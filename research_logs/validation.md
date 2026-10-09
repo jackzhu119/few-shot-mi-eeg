@@ -1,8 +1,8 @@
 # Phase 0 验证记录
 
 执行日期：2026-10-09（Asia/Shanghai）。本记录对应科研实现 commit
-`d0edd09d5d09a937c5fdaea86679a333f795f323`，不是文档记录提交的自引用 SHA。
-默认分支初始化 commit 为 `9fb208380096fe822ce93f1dbb822423f3103ac8`；
+`2e1f785285de4b23560ffe3c203a4d25f61d9f85`，不是文档记录提交的自引用 SHA。
+默认分支初始化 commit 为 `78ca1a2173c2ce43b9b6f80ee1b177c311b51739`；
 完整代码位于 `research/learning-preserving-bci`。GitHub 最终分支 HEAD 以推送后重新读取结果为准。
 
 ## 实际验证结果
@@ -59,6 +59,12 @@ wheel 验证在 `/tmp` 的独立 `/tmp/bci-wheel-env`；该环境先安装由 `u
 有效模型参数和源码哈希；其中分数全部是软件 fixture，不能用于论文真实结果。
 
 ## 初始化中已修复的问题
+
+首次 GitHub 推送因 GH007 邮箱隐私保护被拒绝。通过官方账号 API 核实账号 ID 后，
+仅修改本仓库 local email 为账号的 GitHub noreply 地址，保留原始历史备份，
+重建尚未发布的三个提交；源码树逐字不变。新历史上重新执行99项测试与clean-source smoke
+均通过。未关闭 GitHub 隐私保护，也未改全局 Git 身份。
+
 
 - 默认 uv 缓存位于只读 home：改用 `/workspace/.cache/uv` 和独立工具目录。
 - 最初 editable build 时 README 尚未创建：完成项目元数据后重建成功。
