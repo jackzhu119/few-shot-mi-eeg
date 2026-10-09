@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "learning-preserving-bci"
+version = "0.1.0"
+description = "Reproducible offline EEG infrastructure for learning-preserving co-adaptive BCI research"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "numpy==2.2.6",
+    "scipy==1.15.3",
+    "scikit-learn==1.7.2",
+    "mne==1.10.2",
+]
+
+[project.optional-dependencies]
+data = ["moabb==1.4.3"]
+deep = ["torch==2.8.0", "torchaudio==2.8.0", "braindecode==1.2.0"]
+dev = ["pytest>=8.3.5,<9", "ruff>=0.12,<1"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/learning_preserving_bci"]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+torchaudio = { index = "pytorch-cpu" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+markers = ["deep: CPU EEGNet forward/backward checks requiring deep extra"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
