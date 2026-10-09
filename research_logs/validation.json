@@ -1,0 +1,36 @@
+{
+  "tested_source_commit": "d0edd09d5d09a937c5fdaea86679a333f795f323",
+  "pytest": {
+    "exit_code": 0,
+    "tests": 99,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 99,
+    "warnings": 2,
+    "duration_seconds": 3.741
+  },
+  "checks": {
+    "locked_full_environment_install": "passed",
+    "repeat_install_without_source_or_lock_changes": "passed",
+    "uv_pip_check": "passed",
+    "required_imports": "passed",
+    "ruff_check": "passed",
+    "wheel_build": "passed",
+    "wheel_frozen_base_install_in_independent_venv": "passed",
+    "wheel_base_synthetic_smoke_without_deep_extras": "passed",
+    "MNE_MOABB_synthetic_provider": "passed: 20 epochs, 3 channels, 2 sessions",
+    "full_synthetic_pipeline": "passed: 3 subjects, 6 held-out subject/session records",
+    "clean_code_commit_and_trial_log_identity": "passed"
+  },
+  "artifacts": {
+    "uv.lock_sha256": "e7401a912d4194f2963a815150d3c88b648a5fc4aa23ec45561dd65319ea3f55",
+    "wheel_sha256": "9aa98db9534980e11af53c93a59c20e0e25cfe1b63b1075c445c375266f5d001"
+  },
+  "real_EEG_signal_downloaded": false,
+  "real_data_experiment_executed": false,
+  "large_scale_training_executed": false,
+  "GPU_CUDA_test_executed": false,
+  "human_learning_claim": false,
+  "online_experiment_executed": false
+}
