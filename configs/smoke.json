@@ -1,0 +1,26 @@
+{
+  "experiment": "synthetic_cpu_software_validation",
+  "seed": 42,
+  "data": {
+    "n_subjects": 3,
+    "n_sessions": 3,
+    "trials_per_class": 10,
+    "n_channels": 8,
+    "n_times": 512,
+    "sfreq": 128.0
+  },
+  "preprocessing": {
+    "l_freq": 8.0,
+    "h_freq": 30.0,
+    "reference": "average"
+  },
+  "decoder": {
+    "type": "csp_lda",
+    "n_components": 4
+  },
+  "evaluation": {
+    "reference_session": "session_1",
+    "evaluation_sessions": ["session_2", "session_3"]
+  },
+  "scientific_use": "software_validation_only"
+}

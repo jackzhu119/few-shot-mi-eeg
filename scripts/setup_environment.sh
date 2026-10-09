@@ -19,6 +19,7 @@ export UV_PYTHON_BIN_DIR="${UV_PYTHON_BIN_DIR:-$BCI_DEFAULT_TOOLS/bin}"
 export UV_PROJECT_ENVIRONMENT="${BCI_ENV_DIR:-${UV_PROJECT_ENVIRONMENT:-$BCI_DEFAULT_ENV}}"
 export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$(dirname "$UV_CACHE_DIR")}"
 export MPLCONFIGDIR="${MPLCONFIGDIR:-$XDG_CACHE_HOME/matplotlib}"
+export MNE_DONTWRITE_HOME=true
 mkdir -p "$MPLCONFIGDIR"
 uv python install 3.11.16
 uv sync --locked --all-extras

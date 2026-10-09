@@ -1,0 +1,80 @@
+{
+  "observed_at": "2026-10-09T15:51:56.074096+08:00",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "os_release": {
+    "NAME": "Debian GNU/Linux",
+    "ID": "debian",
+    "PRETTY_NAME": "Debian GNU/Linux 13 (trixie)",
+    "VERSION_ID": "13",
+    "VERSION": "13 (trixie)",
+    "VERSION_CODENAME": "trixie",
+    "DEBIAN_VERSION_FULL": "13.6",
+    "HOME_URL": "https://www.debian.org/",
+    "SUPPORT_URL": "https://www.debian.org/support",
+    "BUG_REPORT_URL": "https://bugs.debian.org/"
+  },
+  "architecture": "x86_64",
+  "python": "3.11.16",
+  "python_executable": "/workspace/.venvs/few-shot-mi-eeg/bin/python",
+  "cpu_count": 5,
+  "cpu_affinity_count": 5,
+  "memory": {
+    "MemTotal_bytes": 35743784960,
+    "MemAvailable_bytes": 33246347264
+  },
+  "disk": {
+    "total_bytes": 33770192896,
+    "free_bytes": 30462918656
+  },
+  "packages": {
+    "numpy": {
+      "version": "2.2.6",
+      "import_verified": true
+    },
+    "scipy": {
+      "version": "1.15.3",
+      "import_verified": true
+    },
+    "scikit-learn": {
+      "version": "1.7.2",
+      "import_verified": true
+    },
+    "mne": {
+      "version": "1.10.2",
+      "import_verified": true
+    },
+    "moabb": {
+      "version": "1.4.3",
+      "import_verified": true
+    },
+    "braindecode": {
+      "version": "1.2.0",
+      "import_verified": true
+    },
+    "torch": {
+      "version": "2.8.0+cpu",
+      "import_verified": true
+    },
+    "torchaudio": {
+      "version": "2.8.0+cpu",
+      "import_verified": true
+    },
+    "pytest": {
+      "version": "8.4.2",
+      "import_verified": true
+    }
+  },
+  "gpu": {
+    "torch_cuda_available": false,
+    "torch_cuda_build": null,
+    "device_count": 0,
+    "nvidia_smi_present": false,
+    "nvidia_device_nodes": [],
+    "validated_device": "cpu"
+  },
+  "git_identity": {
+    "user.name": "configured",
+    "user.email": "configured"
+  },
+  "paid_compute_created": false
+}
