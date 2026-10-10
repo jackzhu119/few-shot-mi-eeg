@@ -1,0 +1,372 @@
+{
+  "status": "handoff_snapshot_no_new_scientific_analysis",
+  "checked_at_utc": "2026-10-10T07:58:41.013633+00:00",
+  "repository": "/workspace/few-shot-mi-eeg",
+  "remote": "https://github.com/jackzhu119/few-shot-mi-eeg.git",
+  "branch": "research/learning-preserving-bci",
+  "base_commit_before_handoff": "5825e10e3eddfee2e4cb6893866da0eb9204470b",
+  "subjects": [
+    {
+      "subject": "sub-1",
+      "download_complete": true,
+      "download_receipt": "research_logs/netbci_cohort_20261010/downloads/sub-1/download_receipt_20261010T035225111339Z.json",
+      "manifest_entries_including_shared": 193,
+      "edf_files": 24,
+      "upstream_header_files": 24,
+      "declared_subject_bytes_excluding_shared": 193406103,
+      "real_signal_audit_complete": true,
+      "audit_summary": {
+        "subject": "sub-1",
+        "session_count": 4,
+        "run_count": 24,
+        "eeg_channel_counts": [
+          74
+        ],
+        "sampling_frequencies_hz": [
+          250.0
+        ],
+        "total_trials": 717,
+        "class_counts": {
+          "right_hand": 360,
+          "rest": 357
+        },
+        "sessions": [
+          {
+            "session": "01",
+            "runs": 6,
+            "run_ids": [
+              "01",
+              "02",
+              "03",
+              "04",
+              "05",
+              "06"
+            ],
+            "trial_count": 180,
+            "class_counts": {
+              "right_hand": 90,
+              "rest": 90
+            }
+          },
+          {
+            "session": "02",
+            "runs": 6,
+            "run_ids": [
+              "01",
+              "02",
+              "03",
+              "04",
+              "05",
+              "06"
+            ],
+            "trial_count": 179,
+            "class_counts": {
+              "rest": 89,
+              "right_hand": 90
+            }
+          },
+          {
+            "session": "03",
+            "runs": 6,
+            "run_ids": [
+              "01",
+              "02",
+              "03",
+              "04",
+              "05",
+              "06"
+            ],
+            "trial_count": 180,
+            "class_counts": {
+              "right_hand": 90,
+              "rest": 90
+            }
+          },
+          {
+            "session": "04",
+            "runs": 6,
+            "run_ids": [
+              "01",
+              "02",
+              "03",
+              "04",
+              "05",
+              "06"
+            ],
+            "trial_count": 178,
+            "class_counts": {
+              "rest": 88,
+              "right_hand": 90
+            }
+          }
+        ],
+        "event_value_mapping": {
+          "right_hand": 2,
+          "rest": 1
+        },
+        "channel_order_stable": true,
+        "files_verified": 193,
+        "bytes_verified": 193510597,
+        "all_checks_pass": true
+      },
+      "original_subject": "sub-01",
+      "bundle_shape": [
+        717,
+        74,
+        1250
+      ],
+      "epochs_sha256": "c7081a3ae456c75dcfdd1dfbe9ec844bd38ba3ecc9c7f0d803c81972f9cd3ba0",
+      "metadata_sha256": "dc8d771c39b4f5042ee7b6b0845b07928b8d127fb7e81e653beb77f5d34b3829",
+      "new_cohort_analysis_complete": false
+    },
+    {
+      "subject": "sub-2",
+      "download_complete": true,
+      "download_receipt": "research_logs/netbci_cohort_20261010/downloads/sub-2/download_receipt_20261010T035225111339Z.json",
+      "manifest_entries_including_shared": 193,
+      "edf_files": 24,
+      "upstream_header_files": 24,
+      "declared_subject_bytes_excluding_shared": 204330387,
+      "real_signal_audit_complete": true,
+      "audit_summary": {
+        "subject": "sub-2",
+        "session_count": 4,
+        "run_count": 24,
+        "eeg_channel_counts": [
+          74
+        ],
+        "sampling_frequencies_hz": [
+          250.0
+        ],
+        "total_trials": 767,
+        "class_counts": {
+          "rest": 383,
+          "right_hand": 384
+        },
+        "sessions": [
+          {
+            "session": "01",
+            "runs": 6,
+            "run_ids": [
+              "01",
+              "02",
+              "03",
+              "04",
+              "05",
+              "06"
+            ],
+            "trial_count": 192,
+            "class_counts": {
+              "rest": 96,
+              "right_hand": 96
+            }
+          },
+          {
+            "session": "02",
+            "runs": 6,
+            "run_ids": [
+              "01",
+              "02",
+              "03",
+              "04",
+              "05",
+              "06"
+            ],
+            "trial_count": 192,
+            "class_counts": {
+              "right_hand": 96,
+              "rest": 96
+            }
+          },
+          {
+            "session": "03",
+            "runs": 6,
+            "run_ids": [
+              "01",
+              "02",
+              "03",
+              "04",
+              "05",
+              "06"
+            ],
+            "trial_count": 191,
+            "class_counts": {
+              "rest": 95,
+              "right_hand": 96
+            }
+          },
+          {
+            "session": "04",
+            "runs": 6,
+            "run_ids": [
+              "01",
+              "02",
+              "03",
+              "04",
+              "05",
+              "06"
+            ],
+            "trial_count": 192,
+            "class_counts": {
+              "rest": 96,
+              "right_hand": 96
+            }
+          }
+        ],
+        "event_value_mapping": {
+          "rest": 1,
+          "right_hand": 2
+        },
+        "channel_order_stable": true,
+        "files_verified": 193,
+        "bytes_verified": 204434881,
+        "all_checks_pass": true
+      },
+      "original_subject": "sub-02",
+      "bundle_shape": [
+        767,
+        74,
+        1250
+      ],
+      "epochs_sha256": "9d93282c28c825e017660399ad1e94c3ac79bfb3fcf9c35dd275094023691166",
+      "metadata_sha256": "a06eb55603fc1a15c1c081944c9fdd6833cbd9f2e5d204edf3dd0f5d55fc60a0",
+      "new_cohort_analysis_complete": false
+    },
+    {
+      "subject": "sub-3",
+      "download_complete": true,
+      "download_receipt": "research_logs/netbci_cohort_20261010/downloads/sub-3/download_receipt_20261010T035225111339Z.json",
+      "manifest_entries_including_shared": 193,
+      "edf_files": 24,
+      "upstream_header_files": 24,
+      "declared_subject_bytes_excluding_shared": 205590305,
+      "real_signal_audit_complete": false,
+      "new_cohort_analysis_complete": false
+    },
+    {
+      "subject": "sub-4",
+      "download_complete": true,
+      "download_receipt": "research_logs/netbci_cohort_20261010/downloads/sub-4/download_receipt_20261010T035225111339Z.json",
+      "manifest_entries_including_shared": 193,
+      "edf_files": 24,
+      "upstream_header_files": 24,
+      "declared_subject_bytes_excluding_shared": 211625360,
+      "real_signal_audit_complete": false,
+      "new_cohort_analysis_complete": false
+    },
+    {
+      "subject": "sub-5",
+      "download_complete": true,
+      "download_receipt": "research_logs/netbci_cohort_20261010/downloads/sub-5/download_receipt_20261010T035225111339Z.json",
+      "manifest_entries_including_shared": 193,
+      "edf_files": 24,
+      "upstream_header_files": 24,
+      "declared_subject_bytes_excluding_shared": 207700032,
+      "real_signal_audit_complete": false,
+      "new_cohort_analysis_complete": false
+    },
+    {
+      "subject": "sub-6",
+      "download_complete": true,
+      "download_receipt": "research_logs/netbci_cohort_20261010/downloads/sub-6/download_receipt_20261010T035225111339Z.json",
+      "manifest_entries_including_shared": 193,
+      "edf_files": 24,
+      "upstream_header_files": 24,
+      "declared_subject_bytes_excluding_shared": 206483960,
+      "real_signal_audit_complete": false,
+      "new_cohort_analysis_complete": false
+    },
+    {
+      "subject": "sub-7",
+      "download_complete": true,
+      "download_receipt": "research_logs/netbci_cohort_20261010/downloads/sub-7/download_receipt_20261010T035225111339Z.json",
+      "manifest_entries_including_shared": 193,
+      "edf_files": 24,
+      "upstream_header_files": 24,
+      "declared_subject_bytes_excluding_shared": 193997851,
+      "real_signal_audit_complete": false,
+      "new_cohort_analysis_complete": false
+    },
+    {
+      "subject": "sub-8",
+      "download_complete": true,
+      "download_receipt": "research_logs/netbci_cohort_20261010/downloads/sub-8/download_receipt_20261010T035225111339Z.json",
+      "manifest_entries_including_shared": 193,
+      "edf_files": 24,
+      "upstream_header_files": 24,
+      "declared_subject_bytes_excluding_shared": 208218495,
+      "real_signal_audit_complete": false,
+      "new_cohort_analysis_complete": false
+    },
+    {
+      "subject": "sub-9",
+      "download_complete": true,
+      "download_receipt": "research_logs/netbci_cohort_20261010/downloads/sub-9/download_receipt_20261010T035225111339Z.json",
+      "manifest_entries_including_shared": 193,
+      "edf_files": 24,
+      "upstream_header_files": 24,
+      "declared_subject_bytes_excluding_shared": 211995576,
+      "real_signal_audit_complete": false,
+      "new_cohort_analysis_complete": false
+    },
+    {
+      "subject": "sub-10",
+      "download_complete": true,
+      "download_receipt": "research_logs/netbci_cohort_20261010/downloads/sub-10/download_receipt_20261010T035225111339Z.json",
+      "manifest_entries_including_shared": 193,
+      "edf_files": 24,
+      "upstream_header_files": 24,
+      "declared_subject_bytes_excluding_shared": 206107854,
+      "real_signal_audit_complete": false,
+      "new_cohort_analysis_complete": false
+    }
+  ],
+  "download_local_reverification": {
+    "unique_files": 1885,
+    "unique_bytes": 2049560417,
+    "edf_files": 240,
+    "original_vhdr_files": 240,
+    "official_checksum_failures": [],
+    "method": "all selected local bytes; SHA256 or Git blob SHA1 as declared by official per-subject manifests"
+  },
+  "verified_real_signal_subjects": [
+    "sub-1",
+    "sub-2"
+  ],
+  "verified_real_signal_trials": 1484,
+  "previous_longitudinal_analysis_subjects": [
+    "sub-1"
+  ],
+  "new_cohort_analysis_subjects": [],
+  "real_behavior_subjects": 19,
+  "real_behavior_session_records": 76,
+  "real_behavior_score_values": 456,
+  "run_trial_behavior_join": "unresolved; participant-session association is available",
+  "disk_free_bytes": 28447019008,
+  "observed_runtime_credentials_configured": false,
+  "first_paper_modified": false,
+  "paid_resources_started": false,
+  "pending_cohort_code_sha256": {
+    "configs/netbci_cohort.json": "396c684415fe861301634a5089f3065bf036cb550aa7e90ec9d9178117642411",
+    "docs/netbci_cohort_expansion_protocol.md": "1705e533179e0347b9c69989f568644b35c81c8d316829921eadb4fc9cfa7d5c",
+    "scripts/analyze_netbci_cohort_subject.py": "686d7149421b74c32e4f49f3324f2889c440c893285e8bbe6d9d00add1de5a07",
+    "scripts/audit_netbci_cohort.py": "146fe5382da0405ad12b325f689e6945824bf17ff209d9923f05230ca71a9b9f",
+    "scripts/fetch_netbci_cohort.py": "eb3fdfad46dc1be38e8d8da92cacd4544500aef241a4cb4c3b70fad9b3e84c65",
+    "scripts/summarize_netbci_cohort.py": "303cfe870f59884fcdb35e88e8e63a424f1b0c56b142ec0c1eb223dc1d72c361",
+    "tests/test_netbci_cohort_analysis.py": "19cba695297d71daef6957cabd26c1edd3cdc6d64f215a28ef40fc73cbb2be54",
+    "tests/test_netbci_cohort_audit.py": "44bddd00575936d20b5638665c9e9414b1d7b76b3b413c1cec3592c51eb8bc7f",
+    "tests/test_netbci_download.py": "9db5d8e4931c1d6232ca1f7a8c5003ce675c7ceb6103d196137ebf961db9c8dd"
+  },
+  "before_handoff_git_status": [
+    "?? configs/netbci_cohort.json",
+    "?? docs/netbci_cohort_expansion_protocol.md",
+    "?? research_logs/netbci_cohort_20261010/",
+    "?? scripts/analyze_netbci_cohort_subject.py",
+    "?? scripts/audit_netbci_cohort.py",
+    "?? scripts/fetch_netbci_cohort.py",
+    "?? scripts/summarize_netbci_cohort.py",
+    "?? tests/test_netbci_cohort_analysis.py",
+    "?? tests/test_netbci_cohort_audit.py",
+    "?? tests/test_netbci_download.py"
+  ]
+}

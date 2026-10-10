@@ -1,0 +1,52 @@
+{
+  "checked_at_utc": "2026-10-10T08:05:11.719392+00:00",
+  "scope": "handoff and software validation; no new real EEG model fits or cohort analysis",
+  "pytest": {
+    "command": "/workspace/.venvs/few-shot-mi-eeg/bin/python -m pytest -q",
+    "passed": 156,
+    "warnings": 2,
+    "seconds": 4.22,
+    "warnings_scope": "existing Braindecode EEGNet deprecation"
+  },
+  "ruff": {
+    "command": "ruff check src tests scripts",
+    "status": "passed"
+  },
+  "smoke": {
+    "status": "software_validation_passed",
+    "synthetic": true,
+    "path": "results/handoff_20261010/software_smoke.json",
+    "sha256": "33991ef6fa99f892a64f30c2d6636d427eb921ed531fef5c75c5a700cbbf752b",
+    "scientific_result_claimed": false
+  },
+  "MNE_MOABB_provider": {
+    "status": "MNE_MOABB_synthetic_provider_passed",
+    "shape": [
+      20,
+      3,
+      385
+    ],
+    "synthetic": true,
+    "public_eeg_downloaded": false
+  },
+  "local_download_reverification": {
+    "unique_files": 1885,
+    "bytes": 2049560417,
+    "checksum_failures": 0
+  },
+  "handoff_document_relative_links": "all_resolved",
+  "pending_code_matches_state_snapshot": true,
+  "new_cohort_summary_unit_test_file": "absent; new summary code provisional; add meaningful participant-statistics/join/hash tests before real cohort conclusions",
+  "new_cohort_independent_methods_review": "not_completed; previous agent usage limit",
+  "scientific_completion": {
+    "downloaded_subjects": 10,
+    "audited_subjects": 2,
+    "audited_trials": 1484,
+    "new_cohort_analyzed_subjects": 0
+  },
+  "remote_write_scope": "current research branch; preserve older results; no raw EEG/NPZ/weights/secrets",
+  "first_paper_repository_modified": false,
+  "paid_resources_started": false,
+  "staged_git_diff_check": "passed",
+  "download_receipts_signed_query_value_exposure_count": 0
+}
