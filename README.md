@@ -115,8 +115,8 @@ paper/                       写作范围与证据门槛
 `717 × 74 × 1250` 的 V 单位数组并通过保存/读取校验。
 [跨会话分析方案](docs/netbci_cross_session_plan.md)与[划分配置](configs/netbci_cross_session.json)
 已准备并验证分组无重叠；这是分析前冻结方案，不是外部预注册或已执行实验。
-下一步确认行为 run 顺序、评分分母及原始缺失 trial 原因，再开展预定科学分析；
-扩展下载另行决定。SHU 保留 `pending author access`。算法影响人类学习与 retention
+已有 subject/session 对应支持会话级科学分析，无需先取得已有成绩或明确run顺序。
+具体 run/trial 研究仍待评分分母、顺序和缺失原因验证；扩展下载另行决定。SHU 保留 `pending author access`。算法影响人类学习与 retention
 的因果问题留待合适的前瞻性设计。
 
 ## 最新科研证据（2026-10-10）
@@ -127,3 +127,12 @@ paper/                       写作范围与证据门槛
 仅1人717trial：会话几何差异可计算重放；CSP后续恒预测rest；短训练EEGNet只验流程。
 行为subject/session可定位，run顺序/分母/trial outcome仍unresolved；不作人类学习因果结论。
 论文工作稿与三篇原始方法精读见 manuscript/README.md（探索性工作稿，未达到投稿证据门槛）。
+
+## 已有行为成绩的实际分析（2026-10-10）
+
+[会话层行为—EEG报告](docs/netbci_behavior_session_analysis.md)已完成：原始19人×4会话×6成绩共456值，
+均值54.11%→56.74%→62.15%→68.68%；末次−首次平均+14.57个百分点，配对受试者bootstrap
+95%区间[10.71,18.27]，属于观察性行为变化。仅sub-1有已读EEG，四行会话级join已完成。
+Mu任务差异与冻结解码结果已分别对照、计数/QC敏感性和精确重放已保存；不作学习因果或算法保留结论。
+可运行入口为[分析脚本](scripts/analyze_netbci_behavior_sessions.py)、[配置](configs/netbci_behavior_sessions.json)
+和[已执行notebook](notebooks/netbci2026_behavior_sessions.ipynb)。没有新增信号下载或模型拟合。

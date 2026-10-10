@@ -1,0 +1,44 @@
+{
+  "notebook": "notebooks/netbci2026_behavior_sessions.ipynb",
+  "sha256": "88193bd452f22ba8612570bf38c179705afaa4e8bf0004a1f189a7232fe40f34",
+  "HTML": "notebooks/netbci2026_behavior_sessions.html",
+  "HTML_sha256": "8c108fd736f855c148be4ab37f7472eb2312107e5f9d17e550d6186e60685299",
+  "executed_code_cells": 5,
+  "error_outputs": 0,
+  "embedded_plot_outputs": 3,
+  "top_to_bottom_executed": true,
+  "runtime": "existing CPU kernel bci-netbci-local; no downloads, no model fitting",
+  "results_source": "research_logs/netbci_behavior_sessions_20261010/run03_verified",
+  "source_script_sha256": "ce0d4914ae7ae0afb5e04c00512ab88b6e9b4046fafd98531565c74b5646d278",
+  "figures_directly_visually_inspected": true,
+  "native_figures_inspected": [
+    "behavior_cohort.png",
+    "pilot_behavior_EEG_endpoints.png",
+    "pilot_representation_diagnostics.png"
+  ],
+  "HTML_render_visual_inspection": "Full-page browser screenshot not attempted after previous-stage failure; three native plots directly inspected; HTML content and embedded images inspected programmatically",
+  "HTML_external_resources_removed": [
+    "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"
+  ],
+  "initial_failures": [
+    {
+      "action": "save first native figure",
+      "error": "Path.relative_to received a relative output path; saved initial PNG preserved under figures/failed_initial",
+      "resolution": "Resolve CLI input/output paths before saving; rerun succeeded"
+    }
+  ],
+  "HTML_structural_checks": {
+    "embedded_png_images": 3,
+    "all_images_data_URIs": true,
+    "rendered_tables": 1,
+    "pilot_table_rows": 5,
+    "remaining_external_script_or_stylesheet_urls": []
+  },
+  "plot_receipt_sha256": "ae4fde642deaaa41bd35e6c851b9bb25a4b1b2eb811b725373ff1bf1c913ee72",
+  "native_png_sha256": {
+    "behavior_cohort.png": "2c07ab4f2dce0ce6fdec54ff2f0e3503237a8ec056772ab99aa298ce347a4d1c",
+    "pilot_behavior_EEG_endpoints.png": "13433829187f5fc64610852f6246c5cf9c35e8b2e1444f0963514c1b629bf214",
+    "pilot_representation_diagnostics.png": "0b11d453cbe8c5059109f554665b3d7bd94fe64a330acf7b7a1b107f224ea1c4"
+  }
+}

@@ -110,7 +110,7 @@ CSP 后三个 session **全部预测 rest**，属于泛化失败，退化区间�
 
 ## 7. 下一阶段决策与执行边界
 
-**当前决策：继续纵向表征/冻结读出研究；行为run及trial因果研究保持 unresolved，暂不实现新策略。** 先向作者准备明确的问题清单并核实run/denominator/exclusion/mapping（当前未发送）。随后决定是否授权扩展 NETBCI 多参与者小批次及充分source-only训练。扩大样本前冻结QC、常量预测处理、预处理敏感性、参考坐标及任务信息分析，并逐人检查；不以最好的seed或post-hoc配置为主结果。
+**当前决策：继续纵向表征/冻结读出及已经可用的会话级行为研究；run/trial关联保持 unresolved，暂不实现新策略。** 已有公开成绩不需再次向作者索取。后续会话分析已实际执行，见[19人行为与单人EEG会话分析](netbci_behavior_session_analysis.md)。仅在研究需要run/trial细节时进一步核实run/denominator/exclusion/mapping（未发送邮件）。随后决定是否扩展 NETBCI 多参与者小批次及充分source-only训练。扩大样本前冻结QC、常量预测处理、预处理敏感性、参考坐标及任务信息分析，并逐人检查；不以最好的seed或post-hoc配置为主结果。
 
 在线研究应有架构/更新频率/标注预算/感觉反馈匹配的固定、常规适应与待定geometry策略组；随机分配并记录所有decoder更新。训练即时performance与预定义非劣效界值之外，设置每session固定历史读出probe、当日公平重校准probe、无额外感觉辅助的任务控制、延迟retention和transfer。这些终点回答不同问题；旧读出变差可能来自有益新技能，不直接称learning loss。统一记录subject/session/run/trial、单调与绝对时间、cue/feedback/outcome、cursor、hit/abort、decoder版本和norm状态。伦理、预注册及基于有意义效应和dropout的样本量模拟先于招募；本轮不启动人体实验或付费资源。
 

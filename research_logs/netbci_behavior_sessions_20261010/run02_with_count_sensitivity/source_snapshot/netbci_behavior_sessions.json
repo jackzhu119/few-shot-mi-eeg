@@ -1,0 +1,31 @@
+{
+  "status": "exploratory_after_stage1_results_observed",
+  "seed": 42,
+  "session_columns": {"01": "BCI-Performance-session1", "02": "BCI-Performance-session2", "03": "BCI-Performance-session3", "04": "BCI-Performance-session4"},
+  "expected_reported_run_scores_per_session": 6,
+  "behavior_source": "research_logs/netbci2026_sources/original_dataverse/participants.tsv",
+  "behavior_dictionary": "research_logs/netbci2026_sources/original_dataverse/participants.json",
+  "behavior_receipt": "research_logs/netbci2026_sources/original_dataverse/behavior_receipt.json",
+  "stage1_closure": "research_logs/netbci_stage1_20261010/source_closure.json",
+  "identity_audit": "research_logs/netbci2026_behavior_link_verified.json",
+  "stage1_results": "research_logs/netbci_stage1_20261010/run01",
+  "qc_geometry": "research_logs/netbci_stage1_20261010/sensitivity/qc_matched_geometry.tsv",
+  "expected_behavior_subjects": 19,
+  "expected_EEG_subject": "sub-1",
+  "expected_EEG_trials": 717,
+  "behavior_aggregation": "unweighted_mean_of_six_reported_run_percentages_not_pooled_trial_hit_rate",
+  "subject_bootstrap_repetitions": 10000,
+  "matched_spectral_repetitions": 20,
+  "matched_spectral_trials_per_class_run": 12,
+  "behavior_cohort_primary_descriptive_change": ["01", "04"],
+  "spectral_summary": "equal_run_mean_of_trial_log10_power_separately_for_each_class",
+  "spectral_variants": {
+    "all_six_runs_all_trials": {"runs": ["01", "02", "03", "04", "05", "06"], "exclude_qc_flagged": false},
+    "common_four_runs_all_trials": {"runs": ["03", "04", "05", "06"], "exclude_qc_flagged": false},
+    "common_four_runs_qc_unflagged": {"runs": ["03", "04", "05", "06"], "exclude_qc_flagged": true}
+  },
+  "neural_behavior_inference": "four_sessions_one_EEG_participant_descriptive_only_no_correlation_p_values",
+  "new_EEG_download": false,
+  "model_training": false,
+  "causal_learning_claim": false
+}

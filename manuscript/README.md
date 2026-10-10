@@ -9,12 +9,15 @@ The draft uses original explanatory prose and cites methodological ideas from th
 ## Evidence usable now
 
 - Real derivative-file checksums, continuous-signal/event checks, explicit sample boundaries, and corresponding original-release headers/events.
-- Participant/session-level behavioural fields with unresolved run/trial joins retained explicitly.
+- Actual 19-participant behavior-only session summaries and four verified participant/session joins to the single EEG participant, with unresolved run/trial joins retained explicitly.
 - Source-only fitting and frozen-model state audits; exact confusion matrices, query counts, and conditional run-bootstrap intervals.
 - Matched representation summaries, post-observation quality sensitivity, source-reference sensitivity, and independent computational replay.
 - Configuration, script/source hashes, executed base commit plus dirty-tree status, and runtime receipts.
 
-All numerical claims trace to `research_logs/netbci_stage1_20261010/`. The primary run is `run01/`; `run02_replay/` is a computational replay of the same records, not an independent biological sample. Twenty matched resamplings do not create twenty participants.
+Stage-1 numerical claims trace to `research_logs/netbci_stage1_20261010/`: primary `run01/`, replay `run02_replay/`.
+The subsequent behavior/EEG session analysis uses `research_logs/netbci_behavior_sessions_20261010/run03_verified/`
+and exact replay `run04_replay/`, with its own source snapshots and receipts. The 19 behavioral records do not add
+EEG participants. Computational replay and twenty matched resamplings do not create independent biological samples.
 
 ## Missing before a stronger or submission-ready paper
 

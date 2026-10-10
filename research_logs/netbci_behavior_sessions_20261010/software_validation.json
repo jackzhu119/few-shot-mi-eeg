@@ -1,0 +1,45 @@
+{
+  "observed_at_utc": "2026-10-10T03:41:06.369754+00:00",
+  "git_base_commit": "5db20a1abd22a0f71cfe3371f58687e752ad53e1",
+  "pytest": {
+    "command": "python -m pytest -q",
+    "passed": 122,
+    "warnings": 2,
+    "warning_scope": "existing Braindecode deprecation; no scientific test failure"
+  },
+  "ruff": "src tests scripts passed",
+  "smoke": {
+    "command": "python scripts/smoke_experiment.py --config configs/smoke.json --output results/netbci_behavior_sessions_20261010/software_smoke.json",
+    "status": "software_validation_passed",
+    "synthetic": true,
+    "source_sha256": "ac5ab5805209082d246b1662753151ef3f67df9f2ef2eda0069d8291098ecd7d"
+  },
+  "MNE_MOABB_synthetic_stack": {
+    "command": "python scripts/check_data_stack.py",
+    "status": "passed",
+    "shape": [
+      20,
+      3,
+      385
+    ],
+    "synthetic": true
+  },
+  "git_diff_check": "passed after staging; generated SVG path whitespace preserved by scoped .gitattributes rule",
+  "runtime_receipt_hash_checks": [
+    "run03_verified",
+    "run04_replay"
+  ],
+  "notebook_and_native_figure_receipt_hash_checks": "passed",
+  "independent_scientific_review": "passed; source grain, numerical results, CI scope and noncausal interpretation checked",
+  "research_scope": {
+    "new_EEG_download_bytes": 0,
+    "new_real_EEG_model_fits": 0,
+    "paid_resources_started": false,
+    "first_paper_repository_modified": false,
+    "author_email_sent": false
+  },
+  "initial_staged_check_failure": {
+    "cause": "Matplotlib SVG multiline path exports contain trailing spaces; initial unstaged check did not include untracked exports",
+    "resolution": "scope whitespace=-blank-at-eol and -text to this phase generated SVG files; preserve exact original export bytes and receipt hashes"
+  }
+}

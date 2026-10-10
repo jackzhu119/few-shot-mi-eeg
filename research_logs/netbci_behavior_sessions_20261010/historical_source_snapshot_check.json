@@ -1,0 +1,29 @@
+{
+  "status": "exact_source_archive_verified_against_existing_runtime_receipts",
+  "checks": [
+    {
+      "run": "run01",
+      "file": "analyze_netbci_behavior_sessions.py",
+      "receipt_sha256": "068a0543f7a6cea5c4cf55d5d5e6bd97b4657b076b1dff3140adf02bb974348c",
+      "matches": true
+    },
+    {
+      "run": "run01",
+      "file": "netbci_behavior_sessions.json",
+      "receipt_sha256": "0cec1557a1f434d9f98f7c950c4afd47c49e48fa44cb55c4893f366917373c7c",
+      "matches": true
+    },
+    {
+      "run": "run02_with_count_sensitivity",
+      "file": "analyze_netbci_behavior_sessions.py",
+      "receipt_sha256": "5a1ba9cdd75c8a403832e196e44ae71d95679840e9878913914eca4837c4b0f2",
+      "matches": true
+    },
+    {
+      "run": "run02_with_count_sensitivity",
+      "file": "netbci_behavior_sessions.json",
+      "receipt_sha256": "1890394bfdf8114ad4916947f315aafa566281b16733bc399032b4bd02b49403",
+      "matches": true
+    }
+  ]
+}

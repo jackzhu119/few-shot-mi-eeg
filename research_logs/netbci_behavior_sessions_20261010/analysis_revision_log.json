@@ -1,0 +1,27 @@
+{
+  "authoritative_run": "run03_verified",
+  "replay": "run04_replay",
+  "superseded_runs": [
+    "run01",
+    "run02_with_count_sensitivity"
+  ],
+  "corrections": [
+    {
+      "field": "n_with_any_decrease",
+      "old": 15,
+      "new": 14,
+      "cause": "sub-07 exactly equal published averages gave a floating point delta near -7.1e-15",
+      "resolution": "numerical tolerance 1e-10 percentage points; regression test added",
+      "reporting_precision_sensitivity": {
+        "threshold_pp": 0.01,
+        "n_with_any_decrease": 13
+      }
+    },
+    {
+      "action": "spectral_count_sensitivity",
+      "status": "added common-four-run QC-unflagged 96-trial sampling, 20 seeds",
+      "reason": "separate trial-count sensitivity from unbalanced retained sets"
+    }
+  ],
+  "preservation": "prior execution results/receipts unchanged; exact old script/config snapshots archived and checked against runtime hashes"
+}

@@ -222,7 +222,7 @@ onset  duration  trial_type  response_time  sample  value
 1. **固定合法来源和版本**：第一优先级 B/NEMAR `nm000305 v1.0.0`，保存 DOI、manifest、许可、字节数和校验结果；原始 Dataverse v2.2 单独记录。A 状态 `pending author access`，等待作者合法访问，不再请求 `nm000288` 或尝试 ZIP 密码。
 2. **最小真实信号门槛**：B 的 NEMAR `sub-1` 4 session × 6 run 已实读；本地适配器及原始 `.vmrk` 已验收；伪迹质量、全体一致性及原始 BrainVision `.eeg` 信号仍未验收。A 历史探针不等于当前原始接入完成。
 3. **事件对齐验收**：B 使用实读 `right_hand/rest`、秒单位与 0 起点，保留 run 边界；反馈/结果事件未提供，记录缺失，禁止生成“合理”伪字段。A 的原始事件单位矛盾仍待作者明确。
-4. **行为数据使用**：B 将 run-level 百分比保留在 run 表，禁止广播后当成逐 trial 标签；真实 trial-level hit/miss 必须由原始日志或可靠事件证据证明。A 不创建反馈命中率。
+4. **行为数据使用**：B 将 run-level 百分比保留为源向量位置；其与具体EEG run尚未验证。可按明确subject/session聚合六个百分比并关联EEG会话，禁止广播后当成逐 trial 标签或 pooled hit率；真实 trial-level hit/miss 必须由原始日志或可靠事件证据证明。A 不创建反馈命中率。
 5. **数据质量与无泄漏**：检查参与者/session 完整性、伪迹、类别计数、时间顺序、删除 trial 的偏差；以 source 训练、target support 校准、target query 测试的隔离评估为准，报告标签预算与随机种子，不用 query 拟合 scaler/选择窗口/阈值。
 6. **主张验收**：离线 smoke/synthetic 数据只验证代码路径；真实数据分析之后才填写结果。人类学习、保持与部署结论需要独立证据，不能从 offline accuracy 倒推。
 
@@ -258,3 +258,6 @@ onset  duration  trial_type  response_time  sample  value
 ## 2026-10-10 后续证据
 
 见[stage1完整报告](netbci_stage1_evidence_and_decision.md)：169文件重验、717事件清单、原始匿名scans、两个ZIP目录审计和behavior verified-grain表。Subject/session成绩字段可定位，具体run顺序/分母和trial结果仍unresolved。实际新增CPU探索性表征与最小冻结baseline；未扩大全队列信号、未破解SHU、未修改第一篇仓库。
+
+已有行为数据已继续分析，见[会话级报告](netbci_behavior_session_analysis.md)：19人的456成绩均完整，
+仅sub-1的4个EEG会话可靠关联。无需以联系作者作为取得既有成绩的前置步骤；run/trial细节的限制仍保留。

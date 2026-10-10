@@ -1,0 +1,81 @@
+{
+  "seed": 42,
+  "git_commit": "5db20a1abd22a0f71cfe3371f58687e752ad53e1",
+  "git_dirty": true,
+  "source_config_sha256": {
+    "configs/netbci_behavior_sessions.json": "66d6e389da7f32644736edb782b981cbe9ef3fa9c2e9f0dfca817d096754621f",
+    "configs/netbci_cross_session.json": "f69100e859bbd7b4eb6aac4194f582cb904b8341d795ffebafc3b65c6030ca7e",
+    "configs/netbci_date_separated.json": "3a91624bd630d81b8198dd8ec3bceb5d1b873d198b73378a0fa090a2a359a52a",
+    "configs/netbci_stage1.json": "27e37183484f99de5a1599b9860671f9f60652b4819c380fd022cde49cf833ca",
+    "configs/smoke.json": "bbf61b1c537c6d52ae42a47672930659b5ebec406557c06c61274aca7c85e6fa",
+    "src/learning_preserving_bci/__init__.py": "be8498e52667fb9412907fa3129e48bd7f5a5759e17d5a647071c5452ffb1908",
+    "src/learning_preserving_bci/adaptation/__init__.py": "feeb5b3461c0f7fb3aac49b2e398de80af588d817ffbb88ce8d1e488ebf19960",
+    "src/learning_preserving_bci/adaptation/fixed.py": "26abe74ed4986be0fa030e2d9c16e250384c9e532eb1017880187094f42089ba",
+    "src/learning_preserving_bci/datasets/__init__.py": "c655a11597730eefed41b295ea6405c2d2fa6b2ad7cd49d57140ab2d53ea0635",
+    "src/learning_preserving_bci/datasets/netbci.py": "2a1e1920767a03effb0ee336432262cec26fbc7d6d2609b0c8fc3ae76ef71968",
+    "src/learning_preserving_bci/datasets/netbci_behavior.py": "921df19e943a7c5c291fd1e0c8c390d61d67c1e4aff4280132276342bb957f66",
+    "src/learning_preserving_bci/decoders/__init__.py": "6feca254387a66999905af61e75c68e005448b31ca34b83514b25acc01664c63",
+    "src/learning_preserving_bci/decoders/csp_lda.py": "4aedb37c21c8056d213b90797324fc5b69f370bb011badf97003c739b1127921",
+    "src/learning_preserving_bci/decoders/eegnet.py": "b66735ea28d6df9f586b089cda18be61211a9878477703185d2ec382f7c3127b",
+    "src/learning_preserving_bci/evaluation/__init__.py": "8f4fcae94e534690dac509b40c47e863786883d4fc1d75474d7ed28ce8b30770",
+    "src/learning_preserving_bci/evaluation/fixed_decoder.py": "72382e3748116e0810584d0d6d3cc09620d26f94fd40b8792900aeea5a917eae",
+    "src/learning_preserving_bci/evaluation/splits.py": "d298350bf4eb48cce802455d0e3a629838c261516aa5ce99664778c4855bf65b",
+    "src/learning_preserving_bci/evaluation/statistics.py": "6ccbda0c8ff7c8cb2ed0e8224ddc0f57246a76c366a1dd00703eb119475948b7",
+    "src/learning_preserving_bci/neural_geometry/__init__.py": "18d36141d9d84827fb1af34c3948e3691c86ead296ff2eb688c5a5ee29848c6e",
+    "src/learning_preserving_bci/preprocessing/__init__.py": "acc3bdf5087786802f3e8f3fd5039c41fe81787775ac92f36dcf5d446d8bed53",
+    "src/learning_preserving_bci/signal_processing/__init__.py": "07446bee3f5e0bd6e83041574acf73a06d3261b593707f0ab259a28f2cd14ed6",
+    "src/learning_preserving_bci/utils/__init__.py": "2454f37e8f10f40b54068fa75d2b8f7e3e51dc3f103f2b92b3e34dfb24f79aea",
+    "src/learning_preserving_bci/utils/reproducibility.py": "b51bb7bdc233b9e070d0de55f73dae1264cb9697be41e709d75154f6e6ef1ecc"
+  },
+  "source_config_hash_scope": [
+    "src/**/*.py",
+    "configs/**/*.json"
+  ],
+  "python": "3.11.16",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "versions": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.7.2",
+    "mne": "1.10.2",
+    "torch": "2.8.0+cpu",
+    "torchaudio": "2.8.0+cpu",
+    "braindecode": "1.2.0",
+    "moabb": "1.4.3"
+  },
+  "analysis_script_sha256": "ecd5bc0aa42d5c8da75959cda99db04c4527a8d900fc1eba3f4ee20b38001e5d",
+  "inputs_sha256": {
+    "configs/netbci_behavior_sessions.json": "66d6e389da7f32644736edb782b981cbe9ef3fa9c2e9f0dfca817d096754621f",
+    "research_logs/netbci2026_sources/original_dataverse/participants.tsv": "57b39accf7014966627788b88f89e0a8735dd24b8af99b81ce58f22398998f09",
+    "research_logs/netbci2026_sources/original_dataverse/participants.json": "94a6e5c5628e2bdb244247d2392d66cfbf6eabead258e777a5c3558b63f5123a",
+    "research_logs/netbci2026_sources/original_dataverse/behavior_receipt.json": "8a21adfc24ffb95b960af294e0f8fdccb74a68ce7c584a57319fca99d1328484",
+    "research_logs/netbci_stage1_20261010/source_closure.json": "9bbf25535bd6418998b4131573d975a5b477c8a615c2a902b4012eaf6f54c3d6",
+    "research_logs/netbci2026_behavior_link_verified.json": "40baa8b6b4f21c572b54d1cd32655032121ccfc0cb904eed8e366621a45d8b6a",
+    "research_logs/netbci_stage1_20261010/sensitivity/qc_matched_geometry.tsv": "668248347f47cbbc44c970d91af58980d90837b04f3f8e45498807136c40a0ad",
+    "research_logs/netbci_stage1_20261010/run01/event_inventory.tsv": "92d7242f068695a7c424bd02667b7ffd6db9f98df27dd84e6ba66c4e5cddf52b",
+    "research_logs/netbci_stage1_20261010/run01/trial_features.tsv": "11f2299ad15c641318f1c8276539d31330aa4661db2c849ccc42f80ae5c74010",
+    "research_logs/netbci_stage1_20261010/run01/matched_geometry.tsv": "51d6ea017cf2e71e4931906ec283e45b17f47c97d0fd56c36befed4d75af6695",
+    "research_logs/netbci_stage1_20261010/run01/decoder_results.json": "53a5cfd59b47179e395080c4d071da3b58846f2c67f1d8216878cce6a9dc9b4f"
+  },
+  "historical_closure_hashes_checked": 83,
+  "new_signal_download_bytes": 0,
+  "model_fits": 0,
+  "elapsed_seconds": 0.4224971450003068,
+  "source_versions": {
+    "behavior": "Dataverse RBJRC7 v2.2",
+    "EEG": "NEMAR nm000305 v1.0.0"
+  },
+  "outputs_sha256": {
+    "analysis_summary.json": "ebf285bcbe917513093d8947fddd973d7eb7ddc2c70fc56082b60a362e1ba57c",
+    "bandpower_session_summaries.tsv": "3402618f0d15cad1701021cfedaff2ccf3522c0f68aa1bf09ae53640172a17ae",
+    "behavior_sessions.tsv": "fd38d4a41af6be9cafef51900ef67eca05aabc1c30c18e0c2d8a36015f6d4edb",
+    "behavior_source_positions.tsv": "9bbd7deda9e009a7ee2afe55dd89eeb204af97a0b5a140d4d4a07f56aad89fb7",
+    "cohort_session_summary.tsv": "e64cf86a7af9039ad5912b7b8d05bd90b618a3e09952487a278942caad067360",
+    "linked_EEG_behavior_sessions.tsv": "6d55e5945fb2499c8e52e7832a94e708d81d976ac846cb8e37f9d21344143d4a",
+    "matched_task_bandpower_contrasts.tsv": "5c9cda302ed7633e9c23f3f92c6b444fc230d43a32cb99937c0f1ff7913d8248",
+    "source_snapshot/analyze_netbci_behavior_sessions.py": "ecd5bc0aa42d5c8da75959cda99db04c4527a8d900fc1eba3f4ee20b38001e5d",
+    "source_snapshot/netbci_behavior.py": "921df19e943a7c5c291fd1e0c8c390d61d67c1e4aff4280132276342bb957f66",
+    "source_snapshot/netbci_behavior_sessions.json": "66d6e389da7f32644736edb782b981cbe9ef3fa9c2e9f0dfca817d096754621f",
+    "task_bandpower_contrasts.tsv": "bc9960c0b5aefc22c0241e9f77922753a2df86cfd9ce93ae68d157f45c63fb31"
+  }
+}

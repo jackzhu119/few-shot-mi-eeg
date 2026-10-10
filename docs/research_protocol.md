@@ -180,3 +180,12 @@ power 与 online 样本量在真实先导数据和最小有意义行为差异明
 ## 本轮正式假设与执行状态（2026-10-10）
 
 用户正式H1–H4编号及证据条件统一见[最新stage1报告第5节](netbci_stage1_evidence_and_decision.md)。上文历史表已改为Operational-1..5，防止编号与新假设冲突。源端run隔离不变；新配置固定3epochCPU EEGNet仅最小验证，source-only transforms及模型冻结已实际检查。描述性target PCA不进入预测；事件相对谱不称ERD。单参与者不能估计人群CI；conditional run-bootstrap需标注退化及小cluster限制。新的策略和在线实验尚未执行。
+
+## 2026-10-10 会话层行为扩展（探索性、已见先导结果）
+
+已有原始19人×4session×6百分比已经核验；各session六个已发布百分比的无权均值可以直接
+关联subject/session，不需先确认run顺序或联系作者取得已有成绩。实际执行见
+[会话分析](netbci_behavior_session_analysis.md)和[配置](../configs/netbci_behavior_sessions.json)。
+19人的完整行为轨迹进行subject-bootstrap，仅1人四会话有EEG，二者样本量不得混称。
+神经—行为对照只作描述，不计算四点显著相关；run/trial outcome继续unresolved，不广播。
+新增task-window log-power对比和96-trial匹配敏感性均不称ERD/学习，未新增解码器拟合。
