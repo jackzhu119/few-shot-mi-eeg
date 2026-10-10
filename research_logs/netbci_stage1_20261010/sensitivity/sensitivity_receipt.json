@@ -1,0 +1,45 @@
+{
+  "status": "exploratory_post_observation_sensitivity",
+  "common_run_ids": [
+    "03",
+    "04",
+    "05",
+    "06"
+  ],
+  "minimum_clean_trials_per_class_run": 12,
+  "QC_does_not_certify_artifact_free": true,
+  "source_fitted_QC_used": true,
+  "independent_rerun_output_hashes_equal": {
+    "event_inventory.tsv": true,
+    "trial_features.tsv": true,
+    "run_features.tsv": true,
+    "matched_geometry.tsv": true,
+    "predictions.tsv": true,
+    "decoder_results.json": true
+  },
+  "decoder_failure_cases": [
+    {
+      "decoder": "CSP_LDA",
+      "session": "02",
+      "failure": "constant prediction",
+      "predicted_class": "rest",
+      "CI_warning": "run-bootstrap interval degenerates; not certainty or evidence of chance mechanism"
+    },
+    {
+      "decoder": "CSP_LDA",
+      "session": "03",
+      "failure": "constant prediction",
+      "predicted_class": "rest",
+      "CI_warning": "run-bootstrap interval degenerates; not certainty or evidence of chance mechanism"
+    },
+    {
+      "decoder": "CSP_LDA",
+      "session": "04",
+      "failure": "constant prediction",
+      "predicted_class": "rest",
+      "CI_warning": "run-bootstrap interval degenerates; not certainty or evidence of chance mechanism"
+    }
+  ],
+  "no_decoder_refit_or_target_tuning": true,
+  "script_sha256": "5320ba77245d52f48ef42996cf404ed6756de6776937141236663158addfb25d"
+}

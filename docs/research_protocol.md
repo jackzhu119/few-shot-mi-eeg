@@ -2,17 +2,17 @@
 
 核心问题：**How should BCIs adapt without compromising human neural skill acquisition?**
 
-协议日期：2026-10-09（Asia/Shanghai）。状态：从零建立可复现的离线基础；下文的真实数据分析、多目标算法和闭环人类实验均为后续计划。本仓库的 synthetic smoke output 只验证软件路径，不作为 EEG、学习或疗效证据。文献核验见 [literature_review.md](literature_review.md)，数据可用性以 [dataset_feasibility.md](dataset_feasibility.md) 为准。
+协议日期：2026-10-09（Asia/Shanghai）。状态：基础设施、单受试者真实审计及2026-10-10最小离线实验已执行；多目标算法与闭环人体实验仍为计划。本仓库的 synthetic smoke output 只验证软件路径，不作为 EEG、学习或疗效证据。文献核验见 [literature_review.md](literature_review.md)，数据可用性以 [dataset_feasibility.md](dataset_feasibility.md) 为准。
 
 ## 1. Scientific questions 与可检验假设
 
 | 问题 | 假设与可证伪结果 | 可以支持它的证据 |
 | --- | --- | --- |
-| Q1. MI-EEG 跨 session 变化对固定 decoder 有多大影响？ | H1：首次 session 校准后冻结的 reference decoder，在后续 session 的 held-out balanced accuracy 发生可重复变化。无变化、跨被试不一致或 CI 很宽均应保留 | 真实 EEG、严格分区、被试内 paired comparison；证明 decoder transportability 的变化，不证明人类学习或退化 |
-| Q2. signal geometry 变化与 decoder performance 是否相关？ | H2：预先规定的 covariance/subspace drift 与 reference decoder 分数变化关联；可出现零关联或相反关系 | 固定 feature convention、样本量匹配、多 session 被试内统计、噪声/伪迹控制；观察性关联 |
-| Q3. 哪些几何变化携带 task information？ | H3：总体方差、表征维度、class separation 与可解码信息可能不同步。若低方差模式没有可重复 task 信息，也报告该结果 | training-only feature construction、nested predictive validation、高/低 variance control；不能仅凭 PCA 图判断 |
-| Q4. decoder 更新改善分数时，是否仍保留无辅助控制能力？ | H4：与更新预算匹配的性能优化策略相比，未来候选策略保持训练性能并提升/保持 delayed no-assistance control；若撤回辅助后恶化则不支持 preservation | 新的人类 randomized closed-loop 实验、辅助撤回、frozen decoder probe、retention/transfer。历史离线 trial 不能检验此因果假设 |
-| Q5. 哪些 adaptation 约束允许有益 neural plasticity？ | H5：后续多目标方案可能优于仅惩罚 drift 或仅最大化 assisted score；其收益应在独立验证集与闭环 retention 上出现 | 与无约束、单约束、同计算预算对照及消融；目前没有已验证算法或命名方法 |
+| Q1. MI-EEG 跨 session 变化对固定 decoder 有多大影响？ | Operational-1：首次 session 校准后冻结的 reference decoder，在后续 session 的 held-out balanced accuracy 发生可重复变化。无变化、跨被试不一致或 CI 很宽均应保留 | 真实 EEG、严格分区、被试内 paired comparison；证明 decoder transportability 的变化，不证明人类学习或退化 |
+| Q2. signal geometry 变化与 decoder performance 是否相关？ | Operational-2：预先规定的 covariance/subspace drift 与 reference decoder 分数变化关联；可出现零关联或相反关系 | 固定 feature convention、样本量匹配、多 session 被试内统计、噪声/伪迹控制；观察性关联 |
+| Q3. 哪些几何变化携带 task information？ | Operational-3：总体方差、表征维度、class separation 与可解码信息可能不同步。若低方差模式没有可重复 task 信息，也报告该结果 | training-only feature construction、nested predictive validation、高/低 variance control；不能仅凭 PCA 图判断 |
+| Q4. decoder 更新改善分数时，是否仍保留无辅助控制能力？ | Operational-4：与更新预算匹配的性能优化策略相比，未来候选策略保持训练性能并提升/保持 delayed no-assistance control；若撤回辅助后恶化则不支持 preservation | 新的人类 randomized closed-loop 实验、辅助撤回、frozen decoder probe、retention/transfer。历史离线 trial 不能检验此因果假设 |
+| Q5. 哪些 adaptation 约束允许有益 neural plasticity？ | Operational-5：后续多目标方案可能优于仅惩罚 drift 或仅最大化 assisted score；其收益应在独立验证集与闭环 retention 上出现 | 与无约束、单约束、同计算预算对照及消融；目前没有已验证算法或命名方法 |
 
 假设不预设所有被试表现提高，也不预设 drift 为坏、stable geometry 为好、compaction 为伤害或 high variance 为任务信息。人类练习、疲劳、electrode/噪声漂移与 decoder 更新可能产生相似离线现象。
 
@@ -21,8 +21,8 @@
 | 来源/层次 | 当前可用或待取得的证据 | 允许的结论 | 不能跨越的边界 |
 | --- | --- | --- | --- |
 | synthetic generator | CPU 可运行的已知结构与人为变化，只用于软件验证 | shape、splits、train-only fit、统计输出和可复现性正常 | 不支持任何真实神经机制、技能或临床结论 |
-| Dataset A: SHU cross-session MI EEG，DOI [10.1038/s41597-022-01647-1](https://doi.org/10.1038/s41597-022-01647-1) | 25 人、五个日 session、间隔 2–3 日，32 通道/250 Hz、left/right grasp MI；发布为已预处理/删坏trial的4秒 epochs。已审metadata/events，未下载真实 EEG；v3 ZIP 密码需联系作者 | 文件与 event/session 语义核实后可做 decoder stability/drift | 非未处理连续raw；无已确认闭环行为；event JSON 单位与onset值疑有矛盾，完整cue/rest时间轴待核实；不能假定 ZIP 已能解密 |
-| Dataset B: NETBCI，DOI [10.1038/s41597-026-08237-5](https://doi.org/10.1038/s41597-026-08237-5) | 19 人/四个不同日，两周内每周两次；74 通道、采集1000 Hz/发布250 Hz；right MI向上 versus rest向下。已审19行participants和metadata，未下载大档案或 EEG | 若六个反馈run performance、phase与session可对齐，可做观察性 longitudinal 描述；先做最小subset审核 | 每session重选channel/frequency并重校准LDA；performance仅六run的hit-target百分比。额外家庭视频练习与遵从未知；无逐trial行为、撤回/延迟probe，不称独立技能retention |
+| Dataset A: SHU cross-session MI EEG，DOI [10.1038/s41597-022-01647-1](https://doi.org/10.1038/s41597-022-01647-1) | 第二优先级，原始接入 `pending author access`。25 人/五日、32 通道/250 Hz、left/right MI；NEMAR nm000288 publication pending，停止请求。历史 Figshare v1 单受试者探针已保存，当前原始 ZIP 仍需作者合法访问 | 原始访问和 event/session 语义核实后可做 decoder stability/drift；通用接口与计划保留 | 非未处理连续 raw；无已确认闭环行为；原始 event 时间单位/完整 cue/rest 待确认；不猜测或绕过 ZIP 密码，不称接入完成 |
+| Dataset B: NETBCI2026，DOI [10.1038/s41597-026-08237-5](https://doi.org/10.1038/s41597-026-08237-5) | 第一优先级 NEMAR nm000305 v1.0.0（CC BY 4.0）：19 人/四日。已实读 sub-1 的4 session×6 run、24 EDF，74通道/250 Hz、717 trial，right_hand/rest。原始 Dataverse v2.2 成绩侧表与 sub-01 小型元数据已读取；24 run 事件对应及本地适配通过；未下载大归档信号 | 公开访问/格式门槛通过；行为向量 run 顺序、评分分母和原始缺失原因验收后可做观察性 longitudinal 描述 | NEMAR为EDF derivative，不能与原始BrainVision混用；真实TSV right_hand=2/rest=1；每session重选特征并重校准LDA；无逐trial行为、撤回/延迟probe，不称独立技能retention |
 | L1 sensory joint learning | 人类 EEG，有无触觉测试及超过两个月子集测试 | 人机联合训练与持久表现值得设计对照验证 | 本仓库未复现；主干预同时包含多个因素 |
 | L2 manifold geometry | rt-fMRI navigation mapping 扰动 | 人类学习可能受到已有 geometry 约束 | 非 EEG，不能直接套用 sensorimotor covariance |
 | L3 assistive algorithms | 侵入式猕猴 spikes 与 RNN | decoder adaptation 可能塑造 task 信息分布 | 历史 fixed/adaptive 数据不随机、非人类 EEG，没有本项目 retention endpoint |
@@ -172,3 +172,11 @@ power 与 online 样本量在真实先导数据和最小有意义行为差异明
 | 6. External and Prospective Validation | 先跨数据集验证；再评估在线伦理/同意、硬件/实时运行、power、randomized controls、无辅助frozen probes、delay/transfer | 外部验证锁定mapping/端点；前瞻试验预注册训练性能与无辅助retention联合终点/排除规则，辅助/decoder日志与必要confounders完整；结论符合实际设计 | 未开展在线retention则不采用“保留人类神经技能”作为已证实结论；临床外推另需患者试验 |
 
 每阶段保留正/负/不确定结果；更改假设、endpoint、排除或数据范围时版本化并说明是否看到结果。稿件可以先定位成可复现的 cross-session representation/decoder analysis，但其论点必须与已完成阶段匹配。
+
+## NETBCI 当前分析前冻结方案
+
+见 [跨会话分析方案](netbci_cross_session_plan.md)及[配置](../configs/netbci_cross_session.json)。单受试者 717 trial 的 run 分组已验证；当前只完成接入与划分，不执行真实模型训练，也不以单受试者推断人群学习。原始与 derivative 事件对应已核查，行为 run 顺序和分母仍为 pending。
+
+## 本轮正式假设与执行状态（2026-10-10）
+
+用户正式H1–H4编号及证据条件统一见[最新stage1报告第5节](netbci_stage1_evidence_and_decision.md)。上文历史表已改为Operational-1..5，防止编号与新假设冲突。源端run隔离不变；新配置固定3epochCPU EEGNet仅最小验证，source-only transforms及模型冻结已实际检查。描述性target PCA不进入预测；事件相对谱不称ERD。单参与者不能估计人群CI；conditional run-bootstrap需标注退化及小cluster限制。新的策略和在线实验尚未执行。

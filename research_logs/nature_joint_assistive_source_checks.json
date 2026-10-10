@@ -1,0 +1,91 @@
+{
+  "checked_at_utc": "2026-10-10T02:27:59.241122+00:00",
+  "source_sha256": {
+    "L1.html": "79055a190d3900a0c025dcb8c18f8c1576660dd14309e3bb7ab3efa5e31708e3",
+    "L3.html": "ba4be2f634e516243cb54e08de3e3c6114e08ceebbe79f4ad56269a01d81e5ca",
+    "L1_MOESM1.pdf": "d8c1aa7420e1f30d75c3c63781929b30b7d1ae6e814ba22e06ef95f87199cacf",
+    "L1_MOESM2.pdf": "52037bbb1f1d8877b17de8a04f0a7f6573cc4aedc3aff50fe6b7bfa269cea884",
+    "L3_MOESM1.pdf": "150d64926402bc1d99b079d9fd67f30f5426bfb68f48cb3d439a262acf7a6d02",
+    "L3_MOESM3.pdf": "123336b56981f20114e3589f3a3383e645c3fdc19d94b3c173e14eb08f27fae4"
+  },
+  "checks": [
+    {
+      "id": "L1_randomization_conflict",
+      "state": "unresolved",
+      "main_locator": "Methods / Participants",
+      "main_statement": "Participants were randomly assigned to three groups",
+      "reporting_locator": "Reporting Summary page 2 / Randomization",
+      "reporting_statement": "Participants were not allocated into experimental groups.",
+      "verification": "reporting PDF page image visually read; main HTML methods read",
+      "inference": "Allocation execution not verified; do not describe as an unqualified verified RCT"
+    },
+    {
+      "id": "L1_long_term_mapping",
+      "state": "verified_source_statement",
+      "locator": "Methods / Experimental paradigm and BCI protocol",
+      "statement": "Long-term weighted and conventional EEGNet reinitialized and trained from scratch each session",
+      "inference": "Delayed no-tactile behavior is not a same-frozen-reference-mapping probe"
+    },
+    {
+      "id": "L1_alignment_gradient",
+      "state": "verified_source_statement",
+      "locator": "Supplementary Methods 2",
+      "equations": [
+        "delta_x=mean_x(t+1)-mean_x(t)",
+        "g_t=gradient_x f(x;theta_t)",
+        "Proj=dot(delta_x,g_t)",
+        "CosSim=dot(delta_x,g_t)/(norm(delta_x)*norm(g_t))"
+      ],
+      "inference": "Input-space class-score gradient; scale-dependent dot product; no direct parameter-update or synaptic-causal measurement"
+    },
+    {
+      "id": "L1_code_publication_identity",
+      "state": "unresolved",
+      "locator": "pinned author updateModel.py vs main Methods and Supplementary Table1",
+      "differences": [
+        "initial confidence uses true-label correctness in public code vs max class probability in main",
+        "default code rounds8 and max_epoch_per_round30 vs main T9 and maximum300epochs",
+        "code epsilon0.01 branch at inclusion1 vs singular main weight formula"
+      ],
+      "inference": "Public code inspected but actual experiment configuration/archive execution not independently verified"
+    },
+    {
+      "id": "L3_randomization",
+      "state": "verified_source_statement",
+      "locator": "Reporting Summary page2 / Randomization and Blinding",
+      "statement": "Fixed and adaptive decoder experiments were done in separate studies; experimenters not blinded",
+      "inference": "Historical cohorts not randomized matched decoder-policy intervention"
+    },
+    {
+      "id": "L3_normalized_PR",
+      "state": "verified_source_statement",
+      "locator": "Supplementary Methods / Dimensionality estimation / equations5-6",
+      "equations": [
+        "PR=trace(C)^2/trace(C@C)",
+        "PRnorm=(PR-1)/(n_units-1)"
+      ],
+      "inference": "Not PR/n_units"
+    },
+    {
+      "id": "L3_split_count",
+      "state": "unresolved",
+      "locator": "Main Methods / Logistic regression model vs Fig3/Fig5 captions",
+      "statements": [
+        "Methods100 splits",
+        "figure captions10000 splits",
+        "public demo n_bs10 with commented100"
+      ],
+      "inference": "Do not claim exact full-analysis split count reproduced"
+    },
+    {
+      "id": "L3_public_demo_rank_selection",
+      "state": "verified_public_demo_only",
+      "locator": "compactness.ipynb source cells; pinned author repository",
+      "statement": "Single-unit cross_validate test scores used to rank units; adding curve evaluated with same pre-defined split",
+      "inference": "Potential optimistic selection; independently rank with inner data then evaluate outer held-out run. Does not establish full paper pipeline uses same practice"
+    }
+  ],
+  "no_author_signal_download": true,
+  "no_author_code_execution": true,
+  "note_path": "docs/nature_joint_assistive_close_reading.md"
+}

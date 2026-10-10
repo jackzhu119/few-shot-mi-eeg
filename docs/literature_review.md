@@ -2,7 +2,7 @@
 
 研究方向：**Learning-Preserving Co-Adaptive Brain–Computer Interfaces**。核心问题是 *How should BCIs adapt without compromising human neural skill acquisition?*
 
-本文记录截至 **2026-10-09（Asia/Shanghai）** 实际访问到的原始来源。它是研究立项的证据台账，不是完成复现实验后的结论。论文报告的结果与本仓库的待检验假设分开记录；本仓库尚无真实 EEG 实验结果。
+本文记录截至 **2026-10-09（Asia/Shanghai）** 实际访问到的原始来源。它是研究立项的证据台账，不是完成复现实验后的结论。论文报告的结果与本仓库的待检验假设分开记录；此句为2026-10-09历史状态；2026-10-10最小真实分析见[stage1报告](netbci_stage1_evidence_and_decision.md)。
 
 ## 1. 访问记录与证据层级
 
@@ -122,3 +122,7 @@ L2 的高变异 manifold 可学性与 L3 的低变异 task information 不是同
 - 若使用 L3 示例做方法验证，记录它覆盖的动物、series 与 days；不得补写为完整原始数据复现。
 - 使用任一来源前检查数据许可、文件校验与事件语义；本次文献 DOI 链接不代表 data ingestion 已完成。
 - 所有新增结果都另列本仓库 run ID、config、数据版本、排除与统计单位，避免把文献结果当本项目结果。
+
+## 2026-10-10 原始方法精读修订
+
+详见[nature_joint_assistive_close_reading](nature_joint_assistive_close_reading.md)及[nature_geometry_close_reading](nature_geometry_close_reading.md)。L1正文随机分组与Reporting Summary矛盾、长期EEGNet重训、输入梯度公式；L2订阅阅读边界、n18与公开源表/源码口径差异；L3历史队列混杂和demo边界均有定位。旧摘要不是新精读或复现结论。原创[论文工作稿](../manuscript/longitudinal_eeg_working_draft.md)不复制原文或将方法借鉴称为已证创新。

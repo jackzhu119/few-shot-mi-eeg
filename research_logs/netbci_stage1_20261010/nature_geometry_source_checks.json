@@ -1,0 +1,136 @@
+{
+  "checked_at_utc": "2026-10-10T02:24:40.152080+00:00",
+  "python_version": "3.12.14",
+  "status": "published_source_table_arithmetic_check_not_full_fMRI_reproduction",
+  "source_files": [
+    {
+      "name": "L2_supp_source.xlsx",
+      "sha256": "0a2a0d420f19133b1b4460ba36ae3810c808e17f8b71027c9c1cb86a63e5f1fe"
+    },
+    {
+      "name": "L2_fig3_source.xlsx",
+      "sha256": "c4a9a3c465acebe5bfe10a1e568a9c23e4636f4d83257b76eac9c033982218da"
+    },
+    {
+      "name": "L2_fig4_source.xlsx",
+      "sha256": "8bb4222a5ca9d43b4b8bdcaf309ee8d7c9bd10a339354ad872c1e2a7eb763a40"
+    }
+  ],
+  "source_sheet_inventory": {
+    "L2_supp_source": {
+      "figureS2C_decodingMSE": 216,
+      "figureS2D_rsaZ": 216,
+      "figureS6": 7,
+      "figureS7": 162,
+      "figureS8A": 108,
+      "figureS8B_scores": 54,
+      "figureS8B_stats": 6,
+      "figureS8C": 54,
+      "figureS9B": 288,
+      "figureS12": 360,
+      "figureS13": 2959,
+      "figureS14_stats": 2,
+      "figureS14_distances_zscores": 18,
+      "figureS15A_stats": 3,
+      "figureS15B_deltaMSE": 54,
+      "figureS15B_stats": 0
+    },
+    "L2_fig3_source": {
+      "figure3A-trialwise": 111,
+      "figure3A-pvals": 57,
+      "figure3B-model": 9,
+      "figure3-pairwise": 15,
+      "figureS6-model": 7,
+      "figure3-timeseries": 9006
+    },
+    "L2_fig4_source": {
+      "figure4B,C": 324,
+      "figure4c-lme": 7,
+      "figure4c-simple": 3
+    }
+  },
+  "neurofeedback_statistical_n": 18,
+  "fig3_raw_observed_subjects": [
+    "avatarRT_sub_05",
+    "avatarRT_sub_06",
+    "avatarRT_sub_07",
+    "avatarRT_sub_08",
+    "avatarRT_sub_09",
+    "avatarRT_sub_10",
+    "avatarRT_sub_11",
+    "avatarRT_sub_13",
+    "avatarRT_sub_14",
+    "avatarRT_sub_15",
+    "avatarRT_sub_16",
+    "avatarRT_sub_17",
+    "avatarRT_sub_18",
+    "avatarRT_sub_19",
+    "avatarRT_sub_20",
+    "avatarRT_sub_21",
+    "avatarRT_sub_22",
+    "avatarRT_sub_23",
+    "avatarRT_sub_24",
+    "avatarRT_sub_25"
+  ],
+  "fig3_statistics_n": [
+    18
+  ],
+  "excluded_neurofeedback_subjects_per_author_readme": [
+    "avatarRT_sub_09",
+    "avatarRT_sub_20"
+  ],
+  "fig4_simple_regression_n": {
+    "IM": 18,
+    "WMP": 18,
+    "OMP": 18
+  },
+  "gromov_wasserstein_zscore_means": {
+    "n": 18,
+    "other_joystick_null_mean": -0.41553006407792836,
+    "other_neurofeedback_null_mean": -1.0513337953081408,
+    "caption_issue": "Supplement Figure S14 printed means omit negative signs; source-table means and printed negative CIs agree on negative direction"
+  },
+  "frozen_IM_decoder_dMSE": {
+    "IM": {
+      "n": 18,
+      "mean": -0.02761862096199453
+    },
+    "WMP": {
+      "n": 18,
+      "mean": 0.04907008236990539,
+      "p_value": 0.0500949905009499,
+      "test": "permutation_test (n_iter=10000, alternative=greater)",
+      "ci_lower": -0.000818441214578688,
+      "ci_upper": 0.106230907769139
+    },
+    "OMP": {
+      "n": 18,
+      "mean": 0.007228362212229141,
+      "p_value": 0.369063093690631,
+      "test": "permutation_test (n_iter=10000, alternative=greater)",
+      "ci_lower": -0.0370074961151254,
+      "ci_upper": 0.0477083738526067
+    }
+  },
+  "source_workbook_sheet_mislabelling": "figureS14_stats contains delta_MSE tests corresponding to Figure S15B; figureS15B_stats sheet is empty",
+  "version_discrepancies": [
+    {
+      "source": "Supplementary Methods printed p4",
+      "aggregation": "mean of first-vs-2/3/4 distances"
+    },
+    {
+      "source": "author intrinsic_manifold_stability.py gitblob 69e9306eb8872ca0adab3394dc9f3c645b6e5cee lines174-179",
+      "aggregation": "minimum self distance; self value included in between-subject null sampling",
+      "status": "not assumed to be code used to generate published table; needs author/version resolution"
+    }
+  ],
+  "no_new_fMRI_download": true,
+  "no_author_model_or_embedding_run": true,
+  "main_text_access": "publisher subscription preview only; PMC browser challenge; EuropePMC fullTextXML HTTP500; no access bypass",
+  "arithmetic_definition": {
+    "GW_mean": "arithmetic mean of 18 subject-specific source-table z scores for each named null, no exclusion added to that published n=18 sheet",
+    "delta_MSE_mean": "arithmetic mean of 18 delta_mse values per test_session_type in figureS15B_deltaMSE",
+    "CI_and_P": "read from published source statistics; not independently recomputed",
+    "sheet_counts": "number of XML worksheet rows after excluding the first header row; not trial/subject count"
+  }
+}

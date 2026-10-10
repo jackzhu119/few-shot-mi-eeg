@@ -1,0 +1,95 @@
+{
+  "status": "retrospective_exploratory_role_audit_of_existing_frozen_predictions",
+  "configuration": {
+    "status": "retrospective_exploratory_role_audit_of_existing_frozen_predictions",
+    "training_session": "01",
+    "source_training_runs": [
+      "01",
+      "02",
+      "03",
+      "04"
+    ],
+    "within_training_date_reference_query_runs": [
+      "05",
+      "06"
+    ],
+    "validation_session": "02",
+    "test_sessions": [
+      "03",
+      "04"
+    ],
+    "validation_test_query_runs": [
+      "02",
+      "03",
+      "04",
+      "05",
+      "06"
+    ],
+    "excluded_calibration_runs": [
+      "01"
+    ],
+    "prior_pilot_scores_observed": true,
+    "new_hyperparameter_selection": false,
+    "new_model_fitting": false,
+    "chronology_basis": "published ordered sessions; actual calendar dates unresolved"
+  },
+  "training_validation_test_sessions_disjoint": true,
+  "counts": {
+    "unused_calibration": 90,
+    "validation_date": 149,
+    "within_date_reference_query": 60,
+    "source_training": 120,
+    "test_dates": 298
+  },
+  "results": [
+    {
+      "decoder": "CSP_LDA",
+      "session": "02",
+      "role": "validation_date",
+      "n": 149,
+      "BA": 0.5
+    },
+    {
+      "decoder": "CSP_LDA",
+      "session": "03",
+      "role": "test_date",
+      "n": 150,
+      "BA": 0.5
+    },
+    {
+      "decoder": "CSP_LDA",
+      "session": "04",
+      "role": "test_date",
+      "n": 148,
+      "BA": 0.5
+    },
+    {
+      "decoder": "EEGNet_CPU_3epochs",
+      "session": "02",
+      "role": "validation_date",
+      "n": 149,
+      "BA": 0.5566666666666666
+    },
+    {
+      "decoder": "EEGNet_CPU_3epochs",
+      "session": "03",
+      "role": "test_date",
+      "n": 150,
+      "BA": 0.54
+    },
+    {
+      "decoder": "EEGNet_CPU_3epochs",
+      "session": "04",
+      "role": "test_date",
+      "n": 148,
+      "BA": 0.44995433789954337
+    }
+  ],
+  "existing_model_train_IDs_match": true,
+  "test_data_fitted_or_selected_parameters": false,
+  "prior_pilot_results_seen": true,
+  "confirmatory_unseen_test_claim": false,
+  "source_predictions_sha256": "5048fbbb348ce2dba0de0b8f1277c58efd558335b552a9ff4d2b9ddf38456b9c",
+  "config_sha256": "3a91624bd630d81b8198dd8ec3bceb5d1b873d198b73378a0fa090a2a359a52a",
+  "script_sha256": "534cd6aa0a905693e86cc4787b88ab006a06208bb7464216992ed0b9d9668a8f"
+}

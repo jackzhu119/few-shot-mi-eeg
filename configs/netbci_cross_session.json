@@ -1,0 +1,56 @@
+{
+  "protocol_version": "1.0",
+  "status": "analysis_plan_only_no_model_training",
+  "dataset_id": "nm000305",
+  "dataset_version": "v1.0.0",
+  "subject": "sub-1",
+  "session_order": ["01", "02", "03", "04"],
+  "chronology_basis": "published protocol order; actual acquisition dates and gaps unverified",
+  "reference_session": "01",
+  "reference_train_runs": ["01", "02", "03"],
+  "reference_validation_runs": ["04"],
+  "reference_query_runs": ["05", "06"],
+  "target_calibration_runs": ["01"],
+  "target_query_runs": ["02", "03", "04", "05", "06"],
+  "optional_calibration_trials_per_class": 10,
+  "seed": 42,
+  "epoch": "all stored target-period samples; metadata duration, half-open interval",
+  "planned_preprocessing": {
+    "reference": "per-epoch average reference, report source reference uncertainty",
+    "decoder_band_hz": [8.0, 30.0],
+    "fit_partition": "reference_train only during development; train+validation for final frozen model",
+    "artifact_policy": "no rejection during adapter validation; later source-fit QC reported separately",
+    "target_query_fitting": false
+  },
+  "planned_decoder": {
+    "family": "CSP + shrinkage LDA",
+    "csp_components": 4,
+    "final_reference_fit_roles": ["reference_train", "reference_validation"],
+    "optional_recalibration": "reference CSP frozen; LDA refit only on reserved target support",
+    "EEGNet_training_this_round": false
+  },
+  "planned_neural_metrics": {
+    "mu_hz": [8.0, 13.0],
+    "beta_hz": [13.0, 30.0],
+    "power_unit": "V^2; Welch PSD in V^2/Hz",
+    "covariance": "fixed shared channel coordinates and documented shrinkage",
+    "PCA_fit": "reference fit roles only; target query never selects feature dimensions",
+    "ERD_ERS": "deferred: no validated prestimulus baseline in the epoch bundle"
+  },
+  "behavior": {
+    "source": "Dataverse v2.2 participants.tsv",
+    "grain": "reported run-level target-hit percentages",
+    "run_score_order_verified": false,
+    "score_denominator_verified": false,
+    "permit_trial_outcome_reconstruction": false,
+    "run_neural_behavior_inference": "blocked until vector order is verified; percentages retain original grain",
+    "session_summary": "unweighted mean of six reported run percentages; not pooled trial success rate"
+  },
+  "statistics": {
+    "independent_unit": "participant",
+    "current_n_participants": 1,
+    "population_inference": false,
+    "trial_bootstrap_as_participant_CI": false,
+    "allowed_claim": "single-participant offline feasibility and descriptive dynamics only"
+  }
+}

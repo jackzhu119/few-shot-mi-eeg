@@ -1,0 +1,1473 @@
+{
+  "status": "frozen_plan_only_not_an_executed_model_experiment",
+  "configuration": {
+    "protocol_version": "1.0",
+    "status": "analysis_plan_only_no_model_training",
+    "dataset_id": "nm000305",
+    "dataset_version": "v1.0.0",
+    "subject": "sub-1",
+    "session_order": [
+      "01",
+      "02",
+      "03",
+      "04"
+    ],
+    "chronology_basis": "published protocol order; actual acquisition dates and gaps unverified",
+    "reference_session": "01",
+    "reference_train_runs": [
+      "01",
+      "02",
+      "03"
+    ],
+    "reference_validation_runs": [
+      "04"
+    ],
+    "reference_query_runs": [
+      "05",
+      "06"
+    ],
+    "target_calibration_runs": [
+      "01"
+    ],
+    "target_query_runs": [
+      "02",
+      "03",
+      "04",
+      "05",
+      "06"
+    ],
+    "optional_calibration_trials_per_class": 10,
+    "seed": 42,
+    "epoch": "all stored target-period samples; metadata duration, half-open interval",
+    "planned_preprocessing": {
+      "reference": "per-epoch average reference, report source reference uncertainty",
+      "decoder_band_hz": [
+        8.0,
+        30.0
+      ],
+      "fit_partition": "reference_train only during development; train+validation for final frozen model",
+      "artifact_policy": "no rejection during adapter validation; later source-fit QC reported separately",
+      "target_query_fitting": false
+    },
+    "planned_decoder": {
+      "family": "CSP + shrinkage LDA",
+      "csp_components": 4,
+      "final_reference_fit_roles": [
+        "reference_train",
+        "reference_validation"
+      ],
+      "optional_recalibration": "reference CSP frozen; LDA refit only on reserved target support",
+      "EEGNet_training_this_round": false
+    },
+    "planned_neural_metrics": {
+      "mu_hz": [
+        8.0,
+        13.0
+      ],
+      "beta_hz": [
+        13.0,
+        30.0
+      ],
+      "power_unit": "V^2; Welch PSD in V^2/Hz",
+      "covariance": "fixed shared channel coordinates and documented shrinkage",
+      "PCA_fit": "reference fit roles only; target query never selects feature dimensions",
+      "ERD_ERS": "deferred: no validated prestimulus baseline in the epoch bundle"
+    },
+    "behavior": {
+      "source": "Dataverse v2.2 participants.tsv",
+      "grain": "reported run-level target-hit percentages",
+      "run_score_order_verified": false,
+      "score_denominator_verified": false,
+      "permit_trial_outcome_reconstruction": false,
+      "run_neural_behavior_inference": "blocked until vector order is verified; percentages retain original grain",
+      "session_summary": "unweighted mean of six reported run percentages; not pooled trial success rate"
+    },
+    "statistics": {
+      "independent_unit": "participant",
+      "current_n_participants": 1,
+      "population_inference": false,
+      "trial_bootstrap_as_participant_CI": false,
+      "allowed_claim": "single-participant offline feasibility and descriptive dynamics only"
+    }
+  },
+  "partitions": {
+    "reference_train": {
+      "trial_count": 90,
+      "class_counts": {
+        "right_hand": 45,
+        "rest": 45
+      },
+      "groups": [
+        "sub-1/ses-01/run-01",
+        "sub-1/ses-01/run-02",
+        "sub-1/ses-01/run-03"
+      ],
+      "trial_ids": [
+        "sub-1/ses-01/run-01/tsv-row-1",
+        "sub-1/ses-01/run-01/tsv-row-2",
+        "sub-1/ses-01/run-01/tsv-row-3",
+        "sub-1/ses-01/run-01/tsv-row-4",
+        "sub-1/ses-01/run-01/tsv-row-5",
+        "sub-1/ses-01/run-01/tsv-row-6",
+        "sub-1/ses-01/run-01/tsv-row-7",
+        "sub-1/ses-01/run-01/tsv-row-8",
+        "sub-1/ses-01/run-01/tsv-row-9",
+        "sub-1/ses-01/run-01/tsv-row-10",
+        "sub-1/ses-01/run-01/tsv-row-11",
+        "sub-1/ses-01/run-01/tsv-row-12",
+        "sub-1/ses-01/run-01/tsv-row-13",
+        "sub-1/ses-01/run-01/tsv-row-14",
+        "sub-1/ses-01/run-01/tsv-row-15",
+        "sub-1/ses-01/run-01/tsv-row-16",
+        "sub-1/ses-01/run-01/tsv-row-17",
+        "sub-1/ses-01/run-01/tsv-row-18",
+        "sub-1/ses-01/run-01/tsv-row-19",
+        "sub-1/ses-01/run-01/tsv-row-20",
+        "sub-1/ses-01/run-01/tsv-row-21",
+        "sub-1/ses-01/run-01/tsv-row-22",
+        "sub-1/ses-01/run-01/tsv-row-23",
+        "sub-1/ses-01/run-01/tsv-row-24",
+        "sub-1/ses-01/run-01/tsv-row-25",
+        "sub-1/ses-01/run-01/tsv-row-26",
+        "sub-1/ses-01/run-01/tsv-row-27",
+        "sub-1/ses-01/run-01/tsv-row-28",
+        "sub-1/ses-01/run-01/tsv-row-29",
+        "sub-1/ses-01/run-01/tsv-row-30",
+        "sub-1/ses-01/run-02/tsv-row-1",
+        "sub-1/ses-01/run-02/tsv-row-2",
+        "sub-1/ses-01/run-02/tsv-row-3",
+        "sub-1/ses-01/run-02/tsv-row-4",
+        "sub-1/ses-01/run-02/tsv-row-5",
+        "sub-1/ses-01/run-02/tsv-row-6",
+        "sub-1/ses-01/run-02/tsv-row-7",
+        "sub-1/ses-01/run-02/tsv-row-8",
+        "sub-1/ses-01/run-02/tsv-row-9",
+        "sub-1/ses-01/run-02/tsv-row-10",
+        "sub-1/ses-01/run-02/tsv-row-11",
+        "sub-1/ses-01/run-02/tsv-row-12",
+        "sub-1/ses-01/run-02/tsv-row-13",
+        "sub-1/ses-01/run-02/tsv-row-14",
+        "sub-1/ses-01/run-02/tsv-row-15",
+        "sub-1/ses-01/run-02/tsv-row-16",
+        "sub-1/ses-01/run-02/tsv-row-17",
+        "sub-1/ses-01/run-02/tsv-row-18",
+        "sub-1/ses-01/run-02/tsv-row-19",
+        "sub-1/ses-01/run-02/tsv-row-20",
+        "sub-1/ses-01/run-02/tsv-row-21",
+        "sub-1/ses-01/run-02/tsv-row-22",
+        "sub-1/ses-01/run-02/tsv-row-23",
+        "sub-1/ses-01/run-02/tsv-row-24",
+        "sub-1/ses-01/run-02/tsv-row-25",
+        "sub-1/ses-01/run-02/tsv-row-26",
+        "sub-1/ses-01/run-02/tsv-row-27",
+        "sub-1/ses-01/run-02/tsv-row-28",
+        "sub-1/ses-01/run-02/tsv-row-29",
+        "sub-1/ses-01/run-02/tsv-row-30",
+        "sub-1/ses-01/run-03/tsv-row-1",
+        "sub-1/ses-01/run-03/tsv-row-2",
+        "sub-1/ses-01/run-03/tsv-row-3",
+        "sub-1/ses-01/run-03/tsv-row-4",
+        "sub-1/ses-01/run-03/tsv-row-5",
+        "sub-1/ses-01/run-03/tsv-row-6",
+        "sub-1/ses-01/run-03/tsv-row-7",
+        "sub-1/ses-01/run-03/tsv-row-8",
+        "sub-1/ses-01/run-03/tsv-row-9",
+        "sub-1/ses-01/run-03/tsv-row-10",
+        "sub-1/ses-01/run-03/tsv-row-11",
+        "sub-1/ses-01/run-03/tsv-row-12",
+        "sub-1/ses-01/run-03/tsv-row-13",
+        "sub-1/ses-01/run-03/tsv-row-14",
+        "sub-1/ses-01/run-03/tsv-row-15",
+        "sub-1/ses-01/run-03/tsv-row-16",
+        "sub-1/ses-01/run-03/tsv-row-17",
+        "sub-1/ses-01/run-03/tsv-row-18",
+        "sub-1/ses-01/run-03/tsv-row-19",
+        "sub-1/ses-01/run-03/tsv-row-20",
+        "sub-1/ses-01/run-03/tsv-row-21",
+        "sub-1/ses-01/run-03/tsv-row-22",
+        "sub-1/ses-01/run-03/tsv-row-23",
+        "sub-1/ses-01/run-03/tsv-row-24",
+        "sub-1/ses-01/run-03/tsv-row-25",
+        "sub-1/ses-01/run-03/tsv-row-26",
+        "sub-1/ses-01/run-03/tsv-row-27",
+        "sub-1/ses-01/run-03/tsv-row-28",
+        "sub-1/ses-01/run-03/tsv-row-29",
+        "sub-1/ses-01/run-03/tsv-row-30"
+      ]
+    },
+    "reference_validation": {
+      "trial_count": 30,
+      "class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "groups": [
+        "sub-1/ses-01/run-04"
+      ],
+      "trial_ids": [
+        "sub-1/ses-01/run-04/tsv-row-1",
+        "sub-1/ses-01/run-04/tsv-row-2",
+        "sub-1/ses-01/run-04/tsv-row-3",
+        "sub-1/ses-01/run-04/tsv-row-4",
+        "sub-1/ses-01/run-04/tsv-row-5",
+        "sub-1/ses-01/run-04/tsv-row-6",
+        "sub-1/ses-01/run-04/tsv-row-7",
+        "sub-1/ses-01/run-04/tsv-row-8",
+        "sub-1/ses-01/run-04/tsv-row-9",
+        "sub-1/ses-01/run-04/tsv-row-10",
+        "sub-1/ses-01/run-04/tsv-row-11",
+        "sub-1/ses-01/run-04/tsv-row-12",
+        "sub-1/ses-01/run-04/tsv-row-13",
+        "sub-1/ses-01/run-04/tsv-row-14",
+        "sub-1/ses-01/run-04/tsv-row-15",
+        "sub-1/ses-01/run-04/tsv-row-16",
+        "sub-1/ses-01/run-04/tsv-row-17",
+        "sub-1/ses-01/run-04/tsv-row-18",
+        "sub-1/ses-01/run-04/tsv-row-19",
+        "sub-1/ses-01/run-04/tsv-row-20",
+        "sub-1/ses-01/run-04/tsv-row-21",
+        "sub-1/ses-01/run-04/tsv-row-22",
+        "sub-1/ses-01/run-04/tsv-row-23",
+        "sub-1/ses-01/run-04/tsv-row-24",
+        "sub-1/ses-01/run-04/tsv-row-25",
+        "sub-1/ses-01/run-04/tsv-row-26",
+        "sub-1/ses-01/run-04/tsv-row-27",
+        "sub-1/ses-01/run-04/tsv-row-28",
+        "sub-1/ses-01/run-04/tsv-row-29",
+        "sub-1/ses-01/run-04/tsv-row-30"
+      ]
+    },
+    "reference_query": {
+      "trial_count": 60,
+      "class_counts": {
+        "rest": 30,
+        "right_hand": 30
+      },
+      "groups": [
+        "sub-1/ses-01/run-05",
+        "sub-1/ses-01/run-06"
+      ],
+      "trial_ids": [
+        "sub-1/ses-01/run-05/tsv-row-1",
+        "sub-1/ses-01/run-05/tsv-row-2",
+        "sub-1/ses-01/run-05/tsv-row-3",
+        "sub-1/ses-01/run-05/tsv-row-4",
+        "sub-1/ses-01/run-05/tsv-row-5",
+        "sub-1/ses-01/run-05/tsv-row-6",
+        "sub-1/ses-01/run-05/tsv-row-7",
+        "sub-1/ses-01/run-05/tsv-row-8",
+        "sub-1/ses-01/run-05/tsv-row-9",
+        "sub-1/ses-01/run-05/tsv-row-10",
+        "sub-1/ses-01/run-05/tsv-row-11",
+        "sub-1/ses-01/run-05/tsv-row-12",
+        "sub-1/ses-01/run-05/tsv-row-13",
+        "sub-1/ses-01/run-05/tsv-row-14",
+        "sub-1/ses-01/run-05/tsv-row-15",
+        "sub-1/ses-01/run-05/tsv-row-16",
+        "sub-1/ses-01/run-05/tsv-row-17",
+        "sub-1/ses-01/run-05/tsv-row-18",
+        "sub-1/ses-01/run-05/tsv-row-19",
+        "sub-1/ses-01/run-05/tsv-row-20",
+        "sub-1/ses-01/run-05/tsv-row-21",
+        "sub-1/ses-01/run-05/tsv-row-22",
+        "sub-1/ses-01/run-05/tsv-row-23",
+        "sub-1/ses-01/run-05/tsv-row-24",
+        "sub-1/ses-01/run-05/tsv-row-25",
+        "sub-1/ses-01/run-05/tsv-row-26",
+        "sub-1/ses-01/run-05/tsv-row-27",
+        "sub-1/ses-01/run-05/tsv-row-28",
+        "sub-1/ses-01/run-05/tsv-row-29",
+        "sub-1/ses-01/run-05/tsv-row-30",
+        "sub-1/ses-01/run-06/tsv-row-1",
+        "sub-1/ses-01/run-06/tsv-row-2",
+        "sub-1/ses-01/run-06/tsv-row-3",
+        "sub-1/ses-01/run-06/tsv-row-4",
+        "sub-1/ses-01/run-06/tsv-row-5",
+        "sub-1/ses-01/run-06/tsv-row-6",
+        "sub-1/ses-01/run-06/tsv-row-7",
+        "sub-1/ses-01/run-06/tsv-row-8",
+        "sub-1/ses-01/run-06/tsv-row-9",
+        "sub-1/ses-01/run-06/tsv-row-10",
+        "sub-1/ses-01/run-06/tsv-row-11",
+        "sub-1/ses-01/run-06/tsv-row-12",
+        "sub-1/ses-01/run-06/tsv-row-13",
+        "sub-1/ses-01/run-06/tsv-row-14",
+        "sub-1/ses-01/run-06/tsv-row-15",
+        "sub-1/ses-01/run-06/tsv-row-16",
+        "sub-1/ses-01/run-06/tsv-row-17",
+        "sub-1/ses-01/run-06/tsv-row-18",
+        "sub-1/ses-01/run-06/tsv-row-19",
+        "sub-1/ses-01/run-06/tsv-row-20",
+        "sub-1/ses-01/run-06/tsv-row-21",
+        "sub-1/ses-01/run-06/tsv-row-22",
+        "sub-1/ses-01/run-06/tsv-row-23",
+        "sub-1/ses-01/run-06/tsv-row-24",
+        "sub-1/ses-01/run-06/tsv-row-25",
+        "sub-1/ses-01/run-06/tsv-row-26",
+        "sub-1/ses-01/run-06/tsv-row-27",
+        "sub-1/ses-01/run-06/tsv-row-28",
+        "sub-1/ses-01/run-06/tsv-row-29",
+        "sub-1/ses-01/run-06/tsv-row-30"
+      ]
+    },
+    "target_calibration_pool": {
+      "trial_count": 90,
+      "class_counts": {
+        "rest": 45,
+        "right_hand": 45
+      },
+      "groups": [
+        "sub-1/ses-02/run-01",
+        "sub-1/ses-03/run-01",
+        "sub-1/ses-04/run-01"
+      ],
+      "trial_ids": [
+        "sub-1/ses-02/run-01/tsv-row-1",
+        "sub-1/ses-02/run-01/tsv-row-2",
+        "sub-1/ses-02/run-01/tsv-row-3",
+        "sub-1/ses-02/run-01/tsv-row-4",
+        "sub-1/ses-02/run-01/tsv-row-5",
+        "sub-1/ses-02/run-01/tsv-row-6",
+        "sub-1/ses-02/run-01/tsv-row-7",
+        "sub-1/ses-02/run-01/tsv-row-8",
+        "sub-1/ses-02/run-01/tsv-row-9",
+        "sub-1/ses-02/run-01/tsv-row-10",
+        "sub-1/ses-02/run-01/tsv-row-11",
+        "sub-1/ses-02/run-01/tsv-row-12",
+        "sub-1/ses-02/run-01/tsv-row-13",
+        "sub-1/ses-02/run-01/tsv-row-14",
+        "sub-1/ses-02/run-01/tsv-row-15",
+        "sub-1/ses-02/run-01/tsv-row-16",
+        "sub-1/ses-02/run-01/tsv-row-17",
+        "sub-1/ses-02/run-01/tsv-row-18",
+        "sub-1/ses-02/run-01/tsv-row-19",
+        "sub-1/ses-02/run-01/tsv-row-20",
+        "sub-1/ses-02/run-01/tsv-row-21",
+        "sub-1/ses-02/run-01/tsv-row-22",
+        "sub-1/ses-02/run-01/tsv-row-23",
+        "sub-1/ses-02/run-01/tsv-row-24",
+        "sub-1/ses-02/run-01/tsv-row-25",
+        "sub-1/ses-02/run-01/tsv-row-26",
+        "sub-1/ses-02/run-01/tsv-row-27",
+        "sub-1/ses-02/run-01/tsv-row-28",
+        "sub-1/ses-02/run-01/tsv-row-29",
+        "sub-1/ses-02/run-01/tsv-row-30",
+        "sub-1/ses-03/run-01/tsv-row-1",
+        "sub-1/ses-03/run-01/tsv-row-2",
+        "sub-1/ses-03/run-01/tsv-row-3",
+        "sub-1/ses-03/run-01/tsv-row-4",
+        "sub-1/ses-03/run-01/tsv-row-5",
+        "sub-1/ses-03/run-01/tsv-row-6",
+        "sub-1/ses-03/run-01/tsv-row-7",
+        "sub-1/ses-03/run-01/tsv-row-8",
+        "sub-1/ses-03/run-01/tsv-row-9",
+        "sub-1/ses-03/run-01/tsv-row-10",
+        "sub-1/ses-03/run-01/tsv-row-11",
+        "sub-1/ses-03/run-01/tsv-row-12",
+        "sub-1/ses-03/run-01/tsv-row-13",
+        "sub-1/ses-03/run-01/tsv-row-14",
+        "sub-1/ses-03/run-01/tsv-row-15",
+        "sub-1/ses-03/run-01/tsv-row-16",
+        "sub-1/ses-03/run-01/tsv-row-17",
+        "sub-1/ses-03/run-01/tsv-row-18",
+        "sub-1/ses-03/run-01/tsv-row-19",
+        "sub-1/ses-03/run-01/tsv-row-20",
+        "sub-1/ses-03/run-01/tsv-row-21",
+        "sub-1/ses-03/run-01/tsv-row-22",
+        "sub-1/ses-03/run-01/tsv-row-23",
+        "sub-1/ses-03/run-01/tsv-row-24",
+        "sub-1/ses-03/run-01/tsv-row-25",
+        "sub-1/ses-03/run-01/tsv-row-26",
+        "sub-1/ses-03/run-01/tsv-row-27",
+        "sub-1/ses-03/run-01/tsv-row-28",
+        "sub-1/ses-03/run-01/tsv-row-29",
+        "sub-1/ses-03/run-01/tsv-row-30",
+        "sub-1/ses-04/run-01/tsv-row-1",
+        "sub-1/ses-04/run-01/tsv-row-2",
+        "sub-1/ses-04/run-01/tsv-row-3",
+        "sub-1/ses-04/run-01/tsv-row-4",
+        "sub-1/ses-04/run-01/tsv-row-5",
+        "sub-1/ses-04/run-01/tsv-row-6",
+        "sub-1/ses-04/run-01/tsv-row-7",
+        "sub-1/ses-04/run-01/tsv-row-8",
+        "sub-1/ses-04/run-01/tsv-row-9",
+        "sub-1/ses-04/run-01/tsv-row-10",
+        "sub-1/ses-04/run-01/tsv-row-11",
+        "sub-1/ses-04/run-01/tsv-row-12",
+        "sub-1/ses-04/run-01/tsv-row-13",
+        "sub-1/ses-04/run-01/tsv-row-14",
+        "sub-1/ses-04/run-01/tsv-row-15",
+        "sub-1/ses-04/run-01/tsv-row-16",
+        "sub-1/ses-04/run-01/tsv-row-17",
+        "sub-1/ses-04/run-01/tsv-row-18",
+        "sub-1/ses-04/run-01/tsv-row-19",
+        "sub-1/ses-04/run-01/tsv-row-20",
+        "sub-1/ses-04/run-01/tsv-row-21",
+        "sub-1/ses-04/run-01/tsv-row-22",
+        "sub-1/ses-04/run-01/tsv-row-23",
+        "sub-1/ses-04/run-01/tsv-row-24",
+        "sub-1/ses-04/run-01/tsv-row-25",
+        "sub-1/ses-04/run-01/tsv-row-26",
+        "sub-1/ses-04/run-01/tsv-row-27",
+        "sub-1/ses-04/run-01/tsv-row-28",
+        "sub-1/ses-04/run-01/tsv-row-29",
+        "sub-1/ses-04/run-01/tsv-row-30"
+      ]
+    },
+    "target_query": {
+      "trial_count": 447,
+      "class_counts": {
+        "right_hand": 225,
+        "rest": 222
+      },
+      "groups": [
+        "sub-1/ses-02/run-02",
+        "sub-1/ses-02/run-03",
+        "sub-1/ses-02/run-04",
+        "sub-1/ses-02/run-05",
+        "sub-1/ses-02/run-06",
+        "sub-1/ses-03/run-02",
+        "sub-1/ses-03/run-03",
+        "sub-1/ses-03/run-04",
+        "sub-1/ses-03/run-05",
+        "sub-1/ses-03/run-06",
+        "sub-1/ses-04/run-02",
+        "sub-1/ses-04/run-03",
+        "sub-1/ses-04/run-04",
+        "sub-1/ses-04/run-05",
+        "sub-1/ses-04/run-06"
+      ],
+      "trial_ids": [
+        "sub-1/ses-02/run-02/tsv-row-1",
+        "sub-1/ses-02/run-02/tsv-row-2",
+        "sub-1/ses-02/run-02/tsv-row-3",
+        "sub-1/ses-02/run-02/tsv-row-4",
+        "sub-1/ses-02/run-02/tsv-row-5",
+        "sub-1/ses-02/run-02/tsv-row-6",
+        "sub-1/ses-02/run-02/tsv-row-7",
+        "sub-1/ses-02/run-02/tsv-row-8",
+        "sub-1/ses-02/run-02/tsv-row-9",
+        "sub-1/ses-02/run-02/tsv-row-10",
+        "sub-1/ses-02/run-02/tsv-row-11",
+        "sub-1/ses-02/run-02/tsv-row-12",
+        "sub-1/ses-02/run-02/tsv-row-13",
+        "sub-1/ses-02/run-02/tsv-row-14",
+        "sub-1/ses-02/run-02/tsv-row-15",
+        "sub-1/ses-02/run-02/tsv-row-16",
+        "sub-1/ses-02/run-02/tsv-row-17",
+        "sub-1/ses-02/run-02/tsv-row-18",
+        "sub-1/ses-02/run-02/tsv-row-19",
+        "sub-1/ses-02/run-02/tsv-row-20",
+        "sub-1/ses-02/run-02/tsv-row-21",
+        "sub-1/ses-02/run-02/tsv-row-22",
+        "sub-1/ses-02/run-02/tsv-row-23",
+        "sub-1/ses-02/run-02/tsv-row-24",
+        "sub-1/ses-02/run-02/tsv-row-25",
+        "sub-1/ses-02/run-02/tsv-row-26",
+        "sub-1/ses-02/run-02/tsv-row-27",
+        "sub-1/ses-02/run-02/tsv-row-28",
+        "sub-1/ses-02/run-02/tsv-row-29",
+        "sub-1/ses-02/run-02/tsv-row-30",
+        "sub-1/ses-02/run-03/tsv-row-1",
+        "sub-1/ses-02/run-03/tsv-row-2",
+        "sub-1/ses-02/run-03/tsv-row-3",
+        "sub-1/ses-02/run-03/tsv-row-4",
+        "sub-1/ses-02/run-03/tsv-row-5",
+        "sub-1/ses-02/run-03/tsv-row-6",
+        "sub-1/ses-02/run-03/tsv-row-7",
+        "sub-1/ses-02/run-03/tsv-row-8",
+        "sub-1/ses-02/run-03/tsv-row-9",
+        "sub-1/ses-02/run-03/tsv-row-10",
+        "sub-1/ses-02/run-03/tsv-row-11",
+        "sub-1/ses-02/run-03/tsv-row-12",
+        "sub-1/ses-02/run-03/tsv-row-13",
+        "sub-1/ses-02/run-03/tsv-row-14",
+        "sub-1/ses-02/run-03/tsv-row-15",
+        "sub-1/ses-02/run-03/tsv-row-16",
+        "sub-1/ses-02/run-03/tsv-row-17",
+        "sub-1/ses-02/run-03/tsv-row-18",
+        "sub-1/ses-02/run-03/tsv-row-19",
+        "sub-1/ses-02/run-03/tsv-row-20",
+        "sub-1/ses-02/run-03/tsv-row-21",
+        "sub-1/ses-02/run-03/tsv-row-22",
+        "sub-1/ses-02/run-03/tsv-row-23",
+        "sub-1/ses-02/run-03/tsv-row-24",
+        "sub-1/ses-02/run-03/tsv-row-25",
+        "sub-1/ses-02/run-03/tsv-row-26",
+        "sub-1/ses-02/run-03/tsv-row-27",
+        "sub-1/ses-02/run-03/tsv-row-28",
+        "sub-1/ses-02/run-03/tsv-row-29",
+        "sub-1/ses-02/run-03/tsv-row-30",
+        "sub-1/ses-02/run-04/tsv-row-1",
+        "sub-1/ses-02/run-04/tsv-row-2",
+        "sub-1/ses-02/run-04/tsv-row-3",
+        "sub-1/ses-02/run-04/tsv-row-4",
+        "sub-1/ses-02/run-04/tsv-row-5",
+        "sub-1/ses-02/run-04/tsv-row-6",
+        "sub-1/ses-02/run-04/tsv-row-7",
+        "sub-1/ses-02/run-04/tsv-row-8",
+        "sub-1/ses-02/run-04/tsv-row-9",
+        "sub-1/ses-02/run-04/tsv-row-10",
+        "sub-1/ses-02/run-04/tsv-row-11",
+        "sub-1/ses-02/run-04/tsv-row-12",
+        "sub-1/ses-02/run-04/tsv-row-13",
+        "sub-1/ses-02/run-04/tsv-row-14",
+        "sub-1/ses-02/run-04/tsv-row-15",
+        "sub-1/ses-02/run-04/tsv-row-16",
+        "sub-1/ses-02/run-04/tsv-row-17",
+        "sub-1/ses-02/run-04/tsv-row-18",
+        "sub-1/ses-02/run-04/tsv-row-19",
+        "sub-1/ses-02/run-04/tsv-row-20",
+        "sub-1/ses-02/run-04/tsv-row-21",
+        "sub-1/ses-02/run-04/tsv-row-22",
+        "sub-1/ses-02/run-04/tsv-row-23",
+        "sub-1/ses-02/run-04/tsv-row-24",
+        "sub-1/ses-02/run-04/tsv-row-25",
+        "sub-1/ses-02/run-04/tsv-row-26",
+        "sub-1/ses-02/run-04/tsv-row-27",
+        "sub-1/ses-02/run-04/tsv-row-28",
+        "sub-1/ses-02/run-04/tsv-row-29",
+        "sub-1/ses-02/run-05/tsv-row-1",
+        "sub-1/ses-02/run-05/tsv-row-2",
+        "sub-1/ses-02/run-05/tsv-row-3",
+        "sub-1/ses-02/run-05/tsv-row-4",
+        "sub-1/ses-02/run-05/tsv-row-5",
+        "sub-1/ses-02/run-05/tsv-row-6",
+        "sub-1/ses-02/run-05/tsv-row-7",
+        "sub-1/ses-02/run-05/tsv-row-8",
+        "sub-1/ses-02/run-05/tsv-row-9",
+        "sub-1/ses-02/run-05/tsv-row-10",
+        "sub-1/ses-02/run-05/tsv-row-11",
+        "sub-1/ses-02/run-05/tsv-row-12",
+        "sub-1/ses-02/run-05/tsv-row-13",
+        "sub-1/ses-02/run-05/tsv-row-14",
+        "sub-1/ses-02/run-05/tsv-row-15",
+        "sub-1/ses-02/run-05/tsv-row-16",
+        "sub-1/ses-02/run-05/tsv-row-17",
+        "sub-1/ses-02/run-05/tsv-row-18",
+        "sub-1/ses-02/run-05/tsv-row-19",
+        "sub-1/ses-02/run-05/tsv-row-20",
+        "sub-1/ses-02/run-05/tsv-row-21",
+        "sub-1/ses-02/run-05/tsv-row-22",
+        "sub-1/ses-02/run-05/tsv-row-23",
+        "sub-1/ses-02/run-05/tsv-row-24",
+        "sub-1/ses-02/run-05/tsv-row-25",
+        "sub-1/ses-02/run-05/tsv-row-26",
+        "sub-1/ses-02/run-05/tsv-row-27",
+        "sub-1/ses-02/run-05/tsv-row-28",
+        "sub-1/ses-02/run-05/tsv-row-29",
+        "sub-1/ses-02/run-05/tsv-row-30",
+        "sub-1/ses-02/run-06/tsv-row-1",
+        "sub-1/ses-02/run-06/tsv-row-2",
+        "sub-1/ses-02/run-06/tsv-row-3",
+        "sub-1/ses-02/run-06/tsv-row-4",
+        "sub-1/ses-02/run-06/tsv-row-5",
+        "sub-1/ses-02/run-06/tsv-row-6",
+        "sub-1/ses-02/run-06/tsv-row-7",
+        "sub-1/ses-02/run-06/tsv-row-8",
+        "sub-1/ses-02/run-06/tsv-row-9",
+        "sub-1/ses-02/run-06/tsv-row-10",
+        "sub-1/ses-02/run-06/tsv-row-11",
+        "sub-1/ses-02/run-06/tsv-row-12",
+        "sub-1/ses-02/run-06/tsv-row-13",
+        "sub-1/ses-02/run-06/tsv-row-14",
+        "sub-1/ses-02/run-06/tsv-row-15",
+        "sub-1/ses-02/run-06/tsv-row-16",
+        "sub-1/ses-02/run-06/tsv-row-17",
+        "sub-1/ses-02/run-06/tsv-row-18",
+        "sub-1/ses-02/run-06/tsv-row-19",
+        "sub-1/ses-02/run-06/tsv-row-20",
+        "sub-1/ses-02/run-06/tsv-row-21",
+        "sub-1/ses-02/run-06/tsv-row-22",
+        "sub-1/ses-02/run-06/tsv-row-23",
+        "sub-1/ses-02/run-06/tsv-row-24",
+        "sub-1/ses-02/run-06/tsv-row-25",
+        "sub-1/ses-02/run-06/tsv-row-26",
+        "sub-1/ses-02/run-06/tsv-row-27",
+        "sub-1/ses-02/run-06/tsv-row-28",
+        "sub-1/ses-02/run-06/tsv-row-29",
+        "sub-1/ses-02/run-06/tsv-row-30",
+        "sub-1/ses-03/run-02/tsv-row-1",
+        "sub-1/ses-03/run-02/tsv-row-2",
+        "sub-1/ses-03/run-02/tsv-row-3",
+        "sub-1/ses-03/run-02/tsv-row-4",
+        "sub-1/ses-03/run-02/tsv-row-5",
+        "sub-1/ses-03/run-02/tsv-row-6",
+        "sub-1/ses-03/run-02/tsv-row-7",
+        "sub-1/ses-03/run-02/tsv-row-8",
+        "sub-1/ses-03/run-02/tsv-row-9",
+        "sub-1/ses-03/run-02/tsv-row-10",
+        "sub-1/ses-03/run-02/tsv-row-11",
+        "sub-1/ses-03/run-02/tsv-row-12",
+        "sub-1/ses-03/run-02/tsv-row-13",
+        "sub-1/ses-03/run-02/tsv-row-14",
+        "sub-1/ses-03/run-02/tsv-row-15",
+        "sub-1/ses-03/run-02/tsv-row-16",
+        "sub-1/ses-03/run-02/tsv-row-17",
+        "sub-1/ses-03/run-02/tsv-row-18",
+        "sub-1/ses-03/run-02/tsv-row-19",
+        "sub-1/ses-03/run-02/tsv-row-20",
+        "sub-1/ses-03/run-02/tsv-row-21",
+        "sub-1/ses-03/run-02/tsv-row-22",
+        "sub-1/ses-03/run-02/tsv-row-23",
+        "sub-1/ses-03/run-02/tsv-row-24",
+        "sub-1/ses-03/run-02/tsv-row-25",
+        "sub-1/ses-03/run-02/tsv-row-26",
+        "sub-1/ses-03/run-02/tsv-row-27",
+        "sub-1/ses-03/run-02/tsv-row-28",
+        "sub-1/ses-03/run-02/tsv-row-29",
+        "sub-1/ses-03/run-02/tsv-row-30",
+        "sub-1/ses-03/run-03/tsv-row-1",
+        "sub-1/ses-03/run-03/tsv-row-2",
+        "sub-1/ses-03/run-03/tsv-row-3",
+        "sub-1/ses-03/run-03/tsv-row-4",
+        "sub-1/ses-03/run-03/tsv-row-5",
+        "sub-1/ses-03/run-03/tsv-row-6",
+        "sub-1/ses-03/run-03/tsv-row-7",
+        "sub-1/ses-03/run-03/tsv-row-8",
+        "sub-1/ses-03/run-03/tsv-row-9",
+        "sub-1/ses-03/run-03/tsv-row-10",
+        "sub-1/ses-03/run-03/tsv-row-11",
+        "sub-1/ses-03/run-03/tsv-row-12",
+        "sub-1/ses-03/run-03/tsv-row-13",
+        "sub-1/ses-03/run-03/tsv-row-14",
+        "sub-1/ses-03/run-03/tsv-row-15",
+        "sub-1/ses-03/run-03/tsv-row-16",
+        "sub-1/ses-03/run-03/tsv-row-17",
+        "sub-1/ses-03/run-03/tsv-row-18",
+        "sub-1/ses-03/run-03/tsv-row-19",
+        "sub-1/ses-03/run-03/tsv-row-20",
+        "sub-1/ses-03/run-03/tsv-row-21",
+        "sub-1/ses-03/run-03/tsv-row-22",
+        "sub-1/ses-03/run-03/tsv-row-23",
+        "sub-1/ses-03/run-03/tsv-row-24",
+        "sub-1/ses-03/run-03/tsv-row-25",
+        "sub-1/ses-03/run-03/tsv-row-26",
+        "sub-1/ses-03/run-03/tsv-row-27",
+        "sub-1/ses-03/run-03/tsv-row-28",
+        "sub-1/ses-03/run-03/tsv-row-29",
+        "sub-1/ses-03/run-03/tsv-row-30",
+        "sub-1/ses-03/run-04/tsv-row-1",
+        "sub-1/ses-03/run-04/tsv-row-2",
+        "sub-1/ses-03/run-04/tsv-row-3",
+        "sub-1/ses-03/run-04/tsv-row-4",
+        "sub-1/ses-03/run-04/tsv-row-5",
+        "sub-1/ses-03/run-04/tsv-row-6",
+        "sub-1/ses-03/run-04/tsv-row-7",
+        "sub-1/ses-03/run-04/tsv-row-8",
+        "sub-1/ses-03/run-04/tsv-row-9",
+        "sub-1/ses-03/run-04/tsv-row-10",
+        "sub-1/ses-03/run-04/tsv-row-11",
+        "sub-1/ses-03/run-04/tsv-row-12",
+        "sub-1/ses-03/run-04/tsv-row-13",
+        "sub-1/ses-03/run-04/tsv-row-14",
+        "sub-1/ses-03/run-04/tsv-row-15",
+        "sub-1/ses-03/run-04/tsv-row-16",
+        "sub-1/ses-03/run-04/tsv-row-17",
+        "sub-1/ses-03/run-04/tsv-row-18",
+        "sub-1/ses-03/run-04/tsv-row-19",
+        "sub-1/ses-03/run-04/tsv-row-20",
+        "sub-1/ses-03/run-04/tsv-row-21",
+        "sub-1/ses-03/run-04/tsv-row-22",
+        "sub-1/ses-03/run-04/tsv-row-23",
+        "sub-1/ses-03/run-04/tsv-row-24",
+        "sub-1/ses-03/run-04/tsv-row-25",
+        "sub-1/ses-03/run-04/tsv-row-26",
+        "sub-1/ses-03/run-04/tsv-row-27",
+        "sub-1/ses-03/run-04/tsv-row-28",
+        "sub-1/ses-03/run-04/tsv-row-29",
+        "sub-1/ses-03/run-04/tsv-row-30",
+        "sub-1/ses-03/run-05/tsv-row-1",
+        "sub-1/ses-03/run-05/tsv-row-2",
+        "sub-1/ses-03/run-05/tsv-row-3",
+        "sub-1/ses-03/run-05/tsv-row-4",
+        "sub-1/ses-03/run-05/tsv-row-5",
+        "sub-1/ses-03/run-05/tsv-row-6",
+        "sub-1/ses-03/run-05/tsv-row-7",
+        "sub-1/ses-03/run-05/tsv-row-8",
+        "sub-1/ses-03/run-05/tsv-row-9",
+        "sub-1/ses-03/run-05/tsv-row-10",
+        "sub-1/ses-03/run-05/tsv-row-11",
+        "sub-1/ses-03/run-05/tsv-row-12",
+        "sub-1/ses-03/run-05/tsv-row-13",
+        "sub-1/ses-03/run-05/tsv-row-14",
+        "sub-1/ses-03/run-05/tsv-row-15",
+        "sub-1/ses-03/run-05/tsv-row-16",
+        "sub-1/ses-03/run-05/tsv-row-17",
+        "sub-1/ses-03/run-05/tsv-row-18",
+        "sub-1/ses-03/run-05/tsv-row-19",
+        "sub-1/ses-03/run-05/tsv-row-20",
+        "sub-1/ses-03/run-05/tsv-row-21",
+        "sub-1/ses-03/run-05/tsv-row-22",
+        "sub-1/ses-03/run-05/tsv-row-23",
+        "sub-1/ses-03/run-05/tsv-row-24",
+        "sub-1/ses-03/run-05/tsv-row-25",
+        "sub-1/ses-03/run-05/tsv-row-26",
+        "sub-1/ses-03/run-05/tsv-row-27",
+        "sub-1/ses-03/run-05/tsv-row-28",
+        "sub-1/ses-03/run-05/tsv-row-29",
+        "sub-1/ses-03/run-05/tsv-row-30",
+        "sub-1/ses-03/run-06/tsv-row-1",
+        "sub-1/ses-03/run-06/tsv-row-2",
+        "sub-1/ses-03/run-06/tsv-row-3",
+        "sub-1/ses-03/run-06/tsv-row-4",
+        "sub-1/ses-03/run-06/tsv-row-5",
+        "sub-1/ses-03/run-06/tsv-row-6",
+        "sub-1/ses-03/run-06/tsv-row-7",
+        "sub-1/ses-03/run-06/tsv-row-8",
+        "sub-1/ses-03/run-06/tsv-row-9",
+        "sub-1/ses-03/run-06/tsv-row-10",
+        "sub-1/ses-03/run-06/tsv-row-11",
+        "sub-1/ses-03/run-06/tsv-row-12",
+        "sub-1/ses-03/run-06/tsv-row-13",
+        "sub-1/ses-03/run-06/tsv-row-14",
+        "sub-1/ses-03/run-06/tsv-row-15",
+        "sub-1/ses-03/run-06/tsv-row-16",
+        "sub-1/ses-03/run-06/tsv-row-17",
+        "sub-1/ses-03/run-06/tsv-row-18",
+        "sub-1/ses-03/run-06/tsv-row-19",
+        "sub-1/ses-03/run-06/tsv-row-20",
+        "sub-1/ses-03/run-06/tsv-row-21",
+        "sub-1/ses-03/run-06/tsv-row-22",
+        "sub-1/ses-03/run-06/tsv-row-23",
+        "sub-1/ses-03/run-06/tsv-row-24",
+        "sub-1/ses-03/run-06/tsv-row-25",
+        "sub-1/ses-03/run-06/tsv-row-26",
+        "sub-1/ses-03/run-06/tsv-row-27",
+        "sub-1/ses-03/run-06/tsv-row-28",
+        "sub-1/ses-03/run-06/tsv-row-29",
+        "sub-1/ses-03/run-06/tsv-row-30",
+        "sub-1/ses-04/run-02/tsv-row-1",
+        "sub-1/ses-04/run-02/tsv-row-2",
+        "sub-1/ses-04/run-02/tsv-row-3",
+        "sub-1/ses-04/run-02/tsv-row-4",
+        "sub-1/ses-04/run-02/tsv-row-5",
+        "sub-1/ses-04/run-02/tsv-row-6",
+        "sub-1/ses-04/run-02/tsv-row-7",
+        "sub-1/ses-04/run-02/tsv-row-8",
+        "sub-1/ses-04/run-02/tsv-row-9",
+        "sub-1/ses-04/run-02/tsv-row-10",
+        "sub-1/ses-04/run-02/tsv-row-11",
+        "sub-1/ses-04/run-02/tsv-row-12",
+        "sub-1/ses-04/run-02/tsv-row-13",
+        "sub-1/ses-04/run-02/tsv-row-14",
+        "sub-1/ses-04/run-02/tsv-row-15",
+        "sub-1/ses-04/run-02/tsv-row-16",
+        "sub-1/ses-04/run-02/tsv-row-17",
+        "sub-1/ses-04/run-02/tsv-row-18",
+        "sub-1/ses-04/run-02/tsv-row-19",
+        "sub-1/ses-04/run-02/tsv-row-20",
+        "sub-1/ses-04/run-02/tsv-row-21",
+        "sub-1/ses-04/run-02/tsv-row-22",
+        "sub-1/ses-04/run-02/tsv-row-23",
+        "sub-1/ses-04/run-02/tsv-row-24",
+        "sub-1/ses-04/run-02/tsv-row-25",
+        "sub-1/ses-04/run-02/tsv-row-26",
+        "sub-1/ses-04/run-02/tsv-row-27",
+        "sub-1/ses-04/run-02/tsv-row-28",
+        "sub-1/ses-04/run-02/tsv-row-29",
+        "sub-1/ses-04/run-03/tsv-row-1",
+        "sub-1/ses-04/run-03/tsv-row-2",
+        "sub-1/ses-04/run-03/tsv-row-3",
+        "sub-1/ses-04/run-03/tsv-row-4",
+        "sub-1/ses-04/run-03/tsv-row-5",
+        "sub-1/ses-04/run-03/tsv-row-6",
+        "sub-1/ses-04/run-03/tsv-row-7",
+        "sub-1/ses-04/run-03/tsv-row-8",
+        "sub-1/ses-04/run-03/tsv-row-9",
+        "sub-1/ses-04/run-03/tsv-row-10",
+        "sub-1/ses-04/run-03/tsv-row-11",
+        "sub-1/ses-04/run-03/tsv-row-12",
+        "sub-1/ses-04/run-03/tsv-row-13",
+        "sub-1/ses-04/run-03/tsv-row-14",
+        "sub-1/ses-04/run-03/tsv-row-15",
+        "sub-1/ses-04/run-03/tsv-row-16",
+        "sub-1/ses-04/run-03/tsv-row-17",
+        "sub-1/ses-04/run-03/tsv-row-18",
+        "sub-1/ses-04/run-03/tsv-row-19",
+        "sub-1/ses-04/run-03/tsv-row-20",
+        "sub-1/ses-04/run-03/tsv-row-21",
+        "sub-1/ses-04/run-03/tsv-row-22",
+        "sub-1/ses-04/run-03/tsv-row-23",
+        "sub-1/ses-04/run-03/tsv-row-24",
+        "sub-1/ses-04/run-03/tsv-row-25",
+        "sub-1/ses-04/run-03/tsv-row-26",
+        "sub-1/ses-04/run-03/tsv-row-27",
+        "sub-1/ses-04/run-03/tsv-row-28",
+        "sub-1/ses-04/run-03/tsv-row-29",
+        "sub-1/ses-04/run-03/tsv-row-30",
+        "sub-1/ses-04/run-04/tsv-row-1",
+        "sub-1/ses-04/run-04/tsv-row-2",
+        "sub-1/ses-04/run-04/tsv-row-3",
+        "sub-1/ses-04/run-04/tsv-row-4",
+        "sub-1/ses-04/run-04/tsv-row-5",
+        "sub-1/ses-04/run-04/tsv-row-6",
+        "sub-1/ses-04/run-04/tsv-row-7",
+        "sub-1/ses-04/run-04/tsv-row-8",
+        "sub-1/ses-04/run-04/tsv-row-9",
+        "sub-1/ses-04/run-04/tsv-row-10",
+        "sub-1/ses-04/run-04/tsv-row-11",
+        "sub-1/ses-04/run-04/tsv-row-12",
+        "sub-1/ses-04/run-04/tsv-row-13",
+        "sub-1/ses-04/run-04/tsv-row-14",
+        "sub-1/ses-04/run-04/tsv-row-15",
+        "sub-1/ses-04/run-04/tsv-row-16",
+        "sub-1/ses-04/run-04/tsv-row-17",
+        "sub-1/ses-04/run-04/tsv-row-18",
+        "sub-1/ses-04/run-04/tsv-row-19",
+        "sub-1/ses-04/run-04/tsv-row-20",
+        "sub-1/ses-04/run-04/tsv-row-21",
+        "sub-1/ses-04/run-04/tsv-row-22",
+        "sub-1/ses-04/run-04/tsv-row-23",
+        "sub-1/ses-04/run-04/tsv-row-24",
+        "sub-1/ses-04/run-04/tsv-row-25",
+        "sub-1/ses-04/run-04/tsv-row-26",
+        "sub-1/ses-04/run-04/tsv-row-27",
+        "sub-1/ses-04/run-04/tsv-row-28",
+        "sub-1/ses-04/run-04/tsv-row-29",
+        "sub-1/ses-04/run-04/tsv-row-30",
+        "sub-1/ses-04/run-05/tsv-row-1",
+        "sub-1/ses-04/run-05/tsv-row-2",
+        "sub-1/ses-04/run-05/tsv-row-3",
+        "sub-1/ses-04/run-05/tsv-row-4",
+        "sub-1/ses-04/run-05/tsv-row-5",
+        "sub-1/ses-04/run-05/tsv-row-6",
+        "sub-1/ses-04/run-05/tsv-row-7",
+        "sub-1/ses-04/run-05/tsv-row-8",
+        "sub-1/ses-04/run-05/tsv-row-9",
+        "sub-1/ses-04/run-05/tsv-row-10",
+        "sub-1/ses-04/run-05/tsv-row-11",
+        "sub-1/ses-04/run-05/tsv-row-12",
+        "sub-1/ses-04/run-05/tsv-row-13",
+        "sub-1/ses-04/run-05/tsv-row-14",
+        "sub-1/ses-04/run-05/tsv-row-15",
+        "sub-1/ses-04/run-05/tsv-row-16",
+        "sub-1/ses-04/run-05/tsv-row-17",
+        "sub-1/ses-04/run-05/tsv-row-18",
+        "sub-1/ses-04/run-05/tsv-row-19",
+        "sub-1/ses-04/run-05/tsv-row-20",
+        "sub-1/ses-04/run-05/tsv-row-21",
+        "sub-1/ses-04/run-05/tsv-row-22",
+        "sub-1/ses-04/run-05/tsv-row-23",
+        "sub-1/ses-04/run-05/tsv-row-24",
+        "sub-1/ses-04/run-05/tsv-row-25",
+        "sub-1/ses-04/run-05/tsv-row-26",
+        "sub-1/ses-04/run-05/tsv-row-27",
+        "sub-1/ses-04/run-05/tsv-row-28",
+        "sub-1/ses-04/run-05/tsv-row-29",
+        "sub-1/ses-04/run-05/tsv-row-30",
+        "sub-1/ses-04/run-06/tsv-row-1",
+        "sub-1/ses-04/run-06/tsv-row-2",
+        "sub-1/ses-04/run-06/tsv-row-3",
+        "sub-1/ses-04/run-06/tsv-row-4",
+        "sub-1/ses-04/run-06/tsv-row-5",
+        "sub-1/ses-04/run-06/tsv-row-6",
+        "sub-1/ses-04/run-06/tsv-row-7",
+        "sub-1/ses-04/run-06/tsv-row-8",
+        "sub-1/ses-04/run-06/tsv-row-9",
+        "sub-1/ses-04/run-06/tsv-row-10",
+        "sub-1/ses-04/run-06/tsv-row-11",
+        "sub-1/ses-04/run-06/tsv-row-12",
+        "sub-1/ses-04/run-06/tsv-row-13",
+        "sub-1/ses-04/run-06/tsv-row-14",
+        "sub-1/ses-04/run-06/tsv-row-15",
+        "sub-1/ses-04/run-06/tsv-row-16",
+        "sub-1/ses-04/run-06/tsv-row-17",
+        "sub-1/ses-04/run-06/tsv-row-18",
+        "sub-1/ses-04/run-06/tsv-row-19",
+        "sub-1/ses-04/run-06/tsv-row-20",
+        "sub-1/ses-04/run-06/tsv-row-21",
+        "sub-1/ses-04/run-06/tsv-row-22",
+        "sub-1/ses-04/run-06/tsv-row-23",
+        "sub-1/ses-04/run-06/tsv-row-24",
+        "sub-1/ses-04/run-06/tsv-row-25",
+        "sub-1/ses-04/run-06/tsv-row-26",
+        "sub-1/ses-04/run-06/tsv-row-27",
+        "sub-1/ses-04/run-06/tsv-row-28",
+        "sub-1/ses-04/run-06/tsv-row-29"
+      ]
+    }
+  },
+  "optional_calibration_trial_ids": {
+    "02": [
+      "sub-1/ses-02/run-01/tsv-row-1",
+      "sub-1/ses-02/run-01/tsv-row-3",
+      "sub-1/ses-02/run-01/tsv-row-5",
+      "sub-1/ses-02/run-01/tsv-row-7",
+      "sub-1/ses-02/run-01/tsv-row-10",
+      "sub-1/ses-02/run-01/tsv-row-12",
+      "sub-1/ses-02/run-01/tsv-row-16",
+      "sub-1/ses-02/run-01/tsv-row-19",
+      "sub-1/ses-02/run-01/tsv-row-25",
+      "sub-1/ses-02/run-01/tsv-row-30",
+      "sub-1/ses-02/run-01/tsv-row-4",
+      "sub-1/ses-02/run-01/tsv-row-6",
+      "sub-1/ses-02/run-01/tsv-row-8",
+      "sub-1/ses-02/run-01/tsv-row-11",
+      "sub-1/ses-02/run-01/tsv-row-15",
+      "sub-1/ses-02/run-01/tsv-row-17",
+      "sub-1/ses-02/run-01/tsv-row-20",
+      "sub-1/ses-02/run-01/tsv-row-24",
+      "sub-1/ses-02/run-01/tsv-row-28",
+      "sub-1/ses-02/run-01/tsv-row-29"
+    ],
+    "03": [
+      "sub-1/ses-03/run-01/tsv-row-2",
+      "sub-1/ses-03/run-01/tsv-row-3",
+      "sub-1/ses-03/run-01/tsv-row-7",
+      "sub-1/ses-03/run-01/tsv-row-9",
+      "sub-1/ses-03/run-01/tsv-row-14",
+      "sub-1/ses-03/run-01/tsv-row-15",
+      "sub-1/ses-03/run-01/tsv-row-19",
+      "sub-1/ses-03/run-01/tsv-row-26",
+      "sub-1/ses-03/run-01/tsv-row-27",
+      "sub-1/ses-03/run-01/tsv-row-29",
+      "sub-1/ses-03/run-01/tsv-row-1",
+      "sub-1/ses-03/run-01/tsv-row-10",
+      "sub-1/ses-03/run-01/tsv-row-12",
+      "sub-1/ses-03/run-01/tsv-row-16",
+      "sub-1/ses-03/run-01/tsv-row-18",
+      "sub-1/ses-03/run-01/tsv-row-20",
+      "sub-1/ses-03/run-01/tsv-row-24",
+      "sub-1/ses-03/run-01/tsv-row-25",
+      "sub-1/ses-03/run-01/tsv-row-28",
+      "sub-1/ses-03/run-01/tsv-row-30"
+    ],
+    "04": [
+      "sub-1/ses-04/run-01/tsv-row-3",
+      "sub-1/ses-04/run-01/tsv-row-9",
+      "sub-1/ses-04/run-01/tsv-row-13",
+      "sub-1/ses-04/run-01/tsv-row-17",
+      "sub-1/ses-04/run-01/tsv-row-20",
+      "sub-1/ses-04/run-01/tsv-row-21",
+      "sub-1/ses-04/run-01/tsv-row-23",
+      "sub-1/ses-04/run-01/tsv-row-25",
+      "sub-1/ses-04/run-01/tsv-row-28",
+      "sub-1/ses-04/run-01/tsv-row-29",
+      "sub-1/ses-04/run-01/tsv-row-2",
+      "sub-1/ses-04/run-01/tsv-row-4",
+      "sub-1/ses-04/run-01/tsv-row-5",
+      "sub-1/ses-04/run-01/tsv-row-11",
+      "sub-1/ses-04/run-01/tsv-row-14",
+      "sub-1/ses-04/run-01/tsv-row-18",
+      "sub-1/ses-04/run-01/tsv-row-19",
+      "sub-1/ses-04/run-01/tsv-row-22",
+      "sub-1/ses-04/run-01/tsv-row-24",
+      "sub-1/ses-04/run-01/tsv-row-26"
+    ]
+  },
+  "all_stored_trials_assigned_once": true,
+  "session_run_groups_disjoint": true,
+  "trained_model": false,
+  "final_reference_fit_count": 120,
+  "chronology_verified_to_calendar_dates": false,
+  "config_sha256": "f69100e859bbd7b4eb6aac4194f582cb904b8341d795ffebafc3b65c6030ca7e",
+  "trial_metadata_sha256": "f9814c4fedfd647dc813e8ed9462326036f988f9d73e02c8345a01f064d563a5",
+  "source_provenance": {
+    "dataset_id": "nm000305",
+    "version": "1.0.0",
+    "version_doi": "10.82901/nemar.nm000305.v1.0.0",
+    "license": "CC-BY-4.0",
+    "signal_unit": "V",
+    "epoch_convention": "[sample, sample + duration * sfreq)",
+    "trial_identity_convention": "stored TSV row; not invented original trial number",
+    "event_value_mapping": {
+      "right_hand": 2,
+      "rest": 1
+    },
+    "source_checksums": {
+      "dataset_description.json": {
+        "algorithm": "git",
+        "checksum": "3240dff16c1bb747b2fed54babf3f047a1c7be3f"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-01_eeg.json": {
+        "algorithm": "git",
+        "checksum": "e510f23265b28775c6acff5232cf1c5cb15ffadf"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-01_events.json": {
+        "algorithm": "git",
+        "checksum": "1f2c3b75c97e6a90067d7713551b16fd8a20c820"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-01_channels.tsv": {
+        "algorithm": "git",
+        "checksum": "e1069a24fc7e2680852737a012478e969904632f"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-01_events.tsv": {
+        "algorithm": "git",
+        "checksum": "d1df0c801911aae48b8ca5adc12cc273666e3b64"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-01_eeg.edf": {
+        "algorithm": "sha256",
+        "checksum": "da9a287a3253db209522725d3832ccea82536456c8f4173c697d11bcdbc3049c"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-02_eeg.json": {
+        "algorithm": "git",
+        "checksum": "4b4e5b38fdd8a3359af69576a6b8ff58dd924c06"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-02_events.json": {
+        "algorithm": "git",
+        "checksum": "1f2c3b75c97e6a90067d7713551b16fd8a20c820"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-02_channels.tsv": {
+        "algorithm": "git",
+        "checksum": "e1069a24fc7e2680852737a012478e969904632f"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-02_events.tsv": {
+        "algorithm": "git",
+        "checksum": "6d29e4c72b917cedfaf93c9b5c46ff70e633d859"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-02_eeg.edf": {
+        "algorithm": "sha256",
+        "checksum": "d46579cbcb8e18ca750e27d074150e240556b3845fbfa77720a075aa1e73491e"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-03_eeg.json": {
+        "algorithm": "git",
+        "checksum": "56ddb63d50c6957cff147e87def80d0035d2b5b3"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-03_events.json": {
+        "algorithm": "git",
+        "checksum": "1f2c3b75c97e6a90067d7713551b16fd8a20c820"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-03_channels.tsv": {
+        "algorithm": "git",
+        "checksum": "e1069a24fc7e2680852737a012478e969904632f"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-03_events.tsv": {
+        "algorithm": "git",
+        "checksum": "2ddbe14264cf8ec49a84117cddd3fe7fc7107034"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-03_eeg.edf": {
+        "algorithm": "sha256",
+        "checksum": "9bdd1d33bdd411b74b3ee5bf3688c77cd874cefc73d31172a138e0488246b427"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-04_eeg.json": {
+        "algorithm": "git",
+        "checksum": "86b84f20f975852b6d8d593626714568189be33e"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-04_events.json": {
+        "algorithm": "git",
+        "checksum": "1f2c3b75c97e6a90067d7713551b16fd8a20c820"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-04_channels.tsv": {
+        "algorithm": "git",
+        "checksum": "07a70806e0fba19fe8c8d1f11b53a4eec366d0cb"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-04_events.tsv": {
+        "algorithm": "git",
+        "checksum": "2bf47ae615e9fecffb20a2af520f4de6f240fba1"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-04_eeg.edf": {
+        "algorithm": "sha256",
+        "checksum": "b31ea17a3aa1ec691e879179c891c9aa12a8aec0a634849568f9ef29c078cb9b"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-05_eeg.json": {
+        "algorithm": "git",
+        "checksum": "544ab174ca46bee61c6b9f958de30e0cd2c530a8"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-05_events.json": {
+        "algorithm": "git",
+        "checksum": "1f2c3b75c97e6a90067d7713551b16fd8a20c820"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-05_channels.tsv": {
+        "algorithm": "git",
+        "checksum": "e1069a24fc7e2680852737a012478e969904632f"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-05_events.tsv": {
+        "algorithm": "git",
+        "checksum": "c4e7494d7bfbf57cb465bf671a897414c397757f"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-05_eeg.edf": {
+        "algorithm": "sha256",
+        "checksum": "00e0cbba5a523466859d6f552c848f52dd462153666eaed723d8a32a7de27a25"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-06_eeg.json": {
+        "algorithm": "git",
+        "checksum": "e510f23265b28775c6acff5232cf1c5cb15ffadf"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-06_events.json": {
+        "algorithm": "git",
+        "checksum": "1f2c3b75c97e6a90067d7713551b16fd8a20c820"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-06_channels.tsv": {
+        "algorithm": "git",
+        "checksum": "e1069a24fc7e2680852737a012478e969904632f"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-06_events.tsv": {
+        "algorithm": "git",
+        "checksum": "e1ccaa4dd5170c4b2f0d9d03e76fd0f39d2242c1"
+      },
+      "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-06_eeg.edf": {
+        "algorithm": "sha256",
+        "checksum": "2642016d8879857cc058db3ae1cca5a466ea62d64f890d75a4674eecd53d2d0b"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-01_eeg.json": {
+        "algorithm": "git",
+        "checksum": "84b9b87f0418be792244b4291f8557eb54d44a39"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-01_events.json": {
+        "algorithm": "git",
+        "checksum": "1f2c3b75c97e6a90067d7713551b16fd8a20c820"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-01_channels.tsv": {
+        "algorithm": "git",
+        "checksum": "e1069a24fc7e2680852737a012478e969904632f"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-01_events.tsv": {
+        "algorithm": "git",
+        "checksum": "7d580b790e47187d37c0971afb259027a8bd58e5"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-01_eeg.edf": {
+        "algorithm": "sha256",
+        "checksum": "62f36c3e4f9e5607fa563d5155efaba772deed30da3aa8c7078857e4893e30db"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-02_eeg.json": {
+        "algorithm": "git",
+        "checksum": "84b9b87f0418be792244b4291f8557eb54d44a39"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-02_events.json": {
+        "algorithm": "git",
+        "checksum": "1f2c3b75c97e6a90067d7713551b16fd8a20c820"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-02_channels.tsv": {
+        "algorithm": "git",
+        "checksum": "e1069a24fc7e2680852737a012478e969904632f"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-02_events.tsv": {
+        "algorithm": "git",
+        "checksum": "fc43ac3f791fab4996d7fef68fd770d97f88eb9b"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-02_eeg.edf": {
+        "algorithm": "sha256",
+        "checksum": "fae63a995c51073c2670e00d9b4ca3b02616399f2a53a6986c8b14ef12b497b6"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-03_eeg.json": {
+        "algorithm": "git",
+        "checksum": "972ea9269b3744609c7ed2bff84abdb436328680"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-03_events.json": {
+        "algorithm": "git",
+        "checksum": "1f2c3b75c97e6a90067d7713551b16fd8a20c820"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-03_channels.tsv": {
+        "algorithm": "git",
+        "checksum": "e1069a24fc7e2680852737a012478e969904632f"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-03_events.tsv": {
+        "algorithm": "git",
+        "checksum": "efec231868f8de6863aeac9a7e3961414d24b5e4"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-03_eeg.edf": {
+        "algorithm": "sha256",
+        "checksum": "d304b0afff045ce637911040c185f7b48d0e6a81f6dbf0552179c46e20b59a66"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-04_eeg.json": {
+        "algorithm": "git",
+        "checksum": "56ddb63d50c6957cff147e87def80d0035d2b5b3"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-04_events.json": {
+        "algorithm": "git",
+        "checksum": "1f2c3b75c97e6a90067d7713551b16fd8a20c820"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-04_channels.tsv": {
+        "algorithm": "git",
+        "checksum": "e1069a24fc7e2680852737a012478e969904632f"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-04_events.tsv": {
+        "algorithm": "git",
+        "checksum": "00447b2dc634b0786c9afc4be58df5f06c286d2a"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-04_eeg.edf": {
+        "algorithm": "sha256",
+        "checksum": "b1741270adfb4f17060f58571f524443e71e271343cad772023157fb4d08c0cb"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-05_eeg.json": {
+        "algorithm": "git",
+        "checksum": "b87a915b5e6e6d8857c14a293f8cfab28a09ead5"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-05_events.json": {
+        "algorithm": "git",
+        "checksum": "1f2c3b75c97e6a90067d7713551b16fd8a20c820"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-05_channels.tsv": {
+        "algorithm": "git",
+        "checksum": "e1069a24fc7e2680852737a012478e969904632f"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-05_events.tsv": {
+        "algorithm": "git",
+        "checksum": "cbffb0068924549776bcabc47157442fbdbbc2fe"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-05_eeg.edf": {
+        "algorithm": "sha256",
+        "checksum": "30f65a9df54150de8ee137f4bb638a953216e0c5210159ba6d8be784dcc799bd"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-06_eeg.json": {
+        "algorithm": "git",
+        "checksum": "4b4e5b38fdd8a3359af69576a6b8ff58dd924c06"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-06_events.json": {
+        "algorithm": "git",
+        "checksum": "1f2c3b75c97e6a90067d7713551b16fd8a20c820"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-06_channels.tsv": {
+        "algorithm": "git",
+        "checksum": "e1069a24fc7e2680852737a012478e969904632f"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-06_events.tsv": {
+        "algorithm": "git",
+        "checksum": "e5c761af4ac10060fc1256639ff790effeda069f"
+      },
+      "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-06_eeg.edf": {
+        "algorithm": "sha256",
+        "checksum": "49660f5c30f4e75a51aafe7a98b2f8d07181c76f12cf39eda414a916b4287581"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-01_eeg.json": {
+        "algorithm": "git",
+        "checksum": "972ea9269b3744609c7ed2bff84abdb436328680"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-01_events.json": {
+        "algorithm": "git",
+        "checksum": "1f2c3b75c97e6a90067d7713551b16fd8a20c820"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-01_channels.tsv": {
+        "algorithm": "git",
+        "checksum": "e1069a24fc7e2680852737a012478e969904632f"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-01_events.tsv": {
+        "algorithm": "git",
+        "checksum": "1ae51e0f39e73c1cc99fd39268982432c2f244b6"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-01_eeg.edf": {
+        "algorithm": "sha256",
+        "checksum": "9f46f0337e89ff57acb5b62b266bd37134f219ef3fda218f62690ac9bde1dd69"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-02_eeg.json": {
+        "algorithm": "git",
+        "checksum": "b87a915b5e6e6d8857c14a293f8cfab28a09ead5"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-02_events.json": {
+        "algorithm": "git",
+        "checksum": "1f2c3b75c97e6a90067d7713551b16fd8a20c820"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-02_channels.tsv": {
+        "algorithm": "git",
+        "checksum": "e1069a24fc7e2680852737a012478e969904632f"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-02_events.tsv": {
+        "algorithm": "git",
+        "checksum": "6715510a2d9ad54f0412e6b58587ef1457fdc3c4"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-02_eeg.edf": {
+        "algorithm": "sha256",
+        "checksum": "85b62cfaae7494d984e2260e18bd5e1ec3fe33239a8239ed7272bdaf1b721418"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-03_eeg.json": {
+        "algorithm": "git",
+        "checksum": "56ddb63d50c6957cff147e87def80d0035d2b5b3"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-03_events.json": {
+        "algorithm": "git",
+        "checksum": "1f2c3b75c97e6a90067d7713551b16fd8a20c820"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-03_channels.tsv": {
+        "algorithm": "git",
+        "checksum": "e1069a24fc7e2680852737a012478e969904632f"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-03_events.tsv": {
+        "algorithm": "git",
+        "checksum": "2ba7a609b2c70e5b9fda3a5d92ecc144a5d92c12"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-03_eeg.edf": {
+        "algorithm": "sha256",
+        "checksum": "bafb2c4e447952b2bd69f870aaa6a757f73edd40e45d2d789b1a6f042983fcc2"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-04_eeg.json": {
+        "algorithm": "git",
+        "checksum": "b87a915b5e6e6d8857c14a293f8cfab28a09ead5"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-04_events.json": {
+        "algorithm": "git",
+        "checksum": "1f2c3b75c97e6a90067d7713551b16fd8a20c820"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-04_channels.tsv": {
+        "algorithm": "git",
+        "checksum": "e1069a24fc7e2680852737a012478e969904632f"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-04_events.tsv": {
+        "algorithm": "git",
+        "checksum": "bc3a3d11ccc1787965c2e5ce90cabca6c1396b9b"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-04_eeg.edf": {
+        "algorithm": "sha256",
+        "checksum": "3f235efb07c6000d9e17dddd40df1052f642391bfbc42720ee83c9b367ff58de"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-05_eeg.json": {
+        "algorithm": "git",
+        "checksum": "6882dcedcaa3ca409c6562afab8af3a2baa43182"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-05_events.json": {
+        "algorithm": "git",
+        "checksum": "1f2c3b75c97e6a90067d7713551b16fd8a20c820"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-05_channels.tsv": {
+        "algorithm": "git",
+        "checksum": "e1069a24fc7e2680852737a012478e969904632f"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-05_events.tsv": {
+        "algorithm": "git",
+        "checksum": "fb6d75bdfb2670a65279fa106a098661baf3dd6d"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-05_eeg.edf": {
+        "algorithm": "sha256",
+        "checksum": "cae67f80bc710b435c322251844a8b01a9388e8b02bdaa29065cef9882e7b8a6"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-06_eeg.json": {
+        "algorithm": "git",
+        "checksum": "56ddb63d50c6957cff147e87def80d0035d2b5b3"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-06_events.json": {
+        "algorithm": "git",
+        "checksum": "1f2c3b75c97e6a90067d7713551b16fd8a20c820"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-06_channels.tsv": {
+        "algorithm": "git",
+        "checksum": "e1069a24fc7e2680852737a012478e969904632f"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-06_events.tsv": {
+        "algorithm": "git",
+        "checksum": "75dcf8347d5c4ed46e6f22640a8088376e1c611b"
+      },
+      "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-06_eeg.edf": {
+        "algorithm": "sha256",
+        "checksum": "7ac3cc155473c57c14b632664984aaa9a9d1910710912677a3213074a5c54765"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-01_eeg.json": {
+        "algorithm": "git",
+        "checksum": "6882dcedcaa3ca409c6562afab8af3a2baa43182"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-01_events.json": {
+        "algorithm": "git",
+        "checksum": "1f2c3b75c97e6a90067d7713551b16fd8a20c820"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-01_channels.tsv": {
+        "algorithm": "git",
+        "checksum": "e1069a24fc7e2680852737a012478e969904632f"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-01_events.tsv": {
+        "algorithm": "git",
+        "checksum": "f756bae8070cddc0aa6d27c02be4a066c62d812b"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-01_eeg.edf": {
+        "algorithm": "sha256",
+        "checksum": "fcb1bcded9325c4499512952a5032a3c52c188493b03c981cfb018a5d428d924"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-02_eeg.json": {
+        "algorithm": "git",
+        "checksum": "6882dcedcaa3ca409c6562afab8af3a2baa43182"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-02_events.json": {
+        "algorithm": "git",
+        "checksum": "1f2c3b75c97e6a90067d7713551b16fd8a20c820"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-02_channels.tsv": {
+        "algorithm": "git",
+        "checksum": "e1069a24fc7e2680852737a012478e969904632f"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-02_events.tsv": {
+        "algorithm": "git",
+        "checksum": "0f43b2a64655aa5d29748ca077a1cb167b5b0ed3"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-02_eeg.edf": {
+        "algorithm": "sha256",
+        "checksum": "ce1d2c737e9597ed25a904024087053577b20ec6e86881e986266690e76c79af"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-03_eeg.json": {
+        "algorithm": "git",
+        "checksum": "56ddb63d50c6957cff147e87def80d0035d2b5b3"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-03_events.json": {
+        "algorithm": "git",
+        "checksum": "1f2c3b75c97e6a90067d7713551b16fd8a20c820"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-03_channels.tsv": {
+        "algorithm": "git",
+        "checksum": "e1069a24fc7e2680852737a012478e969904632f"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-03_events.tsv": {
+        "algorithm": "git",
+        "checksum": "c9c323dcd628413c865b98fb35bc5e02a070beb8"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-03_eeg.edf": {
+        "algorithm": "sha256",
+        "checksum": "89a700df599606962af41386c61f2de58fc744354c19ed1cc7138f1c9e89fbbd"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-04_eeg.json": {
+        "algorithm": "git",
+        "checksum": "fd446f94a65bb1163e3869600c6743f1d3428368"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-04_events.json": {
+        "algorithm": "git",
+        "checksum": "1f2c3b75c97e6a90067d7713551b16fd8a20c820"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-04_channels.tsv": {
+        "algorithm": "git",
+        "checksum": "e1069a24fc7e2680852737a012478e969904632f"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-04_events.tsv": {
+        "algorithm": "git",
+        "checksum": "1b99a98aaac4418c89c25d4463d5f8791fdbb6e6"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-04_eeg.edf": {
+        "algorithm": "sha256",
+        "checksum": "9bfd61842700ee4c89e57a24924ae0af755a3c756a00b33880db1afb2ad206db"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-05_eeg.json": {
+        "algorithm": "git",
+        "checksum": "6882dcedcaa3ca409c6562afab8af3a2baa43182"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-05_events.json": {
+        "algorithm": "git",
+        "checksum": "1f2c3b75c97e6a90067d7713551b16fd8a20c820"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-05_channels.tsv": {
+        "algorithm": "git",
+        "checksum": "e1069a24fc7e2680852737a012478e969904632f"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-05_events.tsv": {
+        "algorithm": "git",
+        "checksum": "c1a41af2f338e6d2e8bbfdd47edfc8f4e32abe60"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-05_eeg.edf": {
+        "algorithm": "sha256",
+        "checksum": "af03bef01e288cacd689c07d840fb141efe96ca73ae8f3a14f9a743082742445"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-06_eeg.json": {
+        "algorithm": "git",
+        "checksum": "fd446f94a65bb1163e3869600c6743f1d3428368"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-06_events.json": {
+        "algorithm": "git",
+        "checksum": "1f2c3b75c97e6a90067d7713551b16fd8a20c820"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-06_channels.tsv": {
+        "algorithm": "git",
+        "checksum": "e1069a24fc7e2680852737a012478e969904632f"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-06_events.tsv": {
+        "algorithm": "git",
+        "checksum": "ec90ecc8934525566dfef4b09526cb021e5e860d"
+      },
+      "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-06_eeg.edf": {
+        "algorithm": "sha256",
+        "checksum": "c499bca72f92d1e6bee5ca847637c89130487f3a78e1462a70d81e8441b709f1"
+      }
+    },
+    "manifest_sha256": "5570544e53ae24a2eed4a38f5808f3b91fef325efb44b95fb44f011ea6b7fa3b",
+    "adapter_source_sha256": "e65c405b15020039eecb986b3b11b989d3505ea57bac6549ea995d1ffc3933b5",
+    "operations": [
+      "EDF unit conversion by MNE",
+      "exact epoch slicing"
+    ],
+    "behavior_values_broadcast_to_trials": false,
+    "models_trained": false
+  }
+}

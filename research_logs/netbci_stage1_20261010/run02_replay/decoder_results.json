@@ -1,0 +1,226 @@
+[
+  {
+    "decoder": "CSP_LDA",
+    "subject": "sub-1",
+    "session": "01",
+    "n_test": 60,
+    "n_runs": 2,
+    "balanced_accuracy": 0.6,
+    "conditional_run_bootstrap_CI95": [
+      0.5,
+      0.7
+    ],
+    "confusion_matrix_rest_right_hand": [
+      [
+        10,
+        20
+      ],
+      [
+        4,
+        26
+      ]
+    ],
+    "n_qc_flagged_query": 0,
+    "qc_unflagged_BA": 0.6,
+    "source_validation_BA": 0.6333333333333333,
+    "train_n": 120,
+    "participant_n": 1,
+    "CI_scope": "conditional run resampling; not participant/generalization CI"
+  },
+  {
+    "decoder": "CSP_LDA",
+    "subject": "sub-1",
+    "session": "02",
+    "n_test": 149,
+    "n_runs": 5,
+    "balanced_accuracy": 0.5,
+    "conditional_run_bootstrap_CI95": [
+      0.5,
+      0.5
+    ],
+    "confusion_matrix_rest_right_hand": [
+      [
+        74,
+        0
+      ],
+      [
+        75,
+        0
+      ]
+    ],
+    "n_qc_flagged_query": 0,
+    "qc_unflagged_BA": 0.5,
+    "source_validation_BA": 0.6333333333333333,
+    "train_n": 120,
+    "participant_n": 1,
+    "CI_scope": "conditional run resampling; not participant/generalization CI"
+  },
+  {
+    "decoder": "CSP_LDA",
+    "subject": "sub-1",
+    "session": "03",
+    "n_test": 150,
+    "n_runs": 5,
+    "balanced_accuracy": 0.5,
+    "conditional_run_bootstrap_CI95": [
+      0.5,
+      0.5
+    ],
+    "confusion_matrix_rest_right_hand": [
+      [
+        75,
+        0
+      ],
+      [
+        75,
+        0
+      ]
+    ],
+    "n_qc_flagged_query": 2,
+    "qc_unflagged_BA": 0.5,
+    "source_validation_BA": 0.6333333333333333,
+    "train_n": 120,
+    "participant_n": 1,
+    "CI_scope": "conditional run resampling; not participant/generalization CI"
+  },
+  {
+    "decoder": "CSP_LDA",
+    "subject": "sub-1",
+    "session": "04",
+    "n_test": 148,
+    "n_runs": 5,
+    "balanced_accuracy": 0.5,
+    "conditional_run_bootstrap_CI95": [
+      0.5,
+      0.5
+    ],
+    "confusion_matrix_rest_right_hand": [
+      [
+        73,
+        0
+      ],
+      [
+        75,
+        0
+      ]
+    ],
+    "n_qc_flagged_query": 30,
+    "qc_unflagged_BA": 0.5,
+    "source_validation_BA": 0.6333333333333333,
+    "train_n": 120,
+    "participant_n": 1,
+    "CI_scope": "conditional run resampling; not participant/generalization CI"
+  },
+  {
+    "decoder": "EEGNet_CPU_3epochs",
+    "subject": "sub-1",
+    "session": "01",
+    "n_test": 60,
+    "n_runs": 2,
+    "balanced_accuracy": 0.5,
+    "conditional_run_bootstrap_CI95": [
+      0.43333333333333335,
+      0.5666666666666667
+    ],
+    "confusion_matrix_rest_right_hand": [
+      [
+        4,
+        26
+      ],
+      [
+        4,
+        26
+      ]
+    ],
+    "n_qc_flagged_query": 0,
+    "qc_unflagged_BA": 0.5,
+    "source_validation_BA": 0.7333333333333334,
+    "train_n": 120,
+    "participant_n": 1,
+    "CI_scope": "conditional run resampling; not participant/generalization CI"
+  },
+  {
+    "decoder": "EEGNet_CPU_3epochs",
+    "subject": "sub-1",
+    "session": "02",
+    "n_test": 149,
+    "n_runs": 5,
+    "balanced_accuracy": 0.5566666666666666,
+    "conditional_run_bootstrap_CI95": [
+      0.4666666666666667,
+      0.6312328767123287
+    ],
+    "confusion_matrix_rest_right_hand": [
+      [
+        37,
+        37
+      ],
+      [
+        29,
+        46
+      ]
+    ],
+    "n_qc_flagged_query": 0,
+    "qc_unflagged_BA": 0.5566666666666666,
+    "source_validation_BA": 0.7333333333333334,
+    "train_n": 120,
+    "participant_n": 1,
+    "CI_scope": "conditional run resampling; not participant/generalization CI"
+  },
+  {
+    "decoder": "EEGNet_CPU_3epochs",
+    "subject": "sub-1",
+    "session": "03",
+    "n_test": 150,
+    "n_runs": 5,
+    "balanced_accuracy": 0.54,
+    "conditional_run_bootstrap_CI95": [
+      0.45999999999999996,
+      0.6133333333333333
+    ],
+    "confusion_matrix_rest_right_hand": [
+      [
+        31,
+        44
+      ],
+      [
+        25,
+        50
+      ]
+    ],
+    "n_qc_flagged_query": 2,
+    "qc_unflagged_BA": 0.5405405405405406,
+    "source_validation_BA": 0.7333333333333334,
+    "train_n": 120,
+    "participant_n": 1,
+    "CI_scope": "conditional run resampling; not participant/generalization CI"
+  },
+  {
+    "decoder": "EEGNet_CPU_3epochs",
+    "subject": "sub-1",
+    "session": "04",
+    "n_test": 148,
+    "n_runs": 5,
+    "balanced_accuracy": 0.44995433789954337,
+    "conditional_run_bootstrap_CI95": [
+      0.38801801801801805,
+      0.5085585585585586
+    ],
+    "confusion_matrix_rest_right_hand": [
+      [
+        18,
+        55
+      ],
+      [
+        26,
+        49
+      ]
+    ],
+    "n_qc_flagged_query": 30,
+    "qc_unflagged_BA": 0.4576271186440678,
+    "source_validation_BA": 0.7333333333333334,
+    "train_n": 120,
+    "participant_n": 1,
+    "CI_scope": "conditional run resampling; not participant/generalization CI"
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "scope": "Read-only independent audit of subset manifest, MNE validation script and documentation",
+  "subset_manifest_matches_official_manifest": true,
+  "subject_edf_file_count": 24,
+  "event_mapping_observed": {
+    "right_hand": 2,
+    "rest": 1
+  },
+  "upstream_loader_observation": {
+    "url": "https://github.com/NeuroTechX/moabb/blob/develop/moabb/datasets/netbci2026.py",
+    "git_blob": "8bb3227e06418642a48af2b22ac2e05615e12a4d",
+    "declared_events": {
+      "right_hand": 1,
+      "rest": 2
+    },
+    "subject_format": "two-digit upstream identifiers, e.g. sub-01"
+  },
+  "provenance_limit": "NEMAR self-reported retrieval tag v1.7.1-11-g9c6b1cc is not a fully resolved exporter implementation; no NETBCI loader found in the corresponding published Git tree. Derivative signal equality and behavior joins remain pending.",
+  "corrected_review_findings": [
+    "Sample origin means zero-based signal sample index; first stored event is 3083, not 0.",
+    "Research protocol now records actual single-subject access validation.",
+    "Exporter and upstream retrieval versions kept separately."
+  ],
+  "training_performed": false
+}

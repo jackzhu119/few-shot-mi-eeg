@@ -1,0 +1,795 @@
+{
+  "status": "cross_version_EEG_run_identity_verified_behavior_run_order_conditional",
+  "subject": "sub-1",
+  "original_subject": "sub-01",
+  "runs_verified": 24,
+  "stored_trials": 717,
+  "signals_compared_or_downloaded": false,
+  "source_versions": {
+    "nemar": "v1.0.0",
+    "dataverse": "2.2"
+  },
+  "subject_session_run_identity_verified": true,
+  "event_task_sequence_verified": true,
+  "upstream_event_semantics": {
+    "right_hand": 1,
+    "rest": 2
+  },
+  "upstream_semantics_source": {
+    "url": "https://github.com/NeuroTechX/moabb/blob/develop/moabb/datasets/netbci2026.py",
+    "git_blob": "8bb3227e06418642a48af2b22ac2e05615e12a4d",
+    "declared_events": {
+      "right_hand": 1,
+      "rest": 2
+    },
+    "subject_format": "two-digit upstream identifiers, e.g. sub-01"
+  },
+  "trial_count_difference_origin": "Already present in original released events/markers; not added by NEMAR conversion",
+  "reason_for_original_trial_omission": "unknown: per-trial rejection logs not released in checked metadata",
+  "published_behavior_rows": 24,
+  "score_run_order_verified": false,
+  "actual_score_denominator_verified": false,
+  "runs_incompatible_with_EEG_trial_denominator": 23,
+  "denominator_numerical_diagnostic": {
+    "tested_range": [
+      1,
+      200
+    ],
+    "compatible_common_denominators": [
+      28,
+      56,
+      84,
+      112,
+      140,
+      168,
+      196
+    ],
+    "interpretation": "Compatibility is not proof; no denominator or hit count selected"
+  },
+  "runs": [
+    {
+      "subject": "sub-1",
+      "original_subject": "sub-01",
+      "session": "01",
+      "run": "01",
+      "eeg_trial_count": 30,
+      "class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "upstream_header_sha256_matches": true,
+      "event_sequence_matches": true,
+      "marker_sequence_matches": true,
+      "original_sampling_frequency_hz": 250.0,
+      "derivative_sampling_frequency_hz": 250.0,
+      "onset_resampling_max_difference_s": 0.0,
+      "original_durations_s": [
+        0.0
+      ],
+      "derivative_durations_s": [
+        5.0
+      ],
+      "behavior_percent": 64.3,
+      "behavior_vector_position": 1,
+      "behavior_source_column": "BCI-Performance-session1",
+      "score_denominator": null,
+      "trial_level_outcomes_available": false,
+      "run_score_order_status": "candidate: score vector has no explicit run IDs",
+      "percentage_compatible_with_eeg_count": false,
+      "online_channel_frequency_features": "[43, 20], [43, 22], [43, 24], [43, 26]"
+    },
+    {
+      "subject": "sub-1",
+      "original_subject": "sub-01",
+      "session": "01",
+      "run": "02",
+      "eeg_trial_count": 30,
+      "class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "upstream_header_sha256_matches": true,
+      "event_sequence_matches": true,
+      "marker_sequence_matches": true,
+      "original_sampling_frequency_hz": 250.0,
+      "derivative_sampling_frequency_hz": 250.0,
+      "onset_resampling_max_difference_s": 0.0,
+      "original_durations_s": [
+        0.0
+      ],
+      "derivative_durations_s": [
+        5.0
+      ],
+      "behavior_percent": 75.0,
+      "behavior_vector_position": 2,
+      "behavior_source_column": "BCI-Performance-session1",
+      "score_denominator": null,
+      "trial_level_outcomes_available": false,
+      "run_score_order_status": "candidate: score vector has no explicit run IDs",
+      "percentage_compatible_with_eeg_count": false,
+      "online_channel_frequency_features": "[43, 20], [43, 22], [43, 24], [43, 26]"
+    },
+    {
+      "subject": "sub-1",
+      "original_subject": "sub-01",
+      "session": "01",
+      "run": "03",
+      "eeg_trial_count": 30,
+      "class_counts": {
+        "rest": 15,
+        "right_hand": 15
+      },
+      "upstream_header_sha256_matches": true,
+      "event_sequence_matches": true,
+      "marker_sequence_matches": true,
+      "original_sampling_frequency_hz": 250.0,
+      "derivative_sampling_frequency_hz": 250.0,
+      "onset_resampling_max_difference_s": 0.0,
+      "original_durations_s": [
+        0.0
+      ],
+      "derivative_durations_s": [
+        5.0
+      ],
+      "behavior_percent": 71.4,
+      "behavior_vector_position": 3,
+      "behavior_source_column": "BCI-Performance-session1",
+      "score_denominator": null,
+      "trial_level_outcomes_available": false,
+      "run_score_order_status": "candidate: score vector has no explicit run IDs",
+      "percentage_compatible_with_eeg_count": false,
+      "online_channel_frequency_features": "[43, 20], [43, 22], [43, 24], [43, 26]"
+    },
+    {
+      "subject": "sub-1",
+      "original_subject": "sub-01",
+      "session": "01",
+      "run": "04",
+      "eeg_trial_count": 30,
+      "class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "upstream_header_sha256_matches": true,
+      "event_sequence_matches": true,
+      "marker_sequence_matches": true,
+      "original_sampling_frequency_hz": 249.89999389648438,
+      "derivative_sampling_frequency_hz": 250.0,
+      "onset_resampling_max_difference_s": 0.0019712411813159747,
+      "original_durations_s": [
+        0.0
+      ],
+      "derivative_durations_s": [
+        5.0
+      ],
+      "behavior_percent": 71.4,
+      "behavior_vector_position": 4,
+      "behavior_source_column": "BCI-Performance-session1",
+      "score_denominator": null,
+      "trial_level_outcomes_available": false,
+      "run_score_order_status": "candidate: score vector has no explicit run IDs",
+      "percentage_compatible_with_eeg_count": false,
+      "online_channel_frequency_features": "[43, 20], [43, 22], [43, 24], [43, 26]"
+    },
+    {
+      "subject": "sub-1",
+      "original_subject": "sub-01",
+      "session": "01",
+      "run": "05",
+      "eeg_trial_count": 30,
+      "class_counts": {
+        "rest": 15,
+        "right_hand": 15
+      },
+      "upstream_header_sha256_matches": true,
+      "event_sequence_matches": true,
+      "marker_sequence_matches": true,
+      "original_sampling_frequency_hz": 250.0,
+      "derivative_sampling_frequency_hz": 250.0,
+      "onset_resampling_max_difference_s": 0.0,
+      "original_durations_s": [
+        0.0
+      ],
+      "derivative_durations_s": [
+        5.0
+      ],
+      "behavior_percent": 75.0,
+      "behavior_vector_position": 5,
+      "behavior_source_column": "BCI-Performance-session1",
+      "score_denominator": null,
+      "trial_level_outcomes_available": false,
+      "run_score_order_status": "candidate: score vector has no explicit run IDs",
+      "percentage_compatible_with_eeg_count": false,
+      "online_channel_frequency_features": "[43, 20], [43, 22], [43, 24], [43, 26]"
+    },
+    {
+      "subject": "sub-1",
+      "original_subject": "sub-01",
+      "session": "01",
+      "run": "06",
+      "eeg_trial_count": 30,
+      "class_counts": {
+        "rest": 15,
+        "right_hand": 15
+      },
+      "upstream_header_sha256_matches": true,
+      "event_sequence_matches": true,
+      "marker_sequence_matches": true,
+      "original_sampling_frequency_hz": 250.0,
+      "derivative_sampling_frequency_hz": 250.0,
+      "onset_resampling_max_difference_s": 0.0,
+      "original_durations_s": [
+        0.0
+      ],
+      "derivative_durations_s": [
+        5.0
+      ],
+      "behavior_percent": 85.7,
+      "behavior_vector_position": 6,
+      "behavior_source_column": "BCI-Performance-session1",
+      "score_denominator": null,
+      "trial_level_outcomes_available": false,
+      "run_score_order_status": "candidate: score vector has no explicit run IDs",
+      "percentage_compatible_with_eeg_count": false,
+      "online_channel_frequency_features": "[43, 20], [43, 22], [43, 24], [43, 26]"
+    },
+    {
+      "subject": "sub-1",
+      "original_subject": "sub-01",
+      "session": "02",
+      "run": "01",
+      "eeg_trial_count": 30,
+      "class_counts": {
+        "rest": 15,
+        "right_hand": 15
+      },
+      "upstream_header_sha256_matches": true,
+      "event_sequence_matches": true,
+      "marker_sequence_matches": true,
+      "original_sampling_frequency_hz": 250.0,
+      "derivative_sampling_frequency_hz": 250.0,
+      "onset_resampling_max_difference_s": 0.0,
+      "original_durations_s": [
+        0.0
+      ],
+      "derivative_durations_s": [
+        5.0
+      ],
+      "behavior_percent": 85.7,
+      "behavior_vector_position": 1,
+      "behavior_source_column": "BCI-Performance-session2",
+      "score_denominator": null,
+      "trial_level_outcomes_available": false,
+      "run_score_order_status": "candidate: score vector has no explicit run IDs",
+      "percentage_compatible_with_eeg_count": false,
+      "online_channel_frequency_features": "[43, 22], [43, 24], [43, 26], [43, 28]"
+    },
+    {
+      "subject": "sub-1",
+      "original_subject": "sub-01",
+      "session": "02",
+      "run": "02",
+      "eeg_trial_count": 30,
+      "class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "upstream_header_sha256_matches": true,
+      "event_sequence_matches": true,
+      "marker_sequence_matches": true,
+      "original_sampling_frequency_hz": 250.0,
+      "derivative_sampling_frequency_hz": 250.0,
+      "onset_resampling_max_difference_s": 0.0,
+      "original_durations_s": [
+        0.0
+      ],
+      "derivative_durations_s": [
+        5.0
+      ],
+      "behavior_percent": 89.3,
+      "behavior_vector_position": 2,
+      "behavior_source_column": "BCI-Performance-session2",
+      "score_denominator": null,
+      "trial_level_outcomes_available": false,
+      "run_score_order_status": "candidate: score vector has no explicit run IDs",
+      "percentage_compatible_with_eeg_count": false,
+      "online_channel_frequency_features": "[43, 22], [43, 24], [43, 26], [43, 28]"
+    },
+    {
+      "subject": "sub-1",
+      "original_subject": "sub-01",
+      "session": "02",
+      "run": "03",
+      "eeg_trial_count": 30,
+      "class_counts": {
+        "rest": 15,
+        "right_hand": 15
+      },
+      "upstream_header_sha256_matches": true,
+      "event_sequence_matches": true,
+      "marker_sequence_matches": true,
+      "original_sampling_frequency_hz": 250.0,
+      "derivative_sampling_frequency_hz": 250.0,
+      "onset_resampling_max_difference_s": 0.0,
+      "original_durations_s": [
+        0.0
+      ],
+      "derivative_durations_s": [
+        5.0
+      ],
+      "behavior_percent": 92.9,
+      "behavior_vector_position": 3,
+      "behavior_source_column": "BCI-Performance-session2",
+      "score_denominator": null,
+      "trial_level_outcomes_available": false,
+      "run_score_order_status": "candidate: score vector has no explicit run IDs",
+      "percentage_compatible_with_eeg_count": false,
+      "online_channel_frequency_features": "[43, 22], [43, 24], [43, 26], [43, 28]"
+    },
+    {
+      "subject": "sub-1",
+      "original_subject": "sub-01",
+      "session": "02",
+      "run": "04",
+      "eeg_trial_count": 29,
+      "class_counts": {
+        "rest": 14,
+        "right_hand": 15
+      },
+      "upstream_header_sha256_matches": true,
+      "event_sequence_matches": true,
+      "marker_sequence_matches": true,
+      "original_sampling_frequency_hz": 250.0,
+      "derivative_sampling_frequency_hz": 250.0,
+      "onset_resampling_max_difference_s": 0.0,
+      "original_durations_s": [
+        0.0
+      ],
+      "derivative_durations_s": [
+        5.0
+      ],
+      "behavior_percent": 92.9,
+      "behavior_vector_position": 4,
+      "behavior_source_column": "BCI-Performance-session2",
+      "score_denominator": null,
+      "trial_level_outcomes_available": false,
+      "run_score_order_status": "candidate: score vector has no explicit run IDs",
+      "percentage_compatible_with_eeg_count": false,
+      "online_channel_frequency_features": "[43, 22], [43, 24], [43, 26], [43, 28]"
+    },
+    {
+      "subject": "sub-1",
+      "original_subject": "sub-01",
+      "session": "02",
+      "run": "05",
+      "eeg_trial_count": 30,
+      "class_counts": {
+        "rest": 15,
+        "right_hand": 15
+      },
+      "upstream_header_sha256_matches": true,
+      "event_sequence_matches": true,
+      "marker_sequence_matches": true,
+      "original_sampling_frequency_hz": 250.0,
+      "derivative_sampling_frequency_hz": 250.0,
+      "onset_resampling_max_difference_s": 0.0,
+      "original_durations_s": [
+        0.0
+      ],
+      "derivative_durations_s": [
+        5.0
+      ],
+      "behavior_percent": 85.7,
+      "behavior_vector_position": 5,
+      "behavior_source_column": "BCI-Performance-session2",
+      "score_denominator": null,
+      "trial_level_outcomes_available": false,
+      "run_score_order_status": "candidate: score vector has no explicit run IDs",
+      "percentage_compatible_with_eeg_count": false,
+      "online_channel_frequency_features": "[43, 22], [43, 24], [43, 26], [43, 28]"
+    },
+    {
+      "subject": "sub-1",
+      "original_subject": "sub-01",
+      "session": "02",
+      "run": "06",
+      "eeg_trial_count": 30,
+      "class_counts": {
+        "rest": 15,
+        "right_hand": 15
+      },
+      "upstream_header_sha256_matches": true,
+      "event_sequence_matches": true,
+      "marker_sequence_matches": true,
+      "original_sampling_frequency_hz": 250.0,
+      "derivative_sampling_frequency_hz": 250.0,
+      "onset_resampling_max_difference_s": 0.0,
+      "original_durations_s": [
+        0.0
+      ],
+      "derivative_durations_s": [
+        5.0
+      ],
+      "behavior_percent": 96.4,
+      "behavior_vector_position": 6,
+      "behavior_source_column": "BCI-Performance-session2",
+      "score_denominator": null,
+      "trial_level_outcomes_available": false,
+      "run_score_order_status": "candidate: score vector has no explicit run IDs",
+      "percentage_compatible_with_eeg_count": false,
+      "online_channel_frequency_features": "[43, 22], [43, 24], [43, 26], [43, 28]"
+    },
+    {
+      "subject": "sub-1",
+      "original_subject": "sub-01",
+      "session": "03",
+      "run": "01",
+      "eeg_trial_count": 30,
+      "class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "upstream_header_sha256_matches": true,
+      "event_sequence_matches": true,
+      "marker_sequence_matches": true,
+      "original_sampling_frequency_hz": 250.0,
+      "derivative_sampling_frequency_hz": 250.0,
+      "onset_resampling_max_difference_s": 0.0,
+      "original_durations_s": [
+        0.0
+      ],
+      "derivative_durations_s": [
+        5.0
+      ],
+      "behavior_percent": 96.4,
+      "behavior_vector_position": 1,
+      "behavior_source_column": "BCI-Performance-session3",
+      "score_denominator": null,
+      "trial_level_outcomes_available": false,
+      "run_score_order_status": "candidate: score vector has no explicit run IDs",
+      "percentage_compatible_with_eeg_count": false,
+      "online_channel_frequency_features": "[43, 24], [43, 26], [43, 28], [43, 30]"
+    },
+    {
+      "subject": "sub-1",
+      "original_subject": "sub-01",
+      "session": "03",
+      "run": "02",
+      "eeg_trial_count": 30,
+      "class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "upstream_header_sha256_matches": true,
+      "event_sequence_matches": true,
+      "marker_sequence_matches": true,
+      "original_sampling_frequency_hz": 250.0,
+      "derivative_sampling_frequency_hz": 250.0,
+      "onset_resampling_max_difference_s": 0.0,
+      "original_durations_s": [
+        0.0
+      ],
+      "derivative_durations_s": [
+        5.0
+      ],
+      "behavior_percent": 82.1,
+      "behavior_vector_position": 2,
+      "behavior_source_column": "BCI-Performance-session3",
+      "score_denominator": null,
+      "trial_level_outcomes_available": false,
+      "run_score_order_status": "candidate: score vector has no explicit run IDs",
+      "percentage_compatible_with_eeg_count": false,
+      "online_channel_frequency_features": "[43, 24], [43, 26], [43, 28], [43, 30]"
+    },
+    {
+      "subject": "sub-1",
+      "original_subject": "sub-01",
+      "session": "03",
+      "run": "03",
+      "eeg_trial_count": 30,
+      "class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "upstream_header_sha256_matches": true,
+      "event_sequence_matches": true,
+      "marker_sequence_matches": true,
+      "original_sampling_frequency_hz": 250.0,
+      "derivative_sampling_frequency_hz": 250.0,
+      "onset_resampling_max_difference_s": 0.0,
+      "original_durations_s": [
+        0.0
+      ],
+      "derivative_durations_s": [
+        5.0
+      ],
+      "behavior_percent": 82.1,
+      "behavior_vector_position": 3,
+      "behavior_source_column": "BCI-Performance-session3",
+      "score_denominator": null,
+      "trial_level_outcomes_available": false,
+      "run_score_order_status": "candidate: score vector has no explicit run IDs",
+      "percentage_compatible_with_eeg_count": false,
+      "online_channel_frequency_features": "[43, 24], [43, 26], [43, 28], [43, 30]"
+    },
+    {
+      "subject": "sub-1",
+      "original_subject": "sub-01",
+      "session": "03",
+      "run": "04",
+      "eeg_trial_count": 30,
+      "class_counts": {
+        "rest": 15,
+        "right_hand": 15
+      },
+      "upstream_header_sha256_matches": true,
+      "event_sequence_matches": true,
+      "marker_sequence_matches": true,
+      "original_sampling_frequency_hz": 250.0,
+      "derivative_sampling_frequency_hz": 250.0,
+      "onset_resampling_max_difference_s": 0.0,
+      "original_durations_s": [
+        0.0
+      ],
+      "derivative_durations_s": [
+        5.0
+      ],
+      "behavior_percent": 85.7,
+      "behavior_vector_position": 4,
+      "behavior_source_column": "BCI-Performance-session3",
+      "score_denominator": null,
+      "trial_level_outcomes_available": false,
+      "run_score_order_status": "candidate: score vector has no explicit run IDs",
+      "percentage_compatible_with_eeg_count": false,
+      "online_channel_frequency_features": "[43, 24], [43, 26], [43, 28], [43, 30]"
+    },
+    {
+      "subject": "sub-1",
+      "original_subject": "sub-01",
+      "session": "03",
+      "run": "05",
+      "eeg_trial_count": 30,
+      "class_counts": {
+        "rest": 15,
+        "right_hand": 15
+      },
+      "upstream_header_sha256_matches": true,
+      "event_sequence_matches": true,
+      "marker_sequence_matches": true,
+      "original_sampling_frequency_hz": 250.0,
+      "derivative_sampling_frequency_hz": 250.0,
+      "onset_resampling_max_difference_s": 0.0,
+      "original_durations_s": [
+        0.0
+      ],
+      "derivative_durations_s": [
+        5.0
+      ],
+      "behavior_percent": 82.1,
+      "behavior_vector_position": 5,
+      "behavior_source_column": "BCI-Performance-session3",
+      "score_denominator": null,
+      "trial_level_outcomes_available": false,
+      "run_score_order_status": "candidate: score vector has no explicit run IDs",
+      "percentage_compatible_with_eeg_count": false,
+      "online_channel_frequency_features": "[43, 24], [43, 26], [43, 28], [43, 30]"
+    },
+    {
+      "subject": "sub-1",
+      "original_subject": "sub-01",
+      "session": "03",
+      "run": "06",
+      "eeg_trial_count": 30,
+      "class_counts": {
+        "rest": 15,
+        "right_hand": 15
+      },
+      "upstream_header_sha256_matches": true,
+      "event_sequence_matches": true,
+      "marker_sequence_matches": true,
+      "original_sampling_frequency_hz": 250.0,
+      "derivative_sampling_frequency_hz": 250.0,
+      "onset_resampling_max_difference_s": 0.0,
+      "original_durations_s": [
+        0.0
+      ],
+      "derivative_durations_s": [
+        5.0
+      ],
+      "behavior_percent": 82.1,
+      "behavior_vector_position": 6,
+      "behavior_source_column": "BCI-Performance-session3",
+      "score_denominator": null,
+      "trial_level_outcomes_available": false,
+      "run_score_order_status": "candidate: score vector has no explicit run IDs",
+      "percentage_compatible_with_eeg_count": false,
+      "online_channel_frequency_features": "[43, 24], [43, 26], [43, 28], [43, 30]"
+    },
+    {
+      "subject": "sub-1",
+      "original_subject": "sub-01",
+      "session": "04",
+      "run": "01",
+      "eeg_trial_count": 30,
+      "class_counts": {
+        "rest": 15,
+        "right_hand": 15
+      },
+      "upstream_header_sha256_matches": true,
+      "event_sequence_matches": true,
+      "marker_sequence_matches": true,
+      "original_sampling_frequency_hz": 250.0,
+      "derivative_sampling_frequency_hz": 250.0,
+      "onset_resampling_max_difference_s": 0.0,
+      "original_durations_s": [
+        0.0
+      ],
+      "derivative_durations_s": [
+        5.0
+      ],
+      "behavior_percent": 85.7,
+      "behavior_vector_position": 1,
+      "behavior_source_column": "BCI-Performance-session4",
+      "score_denominator": null,
+      "trial_level_outcomes_available": false,
+      "run_score_order_status": "candidate: score vector has no explicit run IDs",
+      "percentage_compatible_with_eeg_count": false,
+      "online_channel_frequency_features": "[43, 27], [43, 29], [43, 31], [43, 33]"
+    },
+    {
+      "subject": "sub-1",
+      "original_subject": "sub-01",
+      "session": "04",
+      "run": "02",
+      "eeg_trial_count": 29,
+      "class_counts": {
+        "rest": 14,
+        "right_hand": 15
+      },
+      "upstream_header_sha256_matches": true,
+      "event_sequence_matches": true,
+      "marker_sequence_matches": true,
+      "original_sampling_frequency_hz": 250.0,
+      "derivative_sampling_frequency_hz": 250.0,
+      "onset_resampling_max_difference_s": 0.0,
+      "original_durations_s": [
+        0.0
+      ],
+      "derivative_durations_s": [
+        5.0
+      ],
+      "behavior_percent": 100.0,
+      "behavior_vector_position": 2,
+      "behavior_source_column": "BCI-Performance-session4",
+      "score_denominator": null,
+      "trial_level_outcomes_available": false,
+      "run_score_order_status": "candidate: score vector has no explicit run IDs",
+      "percentage_compatible_with_eeg_count": true,
+      "online_channel_frequency_features": "[43, 27], [43, 29], [43, 31], [43, 33]"
+    },
+    {
+      "subject": "sub-1",
+      "original_subject": "sub-01",
+      "session": "04",
+      "run": "03",
+      "eeg_trial_count": 30,
+      "class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "upstream_header_sha256_matches": true,
+      "event_sequence_matches": true,
+      "marker_sequence_matches": true,
+      "original_sampling_frequency_hz": 250.0,
+      "derivative_sampling_frequency_hz": 250.0,
+      "onset_resampling_max_difference_s": 0.0,
+      "original_durations_s": [
+        0.0
+      ],
+      "derivative_durations_s": [
+        5.0
+      ],
+      "behavior_percent": 96.4,
+      "behavior_vector_position": 3,
+      "behavior_source_column": "BCI-Performance-session4",
+      "score_denominator": null,
+      "trial_level_outcomes_available": false,
+      "run_score_order_status": "candidate: score vector has no explicit run IDs",
+      "percentage_compatible_with_eeg_count": false,
+      "online_channel_frequency_features": "[43, 27], [43, 29], [43, 31], [43, 33]"
+    },
+    {
+      "subject": "sub-1",
+      "original_subject": "sub-01",
+      "session": "04",
+      "run": "04",
+      "eeg_trial_count": 30,
+      "class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "upstream_header_sha256_matches": true,
+      "event_sequence_matches": true,
+      "marker_sequence_matches": true,
+      "original_sampling_frequency_hz": 250.0,
+      "derivative_sampling_frequency_hz": 250.0,
+      "onset_resampling_max_difference_s": 0.0,
+      "original_durations_s": [
+        0.0
+      ],
+      "derivative_durations_s": [
+        5.0
+      ],
+      "behavior_percent": 75.0,
+      "behavior_vector_position": 4,
+      "behavior_source_column": "BCI-Performance-session4",
+      "score_denominator": null,
+      "trial_level_outcomes_available": false,
+      "run_score_order_status": "candidate: score vector has no explicit run IDs",
+      "percentage_compatible_with_eeg_count": false,
+      "online_channel_frequency_features": "[43, 27], [43, 29], [43, 31], [43, 33]"
+    },
+    {
+      "subject": "sub-1",
+      "original_subject": "sub-01",
+      "session": "04",
+      "run": "05",
+      "eeg_trial_count": 30,
+      "class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "upstream_header_sha256_matches": true,
+      "event_sequence_matches": true,
+      "marker_sequence_matches": true,
+      "original_sampling_frequency_hz": 250.0,
+      "derivative_sampling_frequency_hz": 250.0,
+      "onset_resampling_max_difference_s": 0.0,
+      "original_durations_s": [
+        0.0
+      ],
+      "derivative_durations_s": [
+        5.0
+      ],
+      "behavior_percent": 85.7,
+      "behavior_vector_position": 5,
+      "behavior_source_column": "BCI-Performance-session4",
+      "score_denominator": null,
+      "trial_level_outcomes_available": false,
+      "run_score_order_status": "candidate: score vector has no explicit run IDs",
+      "percentage_compatible_with_eeg_count": false,
+      "online_channel_frequency_features": "[43, 27], [43, 29], [43, 31], [43, 33]"
+    },
+    {
+      "subject": "sub-1",
+      "original_subject": "sub-01",
+      "session": "04",
+      "run": "06",
+      "eeg_trial_count": 29,
+      "class_counts": {
+        "right_hand": 15,
+        "rest": 14
+      },
+      "upstream_header_sha256_matches": true,
+      "event_sequence_matches": true,
+      "marker_sequence_matches": true,
+      "original_sampling_frequency_hz": 250.0,
+      "derivative_sampling_frequency_hz": 250.0,
+      "onset_resampling_max_difference_s": 0.0,
+      "original_durations_s": [
+        0.0
+      ],
+      "derivative_durations_s": [
+        5.0
+      ],
+      "behavior_percent": 92.9,
+      "behavior_vector_position": 6,
+      "behavior_source_column": "BCI-Performance-session4",
+      "score_denominator": null,
+      "trial_level_outcomes_available": false,
+      "run_score_order_status": "candidate: score vector has no explicit run IDs",
+      "percentage_compatible_with_eeg_count": false,
+      "online_channel_frequency_features": "[43, 27], [43, 29], [43, 31], [43, 33]"
+    }
+  ]
+}

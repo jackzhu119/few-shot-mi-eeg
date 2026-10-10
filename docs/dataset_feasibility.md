@@ -1,8 +1,79 @@
 # 数据集可行性审计：SHU 与 NETBCI
 
-核查日期：2026-10-09（Asia/Shanghai）。本报告区分原论文陈述、官方发布页/API 元数据、实际读到的小型文件，以及尚未验证的信号文件。**本轮没有下载任何 EEG/MEG/MRI 信号文件，也没有下载大型 ZIP。不能把本报告当成真实数据已接入、预处理已验证或实验已完成的证明。**
+核查日期：2026-10-09（Asia/Shanghai）。本报告区分原论文陈述、官方发布元数据、实际小型文件与实际信号读取。**最新验收仅覆盖 NETBCI2026 的一个受试者：4 个 session、24 个 EDF；未下载全量数据、MEG/MRI 或大型 ZIP，访问验收时未训练模型；2026-10-10已另外执行单受试者冻结baseline最小实验，见[最新真实证据](netbci_stage1_evidence_and_decision.md)。** 第 1–3 节保留初始元数据审计及原始来源信息；当前接入状态以第 0 节为准。
 
-结论：Dataset A 适合作为跨日 few-shot 解码与离线神经表征变化的主验证集；Dataset B 更适合研究真实反馈训练过程的神经变化与行为表现之间的关联。两者都不能单独证明某种解码方法使人类学得更快、减少校准需求或产生长期保持。NETBCI 有实际在线反馈，但每个 session 重新校准在线分类器，且公开的行为侧表是按 run 汇总，必须明确模型适应、人类状态变化与人类学习的区别。
+结论：**第一优先级为 NETBCI2026 / NEMAR `nm000305` v1.0.0；SHU / Ma2022 为第二优先级，原始接入状态 `pending author access`。** NETBCI 已通过单受试者公开访问、校验和及 MNE 读取门槛；本地适配器和原始/derivative 事件对应已验收；行为 run 顺序、评分分母及科学分析仍待验收。两者都不能单独证明某种解码方法使人类学得更快、减少校准需求或产生长期保持。NETBCI 的实验有真实在线反馈，但每个 session 重新校准分类器；公开原始行为侧表按 run 汇总，不能伪造逐 trial 行为。
+
+## 0. 当前优先级与真实读取验收
+
+### NETBCI2026：公开来源、版本、访问与范围
+
+| 项目 | 本轮核实结果 |
+| --- | --- |
+| 官方 NEMAR 入口 | https://www.nemar.org/dataset/nm000305；本环境访问网页返回 HTTP 403，但官方数据 API 和文件端点返回 200 |
+| 可达元数据 | [dataset API](https://data.nemar.org/nm000305/)、[metadata.json](https://data.nemar.org/nm000305/metadata.json)、[固定版本 manifest](https://data.nemar.org/nm000305/v1.0.0/manifest.json) |
+| 固定版本 | **v1.0.0**，API `created_at=2026-10-08 03:46:39`；该字段未注明时区，不换算为实验日期 |
+| 版本 DOI | [10.82901/nemar.nm000305.v1.0.0](https://doi.org/10.82901/nemar.nm000305.v1.0.0)；集合 DOI 为 `10.82901/nemar.nm000305` |
+| 数据许可 | NEMAR metadata 与 dataset_description 一致为 **CC BY 4.0**；使用需署名、链接许可并注明修改。文章/代码的许可另计 |
+| 发布格式 | 根 JSON 为 `DatasetType=derivative`、BIDS 1.9.0、`GeneratedBy=moabb 1.8.0dev0`；真正的信号文件是 **EDF**，README 的 BrainVision 是上游格式说明。sourcedata provenance 的上游检索层另记 `moabb_version_used=v1.7.1-11-g9c6b1cc`、retrieved `2026-10-05`。这是来源自述；该公开 Git 树未见 NETBCI loader，具体导出源码版本尚未完全解析，不混成单一已核实软件版本 |
+| 公开目录 | 19 个受试者、每人 4 session × 6 feedback run；manifest 共 3,582 文件、3,884,172,685 bytes，支持单文件 URL，无需下载归档 |
+| 本轮实际下载 | **仅 `sub-1`**，24 个 EEG EDF 与该受试者 sidecars，加 5 个根/出处文件，共 **169 文件、193,462,298 bytes**；数据在 Git 忽略的 `data/netbci2026/nm000305/v1.0.0/` |
+| 校验 | 全部 169 文件与官方 manifest 校验一致：EDF 为 SHA-256，Git 管理的小文件为 Git blob SHA-1；另存本地 SHA-256。来源快照与收据见 [access_receipt](../research_logs/netbci2026_sources/access_receipt.json)，完整读取审计见 [subject1_audit](../research_logs/netbci2026_subject1_audit.json) |
+| 读取环境 | Python 3.11.16、MNE 1.10.2、NumPy 2.2.6；现有 MOABB 1.4.3 无 NETBCI2026/Ma2022 类，本轮直接用 MNE 读公开 EDF，不把 import 成功当成数据验证 |
+
+原始来源是 Dataverse [10.57745/RBJRC7](https://doi.org/10.57745/RBJRC7) v2.2，包含约 49 GB 的多模态归档及独立行为/问卷侧表。NEMAR 是由该研究派生的 EEG 导出版本；`sub-1/task-imagery/EDF` 与上游 `sub-01/task-MotorImageryRest/BrainVision` 的命名、信号存储、事件映射及参与者字段不同。NEMAR `sourcedata` manifest 只有 456 个 `.vhdr` 头文件，没有配套 `.eeg/.vmrk`，不能作为完整上游 BrainVision 数据读取。**未下载原始大归档，未假定两版本信号逐点相等，不直接混用。**
+
+### sub-1：真实通道、采样与试次数
+
+| BIDS session | 实读 run 数 | 右手 MI | 休息 | 总 trial |
+| --- | ---: | ---: | ---: | ---: |
+| ses-01 | 6 | 90 | 90 | 180 |
+| ses-02 | 6 | 90 | 89 | 179 |
+| ses-03 | 6 | 90 | 90 | 180 |
+| ses-04 | 6 | 90 | 88 | 178 |
+| 合计 | **24** | **360** | **357** | **717** |
+
+实读为 **74 个 EEG 通道、250 Hz**，包括 `C3/Cz/C4`；通道顺序从 EDF 与 channels.tsv 对照，完整名称保存在读取审计，不按推测补齐。EDF 物理单位为 **µV**，MNE 返回 **V**。四个 session 的通道约定需在适配时保持一致。实验的原始采集为 1000 Hz，公开 EEG 已降采样为 250 Hz，不能写成未经处理的采集 raw。
+
+24 个 EDF 全部成功读取，完整信号均为有限值；EDF 与 channels.tsv 的名称、类型、物理单位及采样率相符，通道顺序跨 run/session 一致。全部 717 个 TSV 事件与 EDF annotation 的名称、onset、duration 逐项一致，`mne.events_from_annotations` 生成的 sample/value 与 TSV 相符，5 秒切片均为 1,250 点且不越界。这是格式与完整性验收，不是伪迹清理或科学分析验收。
+
+可重放本地检查：`python scripts/check_netbci_subset.py`（已激活 README 中的冻结环境；不联网、不训练）。可执行伴随记录见 [netbci2026_access_check.ipynb](../notebooks/netbci2026_access_check.ipynb)。
+
+本受试者各 run 实际为 29 或 30 trials，不能硬编码为设计的 32。NEMAR README 的全体 `14,431 trials` 与“375/456 run 保留 32”的陈述未通过全体事件实读验收；本轮只报告上述 **717 个实际存储事件**。后续原始元数据核查确认原始发布已经只有同样的 717 个事件，未见 NEMAR 转换额外丢失事件；原始减少原因未知，不能自动归因为坏 trial 删除。
+
+### 事件时间、标签与格式矛盾
+
+- **真实任务为右手抓握 MI vs 休息**。24 个 run 的 TSV 实际一致为 `trial_type=right_hand, value=2` 和 `trial_type=rest, value=1`，与 README 的 `right_hand=1, rest=2` 相反。事件名与 EDF annotation 对照后使用；数值编码属于文件约定，不能从 README 直接硬编码。
+- NEMAR events JSON 明确 `onset/duration` 单位 **s**、`sample` 索引**以 0 为起点**。首个事件实际为 `onset=12.332 s, sample=3083`，与 EDF **250 Hz** 的 `onset × sfreq` 一致；不是毫秒，也不是 SHU 的 1 起始索引。核验时检查所有事件的样本对齐、递增、持续时间及信号边界。
+- 实际事件 duration 为 **5 s**，对应发布的 target/任务时段。EDF annotation 与 TSV 的名称、onset、duration 可逐 trial 对照；保留 session/run/trial 身份。需要 5 秒切片时按文件采样率得到半开区间，不盲目用包含端点的 `tmax=5` 读取 1,251 点或跨越 run。
+- 事件只有 `right_hand/rest`，**没有已核实的 feedback-onset、逐 trial hit/miss、光标轨迹或响应时间**。论文的反馈时段为 trial 第 3–6 s，不等于文件单独记录了反馈事件；不能生成这些缺失字段。
+- NEMAR 元数据存在额外风险：参与者表把群体均龄 `27.47` 重复给每人且 sex 为 `n/a`，不可用于个体年龄/性别分析；EEG JSON 的 Manufacturer 为 Electrical Geodesics，model/README 却描述 Easycap+MEGIN，需保留矛盾，不能据此猜测硬件改变。`status=good` 也不构成无伪迹证明。
+
+### 后续最小接入与跨版本核查（本轮）
+
+本地适配器输出 **717 × 74 × 1250**，单位 V，保留全部 trial 的 subject/session/run/TSV 行身份；已验证 NPZ 与元数据往返读取。审计见 [adapter audit](../research_logs/netbci2026_adapter_audit.json)。
+
+原始 v2.2 大归档仅通过有上限的 HTTP Range 获取 sub-01 的 120 个小型头文件、事件、marker 和通道元数据：35 个范围请求、1,339,985 bytes（另有初始尾部探针 131,072 bytes），未获取原始信号。成员 CRC 与本地 SHA 保存；**未验证整个 49 GB 归档的 MD5**。见 [范围读取收据](../research_logs/netbci2026_original_metadata_receipt.json)。
+
+24 个原始 `.vhdr` 与 NEMAR provenance 的 SHA256 一致。原始已有同样的 717 个事件；原始 marker 位置从 1 起，TSV sample 从 0 起，onset 为秒。原始 MI=1/Rest=2 与 derivative right_hand=2/rest=1 按语义对齐。原始 ses-01/run-04 为 249.89999389648438 Hz，其余为 250 Hz；导出为 250 Hz，事件样本与实际 onset 的舍入一致。原始 duration=0 的脉冲被导出为 5 秒任务窗，不能当作真实反馈持续时间，也不宣称两版信号逐点相等。
+
+行为候选关联的 **23/24** 个百分比与对应 EEG 的 29/30 个事件作分母不相容；1–200 的候选分母中 28 的多个倍数同样相容，不能据此指定分母或重建 hit/miss。详见 [跨版本核查](../research_logs/netbci2026_behavior_link_verified.json)。[跨会话方案](netbci_cross_session_plan.md)已准备；没有执行真实 EEG 模型训练。
+
+### 在线反馈与纵向行为记录能支持到哪一步
+
+原论文与 NEMAR README 确认采集属于真实在线视觉光标反馈实验；每个 session 另做校准并重新选择在线分类特征。因此这些 EEG 可用于跨日/run 的观察性神经变化分析，但不能把变化直接解释为人类学习，或把离线算法分数当成历史在线行为。
+
+**NEMAR v1.0.0 不包含行为成绩列或独立行为文件。** 其 participants.tsv 只有基本参与者字段，manifest 没有逐 trial 结果/光标文件。原始 Dataverse 的独立 participants.tsv 提供 `BCI-Performance-session1..4`，每格是六个 run 的光标击中目标百分比，并有在线 `ChannelFreq-Features-session1..4`、STAI/VMIQ 等字段。本轮重新实读该 v2.2 文件：file ID **758600**、**8,644 bytes**、19 行、MD5 **b9aa1c07015820e80bc79be6a61f30fc** 与仓储匹配；副本与访问凭证见 [behavior_receipt](../research_logs/netbci2026_sources/original_dataverse/behavior_receipt.json)。participants.json 首次请求 HTTP 503，一次重试后成功；**4,700 bytes** 与官方 MD5 匹配，其字段说明明确成绩为每 run 光标击中目标的 trial 百分比。原文件含 trailing commas，保存原字节，不静默修复或把它说成已通过严格 JSON 验证。
+
+该表具备纵向 **run-level** 行为关联的候选价值。NEMAR sourcedata provenance 将 subject `1` 对应到上游 `sub-01`，24 run 的原始头文件校验、通道和全部事件顺序已交叉验证；行为向量的 run 顺序与评分 trial 分母仍未确认，成绩到 EEG run 的关联仅为候选。原始 `sub-01` 的四个 session 六 run 成绩向量已保存在来源文件，可与后续神经指标在 run 粒度关联；**不能反推或广播成逐 trial hit/miss**。独立训练后保持、无辅助 probe、在家练习依从性和逐 trial 在线输出仍未核实。
+
+### SHU 的当前状态与作者访问清单
+
+**第二优先级，`pending author access`**。MOABB Ma2022 指向 `nm000288`，官方更新注明 publication pending；本轮不继续请求该不可用接口。现有 MOABB 1.4.3 无此类。保留 SHU 五日左右手 MI 的通用接口与研究计划，不把加载器存在或 metadata 列出文件当成已公开可用。
+
+调整优先级前已直接读取 Figshare 原论文 v1 的 `sub-001` 独立 EDF/MAT/events 与 3 个根小文件（18 文件、94,536,106 bytes，官方 MD5 全匹配）；EDF/MAT shape 探针确认 32 通道/250 Hz、MAT trials 100/100/99/99/94。这些历史探针保留，不作为原始 ZIP 解密、NEMAR 公开或 SHU 生产接入完成的证明。未请求、猜测或绕过任何 ZIP 密码；后续不再扩展 SHU 下载。
+
+若后续确需当前原始加密 ZIP，必须向作者取得：**合法下载/使用说明与正确 ZIP 密码、授权适用版本和文件校验清单、EDF/MAT 及 label 对应关系、事件 onset/duration/sample 的真实单位与索引起点、坏 trial 排除与原始 trial/session/day 映射**。若研究需要完整 cue/rest/feedback 时间轴、实际日期或学习行为，还须明确询问这些数据是否保留、是否可提供；不能认为密码本身解决了语义缺失。密码不写入代码或 Git。
 
 ## 1. 证据与核查范围
 
@@ -13,7 +84,7 @@
 - **已确认（实读小文件）**：本轮读取的官方 README、JSON、TSV；已按仓储提供的 MD5 校验，全部匹配。MD5 在此用于核对文件一致性，不替代 TLS 与来源信任。
 - **未知/待核查**：尚未读取实际信号文件、ZIP 内目录或必要原始日志，不能据摘要或文件格式补造字段。
 
-本轮实际读取：
+初始元数据审计读取范围（后续真实 EEG 读取见第 0 节）：
 
 | Dataset | 读取范围 | 明确未读取 |
 | --- | --- | --- |
@@ -120,7 +191,7 @@ onset  duration  trial_type  response_time  sample  value
 
 **已确认（论文）存在真正的在线反馈训练过程**：每个 session 的无反馈校准后，在线 LDA 使用所选 channel/frequency 特征控制光标，反馈时段为 trial 第 3–6 s；MI 对应 up target，rest 对应 down target。首秒为 ISI，随后 5 s target presentation。在线特征使用 0.5 s 窗、每 28 ms 更新的 autoregressive/Maximum Entropy 功率；每个 session 重新选择特征并校准分类器。因此历史在线行为成绩不能被称作“全程固定解码器下的学习效果”。
 
-**已确认（论文）事件表定义**：`_events.tsv` 描述 trigger onset、data sample、trigger channel、trigger value，并由 `event_type` 描述触发含义。**已确认（官方脚本）** [BIDSify.py](https://github.com/mccorsi/NETBCI_data/blob/main/scripts/bidsify/BIDSify.py) 使用 `event_dict={"MI":1,"Rest":2}`。这只是公开转换脚本的映射，**尚未核查 Archive 内实际 events.tsv 的列名、事件 code、时序、run 边界、缺失 trial、单位或反馈/结果事件是否保留**。脚本注释中还提及相对 target onset 的 0–5 s 与结果时段，不能代替对归档事件的检查。
+**已确认（论文）事件表定义**：`_events.tsv` 描述 trigger onset、data sample、trigger channel、trigger value，并由 `event_type` 描述触发含义。**已确认（官方脚本）** [BIDSify.py](https://github.com/mccorsi/NETBCI_data/blob/main/scripts/bidsify/BIDSify.py) 使用 `event_dict={"MI":1,"Rest":2}`。这只是公开转换脚本的映射，**初始审计尚未核查 Archive 事件；后续已核查 sub-01 全部 24 run，结果见第 0 节。未核查其他受试者及逐 trial 行为日志**。脚本注释中还提及相对 target onset 的 0–5 s 与结果时段，不能代替对归档事件的检查。
 
 **已确认（实读小文件）participants TSV**：一行对应一名受试者；含 age/sex/hand、Rosenberg 自尊、EMG28 动机分量表、VMIQ2 三种运动想象能力、各 session `STAI_YA` 焦虑、`BCI-Performance-session1..4`、`ChannelFreq-Features-session1..4`。BCI performance 单元格为 6 个 run 百分比的列表，字典明确含义为每个 run 光标击中目标的 trial 百分比。**不是每个 trial 的 hit/miss、分类输出或光标轨迹。** 应以实际列名为准（官方表格/字典对 `STAI-YA` 与 `STAI_YA` 存在命名差异）。
 
@@ -148,16 +219,26 @@ onset  duration  trial_type  response_time  sample  value
 
 ## 5. 接入前必须完成的检查
 
-1. **固定合法来源和版本**：保存 DOI、文件 ID、版本、许可、字节数与仓储校验和；A 按当前 README 取得作者要求的访问说明/密码。无需将密码写入代码或 Git。
-2. **先读取最小真实信号**：得到合法可用信号后核实 channel names/types、sfreq、unit、reference、EDF/MAT/FIFF/EEG header、轴顺序、坏 trial、session/run 身份；B 核实 `.eeg` 配套 header/marker 和实际目录。
-3. **事件对齐验收**：A 解决 onset/duration/sample 单位矛盾；B 检查真实事件标签、time zero、feedback/result 是否记录及设计 trial 数和实际 trial 数差异。无法确认的字段输出缺失/unknown，禁止生成“合理”伪字段。
+1. **固定合法来源和版本**：第一优先级 B/NEMAR `nm000305 v1.0.0`，保存 DOI、manifest、许可、字节数和校验结果；原始 Dataverse v2.2 单独记录。A 状态 `pending author access`，等待作者合法访问，不再请求 `nm000288` 或尝试 ZIP 密码。
+2. **最小真实信号门槛**：B 的 NEMAR `sub-1` 4 session × 6 run 已实读；本地适配器及原始 `.vmrk` 已验收；伪迹质量、全体一致性及原始 BrainVision `.eeg` 信号仍未验收。A 历史探针不等于当前原始接入完成。
+3. **事件对齐验收**：B 使用实读 `right_hand/rest`、秒单位与 0 起点，保留 run 边界；反馈/结果事件未提供，记录缺失，禁止生成“合理”伪字段。A 的原始事件单位矛盾仍待作者明确。
 4. **行为数据使用**：B 将 run-level 百分比保留在 run 表，禁止广播后当成逐 trial 标签；真实 trial-level hit/miss 必须由原始日志或可靠事件证据证明。A 不创建反馈命中率。
 5. **数据质量与无泄漏**：检查参与者/session 完整性、伪迹、类别计数、时间顺序、删除 trial 的偏差；以 source 训练、target support 校准、target query 测试的隔离评估为准，报告标签预算与随机种子，不用 query 拟合 scaler/选择窗口/阈值。
 6. **主张验收**：离线 smoke/synthetic 数据只验证代码路径；真实数据分析之后才填写结果。人类学习、保持与部署结论需要独立证据，不能从 offline accuracy 倒推。
 
 ## 6. 来源索引
 
-以下均于 2026-10-09 读取；官方信号归档的实际内容尚未查看。
+以下均于 2026-10-09 核查；官方大型信号归档的实际内容尚未查看，NEMAR 单受试者 EDF 已读取。
+
+- B NEMAR 官方入口：https://www.nemar.org/dataset/nm000305
+- B NEMAR 数据 API：https://data.nemar.org/nm000305/
+- B NEMAR 固定版本 DOI：https://doi.org/10.82901/nemar.nm000305.v1.0.0
+- B NEMAR metadata：https://data.nemar.org/nm000305/metadata.json
+- B NEMAR 固定版本 manifest：https://data.nemar.org/nm000305/v1.0.0/manifest.json
+- B NEMAR dataset description：https://data.nemar.org/nm000305/v1.0.0/dataset_description.json
+- B NEMAR README：https://data.nemar.org/nm000305/v1.0.0/README.md
+- B NEMAR 来源 provenance：https://data.nemar.org/nm000305/v1.0.0/sourcedata/sourcedata_provenance.json
+- B MOABB 上游 loader：https://github.com/NeuroTechX/moabb/blob/develop/moabb/datasets/netbci2026.py；审查时 Git blob `8bb3227e06418642a48af2b22ac2e05615e12a4d`，声明 `right_hand=1/rest=2`，不等于 NEMAR 导出的存储数值
 
 - A 原论文：https://www.nature.com/articles/s41597-022-01647-1
 - A 原始数据 DOI：https://doi.org/10.6084/m9.figshare.19228725.v1
@@ -173,3 +254,7 @@ onset  duration  trial_type  response_time  sample  value
 - B 官方代码与 README：https://github.com/mccorsi/NETBCI_data
 - B 事件转换脚本：https://github.com/mccorsi/NETBCI_data/blob/main/scripts/bidsify/BIDSify.py
 - B participants/description/README 小文件：见第 3 节稳定下载 URL。
+
+## 2026-10-10 后续证据
+
+见[stage1完整报告](netbci_stage1_evidence_and_decision.md)：169文件重验、717事件清单、原始匿名scans、两个ZIP目录审计和behavior verified-grain表。Subject/session成绩字段可定位，具体run顺序/分母和trial结果仍unresolved。实际新增CPU探索性表征与最小冻结baseline；未扩大全队列信号、未破解SHU、未修改第一篇仓库。

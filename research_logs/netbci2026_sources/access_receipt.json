@@ -1,0 +1,42 @@
+{
+  "checked_at_utc": "2026-10-09T12:26:28.699712+00:00",
+  "client_timezone": "Asia/Shanghai",
+  "dataset_id": "nm000305",
+  "version": "v1.0.0",
+  "version_doi": "10.82901/nemar.nm000305.v1.0.0",
+  "source_urls": {
+    "landing_page": "https://www.nemar.org/dataset/nm000305",
+    "dataset_api": "https://data.nemar.org/nm000305/",
+    "metadata": "https://data.nemar.org/nm000305/metadata.json",
+    "manifest": "https://data.nemar.org/nm000305/v1.0.0/manifest.json"
+  },
+  "http_checks": {
+    "landing_page_status": 403,
+    "dataset_api_status": 200,
+    "metadata_status": 200,
+    "manifest_status": 200,
+    "downloaded_file_checksums_all_match": true
+  },
+  "scope": {
+    "subject": "sub-1",
+    "sessions": [
+      "01",
+      "02",
+      "03",
+      "04"
+    ],
+    "eeg_files": 24,
+    "downloaded_files": 169,
+    "bytes": 193462298,
+    "whole_dataset_downloaded": false,
+    "trained_model": false,
+    "paid_compute_started": false
+  },
+  "algorithm_note": "EEG sha256 is raw-file SHA-256; git sidecar hash is SHA-1 of git blob header + file bytes, not plain file SHA-1.",
+  "snapshots": {
+    "metadata.json": "f53ea6e578d64a603a6f407c07d781c969ded8d36210036e4385afebe0964d5f",
+    "manifest.json": "7e50f5281e91bec97791a84f5f3dbe20dc443b37c10d4bc6bcda96bed08c092c",
+    "dataset_access.json": "d5d0001f1e1d4d0d1ef78a93c1148f601cd59634da5f9417f77d9704371b37ce",
+    "download_manifest.json": "5570544e53ae24a2eed4a38f5808f3b91fef325efb44b95fb44f011ea6b7fa3b"
+  }
+}

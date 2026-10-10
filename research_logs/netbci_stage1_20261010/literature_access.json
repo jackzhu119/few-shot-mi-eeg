@@ -1,0 +1,41 @@
+[
+  {
+    "id": "L1",
+    "url": "https://www.nature.com/articles/s41467-026-75435-5",
+    "status": 200,
+    "bytes": 577287,
+    "sha256": "79055a190d3900a0c025dcb8c18f8c1576660dd14309e3bb7ab3efa5e31708e3",
+    "local_path": "/workspace/few-shot-mi-eeg/data/literature_stage1/L1.html"
+  },
+  {
+    "id": "L2",
+    "url": "https://www.nature.com/articles/s41593-026-02311-2",
+    "status": 200,
+    "bytes": 462971,
+    "sha256": "6009e5253affd77e6a8562c739f91e424f82dddf2925cdfcff210b9a1a2bcb87",
+    "local_path": "/workspace/few-shot-mi-eeg/data/literature_stage1/L2.html"
+  },
+  {
+    "id": "L3",
+    "url": "https://www.nature.com/articles/s41467-026-76109-y",
+    "status": 200,
+    "bytes": 601137,
+    "sha256": "ba4be2f634e516243cb54e08de3e3c6114e08ceebbe79f4ad56269a01d81e5ca",
+    "local_path": "/workspace/few-shot-mi-eeg/data/literature_stage1/L3.html"
+  },
+  {
+    "id": "L2supp",
+    "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41593-026-02311-2/MediaObjects/41593_2026_2311_MOESM1_ESM.pdf",
+    "status": "failed",
+    "error": "Supplement exceeded initial8MB cap; failed check preserved; subsequent32MB bounded retry succeeded",
+    "error_type": "SizeLimitExceeded"
+  },
+  {
+    "id": "L2supp_retry",
+    "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41593-026-02311-2/MediaObjects/41593_2026_2311_MOESM1_ESM.pdf",
+    "status": 200,
+    "bytes": 27557919,
+    "sha256": "8e434f7665af1af7187c3340a5172a047247fc9736f254becc96f3327c626e84",
+    "note": "initial8MB cap failed; bounded32MB literature-only retry"
+  }
+]

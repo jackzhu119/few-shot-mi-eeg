@@ -4,7 +4,7 @@
 
 核心问题：**How should brain–computer interfaces adapt without compromising human neural skill acquisition?**
 
-本项目从新建空仓库开始，当前阶段建立可复现的离线 EEG 科研基础。仓库名称
+本项目在现有科研分支上开展可复现的纵向 EEG 审计与探索性分析。仓库名称
 `few-shot-mi-eeg` 不限定科学问题为 few-shot 分类，也不代表已提出或验证新算法。
 
 ## 科学边界
@@ -24,8 +24,40 @@
 - 随机种子、配置、依赖版本、源码 commit 和逐受试者结果日志。
 
 具体已运行检查及版本见 [环境报告](research_logs/environment.json) 和
-[验证记录](research_logs/validation.md)。真实数据适配器、完整 EEGNet 训练、候选协同自适应
-方法以及在线人体实验仍须通过 [路线图](ROADMAP.md) 的相应阶段。
+[验证记录](research_logs/validation.md)。已完成 NETBCI2026 单受试者真实 EEG 的访问与
+MNE 读取检查及本地数据适配器验收；完整 EEGNet 训练、候选协同自适应方法以及在线人体实验
+仍须通过 [路线图](ROADMAP.md) 的相应阶段。
+
+## 数据接入优先级与实际验收
+
+1. **NETBCI2026 / NEMAR `nm000305` 为第一优先级。**
+   [官方入口](https://www.nemar.org/dataset/nm000305)、
+   [可达下载 API](https://data.nemar.org/nm000305/)，固定公开快照 **v1.0.0**，
+   DOI [10.82901/nemar.nm000305.v1.0.0](https://doi.org/10.82901/nemar.nm000305.v1.0.0)，
+   数据许可 **CC BY 4.0**。公开目录支持按文件/受试者下载。本轮仅下载 `sub-1` 的
+   24 个 EDF（4 个 session × 6 个 run）及配套元数据，169 个文件共 **193,462,298 bytes**；
+   校验和全部与官方 manifest 匹配。MNE 实读为 **74 EEG 通道、250 Hz**，
+   事件为 **右手运动想象 vs 休息**，四个 session 分别 **180 / 179 / 180 / 178 trials**，
+   合计 **717 trials**。访问与结构验收已完成；2026-10-10 另执行单受试者探索性表征分析、冻结 CSP-LDA 与 3 epoch CPU EEGNet 最小验证，见下方最新报告。
+2. **SHU / Ma2022 为第二优先级，原始接入状态 `pending author access`。**
+   NEMAR `nm000288` publication pending；不继续请求该接口，不尝试破解 ZIP。
+   保留左右手 MI、五日 session 的研究计划与通用数据接口。调整优先级前读取的
+   Figshare v1 单受试者文件保留为历史探针，不作为 SHU 接入验收完成的依据。
+
+NEMAR NETBCI 是经 MOABB 转换的 **EDF/BIDS derivative**，与原始 Dataverse
+[10.57745/RBJRC7](https://doi.org/10.57745/RBJRC7) v2.2 的 BrainVision/MEG/行为侧表
+必须分开记录。实际事件表是 `rest=1, right_hand=2`，与 NEMAR README 中的示例数字
+映射相反；按真实 `trial_type` 与 EDF annotation 验证，不能硬编码 README 的数字。
+`onset/duration` 为秒、`sample` 从 0 起，已按实际采样率与信号边界核验。
+NEMAR 参与者表没有行为成绩；原始官方侧表提供每 session 的六个 run 命中率，
+原始 24 run 与 derivative 的受试者、通道和事件对应已验证；成绩向量的 run 顺序、评分分母、逐 trial 命中和光标轨迹仍需确认。在线反馈实验及 EEG 跨天变化
+不能单独证明人类学习、保持或新算法的因果效果。
+
+详细来源、差异和检查结果见 [数据可行性](docs/dataset_feasibility.md)、
+[来源与校验收据](research_logs/netbci2026_sources/access_receipt.json)、
+[真实读取审计](research_logs/netbci2026_subject1_audit.json) 和
+[可执行核查 notebook](notebooks/netbci2026_access_check.ipynb)。
+本地复核入口为 `python scripts/check_netbci_subset.py --help`；默认不下载整个数据集。
 
 ## 安装与验证
 
@@ -79,6 +111,19 @@ paper/                       写作范围与证据门槛
 
 ## 下一步
 
-先核实一个获准访问的小型真实数据子集，审计标签、时间单位、试次边界、参考、
-通道顺序和反馈状态，冻结受试者/会话划分。随后开展预注册的跨会话频谱、协方差、
-表征和固定解码实验。算法影响人类学习与 retention 的因果问题留待合适的前瞻性设计。
+本地适配器已保留 717 个 trial 的 subject/session/run/TSV 行身份，生成
+`717 × 74 × 1250` 的 V 单位数组并通过保存/读取校验。
+[跨会话分析方案](docs/netbci_cross_session_plan.md)与[划分配置](configs/netbci_cross_session.json)
+已准备并验证分组无重叠；这是分析前冻结方案，不是外部预注册或已执行实验。
+下一步确认行为 run 顺序、评分分母及原始缺失 trial 原因，再开展预定科学分析；
+扩展下载另行决定。SHU 保留 `pending author access`。算法影响人类学习与 retention
+的因果问题留待合适的前瞻性设计。
+
+## 最新科研证据（2026-10-10）
+
+[完整审计、行为映射、Q1–Q7及下一步决策](docs/netbci_stage1_evidence_and_decision.md)；
+[可执行分析](scripts/run_netbci_stage1.py)、[配置](configs/netbci_stage1.json)、
+[已执行 notebook](notebooks/netbci2026_longitudinal_stage1.ipynb)。
+仅1人717trial：会话几何差异可计算重放；CSP后续恒预测rest；短训练EEGNet只验流程。
+行为subject/session可定位，run顺序/分母/trial outcome仍unresolved；不作人类学习因果结论。
+论文工作稿与三篇原始方法精读见 manuscript/README.md（探索性工作稿，未达到投稿证据门槛）。

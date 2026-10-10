@@ -78,6 +78,8 @@ wheel 验证在 `/tmp` 的独立 `/tmp/bci-wheel-env`；该环境先安装由 `u
 
 ## 未验证与仅规划范围
 
+以下为初始基础验证的历史范围；最新 NETBCI2026 单受试者真实读取补充见文末。
+
 实际容器为 Debian 13，5 个可用 CPU，约33.3 GiB RAM；没有 NVIDIA device、
 `nvidia-smi` 或可用 CUDA。Torch 是 `2.8.0+cpu`。没有创建付费资源。
 
@@ -89,3 +91,54 @@ SHU ZIP 密码与事件单位矛盾、NETBCI 大归档/实际事件、订阅论�
 
 本机运行验证、云环境配置草稿、GitHub 提交和产品中的环境发布是四个不同状态。
 保存草稿不执行安装，也不证明新任务恢复已验证；环境发布由用户在产品中完成。
+
+## NETBCI2026 访问与最小真实样本检查（2026-10-09）
+
+- 第一优先级为 NEMAR `nm000305 v1.0.0`，数据 CC BY 4.0，版本 DOI
+  `10.82901/nemar.nm000305.v1.0.0`。官方网页 HTTP 403，数据 API、manifest 与
+  单文件下载均成功。未下载归档或整个数据集。
+- 仅下载 `sub-1` 的 4 session × 6 run：24 EDF 与必要元数据，共 169 文件、
+  193,462,298 bytes。全部与官方 manifest 的 SHA-256/Git blob 校验匹配。
+- `scripts/check_netbci_subset.py` 实际读取所有 24 EDF 和全部信号，验证 74 EEG
+  通道、250 Hz、µV 物理单位/MNE V、跨 run 通道顺序、有限值、717 个事件的
+  annotation/TSV/sample 对齐与持续时间边界。session trials 为 180/179/180/178；
+  右手 MI 360、rest 357；实读 `right_hand=2/rest=1`，不用 README 相反的数字。
+- 固定版为 EDF/BIDS derivative；原始 Dataverse v2.2 BrainVision/MEG/MRI 不混入。
+  NEMAR 无行为成绩字段；原始 participants.tsv（758600）已重新下载并验证 MD5，
+  四 session 各六 run hit-rate 是 run-level。跨版本 join、评分分母、试次排除来源、
+  逐 trial hit/miss/光标、家庭练习剂量与保持指标仍未验收。
+- 审计 JSON：`research_logs/netbci2026_subject1_audit.json`；版本/manifest/文件校验与
+  原始行为出处：`research_logs/netbci2026_sources/`；伴随 notebook 仅重放本地检查。
+  `notebooks/netbci2026_access_check.ipynb` 的 8 个代码单元顺序执行通过、无错误；
+  已保存输出并完成 HTML 渲染检查。Notebook 工具依赖安装在项目外，未改锁定环境。
+- SHU 原始接入为 `pending author access`。调整优先级前的 Figshare v1 单受试者
+  直接文件探针保留在 `research_logs/shu_historical_probe/`，不作为原始 ZIP/NEMAR
+  接入验收。停止 `nm000288` 请求，不尝试解压密码。
+- 本轮没有使用真实 EEG 训练模型、启动大型训练、付费资源或在线人体实验。
+  第一篇 EEG 论文仓库保持只读。
+- 修改后必需软件检查通过：99 项 pytest、`ruff check src tests scripts`、合成 CPU
+  smoke 与 MNE/MOABB synthetic provider；合成输出保留 `synthetic=true` 和
+  `software_validation_only`，不当作 NETBCI 的模型或神经学习结果。
+
+### NETBCI 后续适配与分析方案验收（2026-10-09）
+
+- 本地适配器实际输出 717 × 74 × 1250（V），保留 subject/session/run/TSV 行身份；NPZ 与强制元数据往返校验通过。未过滤、丢弃 trial 或训练模型。
+- 原始 v2.2 归档仅以 HTTP Range 获取 sub-01 的 120 个小型元数据文件，35 个请求合计 1,339,985 bytes，另有初始尾部探针 131,072 bytes。未读取原始信号或完整归档；成员 CRC 已验证，整包 MD5 未验证。
+- 24 个原始头文件 SHA256 与 NEMAR provenance 一致；717 个事件在原始发布已经存在，未见转换额外丢失。原始单 run 249.89999389648438 Hz，其余 250 Hz；事件按实际时间与采样率对齐。原始脉冲 duration=0，derivative 的 5 秒为任务窗约定。
+- 原始成绩与 EEG run 为候选关联：run 向量顺序、评分分母未确认；23/24 个百分比不兼容实际 EEG 事件数作为分母。禁止反推出逐 trial 成功/失败。
+- 跨会话方案及配置已准备，划分覆盖全部 717 trial 且组间无重叠；参考训练/验证/query 为 90/30/60，后续 calibration pool/query 为 90/447。方案没有执行真实模型实验，也没有对外预注册。
+- 软件验证：108 项 pytest 通过（2 个上游弃用警告），ruff 和 git diff --check 通过；合成 CPU smoke 与 MNE/MOABB synthetic provider 通过。合成结果不作为 NETBCI 科学结果。
+- SHU 保持 pending author access，未请求 nm000288、尝试密码或发送邮件；未下载其他受试者信号，未启动付费资源，未修改第一篇仓库。
+
+### 第二篇真实科研阶段与原始方法精读（2026-10-10）
+
+- 重新执行本地信号审计和跨版本事件核查：169文件官方校验、24EDF、717 unique trial，四session180/179/180/178，74通道250Hz。完整事件/源文件清单和run数量表保存于 `research_logs/netbci_stage1_20261010/run01/`。
+- 原始Archive/derivatives仅做有上限Range目录读取，补充4个scans元数据，共1,123,661HTTPbytes，未读取新信号；原始匿名1916日期不当真实日历日期。Behaviour subject/session向量可定位，run顺序/denominator/trial outcome仍unresolved；原始百分比没有转换成hit/miss。
+- 实际执行单受试者PSD/Mu/Beta、协方差/PCA、等类/run数量和粗QC敏感性；55标记trial不等于专家伪迹排除。事件相对PSD没有prestimulus baseline，不命名ERD/ERS。
+- 冻结CSP-LDA及3epoch CPU EEGNet实际执行两次；逐trial预测、特征、几何和结果SHA一致，query前后模型状态不变。CSP后续全rest作为失败保留；EEGNet仅最小流程验证。conditional run-bootstrap不作participant CI。
+- 原pilot validation与train同session不同run；追加独立validation session02/test03–04的角色审计使用同一冻结预测，没有新拟合/选参，但因pilot已观察结果，不冒称前瞻性未查看test。未来完整baseline仍须先冻结新记录的日期分区。
+- 三篇Nature原始方法精读：L1/L3主文、补充/Reporting Summary及小型作者源码，L2订阅预览、完整公开补充和source tables。未绕订阅。L1随机化文字矛盾、长期EEGNet重训；L2符号/源码口径差异；L3demo与完整pipeline边界均保存定位。精读不等于原实验复现。
+- 原创英文工作稿保存于 `manuscript/longitudinal_eeg_working_draft.md`，约6000词，仅单受试者探索性feasibility；作者/机构/伦理secondary-use判定等缺项明确。`docs/personal_paper_research_blueprint.md`区分现在可写的观察层和未来在线因果证据层。
+- 新notebook的4代码单元顺序执行、零error，PSD/几何/BA数值与保存结果一致；两幅实际渲染图已视检，HTML已导出。全页Chromium截图尝试未完成，不能声明HTML全页截图验收。命令入口/template路径失败与恢复记录在notebook_validation.json。
+- 112项pytest通过（2个上游弃用警告），ruff和git diff --check通过；合成CPU smoke、MNE/MOABB synthetic provider通过。没有大型训练、全队列信号下载、付费资源、在线人体试验或第一篇仓库修改。
+- 执行时Git基准/dirty、脚本/配置/数据SHA与实际软件版本保留；新增post-execution source_closure补充脚本依赖，明确不是回填成执行时记录。

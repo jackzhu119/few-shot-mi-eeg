@@ -1,0 +1,33 @@
+{
+  "version": "2.2",
+  "doi": "10.57745/RBJRC7",
+  "file_id": 758600,
+  "source_url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/758600",
+  "official_checksum": {
+    "type": "MD5",
+    "value": "b9aa1c07015820e80bc79be6a61f30fc"
+  },
+  "actual_md5": "b9aa1c07015820e80bc79be6a61f30fc",
+  "checksum_matches": true,
+  "rows": 19,
+  "behavior_grain": "one participant row; six run-level hit-rate percentages per session",
+  "cross_version_behavior_join": "pending validation; provenance maps NEMAR subject 1 to upstream sub-01 but trial/score denominators not reconciled",
+  "other_read_attempts": [
+    {
+      "filename": "participants.json",
+      "status": 503,
+      "note": "No new copy read; no signal archive attempted."
+    }
+  ],
+  "behavior_dictionary": {
+    "file_id": 758595,
+    "source_url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/758595",
+    "size": 4700,
+    "checksum": {
+      "type": "MD5",
+      "value": "41b33bc709e7b36a14faa91da128aaba"
+    },
+    "checksum_matches": true,
+    "note": "Retry succeeded; original JSON syntax preserved without silent repair."
+  }
+}
