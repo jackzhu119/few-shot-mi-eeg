@@ -5,7 +5,7 @@
     "upstream_deprecation_warnings": 2
   },
   "ruff": "passed",
-  "git_diff_check": "passed",
+  "git_diff_check": "passed including committed additions with CRLF-aware TSV attributes",
   "synthetic_smoke": "software_validation_passed",
   "MNE_MOABB_synthetic_provider": "passed",
   "real_EEG_training": "CSP-LDA and fixed3epoch CPU EEGNet only",
@@ -19,5 +19,6 @@
     "behavior run order/denominator unresolved",
     "original pilot same-session validation; supplemental date roles retrospective",
     "HTML full-page screenshot not completed; native figures inspected"
-  ]
+  ],
+  "staged_whitespace_initial_failure": "TSV CRLF reported as trailing whitespace; fixed per-file Git attributes without changing any audited source/result byte"
 }

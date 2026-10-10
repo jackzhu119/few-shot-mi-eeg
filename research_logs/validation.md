@@ -142,3 +142,5 @@ SHU ZIP 密码与事件单位矛盾、NETBCI 大归档/实际事件、订阅论�
 - 新notebook的4代码单元顺序执行、零error，PSD/几何/BA数值与保存结果一致；两幅实际渲染图已视检，HTML已导出。全页Chromium截图尝试未完成，不能声明HTML全页截图验收。命令入口/template路径失败与恢复记录在notebook_validation.json。
 - 112项pytest通过（2个上游弃用警告），ruff和git diff --check通过；合成CPU smoke、MNE/MOABB synthetic provider通过。没有大型训练、全队列信号下载、付费资源、在线人体试验或第一篇仓库修改。
 - 执行时Git基准/dirty、脚本/配置/数据SHA与实际软件版本保留；新增post-execution source_closure补充脚本依赖，明确不是回填成执行时记录。
+
+- 最终新增文件的Git whitespace检查初次将20,477个合法TSV CRLF行尾报为空白；追加`.gitattributes`保留TSV原字节并启用cr-at-eol，提交diff复查零问题。没有重写或归一化校验文件字节。
