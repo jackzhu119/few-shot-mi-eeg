@@ -1,0 +1,1023 @@
+{
+  "status": "actual_data_summary_completed",
+  "synthetic": false,
+  "config_sha256": "2bead8bccd0396e0358bb8167324621e80d48087ba011a334224f73962d10904",
+  "script_sha256": "9a0233006f4c52dd42374496ff3d5aedcddfb7ef67fd3437bba7134f5f93f0ab",
+  "input_sha256": {
+    "config": {
+      "path": "/workspace/few-shot-mi-eeg/configs/netbci_cohort_full_windows_20261010.json",
+      "sha256": "2bead8bccd0396e0358bb8167324621e80d48087ba011a334224f73962d10904"
+    },
+    "summary_script": {
+      "path": "/workspace/few-shot-mi-eeg/scripts/summarize_netbci_cohort.py",
+      "sha256": "9a0233006f4c52dd42374496ff3d5aedcddfb7ef67fd3437bba7134f5f93f0ab"
+    },
+    "behavior_source": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci2026_sources/original_dataverse/participants.tsv",
+      "sha256": "57b39accf7014966627788b88f89e0a8735dd24b8af99b81ce58f22398998f09"
+    },
+    "behavior_dictionary": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci2026_sources/original_dataverse/participants.json",
+      "sha256": "94a6e5c5628e2bdb244247d2392d66cfbf6eabead258e777a5c3558b63f5123a"
+    },
+    "behavior_receipt": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci2026_sources/original_dataverse/behavior_receipt.json",
+      "sha256": "8a21adfc24ffb95b960af294e0f8fdccb74a68ce7c584a57319fca99d1328484"
+    },
+    "sub-1/analysis_receipt": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-1/run01/analysis_receipt.json",
+      "sha256": "736fb595aea170880ab962e9ed9342cf0983aafd8a886dd6da736a85e3690ae4"
+    },
+    "sub-1/audit": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-1/audit.json",
+      "sha256": "f8d76923c70d462d621fa2986664cf2af72a699c5cf45339402a35661fc69b07"
+    },
+    "sub-1/audit/adapter_receipt.json": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-1/adapter_receipt.json",
+      "sha256": "d3cf1ae63bd93aa1e8bf991c26ce18f1a95b9c910ddeb54bfecf5c9cde318415"
+    },
+    "sub-1/audit/events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-1/events.tsv",
+      "sha256": "e482b31dd51160bc32afcb06161603706225494be4d87abdfa2e708dabcc7e15"
+    },
+    "sub-1/audit/run_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-1/run_inventory.tsv",
+      "sha256": "9e32356d1ca43a661b27ee50feb60947ad4776795a2a5090e1cacca3cbbe29d3"
+    },
+    "sub-1/audit/source_events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-1/source_events.tsv",
+      "sha256": "e482b31dd51160bc32afcb06161603706225494be4d87abdfa2e708dabcc7e15"
+    },
+    "sub-1/audit/excluded_events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-1/excluded_events.tsv",
+      "sha256": "95ee7ede711ef35e737109cfaa7056825ed0bc9338c49f7da5093bf53576cdf7"
+    },
+    "sub-1/spectra.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-1/run01/spectra.tsv",
+      "sha256": "3db8c3a26f596e000b02c11930b22cdbd4e7d3f04c13893817fa1f7dd5dbe233"
+    },
+    "sub-1/run_features.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-1/run01/run_features.tsv",
+      "sha256": "f4bc2bb600d2ddc760cd5a6bf5aeecc082cc36506bb063c3d42b25d21800ed5d"
+    },
+    "sub-1/trial_features.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-1/run01/trial_features.tsv",
+      "sha256": "8c0fc6dca41f4aa0f54d6d44db267b96a530eea971b5e853c4e76ef0ede1b56f"
+    },
+    "sub-1/matched_spectral_contrasts.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-1/run01/matched_spectral_contrasts.tsv",
+      "sha256": "9b2d77884764669fe0911af7d5002cf1b4d3a1fb56c1709e24b01959b308a927"
+    },
+    "sub-1/failures.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-1/run01/failures.json",
+      "sha256": "3f9b86b0c8754c193799e9fd34ea3f908a0146f7b8f32dbd9429335d9c1d756d"
+    },
+    "sub-1/CSP_LDA_model_audit.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-1/run01/CSP_LDA_model_audit.json",
+      "sha256": "44f7628b5a76528dcfdfc860b78b65c1f0d63900cf2aaedb0800376abe0d00b3"
+    },
+    "sub-1/event_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-1/run01/event_inventory.tsv",
+      "sha256": "b3994fc82ff162f09dce968481e29dd947cf335327f1b5c8465d1644f307815c"
+    },
+    "sub-1/reference_geometry.npz": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-1/run01/reference_geometry.npz",
+      "sha256": "dada630d233d56a3315426f44de1e402a73d13d4136b125f663d307ac210d0f8"
+    },
+    "sub-1/matched_geometry.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-1/run01/matched_geometry.tsv",
+      "sha256": "cc3e5fa43032feee18d452686ec861ef114bdbcd4ccd3f33175ee3e7a0d51a6b"
+    },
+    "sub-1/transform_audit.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-1/run01/transform_audit.json",
+      "sha256": "da92d17e1df209ab5ac8a3a574ad5a0ead41a28a50e540fb9752daba0e19d44e"
+    },
+    "sub-1/partitions.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-1/run01/partitions.json",
+      "sha256": "99957a216f151d7f66d4f444dc456b7a87d41bcdcf869a24f7cfa7c495be4796"
+    },
+    "sub-1/decoder_results.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-1/run01/decoder_results.json",
+      "sha256": "57bc0494538f28f20edae8be384b184c52628b69cab49f9b3df260dc831e1b4c"
+    },
+    "sub-1/matched_variants_status.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-1/run01/matched_variants_status.json",
+      "sha256": "b3e1923b7be397a33b9a468c87571d4f203462f3711a18a6b46bd06f922051b6"
+    },
+    "sub-1/predictions.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-1/run01/predictions.tsv",
+      "sha256": "52ad7fe90f39ed33cccdc70bda4eca39940853544453045866c39a7bfc704b8b"
+    },
+    "sub-1/csp_lda.pkl": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-1/run01/csp_lda.pkl",
+      "sha256": "85a66d7dccc5a9fbbe0a329f725b0cb286cf6b992d7205eae593dd9eaf14fc7c"
+    },
+    "sub-1/run_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-1/run01/run_inventory.tsv",
+      "sha256": "ba3ba4bc5b752a4ed2ca0d148e164805730cec503744cc9b9138e438d890171c"
+    },
+    "sub-2/analysis_receipt": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-2/run01/analysis_receipt.json",
+      "sha256": "6e6c73c055519ba1d42f50ffbfa465e76009d77246c49af595209839ebbb3fe8"
+    },
+    "sub-2/audit": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-2/audit.json",
+      "sha256": "e306c5293aca25fa4a23446ff60e29e184fc52a3f26e6b79bd9ba843af503bf7"
+    },
+    "sub-2/audit/adapter_receipt.json": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-2/adapter_receipt.json",
+      "sha256": "3ea940e69b92111df119a9512182f914440af811edc2afb18d3c3328e6c1b7e2"
+    },
+    "sub-2/audit/events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-2/events.tsv",
+      "sha256": "f54c9ef7f6a355453b487505e8e1ac9a79049d88902487e9e4e3758515f40d69"
+    },
+    "sub-2/audit/run_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-2/run_inventory.tsv",
+      "sha256": "27080636c3065689d45f7c0032cc1bf665cb6d18a11cfa384f5f9ced7cd1f8b2"
+    },
+    "sub-2/audit/source_events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-2/source_events.tsv",
+      "sha256": "f54c9ef7f6a355453b487505e8e1ac9a79049d88902487e9e4e3758515f40d69"
+    },
+    "sub-2/audit/excluded_events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-2/excluded_events.tsv",
+      "sha256": "95ee7ede711ef35e737109cfaa7056825ed0bc9338c49f7da5093bf53576cdf7"
+    },
+    "sub-2/spectra.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-2/run01/spectra.tsv",
+      "sha256": "6bbe2806a294a24669c1a556485909eef1a9f87e145d114b28c20a77137c50ec"
+    },
+    "sub-2/run_features.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-2/run01/run_features.tsv",
+      "sha256": "fc22a090b631e095f3744c302a3cf99274a76c2301c0f880bcc3c83e19730755"
+    },
+    "sub-2/trial_features.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-2/run01/trial_features.tsv",
+      "sha256": "3f3b74ae01c36f5459afc12563599718f5657f7145e83fc56e297cded095797b"
+    },
+    "sub-2/matched_spectral_contrasts.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-2/run01/matched_spectral_contrasts.tsv",
+      "sha256": "c8268ec7c7d0fef0a6d1ec7ef0b317fa131a48abb1ecaf7379e058bd71e12884"
+    },
+    "sub-2/failures.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-2/run01/failures.json",
+      "sha256": "3afc70e21bb335afdc6a08c971a2baa12ce6c4c15ab7197d41ff06efbb968f8c"
+    },
+    "sub-2/CSP_LDA_model_audit.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-2/run01/CSP_LDA_model_audit.json",
+      "sha256": "4c671796b1a2d4426e0d968e6ab15ccf2131b749114de7c0ed60fe84a07f32ab"
+    },
+    "sub-2/event_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-2/run01/event_inventory.tsv",
+      "sha256": "c50d17e8c5febfc7a156120bb11a35d79b8a8c1e28525b40f30c899a642fd347"
+    },
+    "sub-2/reference_geometry.npz": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-2/run01/reference_geometry.npz",
+      "sha256": "5b8cb05bf0f56677ac685c2877443694c61fea5ebd66cd3d4077b99c42149f33"
+    },
+    "sub-2/matched_geometry.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-2/run01/matched_geometry.tsv",
+      "sha256": "41abae6c72c3f8d1766418a13af55491afe64a4099c59e6a6afe9c87c8161fc4"
+    },
+    "sub-2/transform_audit.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-2/run01/transform_audit.json",
+      "sha256": "077170b35407e66c9808bc70d7f196295c276e014959147e5157aeda0e734b83"
+    },
+    "sub-2/partitions.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-2/run01/partitions.json",
+      "sha256": "d2bd985e59502425dc66a2c5334d2b512ae1c9f24f05cb2e3dadc36657cdf024"
+    },
+    "sub-2/decoder_results.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-2/run01/decoder_results.json",
+      "sha256": "9d12f9156a94bf1f93a74d7f5a0e0ffab79a0cc59c4ec92641735d2d1a74bcfb"
+    },
+    "sub-2/matched_variants_status.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-2/run01/matched_variants_status.json",
+      "sha256": "b3e1923b7be397a33b9a468c87571d4f203462f3711a18a6b46bd06f922051b6"
+    },
+    "sub-2/predictions.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-2/run01/predictions.tsv",
+      "sha256": "a5b7a4bd8506958bd99d0013169e2e560ae7963d928c7b725eba5f58a9adf8c9"
+    },
+    "sub-2/csp_lda.pkl": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-2/run01/csp_lda.pkl",
+      "sha256": "10f5576986b0ed33f8242394236168f77a4157c46c185d989c804eac81193d63"
+    },
+    "sub-2/run_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-2/run01/run_inventory.tsv",
+      "sha256": "563bb2b783ac3b29698f0d945fd362a35cd82d46e8697a9902887893d7c2a258"
+    },
+    "sub-3/analysis_receipt": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-3/run01/analysis_receipt.json",
+      "sha256": "8e21d5eed83543ea40e66159a1691c1b42ed000ea6c06f6777c844fa5c85eb10"
+    },
+    "sub-3/audit": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-3/audit.json",
+      "sha256": "2fe7b988e58a80c697e9c7475059cfdbc55ac78aefb33eecdeccb1f09e8c40e9"
+    },
+    "sub-3/audit/adapter_receipt.json": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-3/adapter_receipt.json",
+      "sha256": "2eb38134bfa0f719fec9721113de2c53f41aa5dc33a096480fbc4dfb685b1307"
+    },
+    "sub-3/audit/events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-3/events.tsv",
+      "sha256": "3b8495198b4dd2342ac62cb603b0aeb105405e4704b23b6a3123beaac8e51a2f"
+    },
+    "sub-3/audit/run_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-3/run_inventory.tsv",
+      "sha256": "13fe8827aa762d9c23038c09639181a0d294ce567ed8024437926827a0faaad4"
+    },
+    "sub-3/audit/source_events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-3/source_events.tsv",
+      "sha256": "7c914c401b75912c5d56a9fa635998a02d833c21474f76f2e5e53b4bbb5e4d0a"
+    },
+    "sub-3/audit/excluded_events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-3/excluded_events.tsv",
+      "sha256": "24984357e4ce5c5830a7492521bb1d7336e878c87a37178f7f61bf835207966e"
+    },
+    "sub-3/spectra.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-3/run01/spectra.tsv",
+      "sha256": "bb5e75b392f142d14503d2cbf624a4bc56648c214d80d56450ca5b8084953028"
+    },
+    "sub-3/run_features.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-3/run01/run_features.tsv",
+      "sha256": "cebfd9f2b179b0eb08d96908c210246b19dc4a955c7c5715754aa7a28d1ee001"
+    },
+    "sub-3/trial_features.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-3/run01/trial_features.tsv",
+      "sha256": "fd2dbdf2a48d55a7978b47f9a760ae6132dec3eb090da65cec170251fc914bcb"
+    },
+    "sub-3/matched_spectral_contrasts.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-3/run01/matched_spectral_contrasts.tsv",
+      "sha256": "96ab800c580d9d98fa6b9ff7a8e283e3713c0eed0d1ef59aa9b2d4b4595e04ae"
+    },
+    "sub-3/failures.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-3/run01/failures.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "sub-3/CSP_LDA_model_audit.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-3/run01/CSP_LDA_model_audit.json",
+      "sha256": "2caa2745e471d1c8624aa5ef37a97639af4013ddbc849c6116f88d8c2bb9ba48"
+    },
+    "sub-3/event_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-3/run01/event_inventory.tsv",
+      "sha256": "6f7a7c896fdcfe57e7ebb2cf6185977227f209a86b0ba7a8f9a302ee28349135"
+    },
+    "sub-3/reference_geometry.npz": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-3/run01/reference_geometry.npz",
+      "sha256": "13c4102bd25513ee9410f9227ce0bd5227da636b37d0dbebd230a2de9227baf1"
+    },
+    "sub-3/matched_geometry.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-3/run01/matched_geometry.tsv",
+      "sha256": "5950741b97c0d801ac25bdfd1fbca45dddb33cee24b453a7fe2338c900d2a95c"
+    },
+    "sub-3/transform_audit.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-3/run01/transform_audit.json",
+      "sha256": "ce290d2ab7eaa4c15db2b572734a904a0cb581842b148c160a632d57b87b0951"
+    },
+    "sub-3/partitions.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-3/run01/partitions.json",
+      "sha256": "88888a7e80bc8d561722a876cf240b8a01d4f56902341f7a1685b550fe792852"
+    },
+    "sub-3/decoder_results.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-3/run01/decoder_results.json",
+      "sha256": "c03d1c33faf8187e2732a735604775c5a0c6a63395564a8e5fc144f3d4d91053"
+    },
+    "sub-3/matched_variants_status.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-3/run01/matched_variants_status.json",
+      "sha256": "b3e1923b7be397a33b9a468c87571d4f203462f3711a18a6b46bd06f922051b6"
+    },
+    "sub-3/predictions.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-3/run01/predictions.tsv",
+      "sha256": "df7d8dc8dbb0fa4b64bd2c3d9bee98c7841aad21892eef0e7c3c730ce958d6d2"
+    },
+    "sub-3/csp_lda.pkl": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-3/run01/csp_lda.pkl",
+      "sha256": "6dc52003efac541f2b56050c50f2a8d92292af83d7d8b4c96fda63a6cf1e1067"
+    },
+    "sub-3/run_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-3/run01/run_inventory.tsv",
+      "sha256": "555ddf902c2a7618d085d006a2a712afb8c5e21275f2ce99c11dc29050889e83"
+    },
+    "sub-4/analysis_receipt": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-4/run01/analysis_receipt.json",
+      "sha256": "bcc960df5ca544f5ae38db4a8b119a83a8d2215088367c4837e1573c1d2410b5"
+    },
+    "sub-4/audit": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-4/audit.json",
+      "sha256": "3ffe5731da614e24a2f4357a71f98e00f06c5c6efd03065f3583074080f8d6ac"
+    },
+    "sub-4/audit/adapter_receipt.json": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-4/adapter_receipt.json",
+      "sha256": "8976dc25aed7dc56ac4f9a5c8d4e9bf18b67aa6942ec733f3cabca5757b64f8f"
+    },
+    "sub-4/audit/events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-4/events.tsv",
+      "sha256": "574c33765037e45399cf667ff0d3b3f936e64666e832207c58d66ab986e8b902"
+    },
+    "sub-4/audit/run_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-4/run_inventory.tsv",
+      "sha256": "92fff9ddf1a70eb9b1699d5956f95d5db63810c40d94cdfaf3d9ba6f286713de"
+    },
+    "sub-4/audit/source_events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-4/source_events.tsv",
+      "sha256": "574c33765037e45399cf667ff0d3b3f936e64666e832207c58d66ab986e8b902"
+    },
+    "sub-4/audit/excluded_events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-4/excluded_events.tsv",
+      "sha256": "95ee7ede711ef35e737109cfaa7056825ed0bc9338c49f7da5093bf53576cdf7"
+    },
+    "sub-4/spectra.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-4/run01/spectra.tsv",
+      "sha256": "823e778867f5bc0a0bcc0613328d757f3d4c939f13626fe8bd6ee7a037c01a94"
+    },
+    "sub-4/run_features.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-4/run01/run_features.tsv",
+      "sha256": "74f23af69615a6a4933072ae7fb355605c42a37f3e5eb7ffb89ab0b03faf6f64"
+    },
+    "sub-4/trial_features.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-4/run01/trial_features.tsv",
+      "sha256": "0badd7798a2e1a150e1592aeb7e086a6973b34d64c4033bd7dc57bdb22afbd01"
+    },
+    "sub-4/matched_spectral_contrasts.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-4/run01/matched_spectral_contrasts.tsv",
+      "sha256": "3ac4fafdd6b96e1db44a656d4c8e5c25bf69f1443b8f2fdb6805b2e932bd7299"
+    },
+    "sub-4/failures.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-4/run01/failures.json",
+      "sha256": "0e42de870f0f8bccb6951da76b24f24e917f34baf2144a464ff12f185c3ebcd1"
+    },
+    "sub-4/CSP_LDA_model_audit.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-4/run01/CSP_LDA_model_audit.json",
+      "sha256": "33a787c4bdd2dfc82b9e6345bbaa7e4b5c34226311bfedb6880add386e276863"
+    },
+    "sub-4/event_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-4/run01/event_inventory.tsv",
+      "sha256": "7ad5a56b35848bc3ec51d240dbb0b6dee8a2d92384a3ee0eb4f4eaebef73ca3a"
+    },
+    "sub-4/reference_geometry.npz": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-4/run01/reference_geometry.npz",
+      "sha256": "1f4fa9ce8317badec12e079a0b1fb2ed9694748ae346b53a25c6fc094c2d3971"
+    },
+    "sub-4/matched_geometry.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-4/run01/matched_geometry.tsv",
+      "sha256": "8eb77a1f93153f48446e7e39f668ee6e5cb982f85d22db0bd57d3455d1f8a129"
+    },
+    "sub-4/transform_audit.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-4/run01/transform_audit.json",
+      "sha256": "8563fe69b222214d555cf8dcf347efc8e219d1d4e8d6443c9435116fa25ed404"
+    },
+    "sub-4/partitions.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-4/run01/partitions.json",
+      "sha256": "1d196d42a553e2a0158bf227677aea1662b82780a68ba9d50a57b5fc495eb522"
+    },
+    "sub-4/decoder_results.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-4/run01/decoder_results.json",
+      "sha256": "514dd2fbe63d0fd3de1efd8d2616ef6e7df55cc8b1a3af2c345ce51dd0ad25a7"
+    },
+    "sub-4/matched_variants_status.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-4/run01/matched_variants_status.json",
+      "sha256": "b3e1923b7be397a33b9a468c87571d4f203462f3711a18a6b46bd06f922051b6"
+    },
+    "sub-4/predictions.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-4/run01/predictions.tsv",
+      "sha256": "2bc68200149e27285ec207d6b49ab3f060fb3237c2c84b309266e7021ae12a15"
+    },
+    "sub-4/csp_lda.pkl": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-4/run01/csp_lda.pkl",
+      "sha256": "ac99693d29937994f88c6db1388388fdb5c47b98d0bfd2dacf52720ab000444d"
+    },
+    "sub-4/run_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-4/run01/run_inventory.tsv",
+      "sha256": "9e0f6a4c7e82096c0737b078242af4be92262944ec36506bfc68d2b9da7a9608"
+    },
+    "sub-5/analysis_receipt": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-5/run01/analysis_receipt.json",
+      "sha256": "af80a6911741acd685fbcd6386254bc83f73fe1d6dcb0cba42ce687f03a365e5"
+    },
+    "sub-5/audit": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-5/audit.json",
+      "sha256": "ff5947a70da0efdbdad6fefee6627897dc67132ba55d9d8b3eb20397fbc1d69b"
+    },
+    "sub-5/audit/adapter_receipt.json": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-5/adapter_receipt.json",
+      "sha256": "ce6f57ad6e3b634d2c37d8539aa56b4e2936612c5143b11cd9e36c06114bc6d6"
+    },
+    "sub-5/audit/events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-5/events.tsv",
+      "sha256": "81ee760d3151986c256402a02fc0fdc82cd4728a878e70e8088cea1fb94ec092"
+    },
+    "sub-5/audit/run_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-5/run_inventory.tsv",
+      "sha256": "7c058a7a54532a7dd7d22b3ffd9bc3c5cb62d6ed657c1fb309413cab4339381b"
+    },
+    "sub-5/audit/source_events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-5/source_events.tsv",
+      "sha256": "81ee760d3151986c256402a02fc0fdc82cd4728a878e70e8088cea1fb94ec092"
+    },
+    "sub-5/audit/excluded_events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-5/excluded_events.tsv",
+      "sha256": "95ee7ede711ef35e737109cfaa7056825ed0bc9338c49f7da5093bf53576cdf7"
+    },
+    "sub-5/spectra.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-5/run01/spectra.tsv",
+      "sha256": "57168de947c426ba1e7be7dfffc9d3efd6b767146477a9dfe2ce56799861390f"
+    },
+    "sub-5/run_features.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-5/run01/run_features.tsv",
+      "sha256": "1850ea2d980b11d7bb52719c3ad9dc97e260ebbb9094b938d1c41baedcd27bec"
+    },
+    "sub-5/trial_features.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-5/run01/trial_features.tsv",
+      "sha256": "16e2428625842566a9c1ae27506576100dc23ab9dc2fa42bd48396f1f872dc4b"
+    },
+    "sub-5/matched_spectral_contrasts.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-5/run01/matched_spectral_contrasts.tsv",
+      "sha256": "d8ea9ae324dece28d5a0d42e89717878084aa07a31ddf271266fd29b57093f52"
+    },
+    "sub-5/failures.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-5/run01/failures.json",
+      "sha256": "2af2b910a3190abf25fd7c95d56048974b7a402fdd16c0193cbe42ead6462380"
+    },
+    "sub-5/CSP_LDA_model_audit.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-5/run01/CSP_LDA_model_audit.json",
+      "sha256": "10f6f570f4e15ff83624d44c4356b69c575df409a6ab0936193286534d5c1fd4"
+    },
+    "sub-5/event_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-5/run01/event_inventory.tsv",
+      "sha256": "664eb73d129cab3df4e13e997ca745e86bb85469c502d455e3aae0e9495d8265"
+    },
+    "sub-5/reference_geometry.npz": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-5/run01/reference_geometry.npz",
+      "sha256": "4fcc885905084c7fbee8a545f61b38a9c27e4f2a7f4cf55db05d146e4eb13741"
+    },
+    "sub-5/matched_geometry.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-5/run01/matched_geometry.tsv",
+      "sha256": "5436937db42ca1effdd53a4425cd39906529747a5cd0fa29b0b5b720ed1f6069"
+    },
+    "sub-5/transform_audit.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-5/run01/transform_audit.json",
+      "sha256": "0b95b6cc3aad35279803b407a2fe9fdc21d96275d696f74476b0e5b8ed1ac48b"
+    },
+    "sub-5/partitions.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-5/run01/partitions.json",
+      "sha256": "810caf528e1ad0efdd8e360a7d166d16f506d8f0ac52671a9b8c463605b490e6"
+    },
+    "sub-5/decoder_results.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-5/run01/decoder_results.json",
+      "sha256": "f108142a5433fe4d7928cc0f04058ef06df8bcaf9b406d17c216e6a09a1bd8f2"
+    },
+    "sub-5/matched_variants_status.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-5/run01/matched_variants_status.json",
+      "sha256": "b3e1923b7be397a33b9a468c87571d4f203462f3711a18a6b46bd06f922051b6"
+    },
+    "sub-5/predictions.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-5/run01/predictions.tsv",
+      "sha256": "c93396a82ca189dbafe78ec45c174cfad4c54597d505cc7423692e8e8229cf3e"
+    },
+    "sub-5/csp_lda.pkl": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-5/run01/csp_lda.pkl",
+      "sha256": "03c2b109254ae697a50e67c7b1b099329ce0681325461403e625d98ee9e56a2f"
+    },
+    "sub-5/run_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-5/run01/run_inventory.tsv",
+      "sha256": "62902c434f48c82b7250de8a1f735c81fa36eaf22e64f29ea6c27cc45398c67c"
+    },
+    "sub-6/analysis_receipt": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-6/run01/analysis_receipt.json",
+      "sha256": "34ae21695a1adfddf9d9109b4c08d6dd3d884d8f3322bc89f8946cefc434d139"
+    },
+    "sub-6/audit": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-6/audit.json",
+      "sha256": "28a231cf3526bdce897de222c886d9725faed15aa336c4a1e4dcaee6c46dd679"
+    },
+    "sub-6/audit/adapter_receipt.json": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-6/adapter_receipt.json",
+      "sha256": "259a6d7e9cbc90fc4f3491424d0a9921354ad9751cdf3aac17769665c396d77a"
+    },
+    "sub-6/audit/events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-6/events.tsv",
+      "sha256": "d97a854be823bc2b310b86694144d1a68bf4dd0e9daa6c64cde009be65ee9b2a"
+    },
+    "sub-6/audit/run_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-6/run_inventory.tsv",
+      "sha256": "b494b3991ff45c836361643fd9c07e2dba0afc9929aecb83a5ba62718971d5e9"
+    },
+    "sub-6/audit/source_events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-6/source_events.tsv",
+      "sha256": "d97a854be823bc2b310b86694144d1a68bf4dd0e9daa6c64cde009be65ee9b2a"
+    },
+    "sub-6/audit/excluded_events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-6/excluded_events.tsv",
+      "sha256": "95ee7ede711ef35e737109cfaa7056825ed0bc9338c49f7da5093bf53576cdf7"
+    },
+    "sub-6/spectra.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-6/run01/spectra.tsv",
+      "sha256": "e7c39607bd0dc023da91bc1ce8ccdc2c496ada355ad066d9adf2de04f3e48314"
+    },
+    "sub-6/run_features.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-6/run01/run_features.tsv",
+      "sha256": "c8efe931682b85429891c1ee668743aa904ff92d573d1f2d809236408d04d3d4"
+    },
+    "sub-6/trial_features.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-6/run01/trial_features.tsv",
+      "sha256": "6f197827e6ee574ba76761fe5994eacc1dc07a70b5a279cbb0e6275113607ee7"
+    },
+    "sub-6/matched_spectral_contrasts.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-6/run01/matched_spectral_contrasts.tsv",
+      "sha256": "87d215db4100927b25077be8bcad5e1e5d0e38a09a38e57572e3b382b620b11e"
+    },
+    "sub-6/failures.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-6/run01/failures.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "sub-6/CSP_LDA_model_audit.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-6/run01/CSP_LDA_model_audit.json",
+      "sha256": "35da2c7b2954743d3726d380f7ac24b5a75b0c74e0d0a1702df90966a87d8953"
+    },
+    "sub-6/event_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-6/run01/event_inventory.tsv",
+      "sha256": "5caa9a1268666bad52f480d7045e803ec2c8f62e685346213d6d30a23d76bc99"
+    },
+    "sub-6/reference_geometry.npz": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-6/run01/reference_geometry.npz",
+      "sha256": "a42e95eeed5bd3bac99c6c89215d9547a7c484a475204663b09aa2ec45b0330c"
+    },
+    "sub-6/matched_geometry.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-6/run01/matched_geometry.tsv",
+      "sha256": "5b0ed84a702f32f8847bf084904eac389922c73daa46a7299b39eded7954103c"
+    },
+    "sub-6/transform_audit.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-6/run01/transform_audit.json",
+      "sha256": "7656203b60b186e633809eb2922c2d8c74770416e36bd3f5d05c2164f4006007"
+    },
+    "sub-6/partitions.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-6/run01/partitions.json",
+      "sha256": "004335973acae2c2d06d5f57429b54f3f3623ece1247fa5ed784ddd35f5200dd"
+    },
+    "sub-6/decoder_results.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-6/run01/decoder_results.json",
+      "sha256": "c80d9735db3c19ceb51f37ea9a81f998c93b0292ae1a03fb103d97ffc48af764"
+    },
+    "sub-6/matched_variants_status.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-6/run01/matched_variants_status.json",
+      "sha256": "b3e1923b7be397a33b9a468c87571d4f203462f3711a18a6b46bd06f922051b6"
+    },
+    "sub-6/predictions.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-6/run01/predictions.tsv",
+      "sha256": "322d83cd44932a91cc978500662eaee16c2bb1e983afb10c527c012153245712"
+    },
+    "sub-6/csp_lda.pkl": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-6/run01/csp_lda.pkl",
+      "sha256": "40347b73f8e6aae234a92565fef632e205f36c2ce9862d645e0aed545018ce0a"
+    },
+    "sub-6/run_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-6/run01/run_inventory.tsv",
+      "sha256": "54c230702669a68e18e5d627d5a82ca98bfc4615644d8c85a5ea121ad5d1e80d"
+    },
+    "sub-7/analysis_receipt": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-7/run01/analysis_receipt.json",
+      "sha256": "faec695b615c2984a5bd8e97c461d0350cc70c38183ca3fad8ac60fda478083a"
+    },
+    "sub-7/audit": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-7/audit.json",
+      "sha256": "534856bf0b5964d66f9b9b31a1174bd1e052252e99f10399b2fbd233665621f1"
+    },
+    "sub-7/audit/adapter_receipt.json": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-7/adapter_receipt.json",
+      "sha256": "8c080ff5272653c2f3fb2193cc3a76ed656d920262facd1e3537f85cf2c7dbed"
+    },
+    "sub-7/audit/events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-7/events.tsv",
+      "sha256": "1c30b5e68d9f0084a158c1adcb8650a03cce2c1dc6fb12136d4c808227a5c1f1"
+    },
+    "sub-7/audit/run_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-7/run_inventory.tsv",
+      "sha256": "e802ae0806a6ea85710c41f58eabb4e797d4266c31fadb7b96f2854431b0a374"
+    },
+    "sub-7/audit/source_events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-7/source_events.tsv",
+      "sha256": "1c30b5e68d9f0084a158c1adcb8650a03cce2c1dc6fb12136d4c808227a5c1f1"
+    },
+    "sub-7/audit/excluded_events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-7/excluded_events.tsv",
+      "sha256": "95ee7ede711ef35e737109cfaa7056825ed0bc9338c49f7da5093bf53576cdf7"
+    },
+    "sub-7/spectra.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-7/run01/spectra.tsv",
+      "sha256": "3f0e9b7b53bb28c4d678b79a3312839c8998eb32f4f7b345508a4c568546b5a3"
+    },
+    "sub-7/run_features.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-7/run01/run_features.tsv",
+      "sha256": "d653f697297e63ab4ddb28c83d5fdf2aeecb9bdd677f2d8706fb7426e5fadf3b"
+    },
+    "sub-7/trial_features.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-7/run01/trial_features.tsv",
+      "sha256": "a3e65d0d5af2073cecf94be2b78437faa39c02e6b3df34d2feaff27803a0a1c3"
+    },
+    "sub-7/matched_spectral_contrasts.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-7/run01/matched_spectral_contrasts.tsv",
+      "sha256": "d276931656ed66b333c42c1eedd55bc87341edd855e91e19c7fa7b8ad4c90a1a"
+    },
+    "sub-7/failures.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-7/run01/failures.json",
+      "sha256": "0e42de870f0f8bccb6951da76b24f24e917f34baf2144a464ff12f185c3ebcd1"
+    },
+    "sub-7/CSP_LDA_model_audit.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-7/run01/CSP_LDA_model_audit.json",
+      "sha256": "8053977af916185acc7b3064108e96745ad8d2352abae0ec4e41b1061b09ddc9"
+    },
+    "sub-7/event_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-7/run01/event_inventory.tsv",
+      "sha256": "daed7077282fb9a5f98bfda4631599507f844f1f09ae455bfcea8203db7bf657"
+    },
+    "sub-7/reference_geometry.npz": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-7/run01/reference_geometry.npz",
+      "sha256": "a6082df0edf68c7533c9860fe532c918229eca1a81828cd309b93dd2a4353497"
+    },
+    "sub-7/matched_geometry.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-7/run01/matched_geometry.tsv",
+      "sha256": "10ec10c88609fd67e5e8316a3f6a4850aba72244232eea895e568a8daee548a1"
+    },
+    "sub-7/transform_audit.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-7/run01/transform_audit.json",
+      "sha256": "7f10b9334bacdfbfb130af17de4137aba395f72d9ea79b2c7b72bc1b8f9bd242"
+    },
+    "sub-7/partitions.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-7/run01/partitions.json",
+      "sha256": "9f678582bb70393e61450114643a73c925b5549be1c9993b33a2d12395e82cf5"
+    },
+    "sub-7/decoder_results.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-7/run01/decoder_results.json",
+      "sha256": "04ddff5c5889fed1aa0e6fce6b69a7aca18f31982c72d8d0dae324dd6a0319ff"
+    },
+    "sub-7/matched_variants_status.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-7/run01/matched_variants_status.json",
+      "sha256": "b3e1923b7be397a33b9a468c87571d4f203462f3711a18a6b46bd06f922051b6"
+    },
+    "sub-7/predictions.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-7/run01/predictions.tsv",
+      "sha256": "0d80a83870c41ec274c1ccea98e713f700ce278e8451fd408f988934a57c5134"
+    },
+    "sub-7/csp_lda.pkl": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-7/run01/csp_lda.pkl",
+      "sha256": "4d8fe77b05aa0d586886a7a5c479bcd01bad2333252df6680a7990dbe69a8b4b"
+    },
+    "sub-7/run_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-7/run01/run_inventory.tsv",
+      "sha256": "1e5475fc68931a1f923b584a5a234811bf7680a6e00b739efb396024f713975c"
+    },
+    "sub-8/analysis_receipt": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-8/run01/analysis_receipt.json",
+      "sha256": "4ef4204c0e3870df84d2362d9e8ce4b847e917e80c28ea0e35586fdd3a490f40"
+    },
+    "sub-8/audit": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-8/audit.json",
+      "sha256": "bde0dc835d8ac399ca1263ac02d660fda7eae3d181f7682764acebcc6404b923"
+    },
+    "sub-8/audit/adapter_receipt.json": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-8/adapter_receipt.json",
+      "sha256": "8c1752ed4f56e348e086c559e3d5b470ebc629bf12622da95c903f1adf7e3f99"
+    },
+    "sub-8/audit/events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-8/events.tsv",
+      "sha256": "064adf50a734703a27f38195da5600cada350dfd8eec33fb3fa0425019b75de8"
+    },
+    "sub-8/audit/run_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-8/run_inventory.tsv",
+      "sha256": "d6f4003cf465b39f718c68559c737efaa22e951b4c7a8b1a869bda662dc7efed"
+    },
+    "sub-8/audit/source_events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-8/source_events.tsv",
+      "sha256": "064adf50a734703a27f38195da5600cada350dfd8eec33fb3fa0425019b75de8"
+    },
+    "sub-8/audit/excluded_events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-8/excluded_events.tsv",
+      "sha256": "95ee7ede711ef35e737109cfaa7056825ed0bc9338c49f7da5093bf53576cdf7"
+    },
+    "sub-8/spectra.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-8/run01/spectra.tsv",
+      "sha256": "494268cfc2608dcdd5859363d21c82de7ddef08ad5e87aa3c99ddd41ef9406d2"
+    },
+    "sub-8/run_features.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-8/run01/run_features.tsv",
+      "sha256": "4fd087453a015a3a1206e2a2f5dcc4067472746f6d8358fa447a1dfdc616a001"
+    },
+    "sub-8/trial_features.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-8/run01/trial_features.tsv",
+      "sha256": "d45707f49130fe502cfbf9dd015e94f2e9bc0557f94f20201a0f9a09e5e2a64c"
+    },
+    "sub-8/matched_spectral_contrasts.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-8/run01/matched_spectral_contrasts.tsv",
+      "sha256": "e7307ad33b3c7b19c7dc846a00174aae7d0d4adad678675d1ad7899e08fa9fd7"
+    },
+    "sub-8/failures.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-8/run01/failures.json",
+      "sha256": "7f58efa7f75c4ee2042b11ab979c5a5df7e82f2b2fef39dce8252d320c819611"
+    },
+    "sub-8/CSP_LDA_model_audit.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-8/run01/CSP_LDA_model_audit.json",
+      "sha256": "49a1633ead1714fc7d7f0a15e02ac2f44ef5d5c9ca768644f690c87521604250"
+    },
+    "sub-8/event_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-8/run01/event_inventory.tsv",
+      "sha256": "5e1a3f9b223e3a3a5169790d535a41163a6091d4a6f94e61465ee5cdb542a015"
+    },
+    "sub-8/reference_geometry.npz": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-8/run01/reference_geometry.npz",
+      "sha256": "25b2ff5c43778382e3e23df5198294f54d22a4e076770e81cc1e48e4946fb910"
+    },
+    "sub-8/matched_geometry.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-8/run01/matched_geometry.tsv",
+      "sha256": "ed68bdc3d3262cd4421008906fb583568c50ff7a0c54be521a7e397f73a42a27"
+    },
+    "sub-8/transform_audit.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-8/run01/transform_audit.json",
+      "sha256": "831604f00f7c40b14be35b6b9ac0de4f6c918811d4f3cdf6a73ca41a28e24b6d"
+    },
+    "sub-8/partitions.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-8/run01/partitions.json",
+      "sha256": "4b8a6c7567e6d0a5d167cdd06af902bab2c0d851e5d070428b5adf5887046012"
+    },
+    "sub-8/decoder_results.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-8/run01/decoder_results.json",
+      "sha256": "033dfa047f1049a8f24bde4b47ce2ec87f425f1b8f166c7a9df4320ecb50bfbe"
+    },
+    "sub-8/matched_variants_status.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-8/run01/matched_variants_status.json",
+      "sha256": "6d6c694e48045162e828be9636128d4193c4ac3342eb1c11362353ba460cf0d1"
+    },
+    "sub-8/predictions.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-8/run01/predictions.tsv",
+      "sha256": "bb35d7551b33972b0d8ac1ec51993d875865356e3f0b755dc2a85708a90496af"
+    },
+    "sub-8/csp_lda.pkl": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-8/run01/csp_lda.pkl",
+      "sha256": "cfefa3a026fb535b82050e092a6823b19f4b54847209bb65e421d0fbb2438d7e"
+    },
+    "sub-8/run_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-8/run01/run_inventory.tsv",
+      "sha256": "b91f156bf4ca209a67ea7e8a6c43cbaa41d539dba5e360f157f9f99af9628f7c"
+    },
+    "sub-9/analysis_receipt": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-9/run01/analysis_receipt.json",
+      "sha256": "936d012d9e8e55df9fefb287d63541a04114bf51cef1c3632ca03729f31f15a0"
+    },
+    "sub-9/audit": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-9/audit.json",
+      "sha256": "25a70e3257a908556ca25810202ce712ba610573f1f22ca18b107fdd8b87073b"
+    },
+    "sub-9/audit/adapter_receipt.json": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-9/adapter_receipt.json",
+      "sha256": "bfa007f13ae512cd8598a7b1e72c1adeb36c36f7ddf2b980ef3c903b5d77f93f"
+    },
+    "sub-9/audit/events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-9/events.tsv",
+      "sha256": "5de99f96cb35e797059f9eef793e373b1545291b9d7cc62903c263a69106ad1b"
+    },
+    "sub-9/audit/run_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-9/run_inventory.tsv",
+      "sha256": "4396338a906ae048ac7df90fc66b24aba47e2f5a91642b56af124bbdcf56dd3e"
+    },
+    "sub-9/audit/source_events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-9/source_events.tsv",
+      "sha256": "5de99f96cb35e797059f9eef793e373b1545291b9d7cc62903c263a69106ad1b"
+    },
+    "sub-9/audit/excluded_events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-9/excluded_events.tsv",
+      "sha256": "95ee7ede711ef35e737109cfaa7056825ed0bc9338c49f7da5093bf53576cdf7"
+    },
+    "sub-9/spectra.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-9/run01/spectra.tsv",
+      "sha256": "4b0005f34fef5016958e62a68fb9516f81368c5306a2beab8bfd0aaa0a108e7c"
+    },
+    "sub-9/run_features.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-9/run01/run_features.tsv",
+      "sha256": "f1a3b57b9ebe49025b7ac5d144e72a1b1a59264e953fa6e9f138c9c74330133a"
+    },
+    "sub-9/trial_features.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-9/run01/trial_features.tsv",
+      "sha256": "5992679c7d10684ea350e562d5340f63fd5ebbc9234b10ca61caa3924895682b"
+    },
+    "sub-9/matched_spectral_contrasts.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-9/run01/matched_spectral_contrasts.tsv",
+      "sha256": "ba49a941d1af43fe728e3e4e135c92b114de83bef79ef5c7ac986a8a4582d7ef"
+    },
+    "sub-9/failures.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-9/run01/failures.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "sub-9/CSP_LDA_model_audit.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-9/run01/CSP_LDA_model_audit.json",
+      "sha256": "2dc1390498d4337bc760a5dfb03cac0b83a22084dd4e430d63fa78f589cfb6e3"
+    },
+    "sub-9/event_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-9/run01/event_inventory.tsv",
+      "sha256": "5998750f0cef4a568b08786b72b6e1e86c1893576f1d66049e9aa5caa451d5e2"
+    },
+    "sub-9/reference_geometry.npz": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-9/run01/reference_geometry.npz",
+      "sha256": "adb7a4fd37a3182e9eb053dd56d179ee4658798b5db479342e30bf74c2609e9b"
+    },
+    "sub-9/matched_geometry.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-9/run01/matched_geometry.tsv",
+      "sha256": "fa5eb738b94c72ea304a5ea4395026a435b8078b3ba4fff006d944a0272aac10"
+    },
+    "sub-9/transform_audit.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-9/run01/transform_audit.json",
+      "sha256": "b8f5736fb1d67bd549ffe2d5b20d1b433bc0e600840a8092c7b87434b58f385d"
+    },
+    "sub-9/partitions.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-9/run01/partitions.json",
+      "sha256": "7e1bea0029e5a459446bdbf2aecca86d5fd67c6e1d00258c55164853b48da53a"
+    },
+    "sub-9/decoder_results.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-9/run01/decoder_results.json",
+      "sha256": "71ab17032265c87028c382304c2ac1876a71e8e03eebfd96112f2956d7888c58"
+    },
+    "sub-9/matched_variants_status.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-9/run01/matched_variants_status.json",
+      "sha256": "b3e1923b7be397a33b9a468c87571d4f203462f3711a18a6b46bd06f922051b6"
+    },
+    "sub-9/predictions.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-9/run01/predictions.tsv",
+      "sha256": "e0feda14839e580c5517ad388004d4a9678430862950bc85fc76ccbda09a920a"
+    },
+    "sub-9/csp_lda.pkl": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-9/run01/csp_lda.pkl",
+      "sha256": "252a4c9d124f1e2cc6462a703049da8fa4b5dbb3e5ccaf3466c4b681173bc635"
+    },
+    "sub-9/run_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-9/run01/run_inventory.tsv",
+      "sha256": "ec91596c915684583ebcb944952740f8166c024072ea5d9fcdd24bc8c3355ce1"
+    },
+    "sub-10/analysis_receipt": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-10/run01/analysis_receipt.json",
+      "sha256": "19d8569b586cfc9631b3e99ed12c0f2f929365cb049b01df756db65e399e9247"
+    },
+    "sub-10/audit": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-10/audit.json",
+      "sha256": "2e77becb8f618e9696d3452affa09bdd5203614b244a207c9176476f7e146520"
+    },
+    "sub-10/audit/adapter_receipt.json": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-10/adapter_receipt.json",
+      "sha256": "139d33497d4d3f3930d98eeece688727fd8a2ca8d1a402abfaba8c8a5b34c798"
+    },
+    "sub-10/audit/events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-10/events.tsv",
+      "sha256": "b81936ab3c5ceedc9c4d1f4426e14a27e9e599edf99f444cd1363b0117649298"
+    },
+    "sub-10/audit/run_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-10/run_inventory.tsv",
+      "sha256": "9a199bf1364313470593009a32a72ce98f2c2d7a5fa2e09b707096194ebec047"
+    },
+    "sub-10/audit/source_events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-10/source_events.tsv",
+      "sha256": "b81936ab3c5ceedc9c4d1f4426e14a27e9e599edf99f444cd1363b0117649298"
+    },
+    "sub-10/audit/excluded_events.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_resume_20261010/audits_full_windows/sub-10/excluded_events.tsv",
+      "sha256": "95ee7ede711ef35e737109cfaa7056825ed0bc9338c49f7da5093bf53576cdf7"
+    },
+    "sub-10/spectra.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-10/run01/spectra.tsv",
+      "sha256": "5971a1fac5244b6dd8bf1cea3b70ee0bf9f4b6dde35cf0ba9bb6f8d36f9ac9da"
+    },
+    "sub-10/run_features.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-10/run01/run_features.tsv",
+      "sha256": "95506b3febd311962146f0c2888183564aa4e89ea0819ea8c13b840d50a53a33"
+    },
+    "sub-10/trial_features.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-10/run01/trial_features.tsv",
+      "sha256": "84c6c6431bad840d061d8056850ea7479e011fdc3960fd7716b56795c600a268"
+    },
+    "sub-10/matched_spectral_contrasts.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-10/run01/matched_spectral_contrasts.tsv",
+      "sha256": "ba3b38f0383707021fc4ce3e95d29b5d69c7000d780e34fc6289cc679d5c8eac"
+    },
+    "sub-10/failures.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-10/run01/failures.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "sub-10/CSP_LDA_model_audit.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-10/run01/CSP_LDA_model_audit.json",
+      "sha256": "1e71a3d8717abd2193d0490c9463a695a0226363962f7f2f5f1b016a97c87d24"
+    },
+    "sub-10/event_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-10/run01/event_inventory.tsv",
+      "sha256": "a4928d9c95f75facce57f2f9f53963b340743526bee62e20d1f467f38116b329"
+    },
+    "sub-10/reference_geometry.npz": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-10/run01/reference_geometry.npz",
+      "sha256": "d62e01e9f725caa02ca1a29d76f5a5b995aa8cef6f70cd834ae401c36880e1d2"
+    },
+    "sub-10/matched_geometry.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-10/run01/matched_geometry.tsv",
+      "sha256": "75793c89020b752a0cd05422303945b1d2cc40d0d4cee3225eb942cba273bdcb"
+    },
+    "sub-10/transform_audit.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-10/run01/transform_audit.json",
+      "sha256": "b37d3473ea00fe176c565564023f3c80f311b5ea0a2f1f3639d3e6b304e01c2c"
+    },
+    "sub-10/partitions.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-10/run01/partitions.json",
+      "sha256": "96728eab29541888e1213b78e6b40e47e6610aeaa7d201ee0cef3b3e900bd906"
+    },
+    "sub-10/decoder_results.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-10/run01/decoder_results.json",
+      "sha256": "58667b9ac74e1cfa9e0be3889c8ad522355776e767cdef30ae76fdca4cb6bd01"
+    },
+    "sub-10/matched_variants_status.json": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-10/run01/matched_variants_status.json",
+      "sha256": "b3e1923b7be397a33b9a468c87571d4f203462f3711a18a6b46bd06f922051b6"
+    },
+    "sub-10/predictions.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-10/run01/predictions.tsv",
+      "sha256": "19eb80312dd240f476c1a11278e14ba582e017c99b8fbf093d7f15a38a017171"
+    },
+    "sub-10/csp_lda.pkl": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-10/run01/csp_lda.pkl",
+      "sha256": "fcefc0075dd169251482ebf494d37ac97e12dd8d37fb42ad1b3ebf4d4f56cb81"
+    },
+    "sub-10/run_inventory.tsv": {
+      "path": "/workspace/few-shot-mi-eeg/results/netbci_cohort_resume_20261010/sub-10/run01/run_inventory.tsv",
+      "sha256": "376638abaed53ca96bf79f5cebc1b2b88e169fa46fd5b5dc417f62820f9a11ee"
+    }
+  },
+  "output_sha256": {
+    "cohort_matched_statistics.tsv": "a52c24af7a3d3a57a262ba29e19716e470659136783d65146d023c9bdd8121c5",
+    "cohort_paired_changes.tsv": "36c2721017413c493b02a1f9af5db923db5f15ea77f34e34a2b6756fa3d3c2d5",
+    "cohort_session_statistics.tsv": "457865c2824983b5ba89d55634569b2a790dbd0383af6d08587c0c403f656448",
+    "cohort_summary.json": "eedd61104299b342b19b6f4e0080fc1fbd6bdf221dd8e882f99905272919553d",
+    "figures/cohort_geometry.pdf": "429b9039411455f664c93b61ca517b0bc2c3253664d3d3c65cd84e5a1115f840",
+    "figures/cohort_geometry.png": "7a7158c3e4d1b7a58d451795666c8cf741dfb32c1fb5922b121ac0586f636056",
+    "figures/cohort_geometry.svg": "47903ae31f3c2329010d8a4db9f0d5efddc3419814490d889ba12c586194cbe9",
+    "figures/cohort_paired_changes.pdf": "2fd71cf9987f6a9fa5cebe1b9ef3a9d69ece53e2b381b534c922fb165eacbcc7",
+    "figures/cohort_paired_changes.png": "2807d7e8c156971de0b85ba9cf4a194dbc75345d1892084f29511300f6bb637f",
+    "figures/cohort_paired_changes.svg": "fb52d82b124d4cd3735df2657b90cbc4116757d8fdec03ee9bc9a85a1ddaf5c0",
+    "figures/cohort_trajectories.pdf": "81950a51fa2e26a8b669456d9e0e3f584212123ff76623a8ef79c00cab941a14",
+    "figures/cohort_trajectories.png": "45dcfa4d9254f8b1e2b26b80eea2a9d562c53dd6d3342b92af6458be2df66894",
+    "figures/cohort_trajectories.svg": "c10484dbf753411889966bcbc222961d1324b5f1af6e352e3dc9a7bcafd322ba",
+    "participant_first_last_changes.tsv": "04e4f633ee1dafc8298a5c731ffbc6c9964591aec1a2e1e5da19be499dda2b6f",
+    "participant_matched_geometry.tsv": "36b8e824cf162b509176f0f5c5ca354c62393455460cd6ca2156db0d3dc00a17",
+    "participant_session_join.tsv": "0b26f8e914390797ffadc4eee0a92cfc511ccedeeef75fa8553893404ad76bee",
+    "spectral_reference_QC_sensitivity.tsv": "a168416f414f22720d34ad5b050cb26599d6b7e29eaab5bab2f43e0653958286"
+  },
+  "provenance": {
+    "seed": 42,
+    "git_commit": "ed81d67cbe8bf3dec486095959e24b014e2f00ca",
+    "git_dirty": true,
+    "source_config_sha256": {
+      "configs/netbci_behavior_sessions.json": "66d6e389da7f32644736edb782b981cbe9ef3fa9c2e9f0dfca817d096754621f",
+      "configs/netbci_cohort.json": "396c684415fe861301634a5089f3065bf036cb550aa7e90ec9d9178117642411",
+      "configs/netbci_cohort_full_windows_20261010.json": "2bead8bccd0396e0358bb8167324621e80d48087ba011a334224f73962d10904",
+      "configs/netbci_cohort_resume_20261010.json": "0d71113bade06ee03fa14ee82ee0813942633bd9b9c40416c4b166237228b0b8",
+      "configs/netbci_cross_session.json": "f69100e859bbd7b4eb6aac4194f582cb904b8341d795ffebafc3b65c6030ca7e",
+      "configs/netbci_date_separated.json": "3a91624bd630d81b8198dd8ec3bceb5d1b873d198b73378a0fa090a2a359a52a",
+      "configs/netbci_stage1.json": "27e37183484f99de5a1599b9860671f9f60652b4819c380fd022cde49cf833ca",
+      "configs/smoke.json": "bbf61b1c537c6d52ae42a47672930659b5ebec406557c06c61274aca7c85e6fa",
+      "src/learning_preserving_bci/__init__.py": "be8498e52667fb9412907fa3129e48bd7f5a5759e17d5a647071c5452ffb1908",
+      "src/learning_preserving_bci/adaptation/__init__.py": "feeb5b3461c0f7fb3aac49b2e398de80af588d817ffbb88ce8d1e488ebf19960",
+      "src/learning_preserving_bci/adaptation/fixed.py": "26abe74ed4986be0fa030e2d9c16e250384c9e532eb1017880187094f42089ba",
+      "src/learning_preserving_bci/datasets/__init__.py": "c655a11597730eefed41b295ea6405c2d2fa6b2ad7cd49d57140ab2d53ea0635",
+      "src/learning_preserving_bci/datasets/netbci.py": "e2e4f179159491fca8358d84fa7a8e6935b106adfe4df1b7eecfd24685f2f24d",
+      "src/learning_preserving_bci/datasets/netbci_behavior.py": "921df19e943a7c5c291fd1e0c8c390d61d67c1e4aff4280132276342bb957f66",
+      "src/learning_preserving_bci/decoders/__init__.py": "6feca254387a66999905af61e75c68e005448b31ca34b83514b25acc01664c63",
+      "src/learning_preserving_bci/decoders/csp_lda.py": "4aedb37c21c8056d213b90797324fc5b69f370bb011badf97003c739b1127921",
+      "src/learning_preserving_bci/decoders/eegnet.py": "b66735ea28d6df9f586b089cda18be61211a9878477703185d2ec382f7c3127b",
+      "src/learning_preserving_bci/evaluation/__init__.py": "8f4fcae94e534690dac509b40c47e863786883d4fc1d75474d7ed28ce8b30770",
+      "src/learning_preserving_bci/evaluation/fixed_decoder.py": "72382e3748116e0810584d0d6d3cc09620d26f94fd40b8792900aeea5a917eae",
+      "src/learning_preserving_bci/evaluation/splits.py": "d298350bf4eb48cce802455d0e3a629838c261516aa5ce99664778c4855bf65b",
+      "src/learning_preserving_bci/evaluation/statistics.py": "6ccbda0c8ff7c8cb2ed0e8224ddc0f57246a76c366a1dd00703eb119475948b7",
+      "src/learning_preserving_bci/neural_geometry/__init__.py": "18d36141d9d84827fb1af34c3948e3691c86ead296ff2eb688c5a5ee29848c6e",
+      "src/learning_preserving_bci/preprocessing/__init__.py": "acc3bdf5087786802f3e8f3fd5039c41fe81787775ac92f36dcf5d446d8bed53",
+      "src/learning_preserving_bci/signal_processing/__init__.py": "07446bee3f5e0bd6e83041574acf73a06d3261b593707f0ab259a28f2cd14ed6",
+      "src/learning_preserving_bci/utils/__init__.py": "2454f37e8f10f40b54068fa75d2b8f7e3e51dc3f103f2b92b3e34dfb24f79aea",
+      "src/learning_preserving_bci/utils/reproducibility.py": "b51bb7bdc233b9e070d0de55f73dae1264cb9697be41e709d75154f6e6ef1ecc"
+    },
+    "source_config_hash_scope": [
+      "src/**/*.py",
+      "configs/**/*.json"
+    ],
+    "python": "3.11.16",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "versions": {
+      "numpy": "2.2.6",
+      "scipy": "1.15.3",
+      "scikit-learn": "1.7.2",
+      "mne": "1.10.2",
+      "torch": "2.8.0+cpu",
+      "torchaudio": "2.8.0+cpu",
+      "braindecode": "1.2.0",
+      "moabb": "1.4.3"
+    }
+  },
+  "duration_seconds": 5.903305301999808,
+  "bootstrap_unit": "whole participant",
+  "source_reference_and_QC_sensitivity_saved": true,
+  "new_EEG_downloads": false,
+  "new_model_fits": false,
+  "figures_native_rendered": true,
+  "figure_visual_inspection": "pending_view_image_review"
+}

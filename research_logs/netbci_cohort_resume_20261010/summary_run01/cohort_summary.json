@@ -1,0 +1,827 @@
+{
+  "status": "actual_audited_first_ten_ID_cohort_exploratory",
+  "synthetic": false,
+  "subjects": [
+    "sub-1",
+    "sub-2",
+    "sub-3",
+    "sub-4",
+    "sub-5",
+    "sub-6",
+    "sub-7",
+    "sub-8",
+    "sub-9",
+    "sub-10"
+  ],
+  "subject_map": {
+    "sub-1": "sub-01",
+    "sub-2": "sub-02",
+    "sub-3": "sub-03",
+    "sub-4": "sub-04",
+    "sub-5": "sub-05",
+    "sub-6": "sub-06",
+    "sub-7": "sub-07",
+    "sub-8": "sub-08",
+    "sub-9": "sub-09",
+    "sub-10": "sub-10"
+  },
+  "participants": 10,
+  "sessions": 40,
+  "runs": 240,
+  "trials": 7576,
+  "source_events": 7577,
+  "excluded_source_events_n": 1,
+  "excluded_source_events": [
+    {
+      "subject": "sub-3",
+      "session": "01",
+      "run": "03",
+      "trial_id": "sub-3/ses-01/run-03/tsv-row-31",
+      "tsv_row": "31",
+      "label": "rest",
+      "stored_event_value": "1",
+      "onset_s": "224.032",
+      "duration_s": "2.968",
+      "start_sample": "56008",
+      "stop_sample_exclusive": "56750",
+      "source_file": "sub-3/ses-01/eeg/sub-3_ses-01_task-imagery_run-03_eeg.edf",
+      "source_length_samples": "742",
+      "fixed_window_eligible": "False",
+      "exclusion_reason": "source_event_duration_does_not_match_fixed_window",
+      "original_subject": "sub-03",
+      "signal_unit": "V",
+      "onset_unit": "s",
+      "duration_unit": "s",
+      "sample_origin": "0",
+      "original_header_file": "sub-03/ses-01/eeg/sub-03_ses-01_task-MotorImageryRest_run-03_eeg.vhdr",
+      "declared_original_header_sha256": "d229a07e3367e44bb46d35d8ff2abc4e8a8302c61fc532ebdb1b7ece06cfb8e6",
+      "original_header_hash_verified": "True",
+      "behavior_trial_outcome": "unresolved",
+      "behavior_score_denominator": "unresolved"
+    }
+  ],
+  "source_class_counts": {
+    "rest": 3783,
+    "right_hand": 3794
+  },
+  "class_counts": {
+    "rest": 3782,
+    "right_hand": 3794
+  },
+  "qc_flags_retained_in_primary": 75,
+  "constant_prediction_sessions_by_session": {
+    "02": 1,
+    "03": 2,
+    "04": 4
+  },
+  "constant_prediction_participants": [
+    "sub-1",
+    "sub-2",
+    "sub-4",
+    "sub-5",
+    "sub-7"
+  ],
+  "unavailable_decoder_sessions": [],
+  "scientific_failures": [
+    {
+      "scope": "CSP_LDA_query",
+      "session": "02",
+      "type": "constant_prediction",
+      "label": "rest",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-1"
+    },
+    {
+      "scope": "CSP_LDA_query",
+      "session": "03",
+      "type": "constant_prediction",
+      "label": "rest",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-1"
+    },
+    {
+      "scope": "CSP_LDA_query",
+      "session": "04",
+      "type": "constant_prediction",
+      "label": "rest",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-1"
+    },
+    {
+      "scope": "CSP_LDA_query",
+      "session": "03",
+      "type": "constant_prediction",
+      "label": "rest",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-2"
+    },
+    {
+      "scope": "CSP_LDA_query",
+      "session": "04",
+      "type": "constant_prediction",
+      "label": "rest",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-4"
+    },
+    {
+      "scope": "CSP_LDA_query",
+      "session": "04",
+      "type": "constant_prediction",
+      "label": "right_hand",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-5"
+    },
+    {
+      "scope": "CSP_LDA_query",
+      "session": "04",
+      "type": "constant_prediction",
+      "label": "rest",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-7"
+    },
+    {
+      "scope": "matched_geometry",
+      "variant": "qc_common_four_runs",
+      "status": "unavailable",
+      "runs": [
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "error": "Insufficient preset matched cells: [{\"session\": \"01\", \"run\": \"05\", \"label\": \"rest\", \"n_available\": 11, \"n_required\": 12}, {\"session\": \"01\", \"run\": \"06\", \"label\": \"rest\", \"n_available\": 8, \"n_required\": 12}]",
+      "preset_not_relaxed": true,
+      "subject": "sub-8"
+    }
+  ],
+  "scientific_failure_records_n": 8,
+  "metric_units": {
+    "mean_run_hit_percent": "percent; changes in percentage points",
+    "CSP_BA_percent": "percent; changes in percentage points",
+    "CSP_conditional_run_CI95_percent": "percent; conditional within-participant run clusters",
+    "spectral_task_contrast": "dB; differences of equal-run mean log10 task-window power",
+    "arithmetic_ROI_power": "microvolt squared (uV2)"
+  },
+  "behavior_dictionary_syntax": "invalid_strict_JSON_preserved: Expecting property name enclosed in double quotes; line 26",
+  "behavior_source_subjects": 19,
+  "behavior_analyzed_EEG_linked_subjects_only": 10,
+  "source_selection": "first_ten_published_subject_IDs_no_selection_on_behavior_or_EEG_results",
+  "pilot_previously_seen": "sub-1",
+  "behavior_grain": "verified_subject_session_unweighted_mean_of_six_reported_percentages",
+  "score_run_order_denominator_trial_outcomes": "unresolved_no_broadcast",
+  "session_statistics": [
+    {
+      "metric": "mean_run_hit_percent",
+      "session": "01",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": 54.53516666666667,
+      "median": 53.33166666666666,
+      "subject_bootstrap_CI95_low": 49.38933333333334,
+      "subject_bootstrap_CI95_high": 60.34201249999999,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "mean_run_hit_percent",
+      "session": "02",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": 57.4485,
+      "median": 54.49916666666667,
+      "subject_bootstrap_CI95_low": 50.72166666666666,
+      "subject_bootstrap_CI95_high": 66.26901666666664,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "mean_run_hit_percent",
+      "session": "03",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": 64.73116666666667,
+      "median": 62.22333333333334,
+      "subject_bootstrap_CI95_low": 59.20616666666666,
+      "subject_bootstrap_CI95_high": 70.9058375,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "mean_run_hit_percent",
+      "session": "04",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": 68.80283333333333,
+      "median": 65.0,
+      "subject_bootstrap_CI95_low": 62.51007083333332,
+      "subject_bootstrap_CI95_high": 75.901325,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "CSP_BA_percent",
+      "session": "01",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": 68.67590146459028,
+      "median": 72.65625,
+      "subject_bootstrap_CI95_low": 59.655897177419355,
+      "subject_bootstrap_CI95_high": 77.36381714636633,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "CSP_BA_percent",
+      "session": "02",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": 63.64168278529981,
+      "median": 60.07867907801419,
+      "subject_bootstrap_CI95_low": 56.338264627659576,
+      "subject_bootstrap_CI95_high": 72.0384630883301,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "CSP_BA_percent",
+      "session": "03",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": 60.432416267942585,
+      "median": 57.250548245614034,
+      "subject_bootstrap_CI95_low": 52.28330592105264,
+      "subject_bootstrap_CI95_high": 70.29552556818182,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "CSP_BA_percent",
+      "session": "04",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": 56.103070175438596,
+      "median": 50.0,
+      "subject_bootstrap_CI95_low": 50.23629385964912,
+      "subject_bootstrap_CI95_high": 62.604166666666664,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "mu_MI_minus_rest_dB",
+      "session": "01",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": -0.47004107808740514,
+      "median": -0.4242707804053758,
+      "subject_bootstrap_CI95_low": -0.9919699779044415,
+      "subject_bootstrap_CI95_high": 0.008612011042090924,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "mu_MI_minus_rest_dB",
+      "session": "02",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": -0.571079878069428,
+      "median": -0.4218427291527149,
+      "subject_bootstrap_CI95_low": -1.1520982704613978,
+      "subject_bootstrap_CI95_high": 0.010978617631169077,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "mu_MI_minus_rest_dB",
+      "session": "03",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": -0.7854901166738362,
+      "median": -0.6626575800272327,
+      "subject_bootstrap_CI95_low": -1.2422596801001333,
+      "subject_bootstrap_CI95_high": -0.382499688673083,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "mu_MI_minus_rest_dB",
+      "session": "04",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": -0.880437314236616,
+      "median": -0.6431618836483821,
+      "subject_bootstrap_CI95_low": -1.551649596135628,
+      "subject_bootstrap_CI95_high": -0.2993248764962943,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "beta_MI_minus_rest_dB",
+      "session": "01",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": -0.3164299328351632,
+      "median": -0.3570282023037219,
+      "subject_bootstrap_CI95_low": -0.6304683811667835,
+      "subject_bootstrap_CI95_high": -0.008977681206922944,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "beta_MI_minus_rest_dB",
+      "session": "02",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": -0.3762169114733549,
+      "median": -0.5174942971224539,
+      "subject_bootstrap_CI95_low": -0.682327976162932,
+      "subject_bootstrap_CI95_high": -0.04314135933652799,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "beta_MI_minus_rest_dB",
+      "session": "03",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": -0.4432806734285233,
+      "median": -0.40379665658857533,
+      "subject_bootstrap_CI95_low": -0.8599087140546852,
+      "subject_bootstrap_CI95_high": 0.035793913499189645,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "beta_MI_minus_rest_dB",
+      "session": "04",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": -0.41429670950119757,
+      "median": -0.49757057272115546,
+      "subject_bootstrap_CI95_low": -0.7740152168908704,
+      "subject_bootstrap_CI95_high": 0.005122730914641087,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "mu_rest_power_uV2",
+      "session": "01",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": 5.599628004626193,
+      "median": 4.623752667498694,
+      "subject_bootstrap_CI95_low": 3.720220281584846,
+      "subject_bootstrap_CI95_high": 7.7480657355585345,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "mu_rest_power_uV2",
+      "session": "02",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": 5.836379735851158,
+      "median": 4.818077994294637,
+      "subject_bootstrap_CI95_low": 3.8891144610956787,
+      "subject_bootstrap_CI95_high": 8.082194770986986,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "mu_rest_power_uV2",
+      "session": "03",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": 9.449369816446467,
+      "median": 3.263549023733005,
+      "subject_bootstrap_CI95_low": 2.8583161490741626,
+      "subject_bootstrap_CI95_high": 21.03154482796482,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "mu_rest_power_uV2",
+      "session": "04",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": 5.91716022274568,
+      "median": 3.8222040579480026,
+      "subject_bootstrap_CI95_low": 3.4766418974647837,
+      "subject_bootstrap_CI95_high": 8.749353513987572,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "mu_MI_power_uV2",
+      "session": "01",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": 4.791886936529638,
+      "median": 4.055291381765349,
+      "subject_bootstrap_CI95_low": 3.209557083151304,
+      "subject_bootstrap_CI95_high": 6.763141438620461,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "mu_MI_power_uV2",
+      "session": "02",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": 4.172048328391122,
+      "median": 3.9170955206676767,
+      "subject_bootstrap_CI95_low": 3.0644279485946666,
+      "subject_bootstrap_CI95_high": 5.350618730575094,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "mu_MI_power_uV2",
+      "session": "03",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": 8.35455086648145,
+      "median": 2.920779665353282,
+      "subject_bootstrap_CI95_low": 2.31424403821879,
+      "subject_bootstrap_CI95_high": 19.009389418030427,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "mu_MI_power_uV2",
+      "session": "04",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": 4.811983950479403,
+      "median": 3.08439495721032,
+      "subject_bootstrap_CI95_low": 2.5045038799712303,
+      "subject_bootstrap_CI95_high": 8.006210886802236,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "beta_rest_power_uV2",
+      "session": "01",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": 5.535240799079025,
+      "median": 3.2178602514291583,
+      "subject_bootstrap_CI95_low": 2.9035535751942647,
+      "subject_bootstrap_CI95_high": 8.756672746242954,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "beta_rest_power_uV2",
+      "session": "02",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": 4.056676762813149,
+      "median": 3.634729684309099,
+      "subject_bootstrap_CI95_low": 2.779156518240382,
+      "subject_bootstrap_CI95_high": 5.455809870932253,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "beta_rest_power_uV2",
+      "session": "03",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": 4.95231863907375,
+      "median": 2.298759170130382,
+      "subject_bootstrap_CI95_low": 2.033274636951827,
+      "subject_bootstrap_CI95_high": 9.898559823997271,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "beta_rest_power_uV2",
+      "session": "04",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": 3.0525014829392028,
+      "median": 3.0272367319261857,
+      "subject_bootstrap_CI95_low": 2.2979836213764333,
+      "subject_bootstrap_CI95_high": 3.925981322766337,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "beta_MI_power_uV2",
+      "session": "01",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": 5.10933814415942,
+      "median": 3.0194289668077854,
+      "subject_bootstrap_CI95_low": 2.554474023293854,
+      "subject_bootstrap_CI95_high": 8.281430673571617,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "beta_MI_power_uV2",
+      "session": "02",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": 3.188790003993797,
+      "median": 2.439593912740816,
+      "subject_bootstrap_CI95_low": 2.2829594790432908,
+      "subject_bootstrap_CI95_high": 4.178701343803862,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "beta_MI_power_uV2",
+      "session": "03",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": 4.630206973748624,
+      "median": 1.8895607332944464,
+      "subject_bootstrap_CI95_low": 1.7815305374230128,
+      "subject_bootstrap_CI95_high": 9.49533400057689,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    },
+    {
+      "metric": "beta_MI_power_uV2",
+      "session": "04",
+      "n_requested_subjects": 10,
+      "n_available_subjects": 10,
+      "mean": 2.7394227599025593,
+      "median": 2.3386720958852263,
+      "subject_bootstrap_CI95_low": 1.9754049099974833,
+      "subject_bootstrap_CI95_high": 3.6088316860797574,
+      "unavailable_subjects": "",
+      "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"
+    }
+  ],
+  "paired_changes": [
+    {
+      "metric": "mean_run_hit_percent",
+      "contrast": "session04_minus_session01",
+      "n_requested_subjects": 10,
+      "n_paired_subjects": 10,
+      "mean_change": 14.267666666666667,
+      "median_change": 13.853333333333339,
+      "min_change": 2.2233333333333363,
+      "max_change": 23.88833333333333,
+      "n_increased": 10,
+      "n_decreased": 0,
+      "n_unchanged": 0,
+      "subject_bootstrap_CI95_low": 10.084666666666669,
+      "subject_bootstrap_CI95_high": 18.29133333333333,
+      "unavailable_subjects": "",
+      "bootstrap_repetitions": 10000,
+      "CI_scope": "paired participants; exploratory observational contrast"
+    },
+    {
+      "metric": "CSP_BA_percent",
+      "contrast": "session04_minus_session01",
+      "n_requested_subjects": 10,
+      "n_paired_subjects": 10,
+      "mean_change": -12.572831289151688,
+      "median_change": -12.846102150537636,
+      "min_change": -39.712643678160916,
+      "max_change": 23.4375,
+      "n_increased": 2,
+      "n_decreased": 8,
+      "n_unchanged": 0,
+      "subject_bootstrap_CI95_low": -22.95394398381242,
+      "subject_bootstrap_CI95_high": -1.5961719619021144,
+      "unavailable_subjects": "",
+      "bootstrap_repetitions": 10000,
+      "CI_scope": "paired participants; exploratory observational contrast"
+    },
+    {
+      "metric": "mu_MI_minus_rest_dB",
+      "contrast": "session04_minus_session01",
+      "n_requested_subjects": 10,
+      "n_paired_subjects": 10,
+      "mean_change": -0.41039623614921084,
+      "median_change": -0.5725275793845608,
+      "min_change": -2.0846162419180025,
+      "max_change": 2.7300002560199133,
+      "n_increased": 5,
+      "n_decreased": 5,
+      "n_unchanged": 0,
+      "subject_bootstrap_CI95_low": -1.1680028698940748,
+      "subject_bootstrap_CI95_high": 0.4919795545520213,
+      "unavailable_subjects": "",
+      "bootstrap_repetitions": 10000,
+      "CI_scope": "paired participants; exploratory observational contrast"
+    },
+    {
+      "metric": "beta_MI_minus_rest_dB",
+      "contrast": "session04_minus_session01",
+      "n_requested_subjects": 10,
+      "n_paired_subjects": 10,
+      "mean_change": -0.09786677666603438,
+      "median_change": -0.2558562274359133,
+      "min_change": -1.1649516565129758,
+      "max_change": 1.1400251304075049,
+      "n_increased": 4,
+      "n_decreased": 6,
+      "n_unchanged": 0,
+      "subject_bootstrap_CI95_low": -0.5458279487599371,
+      "subject_bootstrap_CI95_high": 0.3854022587553519,
+      "unavailable_subjects": "",
+      "bootstrap_repetitions": 10000,
+      "CI_scope": "paired participants; exploratory observational contrast"
+    },
+    {
+      "metric": "mu_rest_power_uV2",
+      "contrast": "session04_minus_session01",
+      "n_requested_subjects": 10,
+      "n_paired_subjects": 10,
+      "mean_change": 0.3175322181194856,
+      "median_change": 0.7530480660556412,
+      "min_change": -7.569601130567277,
+      "max_change": 9.084819128550153,
+      "n_increased": 6,
+      "n_decreased": 4,
+      "n_unchanged": 0,
+      "subject_bootstrap_CI95_low": -2.5114384283879816,
+      "subject_bootstrap_CI95_high": 3.132086720370942,
+      "unavailable_subjects": "",
+      "bootstrap_repetitions": 10000,
+      "CI_scope": "paired participants; exploratory observational contrast"
+    },
+    {
+      "metric": "mu_MI_power_uV2",
+      "contrast": "session04_minus_session01",
+      "n_requested_subjects": 10,
+      "n_paired_subjects": 10,
+      "mean_change": 0.02009701394976633,
+      "median_change": -0.6010717750770297,
+      "min_change": -7.802630156517367,
+      "max_change": 12.947022935575006,
+      "n_increased": 4,
+      "n_decreased": 6,
+      "n_unchanged": 0,
+      "subject_bootstrap_CI95_low": -2.5839409899851535,
+      "subject_bootstrap_CI95_high": 3.4389068886118785,
+      "unavailable_subjects": "",
+      "bootstrap_repetitions": 10000,
+      "CI_scope": "paired participants; exploratory observational contrast"
+    },
+    {
+      "metric": "beta_rest_power_uV2",
+      "contrast": "session04_minus_session01",
+      "n_requested_subjects": 10,
+      "n_paired_subjects": 10,
+      "mean_change": -2.482739316139823,
+      "median_change": 0.005323350492541179,
+      "min_change": -13.789769903533209,
+      "max_change": 0.9854159980234711,
+      "n_increased": 5,
+      "n_decreased": 5,
+      "n_unchanged": 0,
+      "subject_bootstrap_CI95_low": -5.601041196383983,
+      "subject_bootstrap_CI95_high": 0.013705098327455971,
+      "unavailable_subjects": "",
+      "bootstrap_repetitions": 10000,
+      "CI_scope": "paired participants; exploratory observational contrast"
+    },
+    {
+      "metric": "beta_MI_power_uV2",
+      "contrast": "session04_minus_session01",
+      "n_requested_subjects": 10,
+      "n_paired_subjects": 10,
+      "mean_change": -2.36991538425686,
+      "median_change": -0.4830952231223863,
+      "min_change": -13.389147053500292,
+      "max_change": 1.3155095124814657,
+      "n_increased": 3,
+      "n_decreased": 7,
+      "n_unchanged": 0,
+      "subject_bootstrap_CI95_low": -5.333236072241511,
+      "subject_bootstrap_CI95_high": -0.13859246636293543,
+      "unavailable_subjects": "",
+      "bootstrap_repetitions": 10000,
+      "CI_scope": "paired participants; exploratory observational contrast"
+    }
+  ],
+  "matching_availability": [
+    {
+      "subject": "sub-1",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-1",
+      "variant": "qc_common_four_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-2",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-2",
+      "variant": "qc_common_four_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-3",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-3",
+      "variant": "qc_common_four_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-4",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-4",
+      "variant": "qc_common_four_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-5",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-5",
+      "variant": "qc_common_four_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-6",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-6",
+      "variant": "qc_common_four_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-7",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-7",
+      "variant": "qc_common_four_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-8",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-8",
+      "variant": "qc_common_four_runs",
+      "status": "unavailable",
+      "error": "Insufficient preset matched cells: [{\"session\": \"01\", \"run\": \"05\", \"label\": \"rest\", \"n_available\": 11, \"n_required\": 12}, {\"session\": \"01\", \"run\": \"06\", \"label\": \"rest\", \"n_available\": 8, \"n_required\": 12}]"
+    },
+    {
+      "subject": "sub-9",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-9",
+      "variant": "qc_common_four_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-10",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-10",
+      "variant": "qc_common_four_runs",
+      "status": "available",
+      "error": ""
+    }
+  ],
+  "interpretation": "observational spectral/geometry/decoder contrasts; no causal neural-learning or skill-retention conclusion"
+}

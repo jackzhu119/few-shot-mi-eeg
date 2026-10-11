@@ -1,0 +1,27 @@
+[
+  {
+    "variant": "all_six_runs",
+    "status": "available",
+    "runs": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06"
+    ],
+    "repetitions": 10
+  },
+  {
+    "variant": "qc_common_four_runs",
+    "status": "unavailable",
+    "runs": [
+      "03",
+      "04",
+      "05",
+      "06"
+    ],
+    "error": "Insufficient preset matched cells: [{\"session\": \"01\", \"run\": \"05\", \"label\": \"rest\", \"n_available\": 11, \"n_required\": 12}, {\"session\": \"01\", \"run\": \"06\", \"label\": \"rest\", \"n_available\": 8, \"n_required\": 12}]",
+    "preset_not_relaxed": true
+  }
+]

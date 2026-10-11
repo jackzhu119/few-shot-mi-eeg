@@ -1,0 +1,130 @@
+[
+  {
+    "subject": "sub-3",
+    "session": "01",
+    "role": "source_reference_query",
+    "decoder": "CSP_LDA",
+    "n_test": 64,
+    "n_runs": 2,
+    "n_rest": 32,
+    "n_right_hand": 32,
+    "balanced_accuracy": 0.59375,
+    "conditional_run_bootstrap_CI95": [
+      0.5,
+      0.6875
+    ],
+    "confusion_matrix_rest_right_hand": [
+      [
+        11,
+        21
+      ],
+      [
+        5,
+        27
+      ]
+    ],
+    "constant_prediction": false,
+    "n_qc_flagged_query": 0,
+    "qc_unflagged_n": 64,
+    "qc_unflagged_BA": 0.59375,
+    "train_n": 126,
+    "participant_n": 1,
+    "CI_scope": "conditional run clusters; excludes source-fit uncertainty; not population CI"
+  },
+  {
+    "subject": "sub-3",
+    "session": "02",
+    "role": "validation_no_selection",
+    "decoder": "CSP_LDA",
+    "n_test": 192,
+    "n_runs": 6,
+    "n_rest": 96,
+    "n_right_hand": 96,
+    "balanced_accuracy": 0.5833333333333334,
+    "conditional_run_bootstrap_CI95": [
+      0.5,
+      0.6875
+    ],
+    "confusion_matrix_rest_right_hand": [
+      [
+        93,
+        3
+      ],
+      [
+        77,
+        19
+      ]
+    ],
+    "constant_prediction": false,
+    "n_qc_flagged_query": 3,
+    "qc_unflagged_n": 189,
+    "qc_unflagged_BA": 0.5852743561030235,
+    "train_n": 126,
+    "participant_n": 1,
+    "CI_scope": "conditional run clusters; excludes source-fit uncertainty; not population CI"
+  },
+  {
+    "subject": "sub-3",
+    "session": "03",
+    "role": "test_exploratory",
+    "decoder": "CSP_LDA",
+    "n_test": 191,
+    "n_runs": 6,
+    "n_rest": 95,
+    "n_right_hand": 96,
+    "balanced_accuracy": 0.5825109649122807,
+    "conditional_run_bootstrap_CI95": [
+      0.5231854838709677,
+      0.6354166666666666
+    ],
+    "confusion_matrix_rest_right_hand": [
+      [
+        80,
+        15
+      ],
+      [
+        65,
+        31
+      ]
+    ],
+    "constant_prediction": false,
+    "n_qc_flagged_query": 0,
+    "qc_unflagged_n": 191,
+    "qc_unflagged_BA": 0.5825109649122807,
+    "train_n": 126,
+    "participant_n": 1,
+    "CI_scope": "conditional run clusters; excludes source-fit uncertainty; not population CI"
+  },
+  {
+    "subject": "sub-3",
+    "session": "04",
+    "role": "test_exploratory",
+    "decoder": "CSP_LDA",
+    "n_test": 191,
+    "n_runs": 6,
+    "n_rest": 95,
+    "n_right_hand": 96,
+    "balanced_accuracy": 0.5113486842105264,
+    "conditional_run_bootstrap_CI95": [
+      0.470834673844658,
+      0.5548177083333332
+    ],
+    "confusion_matrix_rest_right_hand": [
+      [
+        17,
+        78
+      ],
+      [
+        15,
+        81
+      ]
+    ],
+    "constant_prediction": false,
+    "n_qc_flagged_query": 0,
+    "qc_unflagged_n": 191,
+    "qc_unflagged_BA": 0.5113486842105264,
+    "train_n": 126,
+    "participant_n": 1,
+    "CI_scope": "conditional run clusters; excludes source-fit uncertainty; not population CI"
+  }
+]

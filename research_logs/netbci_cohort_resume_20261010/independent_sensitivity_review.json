@@ -1,0 +1,387 @@
+{
+  "status": "passed_independent_eight_identity_sensitivity_arithmetic",
+  "synthetic": false,
+  "reviewed_at_utc": "2026-10-11T00:21:30.812492+00:00",
+  "selection_basis": "All source identities in exact cross-subject continuous-run duplicate groups; no outcome selection",
+  "excluded_identities": [
+    "sub-1",
+    "sub-7"
+  ],
+  "retained_identities": [
+    "sub-2",
+    "sub-3",
+    "sub-4",
+    "sub-5",
+    "sub-6",
+    "sub-8",
+    "sub-9",
+    "sub-10"
+  ],
+  "session_rows": 32,
+  "paired_changes": [
+    {
+      "metric": "mean_run_hit_percent",
+      "mean_change": 14.37125,
+      "subject_bootstrap_CI95": [
+        9.188536458333337,
+        19.325208333333336
+      ],
+      "n_paired": 8
+    },
+    {
+      "metric": "CSP_BA_percent",
+      "mean_change": -9.501958651669497,
+      "subject_bootstrap_CI95": [
+        -20.244146151669497,
+        2.734666255482452
+      ],
+      "n_paired": 8
+    },
+    {
+      "metric": "mu_MI_minus_rest_dB",
+      "mean_change": -0.6786287188042173,
+      "subject_bootstrap_CI95": [
+        -1.316836863465518,
+        -0.046974548153404974
+      ],
+      "n_paired": 8
+    },
+    {
+      "metric": "beta_MI_minus_rest_dB",
+      "mean_change": -0.16652752214722621,
+      "subject_bootstrap_CI95": [
+        -0.654063127486677,
+        0.3807076423605246
+      ],
+      "n_paired": 8
+    },
+    {
+      "metric": "mu_rest_power_uV2",
+      "mean_change": -1.1398063470274744,
+      "subject_bootstrap_CI95": [
+        -3.8076860687546965,
+        1.3268769841415171
+      ],
+      "n_paired": 8
+    },
+    {
+      "metric": "mu_MI_power_uV2",
+      "mean_change": -1.7300815444074589,
+      "subject_bootstrap_CI95": [
+        -3.621840218248828,
+        -0.3676484274984077
+      ],
+      "n_paired": 8
+    },
+    {
+      "metric": "beta_rest_power_uV2",
+      "mean_change": -3.2825226704271686,
+      "subject_bootstrap_CI95": [
+        -6.913973974112844,
+        -0.3241605190467692
+      ],
+      "n_paired": 8
+    },
+    {
+      "metric": "beta_MI_power_uV2",
+      "mean_change": -3.15253597986701,
+      "subject_bootstrap_CI95": [
+        -6.506938334973343,
+        -0.5667878097670475
+      ],
+      "n_paired": 8
+    }
+  ],
+  "session_mean_checks": [
+    {
+      "metric": "mean_run_hit_percent",
+      "session": "01",
+      "mean": 52.48583333333333
+    },
+    {
+      "metric": "mean_run_hit_percent",
+      "session": "02",
+      "mean": 54.04208333333334
+    },
+    {
+      "metric": "mean_run_hit_percent",
+      "session": "03",
+      "mean": 62.57000000000001
+    },
+    {
+      "metric": "mean_run_hit_percent",
+      "session": "04",
+      "mean": 66.85708333333332
+    },
+    {
+      "metric": "CSP_BA_percent",
+      "session": "01",
+      "mean": 67.13079637096774
+    },
+    {
+      "metric": "CSP_BA_percent",
+      "session": "02",
+      "mean": 62.350398936170215
+    },
+    {
+      "metric": "CSP_BA_percent",
+      "session": "03",
+      "mean": 58.338815789473685
+    },
+    {
+      "metric": "CSP_BA_percent",
+      "session": "04",
+      "mean": 57.62883771929825
+    },
+    {
+      "metric": "mu_MI_minus_rest_dB",
+      "session": "01",
+      "mean": -0.2138867105102471
+    },
+    {
+      "metric": "mu_MI_minus_rest_dB",
+      "session": "02",
+      "mean": -0.3069692457942441
+    },
+    {
+      "metric": "mu_MI_minus_rest_dB",
+      "session": "03",
+      "mean": -0.47503508984912735
+    },
+    {
+      "metric": "mu_MI_minus_rest_dB",
+      "session": "04",
+      "mean": -0.8925154293144644
+    },
+    {
+      "metric": "beta_MI_minus_rest_dB",
+      "session": "01",
+      "mean": -0.22213890886646714
+    },
+    {
+      "metric": "beta_MI_minus_rest_dB",
+      "session": "02",
+      "mean": -0.25315873045513415
+    },
+    {
+      "metric": "beta_MI_minus_rest_dB",
+      "session": "03",
+      "mean": -0.2941295013196821
+    },
+    {
+      "metric": "beta_MI_minus_rest_dB",
+      "session": "04",
+      "mean": -0.38866643101369336
+    },
+    {
+      "metric": "mu_rest_power_uV2",
+      "session": "01",
+      "mean": 5.781133039438428
+    },
+    {
+      "metric": "mu_rest_power_uV2",
+      "session": "02",
+      "mean": 5.849380303971568
+    },
+    {
+      "metric": "mu_rest_power_uV2",
+      "session": "03",
+      "mean": 10.277730415312845
+    },
+    {
+      "metric": "mu_rest_power_uV2",
+      "session": "04",
+      "mean": 4.641326692410955
+    },
+    {
+      "metric": "mu_MI_power_uV2",
+      "session": "01",
+      "mean": 5.169164798973114
+    },
+    {
+      "metric": "mu_MI_power_uV2",
+      "session": "02",
+      "mean": 4.235786530321983
+    },
+    {
+      "metric": "mu_MI_power_uV2",
+      "session": "03",
+      "mean": 9.486106641212835
+    },
+    {
+      "metric": "mu_MI_power_uV2",
+      "session": "04",
+      "mean": 3.439083254565654
+    },
+    {
+      "metric": "beta_rest_power_uV2",
+      "session": "01",
+      "mean": 6.4064444393133915
+    },
+    {
+      "metric": "beta_rest_power_uV2",
+      "session": "02",
+      "mean": 4.5329820280900535
+    },
+    {
+      "metric": "beta_rest_power_uV2",
+      "session": "03",
+      "mean": 5.615708506309594
+    },
+    {
+      "metric": "beta_rest_power_uV2",
+      "session": "04",
+      "mean": 3.1239217688862224
+    },
+    {
+      "metric": "beta_MI_power_uV2",
+      "session": "01",
+      "mean": 5.95250378369261
+    },
+    {
+      "metric": "beta_MI_power_uV2",
+      "session": "02",
+      "mean": 3.5460322519218748
+    },
+    {
+      "metric": "beta_MI_power_uV2",
+      "session": "03",
+      "mean": 5.334678867472447
+    },
+    {
+      "metric": "beta_MI_power_uV2",
+      "session": "04",
+      "mean": 2.7999678038255986
+    }
+  ],
+  "association_checks": [
+    {
+      "pair": "BA_change_vs_behavior_change",
+      "estimator": "Pearson_r",
+      "estimate": 0.4383722283853944,
+      "participant_bootstrap_CI95": [
+        -0.29859954260636795,
+        0.8880145509510575
+      ],
+      "valid_draws": 10000,
+      "participants": 8
+    },
+    {
+      "pair": "BA_change_vs_behavior_change",
+      "estimator": "Spearman_rho",
+      "estimate": 0.3809523809523809,
+      "participant_bootstrap_CI95": [
+        -0.6296296296296295,
+        0.9230769230769228
+      ],
+      "valid_draws": 10000,
+      "participants": 8
+    },
+    {
+      "pair": "Mu_change_vs_behavior_change",
+      "estimator": "Pearson_r",
+      "estimate": -0.5382044154189568,
+      "participant_bootstrap_CI95": [
+        -0.9346094210411418,
+        0.2125853487283819
+      ],
+      "valid_draws": 10000,
+      "participants": 8
+    },
+    {
+      "pair": "Mu_change_vs_behavior_change",
+      "estimator": "Spearman_rho",
+      "estimate": -0.5952380952380952,
+      "participant_bootstrap_CI95": [
+        -0.9047619047619048,
+        0.1506849315068493
+      ],
+      "valid_draws": 10000,
+      "participants": 8
+    },
+    {
+      "pair": "Mu_change_vs_BA_change",
+      "estimator": "Pearson_r",
+      "estimate": -0.61920404484103,
+      "participant_bootstrap_CI95": [
+        -0.9409983939605895,
+        -0.20313616057160555
+      ],
+      "valid_draws": 10000,
+      "participants": 8
+    },
+    {
+      "pair": "Mu_change_vs_BA_change",
+      "estimator": "Spearman_rho",
+      "estimate": -0.619047619047619,
+      "participant_bootstrap_CI95": [
+        -0.9726027397260273,
+        0.1395266169585532
+      ],
+      "valid_draws": 10000,
+      "participants": 8
+    },
+    {
+      "pair": "all_six_runs_AIRM_session04_vs_BA_change",
+      "estimator": "Pearson_r",
+      "estimate": -0.546065675823371,
+      "participant_bootstrap_CI95": [
+        -0.9479779718365021,
+        0.5710580812902463
+      ],
+      "valid_draws": 10000,
+      "participants": 8
+    },
+    {
+      "pair": "all_six_runs_AIRM_session04_vs_BA_change",
+      "estimator": "Spearman_rho",
+      "estimate": -0.38095238095238093,
+      "participant_bootstrap_CI95": [
+        -0.9259259259259258,
+        0.5890410958904109
+      ],
+      "valid_draws": 10000,
+      "participants": 8
+    },
+    {
+      "pair": "all_six_runs_PCA_session04_vs_BA_change",
+      "estimator": "Pearson_r",
+      "estimate": 0.10318654877344748,
+      "participant_bootstrap_CI95": [
+        -0.7587419287827949,
+        0.8290857779035665
+      ],
+      "valid_draws": 10000,
+      "participants": 8
+    },
+    {
+      "pair": "all_six_runs_PCA_session04_vs_BA_change",
+      "estimator": "Spearman_rho",
+      "estimate": 0.35714285714285715,
+      "participant_bootstrap_CI95": [
+        -0.8421052631578947,
+        0.9687500000000002
+      ],
+      "valid_draws": 10000,
+      "participants": 8
+    }
+  ],
+  "independent_of_production_helpers": true,
+  "EEG_arrays_loaded": false,
+  "models_refitted": false,
+  "limits": [
+    "Post-observation restriction of the same cohort; not independent confirmation.",
+    "No detected exact copies among these eight IDs does not prove biological participant identity or near-similarity absence.",
+    "Correlations and paired changes are exploratory observational summaries, not causal learning or skill-retention evidence."
+  ],
+  "input_sha256": {
+    "primary_session_join": "0b26f8e914390797ffadc4eee0a92cfc511ccedeeef75fa8553893404ad76bee",
+    "primary_geometry": "36b8e824cf162b509176f0f5c5ca354c62393455460cd6ca2156db0d3dc00a17",
+    "sensitivity_receipt": "f5593bdbeecf67e03c7aeb21857923038f23baf2354e8b314c2090c548fbc172",
+    "identity_ledger": "4f749f6f91af06bf1233b54c55b73beb61ea2dbd12b44204bd53aa5f3b9e3b28"
+  },
+  "review_source_sha256": "0a6366401aabcc3552f54b26086a6ff0083baf811731bc356fcca41e9befc232",
+  "runtime": {
+    "numpy": "2.2.6"
+  }
+}

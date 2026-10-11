@@ -1,0 +1,327 @@
+{
+  "status": "executed_notebook_and_all_eight_native_figures_verified",
+  "synthetic": false,
+  "checked_at_utc": "2026-10-11T00:25:12.967664+00:00",
+  "checked_date_asia_shanghai": "2026-10-11",
+  "scope": "saved real-data table/source-identity/sensitivity hashes; notebook execution; native figures; report evidence links. No raw EEG read or model refit here.",
+  "execution": {
+    "command": "MNE_DONTWRITE_HOME=true XDG_CACHE_HOME=/workspace/.cache MPLCONFIGDIR=/workspace/.cache/matplotlib OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 /workspace/.venvs/few-shot-mi-eeg/bin/python scripts/build_netbci_cohort_notebook.py --execute --overwrite",
+    "exit_code": 0,
+    "kernel": "bci-netbci-local",
+    "cells": 22,
+    "code_cells": 12,
+    "execution_counts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "error_outputs": 0,
+    "native_png_outputs": 8,
+    "nbformat_schema_passed": true
+  },
+  "visual_review": {
+    "method": "view_image each actual final native PNG",
+    "all_eight_reviewed": true,
+    "status": "passed",
+    "checks": [
+      "all ten published-ID trajectories and paired points retained",
+      "online percentages, BA and spectral dB remain distinct",
+      "source-duplicate six-run numerical equality and 238 train/query repeats visible in every caption",
+      "ten-ID EEG intervals explicitly arithmetic",
+      "spectral run/reference variants remain separate",
+      "QC geometric availability 9 of 10 preserved; sub-8 unavailable cell explicit",
+      "axes units and protocol-session spacing clear",
+      "ID labels, legends, titles and footer legible; no clipping observed"
+    ],
+    "full_page_browser_render_reviewed": false
+  },
+  "html_structure": {
+    "exporter": "nbconvert HTMLExporter lab",
+    "embedded_png_img_tag_count": 8,
+    "source_issue_and_sensitivity_text_present": true,
+    "browser_visual_status": "not_reviewed"
+  },
+  "artifact_sha256": [
+    {
+      "path": "scripts/build_netbci_cohort_notebook.py",
+      "sha256": "e5f3d8673bfff78a21040782e7a2bdeb7e045c1c3af2940d6591616a6505f458",
+      "bytes": 41936
+    },
+    {
+      "path": "notebooks/netbci2026_cohort_20261010.ipynb",
+      "sha256": "f5f177d3ff695c8b2672db1ee1def1100b4411d422bad706ee5ae619549d2704",
+      "bytes": 2468147
+    },
+    {
+      "path": "notebooks/netbci2026_cohort_20261010.html",
+      "sha256": "950dfc66815e9f3ec98bf0c363eeccd8a4fafbf6117a681dba4a6f42ab0f0de1",
+      "bytes": 2821878
+    },
+    {
+      "path": "docs/netbci_cohort_results_20261010.md",
+      "sha256": "5c7bca821ea4a41c569e8410803763ebb3814d142595d1fc93f53a0f10b435f4",
+      "bytes": 25178
+    },
+    {
+      "path": "manuscript/cohort_addendum_20261010.md",
+      "sha256": "0f680bb320f9dcb576824a5cf87ce52b01b4e1a3841803675d2a0ccf230c8b17",
+      "bytes": 23829
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/notebook_validation_final/execution.log",
+      "sha256": "95424bdff97a7c8f959f5a838e82e3b809ed3075fc8a3ade50a8b1604046fc20",
+      "bytes": 79
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/notebook_validation_final/native_figure_index.json",
+      "sha256": "ed541c97b09b8a049a6b0208a29e93f5af1c1a9560850301a5abbb3dcf024eeb",
+      "bytes": 1913
+    }
+  ],
+  "figure_artifacts": [
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/notebook_validation_final/native_figure_01.png",
+      "cell_index": 7,
+      "sha256": "daeb39b23a9378a3e5522a53a9e676e95955e7c65b2dc1e23d8f62bd17dfa7b6",
+      "bytes": 199723
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/notebook_validation_final/native_figure_02.png",
+      "cell_index": 9,
+      "sha256": "bf71ec18762c2b88f6a01fb2f13253a1ef88714158882c701aec308a907a9470",
+      "bytes": 188294
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/notebook_validation_final/native_figure_03.png",
+      "cell_index": 11,
+      "sha256": "d38182f45784cc55cfa612ca96cc9a50a4326d1698cdf8eaa1500616e7e15364",
+      "bytes": 123711
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/notebook_validation_final/native_figure_04.png",
+      "cell_index": 13,
+      "sha256": "4a439233ede1429d7246b184a348ad289dde39f79c80760f71973f3efecf33ac",
+      "bytes": 272202
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/notebook_validation_final/native_figure_05.png",
+      "cell_index": 15,
+      "sha256": "ee5ba6861c1d9bbdad484845e69b41be4b5fdc018a67bc853cacf88fcc11433b",
+      "bytes": 220469
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/notebook_validation_final/native_figure_06.png",
+      "cell_index": 17,
+      "sha256": "e4094ab076e3731b121aa1de2e3d16f0a3d37533fd8752bf4c3a3575b1afeab3",
+      "bytes": 533492
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/notebook_validation_final/native_figure_07.png",
+      "cell_index": 17,
+      "sha256": "6c981c988a40b452cd42dcc7b750084cef5c42ae0f83e024e163010b32805cef",
+      "bytes": 108583
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/notebook_validation_final/native_figure_08.png",
+      "cell_index": 19,
+      "sha256": "d59b8e03d665b376055c921dd4ea77ba619a157acf7384473d5637104f571993",
+      "bytes": 132618
+    }
+  ],
+  "input_artifacts": [
+    {
+      "path": "configs/netbci_cohort_full_windows_20261010.json",
+      "sha256": "2bead8bccd0396e0358bb8167324621e80d48087ba011a334224f73962d10904",
+      "bytes": 3477
+    },
+    {
+      "path": "configs/netbci_cohort.json",
+      "sha256": "396c684415fe861301634a5089f3065bf036cb550aa7e90ec9d9178117642411",
+      "bytes": 2914
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/numeric_signal_identity.json",
+      "sha256": "4f749f6f91af06bf1233b54c55b73beb61ea2dbd12b44204bd53aa5f3b9e3b28",
+      "bytes": 11050625
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/numeric_signal_identity_official_manifest_confirmation.json",
+      "sha256": "c6f2079e00915f76b73cb3fa9c7c1fffecf49457f5e0cc51bfd5ff20e8de26fb",
+      "bytes": 918966
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/summary_run01/summary_receipt.json",
+      "sha256": "1f054d052bd9158b37278842920a747fe44ea8268a35b7e4759f13f6ff7417f1",
+      "bytes": 63154
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/summary_run01/cohort_matched_statistics.tsv",
+      "sha256": "a52c24af7a3d3a57a262ba29e19716e470659136783d65146d023c9bdd8121c5",
+      "bytes": 8141
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/summary_run01/cohort_paired_changes.tsv",
+      "sha256": "36c2721017413c493b02a1f9af5db923db5f15ea77f34e34a2b6756fa3d3c2d5",
+      "bytes": 2137
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/summary_run01/cohort_session_statistics.tsv",
+      "sha256": "457865c2824983b5ba89d55634569b2a790dbd0383af6d08587c0c403f656448",
+      "bytes": 5681
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/summary_run01/cohort_summary.json",
+      "sha256": "eedd61104299b342b19b6f4e0080fc1fbd6bdf221dd8e882f99905272919553d",
+      "bytes": 27718
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/summary_run01/figures/cohort_geometry.pdf",
+      "sha256": "429b9039411455f664c93b61ca517b0bc2c3253664d3d3c65cd84e5a1115f840",
+      "bytes": 44455
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/summary_run01/figures/cohort_geometry.png",
+      "sha256": "7a7158c3e4d1b7a58d451795666c8cf741dfb32c1fb5922b121ac0586f636056",
+      "bytes": 562770
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/summary_run01/figures/cohort_geometry.svg",
+      "sha256": "47903ae31f3c2329010d8a4db9f0d5efddc3419814490d889ba12c586194cbe9",
+      "bytes": 169440
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/summary_run01/figures/cohort_paired_changes.pdf",
+      "sha256": "2fd71cf9987f6a9fa5cebe1b9ef3a9d69ece53e2b381b534c922fb165eacbcc7",
+      "bytes": 25969
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/summary_run01/figures/cohort_paired_changes.png",
+      "sha256": "2807d7e8c156971de0b85ba9cf4a194dbc75345d1892084f29511300f6bb637f",
+      "bytes": 144460
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/summary_run01/figures/cohort_paired_changes.svg",
+      "sha256": "fb52d82b124d4cd3735df2657b90cbc4116757d8fdec03ee9bc9a85a1ddaf5c0",
+      "bytes": 90643
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/summary_run01/figures/cohort_trajectories.pdf",
+      "sha256": "81950a51fa2e26a8b669456d9e0e3f584212123ff76623a8ef79c00cab941a14",
+      "bytes": 41673
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/summary_run01/figures/cohort_trajectories.png",
+      "sha256": "45dcfa4d9254f8b1e2b26b80eea2a9d562c53dd6d3342b92af6458be2df66894",
+      "bytes": 451960
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/summary_run01/figures/cohort_trajectories.svg",
+      "sha256": "c10484dbf753411889966bcbc222961d1324b5f1af6e352e3dc9a7bcafd322ba",
+      "bytes": 141891
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/summary_run01/participant_first_last_changes.tsv",
+      "sha256": "04e4f633ee1dafc8298a5c731ffbc6c9964591aec1a2e1e5da19be499dda2b6f",
+      "bytes": 7179
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/summary_run01/participant_matched_geometry.tsv",
+      "sha256": "36b8e824cf162b509176f0f5c5ca354c62393455460cd6ca2156db0d3dc00a17",
+      "bytes": 12097
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/summary_run01/participant_session_join.tsv",
+      "sha256": "0b26f8e914390797ffadc4eee0a92cfc511ccedeeef75fa8553893404ad76bee",
+      "bytes": 20318
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/summary_run01/spectral_reference_QC_sensitivity.tsv",
+      "sha256": "a168416f414f22720d34ad5b050cb26599d6b7e29eaab5bab2f43e0653958286",
+      "bytes": 97344
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/associations_run01/association_receipt.json",
+      "sha256": "08c7567894fdbd937f9d32cdefb8cc09627e8b4aeada17f80966518e35cb9484",
+      "bytes": 5816
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/associations_run01/association_results.json",
+      "sha256": "4ccc74b585364ae4a9f490e6b681efdfe2cb6b84e4a538670772015971e927a9",
+      "bytes": 19598
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/associations_run01/association_estimates.tsv",
+      "sha256": "fcfc41eb6a0c4d23a47cc7e9dbae6a966c1dd2b2b8a1ca0c2e99677ea93a9753",
+      "bytes": 4311
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/associations_run01/participant_association_values.tsv",
+      "sha256": "aa237d41a508e671f06086eee0961d02d33ec5e8571953bc97cc50823edf5846",
+      "bytes": 2237
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/independence_sensitivity_run01/sensitivity_receipt.json",
+      "sha256": "f5593bdbeecf67e03c7aeb21857923038f23baf2354e8b314c2090c548fbc172",
+      "bytes": 6559
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/independence_sensitivity_run01/cohort_paired_changes.tsv",
+      "sha256": "2e6e351c146662f9781b637f034713932a4944710ed44982dc3cbf7807ff80c5",
+      "bytes": 2112
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/independence_sensitivity_run01/cohort_session_statistics.tsv",
+      "sha256": "0985852104997465d694cc098f4f309ad54e2197d8f30632ee15efea572f3fd9",
+      "bytes": 5646
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/independence_sensitivity_run01/retained_participant_session_join.tsv",
+      "sha256": "5b4354b92a967fcab54ec1470f71e0b1c94679fd7a0a0719bc965395db57fe3d",
+      "bytes": 16456
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/independence_sensitivity_run01/participant_first_last_changes.tsv",
+      "sha256": "62497dbe3f56b4e075ab8d70d3d1deea51ea64d6a77e8ad3a8cf9eaf0dd86f51",
+      "bytes": 5785
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/independence_sensitivity_run01/association_estimates.tsv",
+      "sha256": "d7c53beb51275f24ecedfb2411d4bb381f2e87c6be15d34d692204a8601eafa6",
+      "bytes": 4158
+    },
+    {
+      "path": "research_logs/netbci_cohort_resume_20261010/independence_sensitivity_run01/sensitivity_summary.json",
+      "sha256": "a27e5547bb1d05db83a36676e32284fb165784d8dab4a8d73911d5b38e7497af",
+      "bytes": 16711
+    }
+  ],
+  "primary_ten_identity_outputs_still_match_original_summary_receipt": true,
+  "sensitivity_outputs_still_match_original_sensitivity_receipt": true,
+  "original_previous_notebook_preserved_in": "research_logs/netbci_cohort_resume_20261010/notebook_validation_final/superseded_before_complete_source_identity",
+  "scientific_boundaries": [
+    "complete 240-run exact identity audit confirmed; no original BrainVision continuous EEG comparison",
+    "no inference that ten published IDs are independent EEG sources",
+    "eight-ID sensitivity post-observation and not independent confirmation",
+    "19 published behaviour cohort count unaffected; no generated trial outcomes",
+    "no learning-preservation or causal adaptation claim"
+  ],
+  "versions": {
+    "python": "3.11.16",
+    "numpy": "2.2.6",
+    "pandas": "3.0.6",
+    "matplotlib": "3.11.2",
+    "nbformat": "5.10.4",
+    "nbclient": "0.10.2",
+    "nbconvert": "7.16.6",
+    "ipykernel": "6.30.1"
+  }
+}

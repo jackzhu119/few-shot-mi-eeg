@@ -235,8 +235,10 @@ def main() -> None:
                      if args.config.exists() else None)
     approved = config.get("subjects", list(range(1, 11)))
     approved = [int(str(subject).removeprefix("sub-")) for subject in approved]
-    if any(subject not in range(1, 11) for subject in approved):
-        raise ValueError("This research expansion is bounded to participants 1 through 10")
+    if not approved or len(approved) != len(set(approved)):
+        raise ValueError("Approved cohort must contain unique explicit participant IDs")
+    if any(subject not in range(1, 20) for subject in approved):
+        raise ValueError("Pinned v1.0.0 expansion is bounded to the 19 published participants")
     subjects = args.subjects or approved
     if len(set(subjects)) != len(subjects) or not set(subjects).issubset(approved):
         raise ValueError("Requested participants differ from the approved cohort")

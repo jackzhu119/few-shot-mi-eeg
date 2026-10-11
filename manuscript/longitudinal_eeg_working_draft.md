@@ -10,6 +10,12 @@ author_and_affiliation_metadata: to_be_confirmed_by_author
 
 # Auditable longitudinal EEG representations and frozen-decoder transportability: a single-participant NETBCI feasibility study
 
+**Source-integrity update, 11 October 2026:** this historical feasibility draft predates the
+discovery that sub-1 session-04 and sub-7 sessions-01/02/03 have identical derivative EEG
+signals across all six runs. The correct original assignment is unresolved. Retain the
+numbers below as historical computations; use the [cohort addendum](cohort_addendum_20261010.md)
+and current source audit for scientific interpretation and the eight-ID sensitivity.
+
 **Research programme:** Learning-Preserving Co-Adaptive Brain–Computer Interfaces.
 
 **Working manuscript.** This document reports secondary EEG analysis of one public-data participant and a separate 19-participant behavior-only summary. It does not report a new co-adaptive algorithm, a cohort EEG replication, or a causal experiment on human skill acquisition. Numerical results below come from saved real-data analyses; proposed experiments are identified separately. Authorship, affiliations, contributions, funding, competing interests, and the institution's determination regarding secondary-data research must be completed before any submission.

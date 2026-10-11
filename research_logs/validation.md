@@ -144,3 +144,13 @@ SHU ZIP 密码与事件单位矛盾、NETBCI 大归档/实际事件、订阅论�
 - 执行时Git基准/dirty、脚本/配置/数据SHA与实际软件版本保留；新增post-execution source_closure补充脚本依赖，明确不是回填成执行时记录。
 
 - 最终新增文件的Git whitespace检查初次将20,477个合法TSV CRLF行尾报为空白；追加`.gitattributes`保留TSV原字节并启用cr-at-eol，提交diff复查零问题。没有重写或归一化校验文件字节。
+
+### 2026-10-11 十身份接续检查点
+
+- 同一固定版本1885文件校验、240 EDF信号/7577源事件读取通过，7576个5秒窗口及1条显式源事件排除。
+- 十身份全员source-only频谱/几何/冻结CSP-LDA、40行行为join与统计实际执行；sub3完整refit16文件byte一致。
+- 独立算术复算通过，随后独立完整数值审计发现sub1/sub7跨身份/会话精确重复；238条source training→later query内容重合。
+  官方checksum通过不保证独立采集，原十身份EEG区间不作为独立人的推断；源驱动排除两者后的八身份敏感性另存并独立重算通过。
+- pytest279项通过、2个既有上游deprecation warnings；ruff和Git whitespace检查通过。合成smoke/data-stack在接续preflight已通过且明确software_validation_only。
+- R2实际写入、逐对象HEAD及代表/小结果全GET校验通过；截至本检查点存原始数据/eligible bundles/模型结果/来源ledger/私有聊天备份，具体字节以storage_catalog_ten_20261011.json为准。
+- 新19身份与外部公开资源按用户授权准备，检查点前未下载新增EEG信号，后续独立收据记录实际完成范围。第一篇未修改，未启动付费GPU或在线人体实验。

@@ -43,12 +43,51 @@ def write_json(path: Path, result: dict) -> None:
         stream.write(json.dumps(result, indent=2, ensure_ascii=False, allow_nan=False) + "\n")
 
 
-def write_tsv(path: Path, rows: list[dict]) -> None:
-    require(bool(rows), f"Cannot save empty evidence table: {path}")
+def write_tsv(path: Path, rows: list[dict], *, fieldnames: list[str] | None = None) -> None:
+    require(bool(rows) or bool(fieldnames), f"Cannot save empty evidence table: {path}")
     with path.open("x", encoding="utf-8", newline="") as stream:
-        writer = csv.DictWriter(stream, list(rows[0]), delimiter="\t")
+        writer = csv.DictWriter(stream, fieldnames or list(rows[0]), delimiter="\t")
         writer.writeheader()
         writer.writerows(rows)
+
+
+def add_window_eligibility_counts(result: dict, source_events: list[dict]) -> None:
+    """Retain source run/session totals and add exact-window tensor eligibility."""
+    require(len({row["trial_id"] for row in source_events}) == len(source_events),
+            "Duplicate source event identity")
+    summary = result["summary"]
+    require(len(source_events) == summary["total_trials"],
+            "Source audit and adapter source event counts disagree")
+    eligible = [row for row in source_events if row["fixed_window_eligible"]]
+    excluded = [row for row in source_events if not row["fixed_window_eligible"]]
+    source_counts = Counter(row["label"] for row in source_events)
+    require(dict(source_counts) == summary["class_counts"],
+            "Source audit and adapter source class counts disagree")
+    summary.update({
+        "total_source_trials": len(source_events), "source_class_counts": dict(source_counts),
+        "total_trials": len(eligible), "class_counts": dict(Counter(row["label"] for row in eligible)),
+        "excluded_trial_count": len(excluded),
+        "excluded_class_counts": dict(Counter(row["label"] for row in excluded)),
+        "total_source_task_window_seconds": sum(row["duration_s"] for row in source_events),
+        "total_exact_task_window_seconds": sum(row["duration_s"] for row in eligible),
+        "trial_count_convention": "total_trials counts adapted exact windows; source totals retained separately",
+    })
+    for unit in [*result["runs"], *summary["sessions"]]:
+        selected = [row for row in source_events if row["session"] == unit["session"]
+                    and ("run" not in unit or row["run"] == unit["run"])]
+        require(len(selected) == unit["trial_count"], "Source event/run/session count mismatch")
+        selected_eligible = [row for row in selected if row["fixed_window_eligible"]]
+        selected_excluded = [row for row in selected if not row["fixed_window_eligible"]]
+        unit.update({
+            "source_trial_count": len(selected),
+            "source_class_counts": dict(Counter(row["label"] for row in selected)),
+            "eligible_trial_count": len(selected_eligible),
+            "eligible_class_counts": dict(Counter(row["label"] for row in selected_eligible)),
+            "excluded_trial_count": len(selected_excluded),
+            "excluded_class_counts": dict(Counter(row["label"] for row in selected_excluded)),
+            "source_task_window_seconds": sum(row["duration_s"] for row in selected),
+            "eligible_task_window_seconds": sum(row["duration_s"] for row in selected_eligible),
+        })
 
 
 def upstream_subject_map(provenance: dict, subject: str) -> tuple[str, list[dict]]:
@@ -222,23 +261,42 @@ def audit_subject(subject: str, config: dict, config_path: Path) -> dict:
             "Four protocol session IDs do not establish verified real dates or retention intervals.",
         ]
         write_tsv(output / "original_header_inventory.tsv", headers)
-        subset = load_netbci_subset(data_root, manifest_path, subject=subject)
-        require(subset.dataset.n_trials == result["summary"]["total_trials"],
-                "Audit and adapter trial counts disagree")
+        subset = load_netbci_subset(
+            data_root, manifest_path, subject=subject,
+            fixed_window_duration_seconds=config.get("fixed_window_duration_seconds"),
+            mismatch_action=config.get("mismatch_action"),
+        )
         header_by_run = {(row["session"], row["run"]): row for row in headers}
-        event_rows = []
-        for item in subset.trials:
-            header = header_by_run[(item.session, item.run)]
-            event_rows.append({
-                **asdict(item), "original_subject": original_subject,
+        source_inventory = subset.provenance.get("source_event_inventory", [{
+            **asdict(item), "source_length_samples": item.stop_sample_exclusive - item.start_sample,
+            "fixed_window_eligible": True, "exclusion_reason": "",
+        } for item in subset.trials])
+        add_window_eligibility_counts(result, source_inventory)
+        require(subset.dataset.n_trials == result["summary"]["total_trials"],
+                "Audit and adapter eligible trial counts disagree")
+        eligible_ids = {row["trial_id"] for row in source_inventory if row["fixed_window_eligible"]}
+        require(eligible_ids == {item.trial_id for item in subset.trials},
+                "Adapted tensor and eligible source event identities disagree")
+        if "fixed_window_policy" in subset.provenance:
+            result["fixed_window_policy"] = subset.provenance["fixed_window_policy"]
+            result["limitations"].append(
+                "Duration eligibility was introduced after observing the shortened source event; "
+                "full-window analyses remain exploratory and all source events are retained.")
+        source_rows = []
+        for item in source_inventory:
+            header = header_by_run[(item["session"], item["run"])]
+            source_rows.append({
+                **item, "original_subject": original_subject,
                 "signal_unit": "V", "onset_unit": "s", "duration_unit": "s",
                 "sample_origin": 0, "original_header_file": header["original_header_file"],
                 "declared_original_header_sha256": header["declared_original_header_sha256"],
                 "original_header_hash_verified": header["original_header_hash_verified"],
                 "behavior_trial_outcome": "unresolved", "behavior_score_denominator": "unresolved",
             })
-        require(len({row["trial_id"] for row in event_rows}) == len(event_rows),
-                "Duplicate trial identity")
+        event_rows = [row for row in source_rows if row["fixed_window_eligible"]]
+        excluded_rows = [row for row in source_rows if not row["fixed_window_eligible"]]
+        write_tsv(output / "source_events.tsv", source_rows)
+        write_tsv(output / "excluded_events.tsv", excluded_rows, fieldnames=list(source_rows[0]))
         write_tsv(output / "events.tsv", event_rows)
         run_rows = []
         for item in result["runs"]:
@@ -250,6 +308,14 @@ def audit_subject(subject: str, config: dict, config_path: Path) -> dict:
                 "trial_count": item["trial_count"],
                 "right_hand_count": item["class_counts"].get("right_hand", 0),
                 "rest_count": item["class_counts"].get("rest", 0),
+                "source_trial_count": item["source_trial_count"],
+                "eligible_trial_count": item["eligible_trial_count"],
+                "eligible_right_hand_count": item["eligible_class_counts"].get("right_hand", 0),
+                "eligible_rest_count": item["eligible_class_counts"].get("rest", 0),
+                "excluded_trial_count": item["excluded_trial_count"],
+                "excluded_class_counts_json": json.dumps(item["excluded_class_counts"]),
+                "source_task_window_seconds": item["source_task_window_seconds"],
+                "eligible_task_window_seconds": item["eligible_task_window_seconds"],
                 "channel_count": item["channel_count"],
                 "channel_names_json": json.dumps(item["channel_names"]),
                 "sampling_frequency_hz": item["sampling_frequency_hz"],
@@ -276,6 +342,8 @@ def audit_subject(subject: str, config: dict, config_path: Path) -> dict:
             "shape": shape, "sampling_frequency_hz": subset.dataset.sfreq,
             "channel_names": list(subset.dataset.channel_names), "signal_unit": "V",
             "trial_count": len(subset.trials), "bundle_directory": str(bundle.resolve()),
+            "total_source_trials": len(source_rows), "excluded_trial_count": len(excluded_rows),
+            "fixed_window_policy": subset.provenance.get("fixed_window_policy"),
             "epochs_sha256": metadata["epochs_sha256"],
             "metadata_sha256": file_sha256(bundle / "metadata.json"),
             "source_manifest_sha256": file_sha256(manifest_path),
@@ -327,10 +395,13 @@ def cohort_summary(audits: list[dict], requested_subjects: list[str]) -> dict:
     for order in orders.values():
         intersection &= set(order)
     common_order = [name for name in first_order if name in intersection]
-    counts = Counter()
+    counts, source_counts, excluded_counts = Counter(), Counter(), Counter()
     sessions = []
     for result in audits:
         counts.update(result["summary"]["class_counts"])
+        source_counts.update(result["summary"].get("source_class_counts",
+                                                   result["summary"]["class_counts"]))
+        excluded_counts.update(result["summary"].get("excluded_class_counts", {}))
         for session in result["summary"]["sessions"]:
             sessions.append({"subject": result["summary"]["subject"],
                              "original_subject": result["upstream_mapping"]["original_subject"],
@@ -346,6 +417,9 @@ def cohort_summary(audits: list[dict], requested_subjects: list[str]) -> dict:
         "subject_map_evidence": "explicit fields in pinned NEMAR sourcedata provenance",
         "session_count": len(sessions), "run_count": len(runs),
         "total_trials": sum(counts.values()), "class_counts": dict(counts),
+        "total_source_trials": sum(source_counts.values()), "source_class_counts": dict(source_counts),
+        "total_excluded_trials": sum(excluded_counts.values()),
+        "excluded_class_counts": dict(excluded_counts),
         "sessions": sessions, "channel_orders_by_subject": orders,
         "all_channel_orders_equal": all(order == first_order for order in orders.values()),
         "common_channel_order": common_order,
@@ -359,8 +433,12 @@ def cohort_summary(audits: list[dict], requested_subjects: list[str]) -> dict:
             if isinstance(header["original_sampling_frequency_hz"], (float, int))}),
         "total_continuous_seconds": sum(row["signal_samples"] / row["sampling_frequency_hz"]
                                         for row in runs),
-        "total_exact_task_window_seconds": sum(row["trial_count"] * row["trial_durations_s"][0]
-                                               for row in runs),
+        "total_exact_task_window_seconds": sum(
+            row.get("eligible_task_window_seconds", row["trial_count"] * row["trial_durations_s"][0])
+            for row in runs),
+        "total_source_task_window_seconds": sum(
+            row.get("source_task_window_seconds", row["trial_count"] * row["trial_durations_s"][0])
+            for row in runs),
         "original_headers_hash_verified": sum(result["upstream_mapping"]["actual_headers_hash_verified"]
                                                for result in audits),
         "declared_original_headers": sum(result["upstream_mapping"]["declared_original_headers"]

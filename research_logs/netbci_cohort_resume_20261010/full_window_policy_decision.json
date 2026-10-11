@@ -1,0 +1,20 @@
+{
+  "status": "explicit_input_eligibility_policy_before_any_cohort_model_fitting",
+  "created_at_utc": "2026-10-10T08:19:44.450997+00:00",
+  "config": "configs/netbci_cohort_full_windows_20261010.json",
+  "config_sha256": "9cd010d8841c3b82de10f9acacdcb25d590cbe956665a1343e7449a8ed603751",
+  "original_frozen_config_sha256": "396c684415fe861301634a5089f3065bf036cb550aa7e90ec9d9178117642411",
+  "parameter_changes": {
+    "output_root": "research_logs/netbci_cohort_resume_20261010/audits_full_windows",
+    "bundle_root": "data/netbci2026/cohort_full_windows_v1.0.0",
+    "fixed_window_duration_seconds": 5.0,
+    "mismatch_action": "retain_source_event_exclude_from_fixed_window_tensor"
+  },
+  "evidence": "strict adapter rejected variable epoch length; complete source-event duration census independently identified one shorter source event",
+  "reason": "cannot append later data, pad or invent missing 5s samples; retain source identity and explicit exclusion count",
+  "scientific_scope": "post-observation explicit adapter eligibility for exploratory expansion; not retrospective preregistration",
+  "model_spectral_matching_and_statistical_parameters_changed": false,
+  "earlier_strict_audits_and_failure_preserved": true,
+  "initial_failure": "research_logs/netbci_cohort_resume_20261010/audits/sub-3/failure.json",
+  "all_participants_retained": true
+}

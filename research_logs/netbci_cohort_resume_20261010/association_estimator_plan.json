@@ -1,0 +1,32 @@
+{
+  "recorded_at_utc": "2026-10-10T08:32:26.452592+00:00",
+  "scope": "protocol_planned_exploratory_participant_changes_associations",
+  "timing": "after source audit and three participant computations, before cohort summary or association values inspected",
+  "n_requested": 10,
+  "independent_unit": "participant",
+  "changes": "session04_minus_session01",
+  "pairs": [
+    "BA_change_vs_behavior_change",
+    "Mu_change_vs_behavior_change",
+    "Mu_change_vs_BA_change",
+    "all_six_runs_AIRM_session04_vs_BA_change",
+    "all_six_runs_PCA_session04_vs_BA_change"
+  ],
+  "estimators": [
+    "Pearson_r",
+    "Spearman_rho"
+  ],
+  "bootstrap": {
+    "unit": "paired_participant_rows",
+    "repetitions": 10000,
+    "seed": 42,
+    "interval": "95_percentile",
+    "degenerate_draws": "exclude_and_report_count_not_zero_impute"
+  },
+  "missingness": "retain participant identity; metric pair complete cases with exact n",
+  "p_values": false,
+  "hypothesis_confirmation": false,
+  "causal_claims": false,
+  "original_model_config_changed": false,
+  "estimator_choice_preregistration": false
+}

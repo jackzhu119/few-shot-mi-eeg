@@ -7,6 +7,26 @@
 本项目在现有科研分支上开展可复现的纵向 EEG 审计与探索性分析。仓库名称
 `few-shot-mi-eeg` 不限定科学问题为 few-shot 分类，也不代表已提出或验证新算法。
 
+## 2026-10-10 接续：十人队列
+
+已沿用现有云端环境与 `research/learning-preserving-bci` 分支，完整读取旧聊天交接及其
+状态快照后恢复相同的固定版本子集。十人信号审计已通过：40 会话、240 个 EDF、
+7,577 条原始事件，其中 7,576 条满足完整 5 秒窗口，74 个通道的顺序跨人一致。
+一条 2.968 秒 rest 事件保留在原始清单，按明确的
+[分析窗口修订](docs/netbci_full_window_policy_20261010.md)排除出固定长度张量。
+原始配置和失败记录保留；科学参数未重选，修订不称外部预注册。
+
+最新队列证据和下一阶段门槛以[十人报告](docs/netbci_cohort_results_20261010.md)、
+[统一执行配置](configs/netbci_cohort_full_windows_20261010.json)及
+[接续日志](research_logs/netbci_cohort_resume_20261010/)为准。
+下文单人记录保留为历史先导阶段，不能与新队列拼接计算。
+
+完整数值身份审计发现 sub-7 前三个会话与 sub-1 第四会话的六个对应 run 信号相同；
+文件校验通过不保证采集独立。原十身份统计保留为算术结果，另有排除两个受影响身份的
+八身份敏感性分析，不能把原区间直接用于论文的人群结论。
+2026-10-11 接续将扩展公开数据并保存至已验证的 Cloudflare R2；
+[存储记录](docs/r2_research_storage.md)区分对象核对与完整读取校验。
+
 ## 科学边界
 
 区分解码器参数自适应、EEG 表征漂移、人类神经控制学习和行为表现。
@@ -24,7 +44,7 @@
 - 随机种子、配置、依赖版本、源码 commit 和逐受试者结果日志。
 
 具体已运行检查及版本见 [环境报告](research_logs/environment.json) 和
-[验证记录](research_logs/validation.md)。已完成 NETBCI2026 单受试者真实 EEG 的访问与
+[验证记录](research_logs/validation.md)。已完成 NETBCI2026 前十人的真实 EEG 访问、
 MNE 读取检查及本地数据适配器验收；完整 EEGNet 训练、候选协同自适应方法以及在线人体实验
 仍须通过 [路线图](ROADMAP.md) 的相应阶段。
 
@@ -34,11 +54,12 @@ MNE 读取检查及本地数据适配器验收；完整 EEGNet 训练、候选�
    [官方入口](https://www.nemar.org/dataset/nm000305)、
    [可达下载 API](https://data.nemar.org/nm000305/)，固定公开快照 **v1.0.0**，
    DOI [10.82901/nemar.nm000305.v1.0.0](https://doi.org/10.82901/nemar.nm000305.v1.0.0)，
-   数据许可 **CC BY 4.0**。公开目录支持按文件/受试者下载。本轮仅下载 `sub-1` 的
+   数据许可 **CC BY 4.0**。公开目录支持按文件/受试者下载。历史首次访问仅下载 `sub-1` 的
    24 个 EDF（4 个 session × 6 个 run）及配套元数据，169 个文件共 **193,462,298 bytes**；
    校验和全部与官方 manifest 匹配。MNE 实读为 **74 EEG 通道、250 Hz**，
    事件为 **右手运动想象 vs 休息**，四个 session 分别 **180 / 179 / 180 / 178 trials**，
-   合计 **717 trials**。访问与结构验收已完成；2026-10-10 另执行单受试者探索性表征分析、冻结 CSP-LDA 与 3 epoch CPU EEGNet 最小验证，见下方最新报告。
+   合计 **717 trials**。随后扩展为公开编号前十人：**1,885 个去重文件、2,049,560,417 bytes**，
+   官方校验全部通过。新协议重新分析十人，旧单人 3 epoch CPU EEGNet 只保留为最小软件验证。
 2. **SHU / Ma2022 为第二优先级，原始接入状态 `pending author access`。**
    NEMAR `nm000288` publication pending；不继续请求该接口，不尝试破解 ZIP。
    保留左右手 MI、五日 session 的研究计划与通用数据接口。调整优先级前读取的
@@ -50,7 +71,7 @@ NEMAR NETBCI 是经 MOABB 转换的 **EDF/BIDS derivative**，与原始 Datavers
 映射相反；按真实 `trial_type` 与 EDF annotation 验证，不能硬编码 README 的数字。
 `onset/duration` 为秒、`sample` 从 0 起，已按实际采样率与信号边界核验。
 NEMAR 参与者表没有行为成绩；原始官方侧表提供每 session 的六个 run 命中率，
-原始 24 run 与 derivative 的受试者、通道和事件对应已验证；成绩向量的 run 顺序、评分分母、逐 trial 命中和光标轨迹仍需确认。在线反馈实验及 EEG 跨天变化
+原始 sub-01 的 24 run 事件对应及十人的 240 个原始头文件来源已验证；未实读其余九人的原始 BrainVision 信号或 marker。成绩向量的 run 顺序、评分分母、逐 trial 命中和光标轨迹仍需确认。在线反馈实验及 EEG 跨天变化
 不能单独证明人类学习、保持或新算法的因果效果。
 
 详细来源、差异和检查结果见 [数据可行性](docs/dataset_feasibility.md)、
@@ -111,15 +132,13 @@ paper/                       写作范围与证据门槛
 
 ## 下一步
 
-本地适配器已保留 717 个 trial 的 subject/session/run/TSV 行身份，生成
-`717 × 74 × 1250` 的 V 单位数组并通过保存/读取校验。
-[跨会话分析方案](docs/netbci_cross_session_plan.md)与[划分配置](configs/netbci_cross_session.json)
-已准备并验证分组无重叠；这是分析前冻结方案，不是外部预注册或已执行实验。
-已有 subject/session 对应支持会话级科学分析，无需先取得已有成绩或明确run顺序。
-具体 run/trial 研究仍待评分分母、顺序和缺失原因验证；扩展下载另行决定。SHU 保留 `pending author access`。算法影响人类学习与 retention
-的因果问题留待合适的前瞻性设计。
+十人分析在同一新协议下重新运行，源端 ses-01/run-01–04 训练，run-05–06 为独立参考 query，
+后续会话只评估冻结模型。已有行为按 subject/session 关联；具体 run/trial 研究仍待
+评分分母、顺序和缺失原因验证。后续需专门验证测量可靠性、任务信息、伪迹/参考敏感性和
+充分训练的 source-only baseline，再评估独立确认样本；SHU 保留 `pending author access`。
+算法影响人类学习与 retention 的因果问题仍需前瞻性在线对照和独立保持探测。
 
-## 最新科研证据（2026-10-10）
+## 历史单人先导证据（2026-10-10）
 
 [完整审计、行为映射、Q1–Q7及下一步决策](docs/netbci_stage1_evidence_and_decision.md)；
 [可执行分析](scripts/run_netbci_stage1.py)、[配置](configs/netbci_stage1.json)、
@@ -132,7 +151,7 @@ paper/                       写作范围与证据门槛
 
 [会话层行为—EEG报告](docs/netbci_behavior_session_analysis.md)已完成：原始19人×4会话×6成绩共456值，
 均值54.11%→56.74%→62.15%→68.68%；末次−首次平均+14.57个百分点，配对受试者bootstrap
-95%区间[10.71,18.27]，属于观察性行为变化。仅sub-1有已读EEG，四行会话级join已完成。
+95%区间[10.71,18.27]，属于观察性行为变化。该历史阶段仅sub-1有已读EEG，四行会话级join已完成；十人队列另行汇总。
 Mu任务差异与冻结解码结果已分别对照、计数/QC敏感性和精确重放已保存；不作学习因果或算法保留结论。
 可运行入口为[分析脚本](scripts/analyze_netbci_behavior_sessions.py)、[配置](configs/netbci_behavior_sessions.json)
 和[已执行notebook](notebooks/netbci2026_behavior_sessions.ipynb)。没有新增信号下载或模型拟合。

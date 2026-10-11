@@ -1,0 +1,46 @@
+{
+  "at_utc": "2026-10-10T08:26:25.659737+00:00",
+  "status": "all_preflight_software_checks_passed",
+  "pytest": {
+    "passed": 220,
+    "warnings": 2,
+    "scope": "full suite at preflight; subsequent newlyadded tests verified in scopedcheck",
+    "summary": "220 passed, 2 Braindecode deprecation warnings"
+  },
+  "ruff": "src tests scripts passed",
+  "smoke": {
+    "status": "software_validation_passed",
+    "synthetic": true,
+    "path": "results/netbci_cohort_resume_20261010/software_checks/preflight_smoke.json"
+  },
+  "stack": {
+    "status": "MNE_MOABB_synthetic_provider_passed",
+    "shape": [
+      20,
+      3,
+      385
+    ],
+    "synthetic": true
+  },
+  "python": "3.11.16",
+  "versions": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.7.2",
+    "mne": "1.10.2",
+    "torch": "2.8.0+cpu",
+    "braindecode": "1.2.0",
+    "moabb": "1.4.3",
+    "matplotlib": "3.11.2",
+    "nbformat": "5.10.4",
+    "nbclient": "0.10.2",
+    "nbconvert": "7.16.6"
+  },
+  "logs_sha256": {
+    "pytest_preflight.log": "bf5fcb6f5796ddfaef860ea54537c539f4481d2a79e54301a9e798d2c0558c47",
+    "ruff_preflight.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "smoke_preflight.log": "c43bc4878128476f644f70a61b7e5fe2f9b71e0157ae950d7a5fa568b4be187b",
+    "stack_preflight.log": "1c27830fc2e4968a433363d5b7e906cfae975fe7fd02aad0bcdde971998be368"
+  },
+  "real_data_analysis_claimed_by_checks": false
+}

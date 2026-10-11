@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "date_Asia_Shanghai": "2026-10-11",
+  "scope": "completed storage recovery and ten-participant research stages; later participant/data expansions remain pending",
+  "credential_values_logged": false,
+  "public_access_policy_changed": false,
+  "stages": [
+    {
+      "receipt": "research_logs/netbci_cohort_resume_20261010/r2/raw_ten_20261010_run01.json",
+      "receipt_sha256": "ecd37fb26890180c6da0d86830a54fd315aea3f090e8354b61cdb3a30fe49ced",
+      "key_prefix": "few-shot-mi-eeg/datasets/netbci2026/nm000305/v1.0.0",
+      "status": "completed",
+      "totals": {
+        "planned_files": 1885,
+        "planned_bytes": 2049560417,
+        "verified_files": 1885,
+        "verified_bytes": 2049560417,
+        "failed_files": 0,
+        "full_get_sha256_verified_files": 5,
+        "uploaded_bytes": 2049560417,
+        "readback_bytes": 9904914
+      },
+      "readback_mode": "sample"
+    },
+    {
+      "receipt": "research_logs/netbci_cohort_resume_20261010/r2/full_window_bundles_ten_20261011_run01.json",
+      "receipt_sha256": "18cdedd1b980da4d36e657b031922b9eab70e4def4ee9da2924a014076c352ae",
+      "key_prefix": "few-shot-mi-eeg/derived/netbci2026/nm000305/v1.0.0/full-window-5s/ten-participant-20261010-run01",
+      "status": "completed",
+      "totals": {
+        "planned_files": 20,
+        "planned_bytes": 3183898726,
+        "verified_files": 20,
+        "verified_bytes": 3183898726,
+        "failed_files": 0,
+        "full_get_sha256_verified_files": 2,
+        "uploaded_bytes": 3183898726,
+        "readback_bytes": 391243888
+      },
+      "readback_mode": "sample"
+    },
+    {
+      "receipt": "research_logs/netbci_cohort_resume_20261010/r2/chat_backup_20261011_run01.json",
+      "receipt_sha256": "f155ef8d5f3dd73bf307f9230cccc8f81619300564fec20b744033bf8e7c6768",
+      "key_prefix": "few-shot-mi-eeg/private-handoffs/20261010/original-chat-backup-run01",
+      "status": "completed",
+      "totals": {
+        "planned_files": 2,
+        "planned_bytes": 12238340,
+        "verified_files": 2,
+        "verified_bytes": 12238340,
+        "failed_files": 0,
+        "full_get_sha256_verified_files": 2,
+        "uploaded_bytes": 12238340,
+        "readback_bytes": 12238340
+      },
+      "readback_mode": "all"
+    },
+    {
+      "receipt": "research_logs/netbci_cohort_resume_20261010/r2/numeric_signal_identity_20261011_run01.json",
+      "receipt_sha256": "f0e5d3d151e951cb3f24298261ce6006b54170742e4c84555f4ae67c90a52a5f",
+      "key_prefix": "few-shot-mi-eeg/audits/netbci2026/nm000305/v1.0.0/numeric-signal-identity-20261011-run01",
+      "status": "completed",
+      "totals": {
+        "planned_files": 2,
+        "planned_bytes": 11050966,
+        "verified_files": 2,
+        "verified_bytes": 11050966,
+        "failed_files": 0,
+        "full_get_sha256_verified_files": 2,
+        "uploaded_bytes": 11050966,
+        "readback_bytes": 11050966
+      },
+      "readback_mode": "all"
+    },
+    {
+      "receipt": "research_logs/netbci_cohort_resume_20261010/r2/analysis_results_ten_20261011_run01.json",
+      "receipt_sha256": "184f7a035b44de7dea10699580b4e1bd527502466d15a55198ed35624e9b1347",
+      "key_prefix": "few-shot-mi-eeg/results/netbci2026/nm000305/v1.0.0/ten-participant-full-window-20261011-run01",
+      "status": "completed",
+      "totals": {
+        "planned_files": 188,
+        "planned_bytes": 13296015,
+        "verified_files": 188,
+        "verified_bytes": 13296015,
+        "failed_files": 0,
+        "full_get_sha256_verified_files": 188,
+        "uploaded_bytes": 13296015,
+        "readback_bytes": 13296015
+      },
+      "readback_mode": "all"
+    }
+  ],
+  "additional_reverification": {
+    "receipt": "research_logs/netbci_cohort_resume_20261010/r2/raw_ten_head_recheck_20261011_run01.json",
+    "receipt_sha256": "a36fd2fc4d8138e6b7dd4f9946343563633137f4ca198033c9740b0e9ea1ee81",
+    "status": "completed",
+    "totals": {
+      "checked_files": 1885,
+      "verified_files": 1885,
+      "verified_bytes": 2049560417,
+      "failed_or_missing_files": 0
+    },
+    "not_an_additional_upload": true
+  },
+  "distinct_remote_objects": 2097,
+  "distinct_remote_bytes": 5270044464,
+  "verification_caveat": "All uploads HEAD length/stored SHA256 metadata verified; full GET SHA256 evidence is only the counted selected objects. Recheck of old raw objects is HEAD-only."
+}

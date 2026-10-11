@@ -173,9 +173,9 @@ power 与 online 样本量在真实先导数据和最小有意义行为差异明
 
 每阶段保留正/负/不确定结果；更改假设、endpoint、排除或数据范围时版本化并说明是否看到结果。稿件可以先定位成可复现的 cross-session representation/decoder analysis，但其论点必须与已完成阶段匹配。
 
-## NETBCI 当前分析前冻结方案
+## NETBCI 历史单人分析前冻结方案
 
-见 [跨会话分析方案](netbci_cross_session_plan.md)及[配置](../configs/netbci_cross_session.json)。单受试者 717 trial 的 run 分组已验证；当前只完成接入与划分，不执行真实模型训练，也不以单受试者推断人群学习。原始与 derivative 事件对应已核查，行为 run 顺序和分母仍为 pending。
+见 [跨会话分析方案](netbci_cross_session_plan.md)及[配置](../configs/netbci_cross_session.json)。此历史方案准备时，单受试者 717 trial 的 run 分组已验证，只完成接入与划分；后续最小模型验证和十人分析另有配置与收据，不以单受试者推断人群学习。原始与 derivative 事件对应已核查，行为 run 顺序和分母仍为 pending。
 
 ## 本轮正式假设与执行状态（2026-10-10）
 
@@ -189,3 +189,32 @@ power 与 online 样本量在真实先导数据和最小有意义行为差异明
 19人的完整行为轨迹进行subject-bootstrap，仅1人四会话有EEG，二者样本量不得混称。
 神经—行为对照只作描述，不计算四点显著相关；run/trial outcome继续unresolved，不广播。
 新增task-window log-power对比和96-trial匹配敏感性均不称ERD/学习，未新增解码器拟合。
+
+## 2026-10-10 十人队列接续与修订
+
+[十人扩展协议](netbci_cohort_expansion_protocol.md)沿用公开前十个编号，不按行为或 EEG 结果筛选；
+已见 sub-1 先导与 19 人行为，因此属于探索性扩展。统一执行配置为
+`configs/netbci_cohort_full_windows_20261010.json`，SHA256
+`2bead8bccd0396e0358bb8167324621e80d48087ba011a334224f73962d10904`。
+原 `configs/netbci_cohort.json` 不覆盖。十人 source training 均为 ses-01/run-01–04，
+独立 source query 为 run-05–06；ses-02 仅作为 validation 描述且不选参，ses-03/04 为探索性评估。
+粗 QC、scaler、预测 reference PCA 和 CSP/LDA 只在 source training 拟合；每人模型冻结且逐次
+query 验证状态和预测重放。描述性匹配 PCA 使用同会话均衡样本，明确不进入预测。
+
+严格审计实际遇到 sub-3 的一条 2.968 秒 rest 事件，边界恰达 EDF 末尾；
+原始事件合规，不得填充成 5 秒或把其推断为行为失败。新模型拟合前记录
+[完整窗口修订](netbci_full_window_policy_20261010.md)，保存全部 7,577 个源身份、7,576 个
+纳入身份及一条排除原因，保留严格失败与早期 config 快照。此项为观察数据后的明确修订，
+不冒称外部预注册；全部科学参数与主要描述对比不变。
+
+主要描述对比为 ses-04−ses-01 的固定 CSP/LDA BA 和等 run Mu 任务窗口 log-power 差异。
+重采样单位是完整参与者，10,000 次、seed=42；10 个匹配 seeds 和每人的 500 次 run bootstrap
+均不增加参与者数。QC 匹配固定 run-03–06，每 run 每类 12 个 trial；样本不足记录 unavailable，
+不降低数量或删除参与者。功率对比无 prestimulus baseline，不称 ERD。
+额外的神经—行为/读出变化关联为参与者首末变化的探索性 Pearson/Spearman 描述，估计器及
+五对指标的选择另有时间记录，非确认性或因果检验；不对 40 会话行作独立样本相关。
+
+最新结果、QC/参考敏感性与下一阶段决策见[十人报告](netbci_cohort_results_20261010.md)。
+within-session run AIRM 是异质性描述，不能代替测量可靠性；跨人的描述方向和计算重放
+也不能分别冒称生物学重复或独立确认。H3/H4、算法新颖性、无辅助保持与 delayed retention
+均仍待相应设计，当前不实现新 policy 或追加 EEGNet 训练。

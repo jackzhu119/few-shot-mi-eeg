@@ -1,0 +1,21 @@
+{
+  "checked_at_utc": "2026-10-11T00:24:06.920784+00:00",
+  "pytest": {
+    "passed": 279,
+    "warnings": 2,
+    "log": "runtime/pytest_checkpoint_20261011.log"
+  },
+  "ruff": {
+    "passed": true,
+    "log": "runtime/ruff_checkpoint_20261011.log"
+  },
+  "earlier_synthetic_smoke_and_data_stack_pass": "software_preflight_validation.json",
+  "scientific_signal_independence": "failed_for_cross_ID_copies; raw arithmetic preserved with n8 source-driven sensitivity",
+  "source_code_sha256": {
+    "scripts/analyze_netbci_cohort_subject.py": "686d7149421b74c32e4f49f3324f2889c440c893285e8bbe6d9d00add1de5a07",
+    "scripts/summarize_netbci_cohort.py": "9a0233006f4c52dd42374496ff3d5aedcddfb7ef67fd3437bba7134f5f93f0ab",
+    "scripts/analyze_netbci_independence_sensitivity.py": "f370a48738acefb07e29eff12ea077ec4877cf43e75f00ca39b82f3d203573b4",
+    "scripts/fetch_netbci_cohort.py": "6df940cee13c8340242b300b6aeb509ab0dcccdfa3c775c98c632a145332dd61",
+    "scripts/sync_research_r2.py": "b2583bcbe67956684d1599007d6d7aa2e8ca69f817b4171dca68ddb2d34a886e"
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "status": "prospectively_fixed_expansion_after_single_subject_pilot_exploratory",
+  "dataset": "NETBCI2026",
+  "version": "NEMAR_nm000305_v1.0.0",
+  "version_doi": "10.82901/nemar.nm000305.v1.0.0",
+  "license": "CC-BY-4.0",
+  "subjects": [
+    "sub-1",
+    "sub-2",
+    "sub-3",
+    "sub-4",
+    "sub-5",
+    "sub-6",
+    "sub-7",
+    "sub-8",
+    "sub-9",
+    "sub-10"
+  ],
+  "selection": "first_ten_published_subject_IDs_no_selection_on_behavior_or_EEG_results",
+  "pilot_subject_previously_observed": "sub-1",
+  "cohort_behavior_previously_observed": true,
+  "source_root": "data/netbci2026/nm000305/v1.0.0",
+  "download_root": "research_logs/netbci_cohort_20261010/downloads",
+  "output_root": "research_logs/netbci_cohort_resume_20261010/audits_full_windows",
+  "bundle_root": "data/netbci2026/cohort_full_windows_v1.0.0",
+  "official_manifest": "research_logs/netbci2026_sources/manifest.json",
+  "seed": 42,
+  "threads": 2,
+  "session_order": [
+    "01",
+    "02",
+    "03",
+    "04"
+  ],
+  "expected_sessions": [
+    "01",
+    "02",
+    "03",
+    "04"
+  ],
+  "expected_runs": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06"
+  ],
+  "source_train_runs": [
+    "01",
+    "02",
+    "03",
+    "04"
+  ],
+  "source_query_runs": [
+    "05",
+    "06"
+  ],
+  "later_query_runs": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06"
+  ],
+  "date_roles": {
+    "01": "source_training_and_disjoint_reference_query",
+    "02": "validation_descriptor_no_parameter_selection",
+    "03": "test_exploratory",
+    "04": "test_exploratory"
+  },
+  "expected_sfreq_hz": 250,
+  "reference": "average_all_verified_common_EEG_channels",
+  "roi_channels": [
+    "C3",
+    "Cz",
+    "C4"
+  ],
+  "decoder_band_hz": [
+    8,
+    30
+  ],
+  "filter": "Butterworth_order4_zero_phase_per_epoch",
+  "edge_crop_seconds": 0.5,
+  "welch_segment_samples": 250,
+  "welch_overlap_samples": 125,
+  "mu_hz": [
+    8,
+    13
+  ],
+  "beta_hz": [
+    13,
+    30
+  ],
+  "covariance_trace_shrinkage": 0.05,
+  "pca_components": 10,
+  "csp_components": 4,
+  "artifact_log_peak_MAD_multiplier": 6,
+  "matched_trials_per_class_per_run": 12,
+  "matched_repetitions": 10,
+  "qc_matched_runs": [
+    "03",
+    "04",
+    "05",
+    "06"
+  ],
+  "bootstrap_run_repetitions": 500,
+  "bootstrap_subject_repetitions": 10000,
+  "primary_descriptive_decoder_contrast": "session04_minus_session01_BA_paired_subjects",
+  "primary_descriptive_spectral_contrast": "session04_minus_session01_equal_run_MI_rest_mu_logpower_dB",
+  "behavior_grain": "verified_subject_session_unweighted_mean_of_six_reported_percentages",
+  "score_run_order": "unresolved_no_trial_broadcast",
+  "failures": "retain_all_subjects_and_constant_predictions_report_metric_failures_explicitly",
+  "missing_matching_cells": "report_matching_metric_unavailable_do_not_silently_reduce_or_remove_subject",
+  "neural_behavior_association": "exploratory_subject_level_first_last_changes_not_trial_pseudoreplication",
+  "new_EEGNet_training": false,
+  "GPU_or_paid_resources": false,
+  "full_original_archives": false,
+  "source_qc_rule": "fit_only_session01_training_trials_keep_flags_in_primary_analysis",
+  "confirmation": "no_new_human_learning_or_algorithm_causal_claims",
+  "fixed_window_duration_seconds": 5.0,
+  "mismatch_action": "retain_source_event_exclude_from_fixed_window_tensor"
+}

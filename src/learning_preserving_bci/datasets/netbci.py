@@ -1,7 +1,9 @@
 """Local NETBCI EDF/BIDS adapter with explicit, auditable trial identities.
 
-No download, filtering, re-referencing, baseline correction, rejection, or
-model fitting is performed. Labels are names; stored numeric values remain
+No download, filtering, re-referencing, baseline correction, artifact rejection,
+or model fitting is performed. An optional explicit fixed-window eligibility
+policy retains all source event identities and excludes duration mismatches
+only from the rectangular tensor. Labels are names; stored numeric values remain
 in trial metadata so upstream and derivative encodings cannot be confused.
 """
 
@@ -106,14 +108,34 @@ def load_netbci_subset(
     *,
     subject: str,
     sessions: Sequence[str] | None = None,
+    fixed_window_duration_seconds: float | None = None,
+    mismatch_action: str | None = None,
 ) -> NETBCISubset:
     """Read one local subject, preserving all stored trials and run boundaries.
 
     Epochs are exact ``[sample, sample + duration * sfreq)`` slices in volts.
     An incompatible duration, label, channel order, checksum, or annotation
     raises an error rather than silently changing or dropping a trial.
+    With an explicit fixed duration and the supported mismatch action, every
+    source event is audited and retained in provenance; only exact-duration
+    events enter ``X``. No source event is padded, extended, or shortened.
     """
     root, manifest_path = Path(data_root), Path(manifest_path)
+    fixed_window_policy = None
+    if fixed_window_duration_seconds is not None or mismatch_action is not None:
+        _require(fixed_window_duration_seconds is not None
+                 and not isinstance(fixed_window_duration_seconds, bool)
+                 and np.isfinite(fixed_window_duration_seconds)
+                 and fixed_window_duration_seconds > 0,
+                 "Explicit fixed-window duration must be finite and positive")
+        _require(mismatch_action == "retain_source_event_exclude_from_fixed_window_tensor",
+                 "Explicit fixed-window eligibility requires the supported mismatch action")
+        fixed_window_policy = {
+            "fixed_window_duration_seconds": float(fixed_window_duration_seconds),
+            "mismatch_action": mismatch_action,
+            "source_events_retained": True,
+            "padding_or_extension_performed": False,
+        }
     _require(bool(re.fullmatch(r"sub-[A-Za-z0-9]+", subject)), "Invalid subject identifier")
     manifest = json.loads(manifest_path.read_text())
     entries = {entry["path"]: entry for entry in manifest}
@@ -147,7 +169,7 @@ def load_netbci_subset(
                    and name.endswith("_eeg.edf"))
     _require(bool(paths), "No selected subject EDF in the pinned manifest")
     selected_sessions = set(sessions) if sessions is not None else None
-    chunks, identities, channel_names = [], [], None
+    chunks, identities, source_event_inventory, channel_names = [], [], [], None
     sfreq, n_samples = None, None
     mapping: dict[str, int] = {}
     seen_sessions = set()
@@ -204,20 +226,40 @@ def load_netbci_subset(
                      and np.allclose(raw.annotations.onset, onsets, rtol=0, atol=1e-6)
                      and np.allclose(raw.annotations.duration, durations, rtol=0, atol=1e-6),
                      "EDF and TSV annotation mismatch")
-            if n_samples is None:
-                n_samples = int(lengths[0])
-            _require(np.all(lengths == n_samples), "Variable epoch length requires an explicit policy")
+            if fixed_window_policy is None:
+                if n_samples is None:
+                    n_samples = int(lengths[0])
+                _require(np.all(lengths == n_samples),
+                         "Variable epoch length requires an explicit policy")
+            else:
+                required_length = fixed_window_duration_seconds * frequency
+                _require(abs(required_length - round(required_length)) < 1e-6,
+                         "Fixed-window duration is not an integral number of samples")
+                n_samples = round(required_length)
+                _require(n_samples > 0, "Fixed-window duration must contain at least one sample")
+            eligible = lengths == n_samples
             signal = raw.get_data()
             _require(np.isfinite(signal).all(), "Nonfinite EEG signal")
-            chunks.append(np.stack([signal[:, start:stop] for start, stop in zip(starts, stops)]))
+            if eligible.any():
+                chunks.append(np.stack([signal[:, start:stop]
+                                        for start, stop in zip(starts[eligible], stops[eligible])]))
             for row, (event, start, stop) in enumerate(zip(events, starts, stops), start=1):
                 label, value = event["trial_type"], int(event["value"])
                 _require(label not in mapping or mapping[label] == value, "Event mapping changed")
                 mapping[label] = value
-                identities.append(NETBCITrial(
+                identity = NETBCITrial(
                     subject, session, run, f"{subject}/ses-{session}/run-{run}/tsv-row-{row}",
                     row, label, value, float(event["onset"]), float(event["duration"]),
-                    int(start), int(stop), relative))
+                    int(start), int(stop), relative)
+                is_eligible = bool(eligible[row - 1])
+                source_event_inventory.append({
+                    **asdict(identity), "source_length_samples": int(stop - start),
+                    "fixed_window_eligible": is_eligible,
+                    "exclusion_reason": "" if is_eligible else
+                    "source_event_duration_does_not_match_fixed_window",
+                })
+                if is_eligible:
+                    identities.append(identity)
         finally:
             raw.close()
     _require(selected_sessions is None or seen_sessions == selected_sessions, "Requested session missing")
@@ -236,6 +278,15 @@ def load_netbci_subset(
                   "operations": ["EDF unit conversion by MNE", "exact epoch slicing"],
                   "behavior_values_broadcast_to_trials": False,
                   "models_trained": False}
+    if fixed_window_policy is not None:
+        provenance["operations"].append("explicit fixed-window eligibility with retained source events")
+        provenance.update({
+            "fixed_window_policy": fixed_window_policy,
+            "source_event_inventory": source_event_inventory,
+            "total_source_trials": len(source_event_inventory),
+            "eligible_trial_count": len(identities),
+            "excluded_trial_count": len(source_event_inventory) - len(identities),
+        })
     return NETBCISubset(dataset, tuple(identities), provenance)
 
 

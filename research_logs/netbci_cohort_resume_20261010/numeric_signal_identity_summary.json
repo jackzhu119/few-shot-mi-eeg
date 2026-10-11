@@ -1,0 +1,390 @@
+{
+  "status": "compact_verified_numeric_identity_summary",
+  "synthetic": false,
+  "checked_at_utc": "2026-10-11T00:21:30.916860+00:00",
+  "full_ledger_file": "research_logs/netbci_cohort_resume_20261010/numeric_signal_identity.json",
+  "full_ledger_sha256": "4f749f6f91af06bf1233b54c55b73beb61ea2dbd12b44204bd53aa5f3b9e3b28",
+  "full_ledger_bytes": 11050625,
+  "full_ledger_preserved": true,
+  "summary": {
+    "subjects": 10,
+    "continuous_runs": 240,
+    "source_task_windows": 7577,
+    "fixed_window_eligible_task_windows": 7576,
+    "unique_continuous_numeric_hashes": 222,
+    "unique_task_window_numeric_hashes": 7043,
+    "continuous_duplicate_groups": 6,
+    "continuous_duplicate_members": 24,
+    "same_person_cross_session_continuous_groups": 6,
+    "cross_subject_continuous_groups": 6,
+    "task_window_duplicate_groups": 178,
+    "task_window_duplicate_members": 712,
+    "same_person_cross_session_task_window_groups": 178,
+    "cross_subject_task_window_groups": 178,
+    "multi_label_task_window_duplicate_groups": 0
+  },
+  "method": {
+    "reader": "mne.io.read_raw_edf(preload=False); raw.get_data() one continuous run at a time",
+    "signal_unit": "V",
+    "transformations": "none: no filtering, reference change, rounding or scaling beyond MNE EDF decoding",
+    "canonical_numeric_hash": "SHA256 of netbci-numeric-array-v1 NUL, sorted compact JSON dtype <f8/shape/order C, NUL, little-endian float64 C-order values",
+    "value_payload_hash": "SHA256 of little-endian float64 C-order values, with no EDF header/annotation bytes",
+    "identity_scope": "bitwise identical canonical returned numerical arrays; dimensions included; channel order separately validated",
+    "task_window_policy": "all actual labeled source [start_sample, stop_sample_exclusive) intervals, including the real short event",
+    "near_similarity_assessed": false,
+    "near_similarity_note": "This is an exact numerical identity audit. Different hashes do not rule out near similarity; no correlation/distance threshold is used.",
+    "hash_comparison_note": "Identity uses cryptographic numerical fingerprints; EDF file SHA is recorded independently and includes metadata."
+  },
+  "all_six_continuous_duplicate_groups": [
+    {
+      "numeric_sha256": "e8c8419f56ebfba8cb2370016bc7177848675a33135779965888dc369525915d",
+      "unit": "continuous_run",
+      "member_count": 4,
+      "same_person_cross_session": true,
+      "cross_subject": true,
+      "subjects": [
+        "sub-1",
+        "sub-7"
+      ],
+      "subject_session_count": 4,
+      "labels": [],
+      "source_edf_sha256": [
+        "8498c8095ea94edd717929b10680b86606014ac96700b2933c0cb3c0dcdbd010",
+        "fcb1bcded9325c4499512952a5032a3c52c188493b03c981cfb018a5d428d924"
+      ],
+      "members": [
+        {
+          "identity": "sub-7/ses-01/run-01",
+          "source_file": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-01_eeg.edf",
+          "source_edf_sha256": "8498c8095ea94edd717929b10680b86606014ac96700b2933c0cb3c0dcdbd010",
+          "original_header_sha256": "bb48d569a7757e159ed9f300de38cda8e7e1468386c6151fe9ed45ce057fe230",
+          "official_manifest_match": true
+        },
+        {
+          "identity": "sub-7/ses-02/run-01",
+          "source_file": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-01_eeg.edf",
+          "source_edf_sha256": "8498c8095ea94edd717929b10680b86606014ac96700b2933c0cb3c0dcdbd010",
+          "original_header_sha256": "5d8841431a677628bee403184175411b17ec23d553d9b3436d8eb84d82e5ed69",
+          "official_manifest_match": true
+        },
+        {
+          "identity": "sub-7/ses-03/run-01",
+          "source_file": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-01_eeg.edf",
+          "source_edf_sha256": "8498c8095ea94edd717929b10680b86606014ac96700b2933c0cb3c0dcdbd010",
+          "original_header_sha256": "4e04a78572399e45f576ec9ccc498326466ab45428435abcd58cfffd966fd0a7",
+          "official_manifest_match": true
+        },
+        {
+          "identity": "sub-1/ses-04/run-01",
+          "source_file": "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-01_eeg.edf",
+          "source_edf_sha256": "fcb1bcded9325c4499512952a5032a3c52c188493b03c981cfb018a5d428d924",
+          "original_header_sha256": "cdd1fe43a2ede774b2a107e3e3c9f5b639fe88618fd3d83b79abadddf84dc0e5",
+          "official_manifest_match": true
+        }
+      ],
+      "sub7_three_sessions_whole_edf_hash_equal": true,
+      "sub1_same_numeric_signal_distinct_whole_edf_hash": true
+    },
+    {
+      "numeric_sha256": "e0a0fbfbfd1f971a2a560d87d6b16663bca9944ef6a0197bd95a41acde2d55c4",
+      "unit": "continuous_run",
+      "member_count": 4,
+      "same_person_cross_session": true,
+      "cross_subject": true,
+      "subjects": [
+        "sub-1",
+        "sub-7"
+      ],
+      "subject_session_count": 4,
+      "labels": [],
+      "source_edf_sha256": [
+        "86af1569665bb46e7083e778ff1a28c061a8a863563684ed47d2116008490186",
+        "ce1d2c737e9597ed25a904024087053577b20ec6e86881e986266690e76c79af"
+      ],
+      "members": [
+        {
+          "identity": "sub-7/ses-01/run-02",
+          "source_file": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-02_eeg.edf",
+          "source_edf_sha256": "86af1569665bb46e7083e778ff1a28c061a8a863563684ed47d2116008490186",
+          "original_header_sha256": "48acaa1b7b893fdc46817f1d61defb024be5e28339cd14bdbef452bf6cc1d985",
+          "official_manifest_match": true
+        },
+        {
+          "identity": "sub-7/ses-02/run-02",
+          "source_file": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-02_eeg.edf",
+          "source_edf_sha256": "86af1569665bb46e7083e778ff1a28c061a8a863563684ed47d2116008490186",
+          "original_header_sha256": "776022ca1e6a066017ee0bd78db906a72ccd499f09c661b8455901c9d8f387bb",
+          "official_manifest_match": true
+        },
+        {
+          "identity": "sub-7/ses-03/run-02",
+          "source_file": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-02_eeg.edf",
+          "source_edf_sha256": "86af1569665bb46e7083e778ff1a28c061a8a863563684ed47d2116008490186",
+          "original_header_sha256": "717c482d8dbdc821dd6fadb70dcc74cab88f46a9b63ae357c4729040507932dc",
+          "official_manifest_match": true
+        },
+        {
+          "identity": "sub-1/ses-04/run-02",
+          "source_file": "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-02_eeg.edf",
+          "source_edf_sha256": "ce1d2c737e9597ed25a904024087053577b20ec6e86881e986266690e76c79af",
+          "original_header_sha256": "effed958d48b18501a01b2a4725bad8a1b319e38833912b29ae5d1277a281d9d",
+          "official_manifest_match": true
+        }
+      ],
+      "sub7_three_sessions_whole_edf_hash_equal": true,
+      "sub1_same_numeric_signal_distinct_whole_edf_hash": true
+    },
+    {
+      "numeric_sha256": "4a843ef68f242c9b7e2a25180bc96ff57e088b9639b4778b65706580fbf2386c",
+      "unit": "continuous_run",
+      "member_count": 4,
+      "same_person_cross_session": true,
+      "cross_subject": true,
+      "subjects": [
+        "sub-1",
+        "sub-7"
+      ],
+      "subject_session_count": 4,
+      "labels": [],
+      "source_edf_sha256": [
+        "21d07d532c6480967e701f6f735137ed646ccab88d8a788cf9e5bbd4d09fa6ed",
+        "89a700df599606962af41386c61f2de58fc744354c19ed1cc7138f1c9e89fbbd"
+      ],
+      "members": [
+        {
+          "identity": "sub-7/ses-01/run-03",
+          "source_file": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-03_eeg.edf",
+          "source_edf_sha256": "21d07d532c6480967e701f6f735137ed646ccab88d8a788cf9e5bbd4d09fa6ed",
+          "original_header_sha256": "27fbd7c8a8862bb7043d713011f945718b1a6e954810fd0cbbfaf0e80ce1d980",
+          "official_manifest_match": true
+        },
+        {
+          "identity": "sub-7/ses-02/run-03",
+          "source_file": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-03_eeg.edf",
+          "source_edf_sha256": "21d07d532c6480967e701f6f735137ed646ccab88d8a788cf9e5bbd4d09fa6ed",
+          "original_header_sha256": "dc2e83163a20b1fe3a3279e622c2b5646053dd987152f71bbd226c0a1890623b",
+          "official_manifest_match": true
+        },
+        {
+          "identity": "sub-7/ses-03/run-03",
+          "source_file": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-03_eeg.edf",
+          "source_edf_sha256": "21d07d532c6480967e701f6f735137ed646ccab88d8a788cf9e5bbd4d09fa6ed",
+          "original_header_sha256": "6dfa1ad3d74a53958dc6331c8312937008b789b28ded3504387bda0e917eef1d",
+          "official_manifest_match": true
+        },
+        {
+          "identity": "sub-1/ses-04/run-03",
+          "source_file": "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-03_eeg.edf",
+          "source_edf_sha256": "89a700df599606962af41386c61f2de58fc744354c19ed1cc7138f1c9e89fbbd",
+          "original_header_sha256": "9411ba44436f9282a3b26f4ce8498085920722280d59b5fa2a75faeaae316866",
+          "official_manifest_match": true
+        }
+      ],
+      "sub7_three_sessions_whole_edf_hash_equal": true,
+      "sub1_same_numeric_signal_distinct_whole_edf_hash": true
+    },
+    {
+      "numeric_sha256": "b9f737151dcc1f14b672ed7c3ae9d5cc8447c257948758dd2394b0c4cc411eb3",
+      "unit": "continuous_run",
+      "member_count": 4,
+      "same_person_cross_session": true,
+      "cross_subject": true,
+      "subjects": [
+        "sub-1",
+        "sub-7"
+      ],
+      "subject_session_count": 4,
+      "labels": [],
+      "source_edf_sha256": [
+        "6c49d81d4d7ce2e6a5ee6f1abdc110b13a5bf65bf7f4d27d7d29136ed75043d8",
+        "9bfd61842700ee4c89e57a24924ae0af755a3c756a00b33880db1afb2ad206db"
+      ],
+      "members": [
+        {
+          "identity": "sub-7/ses-01/run-04",
+          "source_file": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-04_eeg.edf",
+          "source_edf_sha256": "6c49d81d4d7ce2e6a5ee6f1abdc110b13a5bf65bf7f4d27d7d29136ed75043d8",
+          "original_header_sha256": "809c3821d8d5642e6bad236f48065d20c68b4908dde654094a1bcb325efef15d",
+          "official_manifest_match": true
+        },
+        {
+          "identity": "sub-7/ses-02/run-04",
+          "source_file": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-04_eeg.edf",
+          "source_edf_sha256": "6c49d81d4d7ce2e6a5ee6f1abdc110b13a5bf65bf7f4d27d7d29136ed75043d8",
+          "original_header_sha256": "abcdf4d002d3dfc86ea5fbece207531e4e9af0e44561fd370e51aedf2a1d5dad",
+          "official_manifest_match": true
+        },
+        {
+          "identity": "sub-7/ses-03/run-04",
+          "source_file": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-04_eeg.edf",
+          "source_edf_sha256": "6c49d81d4d7ce2e6a5ee6f1abdc110b13a5bf65bf7f4d27d7d29136ed75043d8",
+          "original_header_sha256": "ec303c34d86675946a85f436d238a33306b4a86ca7f9d93b9ab7bc508050a2e7",
+          "official_manifest_match": true
+        },
+        {
+          "identity": "sub-1/ses-04/run-04",
+          "source_file": "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-04_eeg.edf",
+          "source_edf_sha256": "9bfd61842700ee4c89e57a24924ae0af755a3c756a00b33880db1afb2ad206db",
+          "original_header_sha256": "910fde8f379da840a3dd8dceb1f89eac9e5450254aaf30d34e09fc2d7584ab5c",
+          "official_manifest_match": true
+        }
+      ],
+      "sub7_three_sessions_whole_edf_hash_equal": true,
+      "sub1_same_numeric_signal_distinct_whole_edf_hash": true
+    },
+    {
+      "numeric_sha256": "1b6cd26012876abafc8992f061be938c8350f746c3c7780d034f74c84b2f8297",
+      "unit": "continuous_run",
+      "member_count": 4,
+      "same_person_cross_session": true,
+      "cross_subject": true,
+      "subjects": [
+        "sub-1",
+        "sub-7"
+      ],
+      "subject_session_count": 4,
+      "labels": [],
+      "source_edf_sha256": [
+        "af03bef01e288cacd689c07d840fb141efe96ca73ae8f3a14f9a743082742445",
+        "d87e4e2edd8a42df7382e102f2216e95459e55565e6319185e286bc9580a4841"
+      ],
+      "members": [
+        {
+          "identity": "sub-7/ses-01/run-05",
+          "source_file": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-05_eeg.edf",
+          "source_edf_sha256": "d87e4e2edd8a42df7382e102f2216e95459e55565e6319185e286bc9580a4841",
+          "original_header_sha256": "b45341dcfac2ab15591d26c3a0892597e8b67b99c49675357ebd3ea743ad242e",
+          "official_manifest_match": true
+        },
+        {
+          "identity": "sub-7/ses-02/run-05",
+          "source_file": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-05_eeg.edf",
+          "source_edf_sha256": "d87e4e2edd8a42df7382e102f2216e95459e55565e6319185e286bc9580a4841",
+          "original_header_sha256": "7a12f6915e8f966d15dd0407b99283d4b98f0df9e507aec07527d9169fdd0ce9",
+          "official_manifest_match": true
+        },
+        {
+          "identity": "sub-7/ses-03/run-05",
+          "source_file": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-05_eeg.edf",
+          "source_edf_sha256": "d87e4e2edd8a42df7382e102f2216e95459e55565e6319185e286bc9580a4841",
+          "original_header_sha256": "5837ff5d86b8492f49b094746b602470ee1ed5ccb4d60bfe5625cb280cc6236e",
+          "official_manifest_match": true
+        },
+        {
+          "identity": "sub-1/ses-04/run-05",
+          "source_file": "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-05_eeg.edf",
+          "source_edf_sha256": "af03bef01e288cacd689c07d840fb141efe96ca73ae8f3a14f9a743082742445",
+          "original_header_sha256": "5658672f02dcdf98361acc5419b35775a1e72fe75eb57c0974bbfa86d86038a7",
+          "official_manifest_match": true
+        }
+      ],
+      "sub7_three_sessions_whole_edf_hash_equal": true,
+      "sub1_same_numeric_signal_distinct_whole_edf_hash": true
+    },
+    {
+      "numeric_sha256": "feb4047f0c3392c8f3428d70517ae7d7c0e5f95e403a2766c6a19dfe5dcfc9cf",
+      "unit": "continuous_run",
+      "member_count": 4,
+      "same_person_cross_session": true,
+      "cross_subject": true,
+      "subjects": [
+        "sub-1",
+        "sub-7"
+      ],
+      "subject_session_count": 4,
+      "labels": [],
+      "source_edf_sha256": [
+        "35a78f2c4addcdd775ff01ebee4b82f9dc68fb28ea125d482a40bb0e92bbff74",
+        "c499bca72f92d1e6bee5ca847637c89130487f3a78e1462a70d81e8441b709f1"
+      ],
+      "members": [
+        {
+          "identity": "sub-7/ses-01/run-06",
+          "source_file": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-06_eeg.edf",
+          "source_edf_sha256": "35a78f2c4addcdd775ff01ebee4b82f9dc68fb28ea125d482a40bb0e92bbff74",
+          "original_header_sha256": "db22265cd627a0194f489377fb4e38a93d375978b1226ccf7ff250af71064e51",
+          "official_manifest_match": true
+        },
+        {
+          "identity": "sub-7/ses-02/run-06",
+          "source_file": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-06_eeg.edf",
+          "source_edf_sha256": "35a78f2c4addcdd775ff01ebee4b82f9dc68fb28ea125d482a40bb0e92bbff74",
+          "original_header_sha256": "a29108873313684dbc19242fb3968d6a09718b2392a8a035bbf044c427b00b3d",
+          "official_manifest_match": true
+        },
+        {
+          "identity": "sub-7/ses-03/run-06",
+          "source_file": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-06_eeg.edf",
+          "source_edf_sha256": "35a78f2c4addcdd775ff01ebee4b82f9dc68fb28ea125d482a40bb0e92bbff74",
+          "original_header_sha256": "d114642fd9650b72f8ba239286c4031652ba0eac64a950792b6a2aa1de4d721d",
+          "official_manifest_match": true
+        },
+        {
+          "identity": "sub-1/ses-04/run-06",
+          "source_file": "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-06_eeg.edf",
+          "source_edf_sha256": "c499bca72f92d1e6bee5ca847637c89130487f3a78e1462a70d81e8441b709f1",
+          "original_header_sha256": "7361a4afc1a5f9fabbc5f55443b3c33f030e912fdfdb0a0880fe68cc26065f26",
+          "official_manifest_match": true
+        }
+      ],
+      "sub7_three_sessions_whole_edf_hash_equal": true,
+      "sub1_same_numeric_signal_distinct_whole_edf_hash": true
+    }
+  ],
+  "partition_content_overlap": {
+    "interpretation": "Exact content overlap between source training and later queries despite distinct source event IDs; affected later-session model scores are not independent cross-session generalization evidence.",
+    "source_training_later_query_affected_trials": 238,
+    "source_reference_later_query_affected_trials": 118,
+    "source_training_later_query_affected_numeric_groups": 119,
+    "source_training_later_query_same_label_affected_trials": 238,
+    "source_training_later_query_conflicting_label_affected_trials": 0,
+    "affected_subject_sessions": [
+      {
+        "subject": "sub-7",
+        "session": "02",
+        "later_query_count": 178,
+        "exact_source_training_overlap_count": 119,
+        "same_label_training_overlap_count": 119,
+        "conflicting_label_training_overlap_count": 0,
+        "exact_source_reference_query_overlap_count": 59
+      },
+      {
+        "subject": "sub-7",
+        "session": "03",
+        "later_query_count": 178,
+        "exact_source_training_overlap_count": 119,
+        "same_label_training_overlap_count": 119,
+        "conflicting_label_training_overlap_count": 0,
+        "exact_source_reference_query_overlap_count": 59
+      }
+    ]
+  },
+  "official_confirmation": {
+    "file": "research_logs/netbci_cohort_resume_20261010/numeric_signal_identity_official_manifest_confirmation.json",
+    "sha256": "c6f2079e00915f76b73cb3fa9c7c1fffecf49457f5e0cc51bfd5ff20e8de26fb",
+    "summary": {
+      "actual_edf_rehashed": 240,
+      "official_manifest_matches": 240,
+      "per_subject_manifest_matches": 240,
+      "duplicate_numeric_groups": 6,
+      "duplicate_edf_members": 24,
+      "numeric_groups_with_repeated_official_edf_checksums": 6,
+      "numeric_groups_with_single_whole_file_checksum": 0
+    },
+    "official_manifest_sha256": "7e50f5281e91bec97791a84f5f3dbe20dc443b37c10d4bc6bcda96bed08c092c",
+    "interpretation": "All local EDFs match the cached official declarations. For each of the six numeric duplicate groups, sub-7 ses01/02/03 share identical whole-file EDF hashes that are also explicitly repeated in the official manifest. sub-1 ses04 has the same returned numeric signal but a distinct whole-file hash, illustrating why numeric identity must be assessed separately from metadata/file identity. The observed derivative repetition is not explained by a local recovery file failing the pinned official checksum."
+  },
+  "cross_subject_affected_identities": [
+    "sub-1",
+    "sub-7"
+  ],
+  "limitations": [
+    "Exact identity applies to the available EDF derivative numeric arrays, not independently read original BrainVision EEG.",
+    "Original header paths, data/marker filename fields and hashes establish distinct metadata identities; they cannot establish distinct or identical underlying original signal contents.",
+    "A blank acquisition-reference field does not identify the acquisition reference.",
+    "No cause (conversion, provenance mapping, acquisition, human physiology or behavior) is inferred from exact derivative repetition.",
+    "Existing numerical analysis and cohort membership are preserved; no participant or event is excluded by this audit.",
+    "Near-zero geometry or identical spectral summaries of repeated derivatives are not independent biological-stability evidence."
+  ],
+  "summary_source_sha256": "0a6366401aabcc3552f54b26086a6ff0083baf811731bc356fcca41e9befc232"
+}

@@ -62,6 +62,7 @@ def finite_or_none(value):
 def participant_statistics(rows, subjects, sessions, metrics, seed, repetitions):
     """Resample complete subject trajectories; never trials or repeated subsamples."""
     require(len(subjects) == len(set(subjects)) and bool(subjects), "Duplicate/empty participant list")
+    require(len(sessions) >= 2 and len(sessions) == len(set(sessions)), "Duplicate/short session list")
     index = {(row["subject"], row["session"]): row for row in rows}
     require(len(index) == len(rows), "Duplicate participant/session key")
     require(set(index) == {(subject, session) for subject in subjects for session in sessions},
@@ -125,6 +126,8 @@ def participant_statistics(rows, subjects, sessions, metrics, seed, repetitions)
 def equal_run_spectral(trials, sessions, runs, exclude_flagged=False, reference="CAR"):
     """Equal run weighting within each task; preserve absent cells as unavailable."""
     rows = []
+    require(reference in ("CAR", "source_reference"), "Unknown spectral reference")
+    require(bool(runs) and len(runs) == len(set(runs)), "Duplicate/empty spectral run list")
     suffix = "ROI_V2" if reference == "CAR" else "source_reference_ROI_V2"
     for session in sessions:
         for band in ("mu", "beta"):
@@ -156,11 +159,44 @@ def equal_run_spectral(trials, sessions, runs, exclude_flagged=False, reference=
     return rows
 
 
-def verify_predictions(predictions, decoder, events, config):
+def expected_trial_roles(events, config):
+    """Derive source/query identity from the audited chronology, not saved flags."""
+    sessions = config["session_order"]
+    require(set(config["source_train_runs"]) == {"01", "02", "03", "04"} and
+            set(config["source_query_runs"]) == {"05", "06"} and
+            set(config["later_query_runs"]) == set(config["expected_runs"]),
+            "Source/query runs differ from the fixed cohort protocol")
+    require(len({row["subject"] for row in events}) == 1, "Mixed event participants")
+    require(len({row["trial_id"] for row in events}) == len(events), "Duplicate event ID")
+    require({row["session"] for row in events} == set(sessions), "Session coverage mismatch")
+    for session in sessions:
+        require({row["run"] for row in events if row["session"] == session} == set(config["expected_runs"]),
+                "Audited run coverage differs from preset cohort protocol")
+    roles = {}
+    for row in events:
+        require(row["label"] in LABELS, "Unexpected audited task label")
+        if row["session"] == sessions[0]:
+            role = "source_train" if row["run"] in config["source_train_runs"] else "source_reference_query"
+        else:
+            role = "validation_no_selection" if row["session"] == sessions[1] else "test_exploratory"
+        roles[row["trial_id"]] = role
+    return roles
+
+
+def verify_predictions(predictions, decoder, events, config, trials=None):
     """Reject accidentally reused pilot partitions and retain constant predictions."""
     event_index = {row["trial_id"]: row for row in events}
     require(len(event_index) == len(events), "Duplicate event ID")
     require(len({row["trial_id"] for row in predictions}) == len(predictions), "Duplicate prediction ID")
+    roles = expected_trial_roles(events, config)
+    require({row["trial_id"] for row in predictions} ==
+            {trial_id for trial_id, role in roles.items() if role != "source_train"},
+            "Prediction coverage contains missing or unexpected query trials")
+    require({row["session"] for row in predictions} <= set(config["session_order"]),
+            "Unexpected prediction session")
+    subject = events[0]["subject"]
+    train_n = sum(role == "source_train" for role in roles.values())
+    qc_by_trial = {row["trial_id"]: row["qc_flag"] == "True" for row in trials} if trials is not None else None
     scores = {row["session"]: row for row in decoder}
     require(len(scores) == len(decoder), "Duplicate decoder session")
     require(set(scores) == set(config["session_order"]), "Incomplete decoder session coverage")
@@ -174,9 +210,19 @@ def verify_predictions(predictions, decoder, events, config):
             event = event_index[row["trial_id"]]
             require(all(row[key] == event[key] for key in ("subject", "session", "run")), "Prediction identity mismatch")
             require(row["true_label"] == event["label"] and row["prediction"] in LABELS, "Prediction label mismatch")
+            require(row["role"] == roles[row["trial_id"]], "Prediction partition role mismatch")
         matrix = np.array([[sum(row["true_label"] == truth and row["prediction"] == pred for row in selected)
                             for pred in LABELS] for truth in LABELS])
         score = scores[session]
+        expected_role = "source_reference_query" if session == config["session_order"][0] else (
+            "validation_no_selection" if session == config["session_order"][1] else "test_exploratory")
+        require(score["subject"] == subject and score["role"] == expected_role and score["decoder"] == "CSP_LDA",
+                "Decoder identity/role mismatch")
+        require(score["train_n"] == train_n and score["participant_n"] == 1,
+                "Decoder training count or independent unit mismatch")
+        require(score["n_runs"] == len({row["run"] for row in selected}) and
+                score["n_rest"] == int(matrix[0].sum()) and score["n_right_hand"] == int(matrix[1].sum()),
+                "Saved decoder run/class count mismatch")
         require(matrix.tolist() == score["confusion_matrix_rest_right_hand"], "Saved confusion matrix mismatch")
         require(len(selected) == score["n_test"], "Saved decoder sample count mismatch")
         constant = len({row["prediction"] for row in selected}) == 1
@@ -186,12 +232,110 @@ def verify_predictions(predictions, decoder, events, config):
             require(np.isclose(ba, score["balanced_accuracy"], rtol=0, atol=1e-12), "Saved BA mismatch")
         else:
             require(score["balanced_accuracy"] is None, "Missing query class cannot support BA")
+        interval = score["conditional_run_bootstrap_CI95"]
+        if interval is not None:
+            require(len(interval) == 2 and all(value is not None and 0 <= finite_or_none(value) <= 1 for value in interval)
+                    and interval[0] <= interval[1], "Conditional BA interval must be ordered fractions")
+        if qc_by_trial is not None:
+            clean = [row for row in selected if not qc_by_trial[row["trial_id"]]]
+            require(score["n_qc_flagged_query"] == len(selected) - len(clean) and
+                    score["qc_unflagged_n"] == len(clean), "Saved decoder QC count mismatch")
+            clean_recalls = [np.mean([row["prediction"] == label for row in clean if row["true_label"] == label])
+                             for label in LABELS if any(row["true_label"] == label for row in clean)]
+            if len(clean_recalls) == 2:
+                require(np.isclose(np.mean(clean_recalls), score["qc_unflagged_BA"], rtol=0, atol=1e-12),
+                        "Saved QC-unflagged BA mismatch")
+            else:
+                require(score["qc_unflagged_BA"] is None, "Missing QC query class cannot support BA")
 
 
 def verify_hashes(directory, receipt, required):
     for name in required:
         require(name in receipt["outputs"], f"Missing output hash: {name}")
         require(file_sha256(directory / name) == receipt["outputs"][name], f"Analysis output hash mismatch: {name}")
+
+
+def summarize_matching(subject, geometry, spectral, statuses, config):
+    """Check each preset repetition/cell before averaging within participants."""
+    runs_by_variant = {"all_six_runs": config["expected_runs"], "qc_common_four_runs": config["qc_matched_runs"]}
+    status_index = {row["variant"]: row for row in statuses}
+    require(len(status_index) == len(statuses) and set(status_index) == set(runs_by_variant),
+            "Duplicate/missing/unexpected matching variant status")
+    repetitions = set(range(config["matched_repetitions"]))
+    require(bool(repetitions), "Positive matched repetition count required")
+    sessions = config["session_order"]
+    for rows in (geometry, spectral):
+        require(all(row["subject"] == subject and row["variant"] in runs_by_variant and
+                    row["session"] in sessions for row in rows), "Matched result identity mismatch")
+    result = []
+    fields = ("AIRM_to_session01", "within_session_run_AIRM_mean", "PCA_subspace_distance")
+    for variant, runs in runs_by_variant.items():
+        status = status_index[variant]
+        require(status["runs"] == runs and status["status"] in ("available", "unavailable"),
+                "Matching variant differs from preset runs/status")
+        expected_n = len(runs) * len(LABELS) * config["matched_trials_per_class_per_run"]
+        for session in sessions:
+            chosen = [row for row in geometry if row["variant"] == variant and row["session"] == session]
+            selected_spectral = [row for row in spectral if row["variant"] == variant and row["session"] == session]
+            if status["status"] == "available":
+                require(status["repetitions"] == config["matched_repetitions"] and
+                        len(chosen) == len(repetitions) and {int(row["repetition"]) for row in chosen} == repetitions,
+                        "Matched geometry repetitions mismatch")
+                expected_spectral = {(repetition, band) for repetition in repetitions for band in ("mu", "beta")}
+                require(len(selected_spectral) == len(expected_spectral) and
+                        {(int(row["repetition"]), row["band"]) for row in selected_spectral} == expected_spectral,
+                        "Matched spectral repetitions/cells mismatch")
+                require(all(int(row["n_matched"]) == expected_n for row in chosen + selected_spectral),
+                        "Matched trial count differs from fixed preset")
+                require(all(finite_or_none(row[field]) is not None and float(row[field]) >= -1e-10
+                            for row in chosen for field in fields), "Nonfinite/negative matched geometry")
+                require(all(finite_or_none(row["MI_minus_rest_log_power_dB"]) is not None for row in selected_spectral),
+                        "Nonfinite matched spectral contrast")
+            else:
+                require(not chosen and not selected_spectral, "Unavailable matching variant contains partial results")
+                require(status.get("preset_not_relaxed") is True and bool(status.get("error")),
+                        "Unavailable matching variant lacks preset failure evidence")
+            result.append({"subject": subject, "session": session, "variant": variant,
+                           "status": status["status"], "error": status.get("error", ""),
+                           "n_subsample_repetitions": len(chosen),
+                           "n_matched_trials_per_repetition": expected_n if chosen else 0,
+                           **{field: float(np.mean([float(row[field]) for row in chosen])) if chosen else None for field in fields},
+                           **{f"{band}_MI_minus_rest_dB": float(np.mean([
+                               float(row["MI_minus_rest_log_power_dB"]) for row in selected_spectral if row["band"] == band]))
+                               if chosen else None for band in ("mu", "beta")}})
+    return result
+
+
+def verify_event_selection(source, eligible, excluded, subject, original, audit_summary):
+    """Every source event must remain eligible or carry an explicit exclusion."""
+    source_index = {row["trial_id"]: row for row in source}
+    eligible_ids = {row["trial_id"] for row in eligible}
+    excluded_ids = {row["trial_id"] for row in excluded}
+    require(len(source_index) == len(source) and len(eligible_ids) == len(eligible) and
+            len(excluded_ids) == len(excluded), "Duplicate source/eligible/excluded event ID")
+    require(not eligible_ids & excluded_ids and eligible_ids | excluded_ids == set(source_index),
+            "Source event eligibility/exclusion is not disjoint and exhaustive")
+    require(len(source) == audit_summary["total_source_trials"] and
+            len(eligible) == audit_summary["total_trials"] and len(excluded) == audit_summary["excluded_trial_count"],
+            "Source/eligible/excluded audit counts disagree")
+    for row in source + eligible + excluded:
+        require(row["subject"] == subject and row["original_subject"] == original and row["label"] in LABELS,
+                "Source/eligible/excluded participant or label mismatch")
+        original_row = source_index[row["trial_id"]]
+        require(all(row[key] == original_row[key] for key in
+                    ("subject", "session", "run", "label", "source_file", "trial_id", "tsv_row",
+                     "stored_event_value", "onset_s", "duration_s", "start_sample", "stop_sample_exclusive")
+                    if key in original_row),
+                "Selected/excluded source event identity mismatch")
+    for rows, field in ((source, "source_class_counts"), (eligible, "class_counts"),
+                        (excluded, "excluded_class_counts")):
+        actual = Counter(row["label"] for row in rows)
+        require(all(actual[label] == audit_summary[field].get(label, 0) for label in LABELS),
+                "Source/eligible/excluded class counts disagree")
+    if source and "fixed_window_eligible" in source[0]:
+        require(all(row["fixed_window_eligible"] == "True" for row in eligible) and
+                all(row["fixed_window_eligible"] == "False" and bool(row.get("exclusion_reason")) for row in excluded),
+                "Window eligibility flags or exclusion reasons disagree")
 
 
 def load_participant(subject, config_path, config, analysis_root, audit_root):
@@ -220,20 +364,37 @@ def load_participant(subject, config_path, config, analysis_root, audit_root):
         inputs[f"audit/{name}"] = audit_dir / name
         require(file_sha256(inputs[f"audit/{name}"]) == audit["output_artifact_sha256"][name],
                 f"Audit artifact hash mismatch: {name}")
+    if "total_source_trials" in audit["summary"]:
+        for name in ("source_events.tsv", "excluded_events.tsv"):
+            inputs[f"audit/{name}"] = audit_dir / name
+            require(file_sha256(inputs[f"audit/{name}"]) == audit["output_artifact_sha256"][name],
+                    f"Audit artifact hash mismatch: {name}")
     adapter = json.loads(inputs["audit/adapter_receipt.json"].read_text())
+    require(adapter["synthetic"] is False and adapter["subject"] == subject and
+            adapter["original_subject"] == original and adapter["signal_unit"] == "V",
+            "Adapter participant/unit mismatch")
     require(analysis["bundle_sha256"] == adapter["epochs_sha256"] and
             analysis["metadata_sha256"] == adapter["metadata_sha256"], "Analysis bundle differs from audited adapter")
     require(analysis["trials"] == audit["summary"]["total_trials"] == adapter["trial_count"], "EEG trial counts disagree")
     require(analysis["channel_names"] == adapter["channel_names"], "EEG channel mapping differs")
+    require(analysis["sampling_frequency_hz"] == adapter["sampling_frequency_hz"] == config["expected_sfreq_hz"],
+            "Analysis sampling frequency differs from audited/preset data")
     required = ["event_inventory.tsv", "trial_features.tsv", "matched_variants_status.json",
                 "failures.json", "decoder_results.json", "transform_audit.json", "partitions.json"]
     for name in ("matched_geometry.tsv", "matched_spectral_contrasts.tsv", "predictions.tsv", "CSP_LDA_model_audit.json"):
         if (analysis_dir / name).exists():
             required.append(name)
     verify_hashes(analysis_dir, analysis, required)
-    for name in required:
+    verify_hashes(analysis_dir, analysis, analysis["outputs"])
+    for name in analysis["outputs"]:
         inputs[name] = analysis_dir / name
     events = read_table(inputs["audit/events.tsv"])
+    source_events = read_table(inputs["audit/source_events.tsv"]) if "audit/source_events.tsv" in inputs else events
+    exclusions = read_table(inputs["audit/excluded_events.tsv"]) if "audit/excluded_events.tsv" in inputs else []
+    if "total_source_trials" in audit["summary"]:
+        verify_event_selection(source_events, events, exclusions, subject, original, audit["summary"])
+        require(adapter["total_source_trials"] == len(source_events) and adapter["excluded_trial_count"] == len(exclusions),
+                "Adapter source/eligible/excluded counts disagree with audit")
     trials = read_table(inputs["trial_features.tsv"])
     analyzed_events = read_table(inputs["event_inventory.tsv"])
     require(len(events) == len(trials) == len(analyzed_events) == analysis["trials"], "Feature/event count mismatch")
@@ -244,19 +405,51 @@ def load_participant(subject, config_path, config, analysis_root, audit_root):
     for event, trial, analyzed in zip(events, trials, analyzed_events, strict=True):
         require(event["original_subject"] == original and event["subject"] == subject, "Original subject identity mismatch")
         require(all(event[key] == trial[key] == analyzed[key] for key in
-                    ("subject", "session", "run", "label", "source_file", "trial_id")), "Feature/event metadata mismatch")
+                    ("subject", "session", "run", "label", "source_file", "trial_id", "tsv_row",
+                     "stored_event_value", "onset_s", "duration_s", "start_sample", "stop_sample_exclusive")
+                    if key in event), "Feature/event metadata mismatch")
         require(trial["qc_flag"] in ("True", "False"), "Invalid saved QC flag")
-    require({row["session"] for row in events} == set(config["session_order"]), "Session coverage mismatch")
+    expected_roles = expected_trial_roles(events, config)
+    require(all(row["analysis_role"] == expected_roles[row["trial_id"]] for row in trials + analyzed_events),
+            "Saved event/feature partition role differs from audited chronology")
+    train_ids = [row["trial_id"] for row in events if expected_roles[row["trial_id"]] == "source_train"]
+    partition = json.loads(inputs["partitions.json"].read_text())
+    expected_partitions = {role: [row["trial_id"] for row in events if expected_roles[row["trial_id"]] == role]
+                           for role in ("source_train", "source_reference_query", "validation_no_selection", "test_exploratory")}
+    require(partition["subject"] == subject and partition["partition_trial_ids"] == expected_partitions and
+            partition["all_trials_assigned_once"] is True and partition["validation_selection_performed"] is False,
+            "Saved partitions differ from preset chronology")
+    transform = json.loads(inputs["transform_audit.json"].read_text())
+    require(transform["source_train_trial_ids"] == train_ids and transform["scaler_fit_source_only"] is True and
+            transform["reference_PCA_fit_source_only"] is True and transform["target_PCA_descriptive_only"] is True and
+            transform["target_prediction_transforms_fitted"] is False and transform["channel_names"] == adapter["channel_names"],
+            "Transform source-training/coordinate evidence differs from preset")
+    failures = json.loads(inputs["failures.json"].read_text())
+    require(len(failures) == analysis["failures_n"], "Analysis failure count mismatch")
     decoder = json.loads(inputs["decoder_results.json"].read_text())
     if decoder:
         require("predictions.tsv" in inputs and "CSP_LDA_model_audit.json" in inputs, "Decoder lacks immutable model evidence")
-        verify_predictions(read_table(inputs["predictions.tsv"]), decoder, events, config)
+        verify_predictions(read_table(inputs["predictions.tsv"]), decoder, events, config, trials)
         model = json.loads(inputs["CSP_LDA_model_audit.json"].read_text())
         require(model["query_state_unchanged"] is True and model["prediction_replay_exact"] is True and
                 model["parameter_sha256_before"] == model["parameter_sha256_after"] and model["fit_calls"] == 1,
                 "Frozen model state verification failed")
+        require(model["source_train_trial_ids"] == train_ids and model["source_train_n"] == len(train_ids) and
+                model["parameters_predefined_no_target_selection"] is True and model["target_transforms_fitted_for_prediction"] is False,
+                "Frozen model training IDs differ from preset source partition")
+        require("csp_lda.pkl" in inputs and file_sha256(inputs["csp_lda.pkl"]) == model["parameter_sha256_after"],
+                "Saved frozen model bytes differ from audited state digest")
+        for score in decoder:
+            if score["constant_prediction"]:
+                require(any(row["scope"] == "CSP_LDA_query" and row.get("session") == score["session"] and
+                            row.get("type") == "constant_prediction" for row in failures),
+                        "Constant prediction lacks retained failure evidence")
+            if score["balanced_accuracy"] is None:
+                require(any(row["scope"] == "CSP_LDA_query" and row.get("session") == score["session"] and
+                            row.get("type") == "missing_query_class" for row in failures),
+                        "Unavailable query BA lacks retained failure evidence")
     else:
-        require(any(row["scope"] == "CSP_LDA_fit_or_query" for row in json.loads(inputs["failures.json"].read_text())),
+        require(any(row["scope"] == "CSP_LDA_fit_or_query" for row in failures),
                 "Unavailable decoder lacks recorded failure evidence")
     scores = {row["session"]: row for row in decoder}
     spectral = equal_run_spectral(trials, config["session_order"], config["expected_runs"])
@@ -271,9 +464,14 @@ def load_participant(subject, config_path, config, analysis_root, audit_root):
     sessions = []
     for session in config["session_order"]:
         selected = [row for row in trials if row["session"] == session]
+        session_source = [row for row in source_events if row["session"] == session]
+        session_exclusions = [row for row in exclusions if row["session"] == session]
         score = scores.get(session)
         sessions.append({"subject": subject, "session": session, "original_subject_from_audit": original,
                          "n_EEG_trials": len(selected), "n_EEG_runs": len({row["run"] for row in selected}),
+                         "n_EEG_source_events": len(session_source), "n_EEG_excluded_events": len(session_exclusions),
+                         "n_source_rest": sum(row["label"] == "rest" for row in session_source),
+                         "n_source_MI": sum(row["label"] == "right_hand" for row in session_source),
                          "n_rest": sum(row["label"] == "rest" for row in selected),
                          "n_MI": sum(row["label"] == "right_hand" for row in selected),
                          "n_qc_flagged": sum(row["qc_flag"] == "True" for row in selected),
@@ -281,33 +479,22 @@ def load_participant(subject, config_path, config, analysis_root, audit_root):
                          "CSP_constant_prediction": score["constant_prediction"] if score else "unavailable",
                          "CSP_query_n": score["n_test"] if score else 0,
                          "CSP_query_n_runs": score["n_runs"] if score else 0,
-                         "CSP_conditional_run_CI95": json.dumps(score["conditional_run_bootstrap_CI95"] if score else None),
-                         "CSP_status": "available" if score else "unavailable_retained",
+                         "CSP_conditional_run_CI95_percent": json.dumps(
+                             [100 * value for value in score["conditional_run_bootstrap_CI95"]]
+                             if score and score["conditional_run_bootstrap_CI95"] is not None else None),
+                         "CSP_status": "available" if score and score["balanced_accuracy"] is not None else "unavailable_retained",
                          **{f"{band}_MI_minus_rest_dB": by_spectral[session, band]["MI_minus_rest_log_power_dB"] for band in ("mu", "beta")},
                          **{f"{band}_{label}_power_uV2": by_spectral[session, band][f"{label}_equal_run_arithmetic_power_uV2"]
                             for band in ("mu", "beta") for label in ("rest", "MI")}})
     geometry = read_table(inputs["matched_geometry.tsv"]) if "matched_geometry.tsv" in inputs else []
     matched_spectral = read_table(inputs["matched_spectral_contrasts.tsv"]) if "matched_spectral_contrasts.tsv" in inputs else []
     statuses = json.loads(inputs["matched_variants_status.json"].read_text())
-    matching_rows = []
+    matching_rows = summarize_matching(subject, geometry, matched_spectral, statuses, config)
     for status in statuses:
-        variant = status["variant"]
-        for session in config["session_order"]:
-            chosen = [row for row in geometry if row["variant"] == variant and row["session"] == session]
-            if status["status"] == "available":
-                require(len(chosen) == config["matched_repetitions"] and
-                        len({row["repetition"] for row in chosen}) == len(chosen), "Matched repetitions mismatch")
-            else:
-                require(not chosen, "Unavailable matching variant contains partial results")
-            fields = ("AIRM_to_session01", "within_session_run_AIRM_mean", "PCA_subspace_distance")
-            matching_rows.append({"subject": subject, "session": session, "variant": variant,
-                                  "status": status["status"], "error": status.get("error", ""),
-                                  "n_subsample_repetitions": len(chosen),
-                                  "n_matched_trials_per_repetition": int(chosen[0]["n_matched"]) if chosen else 0,
-                                  **{field: float(np.mean([float(row[field]) for row in chosen])) if chosen else None for field in fields},
-                                  **{f"{band}_MI_minus_rest_dB": float(np.mean([float(row["MI_minus_rest_log_power_dB"])
-                                      for row in matched_spectral if row["variant"] == variant and row["session"] == session and row["band"] == band]))
-                                      if chosen else None for band in ("mu", "beta")}})
+        if status["status"] == "unavailable":
+            require(any(row["scope"] == "matched_geometry" and row.get("variant") == status["variant"] and
+                        row.get("status") == "unavailable" for row in failures),
+                    "Unavailable matching variant lacks retained failure record")
     return original, sessions, sensitivity, matching_rows, inputs, analysis
 
 
@@ -330,7 +517,9 @@ def plot_results(output, subjects, sessions, trajectories, changes, individuals,
         matrix = trajectories[metric]
         for i, subject in enumerate(subjects):
             ax.plot(x, matrix[i], "o-", color=colors[i], alpha=.65, linewidth=1, markersize=3, label=subject)
-        means = np.nanmean(matrix, axis=0)
+        n_available = np.isfinite(matrix).sum(axis=0)
+        means = np.divide(np.nansum(matrix, axis=0), n_available,
+                          out=np.full(matrix.shape[1], np.nan), where=n_available > 0)
         ax.plot(x, means, "D-", color="black", linewidth=2.5, markersize=5, label="participant mean")
         ax.set(title=title, xticks=x, xticklabels=sessions, xlabel="Protocol session")
         ax.text(.02, .02, "available n=" + "/".join(map(str, np.isfinite(matrix).sum(axis=0))),
@@ -376,8 +565,9 @@ def plot_results(output, subjects, sessions, trajectories, changes, individuals,
             for i in range(len(subjects)):
                 ax.plot(x, matrix[i], "o-", color=colors[i], alpha=.65, linewidth=1, markersize=3)
             if np.isfinite(matrix).any():
-                with np.errstate(invalid="ignore"):
-                    mean = np.nansum(matrix, axis=0)/np.maximum(np.isfinite(matrix).sum(axis=0), 1)
+                n_available = np.isfinite(matrix).sum(axis=0)
+                mean = np.divide(np.nansum(matrix, axis=0), n_available,
+                                 out=np.full(matrix.shape[1], np.nan), where=n_available > 0)
                 ax.plot(x, mean, "D-", color="black", linewidth=2, markersize=4)
             ax.set(title=field, ylabel=variant, xticks=x, xticklabels=sessions, xlabel="Protocol session")
             ax.text(.02, .02, "available n=" + "/".join(map(str, np.isfinite(matrix).sum(axis=0))), transform=ax.transAxes, fontsize=8)
@@ -394,6 +584,7 @@ def summarize(config_path, analysis_root, audit_root, output):
     require(not output.exists(), "Prior summary exists; choose a new output directory")
     config = json.loads(config_path.read_text())
     subjects, sessions = config["subjects"], config["session_order"]
+    require(bool(subjects) and len(subjects) == len(set(subjects)), "Duplicate/empty participant list")
     require(tuple(sessions) == SESSIONS, "Protocol session order differs")
     inputs = {"config": config_path, "summary_script": Path(__file__),
               "behavior_source": BEHAVIOR_ROOT/"participants.tsv",
@@ -414,7 +605,7 @@ def summarize(config_path, analysis_root, audit_root, output):
         dictionary_status = f"invalid_strict_JSON_preserved: {error.msg}; line {error.lineno}"
     behavior, _ = read_behavior_sessions(inputs["behavior_source"], columns, 6)
     require(len({row["original_subject"] for row in behavior}) == 19, "Behavior source cohort count changed")
-    mapping, eeg_sessions, spectral, matching, receipts = {}, [], [], [], []
+    mapping, eeg_sessions, spectral, matching, receipts, scientific_failures, data_exclusions = {}, [], [], [], [], [], []
     for subject in subjects:
         original, rows, bands, geometry, files, receipt = load_participant(
             subject, config_path, config, analysis_root, audit_root)
@@ -425,7 +616,13 @@ def summarize(config_path, analysis_root, audit_root, output):
         matching.extend(geometry)
         inputs.update({f"{subject}/{key}": value for key, value in files.items()})
         receipts.append(receipt)
+        scientific_failures.extend(dict(row, subject=subject) for row in json.loads(files["failures.json"].read_text()))
+        if "audit/excluded_events.tsv" in files:
+            data_exclusions.extend(read_table(files["audit/excluded_events.tsv"]))
     require(len({row["script_sha256"] for row in receipts}) == 1, "Mixed analysis script versions")
+    require(len({tuple(row["channel_names"]) for row in receipts}) == 1 and
+            len({row["sampling_frequency_hz"] for row in receipts}) == 1,
+            "Participant analyses do not share audited channel coordinates/sampling frequency")
     joined = join_verified_sessions(behavior, eeg_sessions, mapping)
     require(len(joined) == len(subjects)*len(sessions), "Subject/session join count changed")
     metrics = ["mean_run_hit_percent", "CSP_BA_percent", "mu_MI_minus_rest_dB", "beta_MI_minus_rest_dB",
@@ -454,10 +651,24 @@ def summarize(config_path, analysis_root, audit_root, output):
                "subjects": subjects, "subject_map": mapping, "participants": len(subjects),
                "sessions": len(joined), "runs": sum(row["n_EEG_runs"] for row in joined),
                "trials": sum(row["n_EEG_trials"] for row in joined),
+               "source_events": sum(row["n_EEG_source_events"] for row in joined),
+               "excluded_source_events_n": sum(row["n_EEG_excluded_events"] for row in joined),
+               "excluded_source_events": data_exclusions,
+               "source_class_counts": {"rest": sum(row["n_source_rest"] for row in joined),
+                    "right_hand": sum(row["n_source_MI"] for row in joined)},
                "class_counts": {"rest": sum(row["n_rest"] for row in joined), "right_hand": sum(row["n_MI"] for row in joined)},
                "qc_flags_retained_in_primary": sum(row["n_qc_flagged"] for row in joined),
                "constant_prediction_sessions_by_session": dict(Counter(row["session"] for row in joined if row["CSP_constant_prediction"] is True)),
                "constant_prediction_participants": [s for s in subjects if any(row["subject"] == s and row["CSP_constant_prediction"] is True for row in joined)],
+               "unavailable_decoder_sessions": [{"subject": row["subject"], "session": row["session"]}
+                    for row in joined if row["CSP_status"] != "available"],
+               "scientific_failures": scientific_failures,
+               "scientific_failure_records_n": len(scientific_failures),
+               "metric_units": {"mean_run_hit_percent": "percent; changes in percentage points",
+                    "CSP_BA_percent": "percent; changes in percentage points",
+                    "CSP_conditional_run_CI95_percent": "percent; conditional within-participant run clusters",
+                    "spectral_task_contrast": "dB; differences of equal-run mean log10 task-window power",
+                    "arithmetic_ROI_power": "microvolt squared (uV2)"},
                "behavior_dictionary_syntax": dictionary_status, "behavior_source_subjects": 19,
                "behavior_analyzed_EEG_linked_subjects_only": len(subjects),
                "source_selection": config["selection"], "pilot_previously_seen": config["pilot_subject_previously_observed"],

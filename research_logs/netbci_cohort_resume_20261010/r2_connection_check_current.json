@@ -1,0 +1,23 @@
+{
+  "checked_at_utc": "2026-10-10T08:31:04.339291+00:00",
+  "operations": "read_only_connectivity_test",
+  "credential_values_logged": false,
+  "objects_uploaded": false,
+  "write_permission_tested": false,
+  "variables_present": {
+    "R2_ENDPOINT": true,
+    "R2_BUCKET": true,
+    "AWS_ACCESS_KEY_ID": true,
+    "AWS_SECRET_ACCESS_KEY": true,
+    "AWS_DEFAULT_REGION": true
+  },
+  "head_bucket": {
+    "http_status": 200
+  },
+  "list_objects_v2": {
+    "http_status": 200,
+    "key_count": 0,
+    "is_truncated": false
+  },
+  "status": "authenticated_read_only_connection_succeeded"
+}

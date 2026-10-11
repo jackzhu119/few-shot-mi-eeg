@@ -1,0 +1,12 @@
+........................................................................ [ 26%]
+........................................................................ [ 52%]
+........................................................................ [ 78%]
+...........................................................              [100%]
+=============================== warnings summary ===============================
+tests/test_decoders.py::test_eegnet_official_cpu_model_small_step_and_frozen_inference
+tests/test_decoders.py::test_eegnet_official_cpu_model_small_step_and_frozen_inference
+  /workspace/.venvs/few-shot-mi-eeg/lib/python3.11/site-packages/braindecode/models/eegnet.py:171: DeprecationWarning: Parameter 'final_layer_with_constraint=False' is deprecated and will be removed in a future release. Please use `final_layer_linear=True`.
+    warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+275 passed, 2 warnings in 10.32s

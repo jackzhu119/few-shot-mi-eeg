@@ -1,5 +1,12 @@
 # Manuscript working materials
 
+The latest [ten-ID cohort addendum](cohort_addendum_20261010.md) reports completed computations,
+the exact cross-identity signal duplication involving sub-1/sub-7, and a separately named
+eight-ID source-driven sensitivity. The original ten-ID EEG intervals cannot be interpreted
+as independent-participant evidence. The single-participant manuscript below is a historical
+freeze; its sub-1 session-04 signal is among the shared derivative recordings, and the correct
+original assignment remains unverified. New public-source expansion is audited separately.
+
 The [English working draft](longitudinal_eeg_working_draft.md) reports the actual NETBCI stage-1 evidence available on 2026-10-10. Its status is **`exploratory_single-participant_working_draft_not_submission_ready`**.
 
 Its current claim is an auditable longitudinal EEG feasibility workflow: one participant, four ordered sessions, 24 task runs, 717 stored events, descriptive feature differences, and minimal source-frozen decoder checks. **Learning-Preserving Co-Adaptive Brain–Computer Interfaces** is the longer-term research programme; no candidate algorithm, skill-retention benefit, or causal human learning effect has been demonstrated.

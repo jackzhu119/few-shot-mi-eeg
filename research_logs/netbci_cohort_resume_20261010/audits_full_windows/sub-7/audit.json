@@ -1,0 +1,4999 @@
+{
+  "status": "passed_local_subset_access_and_structure_checks",
+  "checked_at_utc": "2026-10-10T08:27:09.485394+00:00",
+  "client_timezone": "Asia/Shanghai",
+  "dataset_id": "nm000305",
+  "version": "1.0.0",
+  "dataset_type": "derivative",
+  "license": "CC-BY-4.0",
+  "data_root": "/workspace/few-shot-mi-eeg/data/netbci2026/nm000305/v1.0.0",
+  "manifest_path": "/workspace/few-shot-mi-eeg/research_logs/netbci_cohort_20261010/downloads/sub-7/download_manifest.json",
+  "manifest_sha256": "867f4ee7c5b1c6c66e9ad6208f52e6c27caaec9083caa28c93c0204e0d3c4eef",
+  "audit_script_sha256": "9ccdde5c6ae7259fb2011e404f95b11f5eb472e02db8e136466061b7839472b3",
+  "source_git_commit": "ed81d67cbe8bf3dec486095959e24b014e2f00ca",
+  "runtime_versions": {
+    "python": "3.11.16",
+    "mne": "1.10.2",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "moabb": "1.4.3"
+  },
+  "summary": {
+    "subject": "sub-7",
+    "session_count": 4,
+    "run_count": 24,
+    "eeg_channel_counts": [
+      74
+    ],
+    "sampling_frequencies_hz": [
+      250.0
+    ],
+    "total_trials": 726,
+    "class_counts": {
+      "rest": 360,
+      "right_hand": 366
+    },
+    "sessions": [
+      {
+        "session": "01",
+        "runs": 6,
+        "run_ids": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06"
+        ],
+        "trial_count": 178,
+        "class_counts": {
+          "rest": 88,
+          "right_hand": 90
+        },
+        "source_trial_count": 178,
+        "source_class_counts": {
+          "rest": 88,
+          "right_hand": 90
+        },
+        "eligible_trial_count": 178,
+        "eligible_class_counts": {
+          "rest": 88,
+          "right_hand": 90
+        },
+        "excluded_trial_count": 0,
+        "excluded_class_counts": {},
+        "source_task_window_seconds": 890.0,
+        "eligible_task_window_seconds": 890.0
+      },
+      {
+        "session": "02",
+        "runs": 6,
+        "run_ids": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06"
+        ],
+        "trial_count": 178,
+        "class_counts": {
+          "rest": 88,
+          "right_hand": 90
+        },
+        "source_trial_count": 178,
+        "source_class_counts": {
+          "rest": 88,
+          "right_hand": 90
+        },
+        "eligible_trial_count": 178,
+        "eligible_class_counts": {
+          "rest": 88,
+          "right_hand": 90
+        },
+        "excluded_trial_count": 0,
+        "excluded_class_counts": {},
+        "source_task_window_seconds": 890.0,
+        "eligible_task_window_seconds": 890.0
+      },
+      {
+        "session": "03",
+        "runs": 6,
+        "run_ids": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06"
+        ],
+        "trial_count": 178,
+        "class_counts": {
+          "rest": 88,
+          "right_hand": 90
+        },
+        "source_trial_count": 178,
+        "source_class_counts": {
+          "rest": 88,
+          "right_hand": 90
+        },
+        "eligible_trial_count": 178,
+        "eligible_class_counts": {
+          "rest": 88,
+          "right_hand": 90
+        },
+        "excluded_trial_count": 0,
+        "excluded_class_counts": {},
+        "source_task_window_seconds": 890.0,
+        "eligible_task_window_seconds": 890.0
+      },
+      {
+        "session": "04",
+        "runs": 6,
+        "run_ids": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06"
+        ],
+        "trial_count": 192,
+        "class_counts": {
+          "rest": 96,
+          "right_hand": 96
+        },
+        "source_trial_count": 192,
+        "source_class_counts": {
+          "rest": 96,
+          "right_hand": 96
+        },
+        "eligible_trial_count": 192,
+        "eligible_class_counts": {
+          "rest": 96,
+          "right_hand": 96
+        },
+        "excluded_trial_count": 0,
+        "excluded_class_counts": {},
+        "source_task_window_seconds": 960.0,
+        "eligible_task_window_seconds": 960.0
+      }
+    ],
+    "event_value_mapping": {
+      "rest": 1,
+      "right_hand": 2
+    },
+    "channel_order_stable": true,
+    "files_verified": 193,
+    "bytes_verified": 194102345,
+    "all_checks_pass": true,
+    "total_source_trials": 726,
+    "source_class_counts": {
+      "rest": 360,
+      "right_hand": 366
+    },
+    "excluded_trial_count": 0,
+    "excluded_class_counts": {},
+    "total_source_task_window_seconds": 3630.0,
+    "total_exact_task_window_seconds": 3630.0,
+    "trial_count_convention": "total_trials counts adapted exact windows; source totals retained separately"
+  },
+  "runs": [
+    {
+      "subject": "sub-7",
+      "session": "01",
+      "run": "01",
+      "task": "imagery",
+      "file": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-01_eeg.edf",
+      "trial_count": 30,
+      "class_counts": {
+        "rest": 15,
+        "right_hand": 15
+      },
+      "channel_count": 74,
+      "channel_names": [
+        "FP1",
+        "FPz",
+        "FP2",
+        "AF1",
+        "AF3",
+        "AFz",
+        "AF4",
+        "AF8",
+        "F7",
+        "F5",
+        "F3",
+        "F1",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT9",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "FCz",
+        "FC2",
+        "FC4",
+        "FC6",
+        "FT8",
+        "FT10",
+        "T9",
+        "T7",
+        "C5",
+        "C3",
+        "C1",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "T10",
+        "TP9",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "CPz",
+        "CP2",
+        "CP4",
+        "CP6",
+        "TP8",
+        "TP10",
+        "P9",
+        "P7",
+        "P3",
+        "P1",
+        "Pz",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO9",
+        "PO7",
+        "PO5",
+        "PO3",
+        "POz",
+        "PO4",
+        "PO8",
+        "PO10",
+        "O1",
+        "Oz",
+        "O2",
+        "O9",
+        "IZ",
+        "O10"
+      ],
+      "channel_types": {
+        "eeg": 74
+      },
+      "sampling_frequency_hz": 250.0,
+      "signal_samples": 53250,
+      "physical_units": {
+        "µV": 74
+      },
+      "mne_signal_unit": "V",
+      "signal_range_v": [
+        -0.004961449999999999,
+        0.004961033
+      ],
+      "whole_signal_finite": true,
+      "onset_units": "s",
+      "duration_units": "s",
+      "sample_origin": 0,
+      "event_sample_alignment_max_error": 0.0,
+      "trial_durations_s": [
+        5.0
+      ],
+      "trial_lengths_samples": [
+        1250
+      ],
+      "first_event_sample": 1870,
+      "last_event_sample": 51808,
+      "edf_tsv_annotations_match": true,
+      "mne_events_match": true,
+      "all_trials_inside_recording": true,
+      "source_trial_count": 30,
+      "source_class_counts": {
+        "rest": 15,
+        "right_hand": 15
+      },
+      "eligible_trial_count": 30,
+      "eligible_class_counts": {
+        "rest": 15,
+        "right_hand": 15
+      },
+      "excluded_trial_count": 0,
+      "excluded_class_counts": {},
+      "source_task_window_seconds": 150.0,
+      "eligible_task_window_seconds": 150.0
+    },
+    {
+      "subject": "sub-7",
+      "session": "01",
+      "run": "02",
+      "task": "imagery",
+      "file": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-02_eeg.edf",
+      "trial_count": 29,
+      "class_counts": {
+        "rest": 14,
+        "right_hand": 15
+      },
+      "channel_count": 74,
+      "channel_names": [
+        "FP1",
+        "FPz",
+        "FP2",
+        "AF1",
+        "AF3",
+        "AFz",
+        "AF4",
+        "AF8",
+        "F7",
+        "F5",
+        "F3",
+        "F1",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT9",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "FCz",
+        "FC2",
+        "FC4",
+        "FC6",
+        "FT8",
+        "FT10",
+        "T9",
+        "T7",
+        "C5",
+        "C3",
+        "C1",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "T10",
+        "TP9",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "CPz",
+        "CP2",
+        "CP4",
+        "CP6",
+        "TP8",
+        "TP10",
+        "P9",
+        "P7",
+        "P3",
+        "P1",
+        "Pz",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO9",
+        "PO7",
+        "PO5",
+        "PO3",
+        "POz",
+        "PO4",
+        "PO8",
+        "PO10",
+        "O1",
+        "Oz",
+        "O2",
+        "O9",
+        "IZ",
+        "O10"
+      ],
+      "channel_types": {
+        "eeg": 74
+      },
+      "sampling_frequency_hz": 250.0,
+      "signal_samples": 53250,
+      "physical_units": {
+        "µV": 74
+      },
+      "mne_signal_unit": "V",
+      "signal_range_v": [
+        -0.00496202,
+        0.004960163
+      ],
+      "whole_signal_finite": true,
+      "onset_units": "s",
+      "duration_units": "s",
+      "sample_origin": 0,
+      "event_sample_alignment_max_error": 0.0,
+      "trial_durations_s": [
+        5.0
+      ],
+      "trial_lengths_samples": [
+        1250
+      ],
+      "first_event_sample": 1790,
+      "last_event_sample": 51753,
+      "edf_tsv_annotations_match": true,
+      "mne_events_match": true,
+      "all_trials_inside_recording": true,
+      "source_trial_count": 29,
+      "source_class_counts": {
+        "rest": 14,
+        "right_hand": 15
+      },
+      "eligible_trial_count": 29,
+      "eligible_class_counts": {
+        "rest": 14,
+        "right_hand": 15
+      },
+      "excluded_trial_count": 0,
+      "excluded_class_counts": {},
+      "source_task_window_seconds": 145.0,
+      "eligible_task_window_seconds": 145.0
+    },
+    {
+      "subject": "sub-7",
+      "session": "01",
+      "run": "03",
+      "task": "imagery",
+      "file": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-03_eeg.edf",
+      "trial_count": 30,
+      "class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "channel_count": 74,
+      "channel_names": [
+        "FP1",
+        "FPz",
+        "FP2",
+        "AF1",
+        "AF3",
+        "AFz",
+        "AF4",
+        "AF8",
+        "F7",
+        "F5",
+        "F3",
+        "F1",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT9",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "FCz",
+        "FC2",
+        "FC4",
+        "FC6",
+        "FT8",
+        "FT10",
+        "T9",
+        "T7",
+        "C5",
+        "C3",
+        "C1",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "T10",
+        "TP9",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "CPz",
+        "CP2",
+        "CP4",
+        "CP6",
+        "TP8",
+        "TP10",
+        "P9",
+        "P7",
+        "P3",
+        "P1",
+        "Pz",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO9",
+        "PO7",
+        "PO5",
+        "PO3",
+        "POz",
+        "PO4",
+        "PO8",
+        "PO10",
+        "O1",
+        "Oz",
+        "O2",
+        "O9",
+        "IZ",
+        "O10"
+      ],
+      "channel_types": {
+        "eeg": 74
+      },
+      "sampling_frequency_hz": 250.0,
+      "signal_samples": 54000,
+      "physical_units": {
+        "µV": 74
+      },
+      "mne_signal_unit": "V",
+      "signal_range_v": [
+        -0.00446427,
+        0.003582817
+      ],
+      "whole_signal_finite": true,
+      "onset_units": "s",
+      "duration_units": "s",
+      "sample_origin": 0,
+      "event_sample_alignment_max_error": 0.0,
+      "trial_durations_s": [
+        5.0
+      ],
+      "trial_lengths_samples": [
+        1250
+      ],
+      "first_event_sample": 1973,
+      "last_event_sample": 51911,
+      "edf_tsv_annotations_match": true,
+      "mne_events_match": true,
+      "all_trials_inside_recording": true,
+      "source_trial_count": 30,
+      "source_class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "eligible_trial_count": 30,
+      "eligible_class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "excluded_trial_count": 0,
+      "excluded_class_counts": {},
+      "source_task_window_seconds": 150.0,
+      "eligible_task_window_seconds": 150.0
+    },
+    {
+      "subject": "sub-7",
+      "session": "01",
+      "run": "04",
+      "task": "imagery",
+      "file": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-04_eeg.edf",
+      "trial_count": 30,
+      "class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "channel_count": 74,
+      "channel_names": [
+        "FP1",
+        "FPz",
+        "FP2",
+        "AF1",
+        "AF3",
+        "AFz",
+        "AF4",
+        "AF8",
+        "F7",
+        "F5",
+        "F3",
+        "F1",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT9",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "FCz",
+        "FC2",
+        "FC4",
+        "FC6",
+        "FT8",
+        "FT10",
+        "T9",
+        "T7",
+        "C5",
+        "C3",
+        "C1",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "T10",
+        "TP9",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "CPz",
+        "CP2",
+        "CP4",
+        "CP6",
+        "TP8",
+        "TP10",
+        "P9",
+        "P7",
+        "P3",
+        "P1",
+        "Pz",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO9",
+        "PO7",
+        "PO5",
+        "PO3",
+        "POz",
+        "PO4",
+        "PO8",
+        "PO10",
+        "O1",
+        "Oz",
+        "O2",
+        "O9",
+        "IZ",
+        "O10"
+      ],
+      "channel_types": {
+        "eeg": 74
+      },
+      "sampling_frequency_hz": 250.0,
+      "signal_samples": 52750,
+      "physical_units": {
+        "µV": 74
+      },
+      "mne_signal_unit": "V",
+      "signal_range_v": [
+        -0.00335338,
+        0.0030347319999999996
+      ],
+      "whole_signal_finite": true,
+      "onset_units": "s",
+      "duration_units": "s",
+      "sample_origin": 0,
+      "event_sample_alignment_max_error": 3.637978807091713e-12,
+      "trial_durations_s": [
+        5.0
+      ],
+      "trial_lengths_samples": [
+        1250
+      ],
+      "first_event_sample": 1191,
+      "last_event_sample": 51124,
+      "edf_tsv_annotations_match": true,
+      "mne_events_match": true,
+      "all_trials_inside_recording": true,
+      "source_trial_count": 30,
+      "source_class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "eligible_trial_count": 30,
+      "eligible_class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "excluded_trial_count": 0,
+      "excluded_class_counts": {},
+      "source_task_window_seconds": 150.0,
+      "eligible_task_window_seconds": 150.0
+    },
+    {
+      "subject": "sub-7",
+      "session": "01",
+      "run": "05",
+      "task": "imagery",
+      "file": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-05_eeg.edf",
+      "trial_count": 30,
+      "class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "channel_count": 74,
+      "channel_names": [
+        "FP1",
+        "FPz",
+        "FP2",
+        "AF1",
+        "AF3",
+        "AFz",
+        "AF4",
+        "AF8",
+        "F7",
+        "F5",
+        "F3",
+        "F1",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT9",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "FCz",
+        "FC2",
+        "FC4",
+        "FC6",
+        "FT8",
+        "FT10",
+        "T9",
+        "T7",
+        "C5",
+        "C3",
+        "C1",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "T10",
+        "TP9",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "CPz",
+        "CP2",
+        "CP4",
+        "CP6",
+        "TP8",
+        "TP10",
+        "P9",
+        "P7",
+        "P3",
+        "P1",
+        "Pz",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO9",
+        "PO7",
+        "PO5",
+        "PO3",
+        "POz",
+        "PO4",
+        "PO8",
+        "PO10",
+        "O1",
+        "Oz",
+        "O2",
+        "O9",
+        "IZ",
+        "O10"
+      ],
+      "channel_types": {
+        "eeg": 74
+      },
+      "sampling_frequency_hz": 250.0,
+      "signal_samples": 53250,
+      "physical_units": {
+        "µV": 74
+      },
+      "mne_signal_unit": "V",
+      "signal_range_v": [
+        -0.00243038,
+        0.0028763200000000004
+      ],
+      "whole_signal_finite": true,
+      "onset_units": "s",
+      "duration_units": "s",
+      "sample_origin": 0,
+      "event_sample_alignment_max_error": 3.637978807091713e-12,
+      "trial_durations_s": [
+        5.0
+      ],
+      "trial_lengths_samples": [
+        1250
+      ],
+      "first_event_sample": 1149,
+      "last_event_sample": 51082,
+      "edf_tsv_annotations_match": true,
+      "mne_events_match": true,
+      "all_trials_inside_recording": true,
+      "source_trial_count": 30,
+      "source_class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "eligible_trial_count": 30,
+      "eligible_class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "excluded_trial_count": 0,
+      "excluded_class_counts": {},
+      "source_task_window_seconds": 150.0,
+      "eligible_task_window_seconds": 150.0
+    },
+    {
+      "subject": "sub-7",
+      "session": "01",
+      "run": "06",
+      "task": "imagery",
+      "file": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-06_eeg.edf",
+      "trial_count": 29,
+      "class_counts": {
+        "right_hand": 15,
+        "rest": 14
+      },
+      "channel_count": 74,
+      "channel_names": [
+        "FP1",
+        "FPz",
+        "FP2",
+        "AF1",
+        "AF3",
+        "AFz",
+        "AF4",
+        "AF8",
+        "F7",
+        "F5",
+        "F3",
+        "F1",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT9",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "FCz",
+        "FC2",
+        "FC4",
+        "FC6",
+        "FT8",
+        "FT10",
+        "T9",
+        "T7",
+        "C5",
+        "C3",
+        "C1",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "T10",
+        "TP9",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "CPz",
+        "CP2",
+        "CP4",
+        "CP6",
+        "TP8",
+        "TP10",
+        "P9",
+        "P7",
+        "P3",
+        "P1",
+        "Pz",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO9",
+        "PO7",
+        "PO5",
+        "PO3",
+        "POz",
+        "PO4",
+        "PO8",
+        "PO10",
+        "O1",
+        "Oz",
+        "O2",
+        "O9",
+        "IZ",
+        "O10"
+      ],
+      "channel_types": {
+        "eeg": 74
+      },
+      "sampling_frequency_hz": 250.0,
+      "signal_samples": 52750,
+      "physical_units": {
+        "µV": 74
+      },
+      "mne_signal_unit": "V",
+      "signal_range_v": [
+        -0.0026402199999999995,
+        0.0032936560000000003
+      ],
+      "whole_signal_finite": true,
+      "onset_units": "s",
+      "duration_units": "s",
+      "sample_origin": 0,
+      "event_sample_alignment_max_error": 9.094947017729282e-13,
+      "trial_durations_s": [
+        5.0
+      ],
+      "trial_lengths_samples": [
+        1250
+      ],
+      "first_event_sample": 1280,
+      "last_event_sample": 51219,
+      "edf_tsv_annotations_match": true,
+      "mne_events_match": true,
+      "all_trials_inside_recording": true,
+      "source_trial_count": 29,
+      "source_class_counts": {
+        "right_hand": 15,
+        "rest": 14
+      },
+      "eligible_trial_count": 29,
+      "eligible_class_counts": {
+        "right_hand": 15,
+        "rest": 14
+      },
+      "excluded_trial_count": 0,
+      "excluded_class_counts": {},
+      "source_task_window_seconds": 145.0,
+      "eligible_task_window_seconds": 145.0
+    },
+    {
+      "subject": "sub-7",
+      "session": "02",
+      "run": "01",
+      "task": "imagery",
+      "file": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-01_eeg.edf",
+      "trial_count": 30,
+      "class_counts": {
+        "rest": 15,
+        "right_hand": 15
+      },
+      "channel_count": 74,
+      "channel_names": [
+        "FP1",
+        "FPz",
+        "FP2",
+        "AF1",
+        "AF3",
+        "AFz",
+        "AF4",
+        "AF8",
+        "F7",
+        "F5",
+        "F3",
+        "F1",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT9",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "FCz",
+        "FC2",
+        "FC4",
+        "FC6",
+        "FT8",
+        "FT10",
+        "T9",
+        "T7",
+        "C5",
+        "C3",
+        "C1",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "T10",
+        "TP9",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "CPz",
+        "CP2",
+        "CP4",
+        "CP6",
+        "TP8",
+        "TP10",
+        "P9",
+        "P7",
+        "P3",
+        "P1",
+        "Pz",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO9",
+        "PO7",
+        "PO5",
+        "PO3",
+        "POz",
+        "PO4",
+        "PO8",
+        "PO10",
+        "O1",
+        "Oz",
+        "O2",
+        "O9",
+        "IZ",
+        "O10"
+      ],
+      "channel_types": {
+        "eeg": 74
+      },
+      "sampling_frequency_hz": 250.0,
+      "signal_samples": 53250,
+      "physical_units": {
+        "µV": 74
+      },
+      "mne_signal_unit": "V",
+      "signal_range_v": [
+        -0.004961449999999999,
+        0.004961033
+      ],
+      "whole_signal_finite": true,
+      "onset_units": "s",
+      "duration_units": "s",
+      "sample_origin": 0,
+      "event_sample_alignment_max_error": 0.0,
+      "trial_durations_s": [
+        5.0
+      ],
+      "trial_lengths_samples": [
+        1250
+      ],
+      "first_event_sample": 1870,
+      "last_event_sample": 51808,
+      "edf_tsv_annotations_match": true,
+      "mne_events_match": true,
+      "all_trials_inside_recording": true,
+      "source_trial_count": 30,
+      "source_class_counts": {
+        "rest": 15,
+        "right_hand": 15
+      },
+      "eligible_trial_count": 30,
+      "eligible_class_counts": {
+        "rest": 15,
+        "right_hand": 15
+      },
+      "excluded_trial_count": 0,
+      "excluded_class_counts": {},
+      "source_task_window_seconds": 150.0,
+      "eligible_task_window_seconds": 150.0
+    },
+    {
+      "subject": "sub-7",
+      "session": "02",
+      "run": "02",
+      "task": "imagery",
+      "file": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-02_eeg.edf",
+      "trial_count": 29,
+      "class_counts": {
+        "rest": 14,
+        "right_hand": 15
+      },
+      "channel_count": 74,
+      "channel_names": [
+        "FP1",
+        "FPz",
+        "FP2",
+        "AF1",
+        "AF3",
+        "AFz",
+        "AF4",
+        "AF8",
+        "F7",
+        "F5",
+        "F3",
+        "F1",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT9",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "FCz",
+        "FC2",
+        "FC4",
+        "FC6",
+        "FT8",
+        "FT10",
+        "T9",
+        "T7",
+        "C5",
+        "C3",
+        "C1",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "T10",
+        "TP9",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "CPz",
+        "CP2",
+        "CP4",
+        "CP6",
+        "TP8",
+        "TP10",
+        "P9",
+        "P7",
+        "P3",
+        "P1",
+        "Pz",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO9",
+        "PO7",
+        "PO5",
+        "PO3",
+        "POz",
+        "PO4",
+        "PO8",
+        "PO10",
+        "O1",
+        "Oz",
+        "O2",
+        "O9",
+        "IZ",
+        "O10"
+      ],
+      "channel_types": {
+        "eeg": 74
+      },
+      "sampling_frequency_hz": 250.0,
+      "signal_samples": 53250,
+      "physical_units": {
+        "µV": 74
+      },
+      "mne_signal_unit": "V",
+      "signal_range_v": [
+        -0.00496202,
+        0.004960163
+      ],
+      "whole_signal_finite": true,
+      "onset_units": "s",
+      "duration_units": "s",
+      "sample_origin": 0,
+      "event_sample_alignment_max_error": 0.0,
+      "trial_durations_s": [
+        5.0
+      ],
+      "trial_lengths_samples": [
+        1250
+      ],
+      "first_event_sample": 1790,
+      "last_event_sample": 51753,
+      "edf_tsv_annotations_match": true,
+      "mne_events_match": true,
+      "all_trials_inside_recording": true,
+      "source_trial_count": 29,
+      "source_class_counts": {
+        "rest": 14,
+        "right_hand": 15
+      },
+      "eligible_trial_count": 29,
+      "eligible_class_counts": {
+        "rest": 14,
+        "right_hand": 15
+      },
+      "excluded_trial_count": 0,
+      "excluded_class_counts": {},
+      "source_task_window_seconds": 145.0,
+      "eligible_task_window_seconds": 145.0
+    },
+    {
+      "subject": "sub-7",
+      "session": "02",
+      "run": "03",
+      "task": "imagery",
+      "file": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-03_eeg.edf",
+      "trial_count": 30,
+      "class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "channel_count": 74,
+      "channel_names": [
+        "FP1",
+        "FPz",
+        "FP2",
+        "AF1",
+        "AF3",
+        "AFz",
+        "AF4",
+        "AF8",
+        "F7",
+        "F5",
+        "F3",
+        "F1",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT9",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "FCz",
+        "FC2",
+        "FC4",
+        "FC6",
+        "FT8",
+        "FT10",
+        "T9",
+        "T7",
+        "C5",
+        "C3",
+        "C1",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "T10",
+        "TP9",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "CPz",
+        "CP2",
+        "CP4",
+        "CP6",
+        "TP8",
+        "TP10",
+        "P9",
+        "P7",
+        "P3",
+        "P1",
+        "Pz",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO9",
+        "PO7",
+        "PO5",
+        "PO3",
+        "POz",
+        "PO4",
+        "PO8",
+        "PO10",
+        "O1",
+        "Oz",
+        "O2",
+        "O9",
+        "IZ",
+        "O10"
+      ],
+      "channel_types": {
+        "eeg": 74
+      },
+      "sampling_frequency_hz": 250.0,
+      "signal_samples": 54000,
+      "physical_units": {
+        "µV": 74
+      },
+      "mne_signal_unit": "V",
+      "signal_range_v": [
+        -0.00446427,
+        0.003582817
+      ],
+      "whole_signal_finite": true,
+      "onset_units": "s",
+      "duration_units": "s",
+      "sample_origin": 0,
+      "event_sample_alignment_max_error": 0.0,
+      "trial_durations_s": [
+        5.0
+      ],
+      "trial_lengths_samples": [
+        1250
+      ],
+      "first_event_sample": 1973,
+      "last_event_sample": 51911,
+      "edf_tsv_annotations_match": true,
+      "mne_events_match": true,
+      "all_trials_inside_recording": true,
+      "source_trial_count": 30,
+      "source_class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "eligible_trial_count": 30,
+      "eligible_class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "excluded_trial_count": 0,
+      "excluded_class_counts": {},
+      "source_task_window_seconds": 150.0,
+      "eligible_task_window_seconds": 150.0
+    },
+    {
+      "subject": "sub-7",
+      "session": "02",
+      "run": "04",
+      "task": "imagery",
+      "file": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-04_eeg.edf",
+      "trial_count": 30,
+      "class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "channel_count": 74,
+      "channel_names": [
+        "FP1",
+        "FPz",
+        "FP2",
+        "AF1",
+        "AF3",
+        "AFz",
+        "AF4",
+        "AF8",
+        "F7",
+        "F5",
+        "F3",
+        "F1",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT9",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "FCz",
+        "FC2",
+        "FC4",
+        "FC6",
+        "FT8",
+        "FT10",
+        "T9",
+        "T7",
+        "C5",
+        "C3",
+        "C1",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "T10",
+        "TP9",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "CPz",
+        "CP2",
+        "CP4",
+        "CP6",
+        "TP8",
+        "TP10",
+        "P9",
+        "P7",
+        "P3",
+        "P1",
+        "Pz",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO9",
+        "PO7",
+        "PO5",
+        "PO3",
+        "POz",
+        "PO4",
+        "PO8",
+        "PO10",
+        "O1",
+        "Oz",
+        "O2",
+        "O9",
+        "IZ",
+        "O10"
+      ],
+      "channel_types": {
+        "eeg": 74
+      },
+      "sampling_frequency_hz": 250.0,
+      "signal_samples": 52750,
+      "physical_units": {
+        "µV": 74
+      },
+      "mne_signal_unit": "V",
+      "signal_range_v": [
+        -0.00335338,
+        0.0030347319999999996
+      ],
+      "whole_signal_finite": true,
+      "onset_units": "s",
+      "duration_units": "s",
+      "sample_origin": 0,
+      "event_sample_alignment_max_error": 3.637978807091713e-12,
+      "trial_durations_s": [
+        5.0
+      ],
+      "trial_lengths_samples": [
+        1250
+      ],
+      "first_event_sample": 1191,
+      "last_event_sample": 51124,
+      "edf_tsv_annotations_match": true,
+      "mne_events_match": true,
+      "all_trials_inside_recording": true,
+      "source_trial_count": 30,
+      "source_class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "eligible_trial_count": 30,
+      "eligible_class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "excluded_trial_count": 0,
+      "excluded_class_counts": {},
+      "source_task_window_seconds": 150.0,
+      "eligible_task_window_seconds": 150.0
+    },
+    {
+      "subject": "sub-7",
+      "session": "02",
+      "run": "05",
+      "task": "imagery",
+      "file": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-05_eeg.edf",
+      "trial_count": 30,
+      "class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "channel_count": 74,
+      "channel_names": [
+        "FP1",
+        "FPz",
+        "FP2",
+        "AF1",
+        "AF3",
+        "AFz",
+        "AF4",
+        "AF8",
+        "F7",
+        "F5",
+        "F3",
+        "F1",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT9",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "FCz",
+        "FC2",
+        "FC4",
+        "FC6",
+        "FT8",
+        "FT10",
+        "T9",
+        "T7",
+        "C5",
+        "C3",
+        "C1",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "T10",
+        "TP9",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "CPz",
+        "CP2",
+        "CP4",
+        "CP6",
+        "TP8",
+        "TP10",
+        "P9",
+        "P7",
+        "P3",
+        "P1",
+        "Pz",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO9",
+        "PO7",
+        "PO5",
+        "PO3",
+        "POz",
+        "PO4",
+        "PO8",
+        "PO10",
+        "O1",
+        "Oz",
+        "O2",
+        "O9",
+        "IZ",
+        "O10"
+      ],
+      "channel_types": {
+        "eeg": 74
+      },
+      "sampling_frequency_hz": 250.0,
+      "signal_samples": 53250,
+      "physical_units": {
+        "µV": 74
+      },
+      "mne_signal_unit": "V",
+      "signal_range_v": [
+        -0.00243038,
+        0.0028763200000000004
+      ],
+      "whole_signal_finite": true,
+      "onset_units": "s",
+      "duration_units": "s",
+      "sample_origin": 0,
+      "event_sample_alignment_max_error": 3.637978807091713e-12,
+      "trial_durations_s": [
+        5.0
+      ],
+      "trial_lengths_samples": [
+        1250
+      ],
+      "first_event_sample": 1149,
+      "last_event_sample": 51082,
+      "edf_tsv_annotations_match": true,
+      "mne_events_match": true,
+      "all_trials_inside_recording": true,
+      "source_trial_count": 30,
+      "source_class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "eligible_trial_count": 30,
+      "eligible_class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "excluded_trial_count": 0,
+      "excluded_class_counts": {},
+      "source_task_window_seconds": 150.0,
+      "eligible_task_window_seconds": 150.0
+    },
+    {
+      "subject": "sub-7",
+      "session": "02",
+      "run": "06",
+      "task": "imagery",
+      "file": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-06_eeg.edf",
+      "trial_count": 29,
+      "class_counts": {
+        "right_hand": 15,
+        "rest": 14
+      },
+      "channel_count": 74,
+      "channel_names": [
+        "FP1",
+        "FPz",
+        "FP2",
+        "AF1",
+        "AF3",
+        "AFz",
+        "AF4",
+        "AF8",
+        "F7",
+        "F5",
+        "F3",
+        "F1",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT9",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "FCz",
+        "FC2",
+        "FC4",
+        "FC6",
+        "FT8",
+        "FT10",
+        "T9",
+        "T7",
+        "C5",
+        "C3",
+        "C1",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "T10",
+        "TP9",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "CPz",
+        "CP2",
+        "CP4",
+        "CP6",
+        "TP8",
+        "TP10",
+        "P9",
+        "P7",
+        "P3",
+        "P1",
+        "Pz",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO9",
+        "PO7",
+        "PO5",
+        "PO3",
+        "POz",
+        "PO4",
+        "PO8",
+        "PO10",
+        "O1",
+        "Oz",
+        "O2",
+        "O9",
+        "IZ",
+        "O10"
+      ],
+      "channel_types": {
+        "eeg": 74
+      },
+      "sampling_frequency_hz": 250.0,
+      "signal_samples": 52750,
+      "physical_units": {
+        "µV": 74
+      },
+      "mne_signal_unit": "V",
+      "signal_range_v": [
+        -0.0026402199999999995,
+        0.0032936560000000003
+      ],
+      "whole_signal_finite": true,
+      "onset_units": "s",
+      "duration_units": "s",
+      "sample_origin": 0,
+      "event_sample_alignment_max_error": 9.094947017729282e-13,
+      "trial_durations_s": [
+        5.0
+      ],
+      "trial_lengths_samples": [
+        1250
+      ],
+      "first_event_sample": 1280,
+      "last_event_sample": 51219,
+      "edf_tsv_annotations_match": true,
+      "mne_events_match": true,
+      "all_trials_inside_recording": true,
+      "source_trial_count": 29,
+      "source_class_counts": {
+        "right_hand": 15,
+        "rest": 14
+      },
+      "eligible_trial_count": 29,
+      "eligible_class_counts": {
+        "right_hand": 15,
+        "rest": 14
+      },
+      "excluded_trial_count": 0,
+      "excluded_class_counts": {},
+      "source_task_window_seconds": 145.0,
+      "eligible_task_window_seconds": 145.0
+    },
+    {
+      "subject": "sub-7",
+      "session": "03",
+      "run": "01",
+      "task": "imagery",
+      "file": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-01_eeg.edf",
+      "trial_count": 30,
+      "class_counts": {
+        "rest": 15,
+        "right_hand": 15
+      },
+      "channel_count": 74,
+      "channel_names": [
+        "FP1",
+        "FPz",
+        "FP2",
+        "AF1",
+        "AF3",
+        "AFz",
+        "AF4",
+        "AF8",
+        "F7",
+        "F5",
+        "F3",
+        "F1",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT9",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "FCz",
+        "FC2",
+        "FC4",
+        "FC6",
+        "FT8",
+        "FT10",
+        "T9",
+        "T7",
+        "C5",
+        "C3",
+        "C1",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "T10",
+        "TP9",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "CPz",
+        "CP2",
+        "CP4",
+        "CP6",
+        "TP8",
+        "TP10",
+        "P9",
+        "P7",
+        "P3",
+        "P1",
+        "Pz",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO9",
+        "PO7",
+        "PO5",
+        "PO3",
+        "POz",
+        "PO4",
+        "PO8",
+        "PO10",
+        "O1",
+        "Oz",
+        "O2",
+        "O9",
+        "IZ",
+        "O10"
+      ],
+      "channel_types": {
+        "eeg": 74
+      },
+      "sampling_frequency_hz": 250.0,
+      "signal_samples": 53250,
+      "physical_units": {
+        "µV": 74
+      },
+      "mne_signal_unit": "V",
+      "signal_range_v": [
+        -0.004961449999999999,
+        0.004961033
+      ],
+      "whole_signal_finite": true,
+      "onset_units": "s",
+      "duration_units": "s",
+      "sample_origin": 0,
+      "event_sample_alignment_max_error": 0.0,
+      "trial_durations_s": [
+        5.0
+      ],
+      "trial_lengths_samples": [
+        1250
+      ],
+      "first_event_sample": 1870,
+      "last_event_sample": 51808,
+      "edf_tsv_annotations_match": true,
+      "mne_events_match": true,
+      "all_trials_inside_recording": true,
+      "source_trial_count": 30,
+      "source_class_counts": {
+        "rest": 15,
+        "right_hand": 15
+      },
+      "eligible_trial_count": 30,
+      "eligible_class_counts": {
+        "rest": 15,
+        "right_hand": 15
+      },
+      "excluded_trial_count": 0,
+      "excluded_class_counts": {},
+      "source_task_window_seconds": 150.0,
+      "eligible_task_window_seconds": 150.0
+    },
+    {
+      "subject": "sub-7",
+      "session": "03",
+      "run": "02",
+      "task": "imagery",
+      "file": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-02_eeg.edf",
+      "trial_count": 29,
+      "class_counts": {
+        "rest": 14,
+        "right_hand": 15
+      },
+      "channel_count": 74,
+      "channel_names": [
+        "FP1",
+        "FPz",
+        "FP2",
+        "AF1",
+        "AF3",
+        "AFz",
+        "AF4",
+        "AF8",
+        "F7",
+        "F5",
+        "F3",
+        "F1",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT9",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "FCz",
+        "FC2",
+        "FC4",
+        "FC6",
+        "FT8",
+        "FT10",
+        "T9",
+        "T7",
+        "C5",
+        "C3",
+        "C1",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "T10",
+        "TP9",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "CPz",
+        "CP2",
+        "CP4",
+        "CP6",
+        "TP8",
+        "TP10",
+        "P9",
+        "P7",
+        "P3",
+        "P1",
+        "Pz",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO9",
+        "PO7",
+        "PO5",
+        "PO3",
+        "POz",
+        "PO4",
+        "PO8",
+        "PO10",
+        "O1",
+        "Oz",
+        "O2",
+        "O9",
+        "IZ",
+        "O10"
+      ],
+      "channel_types": {
+        "eeg": 74
+      },
+      "sampling_frequency_hz": 250.0,
+      "signal_samples": 53250,
+      "physical_units": {
+        "µV": 74
+      },
+      "mne_signal_unit": "V",
+      "signal_range_v": [
+        -0.00496202,
+        0.004960163
+      ],
+      "whole_signal_finite": true,
+      "onset_units": "s",
+      "duration_units": "s",
+      "sample_origin": 0,
+      "event_sample_alignment_max_error": 0.0,
+      "trial_durations_s": [
+        5.0
+      ],
+      "trial_lengths_samples": [
+        1250
+      ],
+      "first_event_sample": 1790,
+      "last_event_sample": 51753,
+      "edf_tsv_annotations_match": true,
+      "mne_events_match": true,
+      "all_trials_inside_recording": true,
+      "source_trial_count": 29,
+      "source_class_counts": {
+        "rest": 14,
+        "right_hand": 15
+      },
+      "eligible_trial_count": 29,
+      "eligible_class_counts": {
+        "rest": 14,
+        "right_hand": 15
+      },
+      "excluded_trial_count": 0,
+      "excluded_class_counts": {},
+      "source_task_window_seconds": 145.0,
+      "eligible_task_window_seconds": 145.0
+    },
+    {
+      "subject": "sub-7",
+      "session": "03",
+      "run": "03",
+      "task": "imagery",
+      "file": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-03_eeg.edf",
+      "trial_count": 30,
+      "class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "channel_count": 74,
+      "channel_names": [
+        "FP1",
+        "FPz",
+        "FP2",
+        "AF1",
+        "AF3",
+        "AFz",
+        "AF4",
+        "AF8",
+        "F7",
+        "F5",
+        "F3",
+        "F1",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT9",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "FCz",
+        "FC2",
+        "FC4",
+        "FC6",
+        "FT8",
+        "FT10",
+        "T9",
+        "T7",
+        "C5",
+        "C3",
+        "C1",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "T10",
+        "TP9",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "CPz",
+        "CP2",
+        "CP4",
+        "CP6",
+        "TP8",
+        "TP10",
+        "P9",
+        "P7",
+        "P3",
+        "P1",
+        "Pz",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO9",
+        "PO7",
+        "PO5",
+        "PO3",
+        "POz",
+        "PO4",
+        "PO8",
+        "PO10",
+        "O1",
+        "Oz",
+        "O2",
+        "O9",
+        "IZ",
+        "O10"
+      ],
+      "channel_types": {
+        "eeg": 74
+      },
+      "sampling_frequency_hz": 250.0,
+      "signal_samples": 54000,
+      "physical_units": {
+        "µV": 74
+      },
+      "mne_signal_unit": "V",
+      "signal_range_v": [
+        -0.00446427,
+        0.003582817
+      ],
+      "whole_signal_finite": true,
+      "onset_units": "s",
+      "duration_units": "s",
+      "sample_origin": 0,
+      "event_sample_alignment_max_error": 0.0,
+      "trial_durations_s": [
+        5.0
+      ],
+      "trial_lengths_samples": [
+        1250
+      ],
+      "first_event_sample": 1973,
+      "last_event_sample": 51911,
+      "edf_tsv_annotations_match": true,
+      "mne_events_match": true,
+      "all_trials_inside_recording": true,
+      "source_trial_count": 30,
+      "source_class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "eligible_trial_count": 30,
+      "eligible_class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "excluded_trial_count": 0,
+      "excluded_class_counts": {},
+      "source_task_window_seconds": 150.0,
+      "eligible_task_window_seconds": 150.0
+    },
+    {
+      "subject": "sub-7",
+      "session": "03",
+      "run": "04",
+      "task": "imagery",
+      "file": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-04_eeg.edf",
+      "trial_count": 30,
+      "class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "channel_count": 74,
+      "channel_names": [
+        "FP1",
+        "FPz",
+        "FP2",
+        "AF1",
+        "AF3",
+        "AFz",
+        "AF4",
+        "AF8",
+        "F7",
+        "F5",
+        "F3",
+        "F1",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT9",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "FCz",
+        "FC2",
+        "FC4",
+        "FC6",
+        "FT8",
+        "FT10",
+        "T9",
+        "T7",
+        "C5",
+        "C3",
+        "C1",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "T10",
+        "TP9",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "CPz",
+        "CP2",
+        "CP4",
+        "CP6",
+        "TP8",
+        "TP10",
+        "P9",
+        "P7",
+        "P3",
+        "P1",
+        "Pz",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO9",
+        "PO7",
+        "PO5",
+        "PO3",
+        "POz",
+        "PO4",
+        "PO8",
+        "PO10",
+        "O1",
+        "Oz",
+        "O2",
+        "O9",
+        "IZ",
+        "O10"
+      ],
+      "channel_types": {
+        "eeg": 74
+      },
+      "sampling_frequency_hz": 250.0,
+      "signal_samples": 52750,
+      "physical_units": {
+        "µV": 74
+      },
+      "mne_signal_unit": "V",
+      "signal_range_v": [
+        -0.00335338,
+        0.0030347319999999996
+      ],
+      "whole_signal_finite": true,
+      "onset_units": "s",
+      "duration_units": "s",
+      "sample_origin": 0,
+      "event_sample_alignment_max_error": 3.637978807091713e-12,
+      "trial_durations_s": [
+        5.0
+      ],
+      "trial_lengths_samples": [
+        1250
+      ],
+      "first_event_sample": 1191,
+      "last_event_sample": 51124,
+      "edf_tsv_annotations_match": true,
+      "mne_events_match": true,
+      "all_trials_inside_recording": true,
+      "source_trial_count": 30,
+      "source_class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "eligible_trial_count": 30,
+      "eligible_class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "excluded_trial_count": 0,
+      "excluded_class_counts": {},
+      "source_task_window_seconds": 150.0,
+      "eligible_task_window_seconds": 150.0
+    },
+    {
+      "subject": "sub-7",
+      "session": "03",
+      "run": "05",
+      "task": "imagery",
+      "file": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-05_eeg.edf",
+      "trial_count": 30,
+      "class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "channel_count": 74,
+      "channel_names": [
+        "FP1",
+        "FPz",
+        "FP2",
+        "AF1",
+        "AF3",
+        "AFz",
+        "AF4",
+        "AF8",
+        "F7",
+        "F5",
+        "F3",
+        "F1",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT9",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "FCz",
+        "FC2",
+        "FC4",
+        "FC6",
+        "FT8",
+        "FT10",
+        "T9",
+        "T7",
+        "C5",
+        "C3",
+        "C1",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "T10",
+        "TP9",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "CPz",
+        "CP2",
+        "CP4",
+        "CP6",
+        "TP8",
+        "TP10",
+        "P9",
+        "P7",
+        "P3",
+        "P1",
+        "Pz",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO9",
+        "PO7",
+        "PO5",
+        "PO3",
+        "POz",
+        "PO4",
+        "PO8",
+        "PO10",
+        "O1",
+        "Oz",
+        "O2",
+        "O9",
+        "IZ",
+        "O10"
+      ],
+      "channel_types": {
+        "eeg": 74
+      },
+      "sampling_frequency_hz": 250.0,
+      "signal_samples": 53250,
+      "physical_units": {
+        "µV": 74
+      },
+      "mne_signal_unit": "V",
+      "signal_range_v": [
+        -0.00243038,
+        0.0028763200000000004
+      ],
+      "whole_signal_finite": true,
+      "onset_units": "s",
+      "duration_units": "s",
+      "sample_origin": 0,
+      "event_sample_alignment_max_error": 3.637978807091713e-12,
+      "trial_durations_s": [
+        5.0
+      ],
+      "trial_lengths_samples": [
+        1250
+      ],
+      "first_event_sample": 1149,
+      "last_event_sample": 51082,
+      "edf_tsv_annotations_match": true,
+      "mne_events_match": true,
+      "all_trials_inside_recording": true,
+      "source_trial_count": 30,
+      "source_class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "eligible_trial_count": 30,
+      "eligible_class_counts": {
+        "right_hand": 15,
+        "rest": 15
+      },
+      "excluded_trial_count": 0,
+      "excluded_class_counts": {},
+      "source_task_window_seconds": 150.0,
+      "eligible_task_window_seconds": 150.0
+    },
+    {
+      "subject": "sub-7",
+      "session": "03",
+      "run": "06",
+      "task": "imagery",
+      "file": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-06_eeg.edf",
+      "trial_count": 29,
+      "class_counts": {
+        "right_hand": 15,
+        "rest": 14
+      },
+      "channel_count": 74,
+      "channel_names": [
+        "FP1",
+        "FPz",
+        "FP2",
+        "AF1",
+        "AF3",
+        "AFz",
+        "AF4",
+        "AF8",
+        "F7",
+        "F5",
+        "F3",
+        "F1",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT9",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "FCz",
+        "FC2",
+        "FC4",
+        "FC6",
+        "FT8",
+        "FT10",
+        "T9",
+        "T7",
+        "C5",
+        "C3",
+        "C1",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "T10",
+        "TP9",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "CPz",
+        "CP2",
+        "CP4",
+        "CP6",
+        "TP8",
+        "TP10",
+        "P9",
+        "P7",
+        "P3",
+        "P1",
+        "Pz",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO9",
+        "PO7",
+        "PO5",
+        "PO3",
+        "POz",
+        "PO4",
+        "PO8",
+        "PO10",
+        "O1",
+        "Oz",
+        "O2",
+        "O9",
+        "IZ",
+        "O10"
+      ],
+      "channel_types": {
+        "eeg": 74
+      },
+      "sampling_frequency_hz": 250.0,
+      "signal_samples": 52750,
+      "physical_units": {
+        "µV": 74
+      },
+      "mne_signal_unit": "V",
+      "signal_range_v": [
+        -0.0026402199999999995,
+        0.0032936560000000003
+      ],
+      "whole_signal_finite": true,
+      "onset_units": "s",
+      "duration_units": "s",
+      "sample_origin": 0,
+      "event_sample_alignment_max_error": 9.094947017729282e-13,
+      "trial_durations_s": [
+        5.0
+      ],
+      "trial_lengths_samples": [
+        1250
+      ],
+      "first_event_sample": 1280,
+      "last_event_sample": 51219,
+      "edf_tsv_annotations_match": true,
+      "mne_events_match": true,
+      "all_trials_inside_recording": true,
+      "source_trial_count": 29,
+      "source_class_counts": {
+        "right_hand": 15,
+        "rest": 14
+      },
+      "eligible_trial_count": 29,
+      "eligible_class_counts": {
+        "right_hand": 15,
+        "rest": 14
+      },
+      "excluded_trial_count": 0,
+      "excluded_class_counts": {},
+      "source_task_window_seconds": 145.0,
+      "eligible_task_window_seconds": 145.0
+    },
+    {
+      "subject": "sub-7",
+      "session": "04",
+      "run": "01",
+      "task": "imagery",
+      "file": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-01_eeg.edf",
+      "trial_count": 32,
+      "class_counts": {
+        "rest": 16,
+        "right_hand": 16
+      },
+      "channel_count": 74,
+      "channel_names": [
+        "FP1",
+        "FPz",
+        "FP2",
+        "AF1",
+        "AF3",
+        "AFz",
+        "AF4",
+        "AF8",
+        "F7",
+        "F5",
+        "F3",
+        "F1",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT9",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "FCz",
+        "FC2",
+        "FC4",
+        "FC6",
+        "FT8",
+        "FT10",
+        "T9",
+        "T7",
+        "C5",
+        "C3",
+        "C1",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "T10",
+        "TP9",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "CPz",
+        "CP2",
+        "CP4",
+        "CP6",
+        "TP8",
+        "TP10",
+        "P9",
+        "P7",
+        "P3",
+        "P1",
+        "Pz",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO9",
+        "PO7",
+        "PO5",
+        "PO3",
+        "POz",
+        "PO4",
+        "PO8",
+        "PO10",
+        "O1",
+        "Oz",
+        "O2",
+        "O9",
+        "IZ",
+        "O10"
+      ],
+      "channel_types": {
+        "eeg": 74
+      },
+      "sampling_frequency_hz": 250.0,
+      "signal_samples": 58000,
+      "physical_units": {
+        "µV": 74
+      },
+      "mne_signal_unit": "V",
+      "signal_range_v": [
+        -0.000592819,
+        0.00040213110000000005
+      ],
+      "whole_signal_finite": true,
+      "onset_units": "s",
+      "duration_units": "s",
+      "sample_origin": 0,
+      "event_sample_alignment_max_error": 3.637978807091713e-12,
+      "trial_durations_s": [
+        5.0
+      ],
+      "trial_lengths_samples": [
+        1250
+      ],
+      "first_event_sample": 1588,
+      "last_event_sample": 54970,
+      "edf_tsv_annotations_match": true,
+      "mne_events_match": true,
+      "all_trials_inside_recording": true,
+      "source_trial_count": 32,
+      "source_class_counts": {
+        "rest": 16,
+        "right_hand": 16
+      },
+      "eligible_trial_count": 32,
+      "eligible_class_counts": {
+        "rest": 16,
+        "right_hand": 16
+      },
+      "excluded_trial_count": 0,
+      "excluded_class_counts": {},
+      "source_task_window_seconds": 160.0,
+      "eligible_task_window_seconds": 160.0
+    },
+    {
+      "subject": "sub-7",
+      "session": "04",
+      "run": "02",
+      "task": "imagery",
+      "file": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-02_eeg.edf",
+      "trial_count": 32,
+      "class_counts": {
+        "right_hand": 16,
+        "rest": 16
+      },
+      "channel_count": 74,
+      "channel_names": [
+        "FP1",
+        "FPz",
+        "FP2",
+        "AF1",
+        "AF3",
+        "AFz",
+        "AF4",
+        "AF8",
+        "F7",
+        "F5",
+        "F3",
+        "F1",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT9",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "FCz",
+        "FC2",
+        "FC4",
+        "FC6",
+        "FT8",
+        "FT10",
+        "T9",
+        "T7",
+        "C5",
+        "C3",
+        "C1",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "T10",
+        "TP9",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "CPz",
+        "CP2",
+        "CP4",
+        "CP6",
+        "TP8",
+        "TP10",
+        "P9",
+        "P7",
+        "P3",
+        "P1",
+        "Pz",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO9",
+        "PO7",
+        "PO5",
+        "PO3",
+        "POz",
+        "PO4",
+        "PO8",
+        "PO10",
+        "O1",
+        "Oz",
+        "O2",
+        "O9",
+        "IZ",
+        "O10"
+      ],
+      "channel_types": {
+        "eeg": 74
+      },
+      "sampling_frequency_hz": 250.0,
+      "signal_samples": 59000,
+      "physical_units": {
+        "µV": 74
+      },
+      "mne_signal_unit": "V",
+      "signal_range_v": [
+        -0.000510474,
+        0.00042968369999999995
+      ],
+      "whole_signal_finite": true,
+      "onset_units": "s",
+      "duration_units": "s",
+      "sample_origin": 0,
+      "event_sample_alignment_max_error": 1.8189894035458565e-12,
+      "trial_durations_s": [
+        5.0
+      ],
+      "trial_lengths_samples": [
+        1250
+      ],
+      "first_event_sample": 2512,
+      "last_event_sample": 55894,
+      "edf_tsv_annotations_match": true,
+      "mne_events_match": true,
+      "all_trials_inside_recording": true,
+      "source_trial_count": 32,
+      "source_class_counts": {
+        "right_hand": 16,
+        "rest": 16
+      },
+      "eligible_trial_count": 32,
+      "eligible_class_counts": {
+        "right_hand": 16,
+        "rest": 16
+      },
+      "excluded_trial_count": 0,
+      "excluded_class_counts": {},
+      "source_task_window_seconds": 160.0,
+      "eligible_task_window_seconds": 160.0
+    },
+    {
+      "subject": "sub-7",
+      "session": "04",
+      "run": "03",
+      "task": "imagery",
+      "file": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-03_eeg.edf",
+      "trial_count": 32,
+      "class_counts": {
+        "rest": 16,
+        "right_hand": 16
+      },
+      "channel_count": 74,
+      "channel_names": [
+        "FP1",
+        "FPz",
+        "FP2",
+        "AF1",
+        "AF3",
+        "AFz",
+        "AF4",
+        "AF8",
+        "F7",
+        "F5",
+        "F3",
+        "F1",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT9",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "FCz",
+        "FC2",
+        "FC4",
+        "FC6",
+        "FT8",
+        "FT10",
+        "T9",
+        "T7",
+        "C5",
+        "C3",
+        "C1",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "T10",
+        "TP9",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "CPz",
+        "CP2",
+        "CP4",
+        "CP6",
+        "TP8",
+        "TP10",
+        "P9",
+        "P7",
+        "P3",
+        "P1",
+        "Pz",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO9",
+        "PO7",
+        "PO5",
+        "PO3",
+        "POz",
+        "PO4",
+        "PO8",
+        "PO10",
+        "O1",
+        "Oz",
+        "O2",
+        "O9",
+        "IZ",
+        "O10"
+      ],
+      "channel_types": {
+        "eeg": 74
+      },
+      "sampling_frequency_hz": 250.0,
+      "signal_samples": 57750,
+      "physical_units": {
+        "µV": 74
+      },
+      "mne_signal_unit": "V",
+      "signal_range_v": [
+        -0.00248382,
+        0.003322016999999999
+      ],
+      "whole_signal_finite": true,
+      "onset_units": "s",
+      "duration_units": "s",
+      "sample_origin": 0,
+      "event_sample_alignment_max_error": 1.8189894035458565e-12,
+      "trial_durations_s": [
+        5.0
+      ],
+      "trial_lengths_samples": [
+        1250
+      ],
+      "first_event_sample": 2576,
+      "last_event_sample": 55958,
+      "edf_tsv_annotations_match": true,
+      "mne_events_match": true,
+      "all_trials_inside_recording": true,
+      "source_trial_count": 32,
+      "source_class_counts": {
+        "rest": 16,
+        "right_hand": 16
+      },
+      "eligible_trial_count": 32,
+      "eligible_class_counts": {
+        "rest": 16,
+        "right_hand": 16
+      },
+      "excluded_trial_count": 0,
+      "excluded_class_counts": {},
+      "source_task_window_seconds": 160.0,
+      "eligible_task_window_seconds": 160.0
+    },
+    {
+      "subject": "sub-7",
+      "session": "04",
+      "run": "04",
+      "task": "imagery",
+      "file": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-04_eeg.edf",
+      "trial_count": 32,
+      "class_counts": {
+        "rest": 16,
+        "right_hand": 16
+      },
+      "channel_count": 74,
+      "channel_names": [
+        "FP1",
+        "FPz",
+        "FP2",
+        "AF1",
+        "AF3",
+        "AFz",
+        "AF4",
+        "AF8",
+        "F7",
+        "F5",
+        "F3",
+        "F1",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT9",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "FCz",
+        "FC2",
+        "FC4",
+        "FC6",
+        "FT8",
+        "FT10",
+        "T9",
+        "T7",
+        "C5",
+        "C3",
+        "C1",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "T10",
+        "TP9",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "CPz",
+        "CP2",
+        "CP4",
+        "CP6",
+        "TP8",
+        "TP10",
+        "P9",
+        "P7",
+        "P3",
+        "P1",
+        "Pz",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO9",
+        "PO7",
+        "PO5",
+        "PO3",
+        "POz",
+        "PO4",
+        "PO8",
+        "PO10",
+        "O1",
+        "Oz",
+        "O2",
+        "O9",
+        "IZ",
+        "O10"
+      ],
+      "channel_types": {
+        "eeg": 74
+      },
+      "sampling_frequency_hz": 250.0,
+      "signal_samples": 57000,
+      "physical_units": {
+        "µV": 74
+      },
+      "mne_signal_unit": "V",
+      "signal_range_v": [
+        -0.000503318,
+        0.0004237611999999999
+      ],
+      "whole_signal_finite": true,
+      "onset_units": "s",
+      "duration_units": "s",
+      "sample_origin": 0,
+      "event_sample_alignment_max_error": 0.0,
+      "trial_durations_s": [
+        5.0
+      ],
+      "trial_lengths_samples": [
+        1250
+      ],
+      "first_event_sample": 1760,
+      "last_event_sample": 55146,
+      "edf_tsv_annotations_match": true,
+      "mne_events_match": true,
+      "all_trials_inside_recording": true,
+      "source_trial_count": 32,
+      "source_class_counts": {
+        "rest": 16,
+        "right_hand": 16
+      },
+      "eligible_trial_count": 32,
+      "eligible_class_counts": {
+        "rest": 16,
+        "right_hand": 16
+      },
+      "excluded_trial_count": 0,
+      "excluded_class_counts": {},
+      "source_task_window_seconds": 160.0,
+      "eligible_task_window_seconds": 160.0
+    },
+    {
+      "subject": "sub-7",
+      "session": "04",
+      "run": "05",
+      "task": "imagery",
+      "file": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-05_eeg.edf",
+      "trial_count": 32,
+      "class_counts": {
+        "right_hand": 16,
+        "rest": 16
+      },
+      "channel_count": 74,
+      "channel_names": [
+        "FP1",
+        "FPz",
+        "FP2",
+        "AF1",
+        "AF3",
+        "AFz",
+        "AF4",
+        "AF8",
+        "F7",
+        "F5",
+        "F3",
+        "F1",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT9",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "FCz",
+        "FC2",
+        "FC4",
+        "FC6",
+        "FT8",
+        "FT10",
+        "T9",
+        "T7",
+        "C5",
+        "C3",
+        "C1",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "T10",
+        "TP9",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "CPz",
+        "CP2",
+        "CP4",
+        "CP6",
+        "TP8",
+        "TP10",
+        "P9",
+        "P7",
+        "P3",
+        "P1",
+        "Pz",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO9",
+        "PO7",
+        "PO5",
+        "PO3",
+        "POz",
+        "PO4",
+        "PO8",
+        "PO10",
+        "O1",
+        "Oz",
+        "O2",
+        "O9",
+        "IZ",
+        "O10"
+      ],
+      "channel_types": {
+        "eeg": 74
+      },
+      "sampling_frequency_hz": 250.0,
+      "signal_samples": 57000,
+      "physical_units": {
+        "µV": 74
+      },
+      "mne_signal_unit": "V",
+      "signal_range_v": [
+        -0.000512434,
+        0.0004341471
+      ],
+      "whole_signal_finite": true,
+      "onset_units": "s",
+      "duration_units": "s",
+      "sample_origin": 0,
+      "event_sample_alignment_max_error": 0.0,
+      "trial_durations_s": [
+        5.0
+      ],
+      "trial_lengths_samples": [
+        1250
+      ],
+      "first_event_sample": 1640,
+      "last_event_sample": 55026,
+      "edf_tsv_annotations_match": true,
+      "mne_events_match": true,
+      "all_trials_inside_recording": true,
+      "source_trial_count": 32,
+      "source_class_counts": {
+        "right_hand": 16,
+        "rest": 16
+      },
+      "eligible_trial_count": 32,
+      "eligible_class_counts": {
+        "right_hand": 16,
+        "rest": 16
+      },
+      "excluded_trial_count": 0,
+      "excluded_class_counts": {},
+      "source_task_window_seconds": 160.0,
+      "eligible_task_window_seconds": 160.0
+    },
+    {
+      "subject": "sub-7",
+      "session": "04",
+      "run": "06",
+      "task": "imagery",
+      "file": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-06_eeg.edf",
+      "trial_count": 32,
+      "class_counts": {
+        "rest": 16,
+        "right_hand": 16
+      },
+      "channel_count": 74,
+      "channel_names": [
+        "FP1",
+        "FPz",
+        "FP2",
+        "AF1",
+        "AF3",
+        "AFz",
+        "AF4",
+        "AF8",
+        "F7",
+        "F5",
+        "F3",
+        "F1",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT9",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "FCz",
+        "FC2",
+        "FC4",
+        "FC6",
+        "FT8",
+        "FT10",
+        "T9",
+        "T7",
+        "C5",
+        "C3",
+        "C1",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "T10",
+        "TP9",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "CPz",
+        "CP2",
+        "CP4",
+        "CP6",
+        "TP8",
+        "TP10",
+        "P9",
+        "P7",
+        "P3",
+        "P1",
+        "Pz",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO9",
+        "PO7",
+        "PO5",
+        "PO3",
+        "POz",
+        "PO4",
+        "PO8",
+        "PO10",
+        "O1",
+        "Oz",
+        "O2",
+        "O9",
+        "IZ",
+        "O10"
+      ],
+      "channel_types": {
+        "eeg": 74
+      },
+      "sampling_frequency_hz": 250.0,
+      "signal_samples": 58250,
+      "physical_units": {
+        "µV": 74
+      },
+      "mne_signal_unit": "V",
+      "signal_range_v": [
+        -0.000515397,
+        0.00041522079999999995
+      ],
+      "whole_signal_finite": true,
+      "onset_units": "s",
+      "duration_units": "s",
+      "sample_origin": 0,
+      "event_sample_alignment_max_error": 0.0,
+      "trial_durations_s": [
+        5.0
+      ],
+      "trial_lengths_samples": [
+        1250
+      ],
+      "first_event_sample": 1796,
+      "last_event_sample": 55182,
+      "edf_tsv_annotations_match": true,
+      "mne_events_match": true,
+      "all_trials_inside_recording": true,
+      "source_trial_count": 32,
+      "source_class_counts": {
+        "rest": 16,
+        "right_hand": 16
+      },
+      "eligible_trial_count": 32,
+      "eligible_class_counts": {
+        "rest": 16,
+        "right_hand": 16
+      },
+      "excluded_trial_count": 0,
+      "excluded_class_counts": {},
+      "source_task_window_seconds": 160.0,
+      "eligible_task_window_seconds": 160.0
+    }
+  ],
+  "file_checks": [
+    {
+      "path": "README.md",
+      "size": 4729,
+      "verified": true
+    },
+    {
+      "path": "dataset_description.json",
+      "size": 1241,
+      "verified": true
+    },
+    {
+      "path": "participants.json",
+      "size": 1124,
+      "verified": true
+    },
+    {
+      "path": "participants.tsv",
+      "size": 937,
+      "verified": true
+    },
+    {
+      "path": "sourcedata/sourcedata_provenance.json",
+      "size": 96463,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_space-CapTrak_coordsystem.json",
+      "size": 1155,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_space-CapTrak_electrodes.json",
+      "size": 34,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_space-CapTrak_electrodes.tsv",
+      "size": 6323,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-01_channels.json",
+      "size": 60,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-01_channels.tsv",
+      "size": 4358,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-01_eeg.edf",
+      "size": 7906846,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-01_eeg.json",
+      "size": 1469,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-01_events.json",
+      "size": 1188,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-01_events.tsv",
+      "size": 852,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-02_channels.json",
+      "size": 60,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-02_channels.tsv",
+      "size": 4358,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-02_eeg.edf",
+      "size": 7906846,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-02_eeg.json",
+      "size": 1469,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-02_events.json",
+      "size": 1188,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-02_events.tsv",
+      "size": 824,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-03_channels.json",
+      "size": 60,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-03_channels.tsv",
+      "size": 4358,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-03_eeg.edf",
+      "size": 8017936,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-03_eeg.json",
+      "size": 1469,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-03_events.json",
+      "size": 1188,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-03_events.tsv",
+      "size": 847,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-04_channels.json",
+      "size": 60,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-04_channels.tsv",
+      "size": 4358,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-04_eeg.edf",
+      "size": 7832786,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-04_eeg.json",
+      "size": 1469,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-04_events.json",
+      "size": 1188,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-04_events.tsv",
+      "size": 856,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-05_channels.json",
+      "size": 60,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-05_channels.tsv",
+      "size": 4358,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-05_eeg.edf",
+      "size": 7906846,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-05_eeg.json",
+      "size": 1469,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-05_events.json",
+      "size": 1188,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-05_events.tsv",
+      "size": 852,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-06_channels.json",
+      "size": 60,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-06_channels.tsv",
+      "size": 4358,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-06_eeg.edf",
+      "size": 7832786,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-06_eeg.json",
+      "size": 1469,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-06_events.json",
+      "size": 1188,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-06_events.tsv",
+      "size": 819,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/sub-7_ses-01_scans.json",
+      "size": 194,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-01/sub-7_ses-01_scans.tsv",
+      "size": 456,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_space-CapTrak_coordsystem.json",
+      "size": 1155,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_space-CapTrak_electrodes.json",
+      "size": 34,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_space-CapTrak_electrodes.tsv",
+      "size": 6323,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-01_channels.json",
+      "size": 60,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-01_channels.tsv",
+      "size": 4358,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-01_eeg.edf",
+      "size": 7906846,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-01_eeg.json",
+      "size": 1469,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-01_events.json",
+      "size": 1188,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-01_events.tsv",
+      "size": 852,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-02_channels.json",
+      "size": 60,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-02_channels.tsv",
+      "size": 4358,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-02_eeg.edf",
+      "size": 7906846,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-02_eeg.json",
+      "size": 1469,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-02_events.json",
+      "size": 1188,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-02_events.tsv",
+      "size": 824,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-03_channels.json",
+      "size": 60,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-03_channels.tsv",
+      "size": 4358,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-03_eeg.edf",
+      "size": 8017936,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-03_eeg.json",
+      "size": 1469,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-03_events.json",
+      "size": 1188,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-03_events.tsv",
+      "size": 847,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-04_channels.json",
+      "size": 60,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-04_channels.tsv",
+      "size": 4358,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-04_eeg.edf",
+      "size": 7832786,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-04_eeg.json",
+      "size": 1469,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-04_events.json",
+      "size": 1188,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-04_events.tsv",
+      "size": 856,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-05_channels.json",
+      "size": 60,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-05_channels.tsv",
+      "size": 4358,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-05_eeg.edf",
+      "size": 7906846,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-05_eeg.json",
+      "size": 1469,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-05_events.json",
+      "size": 1188,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-05_events.tsv",
+      "size": 852,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-06_channels.json",
+      "size": 60,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-06_channels.tsv",
+      "size": 4358,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-06_eeg.edf",
+      "size": 7832786,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-06_eeg.json",
+      "size": 1469,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-06_events.json",
+      "size": 1188,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-06_events.tsv",
+      "size": 819,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/sub-7_ses-02_scans.json",
+      "size": 194,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-02/sub-7_ses-02_scans.tsv",
+      "size": 456,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_space-CapTrak_coordsystem.json",
+      "size": 1155,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_space-CapTrak_electrodes.json",
+      "size": 34,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_space-CapTrak_electrodes.tsv",
+      "size": 6323,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-01_channels.json",
+      "size": 60,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-01_channels.tsv",
+      "size": 4358,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-01_eeg.edf",
+      "size": 7906846,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-01_eeg.json",
+      "size": 1469,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-01_events.json",
+      "size": 1188,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-01_events.tsv",
+      "size": 852,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-02_channels.json",
+      "size": 60,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-02_channels.tsv",
+      "size": 4358,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-02_eeg.edf",
+      "size": 7906846,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-02_eeg.json",
+      "size": 1469,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-02_events.json",
+      "size": 1188,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-02_events.tsv",
+      "size": 824,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-03_channels.json",
+      "size": 60,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-03_channels.tsv",
+      "size": 4358,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-03_eeg.edf",
+      "size": 8017936,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-03_eeg.json",
+      "size": 1469,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-03_events.json",
+      "size": 1188,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-03_events.tsv",
+      "size": 847,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-04_channels.json",
+      "size": 60,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-04_channels.tsv",
+      "size": 4358,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-04_eeg.edf",
+      "size": 7832786,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-04_eeg.json",
+      "size": 1469,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-04_events.json",
+      "size": 1188,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-04_events.tsv",
+      "size": 856,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-05_channels.json",
+      "size": 60,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-05_channels.tsv",
+      "size": 4358,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-05_eeg.edf",
+      "size": 7906846,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-05_eeg.json",
+      "size": 1469,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-05_events.json",
+      "size": 1188,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-05_events.tsv",
+      "size": 852,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-06_channels.json",
+      "size": 60,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-06_channels.tsv",
+      "size": 4358,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-06_eeg.edf",
+      "size": 7832786,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-06_eeg.json",
+      "size": 1469,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-06_events.json",
+      "size": 1188,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-06_events.tsv",
+      "size": 819,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/sub-7_ses-03_scans.json",
+      "size": 194,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-03/sub-7_ses-03_scans.tsv",
+      "size": 456,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_space-CapTrak_coordsystem.json",
+      "size": 1155,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_space-CapTrak_electrodes.json",
+      "size": 34,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_space-CapTrak_electrodes.tsv",
+      "size": 6323,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-01_channels.json",
+      "size": 60,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-01_channels.tsv",
+      "size": 4358,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-01_eeg.edf",
+      "size": 8610416,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-01_eeg.json",
+      "size": 1469,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-01_events.json",
+      "size": 1188,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-01_events.tsv",
+      "size": 905,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-02_channels.json",
+      "size": 60,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-02_channels.tsv",
+      "size": 4358,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-02_eeg.edf",
+      "size": 8758536,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-02_eeg.json",
+      "size": 1469,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-02_events.json",
+      "size": 1188,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-02_events.tsv",
+      "size": 913,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-03_channels.json",
+      "size": 60,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-03_channels.tsv",
+      "size": 4358,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-03_eeg.edf",
+      "size": 8573386,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-03_eeg.json",
+      "size": 1469,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-03_events.json",
+      "size": 1188,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-03_events.tsv",
+      "size": 907,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-04_channels.json",
+      "size": 60,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-04_channels.tsv",
+      "size": 4358,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-04_eeg.edf",
+      "size": 8462296,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-04_eeg.json",
+      "size": 1469,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-04_events.json",
+      "size": 1188,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-04_events.tsv",
+      "size": 908,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-05_channels.json",
+      "size": 60,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-05_channels.tsv",
+      "size": 4358,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-05_eeg.edf",
+      "size": 8462296,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-05_eeg.json",
+      "size": 1469,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-05_events.json",
+      "size": 1188,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-05_events.tsv",
+      "size": 908,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-06_channels.json",
+      "size": 60,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-06_channels.tsv",
+      "size": 4358,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-06_eeg.edf",
+      "size": 8647446,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-06_eeg.json",
+      "size": 1469,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-06_events.json",
+      "size": 1188,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-06_events.tsv",
+      "size": 910,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/sub-7_ses-04_scans.json",
+      "size": 194,
+      "verified": true
+    },
+    {
+      "path": "sub-7/ses-04/sub-7_ses-04_scans.tsv",
+      "size": 456,
+      "verified": true
+    },
+    {
+      "path": "sourcedata/sub-07/ses-01/eeg/sub-07_ses-01_task-MotorImageryRest_run-01_eeg.vhdr",
+      "size": 2012,
+      "verified": true
+    },
+    {
+      "path": "sourcedata/sub-07/ses-01/eeg/sub-07_ses-01_task-MotorImageryRest_run-02_eeg.vhdr",
+      "size": 2012,
+      "verified": true
+    },
+    {
+      "path": "sourcedata/sub-07/ses-01/eeg/sub-07_ses-01_task-MotorImageryRest_run-03_eeg.vhdr",
+      "size": 2012,
+      "verified": true
+    },
+    {
+      "path": "sourcedata/sub-07/ses-01/eeg/sub-07_ses-01_task-MotorImageryRest_run-04_eeg.vhdr",
+      "size": 2012,
+      "verified": true
+    },
+    {
+      "path": "sourcedata/sub-07/ses-01/eeg/sub-07_ses-01_task-MotorImageryRest_run-05_eeg.vhdr",
+      "size": 2012,
+      "verified": true
+    },
+    {
+      "path": "sourcedata/sub-07/ses-01/eeg/sub-07_ses-01_task-MotorImageryRest_run-06_eeg.vhdr",
+      "size": 2012,
+      "verified": true
+    },
+    {
+      "path": "sourcedata/sub-07/ses-02/eeg/sub-07_ses-02_task-MotorImageryRest_run-01_eeg.vhdr",
+      "size": 2012,
+      "verified": true
+    },
+    {
+      "path": "sourcedata/sub-07/ses-02/eeg/sub-07_ses-02_task-MotorImageryRest_run-02_eeg.vhdr",
+      "size": 2012,
+      "verified": true
+    },
+    {
+      "path": "sourcedata/sub-07/ses-02/eeg/sub-07_ses-02_task-MotorImageryRest_run-03_eeg.vhdr",
+      "size": 2012,
+      "verified": true
+    },
+    {
+      "path": "sourcedata/sub-07/ses-02/eeg/sub-07_ses-02_task-MotorImageryRest_run-04_eeg.vhdr",
+      "size": 2012,
+      "verified": true
+    },
+    {
+      "path": "sourcedata/sub-07/ses-02/eeg/sub-07_ses-02_task-MotorImageryRest_run-05_eeg.vhdr",
+      "size": 2012,
+      "verified": true
+    },
+    {
+      "path": "sourcedata/sub-07/ses-02/eeg/sub-07_ses-02_task-MotorImageryRest_run-06_eeg.vhdr",
+      "size": 2012,
+      "verified": true
+    },
+    {
+      "path": "sourcedata/sub-07/ses-03/eeg/sub-07_ses-03_task-MotorImageryRest_run-01_eeg.vhdr",
+      "size": 2012,
+      "verified": true
+    },
+    {
+      "path": "sourcedata/sub-07/ses-03/eeg/sub-07_ses-03_task-MotorImageryRest_run-02_eeg.vhdr",
+      "size": 2012,
+      "verified": true
+    },
+    {
+      "path": "sourcedata/sub-07/ses-03/eeg/sub-07_ses-03_task-MotorImageryRest_run-03_eeg.vhdr",
+      "size": 2012,
+      "verified": true
+    },
+    {
+      "path": "sourcedata/sub-07/ses-03/eeg/sub-07_ses-03_task-MotorImageryRest_run-04_eeg.vhdr",
+      "size": 2012,
+      "verified": true
+    },
+    {
+      "path": "sourcedata/sub-07/ses-03/eeg/sub-07_ses-03_task-MotorImageryRest_run-05_eeg.vhdr",
+      "size": 2012,
+      "verified": true
+    },
+    {
+      "path": "sourcedata/sub-07/ses-03/eeg/sub-07_ses-03_task-MotorImageryRest_run-06_eeg.vhdr",
+      "size": 2012,
+      "verified": true
+    },
+    {
+      "path": "sourcedata/sub-07/ses-04/eeg/sub-07_ses-04_task-MotorImageryRest_run-01_eeg.vhdr",
+      "size": 2012,
+      "verified": true
+    },
+    {
+      "path": "sourcedata/sub-07/ses-04/eeg/sub-07_ses-04_task-MotorImageryRest_run-02_eeg.vhdr",
+      "size": 2012,
+      "verified": true
+    },
+    {
+      "path": "sourcedata/sub-07/ses-04/eeg/sub-07_ses-04_task-MotorImageryRest_run-03_eeg.vhdr",
+      "size": 2012,
+      "verified": true
+    },
+    {
+      "path": "sourcedata/sub-07/ses-04/eeg/sub-07_ses-04_task-MotorImageryRest_run-04_eeg.vhdr",
+      "size": 2012,
+      "verified": true
+    },
+    {
+      "path": "sourcedata/sub-07/ses-04/eeg/sub-07_ses-04_task-MotorImageryRest_run-05_eeg.vhdr",
+      "size": 2012,
+      "verified": true
+    },
+    {
+      "path": "sourcedata/sub-07/ses-04/eeg/sub-07_ses-04_task-MotorImageryRest_run-06_eeg.vhdr",
+      "size": 2012,
+      "verified": true
+    }
+  ],
+  "scope": {
+    "local_only": true,
+    "downloaded_by_this_script": false,
+    "training_performed": false,
+    "whole_dataset_validated": false,
+    "original_signals_compared": false,
+    "behavior_trial_outcomes_verified": false
+  },
+  "limitations": [
+    "The EDF/BIDS derivative is the actual signal source; original signals were not compared.",
+    "Unavailable original headers/rates remain unresolved; provenance hashes are declarations.",
+    "Subject/session scores can be linked, but score vector run order and denominator are unresolved.",
+    "No behavior percentages are broadcast to EEG trials or converted to hit/miss labels.",
+    "Finite signals and stable channel order do not establish artifact-free EEG or learning.",
+    "Four protocol session IDs do not establish verified real dates or retention intervals.",
+    "Duration eligibility was introduced after observing the shortened source event; full-window analyses remain exploratory and all source events are retained."
+  ],
+  "synthetic": false,
+  "upstream_mapping": {
+    "derivative_subject": "sub-7",
+    "original_subject": "sub-07",
+    "mapping_evidence": "explicit subject and original file fields in pinned provenance",
+    "provenance_sha256": "70f749430a2add4ff0e73a917b2cb9d77ad20b9c0b6d8699d071148f82be3c46",
+    "declared_original_headers": 24,
+    "actual_headers_hash_verified": 24,
+    "original_metadata_access_status": "verified_cached_headers",
+    "run_score_order_verified": false,
+    "score_denominator_verified": false,
+    "trial_behavior_mapping": "unresolved"
+  },
+  "original_header_audits": [
+    {
+      "subject": "sub-7",
+      "original_subject": "sub-07",
+      "session": "01",
+      "run": "01",
+      "original_header_file": "sub-07/ses-01/eeg/sub-07_ses-01_task-MotorImageryRest_run-01_eeg.vhdr",
+      "declared_original_header_sha256": "bb48d569a7757e159ed9f300de38cda8e7e1468386c6151fe9ed45ce057fe230",
+      "declared_original_header_bytes": 2012,
+      "local_original_header": "/workspace/few-shot-mi-eeg/data/netbci2026/nm000305/v1.0.0/sourcedata/sub-07/ses-01/eeg/sub-07_ses-01_task-MotorImageryRest_run-01_eeg.vhdr",
+      "actual_original_header_sha256": "bb48d569a7757e159ed9f300de38cda8e7e1468386c6151fe9ed45ce057fe230",
+      "original_header_hash_verified": true,
+      "original_sampling_frequency_hz": 250.0,
+      "original_channel_count": 74,
+      "original_channel_units_json": "{\"\\u00b5V\": 74}",
+      "original_reference_fields_json": "{\"\": 74}",
+      "original_reference_interpretation": "blank header fields do not establish acquisition reference",
+      "original_derivative_channel_order_matches": true,
+      "derivative_sampling_frequency_hz": 250.0,
+      "original_signal_equality_verified": false,
+      "original_marker_sequence_verified": false
+    },
+    {
+      "subject": "sub-7",
+      "original_subject": "sub-07",
+      "session": "01",
+      "run": "02",
+      "original_header_file": "sub-07/ses-01/eeg/sub-07_ses-01_task-MotorImageryRest_run-02_eeg.vhdr",
+      "declared_original_header_sha256": "48acaa1b7b893fdc46817f1d61defb024be5e28339cd14bdbef452bf6cc1d985",
+      "declared_original_header_bytes": 2012,
+      "local_original_header": "/workspace/few-shot-mi-eeg/data/netbci2026/nm000305/v1.0.0/sourcedata/sub-07/ses-01/eeg/sub-07_ses-01_task-MotorImageryRest_run-02_eeg.vhdr",
+      "actual_original_header_sha256": "48acaa1b7b893fdc46817f1d61defb024be5e28339cd14bdbef452bf6cc1d985",
+      "original_header_hash_verified": true,
+      "original_sampling_frequency_hz": 250.0,
+      "original_channel_count": 74,
+      "original_channel_units_json": "{\"\\u00b5V\": 74}",
+      "original_reference_fields_json": "{\"\": 74}",
+      "original_reference_interpretation": "blank header fields do not establish acquisition reference",
+      "original_derivative_channel_order_matches": true,
+      "derivative_sampling_frequency_hz": 250.0,
+      "original_signal_equality_verified": false,
+      "original_marker_sequence_verified": false
+    },
+    {
+      "subject": "sub-7",
+      "original_subject": "sub-07",
+      "session": "01",
+      "run": "03",
+      "original_header_file": "sub-07/ses-01/eeg/sub-07_ses-01_task-MotorImageryRest_run-03_eeg.vhdr",
+      "declared_original_header_sha256": "27fbd7c8a8862bb7043d713011f945718b1a6e954810fd0cbbfaf0e80ce1d980",
+      "declared_original_header_bytes": 2012,
+      "local_original_header": "/workspace/few-shot-mi-eeg/data/netbci2026/nm000305/v1.0.0/sourcedata/sub-07/ses-01/eeg/sub-07_ses-01_task-MotorImageryRest_run-03_eeg.vhdr",
+      "actual_original_header_sha256": "27fbd7c8a8862bb7043d713011f945718b1a6e954810fd0cbbfaf0e80ce1d980",
+      "original_header_hash_verified": true,
+      "original_sampling_frequency_hz": 250.0,
+      "original_channel_count": 74,
+      "original_channel_units_json": "{\"\\u00b5V\": 74}",
+      "original_reference_fields_json": "{\"\": 74}",
+      "original_reference_interpretation": "blank header fields do not establish acquisition reference",
+      "original_derivative_channel_order_matches": true,
+      "derivative_sampling_frequency_hz": 250.0,
+      "original_signal_equality_verified": false,
+      "original_marker_sequence_verified": false
+    },
+    {
+      "subject": "sub-7",
+      "original_subject": "sub-07",
+      "session": "01",
+      "run": "04",
+      "original_header_file": "sub-07/ses-01/eeg/sub-07_ses-01_task-MotorImageryRest_run-04_eeg.vhdr",
+      "declared_original_header_sha256": "809c3821d8d5642e6bad236f48065d20c68b4908dde654094a1bcb325efef15d",
+      "declared_original_header_bytes": 2012,
+      "local_original_header": "/workspace/few-shot-mi-eeg/data/netbci2026/nm000305/v1.0.0/sourcedata/sub-07/ses-01/eeg/sub-07_ses-01_task-MotorImageryRest_run-04_eeg.vhdr",
+      "actual_original_header_sha256": "809c3821d8d5642e6bad236f48065d20c68b4908dde654094a1bcb325efef15d",
+      "original_header_hash_verified": true,
+      "original_sampling_frequency_hz": 250.0,
+      "original_channel_count": 74,
+      "original_channel_units_json": "{\"\\u00b5V\": 74}",
+      "original_reference_fields_json": "{\"\": 74}",
+      "original_reference_interpretation": "blank header fields do not establish acquisition reference",
+      "original_derivative_channel_order_matches": true,
+      "derivative_sampling_frequency_hz": 250.0,
+      "original_signal_equality_verified": false,
+      "original_marker_sequence_verified": false
+    },
+    {
+      "subject": "sub-7",
+      "original_subject": "sub-07",
+      "session": "01",
+      "run": "05",
+      "original_header_file": "sub-07/ses-01/eeg/sub-07_ses-01_task-MotorImageryRest_run-05_eeg.vhdr",
+      "declared_original_header_sha256": "b45341dcfac2ab15591d26c3a0892597e8b67b99c49675357ebd3ea743ad242e",
+      "declared_original_header_bytes": 2012,
+      "local_original_header": "/workspace/few-shot-mi-eeg/data/netbci2026/nm000305/v1.0.0/sourcedata/sub-07/ses-01/eeg/sub-07_ses-01_task-MotorImageryRest_run-05_eeg.vhdr",
+      "actual_original_header_sha256": "b45341dcfac2ab15591d26c3a0892597e8b67b99c49675357ebd3ea743ad242e",
+      "original_header_hash_verified": true,
+      "original_sampling_frequency_hz": 250.0,
+      "original_channel_count": 74,
+      "original_channel_units_json": "{\"\\u00b5V\": 74}",
+      "original_reference_fields_json": "{\"\": 74}",
+      "original_reference_interpretation": "blank header fields do not establish acquisition reference",
+      "original_derivative_channel_order_matches": true,
+      "derivative_sampling_frequency_hz": 250.0,
+      "original_signal_equality_verified": false,
+      "original_marker_sequence_verified": false
+    },
+    {
+      "subject": "sub-7",
+      "original_subject": "sub-07",
+      "session": "01",
+      "run": "06",
+      "original_header_file": "sub-07/ses-01/eeg/sub-07_ses-01_task-MotorImageryRest_run-06_eeg.vhdr",
+      "declared_original_header_sha256": "db22265cd627a0194f489377fb4e38a93d375978b1226ccf7ff250af71064e51",
+      "declared_original_header_bytes": 2012,
+      "local_original_header": "/workspace/few-shot-mi-eeg/data/netbci2026/nm000305/v1.0.0/sourcedata/sub-07/ses-01/eeg/sub-07_ses-01_task-MotorImageryRest_run-06_eeg.vhdr",
+      "actual_original_header_sha256": "db22265cd627a0194f489377fb4e38a93d375978b1226ccf7ff250af71064e51",
+      "original_header_hash_verified": true,
+      "original_sampling_frequency_hz": 250.0,
+      "original_channel_count": 74,
+      "original_channel_units_json": "{\"\\u00b5V\": 74}",
+      "original_reference_fields_json": "{\"\": 74}",
+      "original_reference_interpretation": "blank header fields do not establish acquisition reference",
+      "original_derivative_channel_order_matches": true,
+      "derivative_sampling_frequency_hz": 250.0,
+      "original_signal_equality_verified": false,
+      "original_marker_sequence_verified": false
+    },
+    {
+      "subject": "sub-7",
+      "original_subject": "sub-07",
+      "session": "02",
+      "run": "01",
+      "original_header_file": "sub-07/ses-02/eeg/sub-07_ses-02_task-MotorImageryRest_run-01_eeg.vhdr",
+      "declared_original_header_sha256": "5d8841431a677628bee403184175411b17ec23d553d9b3436d8eb84d82e5ed69",
+      "declared_original_header_bytes": 2012,
+      "local_original_header": "/workspace/few-shot-mi-eeg/data/netbci2026/nm000305/v1.0.0/sourcedata/sub-07/ses-02/eeg/sub-07_ses-02_task-MotorImageryRest_run-01_eeg.vhdr",
+      "actual_original_header_sha256": "5d8841431a677628bee403184175411b17ec23d553d9b3436d8eb84d82e5ed69",
+      "original_header_hash_verified": true,
+      "original_sampling_frequency_hz": 250.0,
+      "original_channel_count": 74,
+      "original_channel_units_json": "{\"\\u00b5V\": 74}",
+      "original_reference_fields_json": "{\"\": 74}",
+      "original_reference_interpretation": "blank header fields do not establish acquisition reference",
+      "original_derivative_channel_order_matches": true,
+      "derivative_sampling_frequency_hz": 250.0,
+      "original_signal_equality_verified": false,
+      "original_marker_sequence_verified": false
+    },
+    {
+      "subject": "sub-7",
+      "original_subject": "sub-07",
+      "session": "02",
+      "run": "02",
+      "original_header_file": "sub-07/ses-02/eeg/sub-07_ses-02_task-MotorImageryRest_run-02_eeg.vhdr",
+      "declared_original_header_sha256": "776022ca1e6a066017ee0bd78db906a72ccd499f09c661b8455901c9d8f387bb",
+      "declared_original_header_bytes": 2012,
+      "local_original_header": "/workspace/few-shot-mi-eeg/data/netbci2026/nm000305/v1.0.0/sourcedata/sub-07/ses-02/eeg/sub-07_ses-02_task-MotorImageryRest_run-02_eeg.vhdr",
+      "actual_original_header_sha256": "776022ca1e6a066017ee0bd78db906a72ccd499f09c661b8455901c9d8f387bb",
+      "original_header_hash_verified": true,
+      "original_sampling_frequency_hz": 250.0,
+      "original_channel_count": 74,
+      "original_channel_units_json": "{\"\\u00b5V\": 74}",
+      "original_reference_fields_json": "{\"\": 74}",
+      "original_reference_interpretation": "blank header fields do not establish acquisition reference",
+      "original_derivative_channel_order_matches": true,
+      "derivative_sampling_frequency_hz": 250.0,
+      "original_signal_equality_verified": false,
+      "original_marker_sequence_verified": false
+    },
+    {
+      "subject": "sub-7",
+      "original_subject": "sub-07",
+      "session": "02",
+      "run": "03",
+      "original_header_file": "sub-07/ses-02/eeg/sub-07_ses-02_task-MotorImageryRest_run-03_eeg.vhdr",
+      "declared_original_header_sha256": "dc2e83163a20b1fe3a3279e622c2b5646053dd987152f71bbd226c0a1890623b",
+      "declared_original_header_bytes": 2012,
+      "local_original_header": "/workspace/few-shot-mi-eeg/data/netbci2026/nm000305/v1.0.0/sourcedata/sub-07/ses-02/eeg/sub-07_ses-02_task-MotorImageryRest_run-03_eeg.vhdr",
+      "actual_original_header_sha256": "dc2e83163a20b1fe3a3279e622c2b5646053dd987152f71bbd226c0a1890623b",
+      "original_header_hash_verified": true,
+      "original_sampling_frequency_hz": 250.0,
+      "original_channel_count": 74,
+      "original_channel_units_json": "{\"\\u00b5V\": 74}",
+      "original_reference_fields_json": "{\"\": 74}",
+      "original_reference_interpretation": "blank header fields do not establish acquisition reference",
+      "original_derivative_channel_order_matches": true,
+      "derivative_sampling_frequency_hz": 250.0,
+      "original_signal_equality_verified": false,
+      "original_marker_sequence_verified": false
+    },
+    {
+      "subject": "sub-7",
+      "original_subject": "sub-07",
+      "session": "02",
+      "run": "04",
+      "original_header_file": "sub-07/ses-02/eeg/sub-07_ses-02_task-MotorImageryRest_run-04_eeg.vhdr",
+      "declared_original_header_sha256": "abcdf4d002d3dfc86ea5fbece207531e4e9af0e44561fd370e51aedf2a1d5dad",
+      "declared_original_header_bytes": 2012,
+      "local_original_header": "/workspace/few-shot-mi-eeg/data/netbci2026/nm000305/v1.0.0/sourcedata/sub-07/ses-02/eeg/sub-07_ses-02_task-MotorImageryRest_run-04_eeg.vhdr",
+      "actual_original_header_sha256": "abcdf4d002d3dfc86ea5fbece207531e4e9af0e44561fd370e51aedf2a1d5dad",
+      "original_header_hash_verified": true,
+      "original_sampling_frequency_hz": 250.0,
+      "original_channel_count": 74,
+      "original_channel_units_json": "{\"\\u00b5V\": 74}",
+      "original_reference_fields_json": "{\"\": 74}",
+      "original_reference_interpretation": "blank header fields do not establish acquisition reference",
+      "original_derivative_channel_order_matches": true,
+      "derivative_sampling_frequency_hz": 250.0,
+      "original_signal_equality_verified": false,
+      "original_marker_sequence_verified": false
+    },
+    {
+      "subject": "sub-7",
+      "original_subject": "sub-07",
+      "session": "02",
+      "run": "05",
+      "original_header_file": "sub-07/ses-02/eeg/sub-07_ses-02_task-MotorImageryRest_run-05_eeg.vhdr",
+      "declared_original_header_sha256": "7a12f6915e8f966d15dd0407b99283d4b98f0df9e507aec07527d9169fdd0ce9",
+      "declared_original_header_bytes": 2012,
+      "local_original_header": "/workspace/few-shot-mi-eeg/data/netbci2026/nm000305/v1.0.0/sourcedata/sub-07/ses-02/eeg/sub-07_ses-02_task-MotorImageryRest_run-05_eeg.vhdr",
+      "actual_original_header_sha256": "7a12f6915e8f966d15dd0407b99283d4b98f0df9e507aec07527d9169fdd0ce9",
+      "original_header_hash_verified": true,
+      "original_sampling_frequency_hz": 250.0,
+      "original_channel_count": 74,
+      "original_channel_units_json": "{\"\\u00b5V\": 74}",
+      "original_reference_fields_json": "{\"\": 74}",
+      "original_reference_interpretation": "blank header fields do not establish acquisition reference",
+      "original_derivative_channel_order_matches": true,
+      "derivative_sampling_frequency_hz": 250.0,
+      "original_signal_equality_verified": false,
+      "original_marker_sequence_verified": false
+    },
+    {
+      "subject": "sub-7",
+      "original_subject": "sub-07",
+      "session": "02",
+      "run": "06",
+      "original_header_file": "sub-07/ses-02/eeg/sub-07_ses-02_task-MotorImageryRest_run-06_eeg.vhdr",
+      "declared_original_header_sha256": "a29108873313684dbc19242fb3968d6a09718b2392a8a035bbf044c427b00b3d",
+      "declared_original_header_bytes": 2012,
+      "local_original_header": "/workspace/few-shot-mi-eeg/data/netbci2026/nm000305/v1.0.0/sourcedata/sub-07/ses-02/eeg/sub-07_ses-02_task-MotorImageryRest_run-06_eeg.vhdr",
+      "actual_original_header_sha256": "a29108873313684dbc19242fb3968d6a09718b2392a8a035bbf044c427b00b3d",
+      "original_header_hash_verified": true,
+      "original_sampling_frequency_hz": 250.0,
+      "original_channel_count": 74,
+      "original_channel_units_json": "{\"\\u00b5V\": 74}",
+      "original_reference_fields_json": "{\"\": 74}",
+      "original_reference_interpretation": "blank header fields do not establish acquisition reference",
+      "original_derivative_channel_order_matches": true,
+      "derivative_sampling_frequency_hz": 250.0,
+      "original_signal_equality_verified": false,
+      "original_marker_sequence_verified": false
+    },
+    {
+      "subject": "sub-7",
+      "original_subject": "sub-07",
+      "session": "03",
+      "run": "01",
+      "original_header_file": "sub-07/ses-03/eeg/sub-07_ses-03_task-MotorImageryRest_run-01_eeg.vhdr",
+      "declared_original_header_sha256": "4e04a78572399e45f576ec9ccc498326466ab45428435abcd58cfffd966fd0a7",
+      "declared_original_header_bytes": 2012,
+      "local_original_header": "/workspace/few-shot-mi-eeg/data/netbci2026/nm000305/v1.0.0/sourcedata/sub-07/ses-03/eeg/sub-07_ses-03_task-MotorImageryRest_run-01_eeg.vhdr",
+      "actual_original_header_sha256": "4e04a78572399e45f576ec9ccc498326466ab45428435abcd58cfffd966fd0a7",
+      "original_header_hash_verified": true,
+      "original_sampling_frequency_hz": 250.0,
+      "original_channel_count": 74,
+      "original_channel_units_json": "{\"\\u00b5V\": 74}",
+      "original_reference_fields_json": "{\"\": 74}",
+      "original_reference_interpretation": "blank header fields do not establish acquisition reference",
+      "original_derivative_channel_order_matches": true,
+      "derivative_sampling_frequency_hz": 250.0,
+      "original_signal_equality_verified": false,
+      "original_marker_sequence_verified": false
+    },
+    {
+      "subject": "sub-7",
+      "original_subject": "sub-07",
+      "session": "03",
+      "run": "02",
+      "original_header_file": "sub-07/ses-03/eeg/sub-07_ses-03_task-MotorImageryRest_run-02_eeg.vhdr",
+      "declared_original_header_sha256": "717c482d8dbdc821dd6fadb70dcc74cab88f46a9b63ae357c4729040507932dc",
+      "declared_original_header_bytes": 2012,
+      "local_original_header": "/workspace/few-shot-mi-eeg/data/netbci2026/nm000305/v1.0.0/sourcedata/sub-07/ses-03/eeg/sub-07_ses-03_task-MotorImageryRest_run-02_eeg.vhdr",
+      "actual_original_header_sha256": "717c482d8dbdc821dd6fadb70dcc74cab88f46a9b63ae357c4729040507932dc",
+      "original_header_hash_verified": true,
+      "original_sampling_frequency_hz": 250.0,
+      "original_channel_count": 74,
+      "original_channel_units_json": "{\"\\u00b5V\": 74}",
+      "original_reference_fields_json": "{\"\": 74}",
+      "original_reference_interpretation": "blank header fields do not establish acquisition reference",
+      "original_derivative_channel_order_matches": true,
+      "derivative_sampling_frequency_hz": 250.0,
+      "original_signal_equality_verified": false,
+      "original_marker_sequence_verified": false
+    },
+    {
+      "subject": "sub-7",
+      "original_subject": "sub-07",
+      "session": "03",
+      "run": "03",
+      "original_header_file": "sub-07/ses-03/eeg/sub-07_ses-03_task-MotorImageryRest_run-03_eeg.vhdr",
+      "declared_original_header_sha256": "6dfa1ad3d74a53958dc6331c8312937008b789b28ded3504387bda0e917eef1d",
+      "declared_original_header_bytes": 2012,
+      "local_original_header": "/workspace/few-shot-mi-eeg/data/netbci2026/nm000305/v1.0.0/sourcedata/sub-07/ses-03/eeg/sub-07_ses-03_task-MotorImageryRest_run-03_eeg.vhdr",
+      "actual_original_header_sha256": "6dfa1ad3d74a53958dc6331c8312937008b789b28ded3504387bda0e917eef1d",
+      "original_header_hash_verified": true,
+      "original_sampling_frequency_hz": 250.0,
+      "original_channel_count": 74,
+      "original_channel_units_json": "{\"\\u00b5V\": 74}",
+      "original_reference_fields_json": "{\"\": 74}",
+      "original_reference_interpretation": "blank header fields do not establish acquisition reference",
+      "original_derivative_channel_order_matches": true,
+      "derivative_sampling_frequency_hz": 250.0,
+      "original_signal_equality_verified": false,
+      "original_marker_sequence_verified": false
+    },
+    {
+      "subject": "sub-7",
+      "original_subject": "sub-07",
+      "session": "03",
+      "run": "04",
+      "original_header_file": "sub-07/ses-03/eeg/sub-07_ses-03_task-MotorImageryRest_run-04_eeg.vhdr",
+      "declared_original_header_sha256": "ec303c34d86675946a85f436d238a33306b4a86ca7f9d93b9ab7bc508050a2e7",
+      "declared_original_header_bytes": 2012,
+      "local_original_header": "/workspace/few-shot-mi-eeg/data/netbci2026/nm000305/v1.0.0/sourcedata/sub-07/ses-03/eeg/sub-07_ses-03_task-MotorImageryRest_run-04_eeg.vhdr",
+      "actual_original_header_sha256": "ec303c34d86675946a85f436d238a33306b4a86ca7f9d93b9ab7bc508050a2e7",
+      "original_header_hash_verified": true,
+      "original_sampling_frequency_hz": 250.0,
+      "original_channel_count": 74,
+      "original_channel_units_json": "{\"\\u00b5V\": 74}",
+      "original_reference_fields_json": "{\"\": 74}",
+      "original_reference_interpretation": "blank header fields do not establish acquisition reference",
+      "original_derivative_channel_order_matches": true,
+      "derivative_sampling_frequency_hz": 250.0,
+      "original_signal_equality_verified": false,
+      "original_marker_sequence_verified": false
+    },
+    {
+      "subject": "sub-7",
+      "original_subject": "sub-07",
+      "session": "03",
+      "run": "05",
+      "original_header_file": "sub-07/ses-03/eeg/sub-07_ses-03_task-MotorImageryRest_run-05_eeg.vhdr",
+      "declared_original_header_sha256": "5837ff5d86b8492f49b094746b602470ee1ed5ccb4d60bfe5625cb280cc6236e",
+      "declared_original_header_bytes": 2012,
+      "local_original_header": "/workspace/few-shot-mi-eeg/data/netbci2026/nm000305/v1.0.0/sourcedata/sub-07/ses-03/eeg/sub-07_ses-03_task-MotorImageryRest_run-05_eeg.vhdr",
+      "actual_original_header_sha256": "5837ff5d86b8492f49b094746b602470ee1ed5ccb4d60bfe5625cb280cc6236e",
+      "original_header_hash_verified": true,
+      "original_sampling_frequency_hz": 250.0,
+      "original_channel_count": 74,
+      "original_channel_units_json": "{\"\\u00b5V\": 74}",
+      "original_reference_fields_json": "{\"\": 74}",
+      "original_reference_interpretation": "blank header fields do not establish acquisition reference",
+      "original_derivative_channel_order_matches": true,
+      "derivative_sampling_frequency_hz": 250.0,
+      "original_signal_equality_verified": false,
+      "original_marker_sequence_verified": false
+    },
+    {
+      "subject": "sub-7",
+      "original_subject": "sub-07",
+      "session": "03",
+      "run": "06",
+      "original_header_file": "sub-07/ses-03/eeg/sub-07_ses-03_task-MotorImageryRest_run-06_eeg.vhdr",
+      "declared_original_header_sha256": "d114642fd9650b72f8ba239286c4031652ba0eac64a950792b6a2aa1de4d721d",
+      "declared_original_header_bytes": 2012,
+      "local_original_header": "/workspace/few-shot-mi-eeg/data/netbci2026/nm000305/v1.0.0/sourcedata/sub-07/ses-03/eeg/sub-07_ses-03_task-MotorImageryRest_run-06_eeg.vhdr",
+      "actual_original_header_sha256": "d114642fd9650b72f8ba239286c4031652ba0eac64a950792b6a2aa1de4d721d",
+      "original_header_hash_verified": true,
+      "original_sampling_frequency_hz": 250.0,
+      "original_channel_count": 74,
+      "original_channel_units_json": "{\"\\u00b5V\": 74}",
+      "original_reference_fields_json": "{\"\": 74}",
+      "original_reference_interpretation": "blank header fields do not establish acquisition reference",
+      "original_derivative_channel_order_matches": true,
+      "derivative_sampling_frequency_hz": 250.0,
+      "original_signal_equality_verified": false,
+      "original_marker_sequence_verified": false
+    },
+    {
+      "subject": "sub-7",
+      "original_subject": "sub-07",
+      "session": "04",
+      "run": "01",
+      "original_header_file": "sub-07/ses-04/eeg/sub-07_ses-04_task-MotorImageryRest_run-01_eeg.vhdr",
+      "declared_original_header_sha256": "f201c250c750af687df68b0a7e35a2133e158553585a3e0977fe3d47174838eb",
+      "declared_original_header_bytes": 2012,
+      "local_original_header": "/workspace/few-shot-mi-eeg/data/netbci2026/nm000305/v1.0.0/sourcedata/sub-07/ses-04/eeg/sub-07_ses-04_task-MotorImageryRest_run-01_eeg.vhdr",
+      "actual_original_header_sha256": "f201c250c750af687df68b0a7e35a2133e158553585a3e0977fe3d47174838eb",
+      "original_header_hash_verified": true,
+      "original_sampling_frequency_hz": 250.0,
+      "original_channel_count": 74,
+      "original_channel_units_json": "{\"\\u00b5V\": 74}",
+      "original_reference_fields_json": "{\"\": 74}",
+      "original_reference_interpretation": "blank header fields do not establish acquisition reference",
+      "original_derivative_channel_order_matches": true,
+      "derivative_sampling_frequency_hz": 250.0,
+      "original_signal_equality_verified": false,
+      "original_marker_sequence_verified": false
+    },
+    {
+      "subject": "sub-7",
+      "original_subject": "sub-07",
+      "session": "04",
+      "run": "02",
+      "original_header_file": "sub-07/ses-04/eeg/sub-07_ses-04_task-MotorImageryRest_run-02_eeg.vhdr",
+      "declared_original_header_sha256": "7a824d170d36228620eeb090749b1263acbd5db844f864532a9d0b2ee47adb74",
+      "declared_original_header_bytes": 2012,
+      "local_original_header": "/workspace/few-shot-mi-eeg/data/netbci2026/nm000305/v1.0.0/sourcedata/sub-07/ses-04/eeg/sub-07_ses-04_task-MotorImageryRest_run-02_eeg.vhdr",
+      "actual_original_header_sha256": "7a824d170d36228620eeb090749b1263acbd5db844f864532a9d0b2ee47adb74",
+      "original_header_hash_verified": true,
+      "original_sampling_frequency_hz": 250.0,
+      "original_channel_count": 74,
+      "original_channel_units_json": "{\"\\u00b5V\": 74}",
+      "original_reference_fields_json": "{\"\": 74}",
+      "original_reference_interpretation": "blank header fields do not establish acquisition reference",
+      "original_derivative_channel_order_matches": true,
+      "derivative_sampling_frequency_hz": 250.0,
+      "original_signal_equality_verified": false,
+      "original_marker_sequence_verified": false
+    },
+    {
+      "subject": "sub-7",
+      "original_subject": "sub-07",
+      "session": "04",
+      "run": "03",
+      "original_header_file": "sub-07/ses-04/eeg/sub-07_ses-04_task-MotorImageryRest_run-03_eeg.vhdr",
+      "declared_original_header_sha256": "78ee11073d7837b20355fd62b7d5c46a44a139c0c5a736380264247493243f61",
+      "declared_original_header_bytes": 2012,
+      "local_original_header": "/workspace/few-shot-mi-eeg/data/netbci2026/nm000305/v1.0.0/sourcedata/sub-07/ses-04/eeg/sub-07_ses-04_task-MotorImageryRest_run-03_eeg.vhdr",
+      "actual_original_header_sha256": "78ee11073d7837b20355fd62b7d5c46a44a139c0c5a736380264247493243f61",
+      "original_header_hash_verified": true,
+      "original_sampling_frequency_hz": 250.0,
+      "original_channel_count": 74,
+      "original_channel_units_json": "{\"\\u00b5V\": 74}",
+      "original_reference_fields_json": "{\"\": 74}",
+      "original_reference_interpretation": "blank header fields do not establish acquisition reference",
+      "original_derivative_channel_order_matches": true,
+      "derivative_sampling_frequency_hz": 250.0,
+      "original_signal_equality_verified": false,
+      "original_marker_sequence_verified": false
+    },
+    {
+      "subject": "sub-7",
+      "original_subject": "sub-07",
+      "session": "04",
+      "run": "04",
+      "original_header_file": "sub-07/ses-04/eeg/sub-07_ses-04_task-MotorImageryRest_run-04_eeg.vhdr",
+      "declared_original_header_sha256": "eb8461e1bc977df0f4ca93995c08cda57395f40243b900bf8f56496a274cc19d",
+      "declared_original_header_bytes": 2012,
+      "local_original_header": "/workspace/few-shot-mi-eeg/data/netbci2026/nm000305/v1.0.0/sourcedata/sub-07/ses-04/eeg/sub-07_ses-04_task-MotorImageryRest_run-04_eeg.vhdr",
+      "actual_original_header_sha256": "eb8461e1bc977df0f4ca93995c08cda57395f40243b900bf8f56496a274cc19d",
+      "original_header_hash_verified": true,
+      "original_sampling_frequency_hz": 250.0,
+      "original_channel_count": 74,
+      "original_channel_units_json": "{\"\\u00b5V\": 74}",
+      "original_reference_fields_json": "{\"\": 74}",
+      "original_reference_interpretation": "blank header fields do not establish acquisition reference",
+      "original_derivative_channel_order_matches": true,
+      "derivative_sampling_frequency_hz": 250.0,
+      "original_signal_equality_verified": false,
+      "original_marker_sequence_verified": false
+    },
+    {
+      "subject": "sub-7",
+      "original_subject": "sub-07",
+      "session": "04",
+      "run": "05",
+      "original_header_file": "sub-07/ses-04/eeg/sub-07_ses-04_task-MotorImageryRest_run-05_eeg.vhdr",
+      "declared_original_header_sha256": "80f0bad495c01567c65f6484ab878809e9f1fb9ca961516b0336773acfde8241",
+      "declared_original_header_bytes": 2012,
+      "local_original_header": "/workspace/few-shot-mi-eeg/data/netbci2026/nm000305/v1.0.0/sourcedata/sub-07/ses-04/eeg/sub-07_ses-04_task-MotorImageryRest_run-05_eeg.vhdr",
+      "actual_original_header_sha256": "80f0bad495c01567c65f6484ab878809e9f1fb9ca961516b0336773acfde8241",
+      "original_header_hash_verified": true,
+      "original_sampling_frequency_hz": 250.0,
+      "original_channel_count": 74,
+      "original_channel_units_json": "{\"\\u00b5V\": 74}",
+      "original_reference_fields_json": "{\"\": 74}",
+      "original_reference_interpretation": "blank header fields do not establish acquisition reference",
+      "original_derivative_channel_order_matches": true,
+      "derivative_sampling_frequency_hz": 250.0,
+      "original_signal_equality_verified": false,
+      "original_marker_sequence_verified": false
+    },
+    {
+      "subject": "sub-7",
+      "original_subject": "sub-07",
+      "session": "04",
+      "run": "06",
+      "original_header_file": "sub-07/ses-04/eeg/sub-07_ses-04_task-MotorImageryRest_run-06_eeg.vhdr",
+      "declared_original_header_sha256": "afc602310e2fd73cadd06373ead8bb5591e2bfe4e309995a3f731f60c5cb5561",
+      "declared_original_header_bytes": 2012,
+      "local_original_header": "/workspace/few-shot-mi-eeg/data/netbci2026/nm000305/v1.0.0/sourcedata/sub-07/ses-04/eeg/sub-07_ses-04_task-MotorImageryRest_run-06_eeg.vhdr",
+      "actual_original_header_sha256": "afc602310e2fd73cadd06373ead8bb5591e2bfe4e309995a3f731f60c5cb5561",
+      "original_header_hash_verified": true,
+      "original_sampling_frequency_hz": 250.0,
+      "original_channel_count": 74,
+      "original_channel_units_json": "{\"\\u00b5V\": 74}",
+      "original_reference_fields_json": "{\"\": 74}",
+      "original_reference_interpretation": "blank header fields do not establish acquisition reference",
+      "original_derivative_channel_order_matches": true,
+      "derivative_sampling_frequency_hz": 250.0,
+      "original_signal_equality_verified": false,
+      "original_marker_sequence_verified": false
+    }
+  ],
+  "cohort_audit_script_sha256": "c43fece4b7845291f20f17d77fd368fd77033aeb7eaea34d985c587fb86fe02e",
+  "configuration": {
+    "path": "configs/netbci_cohort_full_windows_20261010.json",
+    "sha256": "2bead8bccd0396e0358bb8167324621e80d48087ba011a334224f73962d10904",
+    "parameters": {
+      "status": "exploratory_cohort_with_post_observation_full_window_eligibility",
+      "dataset": "NETBCI2026",
+      "version": "NEMAR_nm000305_v1.0.0",
+      "version_doi": "10.82901/nemar.nm000305.v1.0.0",
+      "license": "CC-BY-4.0",
+      "subjects": [
+        "sub-1",
+        "sub-2",
+        "sub-3",
+        "sub-4",
+        "sub-5",
+        "sub-6",
+        "sub-7",
+        "sub-8",
+        "sub-9",
+        "sub-10"
+      ],
+      "selection": "first_ten_published_subject_IDs_no_selection_on_behavior_or_EEG_results",
+      "pilot_subject_previously_observed": "sub-1",
+      "cohort_behavior_previously_observed": true,
+      "source_root": "data/netbci2026/nm000305/v1.0.0",
+      "download_root": "research_logs/netbci_cohort_20261010/downloads",
+      "output_root": "research_logs/netbci_cohort_resume_20261010/audits_full_windows",
+      "bundle_root": "data/netbci2026/cohort_full_windows_v1.0.0",
+      "official_manifest": "research_logs/netbci2026_sources/manifest.json",
+      "seed": 42,
+      "threads": 2,
+      "session_order": [
+        "01",
+        "02",
+        "03",
+        "04"
+      ],
+      "expected_sessions": [
+        "01",
+        "02",
+        "03",
+        "04"
+      ],
+      "expected_runs": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "source_train_runs": [
+        "01",
+        "02",
+        "03",
+        "04"
+      ],
+      "source_query_runs": [
+        "05",
+        "06"
+      ],
+      "later_query_runs": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "date_roles": {
+        "01": "source_training_and_disjoint_reference_query",
+        "02": "validation_descriptor_no_parameter_selection",
+        "03": "test_exploratory",
+        "04": "test_exploratory"
+      },
+      "expected_sfreq_hz": 250,
+      "reference": "average_all_verified_common_EEG_channels",
+      "roi_channels": [
+        "C3",
+        "Cz",
+        "C4"
+      ],
+      "decoder_band_hz": [
+        8,
+        30
+      ],
+      "filter": "Butterworth_order4_zero_phase_per_epoch",
+      "edge_crop_seconds": 0.5,
+      "welch_segment_samples": 250,
+      "welch_overlap_samples": 125,
+      "mu_hz": [
+        8,
+        13
+      ],
+      "beta_hz": [
+        13,
+        30
+      ],
+      "covariance_trace_shrinkage": 0.05,
+      "pca_components": 10,
+      "csp_components": 4,
+      "artifact_log_peak_MAD_multiplier": 6,
+      "matched_trials_per_class_per_run": 12,
+      "matched_repetitions": 10,
+      "qc_matched_runs": [
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "bootstrap_run_repetitions": 500,
+      "bootstrap_subject_repetitions": 10000,
+      "primary_descriptive_decoder_contrast": "session04_minus_session01_BA_paired_subjects",
+      "primary_descriptive_spectral_contrast": "session04_minus_session01_equal_run_MI_rest_mu_logpower_dB",
+      "behavior_grain": "verified_subject_session_unweighted_mean_of_six_reported_percentages",
+      "score_run_order": "unresolved_no_trial_broadcast",
+      "failures": "retain_all_subjects_and_constant_predictions_report_metric_failures_explicitly",
+      "missing_matching_cells": "report_matching_metric_unavailable_do_not_silently_reduce_or_remove_subject",
+      "neural_behavior_association": "exploratory_subject_level_first_last_changes_not_trial_pseudoreplication",
+      "new_EEGNet_training": false,
+      "GPU_or_paid_resources": false,
+      "full_original_archives": false,
+      "source_qc_rule": "fit_only_session01_training_trials_keep_flags_in_primary_analysis",
+      "confirmation": "no_new_human_learning_or_algorithm_causal_claims",
+      "fixed_window_duration_seconds": 5.0,
+      "mismatch_action": "retain_source_event_exclude_from_fixed_window_tensor",
+      "eligibility_policy_timing": "after strict sub-3 source-duration failure; before any new cohort model fitting; original science parameters unchanged"
+    }
+  },
+  "fixed_window_policy": {
+    "fixed_window_duration_seconds": 5.0,
+    "mismatch_action": "retain_source_event_exclude_from_fixed_window_tensor",
+    "source_events_retained": true,
+    "padding_or_extension_performed": false
+  },
+  "elapsed_seconds": 16.63422242200022,
+  "output_artifact_sha256": {
+    "adapter_receipt.json": "8c080ff5272653c2f3fb2193cc3a76ed656d920262facd1e3537f85cf2c7dbed",
+    "events.tsv": "1c30b5e68d9f0084a158c1adcb8650a03cce2c1dc6fb12136d4c808227a5c1f1",
+    "excluded_events.tsv": "95ee7ede711ef35e737109cfaa7056825ed0bc9338c49f7da5093bf53576cdf7",
+    "original_header_inventory.tsv": "4a302c994794ad794871212d2d57cc5f3e5d86ae4c7efcac4f4efeae23557ae0",
+    "run_inventory.tsv": "e802ae0806a6ea85710c41f58eabb4e797d4266c31fadb7b96f2854431b0a374",
+    "source_events.tsv": "1c30b5e68d9f0084a158c1adcb8650a03cce2c1dc6fb12136d4c808227a5c1f1"
+  }
+}
