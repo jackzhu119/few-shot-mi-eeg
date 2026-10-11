@@ -154,3 +154,5 @@ SHU ZIP 密码与事件单位矛盾、NETBCI 大归档/实际事件、订阅论�
 - pytest279项通过、2个既有上游deprecation warnings；ruff和Git whitespace检查通过。合成smoke/data-stack在接续preflight已通过且明确software_validation_only。
 - R2实际写入、逐对象HEAD及代表/小结果全GET校验通过；截至本检查点存原始数据/eligible bundles/模型结果/来源ledger/私有聊天备份，具体字节以storage_catalog_ten_20261011.json为准。
 - 新19身份与外部公开资源按用户授权准备，检查点前未下载新增EEG信号，后续独立收据记录实际完成范围。第一篇未修改，未启动付费GPU或在线人体实验。
+
+- 将新生成图/含unavailable空字段TSV纳入Git后，初次staged whitespace检查触发SVG路径空白和TSV末尾空列；科学artifact字节未改。追加gitattributes为机器SVG和TSV保留字节及合法空列，git diff HEAD~1 --check重新执行通过。

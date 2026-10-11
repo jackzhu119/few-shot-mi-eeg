@@ -1,5 +1,6 @@
 # Scientific TSVs preserve source/receipt byte hashes across platforms.
-*.tsv -text whitespace=cr-at-eol
+*.tsv -text whitespace=cr-at-eol,-blank-at-eol
 
 # Preserve Matplotlib export bytes and receipt hashes, including SVG path spacing.
 research_logs/netbci_behavior_sessions_20261010/figures/*.svg -text whitespace=-blank-at-eol
+research_logs/**/*.svg -text whitespace=-blank-at-eol
