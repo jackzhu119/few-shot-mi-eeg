@@ -1,0 +1,48 @@
+{
+  "dataset": "Liu2024",
+  "nemar_id": "nm000158",
+  "version": "v1.0.3",
+  "license": "CC-BY-4.0",
+  "scope": "single-visit video-guided imagery; preprocessed derivative, no treatment/retention intervention",
+  "population": "acute stroke patients 1–30 days post-stroke",
+  "complete": true,
+  "representative_only": true,
+  "source_acceptance_complete": false,
+  "verified_source_file_count": 507,
+  "verified_source_bytes": 14532798,
+  "signal_file_count": 1,
+  "passed_signal_files": 1,
+  "source_identity_count": 1,
+  "source_event_count": 40,
+  "source_label_counts": {
+    "left_hand": 20,
+    "right_hand": 20
+  },
+  "source_duration_counts": {
+    "4.0": 40
+  },
+  "source_event_kind_counts": {
+    "positive_duration_task": 40
+  },
+  "exact_numeric_duplicate_groups": {
+    "whole_signal_numeric_sha256": [],
+    "central4KiB_numeric_sha256": []
+  },
+  "exact_source_task_duplicate_groups": [],
+  "source_task_hash_convention": "all native EEG channels x original source duration samples; float64 little-endian C-order; MNE volts; half-open [start, stop)",
+  "native_sidecar_unit_discrepancy_run_count": 1,
+  "unit_reconciliation_required_before_modeling": true,
+  "started_at_utc": "2026-10-11T12:57:22.960037+00:00",
+  "finished_at_utc": "2026-10-11T12:57:24.166293+00:00",
+  "script_sha256": "bbba21d7607cb16761aec881d64bf0c5700840602cd2cd2831de33a57c6ea43e",
+  "source_commit": "4290c4061f5d35381ed684bb07f1dd52836bbee0",
+  "plan_sha256": "8934f650f7adf7b2e64406cfb5b29bdaca893042c29acd271a95f08c7b4b8a2d",
+  "selection_manifest_sha256": "bfec26f46532a5adf3f4b71b52a15b86eb36a96ed29f7add4f236e2809db6b8e",
+  "runtime_versions": {
+    "python": "3.11.16",
+    "mne": "1.10.2",
+    "numpy": "2.2.6"
+  },
+  "failed_signals": [],
+  "analysis_status": "source_resource_audit_only;no_model_training_or_window_selection"
+}

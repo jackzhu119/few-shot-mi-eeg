@@ -1,0 +1,107 @@
+{
+  "status": "passed",
+  "source_file": "sub-20/ses-0/eeg/sub-20_ses-0_task-imagery_run-0_eeg.bdf",
+  "n_times": 160000,
+  "subject": "sub-20",
+  "channels": [
+    "FP1",
+    "FP2",
+    "Fz",
+    "F3",
+    "F4",
+    "F7",
+    "F8",
+    "FCz",
+    "FC3",
+    "FC4",
+    "FT7",
+    "FT8",
+    "Cz",
+    "C3",
+    "C4",
+    "T3",
+    "T4",
+    "CP3",
+    "CP4",
+    "TP7",
+    "TP8",
+    "Pz",
+    "P3",
+    "P4",
+    "T5",
+    "T6",
+    "Oz",
+    "O1",
+    "O2"
+  ],
+  "sfreq": 500.0,
+  "stored_unit": "µV",
+  "MNE_numeric_unit": "V",
+  "EEG_reference": "CPz",
+  "sidecar_recording_duration_seconds": 319.998,
+  "native_sample_count_duration_seconds": 320.0,
+  "unlabeled_final_gap_samples": 8997,
+  "recording_type_from_sidecar": "continuous",
+  "source_event_count": 40,
+  "source_label_counts": {
+    "left_hand": 20,
+    "right_hand": 20
+  },
+  "source_overlap_event_count": 2,
+  "source_overlap_events": [
+    {
+      "source_event_id": "sub-20/ses-0/run-0/row-15",
+      "source_row": 15,
+      "label": "left_hand",
+      "overlap_samples": 1998
+    },
+    {
+      "source_event_id": "sub-20/ses-0/run-0/row-16",
+      "source_row": 16,
+      "label": "right_hand",
+      "overlap_samples": 90
+    }
+  ],
+  "verified_source_files": {
+    "sub-20/ses-0/eeg/sub-20_ses-0_task-imagery_run-0_eeg.bdf": {
+      "sha256": "9090192e385ede712e7eb900395c81bd6b8d9dcfe84a7734328044cd6ef7f3f4",
+      "bytes": 13945216,
+      "official_checksum": "9090192e385ede712e7eb900395c81bd6b8d9dcfe84a7734328044cd6ef7f3f4"
+    },
+    "sub-20/ses-0/eeg/sub-20_ses-0_task-imagery_run-0_eeg.json": {
+      "sha256": "92282f4269f6bf31f1919f920667b3e237d207f3d90084ca9577eace21013dc7",
+      "bytes": 1968,
+      "official_checksum": "c9c21322dae11f0faa88664386dd897a004485cf"
+    },
+    "sub-20/ses-0/eeg/sub-20_ses-0_task-imagery_run-0_events.json": {
+      "sha256": "8586b14e751960cfb3a8d54c28795b83e35ebc5416c840fb16f219c0ac572120",
+      "bytes": 1193,
+      "official_checksum": "fe4ea91a48401e0dfcba1b244213ad8a025b04a3"
+    },
+    "sub-20/ses-0/eeg/sub-20_ses-0_task-imagery_run-0_channels.tsv": {
+      "sha256": "ae338d6813ff1be1c792b652bf901b62865aa93bbe66e3d0e020a71da19a46be",
+      "bytes": 1705,
+      "official_checksum": "a468d8648885a6eab7db07dc5e3597671268b0a8"
+    },
+    "sub-20/ses-0/eeg/sub-20_ses-0_task-imagery_run-0_events.tsv": {
+      "sha256": "5b8d5aed9746911f3cef7a56c1530247ba1e5d625f10d54018495d646cef739c",
+      "bytes": 1250,
+      "official_checksum": "298631fb4833d28ffefcf897b8e784a10d0c9b99"
+    }
+  },
+  "native_header_unit": "µV",
+  "channel_sidecar_unit": "V",
+  "native_and_sidecar_units_agree": false,
+  "numeric_loading_rule": "MNE applies native header scaling to volts; no additional rescaling",
+  "units_reconciled_for_model_training": false,
+  "unit_discrepancy": "Pinned Liu BDF headers declare µV while official channels.tsv declares V; original conversion/raw values have not been independently reconciled.",
+  "all_continuous_samples_finite": true,
+  "continuous_numeric_values": 4640000,
+  "peak_absolute_volts": 0.0005942380000000001,
+  "global_rms_volts": 3.4113662695063955e-05,
+  "whole_signal_numeric_sha256": "0a2dd7ea3473dafa173434c5242ba213b66f3df2311a2854d7338fe9e5edb0bf",
+  "whole_signal_hash_convention": "all channels; float64 little-endian C-order; chronological16384-sample blocks; MNE volts",
+  "central4KiB_numeric_sha256": "01152a93f7bbd713db8373dc7fa11d14c72a6a44743500d054dfdea031f27248",
+  "central_fingerprint_start_sample": 79872,
+  "flatline_channel_indices": []
+}

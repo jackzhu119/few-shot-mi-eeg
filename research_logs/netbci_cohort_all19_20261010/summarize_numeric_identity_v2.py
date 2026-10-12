@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+from collections import Counter, defaultdict
 import hashlib
 import json
 from datetime import datetime, timezone
@@ -43,10 +44,37 @@ def main():
                        "distinct_whole_edf_sha256": len({row["source_edf_sha256"] for row in members})})
     overlap = record["planned_partition_content_overlap"]
     overlap_counts = {key: value for key, value in overlap.items() if not isinstance(value, list)}
+    overlap_counts["source_training_reference_query_affected_subjects"] = overlap[
+        "source_training_reference_query_affected_subjects"]
     overlap_counts["affected_subject_sessions"] = [row for row in overlap["by_subject_session"]
                                                    if row["exact_source_training_overlap_count"] or
                                                    row["exact_source_reference_query_overlap_count"]]
-    affected = {subject for group in groups if group["cross_subject"] for subject in group["subjects"]}
+    continuous_affected = {subject for group in groups if group["cross_subject"] for subject in group["subjects"]}
+    task_affected = {subject for group in record["task_window_duplicate_groups"]
+                     if group["cross_subject"] for subject in group["subjects"]}
+    affected = continuous_affected | task_affected
+    window_by_id = {row["trial_id"]: row for row in record["source_task_windows"]}
+    assert len(window_by_id) == record["summary"]["source_task_windows"]
+    same_session_counts = defaultdict(Counter)
+    task_cross_subject_locations = set()
+    for group in record["task_window_duplicate_groups"]:
+        location_members = defaultdict(list)
+        for identifier in group["members"]:
+            row = window_by_id[identifier]
+            assert row["numeric_sha256"] == group["numeric_sha256"]
+            location = row["subject"], row["session"]
+            location_members[location].append(row)
+            if group["cross_subject"]:
+                task_cross_subject_locations.add(location)
+        for location, rows in location_members.items():
+            if len(rows) < 2:
+                continue
+            counter = same_session_counts[location]
+            counter["numeric_groups_repeated_within_subject_session"] += 1
+            counter["repeated_window_members"] += len(rows)
+            if any(count > 1 for count in Counter(row["run"] for row in rows).values()):
+                counter["numeric_groups_repeated_within_same_run"] += 1
+    subject_key = lambda value: int(value.split("-")[-1])  # noqa: E731
     output = {
         "status": "compact_verified_pre_model_numeric_identity_summary",
         "synthetic": False, "checked_at_utc": datetime.now(timezone.utc).isoformat(),
@@ -59,9 +87,21 @@ def main():
         "official_manifest_sha256": record["official_manifest_sha256"],
         "timing": record["timing"], "role_source": record["role_source"],
         "continuous_duplicate_groups": groups,
-        "cross_subject_affected_identities": sorted(affected, key=lambda x: int(x.split("-")[-1])),
+        "cross_subject_affected_identities": sorted(affected, key=subject_key),
+        "cross_subject_continuous_affected_identities": sorted(continuous_affected, key=subject_key),
+        "cross_subject_task_window_affected_identities": sorted(task_affected, key=subject_key),
+        "cross_subject_task_window_affected_subject_sessions": [
+            {"subject": subject, "session": session} for subject, session in
+            sorted(task_cross_subject_locations, key=lambda pair: (subject_key(pair[0]), pair[1]))],
         "identities_without_detected_cross_subject_exact_continuous_copies":
+            [subject for subject in record["subject_order"] if subject not in continuous_affected],
+        "identities_without_detected_cross_subject_exact_signal_copies":
             [subject for subject in record["subject_order"] if subject not in affected],
+        "same_subject_session_task_repeat_flags": [
+            {"subject": subject, "session": session, **dict(counts)}
+            for (subject, session), counts in sorted(
+                same_session_counts.items(), key=lambda pair: (subject_key(pair[0][0]), pair[0][1]))],
+        "duplicate_flags_change_cohort_membership": False,
         "planned_partition_content_overlap": overlap_counts,
         "limitations": record["limitations"],
         "audit_script_file": record["script_file"], "audit_script_sha256": record["script_sha256"],

@@ -1,0 +1,46 @@
+{
+  "recorded_at_utc": "2026-10-11T06:58:36.669375+00:00",
+  "software_validation": {
+    "tests": "16 passed",
+    "test_scope": "tests/test_milimb_liu_source_audit.py",
+    "ruff": "passed",
+    "diff_check": "passed",
+    "audit_script_sha256": "816c4a04aebd68773d4169584b4e54f926db34068b70cea2f1a1d67a23f68169"
+  },
+  "MILimbEEG": {
+    "version": "v1.0.0",
+    "license": "CC-BY-4.0",
+    "source_complete": true,
+    "signal_audit_complete": true,
+    "source_ids_nominal": 60,
+    "file_count": 666,
+    "bytes": 62287177,
+    "source_event_rows": 7318,
+    "positive_task_event_rows": 3659,
+    "zero_duration_edge_rows": 3659,
+    "independent_crosscheck_status": "passed",
+    "R2_status": "source_and_receipts_notified_to_storage_agent;verify_final_remote_receipt",
+    "model_fitted": false,
+    "train_window_or_partition_frozen": false
+  },
+  "Liu2024": {
+    "version": "v1.0.3",
+    "license": "CC-BY-4.0",
+    "source_complete": false,
+    "signal_audit_complete": false,
+    "source_ids_nominal": 50,
+    "official_checksum_verified_metadata_files": 506,
+    "downloaded_BDF_count": 0,
+    "published_metadata_events": 2000,
+    "blocker": "HTTP503 upstream Envoy cloudflare_https_tunnel immediate connect Invalid argument",
+    "bounded_attempts_and_diagnostics_retained": true,
+    "model_fitted": false,
+    "train_window_or_partition_frozen": false
+  },
+  "scientific_limits": [
+    "Different single-visit task/population domains, not NETBCI cohort growth",
+    "No individual MILimb healthy/clinical mapping from repeated group summary",
+    "No cross-resource biological identity independence established",
+    "No new prediction, learning, rehabilitation or retention findings"
+  ]
+}

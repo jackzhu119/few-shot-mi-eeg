@@ -1,0 +1,1274 @@
+{
+  "schema_version": 1,
+  "dataset": "Kumar2024",
+  "nemar_id": "nm000177",
+  "version": "v1.0.5",
+  "license": "CC-BY-4.0",
+  "started_at_utc": "2026-10-11T06:42:12.184300+00:00",
+  "finished_at_utc": "2026-10-11T06:42:38.829558+00:00",
+  "source_commit": "4290c4061f5d35381ed684bb07f1dd52836bbee0",
+  "script_sha256": "838614ef2e8822c1d7f1d5ee52fa2e8414a0acfa36a5616e3a4a3b88402d8ba7",
+  "plan_sha256": "6c9529674a3028da806669f4363dcd7a98491814df8dab4e202f0e1f557fcb74",
+  "runtime_versions": {
+    "python": "3.11.16",
+    "mne": "1.10.2",
+    "numpy": "2.2.6"
+  },
+  "selection_manifest_sha256": "377eb25e0938fde905b023a309b8b7adebd1a4779fd48c3d2a2d6ce22cb16750",
+  "complete": true,
+  "EDF_count": 360,
+  "passed_EDF_count": 360,
+  "participants": 18,
+  "subject_session_pairs": 108,
+  "source_events": 7200,
+  "source_class_counts": {
+    "right_hand": 3600,
+    "left_hand": 3600
+  },
+  "duration_exactly5s_count": 7156,
+  "partial_source_event_count": 44,
+  "minimum_source_duration_seconds": 4.146484,
+  "channel_names": [
+    "F7",
+    "F3",
+    "Fz",
+    "F4",
+    "F8",
+    "FC5",
+    "FC1",
+    "FC2",
+    "FC6",
+    "C3",
+    "Cz",
+    "C4",
+    "CP5",
+    "CP1",
+    "CP2",
+    "CP6",
+    "P7",
+    "P3",
+    "Pz",
+    "P4",
+    "P8",
+    "POz"
+  ],
+  "sfreq": 512.0,
+  "participant_metadata": {
+    "sha256": "1596034e5ba33af6df6870ec82bc17cf4cfd5198d91ffb35daf22e7674410bcd",
+    "row_count": 18,
+    "age_field_values": {
+      "2020": 18
+    },
+    "age_covariate_usable": false,
+    "age_problem": "All ages are2020; cannot use as human age",
+    "physical_tab_count": 152,
+    "physical_newline_count": 19,
+    "literal_escaped_tab_count": 0,
+    "literal_escaped_newline_count": 0,
+    "group_field_values": {
+      "healthy": 18
+    },
+    "GR_PAR_mapping_status": "Generic healthy group does not establish historical treatment group"
+  },
+  "whole_signal_exact_numeric_duplicate_groups": [],
+  "central4KiB_duplicate_groups": [],
+  "session_counts": [
+    {
+      "subject": "sub-1",
+      "session": "ses-0",
+      "source_events": 80,
+      "class_counts": {
+        "right_hand": 40,
+        "left_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-1",
+      "session": "ses-1",
+      "source_events": 80,
+      "class_counts": {
+        "left_hand": 40,
+        "right_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 3
+    },
+    {
+      "subject": "sub-1",
+      "session": "ses-2",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-1",
+      "session": "ses-3",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-1",
+      "session": "ses-4",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 1
+    },
+    {
+      "subject": "sub-1",
+      "session": "ses-5",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-2",
+      "session": "ses-0",
+      "source_events": 80,
+      "class_counts": {
+        "left_hand": 40,
+        "right_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-2",
+      "session": "ses-1",
+      "source_events": 80,
+      "class_counts": {
+        "right_hand": 40,
+        "left_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-2",
+      "session": "ses-2",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-2",
+      "session": "ses-3",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-2",
+      "session": "ses-4",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-2",
+      "session": "ses-5",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-3",
+      "session": "ses-0",
+      "source_events": 80,
+      "class_counts": {
+        "left_hand": 40,
+        "right_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-3",
+      "session": "ses-1",
+      "source_events": 80,
+      "class_counts": {
+        "left_hand": 40,
+        "right_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 1
+    },
+    {
+      "subject": "sub-3",
+      "session": "ses-2",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-3",
+      "session": "ses-3",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 1
+    },
+    {
+      "subject": "sub-3",
+      "session": "ses-4",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-3",
+      "session": "ses-5",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 2
+    },
+    {
+      "subject": "sub-4",
+      "session": "ses-0",
+      "source_events": 80,
+      "class_counts": {
+        "right_hand": 40,
+        "left_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-4",
+      "session": "ses-1",
+      "source_events": 80,
+      "class_counts": {
+        "right_hand": 40,
+        "left_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 2
+    },
+    {
+      "subject": "sub-4",
+      "session": "ses-2",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 2
+    },
+    {
+      "subject": "sub-4",
+      "session": "ses-3",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 1
+    },
+    {
+      "subject": "sub-4",
+      "session": "ses-4",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 2
+    },
+    {
+      "subject": "sub-4",
+      "session": "ses-5",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 2
+    },
+    {
+      "subject": "sub-5",
+      "session": "ses-0",
+      "source_events": 80,
+      "class_counts": {
+        "left_hand": 40,
+        "right_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-5",
+      "session": "ses-1",
+      "source_events": 80,
+      "class_counts": {
+        "left_hand": 40,
+        "right_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-5",
+      "session": "ses-2",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-5",
+      "session": "ses-3",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-5",
+      "session": "ses-4",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-5",
+      "session": "ses-5",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 1
+    },
+    {
+      "subject": "sub-6",
+      "session": "ses-0",
+      "source_events": 80,
+      "class_counts": {
+        "left_hand": 40,
+        "right_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-6",
+      "session": "ses-1",
+      "source_events": 80,
+      "class_counts": {
+        "right_hand": 40,
+        "left_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-6",
+      "session": "ses-2",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-6",
+      "session": "ses-3",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 1
+    },
+    {
+      "subject": "sub-6",
+      "session": "ses-4",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-6",
+      "session": "ses-5",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 2
+    },
+    {
+      "subject": "sub-7",
+      "session": "ses-0",
+      "source_events": 80,
+      "class_counts": {
+        "left_hand": 40,
+        "right_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-7",
+      "session": "ses-1",
+      "source_events": 80,
+      "class_counts": {
+        "right_hand": 40,
+        "left_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-7",
+      "session": "ses-2",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-7",
+      "session": "ses-3",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-7",
+      "session": "ses-4",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-7",
+      "session": "ses-5",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-8",
+      "session": "ses-0",
+      "source_events": 80,
+      "class_counts": {
+        "right_hand": 40,
+        "left_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-8",
+      "session": "ses-1",
+      "source_events": 80,
+      "class_counts": {
+        "right_hand": 40,
+        "left_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-8",
+      "session": "ses-2",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-8",
+      "session": "ses-3",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-8",
+      "session": "ses-4",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-8",
+      "session": "ses-5",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 1
+    },
+    {
+      "subject": "sub-9",
+      "session": "ses-0",
+      "source_events": 80,
+      "class_counts": {
+        "right_hand": 40,
+        "left_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-9",
+      "session": "ses-1",
+      "source_events": 80,
+      "class_counts": {
+        "right_hand": 40,
+        "left_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-9",
+      "session": "ses-2",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 1
+    },
+    {
+      "subject": "sub-9",
+      "session": "ses-3",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 1
+    },
+    {
+      "subject": "sub-9",
+      "session": "ses-4",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-9",
+      "session": "ses-5",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 1
+    },
+    {
+      "subject": "sub-10",
+      "session": "ses-0",
+      "source_events": 80,
+      "class_counts": {
+        "right_hand": 40,
+        "left_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-10",
+      "session": "ses-1",
+      "source_events": 80,
+      "class_counts": {
+        "left_hand": 40,
+        "right_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-10",
+      "session": "ses-2",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-10",
+      "session": "ses-3",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 1
+    },
+    {
+      "subject": "sub-10",
+      "session": "ses-4",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-10",
+      "session": "ses-5",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-11",
+      "session": "ses-0",
+      "source_events": 80,
+      "class_counts": {
+        "right_hand": 40,
+        "left_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-11",
+      "session": "ses-1",
+      "source_events": 80,
+      "class_counts": {
+        "left_hand": 40,
+        "right_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 1
+    },
+    {
+      "subject": "sub-11",
+      "session": "ses-2",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-11",
+      "session": "ses-3",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 1
+    },
+    {
+      "subject": "sub-11",
+      "session": "ses-4",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-11",
+      "session": "ses-5",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-12",
+      "session": "ses-0",
+      "source_events": 80,
+      "class_counts": {
+        "right_hand": 40,
+        "left_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-12",
+      "session": "ses-1",
+      "source_events": 80,
+      "class_counts": {
+        "right_hand": 40,
+        "left_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-12",
+      "session": "ses-2",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-12",
+      "session": "ses-3",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-12",
+      "session": "ses-4",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-12",
+      "session": "ses-5",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 1
+    },
+    {
+      "subject": "sub-13",
+      "session": "ses-0",
+      "source_events": 80,
+      "class_counts": {
+        "left_hand": 40,
+        "right_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-13",
+      "session": "ses-1",
+      "source_events": 80,
+      "class_counts": {
+        "right_hand": 40,
+        "left_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-13",
+      "session": "ses-2",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-13",
+      "session": "ses-3",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-13",
+      "session": "ses-4",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 1
+    },
+    {
+      "subject": "sub-13",
+      "session": "ses-5",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-14",
+      "session": "ses-0",
+      "source_events": 80,
+      "class_counts": {
+        "left_hand": 40,
+        "right_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-14",
+      "session": "ses-1",
+      "source_events": 80,
+      "class_counts": {
+        "left_hand": 40,
+        "right_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-14",
+      "session": "ses-2",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-14",
+      "session": "ses-3",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-14",
+      "session": "ses-4",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-14",
+      "session": "ses-5",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-15",
+      "session": "ses-0",
+      "source_events": 80,
+      "class_counts": {
+        "right_hand": 40,
+        "left_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-15",
+      "session": "ses-1",
+      "source_events": 80,
+      "class_counts": {
+        "right_hand": 40,
+        "left_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-15",
+      "session": "ses-2",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-15",
+      "session": "ses-3",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-15",
+      "session": "ses-4",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 1
+    },
+    {
+      "subject": "sub-15",
+      "session": "ses-5",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 1
+    },
+    {
+      "subject": "sub-16",
+      "session": "ses-0",
+      "source_events": 80,
+      "class_counts": {
+        "left_hand": 40,
+        "right_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-16",
+      "session": "ses-1",
+      "source_events": 80,
+      "class_counts": {
+        "right_hand": 40,
+        "left_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-16",
+      "session": "ses-2",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 1
+    },
+    {
+      "subject": "sub-16",
+      "session": "ses-3",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 2
+    },
+    {
+      "subject": "sub-16",
+      "session": "ses-4",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 1
+    },
+    {
+      "subject": "sub-16",
+      "session": "ses-5",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-17",
+      "session": "ses-0",
+      "source_events": 80,
+      "class_counts": {
+        "left_hand": 40,
+        "right_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-17",
+      "session": "ses-1",
+      "source_events": 80,
+      "class_counts": {
+        "left_hand": 40,
+        "right_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 1
+    },
+    {
+      "subject": "sub-17",
+      "session": "ses-2",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-17",
+      "session": "ses-3",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 2
+    },
+    {
+      "subject": "sub-17",
+      "session": "ses-4",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-17",
+      "session": "ses-5",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-18",
+      "session": "ses-0",
+      "source_events": 80,
+      "class_counts": {
+        "left_hand": 40,
+        "right_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-18",
+      "session": "ses-1",
+      "source_events": 80,
+      "class_counts": {
+        "right_hand": 40,
+        "left_hand": 40
+      },
+      "runs": 4,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-18",
+      "session": "ses-2",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 0
+    },
+    {
+      "subject": "sub-18",
+      "session": "ses-3",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 2
+    },
+    {
+      "subject": "sub-18",
+      "session": "ses-4",
+      "source_events": 60,
+      "class_counts": {
+        "right_hand": 30,
+        "left_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 1
+    },
+    {
+      "subject": "sub-18",
+      "session": "ses-5",
+      "source_events": 60,
+      "class_counts": {
+        "left_hand": 30,
+        "right_hand": 30
+      },
+      "runs": 3,
+      "shorter_than5s_source_events": 2
+    }
+  ],
+  "failed_runs": [],
+  "analysis_status": "signal_resource_audited_only_no_model_training_or_window_selection",
+  "scope_limits": [
+    "No hit/miss or racing outcomes inferred from MI class labels",
+    "No age covariate used; participants ages contain invalid2020 values",
+    "GR/PAR mapping requires explicit upstream subject provenance",
+    "No pooled independent participant count across datasets established",
+    "Partial events retained; no padding, extension or removal performed"
+  ]
+}

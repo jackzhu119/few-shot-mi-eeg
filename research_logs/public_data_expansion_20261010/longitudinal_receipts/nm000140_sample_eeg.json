@@ -1,0 +1,46 @@
+{
+	"TaskName": "imagery",
+	"Manufacturer": "g.tec",
+	"PowerLineFrequency": 50.0,
+	"SamplingFrequency": 512.0,
+	"SoftwareFilters": {
+		"preprocessing_steps": {
+			"Description": "bandpass filter, notch filter"
+		}
+	},
+	"RecordingDuration": 2147.5390625,
+	"RecordingType": "continuous",
+	"EEGReference": "Car",
+	"EEGGround": "n/a",
+	"EEGPlacementScheme": "10-20 system",
+	"EEGChannelCount": 13,
+	"EOGChannelCount": 0,
+	"ECGChannelCount": 0,
+	"EMGChannelCount": 0,
+	"TriggerChannelCount": 0,
+	"ManufacturersModelName": "g.tec",
+	"SoftwareVersions": "Matlab",
+	"CapManufacturer": "g.tec",
+	"CapManufacturersModelName": "g.GAMMAsys",
+	"HardwareFilters": {
+		"Bandpass": {
+			"low_cutoff_hz": 0.5,
+			"high_cutoff_hz": 100.0
+		},
+		"Notch": {
+			"CutoffFrequency": [
+				50.0
+			]
+		}
+	},
+	"TaskDescription": "Two-class motor imagery: sustained right hand movement imagery (palmar grip) versus both feet movement imagery (plantar extension) Trial duration: 11.0s, cue: 1.25s, imagery: 4.0s.",
+	"Instructions": "Relax during reference period (3s), perform sustained kinesthetic movement imagery during activity period. Condition 1 (arrow right): imagine palmar grip with right hand. Condition 2 (arrow down): imagine plantar extension of both feet.",
+	"CogAtlasID": "https://www.cognitiveatlas.org/task/id/trm_4c8a834779883/",
+	"InstitutionName": "Graz University of Technology",
+	"InstitutionAddress": "8010 Graz, Austria",
+	"InstitutionalDepartmentName": "Institute of Knowledge Discovery",
+	"SubjectArtefactDescription": "n/a",
+	"DeviceSerialNumber": "n/a",
+	"Description": "EEG recording.",
+	"MISCChannelCount": 0
+}

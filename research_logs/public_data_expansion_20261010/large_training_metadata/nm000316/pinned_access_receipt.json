@@ -1,0 +1,73 @@
+{
+  "id": "nm000316",
+  "pinned_version": "v1.0.0",
+  "checks": [
+    {
+      "url": "https://data.nemar.org/nm000316/v1.0.0/manifest.json",
+      "status": 200,
+      "bytes": 79169,
+      "sha256": "5302f9a6769ef20a2b9cb77933d36a892a91badc7f9361568c742419df766e9c",
+      "snapshot": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000316/manifest.json"
+    },
+    {
+      "url": "https://data.nemar.org/nm000316/v1.0.0/participants.tsv",
+      "status": 200,
+      "bytes": 332,
+      "sha256": "95a5df8f3fa523b824b4040c80751ef4543462a4f536025011d2cb5234a29f99",
+      "snapshot": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000316/participants.tsv"
+    },
+    {
+      "url": "https://data.nemar.org/nm000316/v1.0.0/dataset_description.json",
+      "status": 200,
+      "bytes": 1150,
+      "sha256": "ef4db8a0f9516675bfdcdddf06baf875a8aac3b65ada4354134b73b5434b2dcf",
+      "snapshot": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000316/dataset_description.json"
+    },
+    {
+      "url": "https://data.nemar.org/nm000316/v1.0.0/README.md",
+      "status": 200,
+      "bytes": 6247,
+      "sha256": "60470d0d689ab6e06964036acb33e73e255db9eaa9a2e9d00a275098dd96f752",
+      "snapshot": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000316/README.md"
+    }
+  ],
+  "manifest_file_count": 195,
+  "manifest_total_bytes": 3487192971,
+  "manifest_subject_ids": [
+    "sub-1",
+    "sub-2",
+    "sub-3",
+    "sub-4",
+    "sub-5"
+  ],
+  "sessions_per_subject": {
+    "sub-1": [
+      "ses-0"
+    ],
+    "sub-2": [
+      "ses-0"
+    ],
+    "sub-3": [
+      "ses-0"
+    ],
+    "sub-4": [
+      "ses-0"
+    ],
+    "sub-5": [
+      "ses-0"
+    ]
+  },
+  "signal_file_count": 25,
+  "signal_head": {
+    "path": "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_acq-foot_run-1_eeg.edf",
+    "url": "https://nemar.s3.us-east-2.amazonaws.com/nm000316/objects/SHA256E-s49436476--61a5ac9134ee7a45b9c2639c66f27d938539393b79a253f36afd5e847761a431.edf",
+    "status": 200,
+    "content_length": "49436476",
+    "manifest_size": 49436476,
+    "manifest_checksum_algorithm": "sha256",
+    "manifest_checksum": "61a5ac9134ee7a45b9c2639c66f27d938539393b79a253f36afd5e847761a431",
+    "body_downloaded": false
+  },
+  "participant_table_rows": 5,
+  "participant_unique_ids": 5
+}

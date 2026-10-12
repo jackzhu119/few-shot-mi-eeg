@@ -1,0 +1,1674 @@
+{
+  "schema_version": "1.0.0",
+  "audit_date_local": "2026-10-11",
+  "timezone": "Asia/Shanghai",
+  "scope": "Primary metadata/licence/file inventory and bounded actual PhysioNet hand-imagery ingestion/source audit; source qualification is not trained/model-eligible or independent pooled n. No new model training.",
+  "catalog_screening": {
+    "source": "https://moabb.neurotechx.com/docs/dataset_summary.html",
+    "all_catalog_rows": 204,
+    "retained_large_imagery_labeled_rows": 25,
+    "covered_row_names": [
+      "BNCI2020_001",
+      "Cho2017",
+      "Dreyer2023",
+      "Dreyer2023A",
+      "GuttmannFlury2025_ME",
+      "GuttmannFlury2025_MI",
+      "Han2026",
+      "HefmiIch2025",
+      "Iwama2023",
+      "Lee2019_MI",
+      "Leeuwis2021",
+      "Liu2024",
+      "MILimbEEG",
+      "MIMED2024",
+      "MIND2026",
+      "MartinezPeon2025",
+      "NeBULA2025",
+      "PerezBlanco2026",
+      "PhysionetMI",
+      "Rozado2015",
+      "Stieger2021",
+      "TrianaGuzman2024",
+      "Wang2026",
+      "Yang2025",
+      "Zuo2025"
+    ],
+    "warning": "Imagery is a software paradigm category and includes actual motor execution, aliases and task differences; not25 independent MI cohorts.",
+    "evidence": {
+      "path": "research_logs/public_data_expansion_20261010/large_training_metadata/moabb_current_summary_large_imagery.json",
+      "sha256": "d79e8477021e37b74101833e62416dd038fe1e315d8df96e19b2216dfbf26659"
+    }
+  },
+  "count_policy": {
+    "nine_source_nominal_arithmetic": 568,
+    "nine_source_ids": [
+      "PhysionetMI",
+      "Dreyer2023",
+      "Lee2019_MI",
+      "Cho2017",
+      "Yang2025",
+      "Leeuwis2021",
+      "MILimbEEG",
+      "Liu2024",
+      "MartinezPeon2025"
+    ],
+    "not_an_independent_pooled_n": true,
+    "already_ingested_or_eligible_training_participant_count": null,
+    "reason": "Use per-source download, content-identity, event/QC, model and R2 receipts. Cross-study participant overlap is unknown and source/task/population strata must remain explicit.",
+    "statistics_unit": "participant; sessions/runs/trials/windows/modalities/mirrors/algorithm seeds do not increase independent n.",
+    "new_model_training_participant_count_in_this_catalog": 0
+  },
+  "recommended_next_source_order": [
+    "PhysionetMI",
+    "Dreyer2023",
+    "Cho2017",
+    "Leeuwis2021",
+    "Lee2019_MI",
+    "Yang2025"
+  ],
+  "separate_scientifically_relevant_longitudinal_sources": [
+    "NETBCI2026",
+    "Kumar2024",
+    "Stieger2021",
+    "Iwama2023",
+    "Wang2026"
+  ],
+  "no_learning_retention_causal_claim_from_pooled_offline_training": true,
+  "source_records": [
+    {
+      "id": "PhysionetMI",
+      "nominal_participant_count": 109,
+      "independent_participant_count_verified": null,
+      "task_semantics": "Motor imagery: unilateral left/right hand runs 04/08/12; bilateral hands/feet runs 06/10/14 are a separate task. Execution and baseline runs excluded.",
+      "population": "healthy",
+      "data_license": "ODC-By-1.0",
+      "access_evidence_status": "official_records_and_checksums_read; all selected file HEAD checks recorded separately",
+      "recommendation": "first_large_source_ingestion",
+      "limitations": [
+        "No cross-day chronology or retention endpoint. T1/T2 codes change meaning with run type. Subject identity/content/QC must be audited before n enters analysis.",
+        "Actual retained source flags: S088/S089/S092/S100 all three selected runs have EDF↔WFDB annotation discrepancies and overlaps; 9 of those12 EDF use128Hz. All are preserved but not source-qualified for the current four-second hand-MI inventory."
+      ],
+      "source_url": "https://physionet.org/content/eegmmidb/1.0.0/",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/primary_access_receipt.json",
+          "sha256": "23e8d8fdbc77592ed113db9c7b930c6c561c51945ec1b85fe60821af8a68a964"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/physionet_records.txt",
+          "sha256": "02d1de9c00511d3b7548a6b59bdf209c819db025518ddcc52b21fd3b2b9de4a8"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/physionet_sha256sums.txt",
+          "sha256": "7f5d16957d8ee7bce86cc7ccba0e5994f63f33781607eb3f838392d49311a208"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/physionet_license.html",
+          "sha256": "384d5752e897c6da4d220ce6b729a1e33185eb6a7565a23b346d1ff414e3eb2e"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/physionet_eegmmidb/download_receipt_20261011T064522417697Z.json",
+          "sha256": "2e1a309260b4ac82899d2f014f1d83b6cca8ff9b8f8c6ee6c7cdfb3592c65816"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/physionet_eegmmidb/audit_20261011_run02/signal_audit.json",
+          "sha256": "5c76a23158094217f812aecee11c4b5d51c372a31927327193a5ba566b7d3b18"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/physionet_eegmmidb/independent_source_validation_20261011.json",
+          "sha256": "1a5b89707df04df1ef234b060f7cd09de55b7e2448cd01304418c889c2da67a2"
+        }
+      ],
+      "source_audit_signal_downloaded": true,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": true,
+      "session_semantics": "One acquisition visit, repeated runs; not six longitudinal days.",
+      "catalog_metadata": {
+        "#Subj": "109",
+        "#Sess": "1",
+        "Year": "2009",
+        "#EEG": "64",
+        "Freq (Hz)": "160",
+        "Mode": "",
+        "License": "ODC-By-1.0",
+        "File Format": "edf"
+      },
+      "selected_unilateral_hand_plan": {
+        "edf_records": 327,
+        "edf_and_annotation_files": 654,
+        "total_bytes_from_selection_manifest": 834146640,
+        "selection_manifest": "research_logs/public_data_expansion_20261010/physionet_eegmmidb/selection_manifest.json",
+        "counts_are_planned_not_download_or_model_counts": true
+      },
+      "current_ingestion": {
+        "completed_at_utc": "2026-10-11T06:59:13.424018+00:00",
+        "pinned_version": "1.0.0",
+        "official_file_count": 654,
+        "official_bytes": 834146640,
+        "all_official_hashes_verified": true,
+        "full_signal_read_count": 327,
+        "source_identity_count": 109,
+        "resource_audit_status": "complete_with_source_flags",
+        "source_qualified_file_count": 315,
+        "source_qualified_complete_three_run_identity_count": 105,
+        "full_4s_hand_imagery_source_windows": 4722,
+        "full_4s_class_counts": {
+          "T1_left": 2381,
+          "T2_right": 2341
+        },
+        "source_qualified_is_not_model_eligible_or_trained_n": true,
+        "source_sampling_rates_hz": [
+          128.0,
+          160.0
+        ],
+        "flagged_identities": [
+          "S088",
+          "S089",
+          "S092",
+          "S100"
+        ],
+        "complete_numeric_duplicate_groups": 0,
+        "model_training_performed": false,
+        "new_epochs_created": false,
+        "r2_status": "separate_upload_workflow_pending_receipt",
+        "download_receipt": "research_logs/public_data_expansion_20261010/physionet_eegmmidb/download_receipt_20261011T064522417697Z.json",
+        "source_audit": "research_logs/public_data_expansion_20261010/physionet_eegmmidb/audit_20261011_run02/signal_audit.json",
+        "independent_source_validation": "research_logs/public_data_expansion_20261010/physionet_eegmmidb/independent_source_validation_20261011.json"
+      }
+    },
+    {
+      "id": "Dreyer2023",
+      "nominal_participant_count": 87,
+      "independent_participant_count_verified": null,
+      "task_semantics": "left/right hand MI, calibration and online feedback",
+      "population": "healthy",
+      "data_license": "CC-BY-4.0",
+      "access_evidence_status": "pinned_manifest_participants_and_representative_signal_HEAD_verified",
+      "recommendation": "next_large_compatible_hand_MI",
+      "limitations": [
+        "Dreyer2023A/B/C are subsets of this same release; never add their participants again. Original and derivative signal copies do not add runs."
+      ],
+      "source_url": "https://doi.org/10.1038/s41597-023-02445-z",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000250/pinned_access_receipt.json",
+          "sha256": "53972d5c63454fffe66a9d4775b719e52fd47306d5885d52ee932161ad7bd1f3"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000250/dataset_description.json",
+          "sha256": "1721259d9db96e316f1897c4a177cf8a1c3e4265f631c9a649528a18896d8650"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000250/README.md",
+          "sha256": "de368d942911a414acb1f271e0cfe910c1e68d14bc20abab4a4e1586cdb76f8b"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000250/participants.tsv",
+          "sha256": "e2bf4496aecdad81b432b55cbb6eb9ee4db9ac51ec9efb6276954e0fd18259f9"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000250/manifest.json",
+          "sha256": "f2a43740b9ed1ac32f80bc54ab4501c7ef79e7751965af162e6425df61a5e684"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/dreyer_zenodo_record.json",
+          "sha256": "b41ec482572363cefd9f123e94defd1c9f783406bdeaf7dbbef3a7d376c4c755"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": true,
+      "session_semantics": "Single visit, 6 runs/participant in design; actual derivative 520 files rather than assuming 87×6 complete.",
+      "catalog_metadata": {
+        "#Subj": "87",
+        "#Sess": "1",
+        "Year": "2023",
+        "#EEG": "27",
+        "Freq (Hz)": "512",
+        "Mode": "online",
+        "License": "CC-BY-4.0",
+        "File Format": "GDF"
+      },
+      "pinned_nemar": {
+        "id": "nm000250",
+        "version": "v1.0.5",
+        "participant_table_rows": 87,
+        "manifest_subject_count": 87,
+        "manifest_file_count": 4087,
+        "manifest_total_bytes": 17006345478,
+        "derivative_signal_file_count": 520,
+        "derivative_signal_bytes": 9485388704,
+        "representative_signal_head_status": 200,
+        "signal_body_read_in_this_source_audit": false,
+        "manifest_sha256": "f2a43740b9ed1ac32f80bc54ab4501c7ef79e7751965af162e6425df61a5e684"
+      }
+    },
+    {
+      "id": "Lee2019_MI",
+      "nominal_participant_count": 54,
+      "independent_participant_count_verified": null,
+      "task_semantics": "left/right hand grasp MI; offline train and online test",
+      "population": "healthy",
+      "data_license": {
+        "original_data": "CC0-1.0",
+        "pinned_nemar_description": "GPL-3.0",
+        "scope": "Keep original data, toolbox code, and derivative declarations distinct."
+      },
+      "access_evidence_status": "pinned_manifest_participants_and_representative_signal_HEAD_verified; original_DataCite_license_verified",
+      "recommendation": "cross_day_external_cohort",
+      "limitations": [
+        "MI/ERP/SSVEP modalities share the same participants. Entire raw MAT plus BDF mirror doubles bytes, not people. No delayed no-assistance retention endpoint verified."
+      ],
+      "source_url": "https://doi.org/10.5524/100542",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000338/pinned_access_receipt.json",
+          "sha256": "a9bb149d2f3675af9e273207eb38b937ab2beb08d539ee28330d1d480a9c8c09"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000338/dataset_description.json",
+          "sha256": "0f22e269874503aa1586d8fd05e95ac96c2026f4037184921fee4d4a5ee1d0cf"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000338/README.md",
+          "sha256": "41452e0a311c6eff7cc54ec91b4263ffea5478177a4406056255bc6272ea7e9e"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000338/participants.tsv",
+          "sha256": "31d0b9f3e545c524df5a015b9f3a75785991eb81921837ce3752ba514daf4942"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000338/manifest.json",
+          "sha256": "1ebd2f1d7df09d1220b164df80c8177ec6e01b851aa0dc2cc4b2c8e1c7298435"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/longitudinal_receipts/datacite_openbmi.json",
+          "sha256": "9f32be26232ee9bcaa685e7e142419a325f431dfb5380b19d7b892884f0cb702"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": true,
+      "session_semantics": "54 participants with two different-day visits, not 108 independent people.",
+      "catalog_metadata": {
+        "#Subj": "54",
+        "#Sess": "2",
+        "Year": "2019",
+        "#EEG": "62",
+        "Freq (Hz)": "1000",
+        "Mode": "both",
+        "License": "CC0-1.0",
+        "File Format": "MAT"
+      },
+      "pinned_nemar": {
+        "id": "nm000338",
+        "version": "v1.0.5",
+        "participant_table_rows": 54,
+        "manifest_subject_count": 54,
+        "manifest_file_count": 1955,
+        "manifest_total_bytes": 130115888561,
+        "derivative_signal_file_count": 216,
+        "derivative_signal_bytes": 65265535278,
+        "representative_signal_head_status": 200,
+        "signal_body_read_in_this_source_audit": false,
+        "manifest_sha256": "1ebd2f1d7df09d1220b164df80c8177ec6e01b851aa0dc2cc4b2c8e1c7298435"
+      }
+    },
+    {
+      "id": "Cho2017",
+      "nominal_participant_count": 52,
+      "independent_participant_count_verified": null,
+      "task_semantics": "left/right hand kinesthetic finger MI",
+      "population": "healthy",
+      "data_license": "CC-BY-4.0",
+      "access_evidence_status": "pinned_manifest_participants_and_representative_signal_HEAD_verified",
+      "recommendation": "next_large_compatible_hand_MI",
+      "limitations": [
+        "64 EEG plus four EMG; preserve auxiliary channels for movement contamination checks. Published quality exclusions must be represented explicitly rather than assuming every advertised participant is eligible. Single session."
+      ],
+      "source_url": "https://doi.org/10.5524/100295",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000245/pinned_access_receipt.json",
+          "sha256": "41c613f27886f31dcb1428057980ae7df29ab72a9b3cbdf1d37955b477226666"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000245/dataset_description.json",
+          "sha256": "1468cdad1c374181d5af4097c4c1f8e4e993e34263c772e1f9783ba561780c04"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000245/README.md",
+          "sha256": "157c9d5b65d14f4eab22e33c59739730a5ad0544696e144b21b74b9738c500eb"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000245/participants.tsv",
+          "sha256": "4f178a22bc8b737eb3dfa7bfa84dc89cbc6a0853fd0d020e116e02e871fa702d"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000245/manifest.json",
+          "sha256": "1fc03e912f803d589cc08106ee46958a738e352bcc543ee248a494cbfa6a75d6"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": true,
+      "session_semantics": "Single visit with five/six blocks, not repeated days.",
+      "catalog_metadata": {
+        "#Subj": "52",
+        "#Sess": "1",
+        "Year": "2017",
+        "#EEG": "64",
+        "Freq (Hz)": "512",
+        "Mode": "offline",
+        "License": "CC-BY-4.0",
+        "File Format": ".mat (MATLAB)"
+      },
+      "pinned_nemar": {
+        "id": "nm000245",
+        "version": "v1.0.2",
+        "participant_table_rows": 52,
+        "manifest_subject_count": 52,
+        "manifest_file_count": 635,
+        "manifest_total_bytes": 17947818557,
+        "derivative_signal_file_count": 52,
+        "derivative_signal_bytes": 7242636192,
+        "representative_signal_head_status": 200,
+        "signal_body_read_in_this_source_audit": false,
+        "manifest_sha256": "1fc03e912f803d589cc08106ee46958a738e352bcc543ee248a494cbfa6a75d6"
+      }
+    },
+    {
+      "id": "Yang2025",
+      "nominal_participant_count": 51,
+      "independent_participant_count_verified": null,
+      "task_semantics": "left/right hand MI, binary subset of WBCIC-SHU",
+      "population": "healthy",
+      "data_license": "CC-BY-4.0",
+      "access_evidence_status": "pinned_manifest_participants_and_representative_signal_HEAD_verified",
+      "recommendation": "high_priority_newer_cross_day_external_cohort",
+      "limitations": [
+        "Paper reports 62 total: 51 binary and 11 three-class subjects; current pinned mirror contains binary 51. nm000246 and nm000348 are mirrors of the same binary cohort. Yang2025 differs from blocked Ma2022 SHU. Collection year and publication year differ."
+      ],
+      "source_url": "https://doi.org/10.1038/s41597-025-04826-y",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000348/pinned_access_receipt.json",
+          "sha256": "764432fbd03080bbe7bc8fc367080f1ffdb857fa8711d24962fcaaaccb9c237c"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000348/dataset_description.json",
+          "sha256": "e2963cfc4b1347faaecc2dce598f40a2b4c2602c4082f36cd13105467c765e01"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000348/README.md",
+          "sha256": "ef001ef3e0de4ac981ae3e102623fdecf4df24fcd45eda7caa2611597f3fc826"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000348/participants.tsv",
+          "sha256": "1b4a41957d6bb6ebfec66df7d740b5c3f05a80384cf0fbd47c8e0a969d1b62f9"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000348/manifest.json",
+          "sha256": "edf8aa9efbf55ac4468a59a13bf00ae7273fd9980ac6f4e129b46ac22905169c"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/yang_figshare_record.json",
+          "sha256": "3f6ab14a740e8b48bfe483d648bda8bf5681f235aa3712c26f3432a852769e52"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": true,
+      "session_semantics": "Three different-day sessions, 153 person-sessions in pinned binary release.",
+      "catalog_metadata": {
+        "#Subj": "51",
+        "#Sess": "3",
+        "Year": "2025",
+        "#EEG": "59",
+        "Freq (Hz)": "1000",
+        "Mode": "offline",
+        "License": "CC-BY-4.0",
+        "File Format": "BDF"
+      },
+      "pinned_nemar": {
+        "id": "nm000348",
+        "version": "v1.0.5",
+        "participant_table_rows": 51,
+        "manifest_subject_count": 51,
+        "manifest_file_count": 2231,
+        "manifest_total_bytes": 165139463639,
+        "derivative_signal_file_count": 153,
+        "derivative_signal_bytes": 68046406110,
+        "representative_signal_head_status": 200,
+        "signal_body_read_in_this_source_audit": false,
+        "manifest_sha256": "edf8aa9efbf55ac4468a59a13bf00ae7273fd9980ac6f4e129b46ac22905169c"
+      }
+    },
+    {
+      "id": "Leeuwis2021",
+      "nominal_participant_count": 55,
+      "independent_participant_count_verified": null,
+      "task_semantics": "left/right hand MI, calibration and feedback",
+      "population": "healthy BCI-naive students",
+      "data_license": "CC-BY-4.0",
+      "access_evidence_status": "pinned_manifest_participants_sidecars_and_representative_signal_HEAD_verified",
+      "recommendation": "efficient_large_hand_MI_replication",
+      "limitations": [
+        "Stored trial CSVs span cue −3 to +5 s. Concatenation and EDGE markers reconstruct a tensor presentation; no claim of original continuous signal across joins. Within-visit feedback is not delayed retention."
+      ],
+      "source_url": "https://doi.org/10.34894/Z7ZVOD",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000327/pinned_access_receipt.json",
+          "sha256": "2c129697af420cceb309d146985bae13a6f6b7f22bf807d0c678ab2df5b54bc0"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000327/dataset_description.json",
+          "sha256": "9e2ffe86c18cafb9f4af259abe8c640afb9ec5ff2f444a3c3a1d13b610413bae"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000327/README.md",
+          "sha256": "9b6fe57b5bd2af3798bd27edbc914303c24bb724f3db8be7c0272404945ad1f1"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000327/participants.tsv",
+          "sha256": "340f52e759f28e9f305d0d4802eb932f2bed482525760388560c2d168bfc73c0"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000327/manifest.json",
+          "sha256": "a7865c708e6c01f076d1f7415fded3c0e89008c3251949290a3ede42e0d5c5c3"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/Leeuwis2021_docs_extract.json",
+          "sha256": "7138a26e252f20492bcbc1814ba7d706f5354309eb9b084d69428ef5784d39c3"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": true,
+      "session_semantics": "Single visit, one calibration and three feedback runs.",
+      "catalog_metadata": {
+        "#Subj": "55",
+        "#Sess": "1",
+        "Year": "2021",
+        "#EEG": "16",
+        "Freq (Hz)": "250",
+        "Mode": "online",
+        "License": "CC-BY-4.0",
+        "File Format": "CSV"
+      },
+      "pinned_nemar": {
+        "id": "nm000327",
+        "version": "v1.0.0",
+        "participant_table_rows": 55,
+        "manifest_subject_count": 55,
+        "manifest_file_count": 2320,
+        "manifest_total_bytes": 5692944636,
+        "derivative_signal_file_count": 220,
+        "derivative_signal_bytes": 566607360,
+        "representative_signal_head_status": 200,
+        "signal_body_read_in_this_source_audit": false,
+        "manifest_sha256": "a7865c708e6c01f076d1f7415fded3c0e89008c3251949290a3ede42e0d5c5c3"
+      }
+    },
+    {
+      "id": "MILimbEEG",
+      "nominal_participant_count": 60,
+      "independent_participant_count_verified": null,
+      "task_semantics": "Actual movement (M) and imagery (I) files coexist; use imagery files only, keep hand and foot tasks separate.",
+      "population": "mixed: amputations, hydrocephalus after ventricular infarct, post-COVID and healthy volunteers",
+      "data_license": "CC-BY-4.0",
+      "access_evidence_status": "pinned_manifest_participants_sidecars_and_representative_signal_HEAD_verified",
+      "recommendation": "separate_low_channel_and_population_generalization",
+      "limitations": [
+        "4-s segmented CSVs; concatenation is not original continuous EEG. Reported >8680 recordings combine conditions, not MI training trials verified here. Some subjects repeat, not all have equal sessions. 125 Hz and 16-channel hardware differ from high-density NETBCI."
+      ],
+      "source_url": "https://doi.org/10.17632/x8psbz3f6x.2",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000328/pinned_access_receipt.json",
+          "sha256": "4f1f66e4f8affdecf578f67c5a7ece6e5682283399e153e9bce90919435bafd0"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000328/dataset_description.json",
+          "sha256": "4ad1c1a29234dfa21fe64bc5febc3ce6b4451b8b6f42e9184f7b05d32542a0b3"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000328/README.md",
+          "sha256": "26082da2620424097e234c6445445c56e52cbee2e575ff14827dee3bfdb842a8"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000328/participants.tsv",
+          "sha256": "42d386a1fbf24582b8da25daf641597c29964b982cb790cc67579781b9fcb1cc"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000328/manifest.json",
+          "sha256": "3bc42ee72fc78eff2702c50a3c664520cd578542bec10ef98375c78497dcccd1"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/MILimbEEG_docs_extract.json",
+          "sha256": "114829e98c4b83df5c0e94fa08ff8bc0e792b74e05e7fa6d721ecf59a9dc5154"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": true,
+      "session_semantics": "One repetition for most; repeated blocks in a minority must not be called a balanced cross-day cohort.",
+      "catalog_metadata": {
+        "#Subj": "60",
+        "#Sess": "1",
+        "Year": "2023",
+        "#EEG": "16",
+        "Freq (Hz)": "125",
+        "Mode": "offline",
+        "License": "CC-BY-4.0",
+        "File Format": "CSV"
+      },
+      "pinned_nemar": {
+        "id": "nm000328",
+        "version": "v1.0.0",
+        "participant_table_rows": 60,
+        "manifest_subject_count": 60,
+        "manifest_file_count": 8110,
+        "manifest_total_bytes": 1185725941,
+        "derivative_signal_file_count": 60,
+        "derivative_signal_bytes": 60464776,
+        "representative_signal_head_status": 200,
+        "signal_body_read_in_this_source_audit": false,
+        "manifest_sha256": "3bc42ee72fc78eff2702c50a3c664520cd578542bec10ef98375c78497dcccd1"
+      }
+    },
+    {
+      "id": "Liu2024",
+      "nominal_participant_count": 50,
+      "independent_participant_count_verified": null,
+      "task_semantics": "left/right hand-grip MI with gripping video cue",
+      "population": "acute stroke patients (1–30 days after onset)",
+      "data_license": "CC-BY-4.0",
+      "access_evidence_status": "pinned_manifest_participants_sidecars_and_representative_signal_HEAD_verified",
+      "recommendation": "separate_clinical_external_validation",
+      "limitations": [
+        "29 EEG +2 EOG,500 Hz. Alternating left/right trials and visual movement cues require time/cue controls. Clinical subjects cannot simply enlarge a healthy-population n. No longitudinal retention endpoint."
+      ],
+      "source_url": "https://doi.org/10.1038/s41597-023-02787-8",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000158/pinned_access_receipt.json",
+          "sha256": "aa556dc6609affd31a2090f03f851d52cbf8963eb290b7b7d87d41a5a4bd902f"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000158/dataset_description.json",
+          "sha256": "0eea40b9e98b6dfb2fd551c5ee0c387379cb78991c9c8227e8335aa8f0d1949b"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000158/README.md",
+          "sha256": "8ed712202d30fa5bf3edfd33506c46f82b7cbcf16e49a3831ea5efa69a97071b"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000158/participants.tsv",
+          "sha256": "945f211e5cf7fa721c81ccbebf73cadda0a0d98a9bf73462dc065032e670236b"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000158/manifest.json",
+          "sha256": "61cc35913869ecd8ed4c564aa1d3ab8dea0aa7c84f66b4318d4d6409aefdbd83"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/Liu2024_docs_extract.json",
+          "sha256": "ea7a8590eca036940000dde84a9524e05bdbee00ad6fa69c3fe694864cd372af"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": true,
+      "session_semantics": "Single acquisition visit, 40 trials per design.",
+      "catalog_metadata": {
+        "#Subj": "50",
+        "#Sess": "1",
+        "Year": "2024",
+        "#EEG": "29",
+        "Freq (Hz)": "500",
+        "Mode": "offline",
+        "License": "CC-BY-4.0",
+        "File Format": "MAT and EDF"
+      },
+      "pinned_nemar": {
+        "id": "nm000158",
+        "version": "v1.0.3",
+        "participant_table_rows": 50,
+        "manifest_subject_count": 50,
+        "manifest_file_count": 613,
+        "manifest_total_bytes": 1234574316,
+        "derivative_signal_file_count": 50,
+        "derivative_signal_bytes": 696884480,
+        "representative_signal_head_status": 200,
+        "signal_body_read_in_this_source_audit": false,
+        "manifest_sha256": "61cc35913869ecd8ed4c564aa1d3ab8dea0aa7c84f66b4318d4d6409aefdbd83"
+      }
+    },
+    {
+      "id": "MartinezPeon2025",
+      "nominal_participant_count": 50,
+      "independent_participant_count_verified": null,
+      "task_semantics": "Four kinesthetic grip-force imagery levels, each participant images only one hand.",
+      "population": "healthy right-handed students",
+      "data_license": "CC-BY-NC-SA-4.0",
+      "access_evidence_status": "Mendeley_primary_metadata_202_files_200_CSVs_and_representative_signal_HEAD_verified",
+      "recommendation": "reserve_for_separate_force_MI_question",
+      "limitations": [
+        "S01–25 left hand, S26–50 right hand: handed task label confounded with participant group, no within-person left/right contrast. Force class equals 84-s recording/run. Sampling 500 Hz inferred from 42000 samples/84 s, not stated. No per-trial event log verified; do not manufacture onset/labels from narrative protocol. No linked primary paper in record."
+      ],
+      "source_url": "https://doi.org/10.17632/msgzn862ns.1",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/martinez2025_mendeley_access_receipt.json",
+          "sha256": "ba5048d2faf0fe8d96f3f9973e6a5e2152c025e2e834c29131778af700a290b6"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/martinez2025_mendeley_metadata_sanitized.json",
+          "sha256": "c830bd4cf884c08e25c08c87f930a0da38d072e571d3ab3c5cd7d4dea2dfe43d"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/MartinezPeon2025_docs_extract.json",
+          "sha256": "52bc0195b69d15fc4b0ddd1c90e8b5cf729ff981c5a0a500418d9ff3cbd7ff32"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": true,
+      "session_semantics": "One visit, four force recordings per person; 200 recordings do not add subjects.",
+      "catalog_metadata": {
+        "#Subj": "50",
+        "#Sess": "1",
+        "Year": "2025",
+        "#EEG": "20",
+        "Freq (Hz)": "500",
+        "Mode": "offline",
+        "License": "CC-BY-NC-SA-4.0",
+        "File Format": "CSV"
+      },
+      "primary_file_inventory": {
+        "version": 1,
+        "files": 202,
+        "signal_CSVs": 200,
+        "total_bytes": 1337548703,
+        "signal_downloaded_in_this_source_audit": false
+      }
+    },
+    {
+      "id": "GuttmannFlury2025_MI",
+      "nominal_participant_count": 31,
+      "independent_participant_count_verified": null,
+      "task_semantics": "left/right hand MI; separate ME,SSVEP,P300 paradigms of the same participants",
+      "population": "healthy",
+      "data_license": "CC0 claimed by current catalog; original Synapse/Zenodo record scope pending independent license/file verification",
+      "access_evidence_status": "MOABB_documentation_read; primary_repository_file_inventory_pending",
+      "recommendation": "promising_recent_MI_and_ocular_controls",
+      "limitations": [
+        "Three listed sessions must be verified as temporal blocks/visits; catalog total-trial metadata not accepted without files. MI and ME aliases share all 31 participants. BDF is a conversion from CSV."
+      ],
+      "source_url": "https://doi.org/10.1038/s41597-025-04861-9",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/GuttmannFlury2025_MI.json",
+          "sha256": "921eacceb9e6d99e2670bff5c95faf23ede4e1668df52cd220d75b59d52ea0ae"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/access_receipt.json",
+          "sha256": "5113852cbda2eed93203571a743d09489d397111cd400ef465bce3af148464d7"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": false,
+      "catalog_metadata": {
+        "#Subj": "31",
+        "#Sess": "3",
+        "Year": "2025",
+        "#EEG": "62",
+        "Freq (Hz)": "1000",
+        "Mode": "offline",
+        "License": "CC0",
+        "File Format": "BDF"
+      }
+    },
+    {
+      "id": "HefmiIch2025",
+      "nominal_participant_count": 37,
+      "independent_participant_count_verified": null,
+      "task_semantics": "left/right hand grasp MI; simultaneous EEG/fNIRS",
+      "population": "17 healthy controls +20 intracerebral hemorrhage patients",
+      "data_license": "CC-BY-4.0 in Figshare v4; description separately prohibits commercial use, preserve both declarations",
+      "access_evidence_status": "Figshare_primary_file_inventory_and_license_read",
+      "recommendation": "high_value_separate_mixed_clinical_longitudinal",
+      "limitations": [
+        "Catalog says three sessions; documentation says per-person 1–6, so report actual availability. Pre-epoched MAT,30 trials/session,32 channels/256 Hz. EEG/fNIRS are the same people. Preserve license text discrepancy."
+      ],
+      "source_url": "https://doi.org/10.1038/s41597-025-06100-7",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/HefmiIch2025.json",
+          "sha256": "95f0007a73bf2a997211d261bf3cd1b5f452bbea0fccf69ba16386e95ca0b6cc"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/access_receipt.json",
+          "sha256": "5113852cbda2eed93203571a743d09489d397111cd400ef465bce3af148464d7"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/hefmi_figshare.json",
+          "sha256": "202c7050dc3d42425451ca74254da038dab644e356496a7588f3a4574c73de42"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/primary_access_receipt.json",
+          "sha256": "b3a9958a64c1e3043a02ca922ceb4e9e1e61479bee8c27e25cca6d83690df954"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": false,
+      "catalog_metadata": {
+        "#Subj": "37",
+        "#Sess": "3",
+        "Year": "2025",
+        "#EEG": "32",
+        "Freq (Hz)": "256",
+        "Mode": "offline",
+        "License": "CC-BY-4.0",
+        "File Format": "MAT (pre-epoched)"
+      },
+      "primary_file_inventory": {
+        "doi": "10.6084/m9.figshare.28955456.v4",
+        "version": 4,
+        "file_count": 494,
+        "total_file_bytes": 13166046201,
+        "download_disabled": false,
+        "signal_body_read_in_this_source_audit": false
+      }
+    },
+    {
+      "id": "Han2026",
+      "nominal_participant_count": 35,
+      "independent_participant_count_verified": null,
+      "task_semantics": "Basketball motor observation vs motor imagery, not left vs right hand MI",
+      "population": "healthy",
+      "data_license": "CC0 in current catalog; DataCite rightsList empty, pinned dataset_description not yet checked",
+      "access_evidence_status": "OpenNeuro_version_DOI_read; primary_file_inventory_pending",
+      "recommendation": "separate_task_not_common_hand_MI_training",
+      "limitations": [
+        "Dribble pure MO/MI markers only; ballpass/passing compound sequences are different. 1-s trials,64 EEG plus24 unnamed bipolar channels. Documentation notes duplicate markers for subjects20/25/27."
+      ],
+      "source_url": "https://doi.org/10.18112/openneuro.ds007327.v1.1.0",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/Han2026.json",
+          "sha256": "a693bcdae8d4ba9eece13a8d1a96d4ad4d4c2a6bf581a997ee43288971331b6f"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/access_receipt.json",
+          "sha256": "5113852cbda2eed93203571a743d09489d397111cd400ef465bce3af148464d7"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/han_datacite.json",
+          "sha256": "52cc5b6482355cf5753ffdafef70c026802a2c7718d0f7c2a1512fc338f0ba6c"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/primary_access_receipt.json",
+          "sha256": "b3a9958a64c1e3043a02ca922ceb4e9e1e61479bee8c27e25cca6d83690df954"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": false,
+      "catalog_metadata": {
+        "#Subj": "35",
+        "#Sess": "1",
+        "Year": "2026",
+        "#EEG": "64",
+        "Freq (Hz)": "1000",
+        "Mode": "offline",
+        "License": "CC0",
+        "File Format": "EEGLAB (BIDS)"
+      }
+    },
+    {
+      "id": "MIMED2024",
+      "nominal_participant_count": 30,
+      "independent_participant_count_verified": null,
+      "task_semantics": "MI and ME coexist; imagery hand/trunk scenario files only",
+      "population": "healthy students",
+      "data_license": "CC-BY-4.0 claimed by documentation; primary file/license inventory pending",
+      "access_evidence_status": "MOABB_documentation_read; primary_repository_file_inventory_pending",
+      "recommendation": "reserve_low_density_cross_day_external",
+      "limitations": [
+        "14 electrodes/128 Hz lack NETBCI common C3/Cz/C4 geometry. Original article reports24 trials; adapter exposes12 windows per subject from scenario blocks because per-repetition labels absent. Do not infer finer movement labels."
+      ],
+      "source_url": "https://doi.org/10.17632/zs25xxjkm9.3",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/MIMED2024.json",
+          "sha256": "859f9d7bc0b55fef5d823c1c0c71466d181c331f8f04f0c86ceb790975f85c52"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/access_receipt.json",
+          "sha256": "5113852cbda2eed93203571a743d09489d397111cd400ef465bce3af148464d7"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": false,
+      "catalog_metadata": {
+        "#Subj": "30",
+        "#Sess": "2",
+        "Year": "2024",
+        "#EEG": "14",
+        "Freq (Hz)": "128",
+        "Mode": "offline",
+        "License": "CC-BY-4.0",
+        "File Format": "MAT (converted from EDF)"
+      }
+    },
+    {
+      "id": "MIND2026",
+      "nominal_participant_count": 30,
+      "independent_participant_count_verified": null,
+      "task_semantics": "Four directional MI conditions of right upper limb",
+      "population": "healthy",
+      "data_license": "CC-BY-NC-4.0, ScienceDB PUBLIC version4 metadata",
+      "access_evidence_status": "ScienceDB_public_access_and_license_verified; primary_download_file_inventory_pending",
+      "recommendation": "separate_directional_MI_with_block_controls",
+      "limitations": [
+        "Three consecutive blocks in one visit; direction-pair4/5 precedes6/7, acquisition-half confound. EEG/fNIRS are not separate participants. PUBLIC landing metadata is not successful signal GET or adaptation audit."
+      ],
+      "source_url": "https://doi.org/10.57760/sciencedb.34326",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/MIND2026.json",
+          "sha256": "14be6e7ce607d62ede7f0b84effa6c387f2690181f507a6cf4fa1f5b0e49e17b"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/access_receipt.json",
+          "sha256": "5113852cbda2eed93203571a743d09489d397111cd400ef465bce3af148464d7"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/mind_sciencedb_structured_metadata.json",
+          "sha256": "35d50c6c0bcf430abaeedde8fe178f24c48e315bcc9e325c3a868ed75126ed5c"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/primary_access_receipt.json",
+          "sha256": "b3a9958a64c1e3043a02ca922ceb4e9e1e61479bee8c27e25cca6d83690df954"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": false,
+      "catalog_metadata": {
+        "#Subj": "30",
+        "#Sess": "1",
+        "Year": "2026",
+        "#EEG": "64",
+        "Freq (Hz)": "1000",
+        "Mode": "offline",
+        "License": "CC-BY-NC-4.0",
+        "File Format": "BrainVision"
+      }
+    },
+    {
+      "id": "NeBULA2025",
+      "nominal_participant_count": 39,
+      "independent_participant_count_verified": null,
+      "task_semantics": "Actual right-arm reaching with free/low/high robot assistance; no MI condition",
+      "population": "healthy; paper40,release39",
+      "data_license": "CC-BY-4.0 in current catalog; primary Figshare license scope not independently verified here",
+      "access_evidence_status": "MOABB_documentation_read",
+      "recommendation": "exclude_from_MI_training",
+      "limitations": [
+        "Subject28 not released. 127-channel EEG and11-muscle EMG; targeting and assistance are actual execution conditions. Paradigm=Imagery in software does not establish MI semantics."
+      ],
+      "source_url": "https://doi.org/10.1038/s41597-025-05042-4",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/NeBULA2025.json",
+          "sha256": "b38d1a5d938529de040ed8414816e7e1fce81c24990cb1d2a8cb67ac92a9dcb0"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/access_receipt.json",
+          "sha256": "5113852cbda2eed93203571a743d09489d397111cd400ef465bce3af148464d7"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": false,
+      "catalog_metadata": {
+        "#Subj": "39",
+        "#Sess": "1",
+        "Year": "2025",
+        "#EEG": "127",
+        "Freq (Hz)": "1000",
+        "Mode": "offline",
+        "License": "CC-BY-4.0",
+        "File Format": "BrainVision (BIDS)"
+      }
+    },
+    {
+      "id": "PerezBlanco2026",
+      "nominal_participant_count": 45,
+      "independent_participant_count_verified": null,
+      "task_semantics": "Actual wrist-pointing execution with exoskeleton encoders; no MI condition",
+      "population": "healthy",
+      "data_license": "Figshare v3 CC-BY-4.0; BIDS description PD conflict noted in documentation",
+      "access_evidence_status": "Figshare_primary_file_inventory_and_license_read",
+      "recommendation": "exclude_from_MI_training",
+      "limitations": [
+        "8 EEG+8 EMG/512 Hz. Paper recommends excluding subject31 because of persistent noise, not silently reducing nominal45. Class from current-target state and movement-onset state; never use four wrist directions as MI labels."
+      ],
+      "source_url": "https://doi.org/10.1038/s41597-026-07287-z",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/PerezBlanco2026.json",
+          "sha256": "1e9715cc4cb1db55e1f3ce213850bece72d58859275aecf86e95b6d11dae2497"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/access_receipt.json",
+          "sha256": "5113852cbda2eed93203571a743d09489d397111cd400ef465bce3af148464d7"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/perez_figshare.json",
+          "sha256": "fb2f9c9043fb6912338727a0b8815f7c6b7e49b11dfedb7853a1df1afa617313"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/primary_access_receipt.json",
+          "sha256": "b3a9958a64c1e3043a02ca922ceb4e9e1e61479bee8c27e25cca6d83690df954"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": false,
+      "catalog_metadata": {
+        "#Subj": "45",
+        "#Sess": "1",
+        "Year": "2026",
+        "#EEG": "8",
+        "Freq (Hz)": "512",
+        "Mode": "offline",
+        "License": "CC-BY-4.0",
+        "File Format": "EDF (BIDS, converted fro..."
+      },
+      "primary_file_inventory": {
+        "doi": "10.6084/m9.figshare.29666735.v3",
+        "version": 3,
+        "file_count": 55,
+        "total_file_bytes": 3683416050,
+        "download_disabled": false,
+        "signal_body_read_in_this_source_audit": false
+      }
+    },
+    {
+      "id": "Wang2026",
+      "nominal_participant_count": 39,
+      "independent_participant_count_verified": null,
+      "task_semantics": "Sensory-guided joint-learning MI-BCI with four experimental groups",
+      "population": "healthy BCI-naive",
+      "data_license": "CC-BY-NC-4.0 Figshare v1",
+      "access_evidence_status": "Figshare_primary_file_inventory_and_license_read",
+      "recommendation": "high_scientific_relevance_same_L1_study_not_new_confirmation",
+      "limitations": [
+        "Same Wang2026 paper already read as L1. Groups15/8/8/8; tactile assistance and decoder differences retained. Trial-segmented MATLAB,variable lengths, no invented padding. Five sessions in metadata not an assumed complete balanced panel."
+      ],
+      "source_url": "https://doi.org/10.1184/R1/32293995.v1",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/Wang2026.json",
+          "sha256": "285d6986f8c54f2ea5ead1191d4cf4fc5ef840bc2e8bc3ea54a0e1ce5dff5a4c"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/access_receipt.json",
+          "sha256": "5113852cbda2eed93203571a743d09489d397111cd400ef465bce3af148464d7"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/wang_figshare_v1.json",
+          "sha256": "177e475d88d53621b0161486f8c97d306694424cd88285879f05258dacbefc56"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/primary_access_receipt.json",
+          "sha256": "b3a9958a64c1e3043a02ca922ceb4e9e1e61479bee8c27e25cca6d83690df954"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": false,
+      "catalog_metadata": {
+        "#Subj": "39",
+        "#Sess": "5",
+        "Year": "2026",
+        "#EEG": "62",
+        "Freq (Hz)": "1000",
+        "Mode": "online",
+        "License": "CC-BY-NC-4.0",
+        "File Format": "MATLAB v7.3"
+      },
+      "primary_file_inventory": {
+        "doi": "10.1184/R1/32293995.v1",
+        "version": 1,
+        "file_count": 5,
+        "total_file_bytes": 63738061009,
+        "download_disabled": false,
+        "signal_body_read_in_this_source_audit": false
+      }
+    },
+    {
+      "id": "Zuo2025",
+      "nominal_participant_count": 30,
+      "independent_participant_count_verified": null,
+      "task_semantics": "left/right leg MI",
+      "population": "knee pain patients",
+      "data_license": "CC-BY-4.0 Figshare v3",
+      "access_evidence_status": "Figshare_primary_file_inventory_and_license_read",
+      "recommendation": "separate_lower_limb_clinical_cross_day",
+      "limitations": [
+        "Design5sessions every2days; documentation notes32/150 missing raw sessions in12subjects. Validate actual118 raw sessions, not infer completion from processed tables. README/events label inconsistency remains to resolve from original cues before models."
+      ],
+      "source_url": "https://doi.org/10.1038/s41597-025-05767-2",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/Zuo2025.json",
+          "sha256": "410e5b245dd492e6a3b2934fd47243d816bbaf75542116e823c4a67295f233c8"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/access_receipt.json",
+          "sha256": "5113852cbda2eed93203571a743d09489d397111cd400ef465bce3af148464d7"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/zuo_figshare.json",
+          "sha256": "3776d0cd3986447773ee255258c097ccc7e25af910c03f109d2842875527d5be"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/primary_access_receipt.json",
+          "sha256": "b3a9958a64c1e3043a02ca922ceb4e9e1e61479bee8c27e25cca6d83690df954"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": false,
+      "catalog_metadata": {
+        "#Subj": "30",
+        "#Sess": "5",
+        "Year": "2025",
+        "#EEG": "30",
+        "Freq (Hz)": "500",
+        "Mode": "offline",
+        "License": "CC-BY-4.0",
+        "File Format": "MAT"
+      },
+      "primary_file_inventory": {
+        "doi": "10.6084/m9.figshare.28740260.v3",
+        "version": 3,
+        "file_count": 335,
+        "total_file_bytes": 22518517421,
+        "download_disabled": false,
+        "signal_body_read_in_this_source_audit": false
+      }
+    },
+    {
+      "id": "Iwama2023",
+      "nominal_participant_count": 30,
+      "independent_participant_count_verified": null,
+      "task_semantics": "right-hand MI vs rest with ERD neurofeedback",
+      "population": "healthy right-handed",
+      "data_license": "CC0 in current catalog; DataCite rightsList empty, pinned dataset_description not yet checked",
+      "access_evidence_status": "OpenNeuro_version_DOI_read; primary_file_inventory_pending",
+      "recommendation": "high_priority_task_matched_two_day_validation",
+      "limitations": [
+        "16 stored ses are blocks over two consecutive days (pre+6feedback+post each day), not16 training days. Some blocks missing. Docs report events.tsv onsets in milliseconds despite BIDS seconds convention; validate actual clock against EDF and annotation before epoching."
+      ],
+      "source_url": "https://doi.org/10.1038/s41597-023-02260-6",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/Iwama2023.json",
+          "sha256": "c88fb0e0493e32731d954f9150edcbe8585eb5997c786930171e12d48a72dd09"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/access_receipt.json",
+          "sha256": "5113852cbda2eed93203571a743d09489d397111cd400ef465bce3af148464d7"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/iwama_datacite.json",
+          "sha256": "1ac12159b1f4e97c5fc999591a885d355f370c62d5f702e32d9646e3ba7324de"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/primary_access_receipt.json",
+          "sha256": "b3a9958a64c1e3043a02ca922ceb4e9e1e61479bee8c27e25cca6d83690df954"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": false,
+      "catalog_metadata": {
+        "#Subj": "30",
+        "#Sess": "16",
+        "Year": "2023",
+        "#EEG": "129",
+        "Freq (Hz)": "1000",
+        "Mode": "online",
+        "License": "CC0",
+        "File Format": "EDF (BIDS)"
+      }
+    },
+    {
+      "id": "BNCI2020_001",
+      "nominal_participant_count": 45,
+      "independent_participant_count_verified": null,
+      "task_semantics": "Actual self-initiated reach/grasp execution",
+      "population": "healthy",
+      "data_license": "CC-BY-4.0 in current catalog",
+      "access_evidence_status": "catalog_only",
+      "recommendation": "exclude_from_MI_training",
+      "limitations": [
+        "Software Imagery category conflicts with Mode=execution; metadata discovery is not a source audit."
+      ],
+      "source_url": "https://moabb.neurotechx.com/docs/generated/moabb.datasets.BNCI2020_001.html",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/moabb_current_summary_large_imagery.json",
+          "sha256": "d79e8477021e37b74101833e62416dd038fe1e315d8df96e19b2216dfbf26659"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": false,
+      "catalog_metadata": {
+        "#Subj": "45",
+        "#Sess": "1",
+        "Year": "2020",
+        "#EEG": "58",
+        "Freq (Hz)": "256",
+        "Mode": "execution",
+        "License": "CC-BY-4.0",
+        "File Format": "MAT"
+      }
+    },
+    {
+      "id": "Dreyer2023A",
+      "nominal_participant_count": 60,
+      "independent_participant_count_verified": null,
+      "task_semantics": "left/right hand MI, subset of Dreyer2023",
+      "population": "healthy",
+      "data_license": "CC-BY-4.0",
+      "access_evidence_status": "same_release_alias",
+      "recommendation": "no_new_participants",
+      "limitations": [
+        "This subset is already included in nominal Dreyer87; DreyerB/C likewise cannot be added."
+      ],
+      "source_url": "https://doi.org/10.5281/zenodo.8089820",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/moabb_current_summary_large_imagery.json",
+          "sha256": "d79e8477021e37b74101833e62416dd038fe1e315d8df96e19b2216dfbf26659"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/dreyer_zenodo_record.json",
+          "sha256": "b41ec482572363cefd9f123e94defd1c9f783406bdeaf7dbbef3a7d376c4c755"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": false,
+      "catalog_metadata": {
+        "#Subj": "60",
+        "#Sess": "1",
+        "Year": "2023",
+        "#EEG": "27",
+        "Freq (Hz)": "512",
+        "Mode": "online",
+        "License": "CC-BY-4.0",
+        "File Format": "GDF"
+      }
+    },
+    {
+      "id": "GuttmannFlury2025_ME",
+      "nominal_participant_count": 31,
+      "independent_participant_count_verified": null,
+      "task_semantics": "Actual motor execution alias of same multimodal participants",
+      "population": "healthy",
+      "data_license": "CC0 claimed by catalog; scope pending",
+      "access_evidence_status": "same_release_modality_alias",
+      "recommendation": "exclude_from_MI_training_and_no_new_people",
+      "limitations": [
+        "All31 overlap the GuttmannFlury MI entry. MI/ME/SSVEP/P300/eye/video cannot be summed as people."
+      ],
+      "source_url": "https://doi.org/10.1038/s41597-025-04861-9",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/moabb_current_summary_large_imagery.json",
+          "sha256": "d79e8477021e37b74101833e62416dd038fe1e315d8df96e19b2216dfbf26659"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/latest_candidates_20261011/GuttmannFlury2025_MI.json",
+          "sha256": "921eacceb9e6d99e2670bff5c95faf23ede4e1668df52cd220d75b59d52ea0ae"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": false,
+      "catalog_metadata": {
+        "#Subj": "31",
+        "#Sess": "3",
+        "Year": "2025",
+        "#EEG": "62",
+        "Freq (Hz)": "1000",
+        "Mode": "offline",
+        "License": "CC0",
+        "File Format": "BDF"
+      }
+    },
+    {
+      "id": "Rozado2015",
+      "nominal_participant_count": 30,
+      "independent_participant_count_verified": null,
+      "task_semantics": "left-hand MI vs rest with pupil measurements",
+      "population": "healthy",
+      "data_license": "CC0-1.0 in current catalog",
+      "access_evidence_status": "catalog_only",
+      "recommendation": "lower_priority_task_matched_source_check_pending",
+      "limitations": [
+        "Pupillometry and EEG concern same30 people; check actual data access/version before expansion."
+      ],
+      "source_url": "https://moabb.neurotechx.com/docs/generated/moabb.datasets.Rozado2015.html",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/moabb_current_summary_large_imagery.json",
+          "sha256": "d79e8477021e37b74101833e62416dd038fe1e315d8df96e19b2216dfbf26659"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": false,
+      "session_semantics": "One visit per catalog.",
+      "catalog_metadata": {
+        "#Subj": "30",
+        "#Sess": "1",
+        "Year": "2015",
+        "#EEG": "32",
+        "Freq (Hz)": "512",
+        "Mode": "offline",
+        "License": "CC0 1.0",
+        "File Format": "XDF"
+      }
+    },
+    {
+      "id": "Stieger2021",
+      "nominal_participant_count": 62,
+      "independent_participant_count_verified": null,
+      "task_semantics": "Longitudinal online MI cursor control, 1D/2D tasks",
+      "population": "healthy",
+      "data_license": "Original Figshare CC-BY-4.0; NEMAR CC-BY-NC-4.0",
+      "access_evidence_status": "primary_source_previously_audited_in_longitudinal_catalog",
+      "recommendation": "high_value_longitudinal_source_handled_separately",
+      "limitations": [
+        "Same source already in longitudinal audit, not62 new candidates here; 598sessions and allmirrors share62 identities. HundredsGB require staged representative subsets."
+      ],
+      "source_url": "https://doi.org/10.1038/s41597-021-00883-1",
+      "evidence_files": [
+        {
+          "path": "docs/public_longitudinal_dataset_audit_20261010.md",
+          "sha256": "8135e55af80820fe66657fdd49f1f3ebb79b1bff470bf17c8933378be7b061e1"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/longitudinal_sources.json",
+          "sha256": "1e22c41e0f56e07b220003dad5f1677b2b517959e8f1e289585315d8704aff28"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/moabb_current_summary_large_imagery.json",
+          "sha256": "d79e8477021e37b74101833e62416dd038fe1e315d8df96e19b2216dfbf26659"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": false,
+      "session_semantics": "41 subjects11visits,21subjects7visits per published original inventory.",
+      "catalog_metadata": {
+        "#Subj": "62",
+        "#Sess": "11",
+        "Year": "2021",
+        "#EEG": "62",
+        "Freq (Hz)": "1000",
+        "Mode": "online",
+        "License": "CC-BY-NC-4.0",
+        "File Format": "MAT"
+      }
+    },
+    {
+      "id": "TrianaGuzman2024",
+      "nominal_participant_count": 32,
+      "independent_participant_count_verified": null,
+      "task_semantics": "Sit-to-stand imagery vs idle",
+      "population": "healthy",
+      "data_license": "CC0 in current catalog",
+      "access_evidence_status": "catalog_only",
+      "recommendation": "separate_lower_limb_task_source_check_pending",
+      "limitations": [
+        "Different semantics from left/right hand and right-hand/rest. Year2022 catalog versus2024 adapter name is not a recording-date audit."
+      ],
+      "source_url": "https://moabb.neurotechx.com/docs/generated/moabb.datasets.TrianaGuzman2024.html",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/moabb_current_summary_large_imagery.json",
+          "sha256": "d79e8477021e37b74101833e62416dd038fe1e315d8df96e19b2216dfbf26659"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": false,
+      "session_semantics": "One visit per catalog.",
+      "catalog_metadata": {
+        "#Subj": "32",
+        "#Sess": "1",
+        "Year": "2022",
+        "#EEG": "17",
+        "Freq (Hz)": "250",
+        "Mode": "offline",
+        "License": "CC0",
+        "File Format": "SET (EEGLAB, BIDS)"
+      }
+    },
+    {
+      "id": "IMUMIA2026",
+      "nominal_participant_count": 244,
+      "independent_participant_count_verified": null,
+      "task_semantics": "Fine-limb MI including hands/feet/thumb/index/pinch",
+      "population": "healthy",
+      "data_license": "CC-BY-4.0",
+      "access_evidence_status": "pinned_public_release_five_participants_verified",
+      "recommendation": "five_person_pilot_only_not_244_public_training",
+      "limitations": [
+        "Advertised244 is not released cohort size: pinned nm000316 has5 rows and25 EDFs. Original Zenodo singleZIP2,157,929,761B; bodies not downloaded by this audit."
+      ],
+      "source_url": "https://doi.org/10.5281/zenodo.20421767",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000316/pinned_access_receipt.json",
+          "sha256": "373cbf11fad0547eb64b05f31b9dd837cab8118a3da932260cc8f3d7696adca0"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000316/dataset_description.json",
+          "sha256": "ef4db8a0f9516675bfdcdddf06baf875a8aac3b65ada4354134b73b5434b2dcf"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000316/README.md",
+          "sha256": "60470d0d689ab6e06964036acb33e73e255db9eaa9a2e9d00a275098dd96f752"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000316/participants.tsv",
+          "sha256": "95a5df8f3fa523b824b4040c80751ef4543462a4f536025011d2cb5234a29f99"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000316/manifest.json",
+          "sha256": "5302f9a6769ef20a2b9cb77933d36a892a91badc7f9361568c742419df766e9c"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/imu_zenodo_record.json",
+          "sha256": "50ced8e50a65c4c1f39f9fa962e60d8bbdf1fa8b54d4b2532e51a2886a6fb585"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": false,
+      "pinned_nemar": {
+        "id": "nm000316",
+        "version": "v1.0.0",
+        "participant_table_rows": 5,
+        "manifest_subject_count": 5,
+        "manifest_file_count": 195,
+        "manifest_total_bytes": 3487192971,
+        "derivative_signal_file_count": 25,
+        "derivative_signal_bytes": 1104179896,
+        "representative_signal_head_status": 200,
+        "signal_body_read_in_this_source_audit": false,
+        "manifest_sha256": "5302f9a6769ef20a2b9cb77933d36a892a91badc7f9361568c742419df766e9c"
+      },
+      "public_pinned_participant_count": 5
+    },
+    {
+      "id": "SEFMEID2026",
+      "nominal_participant_count": 50,
+      "independent_participant_count_verified": null,
+      "task_semantics": "Synchronous EEG/fNIRS motor execution and imagery",
+      "population": "not independently verified here",
+      "data_license": "empty license field in official structured metadata",
+      "access_evidence_status": "ScienceDB_conditionsOfAccess_RESTRICTED",
+      "recommendation": "pending_access_not_counted_as_public_signal",
+      "limitations": [
+        "2026paper and50-person claim are discovery metadata, not a downloadable cohort. Restricted record does not imply payment. Article PDF429 not retried."
+      ],
+      "source_url": "https://doi.org/10.57760/sciencedb.30795",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/sefmeid_sciencedb_access.json",
+          "sha256": "84d6b97e310182b14bb72289d28ffe2eeb7ea3f68e157ce3037b6b4ad422d998"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/sefmeid_sciencedb_structured_metadata.json",
+          "sha256": "c51d4fbb0ba5ca394db12e273568d0ef1e21e8b4f175cd669504007092876aaa"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": false
+    },
+    {
+      "id": "RhythmicMI2026",
+      "nominal_participant_count": 100,
+      "independent_participant_count_verified": null,
+      "task_semantics": "Multiclass rhythmic MI per author repository",
+      "population": "not independently verified here",
+      "data_license": "data license not verified; no public signal files",
+      "access_evidence_status": "author_README_dataset_future_release",
+      "recommendation": "unreleased_not_counted_as_public_signal",
+      "limitations": [
+        "Code/baselines are public; README says dataset still under construction and will be released in future. No datasets downloaded or counted."
+      ],
+      "source_url": "https://github.com/SJTUwyxuan/RhythmicMI-CrossSubject",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/rhythmic_mi_readme.md",
+          "sha256": "9bc8f8855e73e9193e1f5c72f3f457d9a8df1e24f7e01ca37fedd484ab1d1910"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/primary_access_receipt.json",
+          "sha256": "23e8d8fdbc77592ed113db9c7b930c6c561c51945ec1b85fe60821af8a68a964"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": false
+    },
+    {
+      "id": "Weibo2014",
+      "nominal_participant_count": 10,
+      "independent_participant_count_verified": null,
+      "task_semantics": "Simple and compound limb MI",
+      "population": "healthy",
+      "data_license": "CC0-1.0",
+      "access_evidence_status": "pinned_manifest_participants_and_representative_signal_HEAD_verified",
+      "recommendation": "small_task_diversity_control",
+      "limitations": [
+        "Multi-class limb imagery;10participants cannot be multiplied by number of classes."
+      ],
+      "source_url": "https://doi.org/10.1371/journal.pone.0114853",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000146/pinned_access_receipt.json",
+          "sha256": "2049cdf62e9c7701081b4c36cb5a2b019d281ac5278139d3f8909f09b668d06c"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000146/dataset_description.json",
+          "sha256": "28ee792083254776bd7bbd6b0af3dcd9a67cbd677c8c91dc351552a02914bb0c"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000146/README.md",
+          "sha256": "7f5c4b25d765768825cfd74fced59233f86df5101bbd6cba6763cd818a37400d"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000146/participants.tsv",
+          "sha256": "661b0c77f4b8bfdc48b7685734459c5499e5591a1d5368c1b0ac37679659412e"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000146/manifest.json",
+          "sha256": "fa1dd00b996210da8bccfbeafbcc997896339e30afc6b8e59f805e46903247e9"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": false,
+      "pinned_nemar": {
+        "id": "nm000146",
+        "version": "v1.0.3",
+        "participant_table_rows": 10,
+        "manifest_subject_count": 10,
+        "manifest_file_count": 133,
+        "manifest_total_bytes": 6060958533,
+        "derivative_signal_file_count": 10,
+        "derivative_signal_bytes": 1697376500,
+        "representative_signal_head_status": 200,
+        "signal_body_read_in_this_source_audit": false,
+        "manifest_sha256": "fa1dd00b996210da8bccfbeafbcc997896339e30afc6b8e59f805e46903247e9"
+      }
+    },
+    {
+      "id": "Shin2017A",
+      "nominal_participant_count": 29,
+      "independent_participant_count_verified": null,
+      "task_semantics": "MI vs separate arithmetic task; EEG/fNIRS modalities",
+      "population": "healthy",
+      "data_license": "GPL-3.0 pinned NEMAR description",
+      "access_evidence_status": "pinned_manifest_participants_and_representative_signal_HEAD_verified",
+      "recommendation": "small_multimodal_control",
+      "limitations": [
+        "Six stored sessions alternate three imagery and three arithmetic; notsix MI days. EEG/fNIRS and Shin2017B arithmetic are same29 people."
+      ],
+      "source_url": "https://doi.org/10.1109/TNSRE.2016.2628057",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000267/pinned_access_receipt.json",
+          "sha256": "c0845856763694220a9c5f1259547c7db92d5f1b3d05ce9cf97cd48ed509556a"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000267/dataset_description.json",
+          "sha256": "da50de71555290a1ee8893d5106a1bf30549c3fd02bb1f6ffba1d638f80bb93d"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000267/README.md",
+          "sha256": "38b79803797300c2fb01713242a2c6072a24b69002a5739cdbe50aa5e0a94ad5"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000267/participants.tsv",
+          "sha256": "17215060bd1adb9cf4654d63c4755b88b0ba3ea6d984d1d3925e7ba809b84aba"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000267/manifest.json",
+          "sha256": "5bc7c92383544a98d5dcd235c43ebe7609c6f3de0bad71f01bd36f42a66deaa8"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": false,
+      "pinned_nemar": {
+        "id": "nm000267",
+        "version": "v1.0.3",
+        "participant_table_rows": 29,
+        "manifest_subject_count": 29,
+        "manifest_file_count": 1983,
+        "manifest_total_bytes": 6982178172,
+        "derivative_signal_file_count": 174,
+        "derivative_signal_bytes": 2011766889,
+        "representative_signal_head_status": 200,
+        "signal_body_read_in_this_source_audit": false,
+        "manifest_sha256": "5bc7c92383544a98d5dcd235c43ebe7609c6f3de0bad71f01bd36f42a66deaa8"
+      }
+    },
+    {
+      "id": "Schirrmeister2017",
+      "nominal_participant_count": 14,
+      "independent_participant_count_verified": null,
+      "task_semantics": "Actual left/right hand and foot movement vs rest",
+      "population": "healthy",
+      "data_license": "CC-BY-4.0",
+      "access_evidence_status": "pinned_manifest_participants_and_representative_signal_HEAD_verified",
+      "recommendation": "exclude_from_MI_training",
+      "limitations": [
+        "High-gamma motor-execution recordings are not MI, even if software labels them Imagery. 128 EEG and500Hz cannot justify mixing overt movement with imagery."
+      ],
+      "source_url": "https://doi.org/10.1002/hbm.23730",
+      "evidence_files": [
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000172/pinned_access_receipt.json",
+          "sha256": "e4c3ea3bef3e78fde76cb50ee666bf7b02e67b962d06aa4b8da60d36a9f8e995"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000172/dataset_description.json",
+          "sha256": "2b109590602addb913178d8bf5b1c4a9a018cd0a8c9f64629b7319155e1a2bce"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000172/README.md",
+          "sha256": "5e2e638f5a69a2699b894bce0432da0e5eeb5f819ebd5b0792bba82369c6c48f"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000172/participants.tsv",
+          "sha256": "8a5c56bb12a80c9cb7410a43347d6a7af9f5e0dc277d675f6ddf703dd0add282"
+        },
+        {
+          "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000172/manifest.json",
+          "sha256": "880d71b4144d042deaef214b49e18d4cfd4ed4fdd7e09c72f9082c70723806d2"
+        }
+      ],
+      "source_audit_signal_downloaded": false,
+      "training_inclusion_approved_by_this_catalog": false,
+      "main_nine_source_arithmetic_member": false,
+      "pinned_nemar": {
+        "id": "nm000172",
+        "version": "v1.0.3",
+        "participant_table_rows": 14,
+        "manifest_subject_count": 14,
+        "manifest_file_count": 279,
+        "manifest_total_bytes": 33606135475,
+        "derivative_signal_file_count": 28,
+        "derivative_signal_bytes": 19838900905,
+        "representative_signal_head_status": 200,
+        "signal_body_read_in_this_source_audit": false,
+        "manifest_sha256": "880d71b4144d042deaef214b49e18d4cfd4ed4fdd7e09c72f9082c70723806d2"
+      }
+    }
+  ],
+  "already_audited_elsewhere": {
+    "report": "docs/public_longitudinal_dataset_audit_20261010.md",
+    "sources": [
+      "NETBCI2026:19",
+      "Kumar2024:18",
+      "Stieger2021:62",
+      "Forenzo2023:25",
+      "Forenzo2024:28",
+      "TESS2025:27",
+      "Wang/Liu2026:24"
+    ],
+    "not_added_to_main_nine_arithmetic": true
+  },
+  "storage_policy": {
+    "destination": "User-authorized private Cloudflare R2 research storage, managed by root ingestion workflow",
+    "preserve": [
+      "original_source_bytes",
+      "pinned_version",
+      "official_checksums",
+      "attribution_and_specific_data_license",
+      "subject_session_run_identity",
+      "download_signal_audit_and_R2_verification_receipts"
+    ],
+    "no_signed_urls_or_credentials_in_this_catalog": true,
+    "raw_processed_derivative_mirrors_count_once_per_source_identity": true
+  },
+  "provenance_history": [
+    {
+      "previous_discovery_catalog_sha256": "7a6937a6e798d458422bab3f78106323cd44943b96a5cab901d4c5f279443d58",
+      "previous_discovery_metadata_evidence_check": "research_logs/public_data_expansion_20261010/large_training_metadata/evidence_validation_20261011.json",
+      "update_reason": "actual fixed PhysioNet source ingestion and independent source validation completed; nominal nine-source arithmetic unchanged; current source gates count105 complete identities, not109 trained"
+    }
+  ]
+}

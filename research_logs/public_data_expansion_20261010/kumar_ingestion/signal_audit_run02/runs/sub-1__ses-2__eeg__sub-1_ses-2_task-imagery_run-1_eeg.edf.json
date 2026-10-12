@@ -1,0 +1,87 @@
+{
+  "status": "passed",
+  "dataset": "Kumar2024",
+  "subject": "sub-1",
+  "session": "ses-2",
+  "run": "run-1",
+  "source_file": "sub-1/ses-2/eeg/sub-1_ses-2_task-imagery_run-1_eeg.edf",
+  "n_channels": 22,
+  "channel_names": [
+    "F7",
+    "F3",
+    "Fz",
+    "F4",
+    "F8",
+    "FC5",
+    "FC1",
+    "FC2",
+    "FC6",
+    "C3",
+    "Cz",
+    "C4",
+    "CP5",
+    "CP1",
+    "CP2",
+    "CP6",
+    "P7",
+    "P3",
+    "Pz",
+    "P4",
+    "P8",
+    "POz"
+  ],
+  "sfreq": 512.0,
+  "n_times": 112128,
+  "EDF_duration_seconds": 219.0,
+  "sidecar_recording_duration_seconds": 218.998046875,
+  "EEG_reference": "CPz",
+  "stored_physical_unit": "µV",
+  "MNE_numeric_unit": "V",
+  "source_event_count": 20,
+  "source_class_counts": {
+    "right_hand": 10,
+    "left_hand": 10
+  },
+  "shorter_than5s_source_events": 0,
+  "verified_source_files": {
+    "sub-1/ses-2/eeg/sub-1_ses-2_task-imagery_run-1_eeg.edf": {
+      "sha256": "a6f38cace784b7009276750aa7be22ac1ee7a5bbb8f65cf2a8d55fd1f4a279af",
+      "official_checksum": "a6f38cace784b7009276750aa7be22ac1ee7a5bbb8f65cf2a8d55fd1f4a279af",
+      "official_algorithm": "sha256",
+      "bytes": 4948536
+    },
+    "sub-1/ses-2/eeg/sub-1_ses-2_task-imagery_run-1_eeg.json": {
+      "sha256": "b6cf8dfde3d48916a9be1059d602cf531da6517cd75462204e1198384b5e2e43",
+      "official_checksum": "ab6da06853775388e88a0a45c5da5ecb275da7f7",
+      "official_algorithm": "git",
+      "bytes": 1699
+    },
+    "sub-1/ses-2/eeg/sub-1_ses-2_task-imagery_run-1_events.json": {
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "official_checksum": "2ec3785e9b4304a24259b6a4a4b87d0a795fd5e6",
+      "official_algorithm": "git",
+      "bytes": 1226
+    },
+    "sub-1/ses-2/eeg/sub-1_ses-2_task-imagery_run-1_events.tsv": {
+      "sha256": "2a10a1b1316cdf775e1171459a728a37499dc86dfeaff2f9ea08136220aad480",
+      "official_checksum": "55c33ef2530a722ee8e291232a43e28b25435e5d",
+      "official_algorithm": "git",
+      "bytes": 735
+    },
+    "sub-1/ses-2/eeg/sub-1_ses-2_task-imagery_run-1_channels.tsv": {
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "official_checksum": "e9138c0390c3b494a21932aa05a4b7319ed7f6bb",
+      "official_algorithm": "git",
+      "bytes": 1359
+    }
+  },
+  "all_continuous_samples_finite": true,
+  "continuous_numeric_values": 2466816,
+  "peak_absolute_volts": 0.014274899999999998,
+  "global_rms_volts": 0.00801284537084779,
+  "whole_signal_numeric_sha256": "3503a67d157b5ef3a2bc2db068cd15117b702db334acb229a9c60a3ea9d22f25",
+  "whole_signal_hash_convention": "all22channels; float64 little-endian C-order; 16384-sample blocks in chronological order; volts",
+  "central_4KiB_numeric_sha256": "6a5357e362ce40e2ac98dfb8be1aa57e1e41cad5498141efc39a73a2f17b1052",
+  "central_fingerprint_start_sample": 55936,
+  "central_fingerprint_convention": "first2channels x256 central samples; float64 little-endian C-order; volts"
+}

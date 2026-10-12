@@ -1,0 +1,106 @@
+{
+  "status": "closed_completed_raw_identity_gate_before_expanded_nineteen_models",
+  "closed_at_utc": "2026-10-11T06:57:36.714331+00:00",
+  "synthetic": false,
+  "config_sha256": "d3de923978079cff7199c294f704a0282d3df589899df1a7f44578a5aabd2bf5",
+  "full_ledger": {
+    "path": "research_logs/netbci_cohort_all19_20261010/numeric_signal_identity_v2.json",
+    "sha256": "d1c4d267baa0a6c0803037db731ebd571f0aa65be9d4d1932e3d9c237815ef45",
+    "bytes": 21593958,
+    "retain_full_local_and_R2_exclude_from_Git": true
+  },
+  "compact_summary": {
+    "path": "research_logs/netbci_cohort_all19_20261010/numeric_signal_identity_summary_v2.json",
+    "sha256": "3b5c282877c256ac95ba0f60a04592c302f3b2a17c298c4be482697ce41232ae",
+    "bytes": 78394
+  },
+  "raw_run_log": {
+    "path": "research_logs/netbci_cohort_all19_20261010/runtime/numeric_signal_identity_v2_run02.log",
+    "sha256": "ad1d6cb382194ef338ca511ba37f32a4bcded50f821cb07861360a463ae14ea7"
+  },
+  "exit_code": 0,
+  "summary": {
+    "subjects": 19,
+    "continuous_runs": 456,
+    "source_task_windows": 14431,
+    "fixed_window_eligible_task_windows": 14429,
+    "unique_continuous_numeric_hashes": 408,
+    "unique_task_window_numeric_hashes": 12988,
+    "continuous_duplicate_groups": 30,
+    "continuous_duplicate_members": 78,
+    "same_person_cross_session_continuous_groups": 6,
+    "cross_subject_continuous_groups": 30,
+    "task_window_duplicate_groups": 909,
+    "task_window_duplicate_members": 2352,
+    "same_person_cross_session_task_window_groups": 178,
+    "same_person_same_session_task_window_groups": 0,
+    "same_person_same_run_task_window_groups": 0,
+    "official_manifest_matches": 456,
+    "per_subject_manifest_matches": 456,
+    "EDF_annotation_and_source_TSV_matches": 456,
+    "cross_subject_task_window_groups": 909,
+    "multi_label_task_window_duplicate_groups": 0
+  },
+  "elapsed_seconds": 106.58278229200005,
+  "cross_subject_affected_identities": [
+    "sub-1",
+    "sub-6",
+    "sub-7",
+    "sub-15",
+    "sub-17"
+  ],
+  "identities_without_detected_cross_subject_exact_signal_copies": [
+    "sub-2",
+    "sub-3",
+    "sub-4",
+    "sub-5",
+    "sub-8",
+    "sub-9",
+    "sub-10",
+    "sub-11",
+    "sub-12",
+    "sub-13",
+    "sub-14",
+    "sub-16",
+    "sub-18",
+    "sub-19"
+  ],
+  "known_effect_on_planned_query_independence": {
+    "interpretation": "Exact content overlap between source training and later queries despite distinct source event IDs; affected later-session model scores are not independent cross-session generalization evidence.",
+    "source_training_reference_query_affected_trials": 0,
+    "source_training_later_query_affected_trials": 238,
+    "source_reference_later_query_affected_trials": 118,
+    "source_training_later_query_affected_numeric_groups": 119,
+    "source_training_later_query_same_label_affected_trials": 238,
+    "source_training_later_query_conflicting_label_affected_trials": 0,
+    "source_training_reference_query_affected_subjects": [],
+    "affected_subject_sessions": [
+      {
+        "subject": "sub-7",
+        "session": "02",
+        "later_query_count": 178,
+        "exact_source_training_overlap_count": 119,
+        "same_label_training_overlap_count": 119,
+        "conflicting_label_training_overlap_count": 0,
+        "exact_source_reference_query_overlap_count": 59
+      },
+      {
+        "subject": "sub-7",
+        "session": "03",
+        "later_query_count": 178,
+        "exact_source_training_overlap_count": 119,
+        "same_label_training_overlap_count": 119,
+        "conflicting_label_training_overlap_count": 0,
+        "exact_source_reference_query_overlap_count": 59
+      }
+    ]
+  },
+  "required_interpretation": [
+    "All nineteen source IDs remain in original planned analyses; no silent exclusions.",
+    "Post-observation restricted numerical sensitivity must dynamically omit all five identities in cross-person exact-copy groups; retain all original results.",
+    "Fourteen remaining IDs have no detected exact cross-person continuous/task copy; this does not verify independent biological identity or exclude near similarity.",
+    "No cause or correct original BrainVision participant assignment inferred."
+  ],
+  "new_model_or_summary_results_read_before_gate_closed": false,
+  "software_fix_record": "research_logs/netbci_cohort_all19_20261010/numeric_identity_native_checksum_correction.json"
+}

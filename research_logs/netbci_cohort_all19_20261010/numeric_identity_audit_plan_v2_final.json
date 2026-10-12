@@ -1,0 +1,53 @@
+{
+  "status": "finalized_before_raw_nineteen_identity_signal_read",
+  "prepared_at_utc": "2026-10-11T00:26:58.977355+00:00",
+  "synthetic": false,
+  "subject_IDs": [
+    "sub-1",
+    "sub-2",
+    "sub-3",
+    "sub-4",
+    "sub-5",
+    "sub-6",
+    "sub-7",
+    "sub-8",
+    "sub-9",
+    "sub-10",
+    "sub-11",
+    "sub-12",
+    "sub-13",
+    "sub-14",
+    "sub-15",
+    "sub-16",
+    "sub-17",
+    "sub-18",
+    "sub-19"
+  ],
+  "expected_continuous_runs": 456,
+  "config_sha256": "d3de923978079cff7199c294f704a0282d3df589899df1a7f44578a5aabd2bf5",
+  "audit_source_sha256": "f42a23efa1e84ca561c1193372a5cf912cca58dabf9eafc29c56e2ee46442d72",
+  "summary_source_sha256": "0b0e937b02d2ad4ad63c5d461fc8ab12de1c1e2441adab1228d6dd48c2b57886",
+  "source_root": "data/netbci2026/nm000305/v1.0.0",
+  "audit_root": "research_logs/netbci_cohort_all19_20261010/audits",
+  "official_manifest_sha256": "7e50f5281e91bec97791a84f5f3dbe20dc443b37c10d4bc6bcda96bed08c092c",
+  "planned_roles": "source session01 runs01-04 training,05-06 reference query; sessions02-04 all6 later queries; derive config not model partitions",
+  "window_content": "all real labeled intervals including every shortened event; finite little-endian float64 C-order numerical fingerprints without signal transforms",
+  "single_run_memory_policy": true,
+  "run_after": "all nineteen source signal audits completed, no concurrent tensor job",
+  "run_before": "any expanded nineteen-ID model fitting or outcome calculation",
+  "expected_artifacts": [
+    "numeric_signal_identity.json",
+    "numeric_signal_identity_summary.json"
+  ],
+  "full_ledger_preservation": "R2 upload; keep local source ledger preserved and excluded from Git if oversized",
+  "finalized_at_utc": "2026-10-11T06:41:38.080222+00:00",
+  "original_plan_file": "research_logs/netbci_cohort_all19_20261010/numeric_identity_audit_plan.json",
+  "original_plan_sha256": "6258688689efdb59eb4347fc170af3d1f604a28f09cf4b8a4fc613cd1cb40fe9",
+  "independent_review_source_sha256": "c2b8453f306bc1f560138ec0718e729212f310ca7b4db8f4d05457750fea430f",
+  "software_review_amendments": [
+    "Direct raw EDF annotation order/onset/duration comparison to officially hashed event TSV; includes the short source event.",
+    "Cross-subject affected IDs are the union of continuous-run and real-task-window exact copies; preserve separate flags and do not change membership.",
+    "Same-person same-session and same-run exact task-repeat flags.",
+    "Explicit source-training versus disjoint reference-query exact-content bridges in addition to later-query overlap."
+  ]
+}

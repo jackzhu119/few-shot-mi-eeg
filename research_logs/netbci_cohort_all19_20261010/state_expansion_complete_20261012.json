@@ -1,0 +1,100 @@
+{
+  "status": "scientific_analysis_and_all_six_raw_subsets_complete_final_evidence_archive_in_progress",
+  "saved_at_utc": "2026-10-12T00:10:58.659959+00:00",
+  "repository": "jackzhu119/few-shot-mi-eeg",
+  "branch": "research/learning-preserving-bci",
+  "checkout": "/workspace/few-shot-mi-eeg",
+  "environment_reinitialized": false,
+  "netbci": {
+    "published_IDs": 19,
+    "sessions": 76,
+    "EDF_runs": 456,
+    "source_events": 14431,
+    "eligible_events": 14429,
+    "partial_events_preserved": 2,
+    "cross_ID_signal_copy_affected": [
+      "sub-1",
+      "sub-6",
+      "sub-7",
+      "sub-15",
+      "sub-17"
+    ],
+    "source_driven_sensitivity_ID_count": 14,
+    "biological_independence_established": false,
+    "frozen_models_complete": true,
+    "first_ten_replay_identical_stable_artifacts": 160,
+    "QC_flags_retained": 456,
+    "constant_prediction_sessions": 21,
+    "QC_matched_unavailable_IDs": 5
+  },
+  "public_resource_raw_subsets": {
+    "source_count": 6,
+    "nominal_ID_sum": 311,
+    "file_count": 10253,
+    "bytes": 7827676824,
+    "EEG_recordings": 1473,
+    "global_unique_independent_training_N": null,
+    "new_resource_model_training_performed": false,
+    "all_official_checksums_passed": true,
+    "all_selected_raw_files_stored_in_R2": true
+  },
+  "source_quality_limits": [
+    "NETBCI repeated continuous/task signals; correct original assignment unknown",
+    "PhysioNet raw109 source-qualified105; flagged4 preserved",
+    "MILimbEEG individual population mapping and some task semantics unresolved",
+    "Liu2024 unit conflict, overlapping task windows and exact cross-ID copies; modeling acceptance false"
+  ],
+  "inputs": {
+    "analysis_config": {
+      "path": "configs/netbci_cohort_all19_20261010.json",
+      "sha256": "d3de923978079cff7199c294f704a0282d3df589899df1a7f44578a5aabd2bf5"
+    },
+    "source_audit": {
+      "path": "research_logs/netbci_cohort_all19_20261010/audits/aggregate.json",
+      "sha256": "ee3fc408ff1efe43f6a80ccb916df779b0c2fe119fe0f417b97fb10cb70f2e53"
+    },
+    "identity_summary": {
+      "path": "research_logs/netbci_cohort_all19_20261010/numeric_signal_identity_summary_v2.json",
+      "sha256": "3b5c282877c256ac95ba0f60a04592c302f3b2a17c298c4be482697ce41232ae"
+    },
+    "summary": {
+      "path": "research_logs/netbci_cohort_all19_20261010/summary_run01/summary_receipt.json",
+      "sha256": "2e3ac733fbcea87dcef012e9bd3acc2bddaf4436c2a5e59ed0b9c625a0bb28da"
+    },
+    "source_sensitivity": {
+      "path": "research_logs/netbci_cohort_all19_20261010/independence_sensitivity_run01/sensitivity_receipt.json",
+      "sha256": "464c8d0eedd2e6cc36394bed26ccf3948192c419b90db50feb2f4bf5768dcf56"
+    },
+    "independent_methods": {
+      "path": "research_logs/netbci_cohort_all19_20261010/independent_methods_closeout_run01.json",
+      "sha256": "2e6cc8558f1ed68209037d9dc2ab186e936979cb53e767b977974a9b01a3f787"
+    },
+    "software_validation": {
+      "path": "research_logs/netbci_cohort_all19_20261010/final_validation/software_validation_receipt.json",
+      "sha256": "6b942f6999fb47c2f79ca64adc15de63628de2d5b7328da24621ec57a1287f5d"
+    },
+    "notebook_qa": {
+      "path": "research_logs/netbci_cohort_all19_20261010/notebook_final_visual_qa_20261012_run01/notebook_validation_receipt.json",
+      "sha256": "10680f9eb4aa40f80a64f234c4a54d89d054e5f094ede2cc8c9f7ab0dd47af8d"
+    },
+    "public_resource_inventory": {
+      "path": "research_logs/public_data_expansion_20261010/resource_inventory_20261011.json",
+      "sha256": "62f8047b83b4f8c829c144a95bc0f1978d59afe229fd5b3a97ebe4eba5fba421"
+    },
+    "r2_scientific_catalog": {
+      "path": "research_logs/public_data_expansion_20261010/r2/storage_catalog_scientific_closeout_20261012_run01.json",
+      "sha256": "e743e80b3e583504b0e4da23ad8f734a824da8d0bd7f3bd8d4d3c65bc2e1cb24"
+    }
+  },
+  "r2_final_closure_complete": false,
+  "original_chat_archive": "/workspace/chat_handoffs/paper2_chat_backup_20261010.tar.gz",
+  "credential_values_recorded": false,
+  "scientific_claim": "exploratory_offline_observation_no_skill_retention_or_candidate_policy_causal_effect",
+  "r2_scientific_evidence_complete": true,
+  "r2_scientific_inventory": {
+    "distinct_objects": 12788,
+    "bytes": 17312564874,
+    "objects_with_full_GET_sha256": 2511,
+    "final_code_archive_pending": true
+  }
+}

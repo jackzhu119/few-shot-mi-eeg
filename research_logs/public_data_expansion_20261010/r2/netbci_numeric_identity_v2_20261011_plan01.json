@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "started_at_utc": "2026-10-11T06:58:26.736272+00:00",
+  "source_root": "/workspace/r2_staging/netbci_numeric_identity_v2_20261011_run01",
+  "key_prefix": "few-shot-mi-eeg/audits/netbci2026/nm000305/v1.0.0/numeric-signal-identity-nineteen-id-20261011-run01",
+  "status": "planned",
+  "workers": 4,
+  "include_patterns": [],
+  "script_sha256": "b2583bcbe67956684d1599007d6d7aa2e8ca69f817b4171dca68ddb2d34a886e",
+  "python_version": "3.11.16 (main, Sep 24 2026, 17:56:40) [Clang 22.1.3 ]",
+  "source_git_commit": "4290c4061f5d35381ed684bb07f1dd52836bbee0",
+  "readback_mode": "all",
+  "full_readback_selection": "all files",
+  "immutable_create": "IfNoneMatch=* on PutObject and CompleteMultipartUpload",
+  "existing_reuse_requires": "HEAD length/SHA256 metadata plus full GET SHA256",
+  "etag_is_not_a_sha256": true,
+  "credential_values_logged": false,
+  "remote_overwrite_enabled": false,
+  "files": [
+    {
+      "relative_path": "SNAPSHOT_MANIFEST.json",
+      "key": "few-shot-mi-eeg/audits/netbci2026/nm000305/v1.0.0/numeric-signal-identity-nineteen-id-20261011-run01/SNAPSHOT_MANIFEST.json",
+      "sha256": "c45d8d30c7a9a13d85e28d116adbe7ec27734545915e587c88b4460032ef6523",
+      "bytes": 1834,
+      "status": "planned",
+      "selected_for_full_readback": true
+    },
+    {
+      "relative_path": "audit_numeric_signal_identity_v2.py",
+      "key": "few-shot-mi-eeg/audits/netbci2026/nm000305/v1.0.0/numeric-signal-identity-nineteen-id-20261011-run01/audit_numeric_signal_identity_v2.py",
+      "sha256": "44a4144715971483e30ccfb634b8b03a17c4d5d488d67565c977ad2b136a7b46",
+      "bytes": 27241,
+      "status": "planned",
+      "selected_for_full_readback": true
+    },
+    {
+      "relative_path": "netbci_cohort_all19_20261010.json",
+      "key": "few-shot-mi-eeg/audits/netbci2026/nm000305/v1.0.0/numeric-signal-identity-nineteen-id-20261011-run01/netbci_cohort_all19_20261010.json",
+      "sha256": "d3de923978079cff7199c294f704a0282d3df589899df1a7f44578a5aabd2bf5",
+      "bytes": 3712,
+      "status": "planned",
+      "selected_for_full_readback": true
+    },
+    {
+      "relative_path": "numeric_signal_identity_summary_v2.json",
+      "key": "few-shot-mi-eeg/audits/netbci2026/nm000305/v1.0.0/numeric-signal-identity-nineteen-id-20261011-run01/numeric_signal_identity_summary_v2.json",
+      "sha256": "3b5c282877c256ac95ba0f60a04592c302f3b2a17c298c4be482697ce41232ae",
+      "bytes": 78394,
+      "status": "planned",
+      "selected_for_full_readback": true
+    },
+    {
+      "relative_path": "numeric_signal_identity_v2.json",
+      "key": "few-shot-mi-eeg/audits/netbci2026/nm000305/v1.0.0/numeric-signal-identity-nineteen-id-20261011-run01/numeric_signal_identity_v2.json",
+      "sha256": "d1c4d267baa0a6c0803037db731ebd571f0aa65be9d4d1932e3d9c237815ef45",
+      "bytes": 21593958,
+      "status": "planned",
+      "selected_for_full_readback": true
+    },
+    {
+      "relative_path": "summarize_numeric_identity_v2.py",
+      "key": "few-shot-mi-eeg/audits/netbci2026/nm000305/v1.0.0/numeric-signal-identity-nineteen-id-20261011-run01/summarize_numeric_identity_v2.py",
+      "sha256": "0b0e937b02d2ad4ad63c5d461fc8ab12de1c1e2441adab1228d6dd48c2b57886",
+      "bytes": 6939,
+      "status": "planned",
+      "selected_for_full_readback": true
+    }
+  ],
+  "updated_at_utc": "2026-10-11T06:58:26.739961+00:00",
+  "totals": {
+    "planned_files": 6,
+    "planned_bytes": 21712078,
+    "verified_files": 0,
+    "verified_bytes": 0,
+    "failed_files": 0,
+    "full_get_sha256_verified_files": 0,
+    "uploaded_bytes": 0,
+    "readback_bytes": 0
+  }
+}

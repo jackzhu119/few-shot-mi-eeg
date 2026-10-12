@@ -1,0 +1,308 @@
+{
+  "url": "https://moabb.neurotechx.com/docs/generated/moabb.datasets.MILimbEEG.html",
+  "status": 200,
+  "html_sha256": "6cb7a590bb0874ad50c362badb2fc7e00b98bdb18f738cbf5d5cb5a61e7c54d4",
+  "text": "API and Main Concepts moabb.datasets.MILimbEEG moabb.datasets.MILimbEEG # class moabb.datasets. MILimbEEG [source] # Bases: BaseDataset [source] Dataset Snapshot MILimbEEG Over 8,680 four-second EEG recordings from 60 volunteers performing and imagining upper- and lower-limb movements, recorded with a 16-channel OpenBCI Cyton+Daisy at 125 Hz. Imagery, 8 classes Authors Victor Asanza , Daniel Montoya , Leandro L. Lorente-Leyva , Diego H. Peluffo-Ordonez , Kleber Gonzalez 🇪🇨 Escuela Superior Politecnica del Litoral (ESPOL), EC · 2023 Imagery Code: MILimbEEG 60 subjects 1 session 16 ch 125 Hz 8 classes 4.0 s trials CC BY 4.0 Class Labels: beo, clh, crh, dlf, plf, drf, prf, rest Quickstart Read Paper Compare Similar Report Issue Overview Motor and motor-imagery limb EEG dataset (MILimbEEG) Dataset description Over 8,680 four-second EEG recordings from 60 adult volunteers of Ecuadorian nationality (average age 36 years; 31 females, 29 males; three left-handed), recruited among ESPOL colleagues and patients of a neurosurgeon at the Hospital Luis Vernaza in Guayaquil, Ecuador. The cohort is not uniformly healthy: two participants have amputations (both upper limbs; right lower limb below the knee), one has hydrocephalus after a ventricular infarct and eighteen are post-COVID-19. EEG was acquired with a 16-channel OpenBCI Cyton+Daisy (dry electrodes, monopolar against a neutral electrode on both ear lobes) at 125 Hz, hardware band-pass filtered 5-50 Hz with a 60 Hz notch. In each repetition (one for most subjects; only one subject performed up to four), participants first executed ( M ) and then imagined ( I ) hand closing and foot dorsal/plantar flexion, each task presented randomly up to five times per run, plus a baseline-eyes-open and rest trials. This loader exposes the motor-imagery files only, one session per repetition: the per-trial CSVs (microvolts, converted to volts) are concatenated into a continuous recording with a cue annotation at every trial onset and a non-rejecting EDGE boundary annotation at every join. Open in Overview tab → from moabb.datasets import MILimbEEG dataset = MILimbEEG () data = dataset . get_data ( subjects = [ 1 ]) print ( data [ 1 ]) Citation & Impact Paper DOI 10.1016/j.dib.2023.109540 Citations Loading… Public API Crossref | OpenAlex Stimulus Protocol 4s task window per trial · 8-class imagery paradigm · 1 runs/session across 1 sessions HED Event Tags HED tags 8/8 events annotated Source: MOABB BIDS HED annotation mapping. Sensory-event 8 Label 7 Experimental-stimulus 1 Rest 1 Visual-presentation 1 rest Sensory-event Experimental-stimulus Visual-presentation Rest beo Sensory-event Label clh Sensory-event Label crh Sensory-event Label dlf Sensory-event Label plf Sensory-event Label drf Sensory-event Label prf Sensory-event Label HED tree view Tree · rest ├─ Sensory-event\n├─ Experimental-stimulus\n├─ Visual-presentation\n└─ Rest Tree · beo ├─ Sensory-event\n└─ Label Tree · clh ├─ Sensory-event\n└─ Label Tree · crh ├─ Sensory-event\n└─ Label Tree · dlf ├─ Sensory-event\n└─ Label Tree · plf ├─ Sensory-event\n└─ Label Tree · drf ├─ Sensory-event\n└─ Label Tree · prf ├─ Sensory-event\n└─ Label Channel Summary Total channels 16 EEG 16 (dry) Montage 10-10 Sampling 125 Hz Reference neutral ear (monopolar) Notch / line 60 Hz This diagram is automatically generated from MOABB metadata. Please consult the original publication to confirm the experimental protocol details. Overview Motor and motor-imagery limb EEG dataset (MILimbEEG) [1] [2] . Dataset description Over 8,680 four-second EEG recordings from 60 adult volunteers of\nEcuadorian nationality (average age 36 years; 31 females, 29 males; three\nleft-handed), recruited among ESPOL colleagues and patients of a\nneurosurgeon at the Hospital Luis Vernaza in Guayaquil, Ecuador. The cohort\nis not uniformly healthy: two participants have amputations (both upper\nlimbs; right lower limb below the knee), one has hydrocephalus after a\nventricular infarct and eighteen are post-COVID-19. EEG was acquired\nwith a 16-channel OpenBCI Cyton+Daisy (dry electrodes, monopolar against a\nneutral electrode on both ear lobes) at 125 Hz, hardware band-pass filtered\n5-50 Hz with a 60 Hz notch. In each repetition (one for most subjects;\nonly one subject performed up to four), participants first executed\n( M ) and then imagined ( I ) hand closing and foot dorsal/plantar\nflexion, each task presented randomly up to five times per run, plus a\nbaseline-eyes-open and rest trials. This loader exposes the motor-imagery files only, one session per repetition: the per-trial\nCSVs (microvolts, converted to volts) are concatenated into a continuous\nrecording with a cue annotation at every trial onset and a non-rejecting EDGE boundary annotation at every join. Warning The Mendeley subject folders ( S1 .. S60 ) are not individually\naddressable; the whole-record archive is served through a\nsession-signed URL and may require manual retrieval. References [ 1 ] Asanza, V., Montoya, D., Lorente-Leyva, L. L., Peluffo-Ordonez,\nD. H., & Gonzalez, K. (2023). MILimbEEG: A dataset of EEG signals\nrelated to upper and lower limb execution of motor and motor imagery\ntasks. Data in Brief, 50, 109540.\nDOI: https://doi.org/10.1016/j.dib.2023.109540 [ 2 ] Asanza, V., Montoya, D., Lorente-Leyva, L. L., Peluffo-Ordonez,\nD. H., & Gonzalez, K. (2022). MILimbEEG. Mendeley Data, V2.\nDOI: https://doi.org/10.17632/x8psbz3f6x.2 Code Examples from moabb.datasets import MILimbEEG dataset = MILimbEEG () data = dataset . get_data ( subjects = [ 1 ]) print ( data [ 1 ]) Metadata Dataset summary #Subj 60 #Chan 16 #Classes 8 Trials length 3.992 s Freq 125 Hz #Sessions 1 #Runs 1 Participants Population : mixed Clinical population : mostly healthy; 2 amputees (both upper limbs; right lower limb below the knee), 1 hydrocephalus after ventricular infarct, 18 post-COVID-19 Age : 36 years Handedness : {‘right’: 57, ‘left’: 3} Equipment Amplifier : OpenBCI Cyton+Daisy Electrodes : dry Montage : 10-10 Reference : neutral ear (monopolar) Preprocessing Data state : raw Bandpass filter : 5-50 Hz Steps : hardware band-pass 5-50 Hz, 60 Hz notch Data Access DOI : 10.1016/j.dib.2023.109540 Data URL : https://doi.org/10.17632/x8psbz3f6x.2 Repository : Mendeley Data Experimental Protocol Paradigm : imagery Feedback : none Stimulus : visual Notes Notes Added in version 1.2.1. __init__ ( ) [source] # Initialize function for the BaseDataset. property all_subjects # Full list of subjects available in this dataset (unfiltered). convert_to_bids ( path = None , subjects = None , overwrite = False , format = 'EDF' , verbose = None , generate_figures = False ) [source] # Convert the dataset to BIDS format. Saves the raw EEG data in a BIDS-compliant directory structure.\nUnlike the caching mechanism (see CacheConfig ), the files\nproduced here do not contain a processing-pipeline hash\n( desc-<hash> ) in their names, making the output a clean,\nshareable BIDS dataset. Parameters : path (str | Path | None) – Directory under which the BIDS dataset will be written.\nIf None the default MNE data directory is used (same default\nas the rest of MOABB). subjects ( list of int | None ) – Subject numbers to convert.  If None , all subjects in subject_list are converted. overwrite ( bool ) – If True , existing BIDS files for a subject are removed before\nsaving.  Default is False . format ( str ) – The file format for the raw EEG data.  Supported values are \"EDF\" (default), \"BrainVision\" , and \"EEGLAB\" . verbose ( str | None ) – Verbosity level forwarded to MNE/MNE-BIDS. generate_figures ( bool ) – If True , generate interactive neural signature HTML figures\nin {bids_root}/derivatives/neural_signatures/ .  Requires plotly ( pip install moabb[interactive] ).  Default is False . Returns : bids_root – Path to the root of the written BIDS dataset. Return type : pathlib.Path Examples >>> from moabb.datasets import AlexMI >>> dataset = AlexMI () >>> bids_root = dataset . convert_to_bids ( path = \"/tmp/bids\" , subjects = [ 1 ]) Notes Use CacheConfig to configure caching\nfor get_data() . Use moabb.datasets.bids_interface.get_bids_root to get the BIDS root\npath. Added in version 1.5. data_path ( subject , path = None , force_update = False , update_path = None , verbose = None ) [source] # Get path to local copy of a subject data. Parameters : subject ( int ) – Number of subject to use path ( None | str ) – Location of where to look for the data storing location.\nIf None, the environment variable or config parameter MNE_DATASETS_(dataset)_PATH is used. If it doesn’t exist, the\n“~/mne_data” directory is used. If the dataset\nis not found under the given path, the data\nwill be automatically downloaded to the specified folder. force_update ( bool ) – Force update of the dataset even if a local copy exists. update_path (bool | None Deprecated ) – If True, set the MNE_DATASETS_(dataset)_PATH in mne-python\nconfig to the given path. If None, the user is prompted. verbose ( bool , str , int , or None ) – If not None, override default verbose level\n(see mne.verbose() ). Returns : path – Local path to the given data file. This path is contained inside a\nlist of length one, for compatibility. Return type : list of str download ( subject_list = None , path = None , force_update = False , update_path = None , accept = False , verbose = None ) [source] # Download all data from the dataset. This function is only useful to download all the dataset at once. When the dataset declares a nemar_id and the download provider\nis not \"upstream\" , the files come from NEMAR’s sourcedata/ –\nthe original pre-BIDS distribution, byte-identical to what the upstream\nhost serves. On any NEMAR failure this falls back to the dataset’s own\ndownloader with a warning (unless the provider is pinned to \"nemar\" ). See sourcedata_path() and moabb.set_download_provider() . Parameters : subject_list ( list of int | None ) – List of subjects id to download, if None all subjects\nare downloaded. On the NEMAR path each subject is resolved through\nthe deposit’s sourcedata_provenance.json ; deposits enriched\nbefore that manifest recorded subjects fetch the whole tree. path ( None | str ) – Location of where to look for the data storing location.\nIf None, the environment variable or config parameter MNE_DATASETS_(dataset)_PATH is used. If it doesn’t exist, the\n“~/mne_data” directory is used. If the dataset\nis not found under the given path, the data\nwill be automatically downloaded to the specified folder. force_update ( bool ) – Force update of the dataset even if a local copy exists. update_path ( bool | None ) – If True, set the MNE_DATASETS_(dataset)_PATH in mne-python\nconfig to the given path. If None, the user is prompted.\nNot used on the NEMAR path. accept ( bool ) – Accept licence term to download the data, if any. Default: False.\nOnly relevant to the dataset’s own downloader; NEMAR mirrors are\nalready public. verbose ( bool , str , int , or None ) – If not None, override default verbose level\n(see mne.verbose() ). get_additional_metadata ( subject : str , session : str , run : str ) [source] # Load additional metadata for a specific subject, session, and run. This method is intended to be overridden by subclasses to provide\nadditional metadata specific to the dataset. The metadata is typically\nloaded from an events.tsv file or similar data source. Parameters : subject ( str ) – The identifier for the subject. session ( str ) – The identifier for the session. run ( str ) – The identifier for the run. Returns : A DataFrame containing the additional metadata if available,\notherwise None. Return type : None | pandas.DataFrame get_block_repetition ( paradigm , subjects , block_list , repetition_list ) [source] # Select data for all provided subjects, blocks and repetitions. subject -> session -> run -> block -> repetition See also get_data Parameters : subjects ( List of int ) – List of subject number block_list ( List of int ) – List of block number repetition_list ( List of int ) – List of repetition number inside a block Returns : data – dict containing the raw data Return type : Dict get_data ( subjects = None , cache_config = None , process_pipeline = None , n_jobs = 1 ) [source] # Return the data corresponding to a list of subjects. The returned data is a dictionary with the following structure: data = { \"subject_id\" : { \"session_id\" : { \"run_id\" : run }}} subjects are on top, then we have sessions, then runs.\nA sessions is a recording done in a single day, without removing the\nEEG cap. A session is constitued of at least one run. A run is a single\ncontiguous recording. Some dataset break session in multiple runs. Processing steps can optionally be applied to the data using the *_pipeline arguments. These pipelines are applied in the\nfollowing order: raw_pipeline -> epochs_pipeline -> array_pipeline . If a *_pipeline argument is None ,\nthe step will be skipped. Therefore, the array_pipeline may\neither receive a mne.io.Raw or a mne.Epochs object\nas input depending on whether epochs_pipeline is None or not. Parameters : subjects ( List of int ) – List of subject number cache_config (dict | CacheConfig ) – Configuration for caching of datasets. See CacheConfig for details. process_pipeline ( sklearn.pipeline.Pipeline | None) – Optional processing pipeline to apply to the data.\nTo generate an adequate pipeline, we recommend using moabb.make_process_pipelines() .\nThis pipeline will receive mne.io.BaseRaw objects.\nThe steps names of this pipeline should be elements of StepType .\nAccording to their name, the steps should either return a mne.io.BaseRaw , a mne.Epochs , or a numpy.ndarray .\nThis pipeline must be “fixed” because it will not be trained,\ni.e. no call to fit will be made. n_jobs ( int ) – Number of jobs to run in parallel over subjects (passed to joblib.Parallel ). Default 1 (sequential). Per-subject\nprocessing (reading, filtering, resampling, epoching) is\nindependent, so this gives a near-linear speedup for datasets with\nmany subjects. Returns : data – dict containing the raw data Return type : Dict property metadata [source] # Return structured metadata for this dataset. Returns the DatasetMetadata object from the centralized catalog,\nor None if metadata is not available for this dataset. Returns : The metadata object containing acquisition parameters,\nparticipant demographics, experiment details, and documentation.\nReturns None if no metadata is registered for this dataset. Return type : DatasetMetadata | None Examples >>> from moabb.datasets import BNCI2014_001 >>> dataset = BNCI2014_001 () >>> dataset . metadata . participants . n_subjects 9 >>> dataset . metadata . acquisition . sampling_rate 250.0 sourcedata_path ( subject = None , path = None , force_update = False , verbose = None ) [source] # Get the dataset’s original pre-BIDS distribution from NEMAR. Where data_path() fetches the original files from the upstream\nhost, this fetches the copy NEMAR mirrors under sourcedata/ . The\nfiles keep their upstream names, so the two are interchangeable in\ncontent – but NEMAR stays reachable when the upstream host is slow,\nrate-limited, behind a bot gate, or retired. Parameters : subject ( int | str | None ) – Restrict the download to one subject, resolved through the\ndeposit’s sourcedata_provenance.json . Deposits enriched before\nthat manifest recorded subjects fall back to the whole tree with a\nwarning. When None the whole tree is fetched. path ( None | str ) – Base path where MOABB stores datasets. force_update ( bool ) – Re-fetch even when a local copy is present. verbose ( bool , str , int , or None ) – If not None, override default verbose level. Returns : Local path to the sourcedata directory. Return type : str Raises : ValueError – If the dataset declares no nemar_id . moabb.datasets.download.NemarDownloadError – If the download fails or the deposit publishes no sourcedata/ . previous moabb.datasets.MartinezPeon2025 next moabb.datasets.Pan2023",
+  "links": [
+    {
+      "text": "[source]",
+      "url": "https://github.com/NeuroTechX/moabb/blob/develop/moabb/datasets/milimbeeg.py#L55-L348"
+    },
+    {
+      "text": "[source]",
+      "url": "https://github.com/NeuroTechX/moabb/blob/develop/moabb/datasets/milimbeeg.py#L55-L348"
+    },
+    {
+      "text": "CC BY 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "text": "Read Paper",
+      "url": "https://doi.org/10.1016%2Fj.dib.2023.109540"
+    },
+    {
+      "text": "Report Issue",
+      "url": "https://github.com/NeuroTechX/moabb/issues/new?title=%5BDataset%5D%20Issue%20with%20MILimbEEG&body=%23%23%20Dataset%0A%0A-%20%2A%2ADataset%20ID%3A%2A%2A%20MILimbEEG%0A%0A%23%23%20Issue%20Description%0A%0APlease%20describe%20the%20issue%20you%20encountered%20with%20this%20dataset%3A%0A%0A%23%23%20Steps%20to%20Reproduce%0A%0A1.%20%0A2.%20%0A3.%20%0A%0A%23%23%20Expected%20Behavior%0A%0A%0A%23%23%20Additional%20Context%0A%0A&labels=dataset"
+    },
+    {
+      "text": "10.1016/j.dib.2023.109540",
+      "url": "https://doi.org/10.1016%2Fj.dib.2023.109540"
+    },
+    {
+      "text": "Crossref",
+      "url": "https://api.crossref.org/works/10.1016/j.dib.2023.109540"
+    },
+    {
+      "text": "OpenAlex",
+      "url": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.dib.2023.109540"
+    },
+    {
+      "text": "https://doi.org/10.1016/j.dib.2023.109540",
+      "url": "https://doi.org/10.1016/j.dib.2023.109540"
+    },
+    {
+      "text": "https://doi.org/10.17632/x8psbz3f6x.2",
+      "url": "https://doi.org/10.17632/x8psbz3f6x.2"
+    },
+    {
+      "text": "https://doi.org/10.17632/x8psbz3f6x.2",
+      "url": "https://doi.org/10.17632/x8psbz3f6x.2"
+    },
+    {
+      "text": "[source]",
+      "url": "https://github.com/NeuroTechX/moabb/blob/develop/moabb/datasets/milimbeeg.py#L209-L218"
+    },
+    {
+      "text": "[source]",
+      "url": "https://github.com/NeuroTechX/moabb/blob/develop/moabb/datasets/base.py#L1307-L1432"
+    },
+    {
+      "text": "Path",
+      "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+    },
+    {
+      "text": "list",
+      "url": "https://docs.python.org/3/builtins/stdtypes.html#list"
+    },
+    {
+      "text": "int",
+      "url": "https://docs.python.org/3/builtins/functions.html#int"
+    },
+    {
+      "text": "bool",
+      "url": "https://docs.python.org/3/builtins/functions.html#bool"
+    },
+    {
+      "text": "str",
+      "url": "https://docs.python.org/3/builtins/stdtypes.html#str"
+    },
+    {
+      "text": "str",
+      "url": "https://docs.python.org/3/builtins/stdtypes.html#str"
+    },
+    {
+      "text": "bool",
+      "url": "https://docs.python.org/3/builtins/functions.html#bool"
+    },
+    {
+      "text": "pathlib.Path",
+      "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+    },
+    {
+      "text": "[source]",
+      "url": "https://github.com/NeuroTechX/moabb/blob/develop/moabb/datasets/milimbeeg.py#L220-L243"
+    },
+    {
+      "text": "int",
+      "url": "https://docs.python.org/3/builtins/functions.html#int"
+    },
+    {
+      "text": "str",
+      "url": "https://docs.python.org/3/builtins/stdtypes.html#str"
+    },
+    {
+      "text": "bool",
+      "url": "https://docs.python.org/3/builtins/functions.html#bool"
+    },
+    {
+      "text": "bool",
+      "url": "https://docs.python.org/3/builtins/functions.html#bool"
+    },
+    {
+      "text": "str",
+      "url": "https://docs.python.org/3/builtins/stdtypes.html#str"
+    },
+    {
+      "text": "int",
+      "url": "https://docs.python.org/3/builtins/functions.html#int"
+    },
+    {
+      "text": "mne.verbose()",
+      "url": "https://mne.tools/stable/generated/mne.verbose.html#mne.verbose"
+    },
+    {
+      "text": "list",
+      "url": "https://docs.python.org/3/builtins/stdtypes.html#list"
+    },
+    {
+      "text": "str",
+      "url": "https://docs.python.org/3/builtins/stdtypes.html#str"
+    },
+    {
+      "text": "[source]",
+      "url": "https://github.com/NeuroTechX/moabb/blob/develop/moabb/datasets/base.py#L952-L1065"
+    },
+    {
+      "text": "list",
+      "url": "https://docs.python.org/3/builtins/stdtypes.html#list"
+    },
+    {
+      "text": "int",
+      "url": "https://docs.python.org/3/builtins/functions.html#int"
+    },
+    {
+      "text": "str",
+      "url": "https://docs.python.org/3/builtins/stdtypes.html#str"
+    },
+    {
+      "text": "bool",
+      "url": "https://docs.python.org/3/builtins/functions.html#bool"
+    },
+    {
+      "text": "bool",
+      "url": "https://docs.python.org/3/builtins/functions.html#bool"
+    },
+    {
+      "text": "bool",
+      "url": "https://docs.python.org/3/builtins/functions.html#bool"
+    },
+    {
+      "text": "bool",
+      "url": "https://docs.python.org/3/builtins/functions.html#bool"
+    },
+    {
+      "text": "str",
+      "url": "https://docs.python.org/3/builtins/stdtypes.html#str"
+    },
+    {
+      "text": "int",
+      "url": "https://docs.python.org/3/builtins/functions.html#int"
+    },
+    {
+      "text": "mne.verbose()",
+      "url": "https://mne.tools/stable/generated/mne.verbose.html#mne.verbose"
+    },
+    {
+      "text": "str",
+      "url": "https://docs.python.org/3/builtins/stdtypes.html#str"
+    },
+    {
+      "text": "str",
+      "url": "https://docs.python.org/3/builtins/stdtypes.html#str"
+    },
+    {
+      "text": "str",
+      "url": "https://docs.python.org/3/builtins/stdtypes.html#str"
+    },
+    {
+      "text": "[source]",
+      "url": "https://github.com/NeuroTechX/moabb/blob/develop/moabb/datasets/base.py#L1605-L1629"
+    },
+    {
+      "text": "str",
+      "url": "https://docs.python.org/3/builtins/stdtypes.html#str"
+    },
+    {
+      "text": "str",
+      "url": "https://docs.python.org/3/builtins/stdtypes.html#str"
+    },
+    {
+      "text": "str",
+      "url": "https://docs.python.org/3/builtins/stdtypes.html#str"
+    },
+    {
+      "text": "pandas.DataFrame",
+      "url": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame"
+    },
+    {
+      "text": "[source]",
+      "url": "https://github.com/NeuroTechX/moabb/blob/develop/moabb/datasets/base.py#L774-L813"
+    },
+    {
+      "text": "int",
+      "url": "https://docs.python.org/3/builtins/functions.html#int"
+    },
+    {
+      "text": "int",
+      "url": "https://docs.python.org/3/builtins/functions.html#int"
+    },
+    {
+      "text": "int",
+      "url": "https://docs.python.org/3/builtins/functions.html#int"
+    },
+    {
+      "text": "[source]",
+      "url": "https://github.com/NeuroTechX/moabb/blob/develop/moabb/datasets/base.py#L815-L904"
+    },
+    {
+      "text": "mne.io.Raw",
+      "url": "https://mne.tools/stable/generated/mne.io.Raw.html#mne.io.Raw"
+    },
+    {
+      "text": "mne.Epochs",
+      "url": "https://mne.tools/stable/generated/mne.Epochs.html#mne.Epochs"
+    },
+    {
+      "text": "int",
+      "url": "https://docs.python.org/3/builtins/functions.html#int"
+    },
+    {
+      "text": "sklearn.pipeline.Pipeline",
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline"
+    },
+    {
+      "text": "mne.io.BaseRaw",
+      "url": "https://mne.tools/stable/generated/mne.io.BaseRaw.html#mne.io.BaseRaw"
+    },
+    {
+      "text": "mne.io.BaseRaw",
+      "url": "https://mne.tools/stable/generated/mne.io.BaseRaw.html#mne.io.BaseRaw"
+    },
+    {
+      "text": "mne.Epochs",
+      "url": "https://mne.tools/stable/generated/mne.Epochs.html#mne.Epochs"
+    },
+    {
+      "text": "numpy.ndarray",
+      "url": "https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray"
+    },
+    {
+      "text": "int",
+      "url": "https://docs.python.org/3/builtins/functions.html#int"
+    },
+    {
+      "text": "[source]",
+      "url": "https://github.com/NeuroTechX/moabb/blob/develop/moabb/../../../../.local/share/uv/python/cpython-3.11.17-linux-x86_64-gnu/lib/python3.11/functools.py"
+    },
+    {
+      "text": "[source]",
+      "url": "https://github.com/NeuroTechX/moabb/blob/develop/moabb/datasets/base.py#L1190-L1242"
+    },
+    {
+      "text": "int",
+      "url": "https://docs.python.org/3/builtins/functions.html#int"
+    },
+    {
+      "text": "str",
+      "url": "https://docs.python.org/3/builtins/stdtypes.html#str"
+    },
+    {
+      "text": "str",
+      "url": "https://docs.python.org/3/builtins/stdtypes.html#str"
+    },
+    {
+      "text": "bool",
+      "url": "https://docs.python.org/3/builtins/functions.html#bool"
+    },
+    {
+      "text": "bool",
+      "url": "https://docs.python.org/3/builtins/functions.html#bool"
+    },
+    {
+      "text": "str",
+      "url": "https://docs.python.org/3/builtins/stdtypes.html#str"
+    },
+    {
+      "text": "int",
+      "url": "https://docs.python.org/3/builtins/functions.html#int"
+    },
+    {
+      "text": "str",
+      "url": "https://docs.python.org/3/builtins/stdtypes.html#str"
+    },
+    {
+      "text": "ValueError",
+      "url": "https://docs.python.org/3/builtins/exceptions.html#ValueError"
+    }
+  ]
+}

@@ -1,0 +1,612 @@
+{
+  "status": "closed_independent_all19_arithmetic_sensitivity_and_failure_census",
+  "synthetic": false,
+  "reviewed_at_utc": "2026-10-11T12:56:59.929457+00:00",
+  "configured_source_identities": 19,
+  "independent_biological_identity_established": false,
+  "source_events": 14431,
+  "eligible_analysis_trials": 14429,
+  "session_joins": 76,
+  "source_short_events_retained": [
+    {
+      "subject": "sub-3",
+      "session": "01",
+      "run": "03",
+      "trial_id": "sub-3/ses-01/run-03/tsv-row-31",
+      "tsv_row": "31",
+      "label": "rest",
+      "stored_event_value": "1",
+      "onset_s": "224.032",
+      "duration_s": "2.968",
+      "start_sample": "56008",
+      "stop_sample_exclusive": "56750",
+      "source_file": "sub-3/ses-01/eeg/sub-3_ses-01_task-imagery_run-03_eeg.edf",
+      "source_length_samples": "742",
+      "fixed_window_eligible": "False",
+      "exclusion_reason": "source_event_duration_does_not_match_fixed_window",
+      "original_subject": "sub-03",
+      "signal_unit": "V",
+      "onset_unit": "s",
+      "duration_unit": "s",
+      "sample_origin": "0",
+      "original_header_file": "sub-03/ses-01/eeg/sub-03_ses-01_task-MotorImageryRest_run-03_eeg.vhdr",
+      "declared_original_header_sha256": "d229a07e3367e44bb46d35d8ff2abc4e8a8302c61fc532ebdb1b7ece06cfb8e6",
+      "original_header_hash_verified": "True",
+      "behavior_trial_outcome": "unresolved",
+      "behavior_score_denominator": "unresolved"
+    },
+    {
+      "subject": "sub-12",
+      "session": "02",
+      "run": "02",
+      "trial_id": "sub-12/ses-02/run-02/tsv-row-32",
+      "tsv_row": "32",
+      "label": "right_hand",
+      "stored_event_value": "2",
+      "onset_s": "235.024",
+      "duration_s": "4.976",
+      "start_sample": "58756",
+      "stop_sample_exclusive": "60000",
+      "source_file": "sub-12/ses-02/eeg/sub-12_ses-02_task-imagery_run-02_eeg.edf",
+      "source_length_samples": "1244",
+      "fixed_window_eligible": "False",
+      "exclusion_reason": "source_event_duration_does_not_match_fixed_window",
+      "original_subject": "sub-12",
+      "signal_unit": "V",
+      "onset_unit": "s",
+      "duration_unit": "s",
+      "sample_origin": "0",
+      "original_header_file": "sub-12/ses-02/eeg/sub-12_ses-02_task-MotorImageryRest_run-02_eeg.vhdr",
+      "declared_original_header_sha256": "987020677d917fc5d2f10bb9582d8309a705458e9bb2a9a561dcfc558991e090",
+      "original_header_hash_verified": "True",
+      "behavior_trial_outcome": "unresolved",
+      "behavior_score_denominator": "unresolved"
+    }
+  ],
+  "constant_prediction_session_count": 21,
+  "constant_prediction_identity_count": 10,
+  "constant_prediction_sessions": [
+    {
+      "subject": "sub-1",
+      "session": "02",
+      "label": "rest"
+    },
+    {
+      "subject": "sub-1",
+      "session": "03",
+      "label": "rest"
+    },
+    {
+      "subject": "sub-1",
+      "session": "04",
+      "label": "rest"
+    },
+    {
+      "subject": "sub-2",
+      "session": "03",
+      "label": "rest"
+    },
+    {
+      "subject": "sub-4",
+      "session": "04",
+      "label": "rest"
+    },
+    {
+      "subject": "sub-5",
+      "session": "04",
+      "label": "right_hand"
+    },
+    {
+      "subject": "sub-7",
+      "session": "04",
+      "label": "rest"
+    },
+    {
+      "subject": "sub-13",
+      "session": "02",
+      "label": "right_hand"
+    },
+    {
+      "subject": "sub-13",
+      "session": "03",
+      "label": "right_hand"
+    },
+    {
+      "subject": "sub-13",
+      "session": "04",
+      "label": "right_hand"
+    },
+    {
+      "subject": "sub-14",
+      "session": "03",
+      "label": "rest"
+    },
+    {
+      "subject": "sub-14",
+      "session": "04",
+      "label": "rest"
+    },
+    {
+      "subject": "sub-16",
+      "session": "02",
+      "label": "rest"
+    },
+    {
+      "subject": "sub-16",
+      "session": "03",
+      "label": "rest"
+    },
+    {
+      "subject": "sub-16",
+      "session": "04",
+      "label": "rest"
+    },
+    {
+      "subject": "sub-17",
+      "session": "02",
+      "label": "rest"
+    },
+    {
+      "subject": "sub-17",
+      "session": "03",
+      "label": "rest"
+    },
+    {
+      "subject": "sub-17",
+      "session": "04",
+      "label": "rest"
+    },
+    {
+      "subject": "sub-19",
+      "session": "02",
+      "label": "right_hand"
+    },
+    {
+      "subject": "sub-19",
+      "session": "03",
+      "label": "right_hand"
+    },
+    {
+      "subject": "sub-19",
+      "session": "04",
+      "label": "right_hand"
+    }
+  ],
+  "qc_flags_retained_in_primary": 456,
+  "scientific_failure_records": 26,
+  "scientific_failure_type_counts": {
+    "constant_prediction": 21,
+    "matched_geometry": 5
+  },
+  "matched_summary_rows_including_unavailable_cells": 152,
+  "matching_availability": {
+    "all_six_runs": {
+      "available_subjects": 19,
+      "unavailable_subjects": []
+    },
+    "qc_common_four_runs": {
+      "available_subjects": 14,
+      "unavailable_subjects": [
+        "sub-8",
+        "sub-11",
+        "sub-13",
+        "sub-14",
+        "sub-19"
+      ]
+    }
+  },
+  "unavailable_matched_variants_preserved": [
+    {
+      "subject": "sub-8",
+      "variant": "qc_common_four_runs",
+      "status": "unavailable",
+      "runs": [
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "error": "Insufficient preset matched cells: [{\"session\": \"01\", \"run\": \"05\", \"label\": \"rest\", \"n_available\": 11, \"n_required\": 12}, {\"session\": \"01\", \"run\": \"06\", \"label\": \"rest\", \"n_available\": 8, \"n_required\": 12}]",
+      "preset_not_relaxed": true
+    },
+    {
+      "subject": "sub-11",
+      "variant": "qc_common_four_runs",
+      "status": "unavailable",
+      "runs": [
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "error": "Insufficient preset matched cells: [{\"session\": \"02\", \"run\": \"06\", \"label\": \"rest\", \"n_available\": 11, \"n_required\": 12}]",
+      "preset_not_relaxed": true
+    },
+    {
+      "subject": "sub-13",
+      "variant": "qc_common_four_runs",
+      "status": "unavailable",
+      "runs": [
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "error": "Insufficient preset matched cells: [{\"session\": \"04\", \"run\": \"04\", \"label\": \"rest\", \"n_available\": 2, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"04\", \"label\": \"right_hand\", \"n_available\": 3, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"05\", \"label\": \"rest\", \"n_available\": 3, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"05\", \"label\": \"right_hand\", \"n_available\": 5, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"06\", \"label\": \"rest\", \"n_available\": 1, \"n_required\": 12}]",
+      "preset_not_relaxed": true
+    },
+    {
+      "subject": "sub-14",
+      "variant": "qc_common_four_runs",
+      "status": "unavailable",
+      "runs": [
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "error": "Insufficient preset matched cells: [{\"session\": \"02\", \"run\": \"04\", \"label\": \"rest\", \"n_available\": 11, \"n_required\": 12}, {\"session\": \"02\", \"run\": \"05\", \"label\": \"rest\", \"n_available\": 11, \"n_required\": 12}, {\"session\": \"02\", \"run\": \"06\", \"label\": \"rest\", \"n_available\": 1, \"n_required\": 12}, {\"session\": \"02\", \"run\": \"06\", \"label\": \"right_hand\", \"n_available\": 8, \"n_required\": 12}]",
+      "preset_not_relaxed": true
+    },
+    {
+      "subject": "sub-19",
+      "variant": "qc_common_four_runs",
+      "status": "unavailable",
+      "runs": [
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "error": "Insufficient preset matched cells: [{\"session\": \"02\", \"run\": \"03\", \"label\": \"rest\", \"n_available\": 2, \"n_required\": 12}, {\"session\": \"02\", \"run\": \"03\", \"label\": \"right_hand\", \"n_available\": 5, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"03\", \"label\": \"rest\", \"n_available\": 7, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"03\", \"label\": \"right_hand\", \"n_available\": 6, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"04\", \"label\": \"rest\", \"n_available\": 4, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"04\", \"label\": \"right_hand\", \"n_available\": 1, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"06\", \"label\": \"rest\", \"n_available\": 8, \"n_required\": 12}]",
+      "preset_not_relaxed": true
+    }
+  ],
+  "retained_sensitivity_identities": [
+    "sub-2",
+    "sub-3",
+    "sub-4",
+    "sub-5",
+    "sub-8",
+    "sub-9",
+    "sub-10",
+    "sub-11",
+    "sub-12",
+    "sub-13",
+    "sub-14",
+    "sub-16",
+    "sub-18",
+    "sub-19"
+  ],
+  "excluded_sensitivity_identities": [
+    "sub-1",
+    "sub-6",
+    "sub-7",
+    "sub-15",
+    "sub-17"
+  ],
+  "retained_matching_availability": {
+    "all_six_runs": {
+      "requested_identities": 14,
+      "available_identities": 14,
+      "unavailable_identities": []
+    },
+    "qc_common_four_runs": {
+      "requested_identities": 14,
+      "available_identities": 9,
+      "unavailable_identities": [
+        "sub-8",
+        "sub-11",
+        "sub-13",
+        "sub-14",
+        "sub-19"
+      ]
+    }
+  },
+  "source_frozen_model_checks": [
+    {
+      "subject": "sub-1",
+      "model_sha256": "85a66d7dccc5a9fbbe0a329f725b0cb286cf6b992d7205eae593dd9eaf14fc7c",
+      "fit_calls": 1,
+      "source_train_n": 120
+    },
+    {
+      "subject": "sub-2",
+      "model_sha256": "10f5576986b0ed33f8242394236168f77a4157c46c185d989c804eac81193d63",
+      "fit_calls": 1,
+      "source_train_n": 128
+    },
+    {
+      "subject": "sub-3",
+      "model_sha256": "6dc52003efac541f2b56050c50f2a8d92292af83d7d8b4c96fda63a6cf1e1067",
+      "fit_calls": 1,
+      "source_train_n": 126
+    },
+    {
+      "subject": "sub-4",
+      "model_sha256": "ac99693d29937994f88c6db1388388fdb5c47b98d0bfd2dacf52720ab000444d",
+      "fit_calls": 1,
+      "source_train_n": 128
+    },
+    {
+      "subject": "sub-5",
+      "model_sha256": "03c2b109254ae697a50e67c7b1b099329ce0681325461403e625d98ee9e56a2f",
+      "fit_calls": 1,
+      "source_train_n": 127
+    },
+    {
+      "subject": "sub-6",
+      "model_sha256": "40347b73f8e6aae234a92565fef632e205f36c2ce9862d645e0aed545018ce0a",
+      "fit_calls": 1,
+      "source_train_n": 128
+    },
+    {
+      "subject": "sub-7",
+      "model_sha256": "4d8fe77b05aa0d586886a7a5c479bcd01bad2333252df6680a7990dbe69a8b4b",
+      "fit_calls": 1,
+      "source_train_n": 119
+    },
+    {
+      "subject": "sub-8",
+      "model_sha256": "cfefa3a026fb535b82050e092a6823b19f4b54847209bb65e421d0fbb2438d7e",
+      "fit_calls": 1,
+      "source_train_n": 128
+    },
+    {
+      "subject": "sub-9",
+      "model_sha256": "252a4c9d124f1e2cc6462a703049da8fa4b5dbb3e5ccaf3466c4b681173bc635",
+      "fit_calls": 1,
+      "source_train_n": 128
+    },
+    {
+      "subject": "sub-10",
+      "model_sha256": "fcefc0075dd169251482ebf494d37ac97e12dd8d37fb42ad1b3ebf4d4f56cb81",
+      "fit_calls": 1,
+      "source_train_n": 128
+    },
+    {
+      "subject": "sub-11",
+      "model_sha256": "92af02f358e629b55bfc48c574ec9f18d0c6b4391171d355d7f829fb57004cf1",
+      "fit_calls": 1,
+      "source_train_n": 128
+    },
+    {
+      "subject": "sub-12",
+      "model_sha256": "f25f7b02610c9134eb77296f042e98c051d7bd2f2413aa99e55960312dbf2528",
+      "fit_calls": 1,
+      "source_train_n": 128
+    },
+    {
+      "subject": "sub-13",
+      "model_sha256": "597cf1b83b4143cdffb27fc85aea195f1278826e35dce69509176f56c6176207",
+      "fit_calls": 1,
+      "source_train_n": 128
+    },
+    {
+      "subject": "sub-14",
+      "model_sha256": "b3e3689adb6c4399033404c6b0232499c07e359d40d9dca276734d3729cf365b",
+      "fit_calls": 1,
+      "source_train_n": 128
+    },
+    {
+      "subject": "sub-15",
+      "model_sha256": "40347b73f8e6aae234a92565fef632e205f36c2ce9862d645e0aed545018ce0a",
+      "fit_calls": 1,
+      "source_train_n": 128
+    },
+    {
+      "subject": "sub-16",
+      "model_sha256": "0e72dcd9bb5ae6b86325c4acd5b2a9b4eb036a2c8d9bba6c894baf6280551c35",
+      "fit_calls": 1,
+      "source_train_n": 128
+    },
+    {
+      "subject": "sub-17",
+      "model_sha256": "85a66d7dccc5a9fbbe0a329f725b0cb286cf6b992d7205eae593dd9eaf14fc7c",
+      "fit_calls": 1,
+      "source_train_n": 120
+    },
+    {
+      "subject": "sub-18",
+      "model_sha256": "4c3e8e5f98777343faf54b43f634a3bb8062721cef5d0081e1e9d98a90c302d1",
+      "fit_calls": 1,
+      "source_train_n": 128
+    },
+    {
+      "subject": "sub-19",
+      "model_sha256": "1e69f67e12ee75de2eae904c342e17f9b514344eb07f82ef47e8962187c37871",
+      "fit_calls": 1,
+      "source_train_n": 128
+    }
+  ],
+  "all19_arithmetic_first_last_changes": [
+    {
+      "metric": "mean_run_hit_percent",
+      "mean_change": 14.568421052631576,
+      "subject_bootstrap_CI95": [
+        10.70628289473684,
+        18.266203947368414
+      ],
+      "paired_n": 19
+    },
+    {
+      "metric": "CSP_BA_percent",
+      "mean_change": -4.6764901521850994,
+      "subject_bootstrap_CI95": [
+        -11.884144333064233,
+        2.3328346532183604
+      ],
+      "paired_n": 19
+    },
+    {
+      "metric": "mu_MI_minus_rest_dB",
+      "mean_change": -0.5254938333633802,
+      "subject_bootstrap_CI95": [
+        -1.0171095953315685,
+        0.03825428610574276
+      ],
+      "paired_n": 19
+    },
+    {
+      "metric": "beta_MI_minus_rest_dB",
+      "mean_change": -0.26053377202198236,
+      "subject_bootstrap_CI95": [
+        -0.5622529758557405,
+        0.04544506004646369
+      ],
+      "paired_n": 19
+    },
+    {
+      "metric": "mu_rest_power_uV2",
+      "mean_change": 0.20253185735870935,
+      "subject_bootstrap_CI95": [
+        -1.4179664045562426,
+        1.8146402418903982
+      ],
+      "paired_n": 19
+    },
+    {
+      "metric": "mu_MI_power_uV2",
+      "mean_change": -0.37318148621634495,
+      "subject_bootstrap_CI95": [
+        -1.9998722679133756,
+        1.5862474898959869
+      ],
+      "paired_n": 19
+    },
+    {
+      "metric": "beta_rest_power_uV2",
+      "mean_change": -1.4370450296980295,
+      "subject_bootstrap_CI95": [
+        -3.2572576601960757,
+        -0.077262529324733
+      ],
+      "paired_n": 19
+    },
+    {
+      "metric": "beta_MI_power_uV2",
+      "mean_change": -1.5483169458968309,
+      "subject_bootstrap_CI95": [
+        -3.2664305647524854,
+        -0.3273114534843529
+      ],
+      "paired_n": 19
+    }
+  ],
+  "post_observation_sensitivity_first_last_changes": [
+    {
+      "metric": "mean_run_hit_percent",
+      "mean_change": 15.409761904761904,
+      "subject_bootstrap_CI95": [
+        11.525708333333334,
+        19.33217261904761
+      ],
+      "n_paired": 14,
+      "n_requested": 14
+    },
+    {
+      "metric": "CSP_BA_percent",
+      "mean_change": -4.202012086668283,
+      "subject_bootstrap_CI95": [
+        -11.412736730940255,
+        2.711093509984638
+      ],
+      "n_paired": 14,
+      "n_requested": 14
+    },
+    {
+      "metric": "mu_MI_minus_rest_dB",
+      "mean_change": -0.5293665700236337,
+      "subject_bootstrap_CI95": [
+        -1.0085229990457767,
+        -0.05803902680885329
+      ],
+      "n_paired": 14,
+      "n_requested": 14
+    },
+    {
+      "metric": "beta_MI_minus_rest_dB",
+      "mean_change": -0.27473303229481794,
+      "subject_bootstrap_CI95": [
+        -0.640243719527582,
+        0.10004093499258307
+      ],
+      "n_paired": 14,
+      "n_requested": 14
+    },
+    {
+      "metric": "mu_rest_power_uV2",
+      "mean_change": -0.6831145118348714,
+      "subject_bootstrap_CI95": [
+        -2.3571370176170583,
+        0.7426068780470838
+      ],
+      "n_paired": 14,
+      "n_requested": 14
+    },
+    {
+      "metric": "mu_MI_power_uV2",
+      "mean_change": -1.2961896965723445,
+      "subject_bootstrap_CI95": [
+        -2.813760293405671,
+        -0.07362287168948796
+      ],
+      "n_paired": 14,
+      "n_requested": 14
+    },
+    {
+      "metric": "beta_rest_power_uV2",
+      "mean_change": -1.994100240268748,
+      "subject_bootstrap_CI95": [
+        -4.3199040092016086,
+        -0.21151865659706318
+      ],
+      "n_paired": 14,
+      "n_requested": 14
+    },
+    {
+      "metric": "beta_MI_power_uV2",
+      "mean_change": -2.105325801178758,
+      "subject_bootstrap_CI95": [
+        -4.271547816411739,
+        -0.5531933698499837
+      ],
+      "n_paired": 14,
+      "n_requested": 14
+    }
+  ],
+  "first_ten_replayed_stable_outputs_byte_identical": 160,
+  "physionet_independent_source_validation_closed": {
+    "source_identities": 109,
+    "source_signal_files": 327,
+    "qualified_three_run_identities": 105,
+    "qualified_signal_files": 315,
+    "unqualified_source_identities_preserved": [
+      "S088",
+      "S089",
+      "S092",
+      "S100"
+    ],
+    "new_models_fitted": false
+  },
+  "independent_of_production_helpers": true,
+  "EEG_arrays_loaded": false,
+  "models_refitted": false,
+  "limits": [
+    "Statistical calculations were independently recomputed from saved trial, prediction, and participant tables; EEG filtering/PSD and geometric arrays were not independently rerun.",
+    "Source training and freezing are source-reviewed and receipt/hash-checked; independent reviewer did not refit models.",
+    "Exact duplicate exclusions depend only on raw source-content identities and apply after observations; no independent replication or biological identity claim.",
+    "Behavior scores remain aggregate participant/session observations; trial outcomes and denominators are unresolved.",
+    "No causal human-learning or skill-retention inference is established."
+  ],
+  "input_sha256": {
+    "research_logs/netbci_cohort_all19_20261010/independent_methods_review_run01.json": "7a2d220229872c06cb8a1e2107998a00056e1e077b70c0e7405f9d1128edcbcd",
+    "research_logs/netbci_cohort_all19_20261010/independent_sensitivity_review_run01.json": "13e29b53b184544502c175889c5aab5b32ef45a17182ec0cc93a32cbe4e98c50",
+    "research_logs/netbci_cohort_all19_20261010/independent_first10_replay_comparison_20261011.json": "5ab0309a83261d06b81e4f25dd1a915b851501213b31e908bbe3276cf32d1752",
+    "research_logs/netbci_cohort_all19_20261010/summary_run01/cohort_summary.json": "cbbd8e9a57feea7222976cc735ebb9fc148ac576fddd3d6b104e189082abc3a0",
+    "research_logs/netbci_cohort_all19_20261010/summary_run01/participant_matched_geometry.tsv": "8e118d50d32ed7db86b19e695c04c66067c0f56a64069688fcae6463c2cfb792",
+    "research_logs/public_data_expansion_20261010/physionet_eegmmidb/independent_source_validation_20261011.json": "1a5b89707df04df1ef234b060f7cd09de55b7e2448cd01304418c889c2da67a2",
+    "research_logs/public_data_expansion_20261010/physionet_eegmmidb/audit_20261011_run02/signal_audit.json": "5c76a23158094217f812aecee11c4b5d51c372a31927327193a5ba566b7d3b18"
+  },
+  "review_source_sha256": "f9354881d91baf3563e8814e61feb82da190ceef0aef098131abf35284417228"
+}

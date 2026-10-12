@@ -1,0 +1,61 @@
+{
+  "recorded_at_utc": "2026-10-11T06:55:08.092227+00:00",
+  "checks": [
+    {
+      "subject": "sub-1",
+      "url_role": "bytes_url",
+      "requested_range": "bytes=0-1023",
+      "http_status": 503,
+      "header_length": "215",
+      "content_range": null,
+      "content_type": "text/plain",
+      "chunk_bytes": 215,
+      "returned_query_keys": [
+        "X-Amz-Algorithm",
+        "X-Amz-Credential",
+        "X-Amz-Date",
+        "X-Amz-Expires",
+        "X-Amz-Signature",
+        "X-Amz-SignedHeaders",
+        "response-content-disposition"
+      ],
+      "error_body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: immediate connect error: Invalid argument|remote address:envoy://cloudflare_https_tunnel/"
+    },
+    {
+      "subject": "sub-1",
+      "url_role": "url",
+      "requested_range": "bytes=0-1023",
+      "http_status": 503,
+      "header_length": "215",
+      "content_range": null,
+      "content_type": "text/plain",
+      "chunk_bytes": 215,
+      "returned_query_keys": [],
+      "error_body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: immediate connect error: Invalid argument|remote address:envoy://cloudflare_https_tunnel/"
+    },
+    {
+      "subject": "sub-10",
+      "url_role": "bytes_url",
+      "requested_range": "bytes=0-1023",
+      "http_status": 503,
+      "header_length": "215",
+      "content_range": null,
+      "content_type": "text/plain",
+      "chunk_bytes": 215,
+      "returned_query_keys": [],
+      "error_body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: immediate connect error: Invalid argument|remote address:envoy://cloudflare_https_tunnel/"
+    },
+    {
+      "subject": "sub-10",
+      "url_role": "url",
+      "requested_range": "bytes=0-1023",
+      "http_status": 503,
+      "header_length": "215",
+      "content_range": null,
+      "content_type": "text/plain",
+      "chunk_bytes": 215,
+      "returned_query_keys": [],
+      "error_body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: immediate connect error: Invalid argument|remote address:envoy://cloudflare_https_tunnel/"
+    }
+  ]
+}

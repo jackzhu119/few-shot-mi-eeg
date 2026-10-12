@@ -1,0 +1,35 @@
+read 30/327 EEG files; failures=0
+read 60/327 EEG files; failures=0
+read 90/327 EEG files; failures=0
+read 120/327 EEG files; failures=0
+read 150/327 EEG files; failures=0
+read 180/327 EEG files; failures=0
+read 210/327 EEG files; failures=0
+read 240/327 EEG files; failures=0
+read 270/327 EEG files; failures=0
+read 300/327 EEG files; failures=0
+Traceback (most recent call last):
+  File "/workspace/few-shot-mi-eeg/scripts/fetch_physionet_imagery.py", line 573, in <module>
+    main()
+  File "/workspace/few-shot-mi-eeg/scripts/fetch_physionet_imagery.py", line 568, in main
+    audit_signals(manifest, args.data_root, output)
+  File "/workspace/few-shot-mi-eeg/scripts/fetch_physionet_imagery.py", line 532, in audit_signals
+    save_new(output / "signal_audit.json", summary)
+  File "/workspace/few-shot-mi-eeg/scripts/fetch_physionet_imagery.py", line 55, in save_new
+    json.dump(value, stream, indent=2, ensure_ascii=False)
+  File "/workspace/.bci-tools/python/cpython-3.11.16-linux-x86_64-gnu/lib/python3.11/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/workspace/.bci-tools/python/cpython-3.11.16-linux-x86_64-gnu/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/workspace/.bci-tools/python/cpython-3.11.16-linux-x86_64-gnu/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/workspace/.bci-tools/python/cpython-3.11.16-linux-x86_64-gnu/lib/python3.11/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/workspace/.bci-tools/python/cpython-3.11.16-linux-x86_64-gnu/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/workspace/.bci-tools/python/cpython-3.11.16-linux-x86_64-gnu/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/workspace/.bci-tools/python/cpython-3.11.16-linux-x86_64-gnu/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type int64 is not JSON serializable

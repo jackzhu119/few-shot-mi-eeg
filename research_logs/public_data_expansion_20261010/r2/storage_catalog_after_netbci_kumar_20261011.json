@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-11T06:51:19.845306+00:00",
+  "scope": "only explicitly supplied, completed project transfer receipts; not a full bucket inventory",
+  "credential_values_logged": false,
+  "public_access_policy_changed": false,
+  "stages": [
+    {
+      "receipt": "research_logs/netbci_cohort_resume_20261010/r2/raw_ten_20261010_run01.json",
+      "receipt_sha256": "ecd37fb26890180c6da0d86830a54fd315aea3f090e8354b61cdb3a30fe49ced",
+      "key_prefix": "few-shot-mi-eeg/datasets/netbci2026/nm000305/v1.0.0",
+      "status": "completed",
+      "totals": {
+        "planned_files": 1885,
+        "planned_bytes": 2049560417,
+        "verified_files": 1885,
+        "verified_bytes": 2049560417,
+        "failed_files": 0,
+        "full_get_sha256_verified_files": 5,
+        "uploaded_bytes": 2049560417,
+        "readback_bytes": 9904914
+      },
+      "readback_mode": "sample"
+    },
+    {
+      "receipt": "research_logs/netbci_cohort_resume_20261010/r2/full_window_bundles_ten_20261011_run01.json",
+      "receipt_sha256": "18cdedd1b980da4d36e657b031922b9eab70e4def4ee9da2924a014076c352ae",
+      "key_prefix": "few-shot-mi-eeg/derived/netbci2026/nm000305/v1.0.0/full-window-5s/ten-participant-20261010-run01",
+      "status": "completed",
+      "totals": {
+        "planned_files": 20,
+        "planned_bytes": 3183898726,
+        "verified_files": 20,
+        "verified_bytes": 3183898726,
+        "failed_files": 0,
+        "full_get_sha256_verified_files": 2,
+        "uploaded_bytes": 3183898726,
+        "readback_bytes": 391243888
+      },
+      "readback_mode": "sample"
+    },
+    {
+      "receipt": "research_logs/netbci_cohort_resume_20261010/r2/chat_backup_20261011_run01.json",
+      "receipt_sha256": "f155ef8d5f3dd73bf307f9230cccc8f81619300564fec20b744033bf8e7c6768",
+      "key_prefix": "few-shot-mi-eeg/private-handoffs/20261010/original-chat-backup-run01",
+      "status": "completed",
+      "totals": {
+        "planned_files": 2,
+        "planned_bytes": 12238340,
+        "verified_files": 2,
+        "verified_bytes": 12238340,
+        "failed_files": 0,
+        "full_get_sha256_verified_files": 2,
+        "uploaded_bytes": 12238340,
+        "readback_bytes": 12238340
+      },
+      "readback_mode": "all"
+    },
+    {
+      "receipt": "research_logs/netbci_cohort_resume_20261010/r2/numeric_signal_identity_20261011_run01.json",
+      "receipt_sha256": "f0e5d3d151e951cb3f24298261ce6006b54170742e4c84555f4ae67c90a52a5f",
+      "key_prefix": "few-shot-mi-eeg/audits/netbci2026/nm000305/v1.0.0/numeric-signal-identity-20261011-run01",
+      "status": "completed",
+      "totals": {
+        "planned_files": 2,
+        "planned_bytes": 11050966,
+        "verified_files": 2,
+        "verified_bytes": 11050966,
+        "failed_files": 0,
+        "full_get_sha256_verified_files": 2,
+        "uploaded_bytes": 11050966,
+        "readback_bytes": 11050966
+      },
+      "readback_mode": "all"
+    },
+    {
+      "receipt": "research_logs/netbci_cohort_resume_20261010/r2/analysis_results_ten_20261011_run01.json",
+      "receipt_sha256": "184f7a035b44de7dea10699580b4e1bd527502466d15a55198ed35624e9b1347",
+      "key_prefix": "few-shot-mi-eeg/results/netbci2026/nm000305/v1.0.0/ten-participant-full-window-20261011-run01",
+      "status": "completed",
+      "totals": {
+        "planned_files": 188,
+        "planned_bytes": 13296015,
+        "verified_files": 188,
+        "verified_bytes": 13296015,
+        "failed_files": 0,
+        "full_get_sha256_verified_files": 188,
+        "uploaded_bytes": 13296015,
+        "readback_bytes": 13296015
+      },
+      "readback_mode": "all"
+    },
+    {
+      "receipt": "research_logs/netbci_cohort_resume_20261010/r2/code_checkpoint_4290c40_20261011_run01.json",
+      "receipt_sha256": "526dc2e9eadeaf1c9f78c278c0b1eec70f655996794def6c60283682832badd7",
+      "key_prefix": "few-shot-mi-eeg/code/checkpoint-4290c40/20261011-run01",
+      "status": "completed",
+      "totals": {
+        "planned_files": 3,
+        "planned_bytes": 38172598,
+        "verified_files": 3,
+        "verified_bytes": 38172598,
+        "failed_files": 0,
+        "full_get_sha256_verified_files": 3,
+        "uploaded_bytes": 38172598,
+        "readback_bytes": 38172598
+      },
+      "readback_mode": "all"
+    },
+    {
+      "receipt": "research_logs/public_data_expansion_20261010/r2/netbci_raw_nine_20261011_run01.json",
+      "receipt_sha256": "4aea6476a6b5834c0a8e90086474288d941b149a50ee81dd3ad2b9610893ed94",
+      "key_prefix": "few-shot-mi-eeg/datasets/netbci2026/nm000305/v1.0.0",
+      "status": "completed",
+      "totals": {
+        "planned_files": 1692,
+        "planned_bytes": 1834605546,
+        "verified_files": 1692,
+        "verified_bytes": 1834605546,
+        "failed_files": 0,
+        "full_get_sha256_verified_files": 4,
+        "uploaded_bytes": 1834605546,
+        "readback_bytes": 9583011
+      },
+      "readback_mode": "sample"
+    },
+    {
+      "receipt": "research_logs/public_data_expansion_20261010/r2/kumar2024_raw_20261011_run01.json",
+      "receipt_sha256": "0eb79f83138fb9e07ec7fd22cb7527bacde8f815f5b987b50e504e5e099a5071",
+      "key_prefix": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5",
+      "status": "completed",
+      "totals": {
+        "planned_files": 2705,
+        "planned_bytes": 1781052841,
+        "verified_files": 2705,
+        "verified_bytes": 1781052841,
+        "failed_files": 0,
+        "full_get_sha256_verified_files": 4,
+        "uploaded_bytes": 1781052841,
+        "readback_bytes": 6743072
+      },
+      "readback_mode": "sample"
+    },
+    {
+      "receipt": "research_logs/public_data_expansion_20261010/r2/kumar2024_signal_audit_20261011_run01.json",
+      "receipt_sha256": "7b2c25e1e2f5812d8359d3518cbfc5422e1b1f4eb2d3458c61907b4d9e0e36c2",
+      "key_prefix": "few-shot-mi-eeg/audits/kumar2024/nm000177/v1.0.5/source-signal-20261011-run02",
+      "status": "completed",
+      "totals": {
+        "planned_files": 362,
+        "planned_bytes": 5127511,
+        "verified_files": 362,
+        "verified_bytes": 5127511,
+        "failed_files": 0,
+        "full_get_sha256_verified_files": 362,
+        "uploaded_bytes": 5127511,
+        "readback_bytes": 5127511
+      },
+      "readback_mode": "all"
+    },
+    {
+      "receipt": "research_logs/public_data_expansion_20261010/r2/kumar2024_source_evidence_20261011_run01.json",
+      "receipt_sha256": "f87760987899d8fce56e933ea2f965e279d29d2f8c2039ab4eb38b411ddc3083",
+      "key_prefix": "few-shot-mi-eeg/research-evidence/kumar2024/nm000177/v1.0.5/source-ingestion-20261011-run01",
+      "status": "completed",
+      "totals": {
+        "planned_files": 19,
+        "planned_bytes": 8201327,
+        "verified_files": 19,
+        "verified_bytes": 8201327,
+        "failed_files": 0,
+        "full_get_sha256_verified_files": 19,
+        "uploaded_bytes": 8201327,
+        "readback_bytes": 8201327
+      },
+      "readback_mode": "all"
+    }
+  ],
+  "duplicate_receipt_references_excluded": [],
+  "distinct_remote_objects": 6878,
+  "distinct_remote_bytes": 8937204287,
+  "distinct_full_get_sha256_verified_objects": 591,
+  "physical_uploaded_bytes_from_receipts": 8937204287,
+  "actual_readback_bytes_from_receipts": 505561642,
+  "deduplication": "exact immutable key and identical SHA256/length; HEAD-only rechecks do not add objects",
+  "verification_caveat": "All counted objects passed HEAD length/stored SHA256 metadata checks. Full remote content is independently verified only for the explicitly counted full GET objects."
+}

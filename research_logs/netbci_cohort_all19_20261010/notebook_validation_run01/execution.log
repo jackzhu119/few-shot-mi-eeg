@@ -1,0 +1,126 @@
+Traceback (most recent call last):
+  File "/workspace/few-shot-mi-eeg/scripts/build_netbci_all19_notebook.py", line 764, in <module>
+    main()
+  File "/workspace/few-shot-mi-eeg/scripts/build_netbci_all19_notebook.py", line 748, in main
+    resources={"metadata": {"path": str(ROOT)}}, allow_errors=False).execute()
+                                                                     ^^^^^^^^^
+  File "/workspace/.venvs/few-shot-mi-eeg/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.bci-tools/python/cpython-3.11.16-linux-x86_64-gnu/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/.venvs/few-shot-mi-eeg/lib/python3.11/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/workspace/.venvs/few-shot-mi-eeg/lib/python3.11/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/workspace/.venvs/few-shot-mi-eeg/lib/python3.11/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+RESULTS = ROOT / 'research_logs/netbci_cohort_all19_20261010/summary_run01'
+AUDIT = RESULTS.parent
+CONFIG = ROOT / "configs/netbci_cohort_all19_20261010.json"
+COMPACT = AUDIT / "numeric_signal_identity_summary_v2.json"
+SENSITIVITY = AUDIT / "independence_sensitivity_run01"
+receipt = read_json(RESULTS / "summary_receipt.json")
+summary = read_json(RESULTS / "cohort_summary.json")
+config = read_json(CONFIG)
+compact = read_json(COMPACT)
+sensitive_receipt = read_json(SENSITIVITY / "sensitivity_receipt.json")
+sensitivity = read_json(SENSITIVITY / "sensitivity_summary.json")
+LEDGER = Path(compact["full_ledger_file"])
+if not LEDGER.is_file():
+    LEDGER = AUDIT / LEDGER.name
+assert receipt["status"] == "actual_data_summary_completed" and receipt["synthetic"] is False
+assert summary["status"] == "actual_audited_published_ID_cohort_exploratory"
+assert summary["synthetic"] is False and compact["synthetic"] is False
+assert compact["status"] == "compact_verified_pre_model_numeric_identity_summary"
+assert sha256(CONFIG) == receipt["config_sha256"] == compact["configuration_sha256"]
+assert sha256(LEDGER) == compact["full_ledger_sha256"]
+assert sha256(LEDGER) == sensitive_receipt["input_sha256"]["identity_audit"]["sha256"]
+assert sha256(RESULTS / "summary_receipt.json") == sensitive_receipt["input_sha256"]["summary_receipt"]["sha256"]
+assert sensitive_receipt["status"] == "completed_real_data_sensitivity"
+assert sensitive_receipt["synthetic"] is False
+assert sensitive_receipt["original_primary_outputs_modified"] is False
+assert sensitivity["no_model_refitting"] and sensitivity["not_independent_confirmation"]
+assert receipt["bootstrap_unit"] == "whole published identity trajectory"
+source_rows = []
+for directory, record in [(RESULTS, receipt), (SENSITIVITY, sensitive_receipt)]:
+    for name, checksum in record["output_sha256"].items():
+        assert sha256(directory / name) == checksum, name
+        source_rows.append({"artifact": str((directory / name).relative_to(ROOT)), "SHA256": checksum})
+for name, item in receipt["input_sha256"].items():
+    path = Path(item["path"])
+    if not path.exists() and "/few-shot-mi-eeg/" in item["path"]:
+        path = ROOT / item["path"].split("/few-shot-mi-eeg/", 1)[1]
+    assert sha256(path) == item["sha256"], name
+for path in [CONFIG, COMPACT, LEDGER, RESULTS / "summary_receipt.json",
+             SENSITIVITY / "sensitivity_receipt.json"]:
+    source_rows.append({"artifact": str(path.relative_to(ROOT)), "SHA256": sha256(path)})
+OFFICIAL_MANIFEST = Path(compact["official_manifest_file"])
+assert sha256(OFFICIAL_MANIFEST) == compact["official_manifest_sha256"]
+source_rows.append({"artifact": str(OFFICIAL_MANIFEST.relative_to(ROOT)),
+                    "SHA256": sha256(OFFICIAL_MANIFEST)})
+SUBJECTS, SESSIONS = config["subjects"], config["session_order"]
+assert SUBJECTS == [f"sub-{i}" for i in range(1, 20)]
+RETAINED, EXCLUDED = sensitivity["retained_identities"], sensitivity["excluded_identities"]
+assert EXCLUDED == compact["cross_subject_affected_identities"]
+assert RETAINED == compact["identities_without_detected_cross_subject_exact_signal_copies"]
+assert not set(RETAINED) & set(EXCLUDED) and set(RETAINED + EXCLUDED) == set(SUBJECTS)
+assert summary["published_identities"] == len(SUBJECTS)
+assert compact["summary"]["continuous_runs"] == len(SUBJECTS) * len(SESSIONS) * 6
+assert compact["summary"]["official_manifest_matches"] == compact["summary"]["continuous_runs"]
+old_config = read_json(ROOT / "configs/netbci_cohort_full_windows_20261010.json")
+SCIENCE_KEYS = ["seed", "threads", "session_order", "expected_runs", "source_train_runs",
+    "source_query_runs", "later_query_runs", "expected_sfreq_hz", "reference", "roi_channels",
+    "decoder_band_hz", "filter", "edge_crop_seconds", "welch_segment_samples", "welch_overlap_samples",
+    "mu_hz", "beta_hz", "covariance_trace_shrinkage", "pca_components", "csp_components",
+    "artifact_log_peak_MAD_multiplier", "matched_trials_per_class_per_run", "matched_repetitions",
+    "qc_matched_runs", "bootstrap_run_repetitions", "bootstrap_subject_repetitions",
+    "fixed_window_duration_seconds", "mismatch_action"]
+assert all(config[key] == old_config[key] for key in SCIENCE_KEYS)
+joined = table(RESULTS / "participant_session_join.tsv")
+paired = table(RESULTS / "cohort_paired_changes.tsv")
+geometry = table(RESULTS / "participant_matched_geometry.tsv")
+spectral = table(RESULTS / "spectral_reference_QC_sensitivity.tsv")
+sensitive_paired = table(SENSITIVITY / "cohort_paired_changes.tsv")
+estimates = table(SENSITIVITY / "association_estimates.tsv")
+restricted = table(SENSITIVITY / "retained_participant_session_join.tsv")
+assert not joined.duplicated(["subject", "session"]).any()
+assert set(zip(joined.subject, joined.session)) == {(s, t) for s in SUBJECTS for t in SESSIONS}
+assert len(joined) == summary["sessions"] == len(SUBJECTS) * len(SESSIONS)
+assert int(joined.n_EEG_source_events.sum()) == summary["source_events"]
+assert int(joined.n_EEG_trials.sum()) == summary["trials"]
+assert int(joined.n_EEG_excluded_events.sum()) == summary["excluded_source_events_n"]
+assert (joined.n_EEG_source_events == joined.n_EEG_trials + joined.n_EEG_excluded_events).all()
+assert (paired.n_requested_subjects == len(SUBJECTS)).all()
+assert (sensitive_paired.n_requested_subjects == len(RETAINED)).all()
+assert set(restricted.subject) == set(RETAINED)
+print("Verified", len(SUBJECTS), "published identities;", len(RETAINED), "retained identities.")
+------------------
+
+
+[31m---------------------------------------------------------------------------[39m
+[31mValueError[39m                                Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[2][39m[32m, line 43[39m
+[32m     39[39m              SENSITIVITY / "sensitivity_receipt.json"]:
+[32m     40[39m     source_rows.append({[33m"artifact"[39m: str(path.relative_to(ROOT)), [33m"SHA256"[39m: sha256(path)})
+[32m     41[39m OFFICIAL_MANIFEST = Path(compact[[33m"official_manifest_file"[39m])
+[32m     42[39m [38;5;28;01massert[39;00m sha256(OFFICIAL_MANIFEST) == compact[[33m"official_manifest_sha256"[39m]
+[32m---> [39m[32m43[39m source_rows.append({"artifact": str(OFFICIAL_MANIFEST.relative_to(ROOT)),
+[32m     44[39m                     "SHA256": sha256(OFFICIAL_MANIFEST)})
+[32m     45[39m SUBJECTS, SESSIONS = config[[33m"subjects"[39m], config[[33m"session_order"[39m]
+[32m     46[39m [38;5;28;01massert[39;00m SUBJECTS == [[33mf"sub-{i}"[39m [38;5;28;01mfor[39;00m i [38;5;28;01min[39;00m range([32m1[39m, [32m20[39m)]
+
+[36mFile [39m[32m/workspace/.bci-tools/python/cpython-3.11.16-linux-x86_64-gnu/lib/python3.11/pathlib.py:730[39m, in [36mPurePath.relative_to[39m[34m(self, *other)[39m
+[32m    728[39m [38;5;28;01mif[39;00m (root [38;5;129;01mor[39;00m drv) [38;5;28;01mif[39;00m n == [32m0[39m [38;5;28;01melse[39;00m cf(abs_parts[:n]) != cf(to_abs_parts):
+[32m    729[39m     formatted = [38;5;28mself[39m._format_parsed_parts(to_drv, to_root, to_parts)
+[32m--> [39m[32m730[39m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m([33m"[39m[38;5;132;01m{!r}[39;00m[33m is not in the subpath of [39m[38;5;132;01m{!r}[39;00m[33m"[39m
+[32m    731[39m             [33m"[39m[33m OR one path is relative and the other is absolute.[39m[33m"[39m
+[32m    732[39m                      .format([38;5;28mstr[39m([38;5;28mself[39m), [38;5;28mstr[39m(formatted)))
+[32m    733[39m [38;5;28;01mreturn[39;00m [38;5;28mself[39m._from_parsed_parts([33m'[39m[33m'[39m, root [38;5;28;01mif[39;00m n == [32m1[39m [38;5;28;01melse[39;00m [33m'[39m[33m'[39m,
+[32m    734[39m                                abs_parts[n:])
+
+[31mValueError[39m: 'research_logs/netbci2026_sources/manifest.json' is not in the subpath of '/workspace/few-shot-mi-eeg' OR one path is relative and the other is absolute.
+

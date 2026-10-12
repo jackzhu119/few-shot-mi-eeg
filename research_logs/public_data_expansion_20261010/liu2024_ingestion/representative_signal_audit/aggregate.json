@@ -1,0 +1,40 @@
+{
+  "dataset": "Liu2024",
+  "nemar_id": "nm000158",
+  "version": "v1.0.3",
+  "license": "CC-BY-4.0",
+  "scope": "single-visit video-guided imagery; preprocessed derivative, no treatment/retention intervention",
+  "population": "acute stroke patients 1–30 days post-stroke",
+  "complete": false,
+  "representative_only": true,
+  "signal_file_count": 1,
+  "passed_signal_files": 0,
+  "source_identity_count": 0,
+  "source_event_count": 0,
+  "source_label_counts": {},
+  "source_duration_counts": {},
+  "source_event_kind_counts": {},
+  "exact_numeric_duplicate_groups": {
+    "whole_signal_numeric_sha256": [],
+    "central4KiB_numeric_sha256": []
+  },
+  "started_at_utc": "2026-10-11T06:54:11.936331+00:00",
+  "finished_at_utc": "2026-10-11T06:54:11.937137+00:00",
+  "script_sha256": "816c4a04aebd68773d4169584b4e54f926db34068b70cea2f1a1d67a23f68169",
+  "source_commit": "4290c4061f5d35381ed684bb07f1dd52836bbee0",
+  "plan_sha256": "8934f650f7adf7b2e64406cfb5b29bdaca893042c29acd271a95f08c7b4b8a2d",
+  "selection_manifest_sha256": "bfec26f46532a5adf3f4b71b52a15b86eb36a96ed29f7add4f236e2809db6b8e",
+  "runtime_versions": {
+    "python": "3.11.16",
+    "mne": "1.10.2",
+    "numpy": "2.2.6"
+  },
+  "failed_signals": [
+    {
+      "status": "failed",
+      "source_file": "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-0_eeg.bdf",
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: 'data/public_eeg/liu2024/nm000158/v1.0.3/sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-0_eeg.bdf'"
+    }
+  ],
+  "analysis_status": "source_resource_audit_only;no_model_training_or_window_selection"
+}

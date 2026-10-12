@@ -1,0 +1,19 @@
+{
+  "at_utc": "2026-10-11T00:22:47.961000+00:00",
+  "checks": [
+    {
+      "url": "https://physionet.org/content/eegmmidb/1.0.0/",
+      "status": 200,
+      "bytes": 57408,
+      "sha256": "b5148ca78a79a0ecba85a3184c816900cb3221506cc59b3ae09ccb43ba6bd1a3",
+      "snapshot": "research_logs/public_data_expansion_20261010/large_training_metadata/physionet_source_page_20261011.html"
+    },
+    {
+      "url": "https://api.crossref.org/works?filter=from-pub-date:2025-01-01,type:journal-article&query.title=motor%20imagery%20EEG%20dataset&rows=30&select=DOI,title,published,URL",
+      "status": 200,
+      "bytes": 6835,
+      "sha256": "8bc04fa65def5d35b183784539e804c524878157a6a38117d6c08810d05ee974",
+      "snapshot": "research_logs/public_data_expansion_20261010/large_training_metadata/new_mi_review_search_20261011.json"
+    }
+  ]
+}

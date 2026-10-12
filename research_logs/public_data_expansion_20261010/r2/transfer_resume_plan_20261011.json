@@ -1,0 +1,33 @@
+{
+  "scope": "R2 continuation; receipt status is authoritative rather than this scheduling note",
+  "already_completed_checkpoint": {
+    "git": "4290c4061f5d35381ed684bb07f1dd52836bbee0",
+    "receipt": "research_logs/netbci_cohort_resume_20261010/r2/code_checkpoint_4290c40_20261011_run01.json"
+  },
+  "do_not_repeat_old_ten_uploads": true,
+  "in_progress": [
+    {
+      "stage": "Kumar raw",
+      "exec_session_id": 26435,
+      "receipt": "research_logs/public_data_expansion_20261010/r2/kumar2024_raw_20261011_run01.json"
+    },
+    {
+      "stage": "Kumar source audit",
+      "exec_session_id": 36561,
+      "receipt": "research_logs/public_data_expansion_20261010/r2/kumar2024_signal_audit_20261011_run01.json"
+    },
+    {
+      "stage": "NETBCI nine new raw",
+      "exec_session_id": 76179,
+      "receipt": "research_logs/public_data_expansion_20261010/r2/netbci_raw_nine_20261011_run01.json"
+    }
+  ],
+  "awaiting_official_gates": [
+    "PhysioNet EEGMMIDB 1.0.0 selected MI raw and closed source audit",
+    "NETBCI all19 derived bundles, numeric identity ledger, completed model analysis",
+    "finalized research-evidence snapshot and closed R2 receipt snapshot"
+  ],
+  "strict_rule": "Never upload an unfinished partial file. Never overwrite an existing immutable key. HEAD metadata is not full byte-content verification.",
+  "credential_values_logged": false,
+  "public_access_policy_changed": false
+}

@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "closed_at_utc": "2026-10-11T12:58:59.922714+00:00",
+  "scope": "PhysioNet EEGMMIDB official selected hand-imagery source and MILimbEEG plus frozen full source-audit and provenance evidence; not global project catalog",
+  "all_six_receipts_closed_completed": true,
+  "every_receipt_total_recomputed_from_its_files": true,
+  "all_remote_HEAD_http_200": true,
+  "all_selected_full_GET_http_200_sha256_matched": true,
+  "failed_files": 0,
+  "distinct_objects": 1432,
+  "total_verified_bytes": 910585217,
+  "full_get_sha256_verified_objects": 119,
+  "actual_readback_bytes": 18977265,
+  "remote_overwrite_enabled": false,
+  "public_access_changed": false,
+  "credential_values_logged": false,
+  "source_qualification": [
+    "PhysioNet archive preserves all109 published IDs; source flags qualify105 complete-three-run IDs /315 signals, no105-model-training claim",
+    "MILimb archive preserves60 mixed-population published IDs and all boundary/source labels; not60 healthy longitudinal learning participants"
+  ],
+  "stages": [
+    {
+      "receipt": "research_logs/public_data_expansion_20261010/r2/physionet_raw_20261011_run01.json",
+      "receipt_sha256": "d61104e23ecbd5902d0fe26a1ca1a5ab607b5144bcfad7e03776eb37f5ec4fd7",
+      "key_prefix": "few-shot-mi-eeg/datasets/physionet-eegmmidb/1.0.0/left-right-hand-imagery-r04-r08-r12",
+      "status": "completed",
+      "readback_mode": "sample",
+      "totals": {
+        "planned_files": 654,
+        "planned_bytes": 834146640,
+        "verified_files": 654,
+        "verified_bytes": 834146640,
+        "failed_files": 0,
+        "full_get_sha256_verified_files": 2,
+        "uploaded_bytes": 834146640,
+        "readback_bytes": 2597534
+      }
+    },
+    {
+      "receipt": "research_logs/public_data_expansion_20261010/r2/milimbeeg_raw_20261011_run02.json",
+      "receipt_sha256": "6070ce8bed6536740270b2fc8a32621ea2a6961d82bba3b49e8c49ea81bcd2c3",
+      "key_prefix": "few-shot-mi-eeg/datasets/milimbeeg/nm000328/v1.0.0",
+      "status": "completed",
+      "readback_mode": "sample",
+      "totals": {
+        "planned_files": 666,
+        "planned_bytes": 62287177,
+        "verified_files": 666,
+        "verified_bytes": 62287177,
+        "failed_files": 0,
+        "full_get_sha256_verified_files": 5,
+        "uploaded_bytes": 62287177,
+        "readback_bytes": 2228331
+      }
+    },
+    {
+      "receipt": "research_logs/public_data_expansion_20261010/r2/physionet_signal_audit_20261011_run01.json",
+      "receipt_sha256": "f0ed6d860272d941ba9f5496347cac9f97e8f22dc742cf77e447840ab49bd96e",
+      "key_prefix": "few-shot-mi-eeg/audits/physionet-eegmmidb/1.0.0/left-right-hand-imagery/source-signal-20261011-run02",
+      "status": "completed",
+      "readback_mode": "all",
+      "totals": {
+        "planned_files": 4,
+        "planned_bytes": 3492631,
+        "verified_files": 4,
+        "verified_bytes": 3492631,
+        "failed_files": 0,
+        "full_get_sha256_verified_files": 4,
+        "uploaded_bytes": 3492631,
+        "readback_bytes": 3492631
+      }
+    },
+    {
+      "receipt": "research_logs/public_data_expansion_20261010/r2/milimbeeg_signal_audit_20261011_run01.json",
+      "receipt_sha256": "354c79416699a8cdfff38b31bea0b5624f68401ca008a3779e48d4c8b8de096a",
+      "key_prefix": "few-shot-mi-eeg/audits/milimbeeg/nm000328/v1.0.0/source-signal-20261011-run01",
+      "status": "completed",
+      "readback_mode": "all",
+      "totals": {
+        "planned_files": 63,
+        "planned_bytes": 4279907,
+        "verified_files": 63,
+        "verified_bytes": 4279907,
+        "failed_files": 0,
+        "full_get_sha256_verified_files": 63,
+        "uploaded_bytes": 4279907,
+        "readback_bytes": 4279907
+      }
+    },
+    {
+      "receipt": "research_logs/public_data_expansion_20261010/r2/physionet_source_evidence_20261011_run01.json",
+      "receipt_sha256": "7eef169e421fdbfaf6c8a97b3d0d08b0d36cf7340f1ee7c361cd721282688c14",
+      "key_prefix": "few-shot-mi-eeg/research-evidence/physionet-eegmmidb/1.0.0/source-ingestion-20261011-run01",
+      "status": "completed",
+      "readback_mode": "all",
+      "totals": {
+        "planned_files": 22,
+        "planned_bytes": 1170080,
+        "verified_files": 22,
+        "verified_bytes": 1170080,
+        "failed_files": 0,
+        "full_get_sha256_verified_files": 22,
+        "uploaded_bytes": 1170080,
+        "readback_bytes": 1170080
+      }
+    },
+    {
+      "receipt": "research_logs/public_data_expansion_20261010/r2/milimbeeg_source_evidence_20261011_run01.json",
+      "receipt_sha256": "bb0a2c13dc54d64f0b60459c6a68fde8857d5a575eb8edf72c78ad4493ca2fdb",
+      "key_prefix": "few-shot-mi-eeg/research-evidence/milimbeeg/nm000328/v1.0.0/source-ingestion-20261011-run01",
+      "status": "completed",
+      "readback_mode": "all",
+      "totals": {
+        "planned_files": 23,
+        "planned_bytes": 5208782,
+        "verified_files": 23,
+        "verified_bytes": 5208782,
+        "failed_files": 0,
+        "full_get_sha256_verified_files": 23,
+        "uploaded_bytes": 5208782,
+        "readback_bytes": 5208782
+      }
+    }
+  ]
+}

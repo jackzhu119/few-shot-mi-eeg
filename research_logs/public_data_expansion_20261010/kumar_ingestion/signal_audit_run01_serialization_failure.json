@@ -1,0 +1,15 @@
+{
+  "recorded_at_utc": "2026-10-11T06:42:11.782596+00:00",
+  "source_commit": "4290c4061f5d35381ed684bb07f1dd52836bbee0",
+  "attempt": "signal_audit_run01",
+  "exit_code": 1,
+  "stage": "serializing first successfully validated EDF receipt; before writing any run receipt",
+  "error": "TypeError: Object of type int64 is not JSON serializable",
+  "runtime_log": "research_logs/public_data_expansion_20261010/kumar_ingestion/signal_audit_runtime_20261011.log",
+  "runtime_log_sha256": "d5c0a9aa66491b72e1ca00defb029eccaf0baf7c8501e84a112d1b82b96d3a4d",
+  "original_script_sha256": "2e7b82d84cb63d89c3f68ce5790043b1c8c325921f3317400e069913172d562a",
+  "fixed_script_sha256": "838614ef2e8822c1d7f1d5ee52fa2e8414a0acfa36a5616e3a4a3b88402d8ba7",
+  "change": "Explicit Python int conversion for MNE n_times and central fingerprint start sample; numeric source/window/model conventions unchanged",
+  "software_regression": "34 Kumar/download tests passed; ruff and git diff --check passed",
+  "next_attempt": "signal_audit_run02"
+}

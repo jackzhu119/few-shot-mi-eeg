@@ -1,0 +1,47 @@
+{
+	"TaskName": "imagery",
+	"Manufacturer": "g.tec",
+	"PowerLineFrequency": 50.0,
+	"SamplingFrequency": 250.0,
+	"SoftwareFilters": {
+		"preprocessing_steps": {
+			"Description": "bandpass filtering, notch filtering"
+		}
+	},
+	"RecordingDuration": 2419.208,
+	"RecordingType": "continuous",
+	"EEGReference": "left mastoid",
+	"EEGGround": "Fz",
+	"EEGPlacementScheme": "10-20 system",
+	"EEGChannelCount": 3,
+	"EOGChannelCount": 0,
+	"ECGChannelCount": 0,
+	"EMGChannelCount": 0,
+	"TriggerChannelCount": 0,
+	"ManufacturersModelName": "g.tec",
+	"SoftwareVersions": "rtsBCI (MATLAB/Simulink)",
+	"CapManufacturer": "Easycap",
+	"HardwareFilters": {
+		"Bandpass": {
+			"low_cutoff_hz": 0.5,
+			"high_cutoff_hz": 100.0,
+			"Type": "analog"
+		},
+		"Notch": {
+			"CutoffFrequency": [
+				50.0
+			]
+		}
+	},
+	"TaskDescription": "[motor_imagery] Two-class motor imagery: left hand and right hand. Screening sessions (01T, 02T) without feedback, feedback sessions (03T, 04E, 05E) with smiley feedback. Trial duration: 7.5s, cue: 1.25s, imagery: 4.0s.",
+	"Instructions": "Subjects selected their best motor imagery strategy (e.g., squeezing a ball or pulling a brake) and performed kinesthetic motor imagery of left or right hand movements.",
+	"CogAtlasID": "https://www.cognitiveatlas.org/task/id/trm_4c8a834779883/",
+	"InstitutionName": "Graz University of Technology",
+	"InstitutionAddress": "AT",
+	"InstitutionalDepartmentName": "Institute for Knowledge Discovery",
+	"CapManufacturersModelName": "n/a",
+	"SubjectArtefactDescription": "n/a",
+	"DeviceSerialNumber": "n/a",
+	"Description": "BCI Competition 2008 - Graz data set B: Two-class motor imagery dataset (left/right hand) with screening sessions (no feedback) and smiley feedback sessions. 9 subjects, 3 bipolar EEG channels (C3, Cz, C4) + 3 EOG channels, 250 Hz.",
+	"MISCChannelCount": 0
+}

@@ -1,0 +1,152 @@
+{
+  "id": "nm000267",
+  "representative_signal_path": "sub-1/ses-0imagery/eeg/sub-1_ses-0imagery_task-imagery_run-0_eeg.bdf",
+  "checks": [
+    {
+      "path": "sub-1/ses-0imagery/eeg/sub-1_ses-0imagery_task-imagery_run-0_eeg.json",
+      "url": "https://data.nemar.org/nm000267/v1.0.3/sub-1/ses-0imagery/eeg/sub-1_ses-0imagery_task-imagery_run-0_eeg.json",
+      "status": 200,
+      "bytes": 2007,
+      "sha256": "d2a6a57ba28ea668d2b2f338f817a6ac27603dc6150ae96110a3e3d0a4f679b6",
+      "official_checksum_match": true,
+      "snapshot": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000267/representative_eeg.json"
+    },
+    {
+      "path": "sub-1/ses-0imagery/eeg/sub-1_ses-0imagery_task-imagery_run-0_channels.tsv",
+      "url": "https://data.nemar.org/nm000267/v1.0.3/sub-1/ses-0imagery/eeg/sub-1_ses-0imagery_task-imagery_run-0_channels.tsv",
+      "status": 200,
+      "bytes": 1905,
+      "sha256": "4d8c9bfadd79d102b48099ff70ecdff72b9a3046acc368f762230dce78b3d83a",
+      "official_checksum_match": true,
+      "snapshot": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000267/representative_channels.tsv"
+    },
+    {
+      "path": "sub-1/ses-0imagery/eeg/sub-1_ses-0imagery_task-imagery_run-0_events.tsv",
+      "url": "https://data.nemar.org/nm000267/v1.0.3/sub-1/ses-0imagery/eeg/sub-1_ses-0imagery_task-imagery_run-0_events.tsv",
+      "status": 200,
+      "bytes": 661,
+      "sha256": "0f5039f7e3d781e46695ef83033e4f9a82fc98ab378d58ebde4273ab729e8424",
+      "official_checksum_match": true,
+      "snapshot": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000267/representative_events.tsv"
+    },
+    {
+      "path": "sub-1/ses-0imagery/eeg/sub-1_ses-0imagery_task-imagery_run-0_events.json",
+      "url": "https://data.nemar.org/nm000267/v1.0.3/sub-1/ses-0imagery/eeg/sub-1_ses-0imagery_task-imagery_run-0_events.json",
+      "status": 200,
+      "bytes": 1517,
+      "sha256": "879e91f7c33e7aae4292567cfe0d99a82f505818e2b33c8f18fe251324e4ae6a",
+      "official_checksum_match": true,
+      "snapshot": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000267/representative_events.json"
+    }
+  ],
+  "eeg_json": {
+    "TaskName": "imagery",
+    "Manufacturer": "Brain Products",
+    "PowerLineFrequency": 50.0,
+    "SamplingFrequency": 200.0,
+    "SoftwareFilters": {
+      "preprocessing_steps": {
+        "Description": "common average reference, bandpass filtering (0.5-50 Hz), ICA-based EOG rejection, downsampling to 200 Hz"
+      }
+    },
+    "RecordingDuration": 601.995,
+    "RecordingType": "continuous",
+    "EEGReference": "linked mastoids",
+    "EEGGround": "Fz",
+    "EEGPlacementScheme": "10-5",
+    "EEGChannelCount": 30,
+    "EOGChannelCount": 2,
+    "ECGChannelCount": 0,
+    "EMGChannelCount": 0,
+    "TriggerChannelCount": 0,
+    "ManufacturersModelName": "BrainAmp",
+    "CapManufacturer": "EASYCAP GmbH",
+    "CapManufacturersModelName": "custom-made stretchy fabric cap",
+    "SoftwareVersions": "n/a",
+    "HardwareFilters": {
+      "Bandpass": {
+        "LowCutoffFrequency": 0.5,
+        "HighCutoffFrequency": 50.0,
+        "Type": "Chebyshev type II",
+        "Order": 4
+      }
+    },
+    "TaskDescription": "Dataset A: left vs right hand motor imagery (kinesthetic imagery of opening and closing hands) Trial duration: 10.0s, cue: 2.0s, imagery: 10.0s.",
+    "Instructions": "Subjects were instructed to perform kinesthetic MI (i.e., to imagine the opening and closing their hands as they were grabbing a ball) to ensure that actual MI, not visual MI, was performed. Subjects were asked to imagine hand gripping (opening and closing their hands) with a 1 Hz pace.",
+    "CogAtlasID": "https://www.cognitiveatlas.org/task/id/trm_4c8a834779883/",
+    "InstitutionName": "Berlin Institute of Technology",
+    "InstitutionAddress": "10587 Berlin, Germany",
+    "InstitutionalDepartmentName": "Machine Learning Group, Department of Computer Science",
+    "SubjectArtefactDescription": "n/a",
+    "DeviceSerialNumber": "n/a",
+    "Description": "Open access dataset for hybrid brain-computer interfaces (BCIs) using electroencephalography (EEG) and near-infrared spectroscopy (NIRS). Dataset includes two BCI experiments: left versus right hand motor imagery, and mental arithmetic versus resting state.",
+    "MISCChannelCount": 0
+  },
+  "events_sidecar": {
+    "rows": 20,
+    "columns": [
+      "onset",
+      "duration",
+      "trial_type",
+      "value",
+      "sample"
+    ],
+    "class_counts": {
+      "left_hand": 10,
+      "right_hand": 10
+    },
+    "durations": [
+      "10.0"
+    ],
+    "values": [
+      "1",
+      "2"
+    ]
+  },
+  "channels_sidecar": {
+    "rows": 32,
+    "types": {
+      "EEG": 30,
+      "EOG": 2
+    },
+    "units": [
+      "V"
+    ],
+    "names": [
+      "F7",
+      "AFF5h",
+      "F3",
+      "AFp1",
+      "AFp2",
+      "AFF6h",
+      "F4",
+      "F8",
+      "AFF1h",
+      "AFF2h",
+      "Cz",
+      "Pz",
+      "FCC5h",
+      "FCC3h",
+      "CCP5h",
+      "CCP3h",
+      "T7",
+      "P7",
+      "P3",
+      "PPO1h",
+      "POO1",
+      "POO2",
+      "PPO2h",
+      "P4",
+      "FCC4h",
+      "FCC6h",
+      "CCP4h",
+      "CCP6h",
+      "P8",
+      "T8",
+      "VEOG",
+      "HEOG"
+    ]
+  },
+  "channels_sidecar_parse": "utf-8-sig to handle observed BOM",
+  "events_sidecar_parse": "utf-8-sig"
+}

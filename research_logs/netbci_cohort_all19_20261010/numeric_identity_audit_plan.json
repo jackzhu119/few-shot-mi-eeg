@@ -1,0 +1,43 @@
+{
+  "status": "prepared_before_raw_nineteen_identity_signal_read",
+  "prepared_at_utc": "2026-10-11T00:26:58.977355+00:00",
+  "synthetic": false,
+  "subject_IDs": [
+    "sub-1",
+    "sub-2",
+    "sub-3",
+    "sub-4",
+    "sub-5",
+    "sub-6",
+    "sub-7",
+    "sub-8",
+    "sub-9",
+    "sub-10",
+    "sub-11",
+    "sub-12",
+    "sub-13",
+    "sub-14",
+    "sub-15",
+    "sub-16",
+    "sub-17",
+    "sub-18",
+    "sub-19"
+  ],
+  "expected_continuous_runs": 456,
+  "config_sha256": "d3de923978079cff7199c294f704a0282d3df589899df1a7f44578a5aabd2bf5",
+  "audit_source_sha256": "671b0b832b040cb813746c6a53be37400f5ce567ca83480a534c981d192a5a69",
+  "summary_source_sha256": "b2a4798cd53605f821a8de94cd6a2067f33c2d5b9ce53c9965db9d072d5ece6f",
+  "source_root": "data/netbci2026/nm000305/v1.0.0",
+  "audit_root": "research_logs/netbci_cohort_all19_20261010/audits",
+  "official_manifest_sha256": "7e50f5281e91bec97791a84f5f3dbe20dc443b37c10d4bc6bcda96bed08c092c",
+  "planned_roles": "source session01 runs01-04 training,05-06 reference query; sessions02-04 all6 later queries; derive config not model partitions",
+  "window_content": "all real labeled intervals including every shortened event; finite little-endian float64 C-order numerical fingerprints without signal transforms",
+  "single_run_memory_policy": true,
+  "run_after": "all nineteen source signal audits completed, no concurrent tensor job",
+  "run_before": "any expanded nineteen-ID model fitting or outcome calculation",
+  "expected_artifacts": [
+    "numeric_signal_identity.json",
+    "numeric_signal_identity_summary.json"
+  ],
+  "full_ledger_preservation": "R2 upload; keep local source ledger preserved and excluded from Git if oversized"
+}

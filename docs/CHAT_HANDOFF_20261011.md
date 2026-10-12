@@ -1,4 +1,7 @@
-# 2026-10-11 当前接续入口
+# 2026-10-11 历史接续快照
+
+> 本文件保留十人完成和扩容进行中的历史状态；当前完成入口为
+> [CHAT_HANDOFF_20261012.md](CHAT_HANDOFF_20261012.md)。
 
 继续 /workspace/few-shot-mi-eeg、research/learning-preserving-bci，不重新初始化。
 原 CHAT_HANDOFF_20261010.md 和 state.json 是历史冻结；旧聊天可获取的根对话、三张图片、
@@ -23,6 +26,28 @@ sub-3 仅一条2.968秒rest源事件保留并明确排除出固定张量，没�
 结果/方法/统计/图的确切值以新收据和报告为准，仍无算法保持人类技能的因果结论。
 
 ## 用户已授权的数据扩展与存储
+
+### 2026-10-11 扩容接续运行（进行中快照，完成后更新）
+
+旧十人 checkpoint 已提交并推送至 `4290c4061f5d35381ed684bb07f1dd52836bbee0`。
+新增 NETBCI 11–19 的 1,692 文件/1,834,605,546 bytes 全部官方验证通过，
+下载收据时间戳 `20261011T063742232116Z`；统一19人配置 SHA256 为
+`d3de923978079cff7199c294f704a0282d3df589899df1a7f44578a5aabd2bf5`。
+全部19人正重新串行审计，输出 `research_logs/netbci_cohort_all19_20261010/audits`。
+首个命令仅因 CLI 传数字而被 config 门槛拒绝，未读取 EEG；修正 `sub-N` 后的
+有效执行日志为 `runtime/audit_all19_run02.log`。源审计全部关闭后由独立数值脚本
+审计456 EDF，再运行 `run_serial_models_20261011.py`；不能跳过这个模型前门槛。
+
+Kumar 全部18身份/108会话/360 EDF实际下载和完整数值审计均完成，2,705文件
+1,781,052,841 bytes；7,200事件、44partial全部保留。MNE整型JSON序列化的首次
+失败记录保留，正确正式审计为 `kumar_ingestion/signal_audit_run02`。
+PhysioNet109手MI资源使用官方archive镜像下载，原版本/654路径/SHA不变，保留慢站
+中断及partial证据；不把partial上传R2。Leeuwis55资源固定 nm000327 v1.0.0 正在
+下载；新增MILimbEEG60与Liu2024卒中50为独立域来源，须完成源审计后单独登记，
+不能混入NETBCI健康纵向结果。所有新库尚未训练新模型。
+
+关闭收据、独立复核、来源记录位于 `research_logs/public_data_expansion_20261010`，
+R2逐库上传及库存由对应关闭收据记录。恢复时先检查进程、日志、收据状态，不重跑已有输出。
 
 先完成上述checkpoint，再新增NETBCI编号11–19、Kumar18人六会话、PhysioNet109人
 hand-imagery runs04/08/12。不把左右手、右手/rest、健康/临床或同日/跨日标签直接混为一库。

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-11T12:55:00.552761+00:00",
+  "source_gate": "exact 654 official files rehashed and compared byte-for-byte SHA256/length against pinned manifest and closed official receipt before transfer",
+  "official_receipt": "research_logs/public_data_expansion_20261010/physionet_eegmmidb/download_receipt_20261011T064522417697Z.json",
+  "official_receipt_sha256": "2e1a309260b4ac82899d2f014f1d83b6cca8ff9b8f8c6ee6c7cdfb3592c65816",
+  "selection_manifest_sha256": "98350a9b0ce2bd439715ecc8742631dfc3b13c158bee6fba483fb233420f3ebc",
+  "selected_files": 654,
+  "selected_bytes": 834146640,
+  "include_patterns": [
+    "S*/**.edf",
+    "S*/**.edf.event"
+  ],
+  "excluded_non_manifest_local_files": [
+    "S002/S002R12.edf.20261011T064305442052Z.attempt1.part",
+    "S003/S003R04.edf.20261011T064309594823Z.attempt1.part",
+    "S003/S003R08.edf.20261011T064314676237Z.attempt1.part",
+    "S003/S003R12.edf.20261011T064432757497Z.attempt1.part"
+  ],
+  "prefix": "few-shot-mi-eeg/datasets/physionet-eegmmidb/1.0.0/left-right-hand-imagery-r04-r08-r12",
+  "independent_signal_review_all_checks_passed": true,
+  "resource_signal_qualification": "complete_with_source_flags; 315 qualified EDF and 105 complete-three-run published IDs; raw archive retains all 327 EDF/109 IDs"
+}

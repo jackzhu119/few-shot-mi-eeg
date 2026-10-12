@@ -1,9 +1,10 @@
 """Summarize verified NETBCI participant trajectories without downloads or fitting.
 
-Each participant is an independent unit. Session scores are unweighted means of
+Whole published-identity trajectories are the resampling unit; numeric source
+independence must be audited separately. Session scores are unweighted means of
 published run percentages, never trial outcomes. Task-window power contrasts are
 not baseline ERD; frozen-decoder failure is not human skill loss. Figures retain
-individual participants and explicitly report metric availability.
+individual identities and explicitly report metric availability.
 """
 from __future__ import annotations
 
@@ -91,7 +92,7 @@ def participant_statistics(rows, subjects, sessions, metrics, seed, repetitions)
                             "median": float(np.median(valid)) if len(valid) else None,
                             "subject_bootstrap_CI95_low": interval[0], "subject_bootstrap_CI95_high": interval[1],
                             "unavailable_subjects": ",".join(np.array(subjects)[~available]),
-                            "CI_scope": "participant-resampling conditional on first-ten-ID sample; not causal"})
+                            "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"})
         delta = matrix[:, -1] - matrix[:, 0]
         valid = np.isfinite(delta)
         values = delta[valid]
@@ -112,7 +113,7 @@ def participant_statistics(rows, subjects, sessions, metrics, seed, repetitions)
                   "subject_bootstrap_CI95_low": interval[0], "subject_bootstrap_CI95_high": interval[1],
                   "unavailable_subjects": ",".join(np.array(subjects)[~valid]),
                   "bootstrap_repetitions": repetitions,
-                  "CI_scope": "paired participants; exploratory observational contrast"}
+                  "CI_scope": "paired published identities; source independence must be verified; exploratory observational contrast"}
         changes.append(change)
         individual.extend({"subject": subject, "metric": metric,
                            "first_session_value": finite_or_none(matrix[i, 0]) if np.isfinite(matrix[i, 0]) else None,
@@ -507,7 +508,8 @@ def plot_results(output, subjects, sessions, trajectories, changes, individuals,
     figure_dir = output / "figures"
     figure_dir.mkdir()
     x = np.arange(len(sessions)) + 1
-    colors = plt.get_cmap("tab10")(np.arange(len(subjects)) % 10)
+    palette_size = 20 if len(subjects) > 10 else 10
+    colors = plt.get_cmap(f"tab{palette_size}")(np.arange(len(subjects)) % palette_size)
     layouts = [("mean_run_hit_percent", "Published online hit score (%)"),
                ("CSP_BA_percent", "Frozen CSP balanced accuracy (%)"),
                ("mu_MI_minus_rest_dB", "Mu MI − rest log-power (dB)"),
@@ -520,23 +522,23 @@ def plot_results(output, subjects, sessions, trajectories, changes, individuals,
         n_available = np.isfinite(matrix).sum(axis=0)
         means = np.divide(np.nansum(matrix, axis=0), n_available,
                           out=np.full(matrix.shape[1], np.nan), where=n_available > 0)
-        ax.plot(x, means, "D-", color="black", linewidth=2.5, markersize=5, label="participant mean")
+        ax.plot(x, means, "D-", color="black", linewidth=2.5, markersize=5, label="published-ID mean")
         ax.set(title=title, xticks=x, xticklabels=sessions, xlabel="Protocol session")
         ax.text(.02, .02, "available n=" + "/".join(map(str, np.isfinite(matrix).sum(axis=0))),
                 transform=ax.transAxes, fontsize=8)
     axes[0, 1].axhline(50, linestyle="--", color="grey", linewidth=1)
     axes[1, 0].axhline(0, linestyle="--", color="grey", linewidth=1)
     axes[1, 1].axhline(0, linestyle="--", color="grey", linewidth=1)
-    axes[0, 0].legend(fontsize=7, ncol=3)
-    fig.suptitle(f"NETBCI: {len(subjects)} audited participants; exploratory longitudinal trajectories")
+    axes[0, 0].legend(fontsize=7, ncol=4 if len(subjects) > 10 else 3)
+    fig.suptitle(f"NETBCI: {len(subjects)} published identities; exploratory trajectories")
     fig.text(.5, .01, "Behavior: mean of six published run percentages, not pooled hit rate. CSP: session 01 query runs 05–06; later sessions all six.\n"
-             "Power: equal run-weighted task-window contrast; no baseline ERD or human skill-retention inference.",
+             "Power: task-window contrast, not baseline ERD. Cross-ID copies require separate source restriction; no human learning inference.",
              ha="center", fontsize=8)
     fig.tight_layout(rect=[0, .055, 1, .95])
     for extension in ("png", "pdf", "svg"):
         fig.savefig(figure_dir / f"cohort_trajectories.{extension}", dpi=180)
     plt.close(fig)
-    fig, axes = plt.subplots(1, 3, figsize=(14, 5))
+    fig, axes = plt.subplots(1, 3, figsize=(14, max(5, len(subjects) * .26 + 1.8)))
     for ax, (metric, title) in zip(axes, layouts[:3], strict=True):
         selected = [row for row in individuals if row["metric"] == metric]
         values = np.array([np.nan if row["last_minus_first"] is None else row["last_minus_first"] for row in selected])
@@ -551,7 +553,7 @@ def plot_results(output, subjects, sessions, trajectories, changes, individuals,
         ax.set(yticks=range(len(subjects)+1), yticklabels=subjects+["mean ± CI"],
                xlabel="Session 04 − session 01", title=title)
         ax.text(.02, .02, f"paired n={change['n_paired_subjects']}/{len(subjects)}", transform=ax.transAxes, fontsize=8)
-    fig.suptitle("All individual changes retained; 95% percentile CI resamples paired participants")
+    fig.suptitle("Published-ID changes; bootstrap intervals are arithmetic until source independence is verified")
     fig.tight_layout()
     for extension in ("png", "pdf", "svg"):
         fig.savefig(figure_dir / f"cohort_paired_changes.{extension}", dpi=180)
@@ -571,8 +573,8 @@ def plot_results(output, subjects, sessions, trajectories, changes, individuals,
                 ax.plot(x, mean, "D-", color="black", linewidth=2, markersize=4)
             ax.set(title=field, ylabel=variant, xticks=x, xticklabels=sessions, xlabel="Protocol session")
             ax.text(.02, .02, "available n=" + "/".join(map(str, np.isfinite(matrix).sum(axis=0))), transform=ax.transAxes, fontsize=8)
-    fig.suptitle("Descriptive geometry; matched repetitions averaged within each participant")
-    fig.text(.5, .01, "QC-common-four run matching uses preset cells/counts; unavailable participants remain recorded. Geometry change does not identify learning.", ha="center", fontsize=8)
+    fig.suptitle("Descriptive geometry; matched repetitions averaged within each published identity")
+    fig.text(.5, .01, "Preset QC matching; unavailable identities retained. Source duplicates need separate restriction; geometry does not identify learning.", ha="center", fontsize=8)
     fig.tight_layout(rect=[0, .035, 1, .95])
     for extension in ("png", "pdf", "svg"):
         fig.savefig(figure_dir / f"cohort_geometry.{extension}", dpi=180)
@@ -647,8 +649,10 @@ def summarize(config_path, analysis_root, audit_root, output):
     write_table(output / "participant_matched_geometry.tsv", matching)
     write_table(output / "cohort_matched_statistics.tsv", matching_stats)
     plot_results(output, subjects, sessions, matrices, changes, individuals, matching)
-    summary = {"status": "actual_audited_first_ten_ID_cohort_exploratory", "synthetic": False,
+    summary = {"status": "actual_audited_published_ID_cohort_exploratory", "synthetic": False,
                "subjects": subjects, "subject_map": mapping, "participants": len(subjects),
+               "published_identities": len(subjects), "participants_field_is_published_ID_count": True,
+               "independent_biological_participant_count": "unverified_requires_separate_source_identity_audit",
                "sessions": len(joined), "runs": sum(row["n_EEG_runs"] for row in joined),
                "trials": sum(row["n_EEG_trials"] for row in joined),
                "source_events": sum(row["n_EEG_source_events"] for row in joined),
@@ -687,7 +691,7 @@ def summarize(config_path, analysis_root, audit_root, output):
                "input_sha256": {key: {"path": str(path.resolve()), "sha256": file_sha256(path)} for key, path in inputs.items()},
                "output_sha256": outputs, "provenance": collect_provenance(config["seed"], ROOT),
                "duration_seconds": time.monotonic()-started,
-               "bootstrap_unit": "whole participant", "source_reference_and_QC_sensitivity_saved": True,
+               "bootstrap_unit": "whole published identity trajectory", "source_reference_and_QC_sensitivity_saved": True,
                "new_EEG_downloads": False, "new_model_fits": False, "figures_native_rendered": True,
                "figure_visual_inspection": "pending_view_image_review"})
     return summary

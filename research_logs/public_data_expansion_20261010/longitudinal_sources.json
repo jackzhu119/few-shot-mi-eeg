@@ -1,0 +1,1416 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-10-10",
+  "user_timezone": "Asia/Shanghai",
+  "sources_are_primary_official": "papers,officialregistries/NEMARAPI/Zenodo/Figshare/DataCite/BNCI",
+  "scope": "longitudinalhumanmotorimageryEEG;nohiddenuserdata,noemail,nopaid,noSHUblockedretry,noEEGsignaldownloadinthissubtask",
+  "actual_probe_levels": [
+    "HTTPGETofficialAPI,manifest,smallsidecars",
+    "HEADonlyrepresentative signalURLs",
+    "AllKumar360eventTSVs officialchecksumvalidated"
+  ],
+  "files_in_audit_receipts_include_failed_attempts": true,
+  "sources": [
+    {
+      "dataset_id": "NETBCI2026",
+      "repository": "NEMAR",
+      "nemar_id": "nm000305",
+      "priority": 1,
+      "version": "v1.0.0",
+      "version_release_string_timezone_unspecified": "2026-10-08 03:46:39",
+      "official_api": "https://data.nemar.org/nm000305/",
+      "official_metadata": "https://data.nemar.org/nm000305/metadata.json",
+      "official_manifest": "https://data.nemar.org/nm000305/v1.0.0/manifest.json",
+      "manifest_sha256": "7e50f5281e91bec97791a84f5f3dbe20dc443b37c10d4bc6bcda96bed08c092c",
+      "license_in_registry": "CC-BY-4.0",
+      "subject_count_metadata": 19,
+      "verified_manifest_census": {
+        "version": "v1.0.0",
+        "created_at_without_timezone": "2026-10-08 03:46:39",
+        "manifest_rows": 3582,
+        "all_manifest_bytes": 3884172685,
+        "signal_file_count": 456,
+        "signal_formats": {
+          ".edf": 456
+        },
+        "signal_bytes": 3878878196,
+        "subjects_with_listed_signals": [
+          "sub-1",
+          "sub-10",
+          "sub-11",
+          "sub-12",
+          "sub-13",
+          "sub-14",
+          "sub-15",
+          "sub-16",
+          "sub-17",
+          "sub-18",
+          "sub-19",
+          "sub-2",
+          "sub-3",
+          "sub-4",
+          "sub-5",
+          "sub-6",
+          "sub-7",
+          "sub-8",
+          "sub-9"
+        ],
+        "subject_count_with_listed_signals": 19,
+        "subject_session_pairs_with_listed_signals": 76,
+        "sourcedata_bytes": 1014045
+      },
+      "actual_sample_sidecar": {
+        "EEGChannelCount": 74,
+        "EOGChannelCount": 0,
+        "EMGChannelCount": 0,
+        "ECGChannelCount": 0,
+        "SamplingFrequency": 250.0,
+        "EEGReference": "mastoids",
+        "RecordingType": "continuous",
+        "SoftwareFilters": "n/a"
+      },
+      "task_semantics": "right_hand versus rest",
+      "intended_scientific_role": "Expand existing same-source cohort from10 to19 participants",
+      "known_limits": [
+        "Current10 observed before expansion; extension remains exploratory",
+        "Versioncreated2026-10-08 is not recordingdate",
+        "Eachonline session recalibrated; no verified no-assistance delayedprobe",
+        "Source manifest duplicates elsewhere require numericalsignal deduplication beforeindependence claims"
+      ],
+      "signal_validation_level": "representative HEAD HTTP200 and manifest listing only; no signal read/training in this subtask",
+      "behavior_validation_level": "publication/repository description only unless noted; no behavior parser audit",
+      "do_not_count_as_human_retention_proof": true,
+      "original_repository": "https://entrepot.recherche.data.gouv.fr/api/datasets/:persistentId/?persistentId=doi:10.57745/RBJRC7",
+      "paper_doi": "10.1038/s41597-026-08237-5",
+      "existing_main_cohort_subjects": 10,
+      "additional_declared_subjects": 9
+    },
+    {
+      "dataset_id": "Kumar2024",
+      "repository": "NEMAR",
+      "nemar_id": "nm000177",
+      "priority": 2,
+      "version": "v1.0.5",
+      "version_release_string_timezone_unspecified": "2026-10-08 14:57:38",
+      "official_api": "https://data.nemar.org/nm000177/",
+      "official_metadata": "https://data.nemar.org/nm000177/metadata.json",
+      "official_manifest": "https://data.nemar.org/nm000177/v1.0.5/manifest.json",
+      "manifest_sha256": "1fe0fe2dbf002614dc38c54b5cd25fcb68b65c6c18b348343307d9d4668d420f",
+      "license_in_registry": "CC-BY-4.0",
+      "subject_count_metadata": 18,
+      "verified_manifest_census": {
+        "version": "v1.0.5",
+        "created_at_without_timezone": "2026-10-08 14:57:38",
+        "manifest_rows": 3976,
+        "all_manifest_bytes": 15492967179,
+        "signal_file_count": 360,
+        "signal_formats": {
+          ".edf": 360
+        },
+        "signal_bytes": 1778578770,
+        "subjects_with_listed_signals": [
+          "sub-1",
+          "sub-10",
+          "sub-11",
+          "sub-12",
+          "sub-13",
+          "sub-14",
+          "sub-15",
+          "sub-16",
+          "sub-17",
+          "sub-18",
+          "sub-2",
+          "sub-3",
+          "sub-4",
+          "sub-5",
+          "sub-6",
+          "sub-7",
+          "sub-8",
+          "sub-9"
+        ],
+        "subject_count_with_listed_signals": 18,
+        "subject_session_pairs_with_listed_signals": 108,
+        "sourcedata_bytes": 13712182300
+      },
+      "actual_sample_sidecar": {
+        "EEGChannelCount": 22,
+        "EOGChannelCount": 0,
+        "EMGChannelCount": 0,
+        "ECGChannelCount": 0,
+        "SamplingFrequency": 512.0,
+        "EEGReference": "CPz",
+        "RecordingType": "continuous",
+        "SoftwareFilters": "n/a"
+      },
+      "task_semantics": "left_hand versus right_hand; bar-only derivative",
+      "intended_scientific_role": "First independent chronological participant/session dataset",
+      "known_limits": [
+        "Source22EEG512Hz sample; 6days: offline calibration plus5online",
+        "Generic Recentering/Personally Assisted Recentering groups each9 come fromstudy; generichealthy metadata insufficient forgroupmapping",
+        "participants age2020 invalid agecovariate; escapedparticipant delimiters",
+        "44 sourceevents shorterthan5s; neverpad silently",
+        "Racing excludedfromderivative and cueevents do not provide hit/miss",
+        "Original article correction10.1093/pnasnexus/pgae137 exists"
+      ],
+      "signal_validation_level": "representative HEAD HTTP200 and manifest listing only; no signal read/training in this subtask",
+      "behavior_validation_level": "publication/repository description only unless noted; no behavior parser audit",
+      "do_not_count_as_human_retention_proof": true,
+      "original_repository": "https://zenodo.org/api/records/10694880",
+      "paper_doi": "10.1093/pnasnexus/pgae076",
+      "verified_event_metadata": {
+        "scope": "all 360 published class-event TSVs only; no EEG bytes; boundaries/units in signal and behavioral outcomes remain unaudited",
+        "all_http200": true,
+        "all_official_checksums_match": true,
+        "trial_count": 7200,
+        "durations": {
+          "5.0": 7156,
+          "4.414062": 1,
+          "4.798828": 1,
+          "4.417969": 1,
+          "4.191406": 1,
+          "4.791016": 1,
+          "4.939453": 2,
+          "4.533203": 1,
+          "4.830078": 1,
+          "4.505859": 1,
+          "4.558594": 1,
+          "4.556641": 1,
+          "4.861328": 2,
+          "4.84375": 1,
+          "4.835938": 2,
+          "4.775391": 1,
+          "4.724609": 1,
+          "4.591797": 1,
+          "4.380859": 1,
+          "4.992188": 1,
+          "4.914062": 1,
+          "4.746094": 1,
+          "4.517578": 1,
+          "4.863281": 2,
+          "4.9375": 1,
+          "4.625": 1,
+          "4.525391": 1,
+          "4.333984": 1,
+          "4.822266": 1,
+          "4.146484": 1,
+          "4.904297": 1,
+          "4.65625": 1,
+          "4.681641": 1,
+          "4.642578": 1,
+          "4.595703": 1,
+          "4.839844": 1,
+          "4.708984": 1,
+          "4.302734": 1,
+          "4.177734": 1,
+          "4.792969": 1,
+          "4.369141": 1
+        },
+        "classes": {
+          "right_hand": 3600,
+          "left_hand": 3600
+        }
+      },
+      "selected_ingestion_plan": "research_logs/public_data_expansion_20261010/kumar2024_ingestion_plan.json"
+    },
+    {
+      "dataset_id": "Stieger2021",
+      "repository": "NEMAR",
+      "nemar_id": "nm000339",
+      "priority": 3,
+      "version": "v1.0.4",
+      "version_release_string_timezone_unspecified": "2026-08-18 18:19:17",
+      "official_api": "https://data.nemar.org/nm000339/",
+      "official_metadata": "https://data.nemar.org/nm000339/metadata.json",
+      "official_manifest": "https://data.nemar.org/nm000339/v1.0.4/manifest.json",
+      "manifest_sha256": "61ebf74c60e6b5676d12bba5ce2c2eaff0dd41ff9d70585f1622333ef3207d22",
+      "license_in_registry": "CC-BY-NC-4.0",
+      "subject_count_metadata": 62,
+      "verified_manifest_census": {
+        "version": "v1.0.4",
+        "created_at_without_timezone": "2026-08-18 18:19:17",
+        "manifest_rows": 7187,
+        "all_manifest_bytes": 775737488950,
+        "signal_file_count": 598,
+        "signal_formats": {
+          ".bdf": 598
+        },
+        "signal_bytes": 398831195366,
+        "subjects_with_listed_signals": [
+          "sub-1",
+          "sub-10",
+          "sub-11",
+          "sub-12",
+          "sub-13",
+          "sub-14",
+          "sub-15",
+          "sub-16",
+          "sub-17",
+          "sub-18",
+          "sub-19",
+          "sub-2",
+          "sub-20",
+          "sub-21",
+          "sub-22",
+          "sub-23",
+          "sub-24",
+          "sub-25",
+          "sub-26",
+          "sub-27",
+          "sub-28",
+          "sub-29",
+          "sub-3",
+          "sub-30",
+          "sub-31",
+          "sub-32",
+          "sub-33",
+          "sub-34",
+          "sub-35",
+          "sub-36",
+          "sub-37",
+          "sub-38",
+          "sub-39",
+          "sub-4",
+          "sub-40",
+          "sub-41",
+          "sub-42",
+          "sub-43",
+          "sub-44",
+          "sub-45",
+          "sub-46",
+          "sub-47",
+          "sub-48",
+          "sub-49",
+          "sub-5",
+          "sub-50",
+          "sub-51",
+          "sub-52",
+          "sub-53",
+          "sub-54",
+          "sub-55",
+          "sub-56",
+          "sub-57",
+          "sub-58",
+          "sub-59",
+          "sub-6",
+          "sub-60",
+          "sub-61",
+          "sub-62",
+          "sub-7",
+          "sub-8",
+          "sub-9"
+        ],
+        "subject_count_with_listed_signals": 62,
+        "subject_session_pairs_with_listed_signals": 598,
+        "sourcedata_bytes": 376894186541
+      },
+      "actual_sample_sidecar": {
+        "EEGChannelCount": 60,
+        "EOGChannelCount": 0,
+        "EMGChannelCount": 0,
+        "ECGChannelCount": 0,
+        "SamplingFrequency": 1000.0,
+        "EEGReference": "n/a",
+        "RecordingType": "continuous",
+        "SoftwareFilters": "n/a"
+      },
+      "task_semantics": "left/right, bothhands/rest, 2D continuousSMR control",
+      "intended_scientific_role": "Large longitudinal training+behavior external validation",
+      "known_limits": [
+        "Original62participants598MAT sessions:41x11+21x7",
+        "Registry derivative licenseCC-BY-NC4 differsfromoriginalCC-BY4",
+        "Samplederived60EEG vsoriginaldescription62 electrodes/hardware64; inspectsignal/removedchannels",
+        "3sfixedtask durationmetadata and variabletriallength; no5sNETwindowassumption",
+        "Mindfulnessintervention, longgap, onlinefeedback andabort/success affectlearning interpretation; no proposeddecoderpolicy causalretention"
+      ],
+      "signal_validation_level": "representative HEAD HTTP200 and manifest listing only; no signal read/training in this subtask",
+      "behavior_validation_level": "publication/repository description only unless noted; no behavior parser audit",
+      "do_not_count_as_human_retention_proof": true,
+      "original_repository": "https://api.figshare.com/v2/articles/13123148",
+      "paper_doi": "10.1038/s41597-021-00883-1",
+      "original_manifest_verified_sessions_per_subject_histogram": {
+        "7": 21,
+        "11": 41
+      },
+      "paper_reported_trials_greater_than": 250000
+    },
+    {
+      "dataset_id": "Yang2025-WBCIC-SHU",
+      "repository": "NEMAR",
+      "nemar_id": "nm000348",
+      "priority": 4,
+      "version": "v1.0.5",
+      "version_release_string_timezone_unspecified": "2026-08-18 22:51:54",
+      "official_api": "https://data.nemar.org/nm000348/",
+      "official_metadata": "https://data.nemar.org/nm000348/metadata.json",
+      "official_manifest": "https://data.nemar.org/nm000348/v1.0.5/manifest.json",
+      "manifest_sha256": "edf8aa9efbf55ac4468a59a13bf00ae7273fd9980ac6f4e129b46ac22905169c",
+      "license_in_registry": "CC-BY-4.0",
+      "subject_count_metadata": 51,
+      "verified_manifest_census": {
+        "version": "v1.0.5",
+        "created_at_without_timezone": "2026-08-18 22:51:54",
+        "manifest_rows": 2231,
+        "all_manifest_bytes": 165139463639,
+        "signal_file_count": 153,
+        "signal_formats": {
+          ".bdf": 153
+        },
+        "signal_bytes": 68046406110,
+        "subjects_with_listed_signals": [
+          "sub-1",
+          "sub-10",
+          "sub-11",
+          "sub-12",
+          "sub-13",
+          "sub-14",
+          "sub-15",
+          "sub-16",
+          "sub-17",
+          "sub-18",
+          "sub-19",
+          "sub-2",
+          "sub-20",
+          "sub-21",
+          "sub-22",
+          "sub-23",
+          "sub-24",
+          "sub-25",
+          "sub-26",
+          "sub-27",
+          "sub-28",
+          "sub-29",
+          "sub-3",
+          "sub-30",
+          "sub-31",
+          "sub-32",
+          "sub-33",
+          "sub-34",
+          "sub-35",
+          "sub-36",
+          "sub-37",
+          "sub-38",
+          "sub-39",
+          "sub-4",
+          "sub-40",
+          "sub-41",
+          "sub-42",
+          "sub-43",
+          "sub-44",
+          "sub-45",
+          "sub-46",
+          "sub-47",
+          "sub-48",
+          "sub-49",
+          "sub-5",
+          "sub-50",
+          "sub-51",
+          "sub-6",
+          "sub-7",
+          "sub-8",
+          "sub-9"
+        ],
+        "subject_count_with_listed_signals": 51,
+        "subject_session_pairs_with_listed_signals": 153,
+        "sourcedata_bytes": 97091048793
+      },
+      "actual_sample_sidecar": {
+        "EEGChannelCount": 59,
+        "EOGChannelCount": 4,
+        "EMGChannelCount": 0,
+        "ECGChannelCount": 1,
+        "SamplingFrequency": 1000.0,
+        "EEGReference": "n/a",
+        "RecordingType": "continuous",
+        "SoftwareFilters": "n/a"
+      },
+      "task_semantics": "left/right hand subset; original includes11 additional3class subjects",
+      "intended_scientific_role": "Large multi-day offline crosssessionexternal validation",
+      "known_limits": [
+        "Same-source51subjects inbothnm000246/nm000348; neveradd as102",
+        "Originalpaper62participants(51two-class+11threeclass) butbothmirrors coveronly51",
+        "Original2019recordings;2025paper;separatefromMa2022pendingSHU",
+        "Source59EEG1000Hz;sample348includes4EOG+1ECG,246only59EEG; processed58Pzreferenced",
+        "No verifiedtrial-levelsuccess or no-assistanceprobe",
+        "Largevolume duplicatesraw/derived; downloadonepinnedrepresentation only"
+      ],
+      "signal_validation_level": "representative HEAD HTTP200 and manifest listing only; no signal read/training in this subtask",
+      "behavior_validation_level": "publication/repository description only unless noted; no behavior parser audit",
+      "do_not_count_as_human_retention_proof": true,
+      "original_repository": "https://api.figshare.com/v2/articles/22671172",
+      "paper_doi": "10.1038/s41597-025-04826-y",
+      "duplicate_group": "figshare22671172_WBCIC-SHU",
+      "original_license": "CC-BY-4.0",
+      "original_paper_claimed_subjects": 62
+    },
+    {
+      "dataset_id": "Yang2025-WBCIC-SHU-legacy",
+      "repository": "NEMAR",
+      "nemar_id": "nm000246",
+      "priority": 4,
+      "version": "v1.0.0",
+      "version_release_string_timezone_unspecified": "2026-06-03 06:04:29",
+      "official_api": "https://data.nemar.org/nm000246/",
+      "official_metadata": "https://data.nemar.org/nm000246/metadata.json",
+      "official_manifest": "https://data.nemar.org/nm000246/v1.0.0/manifest.json",
+      "manifest_sha256": "31e4afa0e00284cf95212fcb0955425503b9c26020ca12ea820ea58c2f9c62dc",
+      "license_in_registry": "CC-BY-4.0",
+      "subject_count_metadata": 51,
+      "verified_manifest_census": {
+        "version": "v1.0.0",
+        "created_at_without_timezone": "2026-06-03 06:04:29",
+        "manifest_rows": 1232,
+        "all_manifest_bytes": 62733163053,
+        "signal_file_count": 153,
+        "signal_formats": {
+          ".bdf": 153
+        },
+        "signal_bytes": 62731200270,
+        "subjects_with_listed_signals": [
+          "sub-1",
+          "sub-10",
+          "sub-11",
+          "sub-12",
+          "sub-13",
+          "sub-14",
+          "sub-15",
+          "sub-16",
+          "sub-17",
+          "sub-18",
+          "sub-19",
+          "sub-2",
+          "sub-20",
+          "sub-21",
+          "sub-22",
+          "sub-23",
+          "sub-24",
+          "sub-25",
+          "sub-26",
+          "sub-27",
+          "sub-28",
+          "sub-29",
+          "sub-3",
+          "sub-30",
+          "sub-31",
+          "sub-32",
+          "sub-33",
+          "sub-34",
+          "sub-35",
+          "sub-36",
+          "sub-37",
+          "sub-38",
+          "sub-39",
+          "sub-4",
+          "sub-40",
+          "sub-41",
+          "sub-42",
+          "sub-43",
+          "sub-44",
+          "sub-45",
+          "sub-46",
+          "sub-47",
+          "sub-48",
+          "sub-49",
+          "sub-5",
+          "sub-50",
+          "sub-51",
+          "sub-6",
+          "sub-7",
+          "sub-8",
+          "sub-9"
+        ],
+        "subject_count_with_listed_signals": 51,
+        "subject_session_pairs_with_listed_signals": 153,
+        "sourcedata_bytes": 0
+      },
+      "actual_sample_sidecar": {
+        "EEGChannelCount": 59,
+        "EOGChannelCount": 0,
+        "EMGChannelCount": 0,
+        "ECGChannelCount": 0,
+        "SamplingFrequency": 1000.0,
+        "EEGReference": "n/a",
+        "RecordingType": "continuous",
+        "SoftwareFilters": "n/a"
+      },
+      "task_semantics": "left/right hand subset; original includes11 additional3class subjects",
+      "intended_scientific_role": "Large multi-day offline crosssessionexternal validation",
+      "known_limits": [
+        "Same-source51subjects inbothnm000246/nm000348; neveradd as102",
+        "Originalpaper62participants(51two-class+11threeclass) butbothmirrors coveronly51",
+        "Original2019recordings;2025paper;separatefromMa2022pendingSHU",
+        "Source59EEG1000Hz;sample348includes4EOG+1ECG,246only59EEG; processed58Pzreferenced",
+        "No verifiedtrial-levelsuccess or no-assistanceprobe",
+        "Largevolume duplicatesraw/derived; downloadonepinnedrepresentation only"
+      ],
+      "signal_validation_level": "representative HEAD HTTP200 and manifest listing only; no signal read/training in this subtask",
+      "behavior_validation_level": "publication/repository description only unless noted; no behavior parser audit",
+      "do_not_count_as_human_retention_proof": true,
+      "original_repository": "https://api.figshare.com/v2/articles/22671172",
+      "paper_doi": "10.1038/s41597-025-04826-y",
+      "duplicate_group": "figshare22671172_WBCIC-SHU",
+      "original_license": "CC-BY-4.0",
+      "original_paper_claimed_subjects": 62
+    },
+    {
+      "dataset_id": "Lee2019-MI-OpenBMI",
+      "repository": "NEMAR",
+      "nemar_id": "nm000338",
+      "priority": 5,
+      "version": "v1.0.5",
+      "version_release_string_timezone_unspecified": "2026-08-18 18:18:53",
+      "official_api": "https://data.nemar.org/nm000338/",
+      "official_metadata": "https://data.nemar.org/nm000338/metadata.json",
+      "official_manifest": "https://data.nemar.org/nm000338/v1.0.5/manifest.json",
+      "manifest_sha256": "1ebd2f1d7df09d1220b164df80c8177ec6e01b851aa0dc2cc4b2c8e1c7298435",
+      "license_in_registry": "GPL-3.0",
+      "subject_count_metadata": 54,
+      "verified_manifest_census": {
+        "version": "v1.0.5",
+        "created_at_without_timezone": "2026-08-18 18:18:53",
+        "manifest_rows": 1955,
+        "all_manifest_bytes": 130115888561,
+        "signal_file_count": 216,
+        "signal_formats": {
+          ".bdf": 216
+        },
+        "signal_bytes": 65265535278,
+        "subjects_with_listed_signals": [
+          "sub-1",
+          "sub-10",
+          "sub-11",
+          "sub-12",
+          "sub-13",
+          "sub-14",
+          "sub-15",
+          "sub-16",
+          "sub-17",
+          "sub-18",
+          "sub-19",
+          "sub-2",
+          "sub-20",
+          "sub-21",
+          "sub-22",
+          "sub-23",
+          "sub-24",
+          "sub-25",
+          "sub-26",
+          "sub-27",
+          "sub-28",
+          "sub-29",
+          "sub-3",
+          "sub-30",
+          "sub-31",
+          "sub-32",
+          "sub-33",
+          "sub-34",
+          "sub-35",
+          "sub-36",
+          "sub-37",
+          "sub-38",
+          "sub-39",
+          "sub-4",
+          "sub-40",
+          "sub-41",
+          "sub-42",
+          "sub-43",
+          "sub-44",
+          "sub-45",
+          "sub-46",
+          "sub-47",
+          "sub-48",
+          "sub-49",
+          "sub-5",
+          "sub-50",
+          "sub-51",
+          "sub-52",
+          "sub-53",
+          "sub-54",
+          "sub-6",
+          "sub-7",
+          "sub-8",
+          "sub-9"
+        ],
+        "subject_count_with_listed_signals": 54,
+        "subject_session_pairs_with_listed_signals": 108,
+        "sourcedata_bytes": 64847453404
+      },
+      "actual_sample_sidecar": {
+        "EEGChannelCount": 62,
+        "EOGChannelCount": 0,
+        "EMGChannelCount": 4,
+        "ECGChannelCount": 0,
+        "SamplingFrequency": 1000.0,
+        "EEGReference": "nasion",
+        "RecordingType": "continuous",
+        "SoftwareFilters": "n/a"
+      },
+      "task_semantics": "left_hand/right_hand; train/test acquisitions",
+      "intended_scientific_role": "Large crossdaydecodertraining andheldout validation",
+      "known_limits": [
+        "OriginalDataCite DOI10.5524/100542 CC0-1.0 versusNEMAR metadataGPL-3.0; data/article/toollicensesseparate",
+        "54subjects across2days; otherERPSSVEP paradigms samepeople",
+        "Source62EEG+4EMG1000Hz;do notcombineEMGwithoutartifact policy",
+        "Wholemanifest130GB includes65GBBDF+65GBMAT;one representation",
+        "No independentretention endpointjust2days"
+      ],
+      "signal_validation_level": "representative HEAD HTTP200 and manifest listing only; no signal read/training in this subtask",
+      "behavior_validation_level": "publication/repository description only unless noted; no behavior parser audit",
+      "do_not_count_as_human_retention_proof": true,
+      "original_repository": "https://api.datacite.org/dois/10.5524/100542",
+      "paper_doi": "10.1093/gigascience/giz002",
+      "original_license_authoritatively_verified": "CC0-1.0"
+    },
+    {
+      "dataset_id": "Forenzo2023",
+      "repository": "NEMAR",
+      "nemar_id": "nm000209",
+      "priority": 6,
+      "version": "v1.0.4",
+      "version_release_string_timezone_unspecified": "2026-08-20 19:21:34",
+      "official_api": "https://data.nemar.org/nm000209/",
+      "official_metadata": "https://data.nemar.org/nm000209/metadata.json",
+      "official_manifest": "https://data.nemar.org/nm000209/v1.0.4/manifest.json",
+      "manifest_sha256": "aed96d931b72e60269feca1c1d79287b4a67aa212a05300da7f9fa6b4bf0e397",
+      "license_in_registry": "CC-BY-4.0",
+      "subject_count_metadata": 25,
+      "verified_manifest_census": {
+        "version": "v1.0.4",
+        "created_at_without_timezone": "2026-08-20 19:21:34",
+        "manifest_rows": 3211,
+        "all_manifest_bytes": 197455867815,
+        "signal_file_count": 150,
+        "signal_formats": {
+          ".bdf": 150
+        },
+        "signal_bytes": 5251633644,
+        "subjects_with_listed_signals": [
+          "sub-1",
+          "sub-10",
+          "sub-11",
+          "sub-12",
+          "sub-13",
+          "sub-14",
+          "sub-15",
+          "sub-16",
+          "sub-17",
+          "sub-18",
+          "sub-19",
+          "sub-2",
+          "sub-20",
+          "sub-21",
+          "sub-22",
+          "sub-23",
+          "sub-24",
+          "sub-25",
+          "sub-3",
+          "sub-4",
+          "sub-5",
+          "sub-6",
+          "sub-7",
+          "sub-8",
+          "sub-9"
+        ],
+        "subject_count_with_listed_signals": 25,
+        "subject_session_pairs_with_listed_signals": 50,
+        "sourcedata_bytes": 192202887269
+      },
+      "actual_sample_sidecar": {
+        "EEGChannelCount": 64,
+        "EOGChannelCount": 0,
+        "EMGChannelCount": 0,
+        "ECGChannelCount": 0,
+        "SamplingFrequency": 1000.0,
+        "EEGReference": "between Cz and CPz",
+        "RecordingType": "continuous",
+        "SoftwareFilters": "n/a"
+      },
+      "task_semantics": "left/rightMI subset ofMI/spatialattention/MIOSA",
+      "intended_scientific_role": "Onlinebehavior andattentioncondition independent validation",
+      "known_limits": [
+        "Original25x5sessions2025runs;NEMARderivative25x2sessions150BDF only",
+        "NeedoriginalMATevent/targets/outcome inspection forbehavior",
+        "Attention/MIOSA cannotbe pooledaspureMI",
+        "OriginalsubjectZIP94GB; derivative5GBpartialcoverage"
+      ],
+      "signal_validation_level": "representative HEAD HTTP200 and manifest listing only; no signal read/training in this subtask",
+      "behavior_validation_level": "publication/repository description only unless noted; no behavior parser audit",
+      "do_not_count_as_human_retention_proof": true,
+      "original_repository": "https://api.figshare.com/v2/articles/23677098",
+      "paper_doi": "10.1109/TBME.2023.3298957",
+      "original_paper_claimed_sessions_per_subject": 5,
+      "original_paper_claimed_runs": 2025
+    },
+    {
+      "dataset_id": "Forenzo2024-ContinuousPursuit",
+      "priority": 7,
+      "repository": "Figshare",
+      "official_api": "https://api.figshare.com/v2/articles/25360300",
+      "doi": "10.1184/R1/25360300.v1",
+      "version": 1,
+      "repository_published_utc": "2024-04-03T20:23:25Z",
+      "data_license": {
+        "value": 1,
+        "name": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "paper_doi": "10.1038/s41597-024-04090-6",
+      "task_semantics": "continuous2Dmotorimagerytracking",
+      "publication_or_repository_claims": {
+        "paper_participants": 28,
+        "paper_subject_substudies": [
+          14,
+          14
+        ],
+        "paper_sessions_per_subject": [
+          4,
+          8
+        ],
+        "paper_recording_hours_approx": 168
+      },
+      "verified_file_metadata": {
+        "count": 29,
+        "bytes": 130013366233,
+        "files": [
+          {
+            "name": "S26.zip",
+            "id": 45214207,
+            "bytes": 2919516799,
+            "checksum_md5": "bd221c2fe63335e13fc6ddda9f772d2b",
+            "download_url": "https://ndownloader.figshare.com/files/45214207"
+          },
+          {
+            "name": "S27.zip",
+            "id": 45214231,
+            "bytes": 3371353399,
+            "checksum_md5": "b1a2f39340931ab851bdb6f71af02c10",
+            "download_url": "https://ndownloader.figshare.com/files/45214231"
+          },
+          {
+            "name": "S28.zip",
+            "id": 45214243,
+            "bytes": 3163883792,
+            "checksum_md5": "1c405fb52b5657393b2ed970b6fc33fe",
+            "download_url": "https://ndownloader.figshare.com/files/45214243"
+          },
+          {
+            "name": "S01.zip",
+            "id": 45214414,
+            "bytes": 6730803684,
+            "checksum_md5": "714bbe3e0673225ed4defc68848e7fa0",
+            "download_url": "https://ndownloader.figshare.com/files/45214414"
+          },
+          {
+            "name": "S02.zip",
+            "id": 45214594,
+            "bytes": 6222674722,
+            "checksum_md5": "7114ca6d948c38de6c047fa49b236491",
+            "download_url": "https://ndownloader.figshare.com/files/45214594"
+          },
+          {
+            "name": "S03.zip",
+            "id": 45214612,
+            "bytes": 6056890355,
+            "checksum_md5": "ff5e9a524220cecdd1df090f42845fd7",
+            "download_url": "https://ndownloader.figshare.com/files/45214612"
+          },
+          {
+            "name": "S04.zip",
+            "id": 45215872,
+            "bytes": 5948465188,
+            "checksum_md5": "b463d02ee9f683175f430de673eeaafd",
+            "download_url": "https://ndownloader.figshare.com/files/45215872"
+          },
+          {
+            "name": "S05.zip",
+            "id": 45217489,
+            "bytes": 6379637873,
+            "checksum_md5": "689b7fe0380d12178e5a8bbc405fa923",
+            "download_url": "https://ndownloader.figshare.com/files/45217489"
+          },
+          {
+            "name": "S06.zip",
+            "id": 45218278,
+            "bytes": 6324234180,
+            "checksum_md5": "8092bfcc3ef9715624cdfd1b2d5a5d52",
+            "download_url": "https://ndownloader.figshare.com/files/45218278"
+          },
+          {
+            "name": "S07.zip",
+            "id": 45218578,
+            "bytes": 6090241303,
+            "checksum_md5": "a6a9aa39be75cb3d29c3c93e9941792b",
+            "download_url": "https://ndownloader.figshare.com/files/45218578"
+          },
+          {
+            "name": "S08.zip",
+            "id": 45218743,
+            "bytes": 6103781918,
+            "checksum_md5": "1ba5812a98d5a5e5f271dd97f04b11b8",
+            "download_url": "https://ndownloader.figshare.com/files/45218743"
+          },
+          {
+            "name": "S09.zip",
+            "id": 45218953,
+            "bytes": 6457082219,
+            "checksum_md5": "6ad1618282377d0af92f51cc5f7aa814",
+            "download_url": "https://ndownloader.figshare.com/files/45218953"
+          },
+          {
+            "name": "S10.zip",
+            "id": 45219391,
+            "bytes": 5825668960,
+            "checksum_md5": "13315bc5aefa6ae6021cb277fdfbc1f1",
+            "download_url": "https://ndownloader.figshare.com/files/45219391"
+          },
+          {
+            "name": "S11.zip",
+            "id": 45219436,
+            "bytes": 6375766050,
+            "checksum_md5": "526abcb90ddc9dbbd222186c82c0566e",
+            "download_url": "https://ndownloader.figshare.com/files/45219436"
+          },
+          {
+            "name": "S12.zip",
+            "id": 45219460,
+            "bytes": 5808918059,
+            "checksum_md5": "f8e61f11ea7e06f672e7811cb1d5e78c",
+            "download_url": "https://ndownloader.figshare.com/files/45219460"
+          },
+          {
+            "name": "S13.zip",
+            "id": 45219478,
+            "bytes": 6213807144,
+            "checksum_md5": "",
+            "download_url": "https://ndownloader.figshare.com/files/45219478"
+          },
+          {
+            "name": "S14.zip",
+            "id": 45219511,
+            "bytes": 6372678150,
+            "checksum_md5": "8b4aaf2c351368a2a48e2f4aea5da541",
+            "download_url": "https://ndownloader.figshare.com/files/45219511"
+          },
+          {
+            "name": "S15.zip",
+            "id": 45219529,
+            "bytes": 3035090822,
+            "checksum_md5": "fd8201988c25331b905d5a0da45cc4ac",
+            "download_url": "https://ndownloader.figshare.com/files/45219529"
+          },
+          {
+            "name": "S16.zip",
+            "id": 45219532,
+            "bytes": 2920519455,
+            "checksum_md5": "41185bc1bcfede5c0e46094189a96ee4",
+            "download_url": "https://ndownloader.figshare.com/files/45219532"
+          },
+          {
+            "name": "S17.zip",
+            "id": 45219622,
+            "bytes": 3009666590,
+            "checksum_md5": "87630e05e378e2c2a586b627e58d6a03",
+            "download_url": "https://ndownloader.figshare.com/files/45219622"
+          },
+          {
+            "name": "S18.zip",
+            "id": 45220030,
+            "bytes": 2765959136,
+            "checksum_md5": "a8171a8b0d852bf22ca432d059719039",
+            "download_url": "https://ndownloader.figshare.com/files/45220030"
+          },
+          {
+            "name": "S19.zip",
+            "id": 45220501,
+            "bytes": 3382837566,
+            "checksum_md5": "14c661bce87257f9821cbb82af184fd9",
+            "download_url": "https://ndownloader.figshare.com/files/45220501"
+          },
+          {
+            "name": "S20.zip",
+            "id": 45220864,
+            "bytes": 2985200589,
+            "checksum_md5": "449734d399106dc78ab96dfd2753c875",
+            "download_url": "https://ndownloader.figshare.com/files/45220864"
+          },
+          {
+            "name": "S21.zip",
+            "id": 45221296,
+            "bytes": 3078091912,
+            "checksum_md5": "ed60152554a1525fd76acaa90ec3cca7",
+            "download_url": "https://ndownloader.figshare.com/files/45221296"
+          },
+          {
+            "name": "S22.zip",
+            "id": 45221695,
+            "bytes": 2974927546,
+            "checksum_md5": "2ab0cf7407c7c4648c4b6c6d43c1b4fa",
+            "download_url": "https://ndownloader.figshare.com/files/45221695"
+          },
+          {
+            "name": "S23.zip",
+            "id": 45221752,
+            "bytes": 3355205378,
+            "checksum_md5": "ab0de0b97740944ee706b5ade320e401",
+            "download_url": "https://ndownloader.figshare.com/files/45221752"
+          },
+          {
+            "name": "S24.zip",
+            "id": 45221755,
+            "bytes": 3245787844,
+            "checksum_md5": "e91ad2caf5efb0d2034a84717be27723",
+            "download_url": "https://ndownloader.figshare.com/files/45221755"
+          },
+          {
+            "name": "S25.zip",
+            "id": 45221767,
+            "bytes": 2894612640,
+            "checksum_md5": "3090cb3217f8ac56ce0a4507d760a54b",
+            "download_url": "https://ndownloader.figshare.com/files/45221767"
+          },
+          {
+            "name": "README.pdf",
+            "id": 45261922,
+            "bytes": 62960,
+            "checksum_md5": "5c9fce22ef153b34a08c947cec8aac63",
+            "download_url": "https://ndownloader.figshare.com/files/45261922"
+          }
+        ]
+      },
+      "known_limits": [
+        "Continuousmovingtarget differsfromdiscreteclasscue;do notinventleft/righttriallabels",
+        "Decoderconditions/substudiesexplicit;trajectoryerror notpooled BA",
+        "OriginalrawZIPinspectionnotperformed"
+      ],
+      "validation_level": "officialmetadataonly;representativeHEAD403doesnotproveGETfailure;nosignaldownloadorreadaudit"
+    },
+    {
+      "dataset_id": "Alawieh2025-TESS",
+      "priority": 8,
+      "repository": "Zenodo",
+      "official_api": "https://zenodo.org/api/records/15454355",
+      "doi": "10.5281/zenodo.15454355",
+      "version": "v1",
+      "publication_date": "2025-05-18",
+      "data_license": {
+        "id": "cc-by-4.0"
+      },
+      "paper_doi": "10.1073/pnas.2418920122",
+      "task_semantics": "left/righthandMI+TESS/Rest/SinglePulse;clinicalSCIseparate",
+      "publication_or_repository_claims": {
+        "unique_participants": 27,
+        "healthy": 25,
+        "SCI_included": 2,
+        "main_randomized_group": 20,
+        "main_TESS": 10,
+        "main_rest": 10,
+        "single_pulse_new_subjects": 5,
+        "crossover_repeat_of_rest_subjects": 4,
+        "sampling_frequency_hz": 512,
+        "EEG_channels_options": [
+          32,
+          64
+        ],
+        "followup_of_subset": "1weekposttraining;6monthwashoutcrossover"
+      },
+      "verified_file_metadata": {
+        "count": 5,
+        "bytes": 18287887800,
+        "files": [
+          {
+            "name": "d5_mri.zip",
+            "bytes": 77634252,
+            "checksum": "md5:19aa2ff1541e6e60220d8d31884ff4b8",
+            "download_url": "https://zenodo.org/api/records/15454355/files/d5_mri.zip/content"
+          },
+          {
+            "name": "d1_Main_Group_n20.zip",
+            "bytes": 5300238461,
+            "checksum": "md5:2e9168e2fc36d25d576138450e333363",
+            "download_url": "https://zenodo.org/api/records/15454355/files/d1_Main_Group_n20.zip/content"
+          },
+          {
+            "name": "d3_SinglePulse_n5.zip",
+            "bytes": 5359572741,
+            "checksum": "md5:b85ac32ecf8be018fa82322029305cde",
+            "download_url": "https://zenodo.org/api/records/15454355/files/d3_SinglePulse_n5.zip/content"
+          },
+          {
+            "name": "d4_SCI_patients.zip",
+            "bytes": 3402925696,
+            "checksum": "md5:5257af4124d53d8303a18ac81d572019",
+            "download_url": "https://zenodo.org/api/records/15454355/files/d4_SCI_patients.zip/content"
+          },
+          {
+            "name": "d2_SlowLearners_n4.zip",
+            "bytes": 4147516650,
+            "checksum": "md5:efe7140ca3890be011a54cd24114be06",
+            "download_url": "https://zenodo.org/api/records/15454355/files/d2_SlowLearners_n4.zip/content"
+          }
+        ]
+      },
+      "known_limits": [
+        "DescriptionSCI n3thenexcludesone;do notreport28 included",
+        "d2 repeatsd1people;fourcrossover notnewindependentparticipants",
+        "CurrentMOABBloaderonlyofflinecueonetimepoint;onlineandfollowupnotmapped",
+        "Closedlooponlinefilesdo notprovide same discretecueeventsthatloaderuses;needindependenttimestampbehavioradapter",
+        "Stimulationeffectisnotdecoderpolicyretentioneffect"
+      ],
+      "validation_level": "metadataandpaper;signalsandbehaviornotread"
+    },
+    {
+      "dataset_id": "WangLiu2026-StrokeSF-AH",
+      "priority": 9,
+      "repository": "Figshare",
+      "official_api": "https://api.figshare.com/v2/articles/30509165",
+      "doi": "10.6084/m9.figshare.30509165.v11",
+      "version": 11,
+      "repository_published_utc": "2026-06-23T17:08:34Z",
+      "data_license": {
+        "value": 1,
+        "name": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "paper_doi": "10.1038/s41597-026-07787-y",
+      "task_semantics": "rest/affectedhandMI/sixthfingerMI",
+      "publication_or_repository_claims": {
+        "paper_participants": 24,
+        "paper_group_counts": {
+          "BCI": 14,
+          "traditional": 10
+        },
+        "paper_assessment_timepoints": [
+          "pre",
+          "post",
+          "1monthfollowup"
+        ],
+        "paper_complete_followup_subjects": 19,
+        "paper_missing_followup_subjects": 5,
+        "missing_followup_original_ids": [
+          "05",
+          "17",
+          "18",
+          "20",
+          "21"
+        ],
+        "paper_publication_date": "2026-07-30",
+        "raw_format": [
+          "set",
+          "fdt"
+        ],
+        "processed_format": "mat"
+      },
+      "verified_file_metadata": {
+        "count": 11,
+        "bytes": 8686749452,
+        "files": [
+          {
+            "name": "processeddata.zip",
+            "id": 64870068,
+            "bytes": 3511450903,
+            "checksum_md5": "7a3138c15fa215b0e607287479211169",
+            "download_url": "https://ndownloader.figshare.com/files/64870068"
+          },
+          {
+            "name": "sourcedata.zip",
+            "id": 64877880,
+            "bytes": 5175273351,
+            "checksum_md5": "74dabab47f477e5bc0510b1e2e705c5a",
+            "download_url": "https://ndownloader.figshare.com/files/64877880"
+          },
+          {
+            "name": "Code.zip",
+            "id": 65799339,
+            "bytes": 18513,
+            "checksum_md5": "a7c4e6d482789ed0e2ca0dfefe1d3fa0",
+            "download_url": "https://ndownloader.figshare.com/files/65799339"
+          },
+          {
+            "name": "dataset_description.json",
+            "id": 65799342,
+            "bytes": 714,
+            "checksum_md5": "a17be1b2413ff206f19dd2fe9ef87c71",
+            "download_url": "https://ndownloader.figshare.com/files/65799342"
+          },
+          {
+            "name": "electrodes.tsv",
+            "id": 65799345,
+            "bytes": 1214,
+            "checksum_md5": "9d7899135475ac7eea82d302f066a6c5",
+            "download_url": "https://ndownloader.figshare.com/files/65799345"
+          },
+          {
+            "name": "events.json",
+            "id": 65799348,
+            "bytes": 451,
+            "checksum_md5": "6512ee21105046a5ef446cb7cae7eb95",
+            "download_url": "https://ndownloader.figshare.com/files/65799348"
+          },
+          {
+            "name": "events.tsv",
+            "id": 65799351,
+            "bytes": 481,
+            "checksum_md5": "1a8a8514247bf074d313904644905e7d",
+            "download_url": "https://ndownloader.figshare.com/files/65799351"
+          },
+          {
+            "name": "participants.json",
+            "id": 65799354,
+            "bytes": 686,
+            "checksum_md5": "dfb62247b7acceddef16253b74aad80c",
+            "download_url": "https://ndownloader.figshare.com/files/65799354"
+          },
+          {
+            "name": "participants.tsv",
+            "id": 65799357,
+            "bytes": 856,
+            "checksum_md5": "8e1fa64e47b11ffc78d1a83bc4926ac3",
+            "download_url": "https://ndownloader.figshare.com/files/65799357"
+          },
+          {
+            "name": "README.md",
+            "id": 65799360,
+            "bytes": 1634,
+            "checksum_md5": "6b37f33f767ae450bcb51065966eeb5d",
+            "download_url": "https://ndownloader.figshare.com/files/65799360"
+          },
+          {
+            "name": "task-MotorImagery_eeg.json",
+            "id": 65799363,
+            "bytes": 649,
+            "checksum_md5": "5744c1f6b0a80217e2ab32e98a63481a",
+            "download_url": "https://ndownloader.figshare.com/files/65799363"
+          }
+        ]
+      },
+      "known_limits": [
+        "8therapysessionsnot8publicEEGtrainingsessions",
+        "Clinicalhemiplegia/interventiondifferentfromhealthyMI;separateanalysis",
+        "No randomizationorproposeddecoderpolicycausalityassumed",
+        "Unchangedclassification andrehabfollowupnotno-assistanceMIretention",
+        "Rawfilesandclinicalsidecars notactuallyread"
+      ],
+      "validation_level": "officialmetadataonly;representativeHEAD403doesnotproveGETfailure;nosignaldownloadorreadaudit"
+    },
+    {
+      "dataset_id": "BNCI2014-001-BCIIV2a",
+      "repository": "NEMAR",
+      "nemar_id": "nm000139",
+      "priority": 10,
+      "version": "v1.0.3",
+      "version_release_string_timezone_unspecified": "2026-10-08 18:14:20",
+      "official_api": "https://data.nemar.org/nm000139/",
+      "official_metadata": "https://data.nemar.org/nm000139/metadata.json",
+      "official_manifest": "https://data.nemar.org/nm000139/v1.0.3/manifest.json",
+      "manifest_sha256": "f3183e97884f0c0dc08a4d7b3347bcfd02e305110fadea61f2cbd02dc5f39a4f",
+      "license_in_registry": "CC-BY-ND-4.0",
+      "subject_count_metadata": 9,
+      "verified_manifest_census": {
+        "version": "v1.0.3",
+        "created_at_without_timezone": "2026-10-08 18:14:20",
+        "manifest_rows": 769,
+        "all_manifest_bytes": 1485045581,
+        "signal_file_count": 108,
+        "signal_formats": {
+          ".bdf": 108
+        },
+        "signal_bytes": 691802208,
+        "subjects_with_listed_signals": [
+          "sub-1",
+          "sub-2",
+          "sub-3",
+          "sub-4",
+          "sub-5",
+          "sub-6",
+          "sub-7",
+          "sub-8",
+          "sub-9"
+        ],
+        "subject_count_with_listed_signals": 9,
+        "subject_session_pairs_with_listed_signals": 18,
+        "sourcedata_bytes": 779877948
+      },
+      "actual_sample_sidecar": {
+        "EEGChannelCount": 22,
+        "EOGChannelCount": 0,
+        "EMGChannelCount": 0,
+        "ECGChannelCount": 0,
+        "SamplingFrequency": 250.0,
+        "EEGReference": "left mastoid",
+        "RecordingType": "continuous",
+        "SoftwareFilters": {
+          "preprocessing_steps": {
+            "Description": "bandpass filtering"
+          }
+        }
+      },
+      "task_semantics": "left_hand/right_hand/feet/tongue;4classMI",
+      "intended_scientific_role": "Establishedsmallcrossdayreplicationbenchmark",
+      "known_limits": [
+        "9subjects2days;notretentionintervention",
+        "22EEG250Hz;possibleLRsubsetneedslockedtaskmapping",
+        "DataCC-BY-ND4 preservelicense;notreusefirstpaperoutputs"
+      ],
+      "signal_validation_level": "representative HEAD HTTP200 and manifest listing only; no signal read/training in this subtask",
+      "behavior_validation_level": "publication/repository description only unless noted; no behavior parser audit",
+      "do_not_count_as_human_retention_proof": true,
+      "original_repository": "https://bnci-horizon-2020.eu/database/data-sets",
+      "paper_doi": "10.3389/fnins.2012.00055"
+    },
+    {
+      "dataset_id": "BNCI2014-004-BCIIV2b",
+      "repository": "NEMAR",
+      "nemar_id": "nm000135",
+      "priority": 11,
+      "version": "v1.0.3",
+      "version_release_string_timezone_unspecified": "2026-10-08 18:12:40",
+      "official_api": "https://data.nemar.org/nm000135/",
+      "official_metadata": "https://data.nemar.org/nm000135/metadata.json",
+      "official_manifest": "https://data.nemar.org/nm000135/v1.0.3/manifest.json",
+      "manifest_sha256": "63a0df79c4a5c236365fb5453521ab326b035f52625d5b7ceb8161dda2e0a114",
+      "license_in_registry": "CC-BY-ND-4.0",
+      "subject_count_metadata": 1,
+      "verified_manifest_census": {
+        "version": "v1.0.3",
+        "created_at_without_timezone": "2026-10-08 18:12:40",
+        "manifest_rows": 84,
+        "all_manifest_bytes": 501568000,
+        "signal_file_count": 5,
+        "signal_formats": {
+          ".bdf": 5
+        },
+        "signal_bytes": 23516719,
+        "subjects_with_listed_signals": [
+          "sub-1"
+        ],
+        "subject_count_with_listed_signals": 1,
+        "subject_session_pairs_with_listed_signals": 5,
+        "sourcedata_bytes": 477985091
+      },
+      "actual_sample_sidecar": {
+        "EEGChannelCount": 3,
+        "EOGChannelCount": 0,
+        "EMGChannelCount": 0,
+        "ECGChannelCount": 0,
+        "SamplingFrequency": 250.0,
+        "EEGReference": "left mastoid",
+        "RecordingType": "continuous",
+        "SoftwareFilters": {
+          "preprocessing_steps": {
+            "Description": "bandpass filtering, notch filtering"
+          }
+        }
+      },
+      "task_semantics": "left/rightMI;3bipolarEEG250Hz",
+      "intended_scientific_role": "Small5sessionfeedbackbenchmark",
+      "known_limits": [
+        "Original9subjects5sessions;first2nofeedbacklast3feedback",
+        "NEMARderivativeonly1subjectbut18originalB01-B09 T/E MAT listedinsourcedata",
+        "Do notfabricate74channels or73-dimensionalCARgeometry",
+        "SessionswithinoriginalT/Efilesneedexplicitboundaryaudit"
+      ],
+      "signal_validation_level": "representative HEAD HTTP200 and manifest listing only; no signal read/training in this subtask",
+      "behavior_validation_level": "publication/repository description only unless noted; no behavior parser audit",
+      "do_not_count_as_human_retention_proof": true,
+      "original_repository": "https://bnci-horizon-2020.eu/database/data-sets",
+      "paper_doi": "10.1109/TNSRE.2007.906956",
+      "original_official_subject_count": 9,
+      "original_signal_sourcedata_mat_count": 18
+    },
+    {
+      "dataset_id": "BNCI2015-001",
+      "repository": "NEMAR",
+      "nemar_id": "nm000140",
+      "priority": 12,
+      "version": "v1.0.2",
+      "version_release_string_timezone_unspecified": "2026-08-18 18:10:57",
+      "official_api": "https://data.nemar.org/nm000140/",
+      "official_metadata": "https://data.nemar.org/nm000140/metadata.json",
+      "official_manifest": "https://data.nemar.org/nm000140/v1.0.2/manifest.json",
+      "manifest_sha256": "2dd5f72d2adab680753e60af7797ac72a530e680e662b377fd60e4a07e9eb609",
+      "license_in_registry": "CC-BY-NC-ND-4.0",
+      "subject_count_metadata": 12,
+      "verified_manifest_census": {
+        "version": "v1.0.2",
+        "created_at_without_timezone": "2026-08-18 18:10:57",
+        "manifest_rows": 349,
+        "all_manifest_bytes": 3042589065,
+        "signal_file_count": 28,
+        "signal_formats": {
+          ".bdf": 28
+        },
+        "signal_bytes": 1203192861,
+        "subjects_with_listed_signals": [
+          "sub-1",
+          "sub-10",
+          "sub-11",
+          "sub-12",
+          "sub-2",
+          "sub-3",
+          "sub-4",
+          "sub-5",
+          "sub-6",
+          "sub-7",
+          "sub-8",
+          "sub-9"
+        ],
+        "subject_count_with_listed_signals": 12,
+        "subject_session_pairs_with_listed_signals": 28,
+        "sourcedata_bytes": 1829858377
+      },
+      "actual_sample_sidecar": {
+        "EEGChannelCount": 13,
+        "EOGChannelCount": 0,
+        "EMGChannelCount": 0,
+        "ECGChannelCount": 0,
+        "SamplingFrequency": 512.0,
+        "EEGReference": "Car",
+        "RecordingType": "continuous",
+        "SoftwareFilters": {
+          "preprocessing_steps": {
+            "Description": "bandpass filter, notch filter"
+          }
+        }
+      },
+      "task_semantics": "right_hand versusfeet;onlineautocalibration/recurrentadaptation",
+      "intended_scientific_role": "Historicaldecoderupdating externaldescriptive replication",
+      "known_limits": [
+        "12participants28sessions;eightsubjects2sessionsfour3",
+        "13EEG512Hz;notleftrighttask",
+        "CC-BY-NC-ND4;datesandbehaviornotread",
+        "Historicaladaptationnotproposedpolicy;notcausalretention"
+      ],
+      "signal_validation_level": "representative HEAD HTTP200 and manifest listing only; no signal read/training in this subtask",
+      "behavior_validation_level": "publication/repository description only unless noted; no behavior parser audit",
+      "do_not_count_as_human_retention_proof": true,
+      "original_repository": "https://bnci-horizon-2020.eu/database/data-sets",
+      "paper_doi": "10.1109/TNSRE.2012.2189584"
+    }
+  ],
+  "not_pooled_participant_count": "Crossdatasetoverlapunverified;mirrors/paradigms/crossover/sessionsnotindependentpeople",
+  "recommended_execution_order": [
+    "FinishexistingNETBCI10reviewedresults",
+    "NETBCIremaining9sameversionwithsignalsubsetQC/dedupbeforegroupstatistics",
+    "Kumar2024all18 independentlongitudinaladaptervalidation",
+    "Stieger/Yang/OpenBMIboundedrepresentative originalorlegallyclearderivative subsets",
+    "Independentcontinuouscontrol/neuromodulation/clinicalfollowup studiesoncorrectendpoints"
+  ],
+  "newer_BNCI_search_exclusions": [
+    {
+      "dataset": "BNCI2024-001",
+      "official_participants": 20,
+      "reason": "handwrittenletters actualmovement;notmatchingMIlongitudinaltask"
+    },
+    {
+      "dataset": "BNCI2025-001",
+      "official_participants": 20,
+      "reason": "discretereachingactualkinematicmovements;notpureMI"
+    },
+    {
+      "dataset": "BNCI2025-002",
+      "official_participants": 20,
+      "moabb_card_participants": 10,
+      "moabb_availability_note_participants": 2,
+      "reason": "attemptedmovementcontinuoustrajectorywithfeedbackfractions;countsandavailabilityunresolved;notcountedasusableMIcohort"
+    }
+  ]
+}

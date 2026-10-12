@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/workspace/few-shot-mi-eeg/scripts/audit_kumar_subset.py", line 282, in <module>
+    main()
+  File "/workspace/few-shot-mi-eeg/scripts/audit_kumar_subset.py", line 223, in main
+    write_immutable(artifact, result)
+  File "/workspace/few-shot-mi-eeg/scripts/fetch_nemar_subset.py", line 221, in write_immutable
+    data = json.dumps(value, ensure_ascii=False, indent=2).encode() + b"\n"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.bci-tools/python/cpython-3.11.16-linux-x86_64-gnu/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/workspace/.bci-tools/python/cpython-3.11.16-linux-x86_64-gnu/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/workspace/.bci-tools/python/cpython-3.11.16-linux-x86_64-gnu/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/workspace/.bci-tools/python/cpython-3.11.16-linux-x86_64-gnu/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/workspace/.bci-tools/python/cpython-3.11.16-linux-x86_64-gnu/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/workspace/.bci-tools/python/cpython-3.11.16-linux-x86_64-gnu/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type int64 is not JSON serializable

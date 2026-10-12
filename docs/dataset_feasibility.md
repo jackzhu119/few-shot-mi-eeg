@@ -267,3 +267,17 @@ onset  duration  trial_type  response_time  sample  value
 
 已有行为数据已继续分析，见[会话级报告](netbci_behavior_session_analysis.md)：19人的456成绩均完整，
 仅sub-1的4个EEG会话可靠关联。无需以联系作者作为取得既有成绩的前置步骤；run/trial细节的限制仍保留。
+
+## 2026-10-11 最新接续证据
+
+NETBCI全部19发布身份、76会话、456EDF现已实读审计并完成冻结CSP/LDA分析。
+14,431原始事件与两条短事件保留，14,429完整窗口用于固定张量。全部数值审计发现
+跨身份复制涉及1、6、7、15、17，来源敏感性保留14；文件官方校验成功不是采集独立证明。
+见[全19结果](netbci_all19_results_20261011.md)。旧单人/十人状态是历史冻结，不再代表当前覆盖。
+
+更大公开资源的实际访问、许可、身份/任务和体积调查分别见
+[纵向来源](public_longitudinal_dataset_audit_20261010.md)、
+[大样本来源](public_large_training_dataset_audit_20261010.md)。
+Kumar、PhysioNet、Leeuwis、MILimbEEG与Liu的实际接入以各库执行/独立审计收据为准；
+跨镜像不重复人数，未实读数据不计已接入，新库下载不计已训练。
+远端存储与回读证据见[R2记录](r2_research_storage.md)。

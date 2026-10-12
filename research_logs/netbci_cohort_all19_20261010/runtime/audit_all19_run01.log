@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/few-shot-mi-eeg/scripts/audit_netbci_cohort.py", line 492, in <module>
+    main()
+  File "/workspace/few-shot-mi-eeg/scripts/audit_netbci_cohort.py", line 461, in main
+    require(set(args.subjects) <= set(config["subjects"]), "Subject outside approved config")
+  File "/workspace/few-shot-mi-eeg/scripts/audit_netbci_cohort.py", line 37, in require
+    raise ValueError(message)
+ValueError: Subject outside approved config

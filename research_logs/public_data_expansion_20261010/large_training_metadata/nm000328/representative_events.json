@@ -1,0 +1,36 @@
+{
+	"onset": {
+		"Description": "Onset (in seconds) of the event from the beginning of the first datapoint. Negative onsets account for events before the first stored data point.",
+		"Units": "s"
+	},
+	"duration": {
+		"Description": "Duration of the event in seconds from onset. Must be zero, positive, or 'n/a' if unavailable. A zero value indicates an impulse event. ",
+		"Units": "s"
+	},
+	"sample": {
+		"Description": "The event onset time in number of sampling points.First sample is 0."
+	},
+	"value": {
+		"Description": "The event code (also known as trigger code or event ID) associated with the event."
+	},
+	"trial_type": {
+		"Description": "The type, category, or name of the event.",
+		"HED": {
+			"rest": "Sensory-event, Experimental-stimulus, Visual-presentation, Rest",
+			"beo": "Sensory-event, (Label/beo)",
+			"clh": "Sensory-event, (Label/clh)",
+			"crh": "Sensory-event, (Label/crh)",
+			"dlf": "Sensory-event, (Label/dlf)",
+			"plf": "Sensory-event, (Label/plf)",
+			"drf": "Sensory-event, (Label/drf)",
+			"prf": "Sensory-event, (Label/prf)"
+		}
+	},
+	"Description": "Event annotations for imagery task (beo, clh, crh, dlf, drf, plf, prf, rest).",
+	"StimulusPresentation": {
+		"StimulusType": "visual",
+		"StimulusModalities": [
+			"visual"
+		]
+	}
+}

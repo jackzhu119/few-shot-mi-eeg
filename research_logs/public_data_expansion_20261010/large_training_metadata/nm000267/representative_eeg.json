@@ -1,0 +1,43 @@
+{
+	"TaskName": "imagery",
+	"Manufacturer": "Brain Products",
+	"PowerLineFrequency": 50.0,
+	"SamplingFrequency": 200.0,
+	"SoftwareFilters": {
+		"preprocessing_steps": {
+			"Description": "common average reference, bandpass filtering (0.5-50 Hz), ICA-based EOG rejection, downsampling to 200 Hz"
+		}
+	},
+	"RecordingDuration": 601.995,
+	"RecordingType": "continuous",
+	"EEGReference": "linked mastoids",
+	"EEGGround": "Fz",
+	"EEGPlacementScheme": "10-5",
+	"EEGChannelCount": 30,
+	"EOGChannelCount": 2,
+	"ECGChannelCount": 0,
+	"EMGChannelCount": 0,
+	"TriggerChannelCount": 0,
+	"ManufacturersModelName": "BrainAmp",
+	"CapManufacturer": "EASYCAP GmbH",
+	"CapManufacturersModelName": "custom-made stretchy fabric cap",
+	"SoftwareVersions": "n/a",
+	"HardwareFilters": {
+		"Bandpass": {
+			"LowCutoffFrequency": 0.5,
+			"HighCutoffFrequency": 50.0,
+			"Type": "Chebyshev type II",
+			"Order": 4
+		}
+	},
+	"TaskDescription": "Dataset A: left vs right hand motor imagery (kinesthetic imagery of opening and closing hands) Trial duration: 10.0s, cue: 2.0s, imagery: 10.0s.",
+	"Instructions": "Subjects were instructed to perform kinesthetic MI (i.e., to imagine the opening and closing their hands as they were grabbing a ball) to ensure that actual MI, not visual MI, was performed. Subjects were asked to imagine hand gripping (opening and closing their hands) with a 1 Hz pace.",
+	"CogAtlasID": "https://www.cognitiveatlas.org/task/id/trm_4c8a834779883/",
+	"InstitutionName": "Berlin Institute of Technology",
+	"InstitutionAddress": "10587 Berlin, Germany",
+	"InstitutionalDepartmentName": "Machine Learning Group, Department of Computer Science",
+	"SubjectArtefactDescription": "n/a",
+	"DeviceSerialNumber": "n/a",
+	"Description": "Open access dataset for hybrid brain-computer interfaces (BCIs) using electroencephalography (EEG) and near-infrared spectroscopy (NIRS). Dataset includes two BCI experiments: left versus right hand motor imagery, and mental arithmetic versus resting state.",
+	"MISCChannelCount": 0
+}

@@ -1,0 +1,142 @@
+{
+  "id": "nm000250",
+  "representative_signal_path": "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_acq-R1acquisition_run-0_eeg.bdf",
+  "checks": [
+    {
+      "path": "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_acq-R1acquisition_run-0_eeg.json",
+      "url": "https://data.nemar.org/nm000250/v1.0.5/sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_acq-R1acquisition_run-0_eeg.json",
+      "status": 200,
+      "bytes": 1932,
+      "sha256": "cf84556f2d6b62fdae6257c604221b9b93acdcdf74da211b9743f99bb141b08d",
+      "official_checksum_match": true,
+      "snapshot": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000250/representative_eeg.json"
+    },
+    {
+      "path": "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_acq-R1acquisition_run-0_channels.tsv",
+      "url": "https://data.nemar.org/nm000250/v1.0.5/sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_acq-R1acquisition_run-0_channels.tsv",
+      "status": 200,
+      "bytes": 1598,
+      "sha256": "e8259fcd02e3447b7dcb243d271127a087d220cedc0d9c27ed78171158d312a6",
+      "official_checksum_match": true,
+      "snapshot": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000250/representative_channels.tsv"
+    },
+    {
+      "path": "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_acq-R1acquisition_run-0_events.tsv",
+      "url": "https://data.nemar.org/nm000250/v1.0.5/sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_acq-R1acquisition_run-0_events.tsv",
+      "status": 200,
+      "bytes": 1328,
+      "sha256": "627e0a6b303cc10d560385d86edbca14dbbaf1f67cc78fd63cde6403af5ecb65",
+      "official_checksum_match": true,
+      "snapshot": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000250/representative_events.tsv"
+    },
+    {
+      "path": "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_acq-R1acquisition_run-0_events.json",
+      "url": "https://data.nemar.org/nm000250/v1.0.5/sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_acq-R1acquisition_run-0_events.json",
+      "status": 200,
+      "bytes": 1323,
+      "sha256": "286d8519347f62f95c2c70c626779895d30ef793dde136572ddbcd2cedd6cb95",
+      "official_checksum_match": true,
+      "snapshot": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000250/representative_events.json"
+    }
+  ],
+  "eeg_json": {
+    "TaskName": "imagery",
+    "Manufacturer": "g.tec",
+    "PowerLineFrequency": 50.0,
+    "SamplingFrequency": 512.0,
+    "SoftwareFilters": "n/a",
+    "RecordingDuration": 449.998046875,
+    "RecordingType": "continuous",
+    "EEGReference": "left earlobe",
+    "EEGGround": "FPz",
+    "EEGPlacementScheme": "10-20 system",
+    "EEGChannelCount": 27,
+    "EOGChannelCount": 0,
+    "ECGChannelCount": 0,
+    "EMGChannelCount": 0,
+    "TriggerChannelCount": 0,
+    "ManufacturersModelName": "g.USBAmp (g.tec, Austria)",
+    "SoftwareVersions": "OpenViBE 2.1.0 (Dataset A) / OpenViBE 2.2.0 (Dataset B and C)",
+    "CapManufacturer": "g.tec",
+    "HardwareFilters": {
+      "Bandpass": {
+        "LowCutoffFrequency": 5.0,
+        "HighCutoffFrequency": 35.0,
+        "Type": "Butterworth",
+        "Order": 5
+      }
+    },
+    "TaskDescription": "Graz protocol Trial duration: 8.0s, cue: 1.25s, imagery: 3.75s.",
+    "Instructions": "Participants were encouraged to perform kinesthetic imagination and leave them free to choose their mental imagery strategy. Participants were instructed to try to find the best strategy so that the system would show the longest possible feedback bar. Only positive feedback was provided.",
+    "CogAtlasID": "https://www.cognitiveatlas.org/task/id/trm_4c8a834779883/",
+    "InstitutionName": "Centre Inria de l'universit\u00e9 de Bordeaux",
+    "InstitutionAddress": "Talence, 33405, France",
+    "InstitutionalDepartmentName": "LaBRI (Univ. Bordeaux/CNRS/Bordeaux INP)",
+    "CapManufacturersModelName": "n/a",
+    "SubjectArtefactDescription": "n/a",
+    "DeviceSerialNumber": "n/a",
+    "Description": "A large EEG database with users' profile information for motor imagery brain-computer interface research. Contains electroencephalographic signals from 87 human participants, collected during a single day of brain-computer interface (BCI) experiments, organized into 3 datasets (A, B, and C) that were all recorded using the same protocol: right and left hand motor imagery (MI).",
+    "MISCChannelCount": 0
+  },
+  "events_sidecar": {
+    "rows": 40,
+    "columns": [
+      "onset",
+      "duration",
+      "trial_type",
+      "value",
+      "sample"
+    ],
+    "class_counts": {
+      "left_hand": 20,
+      "right_hand": 20
+    },
+    "durations": [
+      "5.0"
+    ],
+    "values": [
+      "1",
+      "2"
+    ]
+  },
+  "channels_sidecar": {
+    "rows": 27,
+    "types": {
+      "EEG": 27
+    },
+    "units": [
+      "V"
+    ],
+    "names": [
+      "Fz",
+      "FCz",
+      "Cz",
+      "CPz",
+      "Pz",
+      "C1",
+      "C3",
+      "C5",
+      "C2",
+      "C4",
+      "C6",
+      "F4",
+      "FC2",
+      "FC4",
+      "FC6",
+      "CP2",
+      "CP4",
+      "CP6",
+      "P4",
+      "F3",
+      "FC1",
+      "FC3",
+      "FC5",
+      "CP1",
+      "CP3",
+      "CP5",
+      "P3"
+    ]
+  },
+  "channels_sidecar_parse": "utf-8-sig to handle observed BOM",
+  "events_sidecar_parse": "utf-8-sig"
+}

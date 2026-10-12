@@ -1,0 +1,41 @@
+{
+	"TaskName": "imagery",
+	"Manufacturer": "ZhenTec NT1 wireless multichannel EEG acquisition system",
+	"PowerLineFrequency": 50.0,
+	"SamplingFrequency": 500.0,
+	"SoftwareFilters": {
+		"preprocessing_steps": {
+			"Description": "baseline removal (mean removal method), FIR filtering (0.5-40 Hz)"
+		}
+	},
+	"RecordingDuration": 319.998,
+	"RecordingType": "continuous",
+	"EEGReference": "CPz",
+	"EEGGround": "FPz",
+	"EEGPlacementScheme": "10-10 system",
+	"EEGChannelCount": 29,
+	"EOGChannelCount": 0,
+	"ECGChannelCount": 0,
+	"EMGChannelCount": 0,
+	"TriggerChannelCount": 0,
+	"ManufacturersModelName": "ZhenTec NT1 wireless multichannel EEG acquisition system",
+	"CapManufacturer": "Xi'an ZhenTec Intelligence Technology Co., Ltd.",
+	"CapManufacturersModelName": "ZhenTec NT1",
+	"HardwareFilters": {
+		"Bandpass": {
+			"LowCutoffFrequency": 0.5,
+			"HighCutoffFrequency": 40.0,
+			"Type": "FIR"
+		}
+	},
+	"TaskDescription": "Imagining grasping a spherical object with left or right hand while watching a video of gripping motion. Each trial: instruction stage (prompt), MI stage (4s video-guided imagery), break stage (rest). Trial duration: 8.0s, cue: 2.0s, imagery: 4.0s.",
+	"Instructions": "Subject sat approximately 80 cm from computer screen. Computer played audio instructions. Patients imagined grasping spherical object with prompted hand during 4s video playback.",
+	"CogAtlasID": "https://www.cognitiveatlas.org/task/id/trm_4c8a834779883/",
+	"InstitutionName": "Xuanwu Hospital Capital Medical University",
+	"InstitutionAddress": "Beijing, 100053, China",
+	"InstitutionalDepartmentName": "Department of Neurology",
+	"SubjectArtefactDescription": "Impedance kept below 20 kOhm",
+	"DeviceSerialNumber": "n/a",
+	"Description": "EEG motor imagery dataset from 50 acute stroke patients performing left- and right-handed hand-grip imagination tasks. First open dataset addressing left- and right-handed motor imagery in acute stroke patients.",
+	"MISCChannelCount": 0
+}

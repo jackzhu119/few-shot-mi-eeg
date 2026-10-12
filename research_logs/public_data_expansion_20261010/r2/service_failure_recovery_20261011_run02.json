@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-11T12:56:27.416358+00:00",
+  "previous_diagnosis": "service_failure_diagnosis_20261011_run01.json",
+  "user_reported_no_environment_configuration_changes": true,
+  "transport_restored_evidence": "Root successfully probed the existing R2 HeadBucket HTTP 200, followed by the four real completed transfers below. This record does not imply that the user changed configuration.",
+  "failed_original_receipts_preserved": [
+    "netbci_all19_bundles_20261011_run01.json",
+    "netbci_all19_source_audits_20261011_run01.json",
+    "milimbeeg_raw_20261011_run01.json"
+  ],
+  "credential_values_logged": false,
+  "proxy_and_tls_configuration_changed": false,
+  "bucket_public_access_policy_changed": false,
+  "remote_overwrite_enabled": false,
+  "successful_post_recovery_transfers": [
+    {
+      "receipt": "netbci_all19_bundles_20261011_run02.json",
+      "status": "completed",
+      "started_at_utc": "2026-10-11T12:52:55.788534+00:00",
+      "finished_at_utc": "2026-10-11T12:54:39.262622+00:00",
+      "verified_files": 38,
+      "failed_files": 0
+    },
+    {
+      "receipt": "netbci_all19_source_audits_20261011_run02.json",
+      "status": "completed",
+      "started_at_utc": "2026-10-11T12:52:46.936953+00:00",
+      "finished_at_utc": "2026-10-11T12:53:19.585314+00:00",
+      "verified_files": 134,
+      "failed_files": 0
+    },
+    {
+      "receipt": "netbci_numeric_identity_v2_20261011_run01.json",
+      "status": "completed",
+      "started_at_utc": "2026-10-11T12:53:55.831759+00:00",
+      "finished_at_utc": "2026-10-11T12:54:01.941625+00:00",
+      "verified_files": 6,
+      "failed_files": 0
+    },
+    {
+      "receipt": "netbci_all19_analysis_results_20261011_run01.json",
+      "status": "completed",
+      "started_at_utc": "2026-10-11T12:53:55.827777+00:00",
+      "finished_at_utc": "2026-10-11T12:55:08.481107+00:00",
+      "verified_files": 323,
+      "failed_files": 0
+    }
+  ],
+  "pending_transfers_are_not_counted_as_completed": true
+}

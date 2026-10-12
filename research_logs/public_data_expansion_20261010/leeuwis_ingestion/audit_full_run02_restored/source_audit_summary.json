@@ -1,0 +1,73 @@
+{
+  "dataset": "Leeuwis2021",
+  "nemar_id": "nm000327",
+  "version": "v1.0.0",
+  "license": "CC-BY-4.0",
+  "publication_year": 2021,
+  "nemar_deposit_date": "2026-10-08; reformatted older study, not new acquisition",
+  "started_at_utc": "2026-10-11T12:55:22.198926+00:00",
+  "finished_at_utc": "2026-10-11T12:55:44.242706+00:00",
+  "source_commit": "4290c4061f5d35381ed684bb07f1dd52836bbee0",
+  "script_sha256": "e6dd524cd64534fd9a5f3e47c91f4dac9edaac594beeabc3bcd91a613f159c45",
+  "plan_sha256": "9c237adc6a1fbed3c918309bbf7b5957da5d2b31b0f21c0616aa422bac90719b",
+  "selection_manifest_sha256": "b2121a79bf01cc79094efbe6d710aa3db68069f13f09166382b88d385d783a98",
+  "official_manifest_sha256": "a7865c708e6c01f076d1f7415fded3c0e89008c3251949290a3ede42e0d5c5c3",
+  "runtime_versions": {
+    "mne": "1.10.2",
+    "numpy": "2.2.6"
+  },
+  "verified_source_file_count": 2095,
+  "verified_source_bytes": 568544461,
+  "expected_selected_file_count": 2095,
+  "expected_EDF_count": 220,
+  "available_only": false,
+  "missing_source_files": [],
+  "passed_run_count": 220,
+  "failed_runs": [],
+  "subject_count": 55,
+  "session_identity_count": 55,
+  "source_event_count_including_EDGE": 17380,
+  "task_event_count": 8800,
+  "source_class_counts": {
+    "left_hand": 4400,
+    "EDGE boundary": 8580,
+    "right_hand": 4400
+  },
+  "task_duration_seconds_counts": {
+    "4.996": 8800
+  },
+  "task_sample_count_counts": {
+    "1249": 8800
+  },
+  "stored_codes": {
+    "EDGE boundary": 1,
+    "left_hand": 2,
+    "right_hand": 3
+  },
+  "upstream_codes": {
+    "left_hand": 1,
+    "right_hand": 2
+  },
+  "demographics": {
+    "age_values": {
+      "20.71": 55
+    },
+    "age_covariate_usable": false,
+    "age_note": "20.71 is published group mean, repeated per row; not individual age",
+    "sex_values": {
+      "n/a": 55
+    }
+  },
+  "whole_signal_exact_duplicate_groups": [],
+  "task_window_exact_duplicate_groups": [],
+  "cross_subject_exact_duplicate_affected_ids": [],
+  "flatline_run_count": 0,
+  "all_source_task_and_boundary_rows_retained": true,
+  "task_window_hash_convention": "all16 channels x original source duration sample count; float64 little-endian C-order; MNE volts; half-open [start,stop)",
+  "requested_available_scope_passed": true,
+  "source_acceptance_complete": true,
+  "training_models_fitted": false,
+  "analysis_windows_selected": false,
+  "independence_limit": "Exact numeric checks apply within this pinned resource; absence of detected duplicates does not establish biological identity independence or global cross-dataset uniqueness. Original CSV and other mirrors not downloaded.",
+  "scope_limit": "One visit with calibration+feedback runs; not longitudinal days, not task hit labels, not evidence of learning or retention."
+}

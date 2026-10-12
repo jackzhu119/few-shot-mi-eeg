@@ -1,0 +1,49 @@
+{
+  "dataset": "MILimbEEG",
+  "nemar_id": "nm000328",
+  "version": "v1.0.0",
+  "license": "CC-BY-4.0",
+  "scope": "concatenated imagery segment derivative; no longitudinal feedback learning",
+  "population": "mixed; source study includes healthy, amputee, hydrocephalus and post-COVID participants",
+  "complete": true,
+  "representative_only": false,
+  "signal_file_count": 60,
+  "passed_signal_files": 60,
+  "source_identity_count": 60,
+  "source_event_count": 7318,
+  "source_label_counts": {
+    "EDGE boundary": 3659,
+    "clh": 299,
+    "crh": 300,
+    "dlf": 300,
+    "plf": 300,
+    "drf": 300,
+    "prf": 300,
+    "rest": 1860
+  },
+  "source_duration_counts": {
+    "0.0": 3659,
+    "3.992": 3659
+  },
+  "source_event_kind_counts": {
+    "concatenation_boundary": 3659,
+    "positive_duration_task": 3659
+  },
+  "exact_numeric_duplicate_groups": {
+    "whole_signal_numeric_sha256": [],
+    "central4KiB_numeric_sha256": []
+  },
+  "started_at_utc": "2026-10-11T06:51:43.704364+00:00",
+  "finished_at_utc": "2026-10-11T06:51:46.671539+00:00",
+  "script_sha256": "816c4a04aebd68773d4169584b4e54f926db34068b70cea2f1a1d67a23f68169",
+  "source_commit": "4290c4061f5d35381ed684bb07f1dd52836bbee0",
+  "plan_sha256": "e14ad9864ed2e140d990e99e3fd5e4508d37efce3d0855b1349dfbec5ff38eb0",
+  "selection_manifest_sha256": "79d49afbe3b2838195671b51c86563b82824a053f10a6b4481bf69e184ebad38",
+  "runtime_versions": {
+    "python": "3.11.16",
+    "mne": "1.10.2",
+    "numpy": "2.2.6"
+  },
+  "failed_signals": [],
+  "analysis_status": "source_resource_audit_only;no_model_training_or_window_selection"
+}

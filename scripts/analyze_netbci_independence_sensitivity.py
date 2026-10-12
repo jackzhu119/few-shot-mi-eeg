@@ -1,6 +1,6 @@
-"""Post-observation sensitivity excluding both identities in cross-person copies.
+"""Post-observation sensitivity excluding all identities in cross-person copies.
 
-Original ten-ID outputs are immutable. This restriction follows raw signal
+Original cohort outputs are immutable. This restriction follows raw signal
 identity, not effect direction, and cannot recover the true source assignment.
 """
 from __future__ import annotations
@@ -18,14 +18,31 @@ from learning_preserving_bci.utils.reproducibility import collect_provenance
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def cross_subject_affected_identities(identity):
+    """Exclude every member of cross-ID continuous OR task-window exact copies.
+
+    Window-only copies can contaminate a cohort even when whole runs differ.
+    No outcome, model accuracy, or assumed correct member influences exclusion.
+    """
+    affected = set()
+    scope = set(identity["subject_order"])
+    for field in ("continuous_duplicate_groups", "task_window_duplicate_groups"):
+        for group in identity[field]:
+            subjects = set(group["subjects"])
+            if not subjects <= scope or bool(group["cross_subject"]) != (len(subjects) > 1):
+                raise ValueError("Duplicate-group subject scope/cross-subject flag differs")
+            if group["cross_subject"]:
+                affected.update(subjects)
+    return [subject for subject in identity["subject_order"] if subject in affected]
+
+
 def analyze(summary_root, identity_path, output):
     if output.exists():
         raise FileExistsError("Preserve previous outputs; choose a new directory")
     identity = json.loads(identity_path.read_text())
     if identity["status"] != "complete_exact_numeric_identity_audit" or identity["synthetic"]:
         raise ValueError("A completed real numerical identity audit is required")
-    excluded = sorted({subject for group in identity["continuous_duplicate_groups"]
-                       if group["cross_subject"] for subject in group["subjects"]})
+    excluded = cross_subject_affected_identities(identity)
     receipt_path = summary_root / "summary_receipt.json"
     receipt = json.loads(receipt_path.read_text())
     inputs = {"identity_audit": identity_path, "summary_receipt": receipt_path,
@@ -49,11 +66,11 @@ def analyze(summary_root, identity_path, output):
     associations = association_statistics(values, subjects=subjects, seed=42, repetitions=10000)
     result = {"status": "post_observation_cross_person_duplicate_exclusion_sensitivity", "synthetic": False,
               "excluded_identities": excluded, "retained_identities": subjects,
-              "selection_basis": "all identities in exact cross-subject continuous-signal duplicate groups",
+              "selection_basis": "all identities in exact cross-subject continuous-signal OR task-window duplicate groups",
               "unknown_correct_assignment": True, "no_model_refitting": True,
               "not_independent_confirmation": True, "paired_changes": changes,
               "association_estimates": associations,
-              "limitations": "No exact signal copies detected among retained IDs; true participant identity, biological reliability and causal learning remain unverified."}
+              "limitations": "No exact cross-subject continuous or task-window signal copies detected among retained IDs; within-person exact repeats remain separately audited. True participant identity, biological reliability and causal learning remain unverified."}
     output.mkdir(parents=True)
     write_table(output / "retained_participant_session_join.tsv", joined)
     write_table(output / "cohort_session_statistics.tsv", stats)
@@ -65,7 +82,7 @@ def analyze(summary_root, identity_path, output):
     write_json(output / "sensitivity_receipt.json", {"status": "completed_real_data_sensitivity", "synthetic": False,
                "input_sha256": {key: {"path": str(path.resolve()), "sha256": file_sha256(path)} for key, path in inputs.items()},
                "output_sha256": outputs, "provenance": collect_provenance(42, ROOT),
-               "original_primary_outputs_modified": False, "bootstrap_unit": "paired retained identity"})
+               "original_primary_outputs_modified": False, "bootstrap_unit": "paired retained published identity trajectory"})
     return result
 
 

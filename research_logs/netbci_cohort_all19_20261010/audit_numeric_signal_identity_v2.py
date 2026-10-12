@@ -73,13 +73,21 @@ def group_identities(rows: list[dict], *, unit: str) -> list[dict]:
         subject_sessions = {(row["subject"], row["session"]) for row in members}
         subjects = {row["subject"] for row in members}
         sessions_by_subject = defaultdict(set)
+        members_by_subject_session = defaultdict(list)
+        members_by_subject_session_run = defaultdict(list)
         for row in members:
             sessions_by_subject[row["subject"]].add(row["session"])
+            members_by_subject_session[(row["subject"], row["session"])].append(row)
+            members_by_subject_session_run[(row["subject"], row["session"], row["run"])].append(row)
         groups.append({
             "numeric_sha256": digest, "unit": unit,
             "member_count": len(members),
             "same_person_cross_session": any(len(sessions) > 1
                                               for sessions in sessions_by_subject.values()),
+            "same_person_same_session": any(len(rows) > 1
+                                             for rows in members_by_subject_session.values()),
+            "same_person_same_run": (unit == "task_window" and any(
+                len(rows) > 1 for rows in members_by_subject_session_run.values())),
             "cross_subject": len(subjects) > 1,
             "subjects": sorted(subjects),
             "subject_session_count": len(subject_sessions),
@@ -128,12 +136,22 @@ def leakage_evidence(windows: list[dict]) -> dict:
             training[(row["subject"], row["numeric_sha256"])].append(row)
         if row["planned_role"] == "source_reference_query":
             reference_query[(row["subject"], row["numeric_sha256"])].append(row)
-    bridges, reference_bridges = [], []
+    bridges, reference_bridges, source_reference_training_bridges = [], [], []
     later_counts = defaultdict(Counter)
     for row in windows:
         if not row["fixed_window_eligible"]:
             continue
         key = (row["subject"], row["numeric_sha256"])
+        if row["planned_role"] == "source_reference_query" and training.get(key):
+            source_reference_training_bridges.append({
+                "query_trial_id": row["trial_id"], "query_label": row["label"],
+                "subject": row["subject"], "session": row["session"],
+                "numeric_sha256": row["numeric_sha256"],
+                "same_label_source_train_trial_ids": [source["trial_id"] for source in training[key]
+                                                       if source["label"] == row["label"]],
+                "conflicting_label_source_train_trial_ids": [source["trial_id"] for source in training[key]
+                                                              if source["label"] != row["label"]],
+            })
         if row["session"] != "01":
             counter = later_counts[(row["subject"], row["session"])]
             counter["later_query_count"] += 1
@@ -164,6 +182,10 @@ def leakage_evidence(windows: list[dict]) -> dict:
     return {
         "interpretation": "Exact content overlap between source training and later queries despite distinct source event IDs; affected later-session model scores are not independent cross-session generalization evidence.",
         "source_training_later_query_bridges": bridges,
+        "source_training_reference_query_bridges": source_reference_training_bridges,
+        "source_training_reference_query_affected_trials": len(source_reference_training_bridges),
+        "source_training_reference_query_affected_subjects": sorted({
+            row["subject"] for row in source_reference_training_bridges}),
         "source_reference_later_query_bridges": reference_bridges,
         "source_training_later_query_affected_trials": len(bridges),
         "source_reference_later_query_affected_trials": len(reference_bridges),
@@ -251,9 +273,14 @@ def main() -> None:
             event_file = file.with_name(file.name.replace("_eeg.edf", "_events.tsv"))
             event_sha = sha(event_file)
             event_relative = str(event_file.relative_to(data))
+            event_bytes = event_file.read_bytes()
+            event_git_blob_sha1 = hashlib.sha1(
+                b"blob " + str(len(event_bytes)).encode("ascii") + b"\0" + event_bytes).hexdigest()
             for declaration in (official[event_relative], subject_manifest[event_relative]):
-                assert declaration["checksum_algorithm"] == "sha256"
-                assert declaration["checksum"] == event_sha
+                assert declaration["checksum_algorithm"] in ("sha256", "git")
+                actual_event_checksum = (event_sha if declaration["checksum_algorithm"] == "sha256"
+                                         else event_git_blob_sha1)
+                assert declaration["checksum"] == actual_event_checksum
                 assert declaration["size"] == event_file.stat().st_size
             source_rows = table(event_file)
             selected_events = [row for row in events if row["session"] == session
@@ -263,6 +290,14 @@ def main() -> None:
             assert raw.ch_names == oldrun["channel_names"]
             assert raw.info["sfreq"] == oldrun["sampling_frequency_hz"]
             assert raw.n_times == oldrun["signal_samples"]
+            # Validate the actual EDF annotations independently of the saved adapter
+            # receipt; include the original short event rather than expanding it.
+            source_onsets = np.array([float(row["onset"]) for row in source_rows])
+            source_durations = np.array([float(row["duration"]) for row in source_rows])
+            assert len(raw.annotations) == len(source_rows)
+            assert list(raw.annotations.description) == [row["trial_type"] for row in source_rows]
+            assert np.allclose(raw.annotations.onset, source_onsets, rtol=0, atol=1e-6)
+            assert np.allclose(raw.annotations.duration, source_durations, rtol=0, atol=1e-6)
             signal = raw.get_data()
             full_hash, values_hash = canonical_hash(signal)
             runrow = {
@@ -270,6 +305,9 @@ def main() -> None:
                 "source_file": oldrun["file"], "source_edf_sha256": file_sha,
                 "source_event_file": str(event_file.relative_to(data)),
                 "source_event_sha256": event_sha,
+                "source_event_official_checksum_algorithm": official[event_relative]["checksum_algorithm"],
+                "source_event_official_checksum": official[event_relative]["checksum"],
+                "source_event_actual_native_git_blob_sha1": event_git_blob_sha1,
                 "shape": list(signal.shape), "dtype": "<f8", "order": "C",
                 "signal_unit": "V", "sampling_frequency_hz": raw.info["sfreq"],
                 "channel_names": raw.ch_names, "numeric_sha256": full_hash,
@@ -277,6 +315,8 @@ def main() -> None:
                 "event_count": len(source_rows),
                 "edf_measurement_date": str(raw.info["meas_date"]),
                 "official_manifest_match": True, "per_subject_manifest_match": True,
+                "EDF_annotation_and_source_TSV_exact_order_match": True,
+                "EDF_annotation_onset_duration_tolerance_seconds": 1e-6,
                 "original_header": original_header_evidence(headers[(session, run)]),
             }
             runs.append(runrow)
@@ -359,8 +399,11 @@ def main() -> None:
             "task_window_duplicate_groups": len(window_groups),
             "task_window_duplicate_members": sum(row["member_count"] for row in window_groups),
             "same_person_cross_session_task_window_groups": sum(row["same_person_cross_session"] for row in window_groups),
+            "same_person_same_session_task_window_groups": sum(row["same_person_same_session"] for row in window_groups),
+            "same_person_same_run_task_window_groups": sum(row["same_person_same_run"] for row in window_groups),
             "official_manifest_matches": sum(row["official_manifest_match"] for row in runs),
             "per_subject_manifest_matches": sum(row["per_subject_manifest_match"] for row in runs),
+            "EDF_annotation_and_source_TSV_matches": sum(row["EDF_annotation_and_source_TSV_exact_order_match"] for row in runs),
             "cross_subject_task_window_groups": sum(row["cross_subject"] for row in window_groups),
             "multi_label_task_window_duplicate_groups": sum(len(row["labels"]) > 1 for row in window_groups),
         },

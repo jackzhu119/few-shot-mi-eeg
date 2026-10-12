@@ -1,0 +1,36 @@
+{
+  "status": "required_software_checks_passed",
+  "finished_at_utc": "2026-10-12T00:08:53.996547+00:00",
+  "pytest_passed": 391,
+  "warnings": 2,
+  "warning_type": "existing Braindecode EEGNet deprecation",
+  "checks": {
+    "pytest": {
+      "exit_code": 0,
+      "log_sha256": "39931451f3d7b81c14bb1f954bbc351a501c11a72ec844db30a5e4b477941c71"
+    },
+    "ruff": {
+      "exit_code": 0,
+      "log_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    "smoke": {
+      "exit_code": 0,
+      "log_sha256": "32e6c2f459b25c8bc7acc833b8d1446638090f3a2c5f4597d99da9ee46722640"
+    },
+    "data_stack": {
+      "exit_code": 0,
+      "log_sha256": "1c27830fc2e4968a433363d5b7e906cfae975fe7fd02aad0bcdde971998be368"
+    }
+  },
+  "smoke_and_data_stack_synthetic": true,
+  "synthetic_results_are_software_validation_only": true,
+  "sdk_installed_in_scientific_environment": false,
+  "SDK_isolated_target": "/tmp/codex-r2-connectivity-sdk",
+  "first_ruff_launcher_attempt": "before directory created; no lint ran; corrected invocation passed",
+  "git_diff_check": {
+    "exit_code": 0,
+    "source_response_and_failure_bytes_preserved": true,
+    "first_staged_check": "flagged original HTTP HTML whitespace, trailing blank traceback and interrupted historical JSON; narrow .gitattributes rules preserve hashes rather than rewriting evidence",
+    "code_or_scientific_data_normalized": false
+  }
+}

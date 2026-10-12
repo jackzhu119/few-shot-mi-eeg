@@ -1,0 +1,36 @@
+[
+  {
+    "scope": "CSP_LDA_query",
+    "session": "02",
+    "type": "constant_prediction",
+    "label": "right_hand",
+    "interpretation": "retained classifier failure, not human skill loss"
+  },
+  {
+    "scope": "CSP_LDA_query",
+    "session": "03",
+    "type": "constant_prediction",
+    "label": "right_hand",
+    "interpretation": "retained classifier failure, not human skill loss"
+  },
+  {
+    "scope": "CSP_LDA_query",
+    "session": "04",
+    "type": "constant_prediction",
+    "label": "right_hand",
+    "interpretation": "retained classifier failure, not human skill loss"
+  },
+  {
+    "scope": "matched_geometry",
+    "variant": "qc_common_four_runs",
+    "status": "unavailable",
+    "runs": [
+      "03",
+      "04",
+      "05",
+      "06"
+    ],
+    "error": "Insufficient preset matched cells: [{\"session\": \"04\", \"run\": \"04\", \"label\": \"rest\", \"n_available\": 2, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"04\", \"label\": \"right_hand\", \"n_available\": 3, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"05\", \"label\": \"rest\", \"n_available\": 3, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"05\", \"label\": \"right_hand\", \"n_available\": 5, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"06\", \"label\": \"rest\", \"n_available\": 1, \"n_required\": 12}]",
+    "preset_not_relaxed": true
+  }
+]

@@ -1,0 +1,196 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileObject": "cr:fileObject",
+    "fileProperty": "cr:fileProperty",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform",
+    "wd": "https://www.wikidata.org/wiki/"
+  },
+  "@id": "https://doi.org/10.57760/sciencedb.30795",
+  "@type": "sc:Dataset",
+  "citeAs": "@data{ 033a6dc465c84cc291b5a28fbbc4783b,\n  title        = {{SEFMEID: A Synchronous EEG-fNIRS Motor Execution and Imagery Dataset}},\n  author       = {{Xuecheng Wu and Guanchu Chen and Wenhao Li and Kai Li and Jiyuan Xie and Shibo Zhang and Shuhao Chen and Jiayi Zhou and Wantong Qiu and Kai Wu}},\n  year        = {{2026}},\n  month       = {{September}},\n  publisher   = {{Science Data Bank}},\n  doi         = {{10.57760/sciencedb.30795}},\n  url         = {{https://doi.org/10.57760/sciencedb.30795}},\n  version     = {{V5}}\n}",
+  "conditionsOfAccess": "RESTRICTED",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "creator": [
+    {
+      "@type": "sc:Person",
+      "affiliation": [
+        {
+          "@id": "https://ror.org/0530pts50",
+          "@type": "sc:Organization",
+          "name": "South China University of Technology"
+        }
+      ],
+      "name": "Xuecheng Wu"
+    },
+    {
+      "@type": "sc:Person",
+      "affiliation": [
+        {
+          "@id": "https://ror.org/0530pts50",
+          "@type": "sc:Organization",
+          "name": "South China University of Technology"
+        }
+      ],
+      "name": "Guanchu Chen"
+    },
+    {
+      "@id": "https://orcid.org/0009-0006-1262-1033",
+      "@type": "sc:Person",
+      "affiliation": [
+        {
+          "@id": "https://ror.org/0530pts50",
+          "@type": "sc:Organization",
+          "name": "South China University of Technology"
+        }
+      ],
+      "name": "Wenhao Li"
+    },
+    {
+      "@type": "sc:Person",
+      "affiliation": [
+        {
+          "@id": "https://ror.org/0530pts50",
+          "@type": "sc:Organization",
+          "name": "South China University of Technology"
+        }
+      ],
+      "name": "Kai Li"
+    },
+    {
+      "@type": "sc:Person",
+      "affiliation": [
+        {
+          "@id": "https://ror.org/0530pts50",
+          "@type": "sc:Organization",
+          "name": "South China University of Technology"
+        }
+      ],
+      "name": "Jiyuan Xie"
+    },
+    {
+      "@type": "sc:Person",
+      "affiliation": [
+        {
+          "@id": "https://ror.org/0530pts50",
+          "@type": "sc:Organization",
+          "name": "South China University of Technology"
+        }
+      ],
+      "name": "Shibo Zhang"
+    },
+    {
+      "@type": "sc:Person",
+      "affiliation": [
+        {
+          "@id": "https://ror.org/0530pts50",
+          "@type": "sc:Organization",
+          "name": "South China University of Technology"
+        }
+      ],
+      "name": "Shuhao Chen"
+    },
+    {
+      "@type": "sc:Person",
+      "affiliation": [
+        {
+          "@id": "https://ror.org/0530pts50",
+          "@type": "sc:Organization",
+          "name": "South China University of Technology"
+        }
+      ],
+      "name": "Jiayi Zhou"
+    },
+    {
+      "@type": "sc:Person",
+      "affiliation": [
+        {
+          "@id": "https://ror.org/0530pts50",
+          "@type": "sc:Organization",
+          "name": "South China University of Technology"
+        }
+      ],
+      "name": "Wantong Qiu"
+    },
+    {
+      "@type": "sc:Person",
+      "affiliation": [
+        {
+          "@id": "https://ror.org/0530pts50",
+          "@type": "sc:Organization",
+          "name": "South China University of Technology"
+        }
+      ],
+      "name": "Kai Wu"
+    }
+  ],
+  "datePublished": "2026-03-30T02:25:41.549Z",
+  "description": "We introduce and openly release the Synchronous EEG-fNIRS Motor Execution and Imagery Dataset (SEFMEID), a concurrent hybrid EEG-fNIRS motor imagery dataset collected from 50 healthy participants. The dataset includes resting baseline, left-right hand motor execution (ME), and left-right hand motor imagery (MI) conditions, with each subject performing 25 trials for the right task and 25 trials for the left task. We also provide single-modality and multimodal classification results, as well as neurovascular coupling analyses, to validate the usability and quality of the dataset. In the deep learning results, the multimodal fusion algorithm achieves an improvement of approximately 10% over the best-performing unimodal approach. The public release of SEFMEID aims to serve as a valuable resource for advancing multimodal MI-BCI algorithms, investigating neurovascular coupling mechanisms underlying motor imagery, and accelerating clinical translation in neurological rehabilitation. ",
+  "identifier": "https://doi.org/10.57760/sciencedb.30795",
+  "inLanguage": "en_US",
+  "includedInDataCatalog": {
+    "@id": "https://www.scidb.cn",
+    "@type": "sc:DataCatalog",
+    "@url": "http://www.scidb.cn",
+    "name": "Science Data Bank"
+  },
+  "keywords": [
+    "BCI",
+    "Motor Imagery",
+    "EEG-fNIRS",
+    "synchronous dataset"
+  ],
+  "license": "",
+  "name": "SEFMEID: A Synchronous EEG-fNIRS Motor Execution and Imagery Dataset",
+  "publisher": {
+    "@type": "sc:Organization",
+    "@url": "http://www.scidb.cn",
+    "name": "Science Data Bank"
+  },
+  "size": {
+    "@type": "sc:QuantitativeValue",
+    "unitText": "bytes",
+    "value": 6037379491
+  },
+  "url": "https://doi.org/10.57760/sciencedb.30795",
+  "version": "5.0.0"
+}

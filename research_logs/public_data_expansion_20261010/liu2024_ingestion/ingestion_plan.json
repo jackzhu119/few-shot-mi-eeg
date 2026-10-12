@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "dataset_id": "Liu2024",
+  "nemar_id": "nm000158",
+  "version": "v1.0.3",
+  "collection_doi": "10.82901/nemar.nm000158",
+  "version_doi": "10.82901/nemar.nm000158.v1.0.3",
+  "paper_doi": "10.1038/s41597-023-02787-8",
+  "original_data_doi": "10.6084/m9.figshare.21679035.v5",
+  "license": "CC-BY-4.0",
+  "license_verified_sources": [
+    "https://data.nemar.org/nm000158/metadata.json",
+    "https://data.nemar.org/nm000158/v1.0.3/dataset_description.json"
+  ],
+  "selection_manifest_path": "research_logs/public_data_expansion_20261010/liu2024_ingestion/selection_manifest.json",
+  "selection_manifest_sha256": "bfec26f46532a5adf3f4b71b52a15b86eb36a96ed29f7add4f236e2809db6b8e",
+  "official_manifest_url": "https://data.nemar.org/nm000158/v1.0.3/manifest.json",
+  "official_manifest_sha256": "61cc35913869ecd8ed4c564aa1d3ab8dea0aa7c84f66b4318d4d6409aefdbd83",
+  "selected_file_count": 556,
+  "selected_bytes": 697479742,
+  "signal_file_count": 50,
+  "signal_bytes": 696884480,
+  "published_resource_ids": 50,
+  "session_count_per_subject": 1,
+  "no_large_duplicate_sourcedata": true,
+  "included_provenance_only_from_sourcedata": "sourcedata/sourcedata_provenance.json",
+  "status": "fixed_necessary_derivative_subset_before_signal_ingestion;no_model_window_or_training_selected",
+  "scope": "external_single_visit_domain_resource;not_healthy_NETBCI_or_learning_retention_evidence",
+  "known_source_risks": [
+    "participant snapshot columns/age may be generic; verify actual downloaded bytes",
+    "MI derivative only; cannot inherit original motor-execution/EOG/raw signal claims",
+    "preserve all boundary/zero-duration/short source events; no5s extension or exclusion",
+    "no biological identity overlap assertion across datasets"
+  ]
+}

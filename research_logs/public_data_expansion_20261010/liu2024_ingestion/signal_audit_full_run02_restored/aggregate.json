@@ -1,0 +1,674 @@
+{
+  "dataset": "Liu2024",
+  "nemar_id": "nm000158",
+  "version": "v1.0.3",
+  "license": "CC-BY-4.0",
+  "scope": "single-visit video-guided imagery; preprocessed derivative, no treatment/retention intervention",
+  "population": "acute stroke patients 1–30 days post-stroke",
+  "complete": false,
+  "representative_only": false,
+  "source_acceptance_complete": false,
+  "verified_source_file_count": 556,
+  "verified_source_bytes": 697479742,
+  "signal_file_count": 50,
+  "passed_signal_files": 48,
+  "source_identity_count": 48,
+  "source_event_count": 1920,
+  "source_label_counts": {
+    "left_hand": 960,
+    "right_hand": 960
+  },
+  "source_duration_counts": {
+    "4.0": 1920
+  },
+  "source_event_kind_counts": {
+    "positive_duration_task": 1920
+  },
+  "exact_numeric_duplicate_groups": {
+    "whole_signal_numeric_sha256": [
+      [
+        "sub-4/ses-0/eeg/sub-4_ses-0_task-imagery_run-0_eeg.bdf",
+        "sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-0_eeg.bdf"
+      ]
+    ],
+    "central4KiB_numeric_sha256": [
+      [
+        "sub-4/ses-0/eeg/sub-4_ses-0_task-imagery_run-0_eeg.bdf",
+        "sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-0_eeg.bdf"
+      ],
+      [
+        "sub-47/ses-0/eeg/sub-47_ses-0_task-imagery_run-0_eeg.bdf",
+        "sub-49/ses-0/eeg/sub-49_ses-0_task-imagery_run-0_eeg.bdf"
+      ]
+    ]
+  },
+  "exact_source_task_duplicate_groups": [
+    {
+      "numeric_sha256": "3bec1632b9523b7ba9e0623fe495bf347aeafa61d3e65a545cfc8e242e410405",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-1",
+        "sub-5/ses-0/run-0/row-1"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "left_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "de388c29eb8006b3aaa209a33fd9817d29aaadb33e7d5c56641803db382d8bce",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-2",
+        "sub-5/ses-0/run-0/row-2"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "right_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "4da6b5ee47508ac389cb784bf8d9acee1a63443f096a96b4eccbf0e1aff09a4d",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-3",
+        "sub-5/ses-0/run-0/row-3"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "left_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "6cdbd72de2bb6c18d980601fda00bd032d83bb130fe84d98c20c3809a40fbce2",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-4",
+        "sub-5/ses-0/run-0/row-4"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "right_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "79f0856decb40cfebf2c53557428d145ae6e9eacb13decd418ef990625d1b302",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-5",
+        "sub-5/ses-0/run-0/row-5"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "left_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "3de09d0885bc79c9b1d51b712faf04199d793c902a48970f2ba142fa30e31c50",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-6",
+        "sub-5/ses-0/run-0/row-6"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "right_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "54a9948a1e90ac445d919a7e50dfc04fb3bfc993a1966ff13a3d2ad13ef763f4",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-7",
+        "sub-5/ses-0/run-0/row-7"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "left_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "d57cb36f889a94c5668802240789d9c8c4af49bdd8849d0d7823df9931814245",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-8",
+        "sub-5/ses-0/run-0/row-8"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "right_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "bc6033876793771b2a68b1d8290f1690e36be4e776347da8b9e0cb2ac0f0fce0",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-9",
+        "sub-5/ses-0/run-0/row-9"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "left_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "41f771622f833f1ae50810f25ad5bd82effd189f3148b628be5eabfe897175e6",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-10",
+        "sub-5/ses-0/run-0/row-10"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "right_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "5a0793eac04ef758d46aeca7be7bef2a516cf768ab37fb76c8082c7f66171fa6",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-11",
+        "sub-5/ses-0/run-0/row-11"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "left_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "566a9d5c454823c7d6009b5e43be44e5bbd69fe6f74477b66fc84399a379d320",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-12",
+        "sub-5/ses-0/run-0/row-12"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "right_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "1ab75c9c06e80447f16641cf34c06f13207b009c7ae203789f816f4c1ac96850",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-13",
+        "sub-5/ses-0/run-0/row-13"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "left_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "0e5d6b9008a075db464ca0c47efb7e42c4cd9f735b89b98cff3929704ef44ce2",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-14",
+        "sub-5/ses-0/run-0/row-14"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "right_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "340e129a96e801e55f9c4f37524c35716841650cc34e31d53b243f489f07716f",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-15",
+        "sub-5/ses-0/run-0/row-15"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "left_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "04e740d757e8a3f63509ff70653941a8444f96335edc0d0b7fd0c0413a7bb0f5",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-16",
+        "sub-5/ses-0/run-0/row-16"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "right_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "0c142cca88b7be449303397025b5f0ec6e92acdc50bb6114d2c964b075617dc1",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-17",
+        "sub-5/ses-0/run-0/row-17"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "left_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "de5cad30d609bb52a56c1f89e6826d613de1304d44276ab74d2b169b51296f30",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-18",
+        "sub-5/ses-0/run-0/row-18"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "right_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "9d1352552321de8c5daa17733d4e053a26add33c9a3444139540fd6eb329102d",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-19",
+        "sub-5/ses-0/run-0/row-19"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "left_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "3bcd6544600ca9380000d91fc024f004c95087079d75e2d3afcfff4da8201752",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-20",
+        "sub-5/ses-0/run-0/row-20"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "right_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "871a7a7289744462e161e5d77d8352b8aa7f2d31baa5e63dbbea7e45b054c634",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-21",
+        "sub-5/ses-0/run-0/row-21"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "left_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "18c4a398ab5fae5dd9baef3a452eee97e8899f64d0416938f9524435156ac3b5",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-22",
+        "sub-5/ses-0/run-0/row-22"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "right_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "5561f403194d79bc8ba522213e8707833e9a2b266f9b0e719f41f545e26f1b8b",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-23",
+        "sub-5/ses-0/run-0/row-23"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "left_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "7c736512b7753abc0d4e690ad810916922a545d104546a002479d1688aa004ed",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-24",
+        "sub-5/ses-0/run-0/row-24"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "right_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "159c02de81ed8cab4ee2e75e91aff1e7e4234c1e58ff8862376f13d7829caec7",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-25",
+        "sub-5/ses-0/run-0/row-25"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "left_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "afd4b084c1e67638dd0eda7f567bf0712da4ec4c4215b455f8b90e33a488cf3d",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-26",
+        "sub-5/ses-0/run-0/row-26"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "right_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "7a8b20068ec514c13437bd9aeee216fdec588277b8737b537f30be644e11ee28",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-27",
+        "sub-5/ses-0/run-0/row-27"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "left_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "89c0a1b4beb7d4c05e31f36fe8ca2c319b778982dcccc2fa4c0e59cda0795c55",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-28",
+        "sub-5/ses-0/run-0/row-28"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "right_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "944a8627f0abd7152098f7c9a38cab5463129609c22776004ed2dbcc8c902258",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-29",
+        "sub-5/ses-0/run-0/row-29"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "left_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "255d68b151db7a802a2fdae7dae261ea58a8abc509ec13177a4dc7c0a9b5a44f",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-30",
+        "sub-5/ses-0/run-0/row-30"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "right_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "923197722e83b90aa33341d320070a7d675916876b09119148b3ce794c6bb1ee",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-31",
+        "sub-5/ses-0/run-0/row-31"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "left_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "5818d4ed0e2b496170400d466adf4dee7523f1cfa057a61b91b674221814adc4",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-32",
+        "sub-5/ses-0/run-0/row-32"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "right_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "5fa90e5ebdb77d8d83ac3b00b1407d3f743b55d3668e5074b66ae877d18b8aae",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-33",
+        "sub-5/ses-0/run-0/row-33"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "left_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "91e5b5654186ec2fe928c38e753b04ae5feee08228e1684503012fcdb69961e6",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-34",
+        "sub-5/ses-0/run-0/row-34"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "right_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "676e5e21612f5a8f0ca5ddee33fcdc5146161291c1e76d6fe3bb3d61c3927575",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-35",
+        "sub-5/ses-0/run-0/row-35"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "left_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "01f8e881aac7f670fd4bc9fc9a1cf87f71096da62a3a06f5aac6f16d6e6cfc01",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-36",
+        "sub-5/ses-0/run-0/row-36"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "right_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "5d38ba49bf753aa48455cfec021c65b2f2539c00e668da6ac133b6d7b3cabb77",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-37",
+        "sub-5/ses-0/run-0/row-37"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "left_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "447ce6409421e01d55d4bd62b672418ca6238413b71c1d2f8eca8eeb5bb2a399",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-38",
+        "sub-5/ses-0/run-0/row-38"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "right_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "acd6521b61e436eebfb8617c73377fc7d332d39d077694219fdc95be070a962b",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-39",
+        "sub-5/ses-0/run-0/row-39"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "left_hand"
+      ]
+    },
+    {
+      "numeric_sha256": "0f7667e40c74f4f227c10cfaeb08d5587a9e8875cf22e911d9491e4ed5dd770c",
+      "source_event_ids": [
+        "sub-4/ses-0/run-0/row-40",
+        "sub-5/ses-0/run-0/row-40"
+      ],
+      "subjects": [
+        "sub-4",
+        "sub-5"
+      ],
+      "cross_subject": true,
+      "labels": [
+        "right_hand"
+      ]
+    }
+  ],
+  "source_task_hash_convention": "all native EEG channels x original source duration samples; float64 little-endian C-order; MNE volts; half-open [start, stop)",
+  "native_sidecar_unit_discrepancy_run_count": 48,
+  "unit_reconciliation_required_before_modeling": true,
+  "started_at_utc": "2026-10-11T12:58:42.326137+00:00",
+  "finished_at_utc": "2026-10-11T12:59:02.468131+00:00",
+  "script_sha256": "bbba21d7607cb16761aec881d64bf0c5700840602cd2cd2831de33a57c6ea43e",
+  "source_commit": "4290c4061f5d35381ed684bb07f1dd52836bbee0",
+  "plan_sha256": "8934f650f7adf7b2e64406cfb5b29bdaca893042c29acd271a95f08c7b4b8a2d",
+  "selection_manifest_sha256": "bfec26f46532a5adf3f4b71b52a15b86eb36a96ed29f7add4f236e2809db6b8e",
+  "runtime_versions": {
+    "python": "3.11.16",
+    "mne": "1.10.2",
+    "numpy": "2.2.6"
+  },
+  "failed_signals": [
+    {
+      "status": "failed",
+      "source_file": "sub-20/ses-0/eeg/sub-20_ses-0_task-imagery_run-0_eeg.bdf",
+      "error": "ValueError: Overlapping positive source event windows"
+    },
+    {
+      "status": "failed",
+      "source_file": "sub-43/ses-0/eeg/sub-43_ses-0_task-imagery_run-0_eeg.bdf",
+      "error": "ValueError: Overlapping positive source event windows"
+    }
+  ],
+  "analysis_status": "source_resource_audit_only;no_model_training_or_window_selection"
+}

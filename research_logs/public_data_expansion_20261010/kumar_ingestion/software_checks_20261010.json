@@ -1,0 +1,22 @@
+{
+  "recorded_at_utc": "2026-10-11T00:24:53.337571+00:00",
+  "scope": "ingestion/audit software only; no scientific fit or EEG validity inferred",
+  "source_commit": "ed81d67cbe8bf3dec486095959e24b014e2f00ca",
+  "checks": [
+    {
+      "command": "python -m pytest -q tests/test_nemar_subset_download.py tests/test_kumar_source_audit.py",
+      "exit_code": 0,
+      "passed": 33
+    },
+    {
+      "command": "ruff check scripts/fetch_nemar_subset.py scripts/audit_kumar_subset.py tests/test_nemar_subset_download.py tests/test_kumar_source_audit.py",
+      "exit_code": 0
+    }
+  ],
+  "source_sha256": {
+    "scripts/fetch_nemar_subset.py": "cf16f457a223cc6a574a1e53b09d42696a664397a945772199d5b784632b2b0d",
+    "scripts/audit_kumar_subset.py": "2e7b82d84cb63d89c3f68ce5790043b1c8c325921f3317400e069913172d562a",
+    "tests/test_nemar_subset_download.py": "09235fb18f0ccf77f629feb5dc645d48e686d9f7b7b9e89cdfe1b3cf6bfe0b27",
+    "tests/test_kumar_source_audit.py": "888ad176d8bb793346feff0702b41dcc9627d23b849b3fc247f68facaea3d6b3"
+  }
+}

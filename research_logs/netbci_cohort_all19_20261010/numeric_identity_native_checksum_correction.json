@@ -1,0 +1,2755 @@
+{
+  "status": "native_checksum_algorithm_correction_before_first_raw_EDF_read",
+  "corrected_at_utc": "2026-10-11T06:53:54.155156+00:00",
+  "failed_attempt_log": "research_logs/netbci_cohort_all19_20261010/runtime/numeric_signal_identity_v2_run01.log",
+  "failed_log_sha256": "27cc3128537e83d20f0ced9e66cf6a7b8a97086a197a98359b02a5131440d2f0",
+  "failure": "events.tsv official manifest uses git blob SHA1 rather than EDF SHA256",
+  "failed_attempt_completed_raw_EDF_reads": 0,
+  "failed_attempt_ledger_written": false,
+  "corrected_script_sha256": "44a4144715971483e30ccfb634b8b03a17c4d5d488d67565c977ad2b136a7b46",
+  "config_sha256": "d3de923978079cff7199c294f704a0282d3df589899df1a7f44578a5aabd2bf5",
+  "scientific_parameters_changed": false,
+  "manifest_changed": false,
+  "new_policy_for_source_data_changed": false,
+  "native_TSV_identity_preflight_all456": "passed independent official and per-subject checksum plus byte length",
+  "newline_normalization_performed": false,
+  "checked_event_TSVs": [
+    {
+      "path": "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "d1df0c801911aae48b8ca5adc12cc273666e3b64",
+      "bytes": 853
+    },
+    {
+      "path": "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "6d29e4c72b917cedfaf93c9b5c46ff70e633d859",
+      "bytes": 852
+    },
+    {
+      "path": "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "2ddbe14264cf8ec49a84117cddd3fe7fc7107034",
+      "bytes": 849
+    },
+    {
+      "path": "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "2bf47ae615e9fecffb20a2af520f4de6f240fba1",
+      "bytes": 853
+    },
+    {
+      "path": "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "c4e7494d7bfbf57cb465bf671a897414c397757f",
+      "bytes": 850
+    },
+    {
+      "path": "sub-1/ses-01/eeg/sub-1_ses-01_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "e1ccaa4dd5170c4b2f0d9d03e76fd0f39d2242c1",
+      "bytes": 855
+    },
+    {
+      "path": "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "7d580b790e47187d37c0971afb259027a8bd58e5",
+      "bytes": 857
+    },
+    {
+      "path": "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "fc43ac3f791fab4996d7fef68fd770d97f88eb9b",
+      "bytes": 856
+    },
+    {
+      "path": "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "efec231868f8de6863aeac9a7e3961414d24b5e4",
+      "bytes": 852
+    },
+    {
+      "path": "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "00447b2dc634b0786c9afc4be58df5f06c286d2a",
+      "bytes": 826
+    },
+    {
+      "path": "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "cbffb0068924549776bcabc47157442fbdbbc2fe",
+      "bytes": 851
+    },
+    {
+      "path": "sub-1/ses-02/eeg/sub-1_ses-02_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "e5c761af4ac10060fc1256639ff790effeda069f",
+      "bytes": 852
+    },
+    {
+      "path": "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "1ae51e0f39e73c1cc99fd39268982432c2f244b6",
+      "bytes": 848
+    },
+    {
+      "path": "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "6715510a2d9ad54f0412e6b58587ef1457fdc3c4",
+      "bytes": 854
+    },
+    {
+      "path": "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "2ba7a609b2c70e5b9fda3a5d92ecc144a5d92c12",
+      "bytes": 853
+    },
+    {
+      "path": "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "bc3a3d11ccc1787965c2e5ce90cabca6c1396b9b",
+      "bytes": 850
+    },
+    {
+      "path": "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "fb6d75bdfb2670a65279fa106a098661baf3dd6d",
+      "bytes": 848
+    },
+    {
+      "path": "sub-1/ses-03/eeg/sub-1_ses-03_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "75dcf8347d5c4ed46e6f22640a8088376e1c611b",
+      "bytes": 851
+    },
+    {
+      "path": "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "f756bae8070cddc0aa6d27c02be4a066c62d812b",
+      "bytes": 852
+    },
+    {
+      "path": "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "0f43b2a64655aa5d29748ca077a1cb167b5b0ed3",
+      "bytes": 824
+    },
+    {
+      "path": "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "c9c323dcd628413c865b98fb35bc5e02a070beb8",
+      "bytes": 847
+    },
+    {
+      "path": "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "1b99a98aaac4418c89c25d4463d5f8791fdbb6e6",
+      "bytes": 856
+    },
+    {
+      "path": "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "c1a41af2f338e6d2e8bbfdd47edfc8f4e32abe60",
+      "bytes": 852
+    },
+    {
+      "path": "sub-1/ses-04/eeg/sub-1_ses-04_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "ec90ecc8934525566dfef4b09526cb021e5e860d",
+      "bytes": 819
+    },
+    {
+      "path": "sub-2/ses-01/eeg/sub-2_ses-01_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "411c1f74f69acc146cc4a298a9790b617ac1aea0",
+      "bytes": 912
+    },
+    {
+      "path": "sub-2/ses-01/eeg/sub-2_ses-01_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "8bc8044640ec67c109bb07ddb742f80e70c811ea",
+      "bytes": 908
+    },
+    {
+      "path": "sub-2/ses-01/eeg/sub-2_ses-01_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "8c3c0e3195253cf4cbdf231d0ffedae32893536d",
+      "bytes": 914
+    },
+    {
+      "path": "sub-2/ses-01/eeg/sub-2_ses-01_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "82ee1657534b75bfaa8739817a36fb0e861c1ec4",
+      "bytes": 908
+    },
+    {
+      "path": "sub-2/ses-01/eeg/sub-2_ses-01_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "ee0d8c7e57fe3abe0f84bb10db831db8a211b70e",
+      "bytes": 906
+    },
+    {
+      "path": "sub-2/ses-01/eeg/sub-2_ses-01_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "2ae27f57f87e6993939ed5d86e624efa5fe86128",
+      "bytes": 905
+    },
+    {
+      "path": "sub-2/ses-02/eeg/sub-2_ses-02_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "d4c29e68b9cf70e1b8390d4368a4c4a13afca9b9",
+      "bytes": 908
+    },
+    {
+      "path": "sub-2/ses-02/eeg/sub-2_ses-02_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "e6d0f555cd792c91f331a71b0699a923b1886929",
+      "bytes": 908
+    },
+    {
+      "path": "sub-2/ses-02/eeg/sub-2_ses-02_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "1b979a57f534f4048ee9143f6cce3e05ff24de01",
+      "bytes": 908
+    },
+    {
+      "path": "sub-2/ses-02/eeg/sub-2_ses-02_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "4fc6af3adc0203d728421211feabc0f00e38b8bc",
+      "bytes": 906
+    },
+    {
+      "path": "sub-2/ses-02/eeg/sub-2_ses-02_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "13dbc1d4ca0ca9378f0a04035acb52b0d45d3851",
+      "bytes": 905
+    },
+    {
+      "path": "sub-2/ses-02/eeg/sub-2_ses-02_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "a2f9a5fa745391f83ba00d357fdd4809d5956eff",
+      "bytes": 902
+    },
+    {
+      "path": "sub-2/ses-03/eeg/sub-2_ses-03_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "c8fadbdb2bb88200a5e182676c2d4e916af1d774",
+      "bytes": 906
+    },
+    {
+      "path": "sub-2/ses-03/eeg/sub-2_ses-03_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "8a86de2a773c1ee97d19698bab88a5aa6e58199a",
+      "bytes": 911
+    },
+    {
+      "path": "sub-2/ses-03/eeg/sub-2_ses-03_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "03f7ec4dbf97f5c0bafe8d2b760f5ebd24a169ad",
+      "bytes": 908
+    },
+    {
+      "path": "sub-2/ses-03/eeg/sub-2_ses-03_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "1f15eb06959958e7bf0813f7f54dbf48bf3eb2f2",
+      "bytes": 911
+    },
+    {
+      "path": "sub-2/ses-03/eeg/sub-2_ses-03_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "562c7f51e4cf105cdeb3f69a42927054b01ae511",
+      "bytes": 911
+    },
+    {
+      "path": "sub-2/ses-03/eeg/sub-2_ses-03_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "5abfef2738da10d3ceac7e30a092526669b754e0",
+      "bytes": 884
+    },
+    {
+      "path": "sub-2/ses-04/eeg/sub-2_ses-04_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "b18686e5335d13bb0e4f2ff1282d2aabfffc75a7",
+      "bytes": 905
+    },
+    {
+      "path": "sub-2/ses-04/eeg/sub-2_ses-04_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "5597a44a0fb14f131b2df03000246e55e5609b8c",
+      "bytes": 911
+    },
+    {
+      "path": "sub-2/ses-04/eeg/sub-2_ses-04_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "318f5a91059171a9c0e52f1653c981d99514216f",
+      "bytes": 908
+    },
+    {
+      "path": "sub-2/ses-04/eeg/sub-2_ses-04_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "0ceff12b8cc465151581a2c61483a66693c07f24",
+      "bytes": 906
+    },
+    {
+      "path": "sub-2/ses-04/eeg/sub-2_ses-04_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "ae38216bc88d5d39bc1f2c49cd9e6698ea4e36e0",
+      "bytes": 905
+    },
+    {
+      "path": "sub-2/ses-04/eeg/sub-2_ses-04_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "7b9270cb998bad72ca42fcaeb2834aa7221ac1e6",
+      "bytes": 911
+    },
+    {
+      "path": "sub-3/ses-01/eeg/sub-3_ses-01_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "23cb9e2cfb0d7690ea7393adcd234b9233662bb1",
+      "bytes": 909
+    },
+    {
+      "path": "sub-3/ses-01/eeg/sub-3_ses-01_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "1c7a8dcf18242ad1c4a01543ca909ecce9731bd9",
+      "bytes": 904
+    },
+    {
+      "path": "sub-3/ses-01/eeg/sub-3_ses-01_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "a91bf4704ea5da078373c36269b8a6a55c2ed43f",
+      "bytes": 878
+    },
+    {
+      "path": "sub-3/ses-01/eeg/sub-3_ses-01_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "15d29e0dea3072f8127190d81833cb230728e4cb",
+      "bytes": 910
+    },
+    {
+      "path": "sub-3/ses-01/eeg/sub-3_ses-01_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "ee87ac98421a890a61ca75cb1311e338c33df67a",
+      "bytes": 905
+    },
+    {
+      "path": "sub-3/ses-01/eeg/sub-3_ses-01_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "8b5768cbd58e2593108643b51dbe3863490fda07",
+      "bytes": 910
+    },
+    {
+      "path": "sub-3/ses-02/eeg/sub-3_ses-02_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "20a8696cad1311d61da30ff0bb54f31fcb33eabe",
+      "bytes": 907
+    },
+    {
+      "path": "sub-3/ses-02/eeg/sub-3_ses-02_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "0248eaccb939ca765f658c8ab16b98a4cb966d32",
+      "bytes": 909
+    },
+    {
+      "path": "sub-3/ses-02/eeg/sub-3_ses-02_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "29fc1c71b3c226fb8490eb53bca32f8799d2e9bd",
+      "bytes": 909
+    },
+    {
+      "path": "sub-3/ses-02/eeg/sub-3_ses-02_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "c55b64d8995db50e5f16b416e289a4dd6105a75d",
+      "bytes": 905
+    },
+    {
+      "path": "sub-3/ses-02/eeg/sub-3_ses-02_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "d247fc49d72bcac64d820e22e19445a4b034938b",
+      "bytes": 905
+    },
+    {
+      "path": "sub-3/ses-02/eeg/sub-3_ses-02_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "e4038ad29e8add2eb4d66a1b27f270417b8033bb",
+      "bytes": 908
+    },
+    {
+      "path": "sub-3/ses-03/eeg/sub-3_ses-03_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "ba8c5e0c9c66b1bfe62beb9fec161959dcad0c53",
+      "bytes": 910
+    },
+    {
+      "path": "sub-3/ses-03/eeg/sub-3_ses-03_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "f9c659c7180f71baeb18520636c0b03a90d77543",
+      "bytes": 883
+    },
+    {
+      "path": "sub-3/ses-03/eeg/sub-3_ses-03_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "3b8f08d1a0af806eab44cff8950a07e2bbc38a10",
+      "bytes": 907
+    },
+    {
+      "path": "sub-3/ses-03/eeg/sub-3_ses-03_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "db2714f25fed3808da8e4ab2b150f4f948d14fd5",
+      "bytes": 906
+    },
+    {
+      "path": "sub-3/ses-03/eeg/sub-3_ses-03_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "cd678411dca3b16e9752dbbac6bb0fab3ba0db29",
+      "bytes": 905
+    },
+    {
+      "path": "sub-3/ses-03/eeg/sub-3_ses-03_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "ee4a0caae288cc51771156686d3f733c4b1e3fd6",
+      "bytes": 904
+    },
+    {
+      "path": "sub-3/ses-04/eeg/sub-3_ses-04_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "e89ad608488ef6434b04e823f07e9e45580eac02",
+      "bytes": 909
+    },
+    {
+      "path": "sub-3/ses-04/eeg/sub-3_ses-04_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "b170a34abb302bc9e14a1ba59858a50ab1768fcd",
+      "bytes": 907
+    },
+    {
+      "path": "sub-3/ses-04/eeg/sub-3_ses-04_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "dba2f3c62ad2cc0df4a665933f4daf684443d9e9",
+      "bytes": 880
+    },
+    {
+      "path": "sub-3/ses-04/eeg/sub-3_ses-04_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "333da2e5b6a52bd062ab3ffb144e0203b4ee9d54",
+      "bytes": 907
+    },
+    {
+      "path": "sub-3/ses-04/eeg/sub-3_ses-04_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "3e904944c4f8ca1b42aa876da068d94a5fc9a6db",
+      "bytes": 909
+    },
+    {
+      "path": "sub-3/ses-04/eeg/sub-3_ses-04_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "5d0137e3f8fb41cbb80eacb4cd9cfd4500010eb5",
+      "bytes": 906
+    },
+    {
+      "path": "sub-4/ses-01/eeg/sub-4_ses-01_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "ace234e4086155e2fc14d505e46e78bf7aa9d561",
+      "bytes": 910
+    },
+    {
+      "path": "sub-4/ses-01/eeg/sub-4_ses-01_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "c2ab218891bf55ff97dc1586433b4efe50401b0d",
+      "bytes": 905
+    },
+    {
+      "path": "sub-4/ses-01/eeg/sub-4_ses-01_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "af2ebe2e77a5abe6bae43c8fbc5765da9510e82d",
+      "bytes": 906
+    },
+    {
+      "path": "sub-4/ses-01/eeg/sub-4_ses-01_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "7c0f44f46d8521259467b1f7d335dbe2f574a21f",
+      "bytes": 910
+    },
+    {
+      "path": "sub-4/ses-01/eeg/sub-4_ses-01_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "0e7ad4f211df78007eb8f9bd48cc3a17b04e847e",
+      "bytes": 908
+    },
+    {
+      "path": "sub-4/ses-01/eeg/sub-4_ses-01_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "75f8fb24d59b36c6c943cb4c3421edfa5a48afc4",
+      "bytes": 910
+    },
+    {
+      "path": "sub-4/ses-02/eeg/sub-4_ses-02_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "84468cbeb9bb224f777764097407d3366ed813d3",
+      "bytes": 912
+    },
+    {
+      "path": "sub-4/ses-02/eeg/sub-4_ses-02_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "f01c871f093eaa5ec30bb731f1d615d8299a41fa",
+      "bytes": 904
+    },
+    {
+      "path": "sub-4/ses-02/eeg/sub-4_ses-02_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "85273f31be16fa078ef59c077fb795769b469d11",
+      "bytes": 903
+    },
+    {
+      "path": "sub-4/ses-02/eeg/sub-4_ses-02_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "204ec5506e95b02b52dfe9161a5591ec838f1d8d",
+      "bytes": 912
+    },
+    {
+      "path": "sub-4/ses-02/eeg/sub-4_ses-02_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "63f9c8894b0a561700b7f0514cbc3f5ce6541043",
+      "bytes": 914
+    },
+    {
+      "path": "sub-4/ses-02/eeg/sub-4_ses-02_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "5038625805f11d255c85c6e06e26b462123f5ed1",
+      "bytes": 912
+    },
+    {
+      "path": "sub-4/ses-03/eeg/sub-4_ses-03_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "acd9191696eb95b86842412fa276a77a76d1e838",
+      "bytes": 910
+    },
+    {
+      "path": "sub-4/ses-03/eeg/sub-4_ses-03_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "28c8aa8fba63b0e5130c691cb274c7daa2007f4a",
+      "bytes": 916
+    },
+    {
+      "path": "sub-4/ses-03/eeg/sub-4_ses-03_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "db4b4ed64197e9a4a28c19a4a5286d7a5a40f50f",
+      "bytes": 912
+    },
+    {
+      "path": "sub-4/ses-03/eeg/sub-4_ses-03_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "f3084afc51f19f31b065921278444fb41dcb50f6",
+      "bytes": 909
+    },
+    {
+      "path": "sub-4/ses-03/eeg/sub-4_ses-03_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "6dfd3fedab5a6342fb626adeae3e5a70b14a79e2",
+      "bytes": 917
+    },
+    {
+      "path": "sub-4/ses-03/eeg/sub-4_ses-03_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "5f246511309be4cd78a4199e69550672bedcbd75",
+      "bytes": 908
+    },
+    {
+      "path": "sub-4/ses-04/eeg/sub-4_ses-04_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "84ddd0bd5aeb1f106557b80459431b605755104e",
+      "bytes": 911
+    },
+    {
+      "path": "sub-4/ses-04/eeg/sub-4_ses-04_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "435227c46cf739bed1b6228df6eb494785bfbb45",
+      "bytes": 909
+    },
+    {
+      "path": "sub-4/ses-04/eeg/sub-4_ses-04_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "9d0d384b6a1627160e5545a1859909daf5fde15e",
+      "bytes": 910
+    },
+    {
+      "path": "sub-4/ses-04/eeg/sub-4_ses-04_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "e5cbb0244c3f02ce82a817c41825a09a8885a591",
+      "bytes": 910
+    },
+    {
+      "path": "sub-4/ses-04/eeg/sub-4_ses-04_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "9fd7742584ac490fad5ec312a30ab4b96bbc8389",
+      "bytes": 905
+    },
+    {
+      "path": "sub-4/ses-04/eeg/sub-4_ses-04_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "6b82079caf7b8a598b4e437bb629919f058071d9",
+      "bytes": 907
+    },
+    {
+      "path": "sub-5/ses-01/eeg/sub-5_ses-01_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "cbe5ffaabdad0ccbc195c1db683e9cecbe18a4b3",
+      "bytes": 909
+    },
+    {
+      "path": "sub-5/ses-01/eeg/sub-5_ses-01_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "49e9dbc9b9ac2df13731faac53afdd815a3bdef5",
+      "bytes": 909
+    },
+    {
+      "path": "sub-5/ses-01/eeg/sub-5_ses-01_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "ef55bf20b4fe91482d79155bd81653fba88d1674",
+      "bytes": 906
+    },
+    {
+      "path": "sub-5/ses-01/eeg/sub-5_ses-01_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "d65b6df2bc1f6e57b391190d06da2d30fef43098",
+      "bytes": 884
+    },
+    {
+      "path": "sub-5/ses-01/eeg/sub-5_ses-01_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "4adcfaba658442101e2d094e6af40d86a1025d63",
+      "bytes": 906
+    },
+    {
+      "path": "sub-5/ses-01/eeg/sub-5_ses-01_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "d12c2d1e8553300ea5b1d38a202d529d6057797a",
+      "bytes": 906
+    },
+    {
+      "path": "sub-5/ses-02/eeg/sub-5_ses-02_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "58a00fd5c0448b1932938b66cb47e59b600e52a8",
+      "bytes": 906
+    },
+    {
+      "path": "sub-5/ses-02/eeg/sub-5_ses-02_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "0d0a24237991bc75f402184a2c899229985930d9",
+      "bytes": 875
+    },
+    {
+      "path": "sub-5/ses-02/eeg/sub-5_ses-02_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "88c256d7092f3c85e8b6b75ccc38b39ec46bcb3b",
+      "bytes": 912
+    },
+    {
+      "path": "sub-5/ses-02/eeg/sub-5_ses-02_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "26656ad08691eb2cd7153e44646ad7ce98803821",
+      "bytes": 905
+    },
+    {
+      "path": "sub-5/ses-02/eeg/sub-5_ses-02_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "3a04c6d9a115820b9bd5a402eb24acdb90380d10",
+      "bytes": 874
+    },
+    {
+      "path": "sub-5/ses-02/eeg/sub-5_ses-02_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "018fde626dd1102caffd40206f236fcc97b7095b",
+      "bytes": 905
+    },
+    {
+      "path": "sub-5/ses-03/eeg/sub-5_ses-03_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "3a015b61eb998c939fecdcceccaa3b16033b0b37",
+      "bytes": 912
+    },
+    {
+      "path": "sub-5/ses-03/eeg/sub-5_ses-03_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "cd9ceef97a8ec9a1d44c2b65f30ff0e7fd8fb85e",
+      "bytes": 910
+    },
+    {
+      "path": "sub-5/ses-03/eeg/sub-5_ses-03_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "1b875d1dafde8555341a3cb4430fa65e94ea4187",
+      "bytes": 908
+    },
+    {
+      "path": "sub-5/ses-03/eeg/sub-5_ses-03_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "91b78ee47eb462729b97da6391deb3c6e25c80e4",
+      "bytes": 902
+    },
+    {
+      "path": "sub-5/ses-03/eeg/sub-5_ses-03_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "4002bd0a77e5bd51a2412f498857b45d27d25186",
+      "bytes": 910
+    },
+    {
+      "path": "sub-5/ses-03/eeg/sub-5_ses-03_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "cc15a87b1065ec2f5d10abbc817ba8d719372634",
+      "bytes": 906
+    },
+    {
+      "path": "sub-5/ses-04/eeg/sub-5_ses-04_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "622000615b25005b20a4f2f58432858a48b52d38",
+      "bytes": 908
+    },
+    {
+      "path": "sub-5/ses-04/eeg/sub-5_ses-04_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "307a0677eb0193b4564c322f952dc8ba7cde51e4",
+      "bytes": 906
+    },
+    {
+      "path": "sub-5/ses-04/eeg/sub-5_ses-04_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "031fa370a3abeaeaa41519e3f7899d910887baff",
+      "bytes": 903
+    },
+    {
+      "path": "sub-5/ses-04/eeg/sub-5_ses-04_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "f2150e428f8d7d6f6cedade9983817ab9cdcb305",
+      "bytes": 907
+    },
+    {
+      "path": "sub-5/ses-04/eeg/sub-5_ses-04_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "e0fbd4502128061efe02520e146fd89d7598776b",
+      "bytes": 908
+    },
+    {
+      "path": "sub-5/ses-04/eeg/sub-5_ses-04_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "10697e6f7794e0ed9788bf2035f9f75dd1ff0f24",
+      "bytes": 905
+    },
+    {
+      "path": "sub-6/ses-01/eeg/sub-6_ses-01_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "5f43f3e288317d4981f24a32f4e41fff82c4d869",
+      "bytes": 908
+    },
+    {
+      "path": "sub-6/ses-01/eeg/sub-6_ses-01_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "04f77c0cf29099dc4b6d86fac816be802c0a9789",
+      "bytes": 906
+    },
+    {
+      "path": "sub-6/ses-01/eeg/sub-6_ses-01_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "2afad12f165ac1dce9a2f44f2e4fa98c7af22805",
+      "bytes": 910
+    },
+    {
+      "path": "sub-6/ses-01/eeg/sub-6_ses-01_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "205817ff205b9d7e8c830d51bd2349d76cd5b9d9",
+      "bytes": 911
+    },
+    {
+      "path": "sub-6/ses-01/eeg/sub-6_ses-01_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "8d679a3e94f1ba00306822d871ac81fb3579a915",
+      "bytes": 909
+    },
+    {
+      "path": "sub-6/ses-01/eeg/sub-6_ses-01_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "c2d05c2065bd4651fbf922bc4db61f4b8c8ca3be",
+      "bytes": 912
+    },
+    {
+      "path": "sub-6/ses-02/eeg/sub-6_ses-02_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "cf440fda6aeed6c06123b66f3eac05328aa9a052",
+      "bytes": 910
+    },
+    {
+      "path": "sub-6/ses-02/eeg/sub-6_ses-02_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "3eb844b80627a9d3a63ffbf9fe605807b28b5be9",
+      "bytes": 906
+    },
+    {
+      "path": "sub-6/ses-02/eeg/sub-6_ses-02_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "92f442474c871b86f61acd267e63bf75d85a0c82",
+      "bytes": 903
+    },
+    {
+      "path": "sub-6/ses-02/eeg/sub-6_ses-02_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "1d3213051b89a019382b292511434bcf5dc24bbd",
+      "bytes": 906
+    },
+    {
+      "path": "sub-6/ses-02/eeg/sub-6_ses-02_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "eeccc87b0925b2d00044c9b8843b8486987b5a6e",
+      "bytes": 907
+    },
+    {
+      "path": "sub-6/ses-02/eeg/sub-6_ses-02_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "81909bd71c8c82c6d14b969adf5eda46aa6cf4ce",
+      "bytes": 911
+    },
+    {
+      "path": "sub-6/ses-03/eeg/sub-6_ses-03_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "067749eb9b40f984152ecd14c0fbdf549abc773b",
+      "bytes": 906
+    },
+    {
+      "path": "sub-6/ses-03/eeg/sub-6_ses-03_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "f82de97d87c4e5c804bc3a9f49e63a098422f475",
+      "bytes": 904
+    },
+    {
+      "path": "sub-6/ses-03/eeg/sub-6_ses-03_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "6da9ea44091188bed2898cd61ea05c4983ad7999",
+      "bytes": 906
+    },
+    {
+      "path": "sub-6/ses-03/eeg/sub-6_ses-03_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "3e548fb17e4c24c5c08e3bf273dd27a312b5382c",
+      "bytes": 907
+    },
+    {
+      "path": "sub-6/ses-03/eeg/sub-6_ses-03_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "822d13db65724d293d384815733fa10f90ad2356",
+      "bytes": 903
+    },
+    {
+      "path": "sub-6/ses-03/eeg/sub-6_ses-03_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "0ebab357e3da513abc9f80c2915e72eb411d26bd",
+      "bytes": 905
+    },
+    {
+      "path": "sub-6/ses-04/eeg/sub-6_ses-04_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "940866e7a3cdeec12965e88aaa5c0ddb086868db",
+      "bytes": 910
+    },
+    {
+      "path": "sub-6/ses-04/eeg/sub-6_ses-04_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "1e502772a5349ac37d8ce51e0d8a91681b5a0ad4",
+      "bytes": 902
+    },
+    {
+      "path": "sub-6/ses-04/eeg/sub-6_ses-04_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "d28ab87713987971996f3a99220d2882846b1cb4",
+      "bytes": 904
+    },
+    {
+      "path": "sub-6/ses-04/eeg/sub-6_ses-04_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "08f17d8a17c926dd16e34b0ecb74a0c11ce149f8",
+      "bytes": 903
+    },
+    {
+      "path": "sub-6/ses-04/eeg/sub-6_ses-04_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "af868204d07b7327e2ea859a8a2b7ff77a2e4332",
+      "bytes": 906
+    },
+    {
+      "path": "sub-6/ses-04/eeg/sub-6_ses-04_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "e31b61d15e97596bb30528e5853fbde0c54c4ff9",
+      "bytes": 907
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "f756bae8070cddc0aa6d27c02be4a066c62d812b",
+      "bytes": 852
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "0f43b2a64655aa5d29748ca077a1cb167b5b0ed3",
+      "bytes": 824
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "c9c323dcd628413c865b98fb35bc5e02a070beb8",
+      "bytes": 847
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "1b99a98aaac4418c89c25d4463d5f8791fdbb6e6",
+      "bytes": 856
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "c1a41af2f338e6d2e8bbfdd47edfc8f4e32abe60",
+      "bytes": 852
+    },
+    {
+      "path": "sub-7/ses-01/eeg/sub-7_ses-01_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "ec90ecc8934525566dfef4b09526cb021e5e860d",
+      "bytes": 819
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "f756bae8070cddc0aa6d27c02be4a066c62d812b",
+      "bytes": 852
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "0f43b2a64655aa5d29748ca077a1cb167b5b0ed3",
+      "bytes": 824
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "c9c323dcd628413c865b98fb35bc5e02a070beb8",
+      "bytes": 847
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "1b99a98aaac4418c89c25d4463d5f8791fdbb6e6",
+      "bytes": 856
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "c1a41af2f338e6d2e8bbfdd47edfc8f4e32abe60",
+      "bytes": 852
+    },
+    {
+      "path": "sub-7/ses-02/eeg/sub-7_ses-02_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "ec90ecc8934525566dfef4b09526cb021e5e860d",
+      "bytes": 819
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "f756bae8070cddc0aa6d27c02be4a066c62d812b",
+      "bytes": 852
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "0f43b2a64655aa5d29748ca077a1cb167b5b0ed3",
+      "bytes": 824
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "c9c323dcd628413c865b98fb35bc5e02a070beb8",
+      "bytes": 847
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "1b99a98aaac4418c89c25d4463d5f8791fdbb6e6",
+      "bytes": 856
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "c1a41af2f338e6d2e8bbfdd47edfc8f4e32abe60",
+      "bytes": 852
+    },
+    {
+      "path": "sub-7/ses-03/eeg/sub-7_ses-03_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "ec90ecc8934525566dfef4b09526cb021e5e860d",
+      "bytes": 819
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "d8809dc228f43012bee152eb076218cdf94abb6d",
+      "bytes": 905
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "4935c1a6a3f2d4c50dc28c44300bee9f585bda26",
+      "bytes": 913
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "bb9808fe4f2b0107ffaf7e316abfeb0f0acf3e7e",
+      "bytes": 907
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "508e2449f2efe6bc21ce26410baeb20c9c4e945e",
+      "bytes": 908
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "608ee8b823fe96ed724b1bd63aaf13205f51f7f8",
+      "bytes": 908
+    },
+    {
+      "path": "sub-7/ses-04/eeg/sub-7_ses-04_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "15ea1ac1acc3b295447dab9387091d9f0cd21443",
+      "bytes": 910
+    },
+    {
+      "path": "sub-8/ses-01/eeg/sub-8_ses-01_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "3869e32ebb3609011a06184cff1faa7fb8063544",
+      "bytes": 906
+    },
+    {
+      "path": "sub-8/ses-01/eeg/sub-8_ses-01_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "c18acf3b39fb9ab21971dbd4bcaa23c86e519888",
+      "bytes": 908
+    },
+    {
+      "path": "sub-8/ses-01/eeg/sub-8_ses-01_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "cb0baa6bf2fc4e75ca4b2b178d56b281521f3856",
+      "bytes": 911
+    },
+    {
+      "path": "sub-8/ses-01/eeg/sub-8_ses-01_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "b5423695124c3171a9e390c2f10ae261a0aa9f9b",
+      "bytes": 905
+    },
+    {
+      "path": "sub-8/ses-01/eeg/sub-8_ses-01_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "05d34c6395fca07f41d1f94f2c21b60a7d14f3d7",
+      "bytes": 908
+    },
+    {
+      "path": "sub-8/ses-01/eeg/sub-8_ses-01_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "a28661920a2f0924d94f06da1fad652f67d15c4b",
+      "bytes": 880
+    },
+    {
+      "path": "sub-8/ses-02/eeg/sub-8_ses-02_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "c358af9042fd303f8f302089e0afa3413ce8cff3",
+      "bytes": 910
+    },
+    {
+      "path": "sub-8/ses-02/eeg/sub-8_ses-02_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "e7c2cb9a934fd36b80d743c91e34b962da82da3f",
+      "bytes": 904
+    },
+    {
+      "path": "sub-8/ses-02/eeg/sub-8_ses-02_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "b4ff9a1207b13a0226e9ad5c51fc8b8b4560d8c3",
+      "bytes": 905
+    },
+    {
+      "path": "sub-8/ses-02/eeg/sub-8_ses-02_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "d468a5fd78b4adf50572a1cbbb2d0b5d2dbd4655",
+      "bytes": 909
+    },
+    {
+      "path": "sub-8/ses-02/eeg/sub-8_ses-02_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "ba081c02c457da44bb428263e36a620e30118536",
+      "bytes": 908
+    },
+    {
+      "path": "sub-8/ses-02/eeg/sub-8_ses-02_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "10b9e0bbf39051c27d8b38ab3d8064208dd5899a",
+      "bytes": 908
+    },
+    {
+      "path": "sub-8/ses-03/eeg/sub-8_ses-03_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "afa495e8a16ea21c21ab724841f3ca3542a0fbec",
+      "bytes": 905
+    },
+    {
+      "path": "sub-8/ses-03/eeg/sub-8_ses-03_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "b1f50c53af77970e4f11ca71c785a3bc8c5bf35d",
+      "bytes": 906
+    },
+    {
+      "path": "sub-8/ses-03/eeg/sub-8_ses-03_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "7fe049ce031a1a389d71df10d3ac924c95c5fd80",
+      "bytes": 908
+    },
+    {
+      "path": "sub-8/ses-03/eeg/sub-8_ses-03_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "b00fd0e8ab236887f8d3595a0fa4f4df653d45b8",
+      "bytes": 910
+    },
+    {
+      "path": "sub-8/ses-03/eeg/sub-8_ses-03_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "d04a4d8cbe3b2e6397fda0c32ca258a1e174d488",
+      "bytes": 886
+    },
+    {
+      "path": "sub-8/ses-03/eeg/sub-8_ses-03_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "577e6a42e4558e999fe45d38caf5eb99abb0b858",
+      "bytes": 907
+    },
+    {
+      "path": "sub-8/ses-04/eeg/sub-8_ses-04_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "8c7fc2c8c489ea679c350c0c8735e86085528181",
+      "bytes": 909
+    },
+    {
+      "path": "sub-8/ses-04/eeg/sub-8_ses-04_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "61474bc574de5e16ed4050c3be4f51bb2b691674",
+      "bytes": 907
+    },
+    {
+      "path": "sub-8/ses-04/eeg/sub-8_ses-04_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "65b510b837e75b6c0742c7bea0353d2cb87ef662",
+      "bytes": 906
+    },
+    {
+      "path": "sub-8/ses-04/eeg/sub-8_ses-04_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "9a958efeb29dede1ae685d1852d2713ff0ca70cb",
+      "bytes": 907
+    },
+    {
+      "path": "sub-8/ses-04/eeg/sub-8_ses-04_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "417475b4c16277178b97cc98a16d7a5b694e0c7e",
+      "bytes": 905
+    },
+    {
+      "path": "sub-8/ses-04/eeg/sub-8_ses-04_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "096791fc3388f9888130ff8b3c9c5e0fc15d34e8",
+      "bytes": 907
+    },
+    {
+      "path": "sub-9/ses-01/eeg/sub-9_ses-01_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "3b817d525cae29e323d3c5c0d362f98f73a1f3d4",
+      "bytes": 904
+    },
+    {
+      "path": "sub-9/ses-01/eeg/sub-9_ses-01_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "d5ea13eb30d90b787a7a32973832479162af68c8",
+      "bytes": 906
+    },
+    {
+      "path": "sub-9/ses-01/eeg/sub-9_ses-01_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "163ed73b876717cecaab00b72d913b3aa41a06d6",
+      "bytes": 910
+    },
+    {
+      "path": "sub-9/ses-01/eeg/sub-9_ses-01_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "bcfd98680684b14a314f3843760dbe485cbe2b84",
+      "bytes": 901
+    },
+    {
+      "path": "sub-9/ses-01/eeg/sub-9_ses-01_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "87769193ac1a6217f9a98b631cf4771735ffface",
+      "bytes": 901
+    },
+    {
+      "path": "sub-9/ses-01/eeg/sub-9_ses-01_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "d4dedb7a2d53b26a17def2b36efda020b9d45355",
+      "bytes": 909
+    },
+    {
+      "path": "sub-9/ses-02/eeg/sub-9_ses-02_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "6a66e86fb79d5be750a56f2672d0919525ff10e5",
+      "bytes": 904
+    },
+    {
+      "path": "sub-9/ses-02/eeg/sub-9_ses-02_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "22d8eb7dad1c19e56cc426932bfb487f7785a7f6",
+      "bytes": 910
+    },
+    {
+      "path": "sub-9/ses-02/eeg/sub-9_ses-02_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "bfbec148e8ca61d2afbe077ec7359c509f4faf89",
+      "bytes": 906
+    },
+    {
+      "path": "sub-9/ses-02/eeg/sub-9_ses-02_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "57cf0e22ce642058d0829f843aed5e87dccd5ea3",
+      "bytes": 906
+    },
+    {
+      "path": "sub-9/ses-02/eeg/sub-9_ses-02_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "9db2208a35997aa5f922c73b86b30ae46b096f32",
+      "bytes": 909
+    },
+    {
+      "path": "sub-9/ses-02/eeg/sub-9_ses-02_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "c13f5e03315a540827787e2c784f7eb9a0ad6f63",
+      "bytes": 910
+    },
+    {
+      "path": "sub-9/ses-03/eeg/sub-9_ses-03_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "58a6e883b68028938ab5d8ae7efe4c27cf17dc7e",
+      "bytes": 906
+    },
+    {
+      "path": "sub-9/ses-03/eeg/sub-9_ses-03_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "cd0f11d58c810f4a869b37f30baf18e9d7cab56a",
+      "bytes": 906
+    },
+    {
+      "path": "sub-9/ses-03/eeg/sub-9_ses-03_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "14b2be9b3fd6d06b7c77b6d581a4b1524a259400",
+      "bytes": 908
+    },
+    {
+      "path": "sub-9/ses-03/eeg/sub-9_ses-03_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "add64b62b9fb8ad0272616cc91102ed85e365095",
+      "bytes": 882
+    },
+    {
+      "path": "sub-9/ses-03/eeg/sub-9_ses-03_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "467778df57886fe912d90089a270a902fde99435",
+      "bytes": 913
+    },
+    {
+      "path": "sub-9/ses-03/eeg/sub-9_ses-03_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "b3fbb7178337e8afc199b7693a15f2ede33cbccb",
+      "bytes": 906
+    },
+    {
+      "path": "sub-9/ses-04/eeg/sub-9_ses-04_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "91cc17217256877e9faf6667f2465a8128e6b89a",
+      "bytes": 913
+    },
+    {
+      "path": "sub-9/ses-04/eeg/sub-9_ses-04_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "1e13372c6b4387c148ac210b9fd7661c67ae84c9",
+      "bytes": 909
+    },
+    {
+      "path": "sub-9/ses-04/eeg/sub-9_ses-04_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "58b6157957591198cc77e1a63e8f5cba35f451d6",
+      "bytes": 904
+    },
+    {
+      "path": "sub-9/ses-04/eeg/sub-9_ses-04_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "e4dd7892eb34a1821e1635a53110a1ef17e5a212",
+      "bytes": 906
+    },
+    {
+      "path": "sub-9/ses-04/eeg/sub-9_ses-04_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "db0e2d577f4d189515ff97c25265ac931233be3f",
+      "bytes": 909
+    },
+    {
+      "path": "sub-9/ses-04/eeg/sub-9_ses-04_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "4700a3b3bde4007e414a84998c4b8edf4a19d902",
+      "bytes": 908
+    },
+    {
+      "path": "sub-10/ses-01/eeg/sub-10_ses-01_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "dd9b3bc73d2291d3df2ff0c40b4a5cac023bea96",
+      "bytes": 904
+    },
+    {
+      "path": "sub-10/ses-01/eeg/sub-10_ses-01_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "6ad0575963200d17773239a6371adde39bafce0d",
+      "bytes": 908
+    },
+    {
+      "path": "sub-10/ses-01/eeg/sub-10_ses-01_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "658991342f5b1755c0ba3eaa44cda1918ab9e3fb",
+      "bytes": 906
+    },
+    {
+      "path": "sub-10/ses-01/eeg/sub-10_ses-01_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "72cfc03d91b60770e4fa5656725cdc2202e61664",
+      "bytes": 907
+    },
+    {
+      "path": "sub-10/ses-01/eeg/sub-10_ses-01_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "2b18a5b97938d8c642519d6e24e78f26c75c8673",
+      "bytes": 908
+    },
+    {
+      "path": "sub-10/ses-01/eeg/sub-10_ses-01_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "07bffa419382cb696ec3dfaae5daea446e456b50",
+      "bytes": 903
+    },
+    {
+      "path": "sub-10/ses-02/eeg/sub-10_ses-02_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "fd578ce041b75ef3ed48f891a1555067d41e9067",
+      "bytes": 906
+    },
+    {
+      "path": "sub-10/ses-02/eeg/sub-10_ses-02_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "23c524f2d373304bca1686c58ae6e52e25ccacc5",
+      "bytes": 905
+    },
+    {
+      "path": "sub-10/ses-02/eeg/sub-10_ses-02_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "3419d28fe132088d3689c342877ccb066d88aafa",
+      "bytes": 907
+    },
+    {
+      "path": "sub-10/ses-02/eeg/sub-10_ses-02_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "77bedd573f9da3ddf44b3583ba4326bd440c9068",
+      "bytes": 907
+    },
+    {
+      "path": "sub-10/ses-02/eeg/sub-10_ses-02_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "57706ddb5b74bb421cc21e97c5989ba553c3b26e",
+      "bytes": 909
+    },
+    {
+      "path": "sub-10/ses-02/eeg/sub-10_ses-02_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "a2aa5f5d28ae56facae9f409b3f97b06bed2184e",
+      "bytes": 910
+    },
+    {
+      "path": "sub-10/ses-03/eeg/sub-10_ses-03_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "6423663a11cc077c972cf19724521347c3d8cdfb",
+      "bytes": 911
+    },
+    {
+      "path": "sub-10/ses-03/eeg/sub-10_ses-03_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "9fff3b6b4f03e7fa81fe7ce9bbc27a8e3df4f767",
+      "bytes": 906
+    },
+    {
+      "path": "sub-10/ses-03/eeg/sub-10_ses-03_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "b5c10a00cc53ef5887cca18b6ccb423eb558e562",
+      "bytes": 910
+    },
+    {
+      "path": "sub-10/ses-03/eeg/sub-10_ses-03_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "7b0bdc3427533741a0a8193587922829182b635d",
+      "bytes": 909
+    },
+    {
+      "path": "sub-10/ses-03/eeg/sub-10_ses-03_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "e0c3e24ec1c389134355cef6da0203cfbcb8d803",
+      "bytes": 902
+    },
+    {
+      "path": "sub-10/ses-03/eeg/sub-10_ses-03_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "20c8ce0f02549c56fde5b473b448a3809508eab2",
+      "bytes": 909
+    },
+    {
+      "path": "sub-10/ses-04/eeg/sub-10_ses-04_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "05a1a1cfb0c90b892cbe480ae1c2e5c09fa4fcb4",
+      "bytes": 911
+    },
+    {
+      "path": "sub-10/ses-04/eeg/sub-10_ses-04_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "6a2e43dfb361a22d4aff6839a4a2910686b7e1cd",
+      "bytes": 908
+    },
+    {
+      "path": "sub-10/ses-04/eeg/sub-10_ses-04_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "af35fd530079b4f6c1f5cf311bb0b11b1d295c47",
+      "bytes": 907
+    },
+    {
+      "path": "sub-10/ses-04/eeg/sub-10_ses-04_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "9c44290313c175a17b4dbb82f829dd303855b267",
+      "bytes": 906
+    },
+    {
+      "path": "sub-10/ses-04/eeg/sub-10_ses-04_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "408ed1465e9d8b6d1dc1e1abc03862f988ec2f8e",
+      "bytes": 904
+    },
+    {
+      "path": "sub-10/ses-04/eeg/sub-10_ses-04_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "798881cdaac1882069530b319e8e1ca664e46d99",
+      "bytes": 907
+    },
+    {
+      "path": "sub-11/ses-01/eeg/sub-11_ses-01_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "38be9af2af229d79b8e92129f46c3aa4695a96d5",
+      "bytes": 900
+    },
+    {
+      "path": "sub-11/ses-01/eeg/sub-11_ses-01_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "3d69f45b852d2312a113e438563cc0c20cbb21d4",
+      "bytes": 907
+    },
+    {
+      "path": "sub-11/ses-01/eeg/sub-11_ses-01_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "98ba7e025528f4e5b6fcc74f0b07f5f499a50357",
+      "bytes": 907
+    },
+    {
+      "path": "sub-11/ses-01/eeg/sub-11_ses-01_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "f0abfdf7fc4aedf229076de229c51e6f02ded7fd",
+      "bytes": 910
+    },
+    {
+      "path": "sub-11/ses-01/eeg/sub-11_ses-01_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "1eb6afd6635b11881fa54a435082692669ad5df3",
+      "bytes": 907
+    },
+    {
+      "path": "sub-11/ses-01/eeg/sub-11_ses-01_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "a97fd38e25d6fe33759c8cbb087d793aa2abd989",
+      "bytes": 911
+    },
+    {
+      "path": "sub-11/ses-02/eeg/sub-11_ses-02_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "b326837e1e943c0c47e2838c094e4ad8017c2ff5",
+      "bytes": 906
+    },
+    {
+      "path": "sub-11/ses-02/eeg/sub-11_ses-02_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "8362d583d8fa7fe21c41e72fe5b310ec2e6fefce",
+      "bytes": 903
+    },
+    {
+      "path": "sub-11/ses-02/eeg/sub-11_ses-02_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "24b341baa620cb00a97dabe3b23bbd29c39cc981",
+      "bytes": 908
+    },
+    {
+      "path": "sub-11/ses-02/eeg/sub-11_ses-02_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "ff71d7bb330ebd3a805108baa3faa0fdbcc29657",
+      "bytes": 901
+    },
+    {
+      "path": "sub-11/ses-02/eeg/sub-11_ses-02_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "483914219ba1f67b1a78212aeffaa68ef9344a97",
+      "bytes": 908
+    },
+    {
+      "path": "sub-11/ses-02/eeg/sub-11_ses-02_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "4b16964ace998b4c647e6b13c9b9145d5b8c4a4b",
+      "bytes": 908
+    },
+    {
+      "path": "sub-11/ses-03/eeg/sub-11_ses-03_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "0ad8845bd70253dd88019b4619e325ba1ff77895",
+      "bytes": 908
+    },
+    {
+      "path": "sub-11/ses-03/eeg/sub-11_ses-03_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "7aab4c0d20ecd691011c4b884eb68505e3b8ec86",
+      "bytes": 904
+    },
+    {
+      "path": "sub-11/ses-03/eeg/sub-11_ses-03_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "67c91e88cdc67cbdf8f175878ebc83c97931a46c",
+      "bytes": 904
+    },
+    {
+      "path": "sub-11/ses-03/eeg/sub-11_ses-03_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "c40fbc6a83d840ad6d9b4aa63f8c60ec336f69cb",
+      "bytes": 906
+    },
+    {
+      "path": "sub-11/ses-03/eeg/sub-11_ses-03_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "369da56d2acde10b44619858bbf93e976b920335",
+      "bytes": 904
+    },
+    {
+      "path": "sub-11/ses-03/eeg/sub-11_ses-03_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "0304d776fb603aea4d93c908c77b916fe61352bc",
+      "bytes": 903
+    },
+    {
+      "path": "sub-11/ses-04/eeg/sub-11_ses-04_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "4afc442b4e955f59e8d5ae5b0bf7f4370f4aeaba",
+      "bytes": 901
+    },
+    {
+      "path": "sub-11/ses-04/eeg/sub-11_ses-04_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "bf37ecc86afeb87dfe4a273fee277e881d49e9ac",
+      "bytes": 905
+    },
+    {
+      "path": "sub-11/ses-04/eeg/sub-11_ses-04_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "e0ce00c71d019e0cbd32bd058c7113002d2d81f7",
+      "bytes": 902
+    },
+    {
+      "path": "sub-11/ses-04/eeg/sub-11_ses-04_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "918644e59286ae71ad1188570370444ae096a50f",
+      "bytes": 907
+    },
+    {
+      "path": "sub-11/ses-04/eeg/sub-11_ses-04_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "b9d09c0ba798595ed3cdd8623421c91dd1da3b3b",
+      "bytes": 901
+    },
+    {
+      "path": "sub-11/ses-04/eeg/sub-11_ses-04_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "c83b98ffab3b47d9265140544d2886ab9dba2beb",
+      "bytes": 906
+    },
+    {
+      "path": "sub-12/ses-01/eeg/sub-12_ses-01_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "bf4e505cb02c09cce18095371edfb8126e3e3026",
+      "bytes": 914
+    },
+    {
+      "path": "sub-12/ses-01/eeg/sub-12_ses-01_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "0f0823c804908e963c6a7cfec65d25b8fae0cc94",
+      "bytes": 908
+    },
+    {
+      "path": "sub-12/ses-01/eeg/sub-12_ses-01_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "8cc435361c275a911445a903eb87af44669b646a",
+      "bytes": 906
+    },
+    {
+      "path": "sub-12/ses-01/eeg/sub-12_ses-01_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "236f11f9bc7576888c4cff9d1d7c295cd915c6f8",
+      "bytes": 912
+    },
+    {
+      "path": "sub-12/ses-01/eeg/sub-12_ses-01_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "5dcdd8d9e13b22c6643daac4824896f5595906db",
+      "bytes": 907
+    },
+    {
+      "path": "sub-12/ses-01/eeg/sub-12_ses-01_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "866d9cf9b583e5745602f7b404761ad54103cf46",
+      "bytes": 908
+    },
+    {
+      "path": "sub-12/ses-02/eeg/sub-12_ses-02_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "5fc6a50445fdeefc29ff18084da80647ce02fdb2",
+      "bytes": 905
+    },
+    {
+      "path": "sub-12/ses-02/eeg/sub-12_ses-02_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "8e7634b86b0e633a3a27365c810cc3534a2a5a8e",
+      "bytes": 917
+    },
+    {
+      "path": "sub-12/ses-02/eeg/sub-12_ses-02_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "95dc90fc4238752deb4e5d3634d79e5f4be8a73d",
+      "bytes": 906
+    },
+    {
+      "path": "sub-12/ses-02/eeg/sub-12_ses-02_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "fa76e8c7a6feecd0f4d7444e0733acac4e513e37",
+      "bytes": 906
+    },
+    {
+      "path": "sub-12/ses-02/eeg/sub-12_ses-02_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "542fea619dde051327a3b8749f5da3c361e711ff",
+      "bytes": 912
+    },
+    {
+      "path": "sub-12/ses-02/eeg/sub-12_ses-02_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "e2ddecbb2b5e025342f734b17ad5a2651cf6d3b9",
+      "bytes": 907
+    },
+    {
+      "path": "sub-12/ses-03/eeg/sub-12_ses-03_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "647eaff20f0b81b5088f084526b7238ed0f31486",
+      "bytes": 909
+    },
+    {
+      "path": "sub-12/ses-03/eeg/sub-12_ses-03_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "8bd11d86e7714856cac011b9c3360bd766f7465e",
+      "bytes": 909
+    },
+    {
+      "path": "sub-12/ses-03/eeg/sub-12_ses-03_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "9067d5cf0309b2921e932d3916512761aa71b8d1",
+      "bytes": 912
+    },
+    {
+      "path": "sub-12/ses-03/eeg/sub-12_ses-03_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "c76e3bea60c5708010599aae0c366cd67431b138",
+      "bytes": 910
+    },
+    {
+      "path": "sub-12/ses-03/eeg/sub-12_ses-03_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "504c20ea687106c22ab8f43f8e299ac21528c3f6",
+      "bytes": 910
+    },
+    {
+      "path": "sub-12/ses-03/eeg/sub-12_ses-03_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "3254a931ffb4dff4bf1510e72c8e3733acedb0b7",
+      "bytes": 905
+    },
+    {
+      "path": "sub-12/ses-04/eeg/sub-12_ses-04_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "757d5961bd8af1f487e6aa6d51a1dfbd39b9219a",
+      "bytes": 908
+    },
+    {
+      "path": "sub-12/ses-04/eeg/sub-12_ses-04_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "1475a07aef1cc26267139c412f2324a8478c3fc9",
+      "bytes": 904
+    },
+    {
+      "path": "sub-12/ses-04/eeg/sub-12_ses-04_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "d03c1972961c88757b6d06ce0131ca6ed5bb7126",
+      "bytes": 905
+    },
+    {
+      "path": "sub-12/ses-04/eeg/sub-12_ses-04_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "f36a84e214082164efcf26fc735c249a410e3116",
+      "bytes": 908
+    },
+    {
+      "path": "sub-12/ses-04/eeg/sub-12_ses-04_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "aff6cfc6dd76cdaaf8775523a016306c70809fbd",
+      "bytes": 905
+    },
+    {
+      "path": "sub-12/ses-04/eeg/sub-12_ses-04_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "ca6819c378b3b296ab12162a953de9aad28b4d07",
+      "bytes": 909
+    },
+    {
+      "path": "sub-13/ses-01/eeg/sub-13_ses-01_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "ed8eae3ec914e44fd3d91f8e0e727d19b98375a2",
+      "bytes": 906
+    },
+    {
+      "path": "sub-13/ses-01/eeg/sub-13_ses-01_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "0b46c5be3fd319f040e4cf916081e863fb77a276",
+      "bytes": 911
+    },
+    {
+      "path": "sub-13/ses-01/eeg/sub-13_ses-01_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "ce8dce5030c786dedecac4a2efb69a69a96e13de",
+      "bytes": 906
+    },
+    {
+      "path": "sub-13/ses-01/eeg/sub-13_ses-01_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "442e2d34890fe275829471340a4f1123565137a6",
+      "bytes": 909
+    },
+    {
+      "path": "sub-13/ses-01/eeg/sub-13_ses-01_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "e1f209011ce17f22bcdaf94aa5ebbab4768a3b9c",
+      "bytes": 910
+    },
+    {
+      "path": "sub-13/ses-01/eeg/sub-13_ses-01_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "fc2683044e0eeac13d3b11b1893e64583024b37f",
+      "bytes": 909
+    },
+    {
+      "path": "sub-13/ses-02/eeg/sub-13_ses-02_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "4bdf12d359f7480673c9532c22a7f3c451b28a69",
+      "bytes": 885
+    },
+    {
+      "path": "sub-13/ses-02/eeg/sub-13_ses-02_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "15f10a1ba428c8f07aa1756ecccd386b11096b58",
+      "bytes": 911
+    },
+    {
+      "path": "sub-13/ses-02/eeg/sub-13_ses-02_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "1dbc420488620e524904de0058bc872a6a720a9a",
+      "bytes": 911
+    },
+    {
+      "path": "sub-13/ses-02/eeg/sub-13_ses-02_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "604770030e671ece0b25f4c8582b4e8e32cb9027",
+      "bytes": 905
+    },
+    {
+      "path": "sub-13/ses-02/eeg/sub-13_ses-02_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "096b3ab9fa8c0565cf36bfb2d6558dedbd04cb5f",
+      "bytes": 906
+    },
+    {
+      "path": "sub-13/ses-02/eeg/sub-13_ses-02_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "81fb4a173b09467a15d8a63d2877203da34c4e4d",
+      "bytes": 910
+    },
+    {
+      "path": "sub-13/ses-03/eeg/sub-13_ses-03_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "35ba2093de93968b054c82885d265c642984a04f",
+      "bytes": 909
+    },
+    {
+      "path": "sub-13/ses-03/eeg/sub-13_ses-03_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "4655021e3d2ce034e7ac8ec3519f938d839d94ed",
+      "bytes": 910
+    },
+    {
+      "path": "sub-13/ses-03/eeg/sub-13_ses-03_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "3254b5a70c8f46c8c76e9798540bf5af59c634d6",
+      "bytes": 904
+    },
+    {
+      "path": "sub-13/ses-03/eeg/sub-13_ses-03_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "7ceaae3ed8aa1c438062e7aa52054cfff653ee3d",
+      "bytes": 910
+    },
+    {
+      "path": "sub-13/ses-03/eeg/sub-13_ses-03_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "d9f154ea6b372cbc3c6a0fde006627cad8eb98bb",
+      "bytes": 907
+    },
+    {
+      "path": "sub-13/ses-03/eeg/sub-13_ses-03_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "8be56cee119537128bd676bb39cdac1bbf67e726",
+      "bytes": 910
+    },
+    {
+      "path": "sub-13/ses-04/eeg/sub-13_ses-04_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "1d93a8789452d005149be148ffebe0e824a208d0",
+      "bytes": 880
+    },
+    {
+      "path": "sub-13/ses-04/eeg/sub-13_ses-04_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "4061e57b939b33f4323251604e16825461c28e6e",
+      "bytes": 908
+    },
+    {
+      "path": "sub-13/ses-04/eeg/sub-13_ses-04_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "fd4fd95af1825f34c912b79597bdbe9317692159",
+      "bytes": 907
+    },
+    {
+      "path": "sub-13/ses-04/eeg/sub-13_ses-04_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "1a8af73008bfbfa7f1e51adf82c7a6d0d6fceaeb",
+      "bytes": 906
+    },
+    {
+      "path": "sub-13/ses-04/eeg/sub-13_ses-04_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "2eb68b5569667cc35bc6c3a155462e72e95b8c99",
+      "bytes": 903
+    },
+    {
+      "path": "sub-13/ses-04/eeg/sub-13_ses-04_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "759f16e5d9fb6da28c5a07eee33c4e55d9ccd17c",
+      "bytes": 908
+    },
+    {
+      "path": "sub-14/ses-01/eeg/sub-14_ses-01_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "2914bc0255afca8b6476f20c3601f1ad74fbc315",
+      "bytes": 905
+    },
+    {
+      "path": "sub-14/ses-01/eeg/sub-14_ses-01_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "2b7b89c81166b3adcb4e72c106abffdb584f811e",
+      "bytes": 910
+    },
+    {
+      "path": "sub-14/ses-01/eeg/sub-14_ses-01_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "64f46dc1f9a090dd7c96c682e08774a6b158f836",
+      "bytes": 909
+    },
+    {
+      "path": "sub-14/ses-01/eeg/sub-14_ses-01_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "31f388b87fb80d7c4a5b4491259075851a83ccbe",
+      "bytes": 907
+    },
+    {
+      "path": "sub-14/ses-01/eeg/sub-14_ses-01_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "13bb2420fd6dc05f1a4b815f0181d8b5a992b9a3",
+      "bytes": 914
+    },
+    {
+      "path": "sub-14/ses-01/eeg/sub-14_ses-01_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "fc0fb6b4c88446a701d488cdaa58451d573fd2c5",
+      "bytes": 906
+    },
+    {
+      "path": "sub-14/ses-02/eeg/sub-14_ses-02_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "4489f0106a739b33a3fd51999ab9c088ac16ef2e",
+      "bytes": 909
+    },
+    {
+      "path": "sub-14/ses-02/eeg/sub-14_ses-02_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "362f0dc164bbfe64d17c8d16596cbc577d826581",
+      "bytes": 909
+    },
+    {
+      "path": "sub-14/ses-02/eeg/sub-14_ses-02_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "5d0ef4d19984d76af52b3a91a937207cca43e30f",
+      "bytes": 902
+    },
+    {
+      "path": "sub-14/ses-02/eeg/sub-14_ses-02_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "05c231af5ba057b241a2daf290d9b6480e5bf79c",
+      "bytes": 913
+    },
+    {
+      "path": "sub-14/ses-02/eeg/sub-14_ses-02_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "40deef27138ba692b45d684dc27253a2e954ecdd",
+      "bytes": 908
+    },
+    {
+      "path": "sub-14/ses-02/eeg/sub-14_ses-02_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "131593f38d299ec452e89e30d1cb7dbc78d20872",
+      "bytes": 916
+    },
+    {
+      "path": "sub-14/ses-03/eeg/sub-14_ses-03_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "85c49beb26601299d9883703f6865b8b95bd8908",
+      "bytes": 912
+    },
+    {
+      "path": "sub-14/ses-03/eeg/sub-14_ses-03_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "ee560cf93a62361793fff1cfddcc700795bcf998",
+      "bytes": 905
+    },
+    {
+      "path": "sub-14/ses-03/eeg/sub-14_ses-03_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "19252e7769c13d3239411ac733cd276325fb3c5c",
+      "bytes": 901
+    },
+    {
+      "path": "sub-14/ses-03/eeg/sub-14_ses-03_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "e84b727f1dd86a2f660e90ba3d26d0b6284c58b3",
+      "bytes": 911
+    },
+    {
+      "path": "sub-14/ses-03/eeg/sub-14_ses-03_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "ddd39478248f99bac4d58b71673eb20f0a1a7642",
+      "bytes": 908
+    },
+    {
+      "path": "sub-14/ses-03/eeg/sub-14_ses-03_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "835356d4a90d0780f264d175813cd7a7819b34cd",
+      "bytes": 910
+    },
+    {
+      "path": "sub-14/ses-04/eeg/sub-14_ses-04_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "727408054bfb26b2e8ecf57396e6efcd22078db5",
+      "bytes": 902
+    },
+    {
+      "path": "sub-14/ses-04/eeg/sub-14_ses-04_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "a0488ea8e41226cf01d84752001ffcfdcc875592",
+      "bytes": 903
+    },
+    {
+      "path": "sub-14/ses-04/eeg/sub-14_ses-04_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "058f28226f1420b51e2b4687131296c807dc7eb2",
+      "bytes": 902
+    },
+    {
+      "path": "sub-14/ses-04/eeg/sub-14_ses-04_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "b771870121340a7ff1b6516525bce2db6f09828f",
+      "bytes": 906
+    },
+    {
+      "path": "sub-14/ses-04/eeg/sub-14_ses-04_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "9ce0b09a9d4fd0b7e363b6c14588a126b4bef4d8",
+      "bytes": 906
+    },
+    {
+      "path": "sub-14/ses-04/eeg/sub-14_ses-04_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "31ef490984cf7fa3cebcac6d57936f89b02ac8a8",
+      "bytes": 908
+    },
+    {
+      "path": "sub-15/ses-01/eeg/sub-15_ses-01_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "5f43f3e288317d4981f24a32f4e41fff82c4d869",
+      "bytes": 908
+    },
+    {
+      "path": "sub-15/ses-01/eeg/sub-15_ses-01_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "04f77c0cf29099dc4b6d86fac816be802c0a9789",
+      "bytes": 906
+    },
+    {
+      "path": "sub-15/ses-01/eeg/sub-15_ses-01_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "2afad12f165ac1dce9a2f44f2e4fa98c7af22805",
+      "bytes": 910
+    },
+    {
+      "path": "sub-15/ses-01/eeg/sub-15_ses-01_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "205817ff205b9d7e8c830d51bd2349d76cd5b9d9",
+      "bytes": 911
+    },
+    {
+      "path": "sub-15/ses-01/eeg/sub-15_ses-01_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "8d679a3e94f1ba00306822d871ac81fb3579a915",
+      "bytes": 909
+    },
+    {
+      "path": "sub-15/ses-01/eeg/sub-15_ses-01_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "c2d05c2065bd4651fbf922bc4db61f4b8c8ca3be",
+      "bytes": 912
+    },
+    {
+      "path": "sub-15/ses-02/eeg/sub-15_ses-02_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "20a1fab6d9c38039306a6dc3e348873737ee67d9",
+      "bytes": 899
+    },
+    {
+      "path": "sub-15/ses-02/eeg/sub-15_ses-02_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "ab016c88b9ff3431b077c89486c6d359cb18d13f",
+      "bytes": 907
+    },
+    {
+      "path": "sub-15/ses-02/eeg/sub-15_ses-02_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "bf585ae95a70b1abb7ede3f2ea3d967020952ce0",
+      "bytes": 879
+    },
+    {
+      "path": "sub-15/ses-02/eeg/sub-15_ses-02_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "20c55da93dd0ae0dce9d05be5bae345a8a88e436",
+      "bytes": 906
+    },
+    {
+      "path": "sub-15/ses-02/eeg/sub-15_ses-02_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "c0a3786b43f278d4f6a45c70ba7ef54c147623a8",
+      "bytes": 903
+    },
+    {
+      "path": "sub-15/ses-02/eeg/sub-15_ses-02_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "ab0359b9da3a6869b1abfa60fa19fe9dd6916686",
+      "bytes": 909
+    },
+    {
+      "path": "sub-15/ses-03/eeg/sub-15_ses-03_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "983990e461f5b2cdabe08bdb2fb1dd98d76cb8c5",
+      "bytes": 906
+    },
+    {
+      "path": "sub-15/ses-03/eeg/sub-15_ses-03_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "4dcef5c286c40380c08b0e31cc57f8297ff1bb9a",
+      "bytes": 910
+    },
+    {
+      "path": "sub-15/ses-03/eeg/sub-15_ses-03_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "a198d149fcc4d27c67bd02a40388f3df6cc1cc30",
+      "bytes": 907
+    },
+    {
+      "path": "sub-15/ses-03/eeg/sub-15_ses-03_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "84c7dcb8ce51b5e3fec21c34cdf3ab85a13d28df",
+      "bytes": 909
+    },
+    {
+      "path": "sub-15/ses-03/eeg/sub-15_ses-03_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "0924d4fa02e86089b89cba51d81be9dd088a571e",
+      "bytes": 904
+    },
+    {
+      "path": "sub-15/ses-03/eeg/sub-15_ses-03_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "8e1db242dbf2d1b06a71aed65518ecb44dc37ef9",
+      "bytes": 906
+    },
+    {
+      "path": "sub-15/ses-04/eeg/sub-15_ses-04_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "a3e11dd1c271ec2d7236138864a42503b4003226",
+      "bytes": 907
+    },
+    {
+      "path": "sub-15/ses-04/eeg/sub-15_ses-04_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "fafe18ee2ad09509e6a8d1576951bc1bcd0ad8aa",
+      "bytes": 906
+    },
+    {
+      "path": "sub-15/ses-04/eeg/sub-15_ses-04_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "a496c0def242edcacfbad73af1524268d2ad9620",
+      "bytes": 906
+    },
+    {
+      "path": "sub-15/ses-04/eeg/sub-15_ses-04_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "631f5cd4cbd4f7921f2f3576ba63b2bd3a6b5dcf",
+      "bytes": 906
+    },
+    {
+      "path": "sub-15/ses-04/eeg/sub-15_ses-04_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "5d7431dc8a5ec310d91186d64e7317d67d12848e",
+      "bytes": 911
+    },
+    {
+      "path": "sub-15/ses-04/eeg/sub-15_ses-04_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "361c72857afe4129b0e46300727bd0d8db9ce989",
+      "bytes": 904
+    },
+    {
+      "path": "sub-16/ses-01/eeg/sub-16_ses-01_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "c9895dbdd393cf6a14f9e09dd2e905dc35bb36fa",
+      "bytes": 907
+    },
+    {
+      "path": "sub-16/ses-01/eeg/sub-16_ses-01_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "8aaad9774c5c10e03dd033991f3209c790020834",
+      "bytes": 906
+    },
+    {
+      "path": "sub-16/ses-01/eeg/sub-16_ses-01_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "264886a57887fa4f76ab79abd194eba5800ac04b",
+      "bytes": 905
+    },
+    {
+      "path": "sub-16/ses-01/eeg/sub-16_ses-01_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "ddb9f93b422195a25ebd168861e431213733dd5a",
+      "bytes": 905
+    },
+    {
+      "path": "sub-16/ses-01/eeg/sub-16_ses-01_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "0ca16d58bafeeba9976e96598616077c954911af",
+      "bytes": 910
+    },
+    {
+      "path": "sub-16/ses-01/eeg/sub-16_ses-01_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "f5ad91e3ceec74935229288c986fcd55b3c11eaf",
+      "bytes": 904
+    },
+    {
+      "path": "sub-16/ses-02/eeg/sub-16_ses-02_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "166eb62c6a446706a92a719a2cec5a46a3354543",
+      "bytes": 905
+    },
+    {
+      "path": "sub-16/ses-02/eeg/sub-16_ses-02_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "186e87b5b94b5f64f1357e31837716b4d41b34b6",
+      "bytes": 907
+    },
+    {
+      "path": "sub-16/ses-02/eeg/sub-16_ses-02_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "639ea03ea168e74fbdfd1775e1cb3bec889049d0",
+      "bytes": 911
+    },
+    {
+      "path": "sub-16/ses-02/eeg/sub-16_ses-02_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "1c315db382770cec99d46a9d57e40b02f0024a01",
+      "bytes": 909
+    },
+    {
+      "path": "sub-16/ses-02/eeg/sub-16_ses-02_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "73b2aae97e94f6e061111c68f0a31fac190d7e6f",
+      "bytes": 907
+    },
+    {
+      "path": "sub-16/ses-02/eeg/sub-16_ses-02_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "162b8e8237a1428fdd53b6aba746b5bd4bcd495a",
+      "bytes": 901
+    },
+    {
+      "path": "sub-16/ses-03/eeg/sub-16_ses-03_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "1d8b22e1f10355d7f38b4052c12d9d33163ae886",
+      "bytes": 905
+    },
+    {
+      "path": "sub-16/ses-03/eeg/sub-16_ses-03_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "b6192f0ce0a9aa6b969456ac2a3d7a65740cbfc2",
+      "bytes": 904
+    },
+    {
+      "path": "sub-16/ses-03/eeg/sub-16_ses-03_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "83edef7a6796d260fe58aed5d621a7312890dc50",
+      "bytes": 906
+    },
+    {
+      "path": "sub-16/ses-03/eeg/sub-16_ses-03_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "d85d37ed64285ea35bbca4977366e4f216dd9e6f",
+      "bytes": 903
+    },
+    {
+      "path": "sub-16/ses-03/eeg/sub-16_ses-03_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "5c74f00a7717f1c0ebcad0d8e6a3aab13ee31178",
+      "bytes": 912
+    },
+    {
+      "path": "sub-16/ses-03/eeg/sub-16_ses-03_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "6fe63adea38cd12f650c6deed6c47db97678825c",
+      "bytes": 913
+    },
+    {
+      "path": "sub-16/ses-04/eeg/sub-16_ses-04_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "fb6e268a4de6321b6c601bb483afd7ce6ed789f1",
+      "bytes": 902
+    },
+    {
+      "path": "sub-16/ses-04/eeg/sub-16_ses-04_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "75a24bd05b5a50857bcdb2d5f761495b500d5157",
+      "bytes": 909
+    },
+    {
+      "path": "sub-16/ses-04/eeg/sub-16_ses-04_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "000b27a7e99577ed4b70c58554f807360719687d",
+      "bytes": 903
+    },
+    {
+      "path": "sub-16/ses-04/eeg/sub-16_ses-04_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "8ae65bea82a3beb9f25e63643ce04735b7a7e14d",
+      "bytes": 916
+    },
+    {
+      "path": "sub-16/ses-04/eeg/sub-16_ses-04_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "18dcd7e79c71575936199c2371c9bf41b51d04b6",
+      "bytes": 906
+    },
+    {
+      "path": "sub-16/ses-04/eeg/sub-16_ses-04_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "b1a47c2b5b8feb6df2b4c5df89e4c73912b0418f",
+      "bytes": 907
+    },
+    {
+      "path": "sub-17/ses-01/eeg/sub-17_ses-01_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "d1df0c801911aae48b8ca5adc12cc273666e3b64",
+      "bytes": 853
+    },
+    {
+      "path": "sub-17/ses-01/eeg/sub-17_ses-01_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "6d29e4c72b917cedfaf93c9b5c46ff70e633d859",
+      "bytes": 852
+    },
+    {
+      "path": "sub-17/ses-01/eeg/sub-17_ses-01_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "2ddbe14264cf8ec49a84117cddd3fe7fc7107034",
+      "bytes": 849
+    },
+    {
+      "path": "sub-17/ses-01/eeg/sub-17_ses-01_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "2bf47ae615e9fecffb20a2af520f4de6f240fba1",
+      "bytes": 853
+    },
+    {
+      "path": "sub-17/ses-01/eeg/sub-17_ses-01_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "c4e7494d7bfbf57cb465bf671a897414c397757f",
+      "bytes": 850
+    },
+    {
+      "path": "sub-17/ses-01/eeg/sub-17_ses-01_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "e1ccaa4dd5170c4b2f0d9d03e76fd0f39d2242c1",
+      "bytes": 855
+    },
+    {
+      "path": "sub-17/ses-02/eeg/sub-17_ses-02_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "7d580b790e47187d37c0971afb259027a8bd58e5",
+      "bytes": 857
+    },
+    {
+      "path": "sub-17/ses-02/eeg/sub-17_ses-02_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "fc43ac3f791fab4996d7fef68fd770d97f88eb9b",
+      "bytes": 856
+    },
+    {
+      "path": "sub-17/ses-02/eeg/sub-17_ses-02_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "efec231868f8de6863aeac9a7e3961414d24b5e4",
+      "bytes": 852
+    },
+    {
+      "path": "sub-17/ses-02/eeg/sub-17_ses-02_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "00447b2dc634b0786c9afc4be58df5f06c286d2a",
+      "bytes": 826
+    },
+    {
+      "path": "sub-17/ses-02/eeg/sub-17_ses-02_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "cbffb0068924549776bcabc47157442fbdbbc2fe",
+      "bytes": 851
+    },
+    {
+      "path": "sub-17/ses-02/eeg/sub-17_ses-02_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "e5c761af4ac10060fc1256639ff790effeda069f",
+      "bytes": 852
+    },
+    {
+      "path": "sub-17/ses-03/eeg/sub-17_ses-03_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "1ae51e0f39e73c1cc99fd39268982432c2f244b6",
+      "bytes": 848
+    },
+    {
+      "path": "sub-17/ses-03/eeg/sub-17_ses-03_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "6715510a2d9ad54f0412e6b58587ef1457fdc3c4",
+      "bytes": 854
+    },
+    {
+      "path": "sub-17/ses-03/eeg/sub-17_ses-03_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "2ba7a609b2c70e5b9fda3a5d92ecc144a5d92c12",
+      "bytes": 853
+    },
+    {
+      "path": "sub-17/ses-03/eeg/sub-17_ses-03_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "bc3a3d11ccc1787965c2e5ce90cabca6c1396b9b",
+      "bytes": 850
+    },
+    {
+      "path": "sub-17/ses-03/eeg/sub-17_ses-03_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "fb6d75bdfb2670a65279fa106a098661baf3dd6d",
+      "bytes": 848
+    },
+    {
+      "path": "sub-17/ses-03/eeg/sub-17_ses-03_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "75dcf8347d5c4ed46e6f22640a8088376e1c611b",
+      "bytes": 851
+    },
+    {
+      "path": "sub-17/ses-04/eeg/sub-17_ses-04_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "f756bae8070cddc0aa6d27c02be4a066c62d812b",
+      "bytes": 852
+    },
+    {
+      "path": "sub-17/ses-04/eeg/sub-17_ses-04_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "0f43b2a64655aa5d29748ca077a1cb167b5b0ed3",
+      "bytes": 824
+    },
+    {
+      "path": "sub-17/ses-04/eeg/sub-17_ses-04_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "c9c323dcd628413c865b98fb35bc5e02a070beb8",
+      "bytes": 847
+    },
+    {
+      "path": "sub-17/ses-04/eeg/sub-17_ses-04_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "1b99a98aaac4418c89c25d4463d5f8791fdbb6e6",
+      "bytes": 856
+    },
+    {
+      "path": "sub-17/ses-04/eeg/sub-17_ses-04_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "c1a41af2f338e6d2e8bbfdd47edfc8f4e32abe60",
+      "bytes": 852
+    },
+    {
+      "path": "sub-17/ses-04/eeg/sub-17_ses-04_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "ec90ecc8934525566dfef4b09526cb021e5e860d",
+      "bytes": 819
+    },
+    {
+      "path": "sub-18/ses-01/eeg/sub-18_ses-01_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "9fb46eb501b5315a8e9d99a6ea567d5a0c69e226",
+      "bytes": 910
+    },
+    {
+      "path": "sub-18/ses-01/eeg/sub-18_ses-01_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "3f3a4c63ab229c80bf37f8f29d130f58c81e64e5",
+      "bytes": 910
+    },
+    {
+      "path": "sub-18/ses-01/eeg/sub-18_ses-01_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "ad8f4170d2d2a8fea9c7bc6569b95d265157f075",
+      "bytes": 906
+    },
+    {
+      "path": "sub-18/ses-01/eeg/sub-18_ses-01_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "8f53844e58f99ba17bc93216c513521a1d8be3ad",
+      "bytes": 909
+    },
+    {
+      "path": "sub-18/ses-01/eeg/sub-18_ses-01_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "a258728822ed2494963946f995a4e57e48e835cf",
+      "bytes": 909
+    },
+    {
+      "path": "sub-18/ses-01/eeg/sub-18_ses-01_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "7f1a87793bdedb67a74c23b5f8c3cd8e3fcf939a",
+      "bytes": 905
+    },
+    {
+      "path": "sub-18/ses-02/eeg/sub-18_ses-02_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "7bc18d07824070c8db1114dfc81049202ced6725",
+      "bytes": 911
+    },
+    {
+      "path": "sub-18/ses-02/eeg/sub-18_ses-02_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "8e8bd21657331d999d07b33ad538cd78b387b2e9",
+      "bytes": 907
+    },
+    {
+      "path": "sub-18/ses-02/eeg/sub-18_ses-02_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "5bd7715aa9325d2249c64f4b9947de8fcbed89ee",
+      "bytes": 919
+    },
+    {
+      "path": "sub-18/ses-02/eeg/sub-18_ses-02_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "533fba3fadf19b88903c696452e565597644634a",
+      "bytes": 908
+    },
+    {
+      "path": "sub-18/ses-02/eeg/sub-18_ses-02_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "8070efbb395afdbe45a386c08de546e99ac2b1bb",
+      "bytes": 909
+    },
+    {
+      "path": "sub-18/ses-02/eeg/sub-18_ses-02_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "338e5f978e5fbfb0147f7387803ce649e93bf492",
+      "bytes": 908
+    },
+    {
+      "path": "sub-18/ses-03/eeg/sub-18_ses-03_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "6fe1241095b98479531d050d7fe2750aee90b4b5",
+      "bytes": 910
+    },
+    {
+      "path": "sub-18/ses-03/eeg/sub-18_ses-03_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "182db08bbf929580081a80eed96303f81f2afae2",
+      "bytes": 904
+    },
+    {
+      "path": "sub-18/ses-03/eeg/sub-18_ses-03_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "77c5273008e4f57ff051efc41e8f57f206aea23f",
+      "bytes": 914
+    },
+    {
+      "path": "sub-18/ses-03/eeg/sub-18_ses-03_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "f9ec3e557456dc9d20515614d65e225eaeda6db8",
+      "bytes": 910
+    },
+    {
+      "path": "sub-18/ses-03/eeg/sub-18_ses-03_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "45faae448f1bbc8122562e0c1fb870807f7ff879",
+      "bytes": 905
+    },
+    {
+      "path": "sub-18/ses-03/eeg/sub-18_ses-03_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "d77164fc997ef1c28859e488e273fd7bc5fa11ae",
+      "bytes": 902
+    },
+    {
+      "path": "sub-18/ses-04/eeg/sub-18_ses-04_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "d5f7eb7a454822bc3019f53be375a7cbe2df039b",
+      "bytes": 905
+    },
+    {
+      "path": "sub-18/ses-04/eeg/sub-18_ses-04_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "1ff38f818c41a8900793b8b420e5ad093df6e9b6",
+      "bytes": 901
+    },
+    {
+      "path": "sub-18/ses-04/eeg/sub-18_ses-04_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "21330899211680a89ec20e7f4987982553438b20",
+      "bytes": 906
+    },
+    {
+      "path": "sub-18/ses-04/eeg/sub-18_ses-04_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "e6918e28ed72e82b11c2b6ebbb9b878b00984586",
+      "bytes": 904
+    },
+    {
+      "path": "sub-18/ses-04/eeg/sub-18_ses-04_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "4c285c9f55d7bc009c4677a609f927ad79d649c3",
+      "bytes": 908
+    },
+    {
+      "path": "sub-18/ses-04/eeg/sub-18_ses-04_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "2f8af1a2c832073ca1ac3a47d88ab7ded18586e4",
+      "bytes": 907
+    },
+    {
+      "path": "sub-19/ses-01/eeg/sub-19_ses-01_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "bd55346dd3edf570cdb5a4798e968e2437dc678a",
+      "bytes": 908
+    },
+    {
+      "path": "sub-19/ses-01/eeg/sub-19_ses-01_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "966c666ea594fae56579baf266c0ca63f923a0a0",
+      "bytes": 907
+    },
+    {
+      "path": "sub-19/ses-01/eeg/sub-19_ses-01_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "9844efa9f52f7e1bc480ced48dd9f95f2f7de23f",
+      "bytes": 905
+    },
+    {
+      "path": "sub-19/ses-01/eeg/sub-19_ses-01_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "46e84f3b53670b4580d8732f2396509f2c112558",
+      "bytes": 905
+    },
+    {
+      "path": "sub-19/ses-01/eeg/sub-19_ses-01_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "9d101c5e749208897aefde10010c46780e36a093",
+      "bytes": 910
+    },
+    {
+      "path": "sub-19/ses-01/eeg/sub-19_ses-01_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "f39450868108f474befbecb0d41d5e480b5e3ac9",
+      "bytes": 910
+    },
+    {
+      "path": "sub-19/ses-02/eeg/sub-19_ses-02_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "d8cd1a15ad1ee3feeb8bba44b6fc2612122a7e2a",
+      "bytes": 906
+    },
+    {
+      "path": "sub-19/ses-02/eeg/sub-19_ses-02_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "fad2b3e2f96ba69c45430bc76d1b460910c64721",
+      "bytes": 907
+    },
+    {
+      "path": "sub-19/ses-02/eeg/sub-19_ses-02_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "6480756684e4f90144247d60c9942791af7c2097",
+      "bytes": 906
+    },
+    {
+      "path": "sub-19/ses-02/eeg/sub-19_ses-02_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "2d1784c17a74da31fb4ae900e8e58681192a0d83",
+      "bytes": 910
+    },
+    {
+      "path": "sub-19/ses-02/eeg/sub-19_ses-02_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "6074ef3b83dffeb27fd4445f29898d96e29e5eec",
+      "bytes": 910
+    },
+    {
+      "path": "sub-19/ses-02/eeg/sub-19_ses-02_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "b715792fb77cf230bf8666f20d678be1002e8894",
+      "bytes": 911
+    },
+    {
+      "path": "sub-19/ses-03/eeg/sub-19_ses-03_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "901890e65d5d6d1503bc9b6659c535353b0e6b32",
+      "bytes": 851
+    },
+    {
+      "path": "sub-19/ses-03/eeg/sub-19_ses-03_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "0bc45eb8ca34ddce5fab4cf1c65494de745b8d91",
+      "bytes": 903
+    },
+    {
+      "path": "sub-19/ses-03/eeg/sub-19_ses-03_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "3a81d9a55915d77f3fea5bf44847f35b4afbc456",
+      "bytes": 908
+    },
+    {
+      "path": "sub-19/ses-03/eeg/sub-19_ses-03_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "dac434faf0bbf4b8a885491dfe4307e4c9f5777a",
+      "bytes": 907
+    },
+    {
+      "path": "sub-19/ses-03/eeg/sub-19_ses-03_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "6dee637208b7669612d88a6d5f94a36091790616",
+      "bytes": 911
+    },
+    {
+      "path": "sub-19/ses-03/eeg/sub-19_ses-03_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "d1d7df10f8d96f06a38ac44ae52246f31c618899",
+      "bytes": 908
+    },
+    {
+      "path": "sub-19/ses-04/eeg/sub-19_ses-04_task-imagery_run-01_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "6a9094d9fa7dde6964eb78c70edc1a4e58ab37ea",
+      "bytes": 911
+    },
+    {
+      "path": "sub-19/ses-04/eeg/sub-19_ses-04_task-imagery_run-02_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "5c4bd3b66fed1723c2ebbaba3ebf751daa6e7b29",
+      "bytes": 909
+    },
+    {
+      "path": "sub-19/ses-04/eeg/sub-19_ses-04_task-imagery_run-03_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "3cc5c11f14ac6ac4f49d80c42fbdcec739a28c24",
+      "bytes": 911
+    },
+    {
+      "path": "sub-19/ses-04/eeg/sub-19_ses-04_task-imagery_run-04_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "c6c30d766509c34fde262d7d19b817deeadd12b3",
+      "bytes": 902
+    },
+    {
+      "path": "sub-19/ses-04/eeg/sub-19_ses-04_task-imagery_run-05_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "41cd9f2a0175528f29afbfc9a5eec005d12d9b87",
+      "bytes": 903
+    },
+    {
+      "path": "sub-19/ses-04/eeg/sub-19_ses-04_task-imagery_run-06_events.tsv",
+      "algorithm": "git",
+      "declared_and_actual_checksum": "0f06f34f6ef30f76fa76dc1cf1f42c2837547582",
+      "bytes": 862
+    }
+  ],
+  "next_attempt_runtime_log": "research_logs/netbci_cohort_all19_20261010/runtime/numeric_signal_identity_v2_run02.log"
+}

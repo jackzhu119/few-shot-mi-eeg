@@ -1,0 +1,115 @@
+{
+  "status": "source_review_ready_not_yet_new_signal_or_results_validated",
+  "reviewed_at_utc": "2026-10-11T06:44:45.226891+00:00",
+  "scientific_parameters_changed": false,
+  "configuration_differences": {
+    "bundle_root": {
+      "first10": "data/netbci2026/cohort_full_windows_v1.0.0",
+      "all19": "data/netbci2026/cohort_all19_v1.0.0"
+    },
+    "expansion_timing": {
+      "first10": null,
+      "all19": "after first10 numerical summary; no retuning of scientific parameters; duplicates audited before interpretation"
+    },
+    "neural_behavior_association": {
+      "first10": "exploratory_subject_level_first_last_changes_not_trial_pseudoreplication",
+      "all19": "exploratory_changes; separate first10 estimator plan remains historical"
+    },
+    "output_root": {
+      "first10": "research_logs/netbci_cohort_resume_20261010/audits_full_windows",
+      "all19": "research_logs/netbci_cohort_all19_20261010/audits"
+    },
+    "selection": {
+      "first10": "first_ten_published_subject_IDs_no_selection_on_behavior_or_EEG_results",
+      "all19": "all_19_published_subject_IDs_no_outcome_selection"
+    },
+    "status": {
+      "first10": "exploratory_cohort_with_post_observation_full_window_eligibility",
+      "all19": "exploratory_all19_expansion_after_first10_results_and_derivative_duplicate_audit"
+    },
+    "subjects": {
+      "first10": [
+        "sub-1",
+        "sub-2",
+        "sub-3",
+        "sub-4",
+        "sub-5",
+        "sub-6",
+        "sub-7",
+        "sub-8",
+        "sub-9",
+        "sub-10"
+      ],
+      "all19": [
+        "sub-1",
+        "sub-2",
+        "sub-3",
+        "sub-4",
+        "sub-5",
+        "sub-6",
+        "sub-7",
+        "sub-8",
+        "sub-9",
+        "sub-10",
+        "sub-11",
+        "sub-12",
+        "sub-13",
+        "sub-14",
+        "sub-15",
+        "sub-16",
+        "sub-17",
+        "sub-18",
+        "sub-19"
+      ]
+    }
+  },
+  "expected_participant_IDs": [
+    "sub-1",
+    "sub-2",
+    "sub-3",
+    "sub-4",
+    "sub-5",
+    "sub-6",
+    "sub-7",
+    "sub-8",
+    "sub-9",
+    "sub-10",
+    "sub-11",
+    "sub-12",
+    "sub-13",
+    "sub-14",
+    "sub-15",
+    "sub-16",
+    "sub-17",
+    "sub-18",
+    "sub-19"
+  ],
+  "planned_continuous_runs": 456,
+  "auditor_independent_of_production_helpers": true,
+  "raw_numeric_audit_gate": "Wait for all19 source audits and no concurrent tensor job; complete exact raw identity ledger before any expanded model fitting",
+  "output_review_gate": "Read verified 19 analysis receipts/summary and optional sensitivity only when notified; no new outcome review claimed",
+  "required_output_checks": [
+    "official and subject manifest SHA for every EDF and TSV",
+    "actual original header SHA/mapping; no unsupported original-signal claim",
+    "ordered EDF annotations vs TSV including shortened event",
+    "all source event identities and numerical windows",
+    "dynamic cross-subject affected continuous/task-window union and same-session flags",
+    "complete configured participant/session behavior join",
+    "saved query identities, class counts, confusion, BA, run CIs and constant cases",
+    "equal-run primary and QC/reference spectral arithmetic",
+    "matched cell shortages retained; configured counts not relaxed",
+    "participant and paired-delta bootstrap CIs; no trial pseudoreplication",
+    "dynamic exact-copy sensitivity, retained n/missing cases/degenerate draws",
+    "source/model/config/output receipts and hashes"
+  ],
+  "ruff_status": "passed_all_four_independent_sources",
+  "inputs": {
+    "configs/netbci_cohort_full_windows_20261010.json": "2bead8bccd0396e0358bb8167324621e80d48087ba011a334224f73962d10904",
+    "configs/netbci_cohort_all19_20261010.json": "d3de923978079cff7199c294f704a0282d3df589899df1a7f44578a5aabd2bf5",
+    "docs/netbci_all19_expansion_protocol_20261010.md": "5b82515177403cf4185740ff240cedbf82f76539c88456f365fea11a15223e6a",
+    "research_logs/netbci_cohort_all19_20261010/audit_numeric_signal_identity_v2.py": "f42a23efa1e84ca561c1193372a5cf912cca58dabf9eafc29c56e2ee46442d72",
+    "research_logs/netbci_cohort_all19_20261010/summarize_numeric_identity_v2.py": "0b0e937b02d2ad4ad63c5d461fc8ab12de1c1e2441adab1228d6dd48c2b57886",
+    "research_logs/netbci_cohort_all19_20261010/independent_review_source_v2.py": "c2b8453f306bc1f560138ec0718e729212f310ca7b4db8f4d05457750fea430f",
+    "research_logs/netbci_cohort_all19_20261010/independent_sensitivity_review_v2.py": "5ed8b6f5b30399bb48be4020d6038cfdc3e01c98a7649020e901b6b037e2a4bc"
+  }
+}

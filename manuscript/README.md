@@ -1,6 +1,13 @@
 # Manuscript working materials
 
-The latest [ten-ID cohort addendum](cohort_addendum_20261010.md) reports completed computations,
+The latest [19-ID addendum](all19_addendum_20261011.md) reports 76 verified session joins,
+456 derivative recordings and frozen CSP/LDA analyses. Exact cross-identity copies affect
+five published IDs; a separately named source-driven sensitivity retains fourteen IDs.
+Neither the original nineteen-ID arithmetic nor absence of exact copies proves biological
+independence. New public resources are accepted separately by source, task and population;
+ingestion does not establish model training or human skill retention.
+
+The historical [ten-ID cohort addendum](cohort_addendum_20261010.md) reports completed computations,
 the exact cross-identity signal duplication involving sub-1/sub-7, and a separately named
 eight-ID source-driven sensitivity. The original ten-ID EEG intervals cannot be interpreted
 as independent-participant evidence. The single-participant manuscript below is a historical

@@ -1,0 +1,1156 @@
+{
+  "status": "actual_audited_published_ID_cohort_exploratory",
+  "synthetic": false,
+  "subjects": [
+    "sub-1",
+    "sub-2",
+    "sub-3",
+    "sub-4",
+    "sub-5",
+    "sub-6",
+    "sub-7",
+    "sub-8",
+    "sub-9",
+    "sub-10",
+    "sub-11",
+    "sub-12",
+    "sub-13",
+    "sub-14",
+    "sub-15",
+    "sub-16",
+    "sub-17",
+    "sub-18",
+    "sub-19"
+  ],
+  "subject_map": {
+    "sub-1": "sub-01",
+    "sub-2": "sub-02",
+    "sub-3": "sub-03",
+    "sub-4": "sub-04",
+    "sub-5": "sub-05",
+    "sub-6": "sub-06",
+    "sub-7": "sub-07",
+    "sub-8": "sub-08",
+    "sub-9": "sub-09",
+    "sub-10": "sub-10",
+    "sub-11": "sub-11",
+    "sub-12": "sub-12",
+    "sub-13": "sub-13",
+    "sub-14": "sub-14",
+    "sub-15": "sub-15",
+    "sub-16": "sub-16",
+    "sub-17": "sub-17",
+    "sub-18": "sub-18",
+    "sub-19": "sub-19"
+  },
+  "participants": 19,
+  "published_identities": 19,
+  "participants_field_is_published_ID_count": true,
+  "independent_biological_participant_count": "unverified_requires_separate_source_identity_audit",
+  "sessions": 76,
+  "runs": 456,
+  "trials": 14429,
+  "source_events": 14431,
+  "excluded_source_events_n": 2,
+  "excluded_source_events": [
+    {
+      "subject": "sub-3",
+      "session": "01",
+      "run": "03",
+      "trial_id": "sub-3/ses-01/run-03/tsv-row-31",
+      "tsv_row": "31",
+      "label": "rest",
+      "stored_event_value": "1",
+      "onset_s": "224.032",
+      "duration_s": "2.968",
+      "start_sample": "56008",
+      "stop_sample_exclusive": "56750",
+      "source_file": "sub-3/ses-01/eeg/sub-3_ses-01_task-imagery_run-03_eeg.edf",
+      "source_length_samples": "742",
+      "fixed_window_eligible": "False",
+      "exclusion_reason": "source_event_duration_does_not_match_fixed_window",
+      "original_subject": "sub-03",
+      "signal_unit": "V",
+      "onset_unit": "s",
+      "duration_unit": "s",
+      "sample_origin": "0",
+      "original_header_file": "sub-03/ses-01/eeg/sub-03_ses-01_task-MotorImageryRest_run-03_eeg.vhdr",
+      "declared_original_header_sha256": "d229a07e3367e44bb46d35d8ff2abc4e8a8302c61fc532ebdb1b7ece06cfb8e6",
+      "original_header_hash_verified": "True",
+      "behavior_trial_outcome": "unresolved",
+      "behavior_score_denominator": "unresolved"
+    },
+    {
+      "subject": "sub-12",
+      "session": "02",
+      "run": "02",
+      "trial_id": "sub-12/ses-02/run-02/tsv-row-32",
+      "tsv_row": "32",
+      "label": "right_hand",
+      "stored_event_value": "2",
+      "onset_s": "235.024",
+      "duration_s": "4.976",
+      "start_sample": "58756",
+      "stop_sample_exclusive": "60000",
+      "source_file": "sub-12/ses-02/eeg/sub-12_ses-02_task-imagery_run-02_eeg.edf",
+      "source_length_samples": "1244",
+      "fixed_window_eligible": "False",
+      "exclusion_reason": "source_event_duration_does_not_match_fixed_window",
+      "original_subject": "sub-12",
+      "signal_unit": "V",
+      "onset_unit": "s",
+      "duration_unit": "s",
+      "sample_origin": "0",
+      "original_header_file": "sub-12/ses-02/eeg/sub-12_ses-02_task-MotorImageryRest_run-02_eeg.vhdr",
+      "declared_original_header_sha256": "987020677d917fc5d2f10bb9582d8309a705458e9bb2a9a561dcfc558991e090",
+      "original_header_hash_verified": "True",
+      "behavior_trial_outcome": "unresolved",
+      "behavior_score_denominator": "unresolved"
+    }
+  ],
+  "source_class_counts": {
+    "rest": 7207,
+    "right_hand": 7224
+  },
+  "class_counts": {
+    "rest": 7206,
+    "right_hand": 7223
+  },
+  "qc_flags_retained_in_primary": 456,
+  "constant_prediction_sessions_by_session": {
+    "02": 5,
+    "03": 7,
+    "04": 9
+  },
+  "constant_prediction_participants": [
+    "sub-1",
+    "sub-2",
+    "sub-4",
+    "sub-5",
+    "sub-7",
+    "sub-13",
+    "sub-14",
+    "sub-16",
+    "sub-17",
+    "sub-19"
+  ],
+  "unavailable_decoder_sessions": [],
+  "scientific_failures": [
+    {
+      "scope": "CSP_LDA_query",
+      "session": "02",
+      "type": "constant_prediction",
+      "label": "rest",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-1"
+    },
+    {
+      "scope": "CSP_LDA_query",
+      "session": "03",
+      "type": "constant_prediction",
+      "label": "rest",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-1"
+    },
+    {
+      "scope": "CSP_LDA_query",
+      "session": "04",
+      "type": "constant_prediction",
+      "label": "rest",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-1"
+    },
+    {
+      "scope": "CSP_LDA_query",
+      "session": "03",
+      "type": "constant_prediction",
+      "label": "rest",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-2"
+    },
+    {
+      "scope": "CSP_LDA_query",
+      "session": "04",
+      "type": "constant_prediction",
+      "label": "rest",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-4"
+    },
+    {
+      "scope": "CSP_LDA_query",
+      "session": "04",
+      "type": "constant_prediction",
+      "label": "right_hand",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-5"
+    },
+    {
+      "scope": "CSP_LDA_query",
+      "session": "04",
+      "type": "constant_prediction",
+      "label": "rest",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-7"
+    },
+    {
+      "scope": "matched_geometry",
+      "variant": "qc_common_four_runs",
+      "status": "unavailable",
+      "runs": [
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "error": "Insufficient preset matched cells: [{\"session\": \"01\", \"run\": \"05\", \"label\": \"rest\", \"n_available\": 11, \"n_required\": 12}, {\"session\": \"01\", \"run\": \"06\", \"label\": \"rest\", \"n_available\": 8, \"n_required\": 12}]",
+      "preset_not_relaxed": true,
+      "subject": "sub-8"
+    },
+    {
+      "scope": "matched_geometry",
+      "variant": "qc_common_four_runs",
+      "status": "unavailable",
+      "runs": [
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "error": "Insufficient preset matched cells: [{\"session\": \"02\", \"run\": \"06\", \"label\": \"rest\", \"n_available\": 11, \"n_required\": 12}]",
+      "preset_not_relaxed": true,
+      "subject": "sub-11"
+    },
+    {
+      "scope": "CSP_LDA_query",
+      "session": "02",
+      "type": "constant_prediction",
+      "label": "right_hand",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-13"
+    },
+    {
+      "scope": "CSP_LDA_query",
+      "session": "03",
+      "type": "constant_prediction",
+      "label": "right_hand",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-13"
+    },
+    {
+      "scope": "CSP_LDA_query",
+      "session": "04",
+      "type": "constant_prediction",
+      "label": "right_hand",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-13"
+    },
+    {
+      "scope": "matched_geometry",
+      "variant": "qc_common_four_runs",
+      "status": "unavailable",
+      "runs": [
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "error": "Insufficient preset matched cells: [{\"session\": \"04\", \"run\": \"04\", \"label\": \"rest\", \"n_available\": 2, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"04\", \"label\": \"right_hand\", \"n_available\": 3, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"05\", \"label\": \"rest\", \"n_available\": 3, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"05\", \"label\": \"right_hand\", \"n_available\": 5, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"06\", \"label\": \"rest\", \"n_available\": 1, \"n_required\": 12}]",
+      "preset_not_relaxed": true,
+      "subject": "sub-13"
+    },
+    {
+      "scope": "CSP_LDA_query",
+      "session": "03",
+      "type": "constant_prediction",
+      "label": "rest",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-14"
+    },
+    {
+      "scope": "CSP_LDA_query",
+      "session": "04",
+      "type": "constant_prediction",
+      "label": "rest",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-14"
+    },
+    {
+      "scope": "matched_geometry",
+      "variant": "qc_common_four_runs",
+      "status": "unavailable",
+      "runs": [
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "error": "Insufficient preset matched cells: [{\"session\": \"02\", \"run\": \"04\", \"label\": \"rest\", \"n_available\": 11, \"n_required\": 12}, {\"session\": \"02\", \"run\": \"05\", \"label\": \"rest\", \"n_available\": 11, \"n_required\": 12}, {\"session\": \"02\", \"run\": \"06\", \"label\": \"rest\", \"n_available\": 1, \"n_required\": 12}, {\"session\": \"02\", \"run\": \"06\", \"label\": \"right_hand\", \"n_available\": 8, \"n_required\": 12}]",
+      "preset_not_relaxed": true,
+      "subject": "sub-14"
+    },
+    {
+      "scope": "CSP_LDA_query",
+      "session": "02",
+      "type": "constant_prediction",
+      "label": "rest",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-16"
+    },
+    {
+      "scope": "CSP_LDA_query",
+      "session": "03",
+      "type": "constant_prediction",
+      "label": "rest",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-16"
+    },
+    {
+      "scope": "CSP_LDA_query",
+      "session": "04",
+      "type": "constant_prediction",
+      "label": "rest",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-16"
+    },
+    {
+      "scope": "CSP_LDA_query",
+      "session": "02",
+      "type": "constant_prediction",
+      "label": "rest",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-17"
+    },
+    {
+      "scope": "CSP_LDA_query",
+      "session": "03",
+      "type": "constant_prediction",
+      "label": "rest",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-17"
+    },
+    {
+      "scope": "CSP_LDA_query",
+      "session": "04",
+      "type": "constant_prediction",
+      "label": "rest",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-17"
+    },
+    {
+      "scope": "CSP_LDA_query",
+      "session": "02",
+      "type": "constant_prediction",
+      "label": "right_hand",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-19"
+    },
+    {
+      "scope": "CSP_LDA_query",
+      "session": "03",
+      "type": "constant_prediction",
+      "label": "right_hand",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-19"
+    },
+    {
+      "scope": "CSP_LDA_query",
+      "session": "04",
+      "type": "constant_prediction",
+      "label": "right_hand",
+      "interpretation": "retained classifier failure, not human skill loss",
+      "subject": "sub-19"
+    },
+    {
+      "scope": "matched_geometry",
+      "variant": "qc_common_four_runs",
+      "status": "unavailable",
+      "runs": [
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "error": "Insufficient preset matched cells: [{\"session\": \"02\", \"run\": \"03\", \"label\": \"rest\", \"n_available\": 2, \"n_required\": 12}, {\"session\": \"02\", \"run\": \"03\", \"label\": \"right_hand\", \"n_available\": 5, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"03\", \"label\": \"rest\", \"n_available\": 7, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"03\", \"label\": \"right_hand\", \"n_available\": 6, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"04\", \"label\": \"rest\", \"n_available\": 4, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"04\", \"label\": \"right_hand\", \"n_available\": 1, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"06\", \"label\": \"rest\", \"n_available\": 8, \"n_required\": 12}]",
+      "preset_not_relaxed": true,
+      "subject": "sub-19"
+    }
+  ],
+  "scientific_failure_records_n": 26,
+  "metric_units": {
+    "mean_run_hit_percent": "percent; changes in percentage points",
+    "CSP_BA_percent": "percent; changes in percentage points",
+    "CSP_conditional_run_CI95_percent": "percent; conditional within-participant run clusters",
+    "spectral_task_contrast": "dB; differences of equal-run mean log10 task-window power",
+    "arithmetic_ROI_power": "microvolt squared (uV2)"
+  },
+  "behavior_dictionary_syntax": "invalid_strict_JSON_preserved: Expecting property name enclosed in double quotes; line 26",
+  "behavior_source_subjects": 19,
+  "behavior_analyzed_EEG_linked_subjects_only": 19,
+  "source_selection": "all_19_published_subject_IDs_no_outcome_selection",
+  "pilot_previously_seen": "sub-1",
+  "behavior_grain": "verified_subject_session_unweighted_mean_of_six_reported_percentages",
+  "score_run_order_denominator_trial_outcomes": "unresolved_no_broadcast",
+  "session_statistics": [
+    {
+      "metric": "mean_run_hit_percent",
+      "session": "01",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": 54.11245614035088,
+      "median": 53.833333333333336,
+      "subject_bootstrap_CI95_low": 50.9266600877193,
+      "subject_bootstrap_CI95_high": 57.67499122807018,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "mean_run_hit_percent",
+      "session": "02",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": 56.744473684210526,
+      "median": 53.833333333333336,
+      "subject_bootstrap_CI95_low": 51.98486184210527,
+      "subject_bootstrap_CI95_high": 62.25498245614035,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "mean_run_hit_percent",
+      "session": "03",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": 62.15052631578948,
+      "median": 58.89000000000001,
+      "subject_bootstrap_CI95_low": 57.2232850877193,
+      "subject_bootstrap_CI95_high": 67.34365131578946,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "mean_run_hit_percent",
+      "session": "04",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": 68.68087719298246,
+      "median": 69.44333333333333,
+      "subject_bootstrap_CI95_low": 63.05704605263158,
+      "subject_bootstrap_CI95_high": 74.28240131578946,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "CSP_BA_percent",
+      "session": "01",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": 63.23402708662647,
+      "median": 60.0,
+      "subject_bootstrap_CI95_low": 55.44566391995004,
+      "subject_bootstrap_CI95_high": 70.68494355326581,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "CSP_BA_percent",
+      "session": "02",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": 60.4162134696407,
+      "median": 57.29166666666667,
+      "subject_bootstrap_CI95_low": 55.037245428291286,
+      "subject_bootstrap_CI95_high": 66.2239001070036,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "CSP_BA_percent",
+      "session": "03",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": 58.99951733400487,
+      "median": 53.645833333333336,
+      "subject_bootstrap_CI95_low": 53.44670278792076,
+      "subject_bootstrap_CI95_high": 65.42587338936454,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "CSP_BA_percent",
+      "session": "04",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": 58.557536934441366,
+      "median": 50.0,
+      "subject_bootstrap_CI95_low": 52.91060710987996,
+      "subject_bootstrap_CI95_high": 64.85757877423822,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "mu_MI_minus_rest_dB",
+      "session": "01",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": -0.3559337427870156,
+      "median": -0.425207522432558,
+      "subject_bootstrap_CI95_low": -0.6843124697877717,
+      "subject_bootstrap_CI95_high": -0.045439977603041706,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "mu_MI_minus_rest_dB",
+      "session": "02",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": -0.4909045680874494,
+      "median": -0.4597466991699406,
+      "subject_bootstrap_CI95_low": -0.8388132974369995,
+      "subject_bootstrap_CI95_high": -0.1559126644518999,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "mu_MI_minus_rest_dB",
+      "session": "03",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": -0.6050610409644905,
+      "median": -0.3829381533484266,
+      "subject_bootstrap_CI95_low": -0.9728261509952447,
+      "subject_bootstrap_CI95_high": -0.2344181022499226,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "mu_MI_minus_rest_dB",
+      "session": "04",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": -0.8814275761503958,
+      "median": -0.8580295901970736,
+      "subject_bootstrap_CI95_low": -1.327381629904594,
+      "subject_bootstrap_CI95_high": -0.4437210849486044,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "beta_MI_minus_rest_dB",
+      "session": "01",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": -0.28956418578491755,
+      "median": -0.4006747950753109,
+      "subject_bootstrap_CI95_low": -0.4791723996731813,
+      "subject_bootstrap_CI95_high": -0.09721357061087009,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "beta_MI_minus_rest_dB",
+      "session": "02",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": -0.33159991041323167,
+      "median": -0.24758466412158953,
+      "subject_bootstrap_CI95_low": -0.5219650120393836,
+      "subject_bootstrap_CI95_high": -0.13194794000214002,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "beta_MI_minus_rest_dB",
+      "session": "03",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": -0.4083060280134809,
+      "median": -0.4242739211986901,
+      "subject_bootstrap_CI95_low": -0.6744618482940439,
+      "subject_bootstrap_CI95_high": -0.11640439533677878,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "beta_MI_minus_rest_dB",
+      "session": "04",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": -0.5500979578069,
+      "median": -0.6021947221824675,
+      "subject_bootstrap_CI95_low": -0.7863278065944481,
+      "subject_bootstrap_CI95_high": -0.2950917433661562,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "mu_rest_power_uV2",
+      "session": "01",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": 5.383878494628601,
+      "median": 3.269130950945003,
+      "subject_bootstrap_CI95_low": 3.5423561654116833,
+      "subject_bootstrap_CI95_high": 7.60520044073034,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "mu_rest_power_uV2",
+      "session": "02",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": 9.542390443889374,
+      "median": 3.99899082137321,
+      "subject_bootstrap_CI95_low": 3.7896779279574266,
+      "subject_bootstrap_CI95_high": 19.761146131154778,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "mu_rest_power_uV2",
+      "session": "03",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": 7.374081870998249,
+      "median": 3.3991241945452573,
+      "subject_bootstrap_CI95_low": 3.1748459859727425,
+      "subject_bootstrap_CI95_high": 14.221810998567332,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "mu_rest_power_uV2",
+      "session": "04",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": 5.586410351987312,
+      "median": 3.333064068428714,
+      "subject_bootstrap_CI95_low": 3.6326516919276064,
+      "subject_bootstrap_CI95_high": 7.9463055103328735,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "mu_MI_power_uV2",
+      "session": "01",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": 4.796584165740438,
+      "median": 2.73547570716457,
+      "subject_bootstrap_CI95_low": 3.1670430787902726,
+      "subject_bootstrap_CI95_high": 6.805723070810421,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "mu_MI_power_uV2",
+      "session": "02",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": 10.601757224352548,
+      "median": 2.9681166545700264,
+      "subject_bootstrap_CI95_low": 3.0180454222867024,
+      "subject_bootstrap_CI95_high": 24.87939909382659,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "mu_MI_power_uV2",
+      "session": "03",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": 6.516911843282871,
+      "median": 2.9237552919369407,
+      "subject_bootstrap_CI95_low": 2.7484742411824956,
+      "subject_bootstrap_CI95_high": 12.73212667859824,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "mu_MI_power_uV2",
+      "session": "04",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": 4.423402679524094,
+      "median": 2.628214047421433,
+      "subject_bootstrap_CI95_low": 2.735438334097119,
+      "subject_bootstrap_CI95_high": 6.537032512782653,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "beta_rest_power_uV2",
+      "session": "01",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": 4.658019246416496,
+      "median": 2.433598131823761,
+      "subject_bootstrap_CI95_low": 2.836102448543899,
+      "subject_bootstrap_CI95_high": 6.868232782062763,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "beta_rest_power_uV2",
+      "session": "02",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": 6.349608294751422,
+      "median": 2.5400260661735756,
+      "subject_bootstrap_CI95_low": 2.7122697065616763,
+      "subject_bootstrap_CI95_high": 12.41476067006096,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "beta_rest_power_uV2",
+      "session": "03",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": 4.437180054415642,
+      "median": 2.2741123401393892,
+      "subject_bootstrap_CI95_low": 2.2633320245831703,
+      "subject_bootstrap_CI95_high": 7.5346722191029665,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "beta_rest_power_uV2",
+      "session": "04",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": 3.220974216718466,
+      "median": 2.509417097236084,
+      "subject_bootstrap_CI95_low": 2.203995274988674,
+      "subject_bootstrap_CI95_high": 4.652571843188717,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "beta_MI_power_uV2",
+      "session": "01",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": 4.354006379395283,
+      "median": 2.2457650475996096,
+      "subject_bootstrap_CI95_low": 2.651069095052472,
+      "subject_bootstrap_CI95_high": 6.447921860016675,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "beta_MI_power_uV2",
+      "session": "02",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": 7.933683512764753,
+      "median": 2.146857908129775,
+      "subject_bootstrap_CI95_low": 2.2963944553202484,
+      "subject_bootstrap_CI95_high": 18.24629644275789,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "beta_MI_power_uV2",
+      "session": "03",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": 4.204817503316392,
+      "median": 1.8394878279696698,
+      "subject_bootstrap_CI95_low": 2.1454204435349857,
+      "subject_bootstrap_CI95_high": 7.22721938668869,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    },
+    {
+      "metric": "beta_MI_power_uV2",
+      "session": "04",
+      "n_requested_subjects": 19,
+      "n_available_subjects": 19,
+      "mean": 2.8056894334984523,
+      "median": 1.8399506486824786,
+      "subject_bootstrap_CI95_low": 1.896734446735007,
+      "subject_bootstrap_CI95_high": 4.076596754929272,
+      "unavailable_subjects": "",
+      "CI_scope": "whole published-identity trajectory resampling; source independence must be verified; not causal"
+    }
+  ],
+  "paired_changes": [
+    {
+      "metric": "mean_run_hit_percent",
+      "contrast": "session04_minus_session01",
+      "n_requested_subjects": 19,
+      "n_paired_subjects": 19,
+      "mean_change": 14.568421052631576,
+      "median_change": 14.998333333333328,
+      "min_change": -6.865000000000002,
+      "max_change": 27.713333333333317,
+      "n_increased": 18,
+      "n_decreased": 1,
+      "n_unchanged": 0,
+      "subject_bootstrap_CI95_low": 10.70628289473684,
+      "subject_bootstrap_CI95_high": 18.266203947368414,
+      "unavailable_subjects": "",
+      "bootstrap_repetitions": 10000,
+      "CI_scope": "paired published identities; source independence must be verified; exploratory observational contrast"
+    },
+    {
+      "metric": "CSP_BA_percent",
+      "contrast": "session04_minus_session01",
+      "n_requested_subjects": 19,
+      "n_paired_subjects": 19,
+      "mean_change": -4.6764901521850994,
+      "median_change": -3.125,
+      "min_change": -39.712643678160916,
+      "max_change": 23.4375,
+      "n_increased": 9,
+      "n_decreased": 10,
+      "n_unchanged": 0,
+      "subject_bootstrap_CI95_low": -11.884144333064233,
+      "subject_bootstrap_CI95_high": 2.3328346532183604,
+      "unavailable_subjects": "",
+      "bootstrap_repetitions": 10000,
+      "CI_scope": "paired published identities; source independence must be verified; exploratory observational contrast"
+    },
+    {
+      "metric": "mu_MI_minus_rest_dB",
+      "contrast": "session04_minus_session01",
+      "n_requested_subjects": 19,
+      "n_paired_subjects": 19,
+      "mean_change": -0.5254938333633802,
+      "median_change": -0.9607939384560282,
+      "min_change": -2.0846162419180025,
+      "max_change": 2.7300002560199133,
+      "n_increased": 6,
+      "n_decreased": 13,
+      "n_unchanged": 0,
+      "subject_bootstrap_CI95_low": -1.0171095953315685,
+      "subject_bootstrap_CI95_high": 0.03825428610574276,
+      "unavailable_subjects": "",
+      "bootstrap_repetitions": 10000,
+      "CI_scope": "paired published identities; source independence must be verified; exploratory observational contrast"
+    },
+    {
+      "metric": "beta_MI_minus_rest_dB",
+      "contrast": "session04_minus_session01",
+      "n_requested_subjects": 19,
+      "n_paired_subjects": 19,
+      "mean_change": -0.26053377202198236,
+      "median_change": -0.4503494743374681,
+      "min_change": -1.3209211965034484,
+      "max_change": 1.1400251304075049,
+      "n_increased": 5,
+      "n_decreased": 14,
+      "n_unchanged": 0,
+      "subject_bootstrap_CI95_low": -0.5622529758557405,
+      "subject_bootstrap_CI95_high": 0.04544506004646369,
+      "unavailable_subjects": "",
+      "bootstrap_repetitions": 10000,
+      "CI_scope": "paired published identities; source independence must be verified; exploratory observational contrast"
+    },
+    {
+      "metric": "mu_rest_power_uV2",
+      "contrast": "session04_minus_session01",
+      "n_requested_subjects": 19,
+      "n_paired_subjects": 19,
+      "mean_change": 0.20253185735870935,
+      "median_change": -0.03233076328520257,
+      "min_change": -7.569601130567277,
+      "max_change": 9.084819128550153,
+      "n_increased": 9,
+      "n_decreased": 10,
+      "n_unchanged": 0,
+      "subject_bootstrap_CI95_low": -1.4179664045562421,
+      "subject_bootstrap_CI95_high": 1.8146402418903977,
+      "unavailable_subjects": "",
+      "bootstrap_repetitions": 10000,
+      "CI_scope": "paired published identities; source independence must be verified; exploratory observational contrast"
+    },
+    {
+      "metric": "mu_MI_power_uV2",
+      "contrast": "session04_minus_session01",
+      "n_requested_subjects": 19,
+      "n_paired_subjects": 19,
+      "mean_change": -0.3731814862163447,
+      "median_change": -0.20253185751518887,
+      "min_change": -7.802630156517367,
+      "max_change": 12.947022935575006,
+      "n_increased": 6,
+      "n_decreased": 13,
+      "n_unchanged": 0,
+      "subject_bootstrap_CI95_low": -1.9998722679133758,
+      "subject_bootstrap_CI95_high": 1.586247489895988,
+      "unavailable_subjects": "",
+      "bootstrap_repetitions": 10000,
+      "CI_scope": "paired published identities; source independence must be verified; exploratory observational contrast"
+    },
+    {
+      "metric": "beta_rest_power_uV2",
+      "contrast": "session04_minus_session01",
+      "n_requested_subjects": 19,
+      "n_paired_subjects": 19,
+      "mean_change": -1.43704502969803,
+      "median_change": -0.06517226442724056,
+      "min_change": -13.789769903533209,
+      "max_change": 1.1923099304169464,
+      "n_increased": 8,
+      "n_decreased": 11,
+      "n_unchanged": 0,
+      "subject_bootstrap_CI95_low": -3.2572576601960757,
+      "subject_bootstrap_CI95_high": -0.07726252932473314,
+      "unavailable_subjects": "",
+      "bootstrap_repetitions": 10000,
+      "CI_scope": "paired published identities; source independence must be verified; exploratory observational contrast"
+    },
+    {
+      "metric": "beta_MI_power_uV2",
+      "contrast": "session04_minus_session01",
+      "n_requested_subjects": 19,
+      "n_paired_subjects": 19,
+      "mean_change": -1.5483169458968309,
+      "median_change": -0.4333100116462576,
+      "min_change": -13.389147053500292,
+      "max_change": 1.3155095124814657,
+      "n_increased": 4,
+      "n_decreased": 15,
+      "n_unchanged": 0,
+      "subject_bootstrap_CI95_low": -3.266430564752484,
+      "subject_bootstrap_CI95_high": -0.3273114534843526,
+      "unavailable_subjects": "",
+      "bootstrap_repetitions": 10000,
+      "CI_scope": "paired published identities; source independence must be verified; exploratory observational contrast"
+    }
+  ],
+  "matching_availability": [
+    {
+      "subject": "sub-1",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-1",
+      "variant": "qc_common_four_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-2",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-2",
+      "variant": "qc_common_four_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-3",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-3",
+      "variant": "qc_common_four_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-4",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-4",
+      "variant": "qc_common_four_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-5",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-5",
+      "variant": "qc_common_four_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-6",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-6",
+      "variant": "qc_common_four_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-7",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-7",
+      "variant": "qc_common_four_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-8",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-8",
+      "variant": "qc_common_four_runs",
+      "status": "unavailable",
+      "error": "Insufficient preset matched cells: [{\"session\": \"01\", \"run\": \"05\", \"label\": \"rest\", \"n_available\": 11, \"n_required\": 12}, {\"session\": \"01\", \"run\": \"06\", \"label\": \"rest\", \"n_available\": 8, \"n_required\": 12}]"
+    },
+    {
+      "subject": "sub-9",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-9",
+      "variant": "qc_common_four_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-10",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-10",
+      "variant": "qc_common_four_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-11",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-11",
+      "variant": "qc_common_four_runs",
+      "status": "unavailable",
+      "error": "Insufficient preset matched cells: [{\"session\": \"02\", \"run\": \"06\", \"label\": \"rest\", \"n_available\": 11, \"n_required\": 12}]"
+    },
+    {
+      "subject": "sub-12",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-12",
+      "variant": "qc_common_four_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-13",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-13",
+      "variant": "qc_common_four_runs",
+      "status": "unavailable",
+      "error": "Insufficient preset matched cells: [{\"session\": \"04\", \"run\": \"04\", \"label\": \"rest\", \"n_available\": 2, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"04\", \"label\": \"right_hand\", \"n_available\": 3, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"05\", \"label\": \"rest\", \"n_available\": 3, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"05\", \"label\": \"right_hand\", \"n_available\": 5, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"06\", \"label\": \"rest\", \"n_available\": 1, \"n_required\": 12}]"
+    },
+    {
+      "subject": "sub-14",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-14",
+      "variant": "qc_common_four_runs",
+      "status": "unavailable",
+      "error": "Insufficient preset matched cells: [{\"session\": \"02\", \"run\": \"04\", \"label\": \"rest\", \"n_available\": 11, \"n_required\": 12}, {\"session\": \"02\", \"run\": \"05\", \"label\": \"rest\", \"n_available\": 11, \"n_required\": 12}, {\"session\": \"02\", \"run\": \"06\", \"label\": \"rest\", \"n_available\": 1, \"n_required\": 12}, {\"session\": \"02\", \"run\": \"06\", \"label\": \"right_hand\", \"n_available\": 8, \"n_required\": 12}]"
+    },
+    {
+      "subject": "sub-15",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-15",
+      "variant": "qc_common_four_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-16",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-16",
+      "variant": "qc_common_four_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-17",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-17",
+      "variant": "qc_common_four_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-18",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-18",
+      "variant": "qc_common_four_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-19",
+      "variant": "all_six_runs",
+      "status": "available",
+      "error": ""
+    },
+    {
+      "subject": "sub-19",
+      "variant": "qc_common_four_runs",
+      "status": "unavailable",
+      "error": "Insufficient preset matched cells: [{\"session\": \"02\", \"run\": \"03\", \"label\": \"rest\", \"n_available\": 2, \"n_required\": 12}, {\"session\": \"02\", \"run\": \"03\", \"label\": \"right_hand\", \"n_available\": 5, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"03\", \"label\": \"rest\", \"n_available\": 7, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"03\", \"label\": \"right_hand\", \"n_available\": 6, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"04\", \"label\": \"rest\", \"n_available\": 4, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"04\", \"label\": \"right_hand\", \"n_available\": 1, \"n_required\": 12}, {\"session\": \"04\", \"run\": \"06\", \"label\": \"rest\", \"n_available\": 8, \"n_required\": 12}]"
+    }
+  ],
+  "interpretation": "observational spectral/geometry/decoder contrasts; no causal neural-learning or skill-retention conclusion"
+}

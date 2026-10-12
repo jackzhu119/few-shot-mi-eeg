@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "recorded_at_utc": "2026-10-11T06:53:16.489016+00:00",
+  "dataset": "MILimbEEG",
+  "version": "v1.0.0",
+  "production_helpers_imported": false,
+  "script_sha256": "287e1440a3874bdfde391b85b185d04b83dc3e03ead77b799c83e307dec8c91f",
+  "source_files_official_checksum_recalculated": 666,
+  "selected_bytes": 62287177,
+  "signal_file_count": 60,
+  "published_resource_ids": 60,
+  "source_rows_one_to_one_verified": 7318,
+  "source_label_counts": {
+    "EDGE boundary": 3659,
+    "clh": 299,
+    "crh": 300,
+    "dlf": 300,
+    "plf": 300,
+    "drf": 300,
+    "prf": 300,
+    "rest": 1860
+  },
+  "source_duration_counts": {
+    "0.0": 3659,
+    "3.992": 3659
+  },
+  "source_event_kind_counts": {
+    "concatenation_boundary": 3659,
+    "positive_duration_task": 3659
+  },
+  "exact_numeric_duplicate_groups": {
+    "whole_signal_numeric_sha256": [],
+    "central4KiB_numeric_sha256": []
+  },
+  "representative_numeric_replays": [
+    {
+      "source_file": "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-0_eeg.edf",
+      "full_numeric_replay_exact": true,
+      "full_numeric_sha256": "1675eba4b18b21669d4e9bba5be961daf9e13e1dc561501f1afbd97db797cffc",
+      "central4KiB_sha256": "93b8f17bfc7c363f73d77fbbb7de8329fd49e35038e30fa9c876c9d808ef57ac"
+    },
+    {
+      "source_file": "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-0_eeg.edf",
+      "full_numeric_replay_exact": true,
+      "full_numeric_sha256": "851da60e043d30e473950edcec7ba064d4bb7ccac63469022c60a79b9be4f85b",
+      "central4KiB_sha256": "fa2d8af18ca6428ee6d9d7bb38bfe258a0420844afa3217ccc4e2edcbaa2f381"
+    }
+  ],
+  "aggregate_sha256": "ba50876f0099ce21e3d97573bfb8340f2f0af5e8581c66a03524865eecf97067",
+  "source_events_sha256": "8ee2a9a81a29db953523118eedd32d5c37f899ca483162f72c2efea58715f8cd",
+  "nonstandard_subject_class_counts": {
+    "sub-22": {
+      "EDGE boundary": 60,
+      "clh": 4,
+      "crh": 5,
+      "dlf": 5,
+      "plf": 5,
+      "drf": 5,
+      "prf": 5,
+      "rest": 31
+    }
+  },
+  "scope": "independent resource validation only; no biological cross-resource identity or model/retention evidence"
+}

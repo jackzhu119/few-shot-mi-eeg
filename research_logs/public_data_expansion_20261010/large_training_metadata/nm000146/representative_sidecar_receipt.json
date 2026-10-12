@@ -1,0 +1,186 @@
+{
+  "id": "nm000146",
+  "representative_signal_path": "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-0_eeg.bdf",
+  "checks": [
+    {
+      "path": "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-0_eeg.json",
+      "url": "https://data.nemar.org/nm000146/v1.0.3/sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-0_eeg.json",
+      "status": 200,
+      "bytes": 1469,
+      "sha256": "a670af5ffded3eef06b550f333be89148f3f7556724f44dd6098b74c3c2379d0",
+      "official_checksum_match": true,
+      "snapshot": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000146/representative_eeg.json"
+    },
+    {
+      "path": "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-0_channels.tsv",
+      "url": "https://data.nemar.org/nm000146/v1.0.3/sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-0_channels.tsv",
+      "status": 200,
+      "bytes": 3429,
+      "sha256": "4380e70810132b86b5a2e9904751db35a0695f3b10e60c6d627fb657a9093ece",
+      "official_checksum_match": true,
+      "snapshot": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000146/representative_channels.tsv"
+    },
+    {
+      "path": "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-0_events.tsv",
+      "url": "https://data.nemar.org/nm000146/v1.0.3/sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-0_events.tsv",
+      "status": 200,
+      "bytes": 17920,
+      "sha256": "0cef7e0547973a06ab8b0211e4f3d730183b36c18d51f344f8afb4965733c1fc",
+      "official_checksum_match": true,
+      "snapshot": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000146/representative_events.tsv"
+    },
+    {
+      "path": "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-0_events.json",
+      "url": "https://data.nemar.org/nm000146/v1.0.3/sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-0_events.json",
+      "status": 200,
+      "bytes": 1914,
+      "sha256": "23c01a14b0abc940487594fc4fc9005188cbddc2c92c213846348c421fca6568",
+      "official_checksum_match": true,
+      "snapshot": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000146/representative_events.json"
+    }
+  ],
+  "eeg_json": {
+    "TaskName": "imagery",
+    "Manufacturer": "Compumedics Neuroscan",
+    "PowerLineFrequency": 50.0,
+    "SamplingFrequency": 200.0,
+    "SoftwareFilters": {
+      "preprocessing_steps": {
+        "Description": "bandpass filtering, downsampling"
+      }
+    },
+    "RecordingDuration": 4759.995,
+    "RecordingType": "continuous",
+    "EEGReference": "nose",
+    "EEGGround": "prefrontal lobe",
+    "EEGPlacementScheme": "10-05 system",
+    "EEGChannelCount": 60,
+    "EOGChannelCount": 0,
+    "ECGChannelCount": 0,
+    "EMGChannelCount": 0,
+    "TriggerChannelCount": 0,
+    "ManufacturersModelName": "Neuroscan SynAmps2",
+    "HardwareFilters": {
+      "Bandpass": {
+        "low_cutoff_hz": 0.5,
+        "high_cutoff_hz": 50.0
+      }
+    },
+    "TaskDescription": "Simple limb motor imagery (left hand, right hand, feet) and compound limb motor imagery (both hands, left hand combined with right foot, right hand combined with left foot) Trial duration: 8.0s, cue: 1.0s, imagery: 4.0s.",
+    "Instructions": "Participants were asked to perform kinesthetic motor imagery rather than a visual type of imagery while avoiding any muscle movement",
+    "CogAtlasID": "https://www.cognitiveatlas.org/task/id/trm_4c8a834779883/",
+    "InstitutionName": "Tianjin University",
+    "InstitutionAddress": "CN",
+    "InstitutionalDepartmentName": "Department of Biomedical Engineering",
+    "CapManufacturer": "n/a",
+    "CapManufacturersModelName": "n/a",
+    "SubjectArtefactDescription": "n/a",
+    "DeviceSerialNumber": "n/a",
+    "Description": "EEG recording.",
+    "MISCChannelCount": 0
+  },
+  "events_sidecar": {
+    "rows": 560,
+    "columns": [
+      "onset",
+      "duration",
+      "trial_type",
+      "value",
+      "sample"
+    ],
+    "class_counts": {
+      "feet": 80,
+      "hands": 80,
+      "left_hand": 80,
+      "left_hand_right_foot": 80,
+      "rest": 80,
+      "right_hand": 80,
+      "right_hand_left_foot": 80
+    },
+    "durations": [
+      "4.0"
+    ],
+    "values": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ]
+  },
+  "channels_sidecar": {
+    "rows": 60,
+    "types": {
+      "EEG": 60
+    },
+    "units": [
+      "V"
+    ],
+    "names": [
+      "Fp1",
+      "Fpz",
+      "Fp2",
+      "AF3",
+      "AF4",
+      "F7",
+      "F5",
+      "F3",
+      "F1",
+      "Fz",
+      "F2",
+      "F4",
+      "F6",
+      "F8",
+      "FT7",
+      "FC5",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "FC6",
+      "FT8",
+      "T7",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "T8",
+      "TP7",
+      "CP5",
+      "CP3",
+      "CP1",
+      "CPz",
+      "CP2",
+      "CP4",
+      "CP6",
+      "TP8",
+      "P7",
+      "P5",
+      "P3",
+      "P1",
+      "Pz",
+      "P2",
+      "P4",
+      "P6",
+      "P8",
+      "PO7",
+      "PO5",
+      "PO3",
+      "POz",
+      "PO4",
+      "PO6",
+      "PO8",
+      "O1",
+      "Oz",
+      "O2"
+    ]
+  },
+  "channels_sidecar_parse": "utf-8-sig to handle observed BOM",
+  "events_sidecar_parse": "utf-8-sig"
+}

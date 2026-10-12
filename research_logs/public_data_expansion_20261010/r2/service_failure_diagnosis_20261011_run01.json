@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "status": "blocked_by_managed_session_https_proxy_transport_failure",
+  "scope": "actual failures during newly queued R2 transfers after completed NETBCI/Kumar/Leeuwis-sidecar stages",
+  "observed_public_https_probes": [
+    {
+      "target": "official NEMAR dataset metadata",
+      "status": 503
+    },
+    {
+      "target": "public Cloudflare R2 documentation",
+      "status": 503,
+      "server": "envoy",
+      "error": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: immediate connect error: Invalid argument|remote address:envoy://cloudflare_https_tunnel/"
+    }
+  ],
+  "R2_probes": [
+    {
+      "operation": "HeadBucket",
+      "http_status": 503,
+      "SDK_retry_attempts": 2
+    },
+    {
+      "operation": "HeadObject on earlier verified checkpoint manifest",
+      "http_status": 503,
+      "SDK_retry_attempts": 2
+    }
+  ],
+  "managed_environment_safe_observation": {
+    "connectivity": "connected",
+    "observed_phase": "running",
+    "network_mode": "unrestricted",
+    "network_state": "enforced",
+    "spec_revision": "32",
+    "credential_variables_ready": true
+  },
+  "failed_receipts_preserved": [
+    "netbci_all19_bundles_20261011_run01.json",
+    "netbci_all19_source_audits_20261011_run01.json",
+    "milimbeeg_raw_20261011_run01.json"
+  ],
+  "prior_successful_receipts_not_invalidated": true,
+  "no_proxy_or_TLS_bypass": true,
+  "no_credential_or_bucket_policy_changes": true,
+  "next_action": "Resume with new immutable receipt filenames after a single safe R2 HeadBucket probe succeeds; include only officially verified exact source files. Never count planned/failed receipts in completed catalog."
+}

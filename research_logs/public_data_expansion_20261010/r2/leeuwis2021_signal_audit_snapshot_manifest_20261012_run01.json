@@ -1,0 +1,1368 @@
+{
+  "schema_version": 1,
+  "frozen_at_utc": "2026-10-12T00:08:58.230748+00:00",
+  "scope": "Closed Leeuwis2021 nm000327 v1.0.0 full-signal/source-event audit restored run02; all 220 EDF recordings and complete large source ledgers. Single-visit source inspection only; no new model fit.",
+  "repository": "/workspace/few-shot-mi-eeg",
+  "source_git_commit": "4290c4061f5d35381ed684bb07f1dd52836bbee0",
+  "contains_uncommitted_research_evidence": true,
+  "selection_sha256": "e08021e931bfcce1f60723e35f13ed80749b53437d30e53ce98ea6d360d56903",
+  "snapshot_complete": true,
+  "all_source_and_staged_bytes_unchanged_during_copy": true,
+  "source_qualification_distinct_from_R2_transfer": true,
+  "scientific_acceptance_preserved_without_reinterpretation": true,
+  "credential_values_logged": false,
+  "source_files": 225,
+  "source_bytes": 15355540,
+  "files": [
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/audit_leeuwis_subset_source.py",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/audit_leeuwis_subset_source.py",
+      "bytes": 20141,
+      "sha256": "e6dd524cd64534fd9a5f3e47c91f4dac9edaac594beeabc3bcd91a613f159c45"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/continuous_run_ledger.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/continuous_run_ledger.json",
+      "bytes": 739198,
+      "sha256": "d7b82423894582dd4520daca025982a0abbfab2c02a5e508f83b1d239fa467e8"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-10__ses-0__eeg__sub-10_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-10__ses-0__eeg__sub-10_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3158,
+      "sha256": "355f0d96a261454d73d49666e38dae96d22649192704d990197cea9abbaf8787"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-10__ses-0__eeg__sub-10_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-10__ses-0__eeg__sub-10_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3196,
+      "sha256": "027da2982516a717dc3923a5da8b9d07b019fc663c1c96517818d8737b8cd9f6"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-10__ses-0__eeg__sub-10_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-10__ses-0__eeg__sub-10_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "30bac9f1f58c6a22f91c96e98b86408ca6fc35d2daef270ea88a7f84a998ce0b"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-10__ses-0__eeg__sub-10_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-10__ses-0__eeg__sub-10_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3194,
+      "sha256": "b8e1fea9d4652204fdf8f60494d6a3d412e2c6d4f74efaf19e317eca4d871cd7"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-11__ses-0__eeg__sub-11_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-11__ses-0__eeg__sub-11_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3168,
+      "sha256": "d51baac9718756126a0d8cbf55e336b5ce0591972d78e7198ecbe6d4d5195945"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-11__ses-0__eeg__sub-11_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-11__ses-0__eeg__sub-11_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3197,
+      "sha256": "0ca3db9968ed874c8b16fa30c304e4c190aedddf98e0b58f306b4380f875fd0e"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-11__ses-0__eeg__sub-11_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-11__ses-0__eeg__sub-11_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "429040723b1098a318f1c5eb68979b3e7f4548d5fec8e2abc6f45ba93673e86c"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-11__ses-0__eeg__sub-11_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-11__ses-0__eeg__sub-11_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "9fd26131958375a46ba3a485cea54670f38cc232e5b55fe7362e22a1866d07ac"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-12__ses-0__eeg__sub-12_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-12__ses-0__eeg__sub-12_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3157,
+      "sha256": "5d7813f53ae64c45299ee729173a90a463a49e3fa382916f8732ef11e874cef3"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-12__ses-0__eeg__sub-12_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-12__ses-0__eeg__sub-12_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3197,
+      "sha256": "404fb7887ee95b4b8fb4381323194579ca65d502b5c14ed2f57db0b28d077a6e"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-12__ses-0__eeg__sub-12_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-12__ses-0__eeg__sub-12_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3195,
+      "sha256": "13a08c1ad81dbfabad53b7f889d4359cd70de877044b289e79c9121dc9f6dfd5"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-12__ses-0__eeg__sub-12_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-12__ses-0__eeg__sub-12_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3197,
+      "sha256": "a38655962fba2b67da5d932add410406b554daf568dc2948a2f607fda781d72d"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-13__ses-0__eeg__sub-13_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-13__ses-0__eeg__sub-13_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3168,
+      "sha256": "ad7bb998f27efe1737a3f213e30d077898ecf9607f163212190eaf9860a35182"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-13__ses-0__eeg__sub-13_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-13__ses-0__eeg__sub-13_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "c06f4f0ccb7cdcb204c05cf591458fd46c8a9aedfe76810eda6bf471bf290939"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-13__ses-0__eeg__sub-13_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-13__ses-0__eeg__sub-13_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3196,
+      "sha256": "3cb7446d7e001e437f07f7f4cb74566d9207f226e9bc1552130479780dcc945c"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-13__ses-0__eeg__sub-13_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-13__ses-0__eeg__sub-13_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "7fbad8f11346f91a4581dc0dcc92dafbd2cc240ac955b2a2b1fed998775096a8"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-14__ses-0__eeg__sub-14_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-14__ses-0__eeg__sub-14_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3168,
+      "sha256": "3b2ea5ed14ae185f1b4bc2e31286743549f1dc51a67adfa5ffcf57dee6946e7b"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-14__ses-0__eeg__sub-14_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-14__ses-0__eeg__sub-14_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3196,
+      "sha256": "0ad537df7f636a216bfbec788d3783476c23675283068057be4ea1eb9ebb2f22"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-14__ses-0__eeg__sub-14_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-14__ses-0__eeg__sub-14_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "d0a43df3e3908ba109185bfc67e13476ac59dd74d9b75fe6362c51e5fa91dc67"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-14__ses-0__eeg__sub-14_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-14__ses-0__eeg__sub-14_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "54ba47dbefe9af934e13bd1b014b7ec8214278901ad0e1d79f36aa79271e747d"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-15__ses-0__eeg__sub-15_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-15__ses-0__eeg__sub-15_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3158,
+      "sha256": "7656f806eaaac4d00f918aea54f6a75b91c7f82588241721ee31f8dd88cbe810"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-15__ses-0__eeg__sub-15_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-15__ses-0__eeg__sub-15_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "af1b257e10bb8aa2c1df4c5c62c7de38ef27416e40cd208629ca04b912e183d7"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-15__ses-0__eeg__sub-15_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-15__ses-0__eeg__sub-15_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3187,
+      "sha256": "3cf00457aa3adb1bb3c06fb55c07d1cdadec3a1fe7348892bd8164a9679fa5b8"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-15__ses-0__eeg__sub-15_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-15__ses-0__eeg__sub-15_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3197,
+      "sha256": "5064c6cf28706a1cdfed1b621770ffb123111845502cf9dfdafa55ce890518a0"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-16__ses-0__eeg__sub-16_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-16__ses-0__eeg__sub-16_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3159,
+      "sha256": "7c01562283343662eca5005a4f67a5452291f95fb85141589440457905c9eafb"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-16__ses-0__eeg__sub-16_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-16__ses-0__eeg__sub-16_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3197,
+      "sha256": "115e3e80cd1c5a22543454ff2ece79da44639af8c6a5bb8c952cb3e35bed95f0"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-16__ses-0__eeg__sub-16_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-16__ses-0__eeg__sub-16_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "f5697d7b809afe76405b30b290227246cc91a365948ed70e392dc002d4a9b5f9"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-16__ses-0__eeg__sub-16_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-16__ses-0__eeg__sub-16_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3187,
+      "sha256": "d1a52bf46e8903f0083b933596b5479487cfedad067d1d8e3a2a81836ff93f91"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-17__ses-0__eeg__sub-17_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-17__ses-0__eeg__sub-17_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3167,
+      "sha256": "dc00b6d8279491167c58802832a7f234cfe11d3fe028b1090884c3a4f8b49ae9"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-17__ses-0__eeg__sub-17_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-17__ses-0__eeg__sub-17_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "ec29cb1cd7032c4d60e3c79a132902414c9a667ebb9bdc3f27721c4e5fcb2a16"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-17__ses-0__eeg__sub-17_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-17__ses-0__eeg__sub-17_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3187,
+      "sha256": "151f425223ceb2c99aa8fc05fbe1f30138db3a35cc2ff6b55c0376fd1b911cc6"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-17__ses-0__eeg__sub-17_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-17__ses-0__eeg__sub-17_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3194,
+      "sha256": "f88267e7e461c5f6580e7f65a59339fd882c31801a92392f75a40cd3573896d2"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-18__ses-0__eeg__sub-18_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-18__ses-0__eeg__sub-18_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3158,
+      "sha256": "05a8dc0dabb95982c311753739337179920b5a0dc4c2b32e6ed9c4fbd839aa77"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-18__ses-0__eeg__sub-18_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-18__ses-0__eeg__sub-18_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3196,
+      "sha256": "9243b1e7a4822714f9604aefddf657381a7c54adb679f8839fdfac307155f613"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-18__ses-0__eeg__sub-18_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-18__ses-0__eeg__sub-18_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3194,
+      "sha256": "a5438f349068bdfc39803f3e39cf4e4ffe9b8d58c6ef2bf24e9dd016dafb9981"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-18__ses-0__eeg__sub-18_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-18__ses-0__eeg__sub-18_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3185,
+      "sha256": "443c7633798fc3adc404dd55af70b513f0cc17add487828e4b3a94521300d4d8"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-19__ses-0__eeg__sub-19_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-19__ses-0__eeg__sub-19_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3159,
+      "sha256": "460bcd81fabd234351c38b70829a16e81007cb8066e71f7a07667f950166f1e8"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-19__ses-0__eeg__sub-19_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-19__ses-0__eeg__sub-19_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3195,
+      "sha256": "3a1c1c5fd1c4a41b4ca2538680d50f9f443a7b13e33a0f95f27c45581d048de6"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-19__ses-0__eeg__sub-19_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-19__ses-0__eeg__sub-19_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3185,
+      "sha256": "7b969b0e685c026404d50f8726debda7c7aba11598cbfb034aa7fac9eeb120c1"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-19__ses-0__eeg__sub-19_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-19__ses-0__eeg__sub-19_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3185,
+      "sha256": "90ee1a3ddc6199768793974c14808f1bae211dd8f1dcb811fe81b82ca5143967"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-1__ses-0__eeg__sub-1_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-1__ses-0__eeg__sub-1_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3154,
+      "sha256": "e859e4b01f81c3450525b1559dda9cc35743a7cf3121a279e42d598e56a8cae3"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-1__ses-0__eeg__sub-1_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-1__ses-0__eeg__sub-1_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3173,
+      "sha256": "9e77e1c590869088d0fb78996fa3e989fc0d328a0dc265c00e877b5988c594de"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-1__ses-0__eeg__sub-1_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-1__ses-0__eeg__sub-1_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3183,
+      "sha256": "933dc545f24b3fdead2cb8228befa4835210e963f4e6406529bcef845fe8e4a2"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-1__ses-0__eeg__sub-1_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-1__ses-0__eeg__sub-1_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3173,
+      "sha256": "52a085ee84ad5f0f02d09a4979626400940d89a9d9950b0b445e9c984c574c27"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-20__ses-0__eeg__sub-20_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-20__ses-0__eeg__sub-20_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3157,
+      "sha256": "2a7f8b3fc8163bf25cd14bc874997fc1cb963536c6e450cf0660c4feda9ebac9"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-20__ses-0__eeg__sub-20_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-20__ses-0__eeg__sub-20_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3185,
+      "sha256": "3507d1d5f6cb48965cbff9020d1a29e281e0a173a9cd8245522806b5fa12f9c1"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-20__ses-0__eeg__sub-20_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-20__ses-0__eeg__sub-20_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3185,
+      "sha256": "b145488d02757d62108d4822ca7e8fc1bf11b5fb4162ded42979e87b4c6dd77d"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-20__ses-0__eeg__sub-20_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-20__ses-0__eeg__sub-20_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3184,
+      "sha256": "671f590de57531031c6a4ac33a90d1f81d082c32fd716a6a5b57050fa416d721"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-21__ses-0__eeg__sub-21_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-21__ses-0__eeg__sub-21_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3159,
+      "sha256": "1c76384824e3b9c16913b40acecec2eb3105713dd5cc39af3c62c49890f0b14a"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-21__ses-0__eeg__sub-21_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-21__ses-0__eeg__sub-21_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3194,
+      "sha256": "7b6db6cb821b0f5340f4277f3453890b27e8ad8bdd388c54ec3003b44c5f2f58"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-21__ses-0__eeg__sub-21_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-21__ses-0__eeg__sub-21_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3187,
+      "sha256": "e5349ad71b62017c4c8f04bb49bb0a8f0910f616364d037ec84249ddf3498f8f"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-21__ses-0__eeg__sub-21_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-21__ses-0__eeg__sub-21_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3187,
+      "sha256": "3476d7337fd9112e6452ba1bbee0b1f723e7ad0bdc5df59770dcf25f69ff8171"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-22__ses-0__eeg__sub-22_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-22__ses-0__eeg__sub-22_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3157,
+      "sha256": "e3c9274bb541f8644951d63129ace9e3c4c98fb7d58064cf6a39394fb7d94a1d"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-22__ses-0__eeg__sub-22_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-22__ses-0__eeg__sub-22_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3194,
+      "sha256": "ef7e73efa0b23470726ead38c8ba5aaf365323679e277f65b3b8598098e0a110"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-22__ses-0__eeg__sub-22_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-22__ses-0__eeg__sub-22_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3185,
+      "sha256": "0d06ceaddbed33fa6dad165a300d6542f20d64360e4f3979aacdbba4658dd909"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-22__ses-0__eeg__sub-22_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-22__ses-0__eeg__sub-22_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3183,
+      "sha256": "6baad57ef4226980b2f430a52febf798c586eeb69555b57e43d51d3f83b16a93"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-23__ses-0__eeg__sub-23_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-23__ses-0__eeg__sub-23_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3157,
+      "sha256": "a0f091aa0962102c1e142ba905457fb58837580c4336a41e486364836074d498"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-23__ses-0__eeg__sub-23_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-23__ses-0__eeg__sub-23_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3197,
+      "sha256": "9425e8a9c4e92b2a19669892586499c5af9a86b03ac7606f17f3c65bc6c9ccc6"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-23__ses-0__eeg__sub-23_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-23__ses-0__eeg__sub-23_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "5c24aa184a0bd4708cfadfeade9106fabc1417dfa11a26e54e21c6bbe53c3c75"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-23__ses-0__eeg__sub-23_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-23__ses-0__eeg__sub-23_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "0cca5e2c75bc6cf96cdc2ecd7003662302a2b8701aa0dcab0d996ded50b30305"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-24__ses-0__eeg__sub-24_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-24__ses-0__eeg__sub-24_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3158,
+      "sha256": "27ae2225dab6975a27287bd4476e0884634233fe290031fef792bca1b1ccbe56"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-24__ses-0__eeg__sub-24_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-24__ses-0__eeg__sub-24_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3195,
+      "sha256": "e2a21aad06124ed58a3c6c10e17682a92176d8a3ca56a81dc9889c86c089bdb4"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-24__ses-0__eeg__sub-24_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-24__ses-0__eeg__sub-24_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3196,
+      "sha256": "a008985035acbd25e159cce5bff4a06c22c1fa734541ad5efb1def0f245c5858"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-24__ses-0__eeg__sub-24_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-24__ses-0__eeg__sub-24_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3197,
+      "sha256": "e820f63be205e7b8df18c158551b24a1e4e14c008cf2d9dbbba9fa000c117a22"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-25__ses-0__eeg__sub-25_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-25__ses-0__eeg__sub-25_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3159,
+      "sha256": "96e4d10d83337f0ba4c5e166396c28cb35a0d7f140e829251deea0d5001095ed"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-25__ses-0__eeg__sub-25_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-25__ses-0__eeg__sub-25_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3187,
+      "sha256": "8565e8873523561f59e1fe6621f93c38f5d5a0108cab79a32f78b2c99a0749a5"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-25__ses-0__eeg__sub-25_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-25__ses-0__eeg__sub-25_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3193,
+      "sha256": "704f92e1d9ff46138b4c6378ea7e025b41a6bec99a6c5c0e2c0d20fe07795a6c"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-25__ses-0__eeg__sub-25_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-25__ses-0__eeg__sub-25_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3195,
+      "sha256": "def2595cd6792c399604d9a02503bc5c8aff4e50526457b18045e4f9a1e1b38a"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-26__ses-0__eeg__sub-26_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-26__ses-0__eeg__sub-26_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3168,
+      "sha256": "d7a1129281ba1b70940b74cda0c03e8185eda8c653fd308197b485f28f13052a"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-26__ses-0__eeg__sub-26_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-26__ses-0__eeg__sub-26_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "1b89d29c5df453a72c366d3833adc672bb12f6140c03b576ed0e27dd35a0f044"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-26__ses-0__eeg__sub-26_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-26__ses-0__eeg__sub-26_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "527d684cd40774de6aa5a6f697bb44d192da9574534661fca7a0aa1508caa1fb"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-26__ses-0__eeg__sub-26_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-26__ses-0__eeg__sub-26_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3185,
+      "sha256": "aa0f1f3dc11669c97ac9cb8088f42a6e17447c0bba91b59dc560dcb5429c7c9a"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-27__ses-0__eeg__sub-27_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-27__ses-0__eeg__sub-27_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3157,
+      "sha256": "f0dfda509c524536f504a145c7694b4dda272ac0a86cbe6c1487012d3a9e5040"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-27__ses-0__eeg__sub-27_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-27__ses-0__eeg__sub-27_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3197,
+      "sha256": "a8041dc019a0cdcf59905f098ba16a02588948e4b962e57911df3363264b1c42"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-27__ses-0__eeg__sub-27_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-27__ses-0__eeg__sub-27_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3197,
+      "sha256": "95b2fbbbce1a885e48e4a77673500aba5bc209e4fa1ac7a11bb0a7b43cbaa6dc"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-27__ses-0__eeg__sub-27_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-27__ses-0__eeg__sub-27_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3197,
+      "sha256": "660e4921447cadc7b0913edcebf6464bc4daf5962bdcd3b5fc1e860c06a72bfe"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-28__ses-0__eeg__sub-28_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-28__ses-0__eeg__sub-28_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3159,
+      "sha256": "db09b06c4c1aa20c286bea35f47dddaf9021390586b9c8e2acd798dc9036b2b2"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-28__ses-0__eeg__sub-28_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-28__ses-0__eeg__sub-28_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3196,
+      "sha256": "c6fe4e6d316a0273285fea9042bd8dae6c2735ef10044c47ee224b051c360e76"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-28__ses-0__eeg__sub-28_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-28__ses-0__eeg__sub-28_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3187,
+      "sha256": "35345f665cf904eaf42703d355395297186eb2ec599c9bc4295df2882803af8b"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-28__ses-0__eeg__sub-28_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-28__ses-0__eeg__sub-28_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "ee4b4c92d7d9b310a73ce68cbfc32f007ccf786c564cfb87672816f5f403760d"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-29__ses-0__eeg__sub-29_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-29__ses-0__eeg__sub-29_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3157,
+      "sha256": "62a105becf658a9e002a8f19c205caf9ad0aede2e8ad8a19c53352813b65f922"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-29__ses-0__eeg__sub-29_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-29__ses-0__eeg__sub-29_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3197,
+      "sha256": "21e07d669e2c3248251361df5ea6bdc5e888597b00f876b69b4ef57428365692"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-29__ses-0__eeg__sub-29_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-29__ses-0__eeg__sub-29_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3195,
+      "sha256": "c016c9521fcfe28f00bd16982db452d0573ef1adfab34b6849d741d0f82e5d72"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-29__ses-0__eeg__sub-29_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-29__ses-0__eeg__sub-29_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3184,
+      "sha256": "0588a7ad418ca0226f4a759a6a5e19b596246ab6af8d334053fc3c47e3c406f0"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-2__ses-0__eeg__sub-2_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-2__ses-0__eeg__sub-2_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3156,
+      "sha256": "1f77690a293a904b0003b40ea9ea8c7ac7dd6acce4ff13addeeee8f8138172ad"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-2__ses-0__eeg__sub-2_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-2__ses-0__eeg__sub-2_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3184,
+      "sha256": "f68cd122a0672d48708a509039aad8f73e8aac414ebe05fe3e8107cdd8536e44"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-2__ses-0__eeg__sub-2_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-2__ses-0__eeg__sub-2_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3184,
+      "sha256": "e7df5d406367762b17eb46500e84a78b1c79ba455aa2d0c5f66084586dcba95c"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-2__ses-0__eeg__sub-2_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-2__ses-0__eeg__sub-2_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3172,
+      "sha256": "7659560800d4e4b7e507e2dee9f8ad0ba8e08bba1fb768911b333556d9f9f5db"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-30__ses-0__eeg__sub-30_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-30__ses-0__eeg__sub-30_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3157,
+      "sha256": "bb4b6bf4e010ed333d5f0a31bf603e72cc98688e3fd5ae3958819abeddd82497"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-30__ses-0__eeg__sub-30_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-30__ses-0__eeg__sub-30_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3185,
+      "sha256": "96c06e52315ecf07b9c994c76de3a29fc5555c09dd00f2d23d63d55fd1b7a5ee"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-30__ses-0__eeg__sub-30_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-30__ses-0__eeg__sub-30_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3195,
+      "sha256": "f33932d2571e4701474948fc50b3719454be664b83cbc683f3968d01635bf116"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-30__ses-0__eeg__sub-30_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-30__ses-0__eeg__sub-30_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3194,
+      "sha256": "cd5a22f3b7ed607dbb8cf71a24103ccf67471a9b60fd7621f6a6319dcb0596e9"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-31__ses-0__eeg__sub-31_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-31__ses-0__eeg__sub-31_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3157,
+      "sha256": "965b94e709b7cb8371b17957e615abfc77352d698dcf201d580193d26cfd8aea"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-31__ses-0__eeg__sub-31_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-31__ses-0__eeg__sub-31_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3187,
+      "sha256": "5262c29d03d2630f887e0e31cd33948c4aa79ee8f7c74e3f6aabe7395f174b95"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-31__ses-0__eeg__sub-31_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-31__ses-0__eeg__sub-31_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "f9907794ff91b1fd7575aa34cde8290a38525694a1541c10cdb753670720f224"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-31__ses-0__eeg__sub-31_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-31__ses-0__eeg__sub-31_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3195,
+      "sha256": "968cbc3d4949e00ecd337c0675048b85aead021d1f5266c6f66f0389572e6d9c"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-32__ses-0__eeg__sub-32_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-32__ses-0__eeg__sub-32_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3157,
+      "sha256": "754e8fa23ab90510ffa814230d993d0f7c3510f308cd6ac53c773057e48f2276"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-32__ses-0__eeg__sub-32_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-32__ses-0__eeg__sub-32_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3185,
+      "sha256": "58b4275ecdf59e16b8a0302a7e59ea131d0bea6bad94b47b598113605a003bf5"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-32__ses-0__eeg__sub-32_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-32__ses-0__eeg__sub-32_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3185,
+      "sha256": "cf9181eb18e6bb2dd41999ac7457cc9f27d7fd02b818ea54409419eb463457b3"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-32__ses-0__eeg__sub-32_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-32__ses-0__eeg__sub-32_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3196,
+      "sha256": "204ec29fcb72f418aeeed5a09bce6aa24b6411196529367bd36a9d939e514010"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-33__ses-0__eeg__sub-33_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-33__ses-0__eeg__sub-33_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3158,
+      "sha256": "1b788589f77235ed2de10897a8e374c7afb7afca59369fada432b6dcde70faa8"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-33__ses-0__eeg__sub-33_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-33__ses-0__eeg__sub-33_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3184,
+      "sha256": "14399ce0c4c5741285ff8aba20fb821a66dde3b9fc9c3f0b3ca82554c6fc3e6f"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-33__ses-0__eeg__sub-33_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-33__ses-0__eeg__sub-33_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "99243508c2a3d614a84ed11d8125e6f4c0d09983a80f147e9558cc993c917c84"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-33__ses-0__eeg__sub-33_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-33__ses-0__eeg__sub-33_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "84bb26f4a4b97e0e3ea901ef9647d7c104ea104849dfff74c75b004bfbd87f17"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-34__ses-0__eeg__sub-34_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-34__ses-0__eeg__sub-34_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3167,
+      "sha256": "57d26abd33bc7acb0129c5478f4b2815a5571d7a2a90ed90ff96316f4a84ae97"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-34__ses-0__eeg__sub-34_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-34__ses-0__eeg__sub-34_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3196,
+      "sha256": "845146a302aeb15c1ee857bf7958a9a76167fc52844641d59208f24f1bf07ba9"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-34__ses-0__eeg__sub-34_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-34__ses-0__eeg__sub-34_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3185,
+      "sha256": "44d76def0c16a226b58b1b342ab91804baf508c0b4d14b8a4720a63903806a58"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-34__ses-0__eeg__sub-34_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-34__ses-0__eeg__sub-34_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3185,
+      "sha256": "ab6a3b847da1984aa5ab5cd7a94a5af1e5d3416d54fe8849eba348a548093c06"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-35__ses-0__eeg__sub-35_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-35__ses-0__eeg__sub-35_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3159,
+      "sha256": "31fabd3e01d460731559da1f6b22d5570f64416f8468a984e5ee19a740a75d35"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-35__ses-0__eeg__sub-35_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-35__ses-0__eeg__sub-35_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3195,
+      "sha256": "057e1404d00fb4f8b6cfcd1621b54e769941df621136e95856188a960fda58f5"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-35__ses-0__eeg__sub-35_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-35__ses-0__eeg__sub-35_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3187,
+      "sha256": "47d226f9448bdab2b2127bce9e43dfaace6f23ef250f188259db521155e67eb6"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-35__ses-0__eeg__sub-35_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-35__ses-0__eeg__sub-35_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3197,
+      "sha256": "c9fa649b3d0ef6d27f550946013dfc3c6c9d3588b3454b0335d89d429dc1a9fb"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-36__ses-0__eeg__sub-36_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-36__ses-0__eeg__sub-36_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3169,
+      "sha256": "725dab049a609483742168e7bd3bd0fa16b75b60e05f98126317e40b1dc6e980"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-36__ses-0__eeg__sub-36_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-36__ses-0__eeg__sub-36_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3187,
+      "sha256": "15bf6c642d333b29d209c33ff797ff04862b648e5806f67061f29353245536d7"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-36__ses-0__eeg__sub-36_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-36__ses-0__eeg__sub-36_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3187,
+      "sha256": "255696b6ad08ff8a13d6abca9827115bb088e01d63294a3b1f0cc4eadc237a86"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-36__ses-0__eeg__sub-36_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-36__ses-0__eeg__sub-36_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3197,
+      "sha256": "8721d3ea5e53fdb45664d3dcd6610ba825159d2b93fb6b8bb2ebcb1cd42c41e7"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-37__ses-0__eeg__sub-37_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-37__ses-0__eeg__sub-37_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3168,
+      "sha256": "2aa6af394dfa48b001accc1d8d36d457e4ab0632ca36cd4e6b5db0ab4de3e8e7"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-37__ses-0__eeg__sub-37_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-37__ses-0__eeg__sub-37_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3197,
+      "sha256": "6aa79ab05acef5c82080e0cb441f938f918525a0e5814df8d4c5e84f49407136"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-37__ses-0__eeg__sub-37_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-37__ses-0__eeg__sub-37_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3196,
+      "sha256": "f6b228e86079b188d43077f3ed474df67dcbee35dc3c400377718afc1978ab6e"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-37__ses-0__eeg__sub-37_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-37__ses-0__eeg__sub-37_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3185,
+      "sha256": "1e8d9f2d5101b790e288c22fd9525aac471afcb6cf360616814947a98bda494e"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-38__ses-0__eeg__sub-38_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-38__ses-0__eeg__sub-38_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3157,
+      "sha256": "432fa3f946551e1a388c1b020ba13253ab0b92852f2c48a8abd7ce497e8737db"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-38__ses-0__eeg__sub-38_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-38__ses-0__eeg__sub-38_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3185,
+      "sha256": "b066c49494ca0390e8365263843cfe7ecb267e9628c28a542a10dea952f4236a"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-38__ses-0__eeg__sub-38_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-38__ses-0__eeg__sub-38_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3196,
+      "sha256": "599557652adef21239b11227e1c79beb428849313d913e68cf6615fe8e3259d7"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-38__ses-0__eeg__sub-38_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-38__ses-0__eeg__sub-38_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3194,
+      "sha256": "af5b22c48fc84de888a5914e449f3929686037f25ab660d279675d26d055e3b9"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-39__ses-0__eeg__sub-39_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-39__ses-0__eeg__sub-39_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3168,
+      "sha256": "a0494603759fd474260121b36fb6d1976763287adbe3d7bee1d0c5c7aec58d85"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-39__ses-0__eeg__sub-39_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-39__ses-0__eeg__sub-39_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3195,
+      "sha256": "9e02901e6b32418ba75f3361732aa9ee8c0c38880ae4545709fd104e9f0bcd36"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-39__ses-0__eeg__sub-39_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-39__ses-0__eeg__sub-39_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "b1500e819bb4f957a903874c1c9fd8b078f4e6c2d0a74a296167db1ffd1e067c"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-39__ses-0__eeg__sub-39_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-39__ses-0__eeg__sub-39_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3196,
+      "sha256": "8136cdc47bab2215f3c1174565bba639b781d1ddcec93539c177923569dc9c76"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-3__ses-0__eeg__sub-3_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-3__ses-0__eeg__sub-3_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3155,
+      "sha256": "36c1976e08f1c4e3074c68dd582475f56bf236c37c34103d782fcfa06993251a"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-3__ses-0__eeg__sub-3_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-3__ses-0__eeg__sub-3_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3183,
+      "sha256": "393629390e3204b47fcbc4ec75e261632b24ef54ea943ee45c99d9f31bcdfece"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-3__ses-0__eeg__sub-3_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-3__ses-0__eeg__sub-3_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3182,
+      "sha256": "11d4e4f316fe7508c167e5b23ad91c4400e98e703d014c85c716ff64645cb5d0"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-3__ses-0__eeg__sub-3_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-3__ses-0__eeg__sub-3_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3173,
+      "sha256": "1368750aeaa9a5842bae8b18af5b588d9f4c36992f9acebe59df2b6783839790"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-40__ses-0__eeg__sub-40_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-40__ses-0__eeg__sub-40_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3168,
+      "sha256": "5b637418198afad915c61d61b077fbcff95abbfc49afcb170ccd1aef7a03e9aa"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-40__ses-0__eeg__sub-40_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-40__ses-0__eeg__sub-40_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "c0163de63693c7d0a831fecd2cf387493e1010b509c3d07700c1c4498468a333"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-40__ses-0__eeg__sub-40_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-40__ses-0__eeg__sub-40_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3197,
+      "sha256": "6e73b21b2a15550ef1fa71f38b310aecdc6295a5ce43ca91af3d607695e3e005"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-40__ses-0__eeg__sub-40_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-40__ses-0__eeg__sub-40_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3196,
+      "sha256": "86eb7a11acc83d069eca95c643b70b8994bdf953a30ab7dfe7cda439ca7ca399"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-41__ses-0__eeg__sub-41_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-41__ses-0__eeg__sub-41_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3157,
+      "sha256": "3e8218e77cc683586cfb4738fff2449a137239c791ef94697ba0b4f6f2f38973"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-41__ses-0__eeg__sub-41_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-41__ses-0__eeg__sub-41_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3185,
+      "sha256": "ab018f4bebf15a67e1267ebc3458d6a23e74d9d2fa9c3fab2ad55acb8177d53f"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-41__ses-0__eeg__sub-41_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-41__ses-0__eeg__sub-41_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3185,
+      "sha256": "3b50b94ce9897c84e1d761e57fd97842bfe1c3b41a5cc34b3a4f359eba3f8f52"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-41__ses-0__eeg__sub-41_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-41__ses-0__eeg__sub-41_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3184,
+      "sha256": "b105e5881cf978ec264ad9c22586c9994c285ee665b756503e3530c7e5dcca8e"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-42__ses-0__eeg__sub-42_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-42__ses-0__eeg__sub-42_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3158,
+      "sha256": "313a6b82be74a227e0cfd0892076964723be2cb982eb0bc328be3228d9512887"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-42__ses-0__eeg__sub-42_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-42__ses-0__eeg__sub-42_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "4d901eb593f5b23e78f5bfb46e8ea82b051b67c61dc199082ea1dd28b5f2af10"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-42__ses-0__eeg__sub-42_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-42__ses-0__eeg__sub-42_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3187,
+      "sha256": "26da8fc96ef1384978936a1e39d4dab6e7cd9a19ed697da28da7cb7041babb4d"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-42__ses-0__eeg__sub-42_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-42__ses-0__eeg__sub-42_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3195,
+      "sha256": "a326fabae3d0e0b6e709d3f8119a749d4b36bafd96bdd8c5ce58525603c59b5a"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-43__ses-0__eeg__sub-43_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-43__ses-0__eeg__sub-43_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3167,
+      "sha256": "3e89c01edb07935ccde901ac7bf0ef181f49e76b1e5950ef9673b7b47742dabd"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-43__ses-0__eeg__sub-43_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-43__ses-0__eeg__sub-43_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3195,
+      "sha256": "636a7ce11cf30530d5a5d8fae7f72b82016a6f1f3961d7dafb0cb43e2c7ecadf"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-43__ses-0__eeg__sub-43_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-43__ses-0__eeg__sub-43_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3195,
+      "sha256": "fe42ffe3dee4c80c217d74014eb409178cf6335219d8718bdd363a6c12d6d2a3"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-43__ses-0__eeg__sub-43_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-43__ses-0__eeg__sub-43_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3185,
+      "sha256": "152f7c7aa49a3be8687da55e3b2f588ae5b4ecda713fdebe976505878cbbeb20"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-44__ses-0__eeg__sub-44_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-44__ses-0__eeg__sub-44_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3168,
+      "sha256": "2c44c503810dd6fc50dd86770b2f4f8f874995f7cb0f773e8b29f1181e7f5f24"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-44__ses-0__eeg__sub-44_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-44__ses-0__eeg__sub-44_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3187,
+      "sha256": "8f07946ce3b4140765f92f932127a206a4030db78b534908ca6bef9a47249321"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-44__ses-0__eeg__sub-44_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-44__ses-0__eeg__sub-44_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "5c929d6bb4843eb11268b628dfbe58449672d49131a664310b81fcd01a214f81"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-44__ses-0__eeg__sub-44_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-44__ses-0__eeg__sub-44_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3196,
+      "sha256": "b034140d4fbae4c5bff79f01f4e624952727239b69e53a488b37ebf962e3eb3c"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-45__ses-0__eeg__sub-45_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-45__ses-0__eeg__sub-45_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3158,
+      "sha256": "95bfe00d9beb0206a32237fbe9f6e92898c77d2a1f1a1c3597bbc01ce297168b"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-45__ses-0__eeg__sub-45_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-45__ses-0__eeg__sub-45_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3196,
+      "sha256": "0ce695633c14524e4da32b92b05351f649439a94857ca4207a2d408ebcba351e"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-45__ses-0__eeg__sub-45_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-45__ses-0__eeg__sub-45_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "3f3185c826c768fad050eef9eb7c6a14210a3336d1b8bc302d0647d3ecbd3658"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-45__ses-0__eeg__sub-45_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-45__ses-0__eeg__sub-45_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "0d256ac846197f5702b355203641a3da14474e501633723a49bdcc3611cd968e"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-46__ses-0__eeg__sub-46_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-46__ses-0__eeg__sub-46_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3157,
+      "sha256": "48b58618b6edf455d6678e59dfa5d7ce0e675d48256f8eb149adc5c22cb7ad93"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-46__ses-0__eeg__sub-46_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-46__ses-0__eeg__sub-46_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3185,
+      "sha256": "04622cc55deab552798084ad445d7cf8544869d81ffb52822ab9517f5ee20cdf"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-46__ses-0__eeg__sub-46_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-46__ses-0__eeg__sub-46_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3196,
+      "sha256": "e5e9866495abccfd8188f0ca4604ef865744d46ace1f600ed67ee35e5649a5ac"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-46__ses-0__eeg__sub-46_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-46__ses-0__eeg__sub-46_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3197,
+      "sha256": "427ae6ecd946ef78320ff9c3027a92d88b12292a5525ec8acd329066d17a7586"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-47__ses-0__eeg__sub-47_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-47__ses-0__eeg__sub-47_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3169,
+      "sha256": "4d4c19aff786b258bc7e7ad4d54b7a22f3c94b0205639695fdd3b67a60c4d422"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-47__ses-0__eeg__sub-47_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-47__ses-0__eeg__sub-47_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3195,
+      "sha256": "38f0b3d9c275f8b55d7198c3a88b9faa581e35b9d90c22b9bed74ddfacd87f74"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-47__ses-0__eeg__sub-47_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-47__ses-0__eeg__sub-47_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3195,
+      "sha256": "19c426805c6f921719996b8a4fbd153cb775b55b9f1664e550e414ccd2851317"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-47__ses-0__eeg__sub-47_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-47__ses-0__eeg__sub-47_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3184,
+      "sha256": "608a61516f5114ff7c0b01a75892710258d00a2f2ec274b46ca16b015e5968af"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-48__ses-0__eeg__sub-48_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-48__ses-0__eeg__sub-48_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3157,
+      "sha256": "c57b95cd46a4768cb2fc2dd2fd78e01e4b86bb66178f7ad0c4fb9bb3075b711a"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-48__ses-0__eeg__sub-48_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-48__ses-0__eeg__sub-48_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3196,
+      "sha256": "5a31c53b298955116282dc6e30a898f8e1731c371874fa40fc20e6a15f3f5230"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-48__ses-0__eeg__sub-48_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-48__ses-0__eeg__sub-48_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3185,
+      "sha256": "8f3baf9fd48c559fd89f5b2c27c12ebba71195172bfeaa64c98c6b35e1d02867"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-48__ses-0__eeg__sub-48_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-48__ses-0__eeg__sub-48_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3195,
+      "sha256": "435fdb685a2222db79042e9dc85e93b9e6f39261eb9c8caf1265fc285f52ae0b"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-49__ses-0__eeg__sub-49_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-49__ses-0__eeg__sub-49_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3156,
+      "sha256": "47f3cbea486448616fd7a9500bb4ea039ffdb85431a87a139b4b5ccbff721191"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-49__ses-0__eeg__sub-49_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-49__ses-0__eeg__sub-49_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3187,
+      "sha256": "3cbedd8f1a0ffe3133171b8413a3ef9d23843fc8cab6a2d5637333b506f9fe1b"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-49__ses-0__eeg__sub-49_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-49__ses-0__eeg__sub-49_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3184,
+      "sha256": "589483b4a0c9a186c22f1d2b8d96acd629e4decfc2da17466476c062dd283f43"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-49__ses-0__eeg__sub-49_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-49__ses-0__eeg__sub-49_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "dd0195fb8350fd0220990d0eeeef953d64662a6c64704be9355752c690362c9c"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-4__ses-0__eeg__sub-4_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-4__ses-0__eeg__sub-4_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3146,
+      "sha256": "76fda7f36b35462d75ddf1bb8a7b48f0c3f495d3f7088100fd2d030e0e567fc4"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-4__ses-0__eeg__sub-4_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-4__ses-0__eeg__sub-4_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3172,
+      "sha256": "c6f197bfb52d143addcff082038867c4d5ad3a2ff376c270711f03b6dd2e73bd"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-4__ses-0__eeg__sub-4_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-4__ses-0__eeg__sub-4_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3184,
+      "sha256": "383a55a0243e111a97bb23630380bff9e6740f7301567307b5fd34f946c711c1"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-4__ses-0__eeg__sub-4_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-4__ses-0__eeg__sub-4_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3184,
+      "sha256": "30978fc7d37b5a3197264edc79bbcf693e39d366a9d26f94e469e2c420ee2806"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-50__ses-0__eeg__sub-50_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-50__ses-0__eeg__sub-50_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3159,
+      "sha256": "fd582ade0712897f78456a192f70dd6843e04605ed3b8de611828afda6b1bce7"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-50__ses-0__eeg__sub-50_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-50__ses-0__eeg__sub-50_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3195,
+      "sha256": "428af33c300a32bd3e0df7353340fc3957b19d381b57d93d0403bd8f6609d061"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-50__ses-0__eeg__sub-50_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-50__ses-0__eeg__sub-50_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3196,
+      "sha256": "5a5a40c87efcbc53953ba6eaee68f3102ba2d7e79c588a8c22ece98ba9d540e5"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-50__ses-0__eeg__sub-50_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-50__ses-0__eeg__sub-50_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3196,
+      "sha256": "f1b56481726a48839498868d7d789ec1e2e5b305a5d46e9db1856adc3c1ea220"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-51__ses-0__eeg__sub-51_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-51__ses-0__eeg__sub-51_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3156,
+      "sha256": "b04d26964df933962d57694238a2d2f9928f502a5a7604bfa54784f6b4a4e26c"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-51__ses-0__eeg__sub-51_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-51__ses-0__eeg__sub-51_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3196,
+      "sha256": "86f6a00871bfbcb67c5bbdbe3366aa9d614de228133c66d4703698b7d4e3319c"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-51__ses-0__eeg__sub-51_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-51__ses-0__eeg__sub-51_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3197,
+      "sha256": "0f5c5c057ededa81f485b9508254a527a76c5e7f64850de4650e7c21d593456d"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-51__ses-0__eeg__sub-51_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-51__ses-0__eeg__sub-51_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3197,
+      "sha256": "f4362426ea26bdf28407bad7557a82aa7dee058a4ca6b8b338743b8dfbcb08ca"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-52__ses-0__eeg__sub-52_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-52__ses-0__eeg__sub-52_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3157,
+      "sha256": "d923097c959e7a427f197e566db219f0986df93d47340091ec944cc38f534211"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-52__ses-0__eeg__sub-52_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-52__ses-0__eeg__sub-52_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "729305a9a6064942e9aace0a7d257b54724063730d4e66c355e756062290b579"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-52__ses-0__eeg__sub-52_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-52__ses-0__eeg__sub-52_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3184,
+      "sha256": "f6653b4f2fec2d501d66b7aebb1c53a3eec9637163e3f38fa97247c3bc5f441a"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-52__ses-0__eeg__sub-52_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-52__ses-0__eeg__sub-52_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3185,
+      "sha256": "3c3ab4bc282bb9d492db14a102c91f35b68a3125fbf430705cd95c4213ef7f64"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-53__ses-0__eeg__sub-53_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-53__ses-0__eeg__sub-53_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3167,
+      "sha256": "28b7a586f42ce4aebdb58bb1025ad3c4e74397b47efcc4be224b7578ec4068da"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-53__ses-0__eeg__sub-53_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-53__ses-0__eeg__sub-53_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3194,
+      "sha256": "63d4b373e177b989244e4a1a80923856008215e9e62bb608bd96a52f040a2ee4"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-53__ses-0__eeg__sub-53_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-53__ses-0__eeg__sub-53_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3184,
+      "sha256": "1a1dec8aa3e7c2a38c7c3924d718e5b0eadc4c89e074c5fa98c23240b1a173f0"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-53__ses-0__eeg__sub-53_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-53__ses-0__eeg__sub-53_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3186,
+      "sha256": "7bce1a6b1c2555a7f6de95516c92d65664d491e72bdb6203384c4ad4c305a824"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-54__ses-0__eeg__sub-54_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-54__ses-0__eeg__sub-54_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3157,
+      "sha256": "335c8138cabff60a775ecffdfecb13664bf97a60ef33c8572a44c726e56234d6"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-54__ses-0__eeg__sub-54_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-54__ses-0__eeg__sub-54_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3185,
+      "sha256": "33cd708edcf9e6541e578a600fb72109b5941c415166621e051f7840e2079323"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-54__ses-0__eeg__sub-54_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-54__ses-0__eeg__sub-54_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3195,
+      "sha256": "1fa4e0c49f14f2922cc728f002cb8718fd937e8e7d4ce35296491a6da5f72731"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-54__ses-0__eeg__sub-54_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-54__ses-0__eeg__sub-54_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3197,
+      "sha256": "ce463b142a2f054165de8ee47c4086cfc5815efecb96d605ea5f5b87d9bb7594"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-55__ses-0__eeg__sub-55_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-55__ses-0__eeg__sub-55_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3157,
+      "sha256": "2a14f2308df08ff3677f8bd0d092d313bf5dcb537821624f1f354482f9985a55"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-55__ses-0__eeg__sub-55_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-55__ses-0__eeg__sub-55_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3184,
+      "sha256": "99f845aa91633c15b73dba98c33fc840c3b01d4292e5a9751a51f57c10bf9d08"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-55__ses-0__eeg__sub-55_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-55__ses-0__eeg__sub-55_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3196,
+      "sha256": "2c3f57d4b34ced1d34b07c82d0dee1c4aa3023c8bda194e24a1d1e1a84c7fbb4"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-55__ses-0__eeg__sub-55_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-55__ses-0__eeg__sub-55_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3194,
+      "sha256": "62fa877b80a250e010a70316d024160da55722883a409bb6b9c94b56cba1769c"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-5__ses-0__eeg__sub-5_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-5__ses-0__eeg__sub-5_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3155,
+      "sha256": "0125162a4f2ab163ee510678d3b9f2970e78d0428000b9b037622cf3b7c981dc"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-5__ses-0__eeg__sub-5_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-5__ses-0__eeg__sub-5_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3183,
+      "sha256": "7a90cc2eacba132d18a5eba4661dbfda4222a8ae0a944fedb9bb3647b126a901"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-5__ses-0__eeg__sub-5_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-5__ses-0__eeg__sub-5_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3173,
+      "sha256": "80e6d2ab15143e4f874f222c3ed7128491b7cc3f9b8f258cb8a8ecd0a1906e72"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-5__ses-0__eeg__sub-5_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-5__ses-0__eeg__sub-5_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3171,
+      "sha256": "1c95e6c493972a06a1871088df0ffad40b0556ec2f2231f5015b8b1571e6a78f"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-6__ses-0__eeg__sub-6_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-6__ses-0__eeg__sub-6_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3145,
+      "sha256": "1d9e49fc52a6b2b7429b3d58c5f7793e591f56e4829cdb7bcfbe6ddf587b5b9d"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-6__ses-0__eeg__sub-6_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-6__ses-0__eeg__sub-6_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3184,
+      "sha256": "e168d277ca924e8ee3e9edebe0c1b0d4d8a935ff08a8633a1a9eb9b714559c54"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-6__ses-0__eeg__sub-6_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-6__ses-0__eeg__sub-6_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3174,
+      "sha256": "ce645895ef1498a4a5da737c67f9193d63c96c098ced42f93b45bae774e34c01"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-6__ses-0__eeg__sub-6_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-6__ses-0__eeg__sub-6_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3173,
+      "sha256": "8749be50b1c5de78923693767e255d7e9b6f0c3ad2f2635344257edae6cdf5db"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-7__ses-0__eeg__sub-7_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-7__ses-0__eeg__sub-7_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3155,
+      "sha256": "28cf6e866b8583db5205d28cc92d6465d2604f64e3ef3d38e0616b5bcdfac5bc"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-7__ses-0__eeg__sub-7_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-7__ses-0__eeg__sub-7_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3171,
+      "sha256": "d825f9ba4459a14619d498517c9499dd3b7061d5fe0998bc92aacf2dbe531c24"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-7__ses-0__eeg__sub-7_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-7__ses-0__eeg__sub-7_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3173,
+      "sha256": "3442add313db1d27b39bd628f51268f205469a8aefae825845f4b95a404f6d20"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-7__ses-0__eeg__sub-7_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-7__ses-0__eeg__sub-7_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3173,
+      "sha256": "494756343504e7ac70813f759a6e56c720749d9aa5b90df4be2cf8aac6677f5c"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-8__ses-0__eeg__sub-8_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-8__ses-0__eeg__sub-8_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3144,
+      "sha256": "e3db04c1b2c00a5152e84579839475e15db4b769774a3ca8c2b9f058da98d2a7"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-8__ses-0__eeg__sub-8_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-8__ses-0__eeg__sub-8_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3182,
+      "sha256": "ddd92076119d28b6f10b24cac63adcee565173a5f94923afb476a1c60e11ed7c"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-8__ses-0__eeg__sub-8_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-8__ses-0__eeg__sub-8_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3181,
+      "sha256": "e2829b92648086f7c5eb119d599381082aa07947dead8f6336c5b3b60a4c434c"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-8__ses-0__eeg__sub-8_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-8__ses-0__eeg__sub-8_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3173,
+      "sha256": "6069ccf35b39a739ba61dc38550d726082c193ef6aa970c5c91068c5eb28f251"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-9__ses-0__eeg__sub-9_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-9__ses-0__eeg__sub-9_ses-0_task-imagery_acq-calib_run-0_eeg.edf.json",
+      "bytes": 3155,
+      "sha256": "6590bbab7f6b144446af2f7d3cc71a8be4533ed5c01c0c81a6bdb7b87ab6169b"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-9__ses-0__eeg__sub-9_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-9__ses-0__eeg__sub-9_ses-0_task-imagery_acq-feedback1_run-1_eeg.edf.json",
+      "bytes": 3172,
+      "sha256": "6c5c8fd4ff418229e036014bd68fd5ccf01812bc1807ad3b1484730d271fa8b7"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-9__ses-0__eeg__sub-9_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-9__ses-0__eeg__sub-9_ses-0_task-imagery_acq-feedback2_run-2_eeg.edf.json",
+      "bytes": 3173,
+      "sha256": "b7b6ecff54f94ef56bbea34b064a65bf27469e5ee5705894135cd742bc10bf2c"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-9__ses-0__eeg__sub-9_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/runs/sub-9__ses-0__eeg__sub-9_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf.json",
+      "bytes": 3173,
+      "sha256": "c18673f7e53f613a610927b68c6e48f63d5b14ce3a81d83f12e3715bf8e1b18b"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/source_audit_summary.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/source_audit_summary.json",
+      "bytes": 2749,
+      "sha256": "325b9f483f7f090f84006f58ea73dbe412b4af9d0b1005516fa87f1235f3e6c0"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/source_event_ledger.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/source_event_ledger.json",
+      "bytes": 13471327,
+      "sha256": "db6d27ec1cc753fe251636d7f3a366fbc754f95963b1de11be171b26037d79f8"
+    },
+    {
+      "original_repository_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/verified_source_files.json",
+      "relative_snapshot_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/verified_source_files.json",
+      "bytes": 422310,
+      "sha256": "a3075b123025a4f63158bf72d988add664b792345b069ca2dfa8e69d5c1af233"
+    }
+  ]
+}

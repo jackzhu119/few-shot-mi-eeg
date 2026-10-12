@@ -1,0 +1,774 @@
+{
+  "all_original_TSV_rows_independently_compared": 17380,
+  "biological_participant_independence_established": false,
+  "complete_independent_source_crosscheck": true,
+  "continuous_exact_duplicate_groups_independently_regrouped": [],
+  "demographics": {
+    "mirror_age_counts": {
+      "20.71": 55
+    },
+    "mirror_age_individual_covariate_usable": false,
+    "mirror_sex_counts": {
+      "n/a": 55
+    },
+    "original_sidecars": {
+      "adapter_sha256": "e04a019794fe9c4f70db0b57dd9d7dfb14ac0d7eeae312282c472fdb086112a9",
+      "calibration_feedback_mapping_from_source_readme": {
+        "2": "feedback1",
+        "3": "feedback2",
+        "4": "feedback3",
+        "Calibration": "no feedback"
+      },
+      "curves_are_trial_outcomes": false,
+      "extra_non_EEG_original_IDs": [
+        2,
+        6,
+        20,
+        35,
+        64
+      ],
+      "files": [
+        {
+          "bytes": 10276524,
+          "path": "BCI_OnlineClassificationErrors.csv",
+          "sha256": "b9d238fa1f5082fe4a924ad87106c9e3996692d150e6a053256740430dc07aa9"
+        },
+        {
+          "bytes": 213294,
+          "path": "Data Report.pdf",
+          "sha256": "5eb4af657348f3b54715cd83520a223c41609e2d8244d4458aef60357f92f647"
+        },
+        {
+          "bytes": 17503,
+          "path": "Questionnaires.csv",
+          "sha256": "bc868ac7922495cc761554eb66c9da2155e90766fa717c993c02184b5bf18f88"
+        },
+        {
+          "bytes": 1232,
+          "path": "readme.txt",
+          "sha256": "9c311b90c1756ebd96b917cee49981d2c76c8369c93aa21ce4dd98d1aff3c1a4"
+        }
+      ],
+      "official_metadata_sha256": "59a8139267698cf01bd6a1c3d25e3724c5a89014715b43ead06b3a7d9a953faf",
+      "online_curve_percent_range": [
+        0.0,
+        100.0
+      ],
+      "online_curve_resource_IDs": 60,
+      "online_curve_rows": 480,
+      "online_curve_values": 960000,
+      "original_gender_counts": {
+        "Female": 36,
+        "Male": 19
+      },
+      "original_id_mapping": [
+        {
+          "nemar_subject": "sub-1",
+          "original_filenames": [
+            "S7_eeg_Calibration.csv",
+            "Subject7_eeg_2.csv",
+            "Subject7_eeg_3.csv",
+            "Subject7_eeg_4.csv"
+          ],
+          "original_subject_id": 7
+        },
+        {
+          "nemar_subject": "sub-2",
+          "original_filenames": [
+            "S8_eeg_Calibration.csv",
+            "Subject8_eeg_2.csv",
+            "Subject8_eeg_3.csv",
+            "Subject8_eeg_4.csv"
+          ],
+          "original_subject_id": 8
+        },
+        {
+          "nemar_subject": "sub-3",
+          "original_filenames": [
+            "S9_eeg_Calibration.csv",
+            "Subject9_eeg_2.csv",
+            "Subject9_eeg_3.csv",
+            "Subject9_eeg_4.csv"
+          ],
+          "original_subject_id": 9
+        },
+        {
+          "nemar_subject": "sub-4",
+          "original_filenames": [
+            "S10_eeg_Calibration.csv",
+            "Subject10_eeg_2.csv",
+            "Subject10_eeg_3.csv",
+            "Subject10_eeg_4.csv"
+          ],
+          "original_subject_id": 10
+        },
+        {
+          "nemar_subject": "sub-5",
+          "original_filenames": [
+            "S11_eeg_Calibration.csv",
+            "Subject11_eeg_2.csv",
+            "Subject11_eeg_3.csv",
+            "Subject11_eeg_4.csv"
+          ],
+          "original_subject_id": 11
+        },
+        {
+          "nemar_subject": "sub-6",
+          "original_filenames": [
+            "S12_eeg_Calibration.csv",
+            "Subject12_eeg_2.csv",
+            "Subject12_eeg_3.csv",
+            "Subject12_eeg_4.csv"
+          ],
+          "original_subject_id": 12
+        },
+        {
+          "nemar_subject": "sub-7",
+          "original_filenames": [
+            "S13_eeg_Calibration.csv",
+            "Subject13_eeg_2.csv",
+            "Subject13_eeg_3.csv",
+            "Subject13_eeg_4.csv"
+          ],
+          "original_subject_id": 13
+        },
+        {
+          "nemar_subject": "sub-8",
+          "original_filenames": [
+            "S14_eeg_Calibration.csv",
+            "Subject14_eeg_2.csv",
+            "Subject14_eeg_3.csv",
+            "Subject14_eeg_4.csv"
+          ],
+          "original_subject_id": 14
+        },
+        {
+          "nemar_subject": "sub-9",
+          "original_filenames": [
+            "S15_eeg_Calibration.csv",
+            "Subject15_eeg_2.csv",
+            "Subject15_eeg_3.csv",
+            "Subject15_eeg_4.csv"
+          ],
+          "original_subject_id": 15
+        },
+        {
+          "nemar_subject": "sub-10",
+          "original_filenames": [
+            "S16_eeg_Calibration.csv",
+            "Subject16_eeg_2.csv",
+            "Subject16_eeg_3.csv",
+            "Subject16_eeg_4.csv"
+          ],
+          "original_subject_id": 16
+        },
+        {
+          "nemar_subject": "sub-11",
+          "original_filenames": [
+            "S17_eeg_Calibration.csv",
+            "Subject17_eeg_2.csv",
+            "Subject17_eeg_3.csv",
+            "Subject17_eeg_4.csv"
+          ],
+          "original_subject_id": 17
+        },
+        {
+          "nemar_subject": "sub-12",
+          "original_filenames": [
+            "S18_eeg_Calibration.csv",
+            "Subject18_eeg_2.csv",
+            "Subject18_eeg_3.csv",
+            "Subject18_eeg_4.csv"
+          ],
+          "original_subject_id": 18
+        },
+        {
+          "nemar_subject": "sub-13",
+          "original_filenames": [
+            "S19_eeg_Calibration.csv",
+            "Subject19_eeg_2.csv",
+            "Subject19_eeg_3.csv",
+            "Subject19_eeg_4.csv"
+          ],
+          "original_subject_id": 19
+        },
+        {
+          "nemar_subject": "sub-14",
+          "original_filenames": [
+            "S21_eeg_Calibration.csv",
+            "Subject21_eeg_2.csv",
+            "Subject21_eeg_3.csv",
+            "Subject21_eeg_4.csv"
+          ],
+          "original_subject_id": 21
+        },
+        {
+          "nemar_subject": "sub-15",
+          "original_filenames": [
+            "S22_eeg_Calibration.csv",
+            "Subject22_eeg_2.csv",
+            "Subject22_eeg_3.csv",
+            "Subject22_eeg_4.csv"
+          ],
+          "original_subject_id": 22
+        },
+        {
+          "nemar_subject": "sub-16",
+          "original_filenames": [
+            "S23_eeg_Calibration.csv",
+            "Subject23_eeg_2.csv",
+            "Subject23_eeg_3.csv",
+            "Subject23_eeg_4.csv"
+          ],
+          "original_subject_id": 23
+        },
+        {
+          "nemar_subject": "sub-17",
+          "original_filenames": [
+            "S24_eeg_Calibration.csv",
+            "Subject24_eeg_2.csv",
+            "Subject24_eeg_3.csv",
+            "Subject24_eeg_4.csv"
+          ],
+          "original_subject_id": 24
+        },
+        {
+          "nemar_subject": "sub-18",
+          "original_filenames": [
+            "S25_eeg_Calibration.csv",
+            "Subject25_eeg_2.csv",
+            "Subject25_eeg_3.csv",
+            "Subject25_eeg_4.csv"
+          ],
+          "original_subject_id": 25
+        },
+        {
+          "nemar_subject": "sub-19",
+          "original_filenames": [
+            "S26_eeg_Calibration.csv",
+            "Subject26_eeg_2.csv",
+            "Subject26_eeg_3.csv",
+            "Subject26_eeg_4.csv"
+          ],
+          "original_subject_id": 26
+        },
+        {
+          "nemar_subject": "sub-20",
+          "original_filenames": [
+            "S27_eeg_Calibration.csv",
+            "Subject27_eeg_2.csv",
+            "Subject27_eeg_3.csv",
+            "Subject27_eeg_4.csv"
+          ],
+          "original_subject_id": 27
+        },
+        {
+          "nemar_subject": "sub-21",
+          "original_filenames": [
+            "S28_eeg_Calibration.csv",
+            "Subject28_eeg_2.csv",
+            "Subject28_eeg_3.csv",
+            "Subject28_eeg_4.csv"
+          ],
+          "original_subject_id": 28
+        },
+        {
+          "nemar_subject": "sub-22",
+          "original_filenames": [
+            "S29_eeg_Calibration.csv",
+            "Subject29_eeg_2.csv",
+            "Subject29_eeg_3.csv",
+            "Subject29_eeg_4.csv"
+          ],
+          "original_subject_id": 29
+        },
+        {
+          "nemar_subject": "sub-23",
+          "original_filenames": [
+            "S30_eeg_Calibration.csv",
+            "Subject30_eeg_2.csv",
+            "Subject30_eeg_3.csv",
+            "Subject30_eeg_4.csv"
+          ],
+          "original_subject_id": 30
+        },
+        {
+          "nemar_subject": "sub-24",
+          "original_filenames": [
+            "S31_eeg_Calibration.csv",
+            "Subject31_eeg_2.csv",
+            "Subject31_eeg_3.csv",
+            "Subject31_eeg_4.csv"
+          ],
+          "original_subject_id": 31
+        },
+        {
+          "nemar_subject": "sub-25",
+          "original_filenames": [
+            "S32_eeg_Calibration.csv",
+            "Subject32_eeg_2.csv",
+            "Subject32_eeg_3.csv",
+            "Subject32_eeg_4.csv"
+          ],
+          "original_subject_id": 32
+        },
+        {
+          "nemar_subject": "sub-26",
+          "original_filenames": [
+            "S33_eeg_Calibration.csv",
+            "Subject33_eeg_2.csv",
+            "Subject33_eeg_3.csv",
+            "Subject33_eeg_4.csv"
+          ],
+          "original_subject_id": 33
+        },
+        {
+          "nemar_subject": "sub-27",
+          "original_filenames": [
+            "S34_eeg_Calibration.csv",
+            "Subject34_eeg_2.csv",
+            "Subject34_eeg_3.csv",
+            "Subject34_eeg_4.csv"
+          ],
+          "original_subject_id": 34
+        },
+        {
+          "nemar_subject": "sub-28",
+          "original_filenames": [
+            "S36_eeg_Calibration.csv",
+            "Subject36_eeg_2.csv",
+            "Subject36_eeg_3.csv",
+            "Subject36_eeg_4.csv"
+          ],
+          "original_subject_id": 36
+        },
+        {
+          "nemar_subject": "sub-29",
+          "original_filenames": [
+            "S37_eeg_Calibration.csv",
+            "Subject37_eeg_2.csv",
+            "Subject37_eeg_3.csv",
+            "Subject37_eeg_4.csv"
+          ],
+          "original_subject_id": 37
+        },
+        {
+          "nemar_subject": "sub-30",
+          "original_filenames": [
+            "S38_eeg_Calibration.csv",
+            "Subject38_eeg_2.csv",
+            "Subject38_eeg_3.csv",
+            "Subject38_eeg_4.csv"
+          ],
+          "original_subject_id": 38
+        },
+        {
+          "nemar_subject": "sub-31",
+          "original_filenames": [
+            "S40_eeg_Calibration.csv",
+            "Subject40_eeg_1 (seq of run2).csv",
+            "Subject40_eeg_2.csv",
+            "Subject40_eeg_3.csv"
+          ],
+          "original_subject_id": 40
+        },
+        {
+          "nemar_subject": "sub-32",
+          "original_filenames": [
+            "S41_eeg_Calibration.csv",
+            "Subject41_eeg_2.csv",
+            "Subject41_eeg_3.csv",
+            "Subject41_eeg_4.csv"
+          ],
+          "original_subject_id": 41
+        },
+        {
+          "nemar_subject": "sub-33",
+          "original_filenames": [
+            "S42_eeg_Calibration.csv",
+            "Subject42_eeg_2.csv",
+            "Subject42_eeg_3.csv",
+            "Subject42_eeg_4.csv"
+          ],
+          "original_subject_id": 42
+        },
+        {
+          "nemar_subject": "sub-34",
+          "original_filenames": [
+            "S43_eeg_Calibration.csv",
+            "Subject43_eeg_2.csv",
+            "Subject43_eeg_3.csv",
+            "Subject43_eeg_4.csv"
+          ],
+          "original_subject_id": 43
+        },
+        {
+          "nemar_subject": "sub-35",
+          "original_filenames": [
+            "S44_eeg_Calibration.csv",
+            "Subject44_eeg_2.csv",
+            "Subject44_eeg_3.csv",
+            "Subject44_eeg_4.csv"
+          ],
+          "original_subject_id": 44
+        },
+        {
+          "nemar_subject": "sub-36",
+          "original_filenames": [
+            "S45_eeg_Calibration.csv",
+            "Subject45_eeg_2.csv",
+            "Subject45_eeg_3.csv",
+            "Subject45_eeg_4.csv"
+          ],
+          "original_subject_id": 45
+        },
+        {
+          "nemar_subject": "sub-37",
+          "original_filenames": [
+            "S46_eeg_Calibration.csv",
+            "Subject46_eeg_2.csv",
+            "Subject46_eeg_3.csv",
+            "Subject46_eeg_4.csv"
+          ],
+          "original_subject_id": 46
+        },
+        {
+          "nemar_subject": "sub-38",
+          "original_filenames": [
+            "S47_eeg_Calibration.csv",
+            "Subject47_eeg_2.csv",
+            "Subject47_eeg_3.csv",
+            "Subject47_eeg_4.csv"
+          ],
+          "original_subject_id": 47
+        },
+        {
+          "nemar_subject": "sub-39",
+          "original_filenames": [
+            "S48_eeg_Calibration.csv",
+            "Subject48_eeg_2.csv",
+            "Subject48_eeg_3.csv",
+            "Subject48_eeg_4.csv"
+          ],
+          "original_subject_id": 48
+        },
+        {
+          "nemar_subject": "sub-40",
+          "original_filenames": [
+            "S49_eeg_Calibration.csv",
+            "Subject49_eeg_2.csv",
+            "Subject49_eeg_3.csv",
+            "Subject49_eeg_4.csv"
+          ],
+          "original_subject_id": 49
+        },
+        {
+          "nemar_subject": "sub-41",
+          "original_filenames": [
+            "S50_eeg_Calibration.csv",
+            "Subject50_eeg_2.csv",
+            "Subject50_eeg_3.csv",
+            "Subject50_eeg_4.csv"
+          ],
+          "original_subject_id": 50
+        },
+        {
+          "nemar_subject": "sub-42",
+          "original_filenames": [
+            "S51_eeg_Calibration.csv",
+            "Subject51_eeg_2.csv",
+            "Subject51_eeg_3.csv",
+            "Subject51_eeg_4.csv"
+          ],
+          "original_subject_id": 51
+        },
+        {
+          "nemar_subject": "sub-43",
+          "original_filenames": [
+            "S52_eeg_Calibration.csv",
+            "Subject52_eeg_2.csv",
+            "Subject52_eeg_3.csv",
+            "Subject52_eeg_4.csv"
+          ],
+          "original_subject_id": 52
+        },
+        {
+          "nemar_subject": "sub-44",
+          "original_filenames": [
+            "S54_eeg_Calibration.csv",
+            "Subject54_eeg_2.csv",
+            "Subject54_eeg_3.csv",
+            "Subject54_eeg_4.csv"
+          ],
+          "original_subject_id": 54
+        },
+        {
+          "nemar_subject": "sub-45",
+          "original_filenames": [
+            "S55_eeg_Calibration.csv",
+            "Subject55_eeg_2.csv",
+            "Subject55_eeg_3.csv",
+            "Subject55_eeg_4.csv"
+          ],
+          "original_subject_id": 55
+        },
+        {
+          "nemar_subject": "sub-46",
+          "original_filenames": [
+            "S56_eeg_Calibration.csv",
+            "Subject56_eeg_2.csv",
+            "Subject56_eeg_3.csv",
+            "Subject56_eeg_4.csv"
+          ],
+          "original_subject_id": 56
+        },
+        {
+          "nemar_subject": "sub-47",
+          "original_filenames": [
+            "S57_eeg_Calibration.csv",
+            "Subject57_eeg_2.csv",
+            "Subject57_eeg_3.csv",
+            "Subject57_eeg_4.csv"
+          ],
+          "original_subject_id": 57
+        },
+        {
+          "nemar_subject": "sub-48",
+          "original_filenames": [
+            "S58_eeg_Calibration.csv",
+            "Subject58_eeg_2.csv",
+            "Subject58_eeg_3.csv",
+            "Subject58_eeg_4.csv"
+          ],
+          "original_subject_id": 58
+        },
+        {
+          "nemar_subject": "sub-49",
+          "original_filenames": [
+            "S59_eeg_Calibration.csv",
+            "Subject59_eeg_2.csv",
+            "Subject59_eeg_3.csv",
+            "Subject59_eeg_4.csv"
+          ],
+          "original_subject_id": 59
+        },
+        {
+          "nemar_subject": "sub-50",
+          "original_filenames": [
+            "S60_eeg_Calibration.csv",
+            "Subject60_eeg_2.csv",
+            "Subject60_eeg_3.csv",
+            "Subject60_eeg_4.csv"
+          ],
+          "original_subject_id": 60
+        },
+        {
+          "nemar_subject": "sub-51",
+          "original_filenames": [
+            "S61_eeg_Calibration.csv",
+            "Subject61_eeg_2.csv",
+            "Subject61_eeg_3.csv",
+            "Subject61_eeg_4.csv"
+          ],
+          "original_subject_id": 61
+        },
+        {
+          "nemar_subject": "sub-52",
+          "original_filenames": [
+            "S63_eeg_Calibration.csv",
+            "Subject63_eeg_2.csv",
+            "Subject63_eeg_3.csv",
+            "Subject63_eeg_4.csv"
+          ],
+          "original_subject_id": 63
+        },
+        {
+          "nemar_subject": "sub-53",
+          "original_filenames": [
+            "S65_eeg_Calibration.csv",
+            "Subject65_eeg_2.csv",
+            "Subject65_eeg_3.csv",
+            "Subject65_eeg_4.csv"
+          ],
+          "original_subject_id": 65
+        },
+        {
+          "nemar_subject": "sub-54",
+          "original_filenames": [
+            "S66_eeg_Calibration.csv",
+            "Subject66_eeg_2.csv",
+            "Subject66_eeg_3.csv",
+            "Subject66_eeg_4.csv"
+          ],
+          "original_subject_id": 66
+        },
+        {
+          "nemar_subject": "sub-55",
+          "original_filenames": [
+            "S67_eeg_Calibration.csv",
+            "Subject67_eeg_2.csv",
+            "Subject67_eeg_3.csv",
+            "Subject67_eeg_4.csv"
+          ],
+          "original_subject_id": 67
+        }
+      ],
+      "original_individual_age_range": [
+        18.0,
+        39.0
+      ],
+      "original_signals_or_markers_read": false,
+      "questionnaire_rows": 55,
+      "selected_EEG_matching_curve_rows": 440
+    }
+  },
+  "finished_at_utc": "2026-10-11T13:01:17.151308+00:00",
+  "known_native_sidecar_unit_conflict": false,
+  "native_numeric_finite_scope": "production all files; independently repeat complete first/last files only",
+  "native_physical_unit": "µV",
+  "native_signal_full_scan_repeat_files": [
+    {
+      "MNE_numeric_unit": "V",
+      "all_continuous_samples_finite": true,
+      "annotations_equal_original_TSV": true,
+      "automatic_MNE_unit_factor_to_V": 1e-06,
+      "central4KiB_numeric_sha256": "de6e638ec32b6ea9b474c40fafa20309fbcd04f5df850ad2de566dc3234858e4",
+      "channel_count": 16,
+      "continuous_numeric_values": 1280000,
+      "manual_rescaling_performed": false,
+      "n_times": 80000,
+      "native_physical_unit": "µV",
+      "source_file": "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_acq-calib_run-0_eeg.edf",
+      "task_window_hashes": {
+        "1": "481cee4c448231b6c3c7fe0cd03ccfe0dec8060d9d3e3e0749a192d99d311051",
+        "11": "90ec6890f45847c385f199dcbace8b6f08ab6756999c1b1672be67f15e8e3898",
+        "13": "28bfc5fa891554ac2bb8233cc1836789dba8b41187b902af634ba3d8241e4311",
+        "15": "24e5ca0f5c95ed2fb3c41882b52c6ce44966611601e37a8dc986a867b22948ba",
+        "17": "9d79a903f02903df79e2388f0e169d1fc92c2c8835a9e7bcccb2bf50ba7b47d2",
+        "19": "ff05fd0a73aebd897388d39384b8a270b153714c14bae0f59c7f5459a065c43c",
+        "21": "8cfb78b94cd4a3621a6471cf1caf1bd30e9bdf6b1256da8d8da478d33a5454c4",
+        "23": "8c7cf6b36cc01d6f93a7ba4dba673957e23b120bda2d562783aefab428327c6f",
+        "25": "98f085d8bf9f4d06d40efa0f5bb02c2bea08fc17eb4f42b4fa2b3796ba51b946",
+        "27": "b6217b2f1703d1314ae54779c6896cebf28bed7595fe6452ea908f62e67d4c76",
+        "29": "48917ff20904278ad3a61a44f45dc227bc787cdd54fa0f491fc3c88496330c43",
+        "3": "d1a3df6a12921136dec3c089c3bbba8b3904e1674981a033c36b1626b49c5e66",
+        "31": "890767fa7f41503b2e3150455c6dc19742ba2ed8ac1c232dd9d37abba8613b04",
+        "33": "f0c9786d57fe370c389f7c3982cb493c58c066aaaafb0c5f35a406395979290a",
+        "35": "7d18a0c65b5c32b5471541bc3c4f7a301cbe593fdf07c58cc572a9570ab4f7d3",
+        "37": "6d0d034b9f2618ff0f9c873e4d6b5de7c4bca518aad0830fee7cc6752988c6bd",
+        "39": "a88520bd5f4f7802c469a81ed0ba68137c0e756d4f1e144234a85103ad46a943",
+        "41": "43cae7d41dcd343846e0b9706fd89b525fdbbcea7a0784ccf09d537aa4e60fb5",
+        "43": "106447ec18be56b14ba9358b0ad4421ec7055993ec78f678380dc815038290a2",
+        "45": "bda214009ddccf1bc27e0f70a14362f46dacbd0012c801408a7553f318c419a2",
+        "47": "8d29e446662e02d72622508264eed526565fde9ce05f9ddb1323b1a1d34a51e6",
+        "49": "de9201f9325a2730d828b1c4a2c669a20036334402e64e2b7e29950501b1b4bf",
+        "5": "ef030967ce6314f363698fe5863a3a1cdbbd5016d3d651887b734ea32c136111",
+        "51": "3c06f695472b1faf39eb17753986af883743a3f3c416211110a8c1d284abf4a0",
+        "53": "a7b24226a3e049f4d79f5556e2b46c39abf8b860f4ef8727e254bf5c21290619",
+        "55": "893161b8445791aed4ee9946c2c534f95a7502c6b70696f4b211057fc845b1ba",
+        "57": "8dbc689a55917eacfabc74cd87fb0ab737f7a670b6bb8ac544c862fbaa62ae57",
+        "59": "4286c2cd41c9609b7541cd30cc42e4faaaa2ba2ffb0b0dcfc25d7daca06ba202",
+        "61": "6ce9693a6305a400f74449968fb2864e0a55331166990c5c285570183828f4e4",
+        "63": "fbb53e29db7b15aff24f04eb770002d8abf28df2b53a8690ec90de3179b526fe",
+        "65": "ff2fbaf9c363b1aee6554de46baed438f406706736a821461b8fe3ee2f995cb8",
+        "67": "3490587cf4d240401e29fb0c8f23ec57849f406da660fdd4c60260ab34117362",
+        "69": "1b75b351590dc17a2605f7e331f970364e4a7ea1e56279e5289c6b4f5a7a32aa",
+        "7": "828b2d02bae28d58dbe347370d5bfd210e18ccfc01930b101f82f3193b12a5d1",
+        "71": "6ebdc7f24f1dbd8a7d217e6c85f6a93613d8106929f1d34a6567242c29294f51",
+        "73": "5375d6479bccf1a7924e4f028f1b2044e7098638dd2a5dcc26cac4d5ab1a2616",
+        "75": "69b57d18b2436cdc5cf40650ff678cd3b284765e2ebcc0bc374f20af723f9ea9",
+        "77": "43747459d3fe22dcaaebfdf5064db124ee3477d4df3fc696ab3ee6d918852034",
+        "79": "274b948b59f8fae0053f738014aede8cf7a2422912de381fba8b596fdfc878db",
+        "9": "ef9bda02db56dc4e2e2a2a2713be0fa9a099291922745bec79038386a311f380"
+      },
+      "whole_signal_numeric_sha256": "d567729bd85270e7f1981a2cd26a426e8a878fe9f1966f5adfdc5e5c0b086be6"
+    },
+    {
+      "MNE_numeric_unit": "V",
+      "all_continuous_samples_finite": true,
+      "annotations_equal_original_TSV": true,
+      "automatic_MNE_unit_factor_to_V": 1e-06,
+      "central4KiB_numeric_sha256": "00daa01f8649688fe0f1f8f62b92f48dce868f73ff09c2a83585ed7fc0e4840f",
+      "channel_count": 16,
+      "continuous_numeric_values": 1280000,
+      "manual_rescaling_performed": false,
+      "n_times": 80000,
+      "native_physical_unit": "µV",
+      "source_file": "sub-55/ses-0/eeg/sub-55_ses-0_task-imagery_acq-feedback3_run-3_eeg.edf",
+      "task_window_hashes": {
+        "1": "e5e0dbe4aab01ca38eebe07c48879b635609d5f9722097be2a2f4fb12f3a115b",
+        "11": "02e0bf66b6a50a1caf4cb6ee451ed3f6c688dff40b77bcf7ce8ba63df48293db",
+        "13": "963875d9eb148f104352508e93bf396950b260c8e05cec5495154520ddde4fca",
+        "15": "2581ccd16586eb3baccba394c1e9d02cfb270548ac9917e2a5a7ae56e31c729e",
+        "17": "9142e0bc7778278cb72e8bdff902d8096b686bcb46f0f400db3800006ff3c5b7",
+        "19": "d5c5ba47c2b82a046ce304128bfc8dd0c532db16c05e8333c9aa378f9a0a5299",
+        "21": "08b3e842ec3fd8bf07b5432291fc7034b7c47cad937372f0441ae2f0fd5561b7",
+        "23": "ed5f8fb757feb410f98abbc9ca874e2dde161a56a98feab061378a4fd9390f50",
+        "25": "5e567d74839df14dcf05a08c7ba9c5cad54543a7cb583dce5352be1b04862a0a",
+        "27": "f23336e47a2a03b681f0f4da2895eb87c78bb11eb45819289441c4e95b35f409",
+        "29": "3feb2b6f4decb8a75fa4b0e8f1e4cbc0284555444344c6b0268266efd2936b86",
+        "3": "52c7c60d5f2473d1ce06afe69520e38e22c6c1d622d50bb107bd1cc61b752015",
+        "31": "a81dc0ca59baf217e0675738001e0edfefa1fb20e6b586a45e988692510d7f7a",
+        "33": "4e705d10a15a9dbdd8a649c544d418851b3b1890080a1ec3704da117bc3c42ce",
+        "35": "5618dbebb082780f0cd0f5666670614e0af3272bb79f47abcecad77dcca9d6b5",
+        "37": "97aebd2e7450fbbd4b00825ed3cd26a36c31f706db2f3d838582b36548dd75e4",
+        "39": "ca8687b79d0e0a37148d82efd1b7c07cd0e4a319207b195fea615984a34e93c1",
+        "41": "7d947473eb951f0aa39911df5d403c274021bda33956c04cbda78135fe917e77",
+        "43": "a2f3413eeb1ebf43a8ae6ab90dab542c0cbe6c9e2a1a70c5b210df4fd7b76469",
+        "45": "84928d93a5c6a75473d37afd91df770ce2cfdc9404ac867b52a80cf5cfbbf0d1",
+        "47": "8f3835c326e5856407c51cb2e1db0bb2229f2530c9258e121f0310bd6429c92e",
+        "49": "43be7c06f4d893c9f730db7b165fa8e0e2e7353d7e06140b9a6f5fb971076615",
+        "5": "2533e3e9346a633887dade4db2cfc89df22d685e56ee81e5118304b66459ef35",
+        "51": "7acbeca0c1a7ccc89540a36d965adf422964366b7b644b30bc30fc4449f656cd",
+        "53": "2988c400d5e89a5938b436acc927b055621eb2e6dc4c739ff52bac36445ec9ad",
+        "55": "b4e2486df2a64b8689f64f0b9cc6125de39012dd64870d6ace13692d9d451d0b",
+        "57": "8184b19dc3238900b774f5ecdd4116a0d7739b1fbb2d9757fd152072f82978b0",
+        "59": "647d1eb0c7479ded91aa3be87b4584318a69c891c6d324ec23edb7940583f6cb",
+        "61": "d8d0302d537dd6bfecaf26fd10d6d21ef3fc08f44c414a518f1fdee6e29ba702",
+        "63": "3f0274a34966dde6839fcf332587b154bd6a8604be112224624b4b51e787b8da",
+        "65": "31223b3b295fd8430c2b8e194b41df0112096c11aab0a8c2a60a95bb4798d60c",
+        "67": "e317bc84fff72712ebbcda40e9e496765183f535d53d0e92eff5c7439bd7bbeb",
+        "69": "0f2f407835368a130bc7e885f482b6bf977670a1252abb8c355fbb00cb16ce9f",
+        "7": "ab0230cf6d4d24642a840c901ba5ddd801f3f6affcf359dce16cd3ad564847d5",
+        "71": "32d291a5440838656c68d7c2a11ab9ca81fd435e1395bcbbf5c7ea6d9d1a5419",
+        "73": "f6eb58dfc1d956f3d132e8a9868754baf41404703ae5e63dea7fb31ea83b0441",
+        "75": "4209a00d29f6e72cc9d258f2816d784e391f8d33a4749f20474d7176d6c9dfd5",
+        "77": "9a9da1ea194577f909a3f12e7589d7f8f7dd40ea2e7aa41138f286244f324b85",
+        "79": "338fb4f73b5a45f5e2ee2550d1917ac9d1d817f1910d588834697054c609d925",
+        "9": "23a70ab1a0796072cfdc1fe2edeeba9c1244f624d248655557629414e9ff37c3"
+      },
+      "whole_signal_numeric_sha256": "f5081cbe4eefc9b30eb516a2730a63e03bd401f6cfc59c28aaf85152c1c6da23"
+    }
+  ],
+  "native_signal_full_scan_repeat_selection_rule": "numeric first ID/first run and last ID/last run",
+  "nemar_id": "nm000327",
+  "no_models_or_analysis_windows_selected": true,
+  "no_production_helpers_imported": true,
+  "official_manifest_sha256": "a7865c708e6c01f076d1f7415fded3c0e89008c3251949290a3ede42e0d5c5c3",
+  "plan_sha256": "9c237adc6a1fbed3c918309bbf7b5957da5d2b31b0f21c0616aa422bac90719b",
+  "production_summary_path": "research_logs/public_data_expansion_20261010/leeuwis_ingestion/audit_full_run02_restored/source_audit_summary.json",
+  "production_summary_sha256": "325b9f483f7f090f84006f58ea73dbe412b4af9d0b1005516fa87f1235f3e6c0",
+  "published_resource_IDs": 55,
+  "resource": "leeuwis",
+  "runtime_versions": {
+    "mne": "1.10.2",
+    "numpy": "2.2.6",
+    "python": "3.11.16"
+  },
+  "script_sha256": "d6319fb4ca9a7d635b646a243f01b7601f11f999ec1f6ad935258a235c802364",
+  "selection_manifest_sha256": "b2121a79bf01cc79094efbe6d710aa3db68069f13f09166382b88d385d783a98",
+  "sidecar_declared_unit": "µV",
+  "source_commit": "4290c4061f5d35381ed684bb07f1dd52836bbee0",
+  "source_label_counts": {
+    "EDGE boundary": 8580,
+    "left_hand": 4400,
+    "right_hand": 4400
+  },
+  "started_at_utc": "2026-10-11T13:01:13.815805+00:00",
+  "task_exact_duplicate_groups_independently_regrouped": [],
+  "unit_reconciliation_for_modeling_validated": false,
+  "verified_signal_native_headers": 220,
+  "verified_source_bytes": 568544461,
+  "verified_source_files": 2095,
+  "version": "v1.0.0"
+}
