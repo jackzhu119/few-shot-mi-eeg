@@ -299,3 +299,54 @@ bucket listing. Failed/planned transfer receipts and HEAD-only recovery checks
 are retained but do not add objects to the completed catalog. The final pushed
 source checkpoint and the frozen receipt/catalog metadata archive receive
 separate immutable receipts after this scientific closeout.
+
+## Final pushed research source checkpoint
+
+The scientific commit `2fc09a16bcce81938757bdc77e01a2f551ef6529` was committed
+and pushed to `research/learning-preserving-bci` before archival. Its Git source
+archive, complete local-ref history bundle and full source-file manifest are
+stored below `few-shot-mi-eeg/code/checkpoint-2fc09a1/20261012-run01`.
+All three objects (75,554,783 bytes) were conditionally created and fully read
+back with matching SHA256. The closed receipt is
+`research_logs/public_data_expansion_20261010/r2/code_checkpoint_2fc09a1_20261012_run01.json`.
+
+Every one of the archive's 2,736 tracked source files (183,656,143 uncompressed
+bytes) was verified against the exact committed Git blob; the Git archive
+commit header and the bundle's research-branch reference match that commit.
+`git bundle verify` passed. The manifest records each source-relative path,
+Git blob identity, SHA256 and byte length, plus independent SHA256 digests for
+the 41,334,048-byte source archive and 33,271,370-byte history bundle. Ignored
+raw EEG arrays and large ledgers remain in their separate verified R2 stages.
+
+The 30-stage closed catalog
+`storage_catalog_after_checkpoint_2fc09a1_20261012_run01.json` records 12,791
+distinct immutable objects, 17,388,119,657 bytes, and 2,514 full GET SHA256
+objects. Recorded readback totals 1,171,222,886 bytes. Final archival receipts,
+catalogs and delivery-state metadata are frozen once after this checkpoint.
+A later metadata-only Git commit does not trigger another source-history
+archive; the metadata snapshot excludes its own still-open receipt.
+
+## Closed final receipt and catalog metadata archive
+
+The last metadata snapshot froze 117 reviewed source files (13,386,510 bytes),
+including every preceding closed receipt/catalog, the preserved failed/planned
+records, the exact source manifest, current handoff/state documentation,
+resource-inventory validation and the software receipt's latest Git metadata.
+The source list and source-path/SHA256/length manifest are
+`final_receipt_metadata_selection_20261012_run01.json` and
+`final_receipt_metadata_snapshot_manifest_20261012_run01.json`.
+The snapshot manifest adds one object, giving 118 objects and 13,430,808 bytes.
+All 118 were conditionally created and fully read back with matching SHA256,
+with zero failed objects. The prefix is
+`few-shot-mi-eeg/research-evidence/final-receipts-and-catalogs/20261012-run01`;
+the closed receipt is `final_receipt_metadata_20261012_run01.json`.
+
+`storage_catalog_final_20261012_run01.json` recounts the final explicit 31
+completed stages: 12,909 distinct immutable objects, 17,401,550,465 bytes,
+and 2,632 objects with independent full GET SHA256 evidence. Recorded readback
+totals 1,184,653,694 bytes. The last archive's own closed receipt, this final
+recount and `final_storage_delivery_20261012_run01.json` are retained in the
+metadata-only Git closeout. They are outside the frozen metadata snapshot;
+no receipt captures itself and no source-history archive loop is required.
+All prior source-authenticity and scientific-eligibility caveats continue to
+apply independently of durable storage completion.

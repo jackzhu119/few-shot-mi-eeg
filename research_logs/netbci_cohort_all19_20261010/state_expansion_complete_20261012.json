@@ -1,6 +1,6 @@
 {
-  "status": "scientific_analysis_and_all_six_raw_subsets_complete_final_evidence_archive_in_progress",
-  "saved_at_utc": "2026-10-12T00:10:58.659959+00:00",
+  "status": "completed_analysis_resource_expansion_R2_archive_and_final_metadata",
+  "saved_at_utc": "2026-10-12T00:24:50.237209+00:00",
   "repository": "jackzhu119/few-shot-mi-eeg",
   "branch": "research/learning-preserving-bci",
   "checkout": "/workspace/few-shot-mi-eeg",
@@ -84,17 +84,52 @@
     "r2_scientific_catalog": {
       "path": "research_logs/public_data_expansion_20261010/r2/storage_catalog_scientific_closeout_20261012_run01.json",
       "sha256": "e743e80b3e583504b0e4da23ad8f734a824da8d0bd7f3bd8d4d3c65bc2e1cb24"
+    },
+    "r2_code_checkpoint": {
+      "path": "research_logs/public_data_expansion_20261010/r2/code_checkpoint_2fc09a1_20261012_run01.json",
+      "sha256": "8c2b8f5faa2c9e7459bfd67bc65ea24d3c176aa49ce725d81e1e6004edd4c90b"
+    },
+    "r2_post_checkpoint_catalog": {
+      "path": "research_logs/public_data_expansion_20261010/r2/storage_catalog_after_checkpoint_2fc09a1_20261012_run01.json",
+      "sha256": "b2b7bc9302c48964bb4a92c6ff9dd2e732db8d0665fac208f789d8bb8d81ee12"
+    },
+    "r2_final_catalog": {
+      "path": "research_logs/public_data_expansion_20261010/r2/storage_catalog_final_20261012_run01.json",
+      "sha256": "3fce6ae7c98b879f4dd44eaddd794bf05531c0af21c2db51e091bb468f0336b1"
+    },
+    "r2_closing_metadata_receipt": {
+      "path": "research_logs/public_data_expansion_20261010/r2/final_receipt_metadata_20261012_run01.json",
+      "sha256": "3579e976596964623ad0e6aeda6fef35100a53ce369fd96a619123e845610d13"
+    },
+    "r2_final_storage_delivery": {
+      "path": "research_logs/public_data_expansion_20261010/r2/final_storage_delivery_20261012_run01.json",
+      "sha256": "503a747edcc2bac3859c08d9510b56db6c8951c7dbd0dd6a06daecaba12a9ac9"
     }
   },
-  "r2_final_closure_complete": false,
+  "r2_final_closure_complete": true,
   "original_chat_archive": "/workspace/chat_handoffs/paper2_chat_backup_20261010.tar.gz",
   "credential_values_recorded": false,
   "scientific_claim": "exploratory_offline_observation_no_skill_retention_or_candidate_policy_causal_effect",
   "r2_scientific_evidence_complete": true,
   "r2_scientific_inventory": {
-    "distinct_objects": 12788,
-    "bytes": 17312564874,
-    "objects_with_full_GET_sha256": 2511,
-    "final_code_archive_pending": true
+    "distinct_objects": 12791,
+    "bytes": 17388119657,
+    "objects_with_full_GET_sha256": 2514,
+    "final_code_archive_pending": false,
+    "inventory_scope": "closed raw, scientific evidence and code checkpoint; closing-metadata receipt is recorded separately"
+  },
+  "r2_final_closure_scope": "all raw sources, scientific results, audit evidence and immutable scientific code checkpoint; closing metadata separately archived once",
+  "scientific_code_commit": "2fc09a16bcce81938757bdc77e01a2f551ef6529",
+  "scientific_code_commit_pushed_and_remote_verified": true,
+  "r2_closing_metadata_complete": true,
+  "r2_final_inventory": {
+    "closed_stages": 31,
+    "distinct_objects": 12909,
+    "bytes": 17401550465,
+    "objects_with_full_GET_sha256": 2632,
+    "actual_full_GET_bytes": 1184653694,
+    "zero_failed_files_in_completed_stages": true,
+    "failed_prior_attempts_retained": true,
+    "final_receipt_excluded_from_its_own_snapshot_to_avoid_recursion": true
   }
 }
