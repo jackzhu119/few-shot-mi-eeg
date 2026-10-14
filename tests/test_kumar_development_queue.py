@@ -15,7 +15,11 @@ def test_actual_gates_reuse_first_and_select_only_next_frozen_job():
     runtime, plan, job = queue.check_gate()
     assert runtime["maximum_new_fits"] == 17
     assert len(plan["jobs"]) == 18
-    assert (job["subject"], job["seed"]) == ("sub-1", 20261013)
+    accepted = queue.json_file(queue.ROOT / runtime["accepted_jobs"])["accepted_jobs"]
+    accepted_ids = {entry["job_id"] for entry in accepted}
+    expected = next(item for item in plan["jobs"] if item["job_id"] not in accepted_ids)
+    assert job == expected
+    assert plan["jobs"][0]["job_id"] in accepted_ids
     assert not runtime["formal_gate"]
 
 
