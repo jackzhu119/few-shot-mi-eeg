@@ -1,0 +1,43 @@
+2026-10-14T10:45:14Z
+From https://github.com/jackzhu119/few-shot-mi-eeg
+ * branch            d4d2a64bb16e5f3841ecdefeb188fd8b9a121c71 -> FETCH_HEAD
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  740326a Record private Library to R2 evidence verification and relay acceptance limits
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> 740326a
+
+HEAD is now at d4d2a64 Accept private checkpoint relay and freeze single source-only GPU fit entry
+configs/kumar_eegnet_gpu_development_20261014.json: OK
+research_logs/checkpoint_relay_acceptance_20261014/r2_full_get_receipt.json: OK
+STARTING_EXACTLY_ONE_FROZEN_DEVELOPMENT_FIT
+2026-10-14T10:45:18Z
+LAUNCHER_PID=10164
+    PID    PPID COMMAND
+      1       0 docker-init
+     51       1 start.sh
+     82       1 nginx
+     83      82 nginx
+    116       1 sshd
+    121      51 start.sh
+    128     121 jupyter-lab
+    130      51 sleep
+   3721     128 bash
+  10093    3721 bash
+  10094   10093 tee
+  10164   10093 bash
+  10170   10164 bash
+  10171   10170 timeout
+  10172   10171 python
+  10173   10093 ps
+  10174   10093 head
+Local fit/package ready; R2 backup and parent acknowledgement PENDING. Do not stop Pod.
+SINGLE_LAUNCH_RETURN_CODE=75
+FIRST_FIT_DISPATCH_EXIT_CODE=75
+2026-10-14T10:45:29Z
+Filesystem       1B-blocks       Used   Available Use% Mounted on
+overlay        32212254720 8321306624 23890948096  26% /
