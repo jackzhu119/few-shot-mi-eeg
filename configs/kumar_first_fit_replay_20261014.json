@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_replay_not_yet_executed",
+  "subject": "sub-1",
+  "seed": 20261012,
+  "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+  "checkpoint_sha256": "eb22b63a50e7c100da1e6c82e64515cded0b26ffb138873fd6f0394dbcc08d80",
+  "loss_absolute_tolerance": 1e-07,
+  "loss_relative_tolerance": 0,
+  "normalization_comparison": "bitwise_exact",
+  "state_comparison": "sha256_exact",
+  "rationale": "Same frozen inputs/checkpoint, CUDA settings and batch reduction; 1e-7 absolute accommodates float32 CE summation. Independent float64 logsumexp compared under the same fixed bound. No tolerance relaxation after observation.",
+  "timeout_seconds": 600,
+  "no_fitting": true,
+  "no_query": true,
+  "failure_action": "Preserve output and traceback; block queue; investigate without automatic retry or widening tolerance"
+}
