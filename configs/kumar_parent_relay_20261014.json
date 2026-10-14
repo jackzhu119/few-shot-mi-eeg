@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "scope": "one_fixed_source_only_fit_after_relay_acceptance",
+  "subject": "sub-1",
+  "seed": 20261012,
+  "maximum_real_fits": 1,
+  "query_access": false,
+  "ready_for_first_fit": false,
+  "mandatory_R2_backup": true,
+  "raw_R2_credentials_on_Pod": false,
+  "signed_R2_capabilities_required": false,
+  "route": ["Pod bounded artifact package", "authenticated Jupyter private download", "private Library", "Codex exact archive and member SHA256 verification", "existing Codex R2 authorization conditional upload", "complete GET SHA256 verification", "parent verifies receipt and acknowledges"],
+  "installation_evidence_relay": "passed_Library_archive_and_15_member_hashes_and_R2_full_GET",
+  "synthetic_checkpoint_binary_relay": "pending_existing_Pod_synthetic_weights_package_and_full_route",
+  "model_fit_state_after_local_fit": "fit_finished_backup_pending_not_completed",
+  "completion_requires": ["exact archive SHA256 matched at receiving Codex", "all required weights/logs/config/input/software evidence verified", "R2 complete GET SHA256 receipt binds exact archive and expected result key", "parent explicit receipt acknowledgement"],
+  "stop_instance_before_verified_backup": false,
+  "instance_shutdown_owner": "parent_only_after_both_paper_dependencies_clear",
+  "failure_policy": "preserve_local_artifacts_and_failure_evidence; block_training_if_relay_acceptance_failed; never_relabel_pending_backup_as_complete"
+}
