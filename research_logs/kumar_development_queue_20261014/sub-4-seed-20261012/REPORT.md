@@ -1,0 +1,12 @@
+# sub-4 / seed20261012：第4fit独立审计及备份
+
+接续时本地与远端均为e79338e，未见此任务此前审计/账本追加；未因UNKNOWN重复训练或追加。实际执行提交e79338eba02f0d4e4889eca089fff9767295a5b9，调度11:53:38–11:53:47 UTC退出75，表示当时本地完成而私人备份待验收。
+
+14个结果成员、6个外层成员的长度与SHA256全通过；127输入清单哈希、三个源run原始哈希、冻结trial身份/标签、源码、checkpoint安全tensor context/state及连续三项前序账本一致。40 TRAIN/20源验证/0 query。19epochs、57steps，选择第4轮，随后15轮未改善达到冻结patience。源验证CE=0.6926434755325317；Torch重放差0，Codex从保存logits独立重算CE=0.6926434578528858，误差1.7679646080459577e-8，符合事前绝对1e-7。没有加载EEG或重拟合。不能据此推断总体/query表现或选择有利seed。
+
+原结果174080bytes SHA256 f889999e47b3d4f4d58604c0d4daca95578dac83d0776ba3bac629e23a3268a1。
+外层51200bytes SHA256 67cd0808f8bb9d1edd75baac460a482db54f35f8bdefc2ddeabf9e0597393c74。
+两原包按固定gpu-development-20261014前缀条件写入R2，2对象225280bytes完整GET SHA256通过、零失败。原包及旧pending状态不改写。
+回执SHA256：6fc9db92ab89dd349e1fc13fde8eb2f5e7834f0a655cb9444fdac01c7396a99c
+
+父确认待完成，活动账本仍3项。本任务proposal不是验收记录；父回读确认后才追加parent_acknowledged与活动账本，另发固定提交释放sub-4/20261013。没有推进下一任务或修改配置/预算。按用户12:23要求，Pod保持运行，本agent没有请求停机；实际账单未知。
