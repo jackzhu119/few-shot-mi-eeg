@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "started_at_utc": "2026-10-14T10:22:13.308597+00:00",
+  "source_root": "/workspace/paper2-private-library-check/r2-payload",
+  "key_prefix": "few-shot-mi-eeg/research-evidence/https-first-fit-20261014/library-synthetic-handoff-run01",
+  "status": "completed",
+  "workers": 1,
+  "include_patterns": [],
+  "script_sha256": "b2583bcbe67956684d1599007d6d7aa2e8ca69f817b4171dca68ddb2d34a886e",
+  "python_version": "3.11.16 (main, Sep 24 2026, 17:56:40) [Clang 22.1.3 ]",
+  "source_git_commit": "90f674ff393871032eeafd9935cab8414d15e583",
+  "readback_mode": "all",
+  "full_readback_selection": "all files",
+  "immutable_create": "IfNoneMatch=* on PutObject and CompleteMultipartUpload",
+  "existing_reuse_requires": "HEAD length/SHA256 metadata plus full GET SHA256",
+  "etag_is_not_a_sha256": true,
+  "credential_values_logged": false,
+  "remote_overwrite_enabled": false,
+  "files": [
+    {
+      "relative_path": "installation-evidence-20261014.tar.gz",
+      "key": "few-shot-mi-eeg/research-evidence/https-first-fit-20261014/library-synthetic-handoff-run01/installation-evidence-20261014.tar.gz",
+      "sha256": "d000a45b9db03eca32ea124bd533ce234a5028c5471410ac9efdca2586ff0a1c",
+      "bytes": 14247,
+      "status": "uploaded_content_verified",
+      "selected_for_full_readback": true,
+      "started_at_utc": "2026-10-14T10:22:13.616906+00:00",
+      "uploaded_bytes": 14247,
+      "readback_bytes": 14247,
+      "upload_method": "conditional_put",
+      "put_http_status": 200,
+      "head_http_status": 200,
+      "verification": "full_get_sha256_verified",
+      "get_http_status": 200,
+      "finished_at_utc": "2026-10-14T10:22:14.422531+00:00"
+    }
+  ],
+  "updated_at_utc": "2026-10-14T10:22:14.425398+00:00",
+  "totals": {
+    "planned_files": 1,
+    "planned_bytes": 14247,
+    "verified_files": 1,
+    "verified_bytes": 14247,
+    "failed_files": 0,
+    "full_get_sha256_verified_files": 1,
+    "uploaded_bytes": 14247,
+    "readback_bytes": 14247
+  },
+  "boto3_version": "1.43.111",
+  "finished_at_utc": "2026-10-14T10:22:14.425380+00:00"
+}

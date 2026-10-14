@@ -1,0 +1,42 @@
+mkdir -p failed for path /home/agent/.config/matplotlib: [Errno 30] Read-only file system: '/home/agent/.config/matplotlib'
+Matplotlib created a temporary cache directory at /tmp/matplotlib-i8q8encu because there was an issue with the default path (/home/agent/.config/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Traceback (most recent call last):
+  File "/workspace/few-shot-mi-eeg/scripts/check_data_stack.py", line 48, in <module>
+    main()
+  File "/workspace/few-shot-mi-eeg/scripts/check_data_stack.py", line 15, in main
+    fixture = FakeDataset(
+              ^^^^^^^^^^^^
+  File "/workspace/.venvs/few-shot-mi-eeg/lib/python3.11/site-packages/moabb/datasets/fake.py", line 92, in __init__
+    set_config(key, temp_dir)
+  File "/workspace/.venvs/few-shot-mi-eeg/lib/python3.11/site-packages/mne/utils/config.py", line 449, in set_config
+    os.mkdir(directory)
+OSError: [Errno 30] Read-only file system: '/home/agent/.mne'

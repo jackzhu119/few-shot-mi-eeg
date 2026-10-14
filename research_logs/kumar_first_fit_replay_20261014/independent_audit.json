@@ -1,0 +1,20 @@
+{
+  "status": "independent_replay_archive_audit_passed",
+  "replay_archive_sha256": "394b934c18c1d814fa46de7d6f0e6bb82311be62205c310b9fdef8675841ea71",
+  "dispatch_archive_sha256": "7396bfed6aefd58485175ee0e84dbd29fa6d62762c843846c0b6d073710a0f36",
+  "verified_replay_members": 5,
+  "verified_dispatch_members": 3,
+  "checkpoint_identical_to_first_fit": true,
+  "source_validation_rows": 20,
+  "frozen_trial_ids_and_labels_match": true,
+  "expected_loss": 0.6909911870956421,
+  "recomputed_numpy_loss": 0.690991198601597,
+  "absolute_error": 1.1505954855550726e-08,
+  "preregistered_absolute_tolerance": 1e-07,
+  "replay_model_state_unchanged_reported": true,
+  "audit_refits": 0,
+  "audit_EEG_loaded": false,
+  "scope": "Independent archive/config/checkpoint identity and saved-logit CE verification; actual EEG forward replay executed on Pod, not repeated on Codex",
+  "parent_receipt_acknowledgement_pending": true,
+  "stop_Pod": false
+}

@@ -1,0 +1,20 @@
+........................................................................ [ 10%]
+..........................................s............................. [ 21%]
+........................................................................ [ 31%]
+........................................................................ [ 42%]
+........................................................................ [ 52%]
+........................................................................ [ 63%]
+........................................................................ [ 73%]
+........................................................................ [ 84%]
+........................................................................ [ 94%]
+...................................                                      [100%]
+=============================== warnings summary ===============================
+tests/test_decoders.py: 2 warnings
+tests/test_kumar_eegnet_training.py: 13 warnings
+  /workspace/.venvs/few-shot-mi-eeg/lib/python3.11/site-packages/braindecode/models/eegnet.py:171: DeprecationWarning: Parameter 'final_layer_with_constraint=False' is deprecated and will be removed in a future release. Please use `final_layer_linear=True`.
+    warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_kumar_eegnet_training.py:293: Actual CUDA hardware required
+682 passed, 1 skipped, 15 warnings in 11.82s

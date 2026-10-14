@@ -1,0 +1,33 @@
+{
+  "status": "awaiting_private_fit_bundle",
+  "job": {
+    "subject": "sub-1",
+    "seed": 20261013,
+    "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+    "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+    "job_id": "5be2fc9499d4ec3916e5191c822c205e195c0e25655c39ec0f84e5aa2c091470",
+    "action": "planned_not_authorized_to_execute",
+    "output": "/workspace/paper2-results/development-queue/sub-1/seed-20261013",
+    "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-1-seed-20261013-run01.tar"
+  },
+  "dispatch_commit": "ec56058dc4d2716330db052aec6036cc845b39ba",
+  "dispatch_status": "Parent has scheduled sole RunPod operator; actual completion not yet reported",
+  "receive_requires": [
+    "private Library archive ID",
+    "original archive full SHA256 and byte length",
+    "external dispatch log or evidence archive"
+  ],
+  "audit_entry": "scripts/audit_kumar_queue_bundle.py",
+  "R2_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-1-seed-20261013-run01.tar",
+  "R2_verification": "conditional create, then complete GET length and SHA256; no overwrite",
+  "acceptance_sequence": [
+    "independent archive/source/split/checkpoint/logit audit",
+    "immutable R2 upload and complete GET",
+    "new receipt for parent acknowledgement",
+    "only after parent acknowledgement append accepted_jobs and release next job"
+  ],
+  "accepted_jobs_unchanged": true,
+  "new_real_fits_executed_by_Codex": 0,
+  "replay_repeated": false,
+  "stop_Pod": false
+}

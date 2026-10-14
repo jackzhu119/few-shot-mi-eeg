@@ -1,0 +1,15 @@
+{
+  "status": "post_freeze_exploratory_measurement_only",
+  "development_subjects": ["sub-1", "sub-4", "sub-7", "sub-10", "sub-13", "sub-16"],
+  "allowed_roles": ["source_train", "target_support"],
+  "csp_components": 4,
+  "source_validation": "twofold_leave_whole_source_training_run_out_refit_CSP_and_LDA",
+  "negative_control": "8_seeded_training_label_permutations_per_fold_refit_all_supervised_steps; descriptive_only_not_exchangeability_pvalue",
+  "negative_control_replicates": 8,
+  "seed": 20261014,
+  "bootstrap_replicates": 10000,
+  "support": "CSP_fitted_all_source_train_only; classwise_chronological_halves; frozen_source_axis; existing_cyclic_phase_sensitivity",
+  "query_access": false,
+  "threshold_search": false,
+  "gate_implementation": false
+}

@@ -141,7 +141,7 @@ class EEGNetClassifier(ClassifierMixin, BaseEstimator):
         self.model_.eval()
         with torch.no_grad():
             for start in range(0, len(X), self.batch_size):
-                batch = torch.from_numpy(normalized[start : start + self.batch_size])
+                batch = torch.from_numpy(normalized[start : start + self.batch_size]).to(self.device)
                 logits = self._logits(self.model_, batch)
                 probabilities.append(torch.softmax(logits, dim=1).cpu().numpy())
         return np.concatenate(probabilities)

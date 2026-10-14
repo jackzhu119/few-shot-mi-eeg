@@ -1,0 +1,12 @@
+# sub-1 / seed20261013：实际fit审计及备份
+
+固定训练提交ec56058dc4d2716330db052aec6036cc845b39ba；外层2026-10-14 11:27:04–11:27:14 UTC退出75，代表当时本地完成但备份待验收。14个结果成员、8个外层证据成员的SHA256与长度通过；127输入均匹配冻结清单，其中22复用、105新下载，当前源输入审计与首fit逐字节一致。
+
+40 source TRAIN / 20 source validation / 0 query。实际59 epochs、177 updates；最早最小值在epoch44，随后15轮未改善符合冻结patience。源验证CE=0.6868456840515137；checkpoint重放Torch误差0，Codex从保存logits独立重算CE=0.6868456737597264，误差1.0291787311267342e-8，符合预先绝对1e-7。checkpoint安全tensor读取、绑定context/state摘要、冻结trial身份/标签及执行源码均通过。Codex审计没有重拟合或加载EEG。单个开发编号的第二个seed不支持总体性能、query表现或方法优越性结论。
+
+原结果184320bytes SHA256 d3a7858c54aab0295954be6a6431509d5acdea687171474d5d406a211d7dd2dc。
+外层原包112640bytes SHA256 881fdcf9eb1fc22a80430635b8a22fb05f59d2b2e7077a9653d67dee9d3dc748。
+两包以条件创建写入few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014前缀，2对象296960bytes完整GET及SHA256一致，零失败。原包未改写。
+回执SHA256：f580a9de8414e5dda41ccae12ec9c7087756a2b99c8e7ab2f64803aaaa33413f
+
+父确认尚待完成，活动accepted_jobs未变。proposed_acceptance_entry.json仅是待确认追加项；不得当作已验收账本。父独立回读并确认本回执后，追加parent_acknowledged.json和活动账本，发布新的固定提交，才能用既有launcher释放sub-1/seed20261014。当前提交不释放下一任务；不能把重复运行pending任务误称推进。未重训、未停Pod，论文1仍依赖同Pod缓存；实际账单未知。

@@ -1,0 +1,32 @@
+{
+  "target_pod_id": "52ivinpjwv947i",
+  "endpoint": "root@213.173.108.75",
+  "port": 13010,
+  "attempts": [
+    {
+      "protocol": "SSH",
+      "count": 1,
+      "exit_code": 255,
+      "wall_timeout_seconds": 20,
+      "connect_timeout_seconds": 8,
+      "stderr": "ssh: connect to host 213.173.108.75 port 13010: Connection refused"
+    },
+    {
+      "protocol": "SFTP",
+      "count": 1,
+      "exit_code": 255,
+      "wall_timeout_seconds": 20,
+      "connect_timeout_seconds": 8,
+      "stderr": "ssh: connect to host 213.173.108.75 port 13010: Connection refused\nConnection closed"
+    }
+  ],
+  "attempt_time_utc": "not_recorded_by_original_command; occurred before this metadata update",
+  "evidence_source": "actual previous tool outputs; preserved retrospectively without repeat connection",
+  "private_key_or_capability_contents_saved": false,
+  "strict_host_key_checking": true,
+  "supplied_host_fingerprint": "SHA256:hYLDVgrbK4Ra8+yv8qS1S7C+q6G2yW8x572FTyxuoFE",
+  "remote_handshake_completed": false,
+  "remote_commands_executed": false,
+  "cause": "undetermined; parent inspecting endpoint/mapping/sshd",
+  "retry_performed": false
+}

@@ -1,0 +1,30 @@
+{
+  "status": "independent_audit_and_R2_full_GET_passed_parent_acknowledgement_pending",
+  "job_id": "5be2fc9499d4ec3916e5191c822c205e195c0e25655c39ec0f84e5aa2c091470",
+  "subject": "sub-1",
+  "seed": 20261013,
+  "receipt_sha256": "f580a9de8414e5dda41ccae12ec9c7087756a2b99c8e7ab2f64803aaaa33413f",
+  "verified_objects": 2,
+  "verified_bytes": 296960,
+  "failed_objects": 0,
+  "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-1-seed-20261013-run01.tar",
+  "result_archive_sha256": "d3a7858c54aab0295954be6a6431509d5acdea687171474d5d406a211d7dd2dc",
+  "result_archive_bytes": 184320,
+  "dispatch_archive_sha256": "881fdcf9eb1fc22a80430635b8a22fb05f59d2b2e7077a9653d67dee9d3dc748",
+  "dispatch_archive_bytes": 112640,
+  "checkpoint_sha256": "1c44fef12699a18c4caa64f8dc4af3b40030edc4ae69915780620ee068b8a361",
+  "parent_acknowledged": false,
+  "accepted_ledger_modified": false,
+  "next_job_after_parent_acknowledgement": {
+    "subject": "sub-1",
+    "seed": 20261014,
+    "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+    "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+    "job_id": "ba8899c0dc867baefa9a5623cccf706a82571413d63ec76e4baa7bfab613b4ca",
+    "action": "planned_not_authorized_to_execute",
+    "output": "/workspace/paper2-results/development-queue/sub-1/seed-20261014",
+    "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-1-seed-20261014-run01.tar"
+  },
+  "next_execution_commit": "pending parent acknowledgement; must append accepted_jobs and issue a new fixed Git commit before dispatch",
+  "stop_Pod": false
+}

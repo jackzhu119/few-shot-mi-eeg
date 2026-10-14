@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "scope": "one_fixed_source_only_fit_after_relay_acceptance",
+  "subject": "sub-1",
+  "seed": 20261012,
+  "maximum_real_fits": 1,
+  "query_access": false,
+  "ready_for_first_fit": true,
+  "mandatory_R2_backup": true,
+  "raw_R2_credentials_on_Pod": false,
+  "signed_R2_capabilities_required": false,
+  "route": [
+    "Pod bounded artifact package",
+    "authenticated Jupyter private download",
+    "private Library",
+    "Codex exact archive and member SHA256 verification",
+    "existing Codex R2 authorization conditional upload",
+    "complete GET SHA256 verification",
+    "parent verifies receipt and acknowledges"
+  ],
+  "installation_evidence_relay": "passed_Library_archive_and_15_member_hashes_and_R2_full_GET",
+  "synthetic_checkpoint_binary_relay": "passed_private_Library_full_archive_and_members_then_R2_full_GET_SHA256",
+  "model_fit_state_after_local_fit": "fit_finished_backup_pending_not_completed",
+  "completion_requires": [
+    "exact archive SHA256 matched at receiving Codex",
+    "all required weights/logs/config/input/software evidence verified",
+    "R2 complete GET SHA256 receipt binds exact archive and expected result key",
+    "parent explicit receipt acknowledgement"
+  ],
+  "stop_instance_before_verified_backup": false,
+  "instance_shutdown_owner": "parent_only_after_both_paper_dependencies_clear",
+  "failure_policy": "preserve_local_artifacts_and_failure_evidence; block_training_if_relay_acceptance_failed; never_relabel_pending_backup_as_complete",
+  "synthetic_checkpoint_acceptance_receipt": "research_logs/checkpoint_relay_acceptance_20261014/r2_full_get_receipt.json",
+  "synthetic_checkpoint_acceptance_sha256": "bbdff282d3af9fb1b1e3062fb1459369b1e0c160903988d68c810c333b9ad19e",
+  "synthetic_checkpoint_archive_sha256": "6b5b52e0ce35fdf9abf45b0e27034c829b248fad0d072558285c4e90230493f0",
+  "frozen_training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+  "entry_point": "scripts/run_kumar_parent_first_fit.py",
+  "local_exit_code_backup_pending": 75,
+  "maximum_wall_seconds": 1800,
+  "automatic_retries": 0,
+  "expected_result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-source-20261014/sub-1-seed-20261012-run01.tar"
+}

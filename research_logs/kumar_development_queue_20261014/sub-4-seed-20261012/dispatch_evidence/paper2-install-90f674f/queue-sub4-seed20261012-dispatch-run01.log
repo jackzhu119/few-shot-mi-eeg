@@ -1,0 +1,28 @@
+START=2026-10-14T11:53:33Z
+DISPATCH_PID=19007
+From https://github.com/jackzhu119/few-shot-mi-eeg
+ * branch              e79338eba02f0d4e4889eca089fff9767295a5b9 -> FETCH_HEAD
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  cc70f427 Acknowledge seed20261013 backup and release next frozen source job
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> cc70f427
+
+HEAD is now at e79338eb Acknowledge third source fit and release sub-4 seed20261012
+{"status": "plan_valid_execution_closed", "jobs": 18, "reused": 1, "new_fits_max": 17, "query_access": false, "data_files": 127, "data_bytes": 98743492}
+ALL_7_DELIVERY_AND_127_CACHE_HASHES_PASS
+{"next_job": {"subject": "sub-4", "seed": 20261012, "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d", "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28", "job_id": "e1b092f93db8c972cb59403814c73eb1ba2273b1aa82351f0205c390a28b9faa", "action": "planned_not_authorized_to_execute", "output": "/workspace/paper2-results/development-queue/sub-4/seed-20261012", "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-4-seed-20261012-run01.tar"}, "parent_confirmation_checked": true, "no_downloads": true}
+2026-10-14T11:53:38Z
+e79338eba02f0d4e4889eca089fff9767295a5b9
+{"status": "plan_valid_execution_closed", "jobs": 18, "reused": 1, "new_fits_max": 17, "query_access": false, "data_files": 127, "data_bytes": 98743492}
+{"status": "fit_saved_private_backup_pending", "job_id": "e1b092f93db8c972cb59403814c73eb1ba2273b1aa82351f0205c390a28b9faa", "subject": "sub-4", "seed": 20261012, "archive": "/workspace/paper2-results/development-queue/sub-4/seed-20261012.tar", "bytes": 174080, "sha256": "f889999e47b3d4f4d58604c0d4daca95578dac83d0776ba3bac629e23a3268a1", "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-4-seed-20261012-run01.tar", "R2_backup_verified": false, "stop_Pod": false}
+QUEUE_DISPATCH_EXIT_CODE=75
+2026-10-14T11:53:47Z
+Dispatch evidence: /workspace/paper2-results/queue-dispatch-CEwGnI2r.log
+One local fit awaits private archive acceptance. Do not rerun training or stop Pod.
+OUTER_EXIT_CODE=75
+END=2026-10-14T11:53:47Z

@@ -1,0 +1,43 @@
+{
+  "status": "independent_archive_protocol_checkpoint_audit_passed",
+  "source_commit": "d4d2a64bb16e5f3841ecdefeb188fd8b9a121c71",
+  "fit_archive_sha256": "2a4d0dd291f1f93bc0560e39b99b2e76fbf6bcba0d3a363ceb522fb4afea0f62",
+  "dispatch_archive_sha256": "ad73258ad41c7f7f64508ac27d5726a99d56123faf339386ab8c925048222905",
+  "fit_members_verified": 11,
+  "dispatch_members_verified": 4,
+  "expected_R2_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-source-20261014/sub-1-seed-20261012-run01.tar",
+  "subject": "sub-1",
+  "seed": 20261012,
+  "source_train_rows": 40,
+  "source_validation_rows": 20,
+  "query_rows_loaded_by_audit": 0,
+  "query_rows_loaded_reported_by_fit": 0,
+  "epochs_executed": 41,
+  "selected_epoch": 26,
+  "optimizer_steps": 123,
+  "selected_source_validation_cross_entropy": 0.6909911870956421,
+  "runtime_seconds_reported": 5.509300802834332,
+  "peak_cuda_memory_bytes_reported": 12099072,
+  "dispatch_start_utc": "2026-10-14T10:45:18Z",
+  "dispatch_end_utc": "2026-10-14T10:45:29Z",
+  "dispatch_exit_code": 75,
+  "checkpoint_sha256": "eb22b63a50e7c100da1e6c82e64515cded0b26ffb138873fd6f0394dbcc08d80",
+  "checkpoint_state_sha256": "2036a381309b4830262b3718754e0776a732d5124f5d70134b49103331471fdc",
+  "training_log_bytes": 0,
+  "epoch_evidence": "41-row history bound inside weights.pt and matching weights.json; empty training.log preserved unchanged",
+  "audit_methods": [
+    "full archive/member hashes",
+    "Git snapshot comparison",
+    "frozen trial-ID set comparison",
+    "independent earliest-minimum/patience recomputation",
+    "torch weights_only CPU load and independent state hash"
+  ],
+  "limitations": [
+    "No model refit or prediction replay performed",
+    "Recorded losses not recomputed from EEG",
+    "Single development participant/seed; no query decoding performance or cohort inference",
+    "Device memory/time are execution-reported values, not independent billing"
+  ],
+  "parent_acknowledgement": "pending",
+  "platform_stop_status": "not_checked_no_stop_executed"
+}

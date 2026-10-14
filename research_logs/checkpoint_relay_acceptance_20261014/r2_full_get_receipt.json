@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "started_at_utc": "2026-10-14T10:36:50.142643+00:00",
+  "source_root": "/workspace/paper2-private-library-check/checkpoint-relay",
+  "key_prefix": "few-shot-mi-eeg/research-evidence/https-first-fit-20261014/library-synthetic-checkpoint-run01",
+  "status": "completed",
+  "workers": 1,
+  "include_patterns": [],
+  "script_sha256": "b2583bcbe67956684d1599007d6d7aa2e8ca69f817b4171dca68ddb2d34a886e",
+  "python_version": "3.11.16 (main, Sep 24 2026, 17:56:40) [Clang 22.1.3 ]",
+  "source_git_commit": "740326a6a8a2ac5a5cff8079403f8ec0abef688d",
+  "readback_mode": "all",
+  "full_readback_selection": "all files",
+  "immutable_create": "IfNoneMatch=* on PutObject and CompleteMultipartUpload",
+  "existing_reuse_requires": "HEAD length/SHA256 metadata plus full GET SHA256",
+  "etag_is_not_a_sha256": true,
+  "credential_values_logged": false,
+  "remote_overwrite_enabled": false,
+  "files": [
+    {
+      "relative_path": "cuda-synthetic-relay-run01.tar",
+      "key": "few-shot-mi-eeg/research-evidence/https-first-fit-20261014/library-synthetic-checkpoint-run01/cuda-synthetic-relay-run01.tar",
+      "sha256": "6b5b52e0ce35fdf9abf45b0e27034c829b248fad0d072558285c4e90230493f0",
+      "bytes": 40960,
+      "status": "uploaded_content_verified",
+      "selected_for_full_readback": true,
+      "started_at_utc": "2026-10-14T10:36:50.421523+00:00",
+      "uploaded_bytes": 40960,
+      "readback_bytes": 40960,
+      "upload_method": "conditional_put",
+      "put_http_status": 200,
+      "head_http_status": 200,
+      "verification": "full_get_sha256_verified",
+      "get_http_status": 200,
+      "finished_at_utc": "2026-10-14T10:36:51.444849+00:00"
+    }
+  ],
+  "updated_at_utc": "2026-10-14T10:36:51.447151+00:00",
+  "totals": {
+    "planned_files": 1,
+    "planned_bytes": 40960,
+    "verified_files": 1,
+    "verified_bytes": 40960,
+    "failed_files": 0,
+    "full_get_sha256_verified_files": 1,
+    "uploaded_bytes": 40960,
+    "readback_bytes": 40960
+  },
+  "boto3_version": "1.43.111",
+  "finished_at_utc": "2026-10-14T10:36:51.447113+00:00"
+}
