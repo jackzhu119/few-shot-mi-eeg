@@ -13,6 +13,7 @@ import csv
 import hashlib
 import inspect
 import json
+import os
 import time
 from pathlib import Path
 
@@ -61,11 +62,11 @@ def canonical_sha256(value):
 def validate_training_contract(config):
     """Reject settings whose names promise source-only behavior the code cannot honor."""
     dims, settings = config["input"], config["optimization"]
-    if (config["device"] != "cpu" or dims != {
+    if (config["device"] not in {"cpu", "cuda"} or dims != {
         "n_channels": 22, "n_classes": 2, "n_times": 640, "sfreq_hz": 128.0,
         "units": "V", "class_mapping": {"left_hand": 0, "right_hand": 1},
     }):
-        raise ValueError("Frozen input contract is CPU, 22 channels, 640 samples, 128 Hz, volts")
+        raise ValueError("Frozen input contract is CPU/CUDA, 22 channels, 640 samples, 128 Hz, volts")
     if config["normalization"] != {
         "fit_partition": "source_train", "axis": [0, 2], "scale_floor_volts": 1e-8,
         "target_fit": False,
@@ -150,7 +151,7 @@ class SourceOnlyEEGNet(EEGNetClassifier):
         self.architecture_ = "braindecode.models.EEGNet"
         self.constructor_kwargs_ = {key: value for key, value in kwargs.items()
                                     if key != "activation"}
-        return EEGNet(**kwargs).to("cpu")
+        return EEGNet(**kwargs).to(self.device)
 
     def _normalized(self, X):
         return np.asarray((self._array(X) - self.channel_mean_) / self.channel_scale_,
@@ -162,8 +163,9 @@ class SourceOnlyEEGNet(EEGNetClassifier):
         total = 0.0
         with torch.no_grad():
             for start in range(0, len(X), self.batch_size):
-                batch = torch.from_numpy(X[start:start + self.batch_size])
-                labels = torch.as_tensor(y[start:start + self.batch_size], dtype=torch.long)
+                batch = torch.from_numpy(X[start:start + self.batch_size]).to(self.device)
+                labels = torch.as_tensor(y[start:start + self.batch_size], dtype=torch.long,
+                                         device=self.device)
                 loss = torch.nn.functional.cross_entropy(self._logits(self.model_, batch), labels,
                                                         reduction="sum")
                 total += loss.item()
@@ -174,8 +176,15 @@ class SourceOnlyEEGNet(EEGNetClassifier):
     def fit_source(self, X_train, y_train, X_validation, y_validation,
                    train_metadata, validation_metadata):
         validate_source_partitions(train_metadata, validation_metadata)
-        if self.device != "cpu":
-            raise ValueError("This preparation supports existing CPU resources only")
+        if self.device == "cuda":
+            if not torch.cuda.is_available():
+                raise RuntimeError("CUDA requested but unavailable; refusing CPU fallback")
+            if os.environ.get("CUBLAS_WORKSPACE_CONFIG") != ":4096:8":
+                raise RuntimeError("Set CUBLAS_WORKSPACE_CONFIG=:4096:8 before starting Python")
+            torch.backends.cudnn.benchmark = False
+            torch.backends.cudnn.deterministic = True
+            torch.backends.cuda.matmul.allow_tf32 = False
+            torch.backends.cudnn.allow_tf32 = False
         settings = self.config["optimization"]
         stopping = settings["early_stopping"]
         if stopping["partition"] != "source_validation" or stopping["mode"] != "min":
@@ -214,6 +223,7 @@ class SourceOnlyEEGNet(EEGNetClassifier):
             self.model_.train()
             loss_sum = 0.0
             for batch, labels in loader:
+                batch, labels = batch.to(self.device), labels.to(self.device)
                 optimizer.zero_grad(set_to_none=True)
                 loss = criterion(self._logits(self.model_, batch), labels)
                 if not torch.isfinite(loss):
@@ -457,7 +467,7 @@ def software_check(config, output, *, data_root=None):
                    runtime_seconds=time.monotonic() - start,
                    provenance=collect_provenance(config["seeds"][0], ROOT),
                    training_config_canonical_sha256=canonical_sha256(config),
-                   runtime_device=dict(requested="cpu", torch_build=torch.__version__,
+                   runtime_device=dict(requested=config["device"], torch_build=torch.__version__,
                                        cuda_build=torch.version.cuda,
                                        cuda_available=torch.cuda.is_available(),
                                        cuda_device_count=torch.cuda.device_count(),

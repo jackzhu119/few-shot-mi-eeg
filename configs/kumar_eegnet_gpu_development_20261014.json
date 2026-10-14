@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "experiment": "Task-Aware Adaptive Decoding for Longitudinal Motor-Imagery EEG",
+  "status": "gpu_source_only_development_preparation",
+  "protocol_config": "configs/kumar_cross_session_20261012.json",
+  "split_manifest": "research_logs/kumar_cross_session_20261012/protocol/split_manifest.json",
+  "device": "cuda",
+  "threads": 1,
+  "seeds": [
+    20261012,
+    20261013,
+    20261014
+  ],
+  "input": {
+    "n_channels": 22,
+    "n_classes": 2,
+    "n_times": 640,
+    "sfreq_hz": 128.0,
+    "units": "V",
+    "class_mapping": {
+      "left_hand": 0,
+      "right_hand": 1
+    }
+  },
+  "architecture": {
+    "implementation": "braindecode.models.EEGNet",
+    "F1": 4,
+    "D": 2,
+    "F2": 8,
+    "kernel_length": 64,
+    "depthwise_kernel_length": 16,
+    "pool1_kernel_size": 4,
+    "pool2_kernel_size": 8,
+    "pool_mode": "mean",
+    "final_conv_length": "auto",
+    "conv_spatial_max_norm": 1.0,
+    "activation": "ELU",
+    "batch_norm_momentum": 0.01,
+    "batch_norm_affine": true,
+    "batch_norm_eps": 0.001,
+    "drop_prob": 0.5,
+    "final_layer_with_constraint": false,
+    "norm_rate": 0.25
+  },
+  "optimization": {
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "epsilon": 1e-08,
+    "weight_decay": 0.0,
+    "amsgrad": false,
+    "batch_size": 16,
+    "max_epochs": 100,
+    "scheduler": "none",
+    "loss": "CrossEntropyLoss",
+    "label_smoothing": 0.0,
+    "class_weights": "none",
+    "early_stopping": {
+      "partition": "source_validation",
+      "metric": "mean_cross_entropy",
+      "mode": "min",
+      "patience": 15,
+      "min_delta": 0.0,
+      "ties": "earliest_epoch"
+    },
+    "shuffle_training": true,
+    "drop_last": false,
+    "num_workers": 0
+  },
+  "normalization": {
+    "fit_partition": "source_train",
+    "axis": [
+      0,
+      2
+    ],
+    "scale_floor_volts": 1e-08,
+    "target_fit": false
+  },
+  "inference": {
+    "mode": "eval",
+    "batch_norm_updates": false,
+    "optimizer_steps": 0,
+    "threshold": "argmax_no_tuning"
+  },
+  "development_subjects": [
+    "sub-1",
+    "sub-4",
+    "sub-7",
+    "sub-10",
+    "sub-13",
+    "sub-16"
+  ],
+  "hyperparameter_selection": {
+    "search_performed": false,
+    "allowed_data": "development_subject_source_train_and_source_validation_only",
+    "target_query_access_for_selection": false,
+    "rationale": "small prespecified official EEGNet baseline; no performance-driven selection in this preparation"
+  },
+  "freeze": {
+    "ready_for_formal_training": false,
+    "protocol_config_sha256": null,
+    "split_manifest_sha256": null,
+    "frozen_training_config_sha256": null,
+    "required_conditions": [
+      "protocol and full identity/split audit pass",
+      "final input/split manifests archived with SHA256",
+      "hyperparameters, epochs, stopping, seeds, preprocessing and cohort frozen before final query access",
+      "source-only development validation decisions recorded if any",
+      "resources and actual wall-time/cost budget available without creating paid compute"
+    ],
+    "this_round_authorization": "Parent schedules existing GPU; preparation here, no external launch. Source development only; formal query gate remains false."
+  },
+  "software_validation": {
+    "synthetic_max_epochs": 2,
+    "synthetic_source_train_rows": 16,
+    "synthetic_source_validation_rows": 8,
+    "real_data": "development_sub1_source_train_and_source_validation_shape_and_preprocessing_only",
+    "real_training": false,
+    "query_predictions": false,
+    "formal_performance_claims": false
+  },
+  "budget": {
+    "serial_subject_seed_fits": 54,
+    "subjects": 18,
+    "seeds_per_subject": 3,
+    "maximum_epochs_per_fit": 100,
+    "maximum_training_minibatches_per_epoch": 3,
+    "maximum_optimizer_steps_total": 16200,
+    "new_paid_resources": false,
+    "gpu_availability": "no_cuda_build_and_zero_cuda_devices_on_verified_runtime",
+    "gpu_cost": "unknown_no_rate_or_resource_requested",
+    "formal_wall_time": "pending_representative_benchmark_and_training",
+    "planned_checkpoint_format": "torch_tensor_state_dict_and_bound_utf8_JSON_context_plus_strict_JSON_sidecar; torch.load(weights_only=True)"
+  }
+}

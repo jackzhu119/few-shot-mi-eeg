@@ -144,7 +144,8 @@ class KumarSubject:
 
 
 def load_subject(data_root: str | Path, subject: str, config: str | Path | dict,
-                 split_manifest: str | Path | dict | None = None) -> KumarSubject:
+                 split_manifest: str | Path | dict | None = None, *,
+                 allowed_roles: set[str] | None = None) -> KumarSubject:
     """Serially load one participant and verify frozen identities/content hashes.
 
     Config paths are repository-relative when the caller runs from the checkout.
@@ -152,6 +153,8 @@ def load_subject(data_root: str | Path, subject: str, config: str | Path | dict,
     retains all source identities, official hashes, CPz and actual acquisition UTC.
     """
     config = read_json(config)
+    if allowed_roles is not None:
+        require(bool(allowed_roles) and allowed_roles <= ROLES, "Invalid role allowlist")
     require(re.fullmatch(r"sub-\d+", subject) is not None and subject in config["subjects"],
             "Unfrozen subject")
     root = Path(data_root)
@@ -186,6 +189,9 @@ def load_subject(data_root: str | Path, subject: str, config: str | Path | dict,
     prior = json.loads((prior_root / "source_events.json").read_text())
     source_rows = [dict(e) for e in prior if e["subject"] == subject]
     require(len(source_rows) == 400, "Pinned subject source-event coverage changed")
+    if allowed_roles is not None:
+        source_rows = [e for e in source_rows
+                       if role_for(e["session"], e["run"], config) in allowed_roles]
     by_file = defaultdict(list)
     for e in source_rows:
         by_file[e["source_file"]].append(e)
@@ -198,6 +204,8 @@ def load_subject(data_root: str | Path, subject: str, config: str | Path | dict,
         require(len(scan_rows) == expected_runs, "Actual scan run count changed")
         for run_index, scan in enumerate(scan_rows):
             run = f"run-{run_index}"
+            if allowed_roles is not None and role_for(session, run, config) not in allowed_roles:
+                continue
             relative = f"{subject}/{session}/{scan['filename']}"
             require(relative.endswith(f"_{run}_eeg.edf"), "Run ordering differs from scans.tsv")
             timestamp = datetime.fromisoformat(scan["acq_time"].replace("Z", "+00:00"))

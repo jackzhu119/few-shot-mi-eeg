@@ -281,3 +281,19 @@ def test_real_adapter_inspection_uses_source_shapes_without_training_predictions
     assert not result["predictions_computed"] and not result["performance_metrics_computed"]
     assert [part["shape"] for part in result["partitions"]] == [[16, 22, 640], [8, 22, 640]]
     assert "query-must-not-be-inspected" not in json.dumps(result)
+
+
+def test_cuda_unavailable_refuses_silent_cpu_fallback(config, source, monkeypatch):
+    config['device'] = 'cuda'
+    monkeypatch.setattr(torch.cuda, 'is_available', lambda: False)
+    with pytest.raises(RuntimeError, match='refusing CPU fallback'):
+        training.SourceOnlyEEGNet(config, 123).fit_source(*source)
+
+
+@pytest.mark.skipif(not torch.cuda.is_available(), reason='Actual CUDA hardware required')
+def test_cuda_training_checkpoint_replay(config, tmp_path, monkeypatch):
+    monkeypatch.setenv('CUBLAS_WORKSPACE_CONFIG', ':4096:8')
+    config['device'] = 'cuda'
+    receipt = training.software_check(config, tmp_path / 'cuda')
+    assert receipt['runtime_device']['requested'] == 'cuda'
+    assert receipt['checks'][0]['safe_checkpoint_exact_replay']

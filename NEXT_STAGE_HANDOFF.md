@@ -38,3 +38,5 @@ PYTHONPATH=/tmp/codex-r2-connectivity-sdk MIND_SOURCE_RANGE_WORKERS=1 /workspace
 
 
 低维证据R2已关闭：294对象/18,483,470 bytes全部GET SHA256；累计目录lowdim_cumulative_catalog_run01共16,407去重keys/45,047,516,373 bytes，其中6,130对象有完整GET。目录native闭合61run、原始源文件667/695（采样阶段不同），稍后live闭合62/90；MIND未全量完成。目录不自递归计入后续closing账本。下载沿用PID5558/5563，若已消失先核实failure/checkpoint/lock再恢复，勿重复启动。独立数值审核最大差1.28e-13，小于1e-9容差；720预测及BA逐值相同。
+
+2026-10-14新云端接续：已从67f89ee恢复，监督CSP开发可靠性实际完成：42 EDF完整GET SHA256，836允许窗口（240 source TRAIN/596 support），零query/最终编号加载。source整run留出BA62.92%，六发布编号bootstrap95%区间[52.92,72.08]%；support分半cosine均值0.298，区间[0.049,0.551]，30会话中8负值。不是门控收益证据，尚未实现或调阈值。首次汇总字符串/整数key不匹配已只重算聚合并保留原件，未重跑fit；以research_logs/gpu_preparation_20261014/supervised_csp_run01/summary_corrected.json为准。NumPy逐fold预测重放通过。MIND实时R2列举72个原始EEG对象，只是存在/长度，不宣称72闭合。GPU依赖独立锁、CUDA设备支持、source-only单fit入口、短期逐对象签名传输及完整GET备份准备完成；682测试通过、1实际CUDA测试本机跳过，Ruff/smoke/MOABB通过。没有启动外部GPU。父对话统一调度现有A4500，30GB容器盘非持久，完整命令/空间/安全传输/失败恢复见GPU_SERVER_HANDOFF_20261014.md。现有R2运行环境注入授权HEAD/GET成功，禁止复制密钥到RunPod；短期签名备份用合成对象实测成功。完整54fit和query正式冻结仍待GPU/数据交付验收，不手改历史freeze开关。
