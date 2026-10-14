@@ -1,0 +1,29 @@
+{
+  "development_subjects": [
+    1,
+    4,
+    7,
+    10,
+    13,
+    16
+  ],
+  "seed": 42,
+  "bootstrap_replicates": 10000,
+  "allowed_roles": [
+    "source_train",
+    "target_support"
+  ],
+  "frozen_config_path": "configs/kumar_cross_session_20261012.json",
+  "frozen_config_sha256": "f1b2d0fa870493cc2aaab906fe6d8b1227e45b2a270e06700e3ca137fbfe9c89",
+  "plan_path": "docs/kumar_csp_reliability_plan_20261014.md",
+  "plan_sha256": "b942fdb6265594d632dbfb70a536bd576b9e2d5b13871f8d4e8e4c9721a8b34f",
+  "query_access": false,
+  "final_cohort_access": false,
+  "automatic_candidate_selection": false,
+  "adaptation_gate_threshold_search": false,
+  "phase_control": "exact20x20labelrollpairs;20supervisedCSP/LDArefitsperfold,cachedheldoutpredictions",
+  "conditional_phase_control_is_formal_p_value": false,
+  "existing_primary_baselines_preserved": true,
+  "source_current_support_no_decoder_refit": true,
+  "claim_scope": "exploratory supervised task-coordinate reliability, no adaptation efficacy or neural-learning claim"
+}
