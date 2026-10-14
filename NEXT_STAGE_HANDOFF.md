@@ -85,3 +85,6 @@ HTTPS/私人备份操作修订：固定首fit官方同版本同字节25文件/16
 
 
 2026-10-14第6真实开发fit sub-4/20261014已独立审计及R2备份：14+12载荷另加manifest全部hash、固定f49a977源码/config/split/checkpoint及127缓存输入通过；16epochs48steps选1，validation CE0.6939079999923706，Torch重放差0，保存logits CE误差4.810626230700166e-9通过原1e-7。两原包245760bytes完整GET SHA256、零失败，回执SHAd35ad175bb831ce5681157ab0c85bb04780894c4d2bb0987fb749e6755ec2e00。外层10采样中6有双PID、4在fitting区间、末条GPU为zombie/RSS0；CPU退出3原记录保留，不宣称论文1验收。证据及待父确认请求见sub-4-seed-20261014。活动账本仍5项，未写父确认/第6验收/第7释放/重训/操作Pod；保留旧失败日志和未提交CSP文件。
+
+
+2026-10-14 dot父侧14:47 UTC（分钟精度）已从固定97a5445db50902cb083dd07eefd949522b54fdea实际读取第6fit独立审计、父确认请求和完整GET回执，计算完整UTF-8 SHA256=d35ad175bb831ce5681157ab0c85bb04780894c4d2bb0987fb749e6755ec2e00，明确确认2原对象245760bytes/零失败及离机原包hash。依此追加真实parent_acknowledged及连续账本第6项，原五项和旧证据不变。check_gate确认唯一下一项sub-7/20261012（job 735d0b78575ffe08b0be4e51a26fcadaa0a2db1977c9120d1e837e3ed48d03d7），只运行相关门控测试；7项交付hash、科学配置、容差、数值线程和预算保持不变。并行证据仍为4条fit区间采样、第5条fit_saved后18.498ms、末条GPU zombie/RSS0，不称连续监控或论文1验收。交接见sub-4-seed-20261014/next_dispatch.md及next_dispatch_release.json；dot唯一操作Pod，本agent未训练或操作Pod，原未提交CSP文件保留。
