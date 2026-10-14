@@ -123,16 +123,59 @@
     "formal_performance_claims": false
   },
   "budget": {
-    "serial_subject_seed_fits": 54,
-    "subjects": 18,
-    "seeds_per_subject": 3,
+    "execution_stage": "initial_source_only_development_fit_pending_parent_schedule",
+    "serial_subject_seed_fits": 1,
+    "subjects": 1,
+    "seeds_per_subject": 1,
+    "initial_subject": "sub-1",
+    "initial_seed": 20261012,
     "maximum_epochs_per_fit": 100,
     "maximum_training_minibatches_per_epoch": 3,
-    "maximum_optimizer_steps_total": 16200,
+    "maximum_optimizer_steps_total": 300,
+    "overall_frozen_plan": {
+      "subjects": 18,
+      "seeds": [
+        20261012,
+        20261013,
+        20261014
+      ],
+      "serial_subject_seed_fits": 54,
+      "maximum_optimizer_steps_total": 16200,
+      "status": "planned_not_executed_not_current_dispatch_scope"
+    },
     "new_paid_resources": false,
-    "gpu_availability": "no_cuda_build_and_zero_cuda_devices_on_verified_runtime",
-    "gpu_cost": "unknown_no_rate_or_resource_requested",
-    "formal_wall_time": "pending_representative_benchmark_and_training",
+    "platform_reported_hardware": {
+      "source": "parent_read_only_platform_and_server_precheck",
+      "pod_id": "52ivinpjwv947i",
+      "pod_name": "bright_ivory_bear",
+      "gpu_model": "RTX A4500",
+      "gpu_count": 1,
+      "gpu_memory_mib": 20470,
+      "driver_version": "580.159.04",
+      "container_disk_gb": 30,
+      "persistent_volume_verified": false,
+      "workspace_storage": "nonpersistent_root_overlay"
+    },
+    "execution_environment_verification": {
+      "codex_historical_runtime": "CPU-only software validation",
+      "remote_hardware_independently_verified_by_this_agent": false,
+      "remote_cuda_software_validation": "pending",
+      "paper2_isolated_environment_installation": "not_started",
+      "real_gpu_fit": "not_started",
+      "ssh_status": "connection_refused_before_handshake"
+    },
+    "rates": {
+      "currency": "USD",
+      "compute_per_hour": 0.25,
+      "container_storage_per_hour": 0.004,
+      "source": "parent_platform_reported_rates",
+      "billing_independently_verified": false
+    },
+    "monetary_authorization": "user_reports_no_budget_ceiling; no automatic expansion or wasteful reruns",
+    "hard_monetary_limit_usd": null,
+    "actual_cost_usd": null,
+    "actual_platform_stop_status": "not_verified_parent_controls_shared_instance",
+    "formal_wall_time": "pending_representative_source_only_fit; no synthetic-to-real timing extrapolation",
     "planned_checkpoint_format": "torch_tensor_state_dict_and_bound_utf8_JSON_context_plus_strict_JSON_sidecar; torch.load(weights_only=True)"
   }
 }

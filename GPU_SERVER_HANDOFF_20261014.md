@@ -179,3 +179,28 @@ all planned objects were uploaded/reused and fully GET SHA256 verified, zero fai
 The backup includes the synthetic checkpoint excluded from Git. The receipt is
 outside its own payload to avoid recursive self-archiving. This is a Codex evidence
 backup; it does not imply the future RunPod job or its backup has run.
+
+## Runtime metadata amendment after SSH diagnosis
+
+The development configuration now describes only the initial sub-1 / seed-20261012
+source-only fit (at most 100 epochs / 300 optimizer steps). The overall scientific
+18-participant, three-seed, 54-fit plan remains explicitly preserved under
+`budget.overall_frozen_plan`; all non-budget configuration fields are unchanged.
+The earlier 219cfd5 executable snapshot remains historical evidence. Use the new
+metadata-amendment commit/config hash for the next scheduled run; do not combine
+new and historical config hashes when restoring a checkpoint.
+
+The RTX A4500 / 20470 MiB / driver 580.159.04 specifications and USD 0.25/hour
+compute + USD 0.004/hour container storage are parent-reported observations, not
+new measurements by this agent. Actual charges are unknown. Paper 2 isolated
+server installation, remote CUDA validation and real GPU training are not started.
+The local CPU validation remains separate. No monetary hard limit was removed;
+scientific stopping rules and seeds are unchanged.
+
+SSH and SFTP each failed once before handshake with `Connection refused` at the
+parent-provided endpoint. Strict host-key pinning was configured, but no remote
+host key could be authenticated through a completed handshake. No repeat connection
+was made for this amendment. Sanitized failure evidence and old/new budgets,
+configuration hashes, exact non-budget equality, and software contract validation
+are in `research_logs/gpu_runtime_metadata_20261014/`. No key or signed capability
+contents are included. Parent is investigating the endpoint/mapping/sshd.
