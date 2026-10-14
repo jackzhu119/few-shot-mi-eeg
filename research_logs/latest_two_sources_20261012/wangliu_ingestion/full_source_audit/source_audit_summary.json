@@ -1,0 +1,103 @@
+{
+  "status": "completed_full_source_audit",
+  "started_at_utc": "2026-10-12T07:36:27.657411+00:00",
+  "finished_at_utc": "2026-10-12T07:39:04.881741+00:00",
+  "official_archive_md5_verified": true,
+  "archive_bytes": 5175273351,
+  "archive_md5": "74dabab47f477e5bc0510b1e2e705c5a",
+  "archive_sha256": "22ef6c1a05992334719c34408cb887d997b304fc5d68635989520e73d6b95dad",
+  "subject_count": 24,
+  "recordings": 268,
+  "source_event_count": 10697,
+  "member_crc_and_sha256_verified_count": 536,
+  "group_subject_counts": {
+    "B": 14,
+    "T": 10
+  },
+  "recording_count_by_phase": {
+    "pre": 96,
+    "post": 96,
+    "follow": 76
+  },
+  "subject_count_by_phase": {
+    "pre": 24,
+    "post": 24,
+    "follow": 19
+  },
+  "missing_followup_ids": [
+    "sub-05",
+    "sub-17",
+    "sub-18",
+    "sub-20",
+    "sub-21"
+  ],
+  "missing_followup_reason": "published absence; no recordings invented",
+  "all_present_subject_phases_have_runs_1to4": true,
+  "all_raw_64columns_59scalp_1ECG_4EOG_verified": true,
+  "all_raw_250Hz_verified": true,
+  "all_source_samples_finite": true,
+  "records_with_nonfinite_samples": [],
+  "all_native_events_match_mne_annotations": true,
+  "source_event_type_counts": {
+    "1": 5351,
+    "2": 2674,
+    "3": 2672
+  },
+  "native_duration_status_counts": {
+    "native_duration_absent_point_marker_no_window_inferred": 10697
+  },
+  "positive_native_duration_windows_audited": 0,
+  "task_window_duplicate_check_scope": "only positive complete source-defined native durations; absent/zero duration point markers yield no invented windows",
+  "exact_duplicate_group_counts": {
+    "all64_numeric_sha256": 8,
+    "scalp59_numeric_sha256": 8,
+    "scalp59_native_window_sha256": 0
+  },
+  "exact_cross_identity_duplicate_groups": {
+    "all64_numeric_sha256": 4,
+    "scalp59_numeric_sha256": 4,
+    "scalp59_native_window_sha256": 0
+  },
+  "within_person_cross_phase_content_reuse_groups": {
+    "all64_numeric_sha256": 4,
+    "scalp59_numeric_sha256": 4,
+    "scalp59_native_window_sha256": 0
+  },
+  "records_with_constant_channels": 154,
+  "constant_channel_record_counts": {
+    "ECG": 131,
+    "VEOL": 34,
+    "VEOU": 13,
+    "HEOL": 51,
+    "HEOR": 62,
+    "PO5": 4
+  },
+  "records_with_large_absolute_mean_flags": 268,
+  "records_with_scalp_peak_over_1mV_flags": 268,
+  "observed_reference_fields": [
+    "common"
+  ],
+  "numeric_hash_convention": "MNE volts; little-endian float64; C-order channels-by-samples in chronological fixed 16384-sample blocks (final block shorter); channel labels/order and sample count are separate comparison keys",
+  "block_samples": 16384,
+  "scratch_max_pair_bytes": 55503688,
+  "scratch_budget_bytes": 67108864,
+  "scratch_leftover_pair_directories": 0,
+  "whole_raw_extraction_retained": false,
+  "processed_whole_archive_downloaded": false,
+  "preprocessing_performed": [],
+  "model_fits_performed": false,
+  "root_metadata_conflicts_preserved": [
+    "events.json trailing comma",
+    "events.tsv generic example, not run timing",
+    "root 60EEG/average/0EOG differs from raw64/common/5aux",
+    "participants.json names differ from actual TSV"
+  ],
+  "future_analysis_qualified": false,
+  "future_analysis_gates": [
+    "freeze native-event task windows explicitly",
+    "source units/reference and artifact QC sensitivity",
+    "freeze dataset-specific subject/run/phase splits after duplicate audit",
+    "clinical outcome and decoder-update linkage remain absent"
+  ],
+  "scientific_boundary": "Stroke longitudinal observational source audit. Exact-copy absence does not prove biological independence. Offline decoding, algorithm causality, human skill retention and clinical outcome benefit are not established."
+}

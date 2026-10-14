@@ -1,0 +1,598 @@
+{
+  "scope": "Official paper metadata and text only. No author code or EEG data downloaded/executed; raw SET/FDT and archive contents not verified here.",
+  "verified_utc": "2026-10-12T00:37:58.749459+00:00",
+  "paper": {
+    "title": "A multi-paradigm and longitudinal EEG dataset including the “sixth-finger” and “affected-hand” motor imagery of stroke patients",
+    "doi": "10.1038/s41597-026-07787-y",
+    "pmcid": "PMC13424360",
+    "pmid": "42533005",
+    "journal": "Scientific Data",
+    "volume": "13",
+    "article_number": "1109",
+    "published_online": "2026-07-30",
+    "received": "2025-12-26",
+    "accepted": "2026-06-29",
+    "authors": [
+      "Zhuang Wang",
+      "Yuan Liu",
+      "Shuaifei Huang",
+      "Wenlai Wu",
+      "Huimin Huang",
+      "Zhuolan Gui",
+      "Zhaoqi Li",
+      "Jun Guo",
+      "Hao Zhang",
+      "Minpeng Xu",
+      "Dong Ming"
+    ],
+    "equal_contribution": [
+      "Zhuang Wang",
+      "Yuan Liu"
+    ],
+    "article_license": "CC BY-NC-ND 4.0 (article; do not infer dataset license)",
+    "dataset_doi_cited": "10.6084/m9.figshare.30509165"
+  },
+  "claims": [
+    {
+      "name": "cohort",
+      "value": {
+        "stroke_patients": 24,
+        "BCI": 14,
+        "traditional": 10,
+        "age_range": [
+          34,
+          77
+        ],
+        "mean_age": 55.75,
+        "male": 18,
+        "female": 6
+      },
+      "official_section_id": "Sec3",
+      "official_paragraph_id": "Par7",
+      "publisher_section_url": "https://www.nature.com/articles/s41597-026-07787-y#Sec3",
+      "quote": "This study recruited a total of 24 stroke patients from Tianjin Huanhu Hospital, including 18 males and 6 females. The patients ranged in age from 34 to 77 years, with a mean age of 55.75 years. Among them, 15 had right hemiplegia and 9 had left hemiplegia. And fourteen patients received brain-computer interface (BCI) training (BCI group), while 10 patients received conventional physical rehabilitation therapy (Traditional group). The BCI training involved a 2-week rehabilitation program using the brain-controlled “sixth-finger”15,17 system independently developed by the research team from Tianjin University. The conventional physical training consisted of a 2-week rehabilitation program and administered by rehabilitation physicians from Tianjin Huanhu Hospital. The BCI group and traditional group received equivalent training dosages. Each intervention consisted of 8 training sessions over 2 weeks, with 4 sessions per week, and each session lasted approximately 45 min. In addition, all patients underwent three functional assessments: immediately before the intervention (pre-training), immediately after the intervention (post-training), and 1 month after the intervention (follow-up)."
+    },
+    {
+      "name": "intervention_dose",
+      "value": {
+        "weeks": 2,
+        "sessions": 8,
+        "sessions_per_week": 4,
+        "minutes_per_session_approximately": 45,
+        "dosages_equivalent": true
+      },
+      "official_section_id": "Sec3",
+      "official_paragraph_id": "Par7",
+      "publisher_section_url": "https://www.nature.com/articles/s41597-026-07787-y#Sec3",
+      "quote": "This study recruited a total of 24 stroke patients from Tianjin Huanhu Hospital, including 18 males and 6 females. The patients ranged in age from 34 to 77 years, with a mean age of 55.75 years. Among them, 15 had right hemiplegia and 9 had left hemiplegia. And fourteen patients received brain-computer interface (BCI) training (BCI group), while 10 patients received conventional physical rehabilitation therapy (Traditional group). The BCI training involved a 2-week rehabilitation program using the brain-controlled “sixth-finger”15,17 system independently developed by the research team from Tianjin University. The conventional physical training consisted of a 2-week rehabilitation program and administered by rehabilitation physicians from Tianjin Huanhu Hospital. The BCI group and traditional group received equivalent training dosages. Each intervention consisted of 8 training sessions over 2 weeks, with 4 sessions per week, and each session lasted approximately 45 min. In addition, all patients underwent three functional assessments: immediately before the intervention (pre-training), immediately after the intervention (post-training), and 1 month after the intervention (follow-up)."
+    },
+    {
+      "name": "assessment_phases",
+      "value": {
+        "pre": "Immediately before intervention",
+        "post": "Immediately after intervention",
+        "follow": "1 month after intervention",
+        "complete_all_3": 19,
+        "missing_followup": 5
+      },
+      "official_section_id": "Sec4",
+      "official_paragraph_id": "Par10",
+      "publisher_section_url": "https://www.nature.com/articles/s41597-026-07787-y#Sec4",
+      "quote": "The dataset includes three collection phases: the pre-training phase, collected before patients undergo a two-week training period; the post-training phase, collected immediately after patients complete the two-week training; and the follow-up phase, collected after a one-month washout period following the completion of the training. 19/24 patients participated in all EEG data collection phases, while 5/24 patients were absent from the follow-up data collection due to personal reasons. The data collection status of each patient is shown in Tables 1, 2.Table 2The header of the table of specific information.Subject_idunique patient identifierAge (years)age of the patientGroupgroup assignment of the patientSexbiological sex of the patientSide of Hemiplegiathe side of limb paralysis due to strokeStroke Duration (months)the time from the stroke onset to patient enrollingDiagnosisclinical diagnosis of stroke typeMMSEMMSE score for cognitive function assessmentCollection_phasethe collection phase of EEG data"
+    },
+    {
+      "name": "missing_followup_ids",
+      "value": [
+        "sub-05",
+        "sub-17",
+        "sub-18",
+        "sub-20",
+        "sub-21"
+      ],
+      "official_section_id": "Sec16",
+      "official_paragraph_id": "Par27",
+      "publisher_section_url": "https://www.nature.com/articles/s41597-026-07787-y#Sec16",
+      "quote": "When using this dataset, it is important to consider the following: Due to individual patient circumstances, not all participants completed every experimental task. Specifically, subjects sub-05, sub-17, sub-18, sub-20 and sub-21 lack data from the follow-up sessions. Additionally, as this dataset includes patient data from multiple groups, appropriate adjustments to the code and data folder organization should be made when analyzing EEG data across different groups. To ensure de-identification of the raw data, all participant identifiers were replaced with sequential ID codes. Furthermore, any fields in the data files that could potentially contain identifiable information, including acquisition-site information, recording dates and names, were removed."
+    },
+    {
+      "name": "trial_total_reported",
+      "value": {
+        "MI": 5360,
+        "rest": 5360
+      },
+      "official_section_id": "Sec1",
+      "official_paragraph_id": "Par5",
+      "publisher_section_url": "https://www.nature.com/articles/s41597-026-07787-y#Sec1",
+      "quote": "This study collected neurorehabilitation data from 24 stroke patients, including EEG recordings under three assessment time points (pre-training, post-training, and follow-up period), two motor imagery paradigms (SF-MI and AH-MI), and resting state. A total of 5,360 MI trials and 5,360 resting-state trials were acquired. The public dataset comprises three elements: raw EEG data, preprocessed data, and patient information. The preprocessed data can be used directly with the provided code to visualize results and conduct classification tasks. Researchers are also encouraged to repurpose the dataset for other investigations. To our knowledge, this constitutes the first large-scale MI dataset for stroke patients that combines multi-paradigm, including the “sixth-finger” and “affected-hand” MI, with longitudinal-training."
+    },
+    {
+      "name": "protocol_and_events",
+      "value": {
+        "trial_seconds": 14,
+        "rest_seconds": 7,
+        "preparation_seconds": 1,
+        "MI_seconds": 6,
+        "event_labels": {
+          "1": "rest",
+          "2": "AH-MI",
+          "3": "SF-MI"
+        },
+        "tasks": "Affected-hand grasp imagery or robotic sixth-finger grasp imagery"
+      },
+      "official_section_id": "Sec4",
+      "official_paragraph_id": "Par11",
+      "publisher_section_url": "https://www.nature.com/articles/s41597-026-07787-y#Sec4",
+      "quote": "The data collection paradigm was consistent across all collection phases, as shown in Fig. 1(A). Each trial lasted 14 s and was initiated by pressing the space bar. A green fixation cross was first displayed at the center of the screen for 7 s, during which the patients remained in a resting state. This was followed by a gray circle presented for 1 second to prompt the patients to prepare for the MI task. Subsequently, MI period commenced for 6 s, during which a picture cue randomly appeared on the screen—either showing a clenched fist of the affected hand or a flexed “sixth-finger”—to indicate the type of AH-MI or SF-MI task in this trial. Therefore, this dataset comprises EEG signals from three paradigms: the rest task (events as Label 1), AH-MI task (events as Label 2), and SF-MI task (events as Label 3):Fig. 1Experimental scenarios and paradigm. (A) Experimental paradigm. (B) Experimental scene. (C) Electrode positions."
+    },
+    {
+      "name": "acquisition",
+      "value": {
+        "channels": 64,
+        "amplifier": "NeuSen W (Neuracle)",
+        "electrodes": "Ag/AgCl",
+        "montage": "international 10–20",
+        "reference": "CPz",
+        "ground": "forehead",
+        "sampling_hz": 250,
+        "notch_hz": 50
+      },
+      "official_section_id": "Sec8",
+      "official_paragraph_id": "Par16",
+      "publisher_section_url": "https://www.nature.com/articles/s41597-026-07787-y#Sec8",
+      "quote": "EEG signals were recorded using a 64-channel NeuSen W system (Neuracle) with Ag/AgCl electrodes arranged according to the international 10–20 system. The reference and ground electrodes were placed at CPz and the forehead, respectively. Signals were sampled at 250 Hz and a 50 Hz notch filter was applied to suppress line noise."
+    },
+    {
+      "name": "preprocessing",
+      "value": {
+        "toolbox": "EEGLAB",
+        "analysis_channels": 40,
+        "bandpass_hz": [
+          5,
+          35
+        ],
+        "notch_hz": 50,
+        "reference": "common average reference",
+        "steps": [
+          "peripheral channel removal",
+          "manual transient artifact rejection",
+          "abnormal-channel interpolation",
+          "ICA eye-movement-component removal"
+        ]
+      },
+      "official_section_id": "Sec8",
+      "official_paragraph_id": "Par17",
+      "publisher_section_url": "https://www.nature.com/articles/s41597-026-07787-y#Sec8",
+      "quote": "Preprocessing was performed in EEGLAB. The steps included: (1) band-pass filtering between 5~35 Hz and application of a 50 Hz notch filter; (2) re-referencing to the common average reference (CAR); (3) removal of peripheral channels prone to motion artifacts, resulting in 40 channels for analysis shown in Fig. 1(C); (4) manual artifact rejection to identify and remove transient artifacts characterized by abnormal amplitude fluctuations at specific time points, with channels exhibiting persistent abnormal amplitude patterns interpolated; and (5) independent component analysis (ICA) to identify and remove components associated with eye-movement artifacts, based on scalp topographies, temporal waveforms."
+    },
+    {
+      "name": "dataset_structure",
+      "value": {
+        "raw": [
+          ".set",
+          ".fdt"
+        ],
+        "preprocessed": [
+          ".mat"
+        ],
+        "additional": [
+          "patient details",
+          "electrode locations",
+          "EEG events"
+        ],
+        "code": "MATLAB scripts",
+        "paper_states_BIDS": true
+      },
+      "official_section_id": "Sec9",
+      "official_paragraph_id": "Par18",
+      "publisher_section_url": "https://www.nature.com/articles/s41597-026-07787-y#Sec9",
+      "quote": "Our dataset is available in the Figshare repository21, is organized as Brain Imaging Data Structure (BIDS)22, a widely adopted format for open EEG datasets, facilitating straightforward access and reuse. The dataset structure is illustrated in Fig. 2. The repository is divided into four main sections: (1) Raw data, containing the original EEG recordings for each subject throughout the entire experiment, stored as ‘.set/.fdt’ files; (2) Preprocessed data, stored as ‘.mat’ files; (3) Additional information, including patient details, electrode locations, and EEG event markers; and (4) Code, provided as MATLAB scripts.Fig. 2The EEG dataset structure."
+    },
+    {
+      "name": "raw_records",
+      "value": {
+        "continuous_unsegmented": true,
+        "set": "metadata",
+        "fdt": "raw data",
+        "shape": "channels × time-samples",
+        "filename": "sub-xx_group_session_yy_original.set/.fdt",
+        "group_codes": {
+          "B": "BCI",
+          "T": "Traditional"
+        },
+        "phase_codes": [
+          "pre",
+          "post",
+          "follow"
+        ],
+        "yy": "run number"
+      },
+      "official_section_id": "Sec10",
+      "official_paragraph_id": "Par19",
+      "publisher_section_url": "https://www.nature.com/articles/s41597-026-07787-y#Sec10",
+      "quote": "This section includes the unprocessed, unsegmented EEG data recorded for each patient throughout the entire experiment. The ‘.set’ and ‘.fdt’ files store meta information and raw data respectively. These files can be loaded using the EEGLAB plugin to obtain an ‘EEG’ structure variable, which contains the raw data formatted as ‘channels × time-samples’, channel information, sampling rate, label information, etc. The naming convention is consistent with that of the preprocessed data, as shown below:\\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$${sub}-{xx}{\\rm{\\_}}{group}{\\rm{\\_}}s{ession}{\\rm{\\_}}{yy}{\\rm{\\_}}{original}.{set}/.{fdt}$$\\end{document}sub−xx_group_session_yy_original.set/.fdtwhere ‘xx’ is the subject ID, ‘group’ is the intervention group received for patients (B represents BCI group, T represents Traditional group), ‘session’ indicates the collection phases (pre represents the pre-training phase, post represents the post-training phase, follow represents the follow-up phase), and ‘yy’ is the run number."
+    },
+    {
+      "name": "preprocessed_records",
+      "value": {
+        "file": "sub-xx_group_session_yy_eeg.mat",
+        "native_runtime": "MATLAB + EEGLAB",
+        "object": "EEG structure"
+      },
+      "official_section_id": "Sec11",
+      "official_paragraph_id": "Par20",
+      "publisher_section_url": "https://www.nature.com/articles/s41597-026-07787-y#Sec11",
+      "quote": "Raw data were preprocessed using the EEGLAB toolbox based on MATLAB and saved in ‘.mat’ format. These files can be loaded directly through MATLAB to obtain an ‘EEG’ structure that contains the preprocessed data and meta information. The files are named according to the following convention:\\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$${sub}-{xx}{\\rm{\\_}}{group}{\\rm{\\_}}s{ession}{\\rm{\\_}}{yy}{\\rm{\\_}}{eeg}.{mat}$$\\end{document}sub−xx_group_session_yy_eeg.matwhere ‘xx’ is the subject ID, ‘group’ is the intervention group received for patients (B represents BCI group, T represents Traditional group), ‘session’ indicates the collection phases (pre represents the pre-training phase, post represents the post-training phase, follow represents the follow-up phase), and ‘yy’ is the run number."
+    },
+    {
+      "name": "code_folder",
+      "value": "All scripts/functions for data processing and result figures.",
+      "official_section_id": "Sec12",
+      "official_paragraph_id": "Par21",
+      "publisher_section_url": "https://www.nature.com/articles/s41597-026-07787-y#Sec12",
+      "quote": "The ‘code’ folder contains all the scripts and functions used for data processing and for generating the result figures."
+    },
+    {
+      "name": "paper_classification",
+      "value": {
+        "task": "binary SF-MI versus AH-MI",
+        "window_after_MI_onset_seconds": [
+          1,
+          5
+        ],
+        "window_seconds": 4,
+        "algorithms": [
+          "CSP + SVM",
+          "CSP + LDA"
+        ],
+        "validation": "10-fold random per-subject partition; mean across subjects"
+      },
+      "official_section_id": "Sec15",
+      "official_paragraph_id": "Par25",
+      "publisher_section_url": "https://www.nature.com/articles/s41597-026-07787-y#Sec15",
+      "quote": "In this study, each trial of the SF-MI and AH-MI tasks lasted 6 s. Based on the earlier finding that the ERD phenomenon tends to stabilize after 0.5~1 s, the EEG data segment from 1 s~5 s after the onset of the MI task was selected for classification. The extracted 4 s data segment from each trial was treated as an independent sample, thereby ensuring trial-level independence and preventing overly optimistic classification performance caused by temporal adjacency between samples. And other researchers may adopt customized sample-segmentation strategies according to their specific research objectives and analytical requirements. To demonstrate the inherent classifiability induced by the MI paradigm itself, this study employed classical machine learning algorithms for the binary classification task between SF-MI and AH-MI. EEG features were extracted using the Common Spatial Pattern (CSP) method, and the resulting feature vectors were subsequently classified using both support vector machine (SVM) and linear discriminant analysis (LDA) classifiers. A 10-fold cross-validation procedure was applied, in which the EEG data of each subject was randomly partitioned into 10 groups. For each fold, one group was used as the test set and the remaining nine groups as the training set. This process was repeated 10 times, and the average of the results was taken as the classification accuracy for each subject. The final classification accuracy was then computed as the mean across all subjects."
+    },
+    {
+      "name": "code_availability",
+      "value": {
+        "language": "MATLAB",
+        "requires": "EEGLAB",
+        "location": "dataset code folder",
+        "functions": [
+          "preprocessing",
+          "feature extraction",
+          "plotting",
+          "classification"
+        ]
+      },
+      "official_section": "Code availability",
+      "publisher_section_url": "https://www.nature.com/articles/s41597-026-07787-y#code-availability",
+      "quote": "Code availabilityAll MATLAB scripts used in this study for preprocessing, feature extraction, plotting, and classification are available in the ‘code’ folder21. These scripts require users to install the EEGLAB toolbox in advance. The subject details, electrodes information, and event markers along with raw datasets and preprocessed datasets, have been made publicly available21."
+    }
+  ],
+  "table_1_patients": [
+    {
+      "subject_id": "01",
+      "age_years": "48",
+      "group": "B",
+      "sex": "Male",
+      "hemiplegia_side": "Right",
+      "stroke_duration_months": "10",
+      "diagnosis": "Ischemic",
+      "mmse": "25",
+      "pre": "√",
+      "post": "√",
+      "follow": "√"
+    },
+    {
+      "subject_id": "02",
+      "age_years": "64",
+      "group": "B",
+      "sex": "Female",
+      "hemiplegia_side": "Right",
+      "stroke_duration_months": "7",
+      "diagnosis": "Ischemic",
+      "mmse": "30",
+      "pre": "√",
+      "post": "√",
+      "follow": "√"
+    },
+    {
+      "subject_id": "03",
+      "age_years": "64",
+      "group": "B",
+      "sex": "Male",
+      "hemiplegia_side": "Left",
+      "stroke_duration_months": "5",
+      "diagnosis": "Ischemic",
+      "mmse": "27",
+      "pre": "√",
+      "post": "√",
+      "follow": "√"
+    },
+    {
+      "subject_id": "04",
+      "age_years": "34",
+      "group": "B",
+      "sex": "Male",
+      "hemiplegia_side": "Left",
+      "stroke_duration_months": "6",
+      "diagnosis": "Ischemic",
+      "mmse": "30",
+      "pre": "√",
+      "post": "√",
+      "follow": "√"
+    },
+    {
+      "subject_id": "05",
+      "age_years": "62",
+      "group": "B",
+      "sex": "Female",
+      "hemiplegia_side": "Left",
+      "stroke_duration_months": "5",
+      "diagnosis": "Ischemic",
+      "mmse": "26",
+      "pre": "√",
+      "post": "√",
+      "follow": "N/A"
+    },
+    {
+      "subject_id": "06",
+      "age_years": "52",
+      "group": "B",
+      "sex": "Female",
+      "hemiplegia_side": "Right",
+      "stroke_duration_months": "11",
+      "diagnosis": "Ischemic",
+      "mmse": "30",
+      "pre": "√",
+      "post": "√",
+      "follow": "√"
+    },
+    {
+      "subject_id": "07",
+      "age_years": "77",
+      "group": "T",
+      "sex": "Male",
+      "hemiplegia_side": "Right",
+      "stroke_duration_months": "4",
+      "diagnosis": "Ischemic",
+      "mmse": "22",
+      "pre": "√",
+      "post": "√",
+      "follow": "√"
+    },
+    {
+      "subject_id": "08",
+      "age_years": "52",
+      "group": "T",
+      "sex": "Male",
+      "hemiplegia_side": "Right",
+      "stroke_duration_months": "14",
+      "diagnosis": "Hemorrhagic",
+      "mmse": "24",
+      "pre": "√",
+      "post": "√",
+      "follow": "√"
+    },
+    {
+      "subject_id": "09",
+      "age_years": "68",
+      "group": "B",
+      "sex": "Male",
+      "hemiplegia_side": "Left",
+      "stroke_duration_months": "5",
+      "diagnosis": "Ischemic",
+      "mmse": "27",
+      "pre": "√",
+      "post": "√",
+      "follow": "√"
+    },
+    {
+      "subject_id": "10",
+      "age_years": "38",
+      "group": "B",
+      "sex": "Male",
+      "hemiplegia_side": "Right",
+      "stroke_duration_months": "4",
+      "diagnosis": "Hemorrhagic",
+      "mmse": "29",
+      "pre": "√",
+      "post": "√",
+      "follow": "√"
+    },
+    {
+      "subject_id": "11",
+      "age_years": "55",
+      "group": "T",
+      "sex": "Male",
+      "hemiplegia_side": "Left",
+      "stroke_duration_months": "4",
+      "diagnosis": "Hemorrhagic",
+      "mmse": "27",
+      "pre": "√",
+      "post": "√",
+      "follow": "√"
+    },
+    {
+      "subject_id": "12",
+      "age_years": "57",
+      "group": "B",
+      "sex": "Male",
+      "hemiplegia_side": "Left",
+      "stroke_duration_months": "6",
+      "diagnosis": "Hemorrhagic",
+      "mmse": "25",
+      "pre": "√",
+      "post": "√",
+      "follow": "√"
+    },
+    {
+      "subject_id": "13",
+      "age_years": "66",
+      "group": "T",
+      "sex": "Male",
+      "hemiplegia_side": "Right",
+      "stroke_duration_months": "12",
+      "diagnosis": "Ischemic",
+      "mmse": "28",
+      "pre": "√",
+      "post": "√",
+      "follow": "√"
+    },
+    {
+      "subject_id": "14",
+      "age_years": "55",
+      "group": "T",
+      "sex": "Female",
+      "hemiplegia_side": "Right",
+      "stroke_duration_months": "6",
+      "diagnosis": "Ischemic",
+      "mmse": "25",
+      "pre": "√",
+      "post": "√",
+      "follow": "√"
+    },
+    {
+      "subject_id": "15",
+      "age_years": "55",
+      "group": "B",
+      "sex": "Male",
+      "hemiplegia_side": "Right",
+      "stroke_duration_months": "9",
+      "diagnosis": "Hemorrhagic",
+      "mmse": "21",
+      "pre": "√",
+      "post": "√",
+      "follow": "√"
+    },
+    {
+      "subject_id": "16",
+      "age_years": "60",
+      "group": "B",
+      "sex": "Female",
+      "hemiplegia_side": "Right",
+      "stroke_duration_months": "12",
+      "diagnosis": "Ischemic",
+      "mmse": "22",
+      "pre": "√",
+      "post": "√",
+      "follow": "√"
+    },
+    {
+      "subject_id": "17",
+      "age_years": "41",
+      "group": "T",
+      "sex": "Male",
+      "hemiplegia_side": "Right",
+      "stroke_duration_months": "10",
+      "diagnosis": "Ischemic",
+      "mmse": "30",
+      "pre": "√",
+      "post": "√",
+      "follow": "N/A"
+    },
+    {
+      "subject_id": "18",
+      "age_years": "64",
+      "group": "B",
+      "sex": "Female",
+      "hemiplegia_side": "Left",
+      "stroke_duration_months": "4",
+      "diagnosis": "Hemorrhagic",
+      "mmse": "23",
+      "pre": "√",
+      "post": "√",
+      "follow": "N/A"
+    },
+    {
+      "subject_id": "19",
+      "age_years": "50",
+      "group": "T",
+      "sex": "Male",
+      "hemiplegia_side": "Left",
+      "stroke_duration_months": "4",
+      "diagnosis": "Hemorrhagic",
+      "mmse": "23",
+      "pre": "√",
+      "post": "√",
+      "follow": "√"
+    },
+    {
+      "subject_id": "20",
+      "age_years": "66",
+      "group": "B",
+      "sex": "Male",
+      "hemiplegia_side": "Right",
+      "stroke_duration_months": "6",
+      "diagnosis": "Ischemic",
+      "mmse": "30",
+      "pre": "√",
+      "post": "√",
+      "follow": "N/A"
+    },
+    {
+      "subject_id": "21",
+      "age_years": "54",
+      "group": "T",
+      "sex": "Male",
+      "hemiplegia_side": "Right",
+      "stroke_duration_months": "5",
+      "diagnosis": "Ischemic",
+      "mmse": "26",
+      "pre": "√",
+      "post": "√",
+      "follow": "N/A"
+    },
+    {
+      "subject_id": "22",
+      "age_years": "45",
+      "group": "T",
+      "sex": "Male",
+      "hemiplegia_side": "Right",
+      "stroke_duration_months": "3",
+      "diagnosis": "Ischemic",
+      "mmse": "28",
+      "pre": "√",
+      "post": "√",
+      "follow": "√"
+    },
+    {
+      "subject_id": "23",
+      "age_years": "55",
+      "group": "B",
+      "sex": "Male",
+      "hemiplegia_side": "Right",
+      "stroke_duration_months": "6",
+      "diagnosis": "Ischemic",
+      "mmse": "30",
+      "pre": "√",
+      "post": "√",
+      "follow": "√"
+    },
+    {
+      "subject_id": "24",
+      "age_years": "56",
+      "group": "T",
+      "sex": "Male",
+      "hemiplegia_side": "Left",
+      "stroke_duration_months": "5",
+      "diagnosis": "Hemorrhagic",
+      "mmse": "30",
+      "pre": "√",
+      "post": "√",
+      "follow": "√"
+    }
+  ],
+  "retrieval_validation": {
+    "publisher_article.html": "Valid matching official article title and body.",
+    "pmc_fulltext.xml": "Valid matching NCBI PMC articleset and DOI, authors, publication date and body.",
+    "pmc_article.html": "HTTP 200 browser challenge/reCAPTCHA; not accepted as paper body evidence.",
+    "crossref_record.json": "Valid Crossref record matching DOI, authors and online publication date.",
+    "ncbi_idconv.json": "Valid DOI to PMCID/PMID mapping."
+  },
+  "limits": [
+    "Paper identifies raw EEG as continuous unsegmented .set/.fdt but actual release binary/file-pair validity is outside this paper-only check.",
+    "Paper reports 5,360 total MI trials and 5,360 resting-state trials; per-run counts and per-class balance are not stated in narrative text and are not inferred.",
+    "Assessment EEG across pre/post/follow-up with 2-week intervention does not by itself document adaptive decoder update logs or establish causal human skill retention."
+  ]
+}

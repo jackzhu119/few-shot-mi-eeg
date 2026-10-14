@@ -1,8 +1,24 @@
-# Learning-Preserving Co-Adaptive Brain–Computer Interfaces
+# Task-Aware Adaptive Decoding for Longitudinal Motor-Imagery EEG
 
-**面向神经控制学习能力保留的人机协同自适应脑机接口**
+**面向纵向运动想象 EEG 的任务信息感知跨会话自适应解码**
 
-核心问题：**How should brain–computer interfaces adapt without compromising human neural skill acquisition?**
+核心问题：**When should a decoder adapt to cross-session EEG changes, and does
+task-relevant information explain performance changes better than total signal drift?**
+
+## 2026-10-13：转入 Kumar 跨会话基线研究
+
+用户已将第二篇论文限定为公开多会话 EEG 的离线自适应解码研究，不依赖在线人体实验。
+使用既有 Kumar2024 / NEMAR nm000177 v1.0.5，先冻结资格、预处理与时间顺序划分，
+再实际执行 CPU 冻结 CSP/LDA、相同标签预算的读出重校准及 CSP/LDA 全部重校准。
+正式性能、训练资格和失败记录分别以仓库根目录的
+`KUMAR_MODEL_ELIGIBILITY_REPORT.md`、`KUMAR_FROZEN_EXPERIMENT_PROTOCOL.md`、
+`BASELINE_EXECUTION_REPORT.md`、`CROSS_SESSION_RESULTS.md` 为准。
+EEGNet 的软件验收与充分训练分开报告；本项目不购买算力，不将离线结果称为神经技能保持。
+
+现有六库、NETBCI 全19分析和已验证 R2 对象保持历史冻结。仅恢复已经授权的 MIND V4
+未完成下载；Wang/Liu2026 原始归档和源审计已完成。新旧对象、断点、真实校验范围见
+`DOWNLOAD_RECOVERY_AUDIT.md` 和 `R2_RECOVERY_AND_COMPLETENESS_REPORT.md`。
+原 learning-preserving 方向及下文进展是历史研究记录，不是当前论文必须完成在线实验的要求。
 
 本项目在现有科研分支上开展可复现的纵向 EEG 审计与探索性分析。仓库名称
 `few-shot-mi-eeg` 不限定科学问题为 few-shot 分类，也不代表已提出或验证新算法。
@@ -27,7 +43,7 @@
 311只是逐库发布编号总和；来源资格、重复、人群和任务限制见
 [扩容清单](docs/expanded_data_resources_20261011.md)。新库资源接入不等于模型训练。
 实际Cloudflare R2上传及回读见[存储记录](docs/r2_research_storage.md)，
-恢复入口为[当前交接](docs/CHAT_HANDOFF_20261012.md)。
+恢复入口为[当前交接](docs/CHAT_HANDOFF_20261014.md)。
 
 ## 2026-10-10 历史接续：十人队列
 

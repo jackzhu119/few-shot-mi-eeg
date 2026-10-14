@@ -1,0 +1,533 @@
+........................................................................ [ 13%]
+........................................................................ [ 27%]
+...............F........FFFFFFFFF...................................F.F. [ 40%]
+.......FF............................................................... [ 54%]
+........................................................................ [ 67%]
+........................................................................ [ 81%]
+........................................................................ [ 94%]
+.............................                                            [100%]
+=================================== FAILURES ===================================
+_ test_every_source_upload_requires_independent_full_readback_before_eviction __
+
+task_owned_source = (PosixPath('/tmp/pytest-of-agent/pytest-29/test_every_source_upload_requi0/cache'), PosixPath('/tmp/pytest-of-agent/py...-of-agent/pytest-29/test_every_source_upload_requi0/representative/sub-04/eeg/sub-04_task-motorimagery_run-1_eeg.eeg'))
+
+    def test_every_source_upload_requires_independent_full_readback_before_eviction(task_owned_source):
+        cache, log, source, original = task_owned_source
+        store = MemoryStore()
+        remote = fetch.upload_source(store, "test-private", cache, log, source)
+        assert remote["verification"] == fetch.FULL_GET
+        assert remote["readback_bytes"] == source["bytes"]
+        assert remote["source_official_md5_original"] == source["record"]["md5"]
+        assert [name for name, _ in store.calls] == ["head", "put", "head", "get"]
+        assert all(body.closed for body in store.bodies)
+        closure = complete_closure(source)
+        assert fetch.run_closed(closure, {source["relative_path"]: source},
+                                {source["relative_path"]: remote}) is True
+>       eviction = fetch.evict_signal(cache / source["relative_path"], source, remote, closure)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: evict_signal() missing 1 required keyword-only argument: 'ownership'
+
+tests/test_mind_source_ingestion.py:528: TypeError
+_ test_eviction_refuses_missing_ownership_or_incomplete_closure[source-cache_created_by_this_task-False] _
+
+task_owned_source = (PosixPath('/tmp/pytest-of-agent/pytest-29/test_eviction_refuses_missing_0/cache'), PosixPath('/tmp/pytest-of-agent/py...-of-agent/pytest-29/test_eviction_refuses_missing_0/representative/sub-04/eeg/sub-04_task-motorimagery_run-1_eeg.eeg'))
+scope = 'source', field = 'cache_created_by_this_task', value = False
+
+    @pytest.mark.parametrize("scope,field,value", [
+        ("source", "cache_created_by_this_task", False),
+        ("source", "official_size_and_md5_pass", False),
+        ("remote", "verification", "head_length_and_sha256_metadata_verified"),
+        ("remote", "sha256", "0" * 64),
+        ("remote", "readback_bytes", 1),
+        ("closure", "closed", False),
+        ("closure", "source_audit_integrity_pass", False),
+    ])
+    def test_eviction_refuses_missing_ownership_or_incomplete_closure(
+            task_owned_source, scope, field, value):
+        cache, log, source, _ = task_owned_source
+        remote = fetch.upload_source(MemoryStore(), "test-private", cache, log, source)
+        closure = complete_closure(source)
+        {"source": source, "remote": remote, "closure": closure}[scope][field] = value
+        with pytest.raises(ValueError, match="eviction requires"):
+>           fetch.evict_signal(cache / source["relative_path"], source, remote, closure)
+E           TypeError: evict_signal() missing 1 required keyword-only argument: 'ownership'
+
+tests/test_mind_source_ingestion.py:595: TypeError
+_ test_eviction_refuses_missing_ownership_or_incomplete_closure[source-official_size_and_md5_pass-False] _
+
+task_owned_source = (PosixPath('/tmp/pytest-of-agent/pytest-29/test_eviction_refuses_missing_1/cache'), PosixPath('/tmp/pytest-of-agent/py...-of-agent/pytest-29/test_eviction_refuses_missing_1/representative/sub-04/eeg/sub-04_task-motorimagery_run-1_eeg.eeg'))
+scope = 'source', field = 'official_size_and_md5_pass', value = False
+
+    @pytest.mark.parametrize("scope,field,value", [
+        ("source", "cache_created_by_this_task", False),
+        ("source", "official_size_and_md5_pass", False),
+        ("remote", "verification", "head_length_and_sha256_metadata_verified"),
+        ("remote", "sha256", "0" * 64),
+        ("remote", "readback_bytes", 1),
+        ("closure", "closed", False),
+        ("closure", "source_audit_integrity_pass", False),
+    ])
+    def test_eviction_refuses_missing_ownership_or_incomplete_closure(
+            task_owned_source, scope, field, value):
+        cache, log, source, _ = task_owned_source
+        remote = fetch.upload_source(MemoryStore(), "test-private", cache, log, source)
+        closure = complete_closure(source)
+        {"source": source, "remote": remote, "closure": closure}[scope][field] = value
+        with pytest.raises(ValueError, match="eviction requires"):
+>           fetch.evict_signal(cache / source["relative_path"], source, remote, closure)
+E           TypeError: evict_signal() missing 1 required keyword-only argument: 'ownership'
+
+tests/test_mind_source_ingestion.py:595: TypeError
+_ test_eviction_refuses_missing_ownership_or_incomplete_closure[remote-verification-head_length_and_sha256_metadata_verified] _
+
+task_owned_source = (PosixPath('/tmp/pytest-of-agent/pytest-29/test_eviction_refuses_missing_2/cache'), PosixPath('/tmp/pytest-of-agent/py...-of-agent/pytest-29/test_eviction_refuses_missing_2/representative/sub-04/eeg/sub-04_task-motorimagery_run-1_eeg.eeg'))
+scope = 'remote', field = 'verification'
+value = 'head_length_and_sha256_metadata_verified'
+
+    @pytest.mark.parametrize("scope,field,value", [
+        ("source", "cache_created_by_this_task", False),
+        ("source", "official_size_and_md5_pass", False),
+        ("remote", "verification", "head_length_and_sha256_metadata_verified"),
+        ("remote", "sha256", "0" * 64),
+        ("remote", "readback_bytes", 1),
+        ("closure", "closed", False),
+        ("closure", "source_audit_integrity_pass", False),
+    ])
+    def test_eviction_refuses_missing_ownership_or_incomplete_closure(
+            task_owned_source, scope, field, value):
+        cache, log, source, _ = task_owned_source
+        remote = fetch.upload_source(MemoryStore(), "test-private", cache, log, source)
+        closure = complete_closure(source)
+        {"source": source, "remote": remote, "closure": closure}[scope][field] = value
+        with pytest.raises(ValueError, match="eviction requires"):
+>           fetch.evict_signal(cache / source["relative_path"], source, remote, closure)
+E           TypeError: evict_signal() missing 1 required keyword-only argument: 'ownership'
+
+tests/test_mind_source_ingestion.py:595: TypeError
+_ test_eviction_refuses_missing_ownership_or_incomplete_closure[remote-sha256-0000000000000000000000000000000000000000000000000000000000000000] _
+
+task_owned_source = (PosixPath('/tmp/pytest-of-agent/pytest-29/test_eviction_refuses_missing_3/cache'), PosixPath('/tmp/pytest-of-agent/py...-of-agent/pytest-29/test_eviction_refuses_missing_3/representative/sub-04/eeg/sub-04_task-motorimagery_run-1_eeg.eeg'))
+scope = 'remote', field = 'sha256'
+value = '0000000000000000000000000000000000000000000000000000000000000000'
+
+    @pytest.mark.parametrize("scope,field,value", [
+        ("source", "cache_created_by_this_task", False),
+        ("source", "official_size_and_md5_pass", False),
+        ("remote", "verification", "head_length_and_sha256_metadata_verified"),
+        ("remote", "sha256", "0" * 64),
+        ("remote", "readback_bytes", 1),
+        ("closure", "closed", False),
+        ("closure", "source_audit_integrity_pass", False),
+    ])
+    def test_eviction_refuses_missing_ownership_or_incomplete_closure(
+            task_owned_source, scope, field, value):
+        cache, log, source, _ = task_owned_source
+        remote = fetch.upload_source(MemoryStore(), "test-private", cache, log, source)
+        closure = complete_closure(source)
+        {"source": source, "remote": remote, "closure": closure}[scope][field] = value
+        with pytest.raises(ValueError, match="eviction requires"):
+>           fetch.evict_signal(cache / source["relative_path"], source, remote, closure)
+E           TypeError: evict_signal() missing 1 required keyword-only argument: 'ownership'
+
+tests/test_mind_source_ingestion.py:595: TypeError
+_ test_eviction_refuses_missing_ownership_or_incomplete_closure[remote-readback_bytes-1] _
+
+task_owned_source = (PosixPath('/tmp/pytest-of-agent/pytest-29/test_eviction_refuses_missing_4/cache'), PosixPath('/tmp/pytest-of-agent/py...-of-agent/pytest-29/test_eviction_refuses_missing_4/representative/sub-04/eeg/sub-04_task-motorimagery_run-1_eeg.eeg'))
+scope = 'remote', field = 'readback_bytes', value = 1
+
+    @pytest.mark.parametrize("scope,field,value", [
+        ("source", "cache_created_by_this_task", False),
+        ("source", "official_size_and_md5_pass", False),
+        ("remote", "verification", "head_length_and_sha256_metadata_verified"),
+        ("remote", "sha256", "0" * 64),
+        ("remote", "readback_bytes", 1),
+        ("closure", "closed", False),
+        ("closure", "source_audit_integrity_pass", False),
+    ])
+    def test_eviction_refuses_missing_ownership_or_incomplete_closure(
+            task_owned_source, scope, field, value):
+        cache, log, source, _ = task_owned_source
+        remote = fetch.upload_source(MemoryStore(), "test-private", cache, log, source)
+        closure = complete_closure(source)
+        {"source": source, "remote": remote, "closure": closure}[scope][field] = value
+        with pytest.raises(ValueError, match="eviction requires"):
+>           fetch.evict_signal(cache / source["relative_path"], source, remote, closure)
+E           TypeError: evict_signal() missing 1 required keyword-only argument: 'ownership'
+
+tests/test_mind_source_ingestion.py:595: TypeError
+_ test_eviction_refuses_missing_ownership_or_incomplete_closure[closure-closed-False] _
+
+task_owned_source = (PosixPath('/tmp/pytest-of-agent/pytest-29/test_eviction_refuses_missing_5/cache'), PosixPath('/tmp/pytest-of-agent/py...-of-agent/pytest-29/test_eviction_refuses_missing_5/representative/sub-04/eeg/sub-04_task-motorimagery_run-1_eeg.eeg'))
+scope = 'closure', field = 'closed', value = False
+
+    @pytest.mark.parametrize("scope,field,value", [
+        ("source", "cache_created_by_this_task", False),
+        ("source", "official_size_and_md5_pass", False),
+        ("remote", "verification", "head_length_and_sha256_metadata_verified"),
+        ("remote", "sha256", "0" * 64),
+        ("remote", "readback_bytes", 1),
+        ("closure", "closed", False),
+        ("closure", "source_audit_integrity_pass", False),
+    ])
+    def test_eviction_refuses_missing_ownership_or_incomplete_closure(
+            task_owned_source, scope, field, value):
+        cache, log, source, _ = task_owned_source
+        remote = fetch.upload_source(MemoryStore(), "test-private", cache, log, source)
+        closure = complete_closure(source)
+        {"source": source, "remote": remote, "closure": closure}[scope][field] = value
+        with pytest.raises(ValueError, match="eviction requires"):
+>           fetch.evict_signal(cache / source["relative_path"], source, remote, closure)
+E           TypeError: evict_signal() missing 1 required keyword-only argument: 'ownership'
+
+tests/test_mind_source_ingestion.py:595: TypeError
+_ test_eviction_refuses_missing_ownership_or_incomplete_closure[closure-source_audit_integrity_pass-False] _
+
+task_owned_source = (PosixPath('/tmp/pytest-of-agent/pytest-29/test_eviction_refuses_missing_6/cache'), PosixPath('/tmp/pytest-of-agent/py...-of-agent/pytest-29/test_eviction_refuses_missing_6/representative/sub-04/eeg/sub-04_task-motorimagery_run-1_eeg.eeg'))
+scope = 'closure', field = 'source_audit_integrity_pass', value = False
+
+    @pytest.mark.parametrize("scope,field,value", [
+        ("source", "cache_created_by_this_task", False),
+        ("source", "official_size_and_md5_pass", False),
+        ("remote", "verification", "head_length_and_sha256_metadata_verified"),
+        ("remote", "sha256", "0" * 64),
+        ("remote", "readback_bytes", 1),
+        ("closure", "closed", False),
+        ("closure", "source_audit_integrity_pass", False),
+    ])
+    def test_eviction_refuses_missing_ownership_or_incomplete_closure(
+            task_owned_source, scope, field, value):
+        cache, log, source, _ = task_owned_source
+        remote = fetch.upload_source(MemoryStore(), "test-private", cache, log, source)
+        closure = complete_closure(source)
+        {"source": source, "remote": remote, "closure": closure}[scope][field] = value
+        with pytest.raises(ValueError, match="eviction requires"):
+>           fetch.evict_signal(cache / source["relative_path"], source, remote, closure)
+E           TypeError: evict_signal() missing 1 required keyword-only argument: 'ownership'
+
+tests/test_mind_source_ingestion.py:595: TypeError
+____________ test_closed_cache_changed_after_readback_is_preserved _____________
+
+task_owned_source = (PosixPath('/tmp/pytest-of-agent/pytest-29/test_closed_cache_changed_afte0/cache'), PosixPath('/tmp/pytest-of-agent/py...-of-agent/pytest-29/test_closed_cache_changed_afte0/representative/sub-04/eeg/sub-04_task-motorimagery_run-1_eeg.eeg'))
+
+    def test_closed_cache_changed_after_readback_is_preserved(task_owned_source):
+        cache, log, source, _ = task_owned_source
+        remote = fetch.upload_source(MemoryStore(), "test-private", cache, log, source)
+        path = cache / source["relative_path"]
+        path.write_bytes(b"changed source bytes")
+        with pytest.raises(ValueError, match="changed after closure"):
+>           fetch.evict_signal(path, source, remote, complete_closure(source))
+E           TypeError: evict_signal() missing 1 required keyword-only argument: 'ownership'
+
+tests/test_mind_source_ingestion.py:605: TypeError
+______________ test_preexisting_unowned_signal_cannot_be_evicted _______________
+
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-29/test_preexisting_unowned_signa0')
+
+    def test_preexisting_unowned_signal_cannot_be_evicted(tmp_path):
+        cache, log = tmp_path / "cache", tmp_path / "log"
+        record = official_record()
+        path = cache / fetch.relative_path(record)
+        path.parent.mkdir(parents=True)
+        path.write_bytes(b"synthetic source bytes")
+        source = fetch.ensure_source(record, cache, log, representative=None)
+        assert source["cache_created_by_this_task"] is False
+        remote = fetch.upload_source(MemoryStore(), "test-private", cache, log, source)
+        with pytest.raises(ValueError, match="task ownership"):
+>           fetch.evict_signal(path, source, remote, complete_closure(source))
+E           TypeError: evict_signal() missing 1 required keyword-only argument: 'ownership'
+
+tests/test_mind_source_ingestion.py:619: TypeError
+___ test_prefix_ownership_for_a_different_official_record_cannot_be_adopted ____
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f5542155850>
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-29/test_prefix_ownership_for_a_di0')
+
+    def test_prefix_ownership_for_a_different_official_record_cannot_be_adopted(monkeypatch, tmp_path):
+        body = b"abcdefghijklmnop"
+        record = official_record(body=body)
+        partial, log = tmp_path / "signal.eeg.partial", tmp_path / "log"
+        owned_prefix({**record, "id": "different-source"}, partial, log, body[:3])
+    
+        def forbidden(*args, **kwargs):
+            raise AssertionError("Different-source ownership must be refused before HTTP")
+    
+        monkeypatch.setattr(fetch.requests, "get", forbidden)
+        with pytest.raises(ValueError, match="without matching task ownership"):
+>           fetch.parallel_range_download(record, partial, log, workers=2, range_bytes=4)
+
+tests/test_mind_source_ingestion.py:1145: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/fetch_mind2026_r2.py:180: in parallel_range_download
+    if checked_cache_ownership(log, relative, record) is None:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+log = PosixPath('/tmp/pytest-of-agent/pytest-29/test_prefix_ownership_for_a_di0/log')
+relative = 'sub-04/eeg/sub-04_task-motorimagery_run-1_eeg.eeg'
+record = {'download_endpoint': 'https://www.scidb.cn/api/file/download/public-object-id', 'id': 'public-object-id', 'md5': '1d64dce239c4437b7736041db089e1b9', 'path': '/V4/MIND_BIDS/sub-04/eeg/sub-04_task-motorimagery_run-1_eeg.eeg', ...}
+
+    def checked_cache_ownership(log: Path, relative: str, record: dict) -> dict | None:
+        path = receipt_path(log, "cache_ownership", relative)
+        if not path.exists():
+            return None
+        ownership = load_json(path)
+        if (ownership.get("source_record") != record or ownership.get("relative_path") != relative
+                or ownership.get("cache_created_by_this_task") is not True):
+>           raise ValueError("Cache ownership source record or explicit task ownership differs")
+E           ValueError: Cache ownership source record or explicit task ownership differs
+
+scripts/fetch_mind2026_r2.py:107: ValueError
+
+During handling of the above exception, another exception occurred:
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f5542155850>
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-29/test_prefix_ownership_for_a_di0')
+
+    def test_prefix_ownership_for_a_different_official_record_cannot_be_adopted(monkeypatch, tmp_path):
+        body = b"abcdefghijklmnop"
+        record = official_record(body=body)
+        partial, log = tmp_path / "signal.eeg.partial", tmp_path / "log"
+        owned_prefix({**record, "id": "different-source"}, partial, log, body[:3])
+    
+        def forbidden(*args, **kwargs):
+            raise AssertionError("Different-source ownership must be refused before HTTP")
+    
+        monkeypatch.setattr(fetch.requests, "get", forbidden)
+>       with pytest.raises(ValueError, match="without matching task ownership"):
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'without matching task ownership'
+E        Input: 'Cache ownership source record or explicit task ownership differs'
+
+tests/test_mind_source_ingestion.py:1144: AssertionError
+_ test_adopted_prefix_resume_still_requires_original_source_ownership[different_record] _
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f5542385990>
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-29/test_adopted_prefix_resume_sti1')
+ownership_change = 'different_record'
+
+    @pytest.mark.parametrize("ownership_change", ["missing", "different_record"])
+    def test_adopted_prefix_resume_still_requires_original_source_ownership(
+            monkeypatch, tmp_path, ownership_change):
+        body = b"abcdefghijklmnop"
+        record = official_record(body=body)
+        partial, log = tmp_path / "signal.eeg.partial", tmp_path / "log"
+        owned_prefix(record, partial, log, body[:3])
+        range_http(monkeypatch, body)
+        fetch.parallel_range_download(record, partial, log, workers=2, range_bytes=4)
+        ownership = fetch.receipt_path(log, "cache_ownership", fetch.relative_path(record))
+        if ownership_change == "missing":
+            ownership.unlink()
+        else:
+            value = fetch.load_json(ownership)
+            value["source_record"]["id"] = "different-source"
+            ownership.write_text(json.dumps(value))
+    
+        def forbidden(*args, **kwargs):
+            raise AssertionError("Adopted-prefix resume must retain source ownership")
+    
+        monkeypatch.setattr(fetch.requests, "get", forbidden)
+        with pytest.raises(ValueError, match="prefix resume requires matching task ownership"):
+>           fetch.parallel_range_download(record, partial, log, workers=2, range_bytes=4)
+
+tests/test_mind_source_ingestion.py:1172: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/fetch_mind2026_r2.py:201: in parallel_range_download
+    if checked_cache_ownership(log, relative, record) is None:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+log = PosixPath('/tmp/pytest-of-agent/pytest-29/test_adopted_prefix_resume_sti1/log')
+relative = 'sub-04/eeg/sub-04_task-motorimagery_run-1_eeg.eeg'
+record = {'download_endpoint': 'https://www.scidb.cn/api/file/download/public-object-id', 'id': 'public-object-id', 'md5': '1d64dce239c4437b7736041db089e1b9', 'path': '/V4/MIND_BIDS/sub-04/eeg/sub-04_task-motorimagery_run-1_eeg.eeg', ...}
+
+    def checked_cache_ownership(log: Path, relative: str, record: dict) -> dict | None:
+        path = receipt_path(log, "cache_ownership", relative)
+        if not path.exists():
+            return None
+        ownership = load_json(path)
+        if (ownership.get("source_record") != record or ownership.get("relative_path") != relative
+                or ownership.get("cache_created_by_this_task") is not True):
+>           raise ValueError("Cache ownership source record or explicit task ownership differs")
+E           ValueError: Cache ownership source record or explicit task ownership differs
+
+scripts/fetch_mind2026_r2.py:107: ValueError
+
+During handling of the above exception, another exception occurred:
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f5542385990>
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-29/test_adopted_prefix_resume_sti1')
+ownership_change = 'different_record'
+
+    @pytest.mark.parametrize("ownership_change", ["missing", "different_record"])
+    def test_adopted_prefix_resume_still_requires_original_source_ownership(
+            monkeypatch, tmp_path, ownership_change):
+        body = b"abcdefghijklmnop"
+        record = official_record(body=body)
+        partial, log = tmp_path / "signal.eeg.partial", tmp_path / "log"
+        owned_prefix(record, partial, log, body[:3])
+        range_http(monkeypatch, body)
+        fetch.parallel_range_download(record, partial, log, workers=2, range_bytes=4)
+        ownership = fetch.receipt_path(log, "cache_ownership", fetch.relative_path(record))
+        if ownership_change == "missing":
+            ownership.unlink()
+        else:
+            value = fetch.load_json(ownership)
+            value["source_record"]["id"] = "different-source"
+            ownership.write_text(json.dumps(value))
+    
+        def forbidden(*args, **kwargs):
+            raise AssertionError("Adopted-prefix resume must retain source ownership")
+    
+        monkeypatch.setattr(fetch.requests, "get", forbidden)
+>       with pytest.raises(ValueError, match="prefix resume requires matching task ownership"):
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'prefix resume requires matching task ownership'
+E        Input: 'Cache ownership source record or explicit task ownership differs'
+
+tests/test_mind_source_ingestion.py:1171: AssertionError
+_ test_ensure_source_uses_four_mib_new_ranges_but_keeps_existing_eight_mib_partition[True] _
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f55420c2610>
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-29/test_ensure_source_uses_four_m1')
+existing_checkpoint = True
+
+    @pytest.mark.parametrize("existing_checkpoint", [False, True])
+    def test_ensure_source_uses_four_mib_new_ranges_but_keeps_existing_eight_mib_partition(
+            monkeypatch, tmp_path, existing_checkpoint):
+        mib = 1024 * 1024
+        body = bytes(range(256)) * (8 * mib // 256) + b"seventeen bytes!!"
+        assert len(body) == 8 * mib + 17
+        record = official_record(body=body)
+        relative = fetch.relative_path(record)
+        cache, log = tmp_path / "cache", tmp_path / "log"
+        requested = []
+    
+        class ChunkedRangeResponse(RangeResponse):
+            def iter_content(self, chunk_size):
+                for first in range(0, len(self.body), chunk_size):
+                    yield self.body[first:first + chunk_size]
+    
+        def get(url, **kwargs):
+            first, last = map(int, kwargs["headers"]["Range"].removeprefix("bytes=").split("-"))
+            requested.append((first, last))
+            if existing_checkpoint and first == 8 * mib and not resumed:
+                raise fetch.requests.exceptions.ReadTimeout("synthetic interrupted tail", response=None)
+            return ChunkedRangeResponse(body[first:last + 1], first, last, len(body))
+    
+        resumed = False
+        monkeypatch.setattr(fetch.requests, "get", get)
+        if existing_checkpoint:
+            partial = cache / (relative + ".partial")
+            partial.parent.mkdir(parents=True)
+            fetch.immutable_json(fetch.receipt_path(log, "cache_ownership", relative), {
+                "source_record": record, "cache_created_by_this_task": True,
+            })
+            with pytest.raises(fetch.requests.exceptions.ReadTimeout):
+                fetch.parallel_range_download(record, partial, log, workers=1, range_bytes=8 * mib)
+            checkpoint = fetch.load_json(fetch.receipt_path(log, "range_checkpoints", relative))
+            assert checkpoint["range_bytes"] == 8 * mib
+            assert set(checkpoint["completed"]) == {"0"}
+            requested.clear()
+            resumed = True
+>       source = fetch.ensure_source(record, cache, log, representative=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_mind_source_ingestion.py:1270: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/fetch_mind2026_r2.py:315: in ensure_source
+    checked_ownership = checked_cache_ownership(log, relative, record)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+log = PosixPath('/tmp/pytest-of-agent/pytest-29/test_ensure_source_uses_four_m1/log')
+relative = 'sub-04/eeg/sub-04_task-motorimagery_run-1_eeg.eeg'
+record = {'download_endpoint': 'https://www.scidb.cn/api/file/download/public-object-id', 'id': 'public-object-id', 'md5': '7eb3e1478092eb8ab0d68ea2d3f9cd36', 'path': '/V4/MIND_BIDS/sub-04/eeg/sub-04_task-motorimagery_run-1_eeg.eeg', ...}
+
+    def checked_cache_ownership(log: Path, relative: str, record: dict) -> dict | None:
+        path = receipt_path(log, "cache_ownership", relative)
+        if not path.exists():
+            return None
+        ownership = load_json(path)
+        if (ownership.get("source_record") != record or ownership.get("relative_path") != relative
+                or ownership.get("cache_created_by_this_task") is not True):
+>           raise ValueError("Cache ownership source record or explicit task ownership differs")
+E           ValueError: Cache ownership source record or explicit task ownership differs
+
+scripts/fetch_mind2026_r2.py:107: ValueError
+_____ test_resume_of_closed_run_does_not_redownload_read_signal_or_upload ______
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f55420c2290>
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-29/test_resume_of_closed_run_does0')
+
+    def test_resume_of_closed_run_does_not_redownload_read_signal_or_upload(monkeypatch, tmp_path):
+        signal = official_record()
+        relative = fetch.relative_path(signal)
+        stem = relative.removesuffix("_eeg.eeg")
+        subject_folder = str(Path(relative).parent)
+        relatives = [relative, *(stem + suffix for suffix in (
+            "_eeg.vhdr", "_eeg.vmrk", "_eeg.json", "_events.tsv", "_events.json", "_channels.tsv")),
+            f"{subject_folder}/sub-04_coordsystem.json", f"{subject_folder}/sub-04_electrodes.tsv"]
+        records = [signal, *(official_record(name, body=name.encode()) for name in relatives[1:])]
+        cache, log = configure_main(monkeypatch, tmp_path, records)
+        for record in records:
+            name = fetch.relative_path(record)
+            if record is not signal:
+                path = cache / name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_bytes(name.encode())
+                source = fetch.ensure_source(record, cache, log, representative=None)
+            else:
+                body = b"synthetic source bytes"
+                source = {"record": record, "relative_path": name, "bytes": len(body),
+                          "sha256": hashlib.sha256(body).hexdigest(),
+                          "official_size_and_md5_pass": True, "cache_created_by_this_task": True}
+                fetch.immutable_json(fetch.receipt_path(log, "source_receipts", name), source)
+            remote = {"relative_path": name, "key": f"{fetch.PREFIX}/MIND_BIDS/{name}",
+                      "sha256": source["sha256"],
+                      "bytes": source["bytes"], "verification": fetch.FULL_GET,
+                      "readback_bytes": source["bytes"]}
+            fetch.immutable_json(fetch.receipt_path(log, "r2_receipts", name), remote)
+        closure = {"closed": True, "source_audit_integrity_pass": True,
+                   "source_relative_paths": relatives}
+        closure_path = log / "runs" / Path(stem).name / "closed.json"
+        fetch.immutable_json(closure_path, closure)
+    
+        def forbidden(*args, **kwargs):
+            raise AssertionError("Closed run must reuse saved source and full-GET receipts")
+    
+        monkeypatch.setattr(fetch, "build_client", lambda: (object(), "test-private", "fixture"))
+        monkeypatch.setattr(fetch, "audit_run", forbidden)
+        monkeypatch.setattr(fetch, "transfer_file", forbidden)
+        monkeypatch.setattr(fetch.requests, "get", forbidden)
+>       assert fetch.main() == 0
+E       assert 1 == 0
+E        +  where 1 = <function main at 0x7f55643cc5e0>()
+E        +    where <function main at 0x7f55643cc5e0> = fetch.main
+
+tests/test_mind_source_ingestion.py:1337: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"status": "planned", "files": 9, "eeg_signals": 90, "bytes": 397}
+{"failed_at_utc": "2026-10-12T09:40:18.671509+00:00", "status": "failed_preserved_cache", "error_type": "ValueError", "error_code": "", "credential_values_logged": false, "exception_message_logged": false, "partial_or_signal_deleted": false}
+=============================== warnings summary ===============================
+tests/test_decoders.py::test_eegnet_official_cpu_model_small_step_and_frozen_inference
+tests/test_decoders.py::test_eegnet_official_cpu_model_small_step_and_frozen_inference
+  /workspace/.venvs/few-shot-mi-eeg/lib/python3.11/site-packages/braindecode/models/eegnet.py:171: DeprecationWarning: Parameter 'final_layer_with_constraint=False' is deprecated and will be removed in a future release. Please use `final_layer_linear=True`.
+    warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_mind_source_ingestion.py::test_every_source_upload_requires_independent_full_readback_before_eviction
+FAILED tests/test_mind_source_ingestion.py::test_eviction_refuses_missing_ownership_or_incomplete_closure[source-cache_created_by_this_task-False]
+FAILED tests/test_mind_source_ingestion.py::test_eviction_refuses_missing_ownership_or_incomplete_closure[source-official_size_and_md5_pass-False]
+FAILED tests/test_mind_source_ingestion.py::test_eviction_refuses_missing_ownership_or_incomplete_closure[remote-verification-head_length_and_sha256_metadata_verified]
+FAILED tests/test_mind_source_ingestion.py::test_eviction_refuses_missing_ownership_or_incomplete_closure[remote-sha256-0000000000000000000000000000000000000000000000000000000000000000]
+FAILED tests/test_mind_source_ingestion.py::test_eviction_refuses_missing_ownership_or_incomplete_closure[remote-readback_bytes-1]
+FAILED tests/test_mind_source_ingestion.py::test_eviction_refuses_missing_ownership_or_incomplete_closure[closure-closed-False]
+FAILED tests/test_mind_source_ingestion.py::test_eviction_refuses_missing_ownership_or_incomplete_closure[closure-source_audit_integrity_pass-False]
+FAILED tests/test_mind_source_ingestion.py::test_closed_cache_changed_after_readback_is_preserved
+FAILED tests/test_mind_source_ingestion.py::test_preexisting_unowned_signal_cannot_be_evicted
+FAILED tests/test_mind_source_ingestion.py::test_prefix_ownership_for_a_different_official_record_cannot_be_adopted
+FAILED tests/test_mind_source_ingestion.py::test_adopted_prefix_resume_still_requires_original_source_ownership[different_record]
+FAILED tests/test_mind_source_ingestion.py::test_ensure_source_uses_four_mib_new_ranges_but_keeps_existing_eight_mib_partition[True]
+FAILED tests/test_mind_source_ingestion.py::test_resume_of_closed_run_does_not_redownload_read_signal_or_upload
+14 failed, 519 passed, 2 warnings in 9.64s

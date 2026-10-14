@@ -1,0 +1,1065 @@
+{
+  "checked_at_utc": "2026-10-12T00:45:14.112692+00:00",
+  "dataset_id": "d0f67f38c5bc4416bdcce619f33e57da",
+  "version": "V4",
+  "selection": "root metadata plus all EEG run events.json/events.tsv/eeg.json/channels.tsv; no signal bodies",
+  "metadata_file_count": 365,
+  "downloaded_metadata_bytes": 656121,
+  "all_metadata_md5_and_size_verified": true,
+  "participant_count": 30,
+  "unique_participant_count": 30,
+  "participant_ids": [
+    "sub-01",
+    "sub-02",
+    "sub-03",
+    "sub-04",
+    "sub-05",
+    "sub-06",
+    "sub-07",
+    "sub-08",
+    "sub-09",
+    "sub-10",
+    "sub-11",
+    "sub-12",
+    "sub-13",
+    "sub-14",
+    "sub-15",
+    "sub-16",
+    "sub-17",
+    "sub-18",
+    "sub-19",
+    "sub-20",
+    "sub-21",
+    "sub-22",
+    "sub-23",
+    "sub-24",
+    "sub-25",
+    "sub-26",
+    "sub-27",
+    "sub-28",
+    "sub-29",
+    "sub-30"
+  ],
+  "raw_participant_rows": [
+    {
+      "participant_id": "sub-01",
+      "age": "24",
+      "sex": "F",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-02",
+      "age": "22",
+      "sex": "F",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-03",
+      "age": "22",
+      "sex": "M",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-04",
+      "age": "25",
+      "sex": "F",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-05",
+      "age": "22",
+      "sex": "M",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-06",
+      "age": "24",
+      "sex": "F",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-07",
+      "age": "23",
+      "sex": "M",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-08",
+      "age": "23",
+      "sex": "F",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-09",
+      "age": "23",
+      "sex": "M",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-10",
+      "age": "19",
+      "sex": "M",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-11",
+      "age": "24",
+      "sex": "M",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-12",
+      "age": "24",
+      "sex": "M",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-13",
+      "age": "20",
+      "sex": "M",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-14",
+      "age": "20",
+      "sex": "M",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-15",
+      "age": "22",
+      "sex": "F",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-16",
+      "age": "20",
+      "sex": "M",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-17",
+      "age": "19",
+      "sex": "M",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-18",
+      "age": "21",
+      "sex": "M",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-19",
+      "age": "22",
+      "sex": "M",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-20",
+      "age": "21",
+      "sex": "M",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-21",
+      "age": "21",
+      "sex": "M",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-22",
+      "age": "22",
+      "sex": "M",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-23",
+      "age": "22",
+      "sex": "F",
+      "handedness": "A"
+    },
+    {
+      "participant_id": "sub-24",
+      "age": "20",
+      "sex": "M",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-25",
+      "age": "20",
+      "sex": "F",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-26",
+      "age": "19",
+      "sex": "F",
+      "handedness": "A"
+    },
+    {
+      "participant_id": "sub-27",
+      "age": "19",
+      "sex": "F",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-28",
+      "age": "20",
+      "sex": "M",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-29",
+      "age": "19",
+      "sex": "F",
+      "handedness": "R"
+    },
+    {
+      "participant_id": "sub-30",
+      "age": "19",
+      "sex": "F",
+      "handedness": "R"
+    }
+  ],
+  "handedness_counts": {
+    "R": 28,
+    "A": 2
+  },
+  "run_count": 90,
+  "runs_per_subject": {
+    "sub-01": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_l2r": 30,
+        "mi_t2b": 30,
+        "mi_ur2ll": 30,
+        "mi_ul2lr": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-02": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_t2b": 30,
+        "mi_l2r": 30,
+        "mi_ul2lr": 30,
+        "mi_ur2ll": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-03": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_l2r": 30,
+        "mi_t2b": 30,
+        "mi_ur2ll": 30,
+        "mi_ul2lr": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-04": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_t2b": 31,
+        "mi_ur2ll": 32,
+        "mi_l2r": 30,
+        "mi_ul2lr": 30
+      },
+      "mi_trials": 123
+    },
+    "sub-05": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_l2r": 30,
+        "mi_t2b": 30,
+        "mi_ur2ll": 30,
+        "mi_ul2lr": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-06": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_l2r": 30,
+        "mi_t2b": 30,
+        "mi_ul2lr": 30,
+        "mi_ur2ll": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-07": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_l2r": 30,
+        "mi_t2b": 30,
+        "mi_ur2ll": 30,
+        "mi_ul2lr": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-08": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_l2r": 30,
+        "mi_t2b": 30,
+        "mi_ur2ll": 30,
+        "mi_ul2lr": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-09": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_l2r": 30,
+        "mi_t2b": 30,
+        "mi_ul2lr": 30,
+        "mi_ur2ll": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-10": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_t2b": 30,
+        "mi_l2r": 30,
+        "mi_ur2ll": 30,
+        "mi_ul2lr": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-11": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_l2r": 30,
+        "mi_t2b": 30,
+        "mi_ul2lr": 30,
+        "mi_ur2ll": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-12": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_l2r": 30,
+        "mi_t2b": 30,
+        "mi_ur2ll": 30,
+        "mi_ul2lr": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-13": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_l2r": 30,
+        "mi_t2b": 30,
+        "mi_ur2ll": 30,
+        "mi_ul2lr": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-14": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_l2r": 30,
+        "mi_t2b": 30,
+        "mi_ul2lr": 30,
+        "mi_ur2ll": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-15": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_l2r": 30,
+        "mi_t2b": 30,
+        "mi_ur2ll": 30,
+        "mi_ul2lr": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-16": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_t2b": 30,
+        "mi_l2r": 30,
+        "mi_ul2lr": 30,
+        "mi_ur2ll": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-17": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_t2b": 30,
+        "mi_l2r": 30,
+        "mi_ur2ll": 30,
+        "mi_ul2lr": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-18": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_t2b": 30,
+        "mi_l2r": 30,
+        "mi_ur2ll": 30,
+        "mi_ul2lr": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-19": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_l2r": 39,
+        "mi_t2b": 39,
+        "mi_ul2lr": 30,
+        "mi_ur2ll": 30
+      },
+      "mi_trials": 138
+    },
+    "sub-20": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_l2r": 30,
+        "mi_t2b": 30,
+        "mi_ul2lr": 30,
+        "mi_ur2ll": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-21": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_t2b": 30,
+        "mi_l2r": 30,
+        "mi_ur2ll": 30,
+        "mi_ul2lr": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-22": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_l2r": 30,
+        "mi_t2b": 30,
+        "mi_ul2lr": 30,
+        "mi_ur2ll": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-23": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_t2b": 30,
+        "mi_l2r": 30,
+        "mi_ur2ll": 30,
+        "mi_ul2lr": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-24": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_l2r": 30,
+        "mi_t2b": 30,
+        "mi_ur2ll": 30,
+        "mi_ul2lr": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-25": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_t2b": 30,
+        "mi_l2r": 30,
+        "mi_ur2ll": 30,
+        "mi_ul2lr": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-26": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_t2b": 30,
+        "mi_l2r": 30,
+        "mi_ur2ll": 30,
+        "mi_ul2lr": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-27": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_t2b": 30,
+        "mi_l2r": 30,
+        "mi_ur2ll": 30,
+        "mi_ul2lr": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-28": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_l2r": 30,
+        "mi_t2b": 30,
+        "mi_ur2ll": 30,
+        "mi_ul2lr": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-29": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_l2r": 30,
+        "mi_t2b": 30,
+        "mi_ul2lr": 30,
+        "mi_ur2ll": 30
+      },
+      "mi_trials": 120
+    },
+    "sub-30": {
+      "n_runs": 3,
+      "mi_direction_counts": {
+        "mi_l2r": 30,
+        "mi_t2b": 30,
+        "mi_ur2ll": 30,
+        "mi_ul2lr": 30
+      },
+      "mi_trials": 120
+    }
+  },
+  "all_subjects_have_three_runs": true,
+  "total_mi_trials": 3621,
+  "mi_direction_counts": {
+    "mi_l2r": 909,
+    "mi_t2b": 910,
+    "mi_ur2ll": 902,
+    "mi_ul2lr": 900
+  },
+  "all_mi_duration_10_seconds": true,
+  "all_onsets_monotonic_nondecreasing": true,
+  "sampling_frequency_counts": {
+    "1000.0": 90
+  },
+  "eeg_channel_count_counts": {
+    "64": 90
+  },
+  "flag_count": 43,
+  "flags": [
+    {
+      "subject_id": "sub-02",
+      "run_id": "01",
+      "issue": "unknown_trial_type",
+      "row_0based": 0,
+      "row": {
+        "onset": "3.3",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "800000"
+      }
+    },
+    {
+      "subject_id": "sub-02",
+      "run_id": "01",
+      "issue": "unknown_trial_type",
+      "row_0based": 1,
+      "row": {
+        "onset": "3.301",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "800001"
+      }
+    },
+    {
+      "subject_id": "sub-04",
+      "run_id": "01",
+      "issue": "unknown_trial_type",
+      "row_0based": 5,
+      "row": {
+        "onset": "383.094",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "15"
+      }
+    },
+    {
+      "subject_id": "sub-04",
+      "run_id": "01",
+      "issue": "unknown_trial_type",
+      "row_0based": 6,
+      "row": {
+        "onset": "383.095",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "63"
+      }
+    },
+    {
+      "subject_id": "sub-04",
+      "run_id": "01",
+      "issue": "unknown_trial_type",
+      "row_0based": 7,
+      "row": {
+        "onset": "383.096",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "255"
+      }
+    },
+    {
+      "subject_id": "sub-04",
+      "run_id": "01",
+      "issue": "mi_trial_count_not_40",
+      "actual": 43
+    },
+    {
+      "subject_id": "sub-04",
+      "run_id": "01",
+      "issue": "per_run_four_direction_counts_not_10_each",
+      "actual": {
+        "mi_t2b": 11,
+        "mi_ur2ll": 12,
+        "mi_l2r": 10,
+        "mi_ul2lr": 10
+      }
+    },
+    {
+      "subject_id": "sub-04",
+      "run_id": "01",
+      "issue": "mi_start_cue_count_not_2",
+      "actual": 3
+    },
+    {
+      "subject_id": "sub-04",
+      "run_id": "01",
+      "issue": "half_direction_pair_differs_from_readme"
+    },
+    {
+      "subject_id": "sub-04",
+      "run_id": "01",
+      "issue": "within_half_interval_outside_26_8_to_27_2_seconds",
+      "details": [
+        {
+          "half_1based": 1,
+          "between_mi_trials_0based": 0,
+          "interval_seconds": 46.37800000000004
+        },
+        {
+          "half_1based": 1,
+          "between_mi_trials_0based": 1,
+          "interval_seconds": 12.314999999999998
+        },
+        {
+          "half_1based": 1,
+          "between_mi_trials_0based": 2,
+          "interval_seconds": 163.34299999999996
+        },
+        {
+          "half_1based": 2,
+          "between_mi_trials_0based": 2,
+          "interval_seconds": 147.31500000000005
+        }
+      ],
+      "threshold_is_census_screen_only": true
+    },
+    {
+      "subject_id": "sub-05",
+      "run_id": "01",
+      "issue": "unknown_trial_type",
+      "row_0based": 0,
+      "row": {
+        "onset": "0.0",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "700001"
+      }
+    },
+    {
+      "subject_id": "sub-05",
+      "run_id": "01",
+      "issue": "unknown_trial_type",
+      "row_0based": 1,
+      "row": {
+        "onset": "0.0",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "700001"
+      }
+    },
+    {
+      "subject_id": "sub-07",
+      "run_id": "01",
+      "issue": "unknown_trial_type",
+      "row_0based": 0,
+      "row": {
+        "onset": "0.0",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "700001"
+      }
+    },
+    {
+      "subject_id": "sub-07",
+      "run_id": "02",
+      "issue": "unknown_trial_type",
+      "row_0based": 0,
+      "row": {
+        "onset": "0.0",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "700001"
+      }
+    },
+    {
+      "subject_id": "sub-09",
+      "run_id": "01",
+      "issue": "unknown_trial_type",
+      "row_0based": 0,
+      "row": {
+        "onset": "0.0",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "700001"
+      }
+    },
+    {
+      "subject_id": "sub-11",
+      "run_id": "01",
+      "issue": "unknown_trial_type",
+      "row_0based": 0,
+      "row": {
+        "onset": "0.0",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "700001"
+      }
+    },
+    {
+      "subject_id": "sub-12",
+      "run_id": "01",
+      "issue": "unknown_trial_type",
+      "row_0based": 0,
+      "row": {
+        "onset": "0.0",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "700001"
+      }
+    },
+    {
+      "subject_id": "sub-14",
+      "run_id": "01",
+      "issue": "unknown_trial_type",
+      "row_0based": 0,
+      "row": {
+        "onset": "0.0",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "700001"
+      }
+    },
+    {
+      "subject_id": "sub-16",
+      "run_id": "01",
+      "issue": "unknown_trial_type",
+      "row_0based": 0,
+      "row": {
+        "onset": "0.0",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "700001"
+      }
+    },
+    {
+      "subject_id": "sub-17",
+      "run_id": "01",
+      "issue": "unknown_trial_type",
+      "row_0based": 0,
+      "row": {
+        "onset": "0.0",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "700001"
+      }
+    },
+    {
+      "subject_id": "sub-18",
+      "run_id": "02",
+      "issue": "unknown_trial_type",
+      "row_0based": 0,
+      "row": {
+        "onset": "3.1",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "800000"
+      }
+    },
+    {
+      "subject_id": "sub-18",
+      "run_id": "02",
+      "issue": "unknown_trial_type",
+      "row_0based": 1,
+      "row": {
+        "onset": "3.101",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "800001"
+      }
+    },
+    {
+      "subject_id": "sub-18",
+      "run_id": "02",
+      "issue": "unknown_trial_type",
+      "row_0based": 2,
+      "row": {
+        "onset": "3.3",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "800000"
+      }
+    },
+    {
+      "subject_id": "sub-18",
+      "run_id": "02",
+      "issue": "unknown_trial_type",
+      "row_0based": 3,
+      "row": {
+        "onset": "3.301",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "800001"
+      }
+    },
+    {
+      "subject_id": "sub-19",
+      "run_id": "01",
+      "issue": "unknown_trial_type",
+      "row_0based": 20,
+      "row": {
+        "onset": "600.2",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "800000"
+      }
+    },
+    {
+      "subject_id": "sub-19",
+      "run_id": "01",
+      "issue": "unknown_trial_type",
+      "row_0based": 21,
+      "row": {
+        "onset": "600.201",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "800001"
+      }
+    },
+    {
+      "subject_id": "sub-19",
+      "run_id": "01",
+      "issue": "mi_trial_count_not_40",
+      "actual": 58
+    },
+    {
+      "subject_id": "sub-19",
+      "run_id": "01",
+      "issue": "per_run_four_direction_counts_not_10_each",
+      "actual": {
+        "mi_l2r": 19,
+        "mi_t2b": 19,
+        "mi_ul2lr": 10,
+        "mi_ur2ll": 10
+      }
+    },
+    {
+      "subject_id": "sub-19",
+      "run_id": "01",
+      "issue": "mi_start_cue_count_not_2",
+      "actual": 3
+    },
+    {
+      "subject_id": "sub-19",
+      "run_id": "01",
+      "issue": "half_direction_pair_differs_from_readme"
+    },
+    {
+      "subject_id": "sub-19",
+      "run_id": "01",
+      "issue": "within_half_interval_outside_26_8_to_27_2_seconds",
+      "details": [
+        {
+          "half_1based": 1,
+          "between_mi_trials_0based": 17,
+          "interval_seconds": 124.55100000000004
+        },
+        {
+          "half_1based": 2,
+          "between_mi_trials_0based": 17,
+          "interval_seconds": 147.2829999999999
+        }
+      ],
+      "threshold_is_census_screen_only": true
+    },
+    {
+      "subject_id": "sub-21",
+      "run_id": "01",
+      "issue": "unknown_trial_type",
+      "row_0based": 0,
+      "row": {
+        "onset": "0.0",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "700001"
+      }
+    },
+    {
+      "subject_id": "sub-21",
+      "run_id": "02",
+      "issue": "unknown_trial_type",
+      "row_0based": 0,
+      "row": {
+        "onset": "0.0",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "700001"
+      }
+    },
+    {
+      "subject_id": "sub-22",
+      "run_id": "03",
+      "issue": "unknown_trial_type",
+      "row_0based": 0,
+      "row": {
+        "onset": "0.0",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "700001"
+      }
+    },
+    {
+      "subject_id": "sub-23",
+      "run_id": "01",
+      "issue": "unknown_trial_type",
+      "row_0based": 0,
+      "row": {
+        "onset": "0.0",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "700001"
+      }
+    },
+    {
+      "subject_id": "sub-23",
+      "run_id": "02",
+      "issue": "unknown_trial_type",
+      "row_0based": 0,
+      "row": {
+        "onset": "0.0",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "700001"
+      }
+    },
+    {
+      "subject_id": "sub-24",
+      "run_id": "02",
+      "issue": "unknown_trial_type",
+      "row_0based": 0,
+      "row": {
+        "onset": "0.0",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "700001"
+      }
+    },
+    {
+      "subject_id": "sub-24",
+      "run_id": "03",
+      "issue": "unknown_trial_type",
+      "row_0based": 0,
+      "row": {
+        "onset": "0.0",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "700001"
+      }
+    },
+    {
+      "subject_id": "sub-25",
+      "run_id": "01",
+      "issue": "unknown_trial_type",
+      "row_0based": 0,
+      "row": {
+        "onset": "0.0",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "700001"
+      }
+    },
+    {
+      "subject_id": "sub-25",
+      "run_id": "02",
+      "issue": "unknown_trial_type",
+      "row_0based": 0,
+      "row": {
+        "onset": "0.0",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "700001"
+      }
+    },
+    {
+      "subject_id": "sub-25",
+      "run_id": "03",
+      "issue": "unknown_trial_type",
+      "row_0based": 0,
+      "row": {
+        "onset": "0.0",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "700001"
+      }
+    },
+    {
+      "subject_id": "sub-28",
+      "run_id": "01",
+      "issue": "unknown_trial_type",
+      "row_0based": 0,
+      "row": {
+        "onset": "0.0",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "700001"
+      }
+    },
+    {
+      "subject_id": "sub-29",
+      "run_id": "01",
+      "issue": "unknown_trial_type",
+      "row_0based": 0,
+      "row": {
+        "onset": "0.0",
+        "duration": "0.0",
+        "trial_type": "unknown",
+        "value": "700001"
+      }
+    }
+  ],
+  "source_level_limitations": [
+    "Published onset/duration/event codes were inspected; no claim of true EEG-fNIRS temporal alignment is made.",
+    "Fixed direction pairs occupy different within-run halves; direction and half/time position are confounded.",
+    "Manual event corrections and original vendor markers require separate provenance review; this census preserves published metadata rather than relabeling.",
+    "Repository license is CC BY-NC 4.0; BIDS dataset_description states CC BY 4.0. Both allow noncommercial research; this does not reconcile the license declarations."
+  ],
+  "root_required_files_present": {
+    "README.md": true,
+    "LICENSE": false,
+    "LICENSE.txt": false,
+    "dataset_description.json": true,
+    "participants.json": true,
+    "participants.tsv": true,
+    "CHANGES": false
+  },
+  "signal_bodies_downloaded": 0
+}

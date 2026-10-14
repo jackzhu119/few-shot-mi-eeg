@@ -28,6 +28,9 @@ results/*
 *.hdf5
 *.edf
 *.bdf
+*.eeg
+*.fdt
+*.set
 *.fif
 *.pt
 *.pth
@@ -51,3 +54,12 @@ secrets*.json
 /research_logs/public_data_expansion_20261010/leeuwis_ingestion/**/source_event_ledger.json
 /research_logs/public_data_expansion_20261010/leeuwis_ingestion/**/continuous_run_ledger.json
 /research_logs/public_data_expansion_20261010/leeuwis_ingestion/**/verified_source_files.json
+/research_logs/latest_two_sources_20261012/wangliu_ingestion/full_source_audit/source_event_ledger.jsonl
+/research_logs/latest_two_sources_20261012/wangliu_ingestion/full_source_audit/source_record_ledger.jsonl
+/research_logs/latest_two_sources_20261012/discovery/mind/script_*.js
+# Live MIND state/checkpoints continue independently of immutable Git snapshots.
+/research_logs/latest_two_sources_20261012/mind_ingestion/full_eeg_v4/*
+!/research_logs/latest_two_sources_20261012/mind_ingestion/full_eeg_v4/plan.json
+!/research_logs/latest_two_sources_20261012/mind_ingestion/full_eeg_v4/checkpoint_archives/
+/research_logs/recovery_20261014/mind_supervisor_run01.log
+/research_logs/recovery_20261014/scientific_payload_run01/

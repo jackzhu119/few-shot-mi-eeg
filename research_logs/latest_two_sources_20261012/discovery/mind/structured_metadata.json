@@ -1,0 +1,195 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileObject": "cr:fileObject",
+    "fileProperty": "cr:fileProperty",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform",
+    "wd": "https://www.wikidata.org/wiki/"
+  },
+  "@id": "https://doi.org/10.57760/sciencedb.34326",
+  "@type": "sc:Dataset",
+  "citeAs": "@data{ d0f67f38c5bc4416bdcce619f33e57da,\n  title        = {{MIND：A Multimodal fNIRS-EEG Dataset for Unilateral Limb Motor Imagery}},\n  author       = {{Lufeng Feng and Baomin Xu and Haoran Zhang and Bihai Lin and Zuxuan Deng and Sidi Tao and Chenyu Liu and Shifan Jia and Li Duan and Ziyu Jia}},\n  year        = {{2026}},\n  month       = {{September}},\n  publisher   = {{Science Data Bank}},\n  doi         = {{10.57760/sciencedb.34326}},\n  url         = {{https://doi.org/10.57760/sciencedb.34326}},\n  version     = {{V4}}\n}",
+  "conditionsOfAccess": "PUBLIC",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "creator": [
+    {
+      "@type": "sc:Person",
+      "affiliation": [
+        {
+          "@id": "https://ror.org/01yj56c84",
+          "@type": "sc:Organization",
+          "name": "Beijing Jiaotong University"
+        }
+      ],
+      "name": "Lufeng Feng"
+    },
+    {
+      "@type": "sc:Person",
+      "affiliation": [
+        {
+          "@id": "https://ror.org/01yj56c84",
+          "@type": "sc:Organization",
+          "name": "Beijing jiatong University"
+        }
+      ],
+      "name": "Baomin Xu"
+    },
+    {
+      "@type": "sc:Person",
+      "affiliation": [
+        {
+          "@id": "https://ror.org/01yj56c84",
+          "@type": "sc:Organization",
+          "name": "Beijing Jiaotong University"
+        }
+      ],
+      "name": "Haoran Zhang"
+    },
+    {
+      "@type": "sc:Person",
+      "affiliation": [
+        {
+          "@id": "https://ror.org/01yj56c84",
+          "@type": "sc:Organization",
+          "name": "Beijing Jiaotong University"
+        }
+      ],
+      "name": "Bihai Lin"
+    },
+    {
+      "@type": "sc:Person",
+      "affiliation": [
+        {
+          "@id": "https://ror.org/01yj56c84",
+          "@type": "sc:Organization",
+          "name": "Beijing Jiaotong University"
+        }
+      ],
+      "name": "Zuxuan Deng"
+    },
+    {
+      "@type": "sc:Person",
+      "affiliation": [
+        {
+          "@id": "https://ror.org/01yj56c84",
+          "@type": "sc:Organization",
+          "name": "Beijing Jiaotong University"
+        }
+      ],
+      "name": "Sidi Tao"
+    },
+    {
+      "@type": "sc:Person",
+      "affiliation": [
+        {
+          "@id": "https://ror.org/02e7b5302",
+          "@type": "sc:Organization",
+          "name": "Nanyang Technological University"
+        }
+      ],
+      "name": "Chenyu Liu"
+    },
+    {
+      "@type": "sc:Person",
+      "affiliation": [
+        {
+          "@id": "https://ror.org/0213rcc28",
+          "@type": "sc:Organization",
+          "name": "Simon Fraser University"
+        }
+      ],
+      "name": "Shifan Jia"
+    },
+    {
+      "@type": "sc:Person",
+      "affiliation": [
+        {
+          "@id": "https://ror.org/01yj56c84",
+          "@type": "sc:Organization",
+          "name": "Beijing Jiaotong University"
+        }
+      ],
+      "name": "Li Duan"
+    },
+    {
+      "@type": "sc:Person",
+      "affiliation": [
+        {
+          "@id": "https://ror.org/034t30j35",
+          "@type": "sc:Organization",
+          "name": "Chinese Academy of Sciences"
+        }
+      ],
+      "name": "Ziyu Jia"
+    }
+  ],
+  "datePublished": "2026-01-06T02:13:45.891Z",
+  "description": "Unilateral limb motor imagery (MI) plays an important role in upper-limb motor rehabilitation and precise control of external devices, and places higher demands on spatial resolution. However, most existing public datasets focus on binary- or four-class left–right limb paradigms that mainly exploit coarse hemispheric lateralization, and there is still a lack of multimodal datasets that simultaneously record electroencephalography (EEG) and functional near-infrared spectroscopy (fNIRS) for unilateral multi-directional MI. To address this gap, we constructed MIND, a public motor imagery fNIRS–EEG dataset based on a four-class directional MI paradigm of the right upper limb. The dataset includes 64-channel EEG recordings (1000 Hz) and 51-channel fNIRS recordings (47.62 Hz) from 30 participants (12 females, 18 males; aged 19.0–25.0 years). We analyze the spatiotemporal characteristics of EEG spectral power and hemodynamic responses, and provide baseline classification summaries for EEG, fNIRS, and combined modalities as technical validation of task-related information in the dataset. We expect that this dataset will facilitate the evaluation and comparison of neuroimaging analysis and decoding methods.",
+  "identifier": "https://doi.org/10.57760/sciencedb.34326",
+  "inLanguage": "en_US",
+  "includedInDataCatalog": {
+    "@id": "https://www.scidb.cn",
+    "@type": "sc:DataCatalog",
+    "@url": "http://www.scidb.cn",
+    "name": "Science Data Bank"
+  },
+  "keywords": [
+    "fNIRS-EEG",
+    "Motor Imagery",
+    "unilateral upper-limb",
+    "Mutimodal dataset"
+  ],
+  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "name": "MIND：A Multimodal fNIRS-EEG Dataset for Unilateral Limb Motor Imagery",
+  "publisher": {
+    "@type": "sc:Organization",
+    "@url": "http://www.scidb.cn",
+    "name": "Science Data Bank"
+  },
+  "size": {
+    "@type": "sc:QuantitativeValue",
+    "unitText": "bytes",
+    "value": 99091202929
+  },
+  "url": "https://doi.org/10.57760/sciencedb.34326",
+  "version": "4.0.0"
+}

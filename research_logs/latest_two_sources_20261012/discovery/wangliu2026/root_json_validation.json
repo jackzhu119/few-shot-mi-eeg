@@ -1,0 +1,49 @@
+{
+  "dataset_description.json": {
+    "strict_json": true,
+    "top_level_fields": [
+      "Name",
+      "BIDSVersion",
+      "License",
+      "Authors",
+      "Acknowledgements",
+      "DatasetType"
+    ]
+  },
+  "events.json": {
+    "strict_json": false,
+    "error": "Expecting property name enclosed in double quotes: line 10 column 9 (char 442)"
+  },
+  "participants.json": {
+    "strict_json": true,
+    "top_level_fields": [
+      "subject_id",
+      "age",
+      "sex",
+      "affected_side",
+      "diagnosis",
+      "duration",
+      "acquisition_phase"
+    ]
+  },
+  "task-MotorImagery_eeg.json": {
+    "strict_json": true,
+    "top_level_fields": [
+      "InstitutionAddress",
+      "InstitutionName",
+      "InstitutionDepartmentName",
+      "Manufacturer",
+      "ManufacturerModelName",
+      "TaskName",
+      "RecordingType",
+      "EEGPlacementScheme",
+      "SamplingFrequency",
+      "PowerLineFrequency",
+      "EEGChannelCount",
+      "EOGChannelCount",
+      "EEGReference",
+      "EEGGround",
+      "SoftwareFilter"
+    ]
+  }
+}

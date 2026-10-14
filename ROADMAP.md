@@ -1,5 +1,16 @@
 # Research roadmap
 
+## 当前论文范围：2026-10-13
+
+工作题目按用户指示改为 **Task-Aware Adaptive Decoding for Longitudinal Motor-Imagery EEG**。
+当前顺序是既定范围的数据恢复与私有R2完整性、Kumar源资格和性能前冻结协议、实际CPU
+冻结/读出重校准/全模型重校准基线、固定任务特征与分布漂移分析、EEGNet训练软件准备，
+再根据实测失败模式提出最小任务感知策略。未训练部分明确Pending，不用计划替代结果。
+本论文研究离线解码，不要求在线人体实验，也不声称人类学习、可塑性或神经技能保持。
+已有探索性审计使同库测试不属于完全未接触的外部确认；模型选择不能查看目标query。
+最新执行范围以根目录交付报告和 `NEXT_STAGE_HANDOFF.md` 为准。下面保留旧方向的
+阶段门槛与已完成证据，历史在线阶段不是当前项目的执行依赖。
+
 **最新接续（2026-10-11）：** 全部19个发布身份、76会话、456runs完成冻结模型分析及独立
 方法复核。14431源事件保留，14429完整窗口进入固定张量。跨身份exact副本涉及五个编号；
 来源驱动敏感性保留14编号，未证明真实身份独立或人类技能保持。
@@ -7,7 +18,7 @@
 下一门槛是按数据来源冻结外部训练/评估分区、测量可靠性及混杂控制，而不是新policy有效性。
 见[全19身份报告](docs/netbci_all19_results_20261011.md)与[R2存储](docs/r2_research_storage.md)。
 
-工作题目：**Learning-Preserving Co-Adaptive Brain–Computer Interfaces**。
+历史工作题目：**Learning-Preserving Co-Adaptive Brain–Computer Interfaces**。
 下列阶段是证据门槛，不是已经完成的科学发现。Phase 0 的完成范围以实际验证记录为准。
 
 **历史接续状态（2026-10-10）：** 同一科研分支上的前十人固定版本子集已恢复并重新核验，

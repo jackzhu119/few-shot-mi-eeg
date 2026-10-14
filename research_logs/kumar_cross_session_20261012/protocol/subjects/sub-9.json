@@ -1,0 +1,836 @@
+{
+  "subject": "sub-9",
+  "cohort": "final_test",
+  "synthetic": false,
+  "raw_reference": "CPz",
+  "processed_reference": "average_all22",
+  "numeric_unit": "V",
+  "runs": [
+    {
+      "subject": "sub-9",
+      "session": "ses-0",
+      "run": "run-0",
+      "source_file": "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-0_eeg.edf",
+      "role": "source_train",
+      "acquisition_time_utc": "2021-10-19T18:39:41.999995Z",
+      "raw_file_sha256": "0dc035d53e21d0c4d3eccd470bfdf05aa824461440f5490b56677591edb232c0",
+      "whole_signal_numeric_sha256": "64de221c4d3e8dc2f731ccb47edfcc4782cbf90a5326a89f73044789a5d00a47",
+      "peak_absolute_volts": 0.015276719999999999,
+      "global_rms_volts": 0.004330309481005937,
+      "all_continuous_samples_finite": true,
+      "n_times": 123392
+    },
+    {
+      "subject": "sub-9",
+      "session": "ses-0",
+      "run": "run-1",
+      "source_file": "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-1_eeg.edf",
+      "role": "source_train",
+      "acquisition_time_utc": "2021-10-19T18:46:38.999986Z",
+      "raw_file_sha256": "76e91f19a366fc183596922e8d8ae309f53371297ae34f78f9fe38a72dc7fcb8",
+      "whole_signal_numeric_sha256": "9e0dfa1d1912252d8b4819dc1fc61673abfb8f29130139dba3b7efde0e00aa7e",
+      "peak_absolute_volts": 0.01707181,
+      "global_rms_volts": 0.004684623235665938,
+      "all_continuous_samples_finite": true,
+      "n_times": 122880
+    },
+    {
+      "subject": "sub-9",
+      "session": "ses-0",
+      "run": "run-2",
+      "source_file": "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-2_eeg.edf",
+      "role": "source_validation",
+      "acquisition_time_utc": "2021-10-19T18:54:18.999985Z",
+      "raw_file_sha256": "250e629afacfd4f5906c72855e66ab376085feaa10064dd4d1ffc56f79bd3fa5",
+      "whole_signal_numeric_sha256": "05b46fb49fcd7998bd6821a1c05570f68ce03cf23102880979827ecf940f3667",
+      "peak_absolute_volts": 0.019388049999999993,
+      "global_rms_volts": 0.005211510016452359,
+      "all_continuous_samples_finite": true,
+      "n_times": 123904
+    },
+    {
+      "subject": "sub-9",
+      "session": "ses-0",
+      "run": "run-3",
+      "source_file": "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-3_eeg.edf",
+      "role": "source_query",
+      "acquisition_time_utc": "2021-10-19T19:02:26.999994Z",
+      "raw_file_sha256": "729fe2955c5c00c11437df42423fa7bead7e7560605152686bec32e5342b8ade",
+      "whole_signal_numeric_sha256": "9d06cd26023c8dc2202b9843da30522e89223c372965ea69664dba0f9884cb1f",
+      "peak_absolute_volts": 0.012031920000000002,
+      "global_rms_volts": 0.004303073980108858,
+      "all_continuous_samples_finite": true,
+      "n_times": 124416
+    },
+    {
+      "subject": "sub-9",
+      "session": "ses-1",
+      "run": "run-0",
+      "source_file": "sub-9/ses-1/eeg/sub-9_ses-1_task-imagery_run-0_eeg.edf",
+      "role": "target_support",
+      "acquisition_time_utc": "2021-10-20T22:42:32.000005Z",
+      "raw_file_sha256": "237a6b7a748352bea1966d0ebf43a83e2265a8a6f06423a6820d7f937407ee5f",
+      "whole_signal_numeric_sha256": "fa78cf14ac5bea87676b707ac2e64f21f70d8fbe8d467405d83a5ecb04dd7650",
+      "peak_absolute_volts": 0.01291513,
+      "global_rms_volts": 0.005702986309695093,
+      "all_continuous_samples_finite": true,
+      "n_times": 122368
+    },
+    {
+      "subject": "sub-9",
+      "session": "ses-1",
+      "run": "run-1",
+      "source_file": "sub-9/ses-1/eeg/sub-9_ses-1_task-imagery_run-1_eeg.edf",
+      "role": "target_query",
+      "acquisition_time_utc": "2021-10-20T22:52:18.000005Z",
+      "raw_file_sha256": "f6b5bc1413cd8ec6c7e3cdffe72539e7b39d89c14b4bfacbfa2e0ca424d10fce",
+      "whole_signal_numeric_sha256": "4ab66ac96e1b876991303324395d50e012f64c4c963b99be173ddd3abc0aa77b",
+      "peak_absolute_volts": 0.01511113,
+      "global_rms_volts": 0.005811479378097737,
+      "all_continuous_samples_finite": true,
+      "n_times": 120320
+    },
+    {
+      "subject": "sub-9",
+      "session": "ses-1",
+      "run": "run-2",
+      "source_file": "sub-9/ses-1/eeg/sub-9_ses-1_task-imagery_run-2_eeg.edf",
+      "role": "target_query",
+      "acquisition_time_utc": "2021-10-20T22:58:57.999988Z",
+      "raw_file_sha256": "edff244a0f21f50411f1c188b3a090c4331de8a9c7840b6c7a941da7b2a8a337",
+      "whole_signal_numeric_sha256": "18ea7ea0d80be64a47b73ef390718138875631bea4db7ee7bb6ec0777d927661",
+      "peak_absolute_volts": 0.01558176,
+      "global_rms_volts": 0.006092143550725874,
+      "all_continuous_samples_finite": true,
+      "n_times": 118272
+    },
+    {
+      "subject": "sub-9",
+      "session": "ses-1",
+      "run": "run-3",
+      "source_file": "sub-9/ses-1/eeg/sub-9_ses-1_task-imagery_run-3_eeg.edf",
+      "role": "target_query",
+      "acquisition_time_utc": "2021-10-20T23:05:02.999999Z",
+      "raw_file_sha256": "b6b42af348567008c4ec924354bf6137a3960f0b4efdaac9dfd3330fa440d7f7",
+      "whole_signal_numeric_sha256": "be1a6ae336bcd723d76e812c3cbdb63993274e9dd2c05fd6ffa0ed94780020ae",
+      "peak_absolute_volts": 0.015934089999999998,
+      "global_rms_volts": 0.006330887832778797,
+      "all_continuous_samples_finite": true,
+      "n_times": 120320
+    },
+    {
+      "subject": "sub-9",
+      "session": "ses-2",
+      "run": "run-0",
+      "source_file": "sub-9/ses-2/eeg/sub-9_ses-2_task-imagery_run-0_eeg.edf",
+      "role": "target_support",
+      "acquisition_time_utc": "2021-10-21T18:01:29.999995Z",
+      "raw_file_sha256": "8ff05aa85c158b891e72e7be0159be0b48922791d50abd0a057e63405651084b",
+      "whole_signal_numeric_sha256": "bde1a9be5281721d2c7d1209de7d3a14f16b22f2b06e888cd93a651d818bd3ff",
+      "peak_absolute_volts": 0.0158427,
+      "global_rms_volts": 0.00729820552570304,
+      "all_continuous_samples_finite": true,
+      "n_times": 116224
+    },
+    {
+      "subject": "sub-9",
+      "session": "ses-2",
+      "run": "run-1",
+      "source_file": "sub-9/ses-2/eeg/sub-9_ses-2_task-imagery_run-1_eeg.edf",
+      "role": "target_query",
+      "acquisition_time_utc": "2021-10-21T18:08:11.999987Z",
+      "raw_file_sha256": "e5b2c0ff01d7d39ca856b30866101996ff0f99d7fe77fe08bf253afc3ad0fa02",
+      "whole_signal_numeric_sha256": "5745aaaec3d04e99da33bb5d6e37680a38fe7572e21aef1cc6cdc3a4b34a1cdd",
+      "peak_absolute_volts": 0.00965412,
+      "global_rms_volts": 0.00459334389891113,
+      "all_continuous_samples_finite": true,
+      "n_times": 115712
+    },
+    {
+      "subject": "sub-9",
+      "session": "ses-2",
+      "run": "run-2",
+      "source_file": "sub-9/ses-2/eeg/sub-9_ses-2_task-imagery_run-2_eeg.edf",
+      "role": "target_query",
+      "acquisition_time_utc": "2021-10-21T18:16:28.999987Z",
+      "raw_file_sha256": "3f1ce4c986d0fedf30a2637ea66055f4b3cb4ac97f5828ec2e703fcf9bba9a7f",
+      "whole_signal_numeric_sha256": "149eb0bd2b5fb80becc98bbb12f4241dfb7a1da0cb7c9576dd2808d081e1a336",
+      "peak_absolute_volts": 0.0075469199999999995,
+      "global_rms_volts": 0.0036643361229174447,
+      "all_continuous_samples_finite": true,
+      "n_times": 99328
+    },
+    {
+      "subject": "sub-9",
+      "session": "ses-3",
+      "run": "run-0",
+      "source_file": "sub-9/ses-3/eeg/sub-9_ses-3_task-imagery_run-0_eeg.edf",
+      "role": "target_support",
+      "acquisition_time_utc": "2021-10-22T17:25:52.999999Z",
+      "raw_file_sha256": "4d5b711677e8e5f9d553646c911cffe0f51457eb0ab754f9b94480011b89f7ff",
+      "whole_signal_numeric_sha256": "f8188059c32f831d024a613fe2e1443df9b84dd4496dd9794c212bce9bef33a3",
+      "peak_absolute_volts": 0.0168706,
+      "global_rms_volts": 0.009303701581102606,
+      "all_continuous_samples_finite": true,
+      "n_times": 109056
+    },
+    {
+      "subject": "sub-9",
+      "session": "ses-3",
+      "run": "run-1",
+      "source_file": "sub-9/ses-3/eeg/sub-9_ses-3_task-imagery_run-1_eeg.edf",
+      "role": "target_query",
+      "acquisition_time_utc": "2021-10-22T17:34:57.000005Z",
+      "raw_file_sha256": "49c0715020514253178f74fb3d70a3bd7f990f492ea9a0fb5c0a0c05fde536c5",
+      "whole_signal_numeric_sha256": "667ec48e7fd93cb72c5ac8235221bb9372fc5303b05fd7708c27263d53c5b879",
+      "peak_absolute_volts": 0.015360490000000001,
+      "global_rms_volts": 0.008041921031598299,
+      "all_continuous_samples_finite": true,
+      "n_times": 104448
+    },
+    {
+      "subject": "sub-9",
+      "session": "ses-3",
+      "run": "run-2",
+      "source_file": "sub-9/ses-3/eeg/sub-9_ses-3_task-imagery_run-2_eeg.edf",
+      "role": "target_query",
+      "acquisition_time_utc": "2021-10-22T17:41:12.999997Z",
+      "raw_file_sha256": "5b342ae08872bafb7e26aaf1a7dfee5ca31fc814b26edabceb6eb13673e5b7a5",
+      "whole_signal_numeric_sha256": "385f3e82900369d1073c49874f912bedf384a216d56c82634c1198dd63220df1",
+      "peak_absolute_volts": 0.01636513,
+      "global_rms_volts": 0.007542572580041442,
+      "all_continuous_samples_finite": true,
+      "n_times": 106496
+    },
+    {
+      "subject": "sub-9",
+      "session": "ses-4",
+      "run": "run-0",
+      "source_file": "sub-9/ses-4/eeg/sub-9_ses-4_task-imagery_run-0_eeg.edf",
+      "role": "target_support",
+      "acquisition_time_utc": "2021-10-23T15:33:04.999996Z",
+      "raw_file_sha256": "f008baaf9249e9154e8c612b66382c4f9994493c7bc264fa40d88ac9c18b5275",
+      "whole_signal_numeric_sha256": "170aa4f582ca37b64d4e2c22901168a415caf4fd7f5155440f8a645513391cae",
+      "peak_absolute_volts": 0.0133599,
+      "global_rms_volts": 0.00489068473928744,
+      "all_continuous_samples_finite": true,
+      "n_times": 101888
+    },
+    {
+      "subject": "sub-9",
+      "session": "ses-4",
+      "run": "run-1",
+      "source_file": "sub-9/ses-4/eeg/sub-9_ses-4_task-imagery_run-1_eeg.edf",
+      "role": "target_query",
+      "acquisition_time_utc": "2021-10-23T15:39:22.000003Z",
+      "raw_file_sha256": "c10dcb2969dc4e7cda88352ddcd63a556680b33c6b3ba5badf56ad78dee3750a",
+      "whole_signal_numeric_sha256": "d0750cd31ac5b5be46ea660bd5363f709c0352ec78cde93b230ee2868273b43b",
+      "peak_absolute_volts": 0.0133158,
+      "global_rms_volts": 0.004818519420041073,
+      "all_continuous_samples_finite": true,
+      "n_times": 94720
+    },
+    {
+      "subject": "sub-9",
+      "session": "ses-4",
+      "run": "run-2",
+      "source_file": "sub-9/ses-4/eeg/sub-9_ses-4_task-imagery_run-2_eeg.edf",
+      "role": "target_query",
+      "acquisition_time_utc": "2021-10-23T15:45:24.999985Z",
+      "raw_file_sha256": "7af1c418e2d70bf449cd66bace4124a9b70f4e18e44a0150febfe0fe1e30a2ec",
+      "whole_signal_numeric_sha256": "44d33043b3217be27515be563210e645b33fbda974a546ac50df32b8c1223a3b",
+      "peak_absolute_volts": 0.0121,
+      "global_rms_volts": 0.004642954688827323,
+      "all_continuous_samples_finite": true,
+      "n_times": 108032
+    },
+    {
+      "subject": "sub-9",
+      "session": "ses-5",
+      "run": "run-0",
+      "source_file": "sub-9/ses-5/eeg/sub-9_ses-5_task-imagery_run-0_eeg.edf",
+      "role": "target_support",
+      "acquisition_time_utc": "2021-10-24T19:43:56.999986Z",
+      "raw_file_sha256": "b6b3b5480a72a9cb97f3b2bc51cc9995c778f5f9db95e08d12638225be0efdbc",
+      "whole_signal_numeric_sha256": "ec683807d2ad3588b2c722efc5a78e7a32ae2421205e3bdbffd3d0c0fe5eba8c",
+      "peak_absolute_volts": 0.0221698,
+      "global_rms_volts": 0.009126706212427897,
+      "all_continuous_samples_finite": true,
+      "n_times": 99840
+    },
+    {
+      "subject": "sub-9",
+      "session": "ses-5",
+      "run": "run-1",
+      "source_file": "sub-9/ses-5/eeg/sub-9_ses-5_task-imagery_run-1_eeg.edf",
+      "role": "target_query",
+      "acquisition_time_utc": "2021-10-24T19:50:53.999998Z",
+      "raw_file_sha256": "c52a550947a94816ba20c335882bbd40345b77132a83e084e1775a3afbafdd89",
+      "whole_signal_numeric_sha256": "b5c28f0ad65d38988d45193758ee4e72908527e8d02b0b7bb6837c408a5ad614",
+      "peak_absolute_volts": 0.017951599999999998,
+      "global_rms_volts": 0.006814824563242419,
+      "all_continuous_samples_finite": true,
+      "n_times": 115200
+    },
+    {
+      "subject": "sub-9",
+      "session": "ses-5",
+      "run": "run-2",
+      "source_file": "sub-9/ses-5/eeg/sub-9_ses-5_task-imagery_run-2_eeg.edf",
+      "role": "target_query",
+      "acquisition_time_utc": "2021-10-24T19:59:00.999991Z",
+      "raw_file_sha256": "51fa1104cdaa3afb854505a87d266049146457df192897650228a0100790fa26",
+      "whole_signal_numeric_sha256": "75ed3c1b0c4a15530c68d72627eedabbf00e8479ac31e54d44f7ff10e45b8562",
+      "peak_absolute_volts": 0.0152102,
+      "global_rms_volts": 0.005835574708313103,
+      "all_continuous_samples_finite": true,
+      "n_times": 109568
+    }
+  ],
+  "verified_source_files": {
+    "dataset_description.json": {
+      "sha256": "3ec4afc49c56dcd35be7c1fe8318a1c463983e1a630a42419bb235c66439a747",
+      "official_checksum": "f2db9286f3a7c473e74a061d2b0f5ccc8c0fd3f7",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-0/sub-9_ses-0_scans.tsv": {
+      "sha256": "89881b0f0743e3d16e5df42bd66bb664a1bc7caa28290a4d28d5e3b54ea9ae9d",
+      "official_checksum": "02c20a83c579393f6fcbdbe1cd493351f45c0e4c",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-0_eeg.json": {
+      "sha256": "b100364448874853f91c1a09641dc5f0b9070a15f7c89ef505682ce083a411eb",
+      "official_checksum": "20947c850fea96eab765b1b421de497173bc032e",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-0_events.json": {
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "official_checksum": "2ec3785e9b4304a24259b6a4a4b87d0a795fd5e6",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-0_events.tsv": {
+      "sha256": "2f1090c6c2af958fd810084f6873b601c0df343bb1e32cc2f1752ff7aae6e042",
+      "official_checksum": "ea924d3d2445d9a09f184a56f41d9367d002cd27",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-0_channels.tsv": {
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "official_checksum": "e9138c0390c3b494a21932aa05a4b7319ed7f6bb",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-0_eeg.edf": {
+      "sha256": "0dc035d53e21d0c4d3eccd470bfdf05aa824461440f5490b56677591edb232c0",
+      "official_checksum": "0dc035d53e21d0c4d3eccd470bfdf05aa824461440f5490b56677591edb232c0",
+      "official_algorithm": "sha256"
+    },
+    "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-1_eeg.json": {
+      "sha256": "eaeba81b87a59885a67d275e9baa35b6d66a5295ea2beceb48c70af2314d0966",
+      "official_checksum": "8cf7ec66eda08b8b305e216a439502a574d8f15c",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-1_events.json": {
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "official_checksum": "2ec3785e9b4304a24259b6a4a4b87d0a795fd5e6",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-1_events.tsv": {
+      "sha256": "41dcb844589a95edad2c419cdaaa5856946b82f716e057e2bcab6eb440bda4d1",
+      "official_checksum": "05a95b575db20d052e5534b489e9bbfd8009c3e9",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-1_channels.tsv": {
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "official_checksum": "e9138c0390c3b494a21932aa05a4b7319ed7f6bb",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-1_eeg.edf": {
+      "sha256": "76e91f19a366fc183596922e8d8ae309f53371297ae34f78f9fe38a72dc7fcb8",
+      "official_checksum": "76e91f19a366fc183596922e8d8ae309f53371297ae34f78f9fe38a72dc7fcb8",
+      "official_algorithm": "sha256"
+    },
+    "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-2_eeg.json": {
+      "sha256": "cf3b9d22ae130e5da3db0d45b31107500bfa79ff60deacb853dd0b518ef6910d",
+      "official_checksum": "bf9fe5e29a0dfdd13ee814352dd45a7f77cefdf6",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-2_events.json": {
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "official_checksum": "2ec3785e9b4304a24259b6a4a4b87d0a795fd5e6",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-2_events.tsv": {
+      "sha256": "463b426e2b6f18b38558c1b2c5fcf20655366b06644c41dcd1693bf1b653b8c2",
+      "official_checksum": "e76d58ba582b154e482fe7fa6a21a935e2ce5a22",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-2_channels.tsv": {
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "official_checksum": "e9138c0390c3b494a21932aa05a4b7319ed7f6bb",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-2_eeg.edf": {
+      "sha256": "250e629afacfd4f5906c72855e66ab376085feaa10064dd4d1ffc56f79bd3fa5",
+      "official_checksum": "250e629afacfd4f5906c72855e66ab376085feaa10064dd4d1ffc56f79bd3fa5",
+      "official_algorithm": "sha256"
+    },
+    "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-3_eeg.json": {
+      "sha256": "39217902c3672148fc24ce8a5678c24dd60d9ad8a4be0cf8f0d3477b05ba0f97",
+      "official_checksum": "251d2d6d5c8af9994644950b52fff0b1c19ae018",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-3_events.json": {
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "official_checksum": "2ec3785e9b4304a24259b6a4a4b87d0a795fd5e6",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-3_events.tsv": {
+      "sha256": "8c52b44899a7c11c05d7bc6d453dd6c313a0da41984a438ca9f6eaca2f40cdbd",
+      "official_checksum": "36afa7d5f1aff898f1526d1ff3afde5856d40049",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-3_channels.tsv": {
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "official_checksum": "e9138c0390c3b494a21932aa05a4b7319ed7f6bb",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-3_eeg.edf": {
+      "sha256": "729fe2955c5c00c11437df42423fa7bead7e7560605152686bec32e5342b8ade",
+      "official_checksum": "729fe2955c5c00c11437df42423fa7bead7e7560605152686bec32e5342b8ade",
+      "official_algorithm": "sha256"
+    },
+    "sub-9/ses-1/sub-9_ses-1_scans.tsv": {
+      "sha256": "b28d025bd9c8248b676fdd9a28cd6837380ba6c96e6fa5d05330c235e349bd9c",
+      "official_checksum": "cf3cb4fab1c9b514c20b726a8df6ca57fbc06900",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-1/eeg/sub-9_ses-1_task-imagery_run-0_eeg.json": {
+      "sha256": "7a2bfdf7aa5fe22d5d55e89c462cb28099c7eefbdcc985315af553d11f8e48dc",
+      "official_checksum": "14e3eb91e7b818a4253ff4aa24ad23aaf256e899",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-1/eeg/sub-9_ses-1_task-imagery_run-0_events.json": {
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "official_checksum": "2ec3785e9b4304a24259b6a4a4b87d0a795fd5e6",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-1/eeg/sub-9_ses-1_task-imagery_run-0_events.tsv": {
+      "sha256": "bd6fd7849285624c874f7aa0f44f301e9ebfdfd8075b38c90202baa7c5948392",
+      "official_checksum": "de6dcb00693197c39e388904e0c8ffe747fb7d59",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-1/eeg/sub-9_ses-1_task-imagery_run-0_channels.tsv": {
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "official_checksum": "e9138c0390c3b494a21932aa05a4b7319ed7f6bb",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-1/eeg/sub-9_ses-1_task-imagery_run-0_eeg.edf": {
+      "sha256": "237a6b7a748352bea1966d0ebf43a83e2265a8a6f06423a6820d7f937407ee5f",
+      "official_checksum": "237a6b7a748352bea1966d0ebf43a83e2265a8a6f06423a6820d7f937407ee5f",
+      "official_algorithm": "sha256"
+    },
+    "sub-9/ses-1/eeg/sub-9_ses-1_task-imagery_run-1_eeg.json": {
+      "sha256": "f6872a9f6c8c4adf15fd7a3c7cb0896d89e99485c6d1abb112e1c3be4edf77c2",
+      "official_checksum": "f6c5b43fffd24f7a46a4eb3fa922056ad3cd5058",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-1/eeg/sub-9_ses-1_task-imagery_run-1_events.json": {
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "official_checksum": "2ec3785e9b4304a24259b6a4a4b87d0a795fd5e6",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-1/eeg/sub-9_ses-1_task-imagery_run-1_events.tsv": {
+      "sha256": "1d9417d7094bbcc62adfed28f0eebbb96d0cc0aac18d32b0021245ec47993c3a",
+      "official_checksum": "b7452c326dd08f70e360e98f7810c6fb966e7bd0",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-1/eeg/sub-9_ses-1_task-imagery_run-1_channels.tsv": {
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "official_checksum": "e9138c0390c3b494a21932aa05a4b7319ed7f6bb",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-1/eeg/sub-9_ses-1_task-imagery_run-1_eeg.edf": {
+      "sha256": "f6b5bc1413cd8ec6c7e3cdffe72539e7b39d89c14b4bfacbfa2e0ca424d10fce",
+      "official_checksum": "f6b5bc1413cd8ec6c7e3cdffe72539e7b39d89c14b4bfacbfa2e0ca424d10fce",
+      "official_algorithm": "sha256"
+    },
+    "sub-9/ses-1/eeg/sub-9_ses-1_task-imagery_run-2_eeg.json": {
+      "sha256": "322db53426b016b103482a92e561762b147f42217afb76947192ad21187a443c",
+      "official_checksum": "90487f9b1dee09a6723cc057e41539030e6aa0a4",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-1/eeg/sub-9_ses-1_task-imagery_run-2_events.json": {
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "official_checksum": "2ec3785e9b4304a24259b6a4a4b87d0a795fd5e6",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-1/eeg/sub-9_ses-1_task-imagery_run-2_events.tsv": {
+      "sha256": "1781156361041ad8effb298c75f0192a3429ab485613e1852e8d005fe8271b22",
+      "official_checksum": "2c8e7930e3414c2da15fe2c6590fb0de5d9bdb38",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-1/eeg/sub-9_ses-1_task-imagery_run-2_channels.tsv": {
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "official_checksum": "e9138c0390c3b494a21932aa05a4b7319ed7f6bb",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-1/eeg/sub-9_ses-1_task-imagery_run-2_eeg.edf": {
+      "sha256": "edff244a0f21f50411f1c188b3a090c4331de8a9c7840b6c7a941da7b2a8a337",
+      "official_checksum": "edff244a0f21f50411f1c188b3a090c4331de8a9c7840b6c7a941da7b2a8a337",
+      "official_algorithm": "sha256"
+    },
+    "sub-9/ses-1/eeg/sub-9_ses-1_task-imagery_run-3_eeg.json": {
+      "sha256": "f6872a9f6c8c4adf15fd7a3c7cb0896d89e99485c6d1abb112e1c3be4edf77c2",
+      "official_checksum": "f6c5b43fffd24f7a46a4eb3fa922056ad3cd5058",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-1/eeg/sub-9_ses-1_task-imagery_run-3_events.json": {
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "official_checksum": "2ec3785e9b4304a24259b6a4a4b87d0a795fd5e6",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-1/eeg/sub-9_ses-1_task-imagery_run-3_events.tsv": {
+      "sha256": "34273e6ee6acaf6860e2cf1cdb1013568c463622b68658fef5a5f20fae87a688",
+      "official_checksum": "8341833fb62b3e5af87dc41d20f48b2aea43e085",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-1/eeg/sub-9_ses-1_task-imagery_run-3_channels.tsv": {
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "official_checksum": "e9138c0390c3b494a21932aa05a4b7319ed7f6bb",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-1/eeg/sub-9_ses-1_task-imagery_run-3_eeg.edf": {
+      "sha256": "b6b42af348567008c4ec924354bf6137a3960f0b4efdaac9dfd3330fa440d7f7",
+      "official_checksum": "b6b42af348567008c4ec924354bf6137a3960f0b4efdaac9dfd3330fa440d7f7",
+      "official_algorithm": "sha256"
+    },
+    "sub-9/ses-2/sub-9_ses-2_scans.tsv": {
+      "sha256": "625cc655b50cc5acd7d488c3329d51087caf725205675ccc715898adca375fd9",
+      "official_checksum": "945e5d77d751b6744fabce56bf1b7e1b4f9a9079",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-2/eeg/sub-9_ses-2_task-imagery_run-0_eeg.json": {
+      "sha256": "dcf875f72e10fd373777ffacebd0bb44c6297f8ecb8ad00712a497a5a64f9183",
+      "official_checksum": "49e09b339193029e9ee0e704f9bc2441d5b10ff1",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-2/eeg/sub-9_ses-2_task-imagery_run-0_events.json": {
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "official_checksum": "2ec3785e9b4304a24259b6a4a4b87d0a795fd5e6",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-2/eeg/sub-9_ses-2_task-imagery_run-0_events.tsv": {
+      "sha256": "0c50074ddddcc5ab4843c7425afbdf44792f706471fecd148d1878792b81e742",
+      "official_checksum": "993f889fdde7b6839edf5a27355f9264d42f3cbf",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-2/eeg/sub-9_ses-2_task-imagery_run-0_channels.tsv": {
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "official_checksum": "e9138c0390c3b494a21932aa05a4b7319ed7f6bb",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-2/eeg/sub-9_ses-2_task-imagery_run-0_eeg.edf": {
+      "sha256": "8ff05aa85c158b891e72e7be0159be0b48922791d50abd0a057e63405651084b",
+      "official_checksum": "8ff05aa85c158b891e72e7be0159be0b48922791d50abd0a057e63405651084b",
+      "official_algorithm": "sha256"
+    },
+    "sub-9/ses-2/eeg/sub-9_ses-2_task-imagery_run-1_eeg.json": {
+      "sha256": "fa5008e9b2adfb7f2a016ffff80999d0e87b750f4b70dada77ad7617faff6d87",
+      "official_checksum": "de9f55c6a8284ed7e0ce3fe80a1beea0dda0e4fd",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-2/eeg/sub-9_ses-2_task-imagery_run-1_events.json": {
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "official_checksum": "2ec3785e9b4304a24259b6a4a4b87d0a795fd5e6",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-2/eeg/sub-9_ses-2_task-imagery_run-1_events.tsv": {
+      "sha256": "25c697bd4b2beb3053a3f0dc9f152ccc6fa33c4904049e8f35557aef763a1176",
+      "official_checksum": "5a48649402a8423c3380ab108808dce929a5c2c7",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-2/eeg/sub-9_ses-2_task-imagery_run-1_channels.tsv": {
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "official_checksum": "e9138c0390c3b494a21932aa05a4b7319ed7f6bb",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-2/eeg/sub-9_ses-2_task-imagery_run-1_eeg.edf": {
+      "sha256": "e5b2c0ff01d7d39ca856b30866101996ff0f99d7fe77fe08bf253afc3ad0fa02",
+      "official_checksum": "e5b2c0ff01d7d39ca856b30866101996ff0f99d7fe77fe08bf253afc3ad0fa02",
+      "official_algorithm": "sha256"
+    },
+    "sub-9/ses-2/eeg/sub-9_ses-2_task-imagery_run-2_eeg.json": {
+      "sha256": "8566c7cc95bb684e8546284db813ea56e9bc8eb93d5df781cbf335ef42da41e0",
+      "official_checksum": "fa676a445f438d7b25678334a3f13c89efd855c5",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-2/eeg/sub-9_ses-2_task-imagery_run-2_events.json": {
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "official_checksum": "2ec3785e9b4304a24259b6a4a4b87d0a795fd5e6",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-2/eeg/sub-9_ses-2_task-imagery_run-2_events.tsv": {
+      "sha256": "96f29d6d2738555553b24df37b0dd7feab881c5c0553489359a02b571175679b",
+      "official_checksum": "873440f2c3191e22d60942425da34eec96af9aea",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-2/eeg/sub-9_ses-2_task-imagery_run-2_channels.tsv": {
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "official_checksum": "e9138c0390c3b494a21932aa05a4b7319ed7f6bb",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-2/eeg/sub-9_ses-2_task-imagery_run-2_eeg.edf": {
+      "sha256": "3f1ce4c986d0fedf30a2637ea66055f4b3cb4ac97f5828ec2e703fcf9bba9a7f",
+      "official_checksum": "3f1ce4c986d0fedf30a2637ea66055f4b3cb4ac97f5828ec2e703fcf9bba9a7f",
+      "official_algorithm": "sha256"
+    },
+    "sub-9/ses-3/sub-9_ses-3_scans.tsv": {
+      "sha256": "ed29bdfd8fb0c74d2c6cec376ecbf19a084113b42ebe97471d43aee523f78823",
+      "official_checksum": "3c623996fb8499f0b0972220bd9b4ec40402d269",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-3/eeg/sub-9_ses-3_task-imagery_run-0_eeg.json": {
+      "sha256": "091a82ff3ed5f5f3acd468569f27f061fc9b5070b025c667061b450abb85ac11",
+      "official_checksum": "f7e2a673fa5fe59448554f08d7721aec01c43c67",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-3/eeg/sub-9_ses-3_task-imagery_run-0_events.json": {
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "official_checksum": "2ec3785e9b4304a24259b6a4a4b87d0a795fd5e6",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-3/eeg/sub-9_ses-3_task-imagery_run-0_events.tsv": {
+      "sha256": "ebf0140c6baed304ca2681ce60973c5479a6433e1d03840bf695ce5fa7c1878d",
+      "official_checksum": "de958604cb4d493c66c4777c67498d08ac7b06d2",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-3/eeg/sub-9_ses-3_task-imagery_run-0_channels.tsv": {
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "official_checksum": "e9138c0390c3b494a21932aa05a4b7319ed7f6bb",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-3/eeg/sub-9_ses-3_task-imagery_run-0_eeg.edf": {
+      "sha256": "4d5b711677e8e5f9d553646c911cffe0f51457eb0ab754f9b94480011b89f7ff",
+      "official_checksum": "4d5b711677e8e5f9d553646c911cffe0f51457eb0ab754f9b94480011b89f7ff",
+      "official_algorithm": "sha256"
+    },
+    "sub-9/ses-3/eeg/sub-9_ses-3_task-imagery_run-1_eeg.json": {
+      "sha256": "b8071d71c6b4abc68b9f3af2c2ddf1f549ad4f22105dd75ab3e10c755b70fe1f",
+      "official_checksum": "c455f06453412a5c6ca36464eaf1e44ccccd6923",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-3/eeg/sub-9_ses-3_task-imagery_run-1_events.json": {
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "official_checksum": "2ec3785e9b4304a24259b6a4a4b87d0a795fd5e6",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-3/eeg/sub-9_ses-3_task-imagery_run-1_events.tsv": {
+      "sha256": "1fa5206e712d98fb1454d8747eaa69847ff52e9929d97040aee7271d3d38fe80",
+      "official_checksum": "3512dcd479a33c383da7a38ea75aa7a6869c502d",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-3/eeg/sub-9_ses-3_task-imagery_run-1_channels.tsv": {
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "official_checksum": "e9138c0390c3b494a21932aa05a4b7319ed7f6bb",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-3/eeg/sub-9_ses-3_task-imagery_run-1_eeg.edf": {
+      "sha256": "49c0715020514253178f74fb3d70a3bd7f990f492ea9a0fb5c0a0c05fde536c5",
+      "official_checksum": "49c0715020514253178f74fb3d70a3bd7f990f492ea9a0fb5c0a0c05fde536c5",
+      "official_algorithm": "sha256"
+    },
+    "sub-9/ses-3/eeg/sub-9_ses-3_task-imagery_run-2_eeg.json": {
+      "sha256": "442c38d0ae3d7f6fe40f939a7d1d9d011ebc92fa58fb72ddcd20db29a8175bf1",
+      "official_checksum": "6b93a454410564774668ec4db95771a8afd678be",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-3/eeg/sub-9_ses-3_task-imagery_run-2_events.json": {
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "official_checksum": "2ec3785e9b4304a24259b6a4a4b87d0a795fd5e6",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-3/eeg/sub-9_ses-3_task-imagery_run-2_events.tsv": {
+      "sha256": "b6b887171106a67e7c1eb8636b5d57977c415194a18c8767a3eb705f009c47a3",
+      "official_checksum": "3f6a7af3b7ebd3dcbcdd85117bd734cae0372428",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-3/eeg/sub-9_ses-3_task-imagery_run-2_channels.tsv": {
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "official_checksum": "e9138c0390c3b494a21932aa05a4b7319ed7f6bb",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-3/eeg/sub-9_ses-3_task-imagery_run-2_eeg.edf": {
+      "sha256": "5b342ae08872bafb7e26aaf1a7dfee5ca31fc814b26edabceb6eb13673e5b7a5",
+      "official_checksum": "5b342ae08872bafb7e26aaf1a7dfee5ca31fc814b26edabceb6eb13673e5b7a5",
+      "official_algorithm": "sha256"
+    },
+    "sub-9/ses-4/sub-9_ses-4_scans.tsv": {
+      "sha256": "eaf684f728c3f98a9b971f7e43ba1d7cddbc9bc2e344a8b59dd93327c54a7358",
+      "official_checksum": "2678dc85f3fe92d8e787476f7102b6dc0b1b575b",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-4/eeg/sub-9_ses-4_task-imagery_run-0_eeg.json": {
+      "sha256": "229211d430e24ddd5f07c46e24e452334ec6527cc1905b7ce04ba16ecbb486c9",
+      "official_checksum": "82630a9ec58b54351746dd5c302ec1b126819fdb",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-4/eeg/sub-9_ses-4_task-imagery_run-0_events.json": {
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "official_checksum": "2ec3785e9b4304a24259b6a4a4b87d0a795fd5e6",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-4/eeg/sub-9_ses-4_task-imagery_run-0_events.tsv": {
+      "sha256": "b6d904ed0318744453678e5c5fc3dd8187a26e48f1390cfa13c2f35e4b5c5ff1",
+      "official_checksum": "0a9ce0677179106cc48de6f9a0d971c83f197b5f",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-4/eeg/sub-9_ses-4_task-imagery_run-0_channels.tsv": {
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "official_checksum": "e9138c0390c3b494a21932aa05a4b7319ed7f6bb",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-4/eeg/sub-9_ses-4_task-imagery_run-0_eeg.edf": {
+      "sha256": "f008baaf9249e9154e8c612b66382c4f9994493c7bc264fa40d88ac9c18b5275",
+      "official_checksum": "f008baaf9249e9154e8c612b66382c4f9994493c7bc264fa40d88ac9c18b5275",
+      "official_algorithm": "sha256"
+    },
+    "sub-9/ses-4/eeg/sub-9_ses-4_task-imagery_run-1_eeg.json": {
+      "sha256": "ffc97f530a5a8184de764e2d116f21e4b09ca9958f839f858eb2da9d91019a32",
+      "official_checksum": "5b160e6429709c5fcb63417da6be61434b5925aa",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-4/eeg/sub-9_ses-4_task-imagery_run-1_events.json": {
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "official_checksum": "2ec3785e9b4304a24259b6a4a4b87d0a795fd5e6",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-4/eeg/sub-9_ses-4_task-imagery_run-1_events.tsv": {
+      "sha256": "0fcb07c8879ea483b4c22b2e385f2a287192cb8b984f1d8110f1f285734e9a46",
+      "official_checksum": "567b1c1b35ac1f8cc892cf3da668501c7157c853",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-4/eeg/sub-9_ses-4_task-imagery_run-1_channels.tsv": {
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "official_checksum": "e9138c0390c3b494a21932aa05a4b7319ed7f6bb",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-4/eeg/sub-9_ses-4_task-imagery_run-1_eeg.edf": {
+      "sha256": "c10dcb2969dc4e7cda88352ddcd63a556680b33c6b3ba5badf56ad78dee3750a",
+      "official_checksum": "c10dcb2969dc4e7cda88352ddcd63a556680b33c6b3ba5badf56ad78dee3750a",
+      "official_algorithm": "sha256"
+    },
+    "sub-9/ses-4/eeg/sub-9_ses-4_task-imagery_run-2_eeg.json": {
+      "sha256": "68e831918fa4654cf55c3975b690402f24c443a80477249c9e5383e19aea8fd4",
+      "official_checksum": "9e428b2f249d3a071c620915b3eff3890aa63cd0",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-4/eeg/sub-9_ses-4_task-imagery_run-2_events.json": {
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "official_checksum": "2ec3785e9b4304a24259b6a4a4b87d0a795fd5e6",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-4/eeg/sub-9_ses-4_task-imagery_run-2_events.tsv": {
+      "sha256": "ad6f2d43759949d472cefd7fa215850ce10e435b5e5d222b161691184d58308d",
+      "official_checksum": "7475730cd32f1d9db5e863d515035d44f46cf887",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-4/eeg/sub-9_ses-4_task-imagery_run-2_channels.tsv": {
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "official_checksum": "e9138c0390c3b494a21932aa05a4b7319ed7f6bb",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-4/eeg/sub-9_ses-4_task-imagery_run-2_eeg.edf": {
+      "sha256": "7af1c418e2d70bf449cd66bace4124a9b70f4e18e44a0150febfe0fe1e30a2ec",
+      "official_checksum": "7af1c418e2d70bf449cd66bace4124a9b70f4e18e44a0150febfe0fe1e30a2ec",
+      "official_algorithm": "sha256"
+    },
+    "sub-9/ses-5/sub-9_ses-5_scans.tsv": {
+      "sha256": "e5b9ed26deaba08759307645ae947bc80b789fc54c49786a82cf788b0f7ced1b",
+      "official_checksum": "b23d034edcd13db0a1d21563ce4b4bf1fedaf6b5",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-5/eeg/sub-9_ses-5_task-imagery_run-0_eeg.json": {
+      "sha256": "21927d251282cc7c2e2cba744b348d95e20844635a7b076e753e878ccee72f5b",
+      "official_checksum": "342d9fcd52e928157782de24a182245f9325c966",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-5/eeg/sub-9_ses-5_task-imagery_run-0_events.json": {
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "official_checksum": "2ec3785e9b4304a24259b6a4a4b87d0a795fd5e6",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-5/eeg/sub-9_ses-5_task-imagery_run-0_events.tsv": {
+      "sha256": "f87baf0bcafcf83edd5d34bdf168d04111aed4e34815fc9449b4c358d48d2eb5",
+      "official_checksum": "9c053a5aaf3dac9bc9898dde23926dda7ff477dc",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-5/eeg/sub-9_ses-5_task-imagery_run-0_channels.tsv": {
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "official_checksum": "e9138c0390c3b494a21932aa05a4b7319ed7f6bb",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-5/eeg/sub-9_ses-5_task-imagery_run-0_eeg.edf": {
+      "sha256": "b6b3b5480a72a9cb97f3b2bc51cc9995c778f5f9db95e08d12638225be0efdbc",
+      "official_checksum": "b6b3b5480a72a9cb97f3b2bc51cc9995c778f5f9db95e08d12638225be0efdbc",
+      "official_algorithm": "sha256"
+    },
+    "sub-9/ses-5/eeg/sub-9_ses-5_task-imagery_run-1_eeg.json": {
+      "sha256": "df4eed252fdf8d8300f81406f64d4cc2e0fe38d4eaa97860231a3a065cefeff5",
+      "official_checksum": "f93abda4493760c10a8504d9d2de797320d0e3a4",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-5/eeg/sub-9_ses-5_task-imagery_run-1_events.json": {
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "official_checksum": "2ec3785e9b4304a24259b6a4a4b87d0a795fd5e6",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-5/eeg/sub-9_ses-5_task-imagery_run-1_events.tsv": {
+      "sha256": "c58d35f7d2be76d153142a9d87ce3e92c6d1fd37b4ad9dde645f05c0a77c9f4c",
+      "official_checksum": "aae00f26f24107c06888e7645b2945f951251703",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-5/eeg/sub-9_ses-5_task-imagery_run-1_channels.tsv": {
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "official_checksum": "e9138c0390c3b494a21932aa05a4b7319ed7f6bb",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-5/eeg/sub-9_ses-5_task-imagery_run-1_eeg.edf": {
+      "sha256": "c52a550947a94816ba20c335882bbd40345b77132a83e084e1775a3afbafdd89",
+      "official_checksum": "c52a550947a94816ba20c335882bbd40345b77132a83e084e1775a3afbafdd89",
+      "official_algorithm": "sha256"
+    },
+    "sub-9/ses-5/eeg/sub-9_ses-5_task-imagery_run-2_eeg.json": {
+      "sha256": "02e2416f1624a10575805d4ca5faf688cd2ea16ba7479095355c4e1b2c37813c",
+      "official_checksum": "30baab586ed6350836d586053d7f5cb9115260eb",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-5/eeg/sub-9_ses-5_task-imagery_run-2_events.json": {
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "official_checksum": "2ec3785e9b4304a24259b6a4a4b87d0a795fd5e6",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-5/eeg/sub-9_ses-5_task-imagery_run-2_events.tsv": {
+      "sha256": "e40d866c52ebd13383ffdcb7746b6243a34638808b4bcd8a7bcab3ab972ccb02",
+      "official_checksum": "73ccf03265c2e5250df082d8278fed888e4216a5",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-5/eeg/sub-9_ses-5_task-imagery_run-2_channels.tsv": {
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "official_checksum": "e9138c0390c3b494a21932aa05a4b7319ed7f6bb",
+      "official_algorithm": "git"
+    },
+    "sub-9/ses-5/eeg/sub-9_ses-5_task-imagery_run-2_eeg.edf": {
+      "sha256": "51fa1104cdaa3afb854505a87d266049146457df192897650228a0100790fa26",
+      "official_checksum": "51fa1104cdaa3afb854505a87d266049146457df192897650228a0100790fa26",
+      "official_algorithm": "sha256"
+    }
+  },
+  "source_events": 400,
+  "included_trials": 397,
+  "excluded_trials": 3,
+  "class_counts": {
+    "right_hand": 197,
+    "left_hand": 200
+  },
+  "learned_preprocessing": false,
+  "chronology_strictly_increasing": true
+}

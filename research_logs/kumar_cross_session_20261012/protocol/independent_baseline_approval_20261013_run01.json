@@ -1,0 +1,44 @@
+{
+  "status": "approved_for_baseline_execution",
+  "reviewed_at_utc": "2026-10-13T15:14:25.567232+00:00",
+  "reviewer": "root_independent_input_and_access_review",
+  "user_authorization": "explicit CPU baseline execution in uploaded task; no additional approval required",
+  "config_sha256": "f1b2d0fa870493cc2aaab906fe6d8b1227e45b2a270e06700e3ca137fbfe9c89",
+  "split_manifest_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+  "protocol_path": "KUMAR_FROZEN_EXPERIMENT_PROTOCOL.md",
+  "protocol_sha256": "ac290f0e2c5ca58b3745d7cccd83c3fd265e5be9978f461ea5ed0fe7f645831e",
+  "source_gate_receipt_path": "research_logs/kumar_cross_session_20261012/protocol/source_gate_receipt.json",
+  "source_gate_receipt_sha256": "16187f8d5eb46eefb744396c0e14b2d9d1f6259c6d898f338777d193fa9e730f",
+  "adapter_sha256": "4d1d9439d3adad80532ce24e59d203bea04e353cf5235788e979ab1f79883d57",
+  "runner_sha256": "bf6bc4de396300c2f2430c8d42960eefdfaf50382d17e083a4c1846dabf736ac",
+  "freeze_revision_sha256": "39e5a817b9d5ff942b88493378ac837268f7c0a4d15fed3a99b9ef42b74564bd",
+  "task_aware_analysis_plan_sha256": "29b278814bbbc493540519df97229ef5c5cddef0a4b466eeb941879a7c116c05",
+  "independent_checks": {
+    "trial_identity_unique": true,
+    "source_windows_disjoint": true,
+    "whole_runs_assigned_single_role": true,
+    "cohorts_disjoint": true,
+    "numerical_duplicate_groups": {
+      "raw_window_numeric_sha256": [],
+      "processed_window_numeric_sha256": []
+    }
+  },
+  "adapter_ast_only_allowed_access_helper_changed": true,
+  "pre_performance_counts": {
+    "source_train": 720,
+    "source_validation": 360,
+    "source_query": 360,
+    "target_support": 1786,
+    "target_query": 3930
+  },
+  "performance_seen_by_reviewer": false,
+  "source_quality_qualifications_retained": [
+    "published_identity_not_biological_identity_verification",
+    "timestamps_are_derivative_source_reported_not_independently_verified_acquisition_dates",
+    "participants_age_2020_invalid_no_age_covariate",
+    "GR_PAR_mapping_unverified_no_group_inference",
+    "no_hit_miss_racing_or_human_retention_endpoint",
+    "no_expert_artifact_certification",
+    "offline_CAR_does_not_reconstruct_acquisition_CPz_signal"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "status": "software_validation_only",
+  "synthetic": true,
+  "timestamp_utc": "2026-10-13T15:12:16.843422+00:00",
+  "pytest": {
+    "command": "python -m pytest -q tests/test_kumar_baselines.py",
+    "passed": 7,
+    "failed": 0
+  },
+  "ruff": {
+    "command": "ruff check scripts/run_kumar_baselines.py tests/test_kumar_baselines.py",
+    "status": "passed"
+  },
+  "actual_Kumar_decoder_fits": 0,
+  "actual_Kumar_performance_observed": false,
+  "covered": [
+    "query_and_validation_fit_isolation",
+    "current_session_only_budget",
+    "source_state_frozen",
+    "safe_CSP_LDA_prediction_replay",
+    "feature_fit_query_contamination_invariance",
+    "safe_PCA_replay",
+    "participant_endpoint_bootstrap",
+    "approval_input_hash_binding"
+  ],
+  "hashes": {
+    "scripts/run_kumar_baselines.py": "bf6bc4de396300c2f2430c8d42960eefdfaf50382d17e083a4c1846dabf736ac",
+    "tests/test_kumar_baselines.py": "8f7f74f4643f50ff88047986705b9cfe1cc9ac83b3ad8597e601631abb1ec085",
+    "configs/kumar_cross_session_20261012.json": "f1b2d0fa870493cc2aaab906fe6d8b1227e45b2a270e06700e3ca137fbfe9c89"
+  }
+}

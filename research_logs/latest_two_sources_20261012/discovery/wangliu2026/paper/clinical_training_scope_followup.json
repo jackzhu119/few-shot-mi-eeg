@@ -1,0 +1,114 @@
+{
+  "verified_utc": "2026-10-12T00:40:52.874830+00:00",
+  "scope": "Read-only official article HTML/XML and official Figure 2. Dataset archives not inspected in this follow-up.",
+  "clinical_information": {
+    "paper_location": [
+      "Patients Table 1 (demographic/clinical characteristics)",
+      "Experimental paradigms Table 2 (field definitions)",
+      "Data Records additional information",
+      "Figure 2 root participants.tsv and participants.json"
+    ],
+    "documented_fields": [
+      "Subject ID",
+      "Age (years)",
+      "Group",
+      "Sex",
+      "Side of Hemiplegia",
+      "Stroke Duration (months)",
+      "Diagnosis",
+      "MMSE",
+      "Collection_Phase (pre/post/follow-up availability)"
+    ],
+    "clinical_endpoint_status": "Paper Tables 1/2 have no repeated FMA or other rehabilitation endpoint scores. Par7 says functional assessments without defining their measures or reporting scores; do not infer FMA availability from this language.",
+    "keyword_search_abstract_and_body": {
+      "Fugl-Meyer": 0,
+      "FMA": 0,
+      "Barthel": 0,
+      "NIHSS": 0,
+      "modified Rankin": 0,
+      "clinical endpoint": 0,
+      "decoder": 0,
+      "adaptive": 0,
+      "adaptation": 0,
+      "calibration": 0
+    }
+  },
+  "supplementary_material_scan": {
+    "publisher_supplementary_links": [],
+    "publisher_html_supplement_string_count": 0,
+    "publisher_html_MOESM_string_count": 0,
+    "pmc_supplementary_material_nodes": 0,
+    "pmc_media_nodes": 0,
+    "result": "No official supplementary-table URL identified in saved publisher article or PMC XML; no supplementary-table GET performed; size unavailable."
+  },
+  "training_and_public_EEG": {
+    "therapy_dose": "8 intervention sessions over 2 weeks, 4/week, ~45min each (Par7).",
+    "documented_public_EEG_collection": "pre-training, immediately post-training, one-month follow-up (Par5/Par10); raw/preprocessed naming phase codes pre/post/follow (Par19/Par20).",
+    "conclusion": "Eight therapy sessions must not be counted as eight released EEG assessment sessions. Paper does not document released EEG from each therapy session.",
+    "decoder_logs": "No per-session decoder adaptation, model update, or calibration log availability is documented in this article. Par25 describes offline CSP+SVM/CSP+LDA 10-fold classification; it is not evidence of adaptive online decoder logs.",
+    "caveat": "Par19 says raw recording throughout entire experiment, but naming and collection paragraphs identify assessment phases; this generic wording is insufficient to establish public therapy EEG."
+  },
+  "official_fig2": {
+    "publisher_section_url": "https://www.nature.com/articles/s41597-026-07787-y#Fig2",
+    "path": "/workspace/few-shot-mi-eeg/research_logs/latest_two_sources_20261012/discovery/wangliu2026/paper/publisher_fig2.png",
+    "bytes": 47209,
+    "sha256": "579a0d1917de6745769fb3ced5a06484be5eddf77c87b37b643eb251344da808",
+    "visually_verified_root_files": [
+      "dataset_description.json",
+      "electrodes.tsv",
+      "events.json",
+      "events.tsv",
+      "participants.tsv",
+      "participants.json",
+      "task-MotorImagery_eeg.json",
+      "README.md"
+    ],
+    "visually_verified_folders": [
+      "processed data",
+      "sourcedata",
+      "code"
+    ],
+    "clinical_endpoint_file": "No separate clinical endpoint file is shown in official Figure 2."
+  },
+  "evidence": [
+    {
+      "paragraph_id": "Par7",
+      "publisher_section_url": "https://www.nature.com/articles/s41597-026-07787-y#Sec3",
+      "quote": "This study recruited a total of 24 stroke patients from Tianjin Huanhu Hospital, including 18 males and 6 females. The patients ranged in age from 34 to 77 years, with a mean age of 55.75 years. Among them, 15 had right hemiplegia and 9 had left hemiplegia. And fourteen patients received brain-computer interface (BCI) training (BCI group), while 10 patients received conventional physical rehabilitation therapy (Traditional group). The BCI training involved a 2-week rehabilitation program using the brain-controlled “sixth-finger”15,17 system independently developed by the research team from Tianjin University. The conventional physical training consisted of a 2-week rehabilitation program and administered by rehabilitation physicians from Tianjin Huanhu Hospital. The BCI group and traditional group received equivalent training dosages. Each intervention consisted of 8 training sessions over 2 weeks, with 4 sessions per week, and each session lasted approximately 45 min. In addition, all patients underwent three functional assessments: immediately before the intervention (pre-training), immediately after the intervention (post-training), and 1 month after the intervention (follow-up)."
+    },
+    {
+      "paragraph_id": "Par9",
+      "publisher_section_url": "https://www.nature.com/articles/s41597-026-07787-y#Sec3",
+      "quote": "Patient eligibility was assessed by medical professionals, and the inclusion criteria were as follows: (1) aged 30–80 years; (2) first-ever stroke due to cerebral hemorrhage or infarction; (3) disease duration of 3–14 months; and (4) normal cognitive function, and ability to comprehend and perform experimental tasks. Exclusion criteria included: (1) severe psychological disorders or epilepsy that could interfere with task completion, and (2) scalp conditions preventing valid EEG acquisition. The demographic and clinical characteristics of the patients, including sex, age, side of hemiplegia, stroke duration, stroke diagnosis type, and cognitive function indicators (mini-mental state examination, MMSE), are summarized in Table 1.Table 1Patient information.Subject IDAge (years)GroupSexSide of HemiplegiaStroke Duration (months)DiagnosisMMSECollection_PhasePrePostFollow-up0148BMaleRight10Ischemic25√√√0264BFemaleRight7Ischemic30√√√0364BMaleLeft5Ischemic27√√√0434BMaleLeft6Ischemic30√√√0562BFemaleLeft5Ischemic26√√N/A0652BFemaleRight11Ischemic30√√√0777TMaleRight4Ischemic22√√√0852TMaleRight14Hemorrhagic24√√√0968BMaleLeft5Ischemic27√√√1038BMaleRight4Hemorrhagic29√√√1155TMaleLeft4Hemorrhagic27√√√1257BMaleLeft6Hemorrhagic25√√√1366TMaleRight12Ischemic28√√√1455TFemaleRight6Ischemic25√√√1555BMaleRight9Hemorrhagic21√√√1660BFemaleRight12Ischemic22√√√1741TMaleRight10Ischemic30√√N/A1864BFemaleLeft4Hemorrhagic23√√N/A1950TMaleLeft4Hemorrhagic23√√√2066BMaleRight6Ischemic30√√N/A2154TMaleRight5Ischemic26√√N/A2245TMaleRight3Ischemic28√√√2355BMaleRight6Ischemic30√√√2456TMaleLeft5Hemorrhagic30√√√B represents BCI group, T represents Traditional group, MMSE represents Mini-mental State Examination."
+    },
+    {
+      "paragraph_id": "Par10",
+      "publisher_section_url": "https://www.nature.com/articles/s41597-026-07787-y#Sec4",
+      "quote": "The dataset includes three collection phases: the pre-training phase, collected before patients undergo a two-week training period; the post-training phase, collected immediately after patients complete the two-week training; and the follow-up phase, collected after a one-month washout period following the completion of the training. 19/24 patients participated in all EEG data collection phases, while 5/24 patients were absent from the follow-up data collection due to personal reasons. The data collection status of each patient is shown in Tables 1, 2.Table 2The header of the table of specific information.Subject_idunique patient identifierAge (years)age of the patientGroupgroup assignment of the patientSexbiological sex of the patientSide of Hemiplegiathe side of limb paralysis due to strokeStroke Duration (months)the time from the stroke onset to patient enrollingDiagnosisclinical diagnosis of stroke typeMMSEMMSE score for cognitive function assessmentCollection_phasethe collection phase of EEG data"
+    },
+    {
+      "paragraph_id": "Par18",
+      "publisher_section_url": "https://www.nature.com/articles/s41597-026-07787-y#Sec9",
+      "quote": "Our dataset is available in the Figshare repository21, is organized as Brain Imaging Data Structure (BIDS)22, a widely adopted format for open EEG datasets, facilitating straightforward access and reuse. The dataset structure is illustrated in Fig. 2. The repository is divided into four main sections: (1) Raw data, containing the original EEG recordings for each subject throughout the entire experiment, stored as ‘.set/.fdt’ files; (2) Preprocessed data, stored as ‘.mat’ files; (3) Additional information, including patient details, electrode locations, and EEG event markers; and (4) Code, provided as MATLAB scripts.Fig. 2The EEG dataset structure."
+    },
+    {
+      "paragraph_id": "Par19",
+      "publisher_section_url": "https://www.nature.com/articles/s41597-026-07787-y#Sec10",
+      "quote": "This section includes the unprocessed, unsegmented EEG data recorded for each patient throughout the entire experiment. The ‘.set’ and ‘.fdt’ files store meta information and raw data respectively. These files can be loaded using the EEGLAB plugin to obtain an ‘EEG’ structure variable, which contains the raw data formatted as ‘channels × time-samples’, channel information, sampling rate, label information, etc. The naming convention is consistent with that of the preprocessed data, as shown below:\\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$${sub}-{xx}{\\rm{\\_}}{group}{\\rm{\\_}}s{ession}{\\rm{\\_}}{yy}{\\rm{\\_}}{original}.{set}/.{fdt}$$\\end{document}sub−xx_group_session_yy_original.set/.fdtwhere ‘xx’ is the subject ID, ‘group’ is the intervention group received for patients (B represents BCI group, T represents Traditional group), ‘session’ indicates the collection phases (pre represents the pre-training phase, post represents the post-training phase, follow represents the follow-up phase), and ‘yy’ is the run number."
+    },
+    {
+      "paragraph_id": "Par20",
+      "publisher_section_url": "https://www.nature.com/articles/s41597-026-07787-y#Sec11",
+      "quote": "Raw data were preprocessed using the EEGLAB toolbox based on MATLAB and saved in ‘.mat’ format. These files can be loaded directly through MATLAB to obtain an ‘EEG’ structure that contains the preprocessed data and meta information. The files are named according to the following convention:\\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$${sub}-{xx}{\\rm{\\_}}{group}{\\rm{\\_}}s{ession}{\\rm{\\_}}{yy}{\\rm{\\_}}{eeg}.{mat}$$\\end{document}sub−xx_group_session_yy_eeg.matwhere ‘xx’ is the subject ID, ‘group’ is the intervention group received for patients (B represents BCI group, T represents Traditional group), ‘session’ indicates the collection phases (pre represents the pre-training phase, post represents the post-training phase, follow represents the follow-up phase), and ‘yy’ is the run number."
+    },
+    {
+      "paragraph_id": "Par25",
+      "publisher_section_url": "https://www.nature.com/articles/s41597-026-07787-y#Sec15",
+      "quote": "In this study, each trial of the SF-MI and AH-MI tasks lasted 6 s. Based on the earlier finding that the ERD phenomenon tends to stabilize after 0.5~1 s, the EEG data segment from 1 s~5 s after the onset of the MI task was selected for classification. The extracted 4 s data segment from each trial was treated as an independent sample, thereby ensuring trial-level independence and preventing overly optimistic classification performance caused by temporal adjacency between samples. And other researchers may adopt customized sample-segmentation strategies according to their specific research objectives and analytical requirements. To demonstrate the inherent classifiability induced by the MI paradigm itself, this study employed classical machine learning algorithms for the binary classification task between SF-MI and AH-MI. EEG features were extracted using the Common Spatial Pattern (CSP) method, and the resulting feature vectors were subsequently classified using both support vector machine (SVM) and linear discriminant analysis (LDA) classifiers. A 10-fold cross-validation procedure was applied, in which the EEG data of each subject was randomly partitioned into 10 groups. For each fold, one group was used as the test set and the remaining nine groups as the training set. This process was repeated 10 times, and the average of the results was taken as the classification accuracy for each subject. The final classification accuracy was then computed as the mean across all subjects."
+    }
+  ],
+  "primary_source_hashes": {
+    "publisher_article.html": "06c334254bc46407c78a0303bf06bdbea8666be710bae31296078d69b83359ea",
+    "pmc_fulltext.xml": "1ed5ee6980c4c3b0c77c5443a5b4105d927ef63d2da4bf40e4368ae337d39abf"
+  }
+}

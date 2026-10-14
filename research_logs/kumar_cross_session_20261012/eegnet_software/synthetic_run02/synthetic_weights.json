@@ -1,0 +1,213 @@
+{
+  "synthetic": true,
+  "software_validation_only": true,
+  "config": {
+    "schema_version": 1,
+    "experiment": "Task-Aware Adaptive Decoding for Longitudinal Motor-Imagery EEG",
+    "status": "software_preparation_only_formal_training_pending",
+    "protocol_config": "configs/kumar_cross_session_20261012.json",
+    "split_manifest": "research_logs/kumar_cross_session_20261012/protocol/split_manifest.json",
+    "device": "cpu",
+    "threads": 1,
+    "seeds": [
+      20261012,
+      20261013,
+      20261014
+    ],
+    "input": {
+      "n_channels": 22,
+      "n_classes": 2,
+      "n_times": 640,
+      "sfreq_hz": 128.0,
+      "units": "V",
+      "class_mapping": {
+        "left_hand": 0,
+        "right_hand": 1
+      }
+    },
+    "architecture": {
+      "implementation": "braindecode.models.EEGNet",
+      "F1": 4,
+      "D": 2,
+      "F2": 8,
+      "kernel_length": 64,
+      "depthwise_kernel_length": 16,
+      "pool1_kernel_size": 4,
+      "pool2_kernel_size": 8,
+      "pool_mode": "mean",
+      "final_conv_length": "auto",
+      "conv_spatial_max_norm": 1.0,
+      "activation": "ELU",
+      "batch_norm_momentum": 0.01,
+      "batch_norm_affine": true,
+      "batch_norm_eps": 0.001,
+      "drop_prob": 0.5,
+      "final_layer_with_constraint": false,
+      "norm_rate": 0.25
+    },
+    "optimization": {
+      "optimizer": "Adam",
+      "learning_rate": 0.001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "epsilon": 1e-08,
+      "weight_decay": 0.0,
+      "amsgrad": false,
+      "batch_size": 16,
+      "max_epochs": 2,
+      "scheduler": "none",
+      "loss": "CrossEntropyLoss",
+      "label_smoothing": 0.0,
+      "class_weights": "none",
+      "early_stopping": {
+        "partition": "source_validation",
+        "metric": "mean_cross_entropy",
+        "mode": "min",
+        "patience": 2,
+        "min_delta": 0.0,
+        "ties": "earliest_epoch"
+      },
+      "shuffle_training": true,
+      "drop_last": false,
+      "num_workers": 0
+    },
+    "normalization": {
+      "fit_partition": "source_train",
+      "axis": [
+        0,
+        2
+      ],
+      "scale_floor_volts": 1e-08,
+      "target_fit": false
+    },
+    "inference": {
+      "mode": "eval",
+      "batch_norm_updates": false,
+      "optimizer_steps": 0,
+      "threshold": "argmax_no_tuning"
+    },
+    "development_subjects": [
+      "sub-1",
+      "sub-4",
+      "sub-7",
+      "sub-10",
+      "sub-13",
+      "sub-16"
+    ],
+    "hyperparameter_selection": {
+      "search_performed": false,
+      "allowed_data": "development_subject_source_train_and_source_validation_only",
+      "target_query_access_for_selection": false,
+      "rationale": "small prespecified official EEGNet baseline; no performance-driven selection in this preparation"
+    },
+    "freeze": {
+      "ready_for_formal_training": false,
+      "protocol_config_sha256": null,
+      "split_manifest_sha256": null,
+      "frozen_training_config_sha256": null,
+      "required_conditions": [
+        "protocol and full identity/split audit pass",
+        "final input/split manifests archived with SHA256",
+        "hyperparameters, epochs, stopping, seeds, preprocessing and cohort frozen before final query access",
+        "source-only development validation decisions recorded if any",
+        "resources and actual wall-time/cost budget available without creating paid compute"
+      ],
+      "this_round_authorization": "CPU software checks only; no complete formal EEGNet fits"
+    },
+    "software_validation": {
+      "synthetic_max_epochs": 2,
+      "synthetic_source_train_rows": 16,
+      "synthetic_source_validation_rows": 8,
+      "real_data": "development_sub1_source_train_and_source_validation_shape_and_preprocessing_only",
+      "real_training": false,
+      "query_predictions": false,
+      "formal_performance_claims": false
+    },
+    "budget": {
+      "serial_subject_seed_fits": 54,
+      "subjects": 18,
+      "seeds_per_subject": 3,
+      "maximum_epochs_per_fit": 100,
+      "maximum_training_minibatches_per_epoch": 3,
+      "maximum_optimizer_steps_total": 16200,
+      "new_paid_resources": false,
+      "gpu_availability": "no_cuda_build_and_zero_cuda_devices_on_verified_runtime",
+      "gpu_cost": "unknown_no_rate_or_resource_requested",
+      "formal_wall_time": "pending_representative_benchmark_and_training",
+      "planned_checkpoint_format": "torch_tensor_state_dict_and_bound_utf8_JSON_context_plus_strict_JSON_sidecar; torch.load(weights_only=True)"
+    }
+  },
+  "seed": 20261012,
+  "selected_epoch": 2,
+  "source_validation_loss": 0.6926090121269226,
+  "history": [
+    {
+      "epoch": 1,
+      "source_train_loss": 0.707773745059967,
+      "source_validation_loss": 0.6926442980766296
+    },
+    {
+      "epoch": 2,
+      "source_train_loss": 0.7258773446083069,
+      "source_validation_loss": 0.6926090121269226
+    }
+  ],
+  "optimizer_steps": 2,
+  "source_train_ids": [
+    "synthetic/run-0/0",
+    "synthetic/run-0/1",
+    "synthetic/run-0/2",
+    "synthetic/run-0/3",
+    "synthetic/run-0/4",
+    "synthetic/run-0/5",
+    "synthetic/run-0/6",
+    "synthetic/run-0/7",
+    "synthetic/run-0/8",
+    "synthetic/run-0/9",
+    "synthetic/run-0/10",
+    "synthetic/run-0/11",
+    "synthetic/run-0/12",
+    "synthetic/run-0/13",
+    "synthetic/run-0/14",
+    "synthetic/run-0/15"
+  ],
+  "source_validation_ids": [
+    "synthetic/run-2/0",
+    "synthetic/run-2/1",
+    "synthetic/run-2/2",
+    "synthetic/run-2/3",
+    "synthetic/run-2/4",
+    "synthetic/run-2/5",
+    "synthetic/run-2/6",
+    "synthetic/run-2/7"
+  ],
+  "config_canonical_sha256": "9aac57cd70214c8d5f9412b70f18f70ac2d73183e745f950fe08de4b92d9647d",
+  "frozen_state_sha256": "60e8b31ddabab81062806b75903a2eb73fac7dd24bd2cfd87a24ff80a16d4678",
+  "checkpoint_format": "tensor_state_only_torch_load_weights_only_true",
+  "architecture": "braindecode.models.EEGNet",
+  "constructor_kwargs": {
+    "n_chans": 22,
+    "n_outputs": 2,
+    "n_times": 640,
+    "sfreq": 128.0,
+    "F1": 4,
+    "D": 2,
+    "F2": 8,
+    "kernel_length": 64,
+    "depthwise_kernel_length": 16,
+    "pool1_kernel_size": 4,
+    "pool2_kernel_size": 8,
+    "pool_mode": "mean",
+    "final_conv_length": "auto",
+    "conv_spatial_max_norm": 1.0,
+    "batch_norm_momentum": 0.01,
+    "batch_norm_affine": true,
+    "batch_norm_eps": 0.001,
+    "drop_prob": 0.5,
+    "final_layer_with_constraint": false,
+    "norm_rate": 0.25
+  },
+  "checkpoint_sha256": "6329d636b83873a4165fcd424ba34bccabdf66c5bd53b8c164b75753702b9776"
+}

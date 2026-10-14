@@ -350,3 +350,8 @@ metadata-only Git closeout. They are outside the frozen metadata snapshot;
 no receipt captures itself and no source-history archive loop is required.
 All prior source-authenticity and scientific-eligibility caveats continue to
 apply independently of durable storage completion.
+
+
+## 2026-10-14 task-aware Kumar baseline checkpoint
+
+Current scope is Task-Aware Adaptive Decoding for Longitudinal Motor-Imagery EEG. Existing six-source and NETBCI objects remain immutable. The new CPU baseline has18 participants/324model rows/12,870predictions;618result objects54,272,330bytes passed full GET SHA256. New frozen scientific evidence1236objects98,076,860bytes also passed full GET. Current HEAD revalidation14,399objects passed; HEAD and full-content scopes remain distinct. MIND90-run V4 acquisition is still partial and continues under the authorized manifest. Exact recovery catalogs and closing receipts are in research_logs/recovery_20261014; current handoff is NEXT_STAGE_HANDOFF.md.

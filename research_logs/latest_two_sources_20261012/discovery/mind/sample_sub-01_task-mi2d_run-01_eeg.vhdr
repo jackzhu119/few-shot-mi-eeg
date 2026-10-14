@@ -1,0 +1,89 @@
+Brain Vision Data Exchange Header File Version 1.0
+; Written using pybv 0.7.6
+
+[Common Infos]
+Codepage=UTF-8
+DataFile=sub-01_task-mi2d_run-01_eeg.eeg
+MarkerFile=sub-01_task-mi2d_run-01_eeg.vmrk
+DataFormat=BINARY
+; Data orientation: MULTIPLEXED=ch1,pt1, ch2,pt1 ...
+DataOrientation=MULTIPLEXED
+NumberOfChannels=64
+; Sampling interval in microseconds
+SamplingInterval=1000.0
+
+[Binary Infos]
+BinaryFormat=IEEE_FLOAT_32
+
+[Channel Infos]
+; Each entry: Ch<Channel number>=<Name>,<Reference channel name>,
+; <Resolution in "Unit">,<Unit>, Future extensions..
+; Fields are delimited by commas, some fields might be omitted (empty).
+; Commas in channel names are coded as "\1".
+Ch1=FP1,,0.1,µV
+Ch2=FPZ,,0.1,µV
+Ch3=FP2,,0.1,µV
+Ch4=AF3,,0.1,µV
+Ch5=AF4,,0.1,µV
+Ch6=F7,,0.1,µV
+Ch7=F5,,0.1,µV
+Ch8=F3,,0.1,µV
+Ch9=F1,,0.1,µV
+Ch10=FZ,,0.1,µV
+Ch11=F2,,0.1,µV
+Ch12=F4,,0.1,µV
+Ch13=F6,,0.1,µV
+Ch14=F8,,0.1,µV
+Ch15=FT7,,0.1,µV
+Ch16=FC5,,0.1,µV
+Ch17=FC3,,0.1,µV
+Ch18=FC1,,0.1,µV
+Ch19=FCZ,,0.1,µV
+Ch20=FC2,,0.1,µV
+Ch21=FC4,,0.1,µV
+Ch22=FC6,,0.1,µV
+Ch23=FT8,,0.1,µV
+Ch24=T7,,0.1,µV
+Ch25=C5,,0.1,µV
+Ch26=C3,,0.1,µV
+Ch27=C1,,0.1,µV
+Ch28=CZ,,0.1,µV
+Ch29=C2,,0.1,µV
+Ch30=C4,,0.1,µV
+Ch31=C6,,0.1,µV
+Ch32=T8,,0.1,µV
+Ch33=M1,,0.1,µV
+Ch34=TP7,,0.1,µV
+Ch35=CP5,,0.1,µV
+Ch36=CP3,,0.1,µV
+Ch37=CP1,,0.1,µV
+Ch38=CPZ,,0.1,µV
+Ch39=CP2,,0.1,µV
+Ch40=CP4,,0.1,µV
+Ch41=CP6,,0.1,µV
+Ch42=TP8,,0.1,µV
+Ch43=M2,,0.1,µV
+Ch44=P7,,0.1,µV
+Ch45=P5,,0.1,µV
+Ch46=P3,,0.1,µV
+Ch47=P1,,0.1,µV
+Ch48=PZ,,0.1,µV
+Ch49=P2,,0.1,µV
+Ch50=P4,,0.1,µV
+Ch51=P6,,0.1,µV
+Ch52=P8,,0.1,µV
+Ch53=PO7,,0.1,µV
+Ch54=PO5,,0.1,µV
+Ch55=PO3,,0.1,µV
+Ch56=POZ,,0.1,µV
+Ch57=PO4,,0.1,µV
+Ch58=PO6,,0.1,µV
+Ch59=PO8,,0.1,µV
+Ch60=CB1,,0.1,µV
+Ch61=O1,,0.1,µV
+Ch62=OZ,,0.1,µV
+Ch63=O2,,0.1,µV
+Ch64=CB2,,0.1,µV
+
+[Comment]
+

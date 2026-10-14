@@ -1,0 +1,34 @@
+E702 Multiple statements on one line (semicolon)
+  --> scripts/plot_kumar_results.py:46:53
+   |
+44 |     for suffix in ["png", "svg", "pdf"]:
+45 |         p = args.output / f"participant_baseline_comparison.{suffix}"
+46 |         fig.savefig(p, dpi=170, bbox_inches="tight"); paths.append(p)
+   |                                                     ^
+47 |     plt.close(fig)
+48 |     records, inputs = [], {}
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/plot_kumar_results.py:67:69
+   |
+65 |     p = args.output / "support_only_PCA_subspace_distance.csv"
+66 |     with p.open("x", newline="") as stream:
+67 |         writer = csv.DictWriter(stream, fieldnames=list(records[0])); writer.writeheader(); writer.writerows(records)
+   |                                                                     ^
+68 |     paths.append(p)
+69 |     with (args.output / "figure_and_PCA_diagnostic_receipt.json").open("x") as stream:
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/plot_kumar_results.py:67:91
+   |
+65 |     p = args.output / "support_only_PCA_subspace_distance.csv"
+66 |     with p.open("x", newline="") as stream:
+67 |         writer = csv.DictWriter(stream, fieldnames=list(records[0])); writer.writeheader(); writer.writerows(records)
+   |                                                                                           ^
+68 |     paths.append(p)
+69 |     with (args.output / "figure_and_PCA_diagnostic_receipt.json").open("x") as stream:
+   |
+
+Found 3 errors.

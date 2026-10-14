@@ -1,0 +1,118 @@
+{
+  "source": "Wang/Liu 2026 stroke multi-paradigm longitudinal EEG",
+  "official_article_doi": "10.1038/s41597-026-07787-y",
+  "dataset_doi": "10.6084/m9.figshare.30509165.v11",
+  "figshare_article_id": 30509165,
+  "fixed_version": 11,
+  "license": {
+    "value": 1,
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "source_verified_at_utc": "2026-10-12T00:42:07.892204+00:00",
+  "stage": "prospective ingestion plan; not trained/evaluated",
+  "scientific_source_unit": "published stroke patient identity; group B/T and phase/run explicit; independence still requires numerical identity audit",
+  "subject_ids": [
+    "sub-01",
+    "sub-02",
+    "sub-03",
+    "sub-04",
+    "sub-05",
+    "sub-06",
+    "sub-07",
+    "sub-08",
+    "sub-09",
+    "sub-10",
+    "sub-11",
+    "sub-12",
+    "sub-13",
+    "sub-14",
+    "sub-15",
+    "sub-16",
+    "sub-17",
+    "sub-18",
+    "sub-19",
+    "sub-20",
+    "sub-21",
+    "sub-22",
+    "sub-23",
+    "sub-24"
+  ],
+  "phase_order": [
+    "pre",
+    "post",
+    "follow"
+  ],
+  "missing_followup_ids": [
+    "sub-05",
+    "sub-17",
+    "sub-18",
+    "sub-20",
+    "sub-21"
+  ],
+  "public_recordings": 268,
+  "raw_archive": {
+    "id": 64877880,
+    "name": "sourcedata.zip",
+    "size": 5175273351,
+    "is_link_only": false,
+    "download_url": "https://ndownloader.figshare.com/files/64877880",
+    "supplied_md5": "74dabab47f477e5bc0510b1e2e705c5a",
+    "computed_md5": "74dabab47f477e5bc0510b1e2e705c5a",
+    "mimetype": "application/zip"
+  },
+  "full_raw_download_recommended": true,
+  "representative_access_gate_passed": true,
+  "full_raw_md5_verified": false,
+  "processed_full_archive_recommended": false,
+  "processed_use": "only the verified representative comparison member; its manual/ICA processing and intermediate 43 channels differ from paper final 40-channel description",
+  "peak_local_disk_options_bytes": {
+    "raw_zip_plus_single_raw_representative": 5197432039,
+    "raw_zip_plus_all_raw_uncompressed": 11685480879,
+    "all_source_and_processed_zip_and_uncompressed": 18820852395
+  },
+  "disk_strategy": "Keep one official sourcedata.zip with full official MD5/SHA256 validation, upload immutable archive to R2, audit SETs plus one FDT at a time or stream member data; do not hold full raw extraction together with archive. Retain source-relative member paths and per-member CRC/SHA receipts. Processed archive remains catalogue-only. No paid compute.",
+  "prospective_raw_audit": [
+    "GET official fixed file id64877880 as bounded streaming download to temporary path; enforce expected size and MD574dabab47f477e5bc0510b1e2e705c5a; atomic finalize only if matching; record SHA256/time/HTTP without redirect URLs.",
+    "Inspect all 268 SET headers with explicit uint16_codec=latin1 and actual paths: nbchan/srate/pnts/channel order/reference/events (native labels1/2/3, EEGLAB 1-based sample latency), SET/FDT dimensions, event durations and MI boundaries; retain every source event and missing-run reason; no trial padding.",
+    "Read each FDT sequentially within a fixed scratch budget, preserve member CRC/SHA256 and numerical identity fingerprint, finite/amplitude/constant-channel checks; distinguish 59 labeled scalp channels from ECG+4EOG in representative, verify consistency before assuming across all.",
+    "Do not apply root events.tsv template to individual runs; raw first rest22.736s/AH31.304s differs from template. Native duration0 means point marker, not a validated zero-duration MI trial.",
+    "Separately keep B14/T10 stroke groups and phases pre/post/follow. Eight intervention therapy sessions do not become eight public EEG sessions. No clinical outcome trajectory, model-update log or online retention probe inferred.",
+    "After source gate passes, use existing sync_research_r2.py conditional immutable writes with full GET SHA256 readback for archive and all small metadata; record public source/path/license and frozen version in its own dataset prefix.",
+    "Only after all-source QC and frozen per-dataset splits define eligibility for future offline analysis. Do not train new model, reuse author pipeline, pool tasks/populations or retune NETBCI19 science configuration."
+  ],
+  "suggested_r2_archive_prefix": "few-shot-mi-eeg/datasets/wangliu2026/figshare30509165/v11",
+  "root_metadata_material_issues": {
+    "events.json": "strict JSON parse fails due trailing comma; official bytes unchanged",
+    "events.tsv": "generic 40-point marker example, not per-run events",
+    "task-MotorImagery_eeg.json": "60EEG/0EOG/average declaration differs from raw64 physical columns with5aux and SET common/paperCPz; processed comparison43average",
+    "participants.json": "several declared column names differ from participants.tsv actual headers; TSV lacks group/MMSE/diagnosis/clinical endpoint values"
+  },
+  "signal_representative_only": {
+    "raw": {
+      "nbchan": 64,
+      "srate": 250.0,
+      "pnts": 85000,
+      "trials": 1,
+      "events": {
+        "1": 20,
+        "2": 10,
+        "3": 10
+      }
+    },
+    "processed": {
+      "nbchan": 43,
+      "srate": 250.0,
+      "pnts": 78867,
+      "ref": "average",
+      "events": {
+        "boundary": 2,
+        "1": 20,
+        "2": 10,
+        "3": 10
+      }
+    },
+    "quality": "raw full representative finite; ECG constant -0.37500003125V after MNE EEGLAB scaling, large DC offsets in auxiliary/scalp values; source units/reference and artifact processing require separate verification; does not prove corpus quality"
+  },
+  "scientific_claim_boundary": "Dataset enables stroke pre/post/delayed-follow-up observational EEG analyses. No causal evidence for our algorithm, human neural skill retention, decoder adaptation, or independent healthy training cohort. Offline classifications/geometric proxies remain separate from learning."
+}

@@ -1,0 +1,26 @@
+{
+  "onset": {
+    "Description": "Event onset measured from the beginning of the run",
+    "Units": "s"
+  },
+  "duration": {
+    "Description": "Event duration",
+    "Units": "s"
+  },
+  "trial_type": {
+    "Description": "Task event type",
+    "Levels": {
+      "rest_open": "Eyes-open resting state, 60 s",
+      "rest_closed": "Eyes-closed resting state, 60 s",
+      "mi_start": "Cue period before motor imagery, lasting 2 seconds",
+      "mi_l2r": "Motor imagery of horizontal movement from left to right, 10 s",
+      "mi_t2b": "Motor imagery of vertical movement from top to bottom, 10 s",
+      "mi_ul2lr": "Motor imagery of diagonal movement from upper left to lower right, 10 s",
+      "mi_ur2ll": "Motor imagery of diagonal movement from upper right to lower left, 10 s",
+      "unknown": "Event was present in source annotations but was not mapped"
+    }
+  },
+  "value": {
+    "Description": "Original source event code"
+  }
+}

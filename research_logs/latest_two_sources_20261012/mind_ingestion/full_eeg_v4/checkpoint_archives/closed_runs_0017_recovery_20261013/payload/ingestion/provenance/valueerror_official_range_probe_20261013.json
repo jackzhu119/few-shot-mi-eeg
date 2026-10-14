@@ -1,0 +1,52 @@
+{
+  "checked_at_utc": "2026-10-13T15:06:08.938280+00:00",
+  "status": "passed",
+  "scope": "two serial read-only official ranged GETs; closed first chunk identity plus first pending range; no source-cache mutation, no source quality certification",
+  "relative_path": "sub-06/eeg/sub-06_task-mi2d_run-03_eeg.eeg",
+  "probes": [
+    {
+      "range_index": 0,
+      "first_byte": 0,
+      "last_byte_inclusive": 4194303,
+      "official_total_bytes": 345932800,
+      "checked_at_utc": "2026-10-13T15:05:54.236043+00:00",
+      "http_status": 206,
+      "content_range_numeric": [
+        0,
+        4194303,
+        345932800
+      ],
+      "exact_range_mapping_matches": true,
+      "received_bytes": 4194304,
+      "sha256": "626d4fd2e3bdd05e3df92f68c647720d998b4acb14c3dce9b6b705350e70f470",
+      "exact_body_length_matches": true,
+      "matches_saved_verified_chunk": true
+    },
+    {
+      "range_index": 51,
+      "first_byte": 213909504,
+      "last_byte_inclusive": 218103807,
+      "official_total_bytes": 345932800,
+      "checked_at_utc": "2026-10-13T15:06:00.732342+00:00",
+      "http_status": 206,
+      "content_range_numeric": [
+        213909504,
+        218103807,
+        345932800
+      ],
+      "exact_range_mapping_matches": true,
+      "received_bytes": 4194304,
+      "sha256": "647cc3fc19503d74b5c105f7ea7b59d6a3a96e0d0438b498d636561c17eb6de3",
+      "exact_body_length_matches": true,
+      "matches_saved_verified_chunk": null
+    }
+  ],
+  "prior_ValueError_exact_reason": "unavailable: prior exception text and range response evidence were not recorded",
+  "source_whole_MD5_still_required": true,
+  "all_pending_ranges_still_required": true,
+  "native_signal_audit_still_required": true,
+  "R2_full_GET_still_required": true,
+  "signed_url_or_raw_headers_logged": false,
+  "credential_values_logged": false,
+  "partial_or_signal_deleted": false
+}

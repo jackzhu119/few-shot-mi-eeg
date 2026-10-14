@@ -1,0 +1,155 @@
+research_logs/latest_two_sources_20261012/discovery/mind/census_metadata/.bidsignore:1: trailing whitespace.
++integrity_reports_final/
+research_logs/latest_two_sources_20261012/discovery/mind/census_metadata/.bidsignore:2: trailing whitespace.
++*.log
+research_logs/latest_two_sources_20261012/discovery/mind/census_metadata/.bidsignore:3: trailing whitespace.
++README.md
+research_logs/latest_two_sources_20261012/discovery/mind/census_metadata/.bidsignore:4: trailing whitespace.
++README_bids_updated.md
+research_logs/latest_two_sources_20261012/discovery/mind/census_metadata/.bidsignore:5: trailing whitespace.
++README_bids_updated_en.md
+research_logs/latest_two_sources_20261012/discovery/mind/census_metadata/.bidsignore:6: trailing whitespace.
++DELIVERY_NOTES_MIND_BIDS_FINAL.md
+research_logs/latest_two_sources_20261012/discovery/mind/census_metadata/README.md:9: trailing whitespace.
++[^1]: School of Computer Science and Technology, Beijing Jiaotong University, Beijing 100044, China  
+research_logs/latest_two_sources_20261012/discovery/mind/census_metadata/README.md:10: trailing whitespace.
++[^2]: Institute of Automation, Chinese Academy of Sciences, Beijing 100044, China  
+research_logs/latest_two_sources_20261012/discovery/mind/census_metadata/README.md:11: trailing whitespace.
++[^3]: School of Cyberspace Science and Technology, Beijing Jiaotong University, Beijing 100044, China  
+research_logs/latest_two_sources_20261012/discovery/mind/census_metadata/README.md:47: trailing whitespace.
++- **Inclusion and exclusion criteria:**  
+research_logs/latest_two_sources_20261012/discovery/mind/census_metadata/README.md:146: trailing whitespace.
++The current public release adopts a BIDS-organized structure and uses anonymized public participant IDs (`sub-01` to `sub-30`). The dataset root contains dataset-level description files, participant metadata files, a public subject ID policy file, the raw-recording directory `sourcedata/`, standardized participant directories `sub-*`, the derivatives directory `derivatives/`, and `.bidsignore` for excluding auxiliary files during validation. According to the released BIDS tree, raw vendor-format recordings are preserved in `sourcedata/`, standardized EEG and fNIRS data are stored in `sub-*`, and participant-level preprocessed derivatives are released in `derivatives/preproc-v1/`. In addition, the public release includes `README.md` at the dataset root and `subject_id_policy.json` documenting the anonymized subject-ID convention. 
+research_logs/latest_two_sources_20261012/discovery/mind/census_metadata/README.md:258: trailing whitespace.
++`sourcedata/` stores original vendor-format recordings organized by public BIDS participant ID. Each participant directory contains `eeg/` and `nirs/` subdirectories. EEG recordings are preserved in Curry raw format, while fNIRS recordings are preserved as vendor-exported `TXT` and `csv` files. For participants requiring manual fNIRS event labeling, `sourcedata/sub-*/nirs/` also includes `desc-manualevents_events.csv` and `desc-manualevents_events.json` files to preserve event provenance. For the interrupted second fNIRS acquisition of `sub-07`, two additional split label files, `run-02_1_manualevents_events.*` and `run-02_2_manualevents_events.*`, are provided to preserve alignment with the two physical sub-recordings. For `sub-13`, only `run-01` and `run-03` raw fNIRS files are preserved because the second acquisition was damaged. 
+research_logs/latest_two_sources_20261012/discovery/mind/census_metadata/README.md:436: trailing whitespace.
++    - `sub-XXXX/eeg/sub-XXXX_task-mi2d_desc-motorimagery_eeg.mat`  
+research_logs/latest_two_sources_20261012/discovery/mind/census_metadata/README.md:438: trailing whitespace.
++    - `sub-XXXX/eeg/sub-XXXX_task-mi2d_desc-rest_eeg.mat`  
+research_logs/latest_two_sources_20261012/discovery/mind/sample_README.md:9: trailing whitespace.
++[^1]: School of Computer Science and Technology, Beijing Jiaotong University, Beijing 100044, China  
+research_logs/latest_two_sources_20261012/discovery/mind/sample_README.md:10: trailing whitespace.
++[^2]: Institute of Automation, Chinese Academy of Sciences, Beijing 100044, China  
+research_logs/latest_two_sources_20261012/discovery/mind/sample_README.md:11: trailing whitespace.
++[^3]: School of Cyberspace Science and Technology, Beijing Jiaotong University, Beijing 100044, China  
+research_logs/latest_two_sources_20261012/discovery/mind/sample_README.md:47: trailing whitespace.
++- **Inclusion and exclusion criteria:**  
+research_logs/latest_two_sources_20261012/discovery/mind/sample_README.md:146: trailing whitespace.
++The current public release adopts a BIDS-organized structure and uses anonymized public participant IDs (`sub-01` to `sub-30`). The dataset root contains dataset-level description files, participant metadata files, a public subject ID policy file, the raw-recording directory `sourcedata/`, standardized participant directories `sub-*`, the derivatives directory `derivatives/`, and `.bidsignore` for excluding auxiliary files during validation. According to the released BIDS tree, raw vendor-format recordings are preserved in `sourcedata/`, standardized EEG and fNIRS data are stored in `sub-*`, and participant-level preprocessed derivatives are released in `derivatives/preproc-v1/`. In addition, the public release includes `README.md` at the dataset root and `subject_id_policy.json` documenting the anonymized subject-ID convention. 
+research_logs/latest_two_sources_20261012/discovery/mind/sample_README.md:258: trailing whitespace.
++`sourcedata/` stores original vendor-format recordings organized by public BIDS participant ID. Each participant directory contains `eeg/` and `nirs/` subdirectories. EEG recordings are preserved in Curry raw format, while fNIRS recordings are preserved as vendor-exported `TXT` and `csv` files. For participants requiring manual fNIRS event labeling, `sourcedata/sub-*/nirs/` also includes `desc-manualevents_events.csv` and `desc-manualevents_events.json` files to preserve event provenance. For the interrupted second fNIRS acquisition of `sub-07`, two additional split label files, `run-02_1_manualevents_events.*` and `run-02_2_manualevents_events.*`, are provided to preserve alignment with the two physical sub-recordings. For `sub-13`, only `run-01` and `run-03` raw fNIRS files are preserved because the second acquisition was damaged. 
+research_logs/latest_two_sources_20261012/discovery/mind/sample_README.md:436: trailing whitespace.
++    - `sub-XXXX/eeg/sub-XXXX_task-mi2d_desc-motorimagery_eeg.mat`  
+research_logs/latest_two_sources_20261012/discovery/mind/sample_README.md:438: trailing whitespace.
++    - `sub-XXXX/eeg/sub-XXXX_task-mi2d_desc-rest_eeg.mat`  
+research_logs/latest_two_sources_20261012/discovery/mind/sample_sub-01_task-mi2d_run-01_eeg.vhdr:89: new blank line at EOF.
+research_logs/latest_two_sources_20261012/discovery/wangliu2026/metadata/README.md:16: new blank line at EOF.
+research_logs/latest_two_sources_20261012/mind_ingestion/full_eeg_v4/checkpoint_archives/closed_runs_0017_recovery_20261013/payload/ingestion/provenance/test_mind_source_ingestion.py:1375: new blank line at EOF.
+research_logs/latest_two_sources_20261012/mind_ingestion/full_eeg_v4/checkpoint_archives/closed_runs_0017_recovery_20261013/payload/tests/test_mind_source_ingestion.py:1532: new blank line at EOF.
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_coordsystem.json:1: trailing whitespace.
++{
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_coordsystem.json:2: trailing whitespace.
++  "EEGCoordinateSystem": "Other",
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_coordsystem.json:3: trailing whitespace.
++  "EEGCoordinateUnits": "m",
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_coordsystem.json:4: trailing whitespace.
++  "EEGCoordinateSystemDescription": "Coordinates derived from the provided cap layout table and used as template scalp-space coordinates consistent with the international 10-20 layout."
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_eeg.json:1: trailing whitespace.
++{
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_eeg.json:2: trailing whitespace.
++  "TaskName": "mi2d",
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_eeg.json:3: trailing whitespace.
++  "SamplingFrequency": 1000.0,
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_eeg.json:4: trailing whitespace.
++  "PowerLineFrequency": 50,
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_eeg.json:5: trailing whitespace.
++  "Manufacturer": "Neuroscan",
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_eeg.json:6: trailing whitespace.
++  "ManufacturersModelName": "synAmps2",
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_eeg.json:7: trailing whitespace.
++  "CapManufacturer": "Neuroscan",
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_eeg.json:8: trailing whitespace.
++  "EEGChannelCount": 64,
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_eeg.json:9: trailing whitespace.
++  "EOGChannelCount": 0,
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_eeg.json:10: trailing whitespace.
++  "ECGChannelCount": 0,
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_eeg.json:11: trailing whitespace.
++  "EMGChannelCount": 0,
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_eeg.json:12: trailing whitespace.
++  "MiscChannelCount": 0,
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_eeg.json:13: trailing whitespace.
++  "TriggerChannelCount": 0,
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_eeg.json:14: trailing whitespace.
++  "RecordingType": "continuous",
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_eeg.json:15: trailing whitespace.
++  "EEGReference": "parietal reference",
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_eeg.json:16: trailing whitespace.
++  "SoftwareFilters": "n/a",
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_eeg.json:17: trailing whitespace.
++  "HardwareFilters": {
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_eeg.json:18: trailing whitespace.
++    "High-pass filter": {
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_eeg.json:19: trailing whitespace.
++      "Cutoff (Hz)": 0.0
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_eeg.json:20: trailing whitespace.
++    },
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_eeg.json:21: trailing whitespace.
++    "Low-pass filter": {
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_eeg.json:22: trailing whitespace.
++      "Cutoff (Hz)": 500.0
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_eeg.json:23: trailing whitespace.
++    }
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_eeg.json:24: trailing whitespace.
++  }
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_eeg.vhdr:89: new blank line at EOF.
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_events.json:1: trailing whitespace.
++{
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_events.json:2: trailing whitespace.
++  "onset": {
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_events.json:3: trailing whitespace.
++    "Description": "Event onset measured from the beginning of the run",
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_events.json:4: trailing whitespace.
++    "Units": "s"
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_events.json:5: trailing whitespace.
++  },
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_events.json:6: trailing whitespace.
++  "duration": {
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_events.json:7: trailing whitespace.
++    "Description": "Event duration",
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_events.json:8: trailing whitespace.
++    "Units": "s"
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_events.json:9: trailing whitespace.
++  },
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_events.json:10: trailing whitespace.
++  "trial_type": {
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_events.json:11: trailing whitespace.
++    "Description": "Task event type",
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_events.json:12: trailing whitespace.
++    "Levels": {
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_events.json:13: trailing whitespace.
++      "rest_open": "Eyes-open resting state, 60 s",
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_events.json:14: trailing whitespace.
++      "rest_closed": "Eyes-closed resting state, 60 s",
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_events.json:15: trailing whitespace.
++      "mi_start": "Cue period before motor imagery, lasting 2 seconds",
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_events.json:16: trailing whitespace.
++      "mi_l2r": "Motor imagery of horizontal movement from left to right, 10 s",
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_events.json:17: trailing whitespace.
++      "mi_t2b": "Motor imagery of vertical movement from top to bottom, 10 s",
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_events.json:18: trailing whitespace.
++      "mi_ul2lr": "Motor imagery of diagonal movement from upper left to lower right, 10 s",
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_events.json:19: trailing whitespace.
++      "mi_ur2ll": "Motor imagery of diagonal movement from upper right to lower left, 10 s",
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_events.json:20: trailing whitespace.
++      "unknown": "Event was present in source annotations but was not mapped"
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_events.json:21: trailing whitespace.
++    }
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_events.json:22: trailing whitespace.
++  },
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_events.json:23: trailing whitespace.
++  "value": {
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_events.json:24: trailing whitespace.
++    "Description": "Original source event code"
+research_logs/latest_two_sources_20261012/representative/mind/sub-01/eeg/sub-01_task-mi2d_run-01_events.json:25: trailing whitespace.
++  }

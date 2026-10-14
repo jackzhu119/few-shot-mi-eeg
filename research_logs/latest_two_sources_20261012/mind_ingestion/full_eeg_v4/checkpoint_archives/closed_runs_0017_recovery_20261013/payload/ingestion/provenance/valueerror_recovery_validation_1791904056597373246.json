@@ -1,0 +1,20 @@
+{
+  "checked_at_utc": "2026-10-13T15:07:36.597666+00:00",
+  "status": "software_checks_passed",
+  "mind_tests": "113 passed",
+  "ruff": "three owned files passed",
+  "files_sha256": {
+    "scripts/fetch_mind2026_r2.py": "b15d947567cbfdffe2beddc92a7284c1c1d7d0325fd5b8171172c942237aa860",
+    "scripts/audit_mind_source.py": "e8f78b9821899d66eb95d33e2da2a061d01b1a6ac668577adcdc0af83c5e3af8",
+    "tests/test_mind_source_ingestion.py": "af88078c7333e85024735d1d53f79defa01d449a3b86f7447ac79d6898d232e7"
+  },
+  "change": "numeric-only range guard reason/evidence; fixed ValueError remains nonretryable; prior error details unavailable",
+  "prior_supervisor_sha256": "2673ddd059df2ee8c942738ec22fdc88c3adca7fa9ccc873b029a891c8d969b7",
+  "supervisor_sha256": "f8dca099fb1fbede8c2c22dd6d4624d0d03fe19ec4958b75114a2ab630d25e19",
+  "local_identity_receipt_sha256": "f616d57acadbe91d7eca5ae2106bae8f7c489ca9d52017c3da48f22b229843f0",
+  "fresh_source_probe_receipt_sha256": "a6a1b0c74ac55399f6525bb95ecb87f6e16acd0ea14d619205d2109b02dc257b",
+  "r2_head_bucket_http_status": 200,
+  "r2_head_bucket_checked_at_utc": "2026-10-13T15:07:36.598343+00:00",
+  "boto3_version": "1.43.111",
+  "credential_values_logged": false
+}

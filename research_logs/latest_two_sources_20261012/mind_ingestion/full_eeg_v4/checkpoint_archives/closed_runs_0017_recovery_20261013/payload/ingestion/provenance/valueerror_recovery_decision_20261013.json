@@ -1,0 +1,55 @@
+{
+  "recorded_at_utc": "2026-10-13T15:10:07.714944+00:00",
+  "status": "controlled_resume_with_preserved_source_cache",
+  "prior_failure_at_utc": "2026-10-12T14:07:58.011930+00:00",
+  "prior_error_type": "ValueError",
+  "exact_prior_guard_reason": "not recoverable from prior receipts: message and response evidence were deliberately omitted",
+  "established_prior_stage": "disjoint official source-range transfer before whole-source MD5 verification, native signal audit, or raw upload",
+  "local_facts": {
+    "matching_frozen_official_record": true,
+    "explicit_task_ownership": true,
+    "closed_chunks": 51,
+    "closed_chunk_bytes": 213909504,
+    "every_closed_chunk_sha256_rechecked": true,
+    "pending_chunks": 32,
+    "pending_extents_all_zero": true,
+    "single_partial_cache": true
+  },
+  "possible_prior_range_guards": [
+    "unexpected HTTP status or mismatched exact Content-Range",
+    "empty official 206 body",
+    "incomplete local extent write before any body bytes"
+  ],
+  "implementation_review": "independent read-only range assembly review found no partition, concurrency, ownership or saved-hash defect; diagnostics gap fixed",
+  "resume_evidence": [
+    "local ownership/manifest/chunk hash receipt",
+    "fresh official serial HTTP206 first chunk matches prior verified digest",
+    "fresh official serial HTTP206 first pending chunk exact mapping and4MiB body",
+    "fresh actual R2HeadBucketHTTP200",
+    "113 owned tests and targeted Ruff pass",
+    "durable supervisorPID1300 with old retry budget retained"
+  ],
+  "supervisor_policy": "transport failure types only; a fresh ValueError stops and preserves all cache; no checksum or key-conflict retry",
+  "completion_gates_unchanged": [
+    "all83 intervals complete",
+    "official whole-source length and normalized32hexMD5",
+    "streaming native64channel1000Hz finite/unit/event-marker/source ledger audit",
+    "whole R2 GET SHA256 on every raw object",
+    "closed source audit+event pair",
+    "task-owned cache eviction after complete closure"
+  ],
+  "scope": {
+    "source_files": 695,
+    "source_bytes": 31972856102,
+    "raw_signals": 90,
+    "published_ids": 30
+  },
+  "diagnosis_does_not_certify": [
+    "unseen72raw signals",
+    "clinical or expert EEG quality",
+    "unresolved source event or clock flags",
+    "complete90raw R2 census"
+  ],
+  "prior_artifacts_preserved": true,
+  "credential_values_logged": false
+}

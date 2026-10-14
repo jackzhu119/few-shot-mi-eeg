@@ -1,0 +1,244 @@
+{
+  "status": "full_source_ingested_audited_not_model_qualified",
+  "ledger_reconciliation_passed": true,
+  "member_verification_terms": "536 member CRC/size checks verified; member SHA256 values locally computed and recorded. Figshare publishes the whole-archive MD5, not separate per-member SHA256 references. Whole ZIP official MD5 passed; R2 full GET SHA256 verifies identical local-to-remote bytes.",
+  "bounded_resource_terms": "64 MiB is the disk scratch-pair cap. EEG values are read one recording in 16,384-sample blocks; aggregate record/event metadata remains in RAM. No corpus-wide participant EEG tensors are created.",
+  "native_markers_are_validated_task_windows": false,
+  "all_native_durations_absent": true,
+  "source_point_markers_retained": 10697,
+  "actual_native_marker_counts": {
+    "1": 5351,
+    "2": 2674,
+    "3": 2672
+  },
+  "paper_reported_totals": {
+    "rest": 5360,
+    "MI_combined": 5360
+  },
+  "observed_native_marker_totals": {
+    "rest": 5351,
+    "MI_combined": 5346
+  },
+  "native_event_anomalies_against_nominal40": [
+    {
+      "source_id": "sub-06/follow/sub-06_B_follow_03_original",
+      "subject_id": "sub-06",
+      "phase": "follow",
+      "run": 3,
+      "n_times": 100750,
+      "source_event_count": 43,
+      "source_event_type_counts": {
+        "1": 22,
+        "2": 11,
+        "3": 10
+      }
+    },
+    {
+      "source_id": "sub-10/post/sub-10_B_post_02_original",
+      "subject_id": "sub-10",
+      "phase": "post",
+      "run": 2,
+      "n_times": 107750,
+      "source_event_count": 46,
+      "source_event_type_counts": {
+        "1": 23,
+        "3": 11,
+        "2": 12
+      }
+    },
+    {
+      "source_id": "sub-13/pre/sub-13_T_pre_01_original",
+      "subject_id": "sub-13",
+      "phase": "pre",
+      "run": 1,
+      "n_times": 165000,
+      "source_event_count": 44,
+      "source_event_type_counts": {
+        "1": 22,
+        "2": 11,
+        "3": 11
+      }
+    },
+    {
+      "source_id": "sub-15/follow/sub-15_B_follow_02_original",
+      "subject_id": "sub-15",
+      "phase": "follow",
+      "run": 2,
+      "n_times": 50000,
+      "source_event_count": 5,
+      "source_event_type_counts": {
+        "1": 5
+      }
+    },
+    {
+      "source_id": "sub-17/pre/sub-17_T_pre_04_original",
+      "subject_id": "sub-17",
+      "phase": "pre",
+      "run": 4,
+      "n_times": 82500,
+      "source_event_count": 39,
+      "source_event_type_counts": {
+        "2": 10,
+        "1": 19,
+        "3": 10
+      }
+    }
+  ],
+  "cross_identity_exact_copy_subject_union": [
+    "sub-21",
+    "sub-22"
+  ],
+  "within_person_cross_phase_exact_copy_subject_union": [
+    "sub-02"
+  ],
+  "duplicate_comparisons": [
+    {
+      "source_ids": [
+        "sub-02/post/sub-02_B_post_01_original",
+        "sub-02/follow/sub-02_B_follow_01_original"
+      ],
+      "scalp59_numeric_sha256_equal": true,
+      "all64_numeric_sha256_equal": true,
+      "paired_fdt_byte_sha256_equal": true,
+      "all_native_event_fields_equal": true,
+      "cross_published_identity": false,
+      "within_person_cross_phase": true
+    },
+    {
+      "source_ids": [
+        "sub-02/post/sub-02_B_post_02_original",
+        "sub-02/follow/sub-02_B_follow_02_original"
+      ],
+      "scalp59_numeric_sha256_equal": true,
+      "all64_numeric_sha256_equal": true,
+      "paired_fdt_byte_sha256_equal": true,
+      "all_native_event_fields_equal": true,
+      "cross_published_identity": false,
+      "within_person_cross_phase": true
+    },
+    {
+      "source_ids": [
+        "sub-02/post/sub-02_B_post_03_original",
+        "sub-02/follow/sub-02_B_follow_03_original"
+      ],
+      "scalp59_numeric_sha256_equal": true,
+      "all64_numeric_sha256_equal": true,
+      "paired_fdt_byte_sha256_equal": true,
+      "all_native_event_fields_equal": true,
+      "cross_published_identity": false,
+      "within_person_cross_phase": true
+    },
+    {
+      "source_ids": [
+        "sub-02/post/sub-02_B_post_04_original",
+        "sub-02/follow/sub-02_B_follow_04_original"
+      ],
+      "scalp59_numeric_sha256_equal": true,
+      "all64_numeric_sha256_equal": true,
+      "paired_fdt_byte_sha256_equal": true,
+      "all_native_event_fields_equal": true,
+      "cross_published_identity": false,
+      "within_person_cross_phase": true
+    },
+    {
+      "source_ids": [
+        "sub-21/pre/sub-21_T_pre_01_original",
+        "sub-22/pre/sub-22_T_pre_01_original"
+      ],
+      "scalp59_numeric_sha256_equal": true,
+      "all64_numeric_sha256_equal": true,
+      "paired_fdt_byte_sha256_equal": true,
+      "all_native_event_fields_equal": true,
+      "cross_published_identity": true,
+      "within_person_cross_phase": false
+    },
+    {
+      "source_ids": [
+        "sub-21/pre/sub-21_T_pre_02_original",
+        "sub-22/pre/sub-22_T_pre_02_original"
+      ],
+      "scalp59_numeric_sha256_equal": true,
+      "all64_numeric_sha256_equal": true,
+      "paired_fdt_byte_sha256_equal": true,
+      "all_native_event_fields_equal": true,
+      "cross_published_identity": true,
+      "within_person_cross_phase": false
+    },
+    {
+      "source_ids": [
+        "sub-21/pre/sub-21_T_pre_03_original",
+        "sub-22/pre/sub-22_T_pre_03_original"
+      ],
+      "scalp59_numeric_sha256_equal": true,
+      "all64_numeric_sha256_equal": true,
+      "paired_fdt_byte_sha256_equal": true,
+      "all_native_event_fields_equal": true,
+      "cross_published_identity": true,
+      "within_person_cross_phase": false
+    },
+    {
+      "source_ids": [
+        "sub-21/pre/sub-21_T_pre_04_original",
+        "sub-22/pre/sub-22_T_pre_04_original"
+      ],
+      "scalp59_numeric_sha256_equal": true,
+      "all64_numeric_sha256_equal": true,
+      "paired_fdt_byte_sha256_equal": true,
+      "all_native_event_fields_equal": true,
+      "cross_published_identity": true,
+      "within_person_cross_phase": false
+    }
+  ],
+  "scalp_constant_channel_records": [
+    {
+      "source_id": "sub-18/post/sub-18_B_post_01_original",
+      "channels": [
+        "PO5"
+      ]
+    },
+    {
+      "source_id": "sub-18/post/sub-18_B_post_02_original",
+      "channels": [
+        "PO5"
+      ]
+    },
+    {
+      "source_id": "sub-18/post/sub-18_B_post_03_original",
+      "channels": [
+        "PO5"
+      ]
+    },
+    {
+      "source_id": "sub-18/post/sub-18_B_post_04_original",
+      "channels": [
+        "PO5"
+      ]
+    }
+  ],
+  "source_declared_phase_order": [
+    "pre",
+    "post",
+    "follow"
+  ],
+  "actual_recording_dates_present_or_validated": false,
+  "within_person_train_test_content_reuse": "sub-02 post/follow full recording copies would leak content across a split assigning those phases to opposite sides; no analysis split assigned or model fitted",
+  "train_test_splits_frozen": false,
+  "source_physical_units": "native EEGLAB float32 convention and MNE microvolt-to-volt conversion preserved; independent hardware physical calibration not established",
+  "reference": "native SET common; paper CPz description and root average metadata separately preserved; no rereference applied",
+  "qc_interpretation": "Constant channels, large DC offsets and amplitude flags are descriptive source issues, not expert artifact rejection or quality certification.",
+  "source_independence_interpretation": "Cross-ID exact copies invalidate treating their EEG as independent published identities; correct original ownership unresolved. No detected copy does not prove biological independence.",
+  "processed_variant": "only prior representative preserved for43-channel/average/ICA/boundary contrast; no processed whole archive downloaded or substitute raw channel count/reference used",
+  "qualification": {
+    "raw_source_integrity": true,
+    "model_analysis": false,
+    "algorithm_causal_evidence": false,
+    "human_skill_retention": false,
+    "clinical_outcome_benefit": false
+  },
+  "next_gates": [
+    "freeze native-event task windows explicitly",
+    "source units/reference and artifact QC sensitivity",
+    "freeze dataset-specific subject/run/phase splits after duplicate audit",
+    "clinical outcome and decoder-update linkage remain absent"
+  ]
+}

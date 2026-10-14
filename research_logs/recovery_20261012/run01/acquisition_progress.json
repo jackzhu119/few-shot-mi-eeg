@@ -1,0 +1,180 @@
+{
+  "captured_at_utc": "2026-10-12T13:14:32.332340+00:00",
+  "historical_sources": [
+    {
+      "name": "NETBCI2026",
+      "version": "v1.0.0",
+      "data_root": "/workspace/few-shot-mi-eeg/data/netbci2026/nm000305/v1.0.0",
+      "expected_files": 3577,
+      "expected_bytes": 3884165963,
+      "official_manifest": {
+        "bytes": 1467969,
+        "path": "research_logs/netbci2026_sources/manifest.json",
+        "sha256": "7e50f5281e91bec97791a84f5f3dbe20dc443b37c10d4bc6bcda96bed08c092c"
+      },
+      "existing_scope_authorized": true,
+      "verified_local_files": 3577,
+      "missing_files": 0,
+      "corrupted_files": 0
+    },
+    {
+      "name": "Kumar2024",
+      "version": "v1.0.5",
+      "data_root": "/workspace/few-shot-mi-eeg/data/public_eeg/kumar2024/nm000177/v1.0.5",
+      "expected_files": 2705,
+      "expected_bytes": 1781052841,
+      "official_manifest": {
+        "bytes": 1726352,
+        "path": "research_logs/public_data_expansion_20261010/longitudinal_receipts/nm000177_manifest.json",
+        "sha256": "1fe0fe2dbf002614dc38c54b5cd25fcb68b65c6c18b348343307d9d4668d420f"
+      },
+      "existing_scope_authorized": true,
+      "verified_local_files": 2705,
+      "missing_files": 0,
+      "corrupted_files": 0
+    },
+    {
+      "name": "PhysioNet EEGMMIDB",
+      "version": "1.0.0",
+      "data_root": "/workspace/few-shot-mi-eeg/data/public_eeg/physionet_eegmmidb/1.0.0",
+      "expected_files": 654,
+      "expected_bytes": 834146640,
+      "official_manifest": null,
+      "existing_scope_authorized": true,
+      "verified_local_files": 654,
+      "missing_files": 0,
+      "corrupted_files": 0
+    },
+    {
+      "name": "Leeuwis2021",
+      "version": "v1.0.0",
+      "data_root": "/workspace/few-shot-mi-eeg/data/public_eeg/leeuwis2021/nm000327/v1.0.0",
+      "expected_files": 2095,
+      "expected_bytes": 568544461,
+      "official_manifest": {
+        "bytes": 968894,
+        "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000327/manifest.json",
+        "sha256": "a7865c708e6c01f076d1f7415fded3c0e89008c3251949290a3ede42e0d5c5c3"
+      },
+      "existing_scope_authorized": true,
+      "verified_local_files": 2095,
+      "missing_files": 0,
+      "corrupted_files": 0
+    },
+    {
+      "name": "MILimbEEG",
+      "version": "v1.0.0",
+      "data_root": "/workspace/few-shot-mi-eeg/data/public_eeg/milimbeeg/nm000328/v1.0.0",
+      "expected_files": 666,
+      "expected_bytes": 62287177,
+      "official_manifest": {
+        "bytes": 3207744,
+        "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000328/manifest.json",
+        "sha256": "3bc42ee72fc78eff2702c50a3c664520cd578542bec10ef98375c78497dcccd1"
+      },
+      "existing_scope_authorized": true,
+      "verified_local_files": 666,
+      "missing_files": 0,
+      "corrupted_files": 0
+    },
+    {
+      "name": "Liu2024",
+      "version": "v1.0.3",
+      "data_root": "/workspace/few-shot-mi-eeg/data/public_eeg/liu2024/nm000158/v1.0.3",
+      "expected_files": 556,
+      "expected_bytes": 697479742,
+      "official_manifest": {
+        "bytes": 233964,
+        "path": "research_logs/public_data_expansion_20261010/large_training_metadata/nm000158/manifest.json",
+        "sha256": "61cc35913869ecd8ed4c564aa1d3ab8dea0aa7c84f66b4318d4d6409aefdbd83"
+      },
+      "existing_scope_authorized": true,
+      "verified_local_files": 556,
+      "missing_files": 0,
+      "corrupted_files": 0
+    }
+  ],
+  "historical_sources_not_redownloaded_or_reuploaded": true,
+  "historical_local_verified_files": 10253,
+  "historical_source_missing_or_corrupt_files": 0,
+  "wangliu": {
+    "published_IDs": 24,
+    "recordings": 268,
+    "raw_archive_and_metadata_R2_complete": true,
+    "official_raw_files": 10,
+    "official_raw_bytes": 5175298549,
+    "model_qualified": false
+  },
+  "mind": {
+    "planned_files": 695,
+    "planned_bytes": 31972856102,
+    "planned_runs": 90,
+    "planned_IDs": 30,
+    "verified_remote_source_files": 609,
+    "verified_remote_source_bytes": 1408683302,
+    "completed_source_and_audit_runs": 4,
+    "runs": [
+      {
+        "run": "sub-01_task-mi2d_run-01",
+        "subject": "sub-01",
+        "signal_relative_path": "sub-01/eeg/sub-01_task-mi2d_run-01_eeg.eeg",
+        "signal_bytes": 357478400,
+        "audit_sha256": "12b9130423acdf8683adb1b0a49d798a63521b8ef5d3fb5600aa3ecc30f00a55",
+        "event_ledger_sha256": "eb7a77ae627341cbb6fe978e9ff9eb818566b3ddbbf12969931a1e9b3a481b41",
+        "closure_path": "research_logs/latest_two_sources_20261012/mind_ingestion/full_eeg_v4/runs/sub-01_task-mi2d_run-01/closed.json",
+        "closure_sha256": "86e68c049fbc57ac7720d25fbb875cc92b433aaa34b9b3c4036efefc17ba3a54"
+      },
+      {
+        "run": "sub-01_task-mi2d_run-02",
+        "subject": "sub-01",
+        "signal_relative_path": "sub-01/eeg/sub-01_task-mi2d_run-02_eeg.eeg",
+        "signal_bytes": 356505600,
+        "audit_sha256": "bf12cbb7348c6ca56c9dfbcae2dcf9b5a61ddec51490fd6a7822c8e67f4304b2",
+        "event_ledger_sha256": "e383bc5441fb6cb8cdecf6f13dd771485663064470855daeb35c41870296b5e0",
+        "closure_path": "research_logs/latest_two_sources_20261012/mind_ingestion/full_eeg_v4/runs/sub-01_task-mi2d_run-02/closed.json",
+        "closure_sha256": "8d66e319fc94252cd6ef7022b44aa2db7eaa75ff0906b1ecb9a5fd08795c7de4"
+      },
+      {
+        "run": "sub-01_task-mi2d_run-03",
+        "subject": "sub-01",
+        "signal_relative_path": "sub-01/eeg/sub-01_task-mi2d_run-03_eeg.eeg",
+        "signal_bytes": 345753600,
+        "audit_sha256": "8c147e959f6f45ecc9d5f647104b3eebad14bcd8e24198d29bf85c546fe0fa0b",
+        "event_ledger_sha256": "2ec2e30004dccdd849e4a4fc16f572c6728dcd3a24875860acfb8745155c1a82",
+        "closure_path": "research_logs/latest_two_sources_20261012/mind_ingestion/full_eeg_v4/runs/sub-01_task-mi2d_run-03/closed.json",
+        "closure_sha256": "4ebe42ae73504bc092799f1bbe5bd402873851869311004ff51800d4d0c9facc"
+      },
+      {
+        "run": "sub-02_task-mi2d_run-01",
+        "subject": "sub-02",
+        "signal_relative_path": "sub-02/eeg/sub-02_task-mi2d_run-01_eeg.eeg",
+        "signal_bytes": 347904000,
+        "audit_sha256": "a9666da6a15b7156b5918779ac568d2bbf423bd9da3406990f879bfba1a86a16",
+        "event_ledger_sha256": "2fba51df60546eaa0b2b39e3ad61981871bcacb90a9390dfe7efdd522602a62c",
+        "closure_path": "research_logs/latest_two_sources_20261012/mind_ingestion/full_eeg_v4/runs/sub-02_task-mi2d_run-01/closed.json",
+        "closure_sha256": "b2a892839922b9d53411c20b567e6a2273e403b4d5a79929b9fcd60548ab6f39"
+      }
+    ],
+    "IDs_with_some_complete_runs": [
+      "sub-01",
+      "sub-02"
+    ],
+    "IDs_with_all_three_complete_runs": [
+      "sub-01"
+    ],
+    "full_source_download_complete": false,
+    "remaining_source_files": 86,
+    "remaining_full_file_bytes": 30564172800,
+    "remaining_bytes_caveat": "full-file deficit; verified partial extent bytes are preserved separately in range checkpoints"
+  },
+  "global_unique_independent_training_N": null,
+  "new_source_model_training_performed": false,
+  "catalog": {
+    "distinct_remote_objects": 13552,
+    "distinct_remote_bytes": 24007693230,
+    "distinct_full_get_sha256_verified_objects": 3275
+  },
+  "new_objects_since_historical_catalog": 643,
+  "new_bytes_since_historical_catalog": 6606142765,
+  "credential_values_logged": false
+}

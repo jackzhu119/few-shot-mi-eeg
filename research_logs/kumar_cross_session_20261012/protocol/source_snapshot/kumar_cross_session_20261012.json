@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "experiment": "Kumar2024_task_aware_cross_session_cpu_20261012",
+  "scientific_scope": "offline_within_participant_adaptation_not_human_learning_or_retention",
+  "synthetic": false,
+  "data_root": "data/public_eeg/kumar2024/nm000177/v1.0.5",
+  "source_manifest": "research_logs/public_data_expansion_20261010/kumar2024_nm000177_v1.0.5_selection_manifest.json",
+  "prior_signal_audit": "research_logs/public_data_expansion_20261010/kumar_ingestion/signal_audit_run02",
+  "subjects": [
+    "sub-1",
+    "sub-2",
+    "sub-3",
+    "sub-4",
+    "sub-5",
+    "sub-6",
+    "sub-7",
+    "sub-8",
+    "sub-9",
+    "sub-10",
+    "sub-11",
+    "sub-12",
+    "sub-13",
+    "sub-14",
+    "sub-15",
+    "sub-16",
+    "sub-17",
+    "sub-18"
+  ],
+  "development_subjects": [
+    "sub-1",
+    "sub-4",
+    "sub-7",
+    "sub-10",
+    "sub-13",
+    "sub-16"
+  ],
+  "final_test_subjects": [
+    "sub-2",
+    "sub-3",
+    "sub-5",
+    "sub-6",
+    "sub-8",
+    "sub-9",
+    "sub-11",
+    "sub-12",
+    "sub-14",
+    "sub-15",
+    "sub-17",
+    "sub-18"
+  ],
+  "cohort_assignment": "every_third_numeric_published_id_starting_1_is_development_no_performance_selection",
+  "preprocessing": {
+    "window_seconds": 5.0,
+    "partial_action": "retain_source_identity_exclude_without_padding_or_replacement",
+    "input_sfreq": 512.0,
+    "output_sfreq": 128.0,
+    "reference": "epoch_average_of_all_22_eeg_channels",
+    "band_hz": [
+      8.0,
+      30.0
+    ],
+    "filter": "scipy_butter_sos_order4_sosfiltfilt_default_odd_padding_each_epoch_independently",
+    "resampling": "scipy_resample_poly_up1_down4_default_kaiser5_constant_padding",
+    "output_unit": "V",
+    "output_dtype": "float32",
+    "operation_order": [
+      "average_reference",
+      "bandpass",
+      "resample"
+    ],
+    "learned_preprocessing": "none",
+    "artifact_rejection": "none_no_expert_artifact_certification",
+    "causality": "offline_zero_phase_not_real_time"
+  },
+  "split": {
+    "source_session": "ses-0",
+    "source_train_runs": [
+      "run-0",
+      "run-1"
+    ],
+    "source_validation_runs": [
+      "run-2"
+    ],
+    "source_query_runs": [
+      "run-3"
+    ],
+    "target_sessions": [
+      "ses-1",
+      "ses-2",
+      "ses-3",
+      "ses-4",
+      "ses-5"
+    ],
+    "target_support_runs": [
+      "run-0"
+    ],
+    "target_query_runs": "all_remaining_runs",
+    "target_support_source_budget": 20,
+    "target_support_max_per_class": 10,
+    "support_selection": "fixed_first_whole_run_in_actual_acquisition_order_no_label_selection_no_partial_replacement",
+    "adaptation_history": "source_train_plus_current_session_support_only_no_past_target_accumulation",
+    "validation_use": "reserved_no_hyperparameter_search_no_refit"
+  },
+  "baseline": {
+    "methods": [
+      "source_only",
+      "frozen_csp_lda_recalibration",
+      "refit_csp_lda"
+    ],
+    "csp": {
+      "n_components": 4,
+      "reg": "ledoit_wolf",
+      "log": true,
+      "norm_trace": false
+    },
+    "lda": {
+      "solver": "lsqr",
+      "shrinkage": "auto"
+    },
+    "hyperparameter_selection": "single_fixed_setting_before_any_Kumar_performance_no_search",
+    "fit_access": {
+      "source_only": "source_train",
+      "frozen_csp_lda_recalibration": "source_train_CSP_source_train_plus_current_support_LDA",
+      "refit_csp_lda": "source_train_plus_current_support_CSP_and_LDA"
+    },
+    "target_query_access": "prediction_only_no_fit_no_selection",
+    "source_query_access": "prediction_only_no_fit_no_selection"
+  },
+  "statistics": {
+    "independent_unit": "published_participant_identity",
+    "primary_endpoint": "participant_mean_target_session_balanced_accuracy",
+    "primary_comparison": "refit_csp_lda_minus_source_only_on_same_target_queries",
+    "primary_cohort": "final_test",
+    "bootstrap_replicates": 10000,
+    "seed": 42,
+    "interval": "percentile_95_subject_bootstrap",
+    "secondary_comparisons": "descriptive_no_confirmatory_multiple_testing_claim",
+    "no_signal_failure_exclusion_by_performance": true
+  },
+  "seed": 42,
+  "descriptive_features": {
+    "purpose": "fixed_descriptive_coordinates_not_ERD_or_neural_learning",
+    "welch": {
+      "sfreq": 128.0,
+      "window": "hann",
+      "nperseg": 256,
+      "noverlap": 128,
+      "detrend": "constant",
+      "scaling": "density",
+      "average": "mean",
+      "return_onesided": true
+    },
+    "bands_hz": {
+      "mu": [
+        8.0,
+        13.0
+      ],
+      "beta": [
+        13.0,
+        30.0
+      ]
+    },
+    "power": "absolute_V_squared_trapezoid_including_edge_bins",
+    "power_transform": "log10_max_power_float64_tiny",
+    "power_feature_order": "channel_major_mu_then_beta_in_CHANNEL_NAMES_order_44_dimensions",
+    "covariance": {
+      "basis": "scipy.linalg.helmert_22_full_false_fixed_21_by_22",
+      "time_center": true,
+      "estimator": "unbiased_sample_covariance_n_minus_1",
+      "trace_normalize_before_shrinkage": true,
+      "identity_shrinkage": 0.1,
+      "formula": "0.9_C_trace_normalized_plus_0.1_I_divided_by_21",
+      "dimension": 21
+    },
+    "riemann_reference": {
+      "fit_role": "source_train_only",
+      "metric": "affine_invariant",
+      "initializer": "arithmetic_mean",
+      "max_iterations": 100,
+      "tolerance": 1e-10,
+      "step": 1.0,
+      "target_access": "distance_transform_only_no_refit"
+    },
+    "standard_scaler": {
+      "fit_role": "source_train_only",
+      "with_mean": true,
+      "with_std": true
+    },
+    "pca": {
+      "fit_role": "source_train_only",
+      "n_components": 4,
+      "svd_solver": "full",
+      "whiten": false,
+      "target_access": "transform_only_no_refit"
+    },
+    "task_description": "fixed_left_hand_vs_right_hand_from_verified_source_labels_no_feature_selection",
+    "class_separation": "descriptive_class_means_in_frozen_source_train_coordinates_no_predictive_selection",
+    "query_access": "transform_and_fixed_descriptive_class_aggregation_only_no_fitting_or_selection"
+  },
+  "quality_control": {
+    "peak_to_peak_threshold_volts": 0.00025,
+    "metric": "maximum_raw_source_window_channel_peak_to_peak",
+    "primary_action": "retain_flagged_no_primary_artifact_removal",
+    "threshold_selection": "fixed_before_performance_not_fitted",
+    "expert_artifact_certification": false
+  },
+  "sensitivity_diagnostics": {
+    "power_channel_sets": {
+      "all22": "all_CHANNEL_NAMES",
+      "sensorimotor": [
+        "C3",
+        "Cz",
+        "C4"
+      ]
+    },
+    "count_matching": {
+      "unit": "subject_session_role",
+      "count_per_class": "minimum_available_class_count",
+      "selection": "chronological_first_by_acquisition_time_then_start_sample",
+      "use": "diagnostic_only_no_primary_exclusion"
+    },
+    "covariance_shrinkage_fixed": 0.1,
+    "reference_sensitivity": "native_CPz_reconstruction_not_available_after_offline_CAR"
+  },
+  "source_qualifications": [
+    "published_identity_not_biological_identity_verification",
+    "timestamps_are_derivative_source_reported_not_independently_verified_acquisition_dates",
+    "participants_age_2020_invalid_no_age_covariate",
+    "GR_PAR_mapping_unverified_no_group_inference",
+    "no_hit_miss_racing_or_human_retention_endpoint",
+    "no_expert_artifact_certification",
+    "offline_CAR_does_not_reconstruct_acquisition_CPz_signal"
+  ]
+}

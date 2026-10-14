@@ -1,5 +1,8 @@
 # Scientific TSVs preserve source/receipt byte hashes across platforms.
 *.tsv -text whitespace=cr-at-eol,-blank-at-eol
+*.csv -text whitespace=cr-at-eol,-blank-at-eol
+*.vhdr -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+*.vmrk -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
 
 # Preserve Matplotlib export bytes and receipt hashes, including SVG path spacing.
 research_logs/netbci_behavior_sessions_20261010/figures/*.svg -text whitespace=-blank-at-eol
@@ -7,5 +10,13 @@ research_logs/**/*.svg -text whitespace=-blank-at-eol
 # Preserve exact official HTTP response bytes and historical failed outputs.
 research_logs/public_data_expansion_20261010/large_training_metadata/**/*.html -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
 research_logs/public_data_expansion_20261010/longitudinal_receipts/*.html -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
-research_logs/**/*.log -text whitespace=-blank-at-eof
+research_logs/**/*.log -text whitespace=-blank-at-eol,-blank-at-eof
 research_logs/public_data_expansion_20261010/physionet_eegmmidb/audit_20261011/signal_audit.json -text whitespace=-blank-at-eol
+# Preserve official response bytes in the 2026 source discovery evidence.
+research_logs/latest_two_sources_20261012/discovery/**/*.html -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+research_logs/latest_two_sources_20261012/discovery/**/*.json -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+research_logs/latest_two_sources_20261012/discovery/**/README.md -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+research_logs/latest_two_sources_20261012/discovery/mind/sample_README.md -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+research_logs/latest_two_sources_20261012/discovery/mind/census_metadata/.bidsignore -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+research_logs/latest_two_sources_20261012/representative/mind/** -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+research_logs/latest_two_sources_20261012/mind_ingestion/full_eeg_v4/checkpoint_archives/**/payload/** -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof

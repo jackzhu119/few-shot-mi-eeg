@@ -1,6 +1,8 @@
 # Working instructions
 
-This checkout is for **Learning-Preserving Co-Adaptive Brain–Computer Interfaces**.
+This checkout is for **Task-Aware Adaptive Decoding for Longitudinal Motor-Imagery EEG**
+(user-directed scope update on 2026-10-12). Historical learning-preserving analyses
+remain preserved; the current paper studies offline task-aware adaptive decoding.
 Read `README.md`, `ROADMAP.md` and `docs/research_protocol.md` before changing
 research assumptions. Use the existing isolated cloud checkout; do not create a
 worktree unless explicitly requested. Develop on `research/learning-preserving-bci`.
@@ -17,6 +19,10 @@ worktree unless explicitly requested. Develop on `research/learning-preserving-b
 - The first-paper repository is a read-only reference. Its frozen identity and
   migration decisions are in `docs/code_reuse_audit.md`; do not modify it.
 - Do not create paid compute resources. Current verified target is Python 3.11 CPU.
+- Finish the authorized Kumar2024 frozen protocol and actual CPU baselines;
+  additional source acquisition must stay within existing authorized manifests.
+  EEGNet software preparation is authorized; paid GPU requires a concrete budget
+  and explicit user approval. No online human experiment is required for this paper.
 
 For this cloud machine, activate `/workspace/.venvs/few-shot-mi-eeg` and use writable
 cache paths described in `README.md`. Required software validation:
