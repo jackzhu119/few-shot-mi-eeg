@@ -27,3 +27,8 @@ PYTHONPATH=/tmp/codex-r2-connectivity-sdk MIND_SOURCE_RANGE_WORKERS=1 /workspace
 
 
 2026-10-14末次目录：final_storage_catalog_run01/storage_catalog.json包含15,841去重对象/38,137,312,346 bytes，其中5,564对象有完整GET SHA256证据；目录截点MIND43/90。稍后运行实际已完成55/90，源站HTTP503导致暂停，06:34 UTC R2 HeadBucket200后按原缓存恢复（mind_restart_run02.json，日志mind_supervisor_run02.log）。不得将目录截点或后台状态视为90run全部闭合。科学代码检查点84f2a88已推送并R2全GET归档；后续Git提交仅保存账本与交接。
+
+
+2026-10-14开发support可靠性已计算：30会话中12个split-half任务方向cosine为负，21个源/support方向条件bootstrap区间跨零。无query参与、无最终编号打开、无decoder拟合/阈值搜索。完整结果research_logs/kumar_cross_session_20261012/support_reliability_dev_run01_20261014/REPORT.md；暂不实现原创门控，下一步先冻结源TRAIN内低维测量及run分组负对照。
+
+开发可靠性及MIND58run原生审计追加R2已关闭：240对象/6,818,801 bytes，全部GET SHA256通过、零失败，回执support_reliability_R2_run01.json。668项测试通过，Ruff、smoke、MOABB合成验收通过。

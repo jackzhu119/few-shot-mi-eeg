@@ -1,0 +1,13 @@
+{
+  "scope": "exploratory development-only measurement; no decoder or gate fitting",
+  "development_subjects": [1, 4, 7, 10, 13, 16],
+  "allowed_roles": ["source_train", "target_support"],
+  "feature": "existing source-TRAIN standardized 44-dimensional Mu/Beta power",
+  "split": "chronological first floor(n_class/2) vs remaining within each class",
+  "bootstrap": "1000 current-support within-class resamples; conditional measurement uncertainty, not population CI",
+  "seed": 42,
+  "missing_or_zero_direction": "null, retain row",
+  "threshold_search": false,
+  "query_performance_access": false,
+  "final_subject_access": false
+}

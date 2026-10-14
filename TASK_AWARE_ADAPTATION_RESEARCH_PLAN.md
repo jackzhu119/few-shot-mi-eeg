@@ -72,3 +72,6 @@ EEGNet正式充分训练另见 `EEGNET_TRAINING_PLAN.md`，当前不采购GPU或
 现有12人测试组的普通基线结果已经公开查看；以后在相同编号验证新策略属于带严格分区的同库探索，不能再称完全未接触的确认性检验。阈值只在开发组选择仍是必要防泄漏措施，但不恢复研究者对已见测试结果的盲性；独立确认需要另行冻结合格的外部范围。
 
 已完成固定QC、通道和reference/target类数匹配的功率诊断，以及as-stored derivative与CAR参考诊断；这不独立核实CPz的物理采集身份。该原始保存参考诊断和support-only PCA子空间SVD是额外的描述性诊断，不提升为性能前主要假设，也不改变任何模型。目标support SVD只测量其描述空间，与源TRAIN PCA比较，不对query拟合变换或更新解码器。初始性能前计划的逐字节版本另存protocol/task_aware_analysis_plan_frozen_20261013.md，与核准回执中的SHA一致。
+
+
+2026-10-14开发support可靠性已计算：30会话中12个split-half任务方向cosine为负，21个源/support方向条件bootstrap区间跨零。无query参与、无最终编号打开、无decoder拟合/阈值搜索。完整结果research_logs/kumar_cross_session_20261012/support_reliability_dev_run01_20261014/REPORT.md；暂不实现原创门控，下一步先冻结源TRAIN内低维测量及run分组负对照。
