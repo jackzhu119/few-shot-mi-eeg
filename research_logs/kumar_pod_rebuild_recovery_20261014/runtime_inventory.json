@@ -1,0 +1,729 @@
+{
+  "schema_version": 1,
+  "source_commit": "b2e3f2b6378faacd7296c9e769f9f91a4d276d4c",
+  "scientific_runtime_observed_in_old_fit6": {
+    "evidence": "Original sixth-fit archive fit_result.json provenance, crosschecked against fixed source",
+    "python": "3.11.16",
+    "platform": "Linux-6.8.0-134-generic-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.2.6",
+      "scipy": "1.15.3",
+      "scikit-learn": "1.7.2",
+      "mne": "1.10.2",
+      "torch": "2.8.0+cu128",
+      "torchaudio": "2.8.0+cu128",
+      "braindecode": "1.2.0",
+      "moabb": null
+    },
+    "cuda_build": "12.8",
+    "GPU_driver_historical_parent_report": {
+      "device": "NVIDIA RTX A4500",
+      "driver": "580.159.04",
+      "memory_MiB": 20470
+    }
+  },
+  "target_environment": {
+    "pyproject": {
+      "path": "environments/gpu/pyproject.toml",
+      "bytes": 724,
+      "sha256": "90a3d349023ef448f731990abcad5f3015be3f84ad338be4473d2ef790550089"
+    },
+    "lock": {
+      "path": "environments/gpu/uv.lock",
+      "bytes": 175264,
+      "sha256": "11682d951fe204e32859da12d9cc0ac73c6e63c1bce061d9834f8f68ebfe72e0"
+    },
+    "setup": {
+      "path": "scripts/setup_paper2_gpu.sh",
+      "bytes": 1099,
+      "sha256": "868c5a3fe63e29fab8920fccd67c1b8d1303ecd63bcd58b831a17fc26746bcf0"
+    },
+    "extras": [
+      "deep",
+      "dev"
+    ],
+    "data_extra": false,
+    "package_install_no_cache": true,
+    "minimum_free_disk_before_install_bytes": 19327352832,
+    "minimum_free_disk_after_restore_bytes": 5368709120,
+    "lock_total_packages_including_unselected_extras": 105,
+    "exported_requirement_count": 93,
+    "linux_x86_64_python311_selected_count": 91,
+    "linux_x86_64_python311_selected_versions": {
+      "aiohappyeyeballs": "2.7.1",
+      "aiohttp": "3.14.5",
+      "aiosignal": "1.4.0",
+      "attrs": "26.1.0",
+      "axial-positional-embedding": "0.3.12",
+      "boto3": "1.43.111",
+      "botocore": "1.43.113",
+      "braindecode": "1.2.0",
+      "certifi": "2026.7.22",
+      "cffi": "2.1.1",
+      "charset-normalizer": "3.5.2",
+      "cloudpickle": "3.1.2",
+      "colt5-attention": "0.11.2",
+      "contourpy": "1.3.3",
+      "cycler": "0.12.1",
+      "decorator": "5.3.1",
+      "docstring-inheritance": "3.0.0",
+      "einops": "0.8.2",
+      "filelock": "4.1.1",
+      "fonttools": "4.66.1",
+      "frozenlist": "1.8.0",
+      "fsspec": "2026.9.0",
+      "h5py": "3.16.0",
+      "hyper-connections": "0.4.11",
+      "idna": "3.20",
+      "iniconfig": "2.3.1",
+      "jinja2": "3.1.6",
+      "jmespath": "1.1.0",
+      "joblib": "1.6.0",
+      "kiwisolver": "1.5.1",
+      "lazy-loader": "0.6",
+      "linear-attention-transformer": "0.19.1",
+      "linformer": "0.2.3",
+      "local-attention": "1.11.2",
+      "markupsafe": "3.0.4",
+      "matplotlib": "3.11.2",
+      "mne": "1.10.2",
+      "mne-bids": "0.20.0",
+      "mpmath": "1.3.0",
+      "multidict": "7.1.0",
+      "networkx": "3.6.1",
+      "numpy": "2.2.6",
+      "nvidia-cublas-cu12": "12.8.4.1",
+      "nvidia-cuda-cupti-cu12": "12.8.90",
+      "nvidia-cuda-nvrtc-cu12": "12.8.93",
+      "nvidia-cuda-runtime-cu12": "12.8.90",
+      "nvidia-cudnn-cu12": "9.10.2.21",
+      "nvidia-cufft-cu12": "11.3.3.83",
+      "nvidia-cufile-cu12": "1.13.1.3",
+      "nvidia-curand-cu12": "10.3.9.90",
+      "nvidia-cusolver-cu12": "11.7.3.90",
+      "nvidia-cusparse-cu12": "12.5.8.93",
+      "nvidia-cusparselt-cu12": "0.7.1",
+      "nvidia-nccl-cu12": "2.27.3",
+      "nvidia-nvjitlink-cu12": "12.8.93",
+      "nvidia-nvtx-cu12": "12.8.90",
+      "packaging": "26.3",
+      "pandas": "3.0.6",
+      "pillow": "12.3.0",
+      "platformdirs": "4.13.0",
+      "pluggy": "1.6.0",
+      "pooch": "1.9.0",
+      "product-key-memory": "0.3.0",
+      "propcache": "0.5.4",
+      "pycparser": "3.11",
+      "pygments": "2.21.0",
+      "pyparsing": "3.3.3",
+      "pytest": "8.4.2",
+      "python-dateutil": "2.9.0.post0",
+      "requests": "2.34.2",
+      "ruff": "0.17.0",
+      "s3transfer": "0.19.2",
+      "scikit-learn": "1.7.2",
+      "scipy": "1.15.3",
+      "setuptools": "84.0.0",
+      "six": "1.17.0",
+      "skorch": "1.4.0",
+      "soundfile": "0.14.0",
+      "sympy": "1.14.0",
+      "tabulate": "0.10.0",
+      "threadpoolctl": "3.7.0",
+      "torch": "2.8.0+cu128",
+      "torch-einops-utils": "0.1.36",
+      "torchaudio": "2.8.0+cu128",
+      "torchinfo": "1.8.0",
+      "tqdm": "4.70.1",
+      "triton": "3.4.0",
+      "typing-extensions": "4.16.0",
+      "urllib3": "2.8.0",
+      "wfdb": "4.3.1",
+      "yarl": "1.25.1"
+    },
+    "all_exported_requirements_and_markers": [
+      {
+        "name": "aiohappyeyeballs",
+        "version": "2.7.1",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "aiohttp",
+        "version": "3.14.5",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "aiosignal",
+        "version": "1.4.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "attrs",
+        "version": "26.1.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "axial-positional-embedding",
+        "version": "0.3.12",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "boto3",
+        "version": "1.43.111",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "botocore",
+        "version": "1.43.113",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "braindecode",
+        "version": "1.2.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "certifi",
+        "version": "2026.7.22",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "cffi",
+        "version": "2.1.1",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "charset-normalizer",
+        "version": "3.5.2",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "cloudpickle",
+        "version": "3.1.2",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "colorama",
+        "version": "0.4.6",
+        "marker": "sys_platform == \"win32\"",
+        "selected_on_linux_x86_64_python311": false
+      },
+      {
+        "name": "colt5-attention",
+        "version": "0.11.2",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "contourpy",
+        "version": "1.3.3",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "cycler",
+        "version": "0.12.1",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "decorator",
+        "version": "5.3.1",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "docstring-inheritance",
+        "version": "3.0.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "einops",
+        "version": "0.8.2",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "filelock",
+        "version": "4.1.1",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "fonttools",
+        "version": "4.66.1",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "frozenlist",
+        "version": "1.8.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "fsspec",
+        "version": "2026.9.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "h5py",
+        "version": "3.16.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "hyper-connections",
+        "version": "0.4.11",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "idna",
+        "version": "3.20",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "iniconfig",
+        "version": "2.3.1",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "jinja2",
+        "version": "3.1.6",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "jmespath",
+        "version": "1.1.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "joblib",
+        "version": "1.6.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "kiwisolver",
+        "version": "1.5.1",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "lazy-loader",
+        "version": "0.6",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "linear-attention-transformer",
+        "version": "0.19.1",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "linformer",
+        "version": "0.2.3",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "local-attention",
+        "version": "1.11.2",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "markupsafe",
+        "version": "3.0.4",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "matplotlib",
+        "version": "3.11.2",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "mne",
+        "version": "1.10.2",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "mne-bids",
+        "version": "0.20.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "mpmath",
+        "version": "1.3.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "multidict",
+        "version": "7.1.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "networkx",
+        "version": "3.6.1",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "numpy",
+        "version": "2.2.6",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "nvidia-cublas-cu12",
+        "version": "12.8.4.1",
+        "marker": "platform_machine == \"x86_64\" and sys_platform == \"linux\"",
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "nvidia-cuda-cupti-cu12",
+        "version": "12.8.90",
+        "marker": "platform_machine == \"x86_64\" and sys_platform == \"linux\"",
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "nvidia-cuda-nvrtc-cu12",
+        "version": "12.8.93",
+        "marker": "platform_machine == \"x86_64\" and sys_platform == \"linux\"",
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "nvidia-cuda-runtime-cu12",
+        "version": "12.8.90",
+        "marker": "platform_machine == \"x86_64\" and sys_platform == \"linux\"",
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "nvidia-cudnn-cu12",
+        "version": "9.10.2.21",
+        "marker": "platform_machine == \"x86_64\" and sys_platform == \"linux\"",
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "nvidia-cufft-cu12",
+        "version": "11.3.3.83",
+        "marker": "platform_machine == \"x86_64\" and sys_platform == \"linux\"",
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "nvidia-cufile-cu12",
+        "version": "1.13.1.3",
+        "marker": "platform_machine == \"x86_64\" and sys_platform == \"linux\"",
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "nvidia-curand-cu12",
+        "version": "10.3.9.90",
+        "marker": "platform_machine == \"x86_64\" and sys_platform == \"linux\"",
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "nvidia-cusolver-cu12",
+        "version": "11.7.3.90",
+        "marker": "platform_machine == \"x86_64\" and sys_platform == \"linux\"",
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "nvidia-cusparse-cu12",
+        "version": "12.5.8.93",
+        "marker": "platform_machine == \"x86_64\" and sys_platform == \"linux\"",
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "nvidia-cusparselt-cu12",
+        "version": "0.7.1",
+        "marker": "platform_machine == \"x86_64\" and sys_platform == \"linux\"",
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "nvidia-nccl-cu12",
+        "version": "2.27.3",
+        "marker": "platform_machine == \"x86_64\" and sys_platform == \"linux\"",
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "nvidia-nvjitlink-cu12",
+        "version": "12.8.93",
+        "marker": "platform_machine == \"x86_64\" and sys_platform == \"linux\"",
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "nvidia-nvtx-cu12",
+        "version": "12.8.90",
+        "marker": "platform_machine == \"x86_64\" and sys_platform == \"linux\"",
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "packaging",
+        "version": "26.3",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "pandas",
+        "version": "3.0.6",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "pillow",
+        "version": "12.3.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "platformdirs",
+        "version": "4.13.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "pluggy",
+        "version": "1.6.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "pooch",
+        "version": "1.9.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "product-key-memory",
+        "version": "0.3.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "propcache",
+        "version": "0.5.4",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "pycparser",
+        "version": "3.11",
+        "marker": "implementation_name != \"PyPy\"",
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "pygments",
+        "version": "2.21.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "pyparsing",
+        "version": "3.3.3",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "pytest",
+        "version": "8.4.2",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "python-dateutil",
+        "version": "2.9.0.post0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "requests",
+        "version": "2.34.2",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "ruff",
+        "version": "0.17.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "s3transfer",
+        "version": "0.19.2",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "scikit-learn",
+        "version": "1.7.2",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "scipy",
+        "version": "1.15.3",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "setuptools",
+        "version": "84.0.0",
+        "marker": "platform_machine == \"x86_64\" and sys_platform == \"linux\"",
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "six",
+        "version": "1.17.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "skorch",
+        "version": "1.4.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "soundfile",
+        "version": "0.14.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "sympy",
+        "version": "1.14.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "tabulate",
+        "version": "0.10.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "threadpoolctl",
+        "version": "3.7.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "torch",
+        "version": "2.8.0+cu128",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "torch-einops-utils",
+        "version": "0.1.36",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "torchaudio",
+        "version": "2.8.0+cu128",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "torchinfo",
+        "version": "1.8.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "tqdm",
+        "version": "4.70.1",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "triton",
+        "version": "3.4.0",
+        "marker": "platform_machine == \"x86_64\" and sys_platform == \"linux\"",
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "typing-extensions",
+        "version": "4.16.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "tzdata",
+        "version": "2026.5",
+        "marker": "sys_platform == \"emscripten\" or sys_platform == \"win32\"",
+        "selected_on_linux_x86_64_python311": false
+      },
+      {
+        "name": "urllib3",
+        "version": "2.8.0",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "wfdb",
+        "version": "4.3.1",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      },
+      {
+        "name": "yarl",
+        "version": "1.25.1",
+        "marker": null,
+        "selected_on_linux_x86_64_python311": true
+      }
+    ],
+    "exported_requirements_sha256": "81131f1b8196b744dabf838a0114f1f5b9a2f24dc1f8940e5bd94e7188cc3d6b"
+  },
+  "recovery_tool_pin": {
+    "name": "uv",
+    "version": "0.12.19",
+    "pin_source": "Existing Codex resolver/versioned GPU handoff; recovery installer pin, not an observed historical Pod uv version",
+    "metadata_source": "https://pypi.org/pypi/uv/0.12.19/json",
+    "official_PyPI_metadata_queried_in_this_preparation": true,
+    "wheel": {
+      "filename": "uv-0.12.19-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "url": "https://files.pythonhosted.org/packages/76/71/b47cec536d8ee7b09017c1d9db211dfc2e7ce5c87d0482918d8b3411ec48/uv-0.12.19-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "sha256": "a63d18a0aa38ee9f21a5406afbbaeb41303bcd954be9d6b7c1b95ac275e53958",
+      "bytes": 20478749
+    },
+    "wheel_downloaded_in_this_preparation": false
+  },
+  "unrecorded_historical_details": [
+    "old Pod uv version",
+    "old container image digest",
+    "old managed Python executable/build SHA256",
+    "complete actually installed old Pod transitive package inventory"
+  ],
+  "rebuild_environment_equivalence_claimed": false,
+  "new_container_runtime_verified": false
+}

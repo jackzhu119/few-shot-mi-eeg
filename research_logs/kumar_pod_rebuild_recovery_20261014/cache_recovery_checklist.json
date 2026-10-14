@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "source_commit": "b2e3f2b6378faacd7296c9e769f9f91a4d276d4c",
+  "entries": [
+    {
+      "category": "required_frozen_input_cache",
+      "target": "/workspace/paper2-data/kumar",
+      "action": "Restore/reuse exactly the 127 listed files; verify complete bytes; retain all 36 scans.tsv metadata and exclude other EEG.",
+      "identity": "frozen_inputs_127.json",
+      "old_presence_assumed": false
+    },
+    {
+      "category": "required_adapter_numeric_identity_evidence",
+      "target": "Fixed Git checkout protocol/source_events/selection/runs metadata",
+      "action": "Restore from source commit, 22 adapter metadata files; not EEG signals or learned state.",
+      "identity": "frozen_source_manifest.json adapter_metadata_files"
+    },
+    {
+      "category": "required_acceptance_state",
+      "target": "Fixed Git ledger, six parent ACKs and six R2 receipts plus first-fit replay evidence",
+      "action": "Restore exact unchanged Git bytes. Keep accepted prefix six, never restore empty ledger or synthesize original model reservations.",
+      "identity": "frozen_source_manifest.json"
+    },
+    {
+      "category": "isolated_managed_python_and_GPU_venv",
+      "target": "/workspace/.python-paper2 and /workspace/.venvs/paper2-gpu",
+      "action": "Rebuild only with Python3.11.16 and pinned GPU lock/deep+dev; no system Torch reuse or copying an old venv.",
+      "identity": "runtime_inventory.json"
+    },
+    {
+      "category": "recreatable_wheel_and_tool_cache",
+      "target": "/workspace/.cache, /workspace/.cache-paper2/uv",
+      "action": "Existing .cache contents are unverified. Leave them intact; never take versions from cache instead of immutable lock. Setup uses no wheel cache.",
+      "old_presence_assumed": false
+    },
+    {
+      "category": "recreatable_XDG_MNE_matplotlib_cache",
+      "target": "/workspace/.cache-paper2 and /workspace/.cache-paper2/matplotlib",
+      "action": "Create if missing only after inspection. Use unchanged XDG_CACHE_HOME/MPLCONFIGDIR/MNE_DONTWRITE_HOME; no model/decision state."
+    },
+    {
+      "category": "recreatable_Python_cache",
+      "target": "__pycache__ and *.pyc",
+      "action": "Not required for recovery; verification commands use -B. Never copy cached bytecode in place of source."
+    },
+    {
+      "category": "unneeded_derived_EEG_epochs_or_model_cache",
+      "target": "Old NPZ/processed tensors and first six model weights",
+      "action": "Do not restore or recompute models for queue recovery. Raw frozen bytes plus Git numeric identity metadata are sufficient; private original six-fit archives remain durable in R2."
+    },
+    {
+      "category": "unneeded_other_datasets_and_final_EEG",
+      "target": "CSP247-file/42EDF cache, formal360EDF, MIND, cumulative R2 catalog",
+      "action": "Outside this recovery scope; do not restore to this container."
+    },
+    {
+      "category": "not_a_cache_and_not_restorable_by_this_recipe",
+      "target": "Temporary SSH installation/authorized_keys/credentials/capabilities",
+      "action": "No SSH reinstall/key addition, no credential copy or creation, no extension beyond2026-10-16 09:54 UTC (minute precision). Use existing HTTPS/browser route only."
+    }
+  ]
+}

@@ -88,3 +88,6 @@ HTTPS/私人备份操作修订：固定首fit官方同版本同字节25文件/16
 
 
 2026-10-14 dot父侧14:47 UTC（分钟精度）已从固定97a5445db50902cb083dd07eefd949522b54fdea实际读取第6fit独立审计、父确认请求和完整GET回执，计算完整UTF-8 SHA256=d35ad175bb831ce5681157ab0c85bb04780894c4d2bb0987fb749e6755ec2e00，明确确认2原对象245760bytes/零失败及离机原包hash。依此追加真实parent_acknowledged及连续账本第6项，原五项和旧证据不变。check_gate确认唯一下一项sub-7/20261012（job 735d0b78575ffe08b0be4e51a26fcadaa0a2db1977c9120d1e837e3ed48d03d7），只运行相关门控测试；7项交付hash、科学配置、容差、数值线程和预算保持不变。并行证据仍为4条fit区间采样、第5条fit_saved后18.498ms、末条GPU zombie/RSS0，不称连续监控或论文1验收。交接见sub-4-seed-20261014/next_dispatch.md及next_dispatch_release.json；dot唯一操作Pod，本agent未训练或操作Pod，原未提交CSP文件保留。
+
+
+2026-10-14容器重建恢复准备：用户转述同Pod52ivinpjwv947i于14:59:11 UTC容器b5646c12356b变a7d3f0e408a4，15:01:58 UTC/workspace仅.cache、overlay30→50GiB；原因未核实、dot报告未Stop/Restart，第7fit从未执行/预约。本任务仅交付docs/kumar_pod_rebuild_recovery_20261014.md及research_logs/kumar_pod_rebuild_recovery_20261014版本化清单。科学源码/6项账本固定b2e3f2b6378faacd7296c9e769f9f91a4d276d4c；149项源码/验收依赖、22项adapter元数据、127输入98,743,492bytes与原锁/全部hash保留，唯一下一项仍sub-7/20261012。旧运行时与目标锁定依赖分开，旧Poduv/image/Pythonbuildhash未记录，新容器环境待dot实测；不改旧config的30GiB历史观察。没有安装/恢复Pod、训练、释放fit或复制凭据；不重装SSH/加密钥/延长2026-10-16 09:54 UTC授权。dot经既有HTTPS/browser审核固定方案后单独恢复并返回新验收回执，之后再单独调度。

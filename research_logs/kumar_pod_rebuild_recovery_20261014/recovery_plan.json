@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "status": "prepared_only_parent_review_and_separate_restore_dispatch_required",
+  "prepared_at_utc": "2026-10-14T15:15:23.340116+00:00",
+  "scientific_source_commit": "b2e3f2b6378faacd7296c9e769f9f91a4d276d4c",
+  "scientific_source_tree": "18d9c7faa64295dadb6562cb3cedcd319945c4c9",
+  "container_change": {
+    "evidence_source": "Explicit user-relayed dot parent observations; not independently observed from this Codex workspace",
+    "Pod_id": "52ivinpjwv947i",
+    "reported_rebuilt_at_utc": "2026-10-14T14:59:11+00:00",
+    "old_container": "b5646c12356b",
+    "new_container": "a7d3f0e408a4",
+    "reported_readonly_check_at_utc": "2026-10-14T15:01:58+00:00",
+    "reported_workspace_members": [
+      ".cache"
+    ],
+    "old_overlay_reported_GiB": 30,
+    "new_overlay_reported_GiB": 50,
+    "cause": "unverified",
+    "dot_reports_no_Stop_or_Restart": true
+  },
+  "preserved_accepted_ledger": {
+    "path": "research_logs/kumar_development_queue_20261014/accepted_jobs.json",
+    "bytes": 3556,
+    "sha256": "73ef4a1489c9ac1df8b148a55edc616e3e6988ecbff1bcb32154ac0c505e0971"
+  },
+  "accepted_jobs": 6,
+  "next_job": {
+    "subject": "sub-7",
+    "seed": 20261012,
+    "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+    "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+    "job_id": "735d0b78575ffe08b0be4e51a26fcadaa0a2db1977c9120d1e837e3ed48d03d7",
+    "action": "planned_not_authorized_to_execute",
+    "output": "/workspace/paper2-results/development-queue/sub-7/seed-20261012",
+    "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-7-seed-20261012-run01.tar"
+  },
+  "next_job_reported_never_executed_or_reserved": true,
+  "authorization": {
+    "restore_execution_owner": "dot only, after review of fixed recovery recipe",
+    "preparation_only_this_task": true,
+    "training_authorized_by_this_recipe": false,
+    "Pod_operations_authorized_by_this_recipe": false,
+    "transport": [
+      "existing public HTTPS",
+      "existing authenticated browser/Jupyter pathway"
+    ],
+    "SSH_reinstallation_or_key_addition": false,
+    "create_or_copy_credentials": false,
+    "historical_SSH_authorization_expires_at_utc": "2026-10-16 09:54 UTC",
+    "authorization_expiry_extended": false,
+    "historical_SSH_authorization_expiry_precision": "minute"
+  },
+  "planned_paths_not_assumed_present": {
+    "checkout": "/workspace/paper2-90f674f",
+    "plan_files": "/workspace/paper2-recovery-plan-20261014",
+    "recovery_receipts": "/workspace/paper2-recovery-receipts-20261014-run01",
+    "isolated_uv_tool": "/workspace/paper2-recovery-tools-20261014/uv",
+    "managed_python": "/workspace/.python-paper2",
+    "GPU_environment": "/workspace/.venvs/paper2-gpu",
+    "data_root": "/workspace/paper2-data/kumar",
+    "input_receipt": "/workspace/paper2-results/https-development-download-run01.json",
+    "shared_GPU_lock": "/workspace/research-gpu.lock"
+  },
+  "immutable_scientific_settings": {
+    "config": {
+      "path": "configs/kumar_eegnet_gpu_development_20261014.json",
+      "bytes": 5844,
+      "sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+    },
+    "split": {
+      "path": "research_logs/kumar_cross_session_20261012/protocol/split_manifest.json",
+      "bytes": 9610103,
+      "sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28"
+    },
+    "delivery_hashes": {
+      "scripts/run_kumar_development_queue.py": "666324c630d51ca0308c1cc9bd44551f832991d07a541210b520b351e6a2df80",
+      "scripts/launch_kumar_development_next.sh": "897018b23dd9e2a09fff60683c5c985ac42e5f2467384a17d515b597414f2285",
+      "scripts/fetch_kumar_development_queue_https.py": "8d0fa0bd2212bb032cb8514828868da0cb4d00066ff7316b4c6435209d5c74f5",
+      "scripts/audit_kumar_queue_bundle.py": "443d5ae88f64ef6276a4d9070009fd32c3dbfaab931872f8d3bdcade551a8721",
+      "configs/kumar_development_queue_https_20261014.json": "10aa69b50a935587fcdaa38e4eb7424f7d3d92ab650f07f851a5083f000aaa1f",
+      "configs/kumar_development_queue_runtime_20261014.json": "290b815e1aa6fb2fd9459499d84c84e48b0969c9945000704922a749a38092e5",
+      "configs/kumar_eegnet_gpu_development_20261014.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+    },
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "torch_threads_configured": 1,
+    "MKL_NUM_THREADS_new_override": false,
+    "query_access": false,
+    "formal_gate": false,
+    "maximum_new_fits_per_invocation": 1,
+    "maximum_new_fits_original_budget": 17,
+    "maximum_epochs_per_fit": 100,
+    "maximum_optimizer_steps_per_fit": 300,
+    "scientific_absolute_tolerance": 1e-07
+  },
+  "restoration_scope": {
+    "files": 127,
+    "bytes": 98743492,
+    "EDF_files": 18,
+    "EDF_bytes": 98642480,
+    "metadata_files": 109,
+    "metadata_bytes": 101012,
+    "source_dataset": "NEMAR nm000177 v1.0.5",
+    "license": "CC-BY-4.0",
+    "subjects": [
+      "sub-1",
+      "sub-4",
+      "sub-7",
+      "sub-10",
+      "sub-13",
+      "sub-16"
+    ],
+    "EDF_session": "ses-0",
+    "EDF_runs": [
+      "run-0",
+      "run-1",
+      "run-2"
+    ],
+    "all_six_sessions_scans_metadata_required": true,
+    "support_query_or_final_EEG_restoration": false,
+    "first_six_weights_needed_to_resume_queue": false
+  },
+  "acceptance_gates": [
+    "fresh source checkout exact b2e3f2b commit and clean tree",
+    "all source/adapter/ledger/ACK/receipt manifest bytes match",
+    "Python 3.11.16 and unchanged deep+dev GPU lock, no data extra",
+    "actual rebuilt OS/driver/CUDA recorded and compared; discrepancies stop for parent review",
+    "all 127 restored bytes pass official checksum, length and historical SHA256",
+    "all six ledger/ACK/full-GET bindings and pure next-job gate pass",
+    "sub-7/20261012 reservation/archive absent; no models run by recovery acceptance"
+  ],
+  "new_container_runtime_verified": false,
+  "restore_executed_here": false,
+  "new_fit_executed_here": false,
+  "Pod_operation_performed_here": false
+}
