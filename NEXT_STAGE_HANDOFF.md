@@ -21,3 +21,9 @@ PYTHONPATH=/tmp/codex-r2-connectivity-sdk MIND_SOURCE_RANGE_WORKERS=1 /workspace
 
 
 2026-10-14关闭记录：当前实际HEAD重验14,399对象，零失败；完整科学证据payload 1,236对象/98,076,860bytes已全部完整GETSHA256，前缀few-shot-mi-eeg/research-evidence/task-aware-kumar/20261014/scientific-closeout-run01，回执scientific_evidence_R2_run01.json。659项全套测试加7项限流策略测试已通过；末次完整测试见pytest_final_run02.log。后续更新及本段不重复覆盖该已经关闭的证据payload，追加末次metadata与Git记录。
+
+
+末次科学快照2026-10-14T02:56:31.965054+00:00：MIND 39/90原始run闭合，13发布编号三run完整；剩余51原始文件/18,150,553,600规范bytes。项目累计15,649去重对象/36,677,929,915bytes，5,372对象有完整GET。相对旧12909目录新增2,740对象，不等于全部本日新下载。源码检查点84f2a8871dd179c57039ddd7661fe013cd57e5d6已经远端核对，3个代码归档对象100,276,896bytes全GET，4446Gitblob/commit-header/bundle核对通过。完整666pytest通过，15弃用警告已记录；Ruff/smoke/MOABB通过。此快照之后的raw实时进度仍在状态文件，closing metadata批次不自递归归档。
+
+
+2026-10-14末次目录：final_storage_catalog_run01/storage_catalog.json包含15,841去重对象/38,137,312,346 bytes，其中5,564对象有完整GET SHA256证据；目录截点MIND43/90。稍后运行实际已完成55/90，源站HTTP503导致暂停，06:34 UTC R2 HeadBucket200后按原缓存恢复（mind_restart_run02.json，日志mind_supervisor_run02.log）。不得将目录截点或后台状态视为90run全部闭合。科学代码检查点84f2a88已推送并R2全GET归档；后续Git提交仅保存账本与交接。

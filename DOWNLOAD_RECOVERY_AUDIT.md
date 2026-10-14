@@ -24,3 +24,9 @@ A=字节验证完成；B=本地完整等待R2；C=R2全GET闭环、工作缓存�
 逐文件SHA、官方manifest/版本、R2key及源身份记录见DOWNLOAD_RECOVERY_RECEIPTS.json引用。原始六库已实核10253文件，Kumar2705文件和360信号通过新资格审查。PhysioNet旧失败.part、历史失败审计和原始代表文件保留；不属于当前固定缺口，不自动重试或删除。
 
 来源原始入口仍按旧selection_manifest与MINDall_files_manifest.tsv冻结；不会重新搜索其他版本。Wang/Liu全部268run已审计，但存在21/22跨编号复制、sub02跨阶段复制及伪迹/point-marker限制，未取得模型资格。MIND未完成全90run审计，不计30完整训练主体。
+
+
+末次科学快照2026-10-14T02:56:31.965054+00:00：MIND 39/90原始run闭合，13发布编号三run完整；剩余51原始文件/18,150,553,600规范bytes。项目累计15,649去重对象/36,677,929,915bytes，5,372对象有完整GET。相对旧12909目录新增2,740对象，不等于全部本日新下载。源码检查点84f2a8871dd179c57039ddd7661fe013cd57e5d6已经远端核对，3个代码归档对象100,276,896bytes全GET，4446Gitblob/commit-header/bundle核对通过。完整666pytest通过，15弃用警告已记录；Ruff/smoke/MOABB通过。此快照之后的raw实时进度仍在状态文件，closing metadata批次不自递归归档。
+
+
+2026-10-14末次目录：final_storage_catalog_run01/storage_catalog.json包含15,841去重对象/38,137,312,346 bytes，其中5,564对象有完整GET SHA256证据；目录截点MIND43/90。稍后运行实际已完成55/90，源站HTTP503导致暂停，06:34 UTC R2 HeadBucket200后按原缓存恢复（mind_restart_run02.json，日志mind_supervisor_run02.log）。不得将目录截点或后台状态视为90run全部闭合。科学代码检查点84f2a88已推送并R2全GET归档；后续Git提交仅保存账本与交接。
