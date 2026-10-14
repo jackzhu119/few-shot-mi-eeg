@@ -1,0 +1,122 @@
+{
+  "library_file_id": "libfile_353c26163ec88191b5499ec268dc7a73",
+  "archive_bytes": 40960,
+  "archive_sha256": "6b5b52e0ce35fdf9abf45b0e27034c829b248fad0d072558285c4e90230493f0",
+  "checkpoint_sha256": "37ade045b74cb48d194758420fda485a03e008a4d5d720cb2f564949b1bfddd5",
+  "all_archive_and_member_hashes_verified": true,
+  "members": [
+    {
+      "path": "software_validation.json",
+      "bytes": 6128,
+      "sha256": "1786256c7363df5078363aa9b43d5c17dca88bf551939ae2923f0d1f0bf6ce38"
+    },
+    {
+      "path": "synthetic_weights.json",
+      "bytes": 8269,
+      "sha256": "dd2b4a03283667f538636edc2fce8e886f780acf97a67e3d23a3140bf6b3450c"
+    },
+    {
+      "path": "synthetic_weights.pt",
+      "bytes": 19672,
+      "sha256": "37ade045b74cb48d194758420fda485a03e008a4d5d720cb2f564949b1bfddd5"
+    }
+  ],
+  "cuda_synthetic_software_receipt": {
+    "synthetic": true,
+    "software_validation_only": true,
+    "formal_training_status": "pending_not_executed",
+    "checks": [
+      {
+        "case": "synthetic",
+        "synthetic": true,
+        "software_validation_only": true,
+        "source_train_rows": 16,
+        "source_validation_rows": 8,
+        "epochs_executed": 2,
+        "optimizer_steps": 2,
+        "selected_epoch": 1,
+        "forward_backward_finite": true,
+        "normalization_fit_partition": "source_train_only",
+        "source_only_stopping": true,
+        "target_query_predictions_computed": false,
+        "same_seed_exact_replay": true,
+        "eval_state_unchanged": true,
+        "safe_checkpoint_exact_replay": true,
+        "checkpoint_sha256": "37ade045b74cb48d194758420fda485a03e008a4d5d720cb2f564949b1bfddd5",
+        "frozen_state_sha256": "155035ebd6d6ff66b0674a0e11d808078c84594c8b9111a8f4a1455650e05998",
+        "training_executed": true,
+        "performance_metrics_computed": false
+      }
+    ],
+    "runtime_seconds": 4.088579369708896,
+    "provenance": {
+      "seed": 20261012,
+      "git_commit": "90f674ff393871032eeafd9935cab8414d15e583",
+      "git_dirty": false,
+      "source_config_sha256": {
+        "configs/kumar_cross_session_20261012.json": "f1b2d0fa870493cc2aaab906fe6d8b1227e45b2a270e06700e3ca137fbfe9c89",
+        "configs/kumar_eegnet_20261012.json": "793b7bb35fa31138f1c6459476ac5be236fc5d10d89519523bceabeaa6d7a9a0",
+        "configs/kumar_eegnet_gpu_development_20261014.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "configs/kumar_lowdim_reliability_20261014.json": "2bbbece9835cfbdb33b803a2fce03800102f3c7f92719ab9baf30890ac10b34a",
+        "configs/kumar_supervised_reliability_20261014.json": "e0a9d2f7363d245299b9bff8e2d6fdbcf913021d7e6608ff08f893832ae3a315",
+        "configs/kumar_support_reliability_20261014.json": "b6f85de5568105a0695595b9b54315f60103b1852c81c3b85373f68f8e6baec7",
+        "configs/netbci_behavior_sessions.json": "66d6e389da7f32644736edb782b981cbe9ef3fa9c2e9f0dfca817d096754621f",
+        "configs/netbci_cohort.json": "396c684415fe861301634a5089f3065bf036cb550aa7e90ec9d9178117642411",
+        "configs/netbci_cohort_all19_20261010.json": "d3de923978079cff7199c294f704a0282d3df589899df1a7f44578a5aabd2bf5",
+        "configs/netbci_cohort_full_windows_20261010.json": "2bead8bccd0396e0358bb8167324621e80d48087ba011a334224f73962d10904",
+        "configs/netbci_cohort_resume_20261010.json": "0d71113bade06ee03fa14ee82ee0813942633bd9b9c40416c4b166237228b0b8",
+        "configs/netbci_cross_session.json": "f69100e859bbd7b4eb6aac4194f582cb904b8341d795ffebafc3b65c6030ca7e",
+        "configs/netbci_date_separated.json": "3a91624bd630d81b8198dd8ec3bceb5d1b873d198b73378a0fa090a2a359a52a",
+        "configs/netbci_stage1.json": "27e37183484f99de5a1599b9860671f9f60652b4819c380fd022cde49cf833ca",
+        "configs/smoke.json": "bbf61b1c537c6d52ae42a47672930659b5ebec406557c06c61274aca7c85e6fa",
+        "src/learning_preserving_bci/__init__.py": "be8498e52667fb9412907fa3129e48bd7f5a5759e17d5a647071c5452ffb1908",
+        "src/learning_preserving_bci/adaptation/__init__.py": "feeb5b3461c0f7fb3aac49b2e398de80af588d817ffbb88ce8d1e488ebf19960",
+        "src/learning_preserving_bci/adaptation/fixed.py": "26abe74ed4986be0fa030e2d9c16e250384c9e532eb1017880187094f42089ba",
+        "src/learning_preserving_bci/datasets/__init__.py": "c655a11597730eefed41b295ea6405c2d2fa6b2ad7cd49d57140ab2d53ea0635",
+        "src/learning_preserving_bci/datasets/kumar.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07",
+        "src/learning_preserving_bci/datasets/netbci.py": "e2e4f179159491fca8358d84fa7a8e6935b106adfe4df1b7eecfd24685f2f24d",
+        "src/learning_preserving_bci/datasets/netbci_behavior.py": "921df19e943a7c5c291fd1e0c8c390d61d67c1e4aff4280132276342bb957f66",
+        "src/learning_preserving_bci/decoders/__init__.py": "6feca254387a66999905af61e75c68e005448b31ca34b83514b25acc01664c63",
+        "src/learning_preserving_bci/decoders/csp_lda.py": "4aedb37c21c8056d213b90797324fc5b69f370bb011badf97003c739b1127921",
+        "src/learning_preserving_bci/decoders/eegnet.py": "be7c055be6b5e99f4f710b17405acbc1b9579c340dc724a2279c6dc21e1eb1bb",
+        "src/learning_preserving_bci/evaluation/__init__.py": "8f4fcae94e534690dac509b40c47e863786883d4fc1d75474d7ed28ce8b30770",
+        "src/learning_preserving_bci/evaluation/fixed_decoder.py": "72382e3748116e0810584d0d6d3cc09620d26f94fd40b8792900aeea5a917eae",
+        "src/learning_preserving_bci/evaluation/splits.py": "d298350bf4eb48cce802455d0e3a629838c261516aa5ce99664778c4855bf65b",
+        "src/learning_preserving_bci/evaluation/statistics.py": "6ccbda0c8ff7c8cb2ed0e8224ddc0f57246a76c366a1dd00703eb119475948b7",
+        "src/learning_preserving_bci/neural_geometry/__init__.py": "18d36141d9d84827fb1af34c3948e3691c86ead296ff2eb688c5a5ee29848c6e",
+        "src/learning_preserving_bci/preprocessing/__init__.py": "acc3bdf5087786802f3e8f3fd5039c41fe81787775ac92f36dcf5d446d8bed53",
+        "src/learning_preserving_bci/signal_processing/__init__.py": "07446bee3f5e0bd6e83041574acf73a06d3261b593707f0ab259a28f2cd14ed6",
+        "src/learning_preserving_bci/utils/__init__.py": "2454f37e8f10f40b54068fa75d2b8f7e3e51dc3f103f2b92b3e34dfb24f79aea",
+        "src/learning_preserving_bci/utils/reproducibility.py": "b51bb7bdc233b9e070d0de55f73dae1264cb9697be41e709d75154f6e6ef1ecc"
+      },
+      "source_config_hash_scope": [
+        "src/**/*.py",
+        "configs/**/*.json"
+      ],
+      "python": "3.11.16",
+      "platform": "Linux-6.8.0-134-generic-x86_64-with-glibc2.39",
+      "versions": {
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "scikit-learn": "1.7.2",
+        "mne": "1.10.2",
+        "torch": "2.8.0+cu128",
+        "torchaudio": "2.8.0+cu128",
+        "braindecode": "1.2.0",
+        "moabb": null
+      }
+    },
+    "training_config_canonical_sha256": "91c361210f6fbefc06581541a6cac9a4ee551669d62f2137f90321c7e141bc4e",
+    "runtime_device": {
+      "requested": "cuda",
+      "torch_build": "2.8.0+cu128",
+      "cuda_build": "12.8",
+      "cuda_available": true,
+      "cuda_device_count": 1,
+      "torch_threads": 1
+    },
+    "script_sha256": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5"
+  },
+  "real_training": false,
+  "private_keys_or_capabilities_transferred": false
+}
