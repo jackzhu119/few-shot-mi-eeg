@@ -75,3 +75,6 @@ EEGNet正式充分训练另见 `EEGNET_TRAINING_PLAN.md`，当前不采购GPU或
 
 
 2026-10-14开发support可靠性已计算：30会话中12个split-half任务方向cosine为负，21个源/support方向条件bootstrap区间跨零。无query参与、无最终编号打开、无decoder拟合/阈值搜索。完整结果research_logs/kumar_cross_session_20261012/support_reliability_dev_run01_20261014/REPORT.md；暂不实现原创门控，下一步先冻结源TRAIN内低维测量及run分组负对照。
+
+
+2026-10-14低维任务信息诊断真实完成并独立重放通过：6固定开发编号，三个固定候选（44维功率、PCA4、C3/Cz/C4六维），36源run probe、90support行，零query输入。源BA均值51.67/50.00/54.17%，编号级区间均含50%；分半cosine均值区间均含0。不选候选、不搜索门控阈值、不改变已完成baseline；不能推断不存在EEG任务信息。下一步另冻结源TRAIN监督CSP4空间或源判别分数的run分组可靠性，而不回看query。679测试和Ruff/smoke/MOABB通过。结果、冻结代码及独立NumPy重放见research_logs/kumar_cross_session_20261012/lowdim_reliability_dev_run01_20261014及lowdim_independent_numeric_review_run01_20261014。

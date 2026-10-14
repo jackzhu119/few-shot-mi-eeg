@@ -32,3 +32,9 @@ PYTHONPATH=/tmp/codex-r2-connectivity-sdk MIND_SOURCE_RANGE_WORKERS=1 /workspace
 2026-10-14开发support可靠性已计算：30会话中12个split-half任务方向cosine为负，21个源/support方向条件bootstrap区间跨零。无query参与、无最终编号打开、无decoder拟合/阈值搜索。完整结果research_logs/kumar_cross_session_20261012/support_reliability_dev_run01_20261014/REPORT.md；暂不实现原创门控，下一步先冻结源TRAIN内低维测量及run分组负对照。
 
 开发可靠性及MIND58run原生审计追加R2已关闭：240对象/6,818,801 bytes，全部GET SHA256通过、零失败，回执support_reliability_R2_run01.json。668项测试通过，Ruff、smoke、MOABB合成验收通过。
+
+
+2026-10-14低维任务信息诊断真实完成并独立重放通过：6固定开发编号，三个固定候选（44维功率、PCA4、C3/Cz/C4六维），36源run probe、90support行，零query输入。源BA均值51.67/50.00/54.17%，编号级区间均含50%；分半cosine均值区间均含0。不选候选、不搜索门控阈值、不改变已完成baseline；不能推断不存在EEG任务信息。下一步另冻结源TRAIN监督CSP4空间或源判别分数的run分组可靠性，而不回看query。679测试和Ruff/smoke/MOABB通过。结果、冻结代码及独立NumPy重放见research_logs/kumar_cross_session_20261012/lowdim_reliability_dev_run01_20261014及lowdim_independent_numeric_review_run01_20261014。
+
+
+低维证据R2已关闭：294对象/18,483,470 bytes全部GET SHA256；累计目录lowdim_cumulative_catalog_run01共16,407去重keys/45,047,516,373 bytes，其中6,130对象有完整GET。目录native闭合61run、原始源文件667/695（采样阶段不同），稍后live闭合62/90；MIND未全量完成。目录不自递归计入后续closing账本。下载沿用PID5558/5563，若已消失先核实failure/checkpoint/lock再恢复，勿重复启动。独立数值审核最大差1.28e-13，小于1e-9容差；720预测及BA逐值相同。

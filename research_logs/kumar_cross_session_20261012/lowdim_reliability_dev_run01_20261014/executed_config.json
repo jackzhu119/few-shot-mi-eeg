@@ -1,0 +1,16 @@
+{
+  "development_subjects": [1, 4, 7, 10, 13, 16],
+  "candidates": ["standardized44", "pca4", "motor6"],
+  "seed": 42,
+  "bootstrap_replicates": 10000,
+  "allowed_roles": ["source_train", "target_support"],
+  "source_probe": "two folds run0-to-run1 and run1-to-run0, source run-only scaler/PCA refit, nearest-centroid threshold",
+  "source_negative_control": "exact 20x20 circular label shifts of two source runs; same pair across both folds/all candidates",
+  "support_negative_control": "all cyclic shifts of current support labels, recomputed classwise chronological halves plus fixed-half sensitivity",
+  "task_axis_scale": "source-training projection SD ddof1; no support/query scale fitting",
+  "claim_scope": "exploratory measurement diagnosis, conditional shift-null sensitivity, no formal randomization p or algorithm efficacy",
+  "automatic_candidate_selection": false,
+  "adaptation_gate_threshold_search": false,
+  "query_access": false,
+  "final_cohort_access": false
+}
