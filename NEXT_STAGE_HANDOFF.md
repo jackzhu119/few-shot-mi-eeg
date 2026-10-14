@@ -64,3 +64,6 @@ HTTPS/私人备份操作修订：固定首fit官方同版本同字节25文件/16
 
 
 2026-10-14父对话明确确认sub-1/20261013备份；已检查前两次UNKNOWN未造成重复追加，本地/远端此前均为62e1378，活动账本原仅首fit。现新增唯一parent_acknowledged及一个验收条目，活动账本共2项。plan-only gate实际解析下一项sub-1/20261014，job ba8899c0dc867baefa9a5623cccf706a82571413d63ec76e4baa7bfab613b4ca。仅交付固定版本，由父调度执行；科学配置/预算及7项入口交付hash未变，既有127输入逐项复核复用，不重下。见sub-1-seed-20261013/next_dispatch.md。未实际启动训练或停Pod。
+
+
+2026-10-14 sub-1/20261014实际第三fit已独立审计及R2备份：14+6成员、127输入hash通过，100epochs/300steps达到冻结上限，选择93，末尾7轮未改善（不是patience15早停），没有加轮或按seed筛选。源验证CE0.6714189291000366，Torch重放差0，独立保存logits CE差2.5086555610620564e-8通过原1e-7。2原包245760bytes完整GET SHA256、零失败；证据及待父确认回执在research_logs/kumar_development_queue_20261014/sub-1-seed-20261014。活动账本仍2项，父确认前不释放sub-4/20261012。无重训、未停Pod。

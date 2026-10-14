@@ -1,0 +1,173 @@
+{
+  "subject": "sub-1",
+  "cohort": "development",
+  "synthetic": false,
+  "raw_reference": "CPz",
+  "processed_reference": "average_all22",
+  "numeric_unit": "V",
+  "runs": [
+    {
+      "subject": "sub-1",
+      "session": "ses-0",
+      "run": "run-0",
+      "source_file": "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-0_eeg.edf",
+      "role": "source_train",
+      "acquisition_time_utc": "2021-06-21T20:49:29.000003Z",
+      "raw_file_sha256": "740b63b5ba249316234eb67926e9f7e6b72e6986257206c0f8e03d1efc701b16",
+      "whole_signal_numeric_sha256": "575090774e88d6743d5035cff9bfd3143c6954e59b3a85c85f338b8821cb3664",
+      "peak_absolute_volts": 0.0168005,
+      "global_rms_volts": 0.008363332956881206,
+      "all_continuous_samples_finite": true,
+      "n_times": 124416
+    },
+    {
+      "subject": "sub-1",
+      "session": "ses-0",
+      "run": "run-1",
+      "source_file": "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-1_eeg.edf",
+      "role": "source_train",
+      "acquisition_time_utc": "2021-06-21T20:57:43.999993Z",
+      "raw_file_sha256": "a8d5bbe56eac07405c0b40fec511637fcf8ef5f269b965f975ffd563f9b5b43c",
+      "whole_signal_numeric_sha256": "f2e3356b90bf019f51045c9ac6b9889ebd4313d7d327f6a49f0d31e98a55d1b6",
+      "peak_absolute_volts": 0.016007,
+      "global_rms_volts": 0.007702542431933361,
+      "all_continuous_samples_finite": true,
+      "n_times": 123392
+    },
+    {
+      "subject": "sub-1",
+      "session": "ses-0",
+      "run": "run-2",
+      "source_file": "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-2_eeg.edf",
+      "role": "source_validation",
+      "acquisition_time_utc": "2021-06-21T21:05:15.000001Z",
+      "raw_file_sha256": "312d0de3f65e81c290266c67499fa272fcf6ed55f793e9fb3d44377e6796530c",
+      "whole_signal_numeric_sha256": "20b97b72e5d06ff443ac06025435781f3717e801207cc82c958ba182925f9955",
+      "peak_absolute_volts": 0.0146384,
+      "global_rms_volts": 0.0069722915939773615,
+      "all_continuous_samples_finite": true,
+      "n_times": 123904
+    }
+  ],
+  "verified_source_files": {
+    "dataset_description.json": {
+      "sha256": "3ec4afc49c56dcd35be7c1fe8318a1c463983e1a630a42419bb235c66439a747",
+      "official_checksum": "f2db9286f3a7c473e74a061d2b0f5ccc8c0fd3f7",
+      "official_algorithm": "git"
+    },
+    "sub-1/ses-0/sub-1_ses-0_scans.tsv": {
+      "sha256": "09d0968fac66ae1f0e7ea7867dab00dd65f384207da90d7f18d0dbde047c9df6",
+      "official_checksum": "a3a3b676ae83f099550eba7cc31180b5662b450b",
+      "official_algorithm": "git"
+    },
+    "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-0_eeg.json": {
+      "sha256": "39217902c3672148fc24ce8a5678c24dd60d9ad8a4be0cf8f0d3477b05ba0f97",
+      "official_checksum": "251d2d6d5c8af9994644950b52fff0b1c19ae018",
+      "official_algorithm": "git"
+    },
+    "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-0_events.json": {
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "official_checksum": "2ec3785e9b4304a24259b6a4a4b87d0a795fd5e6",
+      "official_algorithm": "git"
+    },
+    "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-0_events.tsv": {
+      "sha256": "3600a9dd24cc7165deabfca7a48d6c79188cafb39599453887a173a7b5797a35",
+      "official_checksum": "0638642765892d840586f1ab00744f400bf9964d",
+      "official_algorithm": "git"
+    },
+    "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-0_channels.tsv": {
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "official_checksum": "e9138c0390c3b494a21932aa05a4b7319ed7f6bb",
+      "official_algorithm": "git"
+    },
+    "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-0_eeg.edf": {
+      "sha256": "740b63b5ba249316234eb67926e9f7e6b72e6986257206c0f8e03d1efc701b16",
+      "official_checksum": "740b63b5ba249316234eb67926e9f7e6b72e6986257206c0f8e03d1efc701b16",
+      "official_algorithm": "sha256"
+    },
+    "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-1_eeg.json": {
+      "sha256": "b100364448874853f91c1a09641dc5f0b9070a15f7c89ef505682ce083a411eb",
+      "official_checksum": "20947c850fea96eab765b1b421de497173bc032e",
+      "official_algorithm": "git"
+    },
+    "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-1_events.json": {
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "official_checksum": "2ec3785e9b4304a24259b6a4a4b87d0a795fd5e6",
+      "official_algorithm": "git"
+    },
+    "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-1_events.tsv": {
+      "sha256": "dc1f6b9b28171a8b186f3d0cb1a9f1e06adfc27037a1c8aca8ccb10c5fd8f488",
+      "official_checksum": "b3e5d44206b823da7c8fbc473cc4a9444034d780",
+      "official_algorithm": "git"
+    },
+    "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-1_channels.tsv": {
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "official_checksum": "e9138c0390c3b494a21932aa05a4b7319ed7f6bb",
+      "official_algorithm": "git"
+    },
+    "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-1_eeg.edf": {
+      "sha256": "a8d5bbe56eac07405c0b40fec511637fcf8ef5f269b965f975ffd563f9b5b43c",
+      "official_checksum": "a8d5bbe56eac07405c0b40fec511637fcf8ef5f269b965f975ffd563f9b5b43c",
+      "official_algorithm": "sha256"
+    },
+    "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-2_eeg.json": {
+      "sha256": "cf3b9d22ae130e5da3db0d45b31107500bfa79ff60deacb853dd0b518ef6910d",
+      "official_checksum": "bf9fe5e29a0dfdd13ee814352dd45a7f77cefdf6",
+      "official_algorithm": "git"
+    },
+    "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-2_events.json": {
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "official_checksum": "2ec3785e9b4304a24259b6a4a4b87d0a795fd5e6",
+      "official_algorithm": "git"
+    },
+    "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-2_events.tsv": {
+      "sha256": "2f3eff6111e2fad281452f9d21da9fa9318b1288c501a6c276cff9662829f94d",
+      "official_checksum": "e7d3ce734a545edcab9d3a15205c52c02b59216e",
+      "official_algorithm": "git"
+    },
+    "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-2_channels.tsv": {
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "official_checksum": "e9138c0390c3b494a21932aa05a4b7319ed7f6bb",
+      "official_algorithm": "git"
+    },
+    "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-2_eeg.edf": {
+      "sha256": "312d0de3f65e81c290266c67499fa272fcf6ed55f793e9fb3d44377e6796530c",
+      "official_checksum": "312d0de3f65e81c290266c67499fa272fcf6ed55f793e9fb3d44377e6796530c",
+      "official_algorithm": "sha256"
+    },
+    "sub-1/ses-1/sub-1_ses-1_scans.tsv": {
+      "sha256": "f8b6262899d3777f3114cf1ae03497d05d2edac97dc13c136f7af9117f673e9a",
+      "official_checksum": "3d62c528a1e8c0571353264a42001515dc0ad0a5",
+      "official_algorithm": "git"
+    },
+    "sub-1/ses-2/sub-1_ses-2_scans.tsv": {
+      "sha256": "deeeff5150751a8a120ad9d23f3aedd79c04653192c060de4d0d1872e6b3c2b8",
+      "official_checksum": "9761f14a1340588b267bc89102f98658b55127e0",
+      "official_algorithm": "git"
+    },
+    "sub-1/ses-3/sub-1_ses-3_scans.tsv": {
+      "sha256": "872c99ba5ac1183e28485bd73ad066be4c8ce9dfff79a0ed578f67c8e154d1c6",
+      "official_checksum": "fd1ee017ce657995c3732f339ddcbd666f87d70c",
+      "official_algorithm": "git"
+    },
+    "sub-1/ses-4/sub-1_ses-4_scans.tsv": {
+      "sha256": "9c43d30d5c41d03b200df372df97c4e240ca7638f11b1df4b413043440a7e087",
+      "official_checksum": "1a8543736ad1d7307ac8e49a9820bf7cdd105d73",
+      "official_algorithm": "git"
+    },
+    "sub-1/ses-5/sub-1_ses-5_scans.tsv": {
+      "sha256": "1e8dddd5ecf5ec11cb339e927cc1de245fc5c2eac623d7d9455c43da4b7635af",
+      "official_checksum": "4365d8cb2abb027b6b061b52169f41a124aac523",
+      "official_algorithm": "git"
+    }
+  },
+  "source_events": 60,
+  "included_trials": 60,
+  "excluded_trials": 0,
+  "class_counts": {
+    "right_hand": 30,
+    "left_hand": 30
+  },
+  "learned_preprocessing": false,
+  "chronology_strictly_increasing": true
+}
