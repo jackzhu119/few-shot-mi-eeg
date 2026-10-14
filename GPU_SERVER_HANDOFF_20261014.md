@@ -168,3 +168,14 @@ Before Stop: parent verifies every expected fit receipt, transfers results/logs 
 manifest to durable R2, full GET hashes, then brings small evidence back to Codex/Git.
 Raw EEG and weights never enter the public repository. Confirm backups from a second
 host/session when possible, record cost/runtime, then parent alone shuts down.
+
+## Delivery verification
+
+Executable/scientific delivery commit: `219cfd58fc55c83cf4cb1aa79375309dbb36d438`,
+pushed and independently matched with `git ls-remote`. The subsequent receipt-only
+commit does not change this executable version. Local resolver version: uv 0.12.19.
+Full evidence backup receipt: `research_logs/gpu_preparation_R2_20261014_run01.json`;
+all planned objects were uploaded/reused and fully GET SHA256 verified, zero failures.
+The backup includes the synthetic checkpoint excluded from Git. The receipt is
+outside its own payload to avoid recursive self-archiving. This is a Codex evidence
+backup; it does not imply the future RunPod job or its backup has run.
