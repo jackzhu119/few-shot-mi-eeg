@@ -1,0 +1,55 @@
+{
+  "status": "blocked_private_library_byte_retrieval_unavailable",
+  "recorded_at_utc": "2026-10-14T13:29:50.129177+00:00",
+  "job": {
+    "subject": "sub-4",
+    "seed": 20261013,
+    "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+    "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+    "job_id": "451a32bd8f38870f333d43c3941498a72bda8f19574ee381a260200bd23ff112",
+    "action": "planned_not_authorized_to_execute",
+    "output": "/workspace/paper2-results/development-queue/sub-4/seed-20261013",
+    "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-4-seed-20261013-run01.tar"
+  },
+  "required_packages": [
+    {
+      "library_id": "libfile_130c7f1fc0748191bd8e925afb3bbe99",
+      "bytes": 174080,
+      "sha256": "4c8f923a0e706c7e30962415a2dd0293e13096d0a9b27b866e339b1382be1076",
+      "kind": "result_archive"
+    },
+    {
+      "library_id": "libfile_f8f18a35c0788191a582329a6cdbf3de",
+      "bytes": 51200,
+      "sha256": "3efd10b5bb87bfc8a3eb59242f99c397c0fb84a8d42e03da2de91de171304b97",
+      "kind": "dispatch_archive"
+    }
+  ],
+  "expected_fit_as_reported_by_user": {
+    "exit_code": 75,
+    "epochs": 16,
+    "optimizer_steps": 48,
+    "selected_epoch": 1,
+    "source_validation_CE": 0.694194781780243,
+    "source_train_rows": 40,
+    "source_validation_rows": 20,
+    "query_rows": 0,
+    "torch_replay_difference": 0.0,
+    "numpy_replay_difference": 9.23970555621878e-09
+  },
+  "expected_values_independently_audited": false,
+  "archive_bytes_received": false,
+  "independent_bundle_audit_run": false,
+  "R2_injection_ready_and_HeadBucket200": true,
+  "result_archive_and_correct_dispatch_key_HeadObject404": true,
+  "R2_backup_verified": false,
+  "parent_acknowledged": false,
+  "accepted_jobs_count": 4,
+  "accepted_jobs_modified": false,
+  "next_fit_released": false,
+  "training_or_retraining_started": false,
+  "Pod_operation_performed": false,
+  "credentials_copied_or_generated": false,
+  "library_binary_retrieval_tool_available": false,
+  "required_resolution": "deliver unmodified private packages to this cloud workspace or provide authorized private R2 object paths; no credentials needed"
+}
