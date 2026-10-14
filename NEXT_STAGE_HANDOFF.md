@@ -55,3 +55,6 @@ HTTPS/私人备份操作修订：固定首fit官方同版本同字节25文件/16
 
 
 2026-10-14 首fit实际无拟合重放已回传并独立验收：20源验证trial身份/标签一致，原checkpoint不变，保存logits独立CE差1.1505954855550726e-8通过事前1e-7；原PyTorch loss完全相同，外层11:07:17–11:07:22 UTC退出0。2原包122880bytes完整R2 GET SHA256、零失败；新回执父确认请求见research_logs/kumar_first_fit_replay_20261014。已实现实际可执行单步开发队列和127文件HTTPS恢复，下一项sub-1/20261013，最多17新fit，首模型复用，单fit预约/共享锁/30min超时/零自动重试/每批完整GET和父确认后才推进。旧计划保留，runtime独立启用受父调度入口；其他12人和query仍禁用。具体固定版本执行、哈希、证据交付及失败策略见docs/kumar_development_queue_execution_20261014.md。Codex未执行新的真实fit，Pod未停止。
+
+
+2026-10-14父对话明确确认ec56058重放备份：2对象122880bytes完整GET、零失败、与父离机包SHA一致；追加research_logs/kumar_first_fit_replay_20261014/parent_acknowledged.json，原包/回执不改。唯一RunPod操作者已由父安排按ec56058恢复127源文件并只执行sub-1/20261013；暂无实际完成结果，本agent不重复训练/重放。逐fit接收入口和期待身份记录在research_logs/kumar_development_queue_20261014/awaiting_sub1_seed20261013.json。收到私有包后独立审计、R2完整GET并提交待父确认回执；尚不将该任务加入accepted_jobs。论文1诊断依赖同Pod缓存，禁止停Pod。
