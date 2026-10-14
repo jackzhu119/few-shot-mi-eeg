@@ -1,0 +1,312 @@
+{
+  "schema_version": 1,
+  "status": "outer_archive_dispatch_parallel_observation_identity_and_predecessor_gate_independent_review_passed",
+  "review_finished_at_utc": "2026-10-14T14:39:24.257052+00:00",
+  "reviewer": "independent_outer_review_subagent",
+  "job_id": "fe495208cd04aff921403e3e0d8c9f3e065d477deff26b28fbfe4480d9ada6c2",
+  "subject": "sub-4",
+  "seed": 20261014,
+  "source_commit": "f49a9779b53defbe38479d6ad7789b441cc4ad21",
+  "fit_archive_bytes": 174080,
+  "fit_archive_sha256": "854262fe223c2a286f80747c5197c21aecd442c7b2e546931831a76ce03cd6ad",
+  "dispatch_archive_bytes": 71680,
+  "dispatch_archive_sha256": "7534b25a6837e6adf87c6baff0d649ec8ca983eb72c6c685f2c503554da1aa31",
+  "fit_payload_members_verified": 14,
+  "dispatch_payload_members_verified": 12,
+  "manifest_members_additional": 2,
+  "all_members_regular_safe_unique_and_within_16MiB_bound": true,
+  "all_manifest_member_bytes_and_sha256_match": true,
+  "all_execution_provenance_source_config_hashes_match_frozen_Git": true,
+  "source_config_hashes_verified": 41,
+  "all_7_delivery_hashes_match_fixed_and_current": true,
+  "all_127_source_input_receipt_hashes_match_frozen_manifest": true,
+  "source_input_receipt_outer_identical_to_fit": true,
+  "three_actual_source_run_hashes_match": true,
+  "outer_predecessor_receipt_and_parent_acknowledgement_identical_to_fixed_commit": true,
+  "accepted_predecessors": 5,
+  "accepted_prefix_exact_plan_order": true,
+  "predecessor_receipt_and_ack_checks": [
+    {
+      "job_id": "17377a7cf04bfc73e25bc94d7e42fc4f1ab6f14fb6dde63c7b21e742b94b9ace",
+      "receipt_sha256": "b0199119d17ce5909e0a906dc3f3da162e6b769653b4dadf48036fe95244f00d",
+      "parent_acknowledgement_sha256": "f4b25a4c0ad3214237cd11bd6a908313de2bc6c3c31118b3a889451194fe77b0"
+    },
+    {
+      "job_id": "5be2fc9499d4ec3916e5191c822c205e195c0e25655c39ec0f84e5aa2c091470",
+      "receipt_sha256": "f580a9de8414e5dda41ccae12ec9c7087756a2b99c8e7ab2f64803aaaa33413f",
+      "parent_acknowledgement_sha256": "173446d55640edadda1012869f3aa73cb2a6250cc32c4b6d140fde4c7016c7ad"
+    },
+    {
+      "job_id": "ba8899c0dc867baefa9a5623cccf706a82571413d63ec76e4baa7bfab613b4ca",
+      "receipt_sha256": "f7fd70269f10175ed7f93372500518cd18d642f49751ad77ebdc2e202413f4af",
+      "parent_acknowledgement_sha256": "ee80ca7f1233ca31988485c458a650f60aabecdebcfb350bf544d176850ed7fb"
+    },
+    {
+      "job_id": "e1b092f93db8c972cb59403814c73eb1ba2273b1aa82351f0205c390a28b9faa",
+      "receipt_sha256": "6fc9db92ab89dd349e1fc13fde8eb2f5e7834f0a655cb9444fdac01c7396a99c",
+      "parent_acknowledgement_sha256": "a85f7aae61d7b30cd72752fe31fff47880398f7c2161fd35b7d2fdd2f1263645"
+    },
+    {
+      "job_id": "451a32bd8f38870f333d43c3941498a72bda8f19574ee381a260200bd23ff112",
+      "receipt_sha256": "6afda0ba8accc08df359ca3c9887fe95a63f6b9e8e9f6f828367b2f557fca84d",
+      "parent_acknowledgement_sha256": "6c2098c784c870aa8ec7970fce0455fd860a5eccef009e2afdc3bdc953b4abbe"
+    }
+  ],
+  "current_job_absent_from_accepted_ledger": true,
+  "unchanged_current_gate_next_identity": {
+    "job_id": "fe495208cd04aff921403e3e0d8c9f3e065d477deff26b28fbfe4480d9ada6c2",
+    "subject": "sub-4",
+    "seed": 20261014
+  },
+  "outer_dispatch_start_utc": "2026-10-14T14:23:46Z",
+  "launcher_process_start_utc": "2026-10-14T14:23:46.929164+00:00",
+  "fitting_start_utc": "2026-10-14T14:23:51.011980+00:00",
+  "fit_saved_utc": "2026-10-14T14:23:55.461378+00:00",
+  "launcher_exit_observed_utc": "2026-10-14T14:23:57.575838+00:00",
+  "launcher_exit_code": 75,
+  "paper1_source_acceptance_recorded_exit_code": 3,
+  "paper1_exit_observed_utc": "2026-10-14T14:24:21.579247+00:00",
+  "paper1_result_audited_in_this_review": false,
+  "exactly_one_paper2_launcher_Popen_in_preserved_supervisor_source": true,
+  "automatic_next_fit_reported": false,
+  "exactly_one_fitting_event": true,
+  "sample_count": 10,
+  "samples_with_both_CPU_and_GPU_pid_records": 6,
+  "CPU_GPU_samples_within_recorded_fitting_interval": 4,
+  "GPU_compute_unique_pids_in_sampled_observations": [
+    29471
+  ],
+  "last_GPU_PID_sample_is_zombie_not_active_fitting": true,
+  "CPU_GPU_sample_details": [
+    {
+      "utc": "2026-10-14T14:23:51.250172+00:00",
+      "paper1_CPU_pid": 29461,
+      "paper2_GPU_pid": 29471,
+      "GPU_process_state": "RLl",
+      "GPU_process_RSS_kib": 777152,
+      "reported_GPU_memory_MiB": 10,
+      "within_recorded_fitting_interval": true
+    },
+    {
+      "utc": "2026-10-14T14:23:52.345835+00:00",
+      "paper1_CPU_pid": 29461,
+      "paper2_GPU_pid": 29471,
+      "GPU_process_state": "RLl",
+      "GPU_process_RSS_kib": 908996,
+      "reported_GPU_memory_MiB": 214,
+      "within_recorded_fitting_interval": true
+    },
+    {
+      "utc": "2026-10-14T14:23:53.391391+00:00",
+      "paper1_CPU_pid": 29461,
+      "paper2_GPU_pid": 29471,
+      "GPU_process_state": "RLl",
+      "GPU_process_RSS_kib": 978780,
+      "reported_GPU_memory_MiB": 214,
+      "within_recorded_fitting_interval": true
+    },
+    {
+      "utc": "2026-10-14T14:23:54.435475+00:00",
+      "paper1_CPU_pid": 29461,
+      "paper2_GPU_pid": 29471,
+      "GPU_process_state": "RLl",
+      "GPU_process_RSS_kib": 1009824,
+      "reported_GPU_memory_MiB": 214,
+      "within_recorded_fitting_interval": true
+    },
+    {
+      "utc": "2026-10-14T14:23:55.479876+00:00",
+      "paper1_CPU_pid": 29461,
+      "paper2_GPU_pid": 29471,
+      "GPU_process_state": "RLl",
+      "GPU_process_RSS_kib": 1631756,
+      "reported_GPU_memory_MiB": 244,
+      "within_recorded_fitting_interval": false
+    },
+    {
+      "utc": "2026-10-14T14:23:56.527736+00:00",
+      "paper1_CPU_pid": 29461,
+      "paper2_GPU_pid": 29471,
+      "GPU_process_state": "Zl",
+      "GPU_process_RSS_kib": 0,
+      "reported_GPU_memory_MiB": 244,
+      "within_recorded_fitting_interval": false
+    }
+  ],
+  "sampled_parallel_process_evidence_verified": true,
+  "shared_GPU_lock_and_exclusive_reservation_code_verified": true,
+  "unchanged_config_threads": 1,
+  "unchanged_launcher_thread_exports": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+  },
+  "source_train_rows": 40,
+  "source_validation_rows": 20,
+  "query_rows_loaded_reported_by_fit": 0,
+  "epochs_executed": 16,
+  "optimizer_steps": 48,
+  "selected_epoch": 1,
+  "selected_source_validation_cross_entropy": 0.6939079999923706,
+  "consecutive_non_improving_epochs": 15,
+  "stop_reason": "frozen_patience_15_reached",
+  "checkpoint_sha256": "cbe76151f9fb34abaa6350f92375aaefbe9f9f6bcac169190cc7b400d25c2b7a",
+  "recorded_torch_replay_absolute_error": 0.0,
+  "recorded_numpy_replay_absolute_error": 4.810626230700166e-09,
+  "frozen_replay_absolute_tolerance": 1e-07,
+  "training_log_bytes": 76,
+  "training_log_sha256": "d45b29b5f074d8f69e67f89d0c388cdd9d2797886d83449b5179dd7b2d917882",
+  "archive_member_identity_manifests": {
+    "fit_payload_files": [
+      {
+        "path": "weights.pt",
+        "bytes": 22232,
+        "sha256": "cbe76151f9fb34abaa6350f92375aaefbe9f9f6bcac169190cc7b400d25c2b7a"
+      },
+      {
+        "path": "weights.json",
+        "bytes": 11371,
+        "sha256": "1c1a26f4d3f758ac660f777d7a19604d663e9dcf8397ebecccf2c167a3f52cd6"
+      },
+      {
+        "path": "fit_result.json",
+        "bytes": 6562,
+        "sha256": "46b4135054975f55f636dfcc996c33b8adba703f3b92a33a00a6bc1de7471972"
+      },
+      {
+        "path": "training.log",
+        "bytes": 76,
+        "sha256": "d45b29b5f074d8f69e67f89d0c388cdd9d2797886d83449b5179dd7b2d917882"
+      },
+      {
+        "path": "input_audit.json",
+        "bytes": 7949,
+        "sha256": "087028bafbb176a60cd28e80dd541b0380218ee574f2c9e6d27382841af87715"
+      },
+      {
+        "path": "training_config.json",
+        "bytes": 5844,
+        "sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      {
+        "path": "input_receipt.json",
+        "bytes": 26878,
+        "sha256": "ee7b880edb2f9c7a1decd4f164fd815e92801222b6787852774c61eb429756e4"
+      },
+      {
+        "path": "queue_runtime.json",
+        "bytes": 1105,
+        "sha256": "290b815e1aa6fb2fd9459499d84c84e48b0969c9945000704922a749a38092e5"
+      },
+      {
+        "path": "job.json",
+        "bytes": 547,
+        "sha256": "4d29bf4de13c0e5347779d138ddc26c6cf5256ceb9a753cd16ce5eadb1dd2873"
+      },
+      {
+        "path": "run_source.py",
+        "bytes": 15912,
+        "sha256": "666324c630d51ca0308c1cc9bd44551f832991d07a541210b520b351e6a2df80"
+      },
+      {
+        "path": "train_source.py",
+        "bytes": 32558,
+        "sha256": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5"
+      },
+      {
+        "path": "adapter_source.py",
+        "bytes": 17657,
+        "sha256": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      {
+        "path": "events.jsonl",
+        "bytes": 198,
+        "sha256": "66719ea0bf5f0a54ef815ebbe16e7baa96bab62e886886b381c2be812b610e7c"
+      },
+      {
+        "path": "source_validation_predictions.npz",
+        "bytes": 3416,
+        "sha256": "9749ca5c19dd3592fb8955e4f5e5417ae17d76df28c57a1c4e26f859463356ba"
+      }
+    ],
+    "dispatch_payload_files": [
+      {
+        "path": "paper2-results/queue-dispatch-vFBgyuN5.log",
+        "bytes": 762,
+        "sha256": "c0a9b42277e9e755da3adcf9099405588fb5ecb27b8a67fa8fdb8f8257418532"
+      },
+      {
+        "path": "parallel-p1-source-fit6-run01/paper2-launcher.log",
+        "bytes": 919,
+        "sha256": "3ab2d3c9670ec0729339bbd7b1f5484e8176a54906b982f5ced250a08f7516e4"
+      },
+      {
+        "path": "parallel-p1-source-fit6-run01/run_once.py",
+        "bytes": 3498,
+        "sha256": "5c732244e2cd7ffa3b3a727101779a679b3131308b82d525cdaa3a37c4ec630e"
+      },
+      {
+        "path": "parallel-p1-source-fit6-run01/completion.json",
+        "bytes": 1383,
+        "sha256": "733b7c60ae13da5c9981ab60b9e42cb83a578d26f0daaa93fdfaee73021de647"
+      },
+      {
+        "path": "parallel-p1-source-fit6-run01/starts.json",
+        "bytes": 1012,
+        "sha256": "cc9c215329197b9fcec47c5652b8dbcde5d2f8aae7e30098351e8d059b0a239e"
+      },
+      {
+        "path": "parallel-p1-source-fit6-run01/paper2.exit-code",
+        "bytes": 3,
+        "sha256": "84b9bb077be0d8a29d0d01ef350d718b77c2ec5f40c3ab90502b1b4b5016c550"
+      },
+      {
+        "path": "parallel-p1-source-fit6-run01/overlap-samples.jsonl",
+        "bytes": 9210,
+        "sha256": "a579dfe13f8ed8357415fa201bce0c776d0421af403aeea26f48f73f86e7d366"
+      },
+      {
+        "path": "paper2-90f674f/research_logs/kumar_development_queue_20261014/accepted_jobs.json",
+        "bytes": 2963,
+        "sha256": "66d83c24cf3e8c8263710c5955cd69c2bfe4e4c1f720f3c9c79580a94212322f"
+      },
+      {
+        "path": "paper2-90f674f/research_logs/kumar_development_queue_20261014/delivery_hashes.json",
+        "bytes": 834,
+        "sha256": "eb028e992ccfe258b95f62af51daae45caed424e1de2356b2fee61d7dac3573e"
+      },
+      {
+        "path": "paper2-results/https-development-download-run01.json",
+        "bytes": 26878,
+        "sha256": "ee7b880edb2f9c7a1decd4f164fd815e92801222b6787852774c61eb429756e4"
+      },
+      {
+        "path": "paper2-90f674f/research_logs/kumar_development_queue_20261014/sub-4-seed-20261013/r2_full_get_receipt.json",
+        "bytes": 2816,
+        "sha256": "6afda0ba8accc08df359ca3c9887fe95a63f6b9e8e9f6f828367b2f557fca84d"
+      },
+      {
+        "path": "paper2-90f674f/research_logs/kumar_development_queue_20261014/sub-4-seed-20261013/parent_acknowledged.json",
+        "bytes": 1034,
+        "sha256": "6c2098c784c870aa8ec7970fce0455fd860a5eccef009e2afdc3bdc953b4abbe"
+      }
+    ]
+  },
+  "fits_performed_by_review": 0,
+  "EEG_or_query_rows_loaded_by_review": 0,
+  "archive_scripts_executed_by_review": false,
+  "private_archive_bytes_modified": false,
+  "R2_backup_performed_by_review": false,
+  "parent_acknowledged": false,
+  "accepted_ledger_modified": false,
+  "next_fit_released": false,
+  "RunPod_operations_performed": false,
+  "limitations": [
+    "Archive/helper and frozen Git checks verify saved evidence and source identities; reviewer did not independently observe live Pod, lock, remote input bytes or billing.",
+    "Ten process snapshots show a single GPU compute PID in the captured interval, not continuous monitoring or proof that no process ever ran between snapshots.",
+    "Six snapshots contain both paper1 CPU and paper2 GPU PID records. Four lie within recorded fitting; one is just after fit_saved and the last GPU PID is a zombie with zero RSS, so not six active fitting samples.",
+    "Paper1 source-acceptance worker exit code 3 is preserved without claiming paper1 acceptance, diagnosing its failure, or changing the first-paper repository.",
+    "Recorded Torch/NumPy replay errors are crosschecked here; root independently audits saved-logit CE and checkpoint state separately.",
+    "No new fit, EEG forward evaluation, query evaluation or data fetch performed. R2 completion and parent acknowledgement remain separate gates."
+  ]
+}

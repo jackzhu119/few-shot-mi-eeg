@@ -1,0 +1,161 @@
+{
+  "status": "two_unmodified_original_archives_identity_verified",
+  "checked_at_utc": "2026-10-14T14:38:34.239866+00:00",
+  "archives": [
+    {
+      "kind": "result",
+      "path": "/workspace/attachments/cee5d8b9-2247-402f-9703-74eda1a8e1b9/sub-4-seed-20261014.tar",
+      "bytes": 174080,
+      "sha256": "854262fe223c2a286f80747c5197c21aecd442c7b2e546931831a76ce03cd6ad",
+      "payload_members": 14,
+      "manifest_members": 1,
+      "total_regular_members": 15,
+      "manifest_member_hashes_verified": true,
+      "manifest_fields": [
+        "job_id",
+        "subject",
+        "seed",
+        "result_key",
+        "files",
+        "status",
+        "R2_backup_verified",
+        "parent_acknowledged",
+        "query_rows_loaded",
+        "stop_Pod"
+      ],
+      "members": [
+        {
+          "name": "weights.pt",
+          "bytes": 22232
+        },
+        {
+          "name": "weights.json",
+          "bytes": 11371
+        },
+        {
+          "name": "fit_result.json",
+          "bytes": 6562
+        },
+        {
+          "name": "training.log",
+          "bytes": 76
+        },
+        {
+          "name": "input_audit.json",
+          "bytes": 7949
+        },
+        {
+          "name": "training_config.json",
+          "bytes": 5844
+        },
+        {
+          "name": "input_receipt.json",
+          "bytes": 26878
+        },
+        {
+          "name": "queue_runtime.json",
+          "bytes": 1105
+        },
+        {
+          "name": "job.json",
+          "bytes": 547
+        },
+        {
+          "name": "run_source.py",
+          "bytes": 15912
+        },
+        {
+          "name": "train_source.py",
+          "bytes": 32558
+        },
+        {
+          "name": "adapter_source.py",
+          "bytes": 17657
+        },
+        {
+          "name": "events.jsonl",
+          "bytes": 198
+        },
+        {
+          "name": "source_validation_predictions.npz",
+          "bytes": 3416
+        },
+        {
+          "name": "manifest.json",
+          "bytes": 2523
+        }
+      ]
+    },
+    {
+      "kind": "dispatch",
+      "path": "/workspace/attachments/c23c7654-3c03-4f19-9b2b-c2143f75a6f4/sub-4-seed-20261014-dispatch-evidence.tar",
+      "bytes": 71680,
+      "sha256": "7534b25a6837e6adf87c6baff0d649ec8ca983eb72c6c685f2c503554da1aa31",
+      "payload_members": 12,
+      "manifest_members": 1,
+      "total_regular_members": 13,
+      "manifest_member_hashes_verified": true,
+      "manifest_fields": [
+        "created_at_utc",
+        "files"
+      ],
+      "members": [
+        {
+          "name": "paper2-results/queue-dispatch-vFBgyuN5.log",
+          "bytes": 762
+        },
+        {
+          "name": "parallel-p1-source-fit6-run01/paper2-launcher.log",
+          "bytes": 919
+        },
+        {
+          "name": "parallel-p1-source-fit6-run01/run_once.py",
+          "bytes": 3498
+        },
+        {
+          "name": "parallel-p1-source-fit6-run01/completion.json",
+          "bytes": 1383
+        },
+        {
+          "name": "parallel-p1-source-fit6-run01/starts.json",
+          "bytes": 1012
+        },
+        {
+          "name": "parallel-p1-source-fit6-run01/paper2.exit-code",
+          "bytes": 3
+        },
+        {
+          "name": "parallel-p1-source-fit6-run01/overlap-samples.jsonl",
+          "bytes": 9210
+        },
+        {
+          "name": "paper2-90f674f/research_logs/kumar_development_queue_20261014/accepted_jobs.json",
+          "bytes": 2963
+        },
+        {
+          "name": "paper2-90f674f/research_logs/kumar_development_queue_20261014/delivery_hashes.json",
+          "bytes": 834
+        },
+        {
+          "name": "paper2-results/https-development-download-run01.json",
+          "bytes": 26878
+        },
+        {
+          "name": "paper2-90f674f/research_logs/kumar_development_queue_20261014/sub-4-seed-20261013/r2_full_get_receipt.json",
+          "bytes": 2816
+        },
+        {
+          "name": "paper2-90f674f/research_logs/kumar_development_queue_20261014/sub-4-seed-20261013/parent_acknowledged.json",
+          "bytes": 1034
+        },
+        {
+          "name": "manifest.json",
+          "bytes": 2432
+        }
+      ]
+    }
+  ],
+  "archive_bytes_modified": false,
+  "total_original_bytes": 245760,
+  "outer_identity_binding": "checked actual dispatcher/job/run timestamps and frozen source evidence; outer manifest schema differs from old8payload format"
+}

@@ -1,0 +1,15 @@
+# 第6fit独立审计及备份：sub-4 / seed20261014
+
+接续时本地与远端为固定f49a977，原5项验收账本及未提交CSP文件保留。收到两份原始附件，结果174080bytes SHA256 854262fe223c2a286f80747c5197c21aecd442c7b2e546931831a76ce03cd6ad；外层71680bytes SHA256 7534b25a6837e6adf87c6baff0d649ec8ca983eb72c6c685f2c503554da1aa31。14结果载荷与12外层载荷各另加manifest；逐成员长度/hash和安全路径全部通过。此次外层为12载荷及generic manifest，按实际格式审核，未套用旧8载荷或更改原包。
+
+既定audit_kumar_queue_bundle.py通过固定job/config/split/source、weights_only安全tensor/context/state、有限值、40 TRAIN/20 source validation/query0、history及早停和源logits独立CE核验。16epochs/48steps、selected1、连续15轮未改善，未加轮、改容差或按seed删模型。validation CE0.6939079999923706；Torch重放差0，保存logits独立CE0.6939079951817444，绝对差4.8106262307001657e-09通过原1e-7。没有重训、加载原始EEG或执行EEG forward；这是开发源验证，不是query表现。
+
+外层独立审查确认40项执行source/config、7交付hash、127缓存输入hash、三个源run及5项前序ledger/receipt/ACK完全一致。实际fitting14:23:51.011980–14:23:55.461378 UTC，launcher14:23:57.575838退出75。源码及事件仅一次论文2调用、一次fitting；所保存10个采样中只出现GPU PID29471。采样证据不能证明全时段连续监控，但没有捕获第二GPU fit。
+
+并行证据保留细分：10快照中6条同时有论文1CPU PID与论文2GPU PID，其中4条位于记录的fitting区间；第5条在fit_saved后18.498ms，第6条GPU PID为Zl/RSS0。不能将6条都称为正在fitting/有效GPU计算采样。外层记录论文1CPU source worker退出3，原失败/完成记录完整保存在原包；本轮没有审核或宣称论文1验收成功。真实过程数据未删除或重写。
+
+按既有gpu-development-20261014规范键条件写入两原包，未重新打包。R2完整GET/SHA256逐对象通过，2对象245760bytes，零失败；回执r2_full_get_receipt.json SHA256：
+
+d35ad175bb831ce5681157ab0c85bb04780894c4d2bb0987fb749e6755ec2e00
+
+本侧独立审计及备份完成，父确认待完成。活动账本仍5项且与固定f49a977逐字节一致；proposed_acceptance_entry只是候选文本。未写parent_acknowledged、追加第6验收、释放第7fit、启动训练或操作Pod。科学配置、原数值线程、容差及逐fit验收门不变。下一步只由dot明确回读确认后发布新的连续账本。
