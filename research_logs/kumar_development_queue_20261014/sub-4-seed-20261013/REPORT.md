@@ -1,0 +1,17 @@
+# 第5fit独立审计与备份：sub-4 / seed20261013
+
+此前Library二进制取回阻塞已由本会话两份未经改写Sediment原包交付解决。保留旧blocked回执、工作区未提交CSP文件及历史提交；本轮基于a039695接收，不reset、不初始化、不重训。
+
+原结果包174080bytes SHA256 4c8f923a0e706c7e30962415a2dd0293e13096d0a9b27b866e339b1382be1076；外层51200bytes SHA256 3efd10b5bb87bfc8a3eb59242f99c397c0fb84a8d42e03da2de91de171304b97。14结果载荷成员+8调度载荷成员，以及各自manifest，均通过长度/SHA256及安全成员检查。未经改写、未重新打包；R2仅以固定规范文件名保存同字节原包。
+
+既定audit_kumar_queue_bundle.py独立通过：job身份、固定科学config/split、40 TRAIN/20源validation/query0、weights_only安全tensor/context/state、全部有限值和归一化类映射、逐轮history/最早minimum/patience、源码与输入hash均匹配。16epochs/48steps，选择第1轮，随后15轮未改善符合冻结早停。源validation CE=0.694194781780243；GPU记录的Torch重放差0，Codex从保存logits独立CE=0.6941947910199485，误差9.2397055562187802e-09，通过事前绝对1e-7，未改容差。没有加载原始EEG、执行EEG forward或拟合模型。选择epoch1及该validation结果按原样保留，不依据seed表现剔除模型。
+
+额外独立外层审查核对40项执行源码/config、7项交付、127项输入hash、三个实际源run、四项前序账本及第4fit的R2回执/父确认全部一致。外层12:33:41–55 UTC退出75，launcher12:33:46–55 UTC退出75，只有一次调用；75是当时fit已存而私有备份待闭合，不改写原退出状态。
+
+两原包按few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014固定key条件写入，完整GET逐对象SHA256通过：2对象225280bytes，零失败。回执r2_full_get_receipt.json SHA256：
+
+6afda0ba8accc08df359ca3c9887fe95a63f6b9e8e9f6f828367b2f557fca84d
+
+本侧审计及备份完成，dot父确认尚未完成；活动accepted_jobs仍4项，完全等于固定5d3f9c1账本。proposed_acceptance_entry.json只是候选文本，不能作活动验收。没有写parent_acknowledged、释放第6fit或执行任何Pod操作。下一项由dot唯一RunPod操作者在明确确认这份回执并发布新账本固定提交后调度。两篇CPU/GPU并行不改变逐fit验收、共享资源安全或冻结科学配置。
+
+这些是开发源validation证据，不是query/其他12编号结果或总体疗效。原CPU三基线不重跑；没有引入任务门控规则或新的实验。

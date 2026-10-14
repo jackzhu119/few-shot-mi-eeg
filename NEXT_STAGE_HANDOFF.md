@@ -76,3 +76,6 @@ HTTPS/私人备份操作修订：固定首fit官方同版本同字节25文件/16
 
 
 2026-10-14父已回读f61c925并确认sub-4/20261012备份2对象225280bytes完整GET、零失败及离机SHA，父确认及连续账本各追加一次，现4项已验收。既有check_gate验证全部回执/确认绑定及连续前缀，下一项sub-4/20261013；7项交付hash不变。仅做变更范围验证，不重复全测试，科学配置/预算/入口未改。用户12:26要求持续完成授权工作及后续写作，不反复询问/无故暂停；继续冻结队列及验收，不扩展query/其他12人或提前写结果。父统筹共享GPU，Pod保持运行。
+
+
+2026-10-14第5真实GPUfit sub-4/20261013原包已由Sediment交付并独立审计/备份：14+8载荷及manifest、固定源码/config/split/checkpoint及127输入hash通过；16epochs48steps选1，随后15轮未改善。源validationCE0.694194781780243，Torch重放差0，保存logits独立误差9.23970555621878e-9通过原1e-7。2原包225280bytes完整R2 GET SHA256、零失败，回执SHA6afda0ba8accc08df359ca3c9887fe95a63f6b9e8e9f6f828367b2f557fca84d；完整审计与待父确认请求见research_logs/kumar_development_queue_20261014/sub-4-seed-20261013。旧Libraryblocked回执保留，新resolution确认已解决。活动账本仍4项，未写父确认/释放第6fit/重训/操作Pod；dot统筹两篇CPU/GPU并行，验收门及配置不变。
