@@ -49,3 +49,6 @@ HTTPS/私人备份操作修订：固定首fit官方同版本同字节25文件/16
 
 
 2026-10-14 首次真实 GPU fit 已收回并独立验收：固定 d4d2a64，sub-1/seed20261012，40 source train/20 source validation，零 query；41 epoch/123 updates，选择 epoch26，源验证 CE=0.6909911870956421，随后15轮未改善。11结果成员、4外层证据成员、冻结配置/划分/源码与checkpoint state绑定全部通过，未重拟合或重算EEG损失。training.log原始0bytes保留，逐轮历史在weights.json并与checkpoint绑定；外层10:45:18–10:45:29 UTC退出75为当时备份待完成。原始结果143360bytes及dispatch20480bytes已按固定key上传R2，2对象163840bytes全GET SHA256通过。详情、审计及回执见research_logs/kumar_first_gpu_fit_20261014/REPORT.md。独立审查及备份完成但父确认待完成，Pod未停止，实际账单未知；不得重复首fit或自动扩展其余实验。
+
+
+2026-10-14 父对话已独立确认6065286的2对象163840bytes完整GET及原包hash，追加parent_acknowledged.json，旧包/回执不变，Pod仍供论文1调度。无拟合独立源验证重放入口在b6555a0提交；命令bash scripts/launch_kumar_first_fit_replay.sh，详情docs/kumar_first_fit_replay_20261014.md。预先绝对CE容差1e-7/相对0，归一化逐位一致、参数/BN摘要不变；Pod实际重放仍待执行与回传验收。六开发编号三seed队列操作配置/规范完成，首fit复用、最多17新fit，execution_enabled=false，单fit备份及父确认后逐项释放，非开发正式门与query继续关闭。完整本地验证698通过1实际CUDA跳过，Ruff/synthetic smoke通过，未新训练或停Pod。

@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "status": "preparation_only",
+  "execution_enabled": false,
+  "queue_release_requires": [
+    "first_fit_replay_passed_with_frozen_tolerance",
+    "replay_private_archive_R2_full_GET_verified",
+    "parent_acknowledges_replay_and_schedules_queue",
+    "reviewed_fixed_single_fit_queue_runner"
+  ],
+  "training_config": "configs/kumar_eegnet_gpu_development_20261014.json",
+  "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+  "development_subjects": [
+    "sub-1",
+    "sub-4",
+    "sub-7",
+    "sub-10",
+    "sub-13",
+    "sub-16"
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014
+  ],
+  "jobs": [
+    {
+      "subject": "sub-1",
+      "seed": 20261012,
+      "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+      "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+      "job_id": "17377a7cf04bfc73e25bc94d7e42fc4f1ab6f14fb6dde63c7b21e742b94b9ace",
+      "action": "reuse_completed_never_refit",
+      "output": "/workspace/paper2-results/development-queue/sub-1/seed-20261012",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-source-20261014/sub-1-seed-20261012-run01.tar"
+    },
+    {
+      "subject": "sub-1",
+      "seed": 20261013,
+      "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+      "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+      "job_id": "5be2fc9499d4ec3916e5191c822c205e195c0e25655c39ec0f84e5aa2c091470",
+      "action": "planned_not_authorized_to_execute",
+      "output": "/workspace/paper2-results/development-queue/sub-1/seed-20261013",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-1-seed-20261013-run01.tar"
+    },
+    {
+      "subject": "sub-1",
+      "seed": 20261014,
+      "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+      "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+      "job_id": "ba8899c0dc867baefa9a5623cccf706a82571413d63ec76e4baa7bfab613b4ca",
+      "action": "planned_not_authorized_to_execute",
+      "output": "/workspace/paper2-results/development-queue/sub-1/seed-20261014",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-1-seed-20261014-run01.tar"
+    },
+    {
+      "subject": "sub-4",
+      "seed": 20261012,
+      "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+      "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+      "job_id": "e1b092f93db8c972cb59403814c73eb1ba2273b1aa82351f0205c390a28b9faa",
+      "action": "planned_not_authorized_to_execute",
+      "output": "/workspace/paper2-results/development-queue/sub-4/seed-20261012",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-4-seed-20261012-run01.tar"
+    },
+    {
+      "subject": "sub-4",
+      "seed": 20261013,
+      "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+      "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+      "job_id": "451a32bd8f38870f333d43c3941498a72bda8f19574ee381a260200bd23ff112",
+      "action": "planned_not_authorized_to_execute",
+      "output": "/workspace/paper2-results/development-queue/sub-4/seed-20261013",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-4-seed-20261013-run01.tar"
+    },
+    {
+      "subject": "sub-4",
+      "seed": 20261014,
+      "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+      "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+      "job_id": "fe495208cd04aff921403e3e0d8c9f3e065d477deff26b28fbfe4480d9ada6c2",
+      "action": "planned_not_authorized_to_execute",
+      "output": "/workspace/paper2-results/development-queue/sub-4/seed-20261014",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-4-seed-20261014-run01.tar"
+    },
+    {
+      "subject": "sub-7",
+      "seed": 20261012,
+      "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+      "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+      "job_id": "735d0b78575ffe08b0be4e51a26fcadaa0a2db1977c9120d1e837e3ed48d03d7",
+      "action": "planned_not_authorized_to_execute",
+      "output": "/workspace/paper2-results/development-queue/sub-7/seed-20261012",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-7-seed-20261012-run01.tar"
+    },
+    {
+      "subject": "sub-7",
+      "seed": 20261013,
+      "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+      "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+      "job_id": "1aa92ed2b84621e78c67af8bf6f1eb6482b810951b9418a9b9fb017541552c91",
+      "action": "planned_not_authorized_to_execute",
+      "output": "/workspace/paper2-results/development-queue/sub-7/seed-20261013",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-7-seed-20261013-run01.tar"
+    },
+    {
+      "subject": "sub-7",
+      "seed": 20261014,
+      "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+      "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+      "job_id": "a072e1ee4836265f6237ccb5ae6a36adc90f47395f3c0830071d86798bc1f5ba",
+      "action": "planned_not_authorized_to_execute",
+      "output": "/workspace/paper2-results/development-queue/sub-7/seed-20261014",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-7-seed-20261014-run01.tar"
+    },
+    {
+      "subject": "sub-10",
+      "seed": 20261012,
+      "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+      "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+      "job_id": "04c84fd64d26f4aaddcfcce264b71c6332395eb1914ae799470dde4d0e666b5e",
+      "action": "planned_not_authorized_to_execute",
+      "output": "/workspace/paper2-results/development-queue/sub-10/seed-20261012",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-10-seed-20261012-run01.tar"
+    },
+    {
+      "subject": "sub-10",
+      "seed": 20261013,
+      "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+      "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+      "job_id": "1a6f1682dafff74743a174565e4e8360d7615ef8b80d09919ff0a5c043ab1e55",
+      "action": "planned_not_authorized_to_execute",
+      "output": "/workspace/paper2-results/development-queue/sub-10/seed-20261013",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-10-seed-20261013-run01.tar"
+    },
+    {
+      "subject": "sub-10",
+      "seed": 20261014,
+      "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+      "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+      "job_id": "4b2352788f901e95f387f44be75ad0f71ceac4c5a3e68c030365c5e98559a9f1",
+      "action": "planned_not_authorized_to_execute",
+      "output": "/workspace/paper2-results/development-queue/sub-10/seed-20261014",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-10-seed-20261014-run01.tar"
+    },
+    {
+      "subject": "sub-13",
+      "seed": 20261012,
+      "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+      "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+      "job_id": "f7e593ca50f530f362181d48a39258dbbb2f6d741a2ecfd5c51b4ce0e69326b3",
+      "action": "planned_not_authorized_to_execute",
+      "output": "/workspace/paper2-results/development-queue/sub-13/seed-20261012",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-13-seed-20261012-run01.tar"
+    },
+    {
+      "subject": "sub-13",
+      "seed": 20261013,
+      "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+      "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+      "job_id": "3afcfb08e856e7b89468b23e78a34aa4419d31a3c7fcec386a442d5766669599",
+      "action": "planned_not_authorized_to_execute",
+      "output": "/workspace/paper2-results/development-queue/sub-13/seed-20261013",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-13-seed-20261013-run01.tar"
+    },
+    {
+      "subject": "sub-13",
+      "seed": 20261014,
+      "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+      "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+      "job_id": "fe37e7a42f0658cdddd6db0b2eb5134fda1bdc82eaa2855cb198ea2ed97cc2ea",
+      "action": "planned_not_authorized_to_execute",
+      "output": "/workspace/paper2-results/development-queue/sub-13/seed-20261014",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-13-seed-20261014-run01.tar"
+    },
+    {
+      "subject": "sub-16",
+      "seed": 20261012,
+      "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+      "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+      "job_id": "1534e6e3dbe39282e0f7220355889366af2c8a9eafd2008c03cbc3449d361319",
+      "action": "planned_not_authorized_to_execute",
+      "output": "/workspace/paper2-results/development-queue/sub-16/seed-20261012",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-16-seed-20261012-run01.tar"
+    },
+    {
+      "subject": "sub-16",
+      "seed": 20261013,
+      "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+      "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+      "job_id": "1f1cf3552df9ed9bdf25fb45271d5b7ed61df8800f2e66fb509df1a76a5bc9af",
+      "action": "planned_not_authorized_to_execute",
+      "output": "/workspace/paper2-results/development-queue/sub-16/seed-20261013",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-16-seed-20261013-run01.tar"
+    },
+    {
+      "subject": "sub-16",
+      "seed": 20261014,
+      "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+      "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+      "job_id": "df56f563ff26909b6e0590906f305982b0e5df89520c12355f433a1cd2bd968a",
+      "action": "planned_not_authorized_to_execute",
+      "output": "/workspace/paper2-results/development-queue/sub-16/seed-20261014",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-16-seed-20261014-run01.tar"
+    }
+  ],
+  "maximum_new_fits": 17,
+  "maximum_total_development_fits": 18,
+  "formal_non_development_gate": false,
+  "allowed_signal_roles": [
+    "source_train",
+    "source_validation"
+  ],
+  "query_access": false,
+  "scientific_hyperparameters_changed": false,
+  "data_manifest": "research_logs/gpu_preparation_20261014/eegnet_data_plan.json",
+  "data_manifest_sha256": "b8dd6c8872f03a661b34d50fb826ef05e88e5502e9987290fec1301a4cb85363",
+  "data": {
+    "total_files": 127,
+    "total_bytes": 98743492,
+    "total_edf": 18,
+    "reusable_current_files": 22,
+    "additional_files": 105,
+    "additional_bytes": 82322754,
+    "existing_extra_metadata_preserved": true,
+    "source": "Existing R2 frozen official NEMAR nm000177 v1.0.5 bytes",
+    "license": "CC-BY-4.0; preserve attribution and original metadata",
+    "transfer": "private short-lived object capabilities or existing official HTTPS after manifest verification; no new credentials",
+    "credentials_on_Pod": false
+  },
+  "locks": {
+    "shared_gpu": "/workspace/research-gpu.lock",
+    "mode": "nonblocking_flock",
+    "reservation": "exclusive job_id state creation before first model fit; never delete reservation automatically",
+    "state_journal": "append-only per-job events plus immutable fit_result/checkpoint sidecar",
+    "gpu_process_precheck": true,
+    "max_parallel_fits": 1
+  },
+  "limits": {
+    "timeout_seconds_per_fit": 1800,
+    "term_grace_seconds": 30,
+    "maximum_epochs_per_fit": 100,
+    "maximum_optimizer_steps_per_fit": 300,
+    "maximum_new_optimizer_steps": 5100,
+    "max_unbacked_completed_fits": 1,
+    "archive_max_bytes": 16777216,
+    "minimum_free_disk_bytes": 2147483648,
+    "automatic_retries": 0
+  },
+  "backup": {
+    "batch_unit": "one fit",
+    "route": "Pod Jupyter -> private Library -> existing Codex R2 authorization",
+    "conditional_create": true,
+    "overwrite": false,
+    "verification": "full GET length and SHA256 for every archive and manifest member",
+    "advance_only_after": "R2 full GET receipt and parent acknowledgement; no performance-based selection",
+    "payload": "weights.pt + bound weights.json + fit_result + input_audit + frozen config/source + stdout + trial-level source-validation replay + manifest",
+    "public_git": "text audit/config/loss summaries only; no raw EEG or binary weights"
+  },
+  "failure_recovery": {
+    "complete_fit": "verify checkpoint/config/identity then repackage or continue backup only; never refit",
+    "partial_fit": "preserve reservation, log, any checkpoint; stop queue; diagnose explicitly, no auto-resume optimizer because optimizer/RNG not checkpointed",
+    "existing_remote_key": "full GET compare; reuse identical bytes only, conflict stops without overwrite",
+    "missing_Pod_files": "restore only from verified R2 object, never infer completion from local path",
+    "replay_failure": "preserve actual discrepancy; do not widen tolerance or release queue"
+  },
+  "stop_Pod": false,
+  "actual_billed_cost_usd": null
+}
