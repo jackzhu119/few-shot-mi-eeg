@@ -1,0 +1,5 @@
+# 首次fit无拟合重放与私人备份闭合
+
+Pod实际源验证重放11:07:17至11:07:22 UTC退出0。Codex独立核验5个重放成员和3个外层成员，checkpoint和sidecar与首fit相同，20条trial身份和标签与冻结划分一致。从保存logits独立logaddexp重算CE=0.690991198601597，误差1.1505954855550726e-8，在预先绝对1e-7内。原PyTorch重放loss与原0.6909911870956421完全相同。无拟合、optimizer或query；Codex没有重跑EEG forward。
+
+两原包共122880bytes已由现有授权上传固定gpu-source-20261014前缀，全部GET长度和SHA256一致，零失败，见r2_full_get_receipt.json。原包pending状态和空日志保留，不伪造内容。父对话新回执确认待完成；明确launcher确认参数才允许排期。未停Pod或新建资源。后续可执行17项队列见docs/kumar_development_queue_execution_20261014.md，完整开发/正式基线尚未完成。
