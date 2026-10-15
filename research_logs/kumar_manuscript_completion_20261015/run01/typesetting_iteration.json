@@ -1,0 +1,42 @@
+{
+  "scope": "Editorial typesetting corrections only; no scientific execution",
+  "initial_proof_error": "Supplement preliminary proof used Urlmuskip before url package loaded; log retained.",
+  "resolved_proof_error": "Defer URL setting with AtBeginDocument.",
+  "first_export_issue": "Chinese author-name glyphs absent in DejaVu Serif; existing Noto Serif CJK SC is available.",
+  "resolution": "Add existing CJK font to final PDF rendering; preserve first export bytes privately and initial build receipts/source.",
+  "initial_exports": [
+    {
+      "path": "/workspace/private_model_receipts/kumar-manuscript-typesetting-20261015/author_checklist.docx",
+      "bytes": 13895,
+      "sha256": "2ed454b5ec1bd64493d1464e1e6ae0649ac4d8bb3ad59b2c3d6b3ebe8a1fa53d"
+    },
+    {
+      "path": "/workspace/private_model_receipts/kumar-manuscript-typesetting-20261015/author_checklist.pdf",
+      "bytes": 50332,
+      "sha256": "ff8f2465f90d4b82827b116e9859da82545b38d4f49ef9b291dabaff521c9c66"
+    },
+    {
+      "path": "/workspace/private_model_receipts/kumar-manuscript-typesetting-20261015/supplement.pdf",
+      "bytes": 75816,
+      "sha256": "5aae1e7778cf07acf0bc0b70ff00b7cf0245ba9ce30947c85726525597a35e40"
+    },
+    {
+      "path": "/workspace/private_model_receipts/kumar-manuscript-typesetting-20261015/manuscript.docx",
+      "bytes": 713554,
+      "sha256": "63c4124f4a6df44c122935cf7cf66e92b6f0f0fdc6816ceb6e76b7445e9e8c85"
+    },
+    {
+      "path": "/workspace/private_model_receipts/kumar-manuscript-typesetting-20261015/supplement.docx",
+      "bytes": 24390,
+      "sha256": "2132a0da61585e23806315962a399d27f60662cdf6b21c9930a7bd144070193f"
+    },
+    {
+      "path": "/workspace/private_model_receipts/kumar-manuscript-typesetting-20261015/manuscript.pdf",
+      "bytes": 822277,
+      "sha256": "7097e38a1fce7645a6c8794b071a79f95830b53f501cc341aabc60bc3cf57217"
+    }
+  ],
+  "scientific_operations": false,
+  "additional_export_issue": "Pandoc CJKmainfont requested unavailable xeCJK.sty; no package/environment installed.",
+  "final_resolution": "Use existing fontspec and installed Noto Serif CJK SC only for the three Chinese name characters; keep existing document fonts and all scientific text."
+}

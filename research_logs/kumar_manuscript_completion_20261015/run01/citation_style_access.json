@@ -1,0 +1,29 @@
+{
+  "purpose": "Read-only lookup of PLOS-style citation files; absent candidate not used",
+  "requests": [
+    {
+      "url": "https://raw.githubusercontent.com/citation-style-language/styles/master/plos-one.csl",
+      "http_status": 404,
+      "purpose": "First lookup path absent; no style bytes used."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/citation-style-language/styles/master/public-library-of-science.csl",
+      "http_status": 404,
+      "bytes": 14,
+      "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/citation-style-language/styles/master/dependent/plos-one.csl",
+      "http_status": 200,
+      "bytes": 907,
+      "sha256": "7ae410e40859d24fb876715226647d95b742a25a27a0929678025fd75b55c193",
+      "path": "manuscript/review_package_20261015/plos-one.csl"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/citation-style-language/styles/master/plos.csl",
+      "http_status": 200,
+      "bytes": 10357,
+      "sha256": "9e4e46b754097ccc48377aeeeccf28e1d58c3fac169a46cbc7ef8a5fad97c35f"
+    }
+  ]
+}

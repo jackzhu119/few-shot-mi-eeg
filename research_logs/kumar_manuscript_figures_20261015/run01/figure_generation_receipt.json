@@ -1,0 +1,707 @@
+{
+  "schema_version": 1,
+  "status": "completed_saved_text_only",
+  "started_at_utc": "2026-10-15T10:31:23.928259+00:00",
+  "finished_at_utc": "2026-10-15T10:31:27.461980+00:00",
+  "elapsed_seconds": 3.5338462510044337,
+  "script": {
+    "path": "research_logs/kumar_manuscript_figures_20261015/run01/render_saved_text_figures.py",
+    "bytes": 24401,
+    "sha256": "09f5ea5a9eb7f2f258ef32a6afd44ed5558c95d84d311a77e91b699f344a5a5c"
+  },
+  "runtime": {
+    "python": "3.11.16",
+    "numpy": "2.2.6",
+    "matplotlib": "3.11.2",
+    "backend": "Agg"
+  },
+  "sources": [
+    {
+      "path": "research_logs/kumar_frozen_query_comparison_20261015/run01/per_participant_endpoints.csv",
+      "bytes": 5788,
+      "sha256": "115e67c38f89e84f799f9a89008556adf30e7bf9ef0bb5a9c2b9f26fe7c2436b"
+    },
+    {
+      "path": "research_logs/kumar_frozen_query_comparison_20261015/run01/cohort_method_endpoint_summary.csv",
+      "bytes": 4999,
+      "sha256": "e141705b6b53a9b941be7e94d6bcf5ec017a3464f63195b8ddf1dfab199ba76a"
+    },
+    {
+      "path": "research_logs/kumar_frozen_query_comparison_20261015/run01/comparison_receipt.json",
+      "bytes": 97802,
+      "sha256": "a45664d75a3b1e84373f4af809715a8adb356a7710ba14d0843894e968cd80ae"
+    },
+    {
+      "path": "research_logs/kumar_csp_signed_score_execution_20261015/run02/independent_numerical_audit_run01.json",
+      "bytes": 72379,
+      "sha256": "6f00b62a318ef584368bca831c5c12eb93591e4257c610e3c232228cfd12c250"
+    }
+  ],
+  "sources_byte_unchanged_after_render": true,
+  "outputs": [
+    {
+      "path": "manuscript/figures/kumar2024_20261015/figure1_target_query_participants.png",
+      "bytes": 369506,
+      "sha256": "aa2a9c996a3f9925e9dd3aad083e3feedbb9cae19a1279fbef6789d61f860857"
+    },
+    {
+      "path": "manuscript/figures/kumar2024_20261015/figure1_target_query_participants.svg",
+      "bytes": 122652,
+      "sha256": "7f3588fcf8ae2efc5b97e167d864f6dc01c4a2c228d818221aa54b7c93367aab"
+    },
+    {
+      "path": "manuscript/figures/kumar2024_20261015/figure1_target_query_participants.pdf",
+      "bytes": 44371,
+      "sha256": "da438dea575a397b2bf5bf4493241757f8f6eed018a9184fc0ba911be365bc50"
+    },
+    {
+      "path": "manuscript/figures/kumar2024_20261015/figure2_cpu_primary_paired_changes.png",
+      "bytes": 218299,
+      "sha256": "47d52f69bbb0a8038469325c7ed663ecb2524854417dde24e694204e62bf1cc0"
+    },
+    {
+      "path": "manuscript/figures/kumar2024_20261015/figure2_cpu_primary_paired_changes.svg",
+      "bytes": 84871,
+      "sha256": "53bca2c9990777b78b74e350f8f9ca60a9a467a694341acac2a293d5ab8fc7ae"
+    },
+    {
+      "path": "manuscript/figures/kumar2024_20261015/figure2_cpu_primary_paired_changes.pdf",
+      "bytes": 28559,
+      "sha256": "165e03da29db261faf703b90fc48e8d41883538bbde0906fe75bf4326064fe6a"
+    },
+    {
+      "path": "manuscript/figures/kumar2024_20261015/figure3_csp_signed_support_halves.png",
+      "bytes": 240630,
+      "sha256": "aac62adc29eab7dca2ea139e16cc61dc8ad9f7d0781dc1bf954fb842e5d1e850"
+    },
+    {
+      "path": "manuscript/figures/kumar2024_20261015/figure3_csp_signed_support_halves.svg",
+      "bytes": 119663,
+      "sha256": "007a141ed9e79b1d9891c52f43519cab863b386875541b520ac3d0c7ef7ad3fc"
+    },
+    {
+      "path": "manuscript/figures/kumar2024_20261015/figure3_csp_signed_support_halves.pdf",
+      "bytes": 29877,
+      "sha256": "580f27c57ef4aced8247e64532d888f43a9fc555a0e20339f0ac5ecb03ab441c"
+    },
+    {
+      "path": "manuscript/figures/kumar2024_20261015/CAPTIONS.md",
+      "bytes": 4271,
+      "sha256": "0ed01a8e41ee5e2b92a3541baa2d2b35d3d682d7dde1e32b3144fbcc949bf749"
+    }
+  ],
+  "figures": {
+    "figure1_target_query_participants": {
+      "participant_method_points": 72,
+      "development_participants": 6,
+      "remaining_participants": 12,
+      "all_EEGNet_seeds_per_participant": 3,
+      "target_sessions_per_participant": 5,
+      "cohort_mean_CI_markers": 8,
+      "values": [
+        {
+          "subject": "sub-1",
+          "method": "source_only",
+          "BA": 0.5736660617059891
+        },
+        {
+          "subject": "sub-1",
+          "method": "frozen_csp_lda_recalibration",
+          "BA": 0.5143284936479129
+        },
+        {
+          "subject": "sub-1",
+          "method": "refit_csp_lda",
+          "BA": 0.5265607985480945
+        },
+        {
+          "subject": "sub-1",
+          "method": "always_frozen_eegnet",
+          "BA": 0.5256019358741681
+        },
+        {
+          "subject": "sub-4",
+          "method": "source_only",
+          "BA": 0.5828786045573704
+        },
+        {
+          "subject": "sub-4",
+          "method": "frozen_csp_lda_recalibration",
+          "BA": 0.6520185521274451
+        },
+        {
+          "subject": "sub-4",
+          "method": "refit_csp_lda",
+          "BA": 0.6376890502117362
+        },
+        {
+          "subject": "sub-4",
+          "method": "always_frozen_eegnet",
+          "BA": 0.4936492572427237
+        },
+        {
+          "subject": "sub-7",
+          "method": "source_only",
+          "BA": 0.6050000000000001
+        },
+        {
+          "subject": "sub-7",
+          "method": "frozen_csp_lda_recalibration",
+          "BA": 0.7966666666666665
+        },
+        {
+          "subject": "sub-7",
+          "method": "refit_csp_lda",
+          "BA": 0.705
+        },
+        {
+          "subject": "sub-7",
+          "method": "always_frozen_eegnet",
+          "BA": 0.5361111111111111
+        },
+        {
+          "subject": "sub-10",
+          "method": "source_only",
+          "BA": 0.56
+        },
+        {
+          "subject": "sub-10",
+          "method": "frozen_csp_lda_recalibration",
+          "BA": 0.5333333333333333
+        },
+        {
+          "subject": "sub-10",
+          "method": "refit_csp_lda",
+          "BA": 0.5966666666666667
+        },
+        {
+          "subject": "sub-10",
+          "method": "always_frozen_eegnet",
+          "BA": 0.4561111111111111
+        },
+        {
+          "subject": "sub-13",
+          "method": "source_only",
+          "BA": 0.5900000000000001
+        },
+        {
+          "subject": "sub-13",
+          "method": "frozen_csp_lda_recalibration",
+          "BA": 0.675
+        },
+        {
+          "subject": "sub-13",
+          "method": "refit_csp_lda",
+          "BA": 0.6583333333333333
+        },
+        {
+          "subject": "sub-13",
+          "method": "always_frozen_eegnet",
+          "BA": 0.637719298245614
+        },
+        {
+          "subject": "sub-16",
+          "method": "source_only",
+          "BA": 0.6868421052631579
+        },
+        {
+          "subject": "sub-16",
+          "method": "frozen_csp_lda_recalibration",
+          "BA": 0.6908771929824562
+        },
+        {
+          "subject": "sub-16",
+          "method": "refit_csp_lda",
+          "BA": 0.6689473684210526
+        },
+        {
+          "subject": "sub-16",
+          "method": "always_frozen_eegnet",
+          "BA": 0.48932748538011694
+        },
+        {
+          "subject": "sub-2",
+          "method": "source_only",
+          "BA": 0.4866666666666667
+        },
+        {
+          "subject": "sub-2",
+          "method": "frozen_csp_lda_recalibration",
+          "BA": 0.54
+        },
+        {
+          "subject": "sub-2",
+          "method": "refit_csp_lda",
+          "BA": 0.6633333333333333
+        },
+        {
+          "subject": "sub-2",
+          "method": "always_frozen_eegnet",
+          "BA": 0.4733333333333333
+        },
+        {
+          "subject": "sub-3",
+          "method": "source_only",
+          "BA": 0.4649425287356322
+        },
+        {
+          "subject": "sub-3",
+          "method": "frozen_csp_lda_recalibration",
+          "BA": 0.48146098003629767
+        },
+        {
+          "subject": "sub-3",
+          "method": "refit_csp_lda",
+          "BA": 0.547610405323654
+        },
+        {
+          "subject": "sub-3",
+          "method": "always_frozen_eegnet",
+          "BA": 0.48989312361363185
+        },
+        {
+          "subject": "sub-5",
+          "method": "source_only",
+          "BA": 0.651842105263158
+        },
+        {
+          "subject": "sub-5",
+          "method": "frozen_csp_lda_recalibration",
+          "BA": 0.6907017543859649
+        },
+        {
+          "subject": "sub-5",
+          "method": "refit_csp_lda",
+          "BA": 0.6562280701754386
+        },
+        {
+          "subject": "sub-5",
+          "method": "always_frozen_eegnet",
+          "BA": 0.4745906432748538
+        },
+        {
+          "subject": "sub-6",
+          "method": "source_only",
+          "BA": 0.5357894736842106
+        },
+        {
+          "subject": "sub-6",
+          "method": "frozen_csp_lda_recalibration",
+          "BA": 0.4728070175438597
+        },
+        {
+          "subject": "sub-6",
+          "method": "refit_csp_lda",
+          "BA": 0.4776315789473684
+        },
+        {
+          "subject": "sub-6",
+          "method": "always_frozen_eegnet",
+          "BA": 0.5347076023391812
+        },
+        {
+          "subject": "sub-8",
+          "method": "source_only",
+          "BA": 0.5133333333333334
+        },
+        {
+          "subject": "sub-8",
+          "method": "frozen_csp_lda_recalibration",
+          "BA": 0.4600000000000001
+        },
+        {
+          "subject": "sub-8",
+          "method": "refit_csp_lda",
+          "BA": 0.5816666666666667
+        },
+        {
+          "subject": "sub-8",
+          "method": "always_frozen_eegnet",
+          "BA": 0.47833333333333333
+        },
+        {
+          "subject": "sub-9",
+          "method": "source_only",
+          "BA": 0.5783333333333334
+        },
+        {
+          "subject": "sub-9",
+          "method": "frozen_csp_lda_recalibration",
+          "BA": 0.7131578947368421
+        },
+        {
+          "subject": "sub-9",
+          "method": "refit_csp_lda",
+          "BA": 0.7745614035087719
+        },
+        {
+          "subject": "sub-9",
+          "method": "always_frozen_eegnet",
+          "BA": 0.6112865497076024
+        },
+        {
+          "subject": "sub-11",
+          "method": "source_only",
+          "BA": 0.595
+        },
+        {
+          "subject": "sub-11",
+          "method": "frozen_csp_lda_recalibration",
+          "BA": 0.6283333333333333
+        },
+        {
+          "subject": "sub-11",
+          "method": "refit_csp_lda",
+          "BA": 0.8016666666666667
+        },
+        {
+          "subject": "sub-11",
+          "method": "always_frozen_eegnet",
+          "BA": 0.4772222222222222
+        },
+        {
+          "subject": "sub-12",
+          "method": "source_only",
+          "BA": 0.43166666666666664
+        },
+        {
+          "subject": "sub-12",
+          "method": "frozen_csp_lda_recalibration",
+          "BA": 0.5223684210526316
+        },
+        {
+          "subject": "sub-12",
+          "method": "refit_csp_lda",
+          "BA": 0.6042982456140351
+        },
+        {
+          "subject": "sub-12",
+          "method": "always_frozen_eegnet",
+          "BA": 0.4878654970760234
+        },
+        {
+          "subject": "sub-14",
+          "method": "source_only",
+          "BA": 0.5750000000000001
+        },
+        {
+          "subject": "sub-14",
+          "method": "frozen_csp_lda_recalibration",
+          "BA": 0.5816666666666668
+        },
+        {
+          "subject": "sub-14",
+          "method": "refit_csp_lda",
+          "BA": 0.5683333333333334
+        },
+        {
+          "subject": "sub-14",
+          "method": "always_frozen_eegnet",
+          "BA": 0.5344444444444445
+        },
+        {
+          "subject": "sub-15",
+          "method": "source_only",
+          "BA": 0.6774561403508773
+        },
+        {
+          "subject": "sub-15",
+          "method": "frozen_csp_lda_recalibration",
+          "BA": 0.6616666666666666
+        },
+        {
+          "subject": "sub-15",
+          "method": "refit_csp_lda",
+          "BA": 0.6754385964912281
+        },
+        {
+          "subject": "sub-15",
+          "method": "always_frozen_eegnet",
+          "BA": 0.546111111111111
+        },
+        {
+          "subject": "sub-17",
+          "method": "source_only",
+          "BA": 0.7922807017543859
+        },
+        {
+          "subject": "sub-17",
+          "method": "frozen_csp_lda_recalibration",
+          "BA": 0.7856140350877193
+        },
+        {
+          "subject": "sub-17",
+          "method": "refit_csp_lda",
+          "BA": 0.7989473684210526
+        },
+        {
+          "subject": "sub-17",
+          "method": "always_frozen_eegnet",
+          "BA": 0.6011988304093567
+        },
+        {
+          "subject": "sub-18",
+          "method": "source_only",
+          "BA": 0.6501754385964912
+        },
+        {
+          "subject": "sub-18",
+          "method": "frozen_csp_lda_recalibration",
+          "BA": 0.6486842105263158
+        },
+        {
+          "subject": "sub-18",
+          "method": "refit_csp_lda",
+          "BA": 0.6933333333333335
+        },
+        {
+          "subject": "sub-18",
+          "method": "always_frozen_eegnet",
+          "BA": 0.48040935672514623
+        }
+      ]
+    },
+    "figure2_cpu_primary_paired_changes": {
+      "participants": 12,
+      "positive_changes": 9,
+      "negative_changes": 3,
+      "zero_changes": 0,
+      "subject_order": [
+        "sub-2",
+        "sub-3",
+        "sub-5",
+        "sub-6",
+        "sub-8",
+        "sub-9",
+        "sub-11",
+        "sub-12",
+        "sub-14",
+        "sub-15",
+        "sub-17",
+        "sub-18"
+      ],
+      "saved_differences_percentage_points": [
+        17.666666666666664,
+        8.266787658802183,
+        0.43859649122807154,
+        -5.815789473684219,
+        6.833333333333325,
+        19.622807017543852,
+        20.66666666666668,
+        17.263157894736846,
+        -0.666666666666671,
+        -0.20175438596492512,
+        0.666666666666671,
+        4.315789473684206
+      ],
+      "saved_mean_percentage_points": 7.421355111917724,
+      "saved_ci95_percentage_points": [
+        2.487554824561406,
+        12.476615749142978
+      ],
+      "new_bootstrap_or_significance_tests": 0
+    },
+    "figure3_csp_signed_support_halves": {
+      "development_participants": 6,
+      "support_sessions": 30,
+      "half_measurements": 60,
+      "both_positive": 19,
+      "both_negative": 2,
+      "opposite_signs": 9,
+      "values": [
+        {
+          "subject": 1,
+          "session": "ses-1",
+          "half_1": -0.07672081139536024,
+          "half_2": 0.2504365523651147
+        },
+        {
+          "subject": 1,
+          "session": "ses-2",
+          "half_1": -0.033061986959363424,
+          "half_2": 1.328279643808062
+        },
+        {
+          "subject": 1,
+          "session": "ses-3",
+          "half_1": 0.27670999771377663,
+          "half_2": -0.6100321273055787
+        },
+        {
+          "subject": 1,
+          "session": "ses-4",
+          "half_1": -0.38483822478667173,
+          "half_2": -3.456854067572015
+        },
+        {
+          "subject": 1,
+          "session": "ses-5",
+          "half_1": 0.22486576671062342,
+          "half_2": 1.160043068189279
+        },
+        {
+          "subject": 4,
+          "session": "ses-1",
+          "half_1": -0.12204467145623131,
+          "half_2": 0.3580829195836176
+        },
+        {
+          "subject": 4,
+          "session": "ses-2",
+          "half_1": 0.08266548516659322,
+          "half_2": 0.11421545638414007
+        },
+        {
+          "subject": 4,
+          "session": "ses-3",
+          "half_1": 0.10771131902939649,
+          "half_2": 0.26826932452561764
+        },
+        {
+          "subject": 4,
+          "session": "ses-4",
+          "half_1": -0.1340346496824669,
+          "half_2": 0.15224655086067548
+        },
+        {
+          "subject": 4,
+          "session": "ses-5",
+          "half_1": 0.2155280822794215,
+          "half_2": 0.4888044251733794
+        },
+        {
+          "subject": 7,
+          "session": "ses-1",
+          "half_1": 0.1313798707639767,
+          "half_2": 0.1041847545604487
+        },
+        {
+          "subject": 7,
+          "session": "ses-2",
+          "half_1": -0.1348118587804762,
+          "half_2": -1.3990626833243691
+        },
+        {
+          "subject": 7,
+          "session": "ses-3",
+          "half_1": 0.48713366433133326,
+          "half_2": 0.1598086854973626
+        },
+        {
+          "subject": 7,
+          "session": "ses-4",
+          "half_1": 0.18823842464903862,
+          "half_2": 2.0002580544982544
+        },
+        {
+          "subject": 7,
+          "session": "ses-5",
+          "half_1": 0.4018577216175653,
+          "half_2": 0.23467870577127567
+        },
+        {
+          "subject": 10,
+          "session": "ses-1",
+          "half_1": 0.37595142742412135,
+          "half_2": 0.15568529558358699
+        },
+        {
+          "subject": 10,
+          "session": "ses-2",
+          "half_1": 0.3103019758159984,
+          "half_2": -0.04144868072972733
+        },
+        {
+          "subject": 10,
+          "session": "ses-3",
+          "half_1": 0.32706789497144484,
+          "half_2": 0.09395932532821784
+        },
+        {
+          "subject": 10,
+          "session": "ses-4",
+          "half_1": 0.3845502953137849,
+          "half_2": -0.05195316305962827
+        },
+        {
+          "subject": 10,
+          "session": "ses-5",
+          "half_1": -0.20686880927006646,
+          "half_2": 0.33608533627898035
+        },
+        {
+          "subject": 13,
+          "session": "ses-1",
+          "half_1": 0.14321102460316987,
+          "half_2": 0.33234598596840276
+        },
+        {
+          "subject": 13,
+          "session": "ses-2",
+          "half_1": 0.16053452595920706,
+          "half_2": 0.5390524017540758
+        },
+        {
+          "subject": 13,
+          "session": "ses-3",
+          "half_1": 0.5696799558412488,
+          "half_2": 2.163895086316545
+        },
+        {
+          "subject": 13,
+          "session": "ses-4",
+          "half_1": 0.5473005888936595,
+          "half_2": 0.7214838105677979
+        },
+        {
+          "subject": 13,
+          "session": "ses-5",
+          "half_1": 0.5197289188613925,
+          "half_2": 0.5689140700503619
+        },
+        {
+          "subject": 16,
+          "session": "ses-1",
+          "half_1": 0.23558730802618513,
+          "half_2": 0.13467203748257658
+        },
+        {
+          "subject": 16,
+          "session": "ses-2",
+          "half_1": 0.36815630431755214,
+          "half_2": -0.8733288277724289
+        },
+        {
+          "subject": 16,
+          "session": "ses-3",
+          "half_1": 0.2663280956452434,
+          "half_2": 0.05850430004904698
+        },
+        {
+          "subject": 16,
+          "session": "ses-4",
+          "half_1": 0.15586441927890415,
+          "half_2": 0.24050873185518598
+        },
+        {
+          "subject": 16,
+          "session": "ses-5",
+          "half_1": 0.49575898070133967,
+          "half_2": 0.3236107273193053
+        }
+      ],
+      "new_thresholds_or_rules": 0
+    }
+  },
+  "scientific_computation": {
+    "new_model_fits": 0,
+    "new_model_forward_passes": 0,
+    "raw_EEG_or_query_trials_read": 0,
+    "model_weights_or_tensors_read": 0,
+    "producer_executions": 0,
+    "new_bootstraps_or_hypothesis_tests": 0,
+    "seed_selection": false,
+    "new_gates_or_thresholds": 0
+  },
+  "scope": "Visualization of saved text only; existing saved uncertainty and original primary contrast preserved; no new scientific analysis."
+}

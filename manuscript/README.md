@@ -13,6 +13,17 @@ Its status is **exploratory_working_draft_not_submission_ready**. The NETBCI
 documents below remain historical records and are not pooled with Kumar to
 increase the participant count.
 
+## Complete author-review package
+
+- [English PDF](review_package_20261015/manuscript.pdf) and [editable Word](review_package_20261015/manuscript.docx).
+- [Supplementary methods](kumar_supplementary_methods_20261015.md), with [PDF/Word exports](review_package_20261015/README.md).
+- [Three source-backed figures](figures/kumar2024_20261015/CAPTIONS.md), [verified bibliography](kumar_references_20261015.bib), and [reference verification scope](reference_map.md).
+- [Author review checklist](kumar_author_review_checklist_20261015.md): identity/affiliation/correspondence retrieved from the first paper at the user's request; manuscript-specific declarations remain for the author.
+
+The review package uses the carried-forward PLOS ONE citation format and is not
+a submitted manuscript. All actual results and prior test-exposure limitations
+remain unchanged. No new fit, query inference or strategy was introduced.
+
 ## Historical NETBCI working materials
 
 The [19-ID addendum](all19_addendum_20261011.md) reports 76 verified session joins,

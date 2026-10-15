@@ -1,0 +1,27 @@
+{
+  "status": "authored_text_diff_check_passed_with_immutable_generated_artifact_exceptions",
+  "initial_full_check_exit_code": 2,
+  "initial_whitespace_findings": 4567,
+  "affected_original_paths": [
+    "manuscript/figures/kumar2024_20261015/figure1_target_query_participants.svg",
+    "manuscript/figures/kumar2024_20261015/figure2_cpu_primary_paired_changes.svg",
+    "manuscript/figures/kumar2024_20261015/figure3_csp_signed_support_halves.svg",
+    "research_logs/kumar_manuscript_completion_20261015/run01/typesetting_missing_xecjk.stderr"
+  ],
+  "reason": "Matplotlib SVG path formatting and preserved raw failed typesetter log contain generated whitespace; exact already audited/R2-verified original bytes are retained. No authored scientific text exception.",
+  "SVG_XML_parse_passed": 3,
+  "scoped_check_command": [
+    "git",
+    "diff",
+    "--cached",
+    "--check",
+    "--",
+    ".",
+    ":(exclude)manuscript/figures/kumar2024_20261015/figure3_csp_signed_support_halves.svg",
+    ":(exclude)manuscript/figures/kumar2024_20261015/figure1_target_query_participants.svg",
+    ":(exclude)manuscript/figures/kumar2024_20261015/figure2_cpu_primary_paired_changes.svg",
+    ":(exclude)research_logs/kumar_manuscript_completion_20261015/run01/typesetting_missing_xecjk.stderr"
+  ],
+  "scoped_check_exit_code": 0,
+  "initial_full_check_claimed_clean": false
+}

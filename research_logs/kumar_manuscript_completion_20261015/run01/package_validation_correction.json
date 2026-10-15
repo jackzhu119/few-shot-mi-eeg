@@ -1,0 +1,7 @@
+{
+  "status": "validator_parser_corrected_before_final_checks",
+  "initial_failure": "AssertionError in citation key-set check",
+  "cause": "Raw @ regex wrongly interpreted the corresponding-author email domain as a bibliography citation.",
+  "correction": "Require a non-word predecessor for citation @keys; email domains are excluded. All actual citation keys remain bound to verified BibTeX.",
+  "scientific_inputs_or_results_changed": false
+}

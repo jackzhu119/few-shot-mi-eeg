@@ -1,0 +1,21 @@
+# Manuscript figure captions
+
+## Figure 1 — Target-query decoding by participant
+
+All 18 participants are retained, separated into the six development and 12 remaining participants. Each colored point is one participant's balanced accuracy (BA), with equal weight for the five target sessions. Always-frozen EEGNet uses the mean of all three fixed seeds within each session before averaging sessions; CPU methods each use their single frozen execution. Faint lines connect the same participant across methods. Black diamonds and bars reproduce the saved cohort means and 95% descriptive participant-bootstrap intervals (10,000 replicates, seed 42); intervals were not recomputed for this figure. Labels above each method show the saved mean. The 50% reference is descriptive and is not a new significance test. All methods use identical target-query trial identities, but their information and computation budgets differ: all fit on 40 source TRAIN trials, EEGNet selects an epoch using 20 additional source validation labels and receives no target support, whereas the adaptive CPU methods additionally fit with 19 or 20 labels from the current target support session. Thus these are descriptive comparisons, not a matched-budget ranking of model architectures. Previously exposed cohorts make the follow-up comparison exploratory; class-collapsed predictions remain included.
+
+## Figure 2 — Original CPU primary paired contrast
+
+Participant-wise differences in five-target-session mean BA for CSP/LDA refitting minus source-only CSP/LDA, retaining the original primary cohort of 12 remaining participants. Participants are displayed by numeric identity, not ordered by effect size. Nine differences are positive and three are negative (sub-6, sub-14 and sub-15); none is removed. The black diamond and bar reproduce the original mean difference of +7.42 percentage points and 95% participant-bootstrap interval [+2.49, +12.48] (10,000 replicates, seed 42). This frozen primary contrast intentionally compares different target-label access: both methods begin with 40 source TRAIN trials, while refitting additionally uses the current session's 19 or 20 labeled support trials. The figure adds no hypothesis test and does not reinterpret this support-access contrast as a same-budget architecture comparison. These offline decoding changes do not establish human learning, skill preservation or clinical efficacy.
+
+## Figure 3 — Signed-score consistency across target support halves
+
+The six development participants each contribute five target support sessions. Blue circles and vermilion squares show the first and second chronological halves within each class, connected only within the same session. Values are the saved class-balanced signed margin, (mean right-class source-LDA score − mean left-class score) / (2 × source-score standard deviation), with the source model and score normalization fixed. Shared axes retain all 60 half measurements, including negative margins; the natural zero line is a sign reference and is not a selected gate threshold. Of the 30 sessions, 19 have two positive margins, two have two negative margins and nine have opposite signs. In particular, a positive product of two half margins can also represent two negative orientations. These already audited support-only diagnostics do not establish a reliable adaptive gate; no query results, new threshold, refit or strategy search are used by this plotting task.
+
+## Saved-text sources
+
+- Figure 1: `research_logs/kumar_frozen_query_comparison_20261015/run01/per_participant_endpoints.csv` and `cohort_method_endpoint_summary.csv`.
+- Figure 2: the preserved original primary contrast in `research_logs/kumar_frozen_query_comparison_20261015/run01/comparison_receipt.json`, checked against the participant endpoint CSV.
+- Figure 3: `research_logs/kumar_csp_signed_score_execution_20261015/run02/independent_numerical_audit_run01.json`.
+
+All exported PNG, SVG and PDF files are bound by byte size and SHA256 in the figure-generation receipt. The renderer reads saved CSV/JSON only; it does not read raw EEG, query trials, model weights or tensors, execute a producer, fit a model, perform a forward pass, or select seeds. No saved scientific producer or result is modified.

@@ -1,5 +1,13 @@
 # Longitudinal Motor-Imagery EEG Decoding: Frozen Baselines, Supervised Recalibration, and Task-Measurement Reliability
 
+**Ziyuan Zhu**
+
+College of Artificial Intelligence Medicine, Chongqing Medical University, Chongqing, China
+
+**Corresponding author:** Ziyuan Zhu — zzy2630816871@gmail.com
+
+**ORCID:** [0009-0005-1153-4926](https://orcid.org/0009-0005-1153-4926)
+
 **English working draft; evidence available on 2026-10-15.** This draft reports
 completed offline baselines and measurement diagnostics. The historical project
 direction, Task-Aware Adaptive Decoding for Longitudinal Motor-Imagery EEG,
@@ -31,15 +39,45 @@ in this small-source setting. Previously inspected test identities make subseque
 analyses exploratory. Offline decoding does not
 establish human learning, skill retention or clinical benefit.
 
+**Keywords:** motor imagery; longitudinal EEG; cross-session decoding;
+supervised recalibration; measurement reliability; reproducibility.
+
 ## Introduction
 
-A decoder trained in an early recording session may fail when signal
-statistics change. Recalibration with labeled data from the current session
-can improve decoding, but the benefit may vary between participants. A change
-in signal covariance alone also need not identify a change in task-relevant
-information. Before using such measurements to control adaptation, their
-reliability and decision value need to be established using data allowed for
-model development.
+Motor-imagery EEG decoding maps recorded activity to task labels using a
+pipeline whose learned representation and decision rule may both depend on the
+recording session. Reviews of EEG classification identify nonstationarity,
+small training sets and evaluation design as recurring challenges [@lotte2018].
+A decoder trained in an early session may therefore fail when signal statistics
+change. Supervised recalibration can help, but additional labels and changes in
+the fitted spatial representation must be distinguished from changes in the
+classifier alone. Common spatial patterns (CSP) supplies a useful conventional
+reference for this distinction [@ramoser2000; @blankertz2008].
+
+Compact convolutional decoders such as EEGNet provide a complementary neural
+baseline [@lawhern2018], rather than a guarantee of better transfer. Comparing
+pipelines on identical held-out events controls the evaluation sample, but does
+not equalize their training labels, checkpoint selection or optimization. A
+rigorous longitudinal comparison must account for these information budgets and
+retain unsuccessful fits and predictions instead of reporting only favorable
+seeds or sessions.
+
+We reanalyzed the released multi-session dataset associated with Kumar and
+colleagues' study of transfer learning and BCI skill acquisition [@kumar2024;
+@kumar2024correction; @nemar177]. The original study's online training and feedback provide acquisition
+context; our secondary analysis evaluates offline left-versus-right imagery
+classification. It neither reproduces the original interventions nor measures
+participant skill acquisition. The distinction is especially important when
+interpreting a frozen decoder's performance: failure of one mapping does not
+identify a loss of human control or an absence of all task-related information.
+
+Task-related measurements also require their own validation. A change in signal
+covariance need not identify a change in information useful for classification.
+Likewise, a source-discriminative feature can be unreliable when estimated from
+a small support run. Before using a measurement to control adaptation, its
+definition, run grouping and directional reliability must be established using
+data allowed for model development. A favorable cohort average alone cannot
+justify a session-level decision rule.
 
 The present study separates three questions: whether conventional recalibration
 improves longitudinal decoding under a fixed support budget; how a prespecified
@@ -47,7 +85,9 @@ source-only neural baseline transfers to later sessions; and whether available
 task measurements justify a future adaptation rule. The first question has a
 frozen primary CPU contrast. The latter analyses are exploratory diagnostics
 and additional baselines. No task-aware policy is selected from the reported
-query results.
+query results. The contribution is a linked, auditable evaluation of conventional
+recalibration, a frozen neural reference and measurement reliability under
+explicit access rules, including their negative and heterogeneous outcomes.
 
 ## Methods
 
@@ -56,6 +96,8 @@ query results.
 The source was the already archived Kumar2024 derivative at NEMAR
 `nm000177/v1.0.5`, licensed CC BY 4.0
 ([source release README](https://data.nemar.org/nm000177/v1.0.5/README.md)).
+This is a MOABB-generated BIDS derivative [@jayaram2018], not a new recording
+collection or an independent reproduction of the original acquisition pipeline.
 The frozen selection contained 360 EDF
 recordings, 18 published participant identities, six sessions and 7,200 event
 identities. Forty-four partial events were preserved in the audit but excluded
@@ -131,7 +173,12 @@ specified support labels. Identical query samples do not make EEGNet and CPU
 methods equal-budget architecture comparisons: EEGNet additionally uses the
 source-validation labels for epoch selection, and only the CPU update methods
 use target labels. No causal architecture or compute-efficiency ranking is
-inferred from these differences.
+inferred from these differences. The architecture and implementation follow
+EEGNet and Braindecode [@lawhern2018; @schirrmeister2017]; the exact executed
+constructor and optimization settings are listed in Supplementary Methods S3.
+The covariance regularization and LDA settings are implementation choices of
+the frozen pipeline, rather than parameters selected using target outcomes
+[@ledoit2004].
 
 ### Endpoints and statistical units
 
@@ -143,12 +190,32 @@ averaged within participant/session before the five target sessions were
 averaged within participant. Source query was reported separately. Neither
 seeds, sessions nor trials increased the independent participant count.
 
-Descriptive 95% percentile intervals used 10,000 participant resamples with
-seed 42; paired CPU contrasts resampled paired participant differences.
+Balanced-accuracy and participant-mean reliability summaries used 10,000
+participant resamples with seed 42 for descriptive 95% percentile intervals;
+paired CPU contrasts resampled paired participant differences. The separately
+prespecified session-level drift associations used 2,000 participant-block
+resamples with seed 42, retaining each sampled participant's five sessions.
 Development and remaining cohorts were reported separately; all-18 summaries
 were secondary. Cohort intervals containing 50% were not converted into a
 new formal chance hypothesis test. Previously exposed test results preclude
 describing subsequent same-dataset evaluations as untouched external confirmation.
+Intervals condition on the observed cohort, preprocessing and fitted models;
+they do not estimate uncertainty from alternative training datasets or
+hyperparameter choices. No additional EEGNet-versus-CPU significance test was
+introduced. Computational repetition and seeds do not supply new participants.
+
+### Prespecified drift measures and development-only reliability probes
+
+The descriptive drift analysis compared each target session with the independent
+source query. A source-trained task axis was the normalized difference between
+class means in standardized 44-dimensional mu/beta log-power coordinates;
+one-dimensional Wasserstein distance measured change along that fixed axis.
+Covariance-shape change was measured relative to a source-training Riemannian
+reference in a fixed 21-dimensional common-average-reference basis, after trace
+normalization and fixed shrinkage. This shape proxy does not measure all
+distributional changes or absolute amplitude. Target labels did not define
+either drift predictor. The outcome was target-minus-source frozen-decoder BA;
+target-labeled class summaries were explicitly retrospective descriptions.
 
 The task-measurement reliability probes used only development source training
 and predeclared support. Fixed power, PCA and supervised CSP-score measurements
@@ -157,6 +224,22 @@ controls. The controls are phase-alignment sensitivities, not formal
 permutation p values. Separately, the remaining-cohort drift associations were
 pre-frozen descriptive analyses, not policy selection. No diagnostic selected
 an adaptation threshold or used query outcomes to choose a policy.
+
+Source-run probes trained on one 20-event source run and evaluated the other,
+then reversed the roles. Learned transformations were fitted within each source
+training fold; a transform fitted on all 40 events was not reused to score a
+held-out source run. The supervised diagnostic refitted both CSP and LDA within
+each fold. For support descriptions, the existing 40-event source models and
+source-fitted coordinate scales were held fixed. Each class was split into
+chronological halves within the current support run, without query access.
+Vector cosines and signed source-score contrasts summarized agreement between
+the halves; agreement did not itself establish a useful adaptation decision.
+
+Cyclic label controls retained the prescribed run grouping and enumerated
+label phases. They were not random-label exchangeability tests. All 240
+supervised CSP/LDA fold/rotation pipelines and all associated controls were
+retained. Supplementary Methods S4–S6 define the coordinate scales, half sizes,
+score orientation, control enumeration and handling of degenerate cases.
 
 ## Results
 
@@ -281,6 +364,24 @@ class collapse, small support sets and uncertain drift associations remain
 material constraints. Choosing a favorable feature, seed or threshold after
 looking at these query scores would not resolve them.
 
+The practical implication is conditional. With the specified small current-run
+support allowance, refitting the conventional spatial and decision stages was
+more effective on average than retaining the original mapping. Its benefit was
+not universal, and neither a drift association nor a source-probe score
+identified an independently tested rule for deciding when to update. The weak
+EEGNet result is equally important to retain: it constrains the executed
+small-source pipeline without inviting retrospective tuning to the held-out
+cohort. Reporting the two outcomes together prevents a successful conventional
+contrast from obscuring an unsuccessful neural baseline.
+
+The measurement controls narrow interpretation rather than certify physiology.
+Cyclic shifts retain aspects of label order, but circular boundaries and
+run-specific temporal structure need not be exchangeable. A positive agreement
+measure can also arise when both halves oppose the source direction. These
+observations motivate checking sign, class predictions and participant-level
+heterogeneity together. They do not supply a validated classifier of good or
+bad adaptation opportunities.
+
 ## Limitations and remaining evidence
 
 The sample comprises 18 published identities from one derivative dataset;
@@ -309,10 +410,94 @@ data would be needed for stronger confirmation. Human learning or retention
 claims would additionally require relevant behavior, interventions and delayed
 tests; the present task labels and offline decoder scores cannot supply them.
 
-Author affiliations, contributions, funding, competing interests, institutional
-secondary-data requirements and a complete verified scholarly bibliography
-remain pending provision and review by the authors. No author, funding or ethics
-statement is invented in this working draft.
+Author identity, affiliation and correspondence were carried forward from the
+first manuscript at the author’s request. Contribution roles, funding, competing
+interests and the institutional determination for this secondary analysis remain
+pending provision and review by the author. The verified core references below still require
+the authors' final completeness and journal-format review. No author, funding
+or project-approval statement is invented in this working draft.
+
+## Conclusion
+
+In this frozen offline analysis, full CSP/LDA refitting improved the
+cohort-average endpoint under the specified support-label budget, whereas the
+LDA-only contrast remained uncertain. Always-frozen EEGNet transferred weakly
+under its separate source-validation and training budget. Retained participant
+worsening, class collapse and mixed task-direction reliability limit a universal
+update recommendation. The completed evidence supports transparent reporting of
+conventional baselines and measurement limits; it does not establish an
+effective task-aware gate, human skill retention or clinical benefit.
+
+## Data and code availability
+
+The source derivative is available from the official NEMAR release
+`nm000177/v1.0.5` [@nemar177], with the associated original study and data linked
+by the release [@kumar2024]. The frozen analysis uses that version rather than
+an unspecified latest release. The local release metadata declare CC BY 4.0;
+source attribution and applicable terms must accompany reuse. The 18 identities
+were not pooled with another dataset, and original EEG and model weights are
+excluded from this manuscript repository.
+
+The original article's published correction revises descriptive CSP comparison
+values in its own results [@kumar2024correction]. We cite the corrected source
+record and do not import those published performance values into the present
+tables; our numerical results derive from the frozen secondary-analysis
+predictions and audits described above.
+
+Analysis source, frozen configurations, small participant tables and audit
+records are maintained in
+[jackzhu119/few-shot-mi-eeg](https://github.com/jackzhu119/few-shot-mi-eeg)
+on the `research/learning-preserving-bci` branch. The evidence section and
+Supplementary Methods identify the actual execution commits and SHA256-bound
+artifacts. Private full-byte backups support preservation but are not a public
+data-access endpoint. The repository's reuse license and the final public
+analysis-release designation remain for the authors to determine; neither a
+new license nor a journal release is asserted here.
+
+## Ethics and author declarations
+
+This work analyzes released research data and involved no new participant
+recruitment or intervention. The frozen NEMAR `dataset_description.json`
+attributes the original study's ethics approval to the University of Texas at
+Austin, protocol 2020-03-0073. This is a source-metadata statement, not a new
+approval obtained for the present analysis. Original consent wording and the
+institutional determination for this secondary use must be confirmed by the
+authors before submission; they have not been independently certified here.
+
+- **Author and correspondence:** Ziyuan Zhu; the byline and contact information
+  above follow the user-directed first-paper source. Final author approval and
+  current ORCID profile details remain to be confirmed.
+- **Author contributions:** pending author provision and agreement.
+- **Funding and acknowledgements:** pending author provision; source-study
+  funding is not attributed to the present work.
+- **Competing interests:** pending author declarations.
+- **Secondary-data institutional determination:** pending author confirmation.
+- **Working journal format:** PLOS ONE, Research Article, carried forward from
+  the first-paper materials at the user’s request. Final manuscript-specific
+  declarations and submission approval remain pending. No submission has been made.
+
+## Figures and legends
+
+### Figure 1 — Target-query decoding by participant
+
+![](figures/kumar2024_20261015/figure1_target_query_participants.png){width=100%}
+
+All 18 participants are retained, separated into the six development and 12 remaining participants. Each colored point is one participant's balanced accuracy (BA), with equal weight for the five target sessions. Always-frozen EEGNet uses the mean of all three fixed seeds within each session before averaging sessions; CPU methods each use their single frozen execution. Faint lines connect the same participant across methods. Black diamonds and bars reproduce the saved cohort means and 95% descriptive participant-bootstrap intervals (10,000 replicates, seed 42); intervals were not recomputed for this figure. Labels above each method show the saved mean. The 50% reference is descriptive and is not a new significance test. All methods use identical target-query trial identities, but their information and computation budgets differ: all fit on 40 source TRAIN trials, EEGNet selects an epoch using 20 additional source validation labels and receives no target support, whereas the adaptive CPU methods additionally fit with 19 or 20 labels from the current target support session. Thus these are descriptive comparisons, not a matched-budget ranking of model architectures. Previously exposed cohorts make the follow-up comparison exploratory; class-collapsed predictions remain included.
+
+### Figure 2 — Original CPU primary paired contrast
+
+![](figures/kumar2024_20261015/figure2_cpu_primary_paired_changes.png){width=85%}
+
+Participant-wise differences in five-target-session mean BA for CSP/LDA refitting minus source-only CSP/LDA, retaining the original primary cohort of 12 remaining participants. Participants are displayed by numeric identity, not ordered by effect size. Nine differences are positive and three are negative (sub-6, sub-14 and sub-15); none is removed. The black diamond and bar reproduce the original mean difference of +7.42 percentage points and 95% participant-bootstrap interval [+2.49, +12.48] (10,000 replicates, seed 42). This frozen primary contrast intentionally compares different target-label access: both methods begin with 40 source TRAIN trials, while refitting additionally uses the current session's 19 or 20 labeled support trials. The figure adds no hypothesis test and does not reinterpret this support-access contrast as a same-budget architecture comparison. These offline decoding changes do not establish human learning, skill preservation or clinical efficacy.
+
+### Figure 3 — Signed-score consistency across target support halves
+
+![](figures/kumar2024_20261015/figure3_csp_signed_support_halves.png){width=100%}
+
+The six development participants each contribute five target support sessions. Blue circles and vermilion squares show the first and second chronological halves within each class, connected only within the same session. Values are the saved class-balanced signed margin, (mean right-class source-LDA score − mean left-class score) / (2 × source-score standard deviation), with the source model and score normalization fixed. Shared axes retain all 60 half measurements, including negative margins; the natural zero line is a sign reference and is not a selected gate threshold. Of the 30 sessions, 19 have two positive margins, two have two negative margins and nine have opposite signs. In particular, a positive product of two half margins can also represent two negative orientations. These already audited support-only diagnostics do not establish a reliable adaptive gate; no query results, new threshold, refit or strategy search are used by this plotting task.
+
+Detailed definitions and immutable evidence bindings are provided in the
+[Supplementary Methods](kumar_supplementary_methods_20261015.md).
 
 ## Evidence and reproducibility
 
@@ -353,3 +538,8 @@ not claim a new parent R2 GET, second model forward or independent rehash of
 all 147 original objects. Source
 weights and original EEG remain private and are excluded from the manuscript
 repository. Data redistribution remains subject to the source license.
+
+## References
+
+::: {#refs}
+:::

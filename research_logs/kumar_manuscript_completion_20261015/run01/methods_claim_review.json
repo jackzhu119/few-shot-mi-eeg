@@ -1,0 +1,341 @@
+{
+  "status": "completed_independent_methods_claim_review_main_corrected_supplement_details_supplied",
+  "reviewed_at_utc": "2026-10-15T10:27:34.922006+00:00",
+  "reviewer_agent": "/root/accepted18_readiness_review",
+  "scope": "Read-onlyscientific/statisticalcompletenessreviewofworkingdraft,frozenprotocols,executedcodeandsavedtextaudits;newreviewfilesonly.",
+  "manuscript_snapshot_sha256": "ebdded0443eb304608806d4007aeba9e05e6c76830a979641991ef376483e790",
+  "findings": [
+    {
+      "id": "M01",
+      "priority": "high_reporting_accuracy",
+      "issue": "Generic10,000-bootstrap wording needs scope qualification because executed drift-Spearman association intervals used2,000participant-blockdraws.",
+      "action": "Distinguish10,000BA/reliabilitymean bootstrap from2,000associationblockbootstrap, bothseed42; preserveexistingnumbers.",
+      "sources": [
+        "scripts/verify_analyze_kumar_results.py:67",
+        "research_logs/kumar_cross_session_20261012/independent_review_run01_20261014/task_information_associations.json"
+      ],
+      "new_experiment_required": false,
+      "resolution": "Resolved in expanded main Methods183\u2013187; results unchanged."
+    },
+    {
+      "id": "M02",
+      "priority": "high_reproducibility",
+      "issue": "Reliabilitymethods lack complete sourcefold,supervisedrotation,halfconstruction,orientation/scaledefinitions.",
+      "action": "AddsourceTRAIN20twofoldrefitting;400jointrotations/240pipelines;SOURCE40reusedsupportcoordinates;chronologicalclasshalves;source-onlyStandardScaler;separatevectorcosineandsignedLDAcontrast withfixedscorezero/intercept.",
+      "sources": [
+        "docs/kumar_csp_reliability_plan_20261014.md",
+        "docs/kumar_csp_reliability_methods_review_20261014.md",
+        "scripts/analyze_kumar_csp_signed_score_v1.py"
+      ],
+      "new_experiment_required": false
+    },
+    {
+      "id": "M03",
+      "priority": "medium_reproducibility",
+      "issue": "EEGNetabbreviatedarchitecture/optimizer description omitsconstructor/BN/pooling/maxnorm/loader/normalizationfloorsettings.",
+      "action": "Supplyfrozenconfigvaluesorpreciseaccessiblehash-boundconfigcitation; retainmax-epochvs-patiencedistinction.",
+      "sources": [
+        "configs/kumar_eegnet_gpu_development_20261014.json",
+        "EEGNET_TRAINING_PLAN.md"
+      ],
+      "new_experiment_required": false
+    },
+    {
+      "id": "M04",
+      "priority": "medium_reproducibility",
+      "issue": "BAaveragingmustremainseedscoresratherthanensembleprobs andparticipantsratherthanpooledtrials.",
+      "action": "StateBAformula,three-seedmeanperparticipant/session,five-sessionequalmean,participantresampling;retainmissingclass/seed/sessionunavailablepolicy.",
+      "sources": [
+        "scripts/aggregate_kumar_frozen_queries.py",
+        "scripts/run_kumar_baselines.py:552"
+      ],
+      "new_experiment_required": false
+    },
+    {
+      "id": "M05",
+      "priority": "medium_reporting_accuracy",
+      "issue": "Driftproxydefinitions and2,000blockresamplingneededforspecificreportedassociations.",
+      "action": "DefinecovarianceshapeHelmert/trace/shrinkage/sourceRiemannreferenceandtrain-onlypowerdirectionWasserstein;keepretrospectiveexploratoryinterpretation.",
+      "sources": [
+        "KUMAR_FROZEN_EXPERIMENT_PROTOCOL.md:102",
+        "research_logs/kumar_cross_session_20261012/protocol/task_aware_analysis_plan_frozen_20261013.md:18"
+      ],
+      "new_experiment_required": false
+    },
+    {
+      "id": "M06",
+      "priority": "author_source_review_pending",
+      "issue": "Originalstudyethicsmetadata isavailable, consentfulltextandsecondary-analysisinstitutionalclassificationarenotverified.",
+      "action": "AttributeUT Austinprotocol2020-03-0073toreleasemetadataonly;leaveauthorinstitutionalrequirementsandconsentdocumentationpending;stored403HTMLisnotfulltextproof.",
+      "sources": [
+        "data/public_eeg/kumar2024/nm000177/v1.0.5/dataset_description.json:18",
+        "research_logs/public_data_expansion_20261010/longitudinal_receipts/extra_access_receipts.json:79"
+      ],
+      "new_experiment_required": false
+    },
+    {
+      "id": "M07",
+      "priority": "author_source_review_pending",
+      "issue": "Bibliographyandcorrectioncontent requireverification;DOIsandmetadataavailablebutoriginalpaperfulltextnotreviewedfrom403artifact.",
+      "action": "Cite verified exactversionDOI10.82901/nemar.nm000177.v1.0.5 (DataCiteHTTP200),collectionDOIandexplicitreleaseURL;cite verified originalpaper correction10.1093/pnasnexus/pgae137/fullOAEuropePMCXML. Correction concernsduplicatedoriginalCSPparagraphvalues, notourcomputedresults; no newscientificexecution.",
+      "sources": [
+        "research_logs/public_data_expansion_20261010/longitudinal_receipts/zenodo_kumar2024.json",
+        "docs/public_longitudinal_dataset_audit_20261010.md:75"
+      ],
+      "new_experiment_required": false,
+      "resolution": "Later saved rawDataCite response andEuropePMC correctionfullXML independentlyreadandhashmatched; initialversionDOI/correction-content uncertainty resolved. Originalmainpaper403 andunverifiedconsentremainseparate."
+    },
+    {
+      "id": "M08",
+      "priority": "retain_explicit_limit",
+      "issue": "Correctexistingbudgetqualificationmustnotbeweakened:EEGNet40TRAIN+20validationselection/target0,CPU40TRAIN+validationunselected/target0or19-20.",
+      "action": "KeepEEGNet-vsCPUdescriptiveonly;CPUadaptivemethodsmatchlabelsbutcompute differs;do notfillgapwithnewfits.",
+      "sources": [
+        "research_logs/kumar_frozen_query_comparison_20261015/run01/comparison_receipt.json"
+      ],
+      "new_experiment_required": false
+    },
+    {
+      "id": "M09",
+      "priority": "retain_explicit_limit",
+      "issue": "Noeffectivepolicy,causalarchitectureeffect,biologicalidentityverification,neurallearning,retentionorclinicalconclusionisestablished.",
+      "action": "Keepnegative/inconclusivemeasurements,collapsedcases,allseedsandtest-exposurequalification;nonewthresholdorstrategyselected.",
+      "sources": [
+        "manuscript/kumar_longitudinal_decoding_working_draft_20261015.md",
+        "docs/kumar_csp_reliability_methods_review_20261014.md:109"
+      ],
+      "new_experiment_required": false
+    }
+  ],
+  "unsupported_efficacy_claims_found": false,
+  "numeric_contradictions_found": false,
+  "statistical_reporting_ambiguity_found": true,
+  "retained_verified_values": {
+    "published_participant_ids": 18,
+    "development_ids": 6,
+    "remaining_ids": 12,
+    "sessions_per_id": 6,
+    "full_windows": 7156,
+    "original_events": 7200,
+    "partial_events_preserved": 44,
+    "unique_included_queries": 4290,
+    "partial_queries_excluded": 30,
+    "source_queries": 360,
+    "target_queries": 3930,
+    "source_train_per_id": 40,
+    "source_validation_per_id": 20,
+    "support_sessions": 90,
+    "support_sessions_with19": 14,
+    "support_sessions_with20": 76,
+    "support_events": 1786,
+    "EEGNet_seeds": 3,
+    "EEGNet_source_fits": 54,
+    "BA_mean_bootstrap_draws": 10000,
+    "CSP_reliability_mean_bootstrap_draws": 10000,
+    "Spearman_participant_block_bootstrap_draws": 2000,
+    "bootstrap_seed": 42,
+    "source_CE_replay_absolute_tolerance": 1e-07,
+    "CSP_source_control_pipeline_attempts": 240,
+    "CSP_source_control_successes": 240,
+    "CSP_source_control_failures": 0,
+    "CSP_joint_phase_pair_means": 2400,
+    "CSP_fold_score_evaluations": 4800,
+    "CSP_support_signed_counts": {
+      "both_positive": 19,
+      "both_negative": 2,
+      "opposite_sign": 9
+    }
+  },
+  "ethics_license_status": {
+    "data_license": "CC BY4.0source-reported",
+    "source_original_ethics": "Release metadata reportsTheUniversityofTexasatAustinProtocol2020-03-0073",
+    "source_written_consent_text_verified": false,
+    "source_paper_stored_HTML": "HTTP403challenge;notfulltextreview",
+    "author_secondary_data_institutional_requirements": "pendingauthorreview",
+    "authorship_funding_COI_affiliations": "pendingauthorinputs",
+    "source_correction_content": "FullOAcorrectionPMC10989871/pgae137retrievedandreviewed;correctsduplicatedoriginalCSPparagraphvalues;currentcomputedBA/parametersnotimportedfromthatparagraph.",
+    "historical_version_suffixed_DOI": "NowverifiedbyactualpublicDataCiteHTTP200responsefor exactDOI10.82901/nemar.nm000177.v1.0.5,version1.0.5,publicationYear2026,statefindable;seeappendedsource_verification_update."
+  },
+  "missing_methods_detail_file": "research_logs/kumar_manuscript_completion_20261015/run01/methods_details.md",
+  "methods_details_sha256": "b549d268e62cf0e52714c3aba4fa55c90b55025c4468a9b2ba0cabe9c14cd9f0",
+  "source_files": {
+    "manuscript/kumar_longitudinal_decoding_working_draft_20261015.md": {
+      "exists": true,
+      "sha256": "ebdded0443eb304608806d4007aeba9e05e6c76830a979641991ef376483e790"
+    },
+    "EEGNET_TRAINING_PLAN.md": {
+      "exists": true,
+      "sha256": "7f112eeae7d5b14db2c8c154840dd834ebfc77a316367f52173769e29ee35a86"
+    },
+    "KUMAR_FROZEN_EXPERIMENT_PROTOCOL.md": {
+      "exists": true,
+      "sha256": "ac290f0e2c5ca58b3745d7cccd83c3fd265e5be9978f461ea5ed0fe7f645831e"
+    },
+    "KUMAR_MODEL_ELIGIBILITY_REPORT.md": {
+      "exists": true,
+      "sha256": "14145ea6473a53fc3fa53578ea8ec5700ea92458b8e555959749d393ecac618f"
+    },
+    "configs/kumar_cross_session_20261012.json": {
+      "exists": true,
+      "sha256": "f1b2d0fa870493cc2aaab906fe6d8b1227e45b2a270e06700e3ca137fbfe9c89"
+    },
+    "configs/kumar_eegnet_gpu_development_20261014.json": {
+      "exists": true,
+      "sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+    },
+    "configs/kumar_lowdim_reliability_20261014.json": {
+      "exists": true,
+      "sha256": "2bbbece9835cfbdb33b803a2fce03800102f3c7f92719ab9baf30890ac10b34a"
+    },
+    "configs/kumar_csp_reliability_20261014.json": {
+      "exists": true,
+      "sha256": "4f71724c6be77696bbf8764e7de4795ceb1c9c4a315c1c2b266cc201a1c3da18"
+    },
+    "configs/kumar_frozen_query_operation_20261015.json": {
+      "exists": true,
+      "sha256": "fb3a429776e77a4ee8de96c8c7f2a833a4d311cedd8f0a9bcec3d0c6e8df225a"
+    },
+    "research_logs/kumar_cross_session_20261012/protocol/task_aware_analysis_plan_frozen_20261013.md": {
+      "exists": true,
+      "sha256": "29b278814bbbc493540519df97229ef5c5cddef0a4b466eeb941879a7c116c05"
+    },
+    "research_logs/kumar_cross_session_20261012/independent_review_run01_20261014/task_information_associations.json": {
+      "exists": true,
+      "sha256": "513e7dc195eb0b833969eb07da079c5ca4055d138b011a2c6338c38b4968976f"
+    },
+    "research_logs/kumar_csp_signed_score_execution_20261015/run02/scientific_summary_from_saved_results.json": {
+      "exists": true,
+      "sha256": "14de09c5306169e1f08d84aa8bb822885ea2717ff9da353abc6770a56ae16656"
+    },
+    "research_logs/kumar_frozen_query_comparison_20261015/run01/comparison_receipt.json": {
+      "exists": true,
+      "sha256": "a45664d75a3b1e84373f4af809715a8adb356a7710ba14d0843894e968cd80ae"
+    },
+    "research_logs/kumar_frozen_query_comparison_20261015/run01/independent_comparison_validation.json": {
+      "exists": true,
+      "sha256": "0de01a2d9788316556165a63862a25e0c07f336ae66475d203aadefab45b505a"
+    },
+    "scripts/verify_analyze_kumar_results.py": {
+      "exists": true,
+      "sha256": "885ef0f386af7ae02e0119b894fd633306e80b8d7eea625ad6b9249973228a24"
+    },
+    "scripts/analyze_kumar_lowdim_reliability.py": {
+      "exists": true,
+      "sha256": "c3f19cac305cb72fdbfb539172b198bc67836ec6499730fad8829fe16f27a964"
+    },
+    "scripts/analyze_kumar_csp_signed_score_v1.py": {
+      "exists": true,
+      "sha256": "ebc866734add9769c7b881332cb9362badaa0f6bf401bc2c6dfa717b645960f3"
+    },
+    "docs/kumar_csp_reliability_plan_20261014.md": {
+      "exists": true,
+      "sha256": "b942fdb6265594d632dbfb70a536bd576b9e2d5b13871f8d4e8e4c9721a8b34f"
+    },
+    "docs/kumar_csp_reliability_methods_review_20261014.md": {
+      "exists": true,
+      "sha256": "f53592721e4cff14b7d8466234c99d299f81870e0937346f92f1872b86532600"
+    },
+    "data/public_eeg/kumar2024/nm000177/v1.0.5/dataset_description.json": {
+      "exists": true,
+      "sha256": "3ec4afc49c56dcd35be7c1fe8318a1c463983e1a630a42419bb235c66439a747"
+    },
+    "data/public_eeg/kumar2024/nm000177/v1.0.5/participants.tsv": {
+      "exists": true,
+      "sha256": "1596034e5ba33af6df6870ec82bc17cf4cfd5198d91ffb35daf22e7674410bcd"
+    },
+    "data/public_eeg/kumar2024/nm000177/v1.0.5/README.md": {
+      "exists": true,
+      "sha256": "42b1d38790300854b0746eaad1a9f385e6887211b2ec3c6e1c478e54c52a986f"
+    },
+    "research_logs/public_data_expansion_20261010/kumar2024_ingestion_plan.json": {
+      "exists": true,
+      "sha256": "6c9529674a3028da806669f4363dcd7a98491814df8dab4e202f0e1f557fcb74"
+    },
+    "research_logs/public_data_expansion_20261010/longitudinal_receipts/zenodo_kumar2024.json": {
+      "exists": true,
+      "sha256": "8c64f5bfe34a7a142c74f95d89ca659d7788debe651659b29eeffe9c594588de"
+    },
+    "research_logs/public_data_expansion_20261010/longitudinal_receipts/extra_access_receipts.json": {
+      "exists": true,
+      "sha256": "b0fde7642337065089772efaba5fd2e0307ab4d4f80b67f676611463604beece"
+    },
+    "docs/public_longitudinal_dataset_audit_20261010.md": {
+      "exists": true,
+      "sha256": "40cb894f5dc7f7c6ea4fb9aa21778ff0aff05881f285f4983a0e412ad814d045"
+    }
+  },
+  "actions_performed": {
+    "raw_EEG_reads": 0,
+    "checkpoint_tensor_loads": 0,
+    "model_forward_passes": 0,
+    "fits": 0,
+    "query_signal_or_prediction_reads_for_this_review": 0,
+    "scientific_recomputations": 0,
+    "network_requests": 0,
+    "Pod_operations": 0,
+    "frozen_source_changes": 0
+  },
+  "source_assistance": "Read-onlyeligibility/ethics/source review from childagent;nochildedits/network/experiments.",
+  "authors_do_not_need_to_supply_new_experiment_to_write_existing_offline_evidence": true,
+  "final_main_text_review": {
+    "reviewed_at_utc": "2026-10-15T10:29:38.612201+00:00",
+    "manuscript_sha256": "0df7910447a9377248b296d72914338fd20a09054ccca5feb3ff5cdf9e36d28c",
+    "status": "no_remaining_exact_method_misstatement_found",
+    "bootstrap_reporting_ambiguity_resolved": true,
+    "checks": [
+      "Methods183\u2013187 correctly separate10000BA/reliabilityresamples from2000driftparticipant-blockresamples.",
+      "Methods218\u2013232 correctly stateTRAIN20foldtransform/refit, SOURCE40supportreuse,chronologicalclasshalves,andnonexchangeablephasecontrols.",
+      "Methods153\u2013168 clearlyqualifyEEGNet20validationselection andCPU19/20supportlabeldifferences.",
+      "Ethics442\u2013448 attributesoriginalapprovaltoreleasemetadata andleavesconsent/secondaryinstitutionaldeterminationpending.",
+      "No addedcontroloutcome,matchedarchitecturecausalclaim,effectivegate,retentionorclinicalclaimfound."
+    ],
+    "remaining_detail_location": "SupplementaryMethods S3\u2013S6; exact definitions supplied inmethods_details.md; author-onlydeclarationsremainpending."
+  },
+  "source_verification_update": {
+    "reviewed_at_utc": "2026-10-15T10:31:45.582958+00:00",
+    "status": "exact_version_DOI_and_OA_correction_verified_from_saved_raw_sources",
+    "method": "ReadandhashmatchedreferenceagentactualHTTP200retrievals;no newnetworkrequestbymethodsreviewer.",
+    "exact_version_DOI": "10.82901/nemar.nm000177.v1.0.5",
+    "DataCite_version": "1.0.5",
+    "DataCite_publicationYear": 2026,
+    "DataCite_state": "findable",
+    "correction_DOI": "10.1093/pnasnexus/pgae137",
+    "correction_PMC": "PMC10989871",
+    "correction_actual_XML_bytes": 4378,
+    "correction_scope": "OriginalGRtransferlearningCSPparagraphduplicatedvaluescorrected;originalExpert.3727\u00b1.2924retained,Fix.2120\u00b1.2815,Adapt.2515\u00b1.3082. ThesearenotcurrentBAvalues.",
+    "current_scientific_result_changes": 0,
+    "original_main_paper_fulltext_review_claimed": false,
+    "original_main_paper_403_record_rewritten": false,
+    "consent_verification_status_unchanged": "pendingauthor/sourceverification",
+    "sources": {
+      "research_logs/kumar_manuscript_references_20261015/run01/nemar177_version_datacite.json": {
+        "bytes": 13865,
+        "sha256": "c65e6a698c39aac8f7dfb0a0f1f9e2b9f30e5e72ef5bbaa399fe8852574d0011"
+      },
+      "research_logs/kumar_manuscript_references_20261015/run01/version_and_correction_access_receipts.json": {
+        "bytes": 1737,
+        "sha256": "98284f951a36aeb0285a44f4bdee5374401c1c5c7420cab901829434217acae6"
+      },
+      "research_logs/kumar_manuscript_references_20261015/run01/kumar2024_correction_fulltext.xml": {
+        "bytes": 4378,
+        "sha256": "9a0449d0b6add41822fd2e6e4148c30f582fc847318a28a2518498d99a091f09"
+      },
+      "research_logs/kumar_manuscript_references_20261015/run01/kumar2024_correction_body.txt": {
+        "bytes": 824,
+        "sha256": "a29e6362f2fae1346760c17776147742e4c88e7342bd805ef5dc80d8f74b1b7f"
+      },
+      "research_logs/kumar_manuscript_references_20261015/run01/correction_fulltext_access_receipt.json": {
+        "bytes": 557,
+        "sha256": "fabb446e506ebc7046a4feecdeb416879c823333dcd511ef5697cdcd9c2c50f0"
+      },
+      "research_logs/kumar_manuscript_references_20261015/run01/kumar2024_correction_crossref.json": {
+        "bytes": 2157,
+        "sha256": "9bf5edcd83c6865142a4b0496f88dbafe973230414f6afeda6ce0a4330eb31fd"
+      },
+      "research_logs/kumar_manuscript_references_20261015/run01/kumar2024_correction_europepmc.json": {
+        "bytes": 889,
+        "sha256": "c903b0515a566595cf70fb0cead79db726df9861b73e7b1d2f91ce07df3d11ae"
+      }
+    }
+  }
+}

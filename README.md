@@ -14,6 +14,8 @@ Kumar的54项源模型和一次只读query评估已完成并获真实父侧确�
 当前结果表见[CROSS_SESSION_RESULTS.md](CROSS_SESSION_RESULTS.md)，
 英文事实性工作稿见[Kumar working draft](manuscript/kumar_longitudinal_decoding_working_draft_20261015.md)，
 验收范围见[真实ACK](research_logs/kumar_frozen_query_acceptance_20261015/run01/REPORT.md)。
+完整英文作者审阅包（PDF、Word、补充方法、三张图和核验文献）见
+[manuscript/review_package_20261015](manuscript/review_package_20261015/README.md)。
 下文历史状态按其日期保留；不存在待启动的已冻结源训练队列。
 
 ## 2026-10-13：转入 Kumar 跨会话基线研究

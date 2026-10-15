@@ -1,0 +1,31 @@
+{
+  "scope": "typesetting-only supplement layout proof before final author-source integration",
+  "command": [
+    "pandoc",
+    "/tmp/kumar-supp-layout-proof.md",
+    "--standalone",
+    "--shift-heading-level-by=-1",
+    "--metadata",
+    "title=Supplementary methods",
+    "--pdf-engine=xelatex",
+    "--include-in-header=/tmp/kumar-typesetting-header.tex",
+    "-V",
+    "papersize=a4",
+    "-V",
+    "geometry:margin=20mm",
+    "-V",
+    "mainfont=DejaVu Serif",
+    "-V",
+    "sansfont=DejaVu Sans",
+    "-V",
+    "monofont=DejaVu Sans Mono",
+    "-V",
+    "fontsize=10pt",
+    "-o",
+    "/tmp/kumar-supp-layout-proof.pdf"
+  ],
+  "returncode": 43,
+  "stdout": "",
+  "stderr": "Error producing PDF.\n! Undefined control sequence.\nl.61 \\Urlmuskip\n\n",
+  "scientific_operations": false
+}

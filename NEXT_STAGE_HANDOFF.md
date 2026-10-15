@@ -299,3 +299,53 @@ NEXT_FROZEN_STEP.md. No newtraining/query/gate/Pod/paper1 action occurred.
 New ACK/tables/manuscript fullGET backup is recorded separately in that same
 acceptance directory's r2_full_get_receipt.json; historical main147 receipt and
 its true parentACK are not rewritten or renamed as this later transfer.
+
+# 2026-10-15: complete factual manuscript author-review package
+
+Continue from a2b87c244fed10e3def477a2601cb81df4c23682. The manuscript now has
+expanded source-backed introduction, precise methods and reliability controls,
+discussion, conclusion, data/code availability, attributed source ethics and
+explicit author-specific declarations. Preserve the exact approved title and
+abstract distinction between full refit improvement and uncertain LDA-only
+contrast. All original Results prose and three numerical tables remain unchanged.
+The 10,000 participant-mean bootstrap and separately frozen2,000 participant-
+block drift-association bootstrap are now clearly distinguished.
+
+Ten core references are verified against official Crossref/DataCite/dataset
+records. Exact NEMAR version DOI10.82901/nemar.nm000177.v1.0.5 is verified;
+its repository publication year2026 is distinct from original study2024.
+The original pgae076 article's pgae137 correction was read through public
+EuropePMC XML; it changes its own CSP description, not this study's computed
+results. Original article full-text/consent verification is not claimed.
+Access failures and the rejected unrelated MOABB DOI candidate are preserved.
+
+User directed identity retrieval from paper1. Read-only fixed source
+jackzhu119/cross-subject-mi-eeg d9a11926076bd348696f6e690078955921dac3f8 gives
+Ziyuan Zhu / College of Artificial Intelligence Medicine, Chongqing Medical
+University, Chongqing, China / zzy2630816871@gmail.com / author-supplied ORCID
+0009-0005-1153-4926 / PLOS ONE Research Article working format. Source byline and
+submission fields agree. No paper1 repository or experiment was modified.
+Only requested identity/format fields transfer; paper2 funding/COI/contributions,
+secondary-use determination, final software/public-data release decisions and
+approval to submit remain actual author responsibilities. ORCID profile given/
+family fields were not refreshed or changed. Full paper1 reference originals
+are preserved privately; paper2 Git stores identity excerpts/URLs/hashes only.
+
+Deliverables: manuscript/review_package_20261015/README.md links main PDF12pages,
+editable Word, supplement7pages and author checklist2pages, plus all sources.
+Three saved-result figures have PNG/SVG/PDF, actual PNG review and hashed inputs;
+all worsening/collapse/negative results remain. All21PDF pages were rendered
+and reviewed in contact sheets, with dense pages inspected in detail. Word
+XML/numerical text/3embedded figures were checked; nativeWord layout was not
+rendered. Final exports have no missing-character warnings or text outside
+physical pages. Editorial typesetting/parser failures and superseded exports
+are retained and do not represent scientific retries.
+
+New evidence is under research_logs/kumar_manuscript_completion_20261015/run01/,
+kumar_manuscript_references_20261015/run01/ and kumar_manuscript_figures_20261015/run01/.
+All654protected protocols/configs/ledgers/oldresults/olduntracked files match
+prior bytes. No EEG decode, model forward/fit, query rerun, new gate, new resource,
+Pod or submission action occurred. Actual manuscript/R2 backup proof is recorded
+in the new completion directory; do not alter the original accepted source54 or
+query receipts. Current stage is complete for author scientific review, with
+listed author-specific and final publication tasks, not a completed submission.

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "scope": "saved-text figure rendering only",
+  "pre_execution_format": {
+    "command": "/workspace/.venvs/few-shot-mi-eeg/bin/ruff format research_logs/kumar_manuscript_figures_20261015/run01/render_saved_text_figures.py",
+    "exit_code": 0,
+    "output": "1 file reformatted",
+    "elapsed_seconds": null
+  },
+  "pre_execution_lint": {
+    "command": "/workspace/.venvs/few-shot-mi-eeg/bin/ruff check research_logs/kumar_manuscript_figures_20261015/run01/render_saved_text_figures.py",
+    "exit_code": 0,
+    "output": "All checks passed!",
+    "elapsed_seconds": null
+  },
+  "command": [
+    "/workspace/.venvs/few-shot-mi-eeg/bin/python",
+    "research_logs/kumar_manuscript_figures_20261015/run01/render_saved_text_figures.py"
+  ],
+  "script_sha256_at_execution": "09f5ea5a9eb7f2f258ef32a6afd44ed5558c95d84d311a77e91b699f344a5a5c",
+  "started_at_utc": "2026-10-15T10:31:23.253737+00:00",
+  "returncode": 0,
+  "stdout": "{\"status\": \"completed_saved_text_only\", \"outputs\": 10, \"receipt\": {\"path\": \"research_logs/kumar_manuscript_figures_20261015/run01/figure_generation_receipt.json\", \"bytes\": 19573, \"sha256\": \"5a8e2efd8bf23d8577c659d315f0c6586443b3ac6b4de59717410c866f49d29d\"}}\n",
+  "stderr": "",
+  "elapsed_seconds": 4.361025223006436,
+  "finished_at_utc": "2026-10-15T10:31:27.614861+00:00"
+}
