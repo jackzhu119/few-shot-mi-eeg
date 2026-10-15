@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "started_at": "2026-10-14T07:31:35.542313+00:00",
+  "finished_at": "2026-10-14T07:31:51.352202+00:00",
+  "runtime_seconds": 15.809892056000535,
+  "synthetic": false,
+  "development_subjects": [
+    "sub-1",
+    "sub-4",
+    "sub-7",
+    "sub-10",
+    "sub-13",
+    "sub-16"
+  ],
+  "allowed_roles": [
+    "source_train",
+    "target_support"
+  ],
+  "subject_count": 6,
+  "trial_count": 836,
+  "source_file_count": 42,
+  "source_ancestor_commit": "757107fdc369d82b71960ab567d2f8730201337c",
+  "executed_script_sha256": "d48a69740569395feaec1196fe90ea9c4de2a213783809af809d65e7d713820e",
+  "adapter_sha256": "4d1d9439d3adad80532ce24e59d203bea04e353cf5235788e979ab1f79883d57",
+  "frozen_config_sha256": "f1b2d0fa870493cc2aaab906fe6d8b1227e45b2a270e06700e3ca137fbfe9c89",
+  "pinned_source_manifest_sha256": "377eb25e0938fde905b023a309b8b7adebd1a4779fd48c3d2a2d6ce22cb16750",
+  "metadata_root": "/workspace/few-shot-mi-eeg/research_logs/kumar_cross_session_20261012/lowdim_development_inputs_run01_20261014",
+  "data_root": "/workspace/few-shot-mi-eeg/data/public_eeg/kumar2024/nm000177/v1.0.5",
+  "subject_receipts": [
+    {
+      "subject": "sub-1",
+      "path": "sub-1/subject_receipt.json",
+      "sha256": "bb0f8f8b789254d2d15601bebd2f09b1a522b5e0a17db09ff4f06e36a680a93e"
+    },
+    {
+      "subject": "sub-4",
+      "path": "sub-4/subject_receipt.json",
+      "sha256": "f3eedc2a005e5728d3ef1bcef75027363544766035d8af9caf7c5be215abf3c7"
+    },
+    {
+      "subject": "sub-7",
+      "path": "sub-7/subject_receipt.json",
+      "sha256": "dbf3b6c006e8d5fcf5c843d3917c13359245759cba109a20d873f97e987f9c18"
+    },
+    {
+      "subject": "sub-10",
+      "path": "sub-10/subject_receipt.json",
+      "sha256": "1bc481618d8b9dde09ad409a2317911afcf9a0a3ec84fa1e6a9ecfdb58366c74"
+    },
+    {
+      "subject": "sub-13",
+      "path": "sub-13/subject_receipt.json",
+      "sha256": "94572b900c51dfe58606a00cb07d58779889cec6a4018341b617d9196bc56ea7"
+    },
+    {
+      "subject": "sub-16",
+      "path": "sub-16/subject_receipt.json",
+      "sha256": "55b78a2b2152049cf5356e82376532f30561766555789425aed2ad9d322efcfb"
+    }
+  ],
+  "runtime_versions": {
+    "python": "3.11.16",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "mne": "1.10.2"
+  },
+  "all_metadata_bytes_and_trial_order_preserved": true,
+  "query_windows_read": 0,
+  "validation_windows_read": 0,
+  "final_cohort_access": false,
+  "partial_windows_read": 0,
+  "learned_transform_fits": 0,
+  "decoder_fits": 0
+}

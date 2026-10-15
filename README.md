@@ -5,6 +5,16 @@
 核心问题：**When should a decoder adapt to cross-session EEG changes, and does
 task-relevant information explain performance changes better than total signal drift?**
 
+## 当前进度与论文入口（2026-10-15）
+
+**[当前完整进度、论文状态及剩余事项](CURRENT_PROJECT_STATUS.md)**。
+54/54 源 EEGNet 模型及一次只读 query 评估已完成并分别验收，剩余冻结训练为 0。
+目标为 PLOS ONE / Research Article；[最新论文 PDF/Word 与补充材料](manuscript/review_package_author_confirmed_20261015/README.md)
+已归档，作者 8 项事实回复已落实。当前为探索性作者审阅稿，机构二次分析结论、
+具体软件许可与最终投稿审阅仍待完成，本任务未代作者投稿。
+GitHub 保存代码/文本证据/稿件，EEG 数组、权重及原实验包保存在私有 R2。
+以下各日期条目保留历史状态；恢复工作前先读当前入口，勿重启已完成实验。
+
 ## 2026-10-15：冻结基线结果与query真实验收
 
 Kumar的54项源模型和一次只读query评估已完成并获真实父侧确认，原源模型账本不变。

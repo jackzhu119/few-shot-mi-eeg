@@ -1,5 +1,11 @@
 # Manuscript working materials
 
+Current repository-wide scientific completion, manuscript deliverables, author
+confirmations and remaining submission requirements are summarized in
+[CURRENT_PROJECT_STATUS.md](../CURRENT_PROJECT_STATUS.md). All54 source models
+and the separately accepted single frozen query evaluation are complete; this
+is not a request for further training or query evaluation.
+
 ## Current Kumar2024 working draft
 
 The current Kumar2024 research manuscript is

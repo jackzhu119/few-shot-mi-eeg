@@ -1,5 +1,18 @@
 # Current scientific handoff
 
+## 最新有效状态：2026-10-15，论文作者确认版已完成
+
+先读[当前进度及论文状态](CURRENT_PROJECT_STATUS.md)与
+[本次 Git/R2 同步记录](research_logs/kumar_project_status_sync_20261015/run01/README.md)。
+源模型 accepted54 和一次只读 query 评估均已完成并获真实确认，无剩余冻结训练。
+最新稿件为 manuscript/review_package_author_confirmed_20261015/ 的 PDF/Word；
+作者 8 项回答已记录，机构二次分析结论仍“尚无结论”，不能冒称豁免。
+当前只剩投稿前的机构/源同意表述、许可/公开范围、期刊格式及最终作者审阅事项。
+已知旧 CSP 准备脚本与文本证据本次原样归档并标为历史；数组留私有 R2，不进入 Git。
+不得执行下文历史命令、重开已结束队列/claim、重训54或再次query，亦不操作Pod。
+
+**下文是按原日期保留的历史，不是当前运行授权或最新状态。**
+
 2026-10-15用户在真实run01失败后仅授权procfs兼容修复及非科学实测。现以完整可见PID/PPID/session快照、PID/starttime历史及TGID RSS去重替代缺失children接口；不可读/复用/拓扑变化/不完整可见性仍fail-closed，已观察独立session后代用pidfd身份安全清理，根进程退出不冒充全树退出，原0.25s/2GiB/1GiB/deadline不变。当前主机05:58:40–42 UTC真实合成父子孙16664/16665/16666四次采样完整；孙进程改变SID/PGID仍计入，独立RSS总139370496字节逐值一致，全部退出回收。80相关测试及独立复核通过；launcher SHA12337f162d0f27696e512f1b0e7ff099307520e859628da32c05e92ed781d185，CPU合同SHA173f944f4b1df363fb7c0af1025ef6b9d8361979c8397d9c5a6083beae3420ab，仅入口pin更新。原失败20对象40972字节已R2完整GET零失败，回执SHAb5524eeb9aa945535766dcfdba9dab224cb79b6910182694241adbe2d1f48a29。run01 claim/授权/退出及05:27–07:27窗口不变，未第二次CSP/EEGNet/query/Pod；默认metadata门因旧claim继续关闭。费用阻塞政策按最新用户明确记录superseded-by-user，不计算余额/费用或伪造历史门通过，36未释放。完整修复/实机证明/独立报告在research_logs/kumar_procfs_compatibility_20261015/run01，dot决定恢复。
 
 2026-10-15 05:27 UTC父侧通过用户明确授权一次当前Codex CPU CSP operation，固定32164c0/合同7b94420f，窗口05:27–07:27 UTC保持。实际默认前检及入口内置前检通过，主机94346a2083c4/boot02e1dd56-6faf-45ed-b710-a28705535fb6/PID1 ticks54绑定；launcher16107于05:41:45.338291 UTC派发，consumer16119于05:41:45.522564 UTC启动。首轮监测读取/proc/16119/task/16119/children返回FileNotFoundError，05:41:45.524682 SIGTERM，consumer退出-15，launcher退出1。状态launcher_failed_preserved，日志0字节、无输出目录/保存科学结果；不据此声称严格证明从未进入任何fit。随后只读观察者自身children接口也不存在，根因未确定；未重试/修代码/清claim/动Pod，零自动重试门生效。真实外部authorization/cost-scope保留checkout外，原claim/异常/退出证据和独立核对见research_logs/kumar_csp_signed_score_execution_20261015/run01。18账本不变，36未授权，科学诊断未完成；不得因原窗口尚未到期重开同一operation。

@@ -1,0 +1,16 @@
+{
+  "reviewed_by": "independent Codex subagent pending_csp_archive_review",
+  "existing_source_bytes_preserved": true,
+  "source_sha256": "f2a0eb4831d78c4cbef54656c56c5ee7c085c697eff287c64dd535a5bdb7a5ad",
+  "test_sha256": "d7f794e95b715f5c6e431ed0556339b56cb103a39374e46550bc9f4b64eae404",
+  "test_command": "PYTHONDONTWRITEBYTECODE=1 timeout 180s /workspace/.venvs/few-shot-mi-eeg/bin/python -B -m pytest -q -p no:cacheprovider tests/test_kumar_csp_reliability.py",
+  "pytest_exit_code": 0,
+  "pytest_captured_result": "12 passed in 9.09s",
+  "test_scope": "Only existing synthetic/mock/tempfile tests; no real EEG, query, weights or scientific execution.",
+  "ruff_command": "/workspace/.venvs/few-shot-mi-eeg/bin/ruff check --no-cache --output-format json scripts/analyze_kumar_csp_reliability.py tests/test_kumar_csp_reliability.py",
+  "ruff_exit_code": 0,
+  "ruff_findings": [],
+  "archival_caveat": "Old script retains broad except Exception spanning fit/predict/replay/save/hash. Synthetic test pass does not fix this known defect; archive is superseded, not a current execution consumer.",
+  "actual_executed_consumer": "scripts/analyze_kumar_csp_signed_score_v1.py",
+  "actual_consumer_sha256": "ebc866734add9769c7b881332cb9362badaa0f6bf401bc2c6dfa717b645960f3"
+}

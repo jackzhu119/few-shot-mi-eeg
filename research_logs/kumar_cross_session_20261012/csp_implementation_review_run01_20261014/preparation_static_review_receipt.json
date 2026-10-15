@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "status": "passed_static_preparation_review",
+  "reviewed_at_utc": "2026-10-14T07:33:51.432293+00:00",
+  "review_scope": "static code and frozen-plan review plus independent byte-hash/metadata receipt-chain validation; no raw EDF opened, no tensors numerically decoded, no estimator fits",
+  "reviewer": "/root/csp_measurement_methods",
+  "frozen_scientific_commit": "757107fdc369d82b71960ab567d2f8730201337c",
+  "source_files_reviewed": [
+    {
+      "path": "scripts/prepare_kumar_development_epochs.py",
+      "sha256": "d48a69740569395feaec1196fe90ea9c4de2a213783809af809d65e7d713820e",
+      "bytes": 16775
+    },
+    {
+      "path": "src/learning_preserving_bci/datasets/kumar.py",
+      "sha256": "4d1d9439d3adad80532ce24e59d203bea04e353cf5235788e979ab1f79883d57",
+      "bytes": 17186
+    },
+    {
+      "path": "tests/test_kumar_development_epochs.py",
+      "sha256": "b6a98bfdad9645995d0d4e5d849266e35dc206bb2315e926cbec07ac3b827d55",
+      "bytes": 11734
+    },
+    {
+      "path": "docs/kumar_csp_reliability_plan_20261014.md",
+      "sha256": "b942fdb6265594d632dbfb70a536bd576b9e2d5b13871f8d4e8e4c9721a8b34f",
+      "bytes": 5757
+    },
+    {
+      "path": "docs/kumar_csp_reliability_methods_review_20261014.md",
+      "sha256": "f53592721e4cff14b7d8466234c99d299f81870e0937346f92f1872b86532600",
+      "bytes": 10719
+    },
+    {
+      "path": "configs/kumar_csp_reliability_20261014.json",
+      "sha256": "4f71724c6be77696bbf8764e7de4795ceb1c9c4a315c1c2b266cc201a1c3da18",
+      "bytes": 1028
+    },
+    {
+      "path": "configs/kumar_cross_session_20261012.json",
+      "sha256": "f1b2d0fa870493cc2aaab906fe6d8b1227e45b2a270e06700e3ca137fbfe9c89",
+      "bytes": 7307
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_reliability_freeze_run01_20261014/freeze_receipt.json",
+      "sha256": "c1c6eb05e422ad9dcf50227d0ef6849fdd5e7f8928a7b9f22ef17886c937037c",
+      "bytes": 550
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/preparation_receipt.json",
+      "sha256": "f4b3a3bda5533d64c16c9d55e0c15bd934ade5d86c07cf444f340ab7a75e7964",
+      "bytes": 2517
+    }
+  ],
+  "hash_and_metadata_checks": "passed",
+  "subject_count": 6,
+  "trial_count": 836,
+  "selected_raw_file_count": 42,
+  "restricted_subject_evidence": [
+    {
+      "subject": "sub-1",
+      "metadata": {
+        "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-1/included_trial_metadata.json",
+        "sha256": "c2bc368da49884c224716a775021f273f7b1b2ab61e1f0a9b0a5176399a86abb",
+        "bytes": 176498
+      },
+      "tensor_byte_hash": {
+        "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-1/restricted_epochs.npz",
+        "sha256": "50a4714a3b118c5c784ad65ae290e7fe0074b2dad4b426d6ac71a4eeb0395b41",
+        "bytes": 7281428
+      },
+      "subject_receipt": {
+        "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-1/subject_receipt.json",
+        "sha256": "bb0f8f8b789254d2d15601bebd2f09b1a522b5e0a17db09ff4f06e36a680a93e",
+        "bytes": 72892
+      },
+      "trial_count": 139,
+      "source_file_count": 7,
+      "role_counts": {
+        "source_train": 40,
+        "target_support": 99
+      },
+      "quality_flags_retained": 22
+    },
+    {
+      "subject": "sub-4",
+      "metadata": {
+        "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-4/included_trial_metadata.json",
+        "sha256": "56bb545778f46af83834a98e939072412746722a646cd2f9852551b047c96da0",
+        "bytes": 176589
+      },
+      "tensor_byte_hash": {
+        "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-4/restricted_epochs.npz",
+        "sha256": "7de39b345cba461de7aaa49788770c89e29360b1bb7e1b16916541e091f8f271",
+        "bytes": 7280151
+      },
+      "subject_receipt": {
+        "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-4/subject_receipt.json",
+        "sha256": "f3eedc2a005e5728d3ef1bcef75027363544766035d8af9caf7c5be215abf3c7",
+        "bytes": 72930
+      },
+      "trial_count": 139,
+      "source_file_count": 7,
+      "role_counts": {
+        "source_train": 40,
+        "target_support": 99
+      },
+      "quality_flags_retained": 20
+    },
+    {
+      "subject": "sub-7",
+      "metadata": {
+        "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-7/included_trial_metadata.json",
+        "sha256": "d3d97e52208333034bac9bc34fe3ab4c6c9af15f24e9b1cad71a9ca663143515",
+        "bytes": 177841
+      },
+      "tensor_byte_hash": {
+        "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-7/restricted_epochs.npz",
+        "sha256": "4f48b0c16799acaf51cbca5fec905bc567c8ec8a844a746528633c4f6eeedf11",
+        "bytes": 7329155
+      },
+      "subject_receipt": {
+        "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-7/subject_receipt.json",
+        "sha256": "dbf3b6c006e8d5fcf5c843d3917c13359245759cba109a20d873f97e987f9c18",
+        "bytes": 73421
+      },
+      "trial_count": 140,
+      "source_file_count": 7,
+      "role_counts": {
+        "source_train": 40,
+        "target_support": 100
+      },
+      "quality_flags_retained": 10
+    },
+    {
+      "subject": "sub-10",
+      "metadata": {
+        "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-10/included_trial_metadata.json",
+        "sha256": "1c334153d703a1c263df479eaae980702d3105a29f29c48aac197ea3352df203",
+        "bytes": 177101
+      },
+      "tensor_byte_hash": {
+        "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-10/restricted_epochs.npz",
+        "sha256": "e827603ff0942eaec2bf1d7ed0c4af313ef5023c4b0cf86f0951af8afd0d6ee7",
+        "bytes": 7275878
+      },
+      "subject_receipt": {
+        "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-10/subject_receipt.json",
+        "sha256": "1bc481618d8b9dde09ad409a2317911afcf9a0a3ec84fa1e6a9ecfdb58366c74",
+        "bytes": 73498
+      },
+      "trial_count": 139,
+      "source_file_count": 7,
+      "role_counts": {
+        "source_train": 40,
+        "target_support": 99
+      },
+      "quality_flags_retained": 2
+    },
+    {
+      "subject": "sub-13",
+      "metadata": {
+        "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-13/included_trial_metadata.json",
+        "sha256": "015a93fa89242ffd302a2b1cfb2f28bbc7cd344052f95473359f3a284a511d96",
+        "bytes": 178405
+      },
+      "tensor_byte_hash": {
+        "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-13/restricted_epochs.npz",
+        "sha256": "0b3778695f5e78bd086e05fe259b539ada0b2f5e4717139416a83400ca249ce9",
+        "bytes": 7330873
+      },
+      "subject_receipt": {
+        "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-13/subject_receipt.json",
+        "sha256": "94572b900c51dfe58606a00cb07d58779889cec6a4018341b617d9196bc56ea7",
+        "bytes": 73979
+      },
+      "trial_count": 140,
+      "source_file_count": 7,
+      "role_counts": {
+        "source_train": 40,
+        "target_support": 100
+      },
+      "quality_flags_retained": 26
+    },
+    {
+      "subject": "sub-16",
+      "metadata": {
+        "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-16/included_trial_metadata.json",
+        "sha256": "0db92a718f649a9ed1f5a5dc521f4ac7abe21be0079f47d5f5ee9e87f263bb91",
+        "bytes": 177097
+      },
+      "tensor_byte_hash": {
+        "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-16/restricted_epochs.npz",
+        "sha256": "cd3d41fa96bff2056a324c18b319ebf21c1b788530d527cb44e1f2b26e1a9ec3",
+        "bytes": 7288906
+      },
+      "subject_receipt": {
+        "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-16/subject_receipt.json",
+        "sha256": "55b78a2b2152049cf5356e82376532f30561766555789425aed2ad9d322efcfb",
+        "bytes": 73495
+      },
+      "trial_count": 139,
+      "source_file_count": 7,
+      "role_counts": {
+        "source_train": 40,
+        "target_support": 99
+      },
+      "quality_flags_retained": 5
+    }
+  ],
+  "blocking_preparation_findings": [],
+  "execution_proof_limits": [
+    "whole-file checksum verification reads all EDF bytes; MNE header/annotation and record-granularity accesses are not an OS-level zero-byte proof",
+    "reported zero query/partial windows refer to requested numerical epochs and algorithm inputs",
+    "historical native event/label audit is reused through exact source-file/window/hash and metadata bindings; it is not independently regenerated here",
+    "no independent re-read/reprocessing of raw EDFs or numerical tensor verification is claimed by this static review",
+    "consumer analysis implementation has not yet been accepted by this receipt"
+  ],
+  "new_algorithm_implemented": false,
+  "adaptation_gate_threshold_selected": false,
+  "adaptation_efficacy_evaluated": false,
+  "formal_neural_or_human_learning_claim": false,
+  "independent_synthetic_test_execution_in_this_review": false
+}

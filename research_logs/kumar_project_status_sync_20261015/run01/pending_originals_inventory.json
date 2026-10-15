@@ -1,0 +1,474 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-15T11:20:45.787584+00:00",
+  "status": "read_only_byte_inventory_completed",
+  "purpose": "Archive previously untracked historical CSP preparation evidence while keeping six EEG epoch arrays out of GitHub.",
+  "scope": {
+    "original_directories": [
+      "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014",
+      "research_logs/kumar_cross_session_20261012/csp_implementation_review_run01_20261014"
+    ],
+    "original_files_modified": false,
+    "new_scientific_execution": false,
+    "array_numeric_decode_performed": false,
+    "query_or_raw_eeg_loaded": false,
+    "network_access_performed": false,
+    "credentials_accessed": false,
+    "pod_access_performed": false,
+    "sha256_method": "SHA256 of complete file bytes; NPZ containers were byte-hashed only and were not opened as arrays."
+  },
+  "totals": {
+    "files": 20,
+    "bytes": 45302192,
+    "git_candidate_json_files": 14,
+    "git_candidate_json_bytes": 1515801,
+    "private_npz_files": 6,
+    "private_npz_bytes": 43786391,
+    "files_with_exact_historical_r2_receipt_match": 6,
+    "files_without_tracked_exact_prior_r2_proof": 14
+  },
+  "metadata_scope": {
+    "inspection": "Existing JSON trial metadata and preparation receipts only; labels/roles were counted without reopening scientific numerical data.",
+    "trial_count": 836,
+    "role_counts": {
+      "source_train": 240,
+      "target_support": 596
+    },
+    "cohort_counts": {
+      "development": 836
+    },
+    "query_trial_count": 0,
+    "validation_trial_count": 0,
+    "recorded_source_file_count": 42,
+    "per_subject": [
+      {
+        "subject": "sub-1",
+        "trial_count": 139,
+        "role_counts": {
+          "source_train": 40,
+          "target_support": 99
+        },
+        "cohort_counts": {
+          "development": 139
+        }
+      },
+      {
+        "subject": "sub-10",
+        "trial_count": 139,
+        "role_counts": {
+          "source_train": 40,
+          "target_support": 99
+        },
+        "cohort_counts": {
+          "development": 139
+        }
+      },
+      {
+        "subject": "sub-13",
+        "trial_count": 140,
+        "role_counts": {
+          "source_train": 40,
+          "target_support": 100
+        },
+        "cohort_counts": {
+          "development": 140
+        }
+      },
+      {
+        "subject": "sub-16",
+        "trial_count": 139,
+        "role_counts": {
+          "source_train": 40,
+          "target_support": 99
+        },
+        "cohort_counts": {
+          "development": 139
+        }
+      },
+      {
+        "subject": "sub-4",
+        "trial_count": 139,
+        "role_counts": {
+          "source_train": 40,
+          "target_support": 99
+        },
+        "cohort_counts": {
+          "development": 139
+        }
+      },
+      {
+        "subject": "sub-7",
+        "trial_count": 140,
+        "role_counts": {
+          "source_train": 40,
+          "target_support": 100
+        },
+        "cohort_counts": {
+          "development": 140
+        }
+      }
+    ],
+    "preparation_receipt_reported_query_windows_read": 0,
+    "preparation_receipt_reported_validation_windows_read": 0
+  },
+  "tracked_evidence_search": {
+    "source": "Current checkout git ls-files paths",
+    "text_suffixes_searched": [
+      ".csv",
+      ".json",
+      ".jsonl",
+      ".log",
+      ".md",
+      ".txt"
+    ],
+    "tracked_text_files_searched": 4050,
+    "method": "Exact original SHA256 string matching across tracked JSON/JSONL/Markdown/text/CSV/log files, followed by inspection of matching receipt entries and their byte lengths.",
+    "result": "Six included_trial_metadata.json files have historical full-GET/SHA256 proof in the cited lowdim receipt. No exact R2 object/full-GET proof was found for the remaining fourteen original files.",
+    "limitation": "Absence from these tracked records does not establish that no private or untracked backup exists. Hash preservation records and scientific input bindings are not upload receipts."
+  },
+  "historical_r2_receipt": {
+    "path": "research_logs/recovery_20261014/lowdim_evidence_R2_run01.json",
+    "bytes": 244648,
+    "sha256": "772296ef9f94829fa571c96f529c9c2aee0ea1b15855e101baf3a749ae616841",
+    "status": "completed",
+    "readback_mode": "all",
+    "totals": {
+      "planned_files": 294,
+      "planned_bytes": 18483470,
+      "verified_files": 294,
+      "verified_bytes": 18483470,
+      "failed_files": 0,
+      "full_get_sha256_verified_files": 294,
+      "uploaded_bytes": 18483470,
+      "readback_bytes": 18483470
+    },
+    "new_remote_read_performed": false
+  },
+  "files": [
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/preparation_receipt.json",
+      "extension": ".json",
+      "bytes": 2517,
+      "sha256": "f4b3a3bda5533d64c16c9d55e0c15bd934ade5d86c07cf444f340ab7a75e7964",
+      "git_candidate": true,
+      "storage_classification": "git_text_metadata_or_review_receipt",
+      "array_numeric_decode_performed": false,
+      "existing_exact_historical_r2_matches": [],
+      "tracked_exact_prior_r2_proof_found": false,
+      "r2_evidence_limit": "No exact prior R2 object/full-GET receipt match was found in tracked evidence searched. This is not proof that the item was never uploaded; preservation hashes and input bindings alone do not prove an R2 upload."
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-1/included_trial_metadata.json",
+      "extension": ".json",
+      "bytes": 176498,
+      "sha256": "c2bc368da49884c224716a775021f273f7b1b2ab61e1f0a9b0a5176399a86abb",
+      "git_candidate": true,
+      "storage_classification": "git_text_metadata_or_review_receipt",
+      "array_numeric_decode_performed": false,
+      "existing_exact_historical_r2_matches": [
+        {
+          "receipt_path": "research_logs/recovery_20261014/lowdim_evidence_R2_run01.json",
+          "receipt_bytes": 244648,
+          "receipt_sha256": "772296ef9f94829fa571c96f529c9c2aee0ea1b15855e101baf3a749ae616841",
+          "receipt_files_entry_index_zero_based": 9,
+          "entry_relative_path": "lowdim_development_inputs_run01_20261014/sub-1/included_trial_metadata.json",
+          "object_key": "few-shot-mi-eeg/research-evidence/task-aware-kumar/20261014/lowdim-reliability-dev-run01/lowdim_development_inputs_run01_20261014/sub-1/included_trial_metadata.json",
+          "entry_status": "uploaded_content_verified",
+          "selected_for_full_readback": true,
+          "verification": "full_get_sha256_verified",
+          "get_http_status": 200,
+          "readback_bytes": 176498,
+          "evidence_scope": "Existing tracked historical receipt explicitly records a complete GET/SHA256 check of the exact same original file bytes under a different metadata path. No new remote read was performed by this inventory."
+        }
+      ],
+      "tracked_exact_prior_r2_proof_found": true
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-1/restricted_epochs.npz",
+      "extension": ".npz",
+      "bytes": 7281428,
+      "sha256": "50a4714a3b118c5c784ad65ae290e7fe0074b2dad4b426d6ac71a4eeb0395b41",
+      "git_candidate": false,
+      "storage_classification": "private_eeg_epoch_binary_excluded_from_git",
+      "array_numeric_decode_performed": false,
+      "existing_exact_historical_r2_matches": [],
+      "tracked_exact_prior_r2_proof_found": false,
+      "r2_evidence_limit": "No exact prior R2 object/full-GET receipt match was found in tracked evidence searched. This is not proof that the item was never uploaded; preservation hashes and input bindings alone do not prove an R2 upload."
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-1/subject_receipt.json",
+      "extension": ".json",
+      "bytes": 72892,
+      "sha256": "bb0f8f8b789254d2d15601bebd2f09b1a522b5e0a17db09ff4f06e36a680a93e",
+      "git_candidate": true,
+      "storage_classification": "git_text_metadata_or_review_receipt",
+      "array_numeric_decode_performed": false,
+      "existing_exact_historical_r2_matches": [],
+      "tracked_exact_prior_r2_proof_found": false,
+      "r2_evidence_limit": "No exact prior R2 object/full-GET receipt match was found in tracked evidence searched. This is not proof that the item was never uploaded; preservation hashes and input bindings alone do not prove an R2 upload."
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-10/included_trial_metadata.json",
+      "extension": ".json",
+      "bytes": 177101,
+      "sha256": "1c334153d703a1c263df479eaae980702d3105a29f29c48aac197ea3352df203",
+      "git_candidate": true,
+      "storage_classification": "git_text_metadata_or_review_receipt",
+      "array_numeric_decode_performed": false,
+      "existing_exact_historical_r2_matches": [
+        {
+          "receipt_path": "research_logs/recovery_20261014/lowdim_evidence_R2_run01.json",
+          "receipt_bytes": 244648,
+          "receipt_sha256": "772296ef9f94829fa571c96f529c9c2aee0ea1b15855e101baf3a749ae616841",
+          "receipt_files_entry_index_zero_based": 11,
+          "entry_relative_path": "lowdim_development_inputs_run01_20261014/sub-10/included_trial_metadata.json",
+          "object_key": "few-shot-mi-eeg/research-evidence/task-aware-kumar/20261014/lowdim-reliability-dev-run01/lowdim_development_inputs_run01_20261014/sub-10/included_trial_metadata.json",
+          "entry_status": "uploaded_content_verified",
+          "selected_for_full_readback": true,
+          "verification": "full_get_sha256_verified",
+          "get_http_status": 200,
+          "readback_bytes": 177101,
+          "evidence_scope": "Existing tracked historical receipt explicitly records a complete GET/SHA256 check of the exact same original file bytes under a different metadata path. No new remote read was performed by this inventory."
+        }
+      ],
+      "tracked_exact_prior_r2_proof_found": true
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-10/restricted_epochs.npz",
+      "extension": ".npz",
+      "bytes": 7275878,
+      "sha256": "e827603ff0942eaec2bf1d7ed0c4af313ef5023c4b0cf86f0951af8afd0d6ee7",
+      "git_candidate": false,
+      "storage_classification": "private_eeg_epoch_binary_excluded_from_git",
+      "array_numeric_decode_performed": false,
+      "existing_exact_historical_r2_matches": [],
+      "tracked_exact_prior_r2_proof_found": false,
+      "r2_evidence_limit": "No exact prior R2 object/full-GET receipt match was found in tracked evidence searched. This is not proof that the item was never uploaded; preservation hashes and input bindings alone do not prove an R2 upload."
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-10/subject_receipt.json",
+      "extension": ".json",
+      "bytes": 73498,
+      "sha256": "1bc481618d8b9dde09ad409a2317911afcf9a0a3ec84fa1e6a9ecfdb58366c74",
+      "git_candidate": true,
+      "storage_classification": "git_text_metadata_or_review_receipt",
+      "array_numeric_decode_performed": false,
+      "existing_exact_historical_r2_matches": [],
+      "tracked_exact_prior_r2_proof_found": false,
+      "r2_evidence_limit": "No exact prior R2 object/full-GET receipt match was found in tracked evidence searched. This is not proof that the item was never uploaded; preservation hashes and input bindings alone do not prove an R2 upload."
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-13/included_trial_metadata.json",
+      "extension": ".json",
+      "bytes": 178405,
+      "sha256": "015a93fa89242ffd302a2b1cfb2f28bbc7cd344052f95473359f3a284a511d96",
+      "git_candidate": true,
+      "storage_classification": "git_text_metadata_or_review_receipt",
+      "array_numeric_decode_performed": false,
+      "existing_exact_historical_r2_matches": [
+        {
+          "receipt_path": "research_logs/recovery_20261014/lowdim_evidence_R2_run01.json",
+          "receipt_bytes": 244648,
+          "receipt_sha256": "772296ef9f94829fa571c96f529c9c2aee0ea1b15855e101baf3a749ae616841",
+          "receipt_files_entry_index_zero_based": 13,
+          "entry_relative_path": "lowdim_development_inputs_run01_20261014/sub-13/included_trial_metadata.json",
+          "object_key": "few-shot-mi-eeg/research-evidence/task-aware-kumar/20261014/lowdim-reliability-dev-run01/lowdim_development_inputs_run01_20261014/sub-13/included_trial_metadata.json",
+          "entry_status": "uploaded_content_verified",
+          "selected_for_full_readback": true,
+          "verification": "full_get_sha256_verified",
+          "get_http_status": 200,
+          "readback_bytes": 178405,
+          "evidence_scope": "Existing tracked historical receipt explicitly records a complete GET/SHA256 check of the exact same original file bytes under a different metadata path. No new remote read was performed by this inventory."
+        }
+      ],
+      "tracked_exact_prior_r2_proof_found": true
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-13/restricted_epochs.npz",
+      "extension": ".npz",
+      "bytes": 7330873,
+      "sha256": "0b3778695f5e78bd086e05fe259b539ada0b2f5e4717139416a83400ca249ce9",
+      "git_candidate": false,
+      "storage_classification": "private_eeg_epoch_binary_excluded_from_git",
+      "array_numeric_decode_performed": false,
+      "existing_exact_historical_r2_matches": [],
+      "tracked_exact_prior_r2_proof_found": false,
+      "r2_evidence_limit": "No exact prior R2 object/full-GET receipt match was found in tracked evidence searched. This is not proof that the item was never uploaded; preservation hashes and input bindings alone do not prove an R2 upload."
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-13/subject_receipt.json",
+      "extension": ".json",
+      "bytes": 73979,
+      "sha256": "94572b900c51dfe58606a00cb07d58779889cec6a4018341b617d9196bc56ea7",
+      "git_candidate": true,
+      "storage_classification": "git_text_metadata_or_review_receipt",
+      "array_numeric_decode_performed": false,
+      "existing_exact_historical_r2_matches": [],
+      "tracked_exact_prior_r2_proof_found": false,
+      "r2_evidence_limit": "No exact prior R2 object/full-GET receipt match was found in tracked evidence searched. This is not proof that the item was never uploaded; preservation hashes and input bindings alone do not prove an R2 upload."
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-16/included_trial_metadata.json",
+      "extension": ".json",
+      "bytes": 177097,
+      "sha256": "0db92a718f649a9ed1f5a5dc521f4ac7abe21be0079f47d5f5ee9e87f263bb91",
+      "git_candidate": true,
+      "storage_classification": "git_text_metadata_or_review_receipt",
+      "array_numeric_decode_performed": false,
+      "existing_exact_historical_r2_matches": [
+        {
+          "receipt_path": "research_logs/recovery_20261014/lowdim_evidence_R2_run01.json",
+          "receipt_bytes": 244648,
+          "receipt_sha256": "772296ef9f94829fa571c96f529c9c2aee0ea1b15855e101baf3a749ae616841",
+          "receipt_files_entry_index_zero_based": 15,
+          "entry_relative_path": "lowdim_development_inputs_run01_20261014/sub-16/included_trial_metadata.json",
+          "object_key": "few-shot-mi-eeg/research-evidence/task-aware-kumar/20261014/lowdim-reliability-dev-run01/lowdim_development_inputs_run01_20261014/sub-16/included_trial_metadata.json",
+          "entry_status": "uploaded_content_verified",
+          "selected_for_full_readback": true,
+          "verification": "full_get_sha256_verified",
+          "get_http_status": 200,
+          "readback_bytes": 177097,
+          "evidence_scope": "Existing tracked historical receipt explicitly records a complete GET/SHA256 check of the exact same original file bytes under a different metadata path. No new remote read was performed by this inventory."
+        }
+      ],
+      "tracked_exact_prior_r2_proof_found": true
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-16/restricted_epochs.npz",
+      "extension": ".npz",
+      "bytes": 7288906,
+      "sha256": "cd3d41fa96bff2056a324c18b319ebf21c1b788530d527cb44e1f2b26e1a9ec3",
+      "git_candidate": false,
+      "storage_classification": "private_eeg_epoch_binary_excluded_from_git",
+      "array_numeric_decode_performed": false,
+      "existing_exact_historical_r2_matches": [],
+      "tracked_exact_prior_r2_proof_found": false,
+      "r2_evidence_limit": "No exact prior R2 object/full-GET receipt match was found in tracked evidence searched. This is not proof that the item was never uploaded; preservation hashes and input bindings alone do not prove an R2 upload."
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-16/subject_receipt.json",
+      "extension": ".json",
+      "bytes": 73495,
+      "sha256": "55b78a2b2152049cf5356e82376532f30561766555789425aed2ad9d322efcfb",
+      "git_candidate": true,
+      "storage_classification": "git_text_metadata_or_review_receipt",
+      "array_numeric_decode_performed": false,
+      "existing_exact_historical_r2_matches": [],
+      "tracked_exact_prior_r2_proof_found": false,
+      "r2_evidence_limit": "No exact prior R2 object/full-GET receipt match was found in tracked evidence searched. This is not proof that the item was never uploaded; preservation hashes and input bindings alone do not prove an R2 upload."
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-4/included_trial_metadata.json",
+      "extension": ".json",
+      "bytes": 176589,
+      "sha256": "56bb545778f46af83834a98e939072412746722a646cd2f9852551b047c96da0",
+      "git_candidate": true,
+      "storage_classification": "git_text_metadata_or_review_receipt",
+      "array_numeric_decode_performed": false,
+      "existing_exact_historical_r2_matches": [
+        {
+          "receipt_path": "research_logs/recovery_20261014/lowdim_evidence_R2_run01.json",
+          "receipt_bytes": 244648,
+          "receipt_sha256": "772296ef9f94829fa571c96f529c9c2aee0ea1b15855e101baf3a749ae616841",
+          "receipt_files_entry_index_zero_based": 17,
+          "entry_relative_path": "lowdim_development_inputs_run01_20261014/sub-4/included_trial_metadata.json",
+          "object_key": "few-shot-mi-eeg/research-evidence/task-aware-kumar/20261014/lowdim-reliability-dev-run01/lowdim_development_inputs_run01_20261014/sub-4/included_trial_metadata.json",
+          "entry_status": "uploaded_content_verified",
+          "selected_for_full_readback": true,
+          "verification": "full_get_sha256_verified",
+          "get_http_status": 200,
+          "readback_bytes": 176589,
+          "evidence_scope": "Existing tracked historical receipt explicitly records a complete GET/SHA256 check of the exact same original file bytes under a different metadata path. No new remote read was performed by this inventory."
+        }
+      ],
+      "tracked_exact_prior_r2_proof_found": true
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-4/restricted_epochs.npz",
+      "extension": ".npz",
+      "bytes": 7280151,
+      "sha256": "7de39b345cba461de7aaa49788770c89e29360b1bb7e1b16916541e091f8f271",
+      "git_candidate": false,
+      "storage_classification": "private_eeg_epoch_binary_excluded_from_git",
+      "array_numeric_decode_performed": false,
+      "existing_exact_historical_r2_matches": [],
+      "tracked_exact_prior_r2_proof_found": false,
+      "r2_evidence_limit": "No exact prior R2 object/full-GET receipt match was found in tracked evidence searched. This is not proof that the item was never uploaded; preservation hashes and input bindings alone do not prove an R2 upload."
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-4/subject_receipt.json",
+      "extension": ".json",
+      "bytes": 72930,
+      "sha256": "f3eedc2a005e5728d3ef1bcef75027363544766035d8af9caf7c5be215abf3c7",
+      "git_candidate": true,
+      "storage_classification": "git_text_metadata_or_review_receipt",
+      "array_numeric_decode_performed": false,
+      "existing_exact_historical_r2_matches": [],
+      "tracked_exact_prior_r2_proof_found": false,
+      "r2_evidence_limit": "No exact prior R2 object/full-GET receipt match was found in tracked evidence searched. This is not proof that the item was never uploaded; preservation hashes and input bindings alone do not prove an R2 upload."
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-7/included_trial_metadata.json",
+      "extension": ".json",
+      "bytes": 177841,
+      "sha256": "d3d97e52208333034bac9bc34fe3ab4c6c9af15f24e9b1cad71a9ca663143515",
+      "git_candidate": true,
+      "storage_classification": "git_text_metadata_or_review_receipt",
+      "array_numeric_decode_performed": false,
+      "existing_exact_historical_r2_matches": [
+        {
+          "receipt_path": "research_logs/recovery_20261014/lowdim_evidence_R2_run01.json",
+          "receipt_bytes": 244648,
+          "receipt_sha256": "772296ef9f94829fa571c96f529c9c2aee0ea1b15855e101baf3a749ae616841",
+          "receipt_files_entry_index_zero_based": 19,
+          "entry_relative_path": "lowdim_development_inputs_run01_20261014/sub-7/included_trial_metadata.json",
+          "object_key": "few-shot-mi-eeg/research-evidence/task-aware-kumar/20261014/lowdim-reliability-dev-run01/lowdim_development_inputs_run01_20261014/sub-7/included_trial_metadata.json",
+          "entry_status": "uploaded_content_verified",
+          "selected_for_full_readback": true,
+          "verification": "full_get_sha256_verified",
+          "get_http_status": 200,
+          "readback_bytes": 177841,
+          "evidence_scope": "Existing tracked historical receipt explicitly records a complete GET/SHA256 check of the exact same original file bytes under a different metadata path. No new remote read was performed by this inventory."
+        }
+      ],
+      "tracked_exact_prior_r2_proof_found": true
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-7/restricted_epochs.npz",
+      "extension": ".npz",
+      "bytes": 7329155,
+      "sha256": "4f48b0c16799acaf51cbca5fec905bc567c8ec8a844a746528633c4f6eeedf11",
+      "git_candidate": false,
+      "storage_classification": "private_eeg_epoch_binary_excluded_from_git",
+      "array_numeric_decode_performed": false,
+      "existing_exact_historical_r2_matches": [],
+      "tracked_exact_prior_r2_proof_found": false,
+      "r2_evidence_limit": "No exact prior R2 object/full-GET receipt match was found in tracked evidence searched. This is not proof that the item was never uploaded; preservation hashes and input bindings alone do not prove an R2 upload."
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-7/subject_receipt.json",
+      "extension": ".json",
+      "bytes": 73421,
+      "sha256": "dbf3b6c006e8d5fcf5c843d3917c13359245759cba109a20d873f97e987f9c18",
+      "git_candidate": true,
+      "storage_classification": "git_text_metadata_or_review_receipt",
+      "array_numeric_decode_performed": false,
+      "existing_exact_historical_r2_matches": [],
+      "tracked_exact_prior_r2_proof_found": false,
+      "r2_evidence_limit": "No exact prior R2 object/full-GET receipt match was found in tracked evidence searched. This is not proof that the item was never uploaded; preservation hashes and input bindings alone do not prove an R2 upload."
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_implementation_review_run01_20261014/preparation_static_review_receipt.json",
+      "extension": ".json",
+      "bytes": 9538,
+      "sha256": "f8ca93c82713d1ab9c6e174f3a00438f2b3b4dfcb556e78215317b989fb9ead5",
+      "git_candidate": true,
+      "storage_classification": "git_text_metadata_or_review_receipt",
+      "array_numeric_decode_performed": false,
+      "existing_exact_historical_r2_matches": [],
+      "tracked_exact_prior_r2_proof_found": false,
+      "r2_evidence_limit": "No exact prior R2 object/full-GET receipt match was found in tracked evidence searched. This is not proof that the item was never uploaded; preservation hashes and input bindings alone do not prove an R2 upload."
+    }
+  ],
+  "next_storage_action": "Parent will stage unchanged original bytes to a new private R2 prefix, obtain a new complete GET/SHA256 receipt, and add JSON/code evidence to Git without the six NPZ arrays. This inventory does not claim that future action has occurred."
+}
