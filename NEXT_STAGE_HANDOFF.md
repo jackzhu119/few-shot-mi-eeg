@@ -349,3 +349,29 @@ Pod or submission action occurred. Actual manuscript/R2 backup proof is recorded
 in the new completion directory; do not alter the original accepted source54 or
 query receipts. Current stage is complete for author scientific review, with
 listed author-specific and final publication tasks, not a completed submission.
+
+# 2026-10-15: author supplied eight factual declarations
+
+Continue from 027d48a213e03968a43c06c9a820a8b96754ecfc. The user answered all
+8 author questions in this original paper2 conversation. Exact reply and mapped
+scope are in research_logs/kumar_author_confirmation_20261015/run01/author_confirmation.json.
+Sole author Ziyuan Zhu confirms the queried contribution roles, no funding,
+no competing interests, corrected ORCID given/family fields, no institutional
+or collaborator restrictions on releasing code/derived results, PLOS ONE target,
+and no prior preprint/conference publication or concurrent consideration.
+ORCID correction is author-reported, not an independent current-profile check.
+The author explicitly reports no conclusion yet for institutional secondary-use
+requirements; do not infer exemption, approval, waiver or no-review requirement.
+No restrictions does not grant a software license or release every private file.
+Final manuscript approval, truthful AI-assistance disclosure review and actual
+license/release choices remain separate from these factual confirmations.
+
+Canonical manuscript/checklist/supplement are updated. New PDF/Word exports are
+under manuscript/review_package_author_confirmed_20261015/; the old package and
+all previous receipts remain unchanged. The exact Results and original tables,
+all scientific configs/ledgers and previously protected files remain unchanged.
+The author-source text commit is 90e9d41ddc8f3e17316fdaf80331094fa7739520 for
+immutable links in the new exports. The new directory's validation and private
+full-GET backup receipts bind the final export bytes. Editorial link/layout
+corrections and their superseded outputs are preserved; no scientific operation,
+new query, model fit, Pod or submission action occurred.
