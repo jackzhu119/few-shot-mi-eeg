@@ -411,11 +411,12 @@ claims would additionally require relevant behavior, interventions and delayed
 tests; the present task labels and offline decoder scores cannot supply them.
 
 Author identity, affiliation and correspondence were carried forward from the
-first manuscript at the author’s request. Contribution roles, funding, competing
-interests and the institutional determination for this secondary analysis remain
-pending provision and review by the author. The verified core references below still require
-the authors' final completeness and journal-format review. No author, funding
-or project-approval statement is invented in this working draft.
+first manuscript at the author’s request. The author has now confirmed sole
+authorship, contribution roles, no specific funding, no competing interests,
+and PLOS ONE as the target journal. The institutional determination for this
+secondary analysis remains unresolved. Final manuscript approval, reference
+completeness and journal-format review remain outstanding; the author’s factual
+declarations do not establish institutional approval or approval to submit.
 
 ## Conclusion
 
@@ -450,9 +451,11 @@ records are maintained in
 on the `research/learning-preserving-bci` branch. The evidence section and
 Supplementary Methods identify the actual execution commits and SHA256-bound
 artifacts. Private full-byte backups support preservation but are not a public
-data-access endpoint. The repository's reuse license and the final public
-analysis-release designation remain for the authors to determine; neither a
-new license nor a journal release is asserted here.
+data-access endpoint. The author reports no institutional or collaborator
+restrictions on releasing the code or derived results. A specific software
+reuse license and final public analysis-release designation still need to be
+established; absence of reported restrictions does not itself grant a license.
+Neither a new license nor a journal release is asserted here.
 
 ## Ethics and author declarations
 
@@ -464,17 +467,33 @@ approval obtained for the present analysis. Original consent wording and the
 institutional determination for this secondary use must be confirmed by the
 authors before submission; they have not been independently certified here.
 
-- **Author and correspondence:** Ziyuan Zhu; the byline and contact information
-  above follow the user-directed first-paper source. Final author approval and
-  current ORCID profile details remain to be confirmed.
-- **Author contributions:** pending author provision and agreement.
-- **Funding and acknowledgements:** pending author provision; source-study
-  funding is not attributed to the present work.
-- **Competing interests:** pending author declarations.
-- **Secondary-data institutional determination:** pending author confirmation.
-- **Working journal format:** PLOS ONE, Research Article, carried forward from
-  the first-paper materials at the user’s request. Final manuscript-specific
-  declarations and submission approval remain pending. No submission has been made.
+- **Author and correspondence:** Ziyuan Zhu is the sole author and corresponding
+  author. The affiliation and contact information above follow the user-directed
+  first-paper source. The author reports that the ORCID given/family fields have
+  been corrected to Ziyuan/Zhu; the current profile was not independently checked.
+- **Author contributions (CRediT):** Ziyuan Zhu: Conceptualization; Methodology;
+  Software; Formal analysis; Validation; Visualization; Writing – original draft;
+  Writing – review & editing. These roles reflect the author’s confirmation of
+  sole responsibility for the work; no additional human author is reported.
+- **Funding:** The author received no specific funding for this work. Funding
+  of the original source study is not attributed to the present analysis.
+- **Competing interests:** The author declares no competing interests.
+- **Secondary-data institutional determination:** The author reports that no
+  conclusion has yet been obtained. This item remains pending and is not described
+  as an approval, exemption, waiver or determination that review is unnecessary.
+- **Publication history:** The author reports no prior preprint or conference
+  publication of this work and no concurrent journal consideration.
+- **Target journal:** PLOS ONE, Research Article, as confirmed by the author.
+  Final manuscript approval and submission declarations remain outstanding.
+  This task has not submitted the manuscript.
+
+**AI-assisted preparation — disclosure for author review.** OpenAI
+ChatGPT/Codex assisted with software and validation code, preparation of saved-
+result summaries and figures, reference checks, manuscript drafting and editing,
+and document exports. These tools are not authors. Responsibility for the final
+content rests with the human author; the author’s final review and approval of
+the complete manuscript, analyses, references and this disclosure remain
+outstanding. Sole human authorship does not imply that AI assistance was absent.
 
 ## Figures and legends
 

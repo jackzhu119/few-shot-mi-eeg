@@ -15,13 +15,14 @@ increase the participant count.
 
 ## Complete author-review package
 
-- [English PDF](review_package_20261015/manuscript.pdf) and [editable Word](review_package_20261015/manuscript.docx).
-- [Supplementary methods](kumar_supplementary_methods_20261015.md), with [PDF/Word exports](review_package_20261015/README.md).
+- [English PDF](review_package_author_confirmed_20261015/manuscript.pdf) and [editable Word](review_package_author_confirmed_20261015/manuscript.docx), updated with the author's eight factual declarations.
+- [Supplementary methods](kumar_supplementary_methods_20261015.md), with [PDF/Word exports](review_package_author_confirmed_20261015/README.md).
 - [Three source-backed figures](figures/kumar2024_20261015/CAPTIONS.md), [verified bibliography](kumar_references_20261015.bib), and [reference verification scope](reference_map.md).
-- [Author review checklist](kumar_author_review_checklist_20261015.md): identity/affiliation/correspondence retrieved from the first paper at the user's request; manuscript-specific declarations remain for the author.
+- [Author review checklist](kumar_author_review_checklist_20261015.md): sole authorship, queried contributions, no specific funding, no competing interests, corrected ORCID fields, no reported release restrictions, PLOS ONE target and no prior preprint/conference or concurrent submission are author-confirmed. The institutional determination remains unresolved; final approval and license/release decisions remain separate.
 
-The review package uses the carried-forward PLOS ONE citation format and is not
-a submitted manuscript. All actual results and prior test-exposure limitations
+The review package uses PLOS ONE citation format for the author-confirmed target
+and is not a submitted manuscript. The [earlier package](review_package_20261015/README.md)
+is retained unchanged as a historical version. All actual results and prior test-exposure limitations
 remain unchanged. No new fit, query inference or strategy was introduced.
 
 ## Historical NETBCI working materials

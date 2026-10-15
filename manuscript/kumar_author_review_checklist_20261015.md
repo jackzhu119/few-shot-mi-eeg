@@ -2,101 +2,85 @@
 
 **Longitudinal Motor-Imagery EEG Decoding: Frozen Baselines, Supervised Recalibration, and Task-Measurement Reliability**
 
-These are unresolved author, institutional and publication details for the
-[working draft](kumar_longitudinal_decoding_working_draft_20261015.md) and
-[supplementary methods](kumar_supplementary_methods_20261015.md). They are not
-new experiment requirements or authorization to change the frozen analyses.
-Leave an item pending until the responsible authors supply the actual facts.
+This checklist separates the author's actual eight-item reply from the
+remaining institutional and publication work for the [working draft](kumar_longitudinal_decoding_working_draft_20261015.md)
+and [supplementary methods](kumar_supplementary_methods_20261015.md).
+It authorizes no experiment, change to frozen analyses, release or submission.
 
-## Retrieved identity and working journal format
+## Identity and eight author confirmations
 
-At the user's direction, the fixed first-paper commit
-`d9a11926076bd348696f6e690078955921dac3f8` was read without modifying that
-project. Its manuscript byline and submission fields agree:
+Identity was retrieved at the user's direction from first-paper fixed commit
+`d9a11926076bd348696f6e690078955921dac3f8`, without modifying that project:
+**Ziyuan Zhu (朱子元)**; College of Artificial Intelligence Medicine, Chongqing
+Medical University, Chongqing, China; **zzy2630816871@gmail.com**.
+Postal address: Jinyun Campus, Chongqing Medical University, No. 61,
+Daxuecheng Middle Road, Shapingba District, Chongqing 401331, China.
+The byline and submission fields agree; the source excerpts and hashes are in
+the earlier manuscript-completion evidence. The present confirmations come
+directly from this paper's author, rather than from first-paper declarations.
 
-- Author/corresponding author: **Ziyuan Zhu (朱子元)**.
-- Affiliation: **College of Artificial Intelligence Medicine, Chongqing Medical
-  University, Chongqing, China**.
-- Correspondence: **zzy2630816871@gmail.com**.
-- Postal address: Jinyun Campus, Chongqing Medical University, No. 61,
-  Daxuecheng Middle Road, Shapingba District, Chongqing 401331, China.
-- Author-supplied ORCID: **0009-0005-1153-4926**. The first-paper record notes
-  reversed given/family profile fields; this work did not recheck or alter that
-  profile and does not claim the correction is complete.
-- Working journal/article format: **PLOS ONE / Research Article**. This carries
-  forward formatting information, not first-paper approval to submit this paper.
+- [x] **1 — ORCID:** author reports that Given name / Family name have been
+  corrected to Ziyuan / Zhu for **0009-0005-1153-4926**. The current profile was
+  not independently queried or changed by this task.
+- [x] **2 — Authorship and contributions:** author confirms all work was
+  independently undertaken by the sole human author, Ziyuan Zhu, with no other
+  authors. CRediT: Conceptualization; Methodology; Software; Formal analysis;
+  Validation; Visualization; Writing – original draft; Writing – review & editing.
+  AI assistance is disclosed separately; this reply is not final manuscript approval.
+- [x] **3 — Funding:** no specific funding for this work.
+- [x] **4 — Competing interests:** none declared.
+- [x] **5 — Current institutional status recorded:** author reports **no
+  conclusion yet** for the secondary analysis. This records an unresolved status;
+  it does not satisfy or waive the institutional requirement below.
+- [x] **6 — Restrictions:** author reports no institutional or collaborator
+  restrictions on public code or derived results. No software license is thereby
+  granted, and no unreviewed public artifact release is represented as complete.
+- [x] **7 — Journal target:** **PLOS ONE / Research Article** confirmed.
+- [x] **8 — Publication history:** no prior preprint or conference publication
+  and no concurrent journal consideration reported.
 
-Only these requested identity/format fields were reused. Contribution, funding,
-competing-interest, ethics, exclusivity and publication-approval declarations
-remain specific to the second paper and require actual author confirmation.
-The exact source URLs, excerpts and byte hashes are retained in the manuscript
-completion evidence directory's `paper1_author_reference/identity_reference.json`.
+Exact original reply, question mapping, observation time and inference limits
+are retained in the [author confirmation record](../research_logs/kumar_author_confirmation_20261015/run01/author_confirmation.json).
+No additional author acknowledgment, funding identifier or project approval is invented.
 
-## Authorship and institutional details
+## Still needed from the author or responsible institution
 
-- [ ] Confirm the retrieved Ziyuan Zhu byline, affiliation and contact details
-  are current for this manuscript, and verify the ORCID profile’s given/family
-  fields before linking it in a submission system.
-- [ ] Agree the actual contribution statement and approval/accountability of
-  every author. Use the journal's contribution taxonomy if required; do not
-  infer contributions from repository activity or assign authorship to tools.
-- [ ] Supply actual funding, grant identifiers and relevant acknowledgments,
-  including an explicit no-funding statement only if the authors confirm it.
-- [ ] Obtain each author's competing-interest disclosure. Do not replace
-  missing disclosures with a fabricated statement of no competing interests.
+- [ ] Obtain the institution's actual secondary-analysis determination and
+  applicable wording: approval, exemption, waiver, non-human-subjects determination,
+  or a policy explaining why review is not required. Supply a date or identifier
+  only if one exists. **Current answer: no conclusion yet.** Original-study
+  approval is not approval of the present project.
+- [ ] Review the complete final manuscript, contribution statement and truthful
+  AI-assistance disclosure, and confirm final author approval and accountability
+  before submission. A reply supplying factual declarations is not that approval.
+- [ ] Decide a specific software license and public-release scope after the
+  actual dependency/rights review and a concrete release list are supplied.
+  No project software LICENSE file has been established; the dataset's CC BY 4.0
+  terms do not license this project's software. No restrictions is a rights
+  declaration, not an instruction to publish all stored artifacts.
 
-## Secondary-data ethical determination and source qualifications
+## Editorial and source checks we continue to handle
 
-- [ ] Obtain the responsible institution's determination for this secondary
-  analysis and its required wording: approval, exemption, waiver, non-human-
-  subjects determination, or an applicable policy explaining why no review
-  is required. Supply an actual identifier and date only where they exist.
-- [ ] Review the source ethics/consent attribution against the material actually
-  available. The derivative metadata attributes original collection approval
-  to the University of Texas at Austin, protocol `2020-03-0073`; this is not
-  approval of this project, and informed-consent wording has not independently
-  been verified from accessible full text. No consent or institutional approval
-  claim should be invented to fill the manuscript section.
-- [ ] Confirm the source-description wording and citations: Kumar2024 is the
-  original study, while NEMAR `nm000177/v1.0.5` is the analyzed derivative
-  release. Attribute original-study demographic or collection claims to their
-  source rather than presenting them as independently established here.
-- [ ] Retain the documented limitations when approving final wording: published
-  IDs do not independently verify biological identity; `age=2020` is an invalid
-  placeholder, GR/PAR mapping is unresolved, and derivative timestamps and CPz
-  metadata have the stated provenance limits. Do not infer missing demographic
-  or behavioral information.
+- [ ] Verify original ethics/consent attribution using material actually available.
+  Frozen derivative metadata attributes original collection approval to the
+  University of Texas at Austin, protocol **2020-03-0073**. Original consent
+  wording has not been independently verified from accessible full text; do not
+  invent it or treat source metadata as this project's institutional conclusion.
+- [ ] Complete PLOS ONE formatting, reporting, data/code availability and
+  AI-assistance disclosure checks using current journal instructions. Citation
+  style and a journal target alone do not establish submission readiness.
+- [ ] Complete license/dependency review and prepare a concrete public-release
+  list; verify final cited code/evidence versions and links actually released.
+  Private R2 backups and Git commits are not journal submission or public data release.
+- [ ] Retain verified reference scope: Kumar2024 and its published correction,
+  exact NEMAR version DOI, and original methods references. Metadata verification
+  does not imply full-text review of inaccessible papers or original consent.
+- [ ] Retain provenance limitations: published IDs do not independently prove
+  biological identity; `age=2020` is an invalid placeholder; GR/PAR mapping,
+  derivative timestamps and CPz metadata have the documented limits. Do not
+  infer missing demographics, behavior or human-learning outcomes.
 
-## Data, code, reference and journal statements
-
-- [ ] Confirm that the Data Availability statement names the exact release,
-  its CC BY 4.0 terms and required attribution, and distinguishes public source
-  access from private project weights, EEG copies and binary evidence. Do not
-  promise public artifacts that have not actually been released.
-- [ ] Have the rights holders choose and approve the repository's software
-  license, verify the actual license file and upstream obligations, and align
-  the Code Availability statement with that decision. The dataset's CC BY 4.0
-  license does not itself license this project's software. A missing software
-  license must not be described as an established open-source license.
-- [ ] Review the supplied verification of core bibliography metadata and each
-  citation's intended scope, and confirm final reference completeness.
-  The exact NEMAR version DOI and the original article's published correction
-  have been checked against official records; this does not imply full-text
-  review of every article or verification of the original consent statement.
-  Distinguish original Kumar collection, NEMAR
-  derivative version, CSP/shrinkage methods and the actual EEGNet/Braindecode
-  implementation. Do not claim that an inaccessible paper was fully read or
-  fabricate citation details or support from its abstract/metadata.
-- [ ] Confirm the carried-forward PLOS ONE target and apply its actual article format,
-  abstract/word limits, figure/table specifications, reporting forms and
-  data/code/AI-assistance disclosure requirements where applicable. Confirm
-  author approval of the final wording and any required submission declarations.
-- [ ] Verify that the final cited code/evidence version and all public artifact
-  links are the versions actually released. A repository commit, private R2
-  backup and manuscript submission are separate actions; do not describe any
-  unpublished release or submission as completed.
-
-This checklist does not ask for more fitting, new query evaluation, a new
-adaptation strategy or additional participants. The completed scientific
-results and their limitations remain as recorded; administrative completion
-does not make the analysis confirmatory or establish a validated adaptive gate.
+All results, participant-level statistics, unequal label budgets, negative and
+collapsed outcomes and prior test-exposure/exploratory labels remain unchanged.
+Administrative completion establishes no adaptive gate, skill-retention or
+clinical effect and releases no additional fitting or query evaluation.

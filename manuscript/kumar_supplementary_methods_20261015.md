@@ -388,7 +388,8 @@ parent network GET, a second forward or rehashing all 147 original objects.
 The original source EEG, checkpoint tensors and binary measurement artifacts
 remain outside GitHub. Public source access and data terms are distinct from
 the repository's software license and institutional secondary-data requirements.
-The [author review checklist](kumar_author_review_checklist_20261015.md) lists
-the outstanding author-supplied publication details. Completing that checklist
+The [author review checklist](kumar_author_review_checklist_20261015.md) separates
+the author's eight actual confirmations from the still-unresolved institutional
+determination, final approval and license/release decisions. Completing that checklist
 does not change these methods or establish a task-aware, human-learning,
 retention or clinical effect.
