@@ -1,0 +1,825 @@
+{
+  "schema_version": 1,
+  "status": "passed_independent_query_acceptance_metadata_review",
+  "reviewer": "independent_agent_remaining36_deploy_review",
+  "observed_at_utc": "2026-10-15T09:55:56.306894+00:00",
+  "scope": "Read-only new query ACK/acceptance metadata, original receipt and manifest records, source54 ledger, and preserved repository text/evidence bytes; not a new scientific execution or remote storage verification.",
+  "inputs": [
+    {
+      "path": "research_logs/kumar_frozen_query_acceptance_20261015/run01/parent_acknowledged.json",
+      "bytes": 33347,
+      "sha256": "d8006051b03b18714105790f863c4e89ccc64d0148e2e95ec1ca71f7f1e4527d"
+    },
+    {
+      "path": "research_logs/kumar_frozen_query_acceptance_20261015/run01/accepted_evaluation.json",
+      "bytes": 43684,
+      "sha256": "73dae984a9ad8183122d8bd12abd7a08593e93bfbf36c9b7977cc104fc8e7393"
+    },
+    {
+      "path": "research_logs/kumar_frozen_query_acceptance_20261015/run01/preservation_before.json",
+      "bytes": 143651,
+      "sha256": "f773e026f3d6583a900e90258c3e6a0fddbf677f1e19038c821652279265f662"
+    },
+    {
+      "path": "research_logs/kumar_frozen_query_execution_audit_20261015/run01/parent_acknowledgement_request.json",
+      "bytes": 64773,
+      "sha256": "9c49ea7684c519dbfa72ee85386664a7a6beceaf21ecb4ceb1fd45dfe2ccad7b"
+    },
+    {
+      "path": "research_logs/kumar_frozen_query_execution_audit_20261015/run01/r2_full_get_receipt.json",
+      "bytes": 114345,
+      "sha256": "15682a07c13d69aa7bd7aca2cf65327aea7c58fb4e8cb1205b195d4b0fcbb9e2"
+    }
+  ],
+  "checks_completed": 189,
+  "failed_checks": [],
+  "checks": [
+    {
+      "name": "actual_ack_timestamp",
+      "passed": true
+    },
+    {
+      "name": "truthful_decision_source_not_cryptographic_signature",
+      "passed": true
+    },
+    {
+      "name": "reviewed_fixed_evidence_commit",
+      "passed": true
+    },
+    {
+      "name": "execution_identity",
+      "passed": true
+    },
+    {
+      "name": "ack_request_reference",
+      "passed": true,
+      "detail": {
+        "path": "research_logs/kumar_frozen_query_execution_audit_20261015/run01/parent_acknowledgement_request.json",
+        "bytes": 64773,
+        "sha256": "9c49ea7684c519dbfa72ee85386664a7a6beceaf21ecb4ceb1fd45dfe2ccad7b"
+      }
+    },
+    {
+      "name": "complete_receipt_reference",
+      "passed": true,
+      "detail": {
+        "path": "research_logs/kumar_frozen_query_execution_audit_20261015/run01/r2_full_get_receipt.json",
+        "bytes": 114345,
+        "sha256": "15682a07c13d69aa7bd7aca2cf65327aea7c58fb4e8cb1205b195d4b0fcbb9e2"
+      }
+    },
+    {
+      "name": "source54_ledger_reference",
+      "passed": true,
+      "detail": {
+        "path": "research_logs/kumar_remaining36_acceptance_20261015/run01/accepted_jobs_all54.json",
+        "bytes": 33142,
+        "sha256": "013668c8d1b1c5d6061f3701d495cf7770743a1c6fda8678f5db7ffd50992670"
+      }
+    },
+    {
+      "name": "acceptance_ack_reference",
+      "passed": true,
+      "detail": {
+        "path": "research_logs/kumar_frozen_query_acceptance_20261015/run01/parent_acknowledged.json",
+        "bytes": 33347,
+        "sha256": "d8006051b03b18714105790f863c4e89ccc64d0148e2e95ec1ca71f7f1e4527d"
+      }
+    },
+    {
+      "name": "complete_receipt_exact_parent_hash",
+      "passed": true
+    },
+    {
+      "name": "parent_review_positive_counts",
+      "passed": true
+    },
+    {
+      "name": "parent_did_not_repeat_GET_forward_or_all_original_rehash",
+      "passed": true
+    },
+    {
+      "name": "seven_evidence_filenames_not_invented",
+      "passed": true
+    },
+    {
+      "name": "receipt_original_operator_totals",
+      "passed": true
+    },
+    {
+      "name": "GET_not_misattributed_to_parent",
+      "passed": true
+    },
+    {
+      "name": "147_recorded_manifest_GET_sets",
+      "passed": true
+    },
+    {
+      "name": "147_recorded_manifest_GET_hash_bytes_match",
+      "passed": true
+    },
+    {
+      "name": "exact54_unique_accepted_query_results",
+      "passed": true
+    },
+    {
+      "name": "query_01_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_01_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_01_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_02_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_02_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_02_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_03_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_03_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_03_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_04_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_04_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_04_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_05_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_05_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_05_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_06_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_06_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_06_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_07_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_07_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_07_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_08_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_08_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_08_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_09_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_09_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_09_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_10_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_10_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_10_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_11_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_11_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_11_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_12_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_12_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_12_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_13_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_13_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_13_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_14_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_14_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_14_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_15_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_15_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_15_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_16_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_16_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_16_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_17_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_17_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_17_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_18_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_18_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_18_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_19_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_19_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_19_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_20_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_20_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_20_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_21_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_21_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_21_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_22_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_22_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_22_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_23_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_23_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_23_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_24_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_24_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_24_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_25_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_25_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_25_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_26_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_26_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_26_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_27_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_27_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_27_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_28_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_28_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_28_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_29_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_29_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_29_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_30_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_30_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_30_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_31_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_31_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_31_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_32_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_32_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_32_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_33_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_33_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_33_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_34_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_34_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_34_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_35_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_35_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_35_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_36_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_36_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_36_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_37_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_37_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_37_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_38_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_38_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_38_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_39_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_39_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_39_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_40_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_40_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_40_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_41_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_41_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_41_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_42_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_42_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_42_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_43_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_43_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_43_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_44_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_44_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_44_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_45_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_45_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_45_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_46_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_46_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_46_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_47_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_47_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_47_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_48_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_48_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_48_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_49_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_49_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_49_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_50_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_50_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_50_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_51_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_51_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_51_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_52_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_52_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_52_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_53_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_53_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_53_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "query_54_ordered_identity_and_exact_result_ref",
+      "passed": true
+    },
+    {
+      "name": "query_54_original_GET_reference",
+      "passed": true
+    },
+    {
+      "name": "query_54_acceptance_separate_from_pending",
+      "passed": true
+    },
+    {
+      "name": "new_execution_or_strategy_not_released",
+      "passed": true
+    },
+    {
+      "name": "source_ledger_fixed_hash",
+      "passed": true
+    },
+    {
+      "name": "historical_pending_flags_preserved",
+      "passed": true
+    },
+    {
+      "name": "all_preexisting_preservation_snapshot_files_unchanged",
+      "passed": true,
+      "detail": {
+        "checked_files": 654,
+        "changed": []
+      }
+    },
+    {
+      "name": "unchanged_from_reviewed_commit:research_logs/kumar_frozen_query_execution_audit_20261015/run01/r2_full_get_receipt.json",
+      "passed": true
+    },
+    {
+      "name": "unchanged_from_reviewed_commit:research_logs/kumar_frozen_query_execution_audit_20261015/run01/parent_acknowledgement_request.json",
+      "passed": true
+    },
+    {
+      "name": "unchanged_from_reviewed_commit:research_logs/kumar_frozen_query_execution_audit_20261015/run01/received_evaluation_stages.json",
+      "passed": true
+    },
+    {
+      "name": "unchanged_from_reviewed_commit:research_logs/kumar_remaining36_acceptance_20261015/run01/accepted_jobs_all54.json",
+      "passed": true
+    },
+    {
+      "name": "unchanged_from_reviewed_commit:research_logs/kumar_frozen_query_evaluation_20261015/run01/launcher_receipt.json",
+      "passed": true
+    },
+    {
+      "name": "unchanged_from_reviewed_commit:research_logs/kumar_frozen_query_evaluation_20261015/run01/claim.json",
+      "passed": true
+    }
+  ],
+  "reviewer_new_network_GETs": 0,
+  "reviewer_model_forwards": 0,
+  "reviewer_checkpoint_or_raw_EEG_loads": 0,
+  "reviewer_all147_private_original_objects_rehashed": false,
+  "parent_review_scope_is_user_relayed_not_independently_observed": true,
+  "historical_or_scientific_evidence_modified": false,
+  "new_execution_released": false
+}

@@ -33,8 +33,7 @@ bootstrap、seed42、95%百分位区间**[+2.49,+12.48]个百分点**。
 `research_logs/kumar_cross_session_20261012/independent_review_run01_20261014`。
 任务轴只由source_train的类别信息定义，目标标签只用于BA或明确标注的描述性类统计。
 新的任务感知门控策略仍Pending，条件、同预算控制与防泄漏要求见
-`TASK_AWARE_ADAPTATION_RESEARCH_PLAN.md`。EEGNet已完成CPU软件验收和真实源数据
-形状检查，充分正式训练仍Pending。
+`TASK_AWARE_ADAPTATION_RESEARCH_PLAN.md`。EEGNet的历史CPU软件验收和源数据形状检查已由后续54项源模型训练、独立审计及一次冻结query评估补齐；最新结果和预算差异见本文下方2026-10-15更新。
 
 独立解释分析的固定测试60会话中，协方差形状代理与BA变化Spearman为-0.007，
 参与者块bootstrap95%CI[-0.505,0.438]；源任务轴Wasserstein为0.197，CI[-0.240,0.518]。
@@ -46,3 +45,27 @@ bootstrap、seed42、95%百分位区间**[+2.49,+12.48]个百分点**。
 PNG已实看，SVG/PDF仅出口hash验证。固定QC/数量/通道与as-stored/CAR功率诊断已经
 计算；as-stored并不独立证实物理CPz身份。额外support-only PCA/SVD的90个子空间距离
 只作post-freeze描述，不拟合query、不反馈模型，不改变性能前主要比较。
+
+
+## 2026-10-15：54项冻结EEGNet及真实query验收
+
+54个源模型（18参与者×3固定种子）及一次always-frozen query评估均已完成。
+dot于09:49:05 UTC真实确认固定ac5a1f6的query结果；确认范围与独立query接受记录见
+`research_logs/kumar_frozen_query_acceptance_20261015/run01/`。原source54账本不改。
+EEGNet目标BA：开发6人52.3087%（参与者bootstrap95%区间48.4301–57.3582%）；
+固定剩余12人51.5783%（49.0800–54.5125%）；18人次要汇总51.8218%
+（49.5930–54.3590%）。全部目标队列区间含50%，没有新增机会水平假设检验。
+16个种子×会话单类预测结果全部保留（14目标、2源query；涉及7模型/7参与者）。
+
+四种基线使用同一4290个完整query（源360、目标3930）及原30个短query排除，
+但不能将同query误称为同标签预算。EEGNet和CPU都用40个source TRAIN；
+EEGNet还用20个有标签source validation选epoch，CPU不以validation选模型。
+冻结两法均用0个目标support；两种CPU更新各用同一当前会话19或20个support，
+不累积前后会话。CPU两更新之间标签预算相同，更新计算量不同；EEGNet与CPU更新
+之间仅作明确预算不匹配的描述。原CPU主要比较及其负差参与者均不改变。
+
+逐样本/标签核对、逐人/逐会话表、预算矩阵及复算回执见
+`research_logs/kumar_frozen_query_comparison_20261015/run01/`。英文当前稿见
+`manuscript/kumar_longitudinal_decoding_working_draft_20261015.md`。这些是已见测试后的
+探索性结果，不证明架构普遍优劣、自适应因果收益、人类学习或任务感知门控有效。
+没有剩余已冻结EEGNet fit或更新实验需要启动；不为匹配预算重训或补造更新规则。

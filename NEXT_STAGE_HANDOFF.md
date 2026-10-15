@@ -256,3 +256,46 @@ in the evidence directory, independently checks the exact54 query identities,
 and supplies a real acknowledgement for this query evaluation only.
 Query evaluation accepted=false until that actual confirmation. Do not append
 source fits again, reuse the claim, launch training or infer another query grant.
+
+# 2026-10-15: real query ACK, matched-sample tables and factual English draft
+
+Dot's actual ACK issued09:49:05UTC accepts the query-only evaluation delivered
+at ac5a1f6d014421f0adf6f924a58a7063558b89f7. Separate query acceptance records
+are in research_logs/kumar_frozen_query_acceptance_20261015/run01/.
+The parent read and hashed the complete114345-byte main receipt, checked147
+manifest/GET/closing keys,54result identities/hashes and7Git evidence byte
+bindings, and recomputed18participant means and6bootstraps. The parent did not
+make new R2 GET requests, perform another forward or rehash all147 original
+objects. Those limits are explicitly recorded; seven unspecified Git filenames
+are not invented. Source accepted54 SHA013668c8... remains unchanged, and all
+historical pending producer/request records remain byte-identical.
+
+Saved-result comparison is in research_logs/kumar_frozen_query_comparison_20261015/run01/.
+30324 producer checks and29701 independent checks passed, plus4 synthetic join
+checks. Exact4290query IDs/labels,30partial exclusions and210original input-file
+hashes match; no rows/seeds/participants were removed. Independent aggregate
+bootstrap and primary-contrast differences are0; maximum endpoint roundoff is
+2.22e-16. The first optional-hash reader error and executed-script formatting
+findings are preserved; no scientific fit or forward was repeated.
+
+Remaining12 targetBA: frozenCSP57.94%, LDA recalibration59.89%, fullCSP/LDA
+refit65.36%, frozenEEGNet51.58%. Originalprimary refit−frozen remains+7.42pp
+[2.49,12.48],9improved/3worsened. EEGNet interval49.08–54.51% contains50%.
+The two CPU updates use identicalsource40+current19/20support fitIDs but differ
+in update computation. EEGNet uses40sourceTRAIN+20validation for epochselection
+and0targetsupport; CPUvalidation selects nothing. Thus samequery scores do not
+establish a matched-information/compute architecture ranking. NewEEGNet paired
+differences are descriptive only, with no newCI/p-value. Collapse and all negative
+outcomes remain. No task-aware gate or clinical/human-learning claim is supported.
+
+Current English manuscript:
+manuscript/kumar_longitudinal_decoding_working_draft_20261015.md.
+Three tables distinguish budgets, target and sourcequery. HistoricalNETBCI稿
+and all654protected source/protocol/evidence files remain unchanged.
+No frozen sourcefit or EEGNetupdate experiment is missing; the frozen protocol
+contains no EEGNetfine-tuning/operator to launch. Minimal next action is review
+of saved-result tables/manuscript, as specified in the acceptance directory's
+NEXT_FROZEN_STEP.md. No newtraining/query/gate/Pod/paper1 action occurred.
+New ACK/tables/manuscript fullGET backup is recorded separately in that same
+acceptance directory's r2_full_get_receipt.json; historical main147 receipt and
+its true parentACK are not rewritten or renamed as this later transfer.

@@ -1,0 +1,8 @@
+{
+  "status": "saved_result_reader_corrected_before_any_comparison_output",
+  "initial_failure": "KeyError: processed_window_numeric_sha256",
+  "cause": "Both CPU event metadata and frozen split intentionally omit processed hashes for excluded partial epochs; the first strict reader indexed this absent field directly.",
+  "correction": "Match optional hash absence on both sides and explicitly require a 64-character processed hash for every included row and no processed hash for every excluded row.",
+  "scientific_inputs_exclusions_protocol_changed": false,
+  "training_or_forward_performed": false
+}

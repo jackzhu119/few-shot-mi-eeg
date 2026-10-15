@@ -5,6 +5,17 @@
 核心问题：**When should a decoder adapt to cross-session EEG changes, and does
 task-relevant information explain performance changes better than total signal drift?**
 
+## 2026-10-15：冻结基线结果与query真实验收
+
+Kumar的54项源模型和一次只读query评估已完成并获真实父侧确认，原源模型账本不变。
+冻结EEGNet在固定剩余12人的目标BA为51.58%（参与者bootstrap95%区间49.08–54.51%），
+接近机会水平；不据此生成门控或追选种子。现有CPU结果与EEGNet按相同query核对，
+源validation选择及当前support标签预算差异明确列示，不能当成公平架构排名。
+当前结果表见[CROSS_SESSION_RESULTS.md](CROSS_SESSION_RESULTS.md)，
+英文事实性工作稿见[Kumar working draft](manuscript/kumar_longitudinal_decoding_working_draft_20261015.md)，
+验收范围见[真实ACK](research_logs/kumar_frozen_query_acceptance_20261015/run01/REPORT.md)。
+下文历史状态按其日期保留；不存在待启动的已冻结源训练队列。
+
 ## 2026-10-13：转入 Kumar 跨会话基线研究
 
 用户已将第二篇论文限定为公开多会话 EEG 的离线自适应解码研究，不依赖在线人体实验。

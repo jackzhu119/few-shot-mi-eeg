@@ -1,6 +1,21 @@
 # Manuscript working materials
 
-The latest [19-ID addendum](all19_addendum_20261011.md) reports 76 verified session joins,
+## Current Kumar2024 working draft
+
+The current Kumar2024 research manuscript is
+[Task-Aware Adaptive Decoding for Longitudinal Motor-Imagery EEG](kumar_longitudinal_decoding_working_draft_20261015.md).
+This English working draft reports the completed 18-participant CPU baselines,
+all 54 source-only EEGNet checkpoints evaluated on frozen queries, and the
+development-only measurement diagnostics. It distinguishes matched query
+identities from unequal source-validation and target-label budgets, retains
+negative and collapsed results, and establishes no effective task-aware gate.
+Its status is **exploratory_working_draft_not_submission_ready**. The NETBCI
+documents below remain historical records and are not pooled with Kumar to
+increase the participant count.
+
+## Historical NETBCI working materials
+
+The [19-ID addendum](all19_addendum_20261011.md) reports 76 verified session joins,
 456 derivative recordings and frozen CSP/LDA analyses. Exact cross-identity copies affect
 five published IDs; a separately named source-driven sensitivity retains fourteen IDs.
 Neither the original nineteen-ID arithmetic nor absence of exact copies proves biological
@@ -20,7 +35,7 @@ Its current claim is an auditable longitudinal EEG feasibility workflow: one par
 
 The draft uses original explanatory prose and cites methodological ideas from the three requested Nature-family papers. It does not reproduce their text, results, or interventions. Their different modalities and limitations inform the design rather than supply a conclusion for the present data.
 
-## Evidence usable now
+### Historical NETBCI evidence usable now
 
 - Real derivative-file checksums, continuous-signal/event checks, explicit sample boundaries, and corresponding original-release headers/events.
 - Actual 19-participant behavior-only session summaries and four verified participant/session joins to the single EEG participant, with unresolved run/trial joins retained explicitly.
@@ -33,7 +48,7 @@ The subsequent behavior/EEG session analysis uses `research_logs/netbci_behavior
 and exact replay `run04_replay/`, with its own source snapshots and receipts. The 19 behavioral records do not add
 EEG participants. Computational replay and twenty matched resamplings do not create independent biological samples.
 
-## Missing before a stronger or submission-ready paper
+### Historical NETBCI requirements before a stronger paper
 
 - Author-confirmed affiliations, contributions, funding/competing-interest statements, secondary-data institutional review status, and complete verified bibliography.
 - Repository license, immutable analysis release, reviewed publication figures, and independent final result audit.

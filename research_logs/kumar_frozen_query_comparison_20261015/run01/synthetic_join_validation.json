@@ -1,0 +1,24 @@
+{
+  "synthetic": true,
+  "software_validation_only": true,
+  "valid_join_passed": true,
+  "rejected_cases": [
+    {
+      "case": "duplicate",
+      "rejected": true,
+      "message": "Duplicate/missing/unexpected query identity"
+    },
+    {
+      "case": "missing",
+      "rejected": true,
+      "message": "Duplicate/missing/unexpected query identity"
+    },
+    {
+      "case": "mismatched_label",
+      "rejected": true,
+      "message": "Mismatched frozen query label"
+    }
+  ],
+  "tests": 4,
+  "raw_signals_or_models_used": false
+}

@@ -1,0 +1,28 @@
+{
+  "status": "executed_analysis_artifact_preserved",
+  "script_sha256": "e01c692dc79f5f7458dbada94fb4739c4f4cc4baf1c369d276d4c67894a5e7fd",
+  "original_lint_command": [
+    "/workspace/.venvs/few-shot-mi-eeg/bin/ruff",
+    "check",
+    "--output-format=json",
+    "research_logs/kumar_frozen_query_comparison_20261015/run01/compare_saved_predictions.py"
+  ],
+  "original_lint_exit_code": 1,
+  "original_lint_codes": [
+    "E702"
+  ],
+  "original_lint_issue_count": 2,
+  "scoped_lint_command": [
+    "/workspace/.venvs/few-shot-mi-eeg/bin/ruff",
+    "check",
+    "--ignore",
+    "E701,E702",
+    "research_logs/kumar_frozen_query_comparison_20261015/run01/compare_saved_predictions.py"
+  ],
+  "scoped_lint_exit_code": 0,
+  "scoped_lint_stdout": "All checks passed!\n",
+  "scoped_lint_stderr": "",
+  "formatting_exception": "E701/E702 retained in exact executed analysis artifact; no post-run formatting or repeated comparison was performed.",
+  "synthetic_join_validation": "synthetic_join_validation.json; one valid join and duplicate/missing/mismatched-label rejection checks passed",
+  "scientific_run_repeated_for_lint": false
+}
