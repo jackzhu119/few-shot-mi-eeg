@@ -28,8 +28,8 @@ def prepared(tmp_path, monkeypatch):
     for name in ("input.json", "receipt.json", "ledger.json"):
         (repo / name).write_text("{}\n")
     contract = {"remaining_jobs": jobs, "limits": {**batch.FIXED_LIMITS,
-                 "proposed_wall_seconds": 10800}, "proposed_maximum_usd": 1,
-                "balance_recheck_max_age_before_start_seconds": 300, "state_root": str(root),
+                 "proposed_wall_seconds": 10800},
+                "financial_execution_preconditions": "superseded-by-user", "state_root": str(root),
                 "data_root": str(tmp_path), "download_receipt": str(repo / "receipt.json"),
                 "input_manifest": "input.json", "accepted_ledger": "ledger.json"}
     path = repo / "contract.json"
@@ -43,12 +43,7 @@ def prepared(tmp_path, monkeypatch):
         "deadline_unix": start + 10800, "approved_wall_seconds": 10800,
         "authorized_container_hostname": batch.proven.platform.node(),
         "authorized_container_identity": batch.proven.container_identity(),
-        # Synthetic unit-test values, never an actual budget or authorization.
-        "cost": {"currency": "USD", "maximum_usd": 1, "hourly_rate_usd": 0.25,
-                 "latest_authorization_receipt": "synthetic unit test only"},
-        "balance_recheck": {"source": "official_RunPod_console_or_Billing",
-            "observed_at_unix": start - 1, "balance_usd": 1,
-            "evidence_reference": "synthetic unit test only, not actual billing"}}
+        "financial_execution_preconditions": "superseded-by-user"}
     monkeypatch.setattr(batch, "ROOT", repo)
     monkeypatch.setattr(batch.legacy, "LOCK", tmp_path / "research-gpu.lock")
     monkeypatch.setattr(batch, "execution_gate", lambda *_a: {"accepted_preserved": 18})
@@ -95,9 +90,7 @@ def test_actual_contract_excludes_all_accepted18_and_query():
     assert summary["query_adapter_required"] is False
     assert contract["cost_authorization"] is None
     assert contract["limits"]["proposed_wall_seconds"] == 10800
-    assert contract["proposed_maximum_usd"] == 1
-    assert contract["balance_recheck_max_age_before_start_seconds"] == 300
-    assert contract["parent_reported_official_billing_observation"] == batch.BILLING_OBSERVATION
+    assert contract["financial_execution_preconditions"] == "superseded-by-user"
     jobs = contract["remaining_jobs"]
     assert len(jobs) == 36
     assert [(j["subject"], j["seed"]) for j in jobs] == [
@@ -116,13 +109,16 @@ def test_actual_contract_excludes_all_accepted18_and_query():
     changed["execution_enabled"] = True
     with pytest.raises(ValueError, match="silently"):
         batch.validate_contract(changed)
-    for field, value in (("proposed_maximum_usd", 2),
-                         ("balance_recheck_max_age_before_start_seconds", 301),
-                         ("parent_reported_official_billing_observation", {})):
-        changed = copy.deepcopy(contract)
-        changed[field] = value
-        with pytest.raises(ValueError, match="cost ceiling"):
-            batch.validate_contract(changed)
+    changed = copy.deepcopy(contract)
+    del changed["financial_execution_preconditions"]
+    with pytest.raises(ValueError, match="user supersession"):
+        batch.validate_contract(changed)
+    # Historical billing values are preserved evidence, never execution gates.
+    changed = copy.deepcopy(contract)
+    for field in ("proposed_maximum_usd", "balance_recheck_max_age_before_start_seconds",
+                  "parent_reported_official_billing_observation", "cost_authorization"):
+        changed.pop(field, None)
+    assert batch.validate_contract(changed)["new_fits_authorized"] == 0
 
 
 def test_default_metadata_never_reads_signals_or_runtime(prepared, monkeypatch, capsys):
@@ -137,7 +133,7 @@ def test_default_metadata_never_reads_signals_or_runtime(prepared, monkeypatch, 
     assert not batch.legacy.LOCK.exists()
 
 
-def test_execute_without_actual_cost_deadline_record_stops_before_runtime(prepared, monkeypatch):
+def test_execute_without_actual_container_deadline_record_stops_before_runtime(prepared, monkeypatch):
     _contract, path, root, _authorization = prepared
     monkeypatch.setattr(batch, "validate_contract", lambda _c: {})
     monkeypatch.setattr(batch.proven, "runtime_checks", lambda: pytest.fail("GPU/runtime called"))
@@ -149,8 +145,8 @@ def test_execute_without_actual_cost_deadline_record_stops_before_runtime(prepar
 
 
 @pytest.mark.parametrize("field,value,match", [
-    ("cost", None, "cost/rate"),
-    ("cost", {"currency": "USD", "maximum_usd": None}, "cost/rate"),
+    ("financial_execution_preconditions", None, "user supersession"),
+    ("financial_execution_preconditions", "historical_cost_gate_passed", "user supersession"),
     ("query_access", True, "source-only"),
     ("accepted18_refitting_authorized", True, "source-only"),
     ("contract_sha256", "old unrelated queue", "source-only"),
@@ -167,68 +163,68 @@ def test_explicit_authorization_scope_is_not_inferred(prepared, field, value, ma
         batch.authorization_check(contract, batch.sha(path), "fixed", changed)
 
 
-def test_finite_cost_cap_and_expired_deadline_fail_closed(prepared):
+@pytest.mark.parametrize("field,value", [
+    ("not_before_unix", float("inf")), ("deadline_unix", float("nan")),
+    ("approved_wall_seconds", 0), ("approved_wall_seconds", True),
+])
+def test_nonfinite_or_invalid_absolute_window_fail_closed(prepared, field, value):
     contract, path, _root, authorization = prepared
-    for cap in (0, 0.5, 1.01, float("inf"), float("nan")):
-        changed = copy.deepcopy(authorization)
-        changed["cost"]["maximum_usd"] = cap
-        with pytest.raises(ValueError):
-            batch.authorization_check(contract, batch.sha(path), "fixed", changed)
+    changed = copy.deepcopy(authorization)
+    changed[field] = value
+    with pytest.raises(ValueError, match="deadline"):
+        batch.authorization_check(contract, batch.sha(path), "fixed", changed)
+
+
+def test_expired_deadline_or_missing_binding_fail_closed(prepared):
+    contract, path, _root, authorization = prepared
     with pytest.raises(ValueError, match="deadline"):
         batch.authorization_check(contract, batch.sha(path), "fixed", authorization,
                                   now=authorization["deadline_unix"])
-    with pytest.raises(ValueError, match="current cost/deadline"):
+    with pytest.raises(ValueError, match="current container/deadline"):
         batch.authorization_check(contract, batch.sha(path), "fixed", None)
 
 
-@pytest.mark.parametrize("change", ["missing", "wrong_source", "missing_reference",
-                                  "insufficient", "stale", "future", "nan"])
-def test_actual_balance_recheck_is_required_before_start(prepared, change):
+def test_no_cost_or_balance_fields_required_to_create_bound_state(prepared):
     contract, path, root, authorization = prepared
-    authorization = copy.deepcopy(authorization)
-    balance = authorization["balance_recheck"]
-    if change == "missing":
-        del authorization["balance_recheck"]
-    elif change == "wrong_source":
-        balance["source"] = "assumed future topup"
-    elif change == "missing_reference":
-        balance["evidence_reference"] = ""
-    elif change == "insufficient":
-        balance["balance_usd"] = 0.99
-    elif change == "stale":
-        balance["observed_at_unix"] = authorization["not_before_unix"] - 301
-    elif change == "future":
-        balance["observed_at_unix"] = authorization["not_before_unix"] + 1
-    else:
-        balance["balance_usd"] = float("nan")
-    with pytest.raises(ValueError, match="balance recheck"):
-        batch.new_state(contract, batch.sha(path), "fixed", root, authorization)
-    assert not root.exists()
+    assert "cost" not in authorization and "balance_recheck" not in authorization
+    state = batch.new_state(contract, batch.sha(path), "fixed", root, authorization)
+    assert state["authorization"] == authorization
+    assert state["jobs"] == {}
+    assert not list((root / "claims").iterdir())
+    assert all(not Path(job["output"]).exists() for job in contract["remaining_jobs"])
 
 
-def test_three_hour_and_one_dollar_proposal_cannot_be_enlarged(prepared):
+@pytest.mark.parametrize("historical", [None, {}, {"historical_unknown": True}])
+def test_historical_financial_fields_do_not_block_or_authorize(prepared, historical):
+    contract, path, _root, authorization = prepared
+    changed = copy.deepcopy(authorization)
+    changed.update(cost=historical, balance_recheck=historical)
+    assert batch.authorization_check(contract, batch.sha(path), "fixed", changed) == changed
+    changed["deadline_unix"] = changed["not_before_unix"]
+    with pytest.raises(ValueError, match="deadline"):
+        batch.authorization_check(contract, batch.sha(path), "fixed", changed)
+
+
+def test_three_hour_proposal_cannot_be_enlarged(prepared):
     contract, path, _root, authorization = prepared
     changed = copy.deepcopy(authorization)
     changed["approved_wall_seconds"] = 10801
     changed["deadline_unix"] = changed["not_before_unix"] + 10801
     with pytest.raises(ValueError, match="deadline"):
         batch.authorization_check(contract, batch.sha(path), "fixed", changed)
-    changed = copy.deepcopy(authorization)
-    changed["cost"]["maximum_usd"] = 1.01
-    with pytest.raises(ValueError, match="cost/rate"):
-        batch.authorization_check(contract, batch.sha(path), "fixed", changed)
 
 
-def test_delayed_first_start_cannot_use_old_balance_observation(prepared):
+def test_delayed_first_start_uses_remaining_original_window_without_balance(prepared):
     contract, path, root, authorization = prepared
     authorization = copy.deepcopy(authorization)
     authorization["not_before_unix"] = time.time() - 7200
     authorization["deadline_unix"] = authorization["not_before_unix"] + 10800
-    authorization["balance_recheck"]["observed_at_unix"] = authorization["not_before_unix"] - 1
     batch.authorization_check(contract, batch.sha(path), "fixed", authorization)
-    with pytest.raises(ValueError, match="First run creation"):
-        batch.new_state(contract, batch.sha(path), "fixed", root, authorization)
-    assert not root.exists()
+    state = batch.new_state(contract, batch.sha(path), "fixed", root, authorization)
+    assert state["started_unix"] == authorization["not_before_unix"]
+    assert state["deadline_unix"] == authorization["deadline_unix"]
+    assert 0 < state["deadline_unix"] - time.time() < 3600
+    assert state["jobs"] == {}
     assert all(not Path(job["output"]).exists() for job in contract["remaining_jobs"])
 
 
@@ -291,7 +287,6 @@ def test_global_deadline_covers_runtime_and_preserves_new_failure_record(prepare
     authorization["deadline_unix"] = time.time() + 0.1
     authorization["not_before_unix"] = authorization["deadline_unix"] - 1
     authorization["approved_wall_seconds"] = 1
-    authorization["balance_recheck"]["observed_at_unix"] = authorization["not_before_unix"] - 1
     auth_path = path.parent / "synthetic-authorization.json"
     batch.write_new(auth_path, authorization)
     monkeypatch.setattr(batch, "validate_contract", lambda _c: {})

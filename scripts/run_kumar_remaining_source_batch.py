@@ -2,7 +2,7 @@
 
 Default operation is metadata only. No network, credential provisioning, query adapter
 or acceptance writer exists here. Future execution requires a separately reviewed
-fixed commit/contract and a current explicit cost/absolute-deadline authorization.
+fixed commit/contract and a current explicit container/absolute-deadline authorization.
 Off-Pod export is a real dot download followed by --verify-export and receipt return;
 it is never an automatic upload or R2/scientific acceptance claim.
 """
@@ -43,19 +43,6 @@ FALSE_STAGES = proven.FALSE_STAGES
 FIXED_LIMITS = {key: value for key, value in proven.LIMITS.items()
                 if key not in {"wall_seconds", "max_new_fits", "max_epochs", "max_steps"}}
 FIXED_LIMITS.update(max_new_fits=36, max_epochs=3600, max_steps=10800)
-BILLING_OBSERVATION = {
-    "observer": "dot_parent",
-    "source": "official_RunPod_console_and_Billing",
-    "observation_window_utc": ["2026-10-15T04:49Z", "2026-10-15T04:51Z"],
-    "observation_window_Asia_Shanghai": ["2026-10-15T12:49+08:00", "2026-10-15T12:51+08:00"],
-    "provenance": "parent_reported_actual_read_only_observation_not_this_agent_platform_access",
-    "pod_id": "52ivinpjwv947i", "pod_name": "bright_ivory_bear", "pod_status": "running",
-    "balance_usd": 1.27, "total_hourly_usd": 0.257,
-    "compute_hourly_usd": 0.25, "storage_hourly_usd": 0.007, "storage_gb": 50,
-    "estimated_time_left_hours": 5, "autopay_enabled": False,
-    "payment_or_topup_changed_by_observer": False,
-    "future_topup_relied_on": False, "execution_authorization": False,
-}
 
 
 @contextlib.contextmanager
@@ -106,15 +93,13 @@ def validate_contract(contract):
     require(contract["schema_version"] == 1 and contract["policy_revision"] ==
             "remaining-source-bounded-export-v1", "Unknown remaining-source operation")
     require(contract["status"] == "proposal_only_unapproved" and
-            contract["execution_enabled"] is False and contract["cost_authorization"] is None and
+            contract["execution_enabled"] is False and
             contract["authorization"] is None, "Proposal cannot silently become authorization")
     limits = contract["limits"]
     require({k: v for k, v in limits.items() if k != "proposed_wall_seconds"} == FIXED_LIMITS and
             limits["proposed_wall_seconds"] == 10800, "Frozen operational limits differ")
-    require(contract["proposed_maximum_usd"] == 1 and
-            contract["balance_recheck_max_age_before_start_seconds"] == 300 and
-            contract["parent_reported_official_billing_observation"] == BILLING_OBSERVATION,
-            "Frozen proposed cost ceiling or actual parent billing observation differs")
+    require(contract.get("financial_execution_preconditions") == "superseded-by-user",
+            "Explicit user supersession of financial execution preconditions required")
     proposal = read(pinned(contract, "scientific_proposal"))
     import check_kumar_checkpoint_reuse_proposal as proposal_checker
     proposal_checker.check(proposal, root=ROOT)
@@ -163,13 +148,14 @@ def validate_contract(contract):
     return {"status": "remaining_source_proposal_valid_execution_closed", "accepted_preserved": 18,
             "source_fits_proposed": 36, "input_files": 253, "input_bytes": 196740994,
             "query_access": False, "query_adapter_required": False, "new_fits_authorized": 0,
-            "fit_executed": False, "cost_authorization": None}
+            "fit_executed": False,
+            "financial_execution_preconditions": "superseded-by-user"}
 
 
 def authorization_check(contract, contract_sha, commit, authorization, *, now=None):
-    """A prior queue's cost/deadline can never authorize this independent source run."""
+    """A prior queue's identity/deadline cannot authorize this independent source run."""
     now = time.time() if now is None else now
-    require(authorization is not None, "Separate current cost/deadline authorization required")
+    require(authorization is not None, "Separate current container/deadline authorization required")
     require(authorization.get("schema_version") == 1 and authorization.get("status") ==
             "parent_reviewed_remaining36_source_execution_authorized" and
             authorization.get("contract_sha256") == contract_sha and
@@ -178,18 +164,8 @@ def authorization_check(contract, contract_sha, commit, authorization, *, now=No
             and authorization.get("query_access") is False and
             authorization.get("accepted18_refitting_authorized") is False,
             "Current exact source-only parent authorization required")
-    cost = authorization.get("cost")
-    require(isinstance(cost, dict) and cost.get("currency") == "USD" and
-            isinstance(cost.get("maximum_usd"), (int, float)) and
-            not isinstance(cost.get("maximum_usd"), bool) and
-            0 < cost["maximum_usd"] <= contract["proposed_maximum_usd"] and
-            isinstance(cost.get("hourly_rate_usd"), (int, float)) and
-            not isinstance(cost.get("hourly_rate_usd"), bool) and cost["hourly_rate_usd"] > 0 and
-            isinstance(cost.get("latest_authorization_receipt"), str) and
-            bool(cost["latest_authorization_receipt"].strip()),
-            "Explicit current cost/rate decision required; null cannot launch")
-    require(math.isfinite(cost["maximum_usd"]) and math.isfinite(cost["hourly_rate_usd"]),
-            "Finite current cost/rate limits required")
+    require(authorization.get("financial_execution_preconditions") == "superseded-by-user",
+            "Explicit user supersession of financial execution preconditions required")
     start, deadline = authorization.get("not_before_unix"), authorization.get("deadline_unix")
     approved_seconds = authorization.get("approved_wall_seconds")
     require(isinstance(start, (int, float)) and not isinstance(start, bool) and
@@ -199,23 +175,6 @@ def authorization_check(contract, contract_sha, commit, authorization, *, now=No
             0 < approved_seconds <= contract["limits"]["proposed_wall_seconds"] and
             deadline - start == approved_seconds and start <= now < deadline,
             "Explicit unexpired absolute deadline required; never reuse/reset prior time")
-    require(cost["hourly_rate_usd"] * approved_seconds / 3600 <= cost["maximum_usd"],
-            "Approved wall time exceeds current cost cap")
-    balance = authorization.get("balance_recheck")
-    require(isinstance(balance, dict) and
-            balance.get("source") == "official_RunPod_console_or_Billing" and
-            isinstance(balance.get("evidence_reference"), str) and
-            bool(balance["evidence_reference"].strip()) and
-            isinstance(balance.get("balance_usd"), (int, float)) and
-            not isinstance(balance.get("balance_usd"), bool) and
-            math.isfinite(balance["balance_usd"]) and
-            balance["balance_usd"] >= cost["maximum_usd"] and
-            isinstance(balance.get("observed_at_unix"), (int, float)) and
-            not isinstance(balance.get("observed_at_unix"), bool) and
-            math.isfinite(balance["observed_at_unix"]) and
-            start - contract["balance_recheck_max_age_before_start_seconds"] <=
-            balance["observed_at_unix"] <= min(start, now),
-            "Current official balance recheck before authorized start must cover cost cap")
     identity = proven.container_identity()
     require(authorization.get("authorized_container_identity") == identity and
             authorization.get("authorized_container_hostname", identity["hostname"]) ==
@@ -291,9 +250,6 @@ def disk_guard(contract, root):
 
 def new_state(contract, contract_sha, commit, root, authorization):
     authorization_check(contract, contract_sha, commit, authorization)
-    balance_age = time.time() - authorization["balance_recheck"]["observed_at_unix"]
-    require(0 <= balance_age <= contract["balance_recheck_max_age_before_start_seconds"],
-            "First run creation requires a current official balance recheck")
     require(not root.exists(), "Canonical state exists; never replace old claims or reset time")
     for job in contract["remaining_jobs"]:
         output = Path(job["output"])
@@ -558,7 +514,8 @@ def source_fit(job, contract, contract_path):
                 runtime_seconds=time.monotonic() - started,
                 peak_cuda_allocated_bytes=torch.cuda.max_memory_allocated(),
                 provenance=collect_provenance(job["seed"], ROOT),
-                accepted18_baseline_verified=True, execution_cost_deadline_authorized=True,
+                accepted18_baseline_verified=True, execution_absolute_deadline_authorized=True,
+                financial_execution_preconditions="superseded-by-user",
                 parent_result_acceptance_pending=True, R2_backup_verified=False,
                 synthetic=False)
             require(record["epochs_executed"] <= 100 and record["optimizer_steps"] <= 300,

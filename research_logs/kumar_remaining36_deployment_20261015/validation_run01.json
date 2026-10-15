@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-15T06:48:39.479311+00:00",
+  "baseline_commit": "9f7bc102dec264e10688765636596c336e69becc",
+  "status": "minimal_deployment_delta_validated_no_Pod_execution",
+  "contract_sha256": "f1a5b94aa89f6f2d9f694f7c270e48ef2624afc06be3a08e328f500224491bd9",
+  "runner_sha256": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+  "https_manifest_sha256": "b654533a6e4fee780fab11d7a9a44ec418ef327f2422f2a2570d49cfa1b47b9f",
+  "source_input_manifest_sha256": "312b5bd38995aac5fd7748b64cdf5c0446b5e33fe05e3970c61b5dd73e026682",
+  "https_change_only_execution_enabled": true,
+  "scientific_source_fit_AST_unchanged_except_truthful_authorization_metadata": true,
+  "changed_runner_functions": [
+    "validate_contract",
+    "authorization_check",
+    "new_state",
+    "source_fit"
+  ],
+  "all_36_job_identities_order_unchanged": true,
+  "limits_threads_tolerance_unchanged": true,
+  "all_financial_execution_preconditions": "superseded-by-user",
+  "historical_billing_fields_preserved": true,
+  "accepted18_ledger_unchanged": true,
+  "CSP_original253_outputs_and_full_R2_receipt_unchanged": true,
+  "protected_preexisting_files_unchanged": 62,
+  "tests": {
+    "remaining_source_batch": {
+      "passed": 46,
+      "failed": 0,
+      "seconds": 2.39
+    },
+    "remaining_source_https_and_audit": {
+      "passed": 36,
+      "failed": 0,
+      "seconds": 0.79
+    },
+    "total_passed": 82,
+    "scope": "synthetic software plus metadata only; no real fitting or Pod calls"
+  },
+  "scoped_ruff": "passed",
+  "git_diff_check": "passed",
+  "input_package_objects_R2": 3,
+  "input_package_total_bytes_R2": 114390912,
+  "transfer_R2_full_receipt_bytes": 3657,
+  "transfer_R2_full_receipt_sha256": "d3a20342cc6a7e533e5fc0da6d27a75e2fb7622234cdefd10844ff2740302984",
+  "transfer_R2_failed_objects": [],
+  "only_remaining_live_binding": "dot publishes the actual current Pod container identity and one immutable <=10800s absolute window with final commit/contract/job IDs",
+  "new_fits_here": 0,
+  "Pod_operated": false,
+  "new_resources_created": false
+}

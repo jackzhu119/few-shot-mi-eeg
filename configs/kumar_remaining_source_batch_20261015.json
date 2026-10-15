@@ -25,7 +25,7 @@
   "runtime_inventory": "research_logs/kumar_pod_rebuild_recovery_20261014/runtime_inventory.json",
   "scientific_proposal_sha256": "3897af0474ae14b75e51ff06ca200f73e3bb26cf11adebcc32e79fe5662a8aea",
   "input_manifest_sha256": "312b5bd38995aac5fd7748b64cdf5c0446b5e33fe05e3970c61b5dd73e026682",
-  "https_manifest_sha256": "c91a182d4ca6347b7667435ac3cc5eebb6eecb7db9032cd7fecf3a31761c39e6",
+  "https_manifest_sha256": "b654533a6e4fee780fab11d7a9a44ec418ef327f2422f2a2570d49cfa1b47b9f",
   "accepted_ledger_sha256": "1ee1868b97e6ff7ea2e42327fe64337cafbb0f8ee6aff19cc24fba5265f9aaa9",
   "scientific_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
   "split_manifest_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
@@ -427,7 +427,7 @@
     "execution": "serial on the existing dot-scheduled GPU only; no new resource creation",
     "historical_device": "RTX A4500, current hardware/runtime not observed here",
     "proposed_total_wall_seconds": 10800,
-    "basis": "At most 10800 seconds/3h and 1USD execution cost; startup/revalidation/packaging/all export waits share the same absolute deadline. Full36 completion is not promised; preserve partial state at expiry and never renew the same run window.",
+    "basis": "At most 10800 seconds/3h; startup/revalidation/packaging/all export waits share the same absolute deadline. Preserve partial state at expiry and never renew the same run window.",
     "proposed_active_chunks": 18,
     "required_off_Pod_boundaries": 36,
     "minimum_free_disk_floor_bytes": 5368709120,
@@ -437,7 +437,7 @@
     "cost_estimate_usd": null,
     "cost_latest_actual_authorization_ref": null,
     "actual_prices_verified": false,
-    "note": "This is an unapproved three-hour/1USD candidate based on the parent-reported official snapshot, not execution permission, a guaranteed future rate/balance, or reliance on a future topup. Current cost authorization/actual start/deadline remain null; actual reviewed contract/code/full container identity and fresh official balance recheck are required.",
+    "note": "User explicitly removed all cost/rate/balance execution prerequisites. Historical monetary fields and prior observations remain as superseded evidence, not runtime requirements. Dot binds the reviewed contract/code, full current container identity and actual fixed start/deadline; no new resource allocation.",
     "proposed_maximum_usd": 1
   },
   "stages": {
@@ -472,7 +472,7 @@
     "src/learning_preserving_bci/utils/reproducibility.py": "b51bb7bdc233b9e070d0de55f73dae1264cb9697be41e709d75154f6e6ef1ecc",
     "environments/gpu/pyproject.toml": "90a3d349023ef448f731990abcad5f3015be3f84ad338be4473d2ef790550089",
     "environments/gpu/uv.lock": "11682d951fe204e32859da12d9cc0ac73c6e63c1bce061d9834f8f68ebfe72e0",
-    "scripts/run_kumar_remaining_source_batch.py": "9bd6526c7dbc81d85dabb0c5d420bb41ba92957d091760adc72a4246733db5a1",
+    "scripts/run_kumar_remaining_source_batch.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
     "scripts/fetch_kumar_remaining_source_https.py": "beebcc766d8c5edb7f14a6193daaa390f1a1b7cd15f90ec0310b8584d19f4b21",
     "scripts/audit_kumar_remaining_source_bundle.py": "e554a05a566102e1ff06508b7e380d56805df5cf6feb50270a3713acd2b5a0fd",
     "scripts/check_kumar_checkpoint_reuse_proposal.py": "ea9935857629404df596663ae0c849aa32a14f32e1291449028d40415a03aa40"
@@ -504,5 +504,6 @@
     "payment_or_topup_changed_by_observer": false,
     "future_topup_relied_on": false,
     "execution_authorization": false
-  }
+  },
+  "financial_execution_preconditions": "superseded-by-user"
 }

@@ -4,6 +4,7 @@ import copy
 import fcntl
 import hashlib
 import json
+import subprocess
 from types import SimpleNamespace
 
 import pytest
@@ -22,11 +23,17 @@ def test_frozen_metadata_scope_excludes_development_and_query():
     assert plan["query_access"] is False
 
 
-def test_current_real_manifest_blocks_download_before_any_filesystem_work(tmp_path):
+def test_real_manifest_only_enables_existing_exact253_and_default_stays_read_only(tmp_path, capsys):
+    old = json.loads(subprocess.check_output([
+        "git", "show", "9f7bc102dec264e10688765636596c336e69becc:configs/kumar_remaining_source_https_20261015.json"
+    ], cwd=module.ROOT))
+    expected = copy.deepcopy(old)
+    expected["execution_enabled"] = True
+    assert module.load_plan() == expected
     root = tmp_path / "never-created"
     receipt = tmp_path / "never-created-receipt.json"
-    with pytest.raises(PermissionError, match="reviewed restoration freeze"):
-        module.restore(root, receipt)
+    module.main(["--data-root", str(root), "--receipt", str(receipt)])
+    assert json.loads(capsys.readouterr().out)["status"] == "plan_only"
     assert not root.exists()
     assert not receipt.exists()
 
