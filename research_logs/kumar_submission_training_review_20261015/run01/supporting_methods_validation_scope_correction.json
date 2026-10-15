@@ -1,0 +1,9 @@
+{
+  "recorded_utc": "2026-10-15T12:04:02.725472+00:00",
+  "initial_check": "All old S1-S6 inline tokens compared including engineering procfs token",
+  "actual_initial_result": "ValueError: All original S1-S6 inline code/formulas preserved exactly",
+  "actual_difference": "The sole old-only token was `children`, from the operational failure description intentionally retained in the old audit supplement instead of scientific S1 Text. No scientific formula changed.",
+  "correction": "Final checker requires exact equality after removing only this explicitly identified engineering token from the old list.",
+  "scientific_outputs_or_rules_changed": false,
+  "final_check": "supporting_methods_draft_validation.json:46 checks,0 failures"
+}

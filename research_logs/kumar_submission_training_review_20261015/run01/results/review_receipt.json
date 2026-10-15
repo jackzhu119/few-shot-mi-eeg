@@ -1,0 +1,1335 @@
+{
+  "status": "saved_text_training_review_passed",
+  "created_utc": "2026-10-15T11:48:36.585855+00:00",
+  "scope": "descriptive postprocessing of saved histories/metrics; no model or EEG load",
+  "git_HEAD_at_execution": "370bc94b7af3c926adeb02c38e430a53e4a64135",
+  "script_sha256": "5a4d58775ca0535b22ca538faaa833d1f5aabf58db98f4aa87ce478e85fea2cf",
+  "inputs": {
+    "research_logs/kumar_remaining36_acceptance_20261015/run01/source_model_plan_all54.json": {
+      "bytes": 33358,
+      "sha256": "28232bfa53515ae3e66acadefa39ee025320cfda0196a5d785631bf4d8f8abcd"
+    },
+    "research_logs/kumar_remaining36_acceptance_20261015/run01/accepted_jobs_all54.json": {
+      "bytes": 33142,
+      "sha256": "013668c8d1b1c5d6061f3701d495cf7770743a1c6fda8678f5db7ffd50992670"
+    },
+    "/workspace/few-shot-mi-eeg/research_logs/kumar_submission_training_review_20261015/run01/archive_input_index.json": {
+      "bytes": 15382,
+      "sha256": "72d3b2e05fab521b69cc1c1d7692d977b584f890bf5096107f4034cb56fdc6f8"
+    },
+    "configs/kumar_eegnet_gpu_development_20261014.json": {
+      "bytes": 5844,
+      "sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+    },
+    "research_logs/kumar_all54_source_aggregation_20261015/run01/per_fit_source_validation.csv": {
+      "bytes": 9821,
+      "sha256": "cdda41c165c95f9e4b6881ba039ea6277ef47cddeda1cb7599db714c5c639c35"
+    },
+    "research_logs/kumar_frozen_query_comparison_20261015/run01/eegnet_per_seed_session.csv": {
+      "bytes": 16961,
+      "sha256": "edc066cd216982c752662925507f87dc41d09b32a543dccd2e10cd01fcccbf5a"
+    },
+    "research_logs/kumar_frozen_query_comparison_20261015/run01/per_participant_endpoints.csv": {
+      "bytes": 5788,
+      "sha256": "115e67c38f89e84f799f9a89008556adf30e7bf9ef0bb5a9c2b9f26fe7c2436b"
+    },
+    "scripts/train_kumar_eegnet.py": {
+      "bytes": 32558,
+      "sha256": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5"
+    }
+  },
+  "archives": [
+    {
+      "subject": "sub-1",
+      "cohort": "development6",
+      "seed": 20261012,
+      "job_id": "17377a7cf04bfc73e25bc94d7e42fc4f1ab6f14fb6dde63c7b21e742b94b9ace",
+      "archive_filename": "sub-1-seed-20261012-run01.tar",
+      "archive_sha256": "2a4d0dd291f1f93bc0560e39b99b2e76fbf6bcba0d3a363ceb522fb4afea0f62",
+      "archive_bytes": 143360,
+      "payload_members": 11,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "5e3f6579f028193506dfd3d99c4df9d1c1e0ade781cdccf53d3443ee535158dd",
+        "weights.json": "09384f404c5b352b294c7cb153091e399f0b8f54526ee1c4e957b14a986ee1ca",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "949914cbda40f9b50f0a85074fef1f2bb6f087a71170156f0ded18b7a8e8ce2e",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "12331a056c5eb4bfb9934d901d8a51996da791e8e2f15dcc916f0684344209b9",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-1",
+      "cohort": "development6",
+      "seed": 20261013,
+      "job_id": "5be2fc9499d4ec3916e5191c822c205e195c0e25655c39ec0f84e5aa2c091470",
+      "archive_filename": "sub-1-seed-20261013-run01.tar",
+      "archive_sha256": "d3a7858c54aab0295954be6a6431509d5acdea687171474d5d406a211d7dd2dc",
+      "archive_bytes": 184320,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "1d1c48b691650860e8c7e78b2232ba16a484616e11e8b0cf8049e5e4fdbbb0fb",
+        "fit_result.json": "9d3fbf9f42730ca2ebc7d33b80c478fb260745c64390f8d7c2cd18ab118d0969",
+        "weights.json": "166288466d944c45bc4b6639954052e792da382300f9ac7b8f764d01b1e8f88a",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "0f1ebf9ade8d637bb28fb990734416c6102a7f4b99f9fa4261a15fb128ef8f03",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "666324c630d51ca0308c1cc9bd44551f832991d07a541210b520b351e6a2df80",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-1",
+      "cohort": "development6",
+      "seed": 20261014,
+      "job_id": "ba8899c0dc867baefa9a5623cccf706a82571413d63ec76e4baa7bfab613b4ca",
+      "archive_filename": "sub-1-seed-20261014-run01.tar",
+      "archive_sha256": "c31785de7b61c187ae3690a6d16cce8d89e5edf93be0bae6bcfce2b81a0fb309",
+      "archive_bytes": 194560,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "d0bc0a96e608ff0295a48219e24aeec3432f0679d13584eae15a8a26465cf86c",
+        "fit_result.json": "de8a2d311cf98950f33e17cccf4faef8862708a60c82727649eb88d2dc2c3f27",
+        "weights.json": "affe6fddddb76824eb9ea672cab14c512354c89e75daf1d31fa5f9c7bdbe0012",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "73353d00ee742647dd02f3dea1e00bc2881a7fdcb0fafd92e69d28ac5f3a0db2",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "666324c630d51ca0308c1cc9bd44551f832991d07a541210b520b351e6a2df80",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-4",
+      "cohort": "development6",
+      "seed": 20261012,
+      "job_id": "e1b092f93db8c972cb59403814c73eb1ba2273b1aa82351f0205c390a28b9faa",
+      "archive_filename": "sub-4-seed-20261012-run01.tar",
+      "archive_sha256": "f889999e47b3d4f4d58604c0d4daca95578dac83d0776ba3bac629e23a3268a1",
+      "archive_bytes": 174080,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "89849bd80a800b08966a1c10fb616b6df107ad57be602d269c8d18187f6ba287",
+        "fit_result.json": "bed1488a08357e2f6d3c8e14a99705d83e1ce885f828d08c206d02b4f3f7829a",
+        "weights.json": "0600445b0282a0c1d76e9d7ec424b6001044a85f9330ec3ba250c33e44b09cb0",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "d99ba6c79bf6ed41a254c4e4e74602ff0f77de39a7c679deac0d6fe6c04e384d",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "666324c630d51ca0308c1cc9bd44551f832991d07a541210b520b351e6a2df80",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-4",
+      "cohort": "development6",
+      "seed": 20261013,
+      "job_id": "451a32bd8f38870f333d43c3941498a72bda8f19574ee381a260200bd23ff112",
+      "archive_filename": "sub-4-seed-20261013-run01.tar",
+      "archive_sha256": "4c8f923a0e706c7e30962415a2dd0293e13096d0a9b27b866e339b1382be1076",
+      "archive_bytes": 174080,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "d45b29b5f074d8f69e67f89d0c388cdd9d2797886d83449b5179dd7b2d917882",
+        "fit_result.json": "67b489a7040414c3213d06f518cd655eafe5e0d263369013f983a6482ce98460",
+        "weights.json": "c804b65343443abbd68a5c494550020c11b81e4a101ae801cfbf1b0c8232f4b7",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "cd7b4650f0a4f708b98f7230428be9c5923da7ce0220e149dd58242dd9f9c95c",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "666324c630d51ca0308c1cc9bd44551f832991d07a541210b520b351e6a2df80",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-4",
+      "cohort": "development6",
+      "seed": 20261014,
+      "job_id": "fe495208cd04aff921403e3e0d8c9f3e065d477deff26b28fbfe4480d9ada6c2",
+      "archive_filename": "sub-4-seed-20261014-run01.tar",
+      "archive_sha256": "854262fe223c2a286f80747c5197c21aecd442c7b2e546931831a76ce03cd6ad",
+      "archive_bytes": 174080,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "d45b29b5f074d8f69e67f89d0c388cdd9d2797886d83449b5179dd7b2d917882",
+        "fit_result.json": "46b4135054975f55f636dfcc996c33b8adba703f3b92a33a00a6bc1de7471972",
+        "weights.json": "1c1a26f4d3f758ac660f777d7a19604d663e9dcf8397ebecccf2c167a3f52cd6",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "445c6f8d5efeee5f558f36d39889727587eaa6517cb1ec732214539ebadb9765",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "666324c630d51ca0308c1cc9bd44551f832991d07a541210b520b351e6a2df80",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-7",
+      "cohort": "development6",
+      "seed": 20261012,
+      "job_id": "735d0b78575ffe08b0be4e51a26fcadaa0a2db1977c9120d1e837e3ed48d03d7",
+      "archive_filename": "sub-7-seed-20261012-run01.tar",
+      "archive_sha256": "23fd2c2fcdb100fad56aa703d88912a77e29a35c66adf0a81cdb04f4647b654d",
+      "archive_bytes": 174080,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "8cb21d23f10683d54fa67d7ea1cc82bcb6f53ebeaf2431a852b77faff11c60fd",
+        "fit_result.json": "b26c560cae23c02349b32c30d7a102a5131d682ac3712ae1dea4df564478470e",
+        "weights.json": "03ce6c1c33c6955fd2239caf5f888f63b64168a5c4b73c911ded97f9353ff0b7",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "6dfb34d531418d7d36cece92ba9b83837a6a37b672a220d3c7592e67ef8d3bd2",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "666324c630d51ca0308c1cc9bd44551f832991d07a541210b520b351e6a2df80",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-7",
+      "cohort": "development6",
+      "seed": 20261013,
+      "job_id": "1aa92ed2b84621e78c67af8bf6f1eb6482b810951b9418a9b9fb017541552c91",
+      "archive_filename": "sub-7-seed-20261013-run01.tar",
+      "archive_sha256": "829fa765561327a67693c4609010ed0e2963310bc50d339c2ddd6507af6f9f68",
+      "archive_bytes": 194560,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "61843efc3906a28f87c071614ac5756d84ec9082dacb65dc3953843da3bc6716",
+        "fit_result.json": "1c6c775525fcf4d1a530970916a2acc0a507b1fa91f2df6c55ee69c518847d6e",
+        "weights.json": "788b4b936c25e4ade505d448cc0c26f522bfbed5962514eb9d77be4e874393fe",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "dc9ec7a196536779a6a917880c6dda9edd4c67497b61eac200de38912ad4851b",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "666324c630d51ca0308c1cc9bd44551f832991d07a541210b520b351e6a2df80",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-7",
+      "cohort": "development6",
+      "seed": 20261014,
+      "job_id": "a072e1ee4836265f6237ccb5ae6a36adc90f47395f3c0830071d86798bc1f5ba",
+      "archive_filename": "sub-7-seed-20261014-run01.tar",
+      "archive_sha256": "4a9416a46558dffc2f29dd3b0075264eaff90ca6178d67af4f97e822e54b5a93",
+      "archive_bytes": 184320,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "0a6dda676ea434a06d478ee373fbfcee780b409e8f87685371c5f5e46820e191",
+        "fit_result.json": "d8ea52f1ae941f3b7cbf8120461336c0a74e22540cf306351b4ca2ddb152309f",
+        "weights.json": "98a35ce86074b4045b78bdfbad6396fa7f874b07d1f0eef1d3094d9a34147527",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "c254b3380f2727f6f24edb50e345722450a209ed24e4de36cbcfb99d09af8614",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "666324c630d51ca0308c1cc9bd44551f832991d07a541210b520b351e6a2df80",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-10",
+      "cohort": "development6",
+      "seed": 20261012,
+      "job_id": "04c84fd64d26f4aaddcfcce264b71c6332395eb1914ae799470dde4d0e666b5e",
+      "archive_filename": "sub-10-seed-20261012-run01.tar",
+      "archive_sha256": "60f9715ad53489d0512b62a874cedb9e63764c05166b2230f485aa40785fb180",
+      "archive_bytes": 174080,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "d45b29b5f074d8f69e67f89d0c388cdd9d2797886d83449b5179dd7b2d917882",
+        "fit_result.json": "21964dbe4852e1c04ecda77560cda042f26372064b0ebdecb99893a3b954435b",
+        "weights.json": "5c055445039ae40fc04791c8dd691ab77b9dfca4bf0473b489e0bd75be001f04",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "bc5bcc3d144b48fd982c452372f6271db8f68d541b3bd0d6fb93644ba52d7d93",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "666324c630d51ca0308c1cc9bd44551f832991d07a541210b520b351e6a2df80",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-10",
+      "cohort": "development6",
+      "seed": 20261013,
+      "job_id": "1a6f1682dafff74743a174565e4e8360d7615ef8b80d09919ff0a5c043ab1e55",
+      "archive_filename": "sub-10-seed-20261013-run01.tar",
+      "archive_sha256": "4812656cf14807d85f5d6be9722f1c342eacff642d3fdab739770af11c567571",
+      "archive_bytes": 174080,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "d45b29b5f074d8f69e67f89d0c388cdd9d2797886d83449b5179dd7b2d917882",
+        "fit_result.json": "1557572fe813879b709fdbd6bb83ed6f28352424f88f98d066cab283757c8aff",
+        "weights.json": "2483b407404ce97e292f5da97778b228fbd630feb3c70b41298bd33b0c02fa22",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "6eb57ae22016b18581d0d4fbe62656a04731ec995d3f078897985921e086700d",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "666324c630d51ca0308c1cc9bd44551f832991d07a541210b520b351e6a2df80",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-10",
+      "cohort": "development6",
+      "seed": 20261014,
+      "job_id": "4b2352788f901e95f387f44be75ad0f71ceac4c5a3e68c030365c5e98559a9f1",
+      "archive_filename": "sub-10-seed-20261014-run01.tar",
+      "archive_sha256": "2178b05ccb0858ea09f63a4b1429720b029cd6868f417557e9574d352c9fc41f",
+      "archive_bytes": 184320,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "733b3f40c9804ac6316e7a570d9c14f025307ef1db4ed1c163510045c25c5bd3",
+        "fit_result.json": "b78468dd97b0b2190c6a826de90faa678930a69738fd6dc28c7ed35b2d8eb4b1",
+        "weights.json": "15d9e8ad4346ebe910e6d609af93ab0c7a261fa4191ea16fdeb43dc973203aa8",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "0bcaaa9f1f32ec6197cd7f060929d9c71635521893dc3211d199617bd4de7be0",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "666324c630d51ca0308c1cc9bd44551f832991d07a541210b520b351e6a2df80",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-13",
+      "cohort": "development6",
+      "seed": 20261012,
+      "job_id": "f7e593ca50f530f362181d48a39258dbbb2f6d741a2ecfd5c51b4ce0e69326b3",
+      "archive_filename": "sub-13-seed-20261012-run01.tar",
+      "archive_sha256": "cd5afc436560c517c34bf41f32afa2c8f34e26f95870baa855063c0ea48de6c3",
+      "archive_bytes": 184320,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "8d86482712fcab42a4f0902781e7ea84f71f27228f760d3e26d4bb19fbd281f6",
+        "fit_result.json": "c0b413257425fa9126acbd110472b866e15fc84916c932b952216be9a1f2bdf5",
+        "weights.json": "6152a982d14c600a4a1c79849fb1b5e8c56c0dbe3913b973bb16dd61988ba0f1",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "bbd44a5be989103af1fd70b97f145b34c776650085dd2afbee8141ecf0953765",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "666324c630d51ca0308c1cc9bd44551f832991d07a541210b520b351e6a2df80",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-13",
+      "cohort": "development6",
+      "seed": 20261013,
+      "job_id": "3afcfb08e856e7b89468b23e78a34aa4419d31a3c7fcec386a442d5766669599",
+      "archive_filename": "sub-13-seed-20261013-run01.tar",
+      "archive_sha256": "ad78ce4f60abb38a535e069a4837acfb6ea2ace52c2fc471287cb3925c007c2f",
+      "archive_bytes": 184320,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "79d15a333778956b6d10a7b1250cc5e1585ddd9dcdd41144bda2487dd77c873f",
+        "fit_result.json": "c14547e30ce27398c608cc6446915c7799a8d3fd77a0183499297327f0dd055d",
+        "weights.json": "6722bdeb3e682a6aedf44f7b97c0fee6aaed5f7afb2c6ef79c7c636ddd4cbe5d",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "f12e7392c2b59c520288d43dfe24ffb979315c746325f7782dcc5b818fcf4f18",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "666324c630d51ca0308c1cc9bd44551f832991d07a541210b520b351e6a2df80",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-13",
+      "cohort": "development6",
+      "seed": 20261014,
+      "job_id": "fe37e7a42f0658cdddd6db0b2eb5134fda1bdc82eaa2855cb198ea2ed97cc2ea",
+      "archive_filename": "sub-13-seed-20261014-run01.tar",
+      "archive_sha256": "a8e7cad89f3a8839fdc1c2c1f37ca368f789dc50c158dd7fd1a65e1302e104dc",
+      "archive_bytes": 194560,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "f7bac6d241adcfa92616067d0ed5d080cd6e6816f5035aa5ddc7b2b776e62fa0",
+        "fit_result.json": "a18ec8b2b7174815cc1a3648f180126016cbc5de7cbb8e4687a9f40828e290c3",
+        "weights.json": "c40ebdacca431bec64a31f217bc1bc060de8272f537383c6b955d6b36840ddf9",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "4207e329ebeaa0eb16795d6a6535242766f47ef8e6d6d37d0617c9e5d925d831",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "666324c630d51ca0308c1cc9bd44551f832991d07a541210b520b351e6a2df80",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-16",
+      "cohort": "development6",
+      "seed": 20261012,
+      "job_id": "1534e6e3dbe39282e0f7220355889366af2c8a9eafd2008c03cbc3449d361319",
+      "archive_filename": "sub-16-seed-20261012-run01.tar",
+      "archive_sha256": "21755136bbd8e2d9ab595eb77ca5eacfc12b0bcbfe27857b6816775a7ec8a78f",
+      "archive_bytes": 194560,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e8183eb732efc244c95f828a87c265381bd6c060fc1538dc4c1c328e77abcf3e",
+        "fit_result.json": "4d2861d390d2ef80eec4277b20893b51931c88f91b2f37e51326ced52da99a37",
+        "weights.json": "b7eaa95c1dfb504bce56cf05926f24b08d030889b466d6525c9854598d2b0e2e",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "3c5261ef049546813bda6aceec77b2a27de045c4efe1041ab64c66974470a82d",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "666324c630d51ca0308c1cc9bd44551f832991d07a541210b520b351e6a2df80",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-16",
+      "cohort": "development6",
+      "seed": 20261013,
+      "job_id": "1f1cf3552df9ed9bdf25fb45271d5b7ed61df8800f2e66fb509df1a76a5bc9af",
+      "archive_filename": "sub-16-seed-20261013-run01.tar",
+      "archive_sha256": "8b79a00c13537b96a8f15acd2c54001585f8e5062f07f68467a5024674d6d692",
+      "archive_bytes": 194560,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e8183eb732efc244c95f828a87c265381bd6c060fc1538dc4c1c328e77abcf3e",
+        "fit_result.json": "06ca994c12fdfabafe76dd3838336f0830177eed74e4a0f29797c063183b1a68",
+        "weights.json": "0b7a5e7d8d8abf01222665773d266bf311b45e8c7ffbb7796d791b0972db084c",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "82064e7a9e8fff25f055d35b8b448e47d317c825c63ab1d230ca47ce8c5d665a",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "666324c630d51ca0308c1cc9bd44551f832991d07a541210b520b351e6a2df80",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-16",
+      "cohort": "development6",
+      "seed": 20261014,
+      "job_id": "df56f563ff26909b6e0590906f305982b0e5df89520c12355f433a1cd2bd968a",
+      "archive_filename": "sub-16-seed-20261014-run01.tar",
+      "archive_sha256": "02d18055e0c34fcf6b7279769b2d0bf0b1deabef573985b4bad6cd6760fddb27",
+      "archive_bytes": 194560,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "a33deb8f4cadf3345e3d602e2ae851ae8babadf49ed4a9351239e68f5ed32924",
+        "fit_result.json": "511094160adb471c6534334c9a524b400f9060ad94ec8ec51d5531b675a8fa4f",
+        "weights.json": "f298fd0e4e9176f931c5c0d9443a91d977234ebcf01510e3b7dc3ec6dec38459",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "5ca27dd5de9892fc4910a182277b43c3071824452c649d8ab345c430a18117f8",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "666324c630d51ca0308c1cc9bd44551f832991d07a541210b520b351e6a2df80",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-2",
+      "cohort": "remaining12",
+      "seed": 20261012,
+      "job_id": "df3d71e4bed6d37058026cbce4f60e34783fb11c87d8b0f5efe6f368c91ba222",
+      "archive_filename": "sub-2-seed-20261012-run01.tar",
+      "archive_sha256": "7a970cfd963aa3440bf813e3c3dcaff6f82bb27fd768b56a53726a871709b82f",
+      "archive_bytes": 256000,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "4435d7385d91afd5a06264e502e0f9664eced2e0e5359422e0bc1ae81611a602",
+        "weights.json": "f108b4a1dda27990403b896732ef0e8016797e111fd617f340c99760c319d158",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "65b2b1fc1b97c5e862ec9df6648a6331d739ed05de3e85f03e2ebd03026c0cd1",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-2",
+      "cohort": "remaining12",
+      "seed": 20261013,
+      "job_id": "e93b469def25a046cfa08d08fdba7c3dbd6b93bc2d17d360d9d44ef1782aeb07",
+      "archive_filename": "sub-2-seed-20261013-run01.tar",
+      "archive_sha256": "6e14ea97726090a55bf5d241f7063f4eb124c5e6b3c623df86043bd65157971b",
+      "archive_bytes": 266240,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "cc652fceed6899a8918ccae97488bbf9c30d360c1f7bc95ac224776e1ab3acff",
+        "weights.json": "affa4277a4c0de22be378053920f75d6154e8f266de2c9a53b0f1d66d54e5ec5",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "7a313dd48c13148955a72ec60594438281318ef14625829b25f8f9ffd6076297",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-2",
+      "cohort": "remaining12",
+      "seed": 20261014,
+      "job_id": "b5eec7743c554b62a21e160d012eefa38a160a9dbc0dc8809d27ccfb85e7c1c9",
+      "archive_filename": "sub-2-seed-20261014-run01.tar",
+      "archive_sha256": "508ebc11a679ecb2cddc32eb3df903756b02ffdd5af18dd566c05f26806e80d2",
+      "archive_bytes": 256000,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "2aef8a87bd2c58d39146cc6b5e78eb3893a7dbe2d6af439c4f7c2e5ad81b9de2",
+        "weights.json": "66af5656f402dc1eb6e337e0425afd87bc0b972fdc133b9f24209545ce48902a",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "a1a0f77d37212bed81d842ce6977ad8d9f5278efb62fc9cdf79cbe01b087fc74",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-3",
+      "cohort": "remaining12",
+      "seed": 20261012,
+      "job_id": "7b6ebeaef294dff0339c43fa1c35d7f6c34f30785d3e8b2bb9a03e8b7f23b22a",
+      "archive_filename": "sub-3-seed-20261012-run01.tar",
+      "archive_sha256": "1313145f9f0f093936df30098bf95726a7a6e9553d440a49c300b8decd224682",
+      "archive_bytes": 266240,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "2f3f595cdeda3e9944b45ee92ae56cf7e0749129b945a93555925230075f9944",
+        "weights.json": "0287a6cc804e853e98614d901e55e691f264d0741325c4972d1ab8a38de10ce6",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "5a12c36b3989940aef6d9eebb8b06bdc756278c000e38b956e6b384c725cf439",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-3",
+      "cohort": "remaining12",
+      "seed": 20261013,
+      "job_id": "66b5c7a89b8fb4ccbca9f25dfaa588c6952f2aad3a1d7648348f8e88361c4c2f",
+      "archive_filename": "sub-3-seed-20261013-run01.tar",
+      "archive_sha256": "9aec72b2913adf72ac1ffc44f25a3f602abd2a095712983ff90054a704a3a7de",
+      "archive_bytes": 256000,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "95505e7aba31533520c37dd6f6c8e24ecf031281a73f476d328e07d81f533768",
+        "weights.json": "f5d3983d3135a05d61ea9852963942871f3be0842c6fb9894e0ef0f90b11bfbe",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "3702f7e6d8e033fff5c1ec8722d58a4df047e7ea30a66563bd0327fb96b0bfe0",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-3",
+      "cohort": "remaining12",
+      "seed": 20261014,
+      "job_id": "80bcdedfef4684c5cc9b307805bfb74e00bf0a85756059e351eb10a78a13a037",
+      "archive_filename": "sub-3-seed-20261014-run01.tar",
+      "archive_sha256": "20e66e434aa0211fb6661a558ce186272c07dd372073adb3d9175485432f7ead",
+      "archive_bytes": 256000,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "a508c3dcb4fe106bf8ca004c80521a97bc10be59abf634f90b18227f18da1228",
+        "weights.json": "0105cecf66b192fa1e5b1405c045b1f836bbfdc424668369821435e60c2b361d",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "d864ef01c29f2e7cde2fdcc091d07a43642234375a875d45884afbdb5a73d113",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-5",
+      "cohort": "remaining12",
+      "seed": 20261012,
+      "job_id": "d80b3b44b6729ec7d94e42cce0668f8065c9fc15c62538b0d37b6e67eb461c7b",
+      "archive_filename": "sub-5-seed-20261012-run01.tar",
+      "archive_sha256": "3a6467ea3ca1ed31a2c530db1d0f4107272f60b348396d3ca74d4c1fcfeee479",
+      "archive_bytes": 256000,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "f480f1bf60dc6d6b6a1a970dbc8e562c6f516be150cca71ef39bdd7476def593",
+        "weights.json": "f813302fa5e64f7a4276c41fb27f117a2a4958569e01bafa31208729727858f0",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "fd4a21ad0986b5d43c9b086077bbc5e1bce974f39eed8569ed0e878a8b3783c6",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-5",
+      "cohort": "remaining12",
+      "seed": 20261013,
+      "job_id": "15203ad240b981b752d4af83fe24fd8aebfd92c96820c66eda7c32ca6ba0c799",
+      "archive_filename": "sub-5-seed-20261013-run01.tar",
+      "archive_sha256": "467ab3d88d8d637f6496e7bca7c2c81f1c3215edca7385710cad96ffef06d627",
+      "archive_bytes": 256000,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "eb417c86fac0a9c67eca6c93454a29729689011933373b36b43a35783fb13042",
+        "weights.json": "3a95d4f16541fbc3f09fc68fffff333f806bbc7d42adfeb732f63fe8eccd1a6f",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "cc1e19102af5f3eaa6467748da804bcee3a5caf3fe2ca43dcb93ef8644ea4eab",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-5",
+      "cohort": "remaining12",
+      "seed": 20261014,
+      "job_id": "4221970caa1ebb7becc3ba3ba108ee9ea5b2bd44d95ca8e69f3eda7a280942dd",
+      "archive_filename": "sub-5-seed-20261014-run01.tar",
+      "archive_sha256": "b1fe9dc37e96fba657bfccd3e6b85bcbe4e2a63b7c00965f2cc2e4ea41845e73",
+      "archive_bytes": 256000,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "7320de5f99eba1f404a8ff06ea365b2363575c0bb6950308451a6c5e5fc57924",
+        "weights.json": "b47eb506773a3da630a9f419a99b3f484bea3e18e166d7110b192744667d5c70",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "af079b86a284b68f62a2dd5e9e60907879e528664b11c6ab7e19abc072191a50",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-6",
+      "cohort": "remaining12",
+      "seed": 20261012,
+      "job_id": "dd28327b1068bb128614eeb63d7727a8b59da65dc8e52575ef3533d7d1ade074",
+      "archive_filename": "sub-6-seed-20261012-run01.tar",
+      "archive_sha256": "967a0467bdabeca2372d018dfe968ea9c5ef58607199fb1d4827138ca8e248b1",
+      "archive_bytes": 256000,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "2a83338faa3ce869cbf783d19b7bdd72864ec552777c737ce2395c2b27e9ff63",
+        "weights.json": "adc0a93a65e866550036f9fcbded09c3a13ca0608830fa0df111a34c5c65a211",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "ea85099046c9920366a1160405c796b09212b73af9128b21ebf0a2a91891e0ea",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-6",
+      "cohort": "remaining12",
+      "seed": 20261013,
+      "job_id": "ab971cc08608806ea2483fdec9c624b1e95490b6a2309a2e9122cceab9829850",
+      "archive_filename": "sub-6-seed-20261013-run01.tar",
+      "archive_sha256": "e6c8eadf1fc931cc51447010fc978bc21bc351d26bc99c5655c24a0d78603ecc",
+      "archive_bytes": 256000,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "3c7080e23fdff8c5517ae38c8cd5c20f71fb994de92ec9c3607dabf212741ead",
+        "weights.json": "9df3cd90190f31a9faf53131fc0cdf14dcefb14d089b650e0635d68e4ab9f50b",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "bfeec591abb805c5a96aa49b73424974da8f6f968d85cd1e08ab6f1a337ec98e",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-6",
+      "cohort": "remaining12",
+      "seed": 20261014,
+      "job_id": "9b75bb235cd933c268778dc802fe1d4300d6594de8fb5511522fcecf4badf35c",
+      "archive_filename": "sub-6-seed-20261014-run01.tar",
+      "archive_sha256": "12b4a260be84a711233ee27ed832b26c9e64963903abfac762a20914665114d2",
+      "archive_bytes": 266240,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "d2f76fda487ecba3668ca663e33a9913322578ff16eba9fb0d3d7fdd8e75a36d",
+        "weights.json": "bf6c8ab24edb63500599219be5bdff5533def347a5123218c681b7959668dded",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "f099ba852deae92bc5ea5f4bdb1b098d7978715d03332631990dc9f45e6b2129",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-8",
+      "cohort": "remaining12",
+      "seed": 20261012,
+      "job_id": "d1392eb4c7b5aaaa6539285d41f45b63bf7d09258b54d41a6dfc326492d91c1c",
+      "archive_filename": "sub-8-seed-20261012-run01.tar",
+      "archive_sha256": "d5eb8d6842d98118f8ce1e721afab7fcd2028ed5d1de7186ab230b40e28e14a6",
+      "archive_bytes": 266240,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "3e0195068c748800de33e789f303e4c2e352f3019e0969f21c37000dc3b9e674",
+        "weights.json": "9450cba50296ee14b0b7a6d97adb054f344de908c7ad456a7e2dbfe73eb77870",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "4b1467cf53326d9d9a33462ce98312603e3e1a9ab6d378c2b2b2f9761ccd662a",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-8",
+      "cohort": "remaining12",
+      "seed": 20261013,
+      "job_id": "b65b18b7a4fe02dbb95b2e42110a213a7f5f76db4ff7c19473e4320938dbab58",
+      "archive_filename": "sub-8-seed-20261013-run01.tar",
+      "archive_sha256": "12da3ca34ed6ddc831a177f9ec73486e1e2ea5c79b2d0deee9d6f3b9d35c00f1",
+      "archive_bytes": 256000,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "6e5515cc25d23ef7ca8e093bba2af844c571f1ac28f4d64c094294aa193c2e40",
+        "weights.json": "4a4e38e0a46c8aaabe3ac9759c4c25766c59ee431fb316eade7980737d9273e1",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "b323b3444095a1618c15065463140347a4ffcad336570c5347be269119322b80",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-8",
+      "cohort": "remaining12",
+      "seed": 20261014,
+      "job_id": "812b29345cc8262ef329f5b09e24141c65f47f24fe8dd2c044b70f9005946d74",
+      "archive_filename": "sub-8-seed-20261014-run01.tar",
+      "archive_sha256": "bbbad039970242163914e4cf1a51e6bc34650bd8e998e1c30cb1a7772559a1ef",
+      "archive_bytes": 266240,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "db7eded1b1c7cd25e0fcf88d598839a20969f7e679d317818ac123c546638a77",
+        "weights.json": "0e90dc19651a3055a6a275245b3ed6532398a07d00fb4a6f0b171bd40827ae0e",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "bd2a158472c7af4232952ad15d65e72760e07b97c7e6525c219e9a8d5c8fd902",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-9",
+      "cohort": "remaining12",
+      "seed": 20261012,
+      "job_id": "123bdeee936900b1d3d1c23aebda48ee02d6f0c46f2de9f17d711b8ed1653629",
+      "archive_filename": "sub-9-seed-20261012-run01.tar",
+      "archive_sha256": "1966ab9fcd0a041c8d3d3e7edea131d41ab05ff66c45d3b0436dd039a2fecb5d",
+      "archive_bytes": 256000,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "7e486f00ea5b01c0ba518f765400d4831aced5473f77a42c9c0195a00a0777dd",
+        "weights.json": "ac8468e7100bdd765bbdca9e0e5d386c044933c5d56c3b9041711b73ed9125a0",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "9b268f31adaec98e912425c763c7f38eac44955ff615f54018853bb20f924af6",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-9",
+      "cohort": "remaining12",
+      "seed": 20261013,
+      "job_id": "a73f6eb94abd509ca6ec91b3908275f18cfed340bff6e7f8fa64851ddf1ccc64",
+      "archive_filename": "sub-9-seed-20261013-run01.tar",
+      "archive_sha256": "26343dc13b669e967ba8a66ff017cde05e94607f3353bd18449ee20da8018351",
+      "archive_bytes": 266240,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "1143f25b85641fc4db0a692a4927d0d806b14c0158c13b24f0639a8ad9b58ee4",
+        "weights.json": "b042d660c43fcd5c06329af8686ef6aaeef5bfe3ed7323b881fbc582eca636c5",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "b9bc7073ea3bcf77920538593e1871374e212e726aa78a14765271ac083562aa",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-9",
+      "cohort": "remaining12",
+      "seed": 20261014,
+      "job_id": "70011f5decf4795e8a16cf9658c2af1de69dd0d65ac0d515e6e33988979a61ae",
+      "archive_filename": "sub-9-seed-20261014-run01.tar",
+      "archive_sha256": "1ac505b892ddcc906415c3ac86139dc904ac8cef1a197c9537ed4ac75566c04e",
+      "archive_bytes": 266240,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "14329ee22a6ec56568d846f50c305c8347079329942e8bce45d37aa98582742c",
+        "weights.json": "0905267862a0ed8c609c4e21d4d47dea19a417aa3b2bdde519e6636cf4dc72ae",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "4b4b2738527f803074d17468d9aaac7a04ec924b4dff05debe9eb97ec6069aca",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-11",
+      "cohort": "remaining12",
+      "seed": 20261012,
+      "job_id": "caae0027156bdc8ec56b7f863666bba9d8ffe083c85f735c2772f357657fb6c8",
+      "archive_filename": "sub-11-seed-20261012-run01.tar",
+      "archive_sha256": "ca1101b1a4eb954b89598d17ba9d461658fb95149aabbb35f19be1cde13895aa",
+      "archive_bytes": 266240,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "2bcc24b81b575dc29e77074e183354c306cdef362a891f8640b8c2976554f5ad",
+        "weights.json": "88ffce260b8b9572048049561f8ac17ac419e69f8d7ea6745da1f291f95d05a1",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "ba9437c562bd201f7f7d0c1db57fd310f69fb77611d89df70f5fdb46c7ee98eb",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-11",
+      "cohort": "remaining12",
+      "seed": 20261013,
+      "job_id": "1114f9f1524f681564334e943200e3c09b6efa900c0bf80b394c8992cc08e8fd",
+      "archive_filename": "sub-11-seed-20261013-run01.tar",
+      "archive_sha256": "2c0c01780a36247ac81e8f457c04fda04c58ae76c5db95e61543a9fd291385b0",
+      "archive_bytes": 256000,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "7601db654e130365b7145bdaacd4c0a7e9ae3b3349606a445b8d3de866c7d4dc",
+        "weights.json": "9b7b49149041b4976afc9b9582a70b04c93a273c03eb11e657f20e09f52e7b4a",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "f2d557d7922389b36d630ac161a08765dcba27b8fa3ab2618b7288fdb0712eba",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-11",
+      "cohort": "remaining12",
+      "seed": 20261014,
+      "job_id": "e9089a2b0c761b399c14f02a49dd09d16d3a72ab80c935bef50b61754980b880",
+      "archive_filename": "sub-11-seed-20261014-run01.tar",
+      "archive_sha256": "0807d1d11aba3fa105bb422b14d408311c6175b9c0fd92af392c6adf907b354f",
+      "archive_bytes": 256000,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "7702ead123a7656882ba395b640fb63fb3d6e536e32e7fc38d36e687511fa32d",
+        "weights.json": "73e0dbeb5177c23996a801f93b62fbdc136238e04e2ef6d3217e73570e8ba76d",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "be73c3c7c490fce1e598071c98a4c6cf3b38eedf20e94ef1426b3927d5955801",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-12",
+      "cohort": "remaining12",
+      "seed": 20261012,
+      "job_id": "cbd82eef6ffd5c856e142ac381032e252080957d58f5803b8b7eb2fcb09f6218",
+      "archive_filename": "sub-12-seed-20261012-run01.tar",
+      "archive_sha256": "4081e375018b55809f5a2826d7c96626a0dd87ae67554ddcd27a4b734d06d290",
+      "archive_bytes": 256000,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "5ecee7ad1b849f5d5a5daca4aab0ec25b1b944e15837e504566bccdd011a76d3",
+        "weights.json": "5edf2725c760730e1d27f8e5ffca722841852a18e99488d94781cbad803bd66b",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "65ae9d0ea914de2e3600cb342e2106be02587533ec7bf14a2798dcdd1e36c8c4",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-12",
+      "cohort": "remaining12",
+      "seed": 20261013,
+      "job_id": "98e0ab893e8920a08adbb0298a9e45d5d3cb9a2d0f884110d77cb109676e0aee",
+      "archive_filename": "sub-12-seed-20261013-run01.tar",
+      "archive_sha256": "97a43e2098c1e2f4cbc1a6fa68f553aa47d2ab0b300258f10f325b27d52b420d",
+      "archive_bytes": 256000,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "f467b58db64789ceb5ca3201aa98087331087bf0b60f75d3c359b7412c9f76f8",
+        "weights.json": "234fa1caa1dcf2f57d2e9f81e519a7f6474f50f64085e8ed15b0419ddf373369",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "cfdf0d98db0677bb0d2e74d9ebd2ded1519ce9f5c25e4ae67bbe5dbc165d2ff2",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-12",
+      "cohort": "remaining12",
+      "seed": 20261014,
+      "job_id": "4ce16e24f1df1c9f3ceb262166a3a9c99ebd3c32e9debdbffd51fa19a877dafe",
+      "archive_filename": "sub-12-seed-20261014-run01.tar",
+      "archive_sha256": "a02d5cd58c7c56d4c52aba7721b9bc8e7e007cd33d92682d58dc6868b72f677d",
+      "archive_bytes": 256000,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "79416bb89360e762fd67218e073a9a06c3ab41acdf083679ca878e49de542844",
+        "weights.json": "ae54be6a251a33f22beb197d24aa8f804024982b43e6dd0e38ab64ee4f179f87",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "8d0b0da9c63aebebe61fc4bd1047f7f139120a3d4886fbec5e1fe895a298a8e1",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-14",
+      "cohort": "remaining12",
+      "seed": 20261012,
+      "job_id": "18c5557aa4335b6efe44bc202c41393219a81624d00be7da5ded393102cb307e",
+      "archive_filename": "sub-14-seed-20261012-run01.tar",
+      "archive_sha256": "0e037fd230dde5467e024afc17e55af248e74f7670760b098b51a76ce5afb4cc",
+      "archive_bytes": 256000,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "cf8ff34bd00477f785a2740fd0173ec00158474340d3e640fa6bd6c2595038d9",
+        "weights.json": "809376312834f509d5f3cd9be5e862e035cf393ff2f355b9307790a4627ec2d0",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "0746ddef7c4c200902cffefda220a45469396fc38b843e73dfeb40ec4677b60b",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-14",
+      "cohort": "remaining12",
+      "seed": 20261013,
+      "job_id": "3a13a62edf23ed06a82c7103f65d187e7f90bde428284b39484e884caef16091",
+      "archive_filename": "sub-14-seed-20261013-run01.tar",
+      "archive_sha256": "0aeb2e9ba663f9cc3190ad2a80c7180ef6ca5b6fd1d74639e724d5a44fe61270",
+      "archive_bytes": 266240,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "87718ca100f60fa00cc3ffea22683d5722226c5fe44ff9ebaaf4a490b25e0b92",
+        "weights.json": "199679b107b9dac6f8a1d91a1a1c6ba128c4da3a904275835e63bfb6dd69b0db",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "94ba21db1d3cf6eb43873431106aaad3b96c4e04a7fd216c35cf0c33f8e62aaa",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-14",
+      "cohort": "remaining12",
+      "seed": 20261014,
+      "job_id": "e3ddfeef4ae6212f2b02658a7941e515a84fe648a60aca064e02b1993e9942bb",
+      "archive_filename": "sub-14-seed-20261014-run01.tar",
+      "archive_sha256": "c745b102258cc8626975ffbbf50e9274cde84078916455e115c4f52eaba65a16",
+      "archive_bytes": 266240,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "0f11b6fca88f0fa3d90719659d9cad32ad2deff7ef2683478f07cb88d91ae307",
+        "weights.json": "ade59cbc4c7d7bc2023848aacbb37f94e8e88e4930b9ac3d1d30caadaf482edc",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "81752c2c112d77b4e7bf381b0ecb8a44c90cf2fb716db3f20724aaf4f4558a08",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-15",
+      "cohort": "remaining12",
+      "seed": 20261012,
+      "job_id": "edad083df2e4be007e3c4e6f38c00287de389113db9e7987674711ec0d2cf6eb",
+      "archive_filename": "sub-15-seed-20261012-run01.tar",
+      "archive_sha256": "fc930799c78ec1288355fd088c463ef1b1a01b6f087d42154bd6238ea43c78aa",
+      "archive_bytes": 266240,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "6b7de255be3b2882c88879a269ab3d0821e7f64fabb8b6f6663a71bff94b58aa",
+        "weights.json": "4041ed49effd2706a59022cd91c4a99e6ceee2633a7fa3f5a467d3384a6f2235",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "7742466521e45c7c844212813310b5b33bda5eaf7209e8469c42967084244ae0",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-15",
+      "cohort": "remaining12",
+      "seed": 20261013,
+      "job_id": "e903c5fa4eeacd7fc10bc1031e177219051145cb918f0c4542dd56197fc95184",
+      "archive_filename": "sub-15-seed-20261013-run01.tar",
+      "archive_sha256": "c0637983e748d8c46fd43d3f6a0464e62ffe247fd6352036eca252c1418739fe",
+      "archive_bytes": 256000,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "9cf3a4dd4b91693fc8c7ad3c07339674f002338224f4589950a5d24ecb7de830",
+        "weights.json": "85be67e281f4393086949f6ccbdc2ce4be7c5e13eaf95ce50e6827807d2ec210",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "099fa8e3361e5907a39dc055fb2cd5eb49b8241cd53d6ed0b813318a8c9f2cb1",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-15",
+      "cohort": "remaining12",
+      "seed": 20261014,
+      "job_id": "c0c94ed7a22a6c97e257db3f2c565b6e16da24d91fe16e099a74e9e1662bbce5",
+      "archive_filename": "sub-15-seed-20261014-run01.tar",
+      "archive_sha256": "4b6aec0aa20b244351df155b8ccea9ac0bd21e6989ed8a48ffc60c99f97092da",
+      "archive_bytes": 266240,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "2663e16744a461803d498ab9f02e051a54802600dcaa42f5d8cd12eaba0047f6",
+        "weights.json": "2ae39fbdd839cf1b7a4d6dff862985033ccacef9eb055533f74516b9fd4738fa",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "cd5f26e6441e18c1567b93a56983eb20ecef774d19a66fb851d5f1e63a018a5f",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-17",
+      "cohort": "remaining12",
+      "seed": 20261012,
+      "job_id": "4c8846cc25091eae85d942ac3c6c179a014a236eccb1613270ef8bcfbf0a485c",
+      "archive_filename": "sub-17-seed-20261012-run01.tar",
+      "archive_sha256": "9b970fa9e9a07d5ccc339da10145af1a192380a202f5af0409452bf44cff3691",
+      "archive_bytes": 266240,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "d53c3850f1bb46566a1bdab778ae110c37e136aabf1de0225f4f8d949d37e2ce",
+        "weights.json": "f499c0b5cf826ea463e1e16b919a3509a3d82bf4bd9e17e632012fa216579386",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "f6cd07f307001286fc306c44dd42ca219ae79555f5a6e8c5fca486e3ea860656",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-17",
+      "cohort": "remaining12",
+      "seed": 20261013,
+      "job_id": "a30ed546e2ab02bf9c9df4ff9ebb35e6269c84428965eeda56f95cc572bfe1cf",
+      "archive_filename": "sub-17-seed-20261013-run01.tar",
+      "archive_sha256": "ae49f62d61aeaaa9bba1f5a4576e03f038fcd97b0392e5e8790d0efc05e2d1f9",
+      "archive_bytes": 256000,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "8494b7ac39c931c35f425eb63206ba0dda97e564ff24accfb3d76e516d35c167",
+        "weights.json": "7f21588d64eea134f8f979cb0b80779d6732bebf2bcdb906248c48018b310e90",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "61f3c1718fd2deee8bd7e0231a9db6a7f4298776d42c6b506d59dc92463a38ee",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-17",
+      "cohort": "remaining12",
+      "seed": 20261014,
+      "job_id": "c163c8f36f3c6093ae06e622bb3026400dc068728a8fa5e67ccc99b47b6d9c77",
+      "archive_filename": "sub-17-seed-20261014-run01.tar",
+      "archive_sha256": "5df6d6bb088793697d21b6283816ec5c7b7a0925c5efe9a7f67e88d96cf07df7",
+      "archive_bytes": 266240,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "86d1e6f81f6caa1ae38f3af04b7107eddfe1c9795b7531ac061f6646bbbe1578",
+        "weights.json": "646c0e6f3c583eaa925922d18123ed8799c67147c6461135cfadbda1ed7fd9da",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "705c46792793396db0c8685d1609679010cdf97165e973da724194a3c2e5f71c",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-18",
+      "cohort": "remaining12",
+      "seed": 20261012,
+      "job_id": "769c451a4692ba6637a98cc4d88206560d474278e75650d0fa56b62c12c2b26e",
+      "archive_filename": "sub-18-seed-20261012-run01.tar",
+      "archive_sha256": "6512449d15446f79ad81dd8e44b64dea1f2c8d1ba607e53cffabc9c7c582bba1",
+      "archive_bytes": 256000,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "a329624563fbf4f0b76cc64cd5815816af6dd5b587ae7d682cb083692d6e6b10",
+        "weights.json": "a4896a0eb4b9e6b25942951e66e5928966e8ea95be520ae6893de644979c7033",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "6d3d935cde21ba118864870128bb34af18e92049e8be79966e8f48e212fe42a4",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-18",
+      "cohort": "remaining12",
+      "seed": 20261013,
+      "job_id": "e5bd76408bd7c3f5c98ae7b9655d7afc934974003d19fdf5d101c14de799565a",
+      "archive_filename": "sub-18-seed-20261013-run01.tar",
+      "archive_sha256": "2682b58be1c3db20c5770366046a798ba13551574a9be8ba462bbe865cc7c9cc",
+      "archive_bytes": 256000,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "91ccd11985e34fe199a8f8559a4401c37a5676de6f8da1439af23fb1adc155ee",
+        "weights.json": "db511704544819a2d7c3eac706df6e731e7df17e9f7a3f12b845a09fcff406ce",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "d565a0e12cb710ae6f4811c8eb22e08be95b2d12fa050955bdaf5ab88005b7d5",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    },
+    {
+      "subject": "sub-18",
+      "cohort": "remaining12",
+      "seed": 20261014,
+      "job_id": "56d83341333e2ad2ec222ea04e316fcca00d690d2ef440956906d372877f0bc4",
+      "archive_filename": "sub-18-seed-20261014-run01.tar",
+      "archive_sha256": "9a052f4ba27b67ccde334e1c114597485072dbea3a2c509e75b0c928f7dec7cd",
+      "archive_bytes": 256000,
+      "payload_members": 14,
+      "text_member_sha256": {
+        "training.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fit_result.json": "0d1ed4e8b1051064076475a3f19d1d61b9e8eb0bbd0017a8bc4222cc1512ad13",
+        "weights.json": "a4080ef2931c92a843281281127e3c425d12b1be4caf57440c1828965f0c562e",
+        "training_config.json": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+      },
+      "manifest_sha256": "5acbf6c9b99f4e3463727748c8aec2ce2c6273ff77660e00d74836d74a53a637",
+      "execution_source_member_sha256": {
+        "train_source.py": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5",
+        "run_source.py": "9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc",
+        "adapter_source.py": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07"
+      },
+      "binary_handling": "streamed to SHA256 only; never parsed or loaded"
+    }
+  ],
+  "source_models": 54,
+  "participants": 18,
+  "epoch_history_rows": 2871,
+  "complete_epoch_histories": 54,
+  "missing_epoch_histories": 0,
+  "query_metrics_rows_reused": 324,
+  "new_forward_calls": 0,
+  "new_fits": 0,
+  "model_binary_loads": 0,
+  "new_query_array_reads": 0,
+  "seed_exclusions": [],
+  "notes": [
+    "54 source models are 18 participants by three fixed seeds, not 54 independent participants.",
+    "Source validation selected the epoch; it is not an independent performance endpoint.",
+    "Train loss is the batch-weighted training-mode CE during optimization; validation uses eval mode.",
+    "Thus train/validation CE differences are descriptive trajectories, not a calibrated generalization gap.",
+    "No seed selection, newly fitted model, new forward, inferential CI or hypothesis test was added.",
+    "An empty training.log is not evidence of zero execution; all54 weights.json histories are complete.",
+    "Historical fit_result/manifest backup flags remain unchanged; acceptance is read from the real ledger."
+  ],
+  "outputs": {
+    "all_saved_epoch_curves.csv": {
+      "bytes": 386777,
+      "sha256": "47789cd0df863e11346541971ed04c20b1babaa9b911fc8c376ef1db246b3701"
+    },
+    "archive_input_index.json": {
+      "bytes": 15382,
+      "sha256": "72d3b2e05fab521b69cc1c1d7692d977b584f890bf5096107f4034cb56fdc6f8"
+    },
+    "cohort_per_seed_query.csv": {
+      "bytes": 621,
+      "sha256": "7534cba7c857e7c42fa2379be37ff0cc391e3f23d05992a37401c290924720c9"
+    },
+    "cohort_training_review.csv": {
+      "bytes": 1546,
+      "sha256": "375e8ec2970c42b3b9dfc89cc1ac250ddbe3a960926df3b4736c073ddb006760"
+    },
+    "per_fit_training_review.csv": {
+      "bytes": 19595,
+      "sha256": "7e35e7a8e2214a67284a1dea8125be53e81d66e4dc63ea0a09b8ac8b5a84d5f0"
+    },
+    "per_participant_source_target_query.csv": {
+      "bytes": 2191,
+      "sha256": "cc6f4a572e4ba2fb98caaa7861edb0b32bdccfdcdaece8f50f8e8f46e358c731"
+    },
+    "per_seed_source_target_query.csv": {
+      "bytes": 7831,
+      "sha256": "083442cb7a42f1126c5710d5c5d0651687e6a70760ff20be2d55e9f94db4c9ac"
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "status": "targeted_timing_ethics_claim_review_passed_with_minor_wording_recommendations",
+  "reviewed_at_utc": "2026-10-15T11:58:09.583397+00:00",
+  "reviewed_file": "manuscript/kumar_plos_one_submission_draft_20261015.md",
+  "reviewed_file_bytes": 39316,
+  "reviewed_file_sha256": "73e07117d0171e498c5b00016965f1af42618d6d5edb1c62a4ac459da6875f1d",
+  "reviewer_scope": "independent reread of new manuscript timing/ethics/claim scope against saved metadata audit and actually read official source passages",
+  "checks": [
+    {
+      "id": "cue_and_task_codes_distinguished",
+      "passed": true,
+      "scope": "documented original codebook marker distinction",
+      "evidence": "original author codebook at 548470542e63f97ab777684c1f5e4f1cace4b8ed; Git blob ef757734fb7511d9dddd89bc0ba830137301893c"
+    },
+    {
+      "id": "adapter_interval_evidence_qualified",
+      "passed": true,
+      "scope": "published cue anchor chain described as documented convention",
+      "evidence": "saved official adapter SHA256 96af996bfdbb7999f0aa681a6a3aa2a9030cb1c2aff52fc0827e8db2390f446d"
+    },
+    {
+      "id": "recorded_samples_distinguished_from_imagery",
+      "passed": true,
+      "scope": "no phase-only imagery certification",
+      "evidence": "main exported-windows Methods section"
+    },
+    {
+      "id": "nominal_timing_matches_original_methods",
+      "passed": true,
+      "scope": "nominal cue and task/feedback durations",
+      "evidence": "indexed original full-text Methods reading, not original raw XML download"
+    },
+    {
+      "id": "phase_fraction_unknown",
+      "passed": true,
+      "scope": "trial-level phase composition not reconstructed",
+      "evidence": "original end/start marker arrays and sample clock mapping missing"
+    },
+    {
+      "id": "no_window_change_or_phase_reconstruction",
+      "passed": true,
+      "scope": "old scientific analysis retained",
+      "evidence": "scope declaration and metadata-only timing audit"
+    },
+    {
+      "id": "all_event_and_complete_counts_preserved",
+      "passed": true,
+      "scope": "original event/complete counts preserved",
+      "evidence": "saved_metadata_timing_audit.json"
+    },
+    {
+      "id": "partial_boundary_facts_exact",
+      "passed": true,
+      "scope": "44 final-row online boundary intervals",
+      "evidence": "partial_boundary_inventory.json, all44 source_row20 and stop==prior-audited n_times"
+    },
+    {
+      "id": "partial_not_early_MI_count",
+      "passed": true,
+      "scope": "no false causal interpretation of partial annotations",
+      "evidence": "source-only metadata cannot establish task termination"
+    },
+    {
+      "id": "no_inferred_index_error",
+      "passed": true,
+      "scope": "no unsupported window-error inference",
+      "evidence": "cue convention and phase limitation kept separate"
+    },
+    {
+      "id": "original_protocol_and_consent_attributed",
+      "passed": true,
+      "scope": "original study ethics only",
+      "evidence": "original indexed Methods passages; reading_scope_and_validation.json"
+    },
+    {
+      "id": "access_scope_truthful",
+      "passed": true,
+      "scope": "full-text-passage reading vs raw XML retrieval distinguished",
+      "evidence": "actual supported web and sandbox HTTPS access outcomes"
+    },
+    {
+      "id": "no_secondary_approval_invented",
+      "passed": true,
+      "scope": "author institutional determination pending",
+      "evidence": "author response5: \u5c1a\u65e0\u7ed3\u8bba"
+    },
+    {
+      "id": "participant_not_model_count",
+      "passed": true,
+      "scope": "participant statistical unit retained",
+      "evidence": "frozen cohort definitions"
+    },
+    {
+      "id": "test_exposure_marked",
+      "passed": true,
+      "scope": "follow-up exploratory scope preserved",
+      "evidence": "frozen protocol and prior exposure history"
+    },
+    {
+      "id": "future_phase_amendment_requires_evidence",
+      "passed": true,
+      "scope": "no post hoc score-selected window correction",
+      "evidence": "prospective correction proposal in detailed timing report"
+    }
+  ],
+  "passed_checks": 16,
+  "failed_checks": 0,
+  "findings": [
+    {
+      "severity": "minor_precision",
+      "id": "abstract_phase_mixture_presupposition",
+      "observed": "online phase mixture remains unquantified",
+      "suggested": "online phase composition remains unquantified",
+      "reason": "Do not imply post-termination phase mixing was directly observed for all/any individual trials."
+    },
+    {
+      "severity": "minor_precision",
+      "id": "historical_converter_and_raw_marker_caveat",
+      "location": "Methods after documented export convention",
+      "suggested": "The precise historical converter commit and the original trial-level marker arrays were not independently replayed.",
+      "reason": "Cue anchoring follows the documented export chain; exact historical conversion was not replayed."
+    },
+    {
+      "severity": "grammar",
+      "id": "methods_subject_verb",
+      "observed": "The original Methods reports",
+      "suggested": "The original Methods report"
+    }
+  ],
+  "main_manuscript_edited_by_this_review": false,
+  "new_EEG_reads": 0,
+  "new_predictions": 0,
+  "new_model_fits": 0,
+  "no_claim_of_independent_human_replication": true,
+  "source_reading_evidence": "full source PDF/base64/text and web responses remain private; public report supplies fixed source URL, short descriptions and exact content hashes"
+}

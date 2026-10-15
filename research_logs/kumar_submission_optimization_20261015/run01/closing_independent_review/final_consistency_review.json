@@ -1,0 +1,1669 @@
+{
+  "status": "read_only_final_consistency_passed_with_delivery_observations",
+  "reviewed_utc": "2026-10-15T12:30:09.174471+00:00",
+  "current_local_HEAD_observed": "370bc94b7af3c926adeb02c38e430a53e4a64135",
+  "scope": "Actual manuscript/supplement/author files, PDF extracted text, Word XML, saved numeric tables, S1 Data dictionaries/commands/ZIP integrity; no science/statistics execution or independent native Word rendering",
+  "checks": 287,
+  "failures": [],
+  "inputs": {
+    "manuscript/kumar_plos_one_submission_draft_20261015.md": {
+      "bytes": 39792,
+      "sha256": "c483f949715c6c48eb40bb7f72df518d4d3c6422d673b26ebfa448baf471cbec"
+    },
+    "manuscript/kumar_plos_one_supporting_methods_20261015.md": {
+      "bytes": 37206,
+      "sha256": "89b26baaf46f4c0ba999cbef879077a0e3370d6f5697538664daad00e84e50eb"
+    },
+    "manuscript/kumar_plos_one_author_worksheet_20261015.md": {
+      "bytes": 9680,
+      "sha256": "7b75ed9193377cee31e07f925563441072889d1393565513a67206a2da2a45b0"
+    },
+    "docs/kumar_submission_revision_report_20261015.md": {
+      "bytes": 5801,
+      "sha256": "fcf14d2715900eae73d069fa72537df04fbb05a576e54d7d8ee1e8eedcfb3039"
+    },
+    "manuscript/plos_one_submission_20261015/README.md": {
+      "bytes": 4350,
+      "sha256": "1c5c4ebbebf1f7bcf9fa14d7aa7d59de93095ce720a911a98b89237120c04bee"
+    },
+    "manuscript/plos_one_submission_20261015/DATA_DICTIONARY.md": {
+      "bytes": 16420,
+      "sha256": "88c4a3a7b32ca3899d7dbf7e0360099539e7cb361dfcfc9451268e1f83ee8dbd"
+    },
+    "manuscript/plos_one_submission_20261015/REPRODUCE_SAVED_RESULTS.md": {
+      "bytes": 3408,
+      "sha256": "b567823557712202ad70d79b1e7d46179d9e9a084ed93445c1b1a19235a49101"
+    },
+    "manuscript/kumar_longitudinal_decoding_working_draft_20261015.md": {
+      "bytes": 38296,
+      "sha256": "3a3ddf6ddf7a07c73810b4a9ca5b9eefa6969732afa48f5b593ee5ea3ec78525"
+    },
+    "research_logs/kumar_submission_qc_20261015/run01/cohort_method_sensitivity_summary.csv": {
+      "bytes": 20833,
+      "sha256": "874a53f18fc3d26b62842959bca9463ff25e9b111c69d66e3ed2af4161e32f44"
+    },
+    "research_logs/kumar_submission_qc_20261015/run01/cohort_paired_contrasts.csv": {
+      "bytes": 2566,
+      "sha256": "669adfc22640716a6782bd955f38b99070514ea6f4245b494498b20beac73096"
+    },
+    "manuscript/plos_one_submission_20261015/S1_Data_manifest.json": {
+      "bytes": 28473,
+      "sha256": "5def1163396adbae039cbb0d0b3f101f5df1720b9e83eef44027638c05a12cfc"
+    },
+    "manuscript/plos_one_submission_20261015/S1_Data.zip": {
+      "bytes": 591742,
+      "sha256": "797d0e4c2f913428b864688cebcf182f65e022f2fcd7e5225cd919701740867b"
+    },
+    "manuscript/plos_one_submission_20261015/manuscript_for_submission.pdf": {
+      "bytes": 105932,
+      "sha256": "24f5aeb7583a4e3db28fe342b2cd1c609db115df7816d380b2583efc8435b72f"
+    },
+    "manuscript/plos_one_submission_20261015/manuscript_for_submission.docx": {
+      "bytes": 31449,
+      "sha256": "a9b2277ba8e4a498d978178e926d822e03292bc4b0896d49df3a001792436a18"
+    },
+    "manuscript/plos_one_submission_20261015/manuscript_for_review.pdf": {
+      "bytes": 1810230,
+      "sha256": "134110e8bf5ed397f94f3d7841268c0cb96479afaa2e45fb4bb5d9514a9674ea"
+    },
+    "manuscript/plos_one_submission_20261015/manuscript_for_review.docx": {
+      "bytes": 1559581,
+      "sha256": "5df1b4eed22c316020291833a450c0493d13058c5a8cb7b159e57de7f37a27aa"
+    },
+    "manuscript/plos_one_submission_20261015/S1_Text.pdf": {
+      "bytes": 105217,
+      "sha256": "5e756417b8b7603845b29f68e6bc760be0d1b6dbc649f68f5faaeb647743b9ea"
+    },
+    "manuscript/plos_one_submission_20261015/S1_Text.docx": {
+      "bytes": 29629,
+      "sha256": "70c73372d4995f299b84f797e7078c0d0d239e9de090e79e9c74b364cd1980d3"
+    },
+    "manuscript/plos_one_submission_20261015/S2_Text.pdf": {
+      "bytes": 53758,
+      "sha256": "d701c2d0be261231672d1736eab96072a20c22f4762817a35cee3311d02f0ee3"
+    },
+    "manuscript/plos_one_submission_20261015/S2_Text.docx": {
+      "bytes": 14429,
+      "sha256": "b20afeede773a425cf26b4e01427042ca309a6f15a78e1d8a480ed5f397de367"
+    },
+    "manuscript/plos_one_submission_20261015/author_worksheet.pdf": {
+      "bytes": 52896,
+      "sha256": "685dcafad96911c9e10db53dadd6f2452e38272fddbb9566869893bcb96aeb7f"
+    },
+    "manuscript/plos_one_submission_20261015/author_worksheet.docx": {
+      "bytes": 15769,
+      "sha256": "4ee348a80b24d3a5c6b02e6fbe1c9cb90942f88fb55639874faae1611a40607f"
+    },
+    "manuscript/plos_one_submission_20261015/cover_letter_draft.pdf": {
+      "bytes": 37824,
+      "sha256": "9966eec1daef788e0a7f7f4f21d4d3180cfa2a1302eaff237f9a4643212ab2ad"
+    },
+    "manuscript/plos_one_submission_20261015/cover_letter_draft.docx": {
+      "bytes": 11677,
+      "sha256": "d0b78267491f771bd3a0a59179ece4130d389517263d66ba8e3b2637ea6ae389"
+    },
+    "research_logs/kumar_submission_optimization_20261015/run01/github_write_blocker.json": {
+      "bytes": 643,
+      "sha256": "8bc7049f17bc46d3fd0eca44e811d8699fbf6385e98e46caa4c6eb6d4a7cd035"
+    },
+    "research_logs/kumar_submission_optimization_20261015/run01/r2_connectivity_observation.json": {
+      "bytes": 415,
+      "sha256": "1f52dad690657838c4a436a2417ddb9fdada2d0653b45f8a7a41527dbe35e6a5"
+    }
+  },
+  "unchanged_input_files_at_closing": 26,
+  "documents": [
+    {
+      "name": "manuscript_for_submission",
+      "PDF_bytes": 105932,
+      "PDF_sha256": "24f5aeb7583a4e3db28fe342b2cd1c609db115df7816d380b2583efc8435b72f",
+      "DOCX_bytes": 31449,
+      "DOCX_sha256": "a9b2277ba8e4a498d978178e926d822e03292bc4b0896d49df3a001792436a18",
+      "DOCX_tables": 4,
+      "DOCX_images": 0,
+      "PDF_text_extraction_exit": 0,
+      "native_Word_visual_review": false
+    },
+    {
+      "name": "manuscript_for_review",
+      "PDF_bytes": 1810230,
+      "PDF_sha256": "134110e8bf5ed397f94f3d7841268c0cb96479afaa2e45fb4bb5d9514a9674ea",
+      "DOCX_bytes": 1559581,
+      "DOCX_sha256": "5df1b4eed22c316020291833a450c0493d13058c5a8cb7b159e57de7f37a27aa",
+      "DOCX_tables": 4,
+      "DOCX_images": 4,
+      "PDF_text_extraction_exit": 0,
+      "native_Word_visual_review": false
+    },
+    {
+      "name": "S1_Text",
+      "PDF_bytes": 105217,
+      "PDF_sha256": "5e756417b8b7603845b29f68e6bc760be0d1b6dbc649f68f5faaeb647743b9ea",
+      "DOCX_bytes": 29629,
+      "DOCX_sha256": "70c73372d4995f299b84f797e7078c0d0d239e9de090e79e9c74b364cd1980d3",
+      "DOCX_tables": 2,
+      "DOCX_images": 0,
+      "PDF_text_extraction_exit": 0,
+      "native_Word_visual_review": false
+    },
+    {
+      "name": "S2_Text",
+      "PDF_bytes": 53758,
+      "PDF_sha256": "d701c2d0be261231672d1736eab96072a20c22f4762817a35cee3311d02f0ee3",
+      "DOCX_bytes": 14429,
+      "DOCX_sha256": "b20afeede773a425cf26b4e01427042ca309a6f15a78e1d8a480ed5f397de367",
+      "DOCX_tables": 0,
+      "DOCX_images": 0,
+      "PDF_text_extraction_exit": 0,
+      "native_Word_visual_review": false
+    },
+    {
+      "name": "author_worksheet",
+      "PDF_bytes": 52896,
+      "PDF_sha256": "685dcafad96911c9e10db53dadd6f2452e38272fddbb9566869893bcb96aeb7f",
+      "DOCX_bytes": 15769,
+      "DOCX_sha256": "4ee348a80b24d3a5c6b02e6fbe1c9cb90942f88fb55639874faae1611a40607f",
+      "DOCX_tables": 1,
+      "DOCX_images": 0,
+      "PDF_text_extraction_exit": 0,
+      "native_Word_visual_review": false
+    },
+    {
+      "name": "cover_letter_draft",
+      "PDF_bytes": 37824,
+      "PDF_sha256": "9966eec1daef788e0a7f7f4f21d4d3180cfa2a1302eaff237f9a4643212ab2ad",
+      "DOCX_bytes": 11677,
+      "DOCX_sha256": "d0b78267491f771bd3a0a59179ece4130d389517263d66ba8e3b2637ea6ae389",
+      "DOCX_tables": 0,
+      "DOCX_images": 0,
+      "PDF_text_extraction_exit": 0,
+      "native_Word_visual_review": false
+    }
+  ],
+  "new_fits": 0,
+  "new_model_forwards": 0,
+  "new_bootstraps": 0,
+  "new_query_array_reads": 0,
+  "Pod_or_first_paper_actions": 0,
+  "new_network_actions": 0,
+  "Git_or_R2_mutations_by_reviewer": 0,
+  "remote_GitHub_write": "blocked by actual approval-policy rejection record; current revision not remotely pushed",
+  "new_R2_upload_fullGET": "not completed; existing proxy failure record; no fabricated receipt",
+  "local_Git_status": "Read-only HEAD snapshot; parent independently reports local Git writes verified allowed and is sealing local commit/offline delivery",
+  "remaining_human_items": [
+    "Actual institutional determination and basis for this secondary analysis",
+    "Specific scoped code/content license choice and activation",
+    "Final personal review, actual human verification account and approval",
+    "Actual portal-only fields including prior PLOS contact/editor-reviewer suggestions if relevant"
+  ],
+  "observations": [
+    {
+      "severity": "transient_delivery_state",
+      "finding": "Revision report anticipates a real new local commit/offline delivery; HEAD was still reference370bc94 at initial review. Parent reports local Git mutation is now verified allowed and is preparing that commit. Recheck actual fixed commit before final handoff.",
+      "parent_closing_update": "Parent has independently verified local staging is permitted, stage276 files/35.3MB; creating real local commit/offline bundle. This review does not call them remotely pushed or R2 verified."
+    },
+    {
+      "severity": "documentation_advisory",
+      "finding": "Compliance document says final package README records figure reproduction command; package README currently has no plotting command. Actual figure directory README provides the command; link that location precisely if editing documentation."
+    }
+  ],
+  "details": [
+    {
+      "check": "main QC table exact stored values: source_only/all_included",
+      "passed": true,
+      "detail": "57.94 [52.65, 63.84]"
+    },
+    {
+      "check": "main QC table exact stored values: source_only/unflagged",
+      "passed": true,
+      "detail": "60.14 [54.75, 66.02]"
+    },
+    {
+      "check": "main QC table exact stored values: frozen_csp_lda_recalibration/all_included",
+      "passed": true,
+      "detail": "59.89 [54.30, 65.68]"
+    },
+    {
+      "check": "main QC table exact stored values: frozen_csp_lda_recalibration/unflagged",
+      "passed": true,
+      "detail": "62.28 [56.21, 67.91]"
+    },
+    {
+      "check": "main QC table exact stored values: refit_csp_lda/all_included",
+      "passed": true,
+      "detail": "65.36 [59.81, 70.90]"
+    },
+    {
+      "check": "main QC table exact stored values: refit_csp_lda/unflagged",
+      "passed": true,
+      "detail": "66.10 [59.84, 71.94]"
+    },
+    {
+      "check": "main QC table exact stored values: always_frozen_eegnet/all_included",
+      "passed": true,
+      "detail": "51.58 [49.08, 54.51]"
+    },
+    {
+      "check": "main QC table exact stored values: always_frozen_eegnet/unflagged",
+      "passed": true,
+      "detail": "51.80 [48.34, 55.28]"
+    },
+    {
+      "check": "original/sensitivity contrast exact stored rounding refit_minus_frozen/all_included",
+      "passed": true,
+      "detail": [
+        7.42,
+        2.49,
+        12.48
+      ]
+    },
+    {
+      "check": "correct contrast participant denominator refit_minus_frozen/all_included",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original/sensitivity contrast exact stored rounding refit_minus_lda_only/all_included",
+      "passed": true,
+      "detail": [
+        5.47,
+        2.17,
+        8.91
+      ]
+    },
+    {
+      "check": "correct contrast participant denominator refit_minus_lda_only/all_included",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original/sensitivity contrast exact stored rounding refit_minus_frozen/unflagged",
+      "passed": true,
+      "detail": [
+        5.96,
+        0.99,
+        11.24
+      ]
+    },
+    {
+      "check": "correct contrast participant denominator refit_minus_frozen/unflagged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original/sensitivity contrast exact stored rounding refit_minus_lda_only/unflagged",
+      "passed": true,
+      "detail": [
+        3.82,
+        1.11,
+        6.72
+      ]
+    },
+    {
+      "check": "correct contrast participant denominator refit_minus_lda_only/unflagged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "all three original Markdown tables unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main required interpretation boundary: cue-anchored task-label windows",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main required interpretation boundary: not evidence\nthat exactly 44 tasks ended early",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main required interpretation boundary: no approval, exemption, waiver or no-review conclusion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main required interpretation boundary: same ten",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main required interpretation boundary: not artifact-free",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main required interpretation boundary: No source fit was repeated",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main required interpretation boundary: 54 completed source fits",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main required interpretation boundary: not 54 independent participants",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main required interpretation boundary: activation remain pending",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main saved neural-review value 52.92%",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main saved neural-review value 51.58%",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main saved neural-review value −1.34",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main saved neural-review value 2,871",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main saved neural-review value 8,613",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main saved neural-review value 53/54",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main saved neural-review value 29/54",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main saved neural-review value 0.704246",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main saved neural-review value 0.596543",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main saved neural-review value 0.693048",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main saved neural-review value 0.691847",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main saved neural-review value 0.692351",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main saved neural-review value 52.42%",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main saved neural-review value 49.94%",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main saved neural-review value 52.37%",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main saved neural-review value 8.06",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main saved neural-review value 24.62",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "data dictionary scope: BA needs both true classes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "data dictionary scope: all five",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "data dictionary scope: 10/12",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "data dictionary scope: after seeing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "data dictionary scope: not an active MIT grant",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "data dictionary scope: 18 identities",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "data dictionary scope: 54 participants",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "data dictionary scope: 30 historical partial",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "public reproduction statement: No model weights or raw EEG",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "public reproduction statement: --portable-inputs inputs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "public reproduction statement: --output new_qc_output",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "public reproduction statement: 13 scientific CSV tables",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "public reproduction statement: MIT plan\npending author approval",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no newly active root LICENSE file",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "remaining ethics/license/personal-review items truthful",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no accidentally inserted operation-status identifier",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "S1 Data complete ZIP byte hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "S1 Data actual 41 unique members",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "S1 Data CRC integrity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal manifest exact 40 payload coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external manifest exact 41 member coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA DATA_DICTIONARY.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA DATA_DICTIONARY.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member DATA_DICTIONARY.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA MANIFEST.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member MANIFEST.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA POST_OBSERVATION_PROTOCOL.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA POST_OBSERVATION_PROTOCOL.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member POST_OBSERVATION_PROTOCOL.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA REPRODUCE_SAVED_RESULTS.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA REPRODUCE_SAVED_RESULTS.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member REPRODUCE_SAVED_RESULTS.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA code/analyze_kumar_saved_query_qc_20261015.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA code/analyze_kumar_saved_query_qc_20261015.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member code/analyze_kumar_saved_query_qc_20261015.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA figures/Fig1_target_query_participants_source_data.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA figures/Fig1_target_query_participants_source_data.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member figures/Fig1_target_query_participants_source_data.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA figures/Fig2_cpu_primary_paired_changes_source_data.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA figures/Fig2_cpu_primary_paired_changes_source_data.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member figures/Fig2_cpu_primary_paired_changes_source_data.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA figures/Fig3_csp_signed_support_halves_source_data.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA figures/Fig3_csp_signed_support_halves_source_data.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member figures/Fig3_csp_signed_support_halves_source_data.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA figures/Fig4_longitudinal_paired_changes_source_data.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA figures/Fig4_longitudinal_paired_changes_source_data.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member figures/Fig4_longitudinal_paired_changes_source_data.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA inputs/frozen_analysis_configuration.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA inputs/frozen_analysis_configuration.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member inputs/frozen_analysis_configuration.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA inputs/frozen_trial_metadata.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA inputs/frozen_trial_metadata.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member inputs/frozen_trial_metadata.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA inputs/original_participant_endpoints.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA inputs/original_participant_endpoints.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member inputs/original_participant_endpoints.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA inputs/public_input_provenance.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA inputs/public_input_provenance.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member inputs/public_input_provenance.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA inputs/saved_predictions.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA inputs/saved_predictions.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member inputs/saved_predictions.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA results/original_comparison/cohort_method_endpoint_summary.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA results/original_comparison/cohort_method_endpoint_summary.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member results/original_comparison/cohort_method_endpoint_summary.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA results/original_comparison/descriptive_eegnet_minus_cpu.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA results/original_comparison/descriptive_eegnet_minus_cpu.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member results/original_comparison/descriptive_eegnet_minus_cpu.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA results/original_comparison/eegnet_per_seed_session.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA results/original_comparison/eegnet_per_seed_session.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member results/original_comparison/eegnet_per_seed_session.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA results/original_comparison/per_participant_descriptive_differences.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA results/original_comparison/per_participant_descriptive_differences.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member results/original_comparison/per_participant_descriptive_differences.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA results/original_comparison/per_participant_endpoints.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA results/original_comparison/per_participant_endpoints.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member results/original_comparison/per_participant_endpoints.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA results/original_comparison/per_subject_session.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA results/original_comparison/per_subject_session.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member results/original_comparison/per_subject_session.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA results/original_cpu/participant_bootstrap_summary.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA results/original_cpu/participant_bootstrap_summary.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member results/original_cpu/participant_bootstrap_summary.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA results/qc/all_role_qc_counts.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA results/qc/all_role_qc_counts.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member results/qc/all_role_qc_counts.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA results/qc/cohort_method_sensitivity_summary.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA results/qc/cohort_method_sensitivity_summary.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member results/qc/cohort_method_sensitivity_summary.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA results/qc/cohort_paired_contrasts.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA results/qc/cohort_paired_contrasts.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member results/qc/cohort_paired_contrasts.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA results/qc/joined_saved_predictions_qc.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA results/qc/joined_saved_predictions_qc.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member results/qc/joined_saved_predictions_qc.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA results/qc/leave_one_participant_out_influence.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA results/qc/leave_one_participant_out_influence.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member results/qc/leave_one_participant_out_influence.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA results/qc/paired_cross_subset_summary.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA results/qc/paired_cross_subset_summary.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member results/qc/paired_cross_subset_summary.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA results/qc/paired_participant_contrasts.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA results/qc/paired_participant_contrasts.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member results/qc/paired_participant_contrasts.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA results/qc/paired_session_contrasts.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA results/qc/paired_session_contrasts.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member results/qc/paired_session_contrasts.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA results/qc/participant_cross_subset_changes.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA results/qc/participant_cross_subset_changes.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member results/qc/participant_cross_subset_changes.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA results/qc/participant_endpoints.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA results/qc/participant_endpoints.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member results/qc/participant_endpoints.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA results/qc/per_participant_session_metrics.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA results/qc/per_participant_session_metrics.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member results/qc/per_participant_session_metrics.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA results/qc/per_seed_session_and_pooled_metrics.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA results/qc/per_seed_session_and_pooled_metrics.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member results/qc/per_seed_session_and_pooled_metrics.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA results/qc/query_identity_qc_ledger.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA results/qc/query_identity_qc_ledger.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member results/qc/query_identity_qc_ledger.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA results/training/all_saved_epoch_curves.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA results/training/all_saved_epoch_curves.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member results/training/all_saved_epoch_curves.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA results/training/cohort_per_seed_query.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA results/training/cohort_per_seed_query.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member results/training/cohort_per_seed_query.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA results/training/cohort_training_review.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA results/training/cohort_training_review.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member results/training/cohort_training_review.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA results/training/per_fit_training_review.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA results/training/per_fit_training_review.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member results/training/per_fit_training_review.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA results/training/per_participant_source_target_query.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA results/training/per_participant_source_target_query.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member results/training/per_participant_source_target_query.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA results/training/per_seed_source_target_query.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA results/training/per_seed_source_target_query.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member results/training/per_seed_source_target_query.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external member length/SHA tests/test_kumar_saved_query_qc_20261015.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "internal payload length/SHA tests/test_kumar_saved_query_qc_20261015.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "text-only public member tests/test_kumar_saved_query_qc_20261015.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "standalone dictionary/reproduction identical to bundled bytes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count inputs/original_participant_endpoints.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order inputs/original_participant_endpoints.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count inputs/saved_predictions.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order inputs/saved_predictions.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count results/qc/all_role_qc_counts.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order results/qc/all_role_qc_counts.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count results/qc/cohort_method_sensitivity_summary.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order results/qc/cohort_method_sensitivity_summary.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count results/qc/cohort_paired_contrasts.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order results/qc/cohort_paired_contrasts.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count results/qc/joined_saved_predictions_qc.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order results/qc/joined_saved_predictions_qc.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count results/qc/leave_one_participant_out_influence.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order results/qc/leave_one_participant_out_influence.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count results/qc/paired_cross_subset_summary.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order results/qc/paired_cross_subset_summary.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count results/qc/paired_participant_contrasts.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order results/qc/paired_participant_contrasts.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count results/qc/paired_session_contrasts.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order results/qc/paired_session_contrasts.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count results/qc/participant_cross_subset_changes.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order results/qc/participant_cross_subset_changes.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count results/qc/participant_endpoints.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order results/qc/participant_endpoints.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count results/qc/per_participant_session_metrics.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order results/qc/per_participant_session_metrics.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count results/qc/per_seed_session_and_pooled_metrics.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order results/qc/per_seed_session_and_pooled_metrics.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count results/qc/query_identity_qc_ledger.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order results/qc/query_identity_qc_ledger.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count results/training/all_saved_epoch_curves.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order results/training/all_saved_epoch_curves.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count results/training/cohort_per_seed_query.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order results/training/cohort_per_seed_query.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count results/training/cohort_training_review.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order results/training/cohort_training_review.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count results/training/per_fit_training_review.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order results/training/per_fit_training_review.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count results/training/per_participant_source_target_query.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order results/training/per_participant_source_target_query.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count results/training/per_seed_source_target_query.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order results/training/per_seed_source_target_query.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count figures/Fig1_target_query_participants_source_data.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order figures/Fig1_target_query_participants_source_data.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count figures/Fig2_cpu_primary_paired_changes_source_data.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order figures/Fig2_cpu_primary_paired_changes_source_data.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count figures/Fig3_csp_signed_support_halves_source_data.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order figures/Fig3_csp_signed_support_halves_source_data.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count figures/Fig4_longitudinal_paired_changes_source_data.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order figures/Fig4_longitudinal_paired_changes_source_data.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count results/original_comparison/cohort_method_endpoint_summary.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order results/original_comparison/cohort_method_endpoint_summary.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count results/original_comparison/per_participant_endpoints.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order results/original_comparison/per_participant_endpoints.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count results/original_comparison/per_subject_session.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order results/original_comparison/per_subject_session.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count results/original_comparison/eegnet_per_seed_session.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order results/original_comparison/eegnet_per_seed_session.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count results/original_comparison/per_participant_descriptive_differences.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order results/original_comparison/per_participant_descriptive_differences.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV row count results/original_comparison/descriptive_eegnet_minus_cpu.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dictionary exact CSV column order results/original_comparison/descriptive_eegnet_minus_cpu.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "bundled fixed 7200 event metadata identities",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "bundled all2871 recorded epochs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "bundled all54 fit summaries",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "bundled all180 longitudinal figure cells",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manuscript_for_submission saved claim in actual PDF/Word 7.42",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manuscript_for_submission saved claim in actual PDF/Word 5.47",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manuscript_for_submission saved claim in actual PDF/Word 5.96",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manuscript_for_submission saved claim in actual PDF/Word 52.92",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manuscript_for_submission saved claim in actual PDF/Word 51.58",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manuscript_for_submission saved claim in actual PDF/Word 2,871",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manuscript_for_submission saved claim in actual PDF/Word 8,613",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manuscript_for_submission saved claim in actual PDF/Word 0.704246",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manuscript_for_submission saved claim in actual PDF/Word 0.596543",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manuscript_for_submission saved claim in actual PDF/Word 0.691847",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manuscript_for_submission actual editable tables/image separation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manuscript_for_submission ethics/release limitations in actual Word text",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manuscript_for_review saved claim in actual PDF/Word 7.42",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manuscript_for_review saved claim in actual PDF/Word 5.47",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manuscript_for_review saved claim in actual PDF/Word 5.96",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manuscript_for_review saved claim in actual PDF/Word 52.92",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manuscript_for_review saved claim in actual PDF/Word 51.58",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manuscript_for_review saved claim in actual PDF/Word 2,871",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manuscript_for_review saved claim in actual PDF/Word 8,613",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manuscript_for_review saved claim in actual PDF/Word 0.704246",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manuscript_for_review saved claim in actual PDF/Word 0.596543",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manuscript_for_review saved claim in actual PDF/Word 0.691847",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manuscript_for_review actual editable tables/image separation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manuscript_for_review ethics/release limitations in actual Word text",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actual S1 PDF/Word scientific detail 2,871",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actual S1 PDF/Word scientific detail 5.96",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actual S1 PDF/Word scientific detail 6.50",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actual S1 PDF/Word scientific detail −0.54",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actual S1 PDF/Word scientific detail 0.691847",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actual S1 PDF/Word scientific detail 7691/7701",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actual S1 PDF/Word scientific detail 1.5.0dev0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actual worksheet Word retains unresolved choices",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actual GitHub write blocked; no new remote commit claimed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actual R2 probe failed; no new upload/fullGET receipt",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "release_manifest_observed_after_scientific_checks": {
+    "path": "manuscript/plos_one_submission_20261015/release_manifest.json",
+    "bytes": 14818,
+    "sha256": "452185b3d3b5dfdbc0ef3ddb099a99f9518e45eaccc2e95516c6c11ab9098116",
+    "matches_parent_reported_452185b3": true
+  }
+}

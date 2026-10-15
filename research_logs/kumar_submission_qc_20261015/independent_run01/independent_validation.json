@@ -1,0 +1,244 @@
+{
+  "status": "passed",
+  "started_utc": "2026-10-15T11:55:12.880574+00:00",
+  "completed_utc": "2026-10-15T11:55:14.134161+00:00",
+  "scope": "independent saved CSV/JSON arithmetic; no producer imports, model fitting, EEG arrays or inference",
+  "numpy": "2.2.6",
+  "check_count": 358833,
+  "checks_by_category": {
+    "public_input_lengths": 4,
+    "public_input_hashes": 4,
+    "frozen_threshold": 1,
+    "bootstrap_draws": 1,
+    "bootstrap_seed": 1,
+    "event_identity_count": 1,
+    "complete_window_count": 1,
+    "qc_boolean": 7156,
+    "qc_fixed_amplitude_rule": 7156,
+    "qc_complete_total": 1,
+    "query_counts_and_30_exclusions": 1,
+    "query_flagged_count": 1,
+    "prediction_count": 1,
+    "unique_prediction_identity": 25740,
+    "prediction_is_complete_query": 25740,
+    "prediction_metadata_join": 128700,
+    "prediction_qc_join": 25740,
+    "prediction_label_join": 25740,
+    "binary_predictions": 25740,
+    "participant_method_seed_groups": 1,
+    "all_three_seeds_no_selection": 1,
+    "unique_table_keys": 11,
+    "exact_each_seed_query_set": 108,
+    "seed_metric_fields": 24192,
+    "all_seed_metric_keys": 1,
+    "seed_unique_trial_counts": 1152,
+    "seed_BA_averaging_fields": 10368,
+    "all_combined_metric_keys": 1,
+    "equal_five_target_session_fields": 1584,
+    "historical_original_endpoint_preserved": 144,
+    "cohort_eligibility_identity": 96,
+    "cohort_eligibility_count": 96,
+    "cohort_ineligible_identity": 96,
+    "method_cohort_bootstrap": 288,
+    "same10_unflagged_all_methods": 4,
+    "paired_endpoint_defined": 72,
+    "participant_paired_contrasts": 72,
+    "session_paired_contrasts": 432,
+    "session_pair_eligibility": 432,
+    "session_pair_class_counts": 864,
+    "contrast_eligible_ids": 12,
+    "contrast_eligible_count": 12,
+    "contrast_bootstrap": 36,
+    "contrast_sign_counts": 36,
+    "same_participants_across_subsets": 6,
+    "cross_subset_eligible_count": 6,
+    "cross_subset_paired_bootstrap": 18,
+    "cross_subset_cohort_identity": 72,
+    "participant_cross_subset_fields": 288,
+    "loo_omits_existing_eligible_identity": 136,
+    "leave_one_participant_out_fields": 544,
+    "all_role_qc_counts": 2700,
+    "query_ledger_complete_with_exclusions": 1,
+    "query_ledger_identity_fields": 43200,
+    "published_prediction_bytes_equal_public_inputs": 1,
+    "read_only_bytes_unchanged": 21
+  },
+  "maximum_numeric_difference": 3.3306690738754696e-16,
+  "absolute_numeric_tolerance": 1e-14,
+  "fixed_bootstrap_draws": 10000,
+  "fixed_bootstrap_seed": 42,
+  "participant_order": "lexicographic",
+  "original_queries": 4290,
+  "unflagged_queries": 3368,
+  "flagged_queries": 922,
+  "joined_prediction_rows": 25740,
+  "participant_method_seed_groups": 108,
+  "unflagged_target_remaining_complete_cases": [
+    "sub-11",
+    "sub-14",
+    "sub-15",
+    "sub-17",
+    "sub-18",
+    "sub-2",
+    "sub-3",
+    "sub-5",
+    "sub-6",
+    "sub-9"
+  ],
+  "excluded_from_unflagged_target_endpoint": [
+    "sub-8",
+    "sub-12"
+  ],
+  "consequential_contrasts": [
+    {
+      "cohort": "development6",
+      "contrast": "refit_minus_frozen",
+      "subset": "all_included",
+      "n": 6,
+      "independent_mean_and_CI": [
+        0.032468407609060945,
+        -0.009035087719298285,
+        0.07135729649794982
+      ]
+    },
+    {
+      "cohort": "development6",
+      "contrast": "refit_minus_frozen",
+      "subset": "unflagged",
+      "n": 6,
+      "independent_mean_and_CI": [
+        0.03277145890590253,
+        -0.00329344367981782,
+        0.06754220394519679
+      ]
+    },
+    {
+      "cohort": "development6",
+      "contrast": "refit_minus_lda_only",
+      "subset": "all_included",
+      "n": 6,
+      "independent_mean_and_CI": [
+        -0.011504503596155161,
+        -0.0493623630436244,
+        0.024449485783424024
+      ]
+    },
+    {
+      "cohort": "development6",
+      "contrast": "refit_minus_lda_only",
+      "subset": "unflagged",
+      "n": 6,
+      "independent_mean_and_CI": [
+        -0.01236646450302544,
+        -0.055113214399156084,
+        0.027259383887012805
+      ]
+    },
+    {
+      "cohort": "remaining12",
+      "contrast": "refit_minus_frozen",
+      "subset": "all_included",
+      "n": 12,
+      "independent_mean_and_CI": [
+        0.07421355111917723,
+        0.02487554824561403,
+        0.12476615749142968
+      ]
+    },
+    {
+      "cohort": "remaining12",
+      "contrast": "refit_minus_frozen",
+      "subset": "unflagged",
+      "n": 10,
+      "independent_mean_and_CI": [
+        0.05959649142794228,
+        0.0098959258278366,
+        0.11238331639721523
+      ]
+    },
+    {
+      "cohort": "remaining12",
+      "contrast": "refit_minus_lda_only",
+      "subset": "all_included",
+      "n": 12,
+      "independent_mean_and_CI": [
+        0.054715668481548685,
+        0.021680574460576717,
+        0.08913797514619878
+      ]
+    },
+    {
+      "cohort": "remaining12",
+      "contrast": "refit_minus_lda_only",
+      "subset": "unflagged",
+      "n": 10,
+      "independent_mean_and_CI": [
+        0.03823893601090678,
+        0.011056380717976636,
+        0.06720116970372311
+      ]
+    },
+    {
+      "cohort": "all18_secondary",
+      "contrast": "refit_minus_frozen",
+      "subset": "all_included",
+      "n": 18,
+      "independent_mean_and_CI": [
+        0.060298503282471806,
+        0.024057257007461155,
+        0.09856674172660254
+      ]
+    },
+    {
+      "cohort": "all18_secondary",
+      "contrast": "refit_minus_frozen",
+      "subset": "unflagged",
+      "n": 16,
+      "independent_mean_and_CI": [
+        0.04953710423217737,
+        0.015360426372004592,
+        0.08678944927692375
+      ]
+    },
+    {
+      "cohort": "all18_secondary",
+      "contrast": "refit_minus_lda_only",
+      "subset": "all_included",
+      "n": 18,
+      "independent_mean_and_CI": [
+        0.03264227778898074,
+        0.003815391768053583,
+        0.06315137320472311
+      ]
+    },
+    {
+      "cohort": "all18_secondary",
+      "contrast": "refit_minus_lda_only",
+      "subset": "unflagged",
+      "n": 16,
+      "independent_mean_and_CI": [
+        0.019261910818182196,
+        -0.0075375578951228815,
+        0.04583178977738892
+      ]
+    }
+  ],
+  "remaining12_original_primary_LOO_range": [
+    0.06217235879667818,
+    0.08624731892426991
+  ],
+  "remaining10_unflagged_primary_LOO_range": [
+    0.04605786820358074,
+    0.07236095960058338
+  ],
+  "all_read_bytes_unchanged": true,
+  "no_critical_issue_found": true,
+  "limitations": [
+    "Conditioning queries on fixed amplitude QC changes sample composition; complete-case n10 differs from original n12.",
+    "The cross-subset change is checked on the same eligible ten participants, not by subtracting n12 and n10 cohort means.",
+    "Unflagged is not artifact-free; historical fitting and support data, including flagged examples, remain unchanged.",
+    "One true example per class is mathematically sufficient for BA but unstable; low-count rows remain flagged and are not deleted.",
+    "New post-observation descriptive analysis cannot establish a policy, validate continuous MI or become a new primary endpoint."
+  ],
+  "failures": []
+}

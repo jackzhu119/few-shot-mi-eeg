@@ -1,0 +1,224 @@
+{
+  "status": "passed_with_optional_wording_advisory",
+  "reviewed_utc": "2026-10-15T12:08:59.183201+00:00",
+  "review_scope": "Targeted scientific claims, original table preservation, alreadyverifiedQC table formatting, citation resolution and main/S1/S2 scope; no PDF/nativeWord visual claim",
+  "inputs": {
+    "manuscript/kumar_plos_one_submission_draft_20261015.md": {
+      "bytes": 39804,
+      "sha256": "17c994d0821eff57aedb0f493989da6011c4277c849e06ed9d54d18255510898"
+    },
+    "manuscript/kumar_plos_one_supporting_methods_20261015.md": {
+      "bytes": 37206,
+      "sha256": "89b26baaf46f4c0ba999cbef879077a0e3370d6f5697538664daad00e84e50eb"
+    },
+    "manuscript/kumar_plos_one_audit_reproducibility_20261015.md": {
+      "bytes": 7662,
+      "sha256": "9e4530681189cdd61a53c1cc48153489323ae58f1dfa6a57283ae539fd754b68"
+    },
+    "manuscript/kumar_longitudinal_decoding_working_draft_20261015.md": {
+      "bytes": 38296,
+      "sha256": "3a3ddf6ddf7a07c73810b4a9ca5b9eefa6969732afa48f5b593ee5ea3ec78525"
+    },
+    "manuscript/kumar_plos_one_references_20261015.bib": {
+      "bytes": 6359,
+      "sha256": "73f506acf9a05dcb4e155fad76dbfbd13c8a8765d3698fbe355491aca43150f3"
+    }
+  },
+  "checks": [
+    {
+      "id": "all_three_original_table_blocks_byte_identical",
+      "passed": true,
+      "evidence": {
+        "original_blocks": 3,
+        "new_blocks": 4,
+        "detail": "Original budgets, target BA and source BA Markdown tables exactly retained; only fourth QC table added."
+      }
+    },
+    {
+      "id": "qc_table_eight_cells_match_verified_csv_rounding",
+      "passed": true,
+      "evidence": {
+        "expected_and_observed_cells": [
+          [
+            "57.94 [52.65, 63.84]",
+            "60.14 [54.75, 66.02]"
+          ],
+          [
+            "59.89 [54.30, 65.68]",
+            "62.28 [56.21, 67.91]"
+          ],
+          [
+            "65.36 [59.81, 70.90]",
+            "66.10 [59.84, 71.94]"
+          ],
+          [
+            "51.58 [49.08, 54.51]",
+            "51.80 [48.34, 55.28]"
+          ]
+        ],
+        "source": "research_logs/kumar_submission_qc_20261015/run01/cohort_method_sensitivity_summary.csv",
+        "scope": "Formatting saved verified means/intervals only; no new scientific calculation."
+      }
+    },
+    {
+      "id": "all_cited_keys_resolve_in_new_bibliography",
+      "passed": true,
+      "evidence": {
+        "used_keys": [
+          "blankertz2008",
+          "he2020alignment",
+          "jayaram2018",
+          "kumar2024",
+          "kumar2024correction",
+          "kumarcodebook",
+          "lawhern2018",
+          "ledoit2004",
+          "lotte2018",
+          "lotte2018skills",
+          "nemar177",
+          "ramoser2000",
+          "schirrmeister2017",
+          "zanini2018alignment"
+        ],
+        "bibliography_keys": [
+          "blankertz2008",
+          "he2020alignment",
+          "jayaram2018",
+          "kumar2024",
+          "kumar2024correction",
+          "kumarcodebook",
+          "lawhern2018",
+          "ledoit2004",
+          "lotte2018",
+          "lotte2018skills",
+          "nemar177",
+          "ramoser2000",
+          "schirrmeister2017",
+          "zanini2018alignment"
+        ],
+        "missing": [],
+        "pandoc_exit": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "id": "same_label_secondary_not_promoted",
+      "passed": true,
+      "evidence": "Main Abstract/Introduction/Results and S1S4/S8 keep original full-refit−frozen primary and equal-label full-refit−LDA secondary."
+    },
+    {
+      "id": "cue_anchor_not_continuous_imagery",
+      "passed": true,
+      "evidence": "Main exported-window Methods and S1S7 distinguish sample completeness, documented cue anchor and unquantified task phases; historical conversion not replayed."
+    },
+    {
+      "id": "44_partials_not_44_early_tasks",
+      "passed": true,
+      "evidence": "Main Methods and S1S7 retain final-event/EDF-boundary relation without equating to task termination or indexing error."
+    },
+    {
+      "id": "prospective_phase_fix_separate_no_score_selected_windows",
+      "passed": true,
+      "evidence": "Main Discussion and S1S7 retain old results and require raw marker/sample-clock mapping and a separately fixed amendment."
+    },
+    {
+      "id": "eegnet_weak_source_precedes_target_not_drift_cause",
+      "passed": true,
+      "evidence": "Main neural Results/Discussion and S1S9 report weak held-out source query, descriptive source/target difference, limited small-source benchmark and no universal deep-learning conclusion."
+    },
+    {
+      "id": "no_favorable_seed_selection",
+      "passed": true,
+      "evidence": "Main Methods/Results and S1 retain all3seeds, 54histories, collapse and epoch selections; training-mode CE not calibrated generalization gap."
+    },
+    {
+      "id": "participant_denominators_not_models",
+      "passed": true,
+      "evidence": "Main Discussion explicitly separates18participantIDs,12primary,6reliability from54sourcefits; sessions/seeds do not increase sample size."
+    },
+    {
+      "id": "qc_post_observation_not_prereg_or_new_primary",
+      "passed": true,
+      "evidence": "Main QC Methods and S1S8 preserve original primary and state new sensitivity was written after prior test exposure."
+    },
+    {
+      "id": "qc_missing_classes_n10_cases_retained",
+      "passed": true,
+      "evidence": "Main Table4 and S1S8 retain absent/zero-class rows, n10/12 target eligibility and all5requiredsessions; lowcount rows disclosed."
+    },
+    {
+      "id": "qc_same10_changes_not_n12_vs_n10_subtraction",
+      "passed": true,
+      "evidence": "Main QC Results and S1S8 distinguish two cohort columns from same-ten paired changes; previously independently verified CSV intervals."
+    },
+    {
+      "id": "qc_fit_artifacts_and_conditional_mask_limits",
+      "passed": true,
+      "evidence": "Main Methods/Results/Discussion and S1 disclose unchanged fitting/support/validation data and sample/class selection; unflagged is not artifact-free."
+    },
+    {
+      "id": "decline_magnitudes_no_unsupported_harm",
+      "passed": true,
+      "evidence": "Main Results/Fig2 show actual decrement sizes and original LOO+6.22..+8.62 without treating all negative values as harm or deleting participants."
+    },
+    {
+      "id": "task_reliability_no_gate_or_chance_axis_policy",
+      "passed": true,
+      "evidence": "Main Abstract/Results/Discussion and S1retain chance-level power probes, CSPsignorientations and no nested out-of-sample policy benefit."
+    },
+    {
+      "id": "reliability_dev_only_drift_prefrozen_descriptive",
+      "passed": true,
+      "evidence": "Main reliability Methods and S1S2/S5 distinguish6-IDreliability source/support scope from pre-frozen remaining-cohort drift associations."
+    },
+    {
+      "id": "original_study_consent_not_new_ethics_approval",
+      "passed": true,
+      "evidence": "Main ethics/S1S7 attribute UTAustin2020-03-0073+writtenconsent tooriginalstudy only; authorsecondarydetermination remains unresolved."
+    },
+    {
+      "id": "ai_scope_not_language_only_or_human_replication",
+      "passed": true,
+      "evidence": "Main AI Methods truthfully includes code, statistics, references, figures and drafting; author final personal review/approval explicitlypending."
+    },
+    {
+      "id": "related_papers_not_executed_baseline_claims",
+      "passed": true,
+      "evidence": "Three newclosest references support existingalignment and measurement boundaries. EApreprintselectedmethodsread; Zanini/Lotteabstractread; no claims of completefulltextreview or implementednewbaselines."
+    },
+    {
+      "id": "engineering_records_separated_from_main",
+      "passed": true,
+      "evidence": "Operational claims/authorizations/R2readback/failures moved toS2orhistoricalaudit; mainscientificavailability retainsaccurateprivate/publicscope."
+    },
+    {
+      "id": "public_version_license_ethics_not_false_submission_completion",
+      "passed": true,
+      "evidence": "Main availability/declarations and authorworksheet do not fabricatepublicarchiveDOI/licenseactivation/institutionclearance or submission."
+    }
+  ],
+  "passed_checks": 22,
+  "failed_checks": 0,
+  "optional_findings": [
+    {
+      "severity": "minor_wording",
+      "location": "Main neural learning-history Results paragraph",
+      "observed": "without consistent independent validation improvement",
+      "recommendation": "without consistent validation improvement",
+      "reason": "Validationselectedepochs; removingindependent avoids confusing thiswiththeindependentsourcequery. Adjacentparagraphalreadycorrectlystatesselectedvalidationisnotanindependentgeneralizationestimate.",
+      "blocking": false
+    }
+  ],
+  "prior_independent_qc_evidence": "research_logs/kumar_submission_qc_20261015/independent_run01/independent_validation.json",
+  "new_scientific_fits": 0,
+  "new_query_forwards": 0,
+  "new_EEG_reads": 0,
+  "new_statistical_analysis": false,
+  "no_claim_of_independent_human_review": true,
+  "main_manuscript_edited_by_reviewer": false,
+  "remaining_submission_conditions": [
+    "Actualinstitutionaldeterminationforthecurrentsecondaryanalysis.",
+    "Authorpersonalchecksandfinalapprovalofexactmanuscript.",
+    "Actualscopedlicenseselection/activationandfixedpublicversionclosure; noformaljournalsubmissionperformed."
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "tests": 15,
+  "test_file": "tests/test_kumar_saved_query_qc_20261015.py",
+  "synthetic": true,
+  "software_validation_only": true,
+  "pytest_command": "/workspace/.venvs/few-shot-mi-eeg/bin/python -m pytest -q tests/test_kumar_saved_query_qc_20261015.py",
+  "ruff_command": "/workspace/.venvs/few-shot-mi-eeg/bin/ruff check scripts/analyze_kumar_saved_query_qc_20261015.py tests/test_kumar_saved_query_qc_20261015.py",
+  "ruff_passed": true,
+  "script_sha256": "c52586829deb77f4b6b16a15d66df83c0588847036ff9c9de9e2ea1c90efa563",
+  "test_sha256": "ce346f5f9120962e362a200c85344679a6b93eef771348751266d54707b8f0d1",
+  "cases": [
+    "exact identity join / duplicates / missing / unexpected / mismatched label/session / nonbinary prediction",
+    "undefined BA with missing class; low class counts retained",
+    "all-seed BA averaging; reject missing seed",
+    "five-session completeness without silent fewer-session averaging",
+    "deterministic participant bootstrap / insufficient participants",
+    "portable input exact joins / changed QC flag rejected"
+  ]
+}

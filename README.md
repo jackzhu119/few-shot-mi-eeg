@@ -7,13 +7,14 @@ task-relevant information explain performance changes better than total signal d
 
 ## 当前进度与论文入口（2026-10-15）
 
-**[当前完整进度、论文状态及剩余事项](CURRENT_PROJECT_STATUS.md)**。
-54/54 源 EEGNet 模型及一次只读 query 评估已完成并分别验收，剩余冻结训练为 0。
-目标为 PLOS ONE / Research Article；[最新论文 PDF/Word 与补充材料](manuscript/review_package_author_confirmed_20261015/README.md)
-已归档，作者 8 项事实回复已落实。当前为探索性作者审阅稿，机构二次分析结论、
-具体软件许可与最终投稿审阅仍待完成，本任务未代作者投稿。
-GitHub 保存代码/文本证据/稿件，EEG 数组、权重及原实验包保存在私有 R2。
-以下各日期条目保留历史状态；恢复工作前先读当前入口，勿重启已完成实验。
+**[当前进度、论文状态及剩余事项](CURRENT_PROJECT_STATUS.md)**。
+**[新PLOS ONE最终作者审阅包](manuscript/plos_one_submission_20261015/README.md)**
+已完成主文PDF/Word、科学方法、审计复现、4张图、41成员最小数据包和未发送附信。
+原54fit及一次query验收不变；本轮只对保存结果做探索性QC、任务时序及训练曲线核查。
+已确认现有5秒窗是cue锚定，不能宣称全程持续MI；缺失类别后的QC敏感性仅10/12人。
+机构认定、具体许可、最终作者批准仍待完成，未代作者投稿。当前GitHub写入审批策略
+及Git/R2代理阻塞使新稿尚未实际同步远端；本地固定版本和离线交付包如实记录。
+下文历史条目不作为新实验授权。
 
 ## 2026-10-15：冻结基线结果与query真实验收
 

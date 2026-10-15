@@ -1,0 +1,28 @@
+{
+  "observed_at_utc": "2026-10-15T12:32:57.823216+00:00",
+  "status": "sole_documentation_advisory_corrected_no_scientific_change",
+  "file": "docs/plos_one_submission_check_20261015.md",
+  "previous_sha256": "5df8e98bb4e75e68426953051286a0c54da398113400238c1fa10b5bf0ff9f32",
+  "current_sha256": "d74ec96cfd7b09d2b0ef5dcb88e08da96a7aefd4c4c2f1da4bf84981d21659c5",
+  "diff": [
+    "--- previous\n",
+    "+++ current\n",
+    "@@ -181,8 +181,9 @@\n",
+    " ",
+    " Four explicit figure source-data CSVs are supplied under",
+    " `manuscript/figures/plos_submission_20261015/`, one for each Fig1\u2013Fig4.",
+    "-The final package README records the figure reproduction command and source",
+    "-manifest. A plotting command is allowed to read only saved text tables. It must",
+    "+The [figure-directory README](../manuscript/figures/plos_submission_20261015/README.md)",
+    "+records the figure reproduction command and source manifest. A plotting command",
+    "+is allowed to read only saved text tables. It must",
+    " preserve already rendered figures and use a fresh output path. Neither command",
+    " may invoke `generic formal_train`, source fit queues, checkpoint evaluation or",
+    " any query execution launcher."
+  ],
+  "initial_release_manifest_preserved_at": "initial_seal_before_link_correction/release_manifest.json",
+  "initial_final_validation_preserved_at": "initial_seal_before_link_correction/final_package_validation.json",
+  "current_release_manifest_sha256": "5eb06787dfb59b4158f7c860d3b85bc5bec66219c73c8770ba0f0dc324c221e6",
+  "current_seal_checks": 1025,
+  "scientific_numbers_or_exports_changed": false
+}

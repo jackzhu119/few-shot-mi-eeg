@@ -1,0 +1,104 @@
+{
+  "status": "saved_metadata_timing_audit_passed_with_phase_coverage_unresolved",
+  "created_at_utc": "2026-10-15T11:49:41.992016+00:00",
+  "scope": "metadata and prior header-audit receipts only; no signal, model, query prediction or fitting read",
+  "checks": 80293,
+  "source_events": 7200,
+  "runs": 360,
+  "full_5s_windows": 7156,
+  "partial_windows": 44,
+  "class_counts": {
+    "right_hand": 3600,
+    "left_hand": 3600
+  },
+  "retained_value_counts": {
+    "2": 3600,
+    "1": 3600
+  },
+  "retained_event_columns": [
+    "duration",
+    "onset",
+    "sample",
+    "trial_type",
+    "value"
+  ],
+  "events_per_session": {
+    "ses-0": 1440,
+    "ses-1": 1440,
+    "ses-2": 1080,
+    "ses-3": 1080,
+    "ses-4": 1080,
+    "ses-5": 1080
+  },
+  "all_stored_intervals_inside_prior_audited_edf_bounds": true,
+  "partial_source_row_counts": {
+    "20": 44
+  },
+  "partial_session_counts": {
+    "ses-1": 8,
+    "ses-2": 4,
+    "ses-3": 12,
+    "ses-4": 7,
+    "ses-5": 13
+  },
+  "all_partial_final_class_event_and_stop_at_recording_end": true,
+  "partial_duration_seconds_min_max": [
+    4.146484,
+    4.992188
+  ],
+  "stored_intervals_overlapping_next_retained_event": [],
+  "cue_anchor_chain": {
+    "original_author_codebook_fixed_commit": "548470542e63f97ab777684c1f5e4f1cace4b8ed",
+    "codebook_769_770": "Cue Left/Right",
+    "codebook_7691_7701": "Task period starts (PDF has typographical 'perios')",
+    "codebook_7692_7702": "Timeout/Incorrect Hit for Online, Trial End for Offline",
+    "codebook_online_7693_7703": "Cue Left/Right Delivered",
+    "saved_official_moabb_adapter_sha256": "96af996bfdbb7999f0aa681a6a3aa2a9030cb1c2aff52fc0827e8db2390f446d",
+    "adapter_retained_class_events": {
+      "769": "left_hand",
+      "770": "right_hand"
+    },
+    "adapter_interval_seconds": [
+      0,
+      5
+    ],
+    "nemar_version": "1.0.5",
+    "nemar_generated_by": [
+      {
+        "CodeURL": "https://github.com/NeuroTechX/moabb",
+        "Name": "moabb",
+        "Description": "Mother of All BCI Benchmarks",
+        "Version": "1.5.0dev0"
+      }
+    ],
+    "provenance_declared_moabb_version": "1.5.0dev0",
+    "conclusion": "Published derivative task-label windows follow the documented cue-code/[0,5] convention; sustained MI over all five seconds is not established.",
+    "not_claimed": [
+      "all original GDF marker arrays decoded",
+      "exact historical exporter commit pinned",
+      "trial-specific cue-to-task or end latencies verified",
+      "all online intervals overlap result/rest",
+      "44 partial events represent 44 early MI terminations"
+    ]
+  },
+  "minimal_missing_evidence": [
+    "Exact historical NEMAR conversion code/commit and options, or maintainer-confirmed cue-to-derivative sample mapping",
+    "Original bar-task marker POS/TYP arrays for all 360 runs, preserving 769/770,7691/7701,7692/7702,7693/7703 and recording end",
+    "Trial linkage and marker clock/sample-origin mapping sufficient to compare exported onset/end to original task onset/end"
+  ],
+  "source_provenance_file_inventory": {
+    "files": 1265,
+    "extension_counts": {
+      ".gdf": 812,
+      ".txt": 452,
+      "": 1
+    },
+    "original_bytes_not_read": true
+  },
+  "readme_trial_length_claim_present": true,
+  "input_files": 1451,
+  "new_fits": 0,
+  "new_model_forward_passes": 0,
+  "window_or_protocol_changes": 0,
+  "all_input_hashes_unchanged_after_audit": true
+}

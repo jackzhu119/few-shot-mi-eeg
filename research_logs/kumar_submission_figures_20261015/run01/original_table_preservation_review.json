@@ -1,0 +1,67 @@
+{
+  "status": "original_three_main_tables_byte_identical_to_reference_commit",
+  "observed_at_utc": "2026-10-15T11:58:14.368512+00:00",
+  "reference_commit": "370bc94b7af3c926adeb02c38e430a53e4a64135",
+  "original_path": "manuscript/kumar_longitudinal_decoding_working_draft_20261015.md",
+  "original_bytes": 38296,
+  "original_sha256": "3a3ddf6ddf7a07c73810b4a9ca5b9eefa6969732afa48f5b593ee5ea3ec78525",
+  "original_working_file_still_byte_identical_to_reference": true,
+  "reviewed_new_main_path": "manuscript/kumar_plos_one_submission_draft_20261015.md",
+  "reviewed_new_main_sha256_at_observation": "73e07117d0171e498c5b00016965f1af42618d6d5edb1c62a4ac459da6875f1d",
+  "scope": "Three complete contiguous Markdown table blocks compared by exact UTF-8 bytes against fixed Git reference. New fourth QC table is separate. Subsequent prose/format edits do not affect this table-subset proof if block hashes remain equal.",
+  "table_blocks": [
+    {
+      "original_table_number": 1,
+      "new_table_number": 1,
+      "bytes": 623,
+      "sha256": "57cc3c0d323b515285fdee24d381d130dfa425f856d5d4563e5286c497dea5dc",
+      "exact_bytes_preserved": true
+    },
+    {
+      "original_table_number": 2,
+      "new_table_number": 2,
+      "bytes": 526,
+      "sha256": "7b4efc8545851a455241939ddad16689d481bd4980689563b730d7528a3f7818",
+      "exact_bytes_preserved": true
+    },
+    {
+      "original_table_number": 3,
+      "new_table_number": 3,
+      "bytes": 357,
+      "sha256": "f1a51aa613c20a0b3ca97d80514b25048bc4d6788c69f98f2e28741aa1e4afca",
+      "exact_bytes_preserved": true
+    }
+  ],
+  "fig4_ranges_from_saved_values": [
+    {
+      "contrast": "full_refit_minus_frozen",
+      "minimum_pp": -39.86842105263158,
+      "minimum_subject_session": [
+        "sub-18",
+        "ses-4"
+      ],
+      "maximum_pp": 55.00000000000001,
+      "maximum_subject_session": [
+        "sub-2",
+        "ses-5"
+      ],
+      "cells": 90
+    },
+    {
+      "contrast": "full_refit_minus_LDA_only",
+      "minimum_pp": -37.49999999999999,
+      "minimum_subject_session": [
+        "sub-7",
+        "ses-2"
+      ],
+      "maximum_pp": 42.5,
+      "maximum_subject_session": [
+        "sub-2",
+        "ses-5"
+      ],
+      "cells": 90
+    }
+  ],
+  "interpretation": "Description of substantial session-level variation is supported by retained signed ranges; no additional significance or independence claim.",
+  "main_edited_by_this_review": false
+}

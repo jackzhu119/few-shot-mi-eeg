@@ -1,5 +1,16 @@
 # Manuscript working materials
 
+## Latest PLOS ONE author-review revision
+
+The [new complete package](plos_one_submission_20261015/README.md) includes the
+image-free submission manuscript, illustrated review PDF/Word, scientific methods,
+separate audit appendix, four production figures and a portable minimal data ZIP.
+The [revision report](../docs/kumar_submission_revision_report_20261015.md) records
+cue-anchored window semantics, direct QC sensitivity with10/12eligible remaining
+participants and saved EEGNet training interpretation. Original frozen results
+and previous drafts below remain unchanged. Local completion is distinguished
+from the currently blocked GitHub/R2 synchronization. No journal submission occurred.
+
 Current repository-wide scientific completion, manuscript deliverables, author
 confirmations and remaining submission requirements are summarized in
 [CURRENT_PROJECT_STATUS.md](../CURRENT_PROJECT_STATUS.md). All54 source models

@@ -1,0 +1,2115 @@
+1
+
+2
+
+3
+
+Longitudinal motor-imagery EEG decoding: Frozen
+baselines, supervised recalibration, and
+task-measurement reliability
+
+4
+
+5
+
+Short title: Longitudinal EEG decoding with limited recalibration labels
+
+6
+
+Ziyuan Zhu
+
+7
+
+College of Artificial Intelligence Medicine, Chongqing Medical University, Chongqing, China
+
+8
+
+Corresponding author: Ziyuan Zhu; zzy2630816871@gmail.com
+
+9
+
+ORCID: https://orcid.org/0009-0005-1153-4926
+
+1
+
+10
+
+Abstract
+
+11
+
+Supervised recalibration in motor-imagery brain–computer interfaces can update both a classifier
+
+12
+
+and its spatial representation, but a useful update decision also requires reliable task measurements.
+
+13
+
+We reanalyzed 18 published participant identities across six sessions of Kumar2024 (NEMAR
+
+14
+
+nm000177/v1.0.5). A frozen protocol compared source-only CSP/LDA, classifier-only recalibra-
+
+15
+
+tion with frozen CSP, and full CSP/LDA refitting using the same 19 or 20 current-session support
+
+16
+
+labels. An always-frozen EEGNet baseline retained three fixed seeds. The original primary con-
+
+17
+
+trast in 12 remaining participants favored full refitting over frozen decoding by 7.42 percentage
+
+18
+
+points (95% participant-bootstrap interval 2.49–12.48). The secondary same-label-budget contrast
+
+19
+
+favored full refitting over LDA-only updating by 5.47 points (2.17–8.91); it was not promoted to
+
+20
+
+a primary endpoint. Three individual decreases ranged from 0.20 to 5.82 points. An exploratory
+
+21
+
+amplitude-QC sensitivity retained a defined five-session endpoint for 10 of these participants; its
+
+22
+
+full-minus-frozen contrast was 5.96 points (0.99–11.24), with substantial missing-class and selec-
+
+23
+
+tion limitations. EEGNet source-query balanced accuracy (BA) was 52.92% and target BA 51.58%,
+
+24
+
+so weak target performance cannot chiefly be assigned to cross-session drift. Source and support
+
+25
+
+reliability probes did not validate an adaptation gate. Event-code tracing identified cue-anchored
+
+26
+
+exported five-second windows rather than verified five-second continuous imagery; online phase
+
+27
+
+composition remains unquantified. Full CSP/LDA refitting improved the cohort-average endpoint
+
+28
+
+under the specified support-label budget, whereas the LDA-only contrast remained uncertain. Prior
+
+29
+
+test exposure makes the follow-up analyses exploratory. These results concern released task-label
+
+30
+
+windows, not isolated imagery physiology, human skill retention or clinical efficacy.
+
+2
+
+31
+
+Introduction
+
+32
+
+Longitudinal motor-imagery brain–computer interface (BCI) decoding must account for changes in
+
+33
+
+recording distributions and in the relation between signals and task labels. Nonstationarity, limited
+
+34
+
+calibration data and evaluation design remain recurring challenges [1]. Common spatial patterns
+
+35
+
+(CSP) and linear discriminant analysis (LDA) offer a conventional setting in which spatial repre-
+
+36
+
+sentation and classification can be updated separately [2,3]. A current-session label budget may
+
+37
+
+improve decoding, but it does not establish that every participant or session benefits from updating.
+
+38
+
+Kumar and colleagues already studied fixed and adaptive CSP in longitudinal BCI training, includ-
+
+39
+
+ing updates using labels from a session’s first run [4,5]. We therefore do not claim that recalibra-
+
+40
+
+tion, first-run calibration followed by later-run evaluation, or adaptive CSP is a new procedure. Our
+
+41
+
+narrower question is whether updating the spatial filters in addition to the classifier changes perfor-
+
+42
+
+mance when both updates receive the same approximately 20 target labels, and whether available
+
+43
+
+task measurements are reliable enough to inform an update decision. The original full-refit versus
+
+44
+
+frozen comparison remains primary; the full-refit versus classifier-only comparison is an explicitly
+
+45
+
+secondary, equal-label-budget contrast.
+
+46
+
+Distribution alignment is a related but different strategy. Euclidean alignment and Riemannian
+
+47
+
+transfer frameworks reduce between-domain mismatch before or within decoding [6,7]. Such ap-
+
+48
+
+proaches are relevant alternatives, not baselines that were implemented here. A covariance distance
+
+49
+
+or task-score measurement alone neither reproduces those methods nor establishes that a policy
+
+50
+
+based on it improves decoding. Likewise, decoder accuracy is not interchangeable with a user’s
+
+51
+
+mental-imagery skill [8]. This secondary analysis evaluates stored task labels rather than the origi-
+
+52
+
+nal study’s online interventions or acquired skills.
+
+53
+
+EEGNet supplies a compact neural reference [9], but identical query trials do not equalize source-
+
+54
+
+validation labels, target support or optimization. We retain every fixed seed and class-collapsed
+3
+
+55
+
+outcome and examine saved learning histories to interpret this small-source setting. We also trace
+
+56
+
+the exported events to their task semantics: a complete data window is not automatically a complete
+
+57
+
+imagery phase. The resulting contribution is a bounded comparison of frozen and supervised con-
+
+58
+
+ventional baselines, measurement reliability and explicit sources of uncertainty, rather than a newly
+
+59
+
+validated task-aware gate.
+
+60
+
+Materials and methods
+
+61
+
+Data source, original study and ethical status
+
+62
+
+We used the released Kumar2024 derivative, NEMAR nm000177/v1.0.5 [10], associated with the
+
+63
+
+original study and its correction [4,5]. The original Methods report University of Texas at Austin
+
+64
+
+protocol 2020-03-0073 and written informed consent before the experiment. These statements were
+
+65
+
+checked against accessible indexed original Methods passages; downloading the complete original
+
+66
+
+XML was unsuccessful. They describe the original collection, not approval of this secondary anal-
+
+67
+
+ysis. No new participants were recruited and no intervention was performed. The responsible
+
+68
+
+institution’s determination for this secondary use remains pending confirmation by the author; no
+
+69
+
+approval, exemption, waiver or no-review conclusion is asserted for this project.
+
+70
+
+The preserved derivative contains 18 published participant identities, six sessions and 360 EDF
+
+71
+
+recordings. It is not a new recording collection or an independent reproduction of the acquisition
+
+72
+
+pipeline. Published identities are the statistical units; numerical duplicate checks do not indepen-
+
+73
+
+dently verify biological identity. Invalid age placeholders and unresolved original training- protocol
+
+74
+
+membership preclude demographic or intervention-subgroup claims.
+
+4
+
+75
+
+Exported windows, task-phase meaning and chronological partition
+
+76
+
+The frozen analysis identified 7,200 exported left/right event identities and used five-second inter-
+
+77
+
+vals beginning at their annotated onset. Forty-four intervals ended at the recording boundary before
+
+78
+
+five seconds; they were preserved and excluded without padding or replacement, leaving 7,156
+
+79
+
+complete windows. Completeness here refers to available recorded samples, not to five seconds of
+
+80
+
+continuous motor imagery.
+
+81
+
+The original author-supplied codebook defines 769/770 as left/right cue markers and distinct
+
+82
+
+7691/7701 markers as task-period starts [11]. The preserved MOABB Kumar adapter [12] maps
+
+83
+
+769/770 to left/right and declares [0,5] seconds; the derivative’s class annotations and fixed/clipped
+
+84
+
+durations agree with this documented export convention. The precise historical converter commit
+
+85
+
+and the original trial-level marker arrays were not independently replayed. The original Methods
+
+86
+
+describe a 1.5-second cue preceding feedback, with an offline task duration of five seconds and
+
+87
+
+online feedback lasting at most seven seconds, followed by result and rest. Thus the documented
+
+88
+
+export chain supports cue-anchored task-label windows, not isolation of a continuous five-second
+
+89
+
+imagery phase. A nominal cue-anchored window includes the cue interval and at most the
+
+90
+
+subsequent 3.5 seconds; early online termination could introduce later phases. Their trial-level
+
+91
+
+proportions cannot be measured without the original marker sequence and a verified clock mapping.
+
+92
+
+We did not reconstruct these phases from labels or alter any window.
+
+93
+
+All 44 short intervals occur on the last event of an online recording and stop at the audited EDF end.
+
+94
+
+This is a recording-boundary relationship, not evidence that exactly 44 tasks ended early. Neither
+
+95
+
+variable task duration by itself nor this boundary check establishes a sample-indexing error. The
+
+96
+
+original results are retained as decoding of the released task-label windows. S1 Text gives the event
+
+97
+
+evidence and the minimum requirements for a future phase-specific amendment.
+
+98
+
+Development identities were sub-1, 4, 7, 10, 13 and 16; the remaining 12 formed the fixed primary
+5
+
+99
+
+cohort, selected by numeric order rather than performance. In session 0, runs 0/1 supplied 40 source
+
+100
+
+TRAIN windows, run 2 supplied 20 source validation windows and run 3 supplied source query. In
+
+101
+
+each of five later sessions, run 0 supplied support and the remaining whole runs supplied query. Up-
+
+102
+
+dates used source TRAIN plus current-session support without accumulating future or earlier target
+
+103
+
+labels. Partial exclusions left 19/20 support events per target session (1,786 total) and 4,290 query
+
+104
+
+events: 360 source and 3,930 target. Thirty partial query events remained excluded. Derivative
+
+105
+
+timestamp order was checked; absolute calendar accuracy was not independently established.
+
+106
+
+Preprocessing and fixed amplitude-QC flag
+
+107
+
+Each event independently underwent common-average referencing across 22 channels, fourth-order
+
+108
+
+8–30 Hz Butterworth zero-phase filtering and polyphase resampling from 512 to 128 Hz, yielding
+
+109
+
+22 × 640 float32 values in volts. These epoch-local operations learned no held-out statistics. Zero-
+
+110
+
+phase filtering defines an offline analysis; it neither proves real-time operation nor removes a cue
+
+111
+
+or feedback contribution. Native CPz reference remains a metadata declaration.
+
+112
+
+The existing 250 µV maximum raw channel peak-to-peak rule flagged 1,512/7,156 complete win-
+
+113
+
+dows. Every flagged complete window remained in the primary analysis. The rule is an amplitude
+
+114
+
+flag, not expert artifact certification. Signal timing and non-neural contributions are separate quali-
+
+115
+
+fications. No threshold or preprocessing parameter was selected from the new sensitivity results.
+
+116
+
+Decoders and information budgets
+
+117
+
+The CPU pipeline used four-component CSP with Ledoit–Wolf regularization, log mean-square fea-
+
+118
+
+tures and norm_trace=False, followed by shrinkage LDA (solver=lsqr, automatic shrinkage).
+
+119
+
+One prespecified configuration was used. Source-only CSP and LDA stayed fixed. Recalibration
+
+120
+
+retained source CSP and refitted LDA with source training plus current support; full refitting up-
+
+6
+
+121
+
+dated both stages using that same union. Validation and query identities were excluded from all
+
+122
+
+CPU fitting and parameter selection.
+
+123
+
+EEGNet used the frozen Braindecode architecture (F1=4, D=2, F2=8, dropout 0.5), Adam at learn-
+
+124
+
+ing rate 0.001, batch size 16 and a maximum of 100 epochs. Channel means and scales were fitted
+
+125
+
+to source training only. Source-validation cross entropy selected the earliest best epoch with pa-
+
+126
+
+tience 15; the complete selected state was restored. All three seeds—20261012, 20261013 and
+
+127
+
+20261014— were retained for each participant. The 54 completed source fits used 2,871 epochs
+
+128
+
+and 8,613 optimizer steps. No source fit was repeated for query evaluation. Query inference used
+
+129
+
+evaluation mode with fixed parameters, batch-normalization buffers and normalization statistics,
+
+130
+
+with zero optimizer or support updates.
+
+131
+
+Table 1 summarizes the labeled-data use per participant.
+
+132
+
+Table 1. Labeled-data use per participant.
+Source
+optimizer/estimator
+
+Current target support
+
+Method
+
+training
+
+Source-validation use
+
+for fitting
+
+Source-only
+
+40 labeled windows
+
+No model or
+
+0
+
+CSP/LDA
+
+checkpoint selection
+
+Frozen CSP + LDA
+
+40 labeled windows;
+
+No model or
+
+19/20 labeled
+
+recalibration
+
+LDA then refitted
+
+checkpoint selection
+
+windows
+
+40 labeled windows;
+
+No model or
+
+19/20 labeled
+
+both stages then
+
+checkpoint selection
+
+windows
+
+with current support
+CSP/LDA refit
+
+refitted with current
+support
+
+7
+
+Source
+optimizer/estimator
+
+Current target support
+
+Method
+
+training
+
+Source-validation use
+
+for fitting
+
+Always-frozen
+
+40 labeled windows
+
+20 labeled windows
+
+0
+
+EEGNet
+
+per seed
+
+select stopping epoch
+
+133
+
+Thus the two CPU update methods share the same adaptation label budget. Their comparison with
+
+134
+
+the frozen CPU model measures performance after adding the specified support labels. Identical
+
+135
+
+query samples do not make EEGNet and CPU methods equal-budget architecture comparisons:
+
+136
+
+EEGNet additionally uses the source-validation labels for epoch selection, and only the CPU update
+
+137
+
+methods use target labels. No causal architecture or compute-efficiency ranking is inferred from
+
+138
+
+these differences. The architecture and implementation follow EEGNet and Braindecode [9,13];
+
+139
+
+the exact executed constructor and optimization settings are listed in Supplementary Methods S3.
+
+140
+
+The covariance regularization and LDA settings are implementation choices of the frozen pipeline,
+
+141
+
+rather than parameters selected using target outcomes [14].
+
+142
+
+Endpoints, statistical units and original comparisons
+
+143
+
+Balanced accuracy (BA) was the mean of the two class recalls. The primary endpoint was each
+
+144
+
+participant’s mean BA over its five target sessions. The primary contrast remained full CSP/LDA
+
+145
+
+refitting minus source-only CSP/LDA in the fixed remaining 12 identities. For EEGNet, all three
+
+146
+
+seed scores were averaged within participant/session before the five target sessions were averaged
+
+147
+
+within participant. Source query was reported separately. Neither seeds, sessions nor trials increased
+
+148
+
+the independent participant count.
+
+149
+
+Balanced-accuracy and participant-mean reliability summaries used 10,000 participant resamples
+
+8
+
+150
+
+with seed 42 for descriptive 95% percentile intervals; paired CPU contrasts resampled paired partici-
+
+151
+
+pant differences. The separately prespecified session-level drift associations used 2,000 participant-
+
+152
+
+block resamples with seed 42, retaining each sampled participant’s five sessions. Development and
+
+153
+
+remaining cohorts were reported separately; all-18 summaries were secondary. Cohort intervals
+
+154
+
+containing 50% were not converted into a new formal chance hypothesis test. Previously exposed
+
+155
+
+test results preclude describing subsequent same-dataset evaluations as untouched external confir-
+
+156
+
+mation. Intervals condition on the observed cohort, preprocessing and fitted models; they do not
+
+157
+
+estimate uncertainty from alternative training datasets or hyperparameter choices. No additional
+
+158
+
+EEGNet-versus-CPU significance test was introduced. Computational repetition and seeds do not
+
+159
+
+supply new participants.
+
+160
+
+Exploratory saved-prediction QC and influence analyses
+
+161
+
+After observing the original results, we wrote a separate sensitivity rule before computing the new
+
+162
+
+QC summaries. Saved predictions were joined to the existing fixed QC flag by exact trial iden-
+
+163
+
+tity, role, true label and inclusion status. The analysis used neither new EEG loading nor model
+
+164
+
+inference. We reported full and unflagged query BA, true-class counts and paired differences for
+
+165
+
+every participant/session, retaining empty or single-class rows as undefined. BA required both true
+
+166
+
+classes; the target endpoint required all five session BAs. We did not silently average fewer sessions
+
+167
+
+or count seeds as participants.
+
+168
+
+We separated the complete-case sensitivity from the original 12-person analysis and compared sub-
+
+169
+
+sets again within the same eligible participants. Participant bootstrap settings remained 10,000
+
+170
+
+draws and seed 42. Additional pooled-query BA is clearly labeled as a different endpoint. Leave-
+
+171
+
+one-participant-out means assessed influence without deleting any person from the reported pri-
+
+172
+
+mary result. These are post-observation descriptive checks, not a change to the main analysis,
+
+173
+
+new QC threshold, confirmatory test or evidence that unflagged data are artifact-free. The original
+9
+
+174
+
+source/support/validation data and fitted models were not cleaned or retrained by this procedure.
+
+175
+
+Task measurements and development-only reliability
+
+176
+
+The descriptive drift analysis compared each target session with the independent source query.
+
+177
+
+A source-trained task axis was the normalized difference between class means in standardized
+
+178
+
+44-dimensional mu/beta log-power coordinates; one-dimensional Wasserstein distance measured
+
+179
+
+change along that fixed axis. Covariance-shape change was measured relative to a source-training
+
+180
+
+Riemannian reference in a fixed 21-dimensional common-average-reference basis, after trace nor-
+
+181
+
+malization and fixed shrinkage. This shape proxy does not measure all distributional changes or
+
+182
+
+absolute amplitude. Target labels did not define either drift predictor. The outcome was target-
+
+183
+
+minus-source frozen-decoder BA; target-labeled class summaries were explicitly retrospective de-
+
+184
+
+scriptions.
+
+185
+
+The task-measurement reliability probes used only development source training and predeclared sup-
+
+186
+
+port. Fixed power, PCA and supervised CSP-score measurements were evaluated with source-run
+
+187
+
+grouping, support split halves and cyclic-label controls. The controls are phase-alignment sensi-
+
+188
+
+tivities, not formal permutation p values. Separately, the remaining-cohort drift associations were
+
+189
+
+pre-frozen descriptive analyses, not policy selection. No diagnostic selected an adaptation threshold
+
+190
+
+or used query outcomes to choose a policy.
+
+191
+
+Source-run probes trained on one 20-event source run and evaluated the other, then reversed the
+
+192
+
+roles. Learned transformations were fitted within each source training fold; a transform fitted on
+
+193
+
+all 40 events was not reused to score a held-out source run. The supervised diagnostic refitted both
+
+194
+
+CSP and LDA within each fold. For support descriptions, the existing 40-event source models and
+
+195
+
+source-fitted coordinate scales were held fixed. Each class was split into chronological halves within
+
+196
+
+the current support run, without query access. Vector cosines and signed source-score contrasts
+
+10
+
+197
+
+summarized agreement between the halves; agreement did not itself establish a useful adaptation
+
+198
+
+decision.
+
+199
+
+Cyclic label controls retained the prescribed run grouping and enumerated label phases. They were
+
+200
+
+not random-label exchangeability tests. All 240 supervised CSP/LDA fold/rotation pipelines and
+
+201
+
+all associated controls were retained. Supplementary Methods S4–S6 define the coordinate scales,
+
+202
+
+half sizes, score orientation, control enumeration and handling of degenerate cases.
+
+203
+
+Saved training review and AI-assisted preparation
+
+204
+
+We examined all saved epoch-level training/validation histories, selected epochs, fixed seeds and
+
+205
+
+existing source/target query metrics without loading checkpoints or repeating inference. Training
+
+206
+
+losses were accumulated in training mode while parameters changed; validation losses were com-
+
+207
+
+puted after the epoch in evaluation mode. Their gap is not a calibrated measure of generalization.
+
+208
+
+Model-level summaries describe the fixed fits rather than increase the participant count.
+
+209
+
+OpenAI ChatGPT/Codex assisted with code, validation, saved-result aggregation, figures, source
+
+210
+
+and reference checks, and manuscript drafting/editing. Checks included exact identity joins and
+
+211
+
+hashes, original-endpoint reconstruction, separately implemented arithmetic checks, a public-input
+
+212
+
+replay of the text-only postprocessor and visual document/figure review. These computational
+
+213
+
+checks were themselves AI-assisted; they are not an independent human replication or proof of
+
+214
+
+biological validity. The human author must personally review and approve the final methods, ref-
+
+215
+
+erences, results and interpretations before submission. The final approval and account of personal
+
+216
+
+checks remain author-provided facts.
+
+11
+
+217
+
+Results
+
+218
+
+Original decoding endpoints and the same-label-budget secondary contrast
+
+219
+
+All three fixed EEGNet seeds contributed to every participant endpoint. Table 2 retains the original
+
+220
+
+target results; Fig 1 shows participants rather than only cohort means. Each bracketed interval is a
+
+221
+
+descriptive participant-bootstrap interval.
+
+222
+
+Table 2. Target-query balanced accuracy (%, mean across five sessions within participant).
+Frozen CSP +
+
+Cohort
+Development
+
+Fixed
+
+Source-only
+
+LDA
+
+Participants
+
+CSP/LDA
+
+recalibration
+
+refit
+
+EEGNet
+
+6
+
+59.97 [57.34,
+
+64.37 [56.97,
+
+63.22 [58.36,
+
+52.31 [48.43,
+
+63.70]
+
+71.75]
+
+67.40]
+
+57.36]
+
+57.94 [52.65,
+
+59.89 [54.30,
+
+65.36 [59.81,
+
+51.58 [49.08,
+
+63.84]
+
+65.68]
+
+70.90]
+
+54.51]
+
+58.62 [54.88,
+
+61.38 [56.79,
+
+64.65 [60.53,
+
+51.82 [49.59,
+
+62.68]
+
+66.17]
+
+68.71]
+
+54.36]
+
+12
+
+remaining
+
+CSP/LDA Always-frozen
+
+cohort
+All
+
+18
+
+identities,
+secondary
+
+223
+
+Fig 1. Target-query decoding by participant.
+
+224
+
+(A) Six development participants. (B) Twelve remaining participants. Each colored point is one
+
+225
+
+participant’s balanced accuracy (BA), with equal weight for five target sessions. EEGNet
+
+226
+
+averages all three fixed seeds within session before the session mean; CPU methods use their
+
+227
+
+single frozen execution. Faint lines connect the same participant across methods. Diamonds
+
+12
+
+228
+
+and bars reproduce saved means and 95% descriptive participant-bootstrap intervals (10,000
+
+229
+
+resamples, seed 42), not new intervals. All methods use the same query trial identities, but
+
+230
+
+information budgets differ: each learns from 40 source TRAIN labels; EEGNet also uses
+
+231
+
+20 source validation labels for epoch selection, while the two updating CPU baselines use
+
+232
+
+19 or 20 labeled support trials from the current target session. This is not a matched-budget
+
+233
+
+architecture ranking. The follow-up comparison is exploratory; all seeds, participants and
+
+234
+
+class-collapsed predictions are retained.
+
+235
+
+The original primary full-refit minus frozen contrast was +7.42 percentage points [+2.49, +12.48]
+
+236
+
+in the remaining 12 participants. The development contrast was +3.25 points [−0.90, +7.14]. In the
+
+237
+
+original secondary remaining-cohort comparisons, LDA-only minus frozen was +1.95 points [−0.98,
+
+238
+
++5.09], whereas full refit minus LDA-only was +5.47 points [+2.17, +8.91]. Both updating pipelines
+
+239
+
+used the same source/current-support labels, making their secondary difference informative about
+
+240
+
+this implementation under a matched label budget. Their computation differs, and the secondary
+
+241
+
+interval is not a multiplicity-adjusted confirmatory result or a newly promoted primary endpoint.
+
+242
+
+Nine primary participant differences were positive and three negative (Fig 2). The decreases were
+
+243
+
+sub-6 −5.82, sub-14 −0.67 and sub-15 −0.20 points. The latter two are small observed differences
+
+244
+
+and do not establish substantial individual harm. The largest gains were sub-11 +20.67, sub-9
+
+245
+
++19.62 and sub-2 +17.67 points. Leaving out one original participant at a time gave cohort mean
+
+246
+
+differences between +6.22 and +8.62 points, without a sign reversal. This is an influence check, not
+
+247
+
+evidence that all individual effects are reliable or beneficial.
+
+248
+
+Fig 2. Original primary CPU contrast by participant.
+
+249
+
+Full CSP/LDA refitting minus frozen CSP/LDA for the original remaining-12 primary cohort, after
+
+250
+
+equal averaging of five target sessions. Numeric participant order is retained. Nine differences
+
+251
+
+are positive and three negative. The negative changes are sub-6 −5.82, sub-14 −0.67 and sub-15
+
+13
+
+252
+
+−0.20 percentage points; these descriptive decreases differ in magnitude and are not individual
+
+253
+
+significance claims. The mean and original 95% participant-bootstrap interval are +7.42 [+2.49,
+
+254
+
++12.48] percentage points. Refit has access to current-session support labels whereas frozen does
+
+255
+
+not. This figure adds no hypothesis test and does not establish learning, skill retention or clinical
+
+256
+
+efficacy.
+
+257
+
+Weak source-session EEGNet discrimination precedes target transfer
+
+258
+
+Table 3 separates the independent source query from later target sessions. The three CPU labels refer
+
+259
+
+to the same source model on source query, not three independent source estimates. In the remaining
+
+260
+
+cohort, EEGNet source-query BA was 52.92%, already near chance, versus 51.58% on the target
+
+261
+
+endpoint. The −1.34-point difference is descriptive and cannot identify a drift effect. Weak target
+
+262
+
+performance therefore cannot chiefly be attributed to cross-session change. This statement concerns
+
+263
+
+the fixed 40-TRAIN-trial implementation, not all neural architectures or motor-imagery decoding
+
+264
+
+in general.
+
+265
+
+Table 3. Source-query balanced accuracy (%, participant mean and descriptive 95% inter-
+
+266
+
+val).
+CPU source model,
+shared by the three
+Cohort
+
+Participants
+
+method labels
+
+Always-frozen EEGNet
+
+Development
+
+6
+
+60.83 [54.17, 68.33]
+
+52.78 [47.50, 59.44]
+
+Fixed remaining
+
+12
+
+65.00 [56.67, 74.17]
+
+52.92 [48.89, 58.75]
+
+18
+
+63.61 [57.50, 70.28]
+
+52.87 [49.44, 57.22]
+
+cohort
+All identities,
+secondary
+
+14
+
+267
+
+All 54 saved JSON histories were complete (2,871 epochs/8,613 optimizer steps). Twelve models
+
+268
+
+selected epoch 1 and 11 reached the 100-epoch cap; 53/54 had lower final than initial training CE,
+
+269
+
+whereas 29/54 had higher final than initial validation CE. In the remaining 36 fits, the correspond-
+
+270
+
+ing counts were 8, 10, 35 and 19. Their median training CE changed from 0.704246 to 0.596543;
+
+271
+
+median validation CE was 0.693048 initially, 0.691847 at the selected epoch and 0.692351 finally.
+
+272
+
+Training improvement without consistent validation improvement is compatible with limited gen-
+
+273
+
+eralization, but the training/evaluation-mode difference prevents a simple loss-gap diagnosis.
+
+274
+
+No seed was discarded: remaining-cohort target means for seeds 20261012, 20261013 and
+
+275
+
+20261014 were 52.42%, 49.94% and 52.37%. The mean participant target BA range across
+
+276
+
+seeds was 8.06 points, with a maximum of 24.62 points. Source- validation selection scores are
+
+277
+
+not independent generalization estimates. EEGNet retained 16 single-class seed/session query
+
+278
+
+outcomes across seven models and seven participants (2 source, 14 target). The CPU frozen
+
+279
+
+baseline retained three collapsed target sessions across the full cohort, two in the remaining cohort;
+
+280
+
+neither update had collapse. These outcomes stayed in all means.
+
+281
+
+Task measurements do not establish a reliable update decision
+
+282
+
+The pre-frozen remaining-cohort descriptive associations of covariance-shape change and source-
+
+283
+
+task-axis Wasserstein distance with frozen BA change were Spearman −0.007 [−0.505, 0.438]
+
+284
+
+and 0.197 [−0.240, 0.518]. They did not establish reliable performance prediction or superiority
+
+285
+
+of a task-dependent measure. Development power/PCA/motor-band probes averaged source BA
+
+286
+
+51.67/50.00/54.17%, with intervals including 50%; support split-half cosine intervals included zero.
+
+287
+
+All 240 prescribed supervised CSP/LDA fold/rotation attempts were retained.
+
+288
+
+twofold BA was 62.9167% [52.5, 71.6667] and participant-averaged support vector cosine
+
+289
+
+0.295325 [0.032041, 0.573003]. Among 30 support sessions, frozen-score half-contrasts were
+
+15
+
+Mean source
+
+290
+
+positive in both halves for 19, negative in both for two, and opposite for nine (Fig 3). Five support
+
+291
+
+sessions had frozen-score collapse. A positive cosine or product does not ensure the correct task
+
+292
+
+orientation. These diagnostics are not a nested out-of-sample policy comparison.
+
+293
+
+Fig 3. Signed-score consistency across target support halves.
+
+294
+
+Each development participant contributes five target support sessions. Circles and squares show
+
+295
+
+the first and second chronological halves within class. Values are the saved class-balanced contrast
+
+296
+
+of frozen source-LDA scores divided by twice their source-score standard deviation. All 60 values
+
+297
+
+use shared axes. Of 30 sessions, 19 have two positive margins, two have two negative margins
+
+298
+
+and nine have opposite signs. The zero line indicates score orientation, not a selected gate. These
+
+299
+
+support-only diagnostics do not validate an update policy.
+
+300
+
+Longitudinal heterogeneity and exploratory amplitude-QC sensitivity
+
+301
+
+Fig 4 retains the paired changes for every participant and target session for both full-minus-frozen
+
+302
+
+and full-minus-LDA-only contrasts. Substantial session-level variation is visible even when partic-
+
+303
+
+ipant averages are positive; the sessions are not additional independent participants.
+
+304
+
+Fig 4. Longitudinal paired changes for every participant and target session.
+
+305
+
+Each cell is a difference in balanced accuracy for identical saved query trials: (A) full CSP/LDA
+
+306
+
+refit minus frozen CSP/LDA (the original primary contrast); (B) full refit minus LDA-only recali-
+
+307
+
+bration (the secondary same-support-label contrast). Both panels contain all 18 participants and five
+
+308
+
+target sessions. Development and remaining cohorts are separated by a horizontal line; participant
+
+309
+
+identities are numeric within each cohort, without effect-size sorting. The symmetric color scale is
+
+310
+
+shared, and every signed cell value is displayed in percentage points to one decimal. Exact values
+
+311
+
+and trial counts are in the matching source-data CSV. These session values describe heterogeneity;
+
+312
+
+sessions are not treated as independent participants. The original primary endpoint and all inferen16
+
+313
+
+tial comparisons remain unchanged. No new model, query inference, gate, bootstrap or significance
+
+314
+
+test is performed to produce this figure.
+
+315
+
+Table 4 reports the target-endpoint sensitivity, including its changed denominator. The exact QC
+
+316
+
+join contained 25,740 saved prediction rows and 4,290 unique query identities; all 144 reconstructed
+
+317
+
+original participant endpoints matched the saved values. The existing rule flagged 922 query win-
+
+318
+
+dows (36 source and 886 target), leaving 3,368 unflagged. Sub-8 had zero unflagged queries in
+
+319
+
+target sessions 3/4 and sub-12 retained only four target queries, all left class. Their five-session
+
+320
+
+endpoints were undefined rather than silently deleted or averaged over a different session count.
+
+321
+
+Other low-count sessions, including 2-left/1-right groups, remained visible in S1 Data.
+
+322
+
+Table 4. Exploratory amplitude-QC sensitivity of target-session BA (%, descriptive partici-
+
+323
+
+pant intervals).
+All included queries, original 12
+
+Unflagged queries, 10 eligible
+
+participants
+
+participants
+
+Frozen CSP/LDA
+
+57.94 [52.65, 63.84]
+
+60.14 [54.75, 66.02]
+
+Frozen CSP + LDA-only
+
+59.89 [54.30, 65.68]
+
+62.28 [56.21, 67.91]
+
+Full CSP/LDA refit
+
+65.36 [59.81, 70.90]
+
+66.10 [59.84, 71.94]
+
+Always-frozen EEGNet
+
+51.58 [49.08, 54.51]
+
+51.80 [48.34, 55.28]
+
+Method
+
+recalibration
+
+324
+
+The columns have different participant denominators and are not a paired QC change. Sub-8 and
+
+325
+
+sub-12 lack one or more defined unflagged session BAs and remain in the supporting missing-
+
+326
+
+class tables. All five target sessions and all three EEGNet seeds are required. The same-ten paired
+
+327
+
+changes are reported below; unflagged does not mean artifact-free.
+
+328
+
+For the ten eligible participants, unflagged full-minus-frozen was +5.96 points [+0.99, +11.24] and
+
+17
+
+329
+
+full-minus-LDA-only +3.82 [+1.11, +6.72]. The same ten participants’ full-query contrasts were
+
+330
+
++6.50 and +4.53 points. The paired unflagged-minus-full changes were −0.54 [−1.30, +0.16] and
+
+331
+
+−0.71 [−2.11, +0.42] points, respectively. These subset-conditioned findings do not show that the
+
+332
+
+mean contrast was solely carried by flagged queries, but do not establish artifact robustness or full-
+
+333
+
+cohort coverage.
+
+334
+
+Pooling all source and target query trials within each participant, a distinct supplementary endpoint
+
+335
+
+with 12 eligible participants in both subsets, produced full/unflagged means of 58.41/57.58% frozen,
+
+336
+
+60.58/59.77% LDA-only, 65.43/65.95% full refit and 51.81/51.99% EEGNet. The source-only and
+
+337
+
+target-pooled endpoints, every session’s class counts and missingness are supplied separately. Fil-
+
+338
+
+tering query predictions did not remove the 76 flagged source TRAIN, 36 source-validation or 478
+
+339
+
+target-support windows from historical fitting or checkpoint selection. Unflagged windows remain
+
+340
+
+unreviewed for other artifacts.
+
+341
+
+Discussion
+
+342
+
+Increment beyond established supervised recalibration
+
+343
+
+The findings extend an existing longitudinal resource by separating two updates under the same
+
+344
+
+small current-session label allowance. The original study already used adaptive CSP and first-run
+
+345
+
+labels; reproducing that broad design is not a novel algorithm [4]. The secondary +5.47-point full-
+
+346
+
+versus-LDA-only contrast suggests that retaining the source spatial representation can limit this
+
+347
+
+conventional pipeline, even after classifier recalibration. It does not uniquely identify a physiolog-
+
+348
+
+ical mechanism, establish compute efficiency or replace the original primary comparison. Devel-
+
+349
+
+opment/remaining differences and individual variation also prevent a universal recommendation to
+
+350
+
+refit.
+
+18
+
+351
+
+Useful adaptation requires more than a cohort-average improvement. The observed task-score ori-
+
+352
+
+entation was inconsistent within some support runs, and the prespecified drift proxies had wide
+
+353
+
+associations with performance. No threshold, gate or new strategy was chosen from these data.
+
+354
+
+Alignment methods remain important comparators for a separately reviewed study [6,7]; they can-
+
+355
+
+not be retrospectively credited to this benchmark. Reliable individual update decisions would re-
+
+356
+
+quire a separately frozen, group-aware nested development evaluation against equal-label-budget
+
+357
+
+controls.
+
+358
+
+Window semantics and signal quality limit interpretation
+
+359
+
+The strongest qualification is that the recorded endpoint labels classify cue-anchored windows
+
+360
+
+in a motor-imagery experiment, not a verified sustained imagery segment. Cue perception, feed-
+
+361
+
+back, ocular/muscle activity and online termination-related phases could contribute. The recording-
+
+362
+
+boundary exclusion of 44 short events neither repairs nor estimates those contributions. A fu-
+
+363
+
+ture phase-specific analysis would first require matched original task-start/end markers and sam-
+
+364
+
+ple clocks, a preserved new eligibility ledger and a separately reviewed fixed window. It must not
+
+365
+
+search window positions for better scores or overwrite the present benchmark.
+
+366
+
+The amplitude sensitivity directly addresses saved decoding outcomes, unlike a power-only QC
+
+367
+
+description. Its positive complete-case contrasts and lack of a single-participant sign reversal narrow
+
+368
+
+some simple influence explanations. However, two of twelve primary participants lose a valid five-
+
+369
+
+session endpoint, conditioning on amplitude changes the sample and small class counts remain.
+
+370
+
+Flagged fit and validation examples still influence the stored models. These limitations preclude
+
+371
+
+labeling the results artifact-free or robust to all signal-quality problems. The substantially different
+
+372
+
+cue/task meanings also cannot be resolved by an amplitude threshold.
+
+19
+
+373
+
+Neural baseline and statistical scope
+
+374
+
+EEGNet’s weak held-out source-session score is the first interpretive constraint. Its target score
+
+375
+
+should not be presented as mainly a consequence of cross-session drift. Saved histories show train-
+
+376
+
+ing loss reduction without consistent validation benefit, heterogeneous stopping and seed variation.
+
+377
+
+These support a limited small-source benchmark, without proving a unique cause or that deep learn-
+
+378
+
+ing is unsuitable for this task. Parameter choice, additional source labels or alignment would be
+
+379
+
+new experiments, not permissible post-query fixes.
+
+380
+
+There are 18 published participant identities, 12 in the primary comparison and six in reliability
+
+381
+
+probes, not 54 independent participants. Bootstrap intervals condition on these participants, fixed
+
+382
+
+windows and fitted models. Earlier test exposure makes follow-up QC, neural comparisons and
+
+383
+
+manuscript-driven summaries exploratory. Source metadata, protocol membership and biological
+
+384
+
+independence also have unresolved qualifications. Offline task-label accuracy does not measure
+
+385
+
+acquired BCI skill, human learning or clinical benefit [8].
+
+386
+
+Conclusions
+
+387
+
+Full CSP/LDA refitting improved the cohort-average endpoint under the specified support-label
+
+388
+
+budget, whereas the LDA-only contrast remained uncertain. The secondary same-label-budget
+
+389
+
+advantage over LDA-only updating and retained individual/session variation motivate measuring
+
+390
+
+when adaptation is useful, but no reliable task-aware gate was validated. Weak independent source-
+
+391
+
+query EEGNet performance precedes its weak target result. New QC sensitivity is qualified by
+
+392
+
+incomplete class coverage and unchanged fitting artifacts. The present evidence supports transpar-
+
+393
+
+ent interpretation of released cue-anchored task-label windows, not isolated sustained imagery, skill
+
+394
+
+retention or clinical validity.
+
+20
+
+395
+
+Data and code availability
+
+396
+
+The analyzed public source is the exact NEMAR release nm000177/v1.0.5, DOI 10.82901/ne-
+
+397
+
+mar.nm000177.v1.0.5, under its stated CC BY 4.0 terms [10]. Its original study and correction
+
+398
+
+are cited separately. S1 Data contains the minimal saved predictions, fixed trial/QC metadata,
+
+399
+
+participant/session tables, training curves and figure data needed to reproduce this paper’s saved-
+
+400
+
+result arithmetic without raw EEG, checkpoint weights or a second inference pass. The new
+
+401
+
+postprocessor accepts portable explicit inputs and fresh output paths. S1 Text provides scientific
+
+402
+
+details; S2 Text describes provenance and reproduction.
+
+403
+
+Code, configurations, tests and text audit evidence are maintained at https://github.com/jackzhu119/few-
+
+404
+
+shot-mi-eeg on research/learning-preserving-bci, with the exact source-code/data commit and
+
+405
+
+export-file hashes in the accompanying release manifest. The snapshot is not a minted DOI
+
+406
+
+or a submitted journal release. The revised package awaits synchronization and a fixed public
+
+407
+
+archive/version link before submission; its presence in the local author-review package is not
+
+408
+
+public release. Private R2 backups preserve original EEG/weights/evidence and are not public
+
+409
+
+data endpoints. The concrete proposal is MIT for original project code and CC BY 4.0 for original
+
+410
+
+derived content, with explicit third-party exclusions; the author’s license selection and activation
+
+411
+
+remain pending. No software license is silently granted.
+
+412
+
+Author contributions and declarations
+
+413
+
+Ziyuan Zhu: Conceptualization; Methodology; Software; Formal analysis; Validation; Visualiza-
+
+414
+
+tion; Writing – original draft; Writing – review & editing. The author declares no competing in-
+
+415
+
+terests. ORCID name-field correction is reported by the author; this task did not independently
+
+416
+
+recheck the profile. Funding information and manuscript-specific portal declarations are supplied
+
+417
+
+in the separate author worksheet. Final author approval, institutional determination and license
+21
+
+418
+
+419
+
+420
+
+selection remain explicit pre-submission items. This task has not submitted the manuscript.
+
+References
+1.
+
+Lotte F, Bougrain L, Cichocki A, Clerc M, Congedo M, Rakotomamonjy A, et al. A review
+of classification algorithms for EEG-based brain–computer interfaces: a 10 year update.
+Journal of Neural Engineering. 2018;15: 031005. doi:10.1088/1741-2552/aab2f2
+
+421
+
+2.
+
+Ramoser H, Muller-Gerking J, Pfurtscheller G. Optimal spatial filtering of single trial
+EEG during imagined hand movement. IEEE Transactions on Rehabilitation Engineering.
+2000;8: 441–446. doi:10.1109/86.895946
+
+422
+
+3.
+
+Blankertz B, Tomioka R, Lemm S, Kawanabe M, Muller K. Optimizing Spatial filters for
+Robust EEG Single-Trial Analysis. IEEE Signal Processing Magazine. 2008;25: 41–56.
+doi:10.1109/msp.2008.4408441
+
+423
+
+4.
+
+Kumar S, Alawieh H, Racz FS, Fakhreddine R, Millán J del R. Transfer learning
+promotes acquisition of individual BCI skills.
+
+PNAS Nexus.
+
+2024;3:
+
+pgae076.
+
+doi:10.1093/pnasnexus/pgae076
+
+424
+
+5.
+
+Correction to: Transfer learning promotes acquisition of individual BCI skills. PNAS Nexus.
+2024;3: pgae137. doi:10.1093/pnasnexus/pgae137
+
+22
+
+425
+
+6.
+
+He H, Wu D. Transfer Learning for Brain–Computer Interfaces: A Euclidean Space Data
+Alignment Approach. IEEE Transactions on Biomedical Engineering. 2020;67: 399–410.
+doi:10.1109/TBME.2019.2913914
+
+426
+
+7.
+
+Zanini P, Congedo M, Jutten C, Said S, Berthoumieu Y. Transfer Learning: A Riemannian
+Geometry Framework With Applications to Brain–Computer Interfaces. IEEE Transactions
+on Biomedical Engineering. 2018;65: 1107–1116. doi:10.1109/TBME.2017.2742541
+
+427
+
+8.
+
+Lotte F, Jeunet C. Defining and quantifying users’ mental imagery-based BCI skills: a first
+step. Journal of Neural Engineering. 2018;15: 046030. doi:10.1088/1741-2552/aac577
+
+428
+
+9.
+
+Lawhern VJ, Solon AJ, Waytowich NR, Gordon SM, Hung CP, Lance BJ. EEGNet: a compact convolutional neural network for EEG-based brain–computer interfaces. Journal of
+Neural Engineering. 2018;15: 056013. doi:10.1088/1741-2552/aace8c
+
+429
+
+10.
+
+Kumar S, Alawieh H, Racz FS, Fakhreddine R, Millan J del R. Multi-session longitudinal
+motor imagery EEG dataset (Kumar et al. 2024). NEMAR (Neuroelectromagnetic Data
+Archive; Tools Resource); 2026. doi:10.82901/nemar.nm000177.v1.0.5
+
+430
+
+11.
+
+Dataset_Description.pdf. Author-supplied codebook in the TransLearning repository; Available: https://github.com/neurosatya/TransLearning/blob/548470542e63f97ab777684c1f5
+e4f1cace4b8ed/Dataset_Description.pdf
+
+23
+
+431
+
+12.
+
+Jayaram V, Barachant A. MOABB: trustworthy algorithm benchmarking for BCIs. Journal
+of Neural Engineering. 2018;15: 066011. doi:10.1088/1741-2552/aadea0
+
+432
+
+13.
+
+Schirrmeister RT, Springenberg JT, Fiederer LDJ, Glasstetter M, Eggensperger K, Tangermann M, et al. Deep learning with convolutional neural networks for EEG decoding and
+visualization. Human Brain Mapping. 2017;38: 5391–5420. doi:10.1002/hbm.23730
+
+433
+
+14.
+
+Ledoit O, Wolf M. A well-conditioned estimator for large-dimensional covariance matrices.
+Journal of Multivariate Analysis. 2004;88: 365–411. doi:10.1016/s0047-259x(03)00096-4
+
+434
+
+Supporting information captions
+
+435
+
+S1 Text. Detailed scientific methods and sensitivity definitions. Preprocessing, frozen decoders
+
+436
+
+and budgets, participant statistics, event-phase evidence, QC class eligibility, training interpretation
+
+437
+
+and limits.
+
+438
+
+S2 Text.
+
+439
+
+reconstruction, exact data dictionary, portable commands, and a compact account of preserva-
+
+440
+
+tion/recovery checks, separated from the scientific claims.
+
+441
+
+S1 Data. Minimal saved results and underlying figure data. Saved CPU/EEGNet predictions,
+
+442
+
+frozen event/QC lookup, original and sensitivity participant/session counts and endpoints, training
+
+443
+
+histories and exact plot values. No EEG arrays, learned weights, source-paper full texts or bundled
+
+444
+
+third-party software are included.
+
+Audit and saved-result reproduction.
+
+24
+
+Source/version identities, saved-output
+
+

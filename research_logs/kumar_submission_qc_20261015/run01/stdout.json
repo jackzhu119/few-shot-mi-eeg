@@ -1,0 +1,41 @@
+{
+  "status": "completed",
+  "analysis": "post_observation_exploratory_saved_prediction_QC_sensitivity",
+  "started_utc": "2026-10-15T11:48:20.097064+00:00",
+  "completed_utc": "2026-10-15T11:48:21.341927+00:00",
+  "python": "3.11.16",
+  "numpy": "2.2.6",
+  "reference_git_commit": "370bc94b7af3c926adeb02c38e430a53e4a64135",
+  "input_mode": "original_saved_results_with_historical_R2_hash_checks",
+  "protocol_sha256": "2c50dce6f5af984d70d199f261e2bd432caf3d085d2f622d4faf7cc72388730e",
+  "script_sha256": "c52586829deb77f4b6b16a15d66df83c0588847036ff9c9de9e2ea1c90efa563",
+  "inputs_count": 80,
+  "unique_complete_windows": 7156,
+  "flagged_complete_windows": 1512,
+  "query_included": 4290,
+  "query_historical_exclusions": 30,
+  "flagged_query_included": 922,
+  "unflagged_query_included": 3368,
+  "flagged_query_by_role": {
+    "target_query": 886,
+    "source_query": 36
+  },
+  "prediction_rows_exactly_joined": 25740,
+  "method_seed_joins": 108,
+  "session_or_pool_seed_metric_rows": 1728,
+  "undefined_seed_metric_rows": 54,
+  "undefined_participant_target_endpoints": 8,
+  "all_query_endpoint_reconstruction_checks": 144,
+  "maximum_all_query_endpoint_reconstruction_difference": 0.0,
+  "all_read_inputs_unchanged": true,
+  "raw_EEG_or_weights_read": false,
+  "new_model_fits": 0,
+  "new_model_forwards": 0,
+  "failures": [],
+  "limitations": [
+    "Query exclusion does not remove artifacts from original training/validation/support fitting data.",
+    "Unflagged is not certified artifact-free; QC does not establish task-phase alignment.",
+    "Post-observation exploratory sensitivity; exposed test cohort; no rule selection or primary redefinition.",
+    "Low class counts and undefined groups retained; cohort summaries use explicitly listed complete cases."
+  ]
+}

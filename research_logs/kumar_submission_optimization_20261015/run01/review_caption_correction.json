@@ -1,0 +1,86 @@
+{
+  "reason": "Disable Pandoc implicit figure captions in the illustrated review copy; keep authored Fig1-4legends exactly once and graphics in sourceorder.",
+  "scientific_text_or_values_changed": false,
+  "image_free_submission_unchanged": true,
+  "preserved_initial_exports": [
+    {
+      "path": "/workspace/private_model_receipts/kumar-plos-review-caption-initial-20261015/manuscript_for_review.pdf",
+      "bytes": 1810118,
+      "sha256": "dd17ad4ada4f06496364652af28aaf19fa9bfbbfbd52981bfb18539b8d3214e2"
+    },
+    {
+      "path": "/workspace/private_model_receipts/kumar-plos-review-caption-initial-20261015/manuscript_for_review.docx",
+      "bytes": 1559639,
+      "sha256": "268cb89bf9ee575fe88d8b92a3fe26fc7fedd7a772700820d6ae2a58d5cb6335"
+    }
+  ],
+  "actual_rerender_commands": [
+    {
+      "command": [
+        "pandoc",
+        "/workspace/few-shot-mi-eeg/research_logs/kumar_submission_optimization_20261015/run01/manuscript_for_review_pdf_source.md",
+        "--from=markdown-implicit_figures",
+        "--standalone",
+        "--shift-heading-level-by=-1",
+        "--citeproc",
+        "--bibliography=/workspace/few-shot-mi-eeg/manuscript/kumar_plos_one_references_20261015.bib",
+        "--csl=/workspace/few-shot-mi-eeg/manuscript/review_package_author_confirmed_20261015/plos.csl",
+        "--metadata",
+        "title=Longitudinal motor-imagery EEG decoding: Frozen baselines, supervised recalibration, and task-measurement reliability",
+        "--metadata",
+        "lang=en-US",
+        "--metadata",
+        "link-citations=true",
+        "--output",
+        "/workspace/few-shot-mi-eeg/manuscript/plos_one_submission_20261015/manuscript_for_review.pdf",
+        "--pdf-engine=xelatex",
+        "--include-in-header=/workspace/few-shot-mi-eeg/research_logs/kumar_submission_optimization_20261015/run01/plos_typesetting.tex",
+        "--include-in-header=/workspace/few-shot-mi-eeg/research_logs/kumar_submission_optimization_20261015/run01/manuscript_for_review_line_numbers.tex",
+        "-V",
+        "papersize=a4",
+        "-V",
+        "geometry:margin=22mm",
+        "-V",
+        "mainfont=Liberation Serif",
+        "-V",
+        "sansfont=Liberation Sans",
+        "-V",
+        "monofont=DejaVu Sans Mono",
+        "-V",
+        "fontsize=12pt",
+        "-V",
+        "linestretch=2",
+        "-V",
+        "colorlinks=true"
+      ],
+      "returncode": 0,
+      "bytes": 1810230,
+      "sha256": "134110e8bf5ed397f94f3d7841268c0cb96479afaa2e45fb4bb5d9514a9674ea"
+    },
+    {
+      "command": [
+        "pandoc",
+        "/workspace/few-shot-mi-eeg/research_logs/kumar_submission_optimization_20261015/run01/manuscript_for_review_docx_source.md",
+        "--from=markdown-implicit_figures",
+        "--standalone",
+        "--shift-heading-level-by=-1",
+        "--citeproc",
+        "--bibliography=/workspace/few-shot-mi-eeg/manuscript/kumar_plos_one_references_20261015.bib",
+        "--csl=/workspace/few-shot-mi-eeg/manuscript/review_package_author_confirmed_20261015/plos.csl",
+        "--metadata",
+        "title=Longitudinal motor-imagery EEG decoding: Frozen baselines, supervised recalibration, and task-measurement reliability",
+        "--metadata",
+        "lang=en-US",
+        "--metadata",
+        "link-citations=true",
+        "--output",
+        "/workspace/few-shot-mi-eeg/manuscript/plos_one_submission_20261015/manuscript_for_review.docx",
+        "--reference-doc=/workspace/few-shot-mi-eeg/research_logs/kumar_submission_optimization_20261015/run01/plos_reference.docx"
+      ],
+      "returncode": 0,
+      "bytes": 1559581,
+      "sha256": "5df1b4eed22c316020291833a450c0493d13058c5a8cb7b159e57de7f37a27aa"
+    }
+  ],
+  "current_builder_sha256": "47ccc8633c39937850e83e09602c9b6623a4b96a5e88c6a820a74b780e53ec1d"
+}

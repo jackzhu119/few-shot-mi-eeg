@@ -1,0 +1,60 @@
+{
+  "status": "three_reproduction_cli_checks_passed",
+  "checks": [
+    {
+      "name": "fresh_paths_metadata_only",
+      "argv": [
+        "/workspace/.venvs/few-shot-mi-eeg/bin/python",
+        "-B",
+        "/workspace/few-shot-mi-eeg/research_logs/kumar_submission_figures_20261015/run01/reproduce_figures.py",
+        "--output-dir",
+        "/workspace/few-shot-mi-eeg/manuscript/figures/plos_submission_reproduction_20261015",
+        "--log-dir",
+        "/workspace/few-shot-mi-eeg/research_logs/kumar_submission_figures_reproduction_20261015/run01",
+        "--check-only"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "{\n  \"status\": \"saved_text_sources_and_fresh_paths_verified\",\n  \"source_count\": 5,\n  \"output_dir\": \"/workspace/few-shot-mi-eeg/manuscript/figures/plos_submission_reproduction_20261015\",\n  \"log_dir\": \"/workspace/few-shot-mi-eeg/research_logs/kumar_submission_figures_reproduction_20261015/run01\",\n  \"renders_executed\": 0\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "refuse_canonical_existing_outputs",
+      "argv": [
+        "/workspace/.venvs/few-shot-mi-eeg/bin/python",
+        "-B",
+        "/workspace/few-shot-mi-eeg/research_logs/kumar_submission_figures_20261015/run01/reproduce_figures.py",
+        "--output-dir",
+        "/workspace/few-shot-mi-eeg/manuscript/figures/plos_submission_20261015",
+        "--log-dir",
+        "/workspace/few-shot-mi-eeg/research_logs/kumar_submission_figures_reproduction_20261015/run01",
+        "--check-only"
+      ],
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/workspace/few-shot-mi-eeg/research_logs/kumar_submission_figures_20261015/run01/reproduce_figures.py\", line 60, in <module>\n    main()\n  File \"/workspace/few-shot-mi-eeg/research_logs/kumar_submission_figures_20261015/run01/reproduce_figures.py\", line 34, in main\n    raise FileExistsError(f\"preserve existing non-empty output: {path}\")\nFileExistsError: preserve existing non-empty output: /workspace/few-shot-mi-eeg/manuscript/figures/plos_submission_20261015\n"
+    },
+    {
+      "name": "refuse_outside_repository",
+      "argv": [
+        "/workspace/.venvs/few-shot-mi-eeg/bin/python",
+        "-B",
+        "/workspace/few-shot-mi-eeg/research_logs/kumar_submission_figures_20261015/run01/reproduce_figures.py",
+        "--output-dir",
+        "/tmp/kumar-figures",
+        "--log-dir",
+        "/tmp/kumar-figure-log",
+        "--check-only"
+      ],
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/workspace/few-shot-mi-eeg/research_logs/kumar_submission_figures_20261015/run01/reproduce_figures.py\", line 60, in <module>\n    main()\n  File \"/workspace/few-shot-mi-eeg/research_logs/kumar_submission_figures_20261015/run01/reproduce_figures.py\", line 32, in main\n    raise ValueError(\"fresh output and log paths must be inside this repository\")\nValueError: fresh output and log paths must be inside this repository\n"
+    }
+  ],
+  "new_renders_executed": 0
+}

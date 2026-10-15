@@ -1,5 +1,18 @@
 # Current scientific handoff
 
+## 本轮最新：投稿前优化与完整作者审阅包
+
+以CURRENT_PROJECT_STATUS.md和manuscript/plos_one_submission_20261015/README.md
+为当前入口，docs/kumar_submission_revision_report_20261015.md给出整改、核验及限制。
+本轮仅保存结果后处理：cue769/770与taskstart7691/7701已区分；QC922/4290被标记，
+未标记完整五会话仅10/12人，不把完整窗口当持续MI；原主/次比较不变，54源fit和
+一次query接受账本不变，无新训练/query/Pod。论文Word/PDF、S1科学方法、S2工程审计、
+S1Data41成员、4张600dpiTIFF及作者待办/未发送附信已实际生成。机构认定/许可选择/
+最终人类审阅仍待，精确生产字体与原生Word版面检查限制如实记录。
+GitHub读取核实370bc94；写入工具要求approval而当前policynever，Git/R2代理拒绝连接。
+新成果以真实本地提交及离线bundle交付，不声称已推送/新R2GET通过，不重复实验补同步。
+下列旧状态按原日期保留，不执行其中过期命令。
+
 ## 最新有效状态：2026-10-15，论文作者确认版已完成
 
 先读[当前进度及论文状态](CURRENT_PROJECT_STATUS.md)与
