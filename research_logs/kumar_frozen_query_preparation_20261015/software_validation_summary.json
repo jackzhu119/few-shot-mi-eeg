@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "synthetic": true,
+  "software_validation_only": true,
+  "targeted_test_result": "144 passed, 26 warnings in 8.28s",
+  "test_receipt_sha256": "0310619ab464f1e7eb9b3c541b90a3796e6328464e7a2d3f72a1bbdadf67335f",
+  "ruff": {
+    "status": "passed",
+    "files": [
+      "scripts/evaluate_kumar_frozen_queries.py",
+      "scripts/run_kumar_frozen_query_evaluation.py",
+      "scripts/prepare_kumar_frozen_query_inputs.py",
+      "scripts/prepare_kumar_frozen_query_checkpoints.py",
+      "scripts/aggregate_kumar_frozen_queries.py",
+      "tests/test_kumar_frozen_queries.py",
+      "tests/test_kumar_frozen_query_inputs.py",
+      "tests/test_kumar_frozen_query_operation.py",
+      "tests/test_kumar_frozen_query_aggregation.py"
+    ]
+  },
+  "warnings": "26 unchanged Braindecode final_layer_with_constraint=False deprecation notices; frozen architecture unchanged",
+  "metadata_check_receipt_sha256": "a9051e0bdb20360e139b14b2676d763ef22e2e36ed1e855195f87d7f6a5b6b4a",
+  "default_metadata_check_status": "metadata_verified_execution_closed",
+  "default_metadata_check_problems": [],
+  "independent_static_review": "passed_after_targeted_duplicate_signal_cleanup_fix",
+  "development_notes": [
+    {
+      "source": "aggregation agent report",
+      "event": "Initial synthetic pytest collection failed because the new helper import path was absent; switched to explicit importlib loading and 16 scoped tests passed",
+      "scientific_execution": false
+    }
+  ],
+  "query_checkpoint_tensors_loaded": 0,
+  "real_EEG_query_files_opened": 0,
+  "real_query_predictions": 0,
+  "new_scientific_fits": 0,
+  "actual_query_authorization_published": false,
+  "actual_query_claim_created": false,
+  "pod_operations": 0
+}

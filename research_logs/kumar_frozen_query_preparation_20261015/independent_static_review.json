@@ -1,0 +1,26 @@
+{
+  "status": "no_remaining_concrete_blocking_findings",
+  "review_type": "independent_targeted_static_code_review_not_execution_authorization",
+  "reviewer_agent": "run02_result_review",
+  "reviewed_at_recorded_utc": "2026-10-15T09:07:40.534170+00:00",
+  "reviewed_files": {
+    "scripts/evaluate_kumar_frozen_queries.py": "1cb1e4f9cf46f3a6d8d589c55e428e28baa689dd90e7655a5e09bcf486f0989a",
+    "scripts/run_kumar_frozen_query_evaluation.py": "987357c1aa12149357cfa14e5f475774dbb67f20217b1b36d97901beb8280538",
+    "configs/kumar_frozen_query_operation_20261015.json": "fb3a429776e77a4ee8de96c8c7f2a833a4d311cedd8f0a9bcec3d0c6e8df225a"
+  },
+  "boundaries_checked": [
+    "real query authorization before archive deserialization and arrays",
+    "complete accepted54 identities and original archive evidence",
+    "all query IDs whole-run roles labels and numeric hashes",
+    "parameter BN normalization context and evidence state invariance",
+    "inherited global CPU lock private worker parent PID/starttime and exclusive claim",
+    "fixed absolute deadline resources process-tree cleanup",
+    "storage/hash failures stop and preserve partial evidence"
+  ],
+  "finding_resolved": {
+    "problem": "A second TERM/HUP could interrupt one-shot cleanup after stopped was set",
+    "fix": "Ignore TERM/HUP at signal handling and stop entry, then restore prior handlers; synthetic tests cover signal-triggered and resource-error-triggered cleanup"
+  },
+  "scientific_gate_passed": false,
+  "real_weights_or_query_loaded": false
+}

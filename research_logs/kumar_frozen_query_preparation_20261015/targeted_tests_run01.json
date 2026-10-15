@@ -1,0 +1,33 @@
+{
+  "scope": "frozen_query_software_validation_only",
+  "synthetic": true,
+  "software_validation_only": true,
+  "command": [
+    "/workspace/.venvs/few-shot-mi-eeg/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_kumar_frozen_queries.py",
+    "tests/test_kumar_frozen_query_inputs.py",
+    "tests/test_kumar_frozen_query_operation.py",
+    "tests/test_kumar_frozen_query_aggregation.py"
+  ],
+  "started_at_utc": "2026-10-15T09:04:53.314749+00:00",
+  "finished_at_utc": "2026-10-15T09:05:03.377073+00:00",
+  "wall_seconds": 10.062346180999157,
+  "exit_code": 0,
+  "stdout": "........................................................................ [ 50%]\n........................................................................ [100%]\n=============================== warnings summary ===============================\ntests/test_kumar_frozen_queries.py: 26 warnings\n  /workspace/.venvs/few-shot-mi-eeg/lib/python3.11/site-packages/braindecode/models/eegnet.py:171: DeprecationWarning: Parameter 'final_layer_with_constraint=False' is deprecated and will be removed in a future release. Please use `final_layer_linear=True`.\n    warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n144 passed, 26 warnings in 8.28s\n",
+  "stdout_sha256": "c3927c22fe083d164068e0fe77fa3a1a4ba868c5daa10445782ed6fd5794af17",
+  "test_file_sha256": {
+    "tests/test_kumar_frozen_queries.py": "88f7241ddefcc7674cc0458521bae00d35fc1f48300448f91818a79571ad51f3",
+    "tests/test_kumar_frozen_query_inputs.py": "96909c245bc0c67029ac29373c7aa837a15ff2c3758db00847000165fae2fd00",
+    "tests/test_kumar_frozen_query_operation.py": "bbcbf7d34b0cbffd6084ef37b8ba16cce61e19ed271a224c1033509b86263688",
+    "tests/test_kumar_frozen_query_aggregation.py": "d6144934abedf787bb8d341b40b45b4920c8376a7f49b361cfa38d5151ee0bab"
+  },
+  "real_checkpoint_tensors_loaded": 0,
+  "real_query_files_opened": 0,
+  "real_query_predictions": 0,
+  "scientific_fits_started": 0,
+  "actual_query_execution_authorization_published": false
+}

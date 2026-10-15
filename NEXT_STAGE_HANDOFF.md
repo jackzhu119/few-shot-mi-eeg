@@ -179,3 +179,37 @@ frozen query-only checkpoint-reuse evaluator. No new fit, query unblinding,
 Pod operation or paper1 action is authorized by the acceptance ACK. Preserve
 all old raw stage flags, failed attempts and receipts; do not resume the
 completed 36-fit controller or invoke generic formal_train.
+
+# 2026-10-15: checkpoint-only query baseline implemented and synthetically tested
+
+Following the user's explicit request, the prior missing-query-entry boundary
+is now implemented. Use docs/kumar_frozen_checkpoint_query_protocol_20261015.md
+and docs/kumar_frozen_checkpoint_query_execution_20261015.md; preparation and
+test receipts are in research_logs/kumar_frozen_query_preparation_20261015/.
+The original54 accepted source checkpoints remain unchanged at acceptance
+commit3e415b348decde71da54e366e357cded233d54c8; no source fit remains.
+
+Guarded entry scripts/run_kumar_frozen_query_evaluation.py SHA256
+987357c1aa12149357cfa14e5f475774dbb67f20217b1b36d97901beb8280538;
+operation contract SHA256
+fb3a429776e77a4ee8de96c8c7f2a833a4d311cedd8f0a9bcec3d0c6e8df225a.
+Exact query metadata inventory:1189files/1043686331bytes/216EDFs,
+4290included events plus30preserved partial exclusions. Original54 archive
+inventory:12636160bytes, first legacy model uses its original archive.
+All3seeds, whole-run chronology and support budget are preserved; always-frozen
+EEGNet uses zero support updates and adds no task-aware gate.
+
+144 related synthetic tests passed, scoped Ruff passed, default metadata check
+passed with execution closed; independent targeted static review closed a
+repeated-signal cleanup issue. No real checkpoint tensor or raw query was
+loaded, no actual authorization/claim was created, and no Pod was operated.
+The code restores source normalization and verifies parameter/BN/context/file
+state unchanged, builds no optimizer, and requires the complete54 sequence.
+
+The specific later real query run still needs dot's separate dispatch bound to
+this fixed code/contract, actual current CPU host and absolute window. Use the
+unapproved external template and guarded command; never call the private
+worker or generic training. One CPU attempt only, global lock, zero automatic
+retry, fixed resource/deadline/partial-evidence gates. Prior test exposure stays
+exploratory. Real query results, independent audit, R2 full GET and acceptance
+remain distinct future stages; source acceptance grants none of them.

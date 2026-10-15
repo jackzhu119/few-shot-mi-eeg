@@ -1,0 +1,47 @@
+{
+  "started_at_utc": "2026-10-15T09:03:38.318581+00:00",
+  "finished_at_utc": "2026-10-15T09:03:38.916883+00:00",
+  "command": [
+    "/workspace/.venvs/few-shot-mi-eeg/bin/python",
+    "-B",
+    "scripts/run_kumar_frozen_query_evaluation.py",
+    "--check"
+  ],
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+  },
+  "exit_code": 0,
+  "stdout": {
+    "status": "metadata_verified_execution_closed",
+    "execution_authorized": false,
+    "runtime": {
+      "python": "3.11.16",
+      "torch": "2.8.0+cpu",
+      "numpy": "2.2.6",
+      "scipy": "1.15.3",
+      "scikit-learn": "1.7.2",
+      "mne": "1.10.2",
+      "braindecode": "1.2.0",
+      "torchaudio": "2.8.0+cpu"
+    },
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "problems": [],
+    "query_files_opened": false,
+    "checkpoint_archives_opened": false,
+    "models_constructed": false,
+    "accepted_models": 54,
+    "query_input_files": 1189,
+    "query_input_bytes": 1043686331,
+    "query_included_rows": 4290
+  },
+  "stderr": "",
+  "entry_sha256": "987357c1aa12149357cfa14e5f475774dbb67f20217b1b36d97901beb8280538",
+  "contract_sha256": "fb3a429776e77a4ee8de96c8c7f2a833a4d311cedd8f0a9bcec3d0c6e8df225a",
+  "raw_query_or_real_checkpoint_access": false
+}
