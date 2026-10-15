@@ -1,0 +1,2020 @@
+{
+  "schema_version": 1,
+  "status": "passed_saved_prediction_and_checkpoint_integrity_audit",
+  "started_at_utc": "2026-10-15T08:14:05.389404+00:00",
+  "finished_at_utc": "2026-10-15T08:14:06.181073+00:00",
+  "audit_script_sha256": "9ef115618635df1fc3f264b171785755a34bd08a7ee98922a944efd455fd887c",
+  "operation_contract_sha256": "f1a5b94aa89f6f2d9f694f7c270e48ef2624afc06be3a08e328f500224491bd9",
+  "accepted18_ledger_sha256_before_and_after": "1ee1868b97e6ff7ea2e42327fe64337cafbb0f8ee6aff19cc24fba5265f9aaa9",
+  "accepted18_ledger_changed": false,
+  "runtime": {
+    "numpy": "2.2.6",
+    "torch": "2.8.0+cpu"
+  },
+  "counts": {
+    "models": 36,
+    "participants": 12,
+    "seeds_per_participant": 3,
+    "epochs": 1844,
+    "optimizer_steps": 5532,
+    "source_validation_prediction_rows_across_seeds": 720,
+    "distinct_source_validation_trials": 240,
+    "checkpoint_tensors_checked_including_normalization_and_classes": 864,
+    "class_collapsed_models": 4,
+    "max_epoch_cap_reached_models": 10,
+    "query_rows_read_by_audit": 0,
+    "EEG_arrays_loaded_by_audit": 0,
+    "model_forward_passes_by_audit": 0,
+    "fits_by_audit": 0,
+    "optimizers_created_by_audit": 0
+  },
+  "replay": {
+    "frozen_absolute_tolerance": 1e-07,
+    "maximum_numpy_float64_CE_difference_from_selected": 4.6890414995282015e-08,
+    "maximum_recorded_torch_replay_difference_from_selected": 0.0,
+    "maximum_cpu_torch_float32_saved_logit_CE_difference_from_selected": 8.344650270775134e-08,
+    "cpu_torch_float32_saved_logit_differences_above_original_tolerance": 0,
+    "scope": "Independent CPU CE uses saved validation logits only; recorded training torch replay is preserved evidence, not a new checkpoint forward replay."
+  },
+  "descriptive_summary": {
+    "independent_unit": "participant",
+    "seed_handling": "all three frozen seeds averaged within each participant; no selection",
+    "equal_participant_mean_source_validation_BA": 0.5736111111111111,
+    "participant_mean_BA_range": [
+      0.4833333333333334,
+      0.75
+    ],
+    "equal_participant_mean_source_validation_CE": 0.6471200455394056,
+    "participants": [
+      {
+        "subject": "sub-2",
+        "seeds": [
+          20261012,
+          20261013,
+          20261014
+        ],
+        "source_validation_BA_all_seeds": [
+          0.6000000000000001,
+          0.65,
+          0.55
+        ],
+        "source_validation_BA_mean_all_three_seeds": 0.6,
+        "source_validation_CE_mean_all_three_seeds": 0.6882722536722818,
+        "epochs_all_seeds": [
+          16,
+          92,
+          25
+        ],
+        "selected_epochs_all_seeds": [
+          1,
+          77,
+          10
+        ],
+        "collapsed_seed_count": 0
+      },
+      {
+        "subject": "sub-3",
+        "seeds": [
+          20261012,
+          20261013,
+          20261014
+        ],
+        "source_validation_BA_all_seeds": [
+          0.7,
+          0.5,
+          0.45
+        ],
+        "source_validation_BA_mean_all_three_seeds": 0.5499999999999999,
+        "source_validation_CE_mean_all_three_seeds": 0.6827873031298318,
+        "epochs_all_seeds": [
+          100,
+          27,
+          21
+        ],
+        "selected_epochs_all_seeds": [
+          97,
+          12,
+          6
+        ],
+        "collapsed_seed_count": 1
+      },
+      {
+        "subject": "sub-5",
+        "seeds": [
+          20261012,
+          20261013,
+          20261014
+        ],
+        "source_validation_BA_all_seeds": [
+          0.5,
+          0.55,
+          0.4
+        ],
+        "source_validation_BA_mean_all_three_seeds": 0.4833333333333334,
+        "source_validation_CE_mean_all_three_seeds": 0.6939989964167278,
+        "epochs_all_seeds": [
+          16,
+          16,
+          16
+        ],
+        "selected_epochs_all_seeds": [
+          1,
+          1,
+          1
+        ],
+        "collapsed_seed_count": 1
+      },
+      {
+        "subject": "sub-6",
+        "seeds": [
+          20261012,
+          20261013,
+          20261014
+        ],
+        "source_validation_BA_all_seeds": [
+          0.5,
+          0.4,
+          0.75
+        ],
+        "source_validation_BA_mean_all_three_seeds": 0.5499999999999999,
+        "source_validation_CE_mean_all_three_seeds": 0.642137493689855,
+        "epochs_all_seeds": [
+          16,
+          20,
+          100
+        ],
+        "selected_epochs_all_seeds": [
+          1,
+          5,
+          99
+        ],
+        "collapsed_seed_count": 0
+      },
+      {
+        "subject": "sub-8",
+        "seeds": [
+          20261012,
+          20261013,
+          20261014
+        ],
+        "source_validation_BA_all_seeds": [
+          0.6,
+          0.5,
+          0.6
+        ],
+        "source_validation_BA_mean_all_three_seeds": 0.5666666666666668,
+        "source_validation_CE_mean_all_three_seeds": 0.6784263134002687,
+        "epochs_all_seeds": [
+          100,
+          21,
+          64
+        ],
+        "selected_epochs_all_seeds": [
+          87,
+          6,
+          49
+        ],
+        "collapsed_seed_count": 0
+      },
+      {
+        "subject": "sub-9",
+        "seeds": [
+          20261012,
+          20261013,
+          20261014
+        ],
+        "source_validation_BA_all_seeds": [
+          0.4,
+          0.7,
+          0.85
+        ],
+        "source_validation_BA_mean_all_three_seeds": 0.65,
+        "source_validation_CE_mean_all_three_seeds": 0.586917499701182,
+        "epochs_all_seeds": [
+          16,
+          100,
+          100
+        ],
+        "selected_epochs_all_seeds": [
+          1,
+          100,
+          92
+        ],
+        "collapsed_seed_count": 0
+      },
+      {
+        "subject": "sub-11",
+        "seeds": [
+          20261012,
+          20261013,
+          20261014
+        ],
+        "source_validation_BA_all_seeds": [
+          0.6499999999999999,
+          0.5,
+          0.5
+        ],
+        "source_validation_BA_mean_all_three_seeds": 0.5499999999999999,
+        "source_validation_CE_mean_all_three_seeds": 0.6626617391904196,
+        "epochs_all_seeds": [
+          100,
+          55,
+          47
+        ],
+        "selected_epochs_all_seeds": [
+          100,
+          40,
+          32
+        ],
+        "collapsed_seed_count": 1
+      },
+      {
+        "subject": "sub-12",
+        "seeds": [
+          20261012,
+          20261013,
+          20261014
+        ],
+        "source_validation_BA_all_seeds": [
+          0.39999999999999997,
+          0.5,
+          0.65
+        ],
+        "source_validation_BA_mean_all_three_seeds": 0.5166666666666666,
+        "source_validation_CE_mean_all_three_seeds": 0.6905797878901164,
+        "epochs_all_seeds": [
+          16,
+          52,
+          19
+        ],
+        "selected_epochs_all_seeds": [
+          1,
+          37,
+          4
+        ],
+        "collapsed_seed_count": 0
+      },
+      {
+        "subject": "sub-14",
+        "seeds": [
+          20261012,
+          20261013,
+          20261014
+        ],
+        "source_validation_BA_all_seeds": [
+          0.35,
+          0.65,
+          0.55
+        ],
+        "source_validation_BA_mean_all_three_seeds": 0.5166666666666667,
+        "source_validation_CE_mean_all_three_seeds": 0.6687718311945599,
+        "epochs_all_seeds": [
+          19,
+          100,
+          81
+        ],
+        "selected_epochs_all_seeds": [
+          4,
+          98,
+          66
+        ],
+        "collapsed_seed_count": 0
+      },
+      {
+        "subject": "sub-15",
+        "seeds": [
+          20261012,
+          20261013,
+          20261014
+        ],
+        "source_validation_BA_all_seeds": [
+          0.7,
+          0.5,
+          0.65
+        ],
+        "source_validation_BA_mean_all_three_seeds": 0.6166666666666667,
+        "source_validation_CE_mean_all_three_seeds": 0.62047012646993,
+        "epochs_all_seeds": [
+          100,
+          19,
+          86
+        ],
+        "selected_epochs_all_seeds": [
+          87,
+          4,
+          71
+        ],
+        "collapsed_seed_count": 0
+      },
+      {
+        "subject": "sub-17",
+        "seeds": [
+          20261012,
+          20261013,
+          20261014
+        ],
+        "source_validation_BA_all_seeds": [
+          0.8500000000000001,
+          0.6000000000000001,
+          0.8
+        ],
+        "source_validation_BA_mean_all_three_seeds": 0.75,
+        "source_validation_CE_mean_all_three_seeds": 0.45791386862595873,
+        "epochs_all_seeds": [
+          100,
+          16,
+          100
+        ],
+        "selected_epochs_all_seeds": [
+          100,
+          1,
+          85
+        ],
+        "collapsed_seed_count": 0
+      },
+      {
+        "subject": "sub-18",
+        "seeds": [
+          20261012,
+          20261013,
+          20261014
+        ],
+        "source_validation_BA_all_seeds": [
+          0.5,
+          0.55,
+          0.55
+        ],
+        "source_validation_BA_mean_all_three_seeds": 0.5333333333333333,
+        "source_validation_CE_mean_all_three_seeds": 0.6925033330917358,
+        "epochs_all_seeds": [
+          19,
+          17,
+          32
+        ],
+        "selected_epochs_all_seeds": [
+          4,
+          2,
+          17
+        ],
+        "collapsed_seed_count": 1
+      }
+    ]
+  },
+  "numeric_audit_coverage": {
+    "history": "all 36 histories, earliest minimum, patience15 or epoch100 bound, epochs and steps",
+    "labels": "source-validation saved IDs/order/labels checked against frozen split metadata; TRAIN/validation disjoint",
+    "checkpoint": "raw SHA, weights-only CPU tensor loading, embedded context, all finite tensors/state hash, positive source normalization, common tensor schema",
+    "saved_predictions": "20x2 float32 logits, per-row float64 CE, numpy reduction, CPU torch float32 and float64 CE, fixed argmax BA",
+    "not_performed": "checkpoint model construction/forward, EEG loading, retraining, optimizer construction, query evaluation"
+  },
+  "scientific_limits": [
+    "These source-validation labels selected the checkpoint. BA and CE are descriptive selected-checkpoint statistics, not untouched held-out generalization evidence.",
+    "Seeds share the same participant trials and are not 36 independent participants. All fixed seeds are retained.",
+    "No inference of adaptation effectiveness, longitudinal skill retention, clinical benefit or valid gating follows from these source summaries."
+  ],
+  "next_frozen_analysis_readiness": {
+    "all_36_saved_source_packages_available": true,
+    "scientific_evaluation_released": false,
+    "R2_full_GET_and_parent_acceptance_required": "handled separately; this summary supplies neither acceptance nor R2 proof",
+    "checkpoint_reuse_path": "retain all 18+36 identities; only separately frozen, reviewed read-only checkpoint reuse could later evaluate a query; do not call generic formal_train",
+    "source_only_claim": "no new strategy, seed search, source refit, query adapter or query access authorized by this audit"
+  },
+  "checkpoint_parameter_schema": [
+    [
+      "bnorm_1.bias",
+      [
+        8
+      ],
+      "torch.float32"
+    ],
+    [
+      "bnorm_1.num_batches_tracked",
+      [],
+      "torch.int64"
+    ],
+    [
+      "bnorm_1.running_mean",
+      [
+        8
+      ],
+      "torch.float32"
+    ],
+    [
+      "bnorm_1.running_var",
+      [
+        8
+      ],
+      "torch.float32"
+    ],
+    [
+      "bnorm_1.weight",
+      [
+        8
+      ],
+      "torch.float32"
+    ],
+    [
+      "bnorm_2.bias",
+      [
+        8
+      ],
+      "torch.float32"
+    ],
+    [
+      "bnorm_2.num_batches_tracked",
+      [],
+      "torch.int64"
+    ],
+    [
+      "bnorm_2.running_mean",
+      [
+        8
+      ],
+      "torch.float32"
+    ],
+    [
+      "bnorm_2.running_var",
+      [
+        8
+      ],
+      "torch.float32"
+    ],
+    [
+      "bnorm_2.weight",
+      [
+        8
+      ],
+      "torch.float32"
+    ],
+    [
+      "bnorm_temporal.bias",
+      [
+        4
+      ],
+      "torch.float32"
+    ],
+    [
+      "bnorm_temporal.num_batches_tracked",
+      [],
+      "torch.int64"
+    ],
+    [
+      "bnorm_temporal.running_mean",
+      [
+        4
+      ],
+      "torch.float32"
+    ],
+    [
+      "bnorm_temporal.running_var",
+      [
+        4
+      ],
+      "torch.float32"
+    ],
+    [
+      "bnorm_temporal.weight",
+      [
+        4
+      ],
+      "torch.float32"
+    ],
+    [
+      "conv_separable_depth.weight",
+      [
+        8,
+        1,
+        1,
+        16
+      ],
+      "torch.float32"
+    ],
+    [
+      "conv_separable_point.weight",
+      [
+        8,
+        8,
+        1,
+        1
+      ],
+      "torch.float32"
+    ],
+    [
+      "conv_spatial.parametrizations.weight.original",
+      [
+        8,
+        1,
+        22,
+        1
+      ],
+      "torch.float32"
+    ],
+    [
+      "conv_temporal.weight",
+      [
+        4,
+        1,
+        1,
+        64
+      ],
+      "torch.float32"
+    ],
+    [
+      "final_layer.conv_classifier.bias",
+      [
+        2
+      ],
+      "torch.float32"
+    ],
+    [
+      "final_layer.conv_classifier.weight",
+      [
+        2,
+        8,
+        1,
+        20
+      ],
+      "torch.float32"
+    ]
+  ],
+  "jobs": [
+    {
+      "job_id": "df3d71e4bed6d37058026cbce4f60e34783fb11c87d8b0f5efe6f368c91ba222",
+      "subject": "sub-2",
+      "seed": 20261012,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-2-seed-20261012-run01.tar",
+      "archive_filename": "df3d71e4bed6d37058026cbce4f60e34783fb11c87d8b0f5efe6f368c91ba222.tar",
+      "archive_sha256": "7a970cfd963aa3440bf813e3c3dcaff6f82bb27fd768b56a53726a871709b82f",
+      "archive_bytes": 256000,
+      "checkpoint_sha256": "dfac8b4097050fb7310ee6e070cc419d5b8770fb3ae47b8313b4e94fddc0cf82",
+      "checkpoint_state_sha256": "d82c7b333ff9d0c16fbc4d75e725d16dff842b239171691a4473b35418e44e0c",
+      "epochs": 16,
+      "optimizer_steps": 48,
+      "selected_epoch": 1,
+      "selected_source_validation_CE": 0.6928059458732605,
+      "independent_saved_logits_numpy_float64_CE": 0.6928059309458792,
+      "recorded_training_torch_replay_CE": 0.6928059458732605,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.6928058862686157,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.6928059309458791,
+      "numpy_CE_absolute_difference_from_selected": 1.492738133102023e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 5.960464477539063e-08,
+      "source_validation_balanced_accuracy": 0.6000000000000001,
+      "source_validation_class_recall": [
+        0.4,
+        0.8
+      ],
+      "predicted_class_counts": [
+        6,
+        14
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": false
+    },
+    {
+      "job_id": "e93b469def25a046cfa08d08fdba7c3dbd6b93bc2d17d360d9d44ef1782aeb07",
+      "subject": "sub-2",
+      "seed": 20261013,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-2-seed-20261013-run01.tar",
+      "archive_filename": "e93b469def25a046cfa08d08fdba7c3dbd6b93bc2d17d360d9d44ef1782aeb07.tar",
+      "archive_sha256": "6e14ea97726090a55bf5d241f7063f4eb124c5e6b3c623df86043bd65157971b",
+      "archive_bytes": 266240,
+      "checkpoint_sha256": "8d7e76a645c1a866d2bce689b04d70a976c91d54e325046048b6489b6801481a",
+      "checkpoint_state_sha256": "e0f1ac7a846a7ac23d7deef6504e172c808a61fcbcc2448363024d3c2f92a7cc",
+      "epochs": 92,
+      "optimizer_steps": 276,
+      "selected_epoch": 77,
+      "selected_source_validation_CE": 0.6798309803009033,
+      "independent_saved_logits_numpy_float64_CE": 0.6798309366996745,
+      "recorded_training_torch_replay_CE": 0.6798309803009033,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.6798310279846191,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.6798309366996744,
+      "numpy_CE_absolute_difference_from_selected": 4.360122873858785e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 4.768371586472142e-08,
+      "source_validation_balanced_accuracy": 0.65,
+      "source_validation_class_recall": [
+        0.9,
+        0.4
+      ],
+      "predicted_class_counts": [
+        15,
+        5
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": false
+    },
+    {
+      "job_id": "b5eec7743c554b62a21e160d012eefa38a160a9dbc0dc8809d27ccfb85e7c1c9",
+      "subject": "sub-2",
+      "seed": 20261014,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-2-seed-20261014-run01.tar",
+      "archive_filename": "b5eec7743c554b62a21e160d012eefa38a160a9dbc0dc8809d27ccfb85e7c1c9.tar",
+      "archive_sha256": "508ebc11a679ecb2cddc32eb3df903756b02ffdd5af18dd566c05f26806e80d2",
+      "archive_bytes": 256000,
+      "checkpoint_sha256": "d08d786b184724f2c10e009031c614dbe16ef0d31683a46b047eadc054a93d7b",
+      "checkpoint_state_sha256": "00dec4e8f718bce4a544b8a208bc8c235dcd6f28b0c1c27f1c87d606c3c177e1",
+      "epochs": 25,
+      "optimizer_steps": 75,
+      "selected_epoch": 10,
+      "selected_source_validation_CE": 0.6921798348426819,
+      "independent_saved_logits_numpy_float64_CE": 0.6921798409786217,
+      "recorded_training_torch_replay_CE": 0.6921798348426819,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.692179799079895,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.6921798409786216,
+      "numpy_CE_absolute_difference_from_selected": 6.1359398673133114e-09,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 3.5762786843029915e-08,
+      "source_validation_balanced_accuracy": 0.55,
+      "source_validation_class_recall": [
+        0.3,
+        0.8
+      ],
+      "predicted_class_counts": [
+        5,
+        15
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": false
+    },
+    {
+      "job_id": "7b6ebeaef294dff0339c43fa1c35d7f6c34f30785d3e8b2bb9a03e8b7f23b22a",
+      "subject": "sub-3",
+      "seed": 20261012,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-3-seed-20261012-run01.tar",
+      "archive_filename": "7b6ebeaef294dff0339c43fa1c35d7f6c34f30785d3e8b2bb9a03e8b7f23b22a.tar",
+      "archive_sha256": "1313145f9f0f093936df30098bf95726a7a6e9553d440a49c300b8decd224682",
+      "archive_bytes": 266240,
+      "checkpoint_sha256": "e20b47d2574d73536fe0650d24c2a43794a3f857eab9afd3b8241fced0b7a68b",
+      "checkpoint_state_sha256": "63cbfcaedaf4e51248a12d7b8e9793eeb2475bce7709cff08c4f9d3bcb184e8e",
+      "epochs": 100,
+      "optimizer_steps": 300,
+      "selected_epoch": 97,
+      "selected_source_validation_CE": 0.6617177248001098,
+      "independent_saved_logits_numpy_float64_CE": 0.6617177486118404,
+      "recorded_training_torch_replay_CE": 0.6617177248001098,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.6617177724838257,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.6617177486118404,
+      "numpy_CE_absolute_difference_from_selected": 2.3811730587297575e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 4.768371586472142e-08,
+      "source_validation_balanced_accuracy": 0.7,
+      "source_validation_class_recall": [
+        0.7,
+        0.7
+      ],
+      "predicted_class_counts": [
+        10,
+        10
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": true
+    },
+    {
+      "job_id": "66b5c7a89b8fb4ccbca9f25dfaa588c6952f2aad3a1d7648348f8e88361c4c2f",
+      "subject": "sub-3",
+      "seed": 20261013,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-3-seed-20261013-run01.tar",
+      "archive_filename": "66b5c7a89b8fb4ccbca9f25dfaa588c6952f2aad3a1d7648348f8e88361c4c2f.tar",
+      "archive_sha256": "9aec72b2913adf72ac1ffc44f25a3f602abd2a095712983ff90054a704a3a7de",
+      "archive_bytes": 256000,
+      "checkpoint_sha256": "ca9ae9c1b2f15eb1baab818ed31c6a8b9d4b92a5e8b28d09d6bb22dc42c324e9",
+      "checkpoint_state_sha256": "8f927a77776f94ac5c099baa9e5d132c107c9b5dda0759ef7236e97d6be4f58a",
+      "epochs": 27,
+      "optimizer_steps": 81,
+      "selected_epoch": 12,
+      "selected_source_validation_CE": 0.6934141278266907,
+      "independent_saved_logits_numpy_float64_CE": 0.6934141465510989,
+      "recorded_training_torch_replay_CE": 0.6934141278266907,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.6934142112731934,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.6934141465510989,
+      "numpy_CE_absolute_difference_from_selected": 1.8724408246129087e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 8.344650270775134e-08,
+      "source_validation_balanced_accuracy": 0.5,
+      "source_validation_class_recall": [
+        0.0,
+        1.0
+      ],
+      "predicted_class_counts": [
+        0,
+        20
+      ],
+      "class_collapse": true,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": false
+    },
+    {
+      "job_id": "80bcdedfef4684c5cc9b307805bfb74e00bf0a85756059e351eb10a78a13a037",
+      "subject": "sub-3",
+      "seed": 20261014,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-3-seed-20261014-run01.tar",
+      "archive_filename": "80bcdedfef4684c5cc9b307805bfb74e00bf0a85756059e351eb10a78a13a037.tar",
+      "archive_sha256": "20e66e434aa0211fb6661a558ce186272c07dd372073adb3d9175485432f7ead",
+      "archive_bytes": 256000,
+      "checkpoint_sha256": "4499bbdcf484b296a4e26e5b979d86c6fb67bd04e95c1c9abea9c0c4aa79495f",
+      "checkpoint_state_sha256": "15f01cb2d64992b051b314a2fbda31a321e153dbf8f3a79ddda50c7c10a36e15",
+      "epochs": 21,
+      "optimizer_steps": 63,
+      "selected_epoch": 6,
+      "selected_source_validation_CE": 0.6932300567626953,
+      "independent_saved_logits_numpy_float64_CE": 0.6932300668714232,
+      "recorded_training_torch_replay_CE": 0.6932300567626953,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.6932300329208374,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.6932300668714232,
+      "numpy_CE_absolute_difference_from_selected": 1.0108727854785116e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 2.384185793236071e-08,
+      "source_validation_balanced_accuracy": 0.45,
+      "source_validation_class_recall": [
+        0.0,
+        0.9
+      ],
+      "predicted_class_counts": [
+        1,
+        19
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": false
+    },
+    {
+      "job_id": "d80b3b44b6729ec7d94e42cce0668f8065c9fc15c62538b0d37b6e67eb461c7b",
+      "subject": "sub-5",
+      "seed": 20261012,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-5-seed-20261012-run01.tar",
+      "archive_filename": "d80b3b44b6729ec7d94e42cce0668f8065c9fc15c62538b0d37b6e67eb461c7b.tar",
+      "archive_sha256": "3a6467ea3ca1ed31a2c530db1d0f4107272f60b348396d3ca74d4c1fcfeee479",
+      "archive_bytes": 256000,
+      "checkpoint_sha256": "933c2251fcb3096eadadbdb5856a140ed2702916e1194c622abda2f59b59361c",
+      "checkpoint_state_sha256": "e262fa12630edbfe29a23c8fb2bfa5b176d11f71fa837b3fdd1e06a7812935c4",
+      "epochs": 16,
+      "optimizer_steps": 48,
+      "selected_epoch": 1,
+      "selected_source_validation_CE": 0.6933680176734924,
+      "independent_saved_logits_numpy_float64_CE": 0.6933680123422781,
+      "recorded_training_torch_replay_CE": 0.6933680176734924,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.6933679580688477,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.6933680123422782,
+      "numpy_CE_absolute_difference_from_selected": 5.3312143588613026e-09,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 5.960464477539063e-08,
+      "source_validation_balanced_accuracy": 0.5,
+      "source_validation_class_recall": [
+        1.0,
+        0.0
+      ],
+      "predicted_class_counts": [
+        20,
+        0
+      ],
+      "class_collapse": true,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": false
+    },
+    {
+      "job_id": "15203ad240b981b752d4af83fe24fd8aebfd92c96820c66eda7c32ca6ba0c799",
+      "subject": "sub-5",
+      "seed": 20261013,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-5-seed-20261013-run01.tar",
+      "archive_filename": "15203ad240b981b752d4af83fe24fd8aebfd92c96820c66eda7c32ca6ba0c799.tar",
+      "archive_sha256": "467ab3d88d8d637f6496e7bca7c2c81f1c3215edca7385710cad96ffef06d627",
+      "archive_bytes": 256000,
+      "checkpoint_sha256": "a54cec9387dd0cc8f5f827d3d28dc5ec707f1d7aa7e608a9c6278f0bfe73c864",
+      "checkpoint_state_sha256": "b5446f4e068811281f5ebad5e19a847a6888e2019f79403638187007487cfaf8",
+      "epochs": 16,
+      "optimizer_steps": 48,
+      "selected_epoch": 1,
+      "selected_source_validation_CE": 0.6937909841537475,
+      "independent_saved_logits_numpy_float64_CE": 0.693791021486218,
+      "recorded_training_torch_replay_CE": 0.6937909841537475,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.6937910318374634,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.6937910214862181,
+      "numpy_CE_absolute_difference_from_selected": 3.7332470448347976e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 4.768371586472142e-08,
+      "source_validation_balanced_accuracy": 0.55,
+      "source_validation_class_recall": [
+        0.8,
+        0.3
+      ],
+      "predicted_class_counts": [
+        15,
+        5
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": false
+    },
+    {
+      "job_id": "4221970caa1ebb7becc3ba3ba108ee9ea5b2bd44d95ca8e69f3eda7a280942dd",
+      "subject": "sub-5",
+      "seed": 20261014,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-5-seed-20261014-run01.tar",
+      "archive_filename": "4221970caa1ebb7becc3ba3ba108ee9ea5b2bd44d95ca8e69f3eda7a280942dd.tar",
+      "archive_sha256": "b1fe9dc37e96fba657bfccd3e6b85bcbe4e2a63b7c00965f2cc2e4ea41845e73",
+      "archive_bytes": 256000,
+      "checkpoint_sha256": "a9b153c6e25a962fed0e8d76542e204a76ef5a0d8099f8b6c92cda3d56c88149",
+      "checkpoint_state_sha256": "47c2134a0635a6c915a3a0556e9ef83623f500c769f517de349c4935e53733eb",
+      "epochs": 16,
+      "optimizer_steps": 48,
+      "selected_epoch": 1,
+      "selected_source_validation_CE": 0.6948379874229431,
+      "independent_saved_logits_numpy_float64_CE": 0.6948379474252152,
+      "recorded_training_torch_replay_CE": 0.6948379874229431,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.6948379278182983,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.6948379474252151,
+      "numpy_CE_absolute_difference_from_selected": 3.999772790752587e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 5.960464477539063e-08,
+      "source_validation_balanced_accuracy": 0.4,
+      "source_validation_class_recall": [
+        0.2,
+        0.6
+      ],
+      "predicted_class_counts": [
+        6,
+        14
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": false
+    },
+    {
+      "job_id": "dd28327b1068bb128614eeb63d7727a8b59da65dc8e52575ef3533d7d1ade074",
+      "subject": "sub-6",
+      "seed": 20261012,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-6-seed-20261012-run01.tar",
+      "archive_filename": "dd28327b1068bb128614eeb63d7727a8b59da65dc8e52575ef3533d7d1ade074.tar",
+      "archive_sha256": "967a0467bdabeca2372d018dfe968ea9c5ef58607199fb1d4827138ca8e248b1",
+      "archive_bytes": 256000,
+      "checkpoint_sha256": "0d2e5d3405bceb189f5c0b7dd046da24c178f951e95a5f4316f044a19d00efa4",
+      "checkpoint_state_sha256": "0436ef9d517d9937851375127503c42f4b6a614e3ebea830d8ce7624e3b98e64",
+      "epochs": 16,
+      "optimizer_steps": 48,
+      "selected_epoch": 1,
+      "selected_source_validation_CE": 0.6934880495071412,
+      "independent_saved_logits_numpy_float64_CE": 0.6934880842125521,
+      "recorded_training_torch_replay_CE": 0.6934880495071412,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.6934880018234253,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.693488084212552,
+      "numpy_CE_absolute_difference_from_selected": 3.470541098948843e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 4.768371586472142e-08,
+      "source_validation_balanced_accuracy": 0.5,
+      "source_validation_class_recall": [
+        0.8,
+        0.2
+      ],
+      "predicted_class_counts": [
+        16,
+        4
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": false
+    },
+    {
+      "job_id": "ab971cc08608806ea2483fdec9c624b1e95490b6a2309a2e9122cceab9829850",
+      "subject": "sub-6",
+      "seed": 20261013,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-6-seed-20261013-run01.tar",
+      "archive_filename": "ab971cc08608806ea2483fdec9c624b1e95490b6a2309a2e9122cceab9829850.tar",
+      "archive_sha256": "e6c8eadf1fc931cc51447010fc978bc21bc351d26bc99c5655c24a0d78603ecc",
+      "archive_bytes": 256000,
+      "checkpoint_sha256": "83c33105c03bca916a26c32bb9706166f74fbd2eadbd0e6376e31d8f2fc336b0",
+      "checkpoint_state_sha256": "e986b16143abac27a0bec1327fc1de088ed8a445836081c65f661e2c72f4865a",
+      "epochs": 20,
+      "optimizer_steps": 60,
+      "selected_epoch": 5,
+      "selected_source_validation_CE": 0.6935979127883911,
+      "independent_saved_logits_numpy_float64_CE": 0.6935979576584677,
+      "recorded_training_torch_replay_CE": 0.6935979127883911,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.6935979127883911,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.6935979576584677,
+      "numpy_CE_absolute_difference_from_selected": 4.487007654319086e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 0.0,
+      "source_validation_balanced_accuracy": 0.4,
+      "source_validation_class_recall": [
+        0.4,
+        0.4
+      ],
+      "predicted_class_counts": [
+        10,
+        10
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": false
+    },
+    {
+      "job_id": "9b75bb235cd933c268778dc802fe1d4300d6594de8fb5511522fcecf4badf35c",
+      "subject": "sub-6",
+      "seed": 20261014,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-6-seed-20261014-run01.tar",
+      "archive_filename": "9b75bb235cd933c268778dc802fe1d4300d6594de8fb5511522fcecf4badf35c.tar",
+      "archive_sha256": "12b4a260be84a711233ee27ed832b26c9e64963903abfac762a20914665114d2",
+      "archive_bytes": 266240,
+      "checkpoint_sha256": "4d48bf7567169e478c9f8f92ec43500d194c8e3effcc788ca3d9ae2166130e2c",
+      "checkpoint_state_sha256": "9d63015e722113afc3b88f5c868ea933b1e509b9323c0a2ed7cf48d205ef8ab5",
+      "epochs": 100,
+      "optimizer_steps": 300,
+      "selected_epoch": 99,
+      "selected_source_validation_CE": 0.5393265187740326,
+      "independent_saved_logits_numpy_float64_CE": 0.5393264973332925,
+      "recorded_training_torch_replay_CE": 0.5393265187740326,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.5393264889717102,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.5393264973332925,
+      "numpy_CE_absolute_difference_from_selected": 2.144074007226493e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 2.9802322387695312e-08,
+      "source_validation_balanced_accuracy": 0.75,
+      "source_validation_class_recall": [
+        0.8,
+        0.7
+      ],
+      "predicted_class_counts": [
+        11,
+        9
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": true
+    },
+    {
+      "job_id": "d1392eb4c7b5aaaa6539285d41f45b63bf7d09258b54d41a6dfc326492d91c1c",
+      "subject": "sub-8",
+      "seed": 20261012,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-8-seed-20261012-run01.tar",
+      "archive_filename": "d1392eb4c7b5aaaa6539285d41f45b63bf7d09258b54d41a6dfc326492d91c1c.tar",
+      "archive_sha256": "d5eb8d6842d98118f8ce1e721afab7fcd2028ed5d1de7186ab230b40e28e14a6",
+      "archive_bytes": 266240,
+      "checkpoint_sha256": "3f5a26184853346c58b1d750385a9065e0d5a75a5cad04b071bd8ceb56b14b1a",
+      "checkpoint_state_sha256": "676c16bbebbf289b77d8959e72fd4d34059f176f9122fce22c9c41e9cab5bc6a",
+      "epochs": 100,
+      "optimizer_steps": 300,
+      "selected_epoch": 87,
+      "selected_source_validation_CE": 0.6563377976417542,
+      "independent_saved_logits_numpy_float64_CE": 0.6563377701949766,
+      "recorded_training_torch_replay_CE": 0.6563377976417542,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.6563377976417542,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.6563377701949766,
+      "numpy_CE_absolute_difference_from_selected": 2.7446777517425858e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 0.0,
+      "source_validation_balanced_accuracy": 0.6,
+      "source_validation_class_recall": [
+        0.5,
+        0.7
+      ],
+      "predicted_class_counts": [
+        8,
+        12
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": true
+    },
+    {
+      "job_id": "b65b18b7a4fe02dbb95b2e42110a213a7f5f76db4ff7c19473e4320938dbab58",
+      "subject": "sub-8",
+      "seed": 20261013,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-8-seed-20261013-run01.tar",
+      "archive_filename": "b65b18b7a4fe02dbb95b2e42110a213a7f5f76db4ff7c19473e4320938dbab58.tar",
+      "archive_sha256": "12da3ca34ed6ddc831a177f9ec73486e1e2ea5c79b2d0deee9d6f3b9d35c00f1",
+      "archive_bytes": 256000,
+      "checkpoint_sha256": "342752eee976495218a450173ccbb4739d39f0056c85d08aba45d50f4e1cb4c4",
+      "checkpoint_state_sha256": "611ffdbbd3f62d046bfd3f5beeb09ac1e68201537dec32ce98c0737f42b75de1",
+      "epochs": 21,
+      "optimizer_steps": 63,
+      "selected_epoch": 6,
+      "selected_source_validation_CE": 0.6928906202316284,
+      "independent_saved_logits_numpy_float64_CE": 0.6928905840760582,
+      "recorded_training_torch_replay_CE": 0.6928906202316284,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.6928905844688416,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.6928905840760582,
+      "numpy_CE_absolute_difference_from_selected": 3.6155570204421394e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 3.5762786843029915e-08,
+      "source_validation_balanced_accuracy": 0.5,
+      "source_validation_class_recall": [
+        0.5,
+        0.5
+      ],
+      "predicted_class_counts": [
+        10,
+        10
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": false
+    },
+    {
+      "job_id": "812b29345cc8262ef329f5b09e24141c65f47f24fe8dd2c044b70f9005946d74",
+      "subject": "sub-8",
+      "seed": 20261014,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-8-seed-20261014-run01.tar",
+      "archive_filename": "812b29345cc8262ef329f5b09e24141c65f47f24fe8dd2c044b70f9005946d74.tar",
+      "archive_sha256": "bbbad039970242163914e4cf1a51e6bc34650bd8e998e1c30cb1a7772559a1ef",
+      "archive_bytes": 266240,
+      "checkpoint_sha256": "a58dbd5b05386dbd4f794aa988f82c8fb3445b7d27bc31dadac3831e13adfaca",
+      "checkpoint_state_sha256": "66dfbf3c2665ed6f24a0a2c8772f777485340d1a415c08f985e3b43c601dc268",
+      "epochs": 64,
+      "optimizer_steps": 192,
+      "selected_epoch": 49,
+      "selected_source_validation_CE": 0.6860505223274231,
+      "independent_saved_logits_numpy_float64_CE": 0.6860505551873141,
+      "recorded_training_torch_replay_CE": 0.6860505223274231,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.686050534248352,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.6860505551873141,
+      "numpy_CE_absolute_difference_from_selected": 3.285989091939001e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 1.1920928910669204e-08,
+      "source_validation_balanced_accuracy": 0.6,
+      "source_validation_class_recall": [
+        0.5,
+        0.7
+      ],
+      "predicted_class_counts": [
+        8,
+        12
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": false
+    },
+    {
+      "job_id": "123bdeee936900b1d3d1c23aebda48ee02d6f0c46f2de9f17d711b8ed1653629",
+      "subject": "sub-9",
+      "seed": 20261012,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-9-seed-20261012-run01.tar",
+      "archive_filename": "123bdeee936900b1d3d1c23aebda48ee02d6f0c46f2de9f17d711b8ed1653629.tar",
+      "archive_sha256": "1966ab9fcd0a041c8d3d3e7edea131d41ab05ff66c45d3b0436dd039a2fecb5d",
+      "archive_bytes": 256000,
+      "checkpoint_sha256": "3b548e8b000c69a5b1adf61576e9716c25bab22fd76a867d382f193da2770342",
+      "checkpoint_state_sha256": "eb54ba98c97c37203bd474f5b6bd1dac3a7236d1eeb2b26dd2299b36c90dc47d",
+      "epochs": 16,
+      "optimizer_steps": 48,
+      "selected_epoch": 1,
+      "selected_source_validation_CE": 0.6933375358581543,
+      "independent_saved_logits_numpy_float64_CE": 0.6933375738548815,
+      "recorded_training_torch_replay_CE": 0.6933375358581543,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.6933375597000122,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.6933375738548816,
+      "numpy_CE_absolute_difference_from_selected": 3.7996727209055337e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 2.384185793236071e-08,
+      "source_validation_balanced_accuracy": 0.4,
+      "source_validation_class_recall": [
+        0.4,
+        0.4
+      ],
+      "predicted_class_counts": [
+        10,
+        10
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": false
+    },
+    {
+      "job_id": "a73f6eb94abd509ca6ec91b3908275f18cfed340bff6e7f8fa64851ddf1ccc64",
+      "subject": "sub-9",
+      "seed": 20261013,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-9-seed-20261013-run01.tar",
+      "archive_filename": "a73f6eb94abd509ca6ec91b3908275f18cfed340bff6e7f8fa64851ddf1ccc64.tar",
+      "archive_sha256": "26343dc13b669e967ba8a66ff017cde05e94607f3353bd18449ee20da8018351",
+      "archive_bytes": 266240,
+      "checkpoint_sha256": "e3c19baffab415ff644efd95fdb20e75c9c7ac61a341c61c478a70bc5a3090eb",
+      "checkpoint_state_sha256": "334f44c01c8c8ebb649426d917df712a9d4e844cb9040bce0fb6d7bc839159de",
+      "epochs": 100,
+      "optimizer_steps": 300,
+      "selected_epoch": 100,
+      "selected_source_validation_CE": 0.574141800403595,
+      "independent_saved_logits_numpy_float64_CE": 0.5741417834707141,
+      "recorded_training_torch_replay_CE": 0.574141800403595,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.574141800403595,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.5741417834707141,
+      "numpy_CE_absolute_difference_from_selected": 1.693288087523115e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 0.0,
+      "source_validation_balanced_accuracy": 0.7,
+      "source_validation_class_recall": [
+        0.7,
+        0.7
+      ],
+      "predicted_class_counts": [
+        10,
+        10
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": true
+    },
+    {
+      "job_id": "70011f5decf4795e8a16cf9658c2af1de69dd0d65ac0d515e6e33988979a61ae",
+      "subject": "sub-9",
+      "seed": 20261014,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-9-seed-20261014-run01.tar",
+      "archive_filename": "70011f5decf4795e8a16cf9658c2af1de69dd0d65ac0d515e6e33988979a61ae.tar",
+      "archive_sha256": "1ac505b892ddcc906415c3ac86139dc904ac8cef1a197c9537ed4ac75566c04e",
+      "archive_bytes": 266240,
+      "checkpoint_sha256": "b742f241be5eb0153608a44c9ab1f841c990b4cdaef9d69f1acefe8b1889b5b0",
+      "checkpoint_state_sha256": "070f81455b4094a7d6ebbebdb37619221b3e362ae8ff2de335da629a395d5630",
+      "epochs": 100,
+      "optimizer_steps": 300,
+      "selected_epoch": 92,
+      "selected_source_validation_CE": 0.4932731628417969,
+      "independent_saved_logits_numpy_float64_CE": 0.4932731765007331,
+      "recorded_training_torch_replay_CE": 0.4932731628417969,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.49327316880226135,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.49327317650073327,
+      "numpy_CE_absolute_difference_from_selected": 1.3658936204308247e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 5.960464455334602e-09,
+      "source_validation_balanced_accuracy": 0.85,
+      "source_validation_class_recall": [
+        0.7,
+        1.0
+      ],
+      "predicted_class_counts": [
+        7,
+        13
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": true
+    },
+    {
+      "job_id": "caae0027156bdc8ec56b7f863666bba9d8ffe083c85f735c2772f357657fb6c8",
+      "subject": "sub-11",
+      "seed": 20261012,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-11-seed-20261012-run01.tar",
+      "archive_filename": "caae0027156bdc8ec56b7f863666bba9d8ffe083c85f735c2772f357657fb6c8.tar",
+      "archive_sha256": "ca1101b1a4eb954b89598d17ba9d461658fb95149aabbb35f19be1cde13895aa",
+      "archive_bytes": 266240,
+      "checkpoint_sha256": "83e783d52000a4045343777877fcc4999c0c0ddf027a228dfd3fddcb75007e5a",
+      "checkpoint_state_sha256": "ace3b625288b844296a952db654bc7f0dd219dd5b42f1a341e86bdd599dcddd5",
+      "epochs": 100,
+      "optimizer_steps": 300,
+      "selected_epoch": 100,
+      "selected_source_validation_CE": 0.617490804195404,
+      "independent_saved_logits_numpy_float64_CE": 0.6174907929851912,
+      "recorded_training_torch_replay_CE": 0.617490804195404,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.617490828037262,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.617490792985191,
+      "numpy_CE_absolute_difference_from_selected": 1.121021286909496e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 2.384185793236071e-08,
+      "source_validation_balanced_accuracy": 0.6499999999999999,
+      "source_validation_class_recall": [
+        0.6,
+        0.7
+      ],
+      "predicted_class_counts": [
+        9,
+        11
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": true
+    },
+    {
+      "job_id": "1114f9f1524f681564334e943200e3c09b6efa900c0bf80b394c8992cc08e8fd",
+      "subject": "sub-11",
+      "seed": 20261013,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-11-seed-20261013-run01.tar",
+      "archive_filename": "1114f9f1524f681564334e943200e3c09b6efa900c0bf80b394c8992cc08e8fd.tar",
+      "archive_sha256": "2c0c01780a36247ac81e8f457c04fda04c58ae76c5db95e61543a9fd291385b0",
+      "archive_bytes": 256000,
+      "checkpoint_sha256": "fb1874b4679381cf0765e9a0fe6419de7eb5175ad689dd1d84461eafb32976b6",
+      "checkpoint_state_sha256": "856ebfe0deeff28de36e4a142c15767ca86bba88d5e40233d45d8a50ae9c1ac4",
+      "epochs": 55,
+      "optimizer_steps": 165,
+      "selected_epoch": 40,
+      "selected_source_validation_CE": 0.6901407241821289,
+      "independent_saved_logits_numpy_float64_CE": 0.6901407138434908,
+      "recorded_training_torch_replay_CE": 0.6901407241821289,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.6901407241821289,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.6901407138434908,
+      "numpy_CE_absolute_difference_from_selected": 1.0338638056772709e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 0.0,
+      "source_validation_balanced_accuracy": 0.5,
+      "source_validation_class_recall": [
+        0.8,
+        0.2
+      ],
+      "predicted_class_counts": [
+        16,
+        4
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": false
+    },
+    {
+      "job_id": "e9089a2b0c761b399c14f02a49dd09d16d3a72ab80c935bef50b61754980b880",
+      "subject": "sub-11",
+      "seed": 20261014,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-11-seed-20261014-run01.tar",
+      "archive_filename": "e9089a2b0c761b399c14f02a49dd09d16d3a72ab80c935bef50b61754980b880.tar",
+      "archive_sha256": "0807d1d11aba3fa105bb422b14d408311c6175b9c0fd92af392c6adf907b354f",
+      "archive_bytes": 256000,
+      "checkpoint_sha256": "7fd9c7ff0f6c1dfb2eedaac2f9395682ae2768579f30556f5a85f87153e8c7bc",
+      "checkpoint_state_sha256": "44e55e08f913a9dbbddab34dc3a0dd73e28d36cc26a3d0973ab0f959dfc0e984",
+      "epochs": 47,
+      "optimizer_steps": 141,
+      "selected_epoch": 32,
+      "selected_source_validation_CE": 0.6803536891937256,
+      "independent_saved_logits_numpy_float64_CE": 0.6803537328135812,
+      "recorded_training_torch_replay_CE": 0.6803536891937256,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.6803537011146545,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.6803537328135811,
+      "numpy_CE_absolute_difference_from_selected": 4.36198556164058e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 1.1920928910669204e-08,
+      "source_validation_balanced_accuracy": 0.5,
+      "source_validation_class_recall": [
+        0.0,
+        1.0
+      ],
+      "predicted_class_counts": [
+        0,
+        20
+      ],
+      "class_collapse": true,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": false
+    },
+    {
+      "job_id": "cbd82eef6ffd5c856e142ac381032e252080957d58f5803b8b7eb2fcb09f6218",
+      "subject": "sub-12",
+      "seed": 20261012,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-12-seed-20261012-run01.tar",
+      "archive_filename": "cbd82eef6ffd5c856e142ac381032e252080957d58f5803b8b7eb2fcb09f6218.tar",
+      "archive_sha256": "4081e375018b55809f5a2826d7c96626a0dd87ae67554ddcd27a4b734d06d290",
+      "archive_bytes": 256000,
+      "checkpoint_sha256": "a546a55b5b06993ddc4a0c47063ad53b964b5d9805915b28cfdd05176525f3c3",
+      "checkpoint_state_sha256": "dc02ffde2347e0472dda3ee523771dd4acdbd0166840f32aeb6cb1dfc1111c4b",
+      "epochs": 16,
+      "optimizer_steps": 48,
+      "selected_epoch": 1,
+      "selected_source_validation_CE": 0.6935590744018555,
+      "independent_saved_logits_numpy_float64_CE": 0.6935590275114405,
+      "recorded_training_torch_replay_CE": 0.6935590744018555,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.6935590505599976,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.6935590275114406,
+      "numpy_CE_absolute_difference_from_selected": 4.6890414995282015e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 2.384185793236071e-08,
+      "source_validation_balanced_accuracy": 0.39999999999999997,
+      "source_validation_class_recall": [
+        0.1,
+        0.7
+      ],
+      "predicted_class_counts": [
+        4,
+        16
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": false
+    },
+    {
+      "job_id": "98e0ab893e8920a08adbb0298a9e45d5d3cb9a2d0f884110d77cb109676e0aee",
+      "subject": "sub-12",
+      "seed": 20261013,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-12-seed-20261013-run01.tar",
+      "archive_filename": "98e0ab893e8920a08adbb0298a9e45d5d3cb9a2d0f884110d77cb109676e0aee.tar",
+      "archive_sha256": "97a43e2098c1e2f4cbc1a6fa68f553aa47d2ab0b300258f10f325b27d52b420d",
+      "archive_bytes": 256000,
+      "checkpoint_sha256": "c39df834fefc349baaf400dd94a8f30e2daa296215ed97be7176f36b2717cce8",
+      "checkpoint_state_sha256": "e0c1377eb8bf944f52f2e3c3acb54079e2121e41b9317035b010a794679328ff",
+      "epochs": 52,
+      "optimizer_steps": 156,
+      "selected_epoch": 37,
+      "selected_source_validation_CE": 0.6866669535636902,
+      "independent_saved_logits_numpy_float64_CE": 0.6866669516153836,
+      "recorded_training_torch_replay_CE": 0.6866669535636902,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.6866669058799744,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.6866669516153837,
+      "numpy_CE_absolute_difference_from_selected": 1.9483066271419602e-09,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 4.768371586472142e-08,
+      "source_validation_balanced_accuracy": 0.5,
+      "source_validation_class_recall": [
+        0.8,
+        0.2
+      ],
+      "predicted_class_counts": [
+        16,
+        4
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": false
+    },
+    {
+      "job_id": "4ce16e24f1df1c9f3ceb262166a3a9c99ebd3c32e9debdbffd51fa19a877dafe",
+      "subject": "sub-12",
+      "seed": 20261014,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-12-seed-20261014-run01.tar",
+      "archive_filename": "4ce16e24f1df1c9f3ceb262166a3a9c99ebd3c32e9debdbffd51fa19a877dafe.tar",
+      "archive_sha256": "a02d5cd58c7c56d4c52aba7721b9bc8e7e007cd33d92682d58dc6868b72f677d",
+      "archive_bytes": 256000,
+      "checkpoint_sha256": "5ce61786f3caf5182befbbbb3b43b2773ec2433c8fe78efe54bc3331ca1aa168",
+      "checkpoint_state_sha256": "78ae31fce9f969fe1f3350776235265f81a5d56779f61d8cd3b7fc70f7b0b58d",
+      "epochs": 19,
+      "optimizer_steps": 57,
+      "selected_epoch": 4,
+      "selected_source_validation_CE": 0.6915133357048034,
+      "independent_saved_logits_numpy_float64_CE": 0.691513312778507,
+      "recorded_training_torch_replay_CE": 0.6915133357048034,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.6915133595466614,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.691513312778507,
+      "numpy_CE_absolute_difference_from_selected": 2.2926296416869718e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 2.384185793236071e-08,
+      "source_validation_balanced_accuracy": 0.65,
+      "source_validation_class_recall": [
+        0.9,
+        0.4
+      ],
+      "predicted_class_counts": [
+        15,
+        5
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": false
+    },
+    {
+      "job_id": "18c5557aa4335b6efe44bc202c41393219a81624d00be7da5ded393102cb307e",
+      "subject": "sub-14",
+      "seed": 20261012,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-14-seed-20261012-run01.tar",
+      "archive_filename": "18c5557aa4335b6efe44bc202c41393219a81624d00be7da5ded393102cb307e.tar",
+      "archive_sha256": "0e037fd230dde5467e024afc17e55af248e74f7670760b098b51a76ce5afb4cc",
+      "archive_bytes": 256000,
+      "checkpoint_sha256": "e79d8bd157b342d0e5eb92f4f131ba442d0a8daa2138187d52490ce68bfa37b5",
+      "checkpoint_state_sha256": "21651ee302611b14490ec44f6c9ee87d2508018bf7fd1291e145716743ea1bbf",
+      "epochs": 19,
+      "optimizer_steps": 57,
+      "selected_epoch": 4,
+      "selected_source_validation_CE": 0.6934403657913208,
+      "independent_saved_logits_numpy_float64_CE": 0.6934403397963211,
+      "recorded_training_torch_replay_CE": 0.6934403657913208,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.693440318107605,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.6934403397963211,
+      "numpy_CE_absolute_difference_from_selected": 2.599499970834529e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 4.768371586472142e-08,
+      "source_validation_balanced_accuracy": 0.35,
+      "source_validation_class_recall": [
+        0.5,
+        0.2
+      ],
+      "predicted_class_counts": [
+        13,
+        7
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": false
+    },
+    {
+      "job_id": "3a13a62edf23ed06a82c7103f65d187e7f90bde428284b39484e884caef16091",
+      "subject": "sub-14",
+      "seed": 20261013,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-14-seed-20261013-run01.tar",
+      "archive_filename": "3a13a62edf23ed06a82c7103f65d187e7f90bde428284b39484e884caef16091.tar",
+      "archive_sha256": "0aeb2e9ba663f9cc3190ad2a80c7180ef6ca5b6fd1d74639e724d5a44fe61270",
+      "archive_bytes": 266240,
+      "checkpoint_sha256": "2a2cbda2ecc895da4941bdc61ef4d01d49ecb4867d02038b50cdc31d7f68b048",
+      "checkpoint_state_sha256": "58253ebfde513e3d02d7cad2d1566a2483ede6367a1d17084dc1532916584644",
+      "epochs": 100,
+      "optimizer_steps": 300,
+      "selected_epoch": 98,
+      "selected_source_validation_CE": 0.6348127603530884,
+      "independent_saved_logits_numpy_float64_CE": 0.6348127689472266,
+      "recorded_training_torch_replay_CE": 0.6348127603530884,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.6348127126693726,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.6348127689472266,
+      "numpy_CE_absolute_difference_from_selected": 8.594138178885657e-09,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 4.768371586472142e-08,
+      "source_validation_balanced_accuracy": 0.65,
+      "source_validation_class_recall": [
+        0.9,
+        0.4
+      ],
+      "predicted_class_counts": [
+        15,
+        5
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": true
+    },
+    {
+      "job_id": "e3ddfeef4ae6212f2b02658a7941e515a84fe648a60aca064e02b1993e9942bb",
+      "subject": "sub-14",
+      "seed": 20261014,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-14-seed-20261014-run01.tar",
+      "archive_filename": "e3ddfeef4ae6212f2b02658a7941e515a84fe648a60aca064e02b1993e9942bb.tar",
+      "archive_sha256": "c745b102258cc8626975ffbbf50e9274cde84078916455e115c4f52eaba65a16",
+      "archive_bytes": 266240,
+      "checkpoint_sha256": "6962cab63d0d668a9c4bc00f774f27f0c3e0b1069f2e5c6ad9f5eeeef7f7fa6e",
+      "checkpoint_state_sha256": "aa43c989bcef8f69b150254bdffa496e9a415baa114d99a0d0c7a6c9c049a5c6",
+      "epochs": 81,
+      "optimizer_steps": 243,
+      "selected_epoch": 66,
+      "selected_source_validation_CE": 0.6780623674392701,
+      "independent_saved_logits_numpy_float64_CE": 0.6780623536466168,
+      "recorded_training_torch_replay_CE": 0.6780623674392701,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.678062379360199,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.6780623536466168,
+      "numpy_CE_absolute_difference_from_selected": 1.379265324175094e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 1.1920928910669204e-08,
+      "source_validation_balanced_accuracy": 0.55,
+      "source_validation_class_recall": [
+        0.8,
+        0.3
+      ],
+      "predicted_class_counts": [
+        15,
+        5
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": false
+    },
+    {
+      "job_id": "edad083df2e4be007e3c4e6f38c00287de389113db9e7987674711ec0d2cf6eb",
+      "subject": "sub-15",
+      "seed": 20261012,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-15-seed-20261012-run01.tar",
+      "archive_filename": "edad083df2e4be007e3c4e6f38c00287de389113db9e7987674711ec0d2cf6eb.tar",
+      "archive_sha256": "fc930799c78ec1288355fd088c463ef1b1a01b6f087d42154bd6238ea43c78aa",
+      "archive_bytes": 266240,
+      "checkpoint_sha256": "383e2758e05c75ff244716e9e3481a56a264da4817fb98ab9381a909ee6ed881",
+      "checkpoint_state_sha256": "f432f5174565edf255046c03777569800150bdc000de56497017f434dcd9b964",
+      "epochs": 100,
+      "optimizer_steps": 300,
+      "selected_epoch": 87,
+      "selected_source_validation_CE": 0.5797127842903137,
+      "independent_saved_logits_numpy_float64_CE": 0.5797128040757072,
+      "recorded_training_torch_replay_CE": 0.5797127842903137,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.5797127485275269,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.5797128040757074,
+      "numpy_CE_absolute_difference_from_selected": 1.9785393545745933e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 3.5762786843029915e-08,
+      "source_validation_balanced_accuracy": 0.7,
+      "source_validation_class_recall": [
+        0.5,
+        0.9
+      ],
+      "predicted_class_counts": [
+        6,
+        14
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": true
+    },
+    {
+      "job_id": "e903c5fa4eeacd7fc10bc1031e177219051145cb918f0c4542dd56197fc95184",
+      "subject": "sub-15",
+      "seed": 20261013,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-15-seed-20261013-run01.tar",
+      "archive_filename": "e903c5fa4eeacd7fc10bc1031e177219051145cb918f0c4542dd56197fc95184.tar",
+      "archive_sha256": "c0637983e748d8c46fd43d3f6a0464e62ffe247fd6352036eca252c1418739fe",
+      "archive_bytes": 256000,
+      "checkpoint_sha256": "e83923fb29d7d752a997020fb145b56bbb79f4f7b0df35676bb5c66b176fbb3d",
+      "checkpoint_state_sha256": "1cd303d4cd9e0ba77b102b7b225fee03ea701fa66a6f1cb3affb6568623546e1",
+      "epochs": 19,
+      "optimizer_steps": 57,
+      "selected_epoch": 4,
+      "selected_source_validation_CE": 0.6935579419136048,
+      "independent_saved_logits_numpy_float64_CE": 0.6935579644200567,
+      "recorded_training_torch_replay_CE": 0.6935579419136048,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.6935579180717468,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.6935579644200567,
+      "numpy_CE_absolute_difference_from_selected": 2.2506451924364512e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 2.384185793236071e-08,
+      "source_validation_balanced_accuracy": 0.5,
+      "source_validation_class_recall": [
+        0.1,
+        0.9
+      ],
+      "predicted_class_counts": [
+        2,
+        18
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": false
+    },
+    {
+      "job_id": "c0c94ed7a22a6c97e257db3f2c565b6e16da24d91fe16e099a74e9e1662bbce5",
+      "subject": "sub-15",
+      "seed": 20261014,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-15-seed-20261014-run01.tar",
+      "archive_filename": "c0c94ed7a22a6c97e257db3f2c565b6e16da24d91fe16e099a74e9e1662bbce5.tar",
+      "archive_sha256": "4b6aec0aa20b244351df155b8ccea9ac0bd21e6989ed8a48ffc60c99f97092da",
+      "archive_bytes": 266240,
+      "checkpoint_sha256": "9648767fe1194491d4cf1417af6f4cbbb61dfcfb06ef7bccccaf99a8d0aec459",
+      "checkpoint_state_sha256": "17779bca93f9cb460901b6a711895c6c33ef518868ca444eb50d9ec80a18ef2d",
+      "epochs": 86,
+      "optimizer_steps": 258,
+      "selected_epoch": 71,
+      "selected_source_validation_CE": 0.5881396532058716,
+      "independent_saved_logits_numpy_float64_CE": 0.588139607910289,
+      "recorded_training_torch_replay_CE": 0.5881396532058716,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.5881396532058716,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.5881396079102889,
+      "numpy_CE_absolute_difference_from_selected": 4.5295582618010144e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 0.0,
+      "source_validation_balanced_accuracy": 0.65,
+      "source_validation_class_recall": [
+        0.4,
+        0.9
+      ],
+      "predicted_class_counts": [
+        5,
+        15
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": false
+    },
+    {
+      "job_id": "4c8846cc25091eae85d942ac3c6c179a014a236eccb1613270ef8bcfbf0a485c",
+      "subject": "sub-17",
+      "seed": 20261012,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-17-seed-20261012-run01.tar",
+      "archive_filename": "4c8846cc25091eae85d942ac3c6c179a014a236eccb1613270ef8bcfbf0a485c.tar",
+      "archive_sha256": "9b970fa9e9a07d5ccc339da10145af1a192380a202f5af0409452bf44cff3691",
+      "archive_bytes": 266240,
+      "checkpoint_sha256": "9c5a38a554c7fc24dd7d01aac2feacf6a10632283d9a82bf3b4ab1a5a759eb54",
+      "checkpoint_state_sha256": "949abc97c77ade6918e895ed5cdc5ab791e5630af91fb277033fcb47ff3269ff",
+      "epochs": 100,
+      "optimizer_steps": 300,
+      "selected_epoch": 100,
+      "selected_source_validation_CE": 0.29338093996047976,
+      "independent_saved_logits_numpy_float64_CE": 0.2933809463590804,
+      "recorded_training_torch_replay_CE": 0.29338093996047976,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.2933809161186218,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.2933809463590804,
+      "numpy_CE_absolute_difference_from_selected": 6.3986006493266245e-09,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 2.384185793236071e-08,
+      "source_validation_balanced_accuracy": 0.8500000000000001,
+      "source_validation_class_recall": [
+        0.9,
+        0.8
+      ],
+      "predicted_class_counts": [
+        11,
+        9
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": true
+    },
+    {
+      "job_id": "a30ed546e2ab02bf9c9df4ff9ebb35e6269c84428965eeda56f95cc572bfe1cf",
+      "subject": "sub-17",
+      "seed": 20261013,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-17-seed-20261013-run01.tar",
+      "archive_filename": "a30ed546e2ab02bf9c9df4ff9ebb35e6269c84428965eeda56f95cc572bfe1cf.tar",
+      "archive_sha256": "ae49f62d61aeaaa9bba1f5a4576e03f038fcd97b0392e5e8790d0efc05e2d1f9",
+      "archive_bytes": 256000,
+      "checkpoint_sha256": "0f47c33b41325668b4e06a4e7589b5d23ad1f1baa4f71f0c0ed1c18048959366",
+      "checkpoint_state_sha256": "ea42e735236ab33182b9a8c0098b1b25bc6efe010d3c872373091daab8711485",
+      "epochs": 16,
+      "optimizer_steps": 48,
+      "selected_epoch": 1,
+      "selected_source_validation_CE": 0.692409873008728,
+      "independent_saved_logits_numpy_float64_CE": 0.6924099136807995,
+      "recorded_training_torch_replay_CE": 0.692409873008728,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.6924099326133728,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.6924099136807996,
+      "numpy_CE_absolute_difference_from_selected": 4.067207148850116e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 5.960464477539063e-08,
+      "source_validation_balanced_accuracy": 0.6000000000000001,
+      "source_validation_class_recall": [
+        0.8,
+        0.4
+      ],
+      "predicted_class_counts": [
+        14,
+        6
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": false
+    },
+    {
+      "job_id": "c163c8f36f3c6093ae06e622bb3026400dc068728a8fa5e67ccc99b47b6d9c77",
+      "subject": "sub-17",
+      "seed": 20261014,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-17-seed-20261014-run01.tar",
+      "archive_filename": "c163c8f36f3c6093ae06e622bb3026400dc068728a8fa5e67ccc99b47b6d9c77.tar",
+      "archive_sha256": "5df6d6bb088793697d21b6283816ec5c7b7a0925c5efe9a7f67e88d96cf07df7",
+      "archive_bytes": 266240,
+      "checkpoint_sha256": "4f68a6717eae553c71cc05c329b6257fe1dab5ba0c2656060c19ecd6b9fc849e",
+      "checkpoint_state_sha256": "266ea5a89266f19ddc66015ff5867baceaaa5346a608241ad0016089a1768bd6",
+      "epochs": 100,
+      "optimizer_steps": 300,
+      "selected_epoch": 85,
+      "selected_source_validation_CE": 0.3879507929086685,
+      "independent_saved_logits_numpy_float64_CE": 0.38795080098955725,
+      "recorded_training_torch_replay_CE": 0.3879507929086685,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.3879507780075073,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.3879508009895573,
+      "numpy_CE_absolute_difference_from_selected": 8.080888735939595e-09,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 1.4901161193847656e-08,
+      "source_validation_balanced_accuracy": 0.8,
+      "source_validation_class_recall": [
+        0.7,
+        0.9
+      ],
+      "predicted_class_counts": [
+        8,
+        12
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": true
+    },
+    {
+      "job_id": "769c451a4692ba6637a98cc4d88206560d474278e75650d0fa56b62c12c2b26e",
+      "subject": "sub-18",
+      "seed": 20261012,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-18-seed-20261012-run01.tar",
+      "archive_filename": "769c451a4692ba6637a98cc4d88206560d474278e75650d0fa56b62c12c2b26e.tar",
+      "archive_sha256": "6512449d15446f79ad81dd8e44b64dea1f2c8d1ba607e53cffabc9c7c582bba1",
+      "archive_bytes": 256000,
+      "checkpoint_sha256": "526c825918ff101d29b26f2c33632cbd7acc3ad6c4f748d1f72c05b48a2d67de",
+      "checkpoint_state_sha256": "a639d0eeaba65e433b3f5b440f2c1324093041b138bcdd8e1df41ddc96815298",
+      "epochs": 19,
+      "optimizer_steps": 57,
+      "selected_epoch": 4,
+      "selected_source_validation_CE": 0.6929255723953247,
+      "independent_saved_logits_numpy_float64_CE": 0.6929255685834865,
+      "recorded_training_torch_replay_CE": 0.6929255723953247,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.6929255723953247,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.6929255685834865,
+      "numpy_CE_absolute_difference_from_selected": 3.811838178435778e-09,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 0.0,
+      "source_validation_balanced_accuracy": 0.5,
+      "source_validation_class_recall": [
+        0.0,
+        1.0
+      ],
+      "predicted_class_counts": [
+        0,
+        20
+      ],
+      "class_collapse": true,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": false
+    },
+    {
+      "job_id": "e5bd76408bd7c3f5c98ae7b9655d7afc934974003d19fdf5d101c14de799565a",
+      "subject": "sub-18",
+      "seed": 20261013,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-18-seed-20261013-run01.tar",
+      "archive_filename": "e5bd76408bd7c3f5c98ae7b9655d7afc934974003d19fdf5d101c14de799565a.tar",
+      "archive_sha256": "2682b58be1c3db20c5770366046a798ba13551574a9be8ba462bbe865cc7c9cc",
+      "archive_bytes": 256000,
+      "checkpoint_sha256": "c4c921395a11300373598dfc9503cc8968570c12e51215cc2dc7dbf9ff15c99f",
+      "checkpoint_state_sha256": "fb9d4b098e64d1b3025159dc0c47deef5a204d9cb0e0af3de2c4315865688b3e",
+      "epochs": 17,
+      "optimizer_steps": 51,
+      "selected_epoch": 2,
+      "selected_source_validation_CE": 0.6923950672149658,
+      "independent_saved_logits_numpy_float64_CE": 0.6923951008892205,
+      "recorded_training_torch_replay_CE": 0.6923950672149658,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.6923950910568237,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.6923951008892205,
+      "numpy_CE_absolute_difference_from_selected": 3.3674254718008e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 2.384185793236071e-08,
+      "source_validation_balanced_accuracy": 0.55,
+      "source_validation_class_recall": [
+        0.5,
+        0.6
+      ],
+      "predicted_class_counts": [
+        9,
+        11
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": false
+    },
+    {
+      "job_id": "56d83341333e2ad2ec222ea04e316fcca00d690d2ef440956906d372877f0bc4",
+      "subject": "sub-18",
+      "seed": 20261014,
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-remaining-source-20261015/sub-18-seed-20261014-run01.tar",
+      "archive_filename": "56d83341333e2ad2ec222ea04e316fcca00d690d2ef440956906d372877f0bc4.tar",
+      "archive_sha256": "9a052f4ba27b67ccde334e1c114597485072dbea3a2c509e75b0c928f7dec7cd",
+      "archive_bytes": 256000,
+      "checkpoint_sha256": "89acd2e4dac6c530d7730a556259e389ccd41fa5ef711516b000fe817034f298",
+      "checkpoint_state_sha256": "02af98397c8f05bf1aa4598081bd51814ddfb28e20c73ee57648da10e07b2d62",
+      "epochs": 32,
+      "optimizer_steps": 96,
+      "selected_epoch": 17,
+      "selected_source_validation_CE": 0.692189359664917,
+      "independent_saved_logits_numpy_float64_CE": 0.6921893299138271,
+      "recorded_training_torch_replay_CE": 0.692189359664917,
+      "independent_saved_logits_cpu_torch_float32_CE": 0.6921892762184143,
+      "independent_saved_logits_cpu_torch_float64_CE": 0.6921893299138272,
+      "numpy_CE_absolute_difference_from_selected": 2.9751089924978658e-08,
+      "recorded_torch_CE_absolute_difference_from_selected": 0.0,
+      "cpu_torch_float32_CE_absolute_difference_from_selected": 8.344650270775134e-08,
+      "source_validation_balanced_accuracy": 0.55,
+      "source_validation_class_recall": [
+        0.1,
+        1.0
+      ],
+      "predicted_class_counts": [
+        1,
+        19
+      ],
+      "class_collapse": false,
+      "source_train_rows": 40,
+      "source_validation_rows": 20,
+      "query_rows_loaded": 0,
+      "max_epoch_cap_reached": false
+    }
+  ],
+  "original_archives": [
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/1114f9f1524f681564334e943200e3c09b6efa900c0bf80b394c8992cc08e8fd.tar",
+      "sha256": "2c0c01780a36247ac81e8f457c04fda04c58ae76c5db95e61543a9fd291385b0",
+      "bytes": 256000
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/123bdeee936900b1d3d1c23aebda48ee02d6f0c46f2de9f17d711b8ed1653629.tar",
+      "sha256": "1966ab9fcd0a041c8d3d3e7edea131d41ab05ff66c45d3b0436dd039a2fecb5d",
+      "bytes": 256000
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/15203ad240b981b752d4af83fe24fd8aebfd92c96820c66eda7c32ca6ba0c799.tar",
+      "sha256": "467ab3d88d8d637f6496e7bca7c2c81f1c3215edca7385710cad96ffef06d627",
+      "bytes": 256000
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/18c5557aa4335b6efe44bc202c41393219a81624d00be7da5ded393102cb307e.tar",
+      "sha256": "0e037fd230dde5467e024afc17e55af248e74f7670760b098b51a76ce5afb4cc",
+      "bytes": 256000
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/3a13a62edf23ed06a82c7103f65d187e7f90bde428284b39484e884caef16091.tar",
+      "sha256": "0aeb2e9ba663f9cc3190ad2a80c7180ef6ca5b6fd1d74639e724d5a44fe61270",
+      "bytes": 266240
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/4221970caa1ebb7becc3ba3ba108ee9ea5b2bd44d95ca8e69f3eda7a280942dd.tar",
+      "sha256": "b1fe9dc37e96fba657bfccd3e6b85bcbe4e2a63b7c00965f2cc2e4ea41845e73",
+      "bytes": 256000
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/4c8846cc25091eae85d942ac3c6c179a014a236eccb1613270ef8bcfbf0a485c.tar",
+      "sha256": "9b970fa9e9a07d5ccc339da10145af1a192380a202f5af0409452bf44cff3691",
+      "bytes": 266240
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/4ce16e24f1df1c9f3ceb262166a3a9c99ebd3c32e9debdbffd51fa19a877dafe.tar",
+      "sha256": "a02d5cd58c7c56d4c52aba7721b9bc8e7e007cd33d92682d58dc6868b72f677d",
+      "bytes": 256000
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/56d83341333e2ad2ec222ea04e316fcca00d690d2ef440956906d372877f0bc4.tar",
+      "sha256": "9a052f4ba27b67ccde334e1c114597485072dbea3a2c509e75b0c928f7dec7cd",
+      "bytes": 256000
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/66b5c7a89b8fb4ccbca9f25dfaa588c6952f2aad3a1d7648348f8e88361c4c2f.tar",
+      "sha256": "9aec72b2913adf72ac1ffc44f25a3f602abd2a095712983ff90054a704a3a7de",
+      "bytes": 256000
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/70011f5decf4795e8a16cf9658c2af1de69dd0d65ac0d515e6e33988979a61ae.tar",
+      "sha256": "1ac505b892ddcc906415c3ac86139dc904ac8cef1a197c9537ed4ac75566c04e",
+      "bytes": 266240
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/769c451a4692ba6637a98cc4d88206560d474278e75650d0fa56b62c12c2b26e.tar",
+      "sha256": "6512449d15446f79ad81dd8e44b64dea1f2c8d1ba607e53cffabc9c7c582bba1",
+      "bytes": 256000
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/7b6ebeaef294dff0339c43fa1c35d7f6c34f30785d3e8b2bb9a03e8b7f23b22a.tar",
+      "sha256": "1313145f9f0f093936df30098bf95726a7a6e9553d440a49c300b8decd224682",
+      "bytes": 266240
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/80bcdedfef4684c5cc9b307805bfb74e00bf0a85756059e351eb10a78a13a037.tar",
+      "sha256": "20e66e434aa0211fb6661a558ce186272c07dd372073adb3d9175485432f7ead",
+      "bytes": 256000
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/812b29345cc8262ef329f5b09e24141c65f47f24fe8dd2c044b70f9005946d74.tar",
+      "sha256": "bbbad039970242163914e4cf1a51e6bc34650bd8e998e1c30cb1a7772559a1ef",
+      "bytes": 266240
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/98e0ab893e8920a08adbb0298a9e45d5d3cb9a2d0f884110d77cb109676e0aee.tar",
+      "sha256": "97a43e2098c1e2f4cbc1a6fa68f553aa47d2ab0b300258f10f325b27d52b420d",
+      "bytes": 256000
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/9b75bb235cd933c268778dc802fe1d4300d6594de8fb5511522fcecf4badf35c.tar",
+      "sha256": "12b4a260be84a711233ee27ed832b26c9e64963903abfac762a20914665114d2",
+      "bytes": 266240
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/a30ed546e2ab02bf9c9df4ff9ebb35e6269c84428965eeda56f95cc572bfe1cf.tar",
+      "sha256": "ae49f62d61aeaaa9bba1f5a4576e03f038fcd97b0392e5e8790d0efc05e2d1f9",
+      "bytes": 256000
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/a73f6eb94abd509ca6ec91b3908275f18cfed340bff6e7f8fa64851ddf1ccc64.tar",
+      "sha256": "26343dc13b669e967ba8a66ff017cde05e94607f3353bd18449ee20da8018351",
+      "bytes": 266240
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/ab971cc08608806ea2483fdec9c624b1e95490b6a2309a2e9122cceab9829850.tar",
+      "sha256": "e6c8eadf1fc931cc51447010fc978bc21bc351d26bc99c5655c24a0d78603ecc",
+      "bytes": 256000
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/b5eec7743c554b62a21e160d012eefa38a160a9dbc0dc8809d27ccfb85e7c1c9.tar",
+      "sha256": "508ebc11a679ecb2cddc32eb3df903756b02ffdd5af18dd566c05f26806e80d2",
+      "bytes": 256000
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/b65b18b7a4fe02dbb95b2e42110a213a7f5f76db4ff7c19473e4320938dbab58.tar",
+      "sha256": "12da3ca34ed6ddc831a177f9ec73486e1e2ea5c79b2d0deee9d6f3b9d35c00f1",
+      "bytes": 256000
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/c0c94ed7a22a6c97e257db3f2c565b6e16da24d91fe16e099a74e9e1662bbce5.tar",
+      "sha256": "4b6aec0aa20b244351df155b8ccea9ac0bd21e6989ed8a48ffc60c99f97092da",
+      "bytes": 266240
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/c163c8f36f3c6093ae06e622bb3026400dc068728a8fa5e67ccc99b47b6d9c77.tar",
+      "sha256": "5df6d6bb088793697d21b6283816ec5c7b7a0925c5efe9a7f67e88d96cf07df7",
+      "bytes": 266240
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/caae0027156bdc8ec56b7f863666bba9d8ffe083c85f735c2772f357657fb6c8.tar",
+      "sha256": "ca1101b1a4eb954b89598d17ba9d461658fb95149aabbb35f19be1cde13895aa",
+      "bytes": 266240
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/cbd82eef6ffd5c856e142ac381032e252080957d58f5803b8b7eb2fcb09f6218.tar",
+      "sha256": "4081e375018b55809f5a2826d7c96626a0dd87ae67554ddcd27a4b734d06d290",
+      "bytes": 256000
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/d1392eb4c7b5aaaa6539285d41f45b63bf7d09258b54d41a6dfc326492d91c1c.tar",
+      "sha256": "d5eb8d6842d98118f8ce1e721afab7fcd2028ed5d1de7186ab230b40e28e14a6",
+      "bytes": 266240
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/d80b3b44b6729ec7d94e42cce0668f8065c9fc15c62538b0d37b6e67eb461c7b.tar",
+      "sha256": "3a6467ea3ca1ed31a2c530db1d0f4107272f60b348396d3ca74d4c1fcfeee479",
+      "bytes": 256000
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/dd28327b1068bb128614eeb63d7727a8b59da65dc8e52575ef3533d7d1ade074.tar",
+      "sha256": "967a0467bdabeca2372d018dfe968ea9c5ef58607199fb1d4827138ca8e248b1",
+      "bytes": 256000
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/df3d71e4bed6d37058026cbce4f60e34783fb11c87d8b0f5efe6f368c91ba222.tar",
+      "sha256": "7a970cfd963aa3440bf813e3c3dcaff6f82bb27fd768b56a53726a871709b82f",
+      "bytes": 256000
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/e3ddfeef4ae6212f2b02658a7941e515a84fe648a60aca064e02b1993e9942bb.tar",
+      "sha256": "c745b102258cc8626975ffbbf50e9274cde84078916455e115c4f52eaba65a16",
+      "bytes": 266240
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/e5bd76408bd7c3f5c98ae7b9655d7afc934974003d19fdf5d101c14de799565a.tar",
+      "sha256": "2682b58be1c3db20c5770366046a798ba13551574a9be8ba462bbe865cc7c9cc",
+      "bytes": 256000
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/e903c5fa4eeacd7fc10bc1031e177219051145cb918f0c4542dd56197fc95184.tar",
+      "sha256": "c0637983e748d8c46fd43d3f6a0464e62ffe247fd6352036eca252c1418739fe",
+      "bytes": 256000
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/e9089a2b0c761b399c14f02a49dd09d16d3a72ab80c935bef50b61754980b880.tar",
+      "sha256": "0807d1d11aba3fa105bb422b14d408311c6175b9c0fd92af392c6adf907b354f",
+      "bytes": 256000
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/e93b469def25a046cfa08d08fdba7c3dbd6b93bc2d17d360d9d44ef1782aeb07.tar",
+      "sha256": "6e14ea97726090a55bf5d241f7063f4eb124c5e6b3c623df86043bd65157971b",
+      "bytes": 266240
+    },
+    {
+      "path": "/workspace/private_model_receipts/remaining36-audit-20261015-run01/handoff/original-results/edad083df2e4be007e3c4e6f38c00287de389113db9e7987674711ec0d2cf6eb.tar",
+      "sha256": "fc930799c78ec1288355fd088c463ef1b1a01b6f087d42154bd6238ea43c78aa",
+      "bytes": 266240
+    }
+  ]
+}

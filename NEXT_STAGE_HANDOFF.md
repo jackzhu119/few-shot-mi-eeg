@@ -128,3 +128,27 @@ HTTPS/私人备份操作修订：固定首fit官方同版本同字节25文件/16
 
 
 2026-10-15用户要求优先立即推进剩余36EEGNet源模型、撤销全部费用执行前提，不等CSP文稿。已对9f7bc102现存部署差异做最小修复：既有runner authorization_check/new_state删除cost/rate/balance与余额时效硬门，显式financial_execution_preconditions=superseded-by-user，历史账目/unknown保留；source_fit仅授权元字段更名，不改科学逻辑。完全相同253条HTTPS manifest只将execution_enabled改true并更新pins。runner SHA9e54f1107956cae6f98228e787838cf973b8889fa98a85b7ce889cf3a2847dfc，contract SHAf1a5b94aa89f6f2d9f694f7c270e48ef2624afc06be3a08e328f500224491bd9，HTTPS SHAb654533a6e4fee780fab11d7a9a44ec418ef327f2422f2a2570d49cfa1b47b9f；原253source manifest312b5bd3...不变。82相关测试/只读metadata/Ruff通过；36身份顺序、accepted18排除、全局GPU锁、两fit离机门、1800/3600/10800秒、原线程/1e-7/磁盘/零重试均不改。253原字节196740994B已本地逐项重验并打包source-inputs-253.tar.gz，114244136B/SHAfc9f1b26f79df27e6fd5ab06264a092dbe289af38b309aa0f8bf03eed8968155，全254成员含原manifest重验；包+清单+回执共3对象114390912B完整R2 GET/SHA零失败。精确dot部署/恢复/授权/启动/离机命令见docs/kumar_remaining_source_operation_contract_20261015.md，交付research_logs/kumar_remaining36_deployment_20261015。唯一现场待完成是dot将实际当前Pod三元组和不重置的<=10800秒绝对窗口绑定到固定代码/合同，发布真实运行记录；无需新费用或科学决定。Codex未操作Pod/启动训练，CSP run02原结果及R2完整回执、run01失败、accepted18与旧未提交文件完整保留。
+# 2026-10-15: remaining36 received, audited and R2 verified; parent confirmation pending
+
+Latest evidence: `research_logs/kumar_remaining36_audit_20261015/run01/REPORT.md`
+and `parent_acknowledgement_request.json` in that directory. The original
+36-model handoff and supplementary final dispatch/parent integrity report were
+received with their full expected SHA256. All36 frozen model audits passed:
+1844epochs /5532steps /query0; NumPy saved-logit CE maximum difference
+4.6890414995282015e-8, unchanged tolerance1e-7. The final dispatch supports actual
+exit75/complete_exported after the preserved exit76 and same-run resume.
+
+Private R2 full GET/SHA256 completed for113original objects /33666029bytes,
+zero failures. Full receipt113810bytes SHA256
+`bd52fb3f691d9309ce1cd30a1fa4e92921282399e014a1119b06f06041bdcb1c`.
+All36 original model keys equal their frozen contract result_key; full object
+mapping and independent closing check are in the evidence directory. Two
+derived JSON convenience-copy byte mismatches were explicitly reconciled as
+sorted-key reserialization; the first failed audit and all originals remain.
+
+There are now54historical source fits across18participants; the accepted ledger
+is still the unchanged18development models. The new36 are trained/off-Pod/
+audited/R2-verified, accepted=false pending actual dot confirmation. No newfit,
+query, Pod or paper1 operation was performed. Do not resume the completed queue.
+See `NEXT_ANALYSIS_READINESS.md` there for checkpoint-only analysis preparation;
+no query or scientific-strategy gate is released by this audit/backup.
