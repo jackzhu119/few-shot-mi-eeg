@@ -213,3 +213,46 @@ worker or generic training. One CPU attempt only, global lock, zero automatic
 retry, fixed resource/deadline/partial-evidence gates. Prior test exposure stays
 exploratory. Real query results, independent audit, R2 full GET and acceptance
 remain distinct future stages; source acceptance grants none of them.
+
+# 2026-10-15: actual always-frozen query evaluation completed and independently audited
+
+Dot's real 09:14 UTC authorization released exactly one query-only operation at
+fixed d34703ca5bccf7a5b88a91c2ffb2cba893f7cec8 and contract
+fb3a429776e77a4ee8de96c8c7f2a833a4d311cedd8f0a9bcec3d0c6e8df225a.
+The original CPU host, 54 unchanged source checkpoints and 1189 fixed inputs
+passed all preflight/full-SHA gates. Worker PID23678 started09:22:19.606977UTC;
+launcher exit0 was observed09:23:38.857527UTC, inside the original09:14–11:14
+window. All54 completed once, no retries, fit, optimizer or support updates.
+No Pod or paper1 operation occurred. Do not rerun the completed query operation.
+
+Evidence: research_logs/kumar_frozen_query_execution_audit_20261015/run01/.
+Identity audit8026checks and saved-prediction arithmetic audit203421checks
+passed; maximum arithmetic difference0. All1189 inputs were independently
+rehashed after execution. Recorded model/BN/normalization state digests match
+before/after and the original checkpoint binding. Auditors did not perform a
+second model forward or claim to reconstruct transient process memory.
+All4290 included query identities, 30 original exclusions, 3 seeds and18
+participants were retained. Original producer flags and source accepted54
+ledger remain unchanged; new evaluation stages are recorded separately.
+
+Fixed remaining12 target BA51.5783%, participant-bootstrap95% interval
+49.0800–54.5125%; dev6 target52.3087%; all18 secondary51.8218%.
+All target cohort intervals include50%, with no new formal chance test.
+The frozen source-only baseline is weak; no task-aware gate, adaptive benefit,
+clinical effect or human skill retention is established. Prior test exposure
+remains exploratory. No query-selected rules, seed exclusions or new scientific
+execution are released by this result or its future acceptance.
+
+Main private result/evidence R2 backup:147 unique objects /17608200bytes,
+147 full GET/SHA256 verified,0failures. Complete receipt114345UTF-8bytes SHA256
+15682a07c13d69aa7bd7aca2cf65327aea7c58fb4e8cb1205b195d4b0fcbb9e2.
+Independent closing review also matches all147 originals/staged files/keys.
+The 54 original model objects were separately fully GET/SHA checked before
+execution (12636160bytes); no weights or raw EEG are added to GitHub.
+
+Minimal next action: dot reads this fixed commit's REPORT.md, all independent
+audits, complete r2_full_get_receipt.json and parent_acknowledgement_request.json
+in the evidence directory, independently checks the exact54 query identities,
+and supplies a real acknowledgement for this query evaluation only.
+Query evaluation accepted=false until that actual confirmation. Do not append
+source fits again, reuse the claim, launch training or infer another query grant.

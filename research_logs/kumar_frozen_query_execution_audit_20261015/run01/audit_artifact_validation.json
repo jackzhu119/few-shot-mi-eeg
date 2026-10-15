@@ -1,0 +1,31 @@
+{
+  "scope": "validation_of_executed_read_only_audit_artifacts_not_scientific_runner",
+  "immutable_executed_scripts_preserved": true,
+  "initial_strict_check": {
+    "exit_code": 1,
+    "findings": [
+      "E702 semicolon formatting in two executed numerical audit scripts",
+      "E902 root check initially named operation_independent_review_run01.py; actual retained file is operation_audit_run01.py"
+    ]
+  },
+  "formatting_waiver": "E702 only, preserve exact executed script bytes and their result-bound hashes; research_logs artifacts are outside normal src/tests/scripts lint targets",
+  "corrected_command": [
+    "/workspace/.venvs/few-shot-mi-eeg/bin/ruff",
+    "check",
+    "--ignore",
+    "E702",
+    "research_logs/kumar_frozen_query_execution_audit_20261015/run01/identity_archive_input_audit.py",
+    "research_logs/kumar_frozen_query_execution_audit_20261015/run01/numerical_saved_prediction_audit.py",
+    "research_logs/kumar_frozen_query_execution_audit_20261015/run01/numerical_class_collapse_detail.py",
+    "research_logs/kumar_frozen_query_execution_audit_20261015/run01/operation_audit_run01.py"
+  ],
+  "exit_code": 0,
+  "stdout": "All checks passed!\n",
+  "script_sha256": {
+    "identity_archive_input_audit.py": "ad563068e73364b7565a4db190d7194c0664cdba8ef9bbcdf4ddb399d4ccc56b",
+    "numerical_saved_prediction_audit.py": "41e2ea82b66961dfcfc33b2ef315a3f3f8af9fd7baa87d1c631a4ab63a1e456f",
+    "numerical_class_collapse_detail.py": "7651a4af3bc28d36af10d9a678dae1ed713c990fcae51b74ee027769f8973979",
+    "operation_audit_run01.py": "bd46c6edc74a00c34c4ccdd398de5b48df3ba400ad6c69ef81f07cebcdd6d8fa"
+  },
+  "real_query_run_repeated": false
+}

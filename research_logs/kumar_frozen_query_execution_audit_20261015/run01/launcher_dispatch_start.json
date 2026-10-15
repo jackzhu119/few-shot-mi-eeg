@@ -1,0 +1,28 @@
+{
+  "status": "dispatched_not_complete",
+  "launcher_pid": 23665,
+  "launched_at_utc": "2026-10-15T09:22:19.414178+00:00",
+  "command": [
+    "/workspace/.venvs/few-shot-mi-eeg/bin/python",
+    "-B",
+    "scripts/run_kumar_frozen_query_evaluation.py",
+    "--execute",
+    "--expected-commit",
+    "d34703ca5bccf7a5b88a91c2ffb2cba893f7cec8",
+    "--reviewed-contract-sha256",
+    "fb3a429776e77a4ee8de96c8c7f2a833a4d311cedd8f0a9bcec3d0c6e8df225a",
+    "--authorization",
+    "/workspace/private_model_receipts/frozen-query-evaluation-20261015/actual_external_authorization.json",
+    "--authorization-sha256",
+    "137c42df93f99992e2a04603f0107fb6e02554ed3150566b6a57446069649dca",
+    "--data-root",
+    "/workspace/few-shot-mi-eeg/data/public_eeg/kumar2024/nm000177/v1.0.5",
+    "--archive-root",
+    "/workspace/private_model_receipts/frozen-query-originals-54",
+    "--output",
+    "/workspace/private_model_receipts/frozen-query-evaluation-20261015/run01/results"
+  ],
+  "actual_authorization_sha256": "137c42df93f99992e2a04603f0107fb6e02554ed3150566b6a57446069649dca",
+  "remaining_seconds_after_cleanup_reserve": 6670.585289001465,
+  "automatic_retries": 0
+}

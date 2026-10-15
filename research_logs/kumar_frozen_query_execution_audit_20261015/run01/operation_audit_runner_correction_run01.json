@@ -1,0 +1,10 @@
+{
+  "scope": "independent_read_only_auditor_schema_correction_not_scientific_execution",
+  "initial_audit_attempt": "Stopped before publishing operation_independent_review_run01.json",
+  "actual_exception": "TypeError: can only concatenate list (not int) to list",
+  "cause": "Auditor initially treated staging receipt failed_files as an integer; the original schema is a list.",
+  "correction": "Require verified_objects == 54 and failed_files == [] directly.",
+  "original_evidence_modified": false,
+  "query_or_model_execution_repeated": false,
+  "scientific_tolerance_or_gate_changed": false
+}

@@ -1,0 +1,35 @@
+{
+  "diagnostic_id": "kumar-accepted54-always-frozen-query-evaluation-run01-20261015",
+  "launcher_pid": 23665,
+  "launcher_start_ticks": 3143278,
+  "claimed_at_utc": "2026-10-15T09:22:19.602882+00:00",
+  "container_identity": {
+    "hostname": "94346a2083c4",
+    "boot_id": "02e1dd56-6faf-45ed-b710-a28705535fb6",
+    "pid1_start_ticks": "54"
+  },
+  "reviewed_commit": "d34703ca5bccf7a5b88a91c2ffb2cba893f7cec8",
+  "contract_sha256": "fb3a429776e77a4ee8de96c8c7f2a833a4d311cedd8f0a9bcec3d0c6e8df225a",
+  "authorization_sha256": "137c42df93f99992e2a04603f0107fb6e02554ed3150566b6a57446069649dca",
+  "deadline_unix": 1792062840.0,
+  "data_root": "/workspace/few-shot-mi-eeg/data/public_eeg/kumar2024/nm000177/v1.0.5",
+  "archive_root": "/workspace/private_model_receipts/frozen-query-originals-54",
+  "output": "/workspace/private_model_receipts/frozen-query-evaluation-20261015/run01/results",
+  "resource_preflight": {
+    "memory": {
+      "host_available_bytes": 9662164992,
+      "cgroups": [
+        {
+          "path": "/sys/fs/cgroup",
+          "limit_bytes": 8589934592,
+          "current_bytes": 2531540992,
+          "headroom_bytes": 6058393600
+        }
+      ],
+      "effective_available_bytes": 6058393600
+    },
+    "output_filesystem_path": "/workspace/private_model_receipts/frozen-query-evaluation-20261015",
+    "free_output_disk_bytes": 5215252480
+  },
+  "automatic_retries": 0
+}
