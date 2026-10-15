@@ -17,10 +17,48 @@ def test_actual_gates_reuse_first_and_select_only_next_frozen_job():
     assert len(plan["jobs"]) == 18
     accepted = queue.json_file(queue.ROOT / runtime["accepted_jobs"])["accepted_jobs"]
     accepted_ids = {entry["job_id"] for entry in accepted}
-    expected = next(item for item in plan["jobs"] if item["job_id"] not in accepted_ids)
+    expected = next(
+        (item for item in plan["jobs"] if item["job_id"] not in accepted_ids), None
+    )
     assert job == expected
     assert plan["jobs"][0]["job_id"] in accepted_ids
     assert not runtime["formal_gate"]
+
+
+def test_accepted_eighteen_closes_default_dispatch_without_gpu(tmp_path, monkeypatch, capsys):
+    runtime, plan, job = queue.check_gate()
+    accepted = queue.json_file(queue.ROOT / runtime["accepted_jobs"])["accepted_jobs"]
+    assert [entry["job_id"] for entry in accepted] == [item["job_id"] for item in plan["jobs"]]
+    assert len(accepted) == 18 and job is None
+    assert not runtime["query_access"] and not runtime["formal_gate"]
+    lock = tmp_path / "unused-gpu.lock"
+    monkeypatch.setattr(queue, "LOCK", lock)
+    monkeypatch.setattr(sys, "argv", ["queue"])
+    monkeypatch.setattr(queue, "execute", lambda *_a: pytest.fail("Completed fit dispatched"))
+    queue.main()
+    report = json.loads(capsys.readouterr().out.splitlines()[-1])
+    assert report == {"status": "plan_only", "next_job": None, "fit_executed": False}
+    assert not lock.exists()
+
+
+@pytest.mark.parametrize("field,value", [
+    ("status", "pending"), ("receipt_sha256", "wrong"), ("job_id", "another-job")
+])
+def test_new_acceptance_requires_its_real_parent_acknowledgement(monkeypatch, field, value):
+    original_read = queue.json_file
+    runtime = original_read(queue.RUNTIME)
+    accepted = original_read(queue.ROOT / runtime["accepted_jobs"])["accepted_jobs"]
+    ack_path = queue.checked_path(accepted[7]["parent_acknowledgement"])
+
+    def changed_ack(path):
+        data = original_read(path)
+        if path == ack_path:
+            data[field] = value
+        return data
+
+    monkeypatch.setattr(queue, "json_file", changed_ack)
+    with pytest.raises(ValueError, match="acknowledgement missing|another job"):
+        queue.check_gate()
 
 
 def test_source_manifest_exactly_18_source_edfs_no_query():
@@ -57,7 +95,8 @@ def test_backup_gate_rejects_unverified_or_different_bytes(tmp_path, field, valu
 
 
 def test_partial_reservation_blocks_before_cuda_or_fit(tmp_path):
-    _, _, job = queue.check_gate()
+    _, plan, _ = queue.check_gate()
+    job = plan["jobs"][1]  # Synthetic reservation fixture; no live pending job is required.
     output = tmp_path / "reserved"
     output.mkdir()
     job = dict(job, output=str(output))
@@ -66,7 +105,8 @@ def test_partial_reservation_blocks_before_cuda_or_fit(tmp_path):
 
 
 def fake_complete_output(tmp_path):
-    _, _, job = queue.check_gate()
+    _, plan, _ = queue.check_gate()
+    job = plan["jobs"][1]  # Synthetic package fixture, never a real fit.
     output = tmp_path / "complete"
     output.mkdir()
     for name in queue.FILES:

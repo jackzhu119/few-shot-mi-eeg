@@ -1,0 +1,350 @@
+{
+  "status": "all18_accepted_development_queue_complete_no_pending_fit",
+  "recorded_at_utc": "2026-10-15T03:36:41.747703+00:00",
+  "parent_confirmation": "parent_confirmation.json",
+  "parent_confirmation_sha256": "0c3a46441ae25c64e96e45eb4911e8e57550634d1629d1343901880959da17ab",
+  "accepted_jobs": 18,
+  "ordered_ledger_matches_all_18_frozen_jobs": true,
+  "old_seven_entries_unchanged": true,
+  "ledger_path": "research_logs/kumar_development_queue_20261014/accepted_jobs.json",
+  "ledger_sha256": "1ee1868b97e6ff7ea2e42327fe64337cafbb0f8ee6aff19cc24fba5265f9aaa9",
+  "new_per_job_parent_acknowledgements": 11,
+  "next_job": null,
+  "pending_development_fits": 0,
+  "query_access": false,
+  "formal_gate": false,
+  "batch_original_read_only_gate": {
+    "accepted_jobs": 18,
+    "initial_gate_ready": true,
+    "query_access": false,
+    "formal_gate": false
+  },
+  "fresh_batch_start_policy": "Existing frozen runner requires exactly seven accepted before new-run; eighteen rejects before GPU runtime or claims (CPU regression test). Do not execute old batch or old formal_train.",
+  "historical_receipts_flags_failures_pause_and_logs_preserved": true,
+  "historical_proof": [
+    {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/R2_access_preflight_run01.json",
+      "sha256": "6cb5e3fdedef3488adf97e769c33468e3eb29438f516b626ff605400f83acd39",
+      "bytes": 275,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/R2_object_inventory_run01.json",
+      "sha256": "0ad8f6b443d4cf5b1061b4295d577ec1401462e1a8d4212df382299b754831bb",
+      "bytes": 28211,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/R2_receipt_crosscheck_run01.json",
+      "sha256": "26befa609f285fac97b3dd3f89d1a028818ace24524e32f1fd0a1499f627e979",
+      "bytes": 950,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/REPORT.md",
+      "sha256": "9fbd8f237786ff94cebf52e216a4c2050bc445b28211c99b0dd6ccb2bf720f6d",
+      "bytes": 6622,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/all11_model_audit_table.csv",
+      "sha256": "8eb0d0d3e3de83c9b08d51d229af02d3989ac29671729ac2f0d1580568daf67f",
+      "bytes": 2005,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/all11_result_audit_run01.json",
+      "sha256": "8d743487f61eeafd1c612e1b731c70dee63471f6a4c56ca5820af985c554fc9d",
+      "bytes": 10016,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/boundary_independent_review_run01.json",
+      "sha256": "40dcace5b69b891e5f80d99ef6d901a9e768ad32f8fdc263d9dc931e75bb3f01",
+      "bytes": 20923,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/dispatch_independent_review_run01.json",
+      "sha256": "cc0ec4c26301be2cfab6deb88e442ee9ef1c223dca6f1979c30b225f220856cb",
+      "bytes": 56372,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/final_reception_validation_run01.json",
+      "sha256": "00e609e970329dd9897b09435220a033b7c94778491635b5174335dc17be953f",
+      "bytes": 7272,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/frozen_analysis_readiness_run01.json",
+      "sha256": "3c9b0784515bb47f8d9c9a83e878932401836de73b860c5804dcdfe2c1aa4635",
+      "bytes": 1116,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/model_audits/sub-10-seed-20261012.json",
+      "sha256": "06981e244e3dd9b0ca38ca1fe7d029e70a49311bd6a3663f0df3dff2d4e7c7da",
+      "bytes": 797,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/model_audits/sub-10-seed-20261013.json",
+      "sha256": "e68d49c2eef36b07922b59de9ea2da70a653e37c2520cf8ab5fbca3e3b64171b",
+      "bytes": 798,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/model_audits/sub-10-seed-20261014.json",
+      "sha256": "1b23f8c5e068afb122673d4a7bc3fc4e7efb0ba7c379157759d195e026dad91f",
+      "bytes": 798,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/model_audits/sub-13-seed-20261012.json",
+      "sha256": "057fdf4dedffafa796a3d4ddbdf93666401956b67d60a52059f45a8f6a94c7bd",
+      "bytes": 799,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/model_audits/sub-13-seed-20261013.json",
+      "sha256": "416d5e36c266aae1881738fcf8f8cbcb38e5bed1e2a89335f889570cab2b3b9a",
+      "bytes": 799,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/model_audits/sub-13-seed-20261014.json",
+      "sha256": "d0970efdbf73d612ea0468c285595dc04030e18a36a2e5f6bfbc416d401b7e3f",
+      "bytes": 799,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/model_audits/sub-16-seed-20261012.json",
+      "sha256": "e737b8d0efed37f9f1848a88f690a8211094dd358f312b014b13974ec1831a85",
+      "bytes": 799,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/model_audits/sub-16-seed-20261013.json",
+      "sha256": "d879c3e41aaf70ad324ad91cfebcc26187a9f18ad3b3803b3c70b3baf62d0ae7",
+      "bytes": 798,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/model_audits/sub-16-seed-20261014.json",
+      "sha256": "4cccad1664295f7efe5ebeb0a3b9ce8d13dc419001e91db1b690cabacb654eb2",
+      "bytes": 799,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/model_audits/sub-7-seed-20261013.json",
+      "sha256": "66298afd1a074a7ccc94f205862ad4b659a1232a469198204921f4014d05b7e4",
+      "bytes": 797,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/model_audits/sub-7-seed-20261014.json",
+      "sha256": "3e4f9170393b4a298137d307ca9a2aa103982f1c3298812b1ebe92de061ca99f",
+      "bytes": 796,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/original_handoff_identity_run01.json",
+      "sha256": "34e629c818f9b9bfa668fc2fa4b1e02e219bdc8dcaad88f9597ee324bc896325",
+      "bytes": 10122,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/parent_acknowledgement_request.json",
+      "sha256": "56eab3d5f91c4e94a77855d66136551cd23fd8a3e572ad67f5552945005a605a",
+      "bytes": 11781,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/proposed_acceptance_entries.json",
+      "sha256": "06e73508ccf6238cdc32324a0f5334a15f6148b215a039777420ba7c9de92787",
+      "bytes": 7310,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/r2_full_get_receipt.json",
+      "sha256": "a6e68f3391fa732ff2b779417a9f6efb308a4d9fba4a65c0c465d4b757ff8cd9",
+      "bytes": 38663,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/selection_and_replay_audit_run01.json",
+      "sha256": "4cc5a1f37d29d785cb8a8317d52a86d93e5c986f2564a0bcd1d02c3d5a9773dc",
+      "bytes": 10483,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_queue_20261014/sub-1-seed-20261013/parent_acknowledged.json",
+      "sha256": "173446d55640edadda1012869f3aa73cb2a6250cc32c4b6d140fde4c7016c7ad",
+      "bytes": 830,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_queue_20261014/sub-1-seed-20261013/r2_full_get_receipt.json",
+      "sha256": "f580a9de8414e5dda41ccae12ec9c7087756a2b99c8e7ab2f64803aaaa33413f",
+      "bytes": 2809,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_queue_20261014/sub-1-seed-20261014/parent_acknowledged.json",
+      "sha256": "ee80ca7f1233ca31988485c458a650f60aabecdebcfb350bf544d176850ed7fb",
+      "bytes": 758,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_queue_20261014/sub-1-seed-20261014/r2_full_get_receipt.json",
+      "sha256": "f7fd70269f10175ed7f93372500518cd18d642f49751ad77ebdc2e202413f4af",
+      "bytes": 2806,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_queue_20261014/sub-4-seed-20261012/parent_acknowledged.json",
+      "sha256": "a85f7aae61d7b30cd72752fe31fff47880398f7c2161fd35b7d2fdd2f1263645",
+      "bytes": 942,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_queue_20261014/sub-4-seed-20261012/r2_full_get_receipt.json",
+      "sha256": "6fc9db92ab89dd349e1fc13fde8eb2f5e7834f0a655cb9444fdac01c7396a99c",
+      "bytes": 2806,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_queue_20261014/sub-4-seed-20261013/parent_acknowledged.json",
+      "sha256": "6c2098c784c870aa8ec7970fce0455fd860a5eccef009e2afdc3bdc953b4abbe",
+      "bytes": 1034,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_queue_20261014/sub-4-seed-20261013/r2_full_get_receipt.json",
+      "sha256": "6afda0ba8accc08df359ca3c9887fe95a63f6b9e8e9f6f828367b2f557fca84d",
+      "bytes": 2816,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_queue_20261014/sub-4-seed-20261014/parent_acknowledged.json",
+      "sha256": "ddd41bc0035e4ad32edb4cb11ac28e43d9d4588388079686502b4c1466407b8b",
+      "bytes": 1034,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_queue_20261014/sub-4-seed-20261014/r2_full_get_receipt.json",
+      "sha256": "d35ad175bb831ce5681157ab0c85bb04780894c4d2bb0987fb749e6755ec2e00",
+      "bytes": 2816,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_queue_20261014/sub-7-seed-20261012/parent_acknowledged.json",
+      "sha256": "d47450e818bdba255c490d15f4b19afbec1cd3b35a7f032e3d9a23d155de8899",
+      "bytes": 1199,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_development_queue_20261014/sub-7-seed-20261012/r2_full_get_receipt.json",
+      "sha256": "b6293ab6fe6b551575f0fb2e7f1b5640f62dfc77632e838e1cf6a7a210091075",
+      "bytes": 2816,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_first_gpu_fit_20261014/parent_acknowledged.json",
+      "sha256": "f4b25a4c0ad3214237cd11bd6a908313de2bc6c3c31118b3a889451194fe77b0",
+      "bytes": 651,
+      "matches_fixed_preconfirmation_bytes": true
+    },
+    {
+      "path": "research_logs/kumar_first_gpu_fit_20261014/r2_full_get_receipt.json",
+      "sha256": "b0199119d17ce5909e0a906dc3f3da162e6b769653b4dadf48036fe95244f00d",
+      "bytes": 2790,
+      "matches_fixed_preconfirmation_bytes": true
+    }
+  ],
+  "unchanged_scientific_and_operational_entries": [
+    {
+      "path": "scripts/run_kumar_development_queue.py",
+      "bytes": 15912,
+      "sha256": "666324c630d51ca0308c1cc9bd44551f832991d07a541210b520b351e6a2df80",
+      "unchanged_from_fixed_commit": "fca47b7eeb62b01e7f2ea431d5095dba98d9f223"
+    },
+    {
+      "path": "scripts/launch_kumar_development_next.sh",
+      "bytes": 1435,
+      "sha256": "897018b23dd9e2a09fff60683c5c985ac42e5f2467384a17d515b597414f2285",
+      "unchanged_from_fixed_commit": "fca47b7eeb62b01e7f2ea431d5095dba98d9f223"
+    },
+    {
+      "path": "scripts/fetch_kumar_development_queue_https.py",
+      "bytes": 4627,
+      "sha256": "8d0fa0bd2212bb032cb8514828868da0cb4d00066ff7316b4c6435209d5c74f5",
+      "unchanged_from_fixed_commit": "fca47b7eeb62b01e7f2ea431d5095dba98d9f223"
+    },
+    {
+      "path": "scripts/audit_kumar_queue_bundle.py",
+      "bytes": 9946,
+      "sha256": "443d5ae88f64ef6276a4d9070009fd32c3dbfaab931872f8d3bdcade551a8721",
+      "unchanged_from_fixed_commit": "fca47b7eeb62b01e7f2ea431d5095dba98d9f223"
+    },
+    {
+      "path": "configs/kumar_development_queue_https_20261014.json",
+      "bytes": 66575,
+      "sha256": "10aa69b50a935587fcdaa38e4eb7424f7d3d92ab650f07f851a5083f000aaa1f",
+      "unchanged_from_fixed_commit": "fca47b7eeb62b01e7f2ea431d5095dba98d9f223"
+    },
+    {
+      "path": "configs/kumar_development_queue_runtime_20261014.json",
+      "bytes": 1105,
+      "sha256": "290b815e1aa6fb2fd9459499d84c84e48b0969c9945000704922a749a38092e5",
+      "unchanged_from_fixed_commit": "fca47b7eeb62b01e7f2ea431d5095dba98d9f223"
+    },
+    {
+      "path": "configs/kumar_eegnet_gpu_development_20261014.json",
+      "bytes": 5844,
+      "sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+      "unchanged_from_fixed_commit": "fca47b7eeb62b01e7f2ea431d5095dba98d9f223"
+    },
+    {
+      "path": "scripts/run_kumar_development_batch.py",
+      "bytes": 37284,
+      "sha256": "143899dcc6f43ca3d4468745c43f7e305015a696073a319b4bd45837164ab194",
+      "unchanged_from_fixed_commit": "fca47b7eeb62b01e7f2ea431d5095dba98d9f223"
+    },
+    {
+      "path": "scripts/launch_kumar_development_batch.sh",
+      "bytes": 508,
+      "sha256": "c599da3a4066e13791d12a1abe54e35e89472fd41bdc1fa809e13423b2ef2f13",
+      "unchanged_from_fixed_commit": "fca47b7eeb62b01e7f2ea431d5095dba98d9f223"
+    },
+    {
+      "path": "configs/kumar_development_batch_20261015.json",
+      "bytes": 33391,
+      "sha256": "e0ffcbddeacbc1569f44272dd92a7d53e7202391e6742f96983a356d4148fd75",
+      "unchanged_from_fixed_commit": "fca47b7eeb62b01e7f2ea431d5095dba98d9f223"
+    },
+    {
+      "path": "configs/kumar_development_queue_plan_20261014.json",
+      "bytes": 14278,
+      "sha256": "0d23a47952fe286cd47a5e4eed69ae29e7317f63edf83ea41866495686f83a5b",
+      "unchanged_from_fixed_commit": "fca47b7eeb62b01e7f2ea431d5095dba98d9f223"
+    }
+  ],
+  "validation": {
+    "tests": [
+      "tests/test_kumar_development_queue.py",
+      "tests/test_kumar_development_batch.py"
+    ],
+    "pytest_passed": 40,
+    "pytest_failed": 0,
+    "pytest_log": "pytest_ledger_and_gates.log",
+    "pytest_log_sha256": "11d8f2380a5f9ec8854375bc71dfe4eb281912ffe934395040fb1813eb6cb889",
+    "ruff_changed_tests": "passed",
+    "git_diff_check": "passed",
+    "full_suite_rerun": false,
+    "real_fit_or_model_forward_executed": false,
+    "Pod_operated": false,
+    "query_rows_loaded": 0
+  }
+}

@@ -1,0 +1,325 @@
+{
+  "status": "independent_ledger_review_passed",
+  "reviewed_at_utc": "2026-10-15T03:36:53.465491+00:00",
+  "reviewer": "independent engineering subagent /root/accepted18_ledger_review",
+  "base_commit": "fca47b7eeb62b01e7f2ea431d5095dba98d9f223",
+  "scope": "Read-only review of actual dot parent acknowledgements, active ledger, unchanged historical evidence and pure closed queue gate. No network, query, training or Pod operations. This review does not create parent authorization.",
+  "accepted_before": 7,
+  "accepted_after": 18,
+  "old_ledger_sha256": "94caad4e0eec18224ee4c93834c86ae951c8dbb29902972d0645651892f4a911",
+  "new_ledger_sha256": "1ee1868b97e6ff7ea2e42327fe64337cafbb0f8ee6aff19cc24fba5265f9aaa9",
+  "receipt_sha256": "a6e68f3391fa732ff2b779417a9f6efb308a4d9fba4a65c0c465d4b757ff8cd9",
+  "receipt_bytes": 38663,
+  "receipt_objects": 38,
+  "receipt_total_bytes": 8137472,
+  "legacy_research_evidence_files_compared": 4618,
+  "legacy_science_runtime_entry_files_compared": 109,
+  "changed_legacy_research_evidence": [],
+  "changed_legacy_science_files": [],
+  "parent_acknowledgements_reviewed": 11,
+  "pure_gate_next_job": null,
+  "checks_passed": 72,
+  "checks_total": 72,
+  "failures": [],
+  "checks": [
+    {
+      "check": "legacy_ledger_SHA256_matches_known_frozen7",
+      "passed": true
+    },
+    {
+      "check": "exactly_seven_legacy_and_eighteen_current",
+      "passed": true
+    },
+    {
+      "check": "old_seven_entry_objects_identical",
+      "passed": true
+    },
+    {
+      "check": "new_eleven_entry_objects_identical_to_frozen_proposal",
+      "passed": true
+    },
+    {
+      "check": "all_eighteen_exact_frozen_order",
+      "passed": true
+    },
+    {
+      "check": "eighteen_unique_job_ids",
+      "passed": true
+    },
+    {
+      "check": "ledger_other_metadata_unchanged",
+      "passed": true
+    },
+    {
+      "check": "exact_receipt_bytes38663_and_SHA256",
+      "passed": true
+    },
+    {
+      "check": "receipt_identical_to_parent_read_fixed_commit",
+      "passed": true
+    },
+    {
+      "check": "all38_complete_full_GET_receipt_entries",
+      "passed": true
+    },
+    {
+      "check": "legacy1:research_logs/kumar_first_gpu_fit_20261014/r2_full_get_receipt.json:unchanged",
+      "passed": true
+    },
+    {
+      "check": "legacy1:research_logs/kumar_first_gpu_fit_20261014/parent_acknowledged.json:unchanged",
+      "passed": true
+    },
+    {
+      "check": "legacy2:research_logs/kumar_development_queue_20261014/sub-1-seed-20261013/r2_full_get_receipt.json:unchanged",
+      "passed": true
+    },
+    {
+      "check": "legacy2:research_logs/kumar_development_queue_20261014/sub-1-seed-20261013/parent_acknowledged.json:unchanged",
+      "passed": true
+    },
+    {
+      "check": "legacy3:research_logs/kumar_development_queue_20261014/sub-1-seed-20261014/r2_full_get_receipt.json:unchanged",
+      "passed": true
+    },
+    {
+      "check": "legacy3:research_logs/kumar_development_queue_20261014/sub-1-seed-20261014/parent_acknowledged.json:unchanged",
+      "passed": true
+    },
+    {
+      "check": "legacy4:research_logs/kumar_development_queue_20261014/sub-4-seed-20261012/r2_full_get_receipt.json:unchanged",
+      "passed": true
+    },
+    {
+      "check": "legacy4:research_logs/kumar_development_queue_20261014/sub-4-seed-20261012/parent_acknowledged.json:unchanged",
+      "passed": true
+    },
+    {
+      "check": "legacy5:research_logs/kumar_development_queue_20261014/sub-4-seed-20261013/r2_full_get_receipt.json:unchanged",
+      "passed": true
+    },
+    {
+      "check": "legacy5:research_logs/kumar_development_queue_20261014/sub-4-seed-20261013/parent_acknowledged.json:unchanged",
+      "passed": true
+    },
+    {
+      "check": "legacy6:research_logs/kumar_development_queue_20261014/sub-4-seed-20261014/r2_full_get_receipt.json:unchanged",
+      "passed": true
+    },
+    {
+      "check": "legacy6:research_logs/kumar_development_queue_20261014/sub-4-seed-20261014/parent_acknowledged.json:unchanged",
+      "passed": true
+    },
+    {
+      "check": "legacy7:research_logs/kumar_development_queue_20261014/sub-7-seed-20261012/r2_full_get_receipt.json:unchanged",
+      "passed": true
+    },
+    {
+      "check": "legacy7:research_logs/kumar_development_queue_20261014/sub-7-seed-20261012/parent_acknowledged.json:unchanged",
+      "passed": true
+    },
+    {
+      "check": "new8:job_subject_seed_key_hash_ack_bound",
+      "passed": true
+    },
+    {
+      "check": "new8:actual_parent_time_commit_and_receipt_bound",
+      "passed": true
+    },
+    {
+      "check": "new8:own_result_unique_full_GET_archive_hash",
+      "passed": true
+    },
+    {
+      "check": "new8:shared38_count_total_and_no_execution",
+      "passed": true
+    },
+    {
+      "check": "new9:job_subject_seed_key_hash_ack_bound",
+      "passed": true
+    },
+    {
+      "check": "new9:actual_parent_time_commit_and_receipt_bound",
+      "passed": true
+    },
+    {
+      "check": "new9:own_result_unique_full_GET_archive_hash",
+      "passed": true
+    },
+    {
+      "check": "new9:shared38_count_total_and_no_execution",
+      "passed": true
+    },
+    {
+      "check": "new10:job_subject_seed_key_hash_ack_bound",
+      "passed": true
+    },
+    {
+      "check": "new10:actual_parent_time_commit_and_receipt_bound",
+      "passed": true
+    },
+    {
+      "check": "new10:own_result_unique_full_GET_archive_hash",
+      "passed": true
+    },
+    {
+      "check": "new10:shared38_count_total_and_no_execution",
+      "passed": true
+    },
+    {
+      "check": "new11:job_subject_seed_key_hash_ack_bound",
+      "passed": true
+    },
+    {
+      "check": "new11:actual_parent_time_commit_and_receipt_bound",
+      "passed": true
+    },
+    {
+      "check": "new11:own_result_unique_full_GET_archive_hash",
+      "passed": true
+    },
+    {
+      "check": "new11:shared38_count_total_and_no_execution",
+      "passed": true
+    },
+    {
+      "check": "new12:job_subject_seed_key_hash_ack_bound",
+      "passed": true
+    },
+    {
+      "check": "new12:actual_parent_time_commit_and_receipt_bound",
+      "passed": true
+    },
+    {
+      "check": "new12:own_result_unique_full_GET_archive_hash",
+      "passed": true
+    },
+    {
+      "check": "new12:shared38_count_total_and_no_execution",
+      "passed": true
+    },
+    {
+      "check": "new13:job_subject_seed_key_hash_ack_bound",
+      "passed": true
+    },
+    {
+      "check": "new13:actual_parent_time_commit_and_receipt_bound",
+      "passed": true
+    },
+    {
+      "check": "new13:own_result_unique_full_GET_archive_hash",
+      "passed": true
+    },
+    {
+      "check": "new13:shared38_count_total_and_no_execution",
+      "passed": true
+    },
+    {
+      "check": "new14:job_subject_seed_key_hash_ack_bound",
+      "passed": true
+    },
+    {
+      "check": "new14:actual_parent_time_commit_and_receipt_bound",
+      "passed": true
+    },
+    {
+      "check": "new14:own_result_unique_full_GET_archive_hash",
+      "passed": true
+    },
+    {
+      "check": "new14:shared38_count_total_and_no_execution",
+      "passed": true
+    },
+    {
+      "check": "new15:job_subject_seed_key_hash_ack_bound",
+      "passed": true
+    },
+    {
+      "check": "new15:actual_parent_time_commit_and_receipt_bound",
+      "passed": true
+    },
+    {
+      "check": "new15:own_result_unique_full_GET_archive_hash",
+      "passed": true
+    },
+    {
+      "check": "new15:shared38_count_total_and_no_execution",
+      "passed": true
+    },
+    {
+      "check": "new16:job_subject_seed_key_hash_ack_bound",
+      "passed": true
+    },
+    {
+      "check": "new16:actual_parent_time_commit_and_receipt_bound",
+      "passed": true
+    },
+    {
+      "check": "new16:own_result_unique_full_GET_archive_hash",
+      "passed": true
+    },
+    {
+      "check": "new16:shared38_count_total_and_no_execution",
+      "passed": true
+    },
+    {
+      "check": "new17:job_subject_seed_key_hash_ack_bound",
+      "passed": true
+    },
+    {
+      "check": "new17:actual_parent_time_commit_and_receipt_bound",
+      "passed": true
+    },
+    {
+      "check": "new17:own_result_unique_full_GET_archive_hash",
+      "passed": true
+    },
+    {
+      "check": "new17:shared38_count_total_and_no_execution",
+      "passed": true
+    },
+    {
+      "check": "new18:job_subject_seed_key_hash_ack_bound",
+      "passed": true
+    },
+    {
+      "check": "new18:actual_parent_time_commit_and_receipt_bound",
+      "passed": true
+    },
+    {
+      "check": "new18:own_result_unique_full_GET_archive_hash",
+      "passed": true
+    },
+    {
+      "check": "new18:shared38_count_total_and_no_execution",
+      "passed": true
+    },
+    {
+      "check": "all_old_tracked_research_evidence_preserved",
+      "passed": true
+    },
+    {
+      "check": "all_tracked_science_runtime_and_entry_files_unchanged",
+      "passed": true
+    },
+    {
+      "check": "batch_confirmation_exact_ledger_hash_and_order",
+      "passed": true
+    },
+    {
+      "check": "pure_gate_no_next_job_query_closed_formal_closed",
+      "passed": true
+    }
+  ],
+  "training_started": 0,
+  "query_rows_read": 0,
+  "Pod_operated": false,
+  "test_review": {
+    "test_files_read": [
+      "tests/test_kumar_development_queue.py",
+      "tests/test_kumar_development_batch.py"
+    ],
+    "changes": "Completed-queue fixture handling; actual all18 plan-only no-GPU check; per-job ACK rejection cases; new batch invocation rejects accepted18 before runtime/claims. Tests retain frozen runner/contract and only use synthetic fixtures or mocked dispatch.",
+    "root_reported_related_test_output": "40 passed in 4.21s; independently read local pytest_ledger_and_gates.log, not re-executed by this reviewer."
+  }
+}

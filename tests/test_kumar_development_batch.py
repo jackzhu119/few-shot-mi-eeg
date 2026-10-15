@@ -116,6 +116,22 @@ def test_default_plan_never_creates_claim_or_calls_gpu(prepared, monkeypatch, ca
     assert json.loads(capsys.readouterr().out)["fit_executed"] is False
 
 
+def test_new_run_with_all_eighteen_accepted_stops_before_runtime_or_claim(prepared, monkeypatch):
+    _contract, path, root = prepared
+    monkeypatch.setattr(batch, "gate", lambda *_a, **_k: ({}, {"accepted_jobs": 18}))
+    monkeypatch.setattr(batch.subprocess, "check_output",
+                        lambda command, **_k: "fixed" if "rev-parse" in command else "")
+    monkeypatch.setattr(batch, "runtime_checks", lambda: pytest.fail("GPU runtime called"))
+    monkeypatch.setattr(batch.sys, "argv", [
+        "runner", "--contract", str(path), "--execute", "--new-run",
+        "--expected-commit", "fixed", "--reviewed-contract-sha256", batch.sha(path),
+    ])
+    with pytest.raises(ValueError, match="later jobs must never restart"):
+        batch.main()
+    assert not root.exists()
+    assert not batch.single.LOCK.exists()
+
+
 def test_new_run_cannot_rebuild_or_replace_existing_claims(prepared, monkeypatch):
     contract, path, root = prepared
     monkeypatch.setattr(batch.platform, "node", lambda: "unexpected-rebuilt-container")
