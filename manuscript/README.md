@@ -3,11 +3,11 @@
 ## Current Kumar2024 working draft
 
 The current Kumar2024 research manuscript is
-[Task-Aware Adaptive Decoding for Longitudinal Motor-Imagery EEG](kumar_longitudinal_decoding_working_draft_20261015.md).
+[Longitudinal Motor-Imagery EEG Decoding: Frozen Baselines, Supervised Recalibration, and Task-Measurement Reliability](kumar_longitudinal_decoding_working_draft_20261015.md).
 This English working draft reports the completed 18-participant CPU baselines,
 all 54 source-only EEGNet checkpoints evaluated on frozen queries, and the
-development-only measurement diagnostics. It distinguishes matched query
-identities from unequal source-validation and target-label budgets, retains
+development-only reliability probes and pre-frozen descriptive drift associations.
+It distinguishes matched query identities from unequal source-validation and target-label budgets, retains
 negative and collapsed results, and establishes no effective task-aware gate.
 Its status is **exploratory_working_draft_not_submission_ready**. The NETBCI
 documents below remain historical records and are not pooled with Kumar to

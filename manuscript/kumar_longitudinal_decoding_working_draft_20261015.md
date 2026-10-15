@@ -1,9 +1,10 @@
-# Task-Aware Adaptive Decoding for Longitudinal Motor-Imagery EEG
+# Longitudinal Motor-Imagery EEG Decoding: Frozen Baselines, Supervised Recalibration, and Task-Measurement Reliability
 
 **English working draft; evidence available on 2026-10-15.** This draft reports
-completed offline baselines and measurement diagnostics. The project title
-states the research direction; an effective task-aware adaptation policy has
-not been demonstrated. This is an exploratory research draft, not a
+completed offline baselines and measurement diagnostics. The historical project
+direction, Task-Aware Adaptive Decoding for Longitudinal Motor-Imagery EEG,
+remains distinct from the manuscript title; an effective task-aware adaptation
+policy has not been demonstrated. This is an exploratory research draft, not a
 submission-ready manuscript. The historical NETBCI manuscript is a separate
 record and contributes no additional participants to the present analysis.
 
@@ -22,11 +23,12 @@ favored full refitting over source-only decoding by 7.42 percentage points
 (95% participant-bootstrap interval 2.49–12.48), although three participants
 worsened. Always-frozen EEGNet achieved mean target balanced accuracy of 51.58%
 (49.08–54.51%) in this cohort, retaining class-collapsed outcomes. Development-only
-measurement diagnostics found heterogeneous task-direction reliability; they
-did not validate an adaptation gate. These results support a conditional benefit
-of conventional recalibration under the specified label budget and a weak
-source-only neural baseline in this small-source setting. Previously inspected
-test identities make subsequent analyses exploratory. Offline decoding does not
+reliability probes found heterogeneous task-direction reliability; they
+did not validate an adaptation gate. Full CSP/LDA refitting improved the
+cohort-average endpoint under the specified support-label budget, whereas the
+LDA-only contrast remained uncertain. The source-only neural baseline was weak
+in this small-source setting. Previously inspected test identities make subsequent
+analyses exploratory. Offline decoding does not
 establish human learning, skill retention or clinical benefit.
 
 ## Introduction
@@ -148,12 +150,13 @@ were secondary. Cohort intervals containing 50% were not converted into a
 new formal chance hypothesis test. Previously exposed test results preclude
 describing subsequent same-dataset evaluations as untouched external confirmation.
 
-The task-information diagnostics used only development source training and
-predeclared support. Fixed power, PCA and supervised CSP-score measurements
+The task-measurement reliability probes used only development source training
+and predeclared support. Fixed power, PCA and supervised CSP-score measurements
 were evaluated with source-run grouping, support split halves and cyclic-label
 controls. The controls are phase-alignment sensitivities, not formal
-permutation p values. No diagnostic selected an adaptation threshold or used
-query outcomes to choose a policy.
+permutation p values. Separately, the remaining-cohort drift associations were
+pre-frozen descriptive analyses, not policy selection. No diagnostic selected
+an adaptation threshold or used query outcomes to choose a policy.
 
 ## Results
 
@@ -308,8 +311,8 @@ tests; the present task labels and offline decoder scores cannot supply them.
 
 Author affiliations, contributions, funding, competing interests, institutional
 secondary-data requirements and a complete verified scholarly bibliography
-remain to be supplied and reviewed. No author, funding or ethics statement is
-invented in this working draft.
+remain pending provision and review by the authors. No author, funding or ethics
+statement is invented in this working draft.
 
 ## Evidence and reproducibility
 
