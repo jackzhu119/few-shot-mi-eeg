@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "record_type": "agent_observed_software_validation_receipt",
+  "observed_at_utc": "2026-10-15T04:56:04.757318+00:00",
+  "timestamp_semantics": "Receipt generation time only. Historical exact test start/end timestamps were not captured or inferred.",
+  "source_agent": "/root/remaining36_boundary_review_run02",
+  "supersedes_current_proposal_hash": "ac631c4527c414d85e3503affc5291aa17d2fb0947b797314c84129fbaeabeb4",
+  "historical_validation_run01_preserved": true,
+  "billing_evidence_provenance": "The official RunPod console/Billing snapshot was actually read by dot and reported by the parent/user. This agent did not visit the platform, inspect the Pod or perform an independent billing read.",
+  "parent_reported_official_billing_observation": {
+    "observer": "dot_parent",
+    "source": "official_RunPod_console_and_Billing",
+    "observation_window_utc": [
+      "2026-10-15T04:49Z",
+      "2026-10-15T04:51Z"
+    ],
+    "observation_window_Asia_Shanghai": [
+      "2026-10-15T12:49+08:00",
+      "2026-10-15T12:51+08:00"
+    ],
+    "provenance": "parent_reported_actual_read_only_observation_not_this_agent_platform_access",
+    "pod_id": "52ivinpjwv947i",
+    "pod_name": "bright_ivory_bear",
+    "pod_status": "running",
+    "balance_usd": 1.27,
+    "total_hourly_usd": 0.257,
+    "compute_hourly_usd": 0.25,
+    "storage_hourly_usd": 0.007,
+    "storage_gb": 50,
+    "estimated_time_left_hours": 5,
+    "autopay_enabled": false,
+    "payment_or_topup_changed_by_observer": false,
+    "future_topup_relied_on": false,
+    "execution_authorization": false
+  },
+  "current_proposal": {
+    "maximum_wall_seconds": 10800,
+    "maximum_execution_cost_usd": 1,
+    "balance_recheck_max_age_before_start_seconds": 300,
+    "authorization": null,
+    "cost_authorization": null,
+    "approved_wall_seconds": null,
+    "absolute_not_before_utc": null,
+    "absolute_deadline_utc": null,
+    "current_hourly_rate_usd": null,
+    "payment_or_topup_assumed": false,
+    "all36_completion_guaranteed": false,
+    "snapshot_only_arithmetic": "0.257 USD/hour *3 hours=0.771 USD; not a future price/balance/cost/completion guarantee."
+  },
+  "checks": [
+    {
+      "command": "PYTHONPATH=src:scripts /workspace/.venvs/few-shot-mi-eeg/bin/python -B -m pytest -q tests/test_kumar_remaining_source_batch.py",
+      "returncode": 0,
+      "passed_tests": 44,
+      "pytest_reported_elapsed_seconds": 1.92,
+      "stdout_copied_from_tool_output": "............................................                             [100%]\n44 passed in 1.92s\n",
+      "tool_output_chunk_id": "b946b6"
+    },
+    {
+      "command": "/workspace/.venvs/few-shot-mi-eeg/bin/ruff check scripts/run_kumar_remaining_source_batch.py tests/test_kumar_remaining_source_batch.py",
+      "returncode": 0,
+      "stdout_copied_from_tool_output": "All checks passed!\n",
+      "tool_output_chunk_id": "a9ce97"
+    },
+    {
+      "command": "git diff --check",
+      "returncode": 0,
+      "stdout_copied_from_tool_output": "",
+      "tool_output_chunk_id": "a9ce97"
+    },
+    {
+      "command": "PYTHONPATH=src:scripts /workspace/.venvs/few-shot-mi-eeg/bin/python -B scripts/audit_kumar_remaining_source_bundle.py",
+      "returncode": 0,
+      "tool_output_chunk_id": "a9ce97",
+      "observed_result": {
+        "status": "remaining_source_audit_metadata_valid_execution_closed",
+        "remaining_source_jobs": 36,
+        "accepted_models_preserved": 18,
+        "source_input_files": 253,
+        "source_input_bytes": 196740994,
+        "checkpoint_tensors_loaded": false,
+        "EEG_or_query_loaded": false,
+        "model_forward_passes": 0,
+        "audit_refits": 0,
+        "accepted_ledger_modified": false,
+        "parent_acknowledgement_written": false,
+        "Pod_operated": false
+      }
+    },
+    {
+      "command": "PYTHONPATH=src:scripts /workspace/.venvs/few-shot-mi-eeg/bin/python -B scripts/run_kumar_remaining_source_batch.py --plan-only",
+      "returncode": 0,
+      "stdout_sha256": "dd64104b877f0c08f7b0d31a58acad0f5d8f0139675806d5dc78d2351bde1fa4",
+      "stdout_capture_semantics": "Actual subprocess stdout parsed here; full JSON plan duplicates the frozen contract and is summarized in this receipt.",
+      "observed_summary": {
+        "status": "remaining_source_proposal_valid_execution_closed",
+        "accepted_preserved": 18,
+        "source_fits_proposed": 36,
+        "input_files": 253,
+        "input_bytes": 196740994,
+        "query_access": false,
+        "new_fits_authorized": 0,
+        "fit_executed": false,
+        "cost_authorization": null
+      },
+      "observed_limits": {
+        "chunk_fits": 2,
+        "fit_timeout_seconds": 1800,
+        "chunk_timeout_seconds": 3600,
+        "term_grace_seconds": 30,
+        "wait_seconds_max": 600,
+        "proposed_wall_seconds": 10800,
+        "min_free_bytes": 5368709120,
+        "result_archive_max_bytes": 16777216,
+        "export_archive_max_bytes": 67108864,
+        "max_epochs": 3600,
+        "max_steps": 10800,
+        "max_new_fits": 36,
+        "max_local_unexported_fits": 2,
+        "automatic_retries": 0
+      }
+    }
+  ],
+  "new_changed_budget_cases": [
+    "test_actual_balance_recheck_is_required_before_start: missing/source/reference/insufficient/stale/future/nonfinite (7 cases)",
+    "test_three_hour_and_one_dollar_proposal_cannot_be_enlarged (1 case)",
+    "Updated existing fixed-contract/finite cap/runtime-blocked tests and synthetic authorization fixture for the3h/1USD candidate; fixture numbers are software-validation-only, never real execution approval."
+  ],
+  "file_sha256_at_record_generation": {
+    "scripts/run_kumar_remaining_source_batch.py": "3f42b502ee172c9bc60d9477f9c62ba861ed360e5fd3f22003cd29f8293c3749",
+    "configs/kumar_remaining_source_batch_20261015.json": "4ea13abe3f4e44b031526360840c57407cc48c84d6601b7a44730ab816f7e3e7",
+    "configs/kumar_remaining_source_batch_20261015.proposal.sha256": "d56ceb3d9642dd1463c61e34ca66c96a83802ef918412c9657983f1b324ae241",
+    "docs/kumar_remaining_source_operation_contract_20261015.md": "189d55cafe5534f4b1a10c68f7149fd1f5e024a8bd5c17f93e25e35a7c37e5dc",
+    "tests/test_kumar_remaining_source_batch.py": "ddaabc55792b60c5f61363c2b8f8426255d9af45202679f735502557e18b441c"
+  },
+  "accepted18_ledger_sha256": "1ee1868b97e6ff7ea2e42327fe64337cafbb0f8ee6aff19cc24fba5265f9aaa9",
+  "unchanged_mechanisms": [
+    "frozen scientific configuration and numerical threads/tolerance",
+    "18accepted exclusion and ledger",
+    "full253input revalidation",
+    "2-fit chunks and full off-Pod receipts",
+    "sharedGPUlock",
+    "1800second fit /3600second chunk ceiling",
+    "complete container identity and nested absolute watchdog",
+    "zero automatic training retries and preservation of partial/ambiguous claims"
+  ],
+  "real_scientific_fits_executed": 0,
+  "real_checkpoint_tensors_loaded": false,
+  "real_EEG_or_query_arrays_loaded": false,
+  "Pod_operated": false,
+  "credentials_created_or_changed": false,
+  "new_execution_authorization_created": false,
+  "actual_balance_recheck_or_topup_performed_by_agent": false,
+  "paper1_budget_changed": false,
+  "tests_not_rerun": [
+    "Unchanged HTTPS17tests",
+    "Unchanged auditor19tests",
+    "Full repository test suite"
+  ],
+  "provenance_limit": "Test/Ruff/diff stdout was copied from observed tool output into this new receipt, not originally captured on disk. No test was rerun solely to produce logs. Software checks use synthetic placeholders/mocks and short local CPU alarms, not real fits or production transport."
+}

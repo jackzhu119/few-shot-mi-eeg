@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-15T04:52:19.481404+00:00",
+  "status": "passed_software_validation_only",
+  "synthetic": true,
+  "software_validation_only": true,
+  "source_git_head_before_delivery_commit": "d7664adb17908b3ba2a40a6a75adf15245c3e88e",
+  "record_provenance": {
+    "author": "Codex subagent /root/csp_storage_failure_fix",
+    "method": "Receipt transcribed from actual completed exec_command/write_stdin tool output in this same task; tests were not rerun to generate this receipt.",
+    "original_test_started_at_utc": null,
+    "original_test_finished_at_utc": null,
+    "timestamp_limitation": "Exact original test UTC timestamps were not recorded; recorded_at_utc is only the receipt generation time.",
+    "stdout_limitation": "Tool-observed stdout text is retained below; no claim of a previously persisted raw stdout log."
+  },
+  "commands": [
+    {
+      "cwd": "/workspace/few-shot-mi-eeg",
+      "command": "PYTHONPATH=src:scripts /workspace/.venvs/few-shot-mi-eeg/bin/python -B -m pytest -q tests/test_kumar_csp_signed_score_storage_failures_v1.py tests/test_kumar_csp_signed_score_v1.py tests/test_kumar_csp_signed_score_inputs.py tests/test_kumar_csp_signed_score_receipts_v1.py",
+      "exit_code": 0,
+      "tool_session_id": 96239,
+      "observed_stdout": "..........................................................               [100%]\n58 passed in 7.48s\n",
+      "pytest_reported_elapsed_seconds": 7.48,
+      "tests_passed": 58,
+      "existing_related_tests": 42,
+      "new_targeted_failure_cases": 16
+    },
+    {
+      "cwd": "/workspace/few-shot-mi-eeg",
+      "command": "/workspace/.venvs/few-shot-mi-eeg/bin/ruff check scripts/analyze_kumar_csp_signed_score_v1.py tests/test_kumar_csp_signed_score_v1.py tests/test_kumar_csp_signed_score_storage_failures_v1.py && git diff --check -- scripts/analyze_kumar_csp_signed_score_v1.py tests/test_kumar_csp_signed_score_v1.py && sha256sum scripts/analyze_kumar_csp_signed_score_v1.py",
+      "exit_code": 0,
+      "observed_stdout": "All checks passed!\nebc866734add9769c7b881332cb9362badaa0f6bf401bc2c6dfa717b645960f3  scripts/analyze_kumar_csp_signed_score_v1.py\n"
+    }
+  ],
+  "verified_file_sha256_at_receipt_generation": {
+    "scripts/analyze_kumar_csp_signed_score_v1.py": "ebc866734add9769c7b881332cb9362badaa0f6bf401bc2c6dfa717b645960f3",
+    "tests/test_kumar_csp_signed_score_v1.py": "c3e0f764c2d639e7b4b8bd8f7162d69e2f2fb593850139e1a48db6d7589a259f",
+    "tests/test_kumar_csp_signed_score_storage_failures_v1.py": "6bdd2710ddc45f15faf8a3991db5a5d43e7663078fceaba549bf841b8de8da13"
+  },
+  "exception_policy": {
+    "caught_scope": "The try statement encloses only model.fit(fold[\"train\"], shifted).",
+    "only_caught_exception": "numpy.linalg.LinAlgError",
+    "scientific_failure_provenance": [
+      "Installed MNE 1.10.2 CSP._decompose_covs invokes scipy.linalg.eigh.",
+      "Installed scikit-learn 1.7.2 LinearDiscriminantAnalysis._solve_lstsq invokes scipy.linalg.lstsq.",
+      "SciPy linear algebra singular/convergence errors use numpy.linalg.LinAlgError."
+    ],
+    "failed_attempt_semantics": "An estimator fit LinAlgError retains one failed attempt with absent held-out predictions/scores and explicit type/message. No retry is performed.",
+    "propagate_and_stop": [
+      "Factory errors, including LinAlgError before model.fit.",
+      "All unexpected model.fit errors, including ValueError, RuntimeError, OSError and MemoryError.",
+      "State extraction, state digest/mutation validation, prediction and pickle-free replay failures, including LinAlgError outside model.fit.",
+      "np.savez_compressed and file_digest filesystem, storage, hashing and integrity failures."
+    ],
+    "partial_files": "The consumer does not remove previously written files or a partially written failing model artifact. Independent launcher records abnormal process exit and partial evidence; launcher behavior is outside these 58 tests."
+  },
+  "targeted_case_evidence": [
+    {
+      "test": "test_partial_write_failure_stops_before_a_third_fit",
+      "injected_failure": "OSError(ENOSPC) on second np.savez_compressed after writing an explicit synthetic partial marker.",
+      "asserted_constructed_fit_predict_counts": [
+        2,
+        2,
+        2
+      ],
+      "third_fit_started": false,
+      "existing_complete_and_partial_files_preserved": true
+    },
+    {
+      "test": "test_digest_failure_stops_before_a_third_fit_and_preserves_files",
+      "parameterized_failures": [
+        "OSError(EIO)",
+        "ValueError integrity failure",
+        "LinAlgError unexpected hash failure"
+      ],
+      "injection_point": "Second file_digest call, after second mock model artifact is written.",
+      "asserted_constructed_fit_predict_counts_per_case": [
+        2,
+        2,
+        2
+      ],
+      "third_fit_started": false,
+      "both_written_artifacts_preserved_per_case": true
+    },
+    {
+      "test": "test_only_fit_linear_algebra_failure_is_an_unavailable_attempt",
+      "injected_failure": "One first-fit synthetic covariance LinAlgError; no retry.",
+      "attempts": 40,
+      "successes": 39,
+      "failed_attempts": 1,
+      "heldout_prediction_rows": 780,
+      "joint_shift_rows": 400,
+      "unavailable_joint_shift_rows": 20
+    },
+    {
+      "tests": [
+        "test_unexpected_fit_error_propagates_without_another_fit",
+        "test_prediction_error_propagates_without_another_fit",
+        "test_state_integrity_failure_propagates_without_another_fit",
+        "test_replay_failure_propagates_without_another_fit"
+      ],
+      "assertion": "Injected unexpected first-attempt errors propagate; no second mock fit starts."
+    },
+    {
+      "test": "test_factory_numerical_error_is_not_a_fit_failure",
+      "asserted_fit_count": 0,
+      "assertion": "Factory LinAlgError propagates before any mock fit."
+    }
+  ],
+  "actual_scientific_csp_execution": false,
+  "actual_estimator_fit": false,
+  "real_eeg_arrays_loaded": false,
+  "real_weights_loaded": false,
+  "query_access": false,
+  "pod_operation": false,
+  "new_training_or_automatic_retry": false,
+  "scientific_protocol_changed": false,
+  "launcher_abnormal_exit_receipt_coverage": "Owned by independent launcher validation; not claimed from this consumer-only validation."
+}

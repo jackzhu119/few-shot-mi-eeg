@@ -18,6 +18,12 @@ created in this delivery. The immutable contract's `execution_enabled=false`
 describes the present proposal; the explicit separately checked authorization is
 the sole future execution permission. CLI flags alone cannot grant it.
 
+The current exact contract SHA256 supersedes the earlier proposal SHA256
+`23af78e3a902ecb8d610aa480009a330897a5212cd40b84089a6c93a826422e0`.
+The former proposal and its historical logs/receipts remain evidence of preparation,
+but cannot authorize this corrected runner. The current checksum is recorded in
+`configs/kumar_remaining_source_batch_20261015.proposal.sha256`.
+
 ## Fixed scope and concrete resource/time proposal
 
 | Item | Prepared contract |
@@ -30,25 +36,76 @@ the sole future execution permission. CLI flags alone cannot grant it.
 | Active batch | Two sequential fits; shared GPU lock covers input revalidation, both workers and packaging |
 | Time ceilings | 1,800 seconds per fit, 3,600 seconds per active batch, TERM grace 30 seconds then KILL |
 | Off-Pod boundaries | 18 batches × intent/results = 36 full-download verification boundaries, each waits at most 600 seconds |
-| New total proposal | 86,400 seconds, including rechecks, packaging and all waiting; a maximum, not a promise to finish all 36 |
-| Cost / approved time | Null until an actual current decision; historical prices and the old 19,800-second run do not authorize this operation |
+| New total proposal | At most 10,800 seconds / 3 hours, including rechecks, packaging and all waiting; partial completion is expected if this window is insufficient |
+| Absolute watchdog | After verifying the actual authorization, one nonrenewable timer covers fixed-checkout gates, runtime startup, state/claims, all batches, packaging and receipt processing/waits |
+| Proposed execution cost ceiling | At most USD 1; an actual authorization must choose a covered duration and cap no larger than these candidates |
+| Cost authorization / approved time / absolute start and deadline | Still null; the official balance snapshot below is evidence for a proposal, not execution authorization |
 | Disk stop | Before each batch/fit/export, require 5 GiB plus 96 MiB active-batch reserve; otherwise preserve state and stop |
 | Bounded artifacts | At most 16 MiB per original model tar, 64 MiB per export; at most two trained models lacking verified off-Pod export |
 | Retry policy | Zero automatic training retries; partial or ambiguous claims stop the queue |
 
-The time proposal is explicit: 36×1,800 fit ceilings plus 36×600 boundary waits
-equals 86,400 seconds. Revalidation/packaging overhead consumes this same budget;
-there is no hidden extension. A full conservative input/model/export footprint
-plus the 5-GiB floor is 8,585,348,994 bytes, excluding logs; this is not a disk
-guarantee. No current GPU, disk, price or billing state was inspected here.
+The current proposal is capped at three hours and USD 1. It does not promise all
+36 models will finish. All input revalidation, packaging, runtime startup and
+receipt waiting consume the same absolute window. At expiry, preserve partial
+outputs, claims, failures and exports; the same run cannot continue outside its
+reviewed window or receive a silently renewed deadline. A full conservative
+input/model/export footprint plus the 5-GiB floor is 8,585,348,994 bytes, excluding
+logs; this is not a disk guarantee. This agent did not access the Pod or platform.
+
+At **2026-10-15 12:49–12:51 +08:00** (original evidence window
+**04:49–04:51 UTC**), dot reported actually reading the official RunPod console
+and Billing: `bright_ivory_bear` / `52ivinpjwv947i` was running; balance USD 1.27;
+total USD 0.257/hour = compute USD 0.25/hour + 50-GB storage USD 0.007/hour;
+Estimated time left 5 hours; AutoPay disabled. The read-only observation did not
+change payment or top-up status. This is parent-reported platform evidence, not
+an independent platform visit by this agent. Snapshot arithmetic is
+`0.257 * 3 = 0.771 USD`; it is not a future price, available-balance or completion
+guarantee. No future recharge is assumed, no Pod stop is authorized, and the
+paper1 budget is untouched.
+
+Nested active-batch timers retain the earlier absolute supervisor deadline; leaving
+a batch restores only the parent's actual remaining time. They cannot cancel the
+global timer or renew it. Worker termination has at most 30 seconds within the
+already reserved absolute time; if no authorized time remains, cleanup escalates
+to KILL immediately. The runner grants no additional execution interval after the
+deadline. Pod billing may continue while dot keeps the Pod running; terminating a
+fit does not establish that billing has stopped or authorize a Pod operation.
+An execution-attempt failure also writes a new, exclusive sibling
+`remaining-source-bounded-batch-20261015.attempt-failure-<unique>.json`, including
+when runtime startup times out before creating run state. Existing state, claims,
+failed attempts and scientific evidence are preserved.
 
 The remaining parent decisions are concrete: select an actual absolute
-`not_before_unix`/`deadline_unix` and `approved_wall_seconds<=86400`, and provide
+`not_before_unix`/`deadline_unix` and `approved_wall_seconds<=10800`, and provide
 the current comprehensive hourly rate, maximum USD and latest actual cost
 authorization reference. The authorizing record must satisfy
-`rate * approved_seconds / 3600 <= maximum_usd`. Its actual reviewed host and
-the fixed commit/contract digest must match. All of these are still absent;
-cost fields stay null. No estimated dollar amount is substituted.
+`rate * approved_seconds / 3600 <= maximum_usd <= 1`. Actual authorization,
+approved duration and absolute times remain null. The current observed rate is
+stored only in the parent-reported snapshot, separately from a future authorized
+rate; the fixed commit/contract digest and reviewed container must match.
+
+Before authorizing execution, dot must actually recheck official current balance.
+The authorization must bind `balance_recheck` with exact
+`source="official_RunPod_console_or_Billing"`, `observed_at_unix`, `balance_usd`
+and a nonempty `evidence_reference`. The recorded finite balance must cover the
+entire authorized maximum USD, and the actual observation must fall within 300
+seconds before the fixed `not_before_unix`, never in the future. First creation
+of run state also requires that this observation is at most 300 seconds old at
+the actual creation time: a delayed first launch cannot reuse an old balance.
+This is an operational proposal requirement, not a scientific parameter. The same reviewed
+startup observation remains bound on each fit and resume; it cannot extend the
+window or substitute for a fresh authorization for any later operation. No actual
+recheck or authorization record is fabricated here.
+
+The actual authorization must include `authorized_container_identity`, the exact
+object returned by the unchanged `container_identity()` helper at the reviewed
+execution site: `hostname`, `pid1_start_ticks` and `boot_id`. All three must match
+on every authorization check, including before creating any new run state. The
+optional compatibility field `authorized_container_hostname`, when present, must
+match the object's hostname; a hostname alone never authorizes execution. This
+prevents a rebuilt container that retains its hostname but loses local state from
+using the old authorization to start the queue again. No actual container identity
+or execution authorization is collected or created by this preparation change.
 
 ## Source restoration and per-fit revalidation
 

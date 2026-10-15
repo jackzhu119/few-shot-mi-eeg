@@ -14,7 +14,7 @@ from pathlib import Path, PurePosixPath
 
 ROOT = Path(__file__).resolve().parents[1]
 BINDING = ROOT / "configs/kumar_csp_signed_score_input_binding_20261015.json"
-EXPECTED_BINDING_SHA256 = "af65b5f0ce7850b010dc83965e799d3f26601b70fb6bc19607e59d1af3738712"
+EXPECTED_BINDING_SHA256 = "e1a103e3b3b8bcba24f15593561bcd3f7d816ff7fa0b178cf4d55915b13c0a7a"
 SUBJECTS = [f"sub-{value}" for value in (1, 4, 7, 10, 13, 16)]
 EPOCH_NAMES = {"included_trial_metadata.json", "restricted_epochs.npz", "subject_receipt.json"}
 BASELINE_NAMES = {"source_before.npz", "source_after.npz", "participant_receipt.json",

@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "status": "new_operation_software_validation_passed_execution_closed",
+  "recorded_at_utc": "2026-10-15T04:53:24.986481+00:00",
+  "commands": [
+    {
+      "command": [
+        "/workspace/.venvs/few-shot-mi-eeg/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_kumar_csp_signed_score_operation.py"
+      ],
+      "returncode": 0,
+      "stdout": "......................................                                   [100%]\n38 passed in 0.35s\n",
+      "scope": "new software validation only; synthetic metadata, mocks and inert Python child processes"
+    },
+    {
+      "command": [
+        "/workspace/.venvs/few-shot-mi-eeg/bin/ruff",
+        "check",
+        "scripts/run_kumar_csp_signed_score_operation.py",
+        "tests/test_kumar_csp_signed_score_operation.py"
+      ],
+      "returncode": 0,
+      "stdout": "All checks passed!\n",
+      "scope": "new software validation only; synthetic metadata, mocks and inert Python child processes"
+    }
+  ],
+  "files": [
+    {
+      "path": "scripts/run_kumar_csp_signed_score_operation.py",
+      "bytes": 23715,
+      "sha256": "878111aed865d77697b08eebf3e7bbf7cae35fd88a2bdbbe85cc5b4d8e7e6204"
+    },
+    {
+      "path": "configs/kumar_csp_signed_score_operation_20261015.json",
+      "bytes": 2448,
+      "sha256": "e45a3ed1c2dccc8cfa241e0743367b8249e1a984e80a4e1e22c831fe8489d123"
+    },
+    {
+      "path": "configs/kumar_csp_signed_score_operation_20261015.proposal.sha256",
+      "bytes": 121,
+      "sha256": "1800441258073741597645911ba3e468dc14419b255bba670afd81eed671fbc4"
+    },
+    {
+      "path": "tests/test_kumar_csp_signed_score_operation.py",
+      "bytes": 14941,
+      "sha256": "a3e023d35dd4c82874f177686da01fe0bbca52cdec677953335becad9d1b716c"
+    },
+    {
+      "path": "docs/kumar_csp_signed_score_execution_handoff_20261015.md",
+      "bytes": 17524,
+      "sha256": "ddde3ab53204e9556c1d7a5c37251f6ceaae24adbf81bed7f7ef81bb0772bb7f"
+    },
+    {
+      "path": "docs/kumar_csp_signed_score_memory_budget_20261015.md",
+      "bytes": 10049,
+      "sha256": "c49dbcd41552e5c5199eb1c601f21eda23ab40766df3638df4101a583a0fc367"
+    }
+  ],
+  "actual_CSP_consumer_executed": false,
+  "real_EEG_or_model_arrays_loaded": false,
+  "real_estimator_fits": 0,
+  "query_access": false,
+  "pod_operated": false,
+  "actual_authorization_created": false,
+  "paid_resources_created": false,
+  "old_CSP_tests_repeated": false,
+  "default_metadata_preflight": "parent will run final actual read-only check",
+  "software_validation_only": true
+}

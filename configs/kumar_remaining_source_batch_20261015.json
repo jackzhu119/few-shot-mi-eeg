@@ -401,7 +401,7 @@
     "chunk_timeout_seconds": 3600,
     "term_grace_seconds": 30,
     "wait_seconds_max": 600,
-    "proposed_wall_seconds": 86400,
+    "proposed_wall_seconds": 10800,
     "min_free_bytes": 5368709120,
     "result_archive_max_bytes": 16777216,
     "export_archive_max_bytes": 67108864,
@@ -426,8 +426,8 @@
     "gpu_count": 1,
     "execution": "serial on the existing dot-scheduled GPU only; no new resource creation",
     "historical_device": "RTX A4500, current hardware/runtime not observed here",
-    "proposed_total_wall_seconds": 86400,
-    "basis": "36*1800 fit ceilings +36*600 export wait ceilings =86400; revalidation/packaging/overhead also consume same deadline; not a completion-time guarantee",
+    "proposed_total_wall_seconds": 10800,
+    "basis": "At most 10800 seconds/3h and 1USD execution cost; startup/revalidation/packaging/all export waits share the same absolute deadline. Full36 completion is not promised; preserve partial state at expiry and never renew the same run window.",
     "proposed_active_chunks": 18,
     "required_off_Pod_boundaries": 36,
     "minimum_free_disk_floor_bytes": 5368709120,
@@ -437,7 +437,8 @@
     "cost_estimate_usd": null,
     "cost_latest_actual_authorization_ref": null,
     "actual_prices_verified": false,
-    "note": "86400 is a separate maximum proposal, not permission, not an old19800 deadline reset. Actual cost/time/host authorization must bind final reviewed contract and code before execution."
+    "note": "This is an unapproved three-hour/1USD candidate based on the parent-reported official snapshot, not execution permission, a guaranteed future rate/balance, or reliance on a future topup. Current cost authorization/actual start/deadline remain null; actual reviewed contract/code/full container identity and fresh official balance recheck are required.",
+    "proposed_maximum_usd": 1
   },
   "stages": {
     "trained": "Only after the single source fit saved checkpoint and complete original tar; not acceptance",
@@ -448,7 +449,7 @@
   },
   "export_transport": "Existing authenticated Jupyter/browser full download, off-Pod --verify-export, receipt returned via authenticated Jupyter or existing terminal and published exclusively/atomically; no invented internal API or copied R2 credentials",
   "backup_gate_before_each_chunk": "Actual intent receipt before fitting; actual result receipt before another chunk; at most2 trained items local without off-Pod receipt",
-  "recovery": "Persist run_id, auth SHA, absolute deadline and container identity. Preserve claims, failures and packages. Ambiguous/partial state or rebuilt/lost container blocks automatic new-run/refit; reconcile off-Pod intent/results receipts with parent before any recovery. Resume never refreshes authorization/deadline.",
+  "recovery": "Persist run_id, auth SHA, absolute deadline and full container identity (hostname, pid1_start_ticks, boot_id). Actual authorization must bind that exact identity before any new run or resume; hostname alone is insufficient. Preserve claims, failures and packages. Ambiguous/partial state or rebuilt/lost container blocks automatic new-run/refit; reconcile off-Pod intent/results receipts with parent before any recovery. Resume never refreshes authorization/deadline. At the maximum10800-second approved window boundary, retain all partial results and off-Pod evidence; the same run cannot resume outside that unchanged window, and no fresh run may repeat a completed or ambiguous claim.",
   "tested_previous_off_Pod_evidence": [
     {
       "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/boundary_independent_review_run01.json",
@@ -471,9 +472,37 @@
     "src/learning_preserving_bci/utils/reproducibility.py": "b51bb7bdc233b9e070d0de55f73dae1264cb9697be41e709d75154f6e6ef1ecc",
     "environments/gpu/pyproject.toml": "90a3d349023ef448f731990abcad5f3015be3f84ad338be4473d2ef790550089",
     "environments/gpu/uv.lock": "11682d951fe204e32859da12d9cc0ac73c6e63c1bce061d9834f8f68ebfe72e0",
-    "scripts/run_kumar_remaining_source_batch.py": "04794aac79ca34f07abd659934a66768c3a8cf8cde7d9cc0af4cf20353428895",
+    "scripts/run_kumar_remaining_source_batch.py": "9bd6526c7dbc81d85dabb0c5d420bb41ba92957d091760adc72a4246733db5a1",
     "scripts/fetch_kumar_remaining_source_https.py": "beebcc766d8c5edb7f14a6193daaa390f1a1b7cd15f90ec0310b8584d19f4b21",
     "scripts/audit_kumar_remaining_source_bundle.py": "e554a05a566102e1ff06508b7e380d56805df5cf6feb50270a3713acd2b5a0fd",
     "scripts/check_kumar_checkpoint_reuse_proposal.py": "ea9935857629404df596663ae0c849aa32a14f32e1291449028d40415a03aa40"
+  },
+  "proposed_maximum_usd": 1,
+  "balance_recheck_max_age_before_start_seconds": 300,
+  "parent_reported_official_billing_observation": {
+    "observer": "dot_parent",
+    "source": "official_RunPod_console_and_Billing",
+    "observation_window_utc": [
+      "2026-10-15T04:49Z",
+      "2026-10-15T04:51Z"
+    ],
+    "observation_window_Asia_Shanghai": [
+      "2026-10-15T12:49+08:00",
+      "2026-10-15T12:51+08:00"
+    ],
+    "provenance": "parent_reported_actual_read_only_observation_not_this_agent_platform_access",
+    "pod_id": "52ivinpjwv947i",
+    "pod_name": "bright_ivory_bear",
+    "pod_status": "running",
+    "balance_usd": 1.27,
+    "total_hourly_usd": 0.257,
+    "compute_hourly_usd": 0.25,
+    "storage_hourly_usd": 0.007,
+    "storage_gb": 50,
+    "estimated_time_left_hours": 5,
+    "autopay_enabled": false,
+    "payment_or_topup_changed_by_observer": false,
+    "future_topup_relied_on": false,
+    "execution_authorization": false
   }
 }

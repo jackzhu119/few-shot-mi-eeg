@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "reviewer": "independent operation_hardening_independent_review agent",
+  "reviewed_at_utc": "2026-10-15T04:57:17.660901+00:00",
+  "status": "software_boundary_review_passed_execution_not_authorized",
+  "baseline_commit": "d7664adb17908b3ba2a40a6a75adf15245c3e88e",
+  "frozen_files": {
+    "scripts/run_kumar_remaining_source_batch.py": "9bd6526c7dbc81d85dabb0c5d420bb41ba92957d091760adc72a4246733db5a1",
+    "configs/kumar_remaining_source_batch_20261015.json": "4352d0215e7338d7865975ed197fbf3e275fd860a0cab255de9d5617a034699f",
+    "configs/kumar_remaining_source_batch_20261015.proposal.sha256": "aa4904d3b6ef3d95d9313d9a8bf7d9fbffa7a76748ff591a9200a04b3b431ab6",
+    "docs/kumar_remaining_source_operation_contract_20261015.md": "90e9b2551decb242755b6739e0c4232103052baaf0ef1453c97274cdd8d172b6",
+    "tests/test_kumar_remaining_source_batch.py": "4b1ba79303eaa111ba15945815435f8fefd0bce3bd83de03259e2f383f07292c"
+  },
+  "checks": [
+    {
+      "check": "maximum separate proposal 10800 seconds and maximum USD1 enforced by validation and authorization guard",
+      "passed": true
+    },
+    {
+      "check": "official billing snapshot is attributed to parent read-only observation and is not current authorization or this reviewer platform access",
+      "passed": true
+    },
+    {
+      "check": "first new_state requires balance observation within300seconds of actual current time before any state or output creation",
+      "passed": true
+    },
+    {
+      "check": "subsequent per-fit/resume checks retain original bound observation and immutable authorization/deadline without five-minute mid-run expiry",
+      "passed": true
+    },
+    {
+      "check": "same-hostname rebuilt container is rejected using exact boot_id/PID1start/hostname before state creation",
+      "passed": true
+    },
+    {
+      "check": "absolute watchdog covers expensive runtime startup and nested chunk cannot cancel or extend parent deadline",
+      "passed": true
+    },
+    {
+      "check": "deadline exhaustion escalates worker to KILL without additional paid grace and writes pre-state failure sidecar",
+      "passed": true
+    },
+    {
+      "check": "partial/ambiguous claims cannot automatically retry and completed accepted18 remain excluded",
+      "passed": true
+    },
+    {
+      "check": "253 source inputs/196740994bytes, fixed36 identities, query0 and independent stage flags unchanged",
+      "passed": true
+    }
+  ],
+  "independent_targeted_tests": [
+    {
+      "command": "PYTHONPATH=src:scripts /workspace/.venvs/few-shot-mi-eeg/bin/python -B -m pytest -q tests/test_kumar_remaining_source_batch.py -k 'three_hour_and_one_dollar or actual_balance_recheck or hostname or rebuilt or global_deadline or nested_chunk or earlier_chunk or resume_never_resets_deadline'",
+      "passed": 18,
+      "deselected": 26,
+      "seconds": 0.45,
+      "tested_runner_sha256": "3f42b502ee172c9bc60d9477f9c62ba861ed360e5fd3f22003cd29f8293c3749",
+      "note": "Superseded solely by the additional first-start balance-age guard tested separately below."
+    },
+    {
+      "command": "PYTHONPATH=src:scripts /workspace/.venvs/few-shot-mi-eeg/bin/python -B -m pytest -q tests/test_kumar_remaining_source_batch.py -k delayed_first_start",
+      "passed": 1,
+      "deselected": 44,
+      "seconds": 0.77,
+      "tested_runner_sha256": "9bd6526c7dbc81d85dabb0c5d420bb41ba92957d091760adc72a4246733db5a1"
+    }
+  ],
+  "finding_fixed": {
+    "issue": "Checking observation age only relative to not_before_unix allowed a delayed initial start with stale balance.",
+    "minimal_fix": "new_state checks actual current time minus observed_at_unix is within0..300seconds before filesystem creation.",
+    "regression_test": "test_delayed_first_start_cannot_use_old_balance_observation",
+    "regression_result": "passed; no state or model outputs created"
+  },
+  "current_proposal": {
+    "maximum_wall_seconds": 10800,
+    "maximum_usd": 1,
+    "execution_enabled": false,
+    "cost_authorization": null,
+    "authorization": null
+  },
+  "scope": {
+    "real_GPU_fits": 0,
+    "real_scientific_CPU_fits": 0,
+    "real_weight_deserializations": 0,
+    "EEG_or_query_arrays_opened": 0,
+    "Pod_operations": 0,
+    "network_operations": 0,
+    "credentials_changed": false,
+    "scientific_configuration_changed": false
+  },
+  "limitations": [
+    "Operation proposals and software tests are not actual cost/deadline authorization.",
+    "No fresh official balance/rate, future topup or resource availability is inferred.",
+    "Pod billing can continue after a fit stops; no Pod stop or other Pod action is authorized."
+  ]
+}

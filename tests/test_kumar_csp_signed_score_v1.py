@@ -91,7 +91,7 @@ def test_cached_failures_preserve_400_rows_and_missing_denominators():
     class FailsOneShift(MockSupervisedPipeline):
         def fit(self, X, y):
             if np.array_equal(y, labels[0]):
-                raise ValueError("synthetic singular fit")
+                raise np.linalg.LinAlgError("synthetic singular fit")
             return super().fit(X, y)
 
     result = module.source_phase_alignment_control(
@@ -103,7 +103,7 @@ def test_cached_failures_preserve_400_rows_and_missing_denominators():
     assert comparison["total_control_count"] == 400
     assert comparison["unavailable_control_count"] > 0
     failures = [row for row in result["fit_rows"] if row["fit_status"] == "failed"]
-    assert all(row["heldout_predictions"] is None and row["failure"]["type"] == "ValueError" for row in failures)
+    assert all(row["heldout_predictions"] is None and row["failure"]["type"] == "LinAlgError" for row in failures)
 
 
 def test_signed_margin_keeps_offset_and_collapse_even_positive_contrast():

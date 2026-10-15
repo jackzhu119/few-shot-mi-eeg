@@ -39,11 +39,55 @@ container_identity, journal, save = proven.container_identity, proven.journal, p
 reserve_chunk = proven.reserve_chunk
 inspect_export, verify_receipt = proven.inspect_export, proven.verify_receipt
 checked_lock = proven.checked_lock
-chunk_timeout = proven.chunk_timeout
 FALSE_STAGES = proven.FALSE_STAGES
 FIXED_LIMITS = {key: value for key, value in proven.LIMITS.items()
                 if key not in {"wall_seconds", "max_new_fits", "max_epochs", "max_steps"}}
 FIXED_LIMITS.update(max_new_fits=36, max_epochs=3600, max_steps=10800)
+BILLING_OBSERVATION = {
+    "observer": "dot_parent",
+    "source": "official_RunPod_console_and_Billing",
+    "observation_window_utc": ["2026-10-15T04:49Z", "2026-10-15T04:51Z"],
+    "observation_window_Asia_Shanghai": ["2026-10-15T12:49+08:00", "2026-10-15T12:51+08:00"],
+    "provenance": "parent_reported_actual_read_only_observation_not_this_agent_platform_access",
+    "pod_id": "52ivinpjwv947i", "pod_name": "bright_ivory_bear", "pod_status": "running",
+    "balance_usd": 1.27, "total_hourly_usd": 0.257,
+    "compute_hourly_usd": 0.25, "storage_hourly_usd": 0.007, "storage_gb": 50,
+    "estimated_time_left_hours": 5, "autopay_enabled": False,
+    "payment_or_topup_changed_by_observer": False,
+    "future_topup_relied_on": False, "execution_authorization": False,
+}
+
+
+@contextlib.contextmanager
+def deadline_timeout(seconds):
+    """Keep the earlier of nested deadlines without cancelling or renewing a parent."""
+    if not math.isfinite(seconds) or seconds <= 0:
+        raise TimeoutError("Authorized operation deadline reached; preserve state")
+    previous_handler = signal.getsignal(signal.SIGALRM)
+    started = time.monotonic()
+    previous_seconds, previous_interval = signal.getitimer(signal.ITIMER_REAL)
+    parent_deadline = started + previous_seconds if previous_seconds > 0 else None
+    deadline = min(started + seconds, parent_deadline) if parent_deadline else started + seconds
+
+    def expired(_signum, _frame):
+        raise TimeoutError("Authorized operation deadline reached; preserve state")
+
+    signal.signal(signal.SIGALRM, expired)
+    signal.setitimer(signal.ITIMER_REAL, max(deadline - time.monotonic(), 1e-9))
+    try:
+        yield
+    finally:
+        signal.setitimer(signal.ITIMER_REAL, 0)
+        signal.signal(signal.SIGALRM, previous_handler)
+        now = time.monotonic()
+        if parent_deadline is not None and parent_deadline > now:
+            signal.setitimer(signal.ITIMER_REAL, parent_deadline - now, previous_interval)
+        if now >= deadline:
+            raise TimeoutError("Authorized operation deadline reached; preserve state")
+
+
+def chunk_timeout(seconds):
+    return deadline_timeout(seconds)
 
 
 def repo_file(relative):
@@ -66,7 +110,11 @@ def validate_contract(contract):
             contract["authorization"] is None, "Proposal cannot silently become authorization")
     limits = contract["limits"]
     require({k: v for k, v in limits.items() if k != "proposed_wall_seconds"} == FIXED_LIMITS and
-            limits["proposed_wall_seconds"] == 86400, "Frozen operational limits differ")
+            limits["proposed_wall_seconds"] == 10800, "Frozen operational limits differ")
+    require(contract["proposed_maximum_usd"] == 1 and
+            contract["balance_recheck_max_age_before_start_seconds"] == 300 and
+            contract["parent_reported_official_billing_observation"] == BILLING_OBSERVATION,
+            "Frozen proposed cost ceiling or actual parent billing observation differs")
     proposal = read(pinned(contract, "scientific_proposal"))
     import check_kumar_checkpoint_reuse_proposal as proposal_checker
     proposal_checker.check(proposal, root=ROOT)
@@ -133,7 +181,8 @@ def authorization_check(contract, contract_sha, commit, authorization, *, now=No
     cost = authorization.get("cost")
     require(isinstance(cost, dict) and cost.get("currency") == "USD" and
             isinstance(cost.get("maximum_usd"), (int, float)) and
-            not isinstance(cost.get("maximum_usd"), bool) and cost["maximum_usd"] > 0 and
+            not isinstance(cost.get("maximum_usd"), bool) and
+            0 < cost["maximum_usd"] <= contract["proposed_maximum_usd"] and
             isinstance(cost.get("hourly_rate_usd"), (int, float)) and
             not isinstance(cost.get("hourly_rate_usd"), bool) and cost["hourly_rate_usd"] > 0 and
             isinstance(cost.get("latest_authorization_receipt"), str) and
@@ -152,8 +201,26 @@ def authorization_check(contract, contract_sha, commit, authorization, *, now=No
             "Explicit unexpired absolute deadline required; never reuse/reset prior time")
     require(cost["hourly_rate_usd"] * approved_seconds / 3600 <= cost["maximum_usd"],
             "Approved wall time exceeds current cost cap")
-    require(authorization.get("authorized_container_hostname") == proven.platform.node(),
-            "Current container must be explicitly reviewed")
+    balance = authorization.get("balance_recheck")
+    require(isinstance(balance, dict) and
+            balance.get("source") == "official_RunPod_console_or_Billing" and
+            isinstance(balance.get("evidence_reference"), str) and
+            bool(balance["evidence_reference"].strip()) and
+            isinstance(balance.get("balance_usd"), (int, float)) and
+            not isinstance(balance.get("balance_usd"), bool) and
+            math.isfinite(balance["balance_usd"]) and
+            balance["balance_usd"] >= cost["maximum_usd"] and
+            isinstance(balance.get("observed_at_unix"), (int, float)) and
+            not isinstance(balance.get("observed_at_unix"), bool) and
+            math.isfinite(balance["observed_at_unix"]) and
+            start - contract["balance_recheck_max_age_before_start_seconds"] <=
+            balance["observed_at_unix"] <= min(start, now),
+            "Current official balance recheck before authorized start must cover cost cap")
+    identity = proven.container_identity()
+    require(authorization.get("authorized_container_identity") == identity and
+            authorization.get("authorized_container_hostname", identity["hostname"]) ==
+            identity["hostname"],
+            "Current complete container identity must be explicitly reviewed")
     return authorization
 
 
@@ -224,6 +291,9 @@ def disk_guard(contract, root):
 
 def new_state(contract, contract_sha, commit, root, authorization):
     authorization_check(contract, contract_sha, commit, authorization)
+    balance_age = time.time() - authorization["balance_recheck"]["observed_at_unix"]
+    require(0 <= balance_age <= contract["balance_recheck_max_age_before_start_seconds"],
+            "First run creation requires a current official balance recheck")
     require(not root.exists(), "Canonical state exists; never replace old claims or reset time")
     for job in contract["remaining_jobs"]:
         output = Path(job["output"])
@@ -345,8 +415,12 @@ def launch_worker(root, state, contract_path, job, lock_fd, timeout_seconds):
             timed_out = True
             os.killpg(process.pid, signal.SIGTERM)
             try:
-                code = process.wait(timeout=FIXED_LIMITS["term_grace_seconds"])
-            except subprocess.TimeoutExpired:
+                cleanup_seconds = min(FIXED_LIMITS["term_grace_seconds"],
+                                      state["deadline_unix"] - time.time())
+                if cleanup_seconds <= 0:
+                    raise subprocess.TimeoutExpired(command, 0)
+                code = process.wait(timeout=cleanup_seconds)
+            except BaseException:
                 os.killpg(process.pid, signal.SIGKILL)
                 code = process.wait()
     write_new(Path(str(prefix) + ".timing.json"), {"started_unix": started,
@@ -526,41 +600,8 @@ def worker(contract_path, contract_sha, commit, root, job_id, fd, authorization)
     return 75
 
 
-def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--contract", type=Path, default=DEFAULT_CONTRACT)
-    parser.add_argument("--execute", action="store_true")
-    parser.add_argument("--plan-only", action="store_true")
-    mode = parser.add_mutually_exclusive_group()
-    mode.add_argument("--new-run", action="store_true")
-    mode.add_argument("--resume", action="store_true")
-    parser.add_argument("--expected-commit")
-    parser.add_argument("--reviewed-contract-sha256")
-    parser.add_argument("--authorization", type=Path)
-    parser.add_argument("--authorization-sha256")
-    parser.add_argument("--wait-seconds", type=int, default=600)
-    parser.add_argument("--verify-export", type=Path)
-    parser.add_argument("--receipt-output", type=Path)
-    parser.add_argument("--attest-off-pod-possession", action="store_true")
-    parser.add_argument("--worker-job", help=argparse.SUPPRESS)
-    parser.add_argument("--inherited-lock-fd", type=int, help=argparse.SUPPRESS)
-    args = parser.parse_args()
-    if args.verify_export:
-        require(args.attest_off_pod_possession and args.receipt_output,
-                "dot must explicitly attest actual full off-Pod possession")
-        write_new(args.receipt_output, inspect_export(args.verify_export))
-        print(json.dumps({"status": "export_verified", "receipt": str(args.receipt_output)}))
-        return 0
-    contract = read(args.contract)
-    summary = validate_contract(contract)
-    if not args.execute and not args.worker_job or args.plan_only:
-        print(json.dumps({**summary, "limits": contract["limits"],
-                          "remaining_jobs": contract["remaining_jobs"]}, indent=2))
-        return 0
-    require(args.authorization and args.authorization_sha256 and
-            sha(args.authorization) == args.authorization_sha256,
-            "Separate current authorization bytes/SHA256 required")
-    authorization = read(args.authorization)
+def execute_authorized(args, contract, authorization):
+    """Every runtime/checkout/state/export step runs under the absolute watchdog."""
     execution_gate(contract, args.contract, args.expected_commit,
                    args.reviewed_contract_sha256, authorization)
     root = Path(contract["state_root"])
@@ -594,6 +635,62 @@ def main():
         finally:
             signal.signal(signal.SIGTERM, old_term)
             signal.signal(signal.SIGHUP, old_hup)
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--contract", type=Path, default=DEFAULT_CONTRACT)
+    parser.add_argument("--execute", action="store_true")
+    parser.add_argument("--plan-only", action="store_true")
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--new-run", action="store_true")
+    mode.add_argument("--resume", action="store_true")
+    parser.add_argument("--expected-commit")
+    parser.add_argument("--reviewed-contract-sha256")
+    parser.add_argument("--authorization", type=Path)
+    parser.add_argument("--authorization-sha256")
+    parser.add_argument("--wait-seconds", type=int, default=600)
+    parser.add_argument("--verify-export", type=Path)
+    parser.add_argument("--receipt-output", type=Path)
+    parser.add_argument("--attest-off-pod-possession", action="store_true")
+    parser.add_argument("--worker-job", help=argparse.SUPPRESS)
+    parser.add_argument("--inherited-lock-fd", type=int, help=argparse.SUPPRESS)
+    args = parser.parse_args()
+    if args.verify_export:
+        require(args.attest_off_pod_possession and args.receipt_output,
+                "dot must explicitly attest actual full off-Pod possession")
+        write_new(args.receipt_output, inspect_export(args.verify_export))
+        print(json.dumps({"status": "export_verified", "receipt": str(args.receipt_output)}))
+        return 0
+    contract = read(args.contract)
+    if not args.execute and not args.worker_job or args.plan_only:
+        summary = validate_contract(contract)
+        print(json.dumps({**summary, "limits": contract["limits"],
+                          "remaining_jobs": contract["remaining_jobs"]}, indent=2))
+        return 0
+    require(args.authorization and args.authorization_sha256 and
+            sha(args.authorization) == args.authorization_sha256,
+            "Separate current authorization bytes/SHA256 required")
+    authorization = read(args.authorization)
+    authorization_check(contract, args.reviewed_contract_sha256, args.expected_commit,
+                        authorization)
+    try:
+        with deadline_timeout(authorization["deadline_unix"] - time.time()):
+            return execute_authorized(args, contract, authorization)
+    except BaseException as error:
+        root = Path(contract["state_root"])
+        root.parent.mkdir(parents=True, exist_ok=True)
+        failure = root.parent / (root.name + ".attempt-failure-" + proven.uuid.uuid4().hex + ".json")
+        write_new(failure, {"schema_version": 1,
+            "status": "supervisor_attempt_failed_preserve_all_state_no_retry",
+            "contract_sha256": args.reviewed_contract_sha256,
+            "fixed_commit": args.expected_commit,
+            "authorization_sha256": args.authorization_sha256,
+            "absolute_deadline_unix": authorization["deadline_unix"],
+            "state_exists": (root / "state.json").is_file(),
+            "error_type": type(error).__name__, "automatic_training_retries": 0,
+            "utc": datetime.now(timezone.utc).isoformat()})
+        raise
 
 
 if __name__ == "__main__":

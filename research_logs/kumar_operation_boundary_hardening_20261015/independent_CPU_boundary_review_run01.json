@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "reviewer": "independent operation_hardening_independent_review agent",
+  "reviewed_at_utc": "2026-10-15T04:54:21.931798+00:00",
+  "status": "software_boundary_review_passed_execution_not_authorized",
+  "baseline_commit": "d7664adb17908b3ba2a40a6a75adf15245c3e88e",
+  "frozen_files": {
+    "scripts/analyze_kumar_csp_signed_score_v1.py": "ebc866734add9769c7b881332cb9362badaa0f6bf401bc2c6dfa717b645960f3",
+    "scripts/check_kumar_csp_signed_score_inputs.py": "5c05a319dec16950d86885962401d5f28d2d30a07c5287d769aeb03339a94264",
+    "configs/kumar_csp_signed_score_input_binding_20261015.json": "e1a103e3b3b8bcba24f15593561bcd3f7d816ff7fa0b178cf4d55915b13c0a7a",
+    "scripts/run_kumar_csp_signed_score_operation.py": "878111aed865d77697b08eebf3e7bbf7cae35fd88a2bdbbe85cc5b4d8e7e6204",
+    "configs/kumar_csp_signed_score_operation_20261015.json": "e45a3ed1c2dccc8cfa241e0743367b8249e1a984e80a4e1e22c831fe8489d123",
+    "tests/test_kumar_csp_signed_score_storage_failures_v1.py": "6bdd2710ddc45f15faf8a3991db5a5d43e7663078fceaba549bf841b8de8da13",
+    "tests/test_kumar_csp_signed_score_operation.py": "a3e023d35dd4c82874f177686da01fe0bbca52cdec677953335becad9d1b716c"
+  },
+  "checks": [
+    {
+      "check": "only model.fit LinAlgError is an expected estimator unavailable attempt",
+      "passed": true
+    },
+    {
+      "check": "factory, predict, replay, storage, hash and integrity failures propagate before another fit",
+      "passed": true
+    },
+    {
+      "check": "second write/hash failure tests preserve original and partial artifacts and assert no third fit",
+      "passed": true
+    },
+    {
+      "check": "TERM/HUP handlers stop separate child process group and restore prior handlers",
+      "passed": true
+    },
+    {
+      "check": "claim-write/log-hash/receipt-publication failures cannot become scientific success and preserve failure receipt or stderr",
+      "passed": true
+    },
+    {
+      "check": "single diagnostic state and claim prevent any automatic retry or overwrite",
+      "passed": true
+    },
+    {
+      "check": "3 GiB preflight, 2 GiB sampled child-tree RSS, 1 GiB host/cgroup running headroom are explicit operational limits",
+      "passed": true
+    },
+    {
+      "check": "cost/deadline/authorization remain null and no scientific execution is enabled",
+      "passed": true
+    }
+  ],
+  "independent_targeted_tests": {
+    "command": "PYTHONPATH=src:scripts /workspace/.venvs/few-shot-mi-eeg/bin/python -B -m pytest -q tests/test_kumar_csp_signed_score_operation.py -k 'default_preflight or actual_inert or term_hup or sampled_memory or storage_failures or term_grace'",
+    "passed": 14,
+    "deselected": 24,
+    "seconds": 0.27,
+    "inert_python_children_only": true
+  },
+  "scope": {
+    "real_scientific_consumer_executions": 0,
+    "real_GPU_fits": 0,
+    "real_weight_deserializations": 0,
+    "EEG_or_query_arrays_opened": 0,
+    "Pod_operations": 0,
+    "network_operations": 0,
+    "scientific_configuration_changes": 0
+  },
+  "remaining36_review": "Prior 86400 proposal identity/watchdog checks passed 10 targeted tests; not approval of superseding 10800/$1 proposal. Await final superseding file hashes for separate review.",
+  "limitations": [
+    "Sampled resource guard is fail-closed monitoring, not proof of a real CSP memory peak or an operating-system memory reservation.",
+    "No software can promise durable receipts after disk loss, SIGKILL, or machine loss; partial bytes are retained and emergency receipt/stderr attempted.",
+    "This review authorizes neither CPU scientific execution nor GPU fitting."
+  ]
+}

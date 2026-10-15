@@ -183,9 +183,17 @@ def source_phase_alignment_control(folds, labels_by_run, *, model_factory=make_c
                    "heldout_CSP_log_power4": None,
                    "model_parameter_sha256": None, "model_artifact": None}
             started = time.perf_counter()
+            model = model_factory(n_components=4, random_state=42)
             try:
-                model = model_factory(n_components=4, random_state=42)
                 model.fit(fold["train"], shifted)
+            except np.linalg.LinAlgError as error:
+                # MNE CSP uses scipy.linalg.eigh; frozen LDA lsqr uses
+                # scipy.linalg.lstsq. Their singular/convergence failures share
+                # numpy.linalg.LinAlgError and are explicit unavailable fits.
+                # Validation, prediction/replay, storage and integrity failures
+                # are execution failures and must stop this invocation.
+                row["failure"] = {"type": type(error).__name__, "message": str(error)}
+            else:
                 arrays = state_extractor(model)
                 before = baseline.array_digest(arrays)
                 predictions = np.asarray(model.predict(fold["holdout"]), dtype=int)
@@ -207,11 +215,6 @@ def source_phase_alignment_control(folds, labels_by_run, *, model_factory=make_c
                     row["model_artifact"] = str(model_path.resolve())
                     row["model_artifact_sha256"] = file_digest(model_path)
                 successful += 1
-            except Exception as error:
-                row.update({"fit_status": "failed", "failure": {
-                    "type": type(error).__name__, "message": str(error)},
-                    "heldout_predictions": None, "heldout_scores": None,
-                    "heldout_CSP_log_power4": None})
             row["fit_and_predict_seconds"] = time.perf_counter() - started
             fit_rows.append(row)
             cache[(fold_index, train_shift)] = row

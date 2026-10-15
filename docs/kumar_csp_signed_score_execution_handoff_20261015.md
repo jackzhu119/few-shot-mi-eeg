@@ -113,12 +113,15 @@ randomization p-values or evidence of neural specificity.
 | `configs/kumar_csp_reliability_20261014.json` | `4f71724c6be77696bbf8764e7de4795ceb1c9c4a315c1c2b266cc201a1c3da18` |
 | `docs/kumar_csp_reliability_plan_20261014.md` | `b942fdb6265594d632dbfb70a536bd576b9e2d5b13871f8d4e8e4c9721a8b34f` |
 | `docs/kumar_csp_reliability_methods_review_20261014.md` | `f53592721e4cff14b7d8466234c99d299f81870e0937346f92f1872b86532600` |
-| `scripts/analyze_kumar_csp_signed_score_v1.py` | `f2a0eb4831d78c4cbef54656c56c5ee7c085c697eff287c64dd535a5bdb7a5ad` |
-| `configs/kumar_csp_signed_score_input_binding_20261015.json` | `af65b5f0ce7850b010dc83965e799d3f26601b70fb6bc19607e59d1af3738712` |
+| `scripts/analyze_kumar_csp_signed_score_v1.py` | `ebc866734add9769c7b881332cb9362badaa0f6bf401bc2c6dfa717b645960f3` |
+| `configs/kumar_csp_signed_score_input_binding_20261015.json` | `e1a103e3b3b8bcba24f15593561bcd3f7d816ff7fa0b178cf4d55915b13c0a7a` |
 
-The versioned consumer is a byte-exact copy of the preexisting untracked
-candidate. The old candidate, old tests and all prepared untracked files are
-unchanged. Its new test copy redirects only the import to the fixed new path.
+The earlier versioned consumer was the byte-exact `f2a0eb...` copy of the
+preexisting untracked candidate. The current version above supersedes it with
+a narrow failure-boundary correction: only numerical estimator/replay errors
+remain explicit scientific fit failures; storage/hash errors abort the attempt.
+No scientific parameters, label controls, threads, tolerances or fit counts change.
+The old untracked candidate, old tests and prepared inputs remain unchanged.
 The new input binding separately pins 18 prepared artifacts, 24 reusable
 SOURCE40 artifacts and 12 protocol/dependency/receipt files; it does not turn
 the old static preparation receipt into consumer or numerical acceptance.
@@ -148,59 +151,111 @@ cd /workspace/few-shot-mi-eeg
 /workspace/.venvs/few-shot-mi-eeg/bin/python -B scripts/check_kumar_csp_signed_score_inputs.py
 ```
 
-## Single future execution command, pending separate parent review
+## Fixed CPU operation proposal, pending separate parent review
 
-The proposed reservation is one existing CPU worker, no GPU, with 8 GiB
-available RAM and 2 GiB free output disk checked before execution. This is one
-attempt with a 7200-second consumer limit, then TERM with KILL after 30 seconds;
-the preceding metadata/hash preflight consumes additional CPU time. Existing numerical CPU thread
-caps in the consumer remain one. This is a resource/time proposal, not a
-measured runtime or a paid-compute authorization; incremental monetary cost
-stays `null` unless a current applicable authorization is recorded.
-The proposed existing CPU venv's actually observed distribution metadata is
-Python 3.11.16, NumPy 2.2.6, SciPy 1.15.3, scikit-learn 1.7.2 and MNE 1.10.2,
-matching the historical CSP runtime. Obtaining these version strings did not
-import the numerical packages. The input checker does not enforce package
-versions: the separate parent-reviewed CPU operation must bind that runtime
-before execution; do not silently replace dependencies or numerical threads.
+Use the standard-library-only `scripts/run_kumar_csp_signed_score_operation.py`,
+with `configs/kumar_csp_signed_score_operation_20261015.json` and its
+`.proposal.sha256`. It runs only this diagnostic, once, at the fixed paths.
+The raw consumer command in the preceding delivery is superseded by this
+entrypoint. Do not invoke the consumer directly or treat its metadata input
+checker as execution permission.
 
-After the parent reviews the fixed delivery and separately approves this CPU
-operation, in that exact reviewed checkout, the one compound command is:
+The historical 8 GiB **available** proposal did not fit this container: its
+actual cgroup total limit is 8 GiB and other memory is already used. The revised
+resource operation proposal is justified separately in
+`docs/kumar_csp_signed_score_memory_budget_20261015.md`; its static 1,856 MiB
+resident envelope is an estimate, not an actual consumer measurement. Scientific
+configuration, numerical threads and workload remain unchanged. Before execution
+require at least 3 GiB effective available RAM (minimum of host MemAvailable and
+all visible governing cgroup headrooms) and 2 GiB free output disk. During the
+consumer, sample its process-tree RSS and all finite governing cgroup headrooms
+every 0.25 seconds: stop at RSS >= 2 GiB, cgroup headroom <= 1 GiB, host MemAvailable <= 1 GiB, or unreadable memory
+proof while the consumer is still alive. Samples do not establish instantaneous
+peak bounds or replace the actual existing 8 GiB kernel cgroup limit. No new
+resource or paid allocation is created.
+
+The default is a read-only metadata/resource preflight, with no claim, output,
+log, array deserialization or scientific process. It checks the exact Python
+3.11.16 / NumPy 2.2.6 / SciPy 1.15.3 / scikit-learn 1.7.2 / MNE 1.10.2 distribution
+metadata without importing numerical packages, the pinned executable/entrypoint
+bytes, and the 42 prepared/reused artifacts through the existing stdlib checker.
+Any version/resource difference returns `execution_closed_not_ready`; a ready
+metadata pass remains `execution_authorized=false`.
 
 ```bash
-bash -o pipefail -o noclobber -c '
-  cd /workspace/few-shot-mi-eeg &&
-  /workspace/.venvs/few-shot-mi-eeg/bin/python -B scripts/check_kumar_csp_signed_score_inputs.py &&
-  PYTHONPATH=src:scripts timeout --signal=TERM --kill-after=30s 7200s \
-    /workspace/.venvs/few-shot-mi-eeg/bin/python -B scripts/analyze_kumar_csp_signed_score_v1.py \
-    --epochs research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014 \
-    --baseline-root results/kumar_cross_session_20261012/cpu_run01_20261013T151445Z \
-    --baseline-r2-receipt research_logs/recovery_20261014/kumar_results_R2_run01.json \
-    --config configs/kumar_csp_reliability_20261014.json \
-    --output results/kumar_csp_signed_score_20261015/run01 \
-    > research_logs/kumar_next_source_operations_20261015/csp_signed_score_run01.log 2>&1
-'
+cd /workspace/few-shot-mi-eeg
+/workspace/.venvs/few-shot-mi-eeg/bin/python -B scripts/run_kumar_csp_signed_score_operation.py
 ```
 
-This command has **not** been executed. First verify the proposed free-resource
-reservation on the chosen CPU host. `noclobber` protects the log and the consumer
-creates a new output directory with `exist_ok=False`; neither permits silently
-overwriting a previous attempt. If preflight, process execution, timeout or disk
-fails, preserve all files and the real exit status, stop and return for a new
-reviewed recovery decision. Do not auto-retry, resume partially completed
-scientific fits, remove old output or rerun a completed diagnostic. An incomplete
-run is incomplete evidence. A full run with explicit singular-fit failures
-must retain those failures and their unavailable denominators.
+The contract retains `status=proposal_only_unapproved`, `execution_enabled=false`,
+and null cost authorization, execution authorization, approved wall seconds and
+absolute start/deadline. Only an actual separately reviewed authorization can
+permit this one CPU diagnostic. No applicable fresh cost decision, amount,
+credential or authorization file has been generated in this delivery.
 
-Post-execution acceptance would require actual start/exit/logs; all six subject
-measurements; actual 240 attempts and all control/failed denominators; saved
-model/features/scores/member hashes; a separate independent numerical review;
-and genuine off-host export plus R2 full-GET/SHA backup. None is supplied by a
-metadata pass or synthetic tests. Array payloads and weights remain outside Git.
+The future external authorization JSON must contain these exact bindings:
 
-The minimum scientific decision now is whether to approve this already frozen
-measurement operation. There is no supported new gate or threshold. A later
+| Field | Required actual value |
+|---|---|
+| `schema_version`, `status` | `1`, `parent_reviewed_csp_signed_score_cpu_execution_authorized` |
+| `diagnostic_id` | `kumar-csp-signed-score-development-run01-20261015` |
+| `reviewed_commit`, `operation_contract_sha256` | Full reviewed Git commit and full raw-byte operation-contract SHA256 |
+| `container_identity` | Actual current `hostname`, Linux `boot_id` and `pid1_start_ticks`; all three must match |
+| `allocation` | `existing_cpu_no_new_paid_allocation` |
+| `query_access`, `gpu_fit_authorized`, `accepted18_refitting_authorized`, `paid_compute_allocation_authorized` | All `false` |
+| `cost_authorization` | `applicable_to_this_cpu_operation=true`, plus the actual `existing_authorization_receipt` reference and its `existing_authorization_receipt_sha256`; no invented monetary amount |
+| `not_before_unix`, `deadline_unix`, `approved_wall_seconds` | Explicit finite absolute parent-approved window; deadline minus start equals approved seconds; the current time must lie in the unexpired window |
+
+The parent separately reviews the fixed commit, contract, resource estimate and
+actual applicable cost/absolute-time decision. Only after those real decisions,
+these shell variables must be populated from the actual reviewed delivery and
+actual external authorization; they are not supplied or synthesized here:
+
+```bash
+cd /workspace/few-shot-mi-eeg
+/workspace/.venvs/few-shot-mi-eeg/bin/python -B scripts/run_kumar_csp_signed_score_operation.py \
+  --execute \
+  --expected-commit "$PARENT_REVIEWED_COMMIT" \
+  --reviewed-contract-sha256 "$PARENT_REVIEWED_OPERATION_SHA256" \
+  --authorization "$ACTUAL_PARENT_CPU_AUTHORIZATION_JSON" \
+  --authorization-sha256 "$ACTUAL_PARENT_CPU_AUTHORIZATION_SHA256"
+```
+
+This execution command has **not** been run. It requires the reviewed fixed
+tracked checkout, authorization file byte SHA, complete current container
+identity and exact contract identity. The diagnostic's scientific-input files
+may remain the original untracked pinned artifacts; they are neither deleted nor
+committed. The absolute authorization window includes preflight. Its actual
+start/finish and duration are recorded separately; the consumer remains bounded
+by 7,200 seconds and TERM followed by KILL after at most 30 seconds. The consumer
+limit is shortened if necessary to leave TERM grace inside the unchanged parent
+absolute deadline. Reaping and receipt publication can take additional time
+after all scientific child processes have been signalled; this does not extend
+consumer compute or reset any budget.
+
+An exclusive new state directory at
+`research_logs/kumar_next_source_operations_20261015/csp_signed_score_operation_run01`
+contains claim, actual consumer start, raw combined log and launcher receipt.
+Prior state/output/claim blocks every retry. The launcher handles TERM/HUP and
+interrupts by stopping the child's process group and preserving evidence; it
+restores its own prior handlers. It records the actual return code, timeout,
+resource samples/stop, signals, failures, and each output member's bytes/SHA256.
+Log/member hashing or storage errors remain operation failures. Final receipt
+publication is best effort, with an exclusive emergency receipt and stderr
+fallback; SIGKILL, disk loss and container loss cannot promise durable evidence.
+No automatic retry/resume, output cleanup or partial scientific re-execution is
+implemented or authorized.
+
+A zero child exit is only `consumer_exited_zero_pending_audit`. Launcher flags
+`scientific_completion_accepted`, `independently_audited`, `R2_full_GET_verified`
+and `accepted` remain false. Post-execution acceptance requires the real logs,
+all six subject measurements and 240 attempt/control/failure denominators,
+member hashes, separate independent numerical review, genuine off-host export
+and full-GET/SHA R2 backup. Weights and array payloads remain outside Git.
+
+The next scientific decision remains whether to approve this already frozen
+measurement operation. There is no supported new gate or threshold. Any later
 nested participant/run policy comparison with matched-label/update-budget
-controls requires its own scientific freeze after real measurement evidence;
-the historical source BA and EEGNet development BA cannot supply that decision.
-Offline decoding cannot establish skill retention or clinical efficacy.
+controls requires a separate freeze after real measurement evidence. Historical
+source BA and EEGNet development BA cannot supply that decision. Offline
+decoding cannot establish skill retention or clinical efficacy.
