@@ -1,0 +1,121 @@
+{
+  "status": "development_accepted_and_saved_source_summary_ready_formal_query_and_new_policy_closed",
+  "recorded_at_utc": "2026-10-15T03:40:01.548726+00:00",
+  "accepted_ledger_fixed_commit": "92cd2434b0ac8c3b16a6fe8ce163ba6328432094",
+  "accepted_development_fits": 18,
+  "independent_development_participants": 6,
+  "seeds_per_participant": 3,
+  "pending_development_fits": 0,
+  "saved_result_summary_sha256": "7413751f1179c63926ce77b0059dc039befd461f12daf7ddcf3f5dbad7cbf5bd",
+  "query_access": false,
+  "formal_gate": false,
+  "ready_for_formal_training": false,
+  "configuration_modified": false,
+  "numerical_threads_modified": false,
+  "tolerance_modified": false,
+  "budget_modified": false,
+  "new_fits": 0,
+  "model_forward_passes": 0,
+  "query_rows_loaded": 0,
+  "Pod_operated": false,
+  "paper1_operated": false,
+  "readiness": [
+    {
+      "gate": "all_frozen_development_fits_independent_audit_R2_parent_acceptance",
+      "state": "passed",
+      "evidence": "research_logs/kumar_development_batch_20261015/all18_acceptance_run01/ledger_and_gate_closure.json"
+    },
+    {
+      "gate": "all_three_seeds_equal_weight_participant_source_validation_aggregation",
+      "state": "passed_descriptive_only",
+      "evidence": "research_logs/kumar_development_aggregation_20261015/run01/summary.json",
+      "limit": "Epoch-selected source validation is not independent test performance; eighteen fits remain six statistical units."
+    },
+    {
+      "gate": "new_formal_configuration_and_detached_freeze",
+      "state": "closed_not_created",
+      "evidence": "configs/kumar_eegnet_gpu_development_20261014.json#freeze",
+      "limit": "Existing false/null formal freeze fields remain unchanged; no query access is released by operational acceptance."
+    },
+    {
+      "gate": "saved_checkpoint_reuse_in_future_evaluation_entry",
+      "state": "not_ready_existing_generic_formal_entry_would_refit",
+      "evidence": "scripts/train_kumar_eegnet.py:509",
+      "limit": "Generic formal_train fits every participant/seed before query; must not invoke it. A separately reviewed path must reuse the eighteen accepted models and normalization/BN state without fitting them again."
+    },
+    {
+      "gate": "remaining_non_development_models_and_query_evaluation",
+      "state": "not_executed_or_authorized_this_round",
+      "limit": "The overall historical plan covers eighteen participants by three seeds, but this receipt authorizes no further fits, final-participant source reads or any query. Readiness does not dispatch those models."
+    },
+    {
+      "gate": "task_aware_policy_nested_development_and_matched_budget_controls",
+      "state": "not_ready_no_new_policy_or_threshold_selected",
+      "evidence": "research_logs/kumar_cross_session_20261012/protocol/task_aware_analysis_plan_frozen_20261013.md:46",
+      "limit": "Requires separate frozen nested participant/run development, current-support-only information and matched labels/update budget versus always-frozen, always-update, fixed mixture and covariance gate. Existing measurement reliability alone does not establish adaptation benefit."
+    },
+    {
+      "gate": "confirmatory_and_external_inference",
+      "state": "restricted_exploratory_same_cohort",
+      "evidence": "docs/kumar_csp_reliability_methods_review_20261014.md:144",
+      "limit": "Previously inspected final CPU baseline results preclude calling subsequent same-cohort strategy selection untouched confirmatory validation. Offline results do not establish human retention or clinical efficacy."
+    },
+    {
+      "gate": "future_hardware_runtime_input_and_budget_execution_acceptance",
+      "state": "not_observed_or_scheduled_this_round",
+      "limit": "Historical runtime/input receipts remain evidence of their observed execution, not a current live Pod inspection. Dot remains the only Pod operator."
+    }
+  ],
+  "scientific_readout": {
+    "mean_source_validation_BA": 0.5305555555555556,
+    "mean_source_validation_CE": 0.6741382380326589,
+    "single_class_prediction_fits": 1,
+    "interpretation": "Source readout averages 53.06% BA with participant and seed variation; no independent held-out generalization or adaptation-gate benefit established. Keep all negative and failed outcomes."
+  },
+  "sources": [
+    {
+      "path": "EEGNET_TRAINING_PLAN.md",
+      "sha256": "7f112eeae7d5b14db2c8c154840dd834ebfc77a316367f52173769e29ee35a86"
+    },
+    {
+      "path": "scripts/train_kumar_eegnet.py",
+      "sha256": "b3c5e6aff3f9501110012ea2c2d9d9614936392abf3020de980f14e8a4243bb5"
+    },
+    {
+      "path": "configs/kumar_eegnet_gpu_development_20261014.json",
+      "sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+    },
+    {
+      "path": "configs/kumar_development_queue_runtime_20261014.json",
+      "sha256": "290b815e1aa6fb2fd9459499d84c84e48b0969c9945000704922a749a38092e5"
+    },
+    {
+      "path": "configs/kumar_development_queue_plan_20261014.json",
+      "sha256": "0d23a47952fe286cd47a5e4eed69ae29e7317f63edf83ea41866495686f83a5b"
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/protocol/split_manifest.json",
+      "sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28"
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/protocol/task_aware_analysis_plan_frozen_20261013.md",
+      "sha256": "29b278814bbbc493540519df97229ef5c5cddef0a4b466eeb941879a7c116c05"
+    },
+    {
+      "path": "docs/kumar_supervised_reliability_plan_20261014.md",
+      "sha256": "e1fb1d48e39b1866eb76f4790d6941e42761df905c7514d6617097c193d4881b"
+    },
+    {
+      "path": "docs/kumar_csp_reliability_methods_review_20261014.md",
+      "sha256": "f53592721e4cff14b7d8466234c99d299f81870e0937346f92f1872b86532600"
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/lowdim_reliability_dev_run01_20261014/REPORT.md",
+      "sha256": "d1f5c64503be5560555a70d61e3fe10f2b8c0ca1ae7ef9d1eed69aab20795931"
+    },
+    {
+      "path": "research_logs/gpu_preparation_20261014/supervised_csp_run01/summary_corrected.json",
+      "sha256": "de2ff0c8cd054aac4749b32badca8ccae09897ba28a3797d034d90e1271dc5c2"
+    }
+  ]
+}

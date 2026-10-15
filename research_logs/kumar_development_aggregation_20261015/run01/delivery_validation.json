@@ -1,0 +1,80 @@
+{
+  "status": "saved_aggregation_and_next_protocol_readiness_validated",
+  "recorded_at_utc": "2026-10-15T03:41:26.495141+00:00",
+  "accepted_ledger_fixed_commit": "92cd2434b0ac8c3b16a6fe8ce163ba6328432094",
+  "aggregation_observed_HEAD_before_acceptance_commit": "fca47b7eeb62b01e7f2ea431d5095dba98d9f223",
+  "provenance_note": "Initial aggregation ran while the real newly appended ledger was still an uncommitted, exact-hash-bound input; its recorded HEAD is historical. That identical ledger is now fixed at the accepted_ledger_fixed_commit. The aggregation script and outputs are bound by SHA256 and delivered in the subsequent analysis commit. Neither old receipt nor source_git_commit is rewritten.",
+  "source_input_and_output_hashes_match_aggregation_receipt": true,
+  "aggregation_script_sha256": "b97586b395f992487bee4d6a431830116ece8b88b921a413eb974959ddbde446",
+  "independent_analysis_review_sha256": "8899fa90730a14e70b19aeb5628cb61df53b461f02a35df28cfd74f0e0c636d4",
+  "independent_checks": 844,
+  "independent_failed_checks": 0,
+  "validation_tests": {
+    "acceptance_and_gates_passed": 40,
+    "saved_result_aggregation_passed": 4,
+    "new_aggregation_pytest_log_sha256": "d07a1be384f84d9d95b6d48bfc797264bdf209a84dca560c1775e944c8887ef5",
+    "scoped_ruff": "passed",
+    "full_suite_rerun": false
+  },
+  "development_queue_complete": true,
+  "new_fit_started": false,
+  "model_forward_pass_performed": false,
+  "EEG_loaded": false,
+  "query_rows_loaded": 0,
+  "Pod_operated": false,
+  "paper1_operated": false,
+  "scientific_configuration_numerical_threads_tolerance_budget_changed": false,
+  "original_archives_and_old_receipts_modified": false,
+  "analysis_artifacts": [
+    {
+      "path": "research_logs/kumar_development_aggregation_20261015/run01/NEXT_PROTOCOL_READINESS.md",
+      "bytes": 3404,
+      "sha256": "1a5f1ff45a5772ba64b4dbb7f17f9c5fa271a3ecd8d2ecad64383439265489a5"
+    },
+    {
+      "path": "research_logs/kumar_development_aggregation_20261015/run01/REPORT.md",
+      "bytes": 5246,
+      "sha256": "5be678db17653e9b7e55d0c6da88797e856ab5c2d4685bee109236d1f887b8b6"
+    },
+    {
+      "path": "research_logs/kumar_development_aggregation_20261015/run01/aggregation_receipt.json",
+      "bytes": 16134,
+      "sha256": "88fe60cfdfc8ede8d20d53cf067f70e164698bbe990409576f6b427cddecbfc8"
+    },
+    {
+      "path": "research_logs/kumar_development_aggregation_20261015/run01/independent_analysis_review.json",
+      "bytes": 3216,
+      "sha256": "8899fa90730a14e70b19aeb5628cb61df53b461f02a35df28cfd74f0e0c636d4"
+    },
+    {
+      "path": "research_logs/kumar_development_aggregation_20261015/run01/next_frozen_protocol_readiness.json",
+      "bytes": 6191,
+      "sha256": "a11ca0aca436f1e18ff13a2280ee9f4c46ef3f3c09478c2694731d8a915e8232"
+    },
+    {
+      "path": "research_logs/kumar_development_aggregation_20261015/run01/per_fit_source_validation.csv",
+      "bytes": 3256,
+      "sha256": "56480023423f3edc1ae11f178acb0739ab826bb3e50b9ab9ac313d1c517d5f6f"
+    },
+    {
+      "path": "research_logs/kumar_development_aggregation_20261015/run01/per_participant_source_validation.csv",
+      "bytes": 1114,
+      "sha256": "1cb484b4e8631558ef3518e0dc3662c5cf666aa7cb9454c2621793ff93614118"
+    },
+    {
+      "path": "research_logs/kumar_development_aggregation_20261015/run01/pytest_saved_aggregation.log",
+      "bytes": 98,
+      "sha256": "d07a1be384f84d9d95b6d48bfc797264bdf209a84dca560c1775e944c8887ef5"
+    },
+    {
+      "path": "research_logs/kumar_development_aggregation_20261015/run01/source_archive_R2_readback_receipt.json",
+      "bytes": 2723,
+      "sha256": "e35f25f71e28d4c1ae5f3dda18655eedfd98a6c2e274bf55b471ccf7ef6563f5"
+    },
+    {
+      "path": "research_logs/kumar_development_aggregation_20261015/run01/summary.json",
+      "bytes": 1616,
+      "sha256": "7413751f1179c63926ce77b0059dc039befd461f12daf7ddcf3f5dbad7cbf5bd"
+    }
+  ]
+}

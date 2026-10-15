@@ -1,0 +1,51 @@
+{
+  "status": "independent_saved_logit_analysis_review_passed",
+  "reviewed_at_utc": "2026-10-15T03:39:55.061543+00:00",
+  "review_method": "Independent inline Python review; did not import or execute aggregation script. Recalculated argmax/class recalls/BA/accuracy from all original NPZ logits and CE using max-shift log-sum-exp with Python math.fsum; independently regrouped all3 seeds within six participant IDs.",
+  "reviewer_agent": "/root/accepted18_readiness_review",
+  "checks": 844,
+  "failures": [],
+  "reviewed_analysis_script_sha256": "b97586b395f992487bee4d6a431830116ece8b88b921a413eb974959ddbde446",
+  "reviewed_input_index_sha256": "8eb6b5b61ffaa3d424a9e67a78bc7ca8282513491e6cac6a3543da3c05c4ad24",
+  "reviewed_input_archives": 18,
+  "verified_payload_members": 243,
+  "source_validation_unique_trial_ids": 120,
+  "saved_logit_rows_including_repeated_seeds": 360,
+  "mean_participant_BA": 0.5305555555555556,
+  "mean_participant_recorded_CE": 0.6741382380326589,
+  "maximum_independent_CE_vs_report_algorithm_error": 1.1102230246251565e-16,
+  "maximum_independent_CE_vs_recorded_error": 3.2482647127629605e-08,
+  "frozen_CE_tolerance": 1e-07,
+  "single_class_prediction_fits": 1,
+  "participant_ids_with_20pp_seed_BA_range": [
+    "sub-4",
+    "sub-10",
+    "sub-13"
+  ],
+  "total_epochs": 1027,
+  "total_optimizer_steps": 3081,
+  "independent_unit": "six published development participant identities; seeds are repeated fits",
+  "model_fits_performed": 0,
+  "model_forward_passes_performed": 0,
+  "EEG_loaded": false,
+  "query_rows_loaded": 0,
+  "checkpoint_tensors_deserialized": false,
+  "network_or_Pod_operations": false,
+  "limitations": [
+    "Source validation selected checkpoint epoch; reported scores are descriptive development measurements, not an independent held-out generalization estimate.",
+    "No confidence interval or departure-from-chance significance test is warranted by this descriptive validation summary.",
+    "CE is the mean of recorded frozen Torch CE values; independent NumPy/Python recalculation differs only within the unchanged 1e-7 audit tolerance.",
+    "No matched CPU target-query comparison, task-aware policy benefit, neural learning, retention or clinical conclusion follows.",
+    "Generic formal_train currently refits all18x3 and then opens query; it must not be invoked as the next stage for accepted18. Saved-checkpoint-only evaluation requires a separate frozen reviewed entry.",
+    "Future same-cohort adaptation remains exploratory after earlier final-baseline exposure; task/power/CSP measurement reliability does not itself validate an adaptation gate."
+  ],
+  "python_version": "3.11.16",
+  "numpy_version": "2.2.6",
+  "reviewed_output_sha256": {
+    "per_fit_source_validation.csv": "56480023423f3edc1ae11f178acb0739ab826bb3e50b9ab9ac313d1c517d5f6f",
+    "per_participant_source_validation.csv": "1cb484b4e8631558ef3518e0dc3662c5cf666aa7cb9454c2621793ff93614118",
+    "summary.json": "7413751f1179c63926ce77b0059dc039befd461f12daf7ddcf3f5dbad7cbf5bd",
+    "aggregation_receipt.json": "88fe60cfdfc8ede8d20d53cf067f70e164698bbe990409576f6b427cddecbfc8",
+    "REPORT.md": "5be678db17653e9b7e55d0c6da88797e856ab5c2d4685bee109236d1f887b8b6"
+  }
+}

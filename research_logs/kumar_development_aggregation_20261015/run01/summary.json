@@ -1,0 +1,33 @@
+{
+  "status": "saved_source_validation_descriptive_aggregation_complete",
+  "independent_participants": 6,
+  "fits_included": 18,
+  "seeds_per_participant": 3,
+  "all_frozen_seeds_included": true,
+  "unique_source_validation_trials": 120,
+  "saved_prediction_rows_with_repeated_seeds": 360,
+  "mean_participant_source_validation_CE": 0.6741382380326589,
+  "uniform_binary_predictor_CE_reference": 0.6931471805599453,
+  "mean_participant_source_validation_balanced_accuracy": 0.5305555555555556,
+  "mean_participant_source_validation_accuracy": 0.5305555555555556,
+  "single_class_prediction_fits": 1,
+  "fits_selected_at_epoch_one": 4,
+  "fits_reaching_maximum_100_epochs": 1,
+  "total_epochs": 1027,
+  "total_optimizer_steps": 3081,
+  "maximum_recorded_vs_saved_CE_absolute_error": 3.24826470166073e-08,
+  "model_fits_performed": 0,
+  "model_forward_passes_performed": 0,
+  "EEG_loaded": false,
+  "query_rows_loaded": 0,
+  "seed_selection_performed": false,
+  "participant_aggregation": "equal mean of all three frozen seeds, then equal participant mean",
+  "inference": "descriptive only; no hypothesis test or CI on epoch-selected validation",
+  "scientific_limits": [
+    "Source validation selected checkpoint epoch; these scores are not an independent test.",
+    "Six development identities; three seeds do not increase participant n to eighteen.",
+    "No target-session query evaluated and no adaptive policy validated.",
+    "No matched comparison with existing CPU query baselines is available here.",
+    "Offline source decoding does not demonstrate human learning, retention or clinical effect."
+  ]
+}
