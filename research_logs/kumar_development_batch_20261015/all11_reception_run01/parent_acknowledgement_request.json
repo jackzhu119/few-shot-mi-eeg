@@ -1,0 +1,203 @@
+{
+  "status": "all11_independently_audited_and_R2_full_GET_verified_pending_actual_dot_parent_confirmation",
+  "recorded_at_utc": "2026-10-15T03:20:23.177602+00:00",
+  "fixed_execution_commit": "18cc7be472acc6c160117bbb9145b7aa2dfd2bdf",
+  "contract_sha256": "e0ffcbddeacbc1569f44272dd92a7d53e7202391e6742f96983a356d4148fd75",
+  "run_id": "602bc5ffcb6e4b6eb846d0e8b3b5c6e2",
+  "receipt": "research_logs/kumar_development_batch_20261015/all11_reception_run01/r2_full_get_receipt.json",
+  "receipt_sha256": "a6e68f3391fa732ff2b779417a9f6efb308a4d9fba4a65c0c465d4b757ff8cd9",
+  "receipt_UTF8_bytes": 38663,
+  "verified_objects": 38,
+  "verified_bytes": 8137472,
+  "failed_objects": 0,
+  "failures": [],
+  "full_GET_objects": 38,
+  "object_inventory": "research_logs/kumar_development_batch_20261015/all11_reception_run01/R2_object_inventory_run01.json",
+  "object_inventory_sha256": "0ad8f6b443d4cf5b1061b4295d577ec1401462e1a8d4212df382299b754831bb",
+  "object_categories": {
+    "original_boundary_tar": {
+      "objects": 12,
+      "bytes": 4495360
+    },
+    "original_final_dispatch": {
+      "objects": 1,
+      "bytes": 33326
+    },
+    "original_model_tar": {
+      "objects": 11,
+      "bytes": 2058240
+    },
+    "original_off_Pod_receipt": {
+      "objects": 12,
+      "bytes": 42337
+    },
+    "original_progress_index": {
+      "objects": 1,
+      "bytes": 12789
+    },
+    "original_received_handoff_envelope": {
+      "objects": 1,
+      "bytes": 1495420
+    }
+  },
+  "new_original_models": 11,
+  "new_completed_epochs": 751,
+  "new_completed_optimizer_steps": 2253,
+  "query_rows_loaded": 0,
+  "audit_refits": 0,
+  "raw_EEG_loaded": false,
+  "independent_result_audits_passed": 11,
+  "maximum_saved_logit_CE_absolute_error": 3.24826470166073e-08,
+  "frozen_CE_absolute_tolerance": 1e-07,
+  "original_handoff_sha256": "0988286c0602cdfa6ae94c19a572ba759397a2404b300769101d945cd3355af9",
+  "original_handoff_bytes": 1495420,
+  "original_final_dispatch_sha256": "faae3d1b651fc7008cdb71bef635f318ee0e8414bdf6ed83adb00d174cc598e3",
+  "original_final_dispatch_bytes": 33326,
+  "boundary_packages_verified": 12,
+  "original_off_Pod_receipts_verified": 12,
+  "first_exit76_pause_preserved": true,
+  "resume_same_run_deadline_unchanged": true,
+  "original_independent_audit_R2_and_accepted_flags_preserved": true,
+  "scientific_source_input_thread_tolerance_budget_unchanged": true,
+  "completed_development_fits": 18,
+  "accepted_jobs_count": 7,
+  "accepted_ledger_sha256_unchanged": "94caad4e0eec18224ee4c93834c86ae951c8dbb29902972d0645651892f4a911",
+  "accepted_entries_8_to_18_appended": false,
+  "parent_acknowledged": false,
+  "parent_acknowledgements_created": false,
+  "new_fit_started": false,
+  "query_or_future_signal_read": false,
+  "Pod_operated": false,
+  "paper1_operated": false,
+  "new_credentials_created_or_copied": false,
+  "raw_binaries_in_Git": false,
+  "proposed_entries": [
+    {
+      "job_id": "1aa92ed2b84621e78c67af8bf6f1eb6482b810951b9418a9b9fb017541552c91",
+      "subject": "sub-7",
+      "seed": 20261013,
+      "archive_sha256": "829fa765561327a67693c4609010ed0e2963310bc50d339c2ddd6507af6f9f68",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-7-seed-20261013-run01.tar",
+      "receipt": "research_logs/kumar_development_batch_20261015/all11_reception_run01/r2_full_get_receipt.json",
+      "parent_acknowledgement": "research_logs/kumar_development_batch_20261015/all11_reception_run01/parent_acknowledgements/sub-7-seed-20261013.json"
+    },
+    {
+      "job_id": "a072e1ee4836265f6237ccb5ae6a36adc90f47395f3c0830071d86798bc1f5ba",
+      "subject": "sub-7",
+      "seed": 20261014,
+      "archive_sha256": "4a9416a46558dffc2f29dd3b0075264eaff90ca6178d67af4f97e822e54b5a93",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-7-seed-20261014-run01.tar",
+      "receipt": "research_logs/kumar_development_batch_20261015/all11_reception_run01/r2_full_get_receipt.json",
+      "parent_acknowledgement": "research_logs/kumar_development_batch_20261015/all11_reception_run01/parent_acknowledgements/sub-7-seed-20261014.json"
+    },
+    {
+      "job_id": "04c84fd64d26f4aaddcfcce264b71c6332395eb1914ae799470dde4d0e666b5e",
+      "subject": "sub-10",
+      "seed": 20261012,
+      "archive_sha256": "60f9715ad53489d0512b62a874cedb9e63764c05166b2230f485aa40785fb180",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-10-seed-20261012-run01.tar",
+      "receipt": "research_logs/kumar_development_batch_20261015/all11_reception_run01/r2_full_get_receipt.json",
+      "parent_acknowledgement": "research_logs/kumar_development_batch_20261015/all11_reception_run01/parent_acknowledgements/sub-10-seed-20261012.json"
+    },
+    {
+      "job_id": "1a6f1682dafff74743a174565e4e8360d7615ef8b80d09919ff0a5c043ab1e55",
+      "subject": "sub-10",
+      "seed": 20261013,
+      "archive_sha256": "4812656cf14807d85f5d6be9722f1c342eacff642d3fdab739770af11c567571",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-10-seed-20261013-run01.tar",
+      "receipt": "research_logs/kumar_development_batch_20261015/all11_reception_run01/r2_full_get_receipt.json",
+      "parent_acknowledgement": "research_logs/kumar_development_batch_20261015/all11_reception_run01/parent_acknowledgements/sub-10-seed-20261013.json"
+    },
+    {
+      "job_id": "4b2352788f901e95f387f44be75ad0f71ceac4c5a3e68c030365c5e98559a9f1",
+      "subject": "sub-10",
+      "seed": 20261014,
+      "archive_sha256": "2178b05ccb0858ea09f63a4b1429720b029cd6868f417557e9574d352c9fc41f",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-10-seed-20261014-run01.tar",
+      "receipt": "research_logs/kumar_development_batch_20261015/all11_reception_run01/r2_full_get_receipt.json",
+      "parent_acknowledgement": "research_logs/kumar_development_batch_20261015/all11_reception_run01/parent_acknowledgements/sub-10-seed-20261014.json"
+    },
+    {
+      "job_id": "f7e593ca50f530f362181d48a39258dbbb2f6d741a2ecfd5c51b4ce0e69326b3",
+      "subject": "sub-13",
+      "seed": 20261012,
+      "archive_sha256": "cd5afc436560c517c34bf41f32afa2c8f34e26f95870baa855063c0ea48de6c3",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-13-seed-20261012-run01.tar",
+      "receipt": "research_logs/kumar_development_batch_20261015/all11_reception_run01/r2_full_get_receipt.json",
+      "parent_acknowledgement": "research_logs/kumar_development_batch_20261015/all11_reception_run01/parent_acknowledgements/sub-13-seed-20261012.json"
+    },
+    {
+      "job_id": "3afcfb08e856e7b89468b23e78a34aa4419d31a3c7fcec386a442d5766669599",
+      "subject": "sub-13",
+      "seed": 20261013,
+      "archive_sha256": "ad78ce4f60abb38a535e069a4837acfb6ea2ace52c2fc471287cb3925c007c2f",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-13-seed-20261013-run01.tar",
+      "receipt": "research_logs/kumar_development_batch_20261015/all11_reception_run01/r2_full_get_receipt.json",
+      "parent_acknowledgement": "research_logs/kumar_development_batch_20261015/all11_reception_run01/parent_acknowledgements/sub-13-seed-20261013.json"
+    },
+    {
+      "job_id": "fe37e7a42f0658cdddd6db0b2eb5134fda1bdc82eaa2855cb198ea2ed97cc2ea",
+      "subject": "sub-13",
+      "seed": 20261014,
+      "archive_sha256": "a8e7cad89f3a8839fdc1c2c1f37ca368f789dc50c158dd7fd1a65e1302e104dc",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-13-seed-20261014-run01.tar",
+      "receipt": "research_logs/kumar_development_batch_20261015/all11_reception_run01/r2_full_get_receipt.json",
+      "parent_acknowledgement": "research_logs/kumar_development_batch_20261015/all11_reception_run01/parent_acknowledgements/sub-13-seed-20261014.json"
+    },
+    {
+      "job_id": "1534e6e3dbe39282e0f7220355889366af2c8a9eafd2008c03cbc3449d361319",
+      "subject": "sub-16",
+      "seed": 20261012,
+      "archive_sha256": "21755136bbd8e2d9ab595eb77ca5eacfc12b0bcbfe27857b6816775a7ec8a78f",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-16-seed-20261012-run01.tar",
+      "receipt": "research_logs/kumar_development_batch_20261015/all11_reception_run01/r2_full_get_receipt.json",
+      "parent_acknowledgement": "research_logs/kumar_development_batch_20261015/all11_reception_run01/parent_acknowledgements/sub-16-seed-20261012.json"
+    },
+    {
+      "job_id": "1f1cf3552df9ed9bdf25fb45271d5b7ed61df8800f2e66fb509df1a76a5bc9af",
+      "subject": "sub-16",
+      "seed": 20261013,
+      "archive_sha256": "8b79a00c13537b96a8f15acd2c54001585f8e5062f07f68467a5024674d6d692",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-16-seed-20261013-run01.tar",
+      "receipt": "research_logs/kumar_development_batch_20261015/all11_reception_run01/r2_full_get_receipt.json",
+      "parent_acknowledgement": "research_logs/kumar_development_batch_20261015/all11_reception_run01/parent_acknowledgements/sub-16-seed-20261013.json"
+    },
+    {
+      "job_id": "df56f563ff26909b6e0590906f305982b0e5df89520c12355f433a1cd2bd968a",
+      "subject": "sub-16",
+      "seed": 20261014,
+      "archive_sha256": "02d18055e0c34fcf6b7279769b2d0bf0b1deabef573985b4bad6cd6760fddb27",
+      "result_key": "few-shot-mi-eeg/experiments/kumar2024/gpu-development-20261014/sub-16-seed-20261014-run01.tar",
+      "receipt": "research_logs/kumar_development_batch_20261015/all11_reception_run01/r2_full_get_receipt.json",
+      "parent_acknowledgement": "research_logs/kumar_development_batch_20261015/all11_reception_run01/parent_acknowledgements/sub-16-seed-20261014.json"
+    }
+  ],
+  "required_parent_action": "Read the fixed Git audit and entire UTF-8 R2 receipt; independently compare the eleven model and all shared-evidence keys/bytes/hashes against the originals; explicitly confirm this receipt SHA256 and exact eleven job IDs. Only after that real confirmation append per-job ACKs and ordered accepted8-18.",
+  "audits": {
+    "all11_result_audit_run01.json": {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/all11_result_audit_run01.json",
+      "sha256": "8d743487f61eeafd1c612e1b731c70dee63471f6a4c56ca5820af985c554fc9d"
+    },
+    "selection_and_replay_audit_run01.json": {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/selection_and_replay_audit_run01.json",
+      "sha256": "4cc5a1f37d29d785cb8a8317d52a86d93e5c986f2564a0bcd1d02c3d5a9773dc"
+    },
+    "boundary_independent_review_run01.json": {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/boundary_independent_review_run01.json",
+      "sha256": "40dcace5b69b891e5f80d99ef6d901a9e768ad32f8fdc263d9dc931e75bb3f01"
+    },
+    "dispatch_independent_review_run01.json": {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/dispatch_independent_review_run01.json",
+      "sha256": "cc0ec4c26301be2cfab6deb88e442ee9ef1c223dca6f1979c30b225f220856cb"
+    },
+    "R2_receipt_crosscheck_run01.json": {
+      "path": "research_logs/kumar_development_batch_20261015/all11_reception_run01/R2_receipt_crosscheck_run01.json",
+      "sha256": "26befa609f285fac97b3dd3f89d1a028818ace24524e32f1fd0a1499f627e979"
+    }
+  },
+  "limitations": [
+    "Saved evidence and immutable source were audited; this task did not observe live Pod or continuously monitor GPU.",
+    "Physical off-Pod possession is dot attestation; independent R2 proof comes only from this separate all-object full-GET receipt.",
+    "Source-validation CE is not final/query performance, clinical efficacy or human skill retention."
+  ]
+}

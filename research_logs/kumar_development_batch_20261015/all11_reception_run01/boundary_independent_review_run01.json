@@ -1,0 +1,418 @@
+{
+  "schema_version": 1,
+  "status": "all_12_boundaries_and_receipts_independently_verified",
+  "reviewed_at_utc": "2026-10-15T03:16:20.466823+00:00",
+  "reviewer": "independent boundary continuity subagent; trusted fixed repository code only",
+  "source_commit": "18cc7be472acc6c160117bbb9145b7aa2dfd2bdf",
+  "run_id": "602bc5ffcb6e4b6eb846d0e8b3b5c6e2",
+  "contract_sha256": "e0ffcbddeacbc1569f44272dd92a7d53e7202391e6742f96983a356d4148fd75",
+  "trusted_verifier": "scripts/run_kumar_development_batch.py:inspect_export (offline only; main/worker/execute not invoked)",
+  "trusted_verifier_sha256": "143899dcc6f43ca3d4468745c43f7e305015a696073a319b4bd45837164ab194",
+  "checks_passed": 715,
+  "failed_checks": [],
+  "boundary_objects": 12,
+  "boundary_total_bytes": 4495360,
+  "receipt_objects": 12,
+  "receipt_total_bytes": 42337,
+  "chunks": [
+    {
+      "chunk": 1,
+      "job_ids": [
+        "1aa92ed2b84621e78c67af8bf6f1eb6482b810951b9418a9b9fb017541552c91",
+        "a072e1ee4836265f6237ccb5ae6a36adc90f47395f3c0830071d86798bc1f5ba"
+      ],
+      "boundaries": [
+        {
+          "kind": "intent",
+          "archive": "boundaries/intent-1aa92ed2b84621e78c67af8bf6f1eb6482b810951b9418a9b9fb017541552c91-a072e1ee4836265f6237ccb5ae6a36adc90f47395f3c0830071d86798bc1f5ba.tar",
+          "bytes": 184320,
+          "sha256": "7f4b363f4448a26e3c11bc2875181c485859df39e9c2448ad6e9c043307ef58b",
+          "payload_members": 9,
+          "receipt": "receipts/intent-1aa92ed2b84621e78c67af8bf6f1eb6482b810951b9418a9b9fb017541552c91-a072e1ee4836265f6237ccb5ae6a36adc90f47395f3c0830071d86798bc1f5ba.receipt.json.uploaded",
+          "receipt_bytes": 2243,
+          "receipt_sha256": "6bc803e31b9556258a784bb2742cfec39ee4915cb5655b3ce58e56e76e32ac47",
+          "dot_verified_at_utc": "2026-10-15T01:35:13.188159+00:00",
+          "runner_receipt_verified_at_utc": "2026-10-15T02:47:17.892142+00:00",
+          "whole_member_and_receipt_fields_verified": true,
+          "physical_location_is_dot_attestation_not_machine_proof": true
+        },
+        {
+          "kind": "results",
+          "archive": "boundaries/results-1aa92ed2b84621e78c67af8bf6f1eb6482b810951b9418a9b9fb017541552c91-a072e1ee4836265f6237ccb5ae6a36adc90f47395f3c0830071d86798bc1f5ba.tar",
+          "bytes": 583680,
+          "sha256": "77bad86d9b465bc3ac9eadcac73d3056da135bb04763a27ca0aef90b2e45300b",
+          "payload_members": 19,
+          "receipt": "receipts/results-1aa92ed2b84621e78c67af8bf6f1eb6482b810951b9418a9b9fb017541552c91-a072e1ee4836265f6237ccb5ae6a36adc90f47395f3c0830071d86798bc1f5ba.receipt.json.uploaded",
+          "receipt_bytes": 5147,
+          "receipt_sha256": "bf981286cd5e6bee2552518691d20756103c354e9015efc3983d30d29c6e2c40",
+          "dot_verified_at_utc": "2026-10-15T02:50:40.944680+00:00",
+          "runner_receipt_verified_at_utc": "2026-10-15T02:51:17.587194+00:00",
+          "whole_member_and_receipt_fields_verified": true,
+          "physical_location_is_dot_attestation_not_machine_proof": true
+        }
+      ]
+    },
+    {
+      "chunk": 2,
+      "job_ids": [
+        "04c84fd64d26f4aaddcfcce264b71c6332395eb1914ae799470dde4d0e666b5e",
+        "1a6f1682dafff74743a174565e4e8360d7615ef8b80d09919ff0a5c043ab1e55"
+      ],
+      "boundaries": [
+        {
+          "kind": "intent",
+          "archive": "boundaries/intent-04c84fd64d26f4aaddcfcce264b71c6332395eb1914ae799470dde4d0e666b5e-1a6f1682dafff74743a174565e4e8360d7615ef8b80d09919ff0a5c043ab1e55.tar",
+          "bytes": 184320,
+          "sha256": "cb3b9a8d80e1fa3512ac6bad421c1acf5f8bdeec991d9bf1899998071189ec1c",
+          "payload_members": 9,
+          "receipt": "receipts/intent-04c84fd64d26f4aaddcfcce264b71c6332395eb1914ae799470dde4d0e666b5e-1a6f1682dafff74743a174565e4e8360d7615ef8b80d09919ff0a5c043ab1e55.receipt.json.uploaded",
+          "receipt_bytes": 2244,
+          "receipt_sha256": "225cb7c1a40a1132d83bb1179c4b28cfc16846def41c062e89ca00a038130000",
+          "dot_verified_at_utc": "2026-10-15T02:52:55.988081+00:00",
+          "runner_receipt_verified_at_utc": "2026-10-15T02:53:29.752155+00:00",
+          "whole_member_and_receipt_fields_verified": true,
+          "physical_location_is_dot_attestation_not_machine_proof": true
+        },
+        {
+          "kind": "results",
+          "archive": "boundaries/results-04c84fd64d26f4aaddcfcce264b71c6332395eb1914ae799470dde4d0e666b5e-1a6f1682dafff74743a174565e4e8360d7615ef8b80d09919ff0a5c043ab1e55.tar",
+          "bytes": 552960,
+          "sha256": "f66578f2495b72d684c45e69347720b2d09ea7821d38bf12f693c0ad9cbff765",
+          "payload_members": 19,
+          "receipt": "receipts/results-04c84fd64d26f4aaddcfcce264b71c6332395eb1914ae799470dde4d0e666b5e-1a6f1682dafff74743a174565e4e8360d7615ef8b80d09919ff0a5c043ab1e55.receipt.json.uploaded",
+          "receipt_bytes": 5147,
+          "receipt_sha256": "83d06cea343fac66bfadcf7b182022ea5a7a2fe895bffaa1ecedc019cb75a220",
+          "dot_verified_at_utc": "2026-10-15T02:54:42.278542+00:00",
+          "runner_receipt_verified_at_utc": "2026-10-15T02:54:53.445742+00:00",
+          "whole_member_and_receipt_fields_verified": true,
+          "physical_location_is_dot_attestation_not_machine_proof": true
+        }
+      ]
+    },
+    {
+      "chunk": 3,
+      "job_ids": [
+        "4b2352788f901e95f387f44be75ad0f71ceac4c5a3e68c030365c5e98559a9f1",
+        "f7e593ca50f530f362181d48a39258dbbb2f6d741a2ecfd5c51b4ce0e69326b3"
+      ],
+      "boundaries": [
+        {
+          "kind": "intent",
+          "archive": "boundaries/intent-4b2352788f901e95f387f44be75ad0f71ceac4c5a3e68c030365c5e98559a9f1-f7e593ca50f530f362181d48a39258dbbb2f6d741a2ecfd5c51b4ce0e69326b3.tar",
+          "bytes": 194560,
+          "sha256": "005aad04045fdda01d9ccd9587634a7d6bde4ca640f5322063c2d774cddab937",
+          "payload_members": 9,
+          "receipt": "receipts/intent-4b2352788f901e95f387f44be75ad0f71ceac4c5a3e68c030365c5e98559a9f1-f7e593ca50f530f362181d48a39258dbbb2f6d741a2ecfd5c51b4ce0e69326b3.receipt.json.uploaded",
+          "receipt_bytes": 2244,
+          "receipt_sha256": "7f4bc923a4d23104cb852e67771e1648c4520303357a56f7063021f67f137ee9",
+          "dot_verified_at_utc": "2026-10-15T03:00:12.353407+00:00",
+          "runner_receipt_verified_at_utc": "2026-10-15T03:00:22.649035+00:00",
+          "whole_member_and_receipt_fields_verified": true,
+          "physical_location_is_dot_attestation_not_machine_proof": true
+        },
+        {
+          "kind": "results",
+          "archive": "boundaries/results-4b2352788f901e95f387f44be75ad0f71ceac4c5a3e68c030365c5e98559a9f1-f7e593ca50f530f362181d48a39258dbbb2f6d741a2ecfd5c51b4ce0e69326b3.tar",
+          "bytes": 583680,
+          "sha256": "a14c0018e24a4b269857d048e8448767adfa459db75b9a480484c267036cec9a",
+          "payload_members": 19,
+          "receipt": "receipts/results-4b2352788f901e95f387f44be75ad0f71ceac4c5a3e68c030365c5e98559a9f1-f7e593ca50f530f362181d48a39258dbbb2f6d741a2ecfd5c51b4ce0e69326b3.receipt.json.uploaded",
+          "receipt_bytes": 5147,
+          "receipt_sha256": "2fa6db05786dcc996ed657725a76c5fd070317677cc7d9a591748b97b85f7e49",
+          "dot_verified_at_utc": "2026-10-15T03:01:23.848063+00:00",
+          "runner_receipt_verified_at_utc": "2026-10-15T03:01:32.740572+00:00",
+          "whole_member_and_receipt_fields_verified": true,
+          "physical_location_is_dot_attestation_not_machine_proof": true
+        }
+      ]
+    },
+    {
+      "chunk": 4,
+      "job_ids": [
+        "3afcfb08e856e7b89468b23e78a34aa4419d31a3c7fcec386a442d5766669599",
+        "fe37e7a42f0658cdddd6db0b2eb5134fda1bdc82eaa2855cb198ea2ed97cc2ea"
+      ],
+      "boundaries": [
+        {
+          "kind": "intent",
+          "archive": "boundaries/intent-3afcfb08e856e7b89468b23e78a34aa4419d31a3c7fcec386a442d5766669599-fe37e7a42f0658cdddd6db0b2eb5134fda1bdc82eaa2855cb198ea2ed97cc2ea.tar",
+          "bytes": 194560,
+          "sha256": "f93a6619880cdf4525b991dab91273a8eaec9227820e5069552c2e113ac19855",
+          "payload_members": 9,
+          "receipt": "receipts/intent-3afcfb08e856e7b89468b23e78a34aa4419d31a3c7fcec386a442d5766669599-fe37e7a42f0658cdddd6db0b2eb5134fda1bdc82eaa2855cb198ea2ed97cc2ea.receipt.json.uploaded",
+          "receipt_bytes": 2245,
+          "receipt_sha256": "69c6539d3366afd4dc480060a04ddf9b7ae28ad721af9b6822da73c827c13929",
+          "dot_verified_at_utc": "2026-10-15T03:02:03.776550+00:00",
+          "runner_receipt_verified_at_utc": "2026-10-15T03:02:10.879030+00:00",
+          "whole_member_and_receipt_fields_verified": true,
+          "physical_location_is_dot_attestation_not_machine_proof": true
+        },
+        {
+          "kind": "results",
+          "archive": "boundaries/results-3afcfb08e856e7b89468b23e78a34aa4419d31a3c7fcec386a442d5766669599-fe37e7a42f0658cdddd6db0b2eb5134fda1bdc82eaa2855cb198ea2ed97cc2ea.tar",
+          "bytes": 593920,
+          "sha256": "8ac7f49d639a7ff1a3e5b8cc8a82d43254f74b0125dca01ce7aefcfab5c9ff8a",
+          "payload_members": 19,
+          "receipt": "receipts/results-3afcfb08e856e7b89468b23e78a34aa4419d31a3c7fcec386a442d5766669599-fe37e7a42f0658cdddd6db0b2eb5134fda1bdc82eaa2855cb198ea2ed97cc2ea.receipt.json.uploaded",
+          "receipt_bytes": 5148,
+          "receipt_sha256": "debbf8a037cbd908d9beb191877d029f93ef852d04a53a2c2356e19f17f1a05c",
+          "dot_verified_at_utc": "2026-10-15T03:03:07.540938+00:00",
+          "runner_receipt_verified_at_utc": "2026-10-15T03:03:14.962266+00:00",
+          "whole_member_and_receipt_fields_verified": true,
+          "physical_location_is_dot_attestation_not_machine_proof": true
+        }
+      ]
+    },
+    {
+      "chunk": 5,
+      "job_ids": [
+        "1534e6e3dbe39282e0f7220355889366af2c8a9eafd2008c03cbc3449d361319",
+        "1f1cf3552df9ed9bdf25fb45271d5b7ed61df8800f2e66fb509df1a76a5bc9af"
+      ],
+      "boundaries": [
+        {
+          "kind": "intent",
+          "archive": "boundaries/intent-1534e6e3dbe39282e0f7220355889366af2c8a9eafd2008c03cbc3449d361319-1f1cf3552df9ed9bdf25fb45271d5b7ed61df8800f2e66fb509df1a76a5bc9af.tar",
+          "bytes": 204800,
+          "sha256": "d3c7d03579587f40b5efdfbe03d12482d3fa058c53ac60c8677fa7b40bf7f535",
+          "payload_members": 9,
+          "receipt": "receipts/intent-1534e6e3dbe39282e0f7220355889366af2c8a9eafd2008c03cbc3449d361319-1f1cf3552df9ed9bdf25fb45271d5b7ed61df8800f2e66fb509df1a76a5bc9af.receipt.json.uploaded",
+          "receipt_bytes": 2245,
+          "receipt_sha256": "b3a906ccbe5e769c8e91fe89b790ac1582815fc99133a9aaf0fa8fd3fed99297",
+          "dot_verified_at_utc": "2026-10-15T03:03:49.582045+00:00",
+          "runner_receipt_verified_at_utc": "2026-10-15T03:03:58.109415+00:00",
+          "whole_member_and_receipt_fields_verified": true,
+          "physical_location_is_dot_attestation_not_machine_proof": true
+        },
+        {
+          "kind": "results",
+          "archive": "boundaries/results-1534e6e3dbe39282e0f7220355889366af2c8a9eafd2008c03cbc3449d361319-1f1cf3552df9ed9bdf25fb45271d5b7ed61df8800f2e66fb509df1a76a5bc9af.tar",
+          "bytes": 604160,
+          "sha256": "0032931d2978b9693f0de60424985087df1d1d90bfef4ff27c6143bf74e52405",
+          "payload_members": 19,
+          "receipt": "receipts/results-1534e6e3dbe39282e0f7220355889366af2c8a9eafd2008c03cbc3449d361319-1f1cf3552df9ed9bdf25fb45271d5b7ed61df8800f2e66fb509df1a76a5bc9af.receipt.json.uploaded",
+          "receipt_bytes": 5148,
+          "receipt_sha256": "c72c38f15540c1af031d033a5d17f55d37a47c11f5ee0be064ac3e1cc76a60f7",
+          "dot_verified_at_utc": "2026-10-15T03:05:01.567163+00:00",
+          "runner_receipt_verified_at_utc": "2026-10-15T03:05:09.915484+00:00",
+          "whole_member_and_receipt_fields_verified": true,
+          "physical_location_is_dot_attestation_not_machine_proof": true
+        }
+      ]
+    },
+    {
+      "chunk": 6,
+      "job_ids": [
+        "df56f563ff26909b6e0590906f305982b0e5df89520c12355f433a1cd2bd968a"
+      ],
+      "boundaries": [
+        {
+          "kind": "intent",
+          "archive": "boundaries/intent-df56f563ff26909b6e0590906f305982b0e5df89520c12355f433a1cd2bd968a-df56f563ff26909b6e0590906f305982b0e5df89520c12355f433a1cd2bd968a.tar",
+          "bytes": 204800,
+          "sha256": "fb6d938a82d6dfd55477267983bac8f14f7c61cff30d6d5d28d140add153514e",
+          "payload_members": 8,
+          "receipt": "receipts/intent-df56f563ff26909b6e0590906f305982b0e5df89520c12355f433a1cd2bd968a-df56f563ff26909b6e0590906f305982b0e5df89520c12355f433a1cd2bd968a.receipt.json.uploaded",
+          "receipt_bytes": 1963,
+          "receipt_sha256": "eaf0ca924c796cd59e2781ed511e419077dcca12cb3085c3ea71a53719ecdb02",
+          "dot_verified_at_utc": "2026-10-15T03:07:43.647791+00:00",
+          "runner_receipt_verified_at_utc": "2026-10-15T03:07:52.074965+00:00",
+          "whole_member_and_receipt_fields_verified": true,
+          "physical_location_is_dot_attestation_not_machine_proof": true
+        },
+        {
+          "kind": "results",
+          "archive": "boundaries/results-df56f563ff26909b6e0590906f305982b0e5df89520c12355f433a1cd2bd968a-df56f563ff26909b6e0590906f305982b0e5df89520c12355f433a1cd2bd968a.tar",
+          "bytes": 409600,
+          "sha256": "ae00d36515b3e2d439d9c0f4334f1b98432d7b138e6d121b82d24c83b1b2d466",
+          "payload_members": 13,
+          "receipt": "receipts/results-df56f563ff26909b6e0590906f305982b0e5df89520c12355f433a1cd2bd968a-df56f563ff26909b6e0590906f305982b0e5df89520c12355f433a1cd2bd968a.receipt.json.uploaded",
+          "receipt_bytes": 3416,
+          "receipt_sha256": "a383f74b1e9a87bfadc7daa1034dfaa2347695ccd4e4f4718e6f0b7f0747104e",
+          "dot_verified_at_utc": "2026-10-15T03:08:43.165751+00:00",
+          "runner_receipt_verified_at_utc": "2026-10-15T03:09:06.165986+00:00",
+          "whole_member_and_receipt_fields_verified": true,
+          "physical_location_is_dot_attestation_not_machine_proof": true
+        }
+      ]
+    }
+  ],
+  "frozen_remaining_job_ids": [
+    "1aa92ed2b84621e78c67af8bf6f1eb6482b810951b9418a9b9fb017541552c91",
+    "a072e1ee4836265f6237ccb5ae6a36adc90f47395f3c0830071d86798bc1f5ba",
+    "04c84fd64d26f4aaddcfcce264b71c6332395eb1914ae799470dde4d0e666b5e",
+    "1a6f1682dafff74743a174565e4e8360d7615ef8b80d09919ff0a5c043ab1e55",
+    "4b2352788f901e95f387f44be75ad0f71ceac4c5a3e68c030365c5e98559a9f1",
+    "f7e593ca50f530f362181d48a39258dbbb2f6d741a2ecfd5c51b4ce0e69326b3",
+    "3afcfb08e856e7b89468b23e78a34aa4419d31a3c7fcec386a442d5766669599",
+    "fe37e7a42f0658cdddd6db0b2eb5134fda1bdc82eaa2855cb198ea2ed97cc2ea",
+    "1534e6e3dbe39282e0f7220355889366af2c8a9eafd2008c03cbc3449d361319",
+    "1f1cf3552df9ed9bdf25fb45271d5b7ed61df8800f2e66fb509df1a76a5bc9af",
+    "df56f563ff26909b6e0590906f305982b0e5df89520c12355f433a1cd2bd968a"
+  ],
+  "initial_accepted_ledger_count": 7,
+  "initial_accepted_ledger_sha256": "94caad4e0eec18224ee4c93834c86ae951c8dbb29902972d0645651892f4a911",
+  "accepted_ledger_modified": false,
+  "source_closure_checks": {
+    "frozen_recovery_files_verified": 148,
+    "active_ledger_checked_by_original_gate": true
+  },
+  "frozen_contract_input_source_manifest_bytes_verified_in_every_boundary": true,
+  "input_receipt_records_per_boundary": 127,
+  "frozen_input_total_bytes": 98743492,
+  "fresh_runtime_records_verified": 11,
+  "locked_packages_per_worker": 91,
+  "numerical_environment_unchanged": true,
+  "claims_identical_between_intent_results_and_final_dispatch": true,
+  "nested_11_original_archives_identical_to_top_level_bytes": true,
+  "journal_append_only_prefixes_verified": 12,
+  "ordered_unique_fit_starts": 11,
+  "ordered_unique_fit_completions": 11,
+  "old_seven_job_ids_absent_from_this_run": true,
+  "sequential_worker_intervals_no_overlap": true,
+  "worker_timing_records": [
+    {
+      "job_id": "1aa92ed2b84621e78c67af8bf6f1eb6482b810951b9418a9b9fb017541552c91",
+      "started_unix": 1792032438.0652442,
+      "finished_unix": 1792032446.8001957,
+      "returncode": 75,
+      "timed_out": false,
+      "automatic_retries": 0,
+      "pid": 20529
+    },
+    {
+      "job_id": "a072e1ee4836265f6237ccb5ae6a36adc90f47395f3c0830071d86798bc1f5ba",
+      "started_unix": 1792032446.924433,
+      "finished_unix": 1792032455.5092156,
+      "returncode": 75,
+      "timed_out": false,
+      "automatic_retries": 0,
+      "pid": 20564
+    },
+    {
+      "job_id": "04c84fd64d26f4aaddcfcce264b71c6332395eb1914ae799470dde4d0e666b5e",
+      "started_unix": 1792032809.963786,
+      "finished_unix": 1792032817.1421099,
+      "returncode": 75,
+      "timed_out": false,
+      "automatic_retries": 0,
+      "pid": 20644
+    },
+    {
+      "job_id": "1a6f1682dafff74743a174565e4e8360d7615ef8b80d09919ff0a5c043ab1e55",
+      "started_unix": 1792032817.2680693,
+      "finished_unix": 1792032824.4003484,
+      "returncode": 75,
+      "timed_out": false,
+      "automatic_retries": 0,
+      "pid": 20680
+    },
+    {
+      "job_id": "4b2352788f901e95f387f44be75ad0f71ceac4c5a3e68c030365c5e98559a9f1",
+      "started_unix": 1792033222.8565733,
+      "finished_unix": 1792033231.0896401,
+      "returncode": 75,
+      "timed_out": false,
+      "automatic_retries": 0,
+      "pid": 20759
+    },
+    {
+      "job_id": "f7e593ca50f530f362181d48a39258dbbb2f6d741a2ecfd5c51b4ce0e69326b3",
+      "started_unix": 1792033231.2156715,
+      "finished_unix": 1792033239.7000923,
+      "returncode": 75,
+      "timed_out": false,
+      "automatic_retries": 0,
+      "pid": 20795
+    },
+    {
+      "job_id": "3afcfb08e856e7b89468b23e78a34aa4419d31a3c7fcec386a442d5766669599",
+      "started_unix": 1792033331.0827556,
+      "finished_unix": 1792033339.0140939,
+      "returncode": 75,
+      "timed_out": false,
+      "automatic_retries": 0,
+      "pid": 20846
+    },
+    {
+      "job_id": "fe37e7a42f0658cdddd6db0b2eb5134fda1bdc82eaa2855cb198ea2ed97cc2ea",
+      "started_unix": 1792033339.139516,
+      "finished_unix": 1792033347.923383,
+      "returncode": 75,
+      "timed_out": false,
+      "automatic_retries": 0,
+      "pid": 20882
+    },
+    {
+      "job_id": "1534e6e3dbe39282e0f7220355889366af2c8a9eafd2008c03cbc3449d361319",
+      "started_unix": 1792033438.3255913,
+      "finished_unix": 1792033447.0088775,
+      "returncode": 75,
+      "timed_out": false,
+      "automatic_retries": 0,
+      "pid": 20932
+    },
+    {
+      "job_id": "1f1cf3552df9ed9bdf25fb45271d5b7ed61df8800f2e66fb509df1a76a5bc9af",
+      "started_unix": 1792033447.1401439,
+      "finished_unix": 1792033455.8755481,
+      "returncode": 75,
+      "timed_out": false,
+      "automatic_retries": 0,
+      "pid": 20968
+    },
+    {
+      "job_id": "df56f563ff26909b6e0590906f305982b0e5df89520c12355f433a1cd2bd968a",
+      "started_unix": 1792033672.2940764,
+      "finished_unix": 1792033681.1289208,
+      "returncode": 75,
+      "timed_out": false,
+      "automatic_retries": 0,
+      "pid": 21030
+    }
+  ],
+  "initial_safe_pause": {
+    "journal_utc": "2026-10-15T01:42:35.937470+00:00",
+    "launcher_exit_utc": "2026-10-15T01:42:36.344056+00:00",
+    "exit_code": 76,
+    "fits_before_pause": 0,
+    "preserved": true
+  },
+  "resume": {
+    "same_run_id": true,
+    "new_run_requested": false,
+    "deadline_unchanged": true,
+    "started_unix": 1792027955.831294,
+    "deadline_unix": 1792047755.831294,
+    "absolute_wall_seconds": 19800,
+    "final_exit_utc": "2026-10-15T03:09:06.584152+00:00",
+    "final_exit_code": 75
+  },
+  "new_fits_trained": 11,
+  "new_fits_off_Pod_exported": 11,
+  "epochs": 751,
+  "optimizer_steps": 2253,
+  "query_rows_loaded": 0,
+  "audit_EEG_loaded": false,
+  "audit_refits": 0,
+  "final_runner_stage_flags": {
+    "status": "complete_exported",
+    "trained": true,
+    "off_Pod_exported": true,
+    "independently_audited": false,
+    "R2_full_GET_verified": false,
+    "accepted": false
+  },
+  "evidence_limits": [
+    "Off-Pod physical location is an explicit dot attestation; whole archive, every declared member, exact run/contract/job identities and receipt bytes were independently recomputed from received evidence.",
+    "This review reads frozen manifests and recorded 127-file verification receipts; it does not load original EEG or remeasure Pod inputs.",
+    "GPU locking is evidenced by frozen reviewed runner, chunk journal boundaries, inherited-lock worker records and nonoverlapping worker timings; no continuous live GPU monitoring is claimed.",
+    "Only the supplied frozen run is covered; immutable original logs and the first exit76 are preserved. No claim is made about unrecorded historical container details.",
+    "Off-Pod exported does not establish scientific acceptance or R2 backup. Independent model replay audit and actual R2 full GET are separate root audit steps; accepted remains seven pending real parent confirmation."
+  ],
+  "R2_operation_performed_by_this_review": false,
+  "parent_acknowledgement_written": false,
+  "fit_started": false,
+  "Pod_operated": false,
+  "source_or_scientific_configuration_modified": false
+}
