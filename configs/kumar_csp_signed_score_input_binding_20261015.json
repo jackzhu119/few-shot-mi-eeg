@@ -1,0 +1,596 @@
+{
+  "schema_version": 1,
+  "status": "review_proposal_inputs_pinned_no_execution_authority",
+  "execution_authorized": false,
+  "scope": {
+    "development_subjects": [
+      "sub-1",
+      "sub-4",
+      "sub-7",
+      "sub-10",
+      "sub-13",
+      "sub-16"
+    ],
+    "allowed_roles": [
+      "source_train",
+      "target_support"
+    ],
+    "source_rows": 240,
+    "support_rows": 596,
+    "trial_count": 836,
+    "source_file_count": 42,
+    "source_train_session": "ses-0",
+    "source_train_runs": [
+      "run-0",
+      "run-1"
+    ],
+    "support_sessions": [
+      "ses-1",
+      "ses-2",
+      "ses-3",
+      "ses-4",
+      "ses-5"
+    ],
+    "support_run": "run-0",
+    "validation_rows": 0,
+    "query_rows": 0,
+    "final_subjects": 0,
+    "new_source_train20_pipeline_attempts": 240,
+    "new_primary_SOURCE40_decoder_fits": 0,
+    "existing_SOURCE40_models_reused": 6,
+    "bootstrap_seed": 42,
+    "bootstrap_replicates": 10000
+  },
+  "defaults": {
+    "epochs_root": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014",
+    "baseline_root": "results/kumar_cross_session_20261012/cpu_run01_20261013T151445Z"
+  },
+  "source_bindings": [
+    {
+      "path": "configs/kumar_csp_reliability_20261014.json",
+      "bytes": 1028,
+      "sha256": "4f71724c6be77696bbf8764e7de4795ceb1c9c4a315c1c2b266cc201a1c3da18"
+    },
+    {
+      "path": "configs/kumar_cross_session_20261012.json",
+      "bytes": 7307,
+      "sha256": "f1b2d0fa870493cc2aaab906fe6d8b1227e45b2a270e06700e3ca137fbfe9c89"
+    },
+    {
+      "path": "docs/kumar_csp_reliability_plan_20261014.md",
+      "bytes": 5757,
+      "sha256": "b942fdb6265594d632dbfb70a536bd576b9e2d5b13871f8d4e8e4c9721a8b34f"
+    },
+    {
+      "path": "docs/kumar_csp_reliability_methods_review_20261014.md",
+      "bytes": 10719,
+      "sha256": "f53592721e4cff14b7d8466234c99d299f81870e0937346f92f1872b86532600"
+    },
+    {
+      "path": "scripts/analyze_kumar_csp_signed_score_v1.py",
+      "bytes": 30693,
+      "sha256": "f2a0eb4831d78c4cbef54656c56c5ee7c085c697eff287c64dd535a5bdb7a5ad"
+    },
+    {
+      "path": "scripts/analyze_kumar_lowdim_reliability.py",
+      "bytes": 26071,
+      "sha256": "c3f19cac305cb72fdbfb539172b198bc67836ec6499730fad8829fe16f27a964"
+    },
+    {
+      "path": "scripts/run_kumar_baselines.py",
+      "bytes": 39480,
+      "sha256": "bf6bc4de396300c2f2430c8d42960eefdfaf50382d17e083a4c1846dabf736ac"
+    },
+    {
+      "path": "src/learning_preserving_bci/decoders/csp_lda.py",
+      "bytes": 1066,
+      "sha256": "4aedb37c21c8056d213b90797324fc5b69f370bb011badf97003c739b1127921"
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_reliability_freeze_run01_20261014/freeze_receipt.json",
+      "bytes": 550,
+      "sha256": "c1c6eb05e422ad9dcf50227d0ef6849fdd5e7f8928a7b9f22ef17886c937037c"
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/preparation_receipt.json",
+      "bytes": 2517,
+      "sha256": "f4b3a3bda5533d64c16c9d55e0c15bd934ade5d86c07cf444f340ab7a75e7964"
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_implementation_review_run01_20261014/preparation_static_review_receipt.json",
+      "bytes": 9538,
+      "sha256": "f8ca93c82713d1ab9c6e174f3a00438f2b3b4dfcb556e78215317b989fb9ead5"
+    },
+    {
+      "path": "research_logs/recovery_20261014/kumar_results_R2_run01.json",
+      "bytes": 474180,
+      "sha256": "2b8ee043ffe1b29d703c5849522f0dadc396f47859c522a418d0cfa069e47638"
+    }
+  ],
+  "required_files": [
+    {
+      "path": "sub-1/included_trial_metadata.json",
+      "bytes": 176498,
+      "sha256": "c2bc368da49884c224716a775021f273f7b1b2ab61e1f0a9b0a5176399a86abb",
+      "root": "epochs"
+    },
+    {
+      "path": "sub-1/restricted_epochs.npz",
+      "bytes": 7281428,
+      "sha256": "50a4714a3b118c5c784ad65ae290e7fe0074b2dad4b426d6ac71a4eeb0395b41",
+      "root": "epochs"
+    },
+    {
+      "path": "sub-1/subject_receipt.json",
+      "bytes": 72892,
+      "sha256": "bb0f8f8b789254d2d15601bebd2f09b1a522b5e0a17db09ff4f06e36a680a93e",
+      "root": "epochs"
+    },
+    {
+      "path": "sub-1/source_before.npz",
+      "bytes": 9922,
+      "sha256": "6705bb92aba1ba40e8722f2f34e4428ab544401099926e200677ff200d20d237",
+      "root": "baseline"
+    },
+    {
+      "path": "sub-1/source_after.npz",
+      "bytes": 9922,
+      "sha256": "6705bb92aba1ba40e8722f2f34e4428ab544401099926e200677ff200d20d237",
+      "root": "baseline"
+    },
+    {
+      "path": "sub-1/participant_receipt.json",
+      "bytes": 1320,
+      "sha256": "e194049fb2e032e60eb3d2e48419c98e857b210a149d444f1110c9fc8566655e",
+      "root": "baseline"
+    },
+    {
+      "path": "sub-1/fit_access_audit.json",
+      "bytes": 25124,
+      "sha256": "f268a9f24a2657c7eafeed221e9254d1239279e8947106eaf9dfc798582b5664",
+      "root": "baseline"
+    },
+    {
+      "path": "sub-4/included_trial_metadata.json",
+      "bytes": 176589,
+      "sha256": "56bb545778f46af83834a98e939072412746722a646cd2f9852551b047c96da0",
+      "root": "epochs"
+    },
+    {
+      "path": "sub-4/restricted_epochs.npz",
+      "bytes": 7280151,
+      "sha256": "7de39b345cba461de7aaa49788770c89e29360b1bb7e1b16916541e091f8f271",
+      "root": "epochs"
+    },
+    {
+      "path": "sub-4/subject_receipt.json",
+      "bytes": 72930,
+      "sha256": "f3eedc2a005e5728d3ef1bcef75027363544766035d8af9caf7c5be215abf3c7",
+      "root": "epochs"
+    },
+    {
+      "path": "sub-4/source_before.npz",
+      "bytes": 9923,
+      "sha256": "c0aa6c1b1835eb3ffb41abab8165524a606afe3d7cea111e55a9f745972fcc18",
+      "root": "baseline"
+    },
+    {
+      "path": "sub-4/source_after.npz",
+      "bytes": 9923,
+      "sha256": "c0aa6c1b1835eb3ffb41abab8165524a606afe3d7cea111e55a9f745972fcc18",
+      "root": "baseline"
+    },
+    {
+      "path": "sub-4/participant_receipt.json",
+      "bytes": 1319,
+      "sha256": "795a27c6daf328dae7fd0c6c7bb3f9c6368e5a83d736b303ed12ebf0d2d1537c",
+      "root": "baseline"
+    },
+    {
+      "path": "sub-4/fit_access_audit.json",
+      "bytes": 25124,
+      "sha256": "c7b6c6f2e1fbf79820ca254506d566ad664ee1ebf5e087daa753b890ef70d4a0",
+      "root": "baseline"
+    },
+    {
+      "path": "sub-7/included_trial_metadata.json",
+      "bytes": 177841,
+      "sha256": "d3d97e52208333034bac9bc34fe3ab4c6c9af15f24e9b1cad71a9ca663143515",
+      "root": "epochs"
+    },
+    {
+      "path": "sub-7/restricted_epochs.npz",
+      "bytes": 7329155,
+      "sha256": "4f48b0c16799acaf51cbca5fec905bc567c8ec8a844a746528633c4f6eeedf11",
+      "root": "epochs"
+    },
+    {
+      "path": "sub-7/subject_receipt.json",
+      "bytes": 73421,
+      "sha256": "dbf3b6c006e8d5fcf5c843d3917c13359245759cba109a20d873f97e987f9c18",
+      "root": "epochs"
+    },
+    {
+      "path": "sub-7/source_before.npz",
+      "bytes": 9929,
+      "sha256": "10ec90dcf30635a32c61bec3e067e5f0de80df1818a7a1cbdc3f26d09c2ea29c",
+      "root": "baseline"
+    },
+    {
+      "path": "sub-7/source_after.npz",
+      "bytes": 9929,
+      "sha256": "10ec90dcf30635a32c61bec3e067e5f0de80df1818a7a1cbdc3f26d09c2ea29c",
+      "root": "baseline"
+    },
+    {
+      "path": "sub-7/participant_receipt.json",
+      "bytes": 1320,
+      "sha256": "be947e63d4bfdedfd2cd9884ed3a410741449d012ba690763261a171ab9fc06a",
+      "root": "baseline"
+    },
+    {
+      "path": "sub-7/fit_access_audit.json",
+      "bytes": 25192,
+      "sha256": "414d4d5112c286fad8cb440c7330b12a83f850938b08cd5c890b3223f20c6468",
+      "root": "baseline"
+    },
+    {
+      "path": "sub-10/included_trial_metadata.json",
+      "bytes": 177101,
+      "sha256": "1c334153d703a1c263df479eaae980702d3105a29f29c48aac197ea3352df203",
+      "root": "epochs"
+    },
+    {
+      "path": "sub-10/restricted_epochs.npz",
+      "bytes": 7275878,
+      "sha256": "e827603ff0942eaec2bf1d7ed0c4af313ef5023c4b0cf86f0951af8afd0d6ee7",
+      "root": "epochs"
+    },
+    {
+      "path": "sub-10/subject_receipt.json",
+      "bytes": 73498,
+      "sha256": "1bc481618d8b9dde09ad409a2317911afcf9a0a3ec84fa1e6a9ecfdb58366c74",
+      "root": "epochs"
+    },
+    {
+      "path": "sub-10/source_before.npz",
+      "bytes": 9948,
+      "sha256": "b5f260b1d815496bee769af8e7044cc71ce19f2866ea5f65ae51a76124febf3b",
+      "root": "baseline"
+    },
+    {
+      "path": "sub-10/source_after.npz",
+      "bytes": 9948,
+      "sha256": "b5f260b1d815496bee769af8e7044cc71ce19f2866ea5f65ae51a76124febf3b",
+      "root": "baseline"
+    },
+    {
+      "path": "sub-10/participant_receipt.json",
+      "bytes": 1341,
+      "sha256": "ac7767a871f262052c1ef56f40327ab9285502e675668c8f2990f20dfd374c59",
+      "root": "baseline"
+    },
+    {
+      "path": "sub-10/fit_access_audit.json",
+      "bytes": 25762,
+      "sha256": "359de4c667910e55719aa302935f3e7d2c6b948f9af71da18a3000f59b2e5ebc",
+      "root": "baseline"
+    },
+    {
+      "path": "sub-13/included_trial_metadata.json",
+      "bytes": 178405,
+      "sha256": "015a93fa89242ffd302a2b1cfb2f28bbc7cd344052f95473359f3a284a511d96",
+      "root": "epochs"
+    },
+    {
+      "path": "sub-13/restricted_epochs.npz",
+      "bytes": 7330873,
+      "sha256": "0b3778695f5e78bd086e05fe259b539ada0b2f5e4717139416a83400ca249ce9",
+      "root": "epochs"
+    },
+    {
+      "path": "sub-13/subject_receipt.json",
+      "bytes": 73979,
+      "sha256": "94572b900c51dfe58606a00cb07d58779889cec6a4018341b617d9196bc56ea7",
+      "root": "epochs"
+    },
+    {
+      "path": "sub-13/source_before.npz",
+      "bytes": 9943,
+      "sha256": "2ae33ef69bae62cc78a85695b3e39f465aa189f09a3d35f49191f7a78f6254f2",
+      "root": "baseline"
+    },
+    {
+      "path": "sub-13/source_after.npz",
+      "bytes": 9943,
+      "sha256": "2ae33ef69bae62cc78a85695b3e39f465aa189f09a3d35f49191f7a78f6254f2",
+      "root": "baseline"
+    },
+    {
+      "path": "sub-13/participant_receipt.json",
+      "bytes": 1341,
+      "sha256": "53962f1a7e5db647dc04138d947a839d1606f61f10e92f5f4ccd712d80bf3b02",
+      "root": "baseline"
+    },
+    {
+      "path": "sub-13/fit_access_audit.json",
+      "bytes": 25832,
+      "sha256": "4593512e5b92ae2f899d913fa6b0c1c391d4d0e007271295eb50ed777e032613",
+      "root": "baseline"
+    },
+    {
+      "path": "sub-16/included_trial_metadata.json",
+      "bytes": 177097,
+      "sha256": "0db92a718f649a9ed1f5a5dc521f4ac7abe21be0079f47d5f5ee9e87f263bb91",
+      "root": "epochs"
+    },
+    {
+      "path": "sub-16/restricted_epochs.npz",
+      "bytes": 7288906,
+      "sha256": "cd3d41fa96bff2056a324c18b319ebf21c1b788530d527cb44e1f2b26e1a9ec3",
+      "root": "epochs"
+    },
+    {
+      "path": "sub-16/subject_receipt.json",
+      "bytes": 73495,
+      "sha256": "55b78a2b2152049cf5356e82376532f30561766555789425aed2ad9d322efcfb",
+      "root": "epochs"
+    },
+    {
+      "path": "sub-16/source_before.npz",
+      "bytes": 9920,
+      "sha256": "b0b47e9932b0a09736ef88dd295b4aab940f1b5c3ba3c3b1cad12bb5de3dee79",
+      "root": "baseline"
+    },
+    {
+      "path": "sub-16/source_after.npz",
+      "bytes": 9920,
+      "sha256": "b0b47e9932b0a09736ef88dd295b4aab940f1b5c3ba3c3b1cad12bb5de3dee79",
+      "root": "baseline"
+    },
+    {
+      "path": "sub-16/participant_receipt.json",
+      "bytes": 1341,
+      "sha256": "236f0ea822c00a735f5975940e3c6bcd9bee5453e8a941b5d42259dc3372d8ee",
+      "root": "baseline"
+    },
+    {
+      "path": "sub-16/fit_access_audit.json",
+      "bytes": 25762,
+      "sha256": "c2eb5560bb9caa49d6b08a4c627ce966ad8f2c567388b7016bf5a1dcdd3377d7",
+      "root": "baseline"
+    }
+  ],
+  "participants": [
+    {
+      "subject": "sub-1",
+      "role_counts": {
+        "source_train": 40,
+        "target_support": 99
+      },
+      "trial_count": 139,
+      "source_file_count": 7
+    },
+    {
+      "subject": "sub-4",
+      "role_counts": {
+        "source_train": 40,
+        "target_support": 99
+      },
+      "trial_count": 139,
+      "source_file_count": 7
+    },
+    {
+      "subject": "sub-7",
+      "role_counts": {
+        "source_train": 40,
+        "target_support": 100
+      },
+      "trial_count": 140,
+      "source_file_count": 7
+    },
+    {
+      "subject": "sub-10",
+      "role_counts": {
+        "source_train": 40,
+        "target_support": 99
+      },
+      "trial_count": 139,
+      "source_file_count": 7
+    },
+    {
+      "subject": "sub-13",
+      "role_counts": {
+        "source_train": 40,
+        "target_support": 100
+      },
+      "trial_count": 140,
+      "source_file_count": 7
+    },
+    {
+      "subject": "sub-16",
+      "role_counts": {
+        "source_train": 40,
+        "target_support": 99
+      },
+      "trial_count": 139,
+      "source_file_count": 7
+    }
+  ],
+  "source_EDF_identities_metadata_only": [
+    {
+      "path": "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-0_eeg.edf",
+      "sha256": "740b63b5ba249316234eb67926e9f7e6b72e6986257206c0f8e03d1efc701b16"
+    },
+    {
+      "path": "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-1_eeg.edf",
+      "sha256": "a8d5bbe56eac07405c0b40fec511637fcf8ef5f269b965f975ffd563f9b5b43c"
+    },
+    {
+      "path": "sub-1/ses-1/eeg/sub-1_ses-1_task-imagery_run-0_eeg.edf",
+      "sha256": "fd22713938d0b9d54f6ae87479cd08c78d512e167fbcc7227e33f80e49a4ed21"
+    },
+    {
+      "path": "sub-1/ses-2/eeg/sub-1_ses-2_task-imagery_run-0_eeg.edf",
+      "sha256": "1f6dcd6ff4f5b300e30b3c4bc2e09d9e0e5242e7c9d536cbf8a140f298fc95db"
+    },
+    {
+      "path": "sub-1/ses-3/eeg/sub-1_ses-3_task-imagery_run-0_eeg.edf",
+      "sha256": "dcb8563798db479148cf63ed06e124dc59f500fa438596c7be552bca4bb20707"
+    },
+    {
+      "path": "sub-1/ses-4/eeg/sub-1_ses-4_task-imagery_run-0_eeg.edf",
+      "sha256": "e24bbaca9e9e8cddd16d4c941f4cfef0247db90456921a03b6de9cc33bc65502"
+    },
+    {
+      "path": "sub-1/ses-5/eeg/sub-1_ses-5_task-imagery_run-0_eeg.edf",
+      "sha256": "f516f9e8fd1cdecef7db3544543f409e441d9f3bdc8f1760701664e834a755ec"
+    },
+    {
+      "path": "sub-10/ses-0/eeg/sub-10_ses-0_task-imagery_run-0_eeg.edf",
+      "sha256": "40ffde33481acb212fe3332ef947995e4db2181d00e0541f9b42eb2f07f25721"
+    },
+    {
+      "path": "sub-10/ses-0/eeg/sub-10_ses-0_task-imagery_run-1_eeg.edf",
+      "sha256": "14874fbdd6641b30035e85ff001fd26778ce4f10ed5bce013eee6887dbeb4658"
+    },
+    {
+      "path": "sub-10/ses-1/eeg/sub-10_ses-1_task-imagery_run-0_eeg.edf",
+      "sha256": "a3df234af1457dcedc9e12b5502cf5ef8e1cc9c5b5ccececb5535f7d569b6703"
+    },
+    {
+      "path": "sub-10/ses-2/eeg/sub-10_ses-2_task-imagery_run-0_eeg.edf",
+      "sha256": "240cff5dd33bcfc8ee29989c1948cd4b8ca161d8328b77da4adfee6bd1a36580"
+    },
+    {
+      "path": "sub-10/ses-3/eeg/sub-10_ses-3_task-imagery_run-0_eeg.edf",
+      "sha256": "5a5f06caa563d21ada92c50b59efdf9c7dd8498b160e3c464cc1850167c76a53"
+    },
+    {
+      "path": "sub-10/ses-4/eeg/sub-10_ses-4_task-imagery_run-0_eeg.edf",
+      "sha256": "a2cb294be5ad00972e823f851a7f687a2c649880f88b263ca281a3e8efca8564"
+    },
+    {
+      "path": "sub-10/ses-5/eeg/sub-10_ses-5_task-imagery_run-0_eeg.edf",
+      "sha256": "8ee9ad6a059bd046cf49cefcd1c3819cc32fa3c54621b57569ae838920b7231a"
+    },
+    {
+      "path": "sub-13/ses-0/eeg/sub-13_ses-0_task-imagery_run-0_eeg.edf",
+      "sha256": "10b797fe310364c9953909ea098a03c409e653990c1e763147bf6437ca1d4d54"
+    },
+    {
+      "path": "sub-13/ses-0/eeg/sub-13_ses-0_task-imagery_run-1_eeg.edf",
+      "sha256": "1a9e6bf9a35544f37e252a898c4375ee34927d63ef0025e02cb63e14cdf1b902"
+    },
+    {
+      "path": "sub-13/ses-1/eeg/sub-13_ses-1_task-imagery_run-0_eeg.edf",
+      "sha256": "496f14976be90218e5c59105d073178174ed19812d367577e8ffe3a6ebcbc975"
+    },
+    {
+      "path": "sub-13/ses-2/eeg/sub-13_ses-2_task-imagery_run-0_eeg.edf",
+      "sha256": "0cc8c420affcd4b8f0c040589b585d2cae505be8bdeb8bee1400463ce0c02377"
+    },
+    {
+      "path": "sub-13/ses-3/eeg/sub-13_ses-3_task-imagery_run-0_eeg.edf",
+      "sha256": "f7f92f20e3aadecce9b616283b816d51f722442d6451dc1712ea75e1b507c3b0"
+    },
+    {
+      "path": "sub-13/ses-4/eeg/sub-13_ses-4_task-imagery_run-0_eeg.edf",
+      "sha256": "e489398a37c37515743ba93dda522bfac919da6c427979100f33461a2424c261"
+    },
+    {
+      "path": "sub-13/ses-5/eeg/sub-13_ses-5_task-imagery_run-0_eeg.edf",
+      "sha256": "d79d9da047e583983127ccaddd92c131966cce19c0103db15013d81e8a00518d"
+    },
+    {
+      "path": "sub-16/ses-0/eeg/sub-16_ses-0_task-imagery_run-0_eeg.edf",
+      "sha256": "5dae4b071e7a7c1c18e8b8d37ca7a2156a3f43d661aa5f359f62a599654271a0"
+    },
+    {
+      "path": "sub-16/ses-0/eeg/sub-16_ses-0_task-imagery_run-1_eeg.edf",
+      "sha256": "466995dc8e3c8593bbc58af04f1cd1afd8af3e497c4f7c3b62a36823b6d53e06"
+    },
+    {
+      "path": "sub-16/ses-1/eeg/sub-16_ses-1_task-imagery_run-0_eeg.edf",
+      "sha256": "31684f0a0cb0994a3951016582c646d1155562c378bad172df418f6fe9ec9348"
+    },
+    {
+      "path": "sub-16/ses-2/eeg/sub-16_ses-2_task-imagery_run-0_eeg.edf",
+      "sha256": "66395dca34d4cf204e6711d8d828517e515fae69183cb43485032da62d713462"
+    },
+    {
+      "path": "sub-16/ses-3/eeg/sub-16_ses-3_task-imagery_run-0_eeg.edf",
+      "sha256": "b498270ec2e7da3a7e71e87169ac2be00006ef7bd5104ebe2357f907a97622bb"
+    },
+    {
+      "path": "sub-16/ses-4/eeg/sub-16_ses-4_task-imagery_run-0_eeg.edf",
+      "sha256": "5f1bcc52d6c5df9ea7f2810bd97a597c41e91cb884c68611e468518ba1034a3d"
+    },
+    {
+      "path": "sub-16/ses-5/eeg/sub-16_ses-5_task-imagery_run-0_eeg.edf",
+      "sha256": "68a07be53682f87b474328fea1a9aef7695a301eb3e6bbc6ed3e5b01d989bfb3"
+    },
+    {
+      "path": "sub-4/ses-0/eeg/sub-4_ses-0_task-imagery_run-0_eeg.edf",
+      "sha256": "0e4e64169c02f01266e8e9f1ff346c848f48f6e11f7a8d1611b01b758d9cfa17"
+    },
+    {
+      "path": "sub-4/ses-0/eeg/sub-4_ses-0_task-imagery_run-1_eeg.edf",
+      "sha256": "6082222826a199ff08286dca5b72997b93c09f1b14401ff06b8eeafed8773073"
+    },
+    {
+      "path": "sub-4/ses-1/eeg/sub-4_ses-1_task-imagery_run-0_eeg.edf",
+      "sha256": "c1a9f1f9c3f87f9901784e40297ca3a43efb2007ae757a554a1b29cefb997cd4"
+    },
+    {
+      "path": "sub-4/ses-2/eeg/sub-4_ses-2_task-imagery_run-0_eeg.edf",
+      "sha256": "3b14011041ff9fa73eef0f72426ee4a3a7c6501711cb39e9e44a0d3ff142f33d"
+    },
+    {
+      "path": "sub-4/ses-3/eeg/sub-4_ses-3_task-imagery_run-0_eeg.edf",
+      "sha256": "3b9de157b6689d69d7ec7f287373b2f7ecbccc24b9eec7b16229a7fc7cfc4dc9"
+    },
+    {
+      "path": "sub-4/ses-4/eeg/sub-4_ses-4_task-imagery_run-0_eeg.edf",
+      "sha256": "a7e58bd21938d549f70344cefcc12243e278cb205ac1c530ff9012e7f6c4a3a0"
+    },
+    {
+      "path": "sub-4/ses-5/eeg/sub-4_ses-5_task-imagery_run-0_eeg.edf",
+      "sha256": "40a515b4257ec157b349d057f53d212ab218a3c6c533fa2622324d308b5fc8f3"
+    },
+    {
+      "path": "sub-7/ses-0/eeg/sub-7_ses-0_task-imagery_run-0_eeg.edf",
+      "sha256": "9a878a597e2cfcfb54ba94f4dad36ac4d7b3dd32bdb4bdbdeddf923934827618"
+    },
+    {
+      "path": "sub-7/ses-0/eeg/sub-7_ses-0_task-imagery_run-1_eeg.edf",
+      "sha256": "22a0168aa30407e7284df86a1b22bacf2a8910877fbb40e2374deb10ee5c48bb"
+    },
+    {
+      "path": "sub-7/ses-1/eeg/sub-7_ses-1_task-imagery_run-0_eeg.edf",
+      "sha256": "fdb2e9097c77b8f3fa82874dd8b4259476a799c0a2f077be175917a18333c99e"
+    },
+    {
+      "path": "sub-7/ses-2/eeg/sub-7_ses-2_task-imagery_run-0_eeg.edf",
+      "sha256": "e32de01e44cad1624a2c3dadf18c7d4f039596401352ccb52035bf747f3a4ace"
+    },
+    {
+      "path": "sub-7/ses-3/eeg/sub-7_ses-3_task-imagery_run-0_eeg.edf",
+      "sha256": "be1481af0ca88d185e13b8561fa487a53dfaec7f080d6699c762b6ea272d4ff5"
+    },
+    {
+      "path": "sub-7/ses-4/eeg/sub-7_ses-4_task-imagery_run-0_eeg.edf",
+      "sha256": "988cf4c3abd310e2091ef1b9774cd1a19c5e0d09dfa32dfec8460c59e2828c3d"
+    },
+    {
+      "path": "sub-7/ses-5/eeg/sub-7_ses-5_task-imagery_run-0_eeg.edf",
+      "sha256": "b47142caaa20828566f19c9ccc6c7928180cea81c35258cb296aa574f76f6a78"
+    }
+  ],
+  "baseline_R2_receipt_path": "research_logs/recovery_20261014/kumar_results_R2_run01.json",
+  "proof_limits": [
+    "Byte hashes and prepared metadata only; this checker never deserializes EEG/model arrays.",
+    "No fresh raw EDF processing or real diagnostic completion is established by this binding.",
+    "42 EDF identities identify epoch provenance; the diagnostic consumes the pinned restricted tensors, not whole EDF numerical streams."
+  ]
+}

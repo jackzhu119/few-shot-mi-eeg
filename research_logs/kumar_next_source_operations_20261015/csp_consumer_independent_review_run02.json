@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "status": "passed_scoped_software_metadata_review_execution_remains_closed",
+  "reviewer": "/root/csp_consumer_code_review",
+  "recorded_at_utc": "2026-10-15T04:21:36.722191+00:00",
+  "source_git_commit": "ac11d86799dc0c297535ef6e7a0f0ff7f371ef42",
+  "prior_immutable_review": {
+    "path": "research_logs/kumar_next_source_operations_20261015/csp_consumer_independent_review_run01.json",
+    "bytes": 15699,
+    "sha256": "29a033f66311ea992b659dfec2f6bbf0d119d08188ed999ac234f6ee5671bb2a"
+  },
+  "reviewed_files": [
+    {
+      "path": "scripts/check_kumar_csp_signed_score_inputs.py",
+      "bytes": 11173,
+      "sha256": "4afbf6e2570318744a6cbd07bf73b904750454a07b6b06c3d3dcb6f7149c1639"
+    },
+    {
+      "path": "configs/kumar_csp_signed_score_input_binding_20261015.json",
+      "bytes": 20218,
+      "sha256": "af65b5f0ce7850b010dc83965e799d3f26601b70fb6bc19607e59d1af3738712"
+    },
+    {
+      "path": "tests/test_kumar_csp_signed_score_inputs.py",
+      "bytes": 9418,
+      "sha256": "a184a6bf78c23c6a41076b0b78c9a245a67abf367d71215bf856c8004bd3201a"
+    },
+    {
+      "path": "tests/test_kumar_csp_signed_score_receipts_v1.py",
+      "bytes": 7575,
+      "sha256": "54d27e1808e434a147cc1683b0297e8d3d2e3a48f9a7d1a5626fbb36751b3803"
+    },
+    {
+      "path": "scripts/analyze_kumar_csp_signed_score_v1.py",
+      "bytes": 30693,
+      "sha256": "f2a0eb4831d78c4cbef54656c56c5ee7c085c697eff287c64dd535a5bdb7a5ad"
+    }
+  ],
+  "static_checker_imports": [
+    "__future__",
+    "argparse",
+    "collections",
+    "hashlib",
+    "json",
+    "pathlib"
+  ],
+  "external_binding_assessment": [
+    "Fixed binding digest af65b5f0ce7850b010dc83965e799d3f26601b70fb6bc19607e59d1af3738712 is checked before input access. Exact18 prepared plus24 baseline paths and12 scientific/dependency/receipt sources are pinned by byte length/SHA256.",
+    "Contained paths reject direct symlinks/root escapes. Metadata requires six development IDs,240 source rows,596 current-support rows,836 identities and42 exact EDF provenance paths/hashes.",
+    "Source ses0 run0/1 requires20 rows per run,10 per class; current-support is only ses1..5 run0 with19/20 original class budgets. Query/final/validation and unpinned self-consistent metadata changes fail closed.",
+    "Each24 baseline artifact matches a unique historical full-GET R2 record,status200,length/SHA; HEAD-only presence is rejected.",
+    "CLI imports standard library only and has no scientific import,array-deserialization,subprocess or write path. Metadata pass retains execution_authorized=false."
+  ],
+  "related_software_tests": [
+    {
+      "command": "PYTHONPATH=src:scripts /workspace/.venvs/few-shot-mi-eeg/bin/python -B -m pytest -q tests/test_kumar_csp_signed_score_v1.py",
+      "passed": 12,
+      "reported_seconds": 7.9,
+      "exit_code": 0,
+      "scope": "Synthetic numerical tests/mock supervised pipeline only; no real estimator fits."
+    },
+    {
+      "command": "PYTHONPATH=src:scripts /workspace/.venvs/few-shot-mi-eeg/bin/python -B -m pytest -q tests/test_kumar_csp_signed_score_receipts_v1.py tests/test_kumar_csp_signed_score_inputs.py",
+      "passed": 30,
+      "reported_seconds": 2.14,
+      "exit_code": 0,
+      "scope": "12 entirely mocked main/early-loader cases and18 opaque-byte/metadata checker cases."
+    },
+    {
+      "command": "/workspace/.venvs/few-shot-mi-eeg/bin/ruff check tests/test_kumar_csp_signed_score_receipts_v1.py",
+      "exit_code": 0,
+      "result": "All checks passed!"
+    }
+  ],
+  "mock_receipt_coverage": [
+    "Final receipt is published after all six subjects:240 attempted pipelines,2400 joint rows and all six IDs.",
+    "One explicit synthetic fit failure yields completed_with_explicit_source_fit_failures; denominator remains240 and missing participant prevents bootstrap estimate.",
+    "Sixth-subject interruption preserves five completed synthetic markers and produces no final measurement receipt.",
+    "Nine invalid source40 provenance cases fail before np.load:final subject,pending receipt,HEAD-only mode,missing/duplicate identity,unverified artifact,GET503,byte mismatch,SHA mismatch.",
+    "Scientific load/measure calls are mocked; estimator factory,StandardScaler and np.load are forbidden. Mocked persisted artifacts are explicitly synthetic=true/software_validation_only=true."
+  ],
+  "actual_current_metadata_CLI_execution": {
+    "command": "/workspace/.venvs/few-shot-mi-eeg/bin/python -B scripts/check_kumar_csp_signed_score_inputs.py",
+    "exit_code": 0,
+    "status": "metadata_verified_execution_closed",
+    "binding_sha256": "af65b5f0ce7850b010dc83965e799d3f26601b70fb6bc19607e59d1af3738712",
+    "artifact_count": 42,
+    "prepared_artifacts": 18,
+    "existing_SOURCE40_artifacts": 24,
+    "scientific_dependency_bindings": 12,
+    "source_train_rows": 240,
+    "target_support_rows": 596,
+    "source_EDF_metadata_identities": 42,
+    "numerical_arrays_deserialized": false,
+    "new_fits": 0,
+    "query_rows_loaded": 0,
+    "execution_authorized": false
+  },
+  "CPU_environment_package_metadata_only": {
+    "python": "3.11.16",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.7.2",
+    "mne": "1.10.2"
+  },
+  "blocking_software_findings": [],
+  "remaining_limits": [
+    "Real consumer numerical execution,source40 array validation,CSP/LDA fitting,independent numerical audit and latest diagnostic R2 backup remain unperformed/unproven.",
+    "Consumer remains byte-identical to old f2a0eb candidate; external input/provenance guard is separate. Future checker-and-consumer command remains pending separate parent review/authorization.",
+    "Installed-package metadata does not establish scientific execution reproducibility or free-resource availability.",
+    "Software checks provide no gate,threshold,adaptive benefit,query result,skill-retention or clinical conclusion."
+  ],
+  "real_EEG_arrays_loaded": false,
+  "real_weights_loaded": false,
+  "real_estimator_fits": 0,
+  "diagnostic_executed": false,
+  "query_read": false,
+  "pod_operated": false,
+  "scientific_execution_authorized": false
+}

@@ -1,0 +1,320 @@
+{
+  "schema_version": 1,
+  "status": "passed_scoped_software_and_metadata_review_scientific_execution_closed",
+  "reviewer": "/root/csp_consumer_code_review",
+  "reviewed_at_utc": "2026-10-15T04:12:59.260439+00:00",
+  "source_git_commit": "ac11d86799dc0c297535ef6e7a0f0ff7f371ef42",
+  "review_scope": "Static consumer/frozen protocol review, exact prepared-file byte hashes and allowed metadata counts, synthetic/mock software tests only. No real diagnostic execution.",
+  "reviewed_files": [
+    {
+      "path": "scripts/analyze_kumar_csp_signed_score_v1.py",
+      "sha256": "f2a0eb4831d78c4cbef54656c56c5ee7c085c697eff287c64dd535a5bdb7a5ad",
+      "bytes": 30693
+    },
+    {
+      "path": "tests/test_kumar_csp_signed_score_v1.py",
+      "sha256": "cd73acbdb682b9232c593f605031a1b3097959f591b3e785a139e225bccbf279",
+      "bytes": 10918
+    },
+    {
+      "path": "scripts/analyze_kumar_csp_reliability.py",
+      "sha256": "f2a0eb4831d78c4cbef54656c56c5ee7c085c697eff287c64dd535a5bdb7a5ad",
+      "bytes": 30693
+    },
+    {
+      "path": "tests/test_kumar_csp_reliability.py",
+      "sha256": "d7f794e95b715f5c6e431ed0556339b56cb103a39374e46550bc9f4b64eae404",
+      "bytes": 10914
+    },
+    {
+      "path": "configs/kumar_csp_reliability_20261014.json",
+      "sha256": "4f71724c6be77696bbf8764e7de4795ceb1c9c4a315c1c2b266cc201a1c3da18",
+      "bytes": 1028
+    },
+    {
+      "path": "docs/kumar_csp_reliability_plan_20261014.md",
+      "sha256": "b942fdb6265594d632dbfb70a536bd576b9e2d5b13871f8d4e8e4c9721a8b34f",
+      "bytes": 5757
+    },
+    {
+      "path": "docs/kumar_csp_reliability_methods_review_20261014.md",
+      "sha256": "f53592721e4cff14b7d8466234c99d299f81870e0937346f92f1872b86532600",
+      "bytes": 10719
+    },
+    {
+      "path": "scripts/analyze_kumar_lowdim_reliability.py",
+      "sha256": "c3f19cac305cb72fdbfb539172b198bc67836ec6499730fad8829fe16f27a964",
+      "bytes": 26071
+    },
+    {
+      "path": "scripts/run_kumar_baselines.py",
+      "sha256": "bf6bc4de396300c2f2430c8d42960eefdfaf50382d17e083a4c1846dabf736ac",
+      "bytes": 39480
+    },
+    {
+      "path": "src/learning_preserving_bci/decoders/csp_lda.py",
+      "sha256": "4aedb37c21c8056d213b90797324fc5b69f370bb011badf97003c739b1127921",
+      "bytes": 1066
+    }
+  ],
+  "new_consumer_is_exact_old_candidate_bytes": true,
+  "old_untracked_candidate_preserved": true,
+  "old_untracked_test_preserved": true,
+  "frozen_config_sha256": "4f71724c6be77696bbf8764e7de4795ceb1c9c4a315c1c2b266cc201a1c3da18",
+  "method_findings": [
+    "Two source run folds per development ID; each of 20 TRAIN label shifts refits the entire supervised CSP4/LDA pipeline, predicting the unchanged holdout once. Exactly 40 fits per ID, 240 across six IDs, including 12 observed; no all40 model participates in fold fitting.",
+    "Each cached fold prediction is crossed with all 20 holdout label shifts, yielding 400 joint rows per ID and 2400 overall; training shift and holdout shift use the same joint run-index pair in both folds. Synthetic test verifies exact equality to naive label-dependent refitting.",
+    "Failed source fits retain explicit failure type/message, missing predictions and all 400 joint rows. Missing observed participant values prevent bootstrap aggregation. End receipt is written only after all six subjects finish; nonzero source fit failures produce completed_with_explicit_source_fit_failures, not unconditional success.",
+    "Existing source40 arrays load with allow_pickle=False, exact before/after equality, source parameter hash, source40 IDs/X-y hash, and baseline full-GET receipt identities; these full40 models are never refitted.",
+    "Support uses source-only StandardScaler on CSP4 features and unchanged source LDA score including intercept; class-specific signed margins, score bias, class recalls, class-collapse and strict-zero binary prediction boundary are preserved.",
+    "Original and recomputed classwise support halves are retained under all 19/20 label rotations; zero-score-SD/single-class/zero-direction cases remain explicit. Positive direction cosine or signed-contrast product is not treated as a gate pass.",
+    "No query/final roles are accepted by metadata validation; only development IDs 1,4,7,10,13,16, source ses0 runs0/1 and current support ses1..5 run0. Participant-unit bootstrap remains seed42 with10000 draws; no threshold/model selection is implemented."
+  ],
+  "historical_preparation_review": {
+    "path": "research_logs/kumar_cross_session_20261012/csp_implementation_review_run01_20261014/preparation_static_review_receipt.json",
+    "sha256": "f8ca93c82713d1ab9c6e174f3a00438f2b3b4dfcb556e78215317b989fb9ead5"
+  },
+  "current_prepared_file_byte_checks": [
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-1/included_trial_metadata.json",
+      "bytes": 176498,
+      "sha256": "c2bc368da49884c224716a775021f273f7b1b2ab61e1f0a9b0a5176399a86abb",
+      "matches_20261014_review": true
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-1/restricted_epochs.npz",
+      "bytes": 7281428,
+      "sha256": "50a4714a3b118c5c784ad65ae290e7fe0074b2dad4b426d6ac71a4eeb0395b41",
+      "matches_20261014_review": true
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-1/subject_receipt.json",
+      "bytes": 72892,
+      "sha256": "bb0f8f8b789254d2d15601bebd2f09b1a522b5e0a17db09ff4f06e36a680a93e",
+      "matches_20261014_review": true
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-4/included_trial_metadata.json",
+      "bytes": 176589,
+      "sha256": "56bb545778f46af83834a98e939072412746722a646cd2f9852551b047c96da0",
+      "matches_20261014_review": true
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-4/restricted_epochs.npz",
+      "bytes": 7280151,
+      "sha256": "7de39b345cba461de7aaa49788770c89e29360b1bb7e1b16916541e091f8f271",
+      "matches_20261014_review": true
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-4/subject_receipt.json",
+      "bytes": 72930,
+      "sha256": "f3eedc2a005e5728d3ef1bcef75027363544766035d8af9caf7c5be215abf3c7",
+      "matches_20261014_review": true
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-7/included_trial_metadata.json",
+      "bytes": 177841,
+      "sha256": "d3d97e52208333034bac9bc34fe3ab4c6c9af15f24e9b1cad71a9ca663143515",
+      "matches_20261014_review": true
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-7/restricted_epochs.npz",
+      "bytes": 7329155,
+      "sha256": "4f48b0c16799acaf51cbca5fec905bc567c8ec8a844a746528633c4f6eeedf11",
+      "matches_20261014_review": true
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-7/subject_receipt.json",
+      "bytes": 73421,
+      "sha256": "dbf3b6c006e8d5fcf5c843d3917c13359245759cba109a20d873f97e987f9c18",
+      "matches_20261014_review": true
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-10/included_trial_metadata.json",
+      "bytes": 177101,
+      "sha256": "1c334153d703a1c263df479eaae980702d3105a29f29c48aac197ea3352df203",
+      "matches_20261014_review": true
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-10/restricted_epochs.npz",
+      "bytes": 7275878,
+      "sha256": "e827603ff0942eaec2bf1d7ed0c4af313ef5023c4b0cf86f0951af8afd0d6ee7",
+      "matches_20261014_review": true
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-10/subject_receipt.json",
+      "bytes": 73498,
+      "sha256": "1bc481618d8b9dde09ad409a2317911afcf9a0a3ec84fa1e6a9ecfdb58366c74",
+      "matches_20261014_review": true
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-13/included_trial_metadata.json",
+      "bytes": 178405,
+      "sha256": "015a93fa89242ffd302a2b1cfb2f28bbc7cd344052f95473359f3a284a511d96",
+      "matches_20261014_review": true
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-13/restricted_epochs.npz",
+      "bytes": 7330873,
+      "sha256": "0b3778695f5e78bd086e05fe259b539ada0b2f5e4717139416a83400ca249ce9",
+      "matches_20261014_review": true
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-13/subject_receipt.json",
+      "bytes": 73979,
+      "sha256": "94572b900c51dfe58606a00cb07d58779889cec6a4018341b617d9196bc56ea7",
+      "matches_20261014_review": true
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-16/included_trial_metadata.json",
+      "bytes": 177097,
+      "sha256": "0db92a718f649a9ed1f5a5dc521f4ac7abe21be0079f47d5f5ee9e87f263bb91",
+      "matches_20261014_review": true
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-16/restricted_epochs.npz",
+      "bytes": 7288906,
+      "sha256": "cd3d41fa96bff2056a324c18b319ebf21c1b788530d527cb44e1f2b26e1a9ec3",
+      "matches_20261014_review": true
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-16/subject_receipt.json",
+      "bytes": 73495,
+      "sha256": "55b78a2b2152049cf5356e82376532f30561766555789425aed2ad9d322efcfb",
+      "matches_20261014_review": true
+    }
+  ],
+  "current_metadata_scope": {
+    "subject_count": 6,
+    "trial_count": 836,
+    "source_train": 240,
+    "current_target_support": 596,
+    "selected_EDF_source_paths": 42,
+    "subjects": [
+      {
+        "subject": "sub-1",
+        "trial_count": 139,
+        "role_counts": {
+          "source_train": 40,
+          "target_support": 99
+        },
+        "source_files": [
+          "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-0_eeg.edf",
+          "sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-1_eeg.edf",
+          "sub-1/ses-1/eeg/sub-1_ses-1_task-imagery_run-0_eeg.edf",
+          "sub-1/ses-2/eeg/sub-1_ses-2_task-imagery_run-0_eeg.edf",
+          "sub-1/ses-3/eeg/sub-1_ses-3_task-imagery_run-0_eeg.edf",
+          "sub-1/ses-4/eeg/sub-1_ses-4_task-imagery_run-0_eeg.edf",
+          "sub-1/ses-5/eeg/sub-1_ses-5_task-imagery_run-0_eeg.edf"
+        ]
+      },
+      {
+        "subject": "sub-4",
+        "trial_count": 139,
+        "role_counts": {
+          "source_train": 40,
+          "target_support": 99
+        },
+        "source_files": [
+          "sub-4/ses-0/eeg/sub-4_ses-0_task-imagery_run-0_eeg.edf",
+          "sub-4/ses-0/eeg/sub-4_ses-0_task-imagery_run-1_eeg.edf",
+          "sub-4/ses-1/eeg/sub-4_ses-1_task-imagery_run-0_eeg.edf",
+          "sub-4/ses-2/eeg/sub-4_ses-2_task-imagery_run-0_eeg.edf",
+          "sub-4/ses-3/eeg/sub-4_ses-3_task-imagery_run-0_eeg.edf",
+          "sub-4/ses-4/eeg/sub-4_ses-4_task-imagery_run-0_eeg.edf",
+          "sub-4/ses-5/eeg/sub-4_ses-5_task-imagery_run-0_eeg.edf"
+        ]
+      },
+      {
+        "subject": "sub-7",
+        "trial_count": 140,
+        "role_counts": {
+          "source_train": 40,
+          "target_support": 100
+        },
+        "source_files": [
+          "sub-7/ses-0/eeg/sub-7_ses-0_task-imagery_run-0_eeg.edf",
+          "sub-7/ses-0/eeg/sub-7_ses-0_task-imagery_run-1_eeg.edf",
+          "sub-7/ses-1/eeg/sub-7_ses-1_task-imagery_run-0_eeg.edf",
+          "sub-7/ses-2/eeg/sub-7_ses-2_task-imagery_run-0_eeg.edf",
+          "sub-7/ses-3/eeg/sub-7_ses-3_task-imagery_run-0_eeg.edf",
+          "sub-7/ses-4/eeg/sub-7_ses-4_task-imagery_run-0_eeg.edf",
+          "sub-7/ses-5/eeg/sub-7_ses-5_task-imagery_run-0_eeg.edf"
+        ]
+      },
+      {
+        "subject": "sub-10",
+        "trial_count": 139,
+        "role_counts": {
+          "source_train": 40,
+          "target_support": 99
+        },
+        "source_files": [
+          "sub-10/ses-0/eeg/sub-10_ses-0_task-imagery_run-0_eeg.edf",
+          "sub-10/ses-0/eeg/sub-10_ses-0_task-imagery_run-1_eeg.edf",
+          "sub-10/ses-1/eeg/sub-10_ses-1_task-imagery_run-0_eeg.edf",
+          "sub-10/ses-2/eeg/sub-10_ses-2_task-imagery_run-0_eeg.edf",
+          "sub-10/ses-3/eeg/sub-10_ses-3_task-imagery_run-0_eeg.edf",
+          "sub-10/ses-4/eeg/sub-10_ses-4_task-imagery_run-0_eeg.edf",
+          "sub-10/ses-5/eeg/sub-10_ses-5_task-imagery_run-0_eeg.edf"
+        ]
+      },
+      {
+        "subject": "sub-13",
+        "trial_count": 140,
+        "role_counts": {
+          "source_train": 40,
+          "target_support": 100
+        },
+        "source_files": [
+          "sub-13/ses-0/eeg/sub-13_ses-0_task-imagery_run-0_eeg.edf",
+          "sub-13/ses-0/eeg/sub-13_ses-0_task-imagery_run-1_eeg.edf",
+          "sub-13/ses-1/eeg/sub-13_ses-1_task-imagery_run-0_eeg.edf",
+          "sub-13/ses-2/eeg/sub-13_ses-2_task-imagery_run-0_eeg.edf",
+          "sub-13/ses-3/eeg/sub-13_ses-3_task-imagery_run-0_eeg.edf",
+          "sub-13/ses-4/eeg/sub-13_ses-4_task-imagery_run-0_eeg.edf",
+          "sub-13/ses-5/eeg/sub-13_ses-5_task-imagery_run-0_eeg.edf"
+        ]
+      },
+      {
+        "subject": "sub-16",
+        "trial_count": 139,
+        "role_counts": {
+          "source_train": 40,
+          "target_support": 99
+        },
+        "source_files": [
+          "sub-16/ses-0/eeg/sub-16_ses-0_task-imagery_run-0_eeg.edf",
+          "sub-16/ses-0/eeg/sub-16_ses-0_task-imagery_run-1_eeg.edf",
+          "sub-16/ses-1/eeg/sub-16_ses-1_task-imagery_run-0_eeg.edf",
+          "sub-16/ses-2/eeg/sub-16_ses-2_task-imagery_run-0_eeg.edf",
+          "sub-16/ses-3/eeg/sub-16_ses-3_task-imagery_run-0_eeg.edf",
+          "sub-16/ses-4/eeg/sub-16_ses-4_task-imagery_run-0_eeg.edf",
+          "sub-16/ses-5/eeg/sub-16_ses-5_task-imagery_run-0_eeg.edf"
+        ]
+      }
+    ]
+  },
+  "related_test_execution": {
+    "command": "PYTHONPATH=src:scripts /workspace/.venvs/few-shot-mi-eeg/bin/python -B -m pytest -q tests/test_kumar_csp_signed_score_v1.py",
+    "exit_code": 0,
+    "passed": 12,
+    "reported_seconds": 7.9,
+    "synthetic_and_mock_only": true,
+    "real_estimator_fit": false
+  },
+  "blocking_software_findings": [],
+  "verification_limits": [
+    "Prepared NPZ files were byte-hashed only; numerical EEG arrays were not decoded, raw EDFs were not opened and no actual CSP/LDA estimator was fitted.",
+    "The consumer checks supplied prepared-file/subject-receipt self-consistency. Exact historical 836-trial/42-EDF identity is an external pinned-preparation preflight requirement; this review confirms current bytes match the historical static review, not independent raw EEG reprocessing.",
+    "The 12 synthetic tests do not execute the full CLI/main completion-receipt path or load_verified_source_model against real source40 arrays. Static review of those paths is not a real diagnostic completion claim.",
+    "No current CSP signed-score/full-control scientific result, R2 diagnostic backup, validated adaptation gate, formal authorization, query result or learning/clinical effect is established by this software review."
+  ],
+  "real_EEG_arrays_loaded": false,
+  "real_weights_loaded": false,
+  "real_estimator_fits": 0,
+  "diagnostic_executed": false,
+  "query_read": false,
+  "pod_operated": false,
+  "scientific_execution_authorized": false
+}

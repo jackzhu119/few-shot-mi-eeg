@@ -1,0 +1,343 @@
+{
+  "schema_version": 1,
+  "status": "bounded_evidence_reconciliation_complete_latest_diagnostic_pending",
+  "recorded_at_utc": "2026-10-15T04:17:06.755846+00:00",
+  "scientific_base_commit": "ac11d86799dc0c297535ef6e7a0f0ff7f371ef42",
+  "scope": "Metadata, saved SOURCE TRAIN/current-support JSON, byte hashes, local archive headers and existing/live backup metadata only; no numerical arrays, real weights, diagnostic invocation, fitting, query, Pod or paper1 operation.",
+  "frozen_plan_bindings": [
+    {
+      "path": "configs/kumar_csp_reliability_20261014.json",
+      "bytes": 1028,
+      "sha256": "4f71724c6be77696bbf8764e7de4795ceb1c9c4a315c1c2b266cc201a1c3da18"
+    },
+    {
+      "path": "docs/kumar_csp_reliability_plan_20261014.md",
+      "bytes": 5757,
+      "sha256": "b942fdb6265594d632dbfb70a536bd576b9e2d5b13871f8d4e8e4c9721a8b34f"
+    },
+    {
+      "path": "docs/kumar_csp_reliability_methods_review_20261014.md",
+      "bytes": 10719,
+      "sha256": "f53592721e4cff14b7d8466234c99d299f81870e0937346f92f1872b86532600"
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_reliability_freeze_run01_20261014/freeze_receipt.json",
+      "bytes": 550,
+      "sha256": "c1c6eb05e422ad9dcf50227d0ef6849fdd5e7f8928a7b9f22ef17886c937037c"
+    }
+  ],
+  "frozen_at_utc": "2026-10-14T07:29:13.289278+00:00",
+  "prepared_evidence": [
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/preparation_receipt.json",
+      "bytes": 2517,
+      "sha256": "f4b3a3bda5533d64c16c9d55e0c15bd934ade5d86c07cf444f340ab7a75e7964"
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_implementation_review_run01_20261014/preparation_static_review_receipt.json",
+      "bytes": 9538,
+      "sha256": "f8ca93c82713d1ab9c6e174f3a00438f2b3b4dfcb556e78215317b989fb9ead5"
+    }
+  ],
+  "prepared_scope": {
+    "subjects": [
+      "sub-1",
+      "sub-4",
+      "sub-7",
+      "sub-10",
+      "sub-13",
+      "sub-16"
+    ],
+    "source_TRAIN_rows": 240,
+    "current_support_rows": 596,
+    "total_windows": 836,
+    "raw_EDF_provenance_count": 42,
+    "query_validation_final_rows": 0,
+    "prepared_NPZ_files_present": 6,
+    "prepared_NPZ_total_bytes": 43786391,
+    "consumer_accepted_by_static_preparation_receipt": false
+  },
+  "expected_to_observed_matrix": [
+    {
+      "expected": "240 TRAIN20 CSP/LDA pipelines (12 identity +228 phase), exact20x20 shared joint phases",
+      "observed": "No latest measurement_receipt.json / subject_measurement.json / source_loro_models artifact in bounded inventories or examined backup records; known older12 identity +96 random-shuffle +6 newlyfitted SOURCE40 pipelines is different.",
+      "status": "pending_not_substituted_by_old114"
+    },
+    {
+      "expected": "2400 participant/joint-shift twofold BA rows and saved 240 model states; full failed/singular denominators",
+      "observed": "Older per-subject files save8 random-shuffle scores per2 observedfolds; no frozen exact20x20 model-state/control table.",
+      "status": "pending"
+    },
+    {
+      "expected": "Existing six primary SOURCE40 states reused; signed original LDA intercept/bias/separate-class margins/recalls/collapse",
+      "observed": "24 existing SOURCE40 source_before/source_after/fit_audit/participant_receipt artifacts are present and bytehash-match old allGET receipt; old diagnostic separatelyfitted SOURCE40 and saves source-axis contrasts, not the later LDA signed-margin fields.",
+      "status": "inputs_ready_results_pending"
+    },
+    {
+      "expected": "Independent numerical review of latest execution/label phases and original source-score replay",
+      "observed": "07:33:51UTC preparationreview states consumer implementation notaccepted; newlyreviewed candidate and synthetic tests are softwarepreparation only. No latest real numerical/completion review found.",
+      "status": "pending"
+    },
+    {
+      "expected": "Signed-score results and full controls backed by real fullGET/SHA receipt",
+      "observed": "Existing28-objectgpu-preparationreceipt has12 oldCSPfiles only; live3973-object boundedLIST sees12 oldCSP keys,2 earlierpower/support measurements,1oldreadinessdocument and0latestCSPresultkeymatches.",
+      "status": "no_latest_result_backup_evidence_in_examined_scope"
+    }
+  ],
+  "old_completed_CSP": {
+    "summary": {
+      "path": "research_logs/gpu_preparation_20261014/supervised_csp_run01/summary_corrected.json",
+      "bytes": 509759,
+      "sha256": "de2ff0c8cd054aac4749b32badca8ccae09897ba28a3797d034d90e1271dc5c2"
+    },
+    "config_sha256": "e0a9d2f7363d245299b9bff8e2d6fdbcf913021d7e6608ff08f893832ae3a315",
+    "script_sha256": "c58b5390e4a22daef442c84b051fce783ce085a9501e00c58dee399e683701a3",
+    "seed": 20261014,
+    "observed_pipelines": 12,
+    "training_shuffle_control_pipelines": 96,
+    "new_full_SOURCE40_pipelines": 6,
+    "total_recorded_pipelines": 114,
+    "participant_files": [
+      {
+        "path": "research_logs/gpu_preparation_20261014/supervised_csp_run01/sub-1.json",
+        "bytes": 263889,
+        "sha256": "85b7c7ab2ce3cc1e57ec0b5f1c4dc38e5030b090b5291f7249229fb97f1ca4e4",
+        "subject": 1,
+        "observed_folds": 2,
+        "shuffle_controls": 16,
+        "support_sessions": 5,
+        "contains_frozen_LDA_signed_margin_fields": false
+      },
+      {
+        "path": "research_logs/gpu_preparation_20261014/supervised_csp_run01/sub-4.json",
+        "bytes": 264252,
+        "sha256": "fa2415bbbca7251ad7fbfb31c333232f83817872106d86e375734fa83176ef67",
+        "subject": 4,
+        "observed_folds": 2,
+        "shuffle_controls": 16,
+        "support_sessions": 5,
+        "contains_frozen_LDA_signed_margin_fields": false
+      },
+      {
+        "path": "research_logs/gpu_preparation_20261014/supervised_csp_run01/sub-7.json",
+        "bytes": 267058,
+        "sha256": "d1294a0f05e35f16b018510abe0077c42daf982e7fd01d4f241b1d3ba57a543a",
+        "subject": 7,
+        "observed_folds": 2,
+        "shuffle_controls": 16,
+        "support_sessions": 5,
+        "contains_frozen_LDA_signed_margin_fields": false
+      },
+      {
+        "path": "research_logs/gpu_preparation_20261014/supervised_csp_run01/sub-10.json",
+        "bytes": 264741,
+        "sha256": "208c8b3dccb9d1ad91172bde70891348d826c189eff9780bf5ad6e8836c2cd25",
+        "subject": 10,
+        "observed_folds": 2,
+        "shuffle_controls": 16,
+        "support_sessions": 5,
+        "contains_frozen_LDA_signed_margin_fields": false
+      },
+      {
+        "path": "research_logs/gpu_preparation_20261014/supervised_csp_run01/sub-13.json",
+        "bytes": 267199,
+        "sha256": "6dd10d932e11bd000c017a60caff4bcddf4a42ba789e4807af5eb3c3a2ac2080",
+        "subject": 13,
+        "observed_folds": 2,
+        "shuffle_controls": 16,
+        "support_sessions": 5,
+        "contains_frozen_LDA_signed_margin_fields": false
+      },
+      {
+        "path": "research_logs/gpu_preparation_20261014/supervised_csp_run01/sub-16.json",
+        "bytes": 264395,
+        "sha256": "dac1f853a4103ab019c62d08986b8b827cba2ff7f7af941813a5fa1cb67b4d1d",
+        "subject": 16,
+        "observed_folds": 2,
+        "shuffle_controls": 16,
+        "support_sessions": 5,
+        "contains_frozen_LDA_signed_margin_fields": false
+      }
+    ],
+    "not_current_frozen_full_control_or_signed_score_result": true
+  },
+  "backup_records_examined": [
+    {
+      "path": "research_logs/gpu_preparation_R2_20261014_run01.json",
+      "bytes": 22009,
+      "sha256": "3494c6601363b7ce490151e71b65768785c6c7d96a0d9bd4b378c7acf05c56a2",
+      "status": "completed",
+      "readback_mode": "all",
+      "file_entries": 28,
+      "old_CSP_entries": 12,
+      "latest_CSP_execution_result_entries": [],
+      "key_prefix": "few-shot-mi-eeg/research-evidence/gpu-preparation-20261014/run01",
+      "finished_at_utc": "2026-10-14T09:45:13.713137+00:00"
+    },
+    {
+      "path": "research_logs/recovery_20261014/kumar_results_R2_run01.json",
+      "bytes": 474180,
+      "sha256": "2b8ee043ffe1b29d703c5849522f0dadc396f47859c522a418d0cfa069e47638",
+      "status": "completed",
+      "readback_mode": "all",
+      "file_entries": 618,
+      "old_CSP_entries": 0,
+      "latest_CSP_execution_result_entries": [],
+      "key_prefix": "few-shot-mi-eeg/experiments/kumar2024/nm000177/v1.0.5/cpu-baselines-20261013-run01",
+      "finished_at_utc": "2026-10-14T01:52:01.564958+00:00"
+    },
+    {
+      "path": "research_logs/recovery_20261014/scientific_evidence_R2_run01.json",
+      "bytes": 1118513,
+      "sha256": "8e840912f4120b23653402fa597cc6eb6ff95450c384c0045179be8174a5aa58",
+      "status": "completed",
+      "readback_mode": "all",
+      "file_entries": 1236,
+      "old_CSP_entries": 0,
+      "latest_CSP_execution_result_entries": [],
+      "key_prefix": "few-shot-mi-eeg/research-evidence/task-aware-kumar/20261014/scientific-closeout-run01",
+      "finished_at_utc": "2026-10-14T02:18:47.375481+00:00"
+    },
+    {
+      "path": "research_logs/recovery_20261014/lowdim_evidence_R2_run01.json",
+      "bytes": 244648,
+      "sha256": "772296ef9f94829fa571c96f529c9c2aee0ea1b15855e101baf3a749ae616841",
+      "status": "completed",
+      "readback_mode": "all",
+      "file_entries": 294,
+      "old_CSP_entries": 0,
+      "latest_CSP_execution_result_entries": [],
+      "key_prefix": "few-shot-mi-eeg/research-evidence/task-aware-kumar/20261014/lowdim-reliability-dev-run01",
+      "finished_at_utc": "2026-10-14T07:17:05.468708+00:00"
+    },
+    {
+      "path": "research_logs/kumar_checkpoint_reuse_preparation_20261015/R2_text_full_get_receipt.json",
+      "bytes": 24452,
+      "sha256": "0024b5d6d577bed08e6b9eddfb75b94d0e1a2988f33313ecbcb62a3b575a5d12",
+      "status": "completed",
+      "readback_mode": "all",
+      "file_entries": 27,
+      "old_CSP_entries": 0,
+      "latest_CSP_execution_result_entries": [],
+      "key_prefix": "few-shot-mi-eeg/research-evidence/task-aware-kumar/20261015/checkpoint-reuse-preparation-run01",
+      "finished_at_utc": "2026-10-15T04:05:19.343072+00:00"
+    }
+  ],
+  "local_inventory": {
+    "workspace_path_count": 29255,
+    "excluded_directory_names": [
+      ".cache",
+      ".git",
+      ".venvs",
+      "lib",
+      "node_modules",
+      "share",
+      "site-packages"
+    ],
+    "local_measurement_receipt_paths": [
+      "/workspace/few-shot-mi-eeg/research_logs/kumar_cross_session_20261012/support_reliability_dev_run01_20261014/measurement_receipt.json",
+      "/workspace/few-shot-mi-eeg/research_logs/kumar_cross_session_20261012/lowdim_reliability_dev_run01_20261014/measurement_receipt.json"
+    ],
+    "archive_count": 72,
+    "archive_member_count": 10413,
+    "archive_filename_matches": [],
+    "archive_errors": []
+  },
+  "live_R2_inventory": {
+    "receipt": {
+      "path": "research_logs/kumar_next_source_operations_20261015/R2_csp_object_census_run01.json",
+      "bytes": 6010,
+      "sha256": "8fb77d1fb1a3ffaaa905a3add4b0c2fa6b21df612f1fc800942fa61ce11186a4"
+    },
+    "prefixes": [
+      {
+        "prefix": "few-shot-mi-eeg/research-evidence/",
+        "pages": 4,
+        "objects": 3301,
+        "matching_key_count": 15
+      },
+      {
+        "prefix": "few-shot-mi-eeg/experiments/kumar2024/",
+        "pages": 1,
+        "objects": 672,
+        "matching_key_count": 0
+      }
+    ],
+    "failure_count": 0,
+    "object_GETs": 0,
+    "proof_limit": "LIST keys/length/date are existence metadata; no new fullGET/SHA or scientific completion inferred."
+  },
+  "new_versioned_consumer": {
+    "path": "scripts/analyze_kumar_csp_signed_score_v1.py",
+    "bytes": 30693,
+    "sha256": "f2a0eb4831d78c4cbef54656c56c5ee7c085c697eff287c64dd535a5bdb7a5ad"
+  },
+  "original_untracked_consumer": {
+    "path": "scripts/analyze_kumar_csp_reliability.py",
+    "bytes": 30693,
+    "sha256": "f2a0eb4831d78c4cbef54656c56c5ee7c085c697eff287c64dd535a5bdb7a5ad"
+  },
+  "original_untracked_test": {
+    "path": "tests/test_kumar_csp_reliability.py",
+    "bytes": 10914,
+    "sha256": "d7f794e95b715f5c6e431ed0556339b56cb103a39374e46550bc9f4b64eae404"
+  },
+  "consumer_byte_exact_copy": true,
+  "external_input_binding": {
+    "path": "configs/kumar_csp_signed_score_input_binding_20261015.json",
+    "bytes": 20218,
+    "sha256": "af65b5f0ce7850b010dc83965e799d3f26601b70fb6bc19607e59d1af3738712"
+  },
+  "scientific_conclusion": "Existing evidence does not validate any adaptive gate or threshold. Readiness is for review of the already frozen measurement only; source BA and checkpoint acceptance cannot substitute for nested policy benefit/harm evidence.",
+  "next_minimal_decision": "Parent reviews pinned consumer, external input/hash preflight,7200-second CPU-only diagnostic operational proposal and exact existing scope. No actual diagnostic is authorized in this handoff. Later strategy remains separate and exploratory.",
+  "new_actual_fits": 0,
+  "numerical_arrays_deserialized": false,
+  "query_rows_loaded": 0,
+  "execution_authorized": false,
+  "limitations": [
+    "Bounded workspace/archivemember/key inventories cannot prove no execution ever occurred outside inspected namespaces.",
+    "No unseen remotearchive payload was fetched; objectnames cannot reveal arbitrary hidden membercontents.",
+    "The six prepared tensors are preexisting untracked local inputs; sourcebytes are pinned but this round neither reprocesses rawEDFs nor independently decodes tensors.",
+    "No real source40 model arrays are loaded by this reconciliation."
+  ],
+  "current_local_process_metadata": {
+    "path": "research_logs/kumar_next_source_operations_20261015/local_CSP_process_metadata_snapshot_run01.json",
+    "bytes": 466,
+    "sha256": "93a4ca0e732c74a62cd71eaeb4a371db1e93e859171b440d3459517e06a5f471",
+    "processes_scanned": 13,
+    "matching_CSP_consumers": 0,
+    "unreadable_or_exited": 0,
+    "no_historical_or_remote_absence_claim": true
+  },
+  "actual_CPU_metadata_preflight": {
+    "path": "research_logs/kumar_next_source_operations_20261015/csp_input_metadata_preflight_run01.json",
+    "bytes": 1717,
+    "sha256": "5155687897398c6b0f54487ea76c6b610573586bc5feaa33980178329677e42e",
+    "status": "metadata_verified_execution_closed",
+    "new_fits": 0,
+    "numerical_arrays_deserialized": false,
+    "source_train_rows": 240,
+    "target_support_rows": 596,
+    "scope_source_EDFs": 42,
+    "execution_authorized": false
+  },
+  "related_input_software_validation": {
+    "path": "research_logs/kumar_next_source_operations_20261015/csp_input_software_validation_run01.json",
+    "bytes": 1765,
+    "sha256": "4d8180b81cbffd4589edf228309f9ce2924982a57ad52d043f32a743bcc94841"
+  },
+  "new_consumer_independent_software_reviews": [
+    {
+      "path": "research_logs/kumar_next_source_operations_20261015/csp_consumer_independent_review_run01.json",
+      "bytes": 15699,
+      "sha256": "29a033f66311ea992b659dfec2f6bbf0d119d08188ed999ac234f6ee5671bb2a"
+    },
+    {
+      "path": "research_logs/kumar_next_source_operations_20261015/csp_consumer_independent_review_run02.json",
+      "bytes": 6108,
+      "sha256": "5e27349343626c20ed824ac9315d2fcaf0772cdd27b6b27441520b67a1b20d6e"
+    }
+  ],
+  "unique_related_CSP_software_tests_passed": 42,
+  "scientific_completion_inferred_from_software_tests": false
+}

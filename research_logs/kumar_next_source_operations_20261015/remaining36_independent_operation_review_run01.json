@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "status": "independent_software_operation_review_passed_execution_and_science_gates_closed",
+  "reviewed_at_utc": "2026-10-15T04:21:35.321366+00:00",
+  "reviewer": "remaining36_source_fetcher",
+  "independence": {
+    "reviewer_did_not_author_runner_auditor_or_contract": true,
+    "reviewer_authored_source_https_verifier": true,
+    "reviewer_independently_reviewed_its_integration_into_the_new_runner": true
+  },
+  "scope": "Read-only code/metadata review and synthetic CPU software tests. This is not scientific acceptance, actual training/export/R2 proof or cost authorization.",
+  "checked_files": [
+    {
+      "path": "scripts/run_kumar_remaining_source_batch.py",
+      "bytes": 35017,
+      "sha256": "04794aac79ca34f07abd659934a66768c3a8cf8cde7d9cc0af4cf20353428895"
+    },
+    {
+      "path": "tests/test_kumar_remaining_source_batch.py",
+      "bytes": 22992,
+      "sha256": "8c382e713d89a84125d03be8dec7f5ff1fae9708bd21718a735f02c6929f7b18"
+    },
+    {
+      "path": "scripts/audit_kumar_remaining_source_bundle.py",
+      "bytes": 18313,
+      "sha256": "e554a05a566102e1ff06508b7e380d56805df5cf6feb50270a3713acd2b5a0fd"
+    },
+    {
+      "path": "tests/test_kumar_remaining_source_audit.py",
+      "bytes": 8589,
+      "sha256": "188d8028a0df2ee5b4c4750bd927ebd30b22d917d3835cf070671611c592786a"
+    },
+    {
+      "path": "configs/kumar_remaining_source_batch_20261015.json",
+      "bytes": 29028,
+      "sha256": "23af78e3a902ecb8d610aa480009a330897a5212cd40b84089a6c93a826422e0"
+    },
+    {
+      "path": "scripts/fetch_kumar_remaining_source_https.py",
+      "bytes": 8724,
+      "sha256": "beebcc766d8c5edb7f14a6193daaa390f1a1b7cd15f90ec0310b8584d19f4b21"
+    },
+    {
+      "path": "tests/test_kumar_remaining_source_https.py",
+      "bytes": 9310,
+      "sha256": "480fd4d379289a1a8254af20de447b223bbafb4b5c3fbc15c0f8c7a0ddc8cafe"
+    },
+    {
+      "path": "configs/kumar_remaining_source_https_20261015.json",
+      "bytes": 133039,
+      "sha256": "c91a182d4ca6347b7667435ac3cc5eebb6eecb7db9032cd7fecf3a31761c39e6"
+    },
+    {
+      "path": "research_logs/kumar_checkpoint_reuse_preparation_20261015/proposed_remaining_source_inputs.json",
+      "bytes": 83057,
+      "sha256": "312b5bd38995aac5fd7748b64cdf5c0446b5e33fe05e3970c61b5dd73e026682"
+    },
+    {
+      "path": "research_logs/kumar_development_queue_20261014/accepted_jobs.json",
+      "bytes": 11007,
+      "sha256": "1ee1868b97e6ff7ea2e42327fe64337cafbb0f8ee6aff19cc24fba5265f9aaa9"
+    },
+    {
+      "path": "scripts/run_kumar_development_batch.py",
+      "bytes": 37284,
+      "sha256": "143899dcc6f43ca3d4468745c43f7e305015a696073a319b4bd45837164ab194"
+    },
+    {
+      "path": "scripts/audit_kumar_queue_bundle.py",
+      "bytes": 9946,
+      "sha256": "443d5ae88f64ef6276a4d9070009fd32c3dbfaab931872f8d3bdcade551a8721"
+    }
+  ],
+  "checks": [
+    {
+      "name": "metadata_default",
+      "passed": true,
+      "evidence": "Default reads pinned JSON/hashes only; actual metadata tests forbid GPU/runtime/source reading and cause no state or lock creation."
+    },
+    {
+      "name": "authorization_closed",
+      "passed": true,
+      "evidence": "Current cost/authorization are null and execution false. Future execution separately binds reviewed commit/contract, exact36 IDs, finite current USD rate/cap/reference, absolute approved interval and current host."
+    },
+    {
+      "name": "deadline_and_cost",
+      "passed": true,
+      "evidence": "Approved interval <=86400 proposal and current cost cap. Resume binds unchanged authorization, start and deadline; no silent renewal of the old19800 interval."
+    },
+    {
+      "name": "accepted18",
+      "passed": true,
+      "evidence": "All eighteen accepted job IDs and subjects excluded. Frozen ledger unchanged; execution gate also independently validates original ledger/ACK/R2 gate and next_job=None."
+    },
+    {
+      "name": "source253",
+      "passed": true,
+      "evidence": "36 EDFs, twelve remaining participants, session0 runs0/1 TRAIN and run2 source validation; exact253files/196740994bytes. No query adapter or query signal allowed."
+    },
+    {
+      "name": "per_fit_verification",
+      "passed": true,
+      "evidence": "Worker invokes new verify_all before every fit. It binds HTTP and raw input manifests, exact253 unique receipt entries and query=false, then recomputes every original file official checksum/size/SHA256 and license/version."
+    },
+    {
+      "name": "exclusive_chunk_lock",
+      "passed": true,
+      "evidence": "Shared GPU flock spans input rechecks, two serial workers and result packaging. Child inherited FD is checked against the same lock inode/device and independent lock contention."
+    },
+    {
+      "name": "timeouts_and_counts",
+      "passed": true,
+      "evidence": "Per-fit<=1800s, active chunk<=3600s, TERM/KILL<=30s cleanup, absolute approved global deadline includes waits; <=36 fits/3600epochs/10800steps. Zero automatic retries."
+    },
+    {
+      "name": "disk_stop",
+      "passed": true,
+      "evidence": "Input, state and every output filesystem checked before claims/active work/packaging for5GiB floor+96MiB active reserve. Failure preserves artifacts and claims."
+    },
+    {
+      "name": "physical_export",
+      "passed": true,
+      "evidence": "18 two-fit chunks require36 intent/results boundaries. Intent receipt before fit; results receipt before next chunk. Missing receipt safely pauses; <=2 trained fits without physical export."
+    },
+    {
+      "name": "proven_verifier_generic",
+      "passed": true,
+      "evidence": "Unchanged inspect_export/verify_receipt use embedded contract and scoped<=2 jobs. No old7/11/19800 dispatch binding; full outer/nested member and archive hashes/identities recomputed. Physical off-Pod location explicitly remains dot attestation."
+    },
+    {
+      "name": "separate_stages",
+      "passed": true,
+      "evidence": "Only trained/off_Pod_exported are set by runner. independently_audited/R2_full_GET_verified/accepted stay false. No acceptance writer, R2 client, new credentials or invented browser API."
+    },
+    {
+      "name": "failure_recovery",
+      "passed": true,
+      "evidence": "Existing canonical state, claims or outputs cannot be replaced. Starting/failed partial states block retry. Resume checks full container identity plus fixed commit/contract/auth; rebuilt/lost container needs parent reconciliation."
+    },
+    {
+      "name": "new36_scientific_auditor",
+      "passed": true,
+      "evidence": "New auditor binds36jobs/253inputs/newrunner/newcontract, preserves old checkpoint/history/labels/CE numerical block byte-for-byte and1e-7 tolerance. Old17-job/127-input auditor stays unchanged, not used for new36."
+    },
+    {
+      "name": "audit_read_only",
+      "passed": true,
+      "evidence": "Metadata audit imports no tensors/EEG. Explicit future private audit uses CPU weights_only load and saved logits, without model forward/optimizer/fit/acceptance/Pod operation. No real package audited this round."
+    }
+  ],
+  "blocking_findings": [],
+  "resolved_findings": [
+    {
+      "finding": "The future fit_result legacy parent_dispatch_acknowledged_replay_backup=True field could imply own-result acceptance.",
+      "resolution": "Final runner04794aac removes it. accepted18_baseline_verified and execution_cost_deadline_authorized describe preceding gates; parent_result_acceptance_pending=True and R2_backup_verified=False describe own-result pending status. All audit/acceptance stage flags remain false."
+    }
+  ],
+  "software_validation": {
+    "command": "PYTHONPATH=src:scripts /workspace/.venvs/few-shot-mi-eeg/bin/python -B -m pytest -q tests/test_kumar_remaining_source_batch.py tests/test_kumar_remaining_source_https.py tests/test_kumar_remaining_source_audit.py",
+    "passed": 64,
+    "failed": 0,
+    "duration_seconds": 2.04,
+    "runner_tests": 28,
+    "source_https_tests": 17,
+    "remaining_source_auditor_tests": 19,
+    "ruff_new_runner_auditor_and_tests": "passed"
+  },
+  "current_state": {
+    "accepted_preserved": 18,
+    "new_source_fits_proposed": 36,
+    "new_fits_authorized": 0,
+    "cost_authorization": null,
+    "absolute_authorized_deadline": null,
+    "query_access": false,
+    "query_adapter_required": false,
+    "scientific_gate_passed": false
+  },
+  "reviewer_execution": {
+    "real_fits": 0,
+    "real_checkpoint_tensors_loaded": 0,
+    "real_forward_passes": 0,
+    "raw_EEG_or_query_loaded": false,
+    "source_downloads": 0,
+    "GPU_or_Pod_operations": 0,
+    "CSP_diagnostics_executed": false,
+    "accepted_ledger_modified": false,
+    "credentials_created_or_copied": false,
+    "R2_operations": 0
+  },
+  "remaining_actual_gates": [
+    "Parent must review final fixed implementation/contract independently.",
+    "Separately freeze restoration and source-only operation with current real cost/rate cap/reference, current host and absolute start/deadline; null now blocks execution.",
+    "Actual per-boundary off-Pod receipts, new36 independent scientific audit, private R2 fullGET/SHA and real parent confirmation remain future evidence, not consequences of these software tests."
+  ]
+}
