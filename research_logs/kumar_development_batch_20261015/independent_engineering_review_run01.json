@@ -1,0 +1,29 @@
+{
+  "status": "passed_for_fixed_dot_review_no_execution",
+  "reviewer": "independent engineering protocol agent plus primary audit",
+  "independent_CPU_mock_tests": 21,
+  "root_final_related_tests": 30,
+  "blocking_findings": 0,
+  "reviewed_runner_sha256": "143899dcc6f43ca3d4468745c43f7e305015a696073a319b4bd45837164ab194",
+  "reviewed_contract_sha256": "e0ffcbddeacbc1569f44272dd92a7d53e7202391e6742f96983a356d4148fd75",
+  "scope": {
+    "remaining_fits": 11,
+    "chunk_fits_max": 2,
+    "export_boundaries": 12,
+    "fit_timeout_seconds": 1800,
+    "chunk_timeout_seconds": 3600,
+    "global_persistent_seconds": 19800,
+    "accepted_ledger_writes_by_runner": false,
+    "chunk_GPU_lock": true,
+    "GNU_watchdog_and_process_group_cleanup": true,
+    "immutable_claim_and_container_guards": true,
+    "nested_original_14_payload_and_checkpoint_hash_checks": true,
+    "disk_guard_before_each_fit_and_export": true
+  },
+  "actual_integration_test_here": "CPU-only real GNU timeout inherited lock descriptor and sleeping-child timeout, no GPU/model/Pod/network",
+  "limitations": [
+    "No actual GPU batch, GPU watchdog failure injection, Pod access or browser network transfer performed.",
+    "Physical off-Pod location is explicitly attested by dot, not machine-proven.",
+    "No automatic upload implementation;12 bounded manual exports/receipts remain."
+  ]
+}
