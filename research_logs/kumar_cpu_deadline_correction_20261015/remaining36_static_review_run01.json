@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-10-15T05:11:31.526198+00:00",
+  "reviewer": "independent final_launch_contract_review agent",
+  "reviewed_commit": "8b0395b16b8855c759f75dccc88cd66384da214a",
+  "method": "read-only static review; no tests rerun",
+  "status": "no_new_remaining36_blocker_execution_closed",
+  "files": {
+    "scripts/run_kumar_remaining_source_batch.py": "9bd6526c7dbc81d85dabb0c5d420bb41ba92957d091760adc72a4246733db5a1",
+    "configs/kumar_remaining_source_batch_20261015.json": "4352d0215e7338d7865975ed197fbf3e275fd860a0cab255de9d5617a034699f",
+    "configs/kumar_remaining_source_https_20261015.json": "c91a182d4ca6347b7667435ac3cc5eebb6eecb7db9032cd7fecf3a31761c39e6"
+  },
+  "checks": [
+    "full container identity and fresh first-start balance checked before state creation",
+    "pause/resume binds same run, authorization and original absolute deadline",
+    "matching full off-Pod receipt required before progressing",
+    "started, failed and ambiguous claims reject automatic retraining",
+    "global and nested batch deadlines cannot renew total time"
+  ],
+  "separate_release_requirements": [
+    "HTTPS manifest remains execution_enabled=false; restoration requires separately reviewed enabled version and updated contract digest",
+    "actual fixed-code review, fresh official balance/rate, cost authorization and absolute window remain required"
+  ],
+  "actual_scientific_executions": 0,
+  "Pod_operations": 0,
+  "parent_execution_authorization_received": false
+}

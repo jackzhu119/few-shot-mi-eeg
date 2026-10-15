@@ -1,5 +1,7 @@
 # Current scientific handoff
 
+2026-10-15 接续8b0395b完成CPU入口最终计时修复：发现Popen及启动回执fsync耗时曾在monotonic deadline建立之前被漏计，现于启动前固定原窗口，取得子进程句柄后以同一剩余期限限制可中断写入/监测；资源停止退出timer后单次TERM/KILL，避免重复授予宽限。launcher SHA dae980fc8c685b3902921c51020b28452d52889faf5b0f6da0f41d8c638f34b6，CPU合同SHA7b94420fabbdd8878cf14b26a1ca5039061552f8225c9719b2a7d3baf29af42a；CSP consumer/输入/科学参数/18账本及36合同不变。44项CPU相关软件测试、独立静态复核和实际metadata-only预检通过，未真实CSP/fit/query/Pod。进程构造/不可中断内核I/O不承诺硬时限，返回后不续期。当前审查请求与完整证据见research_logs/kumar_cpu_deadline_correction_20261015；仍需父侧实际固定版本复核及相应执行授权，未代写父确认、未放行36项，3小时/$1仍仅提案。
+
 继续/workspace/few-shot-mi-eeg，research/learning-preserving-bci，不重新初始化、不删历史结果。当前方向Task-Aware Adaptive Decoding for Longitudinal Motor-Imagery EEG；在线实验不是本论文依赖，不宣称技能保持。
 
 已完成Kumar18发布编号/6会话/360EDF的真实资格、性能前冻结、7156完整窗口与44partial保留、三种CPUbaseline和独立324行/12870预测重放。固定12测试编号冻结BA57.94%，全CSP/LDA重校准65.36%，配对+7.42pp CI[2.49,12.48]，9提高3降低。所有结果及618对象R2全GET通过；不要重跑已完成模型。主状态是baseline真实完成，原创门控尚未实现，EEGNet仅软件验收/训练准备完成。

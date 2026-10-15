@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "status": "focused_software_and_metadata_checks_passed_execution_closed",
+  "baseline_commit": "8b0395b16b8855c759f75dccc88cd66384da214a",
+  "runs": [
+    {
+      "command": [
+        "/workspace/.venvs/few-shot-mi-eeg/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_kumar_csp_signed_score_operation.py"
+      ],
+      "started_at_utc": "2026-10-15T05:14:54.520591+00:00",
+      "finished_at_utc": "2026-10-15T05:14:55.247564+00:00",
+      "returncode": 0,
+      "output": "pytest_operation_final_run01.log",
+      "sha256": "780796d65d70760eeb3cae901e1b216be1ecb89f26c0b04760a966f258cc26b0"
+    },
+    {
+      "command": [
+        "/workspace/.venvs/few-shot-mi-eeg/bin/ruff",
+        "check",
+        "scripts/run_kumar_csp_signed_score_operation.py",
+        "tests/test_kumar_csp_signed_score_operation.py"
+      ],
+      "started_at_utc": "2026-10-15T05:14:55.247617+00:00",
+      "finished_at_utc": "2026-10-15T05:14:55.256528+00:00",
+      "returncode": 0,
+      "output": "ruff_final_run01.log",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "command": [
+        "/workspace/.venvs/few-shot-mi-eeg/bin/python",
+        "-B",
+        "scripts/run_kumar_csp_signed_score_operation.py"
+      ],
+      "started_at_utc": "2026-10-15T05:14:55.256557+00:00",
+      "finished_at_utc": "2026-10-15T05:14:55.428290+00:00",
+      "returncode": 0,
+      "output": "metadata_preflight_run01.json",
+      "sha256": "1912f315c7512e73384afa7ec80d082a3bc71ff5d99885a82e1c23f21ebd3a19"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "started_at_utc": "2026-10-15T05:14:55.428336+00:00",
+      "finished_at_utc": "2026-10-15T05:14:55.439296+00:00",
+      "returncode": 0,
+      "output": "diff_check_run01.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "tested_files": {
+    "scripts/run_kumar_csp_signed_score_operation.py": "dae980fc8c685b3902921c51020b28452d52889faf5b0f6da0f41d8c638f34b6",
+    "tests/test_kumar_csp_signed_score_operation.py": "5c1188a7bc6daed9ad98e9d396750043435b72e6376a75d922faf1fda6090a93",
+    "configs/kumar_csp_signed_score_operation_20261015.json": "7b94420fabbdd8878cf14b26a1ca5039061552f8225c9719b2a7d3baf29af42a"
+  },
+  "real_scientific_execution": false,
+  "query_access": false,
+  "Pod_operated": false
+}

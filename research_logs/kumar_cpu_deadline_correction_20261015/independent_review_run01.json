@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-15T05:15:42.519814+00:00",
+  "reviewer": "independent final_launch_contract_review agent",
+  "method": "read-only static review of final diff; root recorded received findings",
+  "status": "no_remaining_blocking_findings_execution_not_authorized",
+  "reviewed_runner_sha256": "dae980fc8c685b3902921c51020b28452d52889faf5b0f6da0f41d8c638f34b6",
+  "reviewed_tests_sha256": "5c1188a7bc6daed9ad98e9d396750043435b72e6376a75d922faf1fda6090a93",
+  "checks": [
+    "elapsed deadline bound before Popen; delayed handle return cannot renew timeout",
+    "interruptible start write and monitor use original remaining deadline",
+    "existing external alarm rejected before claim and preserved",
+    "resource stop occurs once outside consumer timer; no second TERM grace",
+    "original wall and monotonic boundaries cap polling and cleanup"
+  ],
+  "finding_resolved": "Resource-limit cleanup inside consumer alarm could restart TERM grace after timeout; cleanup now occurs once after guard exit.",
+  "limitations": [
+    "OS process construction and uninterruptible kernel I/O have no promised hard userspace bound; handle return consumes original window",
+    "No scientific execution or parent authorization is established by software tests"
+  ],
+  "implementer_reported_baseline_negative_regression": {
+    "baseline_commit": "8b0395b16b8855c759f75dccc88cd66384da214a",
+    "test": "test_delayed_popen_return_consumes_original_budget_without_start_write",
+    "returncode": 1,
+    "passed": 0,
+    "failed": 1,
+    "deselected": 42,
+    "seconds": 0.22,
+    "failure": "Baseline incorrectly produced2 resource samples after the original synthetic elapsed budget had expired",
+    "source": "cpu_final_launch_review agent actual test report; not a new root rerun"
+  },
+  "independent_test_rerun": false,
+  "actual_CSP_fits": 0,
+  "actual_GPU_fits": 0,
+  "query_access": false,
+  "Pod_operated": false
+}

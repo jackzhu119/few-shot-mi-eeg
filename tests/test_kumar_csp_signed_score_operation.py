@@ -9,6 +9,7 @@ import os
 import signal
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 import pytest
@@ -349,3 +350,146 @@ def test_launcher_uses_only_standard_library_imports():
     modules |= {alias.name.split(".")[0] for node in ast.walk(tree)
                 if isinstance(node, ast.Import) for alias in node.names}
     assert modules <= sys.stdlib_module_names | {"__future__"}
+
+
+def test_delayed_popen_return_consumes_original_budget_without_start_write(launch):
+    root, contract, run = launch
+    changed = copy.deepcopy(contract)
+    changed["consumer_timeout_seconds"] = .02  # Synthetic elapsed budget only.
+    children = []
+
+    def delayed(argv, **kwargs):
+        child = subprocess.Popen([sys.executable, "-c", "import time;time.sleep(60)"], **kwargs)
+        children.append(child)
+        time.sleep(.04)
+        return child
+
+    receipt = run(delayed, config=changed)
+    assert len(children) == 1 and children[0].poll() == -15
+    assert receipt["timeout"] is True and receipt["returncode"] == -15
+    assert receipt["resource_samples"] == []
+    assert not (root / operation.STATE / "consumer_start.json").exists()
+    assert operation.read(root / operation.STATE / "launcher_receipt.json")["accepted"] is False
+
+
+def test_blocked_start_write_expires_preserves_partial_and_stops_only_child(launch, monkeypatch):
+    root, contract, run = launch
+    changed = copy.deepcopy(contract)
+    changed["consumer_timeout_seconds"] = .04  # Synthetic elapsed budget only.
+    original_write = operation.write_new
+    previous_handler = signal.getsignal(signal.SIGALRM)
+    children = []
+
+    def blocked(path, value):
+        if Path(path).name == "consumer_start.json":
+            with Path(path).open("xb") as stream:
+                stream.write(b"SYNTHETIC PARTIAL START RECEIPT")
+                stream.flush()
+                time.sleep(60)  # Interruptible stand-in for blocked fsync.
+        else:
+            original_write(path, value)
+
+    def inert(argv, **kwargs):
+        child = subprocess.Popen([sys.executable, "-c", "import time;time.sleep(60)"], **kwargs)
+        children.append(child)
+        return child
+
+    monkeypatch.setattr(operation, "write_new", blocked)
+    receipt = run(inert, config=changed)
+    assert len(children) == 1 and children[0].poll() == -15
+    assert receipt["timeout"] is True and receipt["failure"]["type"] == "TimeoutError"
+    assert (root / operation.STATE / "consumer_start.json").read_bytes() == b"SYNTHETIC PARTIAL START RECEIPT"
+    assert operation.read(root / operation.STATE / "launcher_receipt.json")["timeout"] is True
+    assert signal.getsignal(signal.SIGALRM) == previous_handler
+    assert signal.getitimer(signal.ITIMER_REAL) == (0.0, 0.0)
+
+
+def test_existing_external_alarm_fails_before_claim_without_reset(launch):
+    root, _, run = launch
+    previous_handler = signal.getsignal(signal.SIGALRM)
+    signal.setitimer(signal.ITIMER_REAL, 30)
+    try:
+        with pytest.raises(ValueError, match="Existing real-time alarm"):
+            run(lambda *args, **kwargs: pytest.fail("Must not launch under another timer"))
+        remaining, interval = signal.getitimer(signal.ITIMER_REAL)
+        assert 29 < remaining <= 30 and interval == 0
+        assert signal.getsignal(signal.SIGALRM) == previous_handler
+        assert not (root / operation.STATE).exists()
+    finally:
+        signal.setitimer(signal.ITIMER_REAL, 0)
+
+
+def test_blocked_authorized_preflight_expires_without_claim_or_consumer(launch, monkeypatch):
+    root, contract, _ = launch
+    monkeypatch.setattr(operation, "authorization_check", lambda *args, **kwargs: 1030.02)
+    previous_handler = signal.getsignal(signal.SIGALRM)
+
+    def blocked(*args, **kwargs):
+        time.sleep(60)
+        pytest.fail("Preflight must be interrupted at the fixed authorization boundary")
+
+    with pytest.raises(TimeoutError, match="Fixed CPU operation deadline"):
+        operation.execute(contract, auth_fixture(), contract_sha="b" * 64,
+            commit="a" * 40, auth_sha="c" * 64, root=root,
+            preflight_reader=blocked,
+            popen=lambda *args, **kwargs: pytest.fail("Preflight cannot launch a consumer"))
+    assert not (root / operation.STATE).exists()
+    assert signal.getsignal(signal.SIGALRM) == previous_handler
+    assert signal.getitimer(signal.ITIMER_REAL) == (0.0, 0.0)
+
+
+def test_absolute_deadline_rechecked_after_resource_read_and_cleanup_not_extended(launch, monkeypatch):
+    _, _, run = launch
+    clock, grace = [1000], []
+    monkeypatch.setattr(operation.time, "time", lambda: clock[0])
+
+    class InertMock:
+        pid = -999999
+
+        def poll(self):
+            return None
+
+        def wait(self, timeout):
+            pytest.fail("No wait/fit may continue after the absolute deadline")
+
+    def memory(pid):
+        clock[0] = 9001
+        return {"consumer_rss_bytes": 1024, "process_tree_pids": [pid],
+                "cgroup_headroom_bytes": 4 * 1024**3,
+                "host_available_bytes": 16 * 1024**3}
+
+    monkeypatch.setattr(operation, "stop_process", lambda child, seconds:
+                        (grace.append(seconds) or -9, [{"signal": "SIGKILL"}]))
+    receipt = run(lambda *args, **kwargs: InertMock(), memory_reader=memory)
+    assert receipt["timeout"] is True and receipt["returncode"] == -9
+    assert grace == [0]
+
+
+def test_resource_stop_does_not_restart_term_grace_at_consumer_deadline(launch, monkeypatch):
+    _, contract, run = launch
+    changed = copy.deepcopy(contract)
+    changed["consumer_timeout_seconds"] = .02  # Synthetic elapsed budget only.
+    sent, waits = [], []
+
+    class StubbornInertMock:
+        pid = -999999
+
+        def poll(self):
+            return None
+
+        def wait(self, timeout):
+            waits.append(timeout)
+            if len(waits) == 1:
+                time.sleep(.04)  # Cross consumer deadline during TERM cleanup.
+                raise subprocess.TimeoutExpired("SYNTHETIC MOCK ONLY", timeout)
+            return -9
+
+    monkeypatch.setattr(operation.os, "killpg", lambda pid, signum: sent.append(signum))
+    receipt = run(lambda *args, **kwargs: StubbornInertMock(), config=changed,
+        memory_reader=lambda pid: {"consumer_rss_bytes": 2 * 1024**3,
+            "process_tree_pids": [pid], "cgroup_headroom_bytes": 4 * 1024**3,
+            "host_available_bytes": 16 * 1024**3})
+    assert receipt["resource_limit_stop"] is True and receipt["returncode"] == -9
+    assert receipt["timeout"] is False
+    assert sent == [signal.SIGTERM, signal.SIGKILL] and waits == [30, 5]
+    assert [event["signal"] for event in receipt["signals"]] == ["SIGTERM", "SIGKILL"]

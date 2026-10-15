@@ -118,8 +118,10 @@ randomization p-values or evidence of neural specificity.
 
 The earlier versioned consumer was the byte-exact `f2a0eb...` copy of the
 preexisting untracked candidate. The current version above supersedes it with
-a narrow failure-boundary correction: only numerical estimator/replay errors
-remain explicit scientific fit failures; storage/hash errors abort the attempt.
+a narrow failure-boundary correction: only `numpy.linalg.LinAlgError` raised by
+`model.fit` remains an explicit unavailable scientific estimator attempt.
+Constructor, prediction, replay, storage/hash/integrity and every other unexpected
+error propagate and stop the entire invocation before another fit.
 No scientific parameters, label controls, threads, tolerances or fit counts change.
 The old untracked candidate, old tests and prepared inputs remain unchanged.
 The new input binding separately pins 18 prepared artifacts, 24 reusable
@@ -232,6 +234,17 @@ limit is shortened if necessary to leave TERM grace inside the unchanged parent
 absolute deadline. Reaping and receipt publication can take additional time
 after all scientific child processes have been signalled; this does not extend
 consumer compute or reset any budget.
+
+The deadline-accounting correction after `8b0395b` fixes the elapsed budget
+before `Popen`; process startup and the fsynced start receipt consume that same
+budget. Once the returned child handle is owned, a one-shot alarm bounds
+interruptible start-receipt writes and monitoring. The authorized preflight and
+claim write are also bounded; an existing external alarm is refused before any
+claim instead of being cancelled. Polls and TERM grace are capped by the original
+wall and monotonic authorization deadlines. Delayed startup never renews time.
+OS process creation and uninterruptible kernel I/O are not claimed to have a
+hard userspace time bound. Timeout, partial files and actual child exit remain
+failure evidence, with no automatic retry or scientific acceptance.
 
 An exclusive new state directory at
 `research_logs/kumar_next_source_operations_20261015/csp_signed_score_operation_run01`

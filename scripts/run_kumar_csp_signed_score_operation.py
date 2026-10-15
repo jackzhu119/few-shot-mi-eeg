@@ -20,6 +20,7 @@ import signal
 import subprocess
 import sys
 import time
+from contextlib import contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -283,6 +284,35 @@ def stop_process(process, grace):
     raise RuntimeError("Child process did not reap after SIGKILL")
 
 
+@contextmanager
+def deadline_guard(deadline):
+    """Interrupt Python-visible blocking work without renewing a fixed deadline.
+
+    An existing real-time alarm is not ours to cancel or reschedule. Refuse it
+    before launch, and restore the original handler after our one-shot timer.
+    This cannot interrupt uninterruptible kernel I/O or make Popen atomic.
+    """
+    require(signal.getitimer(signal.ITIMER_REAL) == (0.0, 0.0),
+            "Existing real-time alarm prevents this operation")
+    previous = signal.getsignal(signal.SIGALRM)
+
+    def expired(signum, frame):
+        raise TimeoutError("Fixed CPU operation deadline reached; preserve partial evidence")
+
+    signal.signal(signal.SIGALRM, expired)
+    try:
+        remaining = deadline - time.monotonic()
+        if remaining <= 0:
+            expired(None, None)
+        signal.setitimer(signal.ITIMER_REAL, remaining)
+        yield
+        if time.monotonic() >= deadline:
+            expired(None, None)
+    finally:
+        signal.setitimer(signal.ITIMER_REAL, 0)
+        signal.signal(signal.SIGALRM, previous)
+
+
 def running_memory(pid):
     pending, seen, rss = [pid], set(), 0
     while pending:
@@ -307,14 +337,16 @@ def running_memory(pid):
 def execute(contract, auth, *, contract_sha, commit, auth_sha, root=ROOT,
             preflight_reader=preflight, popen=subprocess.Popen, memory_reader=running_memory):
     deadline = authorization_check(auth, contract_sha, commit)
-    require(re.fullmatch(r"[0-9a-f]{40}", commit or ""), "Full reviewed commit required")
-    require(subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True).strip() == commit,
-            "Reviewed fixed checkout differs")
-    require(not subprocess.check_output(["git", "diff", "HEAD", "--name-only"], cwd=root, text=True).strip(),
-            "Tracked checkout changed since review")
-    checked = preflight_reader(contract, root=root)
-    require(checked["ready_for_separate_parent_review"], "CPU preflight not ready: " + "; ".join(checked["problems"]))
-    require(time.time() < deadline - 30, "Authorization expired during preflight")
+    absolute_deadline = time.monotonic() + deadline - time.time()
+    with deadline_guard(absolute_deadline - 30):
+        require(re.fullmatch(r"[0-9a-f]{40}", commit or ""), "Full reviewed commit required")
+        require(subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True).strip() == commit,
+                "Reviewed fixed checkout differs")
+        require(not subprocess.check_output(["git", "diff", "HEAD", "--name-only"], cwd=root, text=True).strip(),
+                "Tracked checkout changed since review")
+        checked = preflight_reader(contract, root=root)
+        require(checked["ready_for_separate_parent_review"], "CPU preflight not ready: " + "; ".join(checked["problems"]))
+        require(time.time() < deadline - 30, "Authorization expired during preflight")
     state = root / STATE
     state.mkdir(parents=True, exist_ok=False)
     claim = {"diagnostic_id": DIAGNOSTIC, "claimed_at_utc": utc(), "reviewed_commit": commit,
@@ -330,6 +362,10 @@ def execute(contract, auth, *, contract_sha, commit, auth_sha, root=ROOT,
                "R2_full_GET_verified": False, "accepted": False, "query_access": False}
     process, old_handlers = None, {}
 
+    def remaining_grace():
+        return min(30, max(0, deadline - time.time()),
+                   max(0, absolute_deadline - time.monotonic()))
+
     def interrupt(signum, frame):
         # A separate session does not receive the launcher's TERM/HUP; explicitly
         # stop the child's entire process group through the exception boundary.
@@ -340,54 +376,70 @@ def execute(contract, auth, *, contract_sha, commit, auth_sha, root=ROOT,
     try:
         for number in (signal.SIGTERM, signal.SIGHUP):
             old_handlers[number] = signal.signal(number, interrupt)
-        write_new(state / "claim.json", claim)
+        with deadline_guard(absolute_deadline - 30):
+            write_new(state / "claim.json", claim)
         with (state / "consumer.log").open("xb") as log:
-            timeout = min(contract["consumer_timeout_seconds"], deadline - time.time() - 30)
-            require(timeout > 0, "Authorization expired before consumer start")
+            launch_started = time.monotonic()
+            timeout = min(contract["consumer_timeout_seconds"], deadline - time.time() - 30,
+                          absolute_deadline - launch_started - 30)
+            if timeout <= 0:
+                raise TimeoutError("Authorization expired before consumer start")
+            consumer_deadline = launch_started + timeout
+            receipt["consumer_launch_attempt_started_at_utc"] = utc()
             env = dict(os.environ, PYTHONPATH=str(root / "src") + os.pathsep + str(root / "scripts"))
+            # Bind elapsed time before Popen; arm the timer only after owning the
+            # returned handle so an interrupted constructor cannot orphan a child.
+            # OS process creation itself is not claimed to have a hard time bound.
             process = popen(command(), cwd=root, env=env, stdout=log, stderr=subprocess.STDOUT,
                             start_new_session=True)
             receipt["consumer_started_at_utc"] = utc()
-            write_new(state / "consumer_start.json", {"started_at_utc": receipt["consumer_started_at_utc"],
-                      "pid": process.pid, "command": command(), "timeout_seconds": timeout})
-            consumer_deadline = time.monotonic() + timeout
-            while process.poll() is None:
-                try:
-                    observed = memory_reader(process.pid)
-                except (OSError, KeyError, ValueError):
-                    if process.poll() is None:
-                        raise
-                    break
-                receipt["resource_samples"].append({"at_utc": utc(), **observed})
-                peak = receipt["maximum_observed_consumer_rss_bytes"] or 0
-                receipt["maximum_observed_consumer_rss_bytes"] = max(peak, observed["consumer_rss_bytes"])
-                rss_exceeded = observed["consumer_rss_bytes"] >= contract["maximum_sampled_consumer_rss_bytes"]
-                headroom = observed["cgroup_headroom_bytes"]
-                headroom_exceeded = headroom is not None and headroom <= contract["minimum_running_cgroup_headroom_bytes"]
-                host_exceeded = observed["host_available_bytes"] <= contract["minimum_running_host_available_bytes"]
-                remaining = consumer_deadline - time.monotonic()
-                if rss_exceeded or headroom_exceeded or host_exceeded or remaining <= 0:
-                    receipt["resource_limit_stop"] = rss_exceeded or headroom_exceeded or host_exceeded
-                    receipt["timeout"] = remaining <= 0
-                    receipt["returncode"], receipt["signals"] = stop_process(
-                        process, min(30, max(0, deadline - time.time())))
-                    break
-                try:
-                    receipt["returncode"] = process.wait(timeout=min(contract["resource_poll_seconds"], remaining))
-                    break
-                except subprocess.TimeoutExpired:
-                    pass
+            with deadline_guard(consumer_deadline):
+                write_new(state / "consumer_start.json", {"started_at_utc": receipt["consumer_started_at_utc"],
+                          "launch_attempt_started_at_utc": receipt["consumer_launch_attempt_started_at_utc"],
+                          "pid": process.pid, "command": command(), "timeout_seconds": timeout})
+                while process.poll() is None:
+                    remaining = min(consumer_deadline - time.monotonic(), deadline - time.time() - 30)
+                    if remaining <= 0:
+                        raise TimeoutError("Authorization or consumer deadline reached")
+                    try:
+                        observed = memory_reader(process.pid)
+                    except (OSError, KeyError, ValueError):
+                        if process.poll() is None:
+                            raise
+                        break
+                    receipt["resource_samples"].append({"at_utc": utc(), **observed})
+                    peak = receipt["maximum_observed_consumer_rss_bytes"] or 0
+                    receipt["maximum_observed_consumer_rss_bytes"] = max(peak, observed["consumer_rss_bytes"])
+                    rss_exceeded = observed["consumer_rss_bytes"] >= contract["maximum_sampled_consumer_rss_bytes"]
+                    headroom = observed["cgroup_headroom_bytes"]
+                    headroom_exceeded = headroom is not None and headroom <= contract["minimum_running_cgroup_headroom_bytes"]
+                    host_exceeded = observed["host_available_bytes"] <= contract["minimum_running_host_available_bytes"]
+                    if rss_exceeded or headroom_exceeded or host_exceeded:
+                        receipt["resource_limit_stop"] = True
+                        break
+                    remaining = min(consumer_deadline - time.monotonic(), deadline - time.time() - 30)
+                    if remaining <= 0:
+                        raise TimeoutError("Authorization or consumer deadline reached")
+                    try:
+                        receipt["returncode"] = process.wait(timeout=min(contract["resource_poll_seconds"], remaining))
+                        break
+                    except subprocess.TimeoutExpired:
+                        pass
+            if receipt["resource_limit_stop"]:
+                # The consumer timer must not interrupt TERM grace and cause a
+                # second stop attempt with a newly granted grace period.
+                receipt["returncode"], receipt["signals"] = stop_process(process, remaining_grace())
             if receipt["returncode"] is None:
                 receipt["returncode"] = process.poll()
             receipt["status"] = "consumer_exited_zero_pending_audit" if receipt["returncode"] == 0 and not (receipt["timeout"] or receipt["resource_limit_stop"]) else "consumer_failed_preserved"
     except BaseException as error:
         receipt["interrupted"] = isinstance(error, (KeyboardInterrupt, InterruptedError))
+        receipt["timeout"] = receipt["timeout"] or isinstance(error, TimeoutError)
         receipt["status"] = "consumer_interrupted_preserved" if receipt["interrupted"] else "launcher_failed_preserved"
         receipt["failure"] = {"type": type(error).__name__, "message": str(error)}
         if process is not None and process.poll() is None:
             try:
-                receipt["returncode"], receipt["signals"] = stop_process(
-                    process, min(30, max(0, deadline - time.time())))
+                receipt["returncode"], receipt["signals"] = stop_process(process, remaining_grace())
             except BaseException as stop_error:
                 receipt["stop_failure"] = {"type": type(stop_error).__name__, "message": str(stop_error)}
         elif process is not None:
