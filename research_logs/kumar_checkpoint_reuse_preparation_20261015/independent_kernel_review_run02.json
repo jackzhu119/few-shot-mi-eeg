@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "status": "independent_preparation_review_passed_execution_and_scientific_gates_closed",
+  "reviewed_script": "scripts/evaluate_kumar_checkpoint_reuse.py",
+  "reviewed_script_sha256": "838f3ed7b8f67c65dcf27b3ef43aace29db9464c8cdaae730be5dfebc92ba4e2",
+  "reviewed_tests": "tests/test_kumar_checkpoint_reuse.py",
+  "reviewed_tests_sha256": "c80fff847ec040bc9098ba73f8706d7017bab1eceb41998be975fc76618ee50e",
+  "review_scope": "Independent code, synthetic untrained software tests, and accepted archive metadata before any tensor deserialization; no real-model execution",
+  "independent_tests": {
+    "command": "PYTHONPATH=src:scripts /workspace/.venvs/few-shot-mi-eeg/bin/python -B -m pytest -q tests/test_kumar_checkpoint_reuse.py",
+    "passed": 53,
+    "failed": 0,
+    "warnings": "22 upstream Braindecode deprecation warnings for the preserved final_layer_with_constraint=False architecture; no architecture change"
+  },
+  "real_archive_compatibility": {
+    "local_original_archives_checked": 17,
+    "accepted_archive_sha256_and_length_checked": true,
+    "every_archive_member_manifest_length_and_sha256_checked": true,
+    "accepted_ledger_plan_identity_ack_full_get_receipt_bindings_checked": true,
+    "frozen_training_config_and_source_split_checked": true,
+    "source_train_count": 40,
+    "source_validation_count": 20,
+    "checkpoint_tensor_deserialization_intercepted_before_torch_load": true,
+    "first_legacy_original_archive_locally_available": false,
+    "first_legacy_review": "Original accepted manifest, fit_result.json and weights.json metadata reviewed; its smaller saved-source replay archive is distinct from the accepted original. Restricted legacy schema compatibility is covered by a synthetic untrained fixture, not claimed as an actual original-weight load.",
+    "bound_development_source_validation_rows_with_valid_processed_window_sha256": 120,
+    "rechecked_current_version_before_tensor_load": true
+  },
+  "checked_invariants": [
+    "No optimizer is constructed; training wrappers, fit, backward and numerical thread mutation are forbidden by synthetic tests.",
+    "Safe tensor loading uses weights_only=True and map_location=cpu after archive/manifest/accepted-identity checks.",
+    "CPU construction preserves the caller CPU RNG, explicitly uses the CPU device context, and never calls torch.manual_seed or CUDA manual_seed_all.",
+    "Evaluation mode, disabled gradients, every parameter and registered buffer including BN, channel normalization and classes are checked before and after replay.",
+    "Metadata, accepted identity, source-validation metadata, frozen bindings, original archive, ledger, plan, split, acknowledgement, receipt and actual authorization bytes remain bound and unchanged.",
+    "Invalid query/future identities, roles, run, label or duplicate rows are rejected before signal or label array conversion.",
+    "The real-source replay path defaults closed and requires a separately fixed exact-hash actual parent authorization before accessing arrays.",
+    "Evaluation uses archived normalization without refitting; input signal arrays are copied and no checkpoint or result state is written.",
+    "State tampering before or during evaluation fails; no restore is used to disguise mutation and no success result is returned.",
+    "Archived CUDA training provenance remains unchanged while this implementation explicitly reports CPU execution; reuse is not a new fit or experiment.",
+    "Each supplied processed trial is serialized as little-endian float32 in C order and checked against processed_window_numeric_sha256 from the bound frozen split before normalization or forward; caller-supplied digest assertions cannot replace the bound identity.",
+    "The processed-window serialization exactly matches the existing datasets.kumar.numeric_hash(trial, dtype='<f4') contract; equivalent byte-order/memory-layout inputs are handled without changing processed numeric values.",
+    "After the post-evaluation state guard, real source replay CE must agree with checkpoint-bound selected source_validation_loss within the original absolute 1e-7 tolerance; excess or nonfinite loss fails without a success result.",
+    "Synthetic untrained software fixtures explicitly mark the real source CE comparison inapplicable with null error and null pass field; they cannot claim an actual replay-tolerance result."
+  ],
+  "resolved_review_findings": [
+    {
+      "finding": "torch.manual_seed inside fork_rng(devices=[]) could alter CUDA RNG on GPU hosts.",
+      "resolution": "Replaced with torch.random.default_generator.manual_seed inside an explicit CPU construction context; synthetic replay test forbids the global/CUDA seed functions and verifies CPU RNG preservation."
+    }
+  ],
+  "unresolved_blocking_implementation_findings": [],
+  "limitations": [
+    "No accepted real checkpoint tensor was deserialized and no accepted real model forward was executed during this preparation.",
+    "No actual EEG signal or query array was read; the immutable split manifest was parsed only to select and verify the existing source-train/source-validation metadata.",
+    "Passing synthetic software tests and metadata compatibility does not establish CPU-versus-archived-CUDA replay tolerance, valid gating, scientific efficacy, or permission for future evaluation.",
+    "The first accepted original archive must be recovered and hash-verified under the existing access process before a future authorized actual checkpoint load; the saved-source replay tar cannot substitute for it.",
+    "The new CE guard is a fail-closed implementation boundary, not evidence that any accepted checkpoint has already passed CPU-versus-CUDA replay. A future authorized replay may fail the unchanged 1e-7 bound and must preserve the failure rather than relax it."
+  ],
+  "counters": {
+    "accepted_real_checkpoints_loaded": 0,
+    "accepted_real_model_forwards": 0,
+    "new_fits": 0,
+    "optimizer_instances": 0,
+    "query_signal_arrays_loaded": 0,
+    "pod_operations": 0,
+    "ledger_entries_modified": 0
+  },
+  "formal_scientific_gate_passed": false,
+  "real_source_replay_authorized": false,
+  "query_access_authorized": false,
+  "review_run": "run02",
+  "previous_review": {
+    "path": "research_logs/kumar_checkpoint_reuse_preparation_20261015/independent_kernel_review.json",
+    "sha256": "afe676dfd09bc84868b83fae58d5fa979b85d9abf91f5159c8a3fb72d1ca5b18",
+    "preserved_unchanged": true,
+    "scope": "Historical initial 43-test implementation review; this run reviews the additional input identity and CE replay guards."
+  },
+  "added_guard_tests": {
+    "changed_processed_signal_one_float32_ulp_rejected_before_forward": true,
+    "caller_forged_processed_hash_rejected": true,
+    "existing_numeric_hash_serialization_matches": true,
+    "big_endian_fortran_layout_same_values_supported": true,
+    "ce_exact_frozen_boundary_passes": true,
+    "ce_outside_boundary_or_nonfinite_rejected": true,
+    "synthetic_ce_comparison_explicitly_inapplicable": true
+  }
+}

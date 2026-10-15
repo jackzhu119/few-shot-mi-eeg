@@ -1,0 +1,1618 @@
+{
+  "schema_version": 1,
+  "status": "proposal_only_unapproved",
+  "purpose": "Exact metadata-only proposed input scope for the remaining twelve participants source-only thirty-six EEGNet fits; no data read or execution authorization.",
+  "execution_enabled": false,
+  "new_fits_authorized": 0,
+  "query_access": false,
+  "Pod_operated": false,
+  "source_files_read": false,
+  "downloads_performed": false,
+  "selectors": {
+    "participants": [
+      "sub-2",
+      "sub-3",
+      "sub-5",
+      "sub-6",
+      "sub-8",
+      "sub-9",
+      "sub-11",
+      "sub-12",
+      "sub-14",
+      "sub-15",
+      "sub-17",
+      "sub-18"
+    ],
+    "cohort_identity_rule": "every_third_numeric_published_id_starting_1_is_development_no_performance_selection",
+    "training_EEG": {
+      "session": "ses-0",
+      "runs": [
+        "run-0",
+        "run-1"
+      ]
+    },
+    "epoch_selection_EEG": {
+      "session": "ses-0",
+      "runs": [
+        "run-2"
+      ]
+    },
+    "allowed_run_file_suffixes": [
+      "channels.tsv",
+      "eeg.edf",
+      "eeg.json",
+      "events.json",
+      "events.tsv"
+    ],
+    "metadata_only": [
+      "dataset_description.json",
+      "all six scans.tsv per selected participant, including future sessions for frozen acquisition-order identity validation"
+    ],
+    "future_session_metadata_does_not_authorize_signal_or_labels": true,
+    "selection_equivalence_check": "Applying this exact selector to the six development IDs produces the unchanged existing 127-file eegnet_data_plan.json list byte-for-byte at entry level.",
+    "excluded_EEG_roles": [
+      "source_query",
+      "target_support",
+      "target_query"
+    ],
+    "no_query_label_files": true,
+    "complete_formal_data_plan_not_authorized": true
+  },
+  "file_count": 253,
+  "bytes": 196740994,
+  "edf_count": 36,
+  "edf_bytes": 196540216,
+  "metadata_file_count": 217,
+  "metadata_bytes": 200778,
+  "scans_tsv_count": 72,
+  "future_session_scans_tsv_count": 60,
+  "query_EEG_file_count": 0,
+  "target_EEG_file_count": 0,
+  "query_label_file_count": 0,
+  "input_validation_required_before_any_future_fit": "Each selected original file length/SHA256 and frozen official checksum, source trial identities, chronological roles, processed numeric hashes, classes and exclusions must pass under a separately reviewed frozen operation; this proposal has not read these files.",
+  "frozen_sources": [
+    {
+      "path": "research_logs/gpu_preparation_20261014/formal_data_plan.json",
+      "sha256": "6d1461720eda23287d93614e28205bdb0feabeaed71d49fec2a4f9659e70548d",
+      "role": "Existing full-scope manifest used only as metadata inventory; its complete 360-EDF scope is not authorized."
+    },
+    {
+      "path": "research_logs/gpu_preparation_20261014/eegnet_data_plan.json",
+      "sha256": "b8dd6c8872f03a661b34d50fb826ef05e88e5502e9987290fec1301a4cb85363",
+      "role": "Unchanged 127-file six-development-subject selection used to independently verify selector equivalence."
+    },
+    {
+      "path": "configs/kumar_cross_session_20261012.json",
+      "sha256": "f1b2d0fa870493cc2aaab906fe6d8b1227e45b2a270e06700e3ca137fbfe9c89",
+      "role": "Frozen participant cohorts, preprocessing and role allocation."
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/protocol/split_manifest.json",
+      "sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+      "role": "Frozen trial identities; metadata only read for the manifest hash."
+    }
+  ],
+  "historical_source_receipt_sha256": "0eb79f83138fb9e07ec7fd22cb7527bacde8f815f5b987b50e504e5e099a5071",
+  "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+  "files": [
+    {
+      "relative_path": "dataset_description.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/dataset_description.json",
+      "sha256": "3ec4afc49c56dcd35be7c1fe8318a1c463983e1a630a42419bb235c66439a747",
+      "bytes": 1310
+    },
+    {
+      "relative_path": "sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-0_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-0_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-0_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-0_eeg.edf",
+      "sha256": "3f282ca4922b02b5991efcf75696f2974d48905379e21a87ef887b76260d5345",
+      "bytes": 5377328
+    },
+    {
+      "relative_path": "sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-0_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-0_eeg.json",
+      "sha256": "d2e18814a5c75344d0e2df89e4bbff7af74b6bbccc1b17d72ee5fd26e95caf0b",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-0_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-0_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-0_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-0_events.tsv",
+      "sha256": "8e985c7eb8050d8c5589bc0c409ad31ae66a6a286ddd9c21d7e85edbc870d451",
+      "bytes": 740
+    },
+    {
+      "relative_path": "sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-1_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-1_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-1_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-1_eeg.edf",
+      "sha256": "b705a51b30e08351b6214ddc08d3a8d9fd1ba5a1aa53ad93af2beb01014c8e7b",
+      "bytes": 5467600
+    },
+    {
+      "relative_path": "sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-1_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-1_eeg.json",
+      "sha256": "cf3b9d22ae130e5da3db0d45b31107500bfa79ff60deacb853dd0b518ef6910d",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-1_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-1_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-1_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-1_events.tsv",
+      "sha256": "20296003b5b3b847b4a3970299250ddaf56372a6a756be46432f64d4b3b5f1fc",
+      "bytes": 751
+    },
+    {
+      "relative_path": "sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-2_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-2_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-2_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-2_eeg.edf",
+      "sha256": "922655975008cd23bd962c11d0776f22ab7d55d58065c9df30bd573fef528770",
+      "bytes": 5422464
+    },
+    {
+      "relative_path": "sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-2_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-2_eeg.json",
+      "sha256": "eaeba81b87a59885a67d275e9baa35b6d66a5295ea2beceb48c70af2314d0966",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-2_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-2_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-2_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-11/ses-0/eeg/sub-11_ses-0_task-imagery_run-2_events.tsv",
+      "sha256": "fbd4746074ee8aef386c327e18204ba97df18e5bed6d67adc3883a42bd72f6b3",
+      "bytes": 750
+    },
+    {
+      "relative_path": "sub-11/ses-0/sub-11_ses-0_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-11/ses-0/sub-11_ses-0_scans.tsv",
+      "sha256": "b2303a254061e4ead439f2a8daa1f6d4f7d16506735e55442f55026abe142d49",
+      "bytes": 306
+    },
+    {
+      "relative_path": "sub-11/ses-1/sub-11_ses-1_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-11/ses-1/sub-11_ses-1_scans.tsv",
+      "sha256": "6e9a377c8742fd25f8435d830350c9bbf913a88fd03b9b7dc87704fb87283244",
+      "bytes": 306
+    },
+    {
+      "relative_path": "sub-11/ses-2/sub-11_ses-2_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-11/ses-2/sub-11_ses-2_scans.tsv",
+      "sha256": "7f63124b9b3c91a955f909f91be0a9a54b2083466ccfe7b8d6dfe27901fba2c0",
+      "bytes": 234
+    },
+    {
+      "relative_path": "sub-11/ses-3/sub-11_ses-3_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-11/ses-3/sub-11_ses-3_scans.tsv",
+      "sha256": "067317ee1c20f19dc37d022568a4acac39cb7be7229c6b10e52a9691e69d3a5d",
+      "bytes": 234
+    },
+    {
+      "relative_path": "sub-11/ses-4/sub-11_ses-4_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-11/ses-4/sub-11_ses-4_scans.tsv",
+      "sha256": "24897d484938f7c2c2a52ee411aa2722b95cadeab5de396161c82dea72ff04ce",
+      "bytes": 234
+    },
+    {
+      "relative_path": "sub-11/ses-5/sub-11_ses-5_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-11/ses-5/sub-11_ses-5_scans.tsv",
+      "sha256": "595f7fd8396a1de7f645c717985521672b0584e4d00360dcaba3eab429c0b928",
+      "bytes": 234
+    },
+    {
+      "relative_path": "sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-0_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-0_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-0_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-0_eeg.edf",
+      "sha256": "475ec240b4a897831bef1bca6402def3a858a331fa6dad4c9ed49779b1f3dd8c",
+      "bytes": 5490168
+    },
+    {
+      "relative_path": "sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-0_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-0_eeg.json",
+      "sha256": "39217902c3672148fc24ce8a5678c24dd60d9ad8a4be0cf8f0d3477b05ba0f97",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-0_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-0_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-0_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-0_events.tsv",
+      "sha256": "72ed6ee8e1568527b4fad5e82e996fabaf69d08c376db6111e45a37ea9d88f8c",
+      "bytes": 747
+    },
+    {
+      "relative_path": "sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-1_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-1_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-1_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-1_eeg.edf",
+      "sha256": "200a2fc0dcb54a5a6ece83f9e56a5ee2a6d09d2df9b954b75394178a0265ebff",
+      "bytes": 5467600
+    },
+    {
+      "relative_path": "sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-1_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-1_eeg.json",
+      "sha256": "cf3b9d22ae130e5da3db0d45b31107500bfa79ff60deacb853dd0b518ef6910d",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-1_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-1_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-1_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-1_events.tsv",
+      "sha256": "327ffdf7e8cdaeeb6bb1ad37ee3fc69b5e4f32fd749ddff09bd0c5e178f577d8",
+      "bytes": 750
+    },
+    {
+      "relative_path": "sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-2_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-2_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-2_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-2_eeg.edf",
+      "sha256": "c7f91b157845e5296b4498e3a22cc26b89c1f0dee1ef8d6ffcd95bdfd283003e",
+      "bytes": 5490168
+    },
+    {
+      "relative_path": "sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-2_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-2_eeg.json",
+      "sha256": "39217902c3672148fc24ce8a5678c24dd60d9ad8a4be0cf8f0d3477b05ba0f97",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-2_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-2_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-2_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-12/ses-0/eeg/sub-12_ses-0_task-imagery_run-2_events.tsv",
+      "sha256": "83e81e55f2d5b3dc498bd0d1edc1c8cec78bfb85a22a7eab3e46158a5f8173e7",
+      "bytes": 746
+    },
+    {
+      "relative_path": "sub-12/ses-0/sub-12_ses-0_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-12/ses-0/sub-12_ses-0_scans.tsv",
+      "sha256": "20f0062cc13d2e17a3387728b70f094ed7c8914e7fd713037313b478eaa617b6",
+      "bytes": 306
+    },
+    {
+      "relative_path": "sub-12/ses-1/sub-12_ses-1_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-12/ses-1/sub-12_ses-1_scans.tsv",
+      "sha256": "0feea834e5d9e9d2cd55a433980a2651b9c97f1a5dabfe14c025f46e1d9e77c2",
+      "bytes": 306
+    },
+    {
+      "relative_path": "sub-12/ses-2/sub-12_ses-2_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-12/ses-2/sub-12_ses-2_scans.tsv",
+      "sha256": "e70ef6dc8e25630b2de0c47b15e52e20fc203f88bfcae138ebfedc431b462c87",
+      "bytes": 234
+    },
+    {
+      "relative_path": "sub-12/ses-3/sub-12_ses-3_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-12/ses-3/sub-12_ses-3_scans.tsv",
+      "sha256": "b774ef4415fbc1935a4c0ebc861ba3841b3475ce15ffbed3c37cec2823a9e977",
+      "bytes": 234
+    },
+    {
+      "relative_path": "sub-12/ses-4/sub-12_ses-4_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-12/ses-4/sub-12_ses-4_scans.tsv",
+      "sha256": "cc24e40fc9b2a8717f64ddf0d08f35b2522037337344dd506810df9788688e22",
+      "bytes": 234
+    },
+    {
+      "relative_path": "sub-12/ses-5/sub-12_ses-5_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-12/ses-5/sub-12_ses-5_scans.tsv",
+      "sha256": "957b8f9f23b2a7c0218c6f825cec28c36e684480e641b774ce4f5d6066ec1eae",
+      "bytes": 234
+    },
+    {
+      "relative_path": "sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-0_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-0_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-0_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-0_eeg.edf",
+      "sha256": "93d69e6efd57aa4143d506c822f1f0ea9138492a944127ccfed4fdc9a6fdf08b",
+      "bytes": 5445032
+    },
+    {
+      "relative_path": "sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-0_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-0_eeg.json",
+      "sha256": "b100364448874853f91c1a09641dc5f0b9070a15f7c89ef505682ce083a411eb",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-0_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-0_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-0_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-0_events.tsv",
+      "sha256": "3fcbd76a3ab29a3defa6e14758c3637aa4bdb80b42ebe1ddeeff53a4414b48e8",
+      "bytes": 739
+    },
+    {
+      "relative_path": "sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-1_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-1_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-1_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-1_eeg.edf",
+      "sha256": "1979318c377fce8d343cfc8f5d90fa5888d520e6b1cba2ffab71947660775c4e",
+      "bytes": 5445032
+    },
+    {
+      "relative_path": "sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-1_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-1_eeg.json",
+      "sha256": "b100364448874853f91c1a09641dc5f0b9070a15f7c89ef505682ce083a411eb",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-1_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-1_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-1_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-1_events.tsv",
+      "sha256": "777dce0fca4256e7795a5c4ccf9ce067aeb51a7d6b5e5897808afc3af9c5d61d",
+      "bytes": 733
+    },
+    {
+      "relative_path": "sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-2_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-2_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-2_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-2_eeg.edf",
+      "sha256": "033efcef9b41b7849c83d7a7af922eb3907b0f1729324134de16d2f59ea94e95",
+      "bytes": 5512736
+    },
+    {
+      "relative_path": "sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-2_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-2_eeg.json",
+      "sha256": "cf283003e36da926c3d8408a090e48ee2e4b0c69c80cb7094ca6ca0bac745d65",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-2_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-2_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-2_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-14/ses-0/eeg/sub-14_ses-0_task-imagery_run-2_events.tsv",
+      "sha256": "cede63db5de46d44f4e08012271b5411afc096ef46ca501905f3f330435e2d4b",
+      "bytes": 749
+    },
+    {
+      "relative_path": "sub-14/ses-0/sub-14_ses-0_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-14/ses-0/sub-14_ses-0_scans.tsv",
+      "sha256": "89bcbe2d8220bdf4b068b348a9278a64823e8cac4ea9c3b1067f1d4d134bf8ad",
+      "bytes": 306
+    },
+    {
+      "relative_path": "sub-14/ses-1/sub-14_ses-1_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-14/ses-1/sub-14_ses-1_scans.tsv",
+      "sha256": "78002213805638f2e744f0dcafbafaf1daf558c27f0777cbf634f363950b76a0",
+      "bytes": 306
+    },
+    {
+      "relative_path": "sub-14/ses-2/sub-14_ses-2_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-14/ses-2/sub-14_ses-2_scans.tsv",
+      "sha256": "88bc201ec9260af47729ce6363f98ba15d3ea1179a37f12c84cd14bd9d40f385",
+      "bytes": 234
+    },
+    {
+      "relative_path": "sub-14/ses-3/sub-14_ses-3_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-14/ses-3/sub-14_ses-3_scans.tsv",
+      "sha256": "1b8fffe4ec7305b234994750a558cbca7f9acb3e0e3579a2712c091753d8d03b",
+      "bytes": 234
+    },
+    {
+      "relative_path": "sub-14/ses-4/sub-14_ses-4_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-14/ses-4/sub-14_ses-4_scans.tsv",
+      "sha256": "29c7b835f511e1f987d190c14d98b5f22928ccf517e362a15e6ca5d621ec4e7b",
+      "bytes": 234
+    },
+    {
+      "relative_path": "sub-14/ses-5/sub-14_ses-5_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-14/ses-5/sub-14_ses-5_scans.tsv",
+      "sha256": "a31e647dc8382610f072b691f610c986a6eec4cfe19b7b25a22e2343f8f60d7b",
+      "bytes": 234
+    },
+    {
+      "relative_path": "sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-0_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-0_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-0_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-0_eeg.edf",
+      "sha256": "7e15edd314ff6ec860382b7c0bd5cfcda7ce8df27012c67e85b36e2a8a4dbc43",
+      "bytes": 5490168
+    },
+    {
+      "relative_path": "sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-0_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-0_eeg.json",
+      "sha256": "39217902c3672148fc24ce8a5678c24dd60d9ad8a4be0cf8f0d3477b05ba0f97",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-0_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-0_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-0_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-0_events.tsv",
+      "sha256": "1fe0215c05d7f9e82c0e3fa909bae55c815d147f3fd450b06ff88b7281b5d6f6",
+      "bytes": 742
+    },
+    {
+      "relative_path": "sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-1_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-1_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-1_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-1_eeg.edf",
+      "sha256": "3d126e3e9ada4482f3073798036903fc4b6e7c7121591c5b051e3efc49ad3f6f",
+      "bytes": 5445032
+    },
+    {
+      "relative_path": "sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-1_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-1_eeg.json",
+      "sha256": "b100364448874853f91c1a09641dc5f0b9070a15f7c89ef505682ce083a411eb",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-1_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-1_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-1_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-1_events.tsv",
+      "sha256": "ab1117879f1f74f1cb5e27755921bc64b96320656a2b7695b0e2ecefb41559cc",
+      "bytes": 744
+    },
+    {
+      "relative_path": "sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-2_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-2_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-2_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-2_eeg.edf",
+      "sha256": "c4746fe4dcd0278bb68df3e4551407f2d0d899cae342be8bd11c6af57c5aeca6",
+      "bytes": 5512736
+    },
+    {
+      "relative_path": "sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-2_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-2_eeg.json",
+      "sha256": "cf283003e36da926c3d8408a090e48ee2e4b0c69c80cb7094ca6ca0bac745d65",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-2_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-2_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-2_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-15/ses-0/eeg/sub-15_ses-0_task-imagery_run-2_events.tsv",
+      "sha256": "53b51a3e3f9b5cd7fff0224ffc94cad4e20449fab0188856fdcdf32217473ada",
+      "bytes": 740
+    },
+    {
+      "relative_path": "sub-15/ses-0/sub-15_ses-0_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-15/ses-0/sub-15_ses-0_scans.tsv",
+      "sha256": "6b8be8bb0a9c7ba87d117d88479d034175d919f128a5f38ab0f4a3c25e892d38",
+      "bytes": 306
+    },
+    {
+      "relative_path": "sub-15/ses-1/sub-15_ses-1_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-15/ses-1/sub-15_ses-1_scans.tsv",
+      "sha256": "85aaaa27c39c313ba99ff9c1c2808504e6f8b83b5ae29b33b0fd54a7612c9b48",
+      "bytes": 306
+    },
+    {
+      "relative_path": "sub-15/ses-2/sub-15_ses-2_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-15/ses-2/sub-15_ses-2_scans.tsv",
+      "sha256": "4c3f61a0470a0cf362afcad9c07a819cbff440a74cdf1b94a35bdf4cbf73f0e9",
+      "bytes": 234
+    },
+    {
+      "relative_path": "sub-15/ses-3/sub-15_ses-3_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-15/ses-3/sub-15_ses-3_scans.tsv",
+      "sha256": "e59f60ca7493ad981a218d589e4ecbd1957c5b7ae1402da1a39c6f96efcefb0e",
+      "bytes": 234
+    },
+    {
+      "relative_path": "sub-15/ses-4/sub-15_ses-4_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-15/ses-4/sub-15_ses-4_scans.tsv",
+      "sha256": "c8b24787a81834ea131358190e9e5b6bead308580e37ae68eff05ee0db944572",
+      "bytes": 234
+    },
+    {
+      "relative_path": "sub-15/ses-5/sub-15_ses-5_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-15/ses-5/sub-15_ses-5_scans.tsv",
+      "sha256": "20ffd10d2e7f83d8f3a2f9b7eb760cf40488225776971d93bead157da25f2c05",
+      "bytes": 234
+    },
+    {
+      "relative_path": "sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-0_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-0_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-0_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-0_eeg.edf",
+      "sha256": "1cfeab8f41c41a610247739867dfe0d61b87e3b0954349adb35a3d8905799aeb",
+      "bytes": 5422464
+    },
+    {
+      "relative_path": "sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-0_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-0_eeg.json",
+      "sha256": "eaeba81b87a59885a67d275e9baa35b6d66a5295ea2beceb48c70af2314d0966",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-0_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-0_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-0_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-0_events.tsv",
+      "sha256": "7c9b075e250c73eff572597ff6da2325372ce2486fddf3a71f141aa7d9961bad",
+      "bytes": 745
+    },
+    {
+      "relative_path": "sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-1_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-1_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-1_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-1_eeg.edf",
+      "sha256": "f19b09e06ee01a1529e7007608292db14230448369a1a6f957e342a43d13fd9b",
+      "bytes": 5467600
+    },
+    {
+      "relative_path": "sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-1_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-1_eeg.json",
+      "sha256": "cf3b9d22ae130e5da3db0d45b31107500bfa79ff60deacb853dd0b518ef6910d",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-1_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-1_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-1_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-1_events.tsv",
+      "sha256": "9cab059c863fffc5b7fc3761133695be2c08aa321c806b6c45a9ec659b1ae9ed",
+      "bytes": 741
+    },
+    {
+      "relative_path": "sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-2_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-2_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-2_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-2_eeg.edf",
+      "sha256": "c73e85779349146cc569aac2ef56233301507fbd88fe3f79af4822c08bbfe6bf",
+      "bytes": 5490168
+    },
+    {
+      "relative_path": "sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-2_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-2_eeg.json",
+      "sha256": "39217902c3672148fc24ce8a5678c24dd60d9ad8a4be0cf8f0d3477b05ba0f97",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-2_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-2_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-2_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-17/ses-0/eeg/sub-17_ses-0_task-imagery_run-2_events.tsv",
+      "sha256": "2e4cd02cdd972e0da7d4deaef280187c28d73255dcf975f631dfc9d41ddb7337",
+      "bytes": 743
+    },
+    {
+      "relative_path": "sub-17/ses-0/sub-17_ses-0_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-17/ses-0/sub-17_ses-0_scans.tsv",
+      "sha256": "ac2482b9c9a8bb3ee92809d853aa0394ca7be9bc610f568cb81255038d1d72dd",
+      "bytes": 306
+    },
+    {
+      "relative_path": "sub-17/ses-1/sub-17_ses-1_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-17/ses-1/sub-17_ses-1_scans.tsv",
+      "sha256": "2c7902539d42d7b442d2217dcb144071802673917ed482228a6a66fd3f3404af",
+      "bytes": 306
+    },
+    {
+      "relative_path": "sub-17/ses-2/sub-17_ses-2_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-17/ses-2/sub-17_ses-2_scans.tsv",
+      "sha256": "acf8d434dbd76c43462031eb6d1c10c0e694dfb2359674827f115b7e45d267cd",
+      "bytes": 234
+    },
+    {
+      "relative_path": "sub-17/ses-3/sub-17_ses-3_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-17/ses-3/sub-17_ses-3_scans.tsv",
+      "sha256": "3c68b11ee9fbd1f36beed49f7c99d2f22c9bb022abbdd33fc94a639c6661d5c9",
+      "bytes": 234
+    },
+    {
+      "relative_path": "sub-17/ses-4/sub-17_ses-4_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-17/ses-4/sub-17_ses-4_scans.tsv",
+      "sha256": "a9ee73cd54476a72e3fbb6da5f24f3e44c5821e67ea3937d6e5c6928c30fa945",
+      "bytes": 234
+    },
+    {
+      "relative_path": "sub-17/ses-5/sub-17_ses-5_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-17/ses-5/sub-17_ses-5_scans.tsv",
+      "sha256": "d96dad519b941dc133c27d2c13a4f424ce9561072fa8f935d9e49dbe783c885d",
+      "bytes": 234
+    },
+    {
+      "relative_path": "sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-0_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-0_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-0_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-0_eeg.edf",
+      "sha256": "1172375ad43b4da27326e48ea3954f5e292603ebed141f5c12aaa9b53fd116db",
+      "bytes": 5445032
+    },
+    {
+      "relative_path": "sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-0_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-0_eeg.json",
+      "sha256": "b100364448874853f91c1a09641dc5f0b9070a15f7c89ef505682ce083a411eb",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-0_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-0_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-0_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-0_events.tsv",
+      "sha256": "111425502d18f4166da8b7e6054d54e456028f310d2b4d9107b72db23bca1ce8",
+      "bytes": 737
+    },
+    {
+      "relative_path": "sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-1_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-1_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-1_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-1_eeg.edf",
+      "sha256": "6488b8b88b770a66971f37eeede085129eeb707a56e588f3ba095ffd6dabb54f",
+      "bytes": 5422464
+    },
+    {
+      "relative_path": "sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-1_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-1_eeg.json",
+      "sha256": "eaeba81b87a59885a67d275e9baa35b6d66a5295ea2beceb48c70af2314d0966",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-1_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-1_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-1_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-1_events.tsv",
+      "sha256": "1970ad87359ca7a52e9cc33f885bd0e24e06b1fa46143c0b1ad321b5b474bf4e",
+      "bytes": 736
+    },
+    {
+      "relative_path": "sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-2_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-2_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-2_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-2_eeg.edf",
+      "sha256": "a80a1a972a6126e08c8f991e133cc3731fcb1a9e4dfb3e975c032a40d9e2ffd5",
+      "bytes": 5467600
+    },
+    {
+      "relative_path": "sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-2_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-2_eeg.json",
+      "sha256": "cf3b9d22ae130e5da3db0d45b31107500bfa79ff60deacb853dd0b518ef6910d",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-2_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-2_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-2_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-18/ses-0/eeg/sub-18_ses-0_task-imagery_run-2_events.tsv",
+      "sha256": "ef8a01b2f17a0deb19e845f6c28f0e6b413d5f2f6d677223261ee0ae60e07035",
+      "bytes": 744
+    },
+    {
+      "relative_path": "sub-18/ses-0/sub-18_ses-0_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-18/ses-0/sub-18_ses-0_scans.tsv",
+      "sha256": "1d87d01bcd6e3e20dec7645e503eb2a44abbb971bd226fc9c119e731c18f3d01",
+      "bytes": 306
+    },
+    {
+      "relative_path": "sub-18/ses-1/sub-18_ses-1_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-18/ses-1/sub-18_ses-1_scans.tsv",
+      "sha256": "9218f8366cf258994598af7ebd12632bdd37f07e1fb18dad989753459a909cd1",
+      "bytes": 306
+    },
+    {
+      "relative_path": "sub-18/ses-2/sub-18_ses-2_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-18/ses-2/sub-18_ses-2_scans.tsv",
+      "sha256": "adafcccdc097b7b6889913c5b007ff988f2f2eb8539197f0ebdb06f5b56a9d1a",
+      "bytes": 234
+    },
+    {
+      "relative_path": "sub-18/ses-3/sub-18_ses-3_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-18/ses-3/sub-18_ses-3_scans.tsv",
+      "sha256": "5ed05f1b995f62f9dd89993251261fd538792920ab917da55de8df0bfb5e9db4",
+      "bytes": 234
+    },
+    {
+      "relative_path": "sub-18/ses-4/sub-18_ses-4_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-18/ses-4/sub-18_ses-4_scans.tsv",
+      "sha256": "15cea6d8e17f9753e962dba163d6275645b9f8788c6250737e92339e6980e18f",
+      "bytes": 234
+    },
+    {
+      "relative_path": "sub-18/ses-5/sub-18_ses-5_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-18/ses-5/sub-18_ses-5_scans.tsv",
+      "sha256": "f15e1fdf24f4eeba643a0b58fb91437240dbccb45a4fa5d347d11a421d8dc754",
+      "bytes": 234
+    },
+    {
+      "relative_path": "sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-0_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-0_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-0_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-0_eeg.edf",
+      "sha256": "440d1d82d90ad96f4cc69fdf57228755054b33f7cb7558954f9e2fc4d47246ce",
+      "bytes": 5490168
+    },
+    {
+      "relative_path": "sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-0_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-0_eeg.json",
+      "sha256": "39217902c3672148fc24ce8a5678c24dd60d9ad8a4be0cf8f0d3477b05ba0f97",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-0_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-0_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-0_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-0_events.tsv",
+      "sha256": "40d082b6ff968947b82eda4b8ce0f5ad9ea474ccd7f9beb5e6438523a65b6502",
+      "bytes": 742
+    },
+    {
+      "relative_path": "sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-1_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-1_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-1_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-1_eeg.edf",
+      "sha256": "236ecb5eb27178e72f49159630f3561fa3b8c2586b79a253cb047d18d39f5e1b",
+      "bytes": 5445032
+    },
+    {
+      "relative_path": "sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-1_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-1_eeg.json",
+      "sha256": "b100364448874853f91c1a09641dc5f0b9070a15f7c89ef505682ce083a411eb",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-1_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-1_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-1_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-1_events.tsv",
+      "sha256": "c9c9e2e62c0638a8580d6b5b9ba1742175e1924dcd98bbf7e9b544fcd711b5d7",
+      "bytes": 739
+    },
+    {
+      "relative_path": "sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-2_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-2_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-2_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-2_eeg.edf",
+      "sha256": "139afcb672e9de606e7afd83ab44b7e4bad9b07c5a4c4a16f693c5b511202ffa",
+      "bytes": 5445032
+    },
+    {
+      "relative_path": "sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-2_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-2_eeg.json",
+      "sha256": "b100364448874853f91c1a09641dc5f0b9070a15f7c89ef505682ce083a411eb",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-2_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-2_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-2_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-2/ses-0/eeg/sub-2_ses-0_task-imagery_run-2_events.tsv",
+      "sha256": "fa520036e52245582ce7788b3c68d73e714cf213b4e0425209742eb1e5b1e71f",
+      "bytes": 742
+    },
+    {
+      "relative_path": "sub-2/ses-0/sub-2_ses-0_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-2/ses-0/sub-2_ses-0_scans.tsv",
+      "sha256": "2ef72045848b808b39f27aabc24e4e82dde3dc4d4d8b6ee90374ea4ef86b2ce7",
+      "bytes": 302
+    },
+    {
+      "relative_path": "sub-2/ses-1/sub-2_ses-1_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-2/ses-1/sub-2_ses-1_scans.tsv",
+      "sha256": "2be46fa1871ee358b44c1d755b91d740c73fd9c4e1593fee145edc228d942b6c",
+      "bytes": 302
+    },
+    {
+      "relative_path": "sub-2/ses-2/sub-2_ses-2_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-2/ses-2/sub-2_ses-2_scans.tsv",
+      "sha256": "48c7d0e76181471d9383ce04dd4959e65b9f5830800bcfffa19482fb68831921",
+      "bytes": 231
+    },
+    {
+      "relative_path": "sub-2/ses-3/sub-2_ses-3_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-2/ses-3/sub-2_ses-3_scans.tsv",
+      "sha256": "d091ac722d5aca77ff807db37a44dfcf170616bf5ae08350fbf064202a095782",
+      "bytes": 231
+    },
+    {
+      "relative_path": "sub-2/ses-4/sub-2_ses-4_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-2/ses-4/sub-2_ses-4_scans.tsv",
+      "sha256": "20780f26b722137f83c48f1122b405aa51c4e69cb1b60c53e9b69e4d61c02f85",
+      "bytes": 231
+    },
+    {
+      "relative_path": "sub-2/ses-5/sub-2_ses-5_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-2/ses-5/sub-2_ses-5_scans.tsv",
+      "sha256": "56edbf454e192424a35995dba417288e97c50464af2f820975c55f834ea7f6b3",
+      "bytes": 231
+    },
+    {
+      "relative_path": "sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-0_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-0_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-0_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-0_eeg.edf",
+      "sha256": "ac91584dfe14f2cac8eba151ac1c7c090ab85e457b8869a747469ce40eec9d31",
+      "bytes": 5467600
+    },
+    {
+      "relative_path": "sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-0_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-0_eeg.json",
+      "sha256": "cf3b9d22ae130e5da3db0d45b31107500bfa79ff60deacb853dd0b518ef6910d",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-0_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-0_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-0_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-0_events.tsv",
+      "sha256": "a82e01d076632494315be6b44df0a6dd5a1b0e702d0bed48c3a4e4438fa98678",
+      "bytes": 749
+    },
+    {
+      "relative_path": "sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-1_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-1_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-1_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-1_eeg.edf",
+      "sha256": "bd72ce4a3bd72d7597fec6aaa8338a464fdf4a43279ba86f46abd8ad435db988",
+      "bytes": 5467600
+    },
+    {
+      "relative_path": "sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-1_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-1_eeg.json",
+      "sha256": "cf3b9d22ae130e5da3db0d45b31107500bfa79ff60deacb853dd0b518ef6910d",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-1_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-1_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-1_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-1_events.tsv",
+      "sha256": "54a2c1be78d513a4c7ca095f2af5124f237cda4584186dc41f3c60e4beb42944",
+      "bytes": 743
+    },
+    {
+      "relative_path": "sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-2_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-2_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-2_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-2_eeg.edf",
+      "sha256": "33e71ff6b51c687c4e1bc2447b1b4a953d592a650b5e95f1621492fd1bf9910d",
+      "bytes": 5490168
+    },
+    {
+      "relative_path": "sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-2_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-2_eeg.json",
+      "sha256": "39217902c3672148fc24ce8a5678c24dd60d9ad8a4be0cf8f0d3477b05ba0f97",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-2_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-2_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-2_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-3/ses-0/eeg/sub-3_ses-0_task-imagery_run-2_events.tsv",
+      "sha256": "2d0a248a69abddd30a0a1b0444774d28f6118fd7d391872f2aa16ff8c69b40f8",
+      "bytes": 750
+    },
+    {
+      "relative_path": "sub-3/ses-0/sub-3_ses-0_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-3/ses-0/sub-3_ses-0_scans.tsv",
+      "sha256": "065b80d10973c49f0df09d7d6edf238b4d6562a3ed1c4e0a5356d5b335ccd5b5",
+      "bytes": 302
+    },
+    {
+      "relative_path": "sub-3/ses-1/sub-3_ses-1_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-3/ses-1/sub-3_ses-1_scans.tsv",
+      "sha256": "20b5a56b2980bac87ca83b957c82aeacdf948837900d1ed7f54e0a53f8357c14",
+      "bytes": 302
+    },
+    {
+      "relative_path": "sub-3/ses-2/sub-3_ses-2_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-3/ses-2/sub-3_ses-2_scans.tsv",
+      "sha256": "121b83ea1a69c62f1e0e9099ec1c2fe498cd4ed236693dcc925e6d593063bc5e",
+      "bytes": 231
+    },
+    {
+      "relative_path": "sub-3/ses-3/sub-3_ses-3_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-3/ses-3/sub-3_ses-3_scans.tsv",
+      "sha256": "45b0389d7c97cdbc5c21c10091e0b60cb94c89ec8b5e6946b7c04a14a8d0ffea",
+      "bytes": 231
+    },
+    {
+      "relative_path": "sub-3/ses-4/sub-3_ses-4_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-3/ses-4/sub-3_ses-4_scans.tsv",
+      "sha256": "df96efd3f99564ba7d6664aec80f0ee7ed0fef55f7d3b90f3a4f8853f18150f3",
+      "bytes": 231
+    },
+    {
+      "relative_path": "sub-3/ses-5/sub-3_ses-5_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-3/ses-5/sub-3_ses-5_scans.tsv",
+      "sha256": "0e87b603efa2f1a20883705b5b6c3f32e48d86bd33e91f7e4e9420a27346a824",
+      "bytes": 231
+    },
+    {
+      "relative_path": "sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-0_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-0_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-0_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-0_eeg.edf",
+      "sha256": "3830f90d86b60e309371f24bf4b8550084ffe3c694d227efa05be2a47a4c7c1e",
+      "bytes": 5422464
+    },
+    {
+      "relative_path": "sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-0_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-0_eeg.json",
+      "sha256": "eaeba81b87a59885a67d275e9baa35b6d66a5295ea2beceb48c70af2314d0966",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-0_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-0_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-0_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-0_events.tsv",
+      "sha256": "e724262e8cdeee82ce257c3bdadd6cf398d6386fe0209120bd60bba4e39edc4d",
+      "bytes": 741
+    },
+    {
+      "relative_path": "sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-1_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-1_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-1_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-1_eeg.edf",
+      "sha256": "bdc8d284169a94fcbc065c68b1a4d3488b44d6a393dbd62510e43cc61b81634d",
+      "bytes": 5490168
+    },
+    {
+      "relative_path": "sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-1_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-1_eeg.json",
+      "sha256": "39217902c3672148fc24ce8a5678c24dd60d9ad8a4be0cf8f0d3477b05ba0f97",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-1_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-1_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-1_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-1_events.tsv",
+      "sha256": "1297fcbd6db461b641bfd89744530238d138d27581bab75fece7e1e5c6a10048",
+      "bytes": 749
+    },
+    {
+      "relative_path": "sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-2_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-2_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-2_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-2_eeg.edf",
+      "sha256": "2d6e374cd9f05fe336eb4c700dbf9225284c4670c14625f1fe6b092b1b091bfb",
+      "bytes": 5490168
+    },
+    {
+      "relative_path": "sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-2_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-2_eeg.json",
+      "sha256": "39217902c3672148fc24ce8a5678c24dd60d9ad8a4be0cf8f0d3477b05ba0f97",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-2_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-2_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-2_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-5/ses-0/eeg/sub-5_ses-0_task-imagery_run-2_events.tsv",
+      "sha256": "417ed64b05a1006e85cc10a4d624b47e4942267f3f114c83a642d816a9aee05a",
+      "bytes": 745
+    },
+    {
+      "relative_path": "sub-5/ses-0/sub-5_ses-0_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-5/ses-0/sub-5_ses-0_scans.tsv",
+      "sha256": "9db5aea90a7ea2c1de7cd352231af17d4bdbc54a9cdf359218463a4487bbf203",
+      "bytes": 302
+    },
+    {
+      "relative_path": "sub-5/ses-1/sub-5_ses-1_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-5/ses-1/sub-5_ses-1_scans.tsv",
+      "sha256": "29cb5ff67ec227623906985f9bd2f9b0dc2dfe542f42ed293ec9117678152d7e",
+      "bytes": 302
+    },
+    {
+      "relative_path": "sub-5/ses-2/sub-5_ses-2_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-5/ses-2/sub-5_ses-2_scans.tsv",
+      "sha256": "a3e6dd303c8b331cece7e2c351d0a3b1e5487e2e117fdfbfcffff8cc7766632e",
+      "bytes": 231
+    },
+    {
+      "relative_path": "sub-5/ses-3/sub-5_ses-3_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-5/ses-3/sub-5_ses-3_scans.tsv",
+      "sha256": "56ec6f193f71a9b92da7124eea28d1256398f217a59310c9813a33c78f41b182",
+      "bytes": 231
+    },
+    {
+      "relative_path": "sub-5/ses-4/sub-5_ses-4_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-5/ses-4/sub-5_ses-4_scans.tsv",
+      "sha256": "cf564bee5ccbd01fdb71dbbb2f0ba75a33fadeb06744f6596811ef99df8ca01e",
+      "bytes": 231
+    },
+    {
+      "relative_path": "sub-5/ses-5/sub-5_ses-5_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-5/ses-5/sub-5_ses-5_scans.tsv",
+      "sha256": "4109bc08b133896b345de56f0af22b3302f1d592ad8bfce88eeef53d85c2c324",
+      "bytes": 231
+    },
+    {
+      "relative_path": "sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-0_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-0_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-0_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-0_eeg.edf",
+      "sha256": "8062c491613480c0a4daaa35c5d2c91c9cb69a578b0d082336a6241a6c0ad21f",
+      "bytes": 5422464
+    },
+    {
+      "relative_path": "sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-0_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-0_eeg.json",
+      "sha256": "eaeba81b87a59885a67d275e9baa35b6d66a5295ea2beceb48c70af2314d0966",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-0_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-0_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-0_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-0_events.tsv",
+      "sha256": "ec4f751e4340f48f0cae5f0e310c57e1dcb3a33d2f2cee92920a5962726987fa",
+      "bytes": 746
+    },
+    {
+      "relative_path": "sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-1_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-1_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-1_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-1_eeg.edf",
+      "sha256": "7bb46d86b906abad2391f20792ea0274ffbf47829783722720e22fd3db0a9e30",
+      "bytes": 5490168
+    },
+    {
+      "relative_path": "sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-1_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-1_eeg.json",
+      "sha256": "39217902c3672148fc24ce8a5678c24dd60d9ad8a4be0cf8f0d3477b05ba0f97",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-1_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-1_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-1_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-1_events.tsv",
+      "sha256": "a154793c9c8cd3ffa66ccaa923c94fd6a3a019e4ca67e24f7424aea80b75b7a4",
+      "bytes": 746
+    },
+    {
+      "relative_path": "sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-2_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-2_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-2_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-2_eeg.edf",
+      "sha256": "a66e25382a6343634eee6e82ece75b5ce5f4c1fc32050db19c544e10c0c0b077",
+      "bytes": 5467600
+    },
+    {
+      "relative_path": "sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-2_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-2_eeg.json",
+      "sha256": "cf3b9d22ae130e5da3db0d45b31107500bfa79ff60deacb853dd0b518ef6910d",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-2_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-2_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-2_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-6/ses-0/eeg/sub-6_ses-0_task-imagery_run-2_events.tsv",
+      "sha256": "fe3db1dbb4b0ff5a82d9cf6728548eb39b6257ca3d2def15f0c427ec130b496c",
+      "bytes": 744
+    },
+    {
+      "relative_path": "sub-6/ses-0/sub-6_ses-0_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-6/ses-0/sub-6_ses-0_scans.tsv",
+      "sha256": "0b478857f13e93fda1e869edfb4a29f43957491e10cd0157524cc8b03a003bee",
+      "bytes": 302
+    },
+    {
+      "relative_path": "sub-6/ses-1/sub-6_ses-1_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-6/ses-1/sub-6_ses-1_scans.tsv",
+      "sha256": "3fe9ae905ea83ec76bdd6f1e057bcd231d553cc67b4d38fa812881d2880d5792",
+      "bytes": 302
+    },
+    {
+      "relative_path": "sub-6/ses-2/sub-6_ses-2_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-6/ses-2/sub-6_ses-2_scans.tsv",
+      "sha256": "562a13bb64744a6a7e1cd1f43f7a0d61429715acb3853c04e480ffbd625fbef6",
+      "bytes": 231
+    },
+    {
+      "relative_path": "sub-6/ses-3/sub-6_ses-3_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-6/ses-3/sub-6_ses-3_scans.tsv",
+      "sha256": "5c6af3ef1b87c150c7d7a32a624f50a3545c986a872bd6bccb179c685115f624",
+      "bytes": 231
+    },
+    {
+      "relative_path": "sub-6/ses-4/sub-6_ses-4_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-6/ses-4/sub-6_ses-4_scans.tsv",
+      "sha256": "1e5bac352bbd920ebbf27d17defea356c53147938e3dc36b179998434c58e6a0",
+      "bytes": 231
+    },
+    {
+      "relative_path": "sub-6/ses-5/sub-6_ses-5_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-6/ses-5/sub-6_ses-5_scans.tsv",
+      "sha256": "93de125ee32f3f7ce5b90bccc2a578b65592cfb75e8bb728e410178892c4fd7e",
+      "bytes": 231
+    },
+    {
+      "relative_path": "sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-0_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-0_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-0_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-0_eeg.edf",
+      "sha256": "1e6e72b1576cbd95317f4570ca54ea058df4a4673636290519b19a41939ed24c",
+      "bytes": 5445032
+    },
+    {
+      "relative_path": "sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-0_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-0_eeg.json",
+      "sha256": "b100364448874853f91c1a09641dc5f0b9070a15f7c89ef505682ce083a411eb",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-0_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-0_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-0_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-0_events.tsv",
+      "sha256": "4361bb13865d960e1f1dc359f0281d7f37895895058b8491dc017fb489036e33",
+      "bytes": 751
+    },
+    {
+      "relative_path": "sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-1_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-1_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-1_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-1_eeg.edf",
+      "sha256": "25f29d226f8cdaff86f4ab765b26e96a0814a2223810b060ad781923e9ef4f3e",
+      "bytes": 5445032
+    },
+    {
+      "relative_path": "sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-1_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-1_eeg.json",
+      "sha256": "b100364448874853f91c1a09641dc5f0b9070a15f7c89ef505682ce083a411eb",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-1_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-1_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-1_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-1_events.tsv",
+      "sha256": "3ac050659bec14a1bfa3d32f5ba5527494996aa02636295fedf28c1f13dbcea0",
+      "bytes": 745
+    },
+    {
+      "relative_path": "sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-2_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-2_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-2_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-2_eeg.edf",
+      "sha256": "7cf3da16371d6e4b8c4643f0484e0b3625232d8effb968290e920fbe2c47d50b",
+      "bytes": 5445032
+    },
+    {
+      "relative_path": "sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-2_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-2_eeg.json",
+      "sha256": "b100364448874853f91c1a09641dc5f0b9070a15f7c89ef505682ce083a411eb",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-2_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-2_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-2_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-8/ses-0/eeg/sub-8_ses-0_task-imagery_run-2_events.tsv",
+      "sha256": "db2fa9dcf6ab32c4f1cc2a551c7a7fc65e061dcbe70d871c87aa90fce567c065",
+      "bytes": 746
+    },
+    {
+      "relative_path": "sub-8/ses-0/sub-8_ses-0_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-8/ses-0/sub-8_ses-0_scans.tsv",
+      "sha256": "fe1e3991851e42e7104af5f48d12ef17484514584b7e4e13cd08a6057dfedd5d",
+      "bytes": 302
+    },
+    {
+      "relative_path": "sub-8/ses-1/sub-8_ses-1_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-8/ses-1/sub-8_ses-1_scans.tsv",
+      "sha256": "ad668b72f4d61482c1d823d763ec7be4af484ca723e06b0adc0505d4cf038f40",
+      "bytes": 302
+    },
+    {
+      "relative_path": "sub-8/ses-2/sub-8_ses-2_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-8/ses-2/sub-8_ses-2_scans.tsv",
+      "sha256": "d26f367e09014e4bca2aedbd7c13b6ceb2138ccb0a3f4fc6721162d516571525",
+      "bytes": 231
+    },
+    {
+      "relative_path": "sub-8/ses-3/sub-8_ses-3_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-8/ses-3/sub-8_ses-3_scans.tsv",
+      "sha256": "680c65f7ea97b2a42c6206cd47b0e2b6abd019b28cc53e0a5efde6ffba9b3a47",
+      "bytes": 231
+    },
+    {
+      "relative_path": "sub-8/ses-4/sub-8_ses-4_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-8/ses-4/sub-8_ses-4_scans.tsv",
+      "sha256": "c24141712ac2fae003f5a8a09db40ed46c8ea79d5e3c82ee027acd237ad4bb99",
+      "bytes": 231
+    },
+    {
+      "relative_path": "sub-8/ses-5/sub-8_ses-5_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-8/ses-5/sub-8_ses-5_scans.tsv",
+      "sha256": "c038c5eea26012480294ef35d71456cc40fd77ae8bf4c60e23226a295566aec7",
+      "bytes": 231
+    },
+    {
+      "relative_path": "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-0_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-0_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-0_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-0_eeg.edf",
+      "sha256": "0dc035d53e21d0c4d3eccd470bfdf05aa824461440f5490b56677591edb232c0",
+      "bytes": 5445032
+    },
+    {
+      "relative_path": "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-0_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-0_eeg.json",
+      "sha256": "b100364448874853f91c1a09641dc5f0b9070a15f7c89ef505682ce083a411eb",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-0_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-0_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-0_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-0_events.tsv",
+      "sha256": "2f1090c6c2af958fd810084f6873b601c0df343bb1e32cc2f1752ff7aae6e042",
+      "bytes": 747
+    },
+    {
+      "relative_path": "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-1_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-1_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-1_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-1_eeg.edf",
+      "sha256": "76e91f19a366fc183596922e8d8ae309f53371297ae34f78f9fe38a72dc7fcb8",
+      "bytes": 5422464
+    },
+    {
+      "relative_path": "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-1_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-1_eeg.json",
+      "sha256": "eaeba81b87a59885a67d275e9baa35b6d66a5295ea2beceb48c70af2314d0966",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-1_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-1_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-1_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-1_events.tsv",
+      "sha256": "41dcb844589a95edad2c419cdaaa5856946b82f716e057e2bcab6eb440bda4d1",
+      "bytes": 750
+    },
+    {
+      "relative_path": "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-2_channels.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-2_channels.tsv",
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "bytes": 1359
+    },
+    {
+      "relative_path": "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-2_eeg.edf",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-2_eeg.edf",
+      "sha256": "250e629afacfd4f5906c72855e66ab376085feaa10064dd4d1ffc56f79bd3fa5",
+      "bytes": 5467600
+    },
+    {
+      "relative_path": "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-2_eeg.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-2_eeg.json",
+      "sha256": "cf3b9d22ae130e5da3db0d45b31107500bfa79ff60deacb853dd0b518ef6910d",
+      "bytes": 1699
+    },
+    {
+      "relative_path": "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-2_events.json",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-2_events.json",
+      "sha256": "968a5e8b35e93902e2e1977c9e9eb12f6161b63a19a125f43e6745aeed4e0d82",
+      "bytes": 1226
+    },
+    {
+      "relative_path": "sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-2_events.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-9/ses-0/eeg/sub-9_ses-0_task-imagery_run-2_events.tsv",
+      "sha256": "463b426e2b6f18b38558c1b2c5fcf20655366b06644c41dcd1693bf1b653b8c2",
+      "bytes": 736
+    },
+    {
+      "relative_path": "sub-9/ses-0/sub-9_ses-0_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-9/ses-0/sub-9_ses-0_scans.tsv",
+      "sha256": "89881b0f0743e3d16e5df42bd66bb664a1bc7caa28290a4d28d5e3b54ea9ae9d",
+      "bytes": 302
+    },
+    {
+      "relative_path": "sub-9/ses-1/sub-9_ses-1_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-9/ses-1/sub-9_ses-1_scans.tsv",
+      "sha256": "b28d025bd9c8248b676fdd9a28cd6837380ba6c96e6fa5d05330c235e349bd9c",
+      "bytes": 302
+    },
+    {
+      "relative_path": "sub-9/ses-2/sub-9_ses-2_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-9/ses-2/sub-9_ses-2_scans.tsv",
+      "sha256": "625cc655b50cc5acd7d488c3329d51087caf725205675ccc715898adca375fd9",
+      "bytes": 231
+    },
+    {
+      "relative_path": "sub-9/ses-3/sub-9_ses-3_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-9/ses-3/sub-9_ses-3_scans.tsv",
+      "sha256": "ed29bdfd8fb0c74d2c6cec376ecbf19a084113b42ebe97471d43aee523f78823",
+      "bytes": 231
+    },
+    {
+      "relative_path": "sub-9/ses-4/sub-9_ses-4_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-9/ses-4/sub-9_ses-4_scans.tsv",
+      "sha256": "eaf684f728c3f98a9b971f7e43ba1d7cddbc9bc2e344a8b59dd93327c54a7358",
+      "bytes": 231
+    },
+    {
+      "relative_path": "sub-9/ses-5/sub-9_ses-5_scans.tsv",
+      "key": "few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5/sub-9/ses-5/sub-9_ses-5_scans.tsv",
+      "sha256": "e5b9ed26deaba08759307645ae947bc80b789fc54c49786a82cf788b0f7ced1b",
+      "bytes": 231
+    }
+  ],
+  "credentials_logged": false
+}

@@ -1,0 +1,564 @@
+{
+  "schema_version": 1,
+  "status": "independent_final_metadata_and_specification_review_passed_execution_closed",
+  "recorded_at_utc": "2026-10-15T04:04:34.130540+00:00",
+  "reviewer": "formal_freeze_requirements_review",
+  "previous_review_preserved": {
+    "path": "research_logs/kumar_checkpoint_reuse_preparation_20261015/independent_proposal_review.json",
+    "sha256": "e01e7b68a8fb5ef5d5c8460cbb4f2d51626eba075ff10975fb298482f58828af",
+    "note": "Earlier review of superseded 9aed proposal; retained without alteration. This run02 binds the final stage-applicability precision revision."
+  },
+  "proposal": {
+    "path": "configs/kumar_eegnet_formal_freeze_proposal_20261015.json",
+    "sha256": "3897af0474ae14b75e51ff06ca200f73e3bb26cf11adebcc32e79fe5662a8aea"
+  },
+  "sources": [
+    {
+      "path": "configs/kumar_eegnet_gpu_development_20261014.json",
+      "sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+    },
+    {
+      "path": "configs/kumar_cross_session_20261012.json",
+      "sha256": "f1b2d0fa870493cc2aaab906fe6d8b1227e45b2a270e06700e3ca137fbfe9c89"
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/protocol/split_manifest.json",
+      "sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28"
+    },
+    {
+      "path": "configs/kumar_development_queue_plan_20261014.json",
+      "sha256": "0d23a47952fe286cd47a5e4eed69ae29e7317f63edf83ea41866495686f83a5b"
+    },
+    {
+      "path": "research_logs/kumar_development_queue_20261014/accepted_jobs.json",
+      "sha256": "1ee1868b97e6ff7ea2e42327fe64337cafbb0f8ee6aff19cc24fba5265f9aaa9"
+    },
+    {
+      "path": "research_logs/kumar_checkpoint_reuse_preparation_20261015/accepted_checkpoint_inventory.json",
+      "sha256": "c4bef5fd36c4759987737d73695de236d5e9924b94decc28bb977317303df788"
+    },
+    {
+      "path": "research_logs/kumar_checkpoint_reuse_preparation_20261015/proposed_remaining_source_inputs.json",
+      "sha256": "312b5bd38995aac5fd7748b64cdf5c0446b5e33fe05e3970c61b5dd73e026682"
+    },
+    {
+      "path": "configs/kumar_eegnet_20261012.json",
+      "sha256": "793b7bb35fa31138f1c6459476ac5be236fc5d10d89519523bceabeaa6d7a9a0"
+    },
+    {
+      "path": "research_logs/kumar_pod_rebuild_recovery_20261014/runtime_inventory.json",
+      "sha256": "34f33afd816376c44af99552932d3127af794a32623f10133f774c8a2312944b"
+    },
+    {
+      "path": "environments/gpu/uv.lock",
+      "sha256": "11682d951fe204e32859da12d9cc0ac73c6e63c1bce061d9834f8f68ebfe72e0"
+    },
+    {
+      "path": "docs/kumar_csp_reliability_plan_20261014.md",
+      "sha256": "b942fdb6265594d632dbfb70a536bd576b9e2d5b13871f8d4e8e4c9721a8b34f"
+    },
+    {
+      "path": "configs/kumar_csp_reliability_20261014.json",
+      "sha256": "4f71724c6be77696bbf8764e7de4795ceb1c9c4a315c1c2b266cc201a1c3da18"
+    },
+    {
+      "path": "research_logs/kumar_checkpoint_reuse_preparation_20261015/reliability_review_run01.json",
+      "sha256": "fec3f9ff8d3b0a629b6a6d41b3a4a3e9f105b1793445afa6256037ca6ab1f0d3"
+    },
+    {
+      "path": "scripts/evaluate_kumar_checkpoint_reuse.py",
+      "sha256": "838f3ed7b8f67c65dcf27b3ef43aace29db9464c8cdaae730be5dfebc92ba4e2"
+    },
+    {
+      "path": "scripts/check_kumar_checkpoint_reuse_proposal.py",
+      "sha256": "ea9935857629404df596663ae0c849aa32a14f32e1291449028d40415a03aa40"
+    },
+    {
+      "path": "research_logs/gpu_preparation_20261014/eegnet_data_plan.json",
+      "sha256": "b8dd6c8872f03a661b34d50fb826ef05e88e5502e9987290fec1301a4cb85363"
+    }
+  ],
+  "documentation": {
+    "path": "docs/kumar_checkpoint_reuse_and_formal_freeze_proposal_20261015.md",
+    "sha256": "05b5b59567f043d2c8164efb502fc05cf8ca0e7763ea3f5463d8468cd1994a72"
+  },
+  "scope": "Independent JSON/source-code/specification review and pure metadata checker; not checkpoint replay or scientific execution acceptance.",
+  "pure_checker_result": {
+    "status": "proposal_valid_execution_closed",
+    "accepted_checkpoints": 18,
+    "future_source_fits_proposed": 36,
+    "future_source_input_files": 253,
+    "future_source_input_bytes": 196740994,
+    "new_fits_authorized": 0,
+    "checkpoint_tensors_loaded": false,
+    "signals_loaded": false,
+    "query_access": false,
+    "unresolved_execution_bindings": [
+      "actual_parent_review_receipt",
+      "final_operational_config_and_detached_sha256",
+      "final_operational_freeze_canonical_sha256",
+      "approved_36_source_fit_entry_and_contract",
+      "remaining_source_input_full_verification_receipt",
+      "current_runtime_disk_and_software_acceptance",
+      "new_absolute_total_wall_deadline_and_cost_scope",
+      "off_Pod_export_and_R2_acceptance_contract",
+      "query_specific_checkpoint_reuse_entry_and_input_scope"
+    ]
+  },
+  "check_count": 109,
+  "failed_checks": 0,
+  "checks": [
+    {
+      "name": "final_proposal_exact_review_bytes",
+      "passed": true
+    },
+    {
+      "name": "final_checker_exact_review_bytes",
+      "passed": true
+    },
+    {
+      "name": "review_only_detached_digest_matches",
+      "passed": true
+    },
+    {
+      "name": "previous99check_review_preserved",
+      "passed": true
+    },
+    {
+      "name": "pinned_checkpoint_training_config",
+      "passed": true
+    },
+    {
+      "name": "pinned_protocol",
+      "passed": true
+    },
+    {
+      "name": "pinned_split",
+      "passed": true
+    },
+    {
+      "name": "pinned_accepted_plan",
+      "passed": true
+    },
+    {
+      "name": "pinned_accepted_ledger",
+      "passed": true
+    },
+    {
+      "name": "pinned_accepted_checkpoint_inventory",
+      "passed": true
+    },
+    {
+      "name": "pinned_remaining_source_inputs",
+      "passed": true
+    },
+    {
+      "name": "pinned_historical_formal_config",
+      "passed": true
+    },
+    {
+      "name": "pinned_historical_runtime_inventory",
+      "passed": true
+    },
+    {
+      "name": "pinned_gpu_dependency_lock",
+      "passed": true
+    },
+    {
+      "name": "pinned_csp4_plan",
+      "passed": true
+    },
+    {
+      "name": "pinned_csp4_config",
+      "passed": true
+    },
+    {
+      "name": "pinned_reliability_review",
+      "passed": true
+    },
+    {
+      "name": "pinned_readonly_source_replay_kernel",
+      "passed": true
+    },
+    {
+      "name": "pinned_proposal_checker",
+      "passed": true
+    },
+    {
+      "name": "pinned_existing_development_source_inputs",
+      "passed": true
+    },
+    {
+      "name": "canonical_training_identity",
+      "passed": true
+    },
+    {
+      "name": "training_freeze_remains_false_null",
+      "passed": true
+    },
+    {
+      "name": "all18_order_and_identity_preserved",
+      "passed": true
+    },
+    {
+      "name": "inventory_17377a7cf04bfc73e25bc94d7e42fc4f1ab6f14fb6dde63c7b21e742b94b9ace",
+      "passed": true
+    },
+    {
+      "name": "inventory_5be2fc9499d4ec3916e5191c822c205e195c0e25655c39ec0f84e5aa2c091470",
+      "passed": true
+    },
+    {
+      "name": "inventory_ba8899c0dc867baefa9a5623cccf706a82571413d63ec76e4baa7bfab613b4ca",
+      "passed": true
+    },
+    {
+      "name": "inventory_e1b092f93db8c972cb59403814c73eb1ba2273b1aa82351f0205c390a28b9faa",
+      "passed": true
+    },
+    {
+      "name": "inventory_451a32bd8f38870f333d43c3941498a72bda8f19574ee381a260200bd23ff112",
+      "passed": true
+    },
+    {
+      "name": "inventory_fe495208cd04aff921403e3e0d8c9f3e065d477deff26b28fbfe4480d9ada6c2",
+      "passed": true
+    },
+    {
+      "name": "inventory_735d0b78575ffe08b0be4e51a26fcadaa0a2db1977c9120d1e837e3ed48d03d7",
+      "passed": true
+    },
+    {
+      "name": "inventory_1aa92ed2b84621e78c67af8bf6f1eb6482b810951b9418a9b9fb017541552c91",
+      "passed": true
+    },
+    {
+      "name": "inventory_a072e1ee4836265f6237ccb5ae6a36adc90f47395f3c0830071d86798bc1f5ba",
+      "passed": true
+    },
+    {
+      "name": "inventory_04c84fd64d26f4aaddcfcce264b71c6332395eb1914ae799470dde4d0e666b5e",
+      "passed": true
+    },
+    {
+      "name": "inventory_1a6f1682dafff74743a174565e4e8360d7615ef8b80d09919ff0a5c043ab1e55",
+      "passed": true
+    },
+    {
+      "name": "inventory_4b2352788f901e95f387f44be75ad0f71ceac4c5a3e68c030365c5e98559a9f1",
+      "passed": true
+    },
+    {
+      "name": "inventory_f7e593ca50f530f362181d48a39258dbbb2f6d741a2ecfd5c51b4ce0e69326b3",
+      "passed": true
+    },
+    {
+      "name": "inventory_3afcfb08e856e7b89468b23e78a34aa4419d31a3c7fcec386a442d5766669599",
+      "passed": true
+    },
+    {
+      "name": "inventory_fe37e7a42f0658cdddd6db0b2eb5134fda1bdc82eaa2855cb198ea2ed97cc2ea",
+      "passed": true
+    },
+    {
+      "name": "inventory_1534e6e3dbe39282e0f7220355889366af2c8a9eafd2008c03cbc3449d361319",
+      "passed": true
+    },
+    {
+      "name": "inventory_1f1cf3552df9ed9bdf25fb45271d5b7ed61df8800f2e66fb509df1a76a5bc9af",
+      "passed": true
+    },
+    {
+      "name": "inventory_df56f563ff26909b6e0590906f305982b0e5df89520c12355f433a1cd2bd968a",
+      "passed": true
+    },
+    {
+      "name": "baseline_original_bytes_checkpoint_training_config",
+      "passed": true
+    },
+    {
+      "name": "baseline_original_bytes_protocol",
+      "passed": true
+    },
+    {
+      "name": "baseline_original_bytes_split",
+      "passed": true
+    },
+    {
+      "name": "baseline_original_bytes_accepted_plan",
+      "passed": true
+    },
+    {
+      "name": "baseline_original_bytes_accepted_ledger",
+      "passed": true
+    },
+    {
+      "name": "baseline_original_bytes_historical_formal_config",
+      "passed": true
+    },
+    {
+      "name": "baseline_original_bytes_historical_runtime_inventory",
+      "passed": true
+    },
+    {
+      "name": "baseline_original_bytes_gpu_dependency_lock",
+      "passed": true
+    },
+    {
+      "name": "exact36_fixed_order_and_no_development",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_df3d71e4bed6d37058026cbce4f60e34783fb11c87d8b0f5efe6f368c91ba222",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_e93b469def25a046cfa08d08fdba7c3dbd6b93bc2d17d360d9d44ef1782aeb07",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_b5eec7743c554b62a21e160d012eefa38a160a9dbc0dc8809d27ccfb85e7c1c9",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_7b6ebeaef294dff0339c43fa1c35d7f6c34f30785d3e8b2bb9a03e8b7f23b22a",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_66b5c7a89b8fb4ccbca9f25dfaa588c6952f2aad3a1d7648348f8e88361c4c2f",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_80bcdedfef4684c5cc9b307805bfb74e00bf0a85756059e351eb10a78a13a037",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_d80b3b44b6729ec7d94e42cce0668f8065c9fc15c62538b0d37b6e67eb461c7b",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_15203ad240b981b752d4af83fe24fd8aebfd92c96820c66eda7c32ca6ba0c799",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_4221970caa1ebb7becc3ba3ba108ee9ea5b2bd44d95ca8e69f3eda7a280942dd",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_dd28327b1068bb128614eeb63d7727a8b59da65dc8e52575ef3533d7d1ade074",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_ab971cc08608806ea2483fdec9c624b1e95490b6a2309a2e9122cceab9829850",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_9b75bb235cd933c268778dc802fe1d4300d6594de8fb5511522fcecf4badf35c",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_d1392eb4c7b5aaaa6539285d41f45b63bf7d09258b54d41a6dfc326492d91c1c",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_b65b18b7a4fe02dbb95b2e42110a213a7f5f76db4ff7c19473e4320938dbab58",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_812b29345cc8262ef329f5b09e24141c65f47f24fe8dd2c044b70f9005946d74",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_123bdeee936900b1d3d1c23aebda48ee02d6f0c46f2de9f17d711b8ed1653629",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_a73f6eb94abd509ca6ec91b3908275f18cfed340bff6e7f8fa64851ddf1ccc64",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_70011f5decf4795e8a16cf9658c2af1de69dd0d65ac0d515e6e33988979a61ae",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_caae0027156bdc8ec56b7f863666bba9d8ffe083c85f735c2772f357657fb6c8",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_1114f9f1524f681564334e943200e3c09b6efa900c0bf80b394c8992cc08e8fd",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_e9089a2b0c761b399c14f02a49dd09d16d3a72ab80c935bef50b61754980b880",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_cbd82eef6ffd5c856e142ac381032e252080957d58f5803b8b7eb2fcb09f6218",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_98e0ab893e8920a08adbb0298a9e45d5d3cb9a2d0f884110d77cb109676e0aee",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_4ce16e24f1df1c9f3ceb262166a3a9c99ebd3c32e9debdbffd51fa19a877dafe",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_18c5557aa4335b6efe44bc202c41393219a81624d00be7da5ded393102cb307e",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_3a13a62edf23ed06a82c7103f65d187e7f90bde428284b39484e884caef16091",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_e3ddfeef4ae6212f2b02658a7941e515a84fe648a60aca064e02b1993e9942bb",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_edad083df2e4be007e3c4e6f38c00287de389113db9e7987674711ec0d2cf6eb",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_e903c5fa4eeacd7fc10bc1031e177219051145cb918f0c4542dd56197fc95184",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_c0c94ed7a22a6c97e257db3f2c565b6e16da24d91fe16e099a74e9e1662bbce5",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_4c8846cc25091eae85d942ac3c6c179a014a236eccb1613270ef8bcfbf0a485c",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_a30ed546e2ab02bf9c9df4ff9ebb35e6269c84428965eeda56f95cc572bfe1cf",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_c163c8f36f3c6093ae06e622bb3026400dc068728a8fa5e67ccc99b47b6d9c77",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_769c451a4692ba6637a98cc4d88206560d474278e75650d0fa56b62c12c2b26e",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_e5bd76408bd7c3f5c98ae7b9655d7afc934974003d19fdf5d101c14de799565a",
+      "passed": true
+    },
+    {
+      "name": "future_proposed_identity_56d83341333e2ad2ec222ea04e316fcca00d690d2ef440956906d372877f0bc4",
+      "passed": true
+    },
+    {
+      "name": "source_selector_exact_original_inventory",
+      "passed": true
+    },
+    {
+      "name": "source_selector_matches_existing127",
+      "passed": true
+    },
+    {
+      "name": "exact253files_196740994bytes_36sourceEDF",
+      "passed": true
+    },
+    {
+      "name": "no_query_label_signal_manifest_scope",
+      "passed": true
+    },
+    {
+      "name": "all_execution_permissions_false",
+      "passed": true
+    },
+    {
+      "name": "nine_unresolved_fields_union_all_null",
+      "passed": true
+    },
+    {
+      "name": "remaining36_requires_first8_not_query_adapter",
+      "passed": true
+    },
+    {
+      "name": "existing18_replay_requires_only_relevant_four_bindings",
+      "passed": true
+    },
+    {
+      "name": "existing18_replay_requires_existing_source_and_own_authorization",
+      "passed": true
+    },
+    {
+      "name": "query_stage_separate_scope_and_no_retraining",
+      "passed": true
+    },
+    {
+      "name": "new_deadline_and_cost_unset_old_deadline_not_reused",
+      "passed": true
+    },
+    {
+      "name": "fixed_count_budgets_retained",
+      "passed": true
+    },
+    {
+      "name": "same_endpoint_and_participant_seed_rules",
+      "passed": true
+    },
+    {
+      "name": "no_strategy_release",
+      "passed": true
+    },
+    {
+      "name": "kernel_final838f_unchanged",
+      "passed": true
+    },
+    {
+      "name": "kernel_no_fit_optimizer_backward_calls",
+      "passed": true
+    },
+    {
+      "name": "kernel_no_EEG_query_adapter",
+      "passed": true
+    },
+    {
+      "name": "kernel_CPU_source_validation_only",
+      "passed": true
+    },
+    {
+      "name": "no_real_CPU_GPU_CE_replay_pass_claimed",
+      "passed": true
+    },
+    {
+      "name": "stage_union_documented",
+      "passed": true
+    },
+    {
+      "name": "pure_checker_reports_closed",
+      "passed": true
+    },
+    {
+      "name": "pure_checker_rejects_permission_opening",
+      "passed": true
+    },
+    {
+      "name": "pure_checker_rejects_stage_scope_overconstraint",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Kernel inspection is static in this independent review; synthetic software tests are separately recorded by implementation/root reviewers.",
+    "No accepted checkpoint tensor loaded, source EEG/query read, or real CPU/GPU CE replay success claimed.",
+    "Nine unresolved bindings are a union; stage-specific requirements do not open any stage. Actual scope-specific parent review and separate freezes remain pending.",
+    "Historical run limits/platform observations do not verify current hardware/cost/deadlines."
+  ],
+  "checkpoint_tensors_loaded": false,
+  "EEG_loaded": false,
+  "query_rows_loaded": 0,
+  "model_forward_passes": 0,
+  "new_fits": 0,
+  "optimizer_instances_created": 0,
+  "Pod_operated": false,
+  "network_accessed": false,
+  "scientific_gate_passed": false,
+  "parent_acknowledgement_created": false
+}

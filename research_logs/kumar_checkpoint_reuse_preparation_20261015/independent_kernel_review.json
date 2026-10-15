@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "status": "independent_preparation_review_passed_execution_and_scientific_gates_closed",
+  "reviewed_script": "scripts/evaluate_kumar_checkpoint_reuse.py",
+  "reviewed_script_sha256": "a4748811dff3a70d8a8ddb9c3df7c2fcf9eb0c51763ff0079a78c68e6e2b717f",
+  "reviewed_tests": "tests/test_kumar_checkpoint_reuse.py",
+  "reviewed_tests_sha256": "401706eff7485f1016605056763190e28c82f9c50eb8d319e51edf1ae49b3337",
+  "review_scope": "Independent code, synthetic untrained software tests, and accepted archive metadata before any tensor deserialization; no real-model execution",
+  "independent_tests": {
+    "command": "PYTHONPATH=src:scripts /workspace/.venvs/few-shot-mi-eeg/bin/python -B -m pytest -q tests/test_kumar_checkpoint_reuse.py",
+    "passed": 43,
+    "failed": 0,
+    "warnings": "20 upstream Braindecode deprecation warnings for the preserved final_layer_with_constraint=False architecture; no architecture change"
+  },
+  "real_archive_compatibility": {
+    "local_original_archives_checked": 17,
+    "accepted_archive_sha256_and_length_checked": true,
+    "every_archive_member_manifest_length_and_sha256_checked": true,
+    "accepted_ledger_plan_identity_ack_full_get_receipt_bindings_checked": true,
+    "frozen_training_config_and_source_split_checked": true,
+    "source_train_count": 40,
+    "source_validation_count": 20,
+    "checkpoint_tensor_deserialization_intercepted_before_torch_load": true,
+    "first_legacy_original_archive_locally_available": false,
+    "first_legacy_review": "Original accepted manifest, fit_result.json and weights.json metadata reviewed; its smaller saved-source replay archive is distinct from the accepted original. Restricted legacy schema compatibility is covered by a synthetic untrained fixture, not claimed as an actual original-weight load."
+  },
+  "checked_invariants": [
+    "No optimizer is constructed; training wrappers, fit, backward and numerical thread mutation are forbidden by synthetic tests.",
+    "Safe tensor loading uses weights_only=True and map_location=cpu after archive/manifest/accepted-identity checks.",
+    "CPU construction preserves the caller CPU RNG, explicitly uses the CPU device context, and never calls torch.manual_seed or CUDA manual_seed_all.",
+    "Evaluation mode, disabled gradients, every parameter and registered buffer including BN, channel normalization and classes are checked before and after replay.",
+    "Metadata, accepted identity, source-validation metadata, frozen bindings, original archive, ledger, plan, split, acknowledgement, receipt and actual authorization bytes remain bound and unchanged.",
+    "Invalid query/future identities, roles, run, label or duplicate rows are rejected before signal or label array conversion.",
+    "The real-source replay path defaults closed and requires a separately fixed exact-hash actual parent authorization before accessing arrays.",
+    "Evaluation uses archived normalization without refitting; input signal arrays are copied and no checkpoint or result state is written.",
+    "State tampering before or during evaluation fails; no restore is used to disguise mutation and no success result is returned.",
+    "Archived CUDA training provenance remains unchanged while this implementation explicitly reports CPU execution; reuse is not a new fit or experiment."
+  ],
+  "resolved_review_findings": [
+    {
+      "finding": "torch.manual_seed inside fork_rng(devices=[]) could alter CUDA RNG on GPU hosts.",
+      "resolution": "Replaced with torch.random.default_generator.manual_seed inside an explicit CPU construction context; synthetic replay test forbids the global/CUDA seed functions and verifies CPU RNG preservation."
+    }
+  ],
+  "unresolved_blocking_implementation_findings": [],
+  "limitations": [
+    "No accepted real checkpoint tensor was deserialized and no accepted real model forward was executed during this preparation.",
+    "No actual EEG signal or query array was read; the immutable split manifest was parsed only to select and verify the existing source-train/source-validation metadata.",
+    "Passing synthetic software tests and metadata compatibility does not establish CPU-versus-archived-CUDA replay tolerance, valid gating, scientific efficacy, or permission for future evaluation.",
+    "The first accepted original archive must be recovered and hash-verified under the existing access process before a future authorized actual checkpoint load; the saved-source replay tar cannot substitute for it."
+  ],
+  "counters": {
+    "accepted_real_checkpoints_loaded": 0,
+    "accepted_real_model_forwards": 0,
+    "new_fits": 0,
+    "optimizer_instances": 0,
+    "query_signal_arrays_loaded": 0,
+    "pod_operations": 0,
+    "ledger_entries_modified": 0
+  },
+  "formal_scientific_gate_passed": false,
+  "real_source_replay_authorized": false,
+  "query_access_authorized": false
+}

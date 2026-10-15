@@ -1,0 +1,1319 @@
+{
+  "schema_version": 1,
+  "status": "read_only_reliability_review_complete_no_validated_adaptation_rule",
+  "recorded_at_utc": "2026-10-15T03:49:51.780147+00:00",
+  "review_baseline_commit": "65fe52ee2cefa43f091cf466dac3682b4c6e5745",
+  "review_scope": "Read existing scientific protocols, reports and software statically; hash original text evidence and independently recompute older source-fold BA and participant means from saved labels/predictions only. No new scientific model or diagnostic executed.",
+  "new_fits": 0,
+  "optimizer_steps": 0,
+  "model_forward_passes": 0,
+  "EEG_loaded": false,
+  "query_rows_loaded": 0,
+  "Pod_operated": false,
+  "paper1_operated": false,
+  "independent_unit": "six published development participant identities; folds/sessions/seeds/controls do not increase n",
+  "latest_frozen_CSP4_source_score_stage": {
+    "config_path": "configs/kumar_csp_reliability_20261014.json",
+    "plan_path": "docs/kumar_csp_reliability_plan_20261014.md",
+    "status": "frozen_plan_and_preexisting_untracked_preparation_only_execution_receipt_not_found_in_current_checkout",
+    "scientific_results_available": false,
+    "execution_or_acceptance_claimed": false,
+    "planned_pipeline_fits": 240,
+    "planned_observed_folds_included": 12,
+    "planned_joint_phase_pairs_per_participant": 400,
+    "planned_participant_joint_scores": 2400,
+    "planned_saved_source40_models_reused": 6,
+    "planned_new_source40_decoder_fits": 0,
+    "planned_bootstrap_seed": 42,
+    "planned_bootstrap_replicates": 10000,
+    "required_but_unavailable_results": [
+      "exact 20x20 paired phase controls with both CSP/LDA refitted for every TRAIN label phase",
+      "saved signed frozen LDA margins, per-class recalls, bias and collapse diagnostics",
+      "independent numerical review and immutable execution receipt binding frozen config/plan/code/input states"
+    ],
+    "execution_receipt_search_roots": [
+      "research_logs",
+      "results"
+    ],
+    "matched_execution_receipts": [],
+    "availability_limit": "A local inventory cannot establish that an external execution never occurred; no missing result is inferred or fabricated. Prepared input receipts and static review are not execution evidence."
+  },
+  "completed_earlier_supervised_CSP_diagnostic": {
+    "summary_path": "research_logs/gpu_preparation_20261014/supervised_csp_run01/summary_corrected.json",
+    "status": "completed_exploratory_diagnostic",
+    "source_BA": {
+      "participant_values": [
+        {
+          "subject": 1,
+          "value": 0.7
+        },
+        {
+          "subject": 4,
+          "value": 0.5
+        },
+        {
+          "subject": 7,
+          "value": 0.725
+        },
+        {
+          "subject": 10,
+          "value": 0.425
+        },
+        {
+          "subject": 13,
+          "value": 0.6749999999999999
+        },
+        {
+          "subject": 16,
+          "value": 0.75
+        }
+      ],
+      "mean": 0.6291666666666665,
+      "interval95": [
+        0.5291666666666667,
+        0.7208333333333332
+      ],
+      "replicates": 10000,
+      "seed": 20261014,
+      "independent_unit": "participant",
+      "status": "completed"
+    },
+    "support_split_half_cosine": {
+      "participant_values": [
+        {
+          "subject": 1,
+          "value": -0.057927873352905765
+        },
+        {
+          "subject": 4,
+          "value": 0.0596939066371025
+        },
+        {
+          "subject": 7,
+          "value": 0.7131339420208531
+        },
+        {
+          "subject": 10,
+          "value": 0.0111022309212373
+        },
+        {
+          "subject": 13,
+          "value": 0.7346641435595143
+        },
+        {
+          "subject": 16,
+          "value": 0.3284213917125639
+        }
+      ],
+      "mean": 0.29818129024972756,
+      "interval95": [
+        0.049077335581054905,
+        0.5508736118415104
+      ],
+      "replicates": 10000,
+      "seed": 20261014,
+      "independent_unit": "participant",
+      "status": "completed"
+    },
+    "saved_source_folds": [
+      {
+        "subject": "sub-1",
+        "two_source_fold_BA": [
+          0.7,
+          0.7
+        ],
+        "mean_source_BA": 0.7
+      },
+      {
+        "subject": "sub-4",
+        "two_source_fold_BA": [
+          0.45,
+          0.55
+        ],
+        "mean_source_BA": 0.5
+      },
+      {
+        "subject": "sub-7",
+        "two_source_fold_BA": [
+          0.75,
+          0.7
+        ],
+        "mean_source_BA": 0.725
+      },
+      {
+        "subject": "sub-10",
+        "two_source_fold_BA": [
+          0.4,
+          0.44999999999999996
+        ],
+        "mean_source_BA": 0.425
+      },
+      {
+        "subject": "sub-13",
+        "two_source_fold_BA": [
+          0.7,
+          0.6499999999999999
+        ],
+        "mean_source_BA": 0.6749999999999999
+      },
+      {
+        "subject": "sub-16",
+        "two_source_fold_BA": [
+          0.65,
+          0.85
+        ],
+        "mean_source_BA": 0.75
+      }
+    ],
+    "saved_support_rows": [
+      {
+        "subject": "sub-1",
+        "session": "ses-1",
+        "support_count": 19,
+        "split_half_CSP4_cosine": 0.46648440191285995,
+        "source_support_CSP4_cosine": 0.5676860811224853,
+        "half_source_axis_signed_contrasts": [
+          -0.0495197474736466,
+          0.6682807119760493
+        ]
+      },
+      {
+        "subject": "sub-1",
+        "session": "ses-2",
+        "support_count": 20,
+        "split_half_CSP4_cosine": -0.9802810158176768,
+        "source_support_CSP4_cosine": 0.4653001026854894,
+        "half_source_axis_signed_contrasts": [
+          -0.38505846675024574,
+          5.605505915355517
+        ]
+      },
+      {
+        "subject": "sub-1",
+        "session": "ses-3",
+        "support_count": 20,
+        "split_half_CSP4_cosine": -0.8387605440250444,
+        "source_support_CSP4_cosine": -0.3274489403639116,
+        "half_source_axis_signed_contrasts": [
+          0.6997925884499271,
+          -3.4747432383499257
+        ]
+      },
+      {
+        "subject": "sub-1",
+        "session": "ses-4",
+        "support_count": 20,
+        "split_half_CSP4_cosine": 0.2698055864226183,
+        "source_support_CSP4_cosine": -0.8791321465820843,
+        "half_source_axis_signed_contrasts": [
+          -0.624199213212374,
+          -7.451611147311819
+        ]
+      },
+      {
+        "subject": "sub-1",
+        "session": "ses-5",
+        "support_count": 20,
+        "split_half_CSP4_cosine": 0.793112204742714,
+        "source_support_CSP4_cosine": 0.4446324693550876,
+        "half_source_axis_signed_contrasts": [
+          0.7207200496563426,
+          5.513620854155122
+        ]
+      },
+      {
+        "subject": "sub-4",
+        "session": "ses-1",
+        "support_count": 19,
+        "split_half_CSP4_cosine": 0.7801891735131137,
+        "source_support_CSP4_cosine": 0.10480602852893861,
+        "half_source_axis_signed_contrasts": [
+          -0.3638636674446132,
+          0.5388316872447058
+        ]
+      },
+      {
+        "subject": "sub-4",
+        "session": "ses-2",
+        "support_count": 20,
+        "split_half_CSP4_cosine": 0.5895824297275195,
+        "source_support_CSP4_cosine": 0.16176015105777622,
+        "half_source_axis_signed_contrasts": [
+          -0.010133117333628974,
+          0.30680705374383355
+        ]
+      },
+      {
+        "subject": "sub-4",
+        "session": "ses-3",
+        "support_count": 20,
+        "split_half_CSP4_cosine": -0.8885372986813738,
+        "source_support_CSP4_cosine": 0.864971018287702,
+        "half_source_axis_signed_contrasts": [
+          0.5251392829328557,
+          0.35918497183524467
+        ]
+      },
+      {
+        "subject": "sub-4",
+        "session": "ses-4",
+        "support_count": 20,
+        "split_half_CSP4_cosine": -0.9893566314917989,
+        "source_support_CSP4_cosine": 0.16418520572905618,
+        "half_source_axis_signed_contrasts": [
+          0.15674185149781564,
+          0.09903719687473618
+        ]
+      },
+      {
+        "subject": "sub-4",
+        "session": "ses-5",
+        "support_count": 20,
+        "split_half_CSP4_cosine": 0.8065918601180521,
+        "source_support_CSP4_cosine": 0.5624761336855016,
+        "half_source_axis_signed_contrasts": [
+          0.4832131050282247,
+          0.6185180807189269
+        ]
+      },
+      {
+        "subject": "sub-7",
+        "session": "ses-1",
+        "support_count": 20,
+        "split_half_CSP4_cosine": 0.7295397830318826,
+        "source_support_CSP4_cosine": 0.7650425613512345,
+        "half_source_axis_signed_contrasts": [
+          0.7623788513790903,
+          0.7560885891912114
+        ]
+      },
+      {
+        "subject": "sub-7",
+        "session": "ses-2",
+        "support_count": 20,
+        "split_half_CSP4_cosine": 0.6408577945941193,
+        "source_support_CSP4_cosine": 0.30745042525827093,
+        "half_source_axis_signed_contrasts": [
+          0.7570247048612342,
+          1.0599039497718312
+        ]
+      },
+      {
+        "subject": "sub-7",
+        "session": "ses-3",
+        "support_count": 20,
+        "split_half_CSP4_cosine": 0.8865414152368988,
+        "source_support_CSP4_cosine": 0.4832086510263287,
+        "half_source_axis_signed_contrasts": [
+          0.8048571090825987,
+          0.6842035233035869
+        ]
+      },
+      {
+        "subject": "sub-7",
+        "session": "ses-4",
+        "support_count": 20,
+        "split_half_CSP4_cosine": 0.38577748850139315,
+        "source_support_CSP4_cosine": 0.026487936407679206,
+        "half_source_axis_signed_contrasts": [
+          0.5672251980888035,
+          -0.3719785858001611
+        ]
+      },
+      {
+        "subject": "sub-7",
+        "session": "ses-5",
+        "support_count": 20,
+        "split_half_CSP4_cosine": 0.9229532287399718,
+        "source_support_CSP4_cosine": 0.8456086477815669,
+        "half_source_axis_signed_contrasts": [
+          1.1989632391240295,
+          1.2536832077714475
+        ]
+      },
+      {
+        "subject": "sub-10",
+        "session": "ses-1",
+        "support_count": 20,
+        "split_half_CSP4_cosine": 0.6456232766387633,
+        "source_support_CSP4_cosine": 0.6628517457058427,
+        "half_source_axis_signed_contrasts": [
+          0.6651380357510358,
+          0.23498592614248212
+        ]
+      },
+      {
+        "subject": "sub-10",
+        "session": "ses-2",
+        "support_count": 20,
+        "split_half_CSP4_cosine": 0.2305042453834165,
+        "source_support_CSP4_cosine": 0.3207046256382601,
+        "half_source_axis_signed_contrasts": [
+          0.557007040393451,
+          0.10213254424748518
+        ]
+      },
+      {
+        "subject": "sub-10",
+        "session": "ses-3",
+        "support_count": 19,
+        "split_half_CSP4_cosine": 0.2679331197045649,
+        "source_support_CSP4_cosine": 0.538080506234398,
+        "half_source_axis_signed_contrasts": [
+          0.5716029163635311,
+          0.21703906774798185
+        ]
+      },
+      {
+        "subject": "sub-10",
+        "session": "ses-4",
+        "support_count": 20,
+        "split_half_CSP4_cosine": -0.3595389095499594,
+        "source_support_CSP4_cosine": 0.8681549581601191,
+        "half_source_axis_signed_contrasts": [
+          0.7178782560462377,
+          -0.06343138393647002
+        ]
+      },
+      {
+        "subject": "sub-10",
+        "session": "ses-5",
+        "support_count": 20,
+        "split_half_CSP4_cosine": -0.7290105775705988,
+        "source_support_CSP4_cosine": -0.09628250527619096,
+        "half_source_axis_signed_contrasts": [
+          -0.3506298570445019,
+          -0.9197903580228215
+        ]
+      },
+      {
+        "subject": "sub-13",
+        "session": "ses-1",
+        "support_count": 20,
+        "split_half_CSP4_cosine": -0.0664480306832547,
+        "source_support_CSP4_cosine": 0.17532554286929786,
+        "half_source_axis_signed_contrasts": [
+          -0.19568432353026632,
+          0.30143056214811775
+        ]
+      },
+      {
+        "subject": "sub-13",
+        "session": "ses-2",
+        "support_count": 20,
+        "split_half_CSP4_cosine": 0.9011989116854473,
+        "source_support_CSP4_cosine": 0.9693137437882857,
+        "half_source_axis_signed_contrasts": [
+          0.6084397138350145,
+          0.8874878497020466
+        ]
+      },
+      {
+        "subject": "sub-13",
+        "session": "ses-3",
+        "support_count": 20,
+        "split_half_CSP4_cosine": 0.937315387389913,
+        "source_support_CSP4_cosine": 0.9672976928974094,
+        "half_source_axis_signed_contrasts": [
+          1.1554083282820593,
+          3.3938003640977406
+        ]
+      },
+      {
+        "subject": "sub-13",
+        "session": "ses-4",
+        "support_count": 20,
+        "split_half_CSP4_cosine": 0.9363616146836976,
+        "source_support_CSP4_cosine": 0.9841588003913673,
+        "half_source_axis_signed_contrasts": [
+          1.2690885034824344,
+          1.366659055345664
+        ]
+      },
+      {
+        "subject": "sub-13",
+        "session": "ses-5",
+        "support_count": 20,
+        "split_half_CSP4_cosine": 0.9648928347217682,
+        "source_support_CSP4_cosine": 0.9946122281107943,
+        "half_source_axis_signed_contrasts": [
+          1.1090940513960257,
+          0.8865307166435596
+        ]
+      },
+      {
+        "subject": "sub-16",
+        "session": "ses-1",
+        "support_count": 20,
+        "split_half_CSP4_cosine": 0.5473924156898982,
+        "source_support_CSP4_cosine": 0.1647193116611763,
+        "half_source_axis_signed_contrasts": [
+          0.1579988191719004,
+          -0.012355620088557773
+        ]
+      },
+      {
+        "subject": "sub-16",
+        "session": "ses-2",
+        "support_count": 20,
+        "split_half_CSP4_cosine": -0.7593630660228173,
+        "source_support_CSP4_cosine": 0.026164208170819044,
+        "half_source_axis_signed_contrasts": [
+          0.7445578834571133,
+          -0.6371727147403674
+        ]
+      },
+      {
+        "subject": "sub-16",
+        "session": "ses-3",
+        "support_count": 19,
+        "split_half_CSP4_cosine": 0.08893068149194949,
+        "source_support_CSP4_cosine": -0.05269830275811481,
+        "half_source_axis_signed_contrasts": [
+          0.3647966405511169,
+          -0.3485361554703981
+        ]
+      },
+      {
+        "subject": "sub-16",
+        "session": "ses-4",
+        "support_count": 20,
+        "split_half_CSP4_cosine": 0.9928492656400396,
+        "source_support_CSP4_cosine": 0.5678672352028189,
+        "half_source_axis_signed_contrasts": [
+          0.3155655010204821,
+          0.4759002177760947
+        ]
+      },
+      {
+        "subject": "sub-16",
+        "session": "ses-5",
+        "support_count": 20,
+        "split_half_CSP4_cosine": 0.7722976617637497,
+        "source_support_CSP4_cosine": 0.6261700948365857,
+        "half_source_axis_signed_contrasts": [
+          0.5030348816765664,
+          0.39809180818509343
+        ]
+      }
+    ],
+    "source_TRAIN_rows": 240,
+    "current_support_rows": 596,
+    "observed_TRAIN20_source_pipeline_fits": 12,
+    "recorded_TRAIN_label_shuffle_control_pipeline_fits": 96,
+    "recorded_SOURCE40_support_coordinate_pipeline_fits": 6,
+    "total_recorded_pipeline_fits": 114,
+    "source40_provenance_limit": "This older diagnostic fitted its own six SOURCE40 models; it does not meet the later requirement to reuse original primary baseline SOURCE40 model arrays.",
+    "negative_support_cosines": 8,
+    "support_sessions": 30,
+    "both_half_source_axis_contrasts_negative": 2,
+    "opposite_sign_half_source_axis_contrasts": 11,
+    "signed_contrast_scope": "Source-task-axis contrast from saved CSP features; not a saved frozen-LDA class-margin or calibrated-score reliability result.",
+    "query_rows_loaded_recorded": 0,
+    "gate_implemented_recorded": false,
+    "aggregation_repair_preserved": "Original run summary used string subject keys with integer-key bootstrap helper; corrected aggregation only, no fits or data reads repeated. Original preserved.",
+    "limits": [
+      "12 observed folds and 96 seeded label-shuffle controls are not the later exact 240 pipeline phase design.",
+      "Older participant intervals use seed 20261014, while later frozen phase plan requires seed 42; no bootstrap rerun was performed here.",
+      "Positive cosine or positive half-contrast product can persist when both task orientations are reversed.",
+      "No matched-label/update-budget nested adaptive-policy comparison, benefit/harms estimate, or threshold selection is present.",
+      "Circular-phase and shuffled-label controls are descriptive sensitivities, not validated exchangeability p-values or MI-specificity evidence."
+    ]
+  },
+  "completed_fixed_power_diagnostics": {
+    "participant_summaries": {
+      "standardized44": {
+        "source_twofold_balanced_accuracy": {
+          "participant_values": [
+            {
+              "subject": 1,
+              "value": 0.6000000000000001
+            },
+            {
+              "subject": 4,
+              "value": 0.45
+            },
+            {
+              "subject": 7,
+              "value": 0.55
+            },
+            {
+              "subject": 10,
+              "value": 0.55
+            },
+            {
+              "subject": 13,
+              "value": 0.6
+            },
+            {
+              "subject": 16,
+              "value": 0.35
+            }
+          ],
+          "mean": 0.5166666666666667,
+          "interval95": [
+            0.44166666666666665,
+            0.5833333333333334
+          ],
+          "replicates": 10000,
+          "seed": 42,
+          "independent_unit": "participant",
+          "status": "completed"
+        },
+        "mean_five_support_split_half_vector_cosine": {
+          "participant_values": [
+            {
+              "subject": 1,
+              "value": -0.26945465051272166
+            },
+            {
+              "subject": 4,
+              "value": -0.02325782992187838
+            },
+            {
+              "subject": 7,
+              "value": 0.4831533869245697
+            },
+            {
+              "subject": 10,
+              "value": 0.24767863018492223
+            },
+            {
+              "subject": 13,
+              "value": 0.5516412467336418
+            },
+            {
+              "subject": 16,
+              "value": -0.3379347267391692
+            }
+          ],
+          "mean": 0.10863767611156076,
+          "interval95": [
+            -0.16505965904012299,
+            0.38233501126324443
+          ],
+          "replicates": 10000,
+          "seed": 42,
+          "independent_unit": "participant",
+          "status": "completed"
+        }
+      },
+      "pca4": {
+        "source_twofold_balanced_accuracy": {
+          "participant_values": [
+            {
+              "subject": 1,
+              "value": 0.525
+            },
+            {
+              "subject": 4,
+              "value": 0.45
+            },
+            {
+              "subject": 7,
+              "value": 0.5
+            },
+            {
+              "subject": 10,
+              "value": 0.525
+            },
+            {
+              "subject": 13,
+              "value": 0.625
+            },
+            {
+              "subject": 16,
+              "value": 0.375
+            }
+          ],
+          "mean": 0.5,
+          "interval95": [
+            0.4375,
+            0.5583333333333333
+          ],
+          "replicates": 10000,
+          "seed": 42,
+          "independent_unit": "participant",
+          "status": "completed"
+        },
+        "mean_five_support_split_half_vector_cosine": {
+          "participant_values": [
+            {
+              "subject": 1,
+              "value": -0.34560860091261325
+            },
+            {
+              "subject": 4,
+              "value": -0.13418989182944843
+            },
+            {
+              "subject": 7,
+              "value": 0.6203875258091683
+            },
+            {
+              "subject": 10,
+              "value": 0.20628995024534422
+            },
+            {
+              "subject": 13,
+              "value": 0.708053575969571
+            },
+            {
+              "subject": 16,
+              "value": -0.4939725821946488
+            }
+          ],
+          "mean": 0.0934933295145622,
+          "interval95": [
+            -0.2605517380479845,
+            0.45938817135553806
+          ],
+          "replicates": 10000,
+          "seed": 42,
+          "independent_unit": "participant",
+          "status": "completed"
+        }
+      },
+      "motor6": {
+        "source_twofold_balanced_accuracy": {
+          "participant_values": [
+            {
+              "subject": 1,
+              "value": 0.425
+            },
+            {
+              "subject": 4,
+              "value": 0.44999999999999996
+            },
+            {
+              "subject": 7,
+              "value": 0.65
+            },
+            {
+              "subject": 10,
+              "value": 0.575
+            },
+            {
+              "subject": 13,
+              "value": 0.625
+            },
+            {
+              "subject": 16,
+              "value": 0.525
+            }
+          ],
+          "mean": 0.5416666666666666,
+          "interval95": [
+            0.4749999999999999,
+            0.6083333333333333
+          ],
+          "replicates": 10000,
+          "seed": 42,
+          "independent_unit": "participant",
+          "status": "completed"
+        },
+        "mean_five_support_split_half_vector_cosine": {
+          "participant_values": [
+            {
+              "subject": 1,
+              "value": -0.14764331969756148
+            },
+            {
+              "subject": 4,
+              "value": -0.034421946793705374
+            },
+            {
+              "subject": 7,
+              "value": 0.5737490066108277
+            },
+            {
+              "subject": 10,
+              "value": 0.1367772675650324
+            },
+            {
+              "subject": 13,
+              "value": 0.7302321076947748
+            },
+            {
+              "subject": 16,
+              "value": -0.340240990229379
+            }
+          ],
+          "mean": 0.15307535419166482,
+          "interval95": [
+            -0.1420024738182457,
+            0.45892987959377046
+          ],
+          "replicates": 10000,
+          "seed": 42,
+          "independent_unit": "participant",
+          "status": "completed"
+        }
+      }
+    },
+    "inference": "All three source BA intervals include 0.5 and all three support half-cosine intervals include zero; do not choose a winner or claim absence of EEG task information."
+  },
+  "saved_EEGNet_source_validation_context": {
+    "status": "saved_source_validation_descriptive_aggregation_complete",
+    "independent_participants": 6,
+    "fits_included": 18,
+    "seeds_per_participant": 3,
+    "all_frozen_seeds_included": true,
+    "unique_source_validation_trials": 120,
+    "saved_prediction_rows_with_repeated_seeds": 360,
+    "mean_participant_source_validation_CE": 0.6741382380326589,
+    "uniform_binary_predictor_CE_reference": 0.6931471805599453,
+    "mean_participant_source_validation_balanced_accuracy": 0.5305555555555556,
+    "mean_participant_source_validation_accuracy": 0.5305555555555556,
+    "single_class_prediction_fits": 1,
+    "fits_selected_at_epoch_one": 4,
+    "fits_reaching_maximum_100_epochs": 1,
+    "total_epochs": 1027,
+    "total_optimizer_steps": 3081,
+    "maximum_recorded_vs_saved_CE_absolute_error": 3.24826470166073e-08,
+    "model_fits_performed": 0,
+    "model_forward_passes_performed": 0,
+    "EEG_loaded": false,
+    "query_rows_loaded": 0,
+    "seed_selection_performed": false,
+    "participant_aggregation": "equal mean of all three frozen seeds, then equal participant mean",
+    "inference": "descriptive only; no hypothesis test or CI on epoch-selected validation",
+    "scientific_limits": [
+      "Source validation selected checkpoint epoch; these scores are not an independent test.",
+      "Six development identities; three seeds do not increase participant n to eighteen.",
+      "No target-session query evaluated and no adaptive policy validated.",
+      "No matched comparison with existing CPU query baselines is available here.",
+      "Offline source decoding does not demonstrate human learning, retention or clinical effect."
+    ]
+  },
+  "nested_policy_evidence": {
+    "status": "not_available_no_separately_frozen_and_executed_nested_strategy_evaluation_found",
+    "any_minimal_adaptive_strategy_supported": false,
+    "new_strategy_or_threshold_chosen": false,
+    "source_BA_used_to_invent_gate": false
+  },
+  "minimum_scientific_decision": {
+    "current_decision": "Retain the prespecified source-only EEGNet baseline and immutable accepted18 checkpoint reuse as a preparation path; keep any new adaptive-policy gate closed.",
+    "separate_required_decision": "A formal source-only fit/evaluation freeze may be reviewed separately from an adaptive strategy. No strategy is justified by current source BA or CSP measurement alone.",
+    "next_policy_decision_only_after_available_evidence": "First reconcile/obtain immutable execution and independent review of the already frozen CSP4/source-score diagnostic, or explicitly retain it as pending; if measurements justify proceeding, separately freeze one nested-development matched-budget strategy protocol before any implementation or query use.",
+    "unfrozen_policy_fields": [
+      "outer held-participant and inner grouped run/support assignments",
+      "one fixed permissible reliability scalar and orientation/degeneracy policy",
+      "fixed update operator and parameter/update budget",
+      "threshold/objective/selection rule restricted to inner development folds",
+      "exact always-frozen, always-update, fixed-mixture and covariance-gate controls and matching budgets",
+      "harm/collapse/update-count endpoints and participant aggregation",
+      "data-access scopes, code/input hashes and operational bounds"
+    ],
+    "remaining36_and_query_authorized": false,
+    "scientific_gate_passed": false
+  },
+  "read_only_saved_text_checks": [
+    {
+      "check": "sub-1 original per-participant SHA matches corrected summary",
+      "passed": true
+    },
+    {
+      "check": "sub-1 fold-0 two disjoint complete source TRAIN runs",
+      "passed": true
+    },
+    {
+      "check": "sub-1 fold-0 10 held-out labels per class",
+      "passed": true
+    },
+    {
+      "check": "sub-1 fold-0 saved prediction BA replay",
+      "passed": true
+    },
+    {
+      "check": "sub-1 fold-1 two disjoint complete source TRAIN runs",
+      "passed": true
+    },
+    {
+      "check": "sub-1 fold-1 10 held-out labels per class",
+      "passed": true
+    },
+    {
+      "check": "sub-1 fold-1 saved prediction BA replay",
+      "passed": true
+    },
+    {
+      "check": "sub-1 source mean matches corrected summary",
+      "passed": true
+    },
+    {
+      "check": "sub-1 ses-1 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-1 ses-2 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-1 ses-3 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-1 ses-4 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-1 ses-5 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-1 five-support mean cosine matches corrected summary",
+      "passed": true
+    },
+    {
+      "check": "sub-4 original per-participant SHA matches corrected summary",
+      "passed": true
+    },
+    {
+      "check": "sub-4 fold-0 two disjoint complete source TRAIN runs",
+      "passed": true
+    },
+    {
+      "check": "sub-4 fold-0 10 held-out labels per class",
+      "passed": true
+    },
+    {
+      "check": "sub-4 fold-0 saved prediction BA replay",
+      "passed": true
+    },
+    {
+      "check": "sub-4 fold-1 two disjoint complete source TRAIN runs",
+      "passed": true
+    },
+    {
+      "check": "sub-4 fold-1 10 held-out labels per class",
+      "passed": true
+    },
+    {
+      "check": "sub-4 fold-1 saved prediction BA replay",
+      "passed": true
+    },
+    {
+      "check": "sub-4 source mean matches corrected summary",
+      "passed": true
+    },
+    {
+      "check": "sub-4 ses-1 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-4 ses-2 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-4 ses-3 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-4 ses-4 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-4 ses-5 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-4 five-support mean cosine matches corrected summary",
+      "passed": true
+    },
+    {
+      "check": "sub-7 original per-participant SHA matches corrected summary",
+      "passed": true
+    },
+    {
+      "check": "sub-7 fold-0 two disjoint complete source TRAIN runs",
+      "passed": true
+    },
+    {
+      "check": "sub-7 fold-0 10 held-out labels per class",
+      "passed": true
+    },
+    {
+      "check": "sub-7 fold-0 saved prediction BA replay",
+      "passed": true
+    },
+    {
+      "check": "sub-7 fold-1 two disjoint complete source TRAIN runs",
+      "passed": true
+    },
+    {
+      "check": "sub-7 fold-1 10 held-out labels per class",
+      "passed": true
+    },
+    {
+      "check": "sub-7 fold-1 saved prediction BA replay",
+      "passed": true
+    },
+    {
+      "check": "sub-7 source mean matches corrected summary",
+      "passed": true
+    },
+    {
+      "check": "sub-7 ses-1 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-7 ses-2 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-7 ses-3 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-7 ses-4 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-7 ses-5 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-7 five-support mean cosine matches corrected summary",
+      "passed": true
+    },
+    {
+      "check": "sub-10 original per-participant SHA matches corrected summary",
+      "passed": true
+    },
+    {
+      "check": "sub-10 fold-0 two disjoint complete source TRAIN runs",
+      "passed": true
+    },
+    {
+      "check": "sub-10 fold-0 10 held-out labels per class",
+      "passed": true
+    },
+    {
+      "check": "sub-10 fold-0 saved prediction BA replay",
+      "passed": true
+    },
+    {
+      "check": "sub-10 fold-1 two disjoint complete source TRAIN runs",
+      "passed": true
+    },
+    {
+      "check": "sub-10 fold-1 10 held-out labels per class",
+      "passed": true
+    },
+    {
+      "check": "sub-10 fold-1 saved prediction BA replay",
+      "passed": true
+    },
+    {
+      "check": "sub-10 source mean matches corrected summary",
+      "passed": true
+    },
+    {
+      "check": "sub-10 ses-1 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-10 ses-2 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-10 ses-3 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-10 ses-4 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-10 ses-5 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-10 five-support mean cosine matches corrected summary",
+      "passed": true
+    },
+    {
+      "check": "sub-13 original per-participant SHA matches corrected summary",
+      "passed": true
+    },
+    {
+      "check": "sub-13 fold-0 two disjoint complete source TRAIN runs",
+      "passed": true
+    },
+    {
+      "check": "sub-13 fold-0 10 held-out labels per class",
+      "passed": true
+    },
+    {
+      "check": "sub-13 fold-0 saved prediction BA replay",
+      "passed": true
+    },
+    {
+      "check": "sub-13 fold-1 two disjoint complete source TRAIN runs",
+      "passed": true
+    },
+    {
+      "check": "sub-13 fold-1 10 held-out labels per class",
+      "passed": true
+    },
+    {
+      "check": "sub-13 fold-1 saved prediction BA replay",
+      "passed": true
+    },
+    {
+      "check": "sub-13 source mean matches corrected summary",
+      "passed": true
+    },
+    {
+      "check": "sub-13 ses-1 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-13 ses-2 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-13 ses-3 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-13 ses-4 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-13 ses-5 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-13 five-support mean cosine matches corrected summary",
+      "passed": true
+    },
+    {
+      "check": "sub-16 original per-participant SHA matches corrected summary",
+      "passed": true
+    },
+    {
+      "check": "sub-16 fold-0 two disjoint complete source TRAIN runs",
+      "passed": true
+    },
+    {
+      "check": "sub-16 fold-0 10 held-out labels per class",
+      "passed": true
+    },
+    {
+      "check": "sub-16 fold-0 saved prediction BA replay",
+      "passed": true
+    },
+    {
+      "check": "sub-16 fold-1 two disjoint complete source TRAIN runs",
+      "passed": true
+    },
+    {
+      "check": "sub-16 fold-1 10 held-out labels per class",
+      "passed": true
+    },
+    {
+      "check": "sub-16 fold-1 saved prediction BA replay",
+      "passed": true
+    },
+    {
+      "check": "sub-16 source mean matches corrected summary",
+      "passed": true
+    },
+    {
+      "check": "sub-16 ses-1 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-16 ses-2 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-16 ses-3 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-16 ses-4 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-16 ses-5 support identities limited to current run-0",
+      "passed": true
+    },
+    {
+      "check": "sub-16 five-support mean cosine matches corrected summary",
+      "passed": true
+    },
+    {
+      "check": "latest frozen binding configs/kumar_csp_reliability_20261014.json",
+      "passed": true
+    },
+    {
+      "check": "latest frozen binding docs/kumar_csp_reliability_plan_20261014.md",
+      "passed": true
+    },
+    {
+      "check": "latest CSP4 diagnostic explicitly excludes query/final/threshold search",
+      "passed": true
+    },
+    {
+      "check": "no latest exact CSP4/source-score execution receipt found in current research_logs/results",
+      "passed": true
+    }
+  ],
+  "check_count": 88,
+  "failed_checks": [],
+  "sources": [
+    {
+      "path": "EEGNET_TRAINING_PLAN.md",
+      "sha256": "7f112eeae7d5b14db2c8c154840dd834ebfc77a316367f52173769e29ee35a86",
+      "bytes": 9883,
+      "version_status": "tracked_in_review_baseline"
+    },
+    {
+      "path": "TASK_AWARE_ADAPTATION_RESEARCH_PLAN.md",
+      "sha256": "f02a28e094a189664a22a3db9174e067217ee98212dfc6d0891ec018bb15fffa",
+      "bytes": 7795,
+      "version_status": "tracked_in_review_baseline"
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/protocol/task_aware_analysis_plan_frozen_20261013.md",
+      "sha256": "29b278814bbbc493540519df97229ef5c5cddef0a4b466eeb941879a7c116c05",
+      "bytes": 4672,
+      "version_status": "tracked_in_review_baseline"
+    },
+    {
+      "path": "configs/kumar_csp_reliability_20261014.json",
+      "sha256": "4f71724c6be77696bbf8764e7de4795ceb1c9c4a315c1c2b266cc201a1c3da18",
+      "bytes": 1028,
+      "version_status": "tracked_in_review_baseline"
+    },
+    {
+      "path": "docs/kumar_csp_reliability_plan_20261014.md",
+      "sha256": "b942fdb6265594d632dbfb70a536bd576b9e2d5b13871f8d4e8e4c9721a8b34f",
+      "bytes": 5757,
+      "version_status": "tracked_in_review_baseline"
+    },
+    {
+      "path": "docs/kumar_csp_reliability_methods_review_20261014.md",
+      "sha256": "f53592721e4cff14b7d8466234c99d299f81870e0937346f92f1872b86532600",
+      "bytes": 10719,
+      "version_status": "tracked_in_review_baseline"
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_reliability_freeze_run01_20261014/freeze_receipt.json",
+      "sha256": "c1c6eb05e422ad9dcf50227d0ef6849fdd5e7f8928a7b9f22ef17886c937037c",
+      "bytes": 550,
+      "version_status": "tracked_in_review_baseline"
+    },
+    {
+      "path": "scripts/analyze_kumar_csp_reliability.py",
+      "sha256": "f2a0eb4831d78c4cbef54656c56c5ee7c085c697eff287c64dd535a5bdb7a5ad",
+      "bytes": 30693,
+      "version_status": "preexisting_untracked_preserved_not_adopted_or_executed"
+    },
+    {
+      "path": "tests/test_kumar_csp_reliability.py",
+      "sha256": "d7f794e95b715f5c6e431ed0556339b56cb103a39374e46550bc9f4b64eae404",
+      "bytes": 10914,
+      "version_status": "preexisting_untracked_preserved_not_adopted_or_executed"
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/preparation_receipt.json",
+      "sha256": "f4b3a3bda5533d64c16c9d55e0c15bd934ade5d86c07cf444f340ab7a75e7964",
+      "bytes": 2517,
+      "version_status": "preexisting_untracked_preserved_not_adopted_or_executed"
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/csp_implementation_review_run01_20261014/preparation_static_review_receipt.json",
+      "sha256": "f8ca93c82713d1ab9c6e174f3a00438f2b3b4dfcb556e78215317b989fb9ead5",
+      "bytes": 9538,
+      "version_status": "preexisting_untracked_preserved_not_adopted_or_executed"
+    },
+    {
+      "path": "research_logs/gpu_preparation_20261014/supervised_csp_run01/source_snapshot/analyze_kumar_supervised_reliability_executed.py",
+      "sha256": "c58b5390e4a22daef442c84b051fce783ce085a9501e00c58dee399e683701a3",
+      "bytes": 5867,
+      "version_status": "tracked_in_review_baseline"
+    },
+    {
+      "path": "research_logs/gpu_preparation_20261014/supervised_csp_run01/summary_corrected.json",
+      "sha256": "de2ff0c8cd054aac4749b32badca8ccae09897ba28a3797d034d90e1271dc5c2",
+      "bytes": 509759,
+      "version_status": "tracked_in_review_baseline"
+    },
+    {
+      "path": "research_logs/gpu_preparation_20261014/supervised_csp_run01/before_fit_freeze.json",
+      "sha256": "eba75efd67bb51a1d4d30fc5fa6a5124c67e0c73ebb9af7209226201ca3fb823",
+      "bytes": 439,
+      "version_status": "tracked_in_review_baseline"
+    },
+    {
+      "path": "docs/kumar_supervised_reliability_plan_20261014.md",
+      "sha256": "e1fb1d48e39b1866eb76f4790d6941e42761df905c7514d6617097c193d4881b",
+      "bytes": 1860,
+      "version_status": "tracked_in_review_baseline"
+    },
+    {
+      "path": "configs/kumar_supervised_reliability_20261014.json",
+      "sha256": "e0a9d2f7363d245299b9bff8e2d6fdbcf913021d7e6608ff08f893832ae3a315",
+      "bytes": 764,
+      "version_status": "tracked_in_review_baseline"
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/lowdim_reliability_dev_run01_20261014/measurement_receipt.json",
+      "sha256": "823dacd72811eba0988fc7adc9decd6f0a7c79264ab21dc8c5f1bb3c29fefff3",
+      "bytes": 9489649,
+      "version_status": "tracked_in_review_baseline"
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/support_reliability_dev_run01_20261014/measurement_receipt.json",
+      "sha256": "c37797a012128dddfa4c423e10117fab131b4e5306a0a165b761272fe1e1b928",
+      "bytes": 82402,
+      "version_status": "tracked_in_review_baseline"
+    },
+    {
+      "path": "research_logs/kumar_development_aggregation_20261015/run01/summary.json",
+      "sha256": "7413751f1179c63926ce77b0059dc039befd461f12daf7ddcf3f5dbad7cbf5bd",
+      "bytes": 1616,
+      "version_status": "tracked_in_review_baseline"
+    },
+    {
+      "path": "research_logs/gpu_preparation_20261014/supervised_csp_run01/sub-1.json",
+      "sha256": "85b7c7ab2ce3cc1e57ec0b5f1c4dc38e5030b090b5291f7249229fb97f1ca4e4",
+      "bytes": 263889,
+      "version_status": "tracked_in_review_baseline"
+    },
+    {
+      "path": "research_logs/gpu_preparation_20261014/supervised_csp_run01/sub-4.json",
+      "sha256": "fa2415bbbca7251ad7fbfb31c333232f83817872106d86e375734fa83176ef67",
+      "bytes": 264252,
+      "version_status": "tracked_in_review_baseline"
+    },
+    {
+      "path": "research_logs/gpu_preparation_20261014/supervised_csp_run01/sub-7.json",
+      "sha256": "d1294a0f05e35f16b018510abe0077c42daf982e7fd01d4f241b1d3ba57a543a",
+      "bytes": 267058,
+      "version_status": "tracked_in_review_baseline"
+    },
+    {
+      "path": "research_logs/gpu_preparation_20261014/supervised_csp_run01/sub-10.json",
+      "sha256": "208c8b3dccb9d1ad91172bde70891348d826c189eff9780bf5ad6e8836c2cd25",
+      "bytes": 264741,
+      "version_status": "tracked_in_review_baseline"
+    },
+    {
+      "path": "research_logs/gpu_preparation_20261014/supervised_csp_run01/sub-13.json",
+      "sha256": "6dd10d932e11bd000c017a60caff4bcddf4a42ba789e4807af5eb3c3a2ac2080",
+      "bytes": 267199,
+      "version_status": "tracked_in_review_baseline"
+    },
+    {
+      "path": "research_logs/gpu_preparation_20261014/supervised_csp_run01/sub-16.json",
+      "sha256": "dac1f853a4103ab019c62d08986b8b827cba2ff7f7af941813a5fa1cb67b4d1d",
+      "bytes": 264395,
+      "version_status": "tracked_in_review_baseline"
+    }
+  ]
+}

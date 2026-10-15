@@ -1,0 +1,602 @@
+{
+  "schema_version": 1,
+  "status": "proposal_only_separate_parent_review_required",
+  "baseline_commit": "65fe52ee2cefa43f091cf466dac3682b4c6e5745",
+  "accepted_ledger_commit": "92cd2434b0ac8c3b16a6fe8ce163ba6328432094",
+  "scope": "Prepare read-only source-validation checkpoint reuse kernel and exact future source-only scope; no real checkpoint evaluation, new fit, query or Pod operation authorized",
+  "execution_permissions": {
+    "real_checkpoint_load": false,
+    "real_source_validation_replay": false,
+    "new_fits": false,
+    "query": false,
+    "target_support_fit": false,
+    "Pod_operation": false,
+    "model_search": false
+  },
+  "pinned_inputs": {
+    "checkpoint_training_config": {
+      "path": "configs/kumar_eegnet_gpu_development_20261014.json",
+      "sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d"
+    },
+    "protocol": {
+      "path": "configs/kumar_cross_session_20261012.json",
+      "sha256": "f1b2d0fa870493cc2aaab906fe6d8b1227e45b2a270e06700e3ca137fbfe9c89"
+    },
+    "split": {
+      "path": "research_logs/kumar_cross_session_20261012/protocol/split_manifest.json",
+      "sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28"
+    },
+    "accepted_plan": {
+      "path": "configs/kumar_development_queue_plan_20261014.json",
+      "sha256": "0d23a47952fe286cd47a5e4eed69ae29e7317f63edf83ea41866495686f83a5b"
+    },
+    "accepted_ledger": {
+      "path": "research_logs/kumar_development_queue_20261014/accepted_jobs.json",
+      "sha256": "1ee1868b97e6ff7ea2e42327fe64337cafbb0f8ee6aff19cc24fba5265f9aaa9"
+    },
+    "accepted_checkpoint_inventory": {
+      "path": "research_logs/kumar_checkpoint_reuse_preparation_20261015/accepted_checkpoint_inventory.json",
+      "sha256": "c4bef5fd36c4759987737d73695de236d5e9924b94decc28bb977317303df788"
+    },
+    "remaining_source_inputs": {
+      "path": "research_logs/kumar_checkpoint_reuse_preparation_20261015/proposed_remaining_source_inputs.json",
+      "sha256": "312b5bd38995aac5fd7748b64cdf5c0446b5e33fe05e3970c61b5dd73e026682"
+    },
+    "historical_formal_config": {
+      "path": "configs/kumar_eegnet_20261012.json",
+      "sha256": "793b7bb35fa31138f1c6459476ac5be236fc5d10d89519523bceabeaa6d7a9a0"
+    },
+    "historical_runtime_inventory": {
+      "path": "research_logs/kumar_pod_rebuild_recovery_20261014/runtime_inventory.json",
+      "sha256": "34f33afd816376c44af99552932d3127af794a32623f10133f774c8a2312944b"
+    },
+    "gpu_dependency_lock": {
+      "path": "environments/gpu/uv.lock",
+      "sha256": "11682d951fe204e32859da12d9cc0ac73c6e63c1bce061d9834f8f68ebfe72e0"
+    },
+    "csp4_plan": {
+      "path": "docs/kumar_csp_reliability_plan_20261014.md",
+      "sha256": "b942fdb6265594d632dbfb70a536bd576b9e2d5b13871f8d4e8e4c9721a8b34f"
+    },
+    "csp4_config": {
+      "path": "configs/kumar_csp_reliability_20261014.json",
+      "sha256": "4f71724c6be77696bbf8764e7de4795ceb1c9c4a315c1c2b266cc201a1c3da18"
+    },
+    "reliability_review": {
+      "path": "research_logs/kumar_checkpoint_reuse_preparation_20261015/reliability_review_run01.json",
+      "sha256": "fec3f9ff8d3b0a629b6a6d41b3a4a3e9f105b1793445afa6256037ca6ab1f0d3"
+    },
+    "readonly_source_replay_kernel": {
+      "path": "scripts/evaluate_kumar_checkpoint_reuse.py",
+      "sha256": "838f3ed7b8f67c65dcf27b3ef43aace29db9464c8cdaae730be5dfebc92ba4e2"
+    },
+    "proposal_checker": {
+      "path": "scripts/check_kumar_checkpoint_reuse_proposal.py",
+      "sha256": "ea9935857629404df596663ae0c849aa32a14f32e1291449028d40415a03aa40"
+    },
+    "existing_development_source_inputs": {
+      "path": "research_logs/gpu_preparation_20261014/eegnet_data_plan.json",
+      "sha256": "b8dd6c8872f03a661b34d50fb826ef05e88e5502e9987290fec1301a4cb85363"
+    }
+  },
+  "known_scientific_digests": {
+    "training_config_exact_bytes_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+    "training_config_canonical_sha256_with_existing_self_field_null": "91c361210f6fbefc06581541a6cac9a4ee551669d62f2137f90321c7e141bc4e",
+    "protocol_config_sha256": "f1b2d0fa870493cc2aaab906fe6d8b1227e45b2a270e06700e3ca137fbfe9c89",
+    "split_manifest_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+    "note": "These known exact identities are references, not edits to historical false/null freeze fields. Final review must bind them in a separate canonical operational freeze and detached exact-byte digest."
+  },
+  "reuse": {
+    "job_ids": [
+      "17377a7cf04bfc73e25bc94d7e42fc4f1ab6f14fb6dde63c7b21e742b94b9ace",
+      "5be2fc9499d4ec3916e5191c822c205e195c0e25655c39ec0f84e5aa2c091470",
+      "ba8899c0dc867baefa9a5623cccf706a82571413d63ec76e4baa7bfab613b4ca",
+      "e1b092f93db8c972cb59403814c73eb1ba2273b1aa82351f0205c390a28b9faa",
+      "451a32bd8f38870f333d43c3941498a72bda8f19574ee381a260200bd23ff112",
+      "fe495208cd04aff921403e3e0d8c9f3e065d477deff26b28fbfe4480d9ada6c2",
+      "735d0b78575ffe08b0be4e51a26fcadaa0a2db1977c9120d1e837e3ed48d03d7",
+      "1aa92ed2b84621e78c67af8bf6f1eb6482b810951b9418a9b9fb017541552c91",
+      "a072e1ee4836265f6237ccb5ae6a36adc90f47395f3c0830071d86798bc1f5ba",
+      "04c84fd64d26f4aaddcfcce264b71c6332395eb1914ae799470dde4d0e666b5e",
+      "1a6f1682dafff74743a174565e4e8360d7615ef8b80d09919ff0a5c043ab1e55",
+      "4b2352788f901e95f387f44be75ad0f71ceac4c5a3e68c030365c5e98559a9f1",
+      "f7e593ca50f530f362181d48a39258dbbb2f6d741a2ecfd5c51b4ce0e69326b3",
+      "3afcfb08e856e7b89468b23e78a34aa4419d31a3c7fcec386a442d5766669599",
+      "fe37e7a42f0658cdddd6db0b2eb5134fda1bdc82eaa2855cb198ea2ed97cc2ea",
+      "1534e6e3dbe39282e0f7220355889366af2c8a9eafd2008c03cbc3449d361319",
+      "1f1cf3552df9ed9bdf25fb45271d5b7ed61df8800f2e66fb509df1a76a5bc9af",
+      "df56f563ff26909b6e0590906f305982b0e5df89520c12355f433a1cd2bd968a"
+    ],
+    "new_fits": 0,
+    "optimizer_instances": 0,
+    "entry": "scripts/evaluate_kumar_checkpoint_reuse.py",
+    "accepted_original_artifacts_and_parent_ACKs_required": true,
+    "archive_and_checkpoint_full_SHA256_required": true,
+    "torch_load_weights_only": true,
+    "execution_device_for_software_kernel": "cpu",
+    "archived_training_device_preserved": "cuda",
+    "mode": "eval_and_inference_only",
+    "parameter_BN_normalization_updates": false,
+    "all_state_and_file_hashes_unchanged": true,
+    "permitted_kernel_role": "source_validation_only",
+    "real_evaluation_default": "closed_requires_separate_exact_hash_parent_authorization",
+    "query_adapter_implemented": false,
+    "outputs_are_new_evaluation_receipts_not_new_training_results": true,
+    "numerical_threads": 1,
+    "existing_CE_absolute_tolerance": 1e-07
+  },
+  "remaining_source_training_proposal": {
+    "subjects": [
+      "sub-2",
+      "sub-3",
+      "sub-5",
+      "sub-6",
+      "sub-8",
+      "sub-9",
+      "sub-11",
+      "sub-12",
+      "sub-14",
+      "sub-15",
+      "sub-17",
+      "sub-18"
+    ],
+    "seeds": [
+      20261012,
+      20261013,
+      20261014
+    ],
+    "jobs": [
+      {
+        "subject": "sub-2",
+        "seed": 20261012,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "df3d71e4bed6d37058026cbce4f60e34783fb11c87d8b0f5efe6f368c91ba222",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-2",
+        "seed": 20261013,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "e93b469def25a046cfa08d08fdba7c3dbd6b93bc2d17d360d9d44ef1782aeb07",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-2",
+        "seed": 20261014,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "b5eec7743c554b62a21e160d012eefa38a160a9dbc0dc8809d27ccfb85e7c1c9",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-3",
+        "seed": 20261012,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "7b6ebeaef294dff0339c43fa1c35d7f6c34f30785d3e8b2bb9a03e8b7f23b22a",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-3",
+        "seed": 20261013,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "66b5c7a89b8fb4ccbca9f25dfaa588c6952f2aad3a1d7648348f8e88361c4c2f",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-3",
+        "seed": 20261014,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "80bcdedfef4684c5cc9b307805bfb74e00bf0a85756059e351eb10a78a13a037",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-5",
+        "seed": 20261012,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "d80b3b44b6729ec7d94e42cce0668f8065c9fc15c62538b0d37b6e67eb461c7b",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-5",
+        "seed": 20261013,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "15203ad240b981b752d4af83fe24fd8aebfd92c96820c66eda7c32ca6ba0c799",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-5",
+        "seed": 20261014,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "4221970caa1ebb7becc3ba3ba108ee9ea5b2bd44d95ca8e69f3eda7a280942dd",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-6",
+        "seed": 20261012,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "dd28327b1068bb128614eeb63d7727a8b59da65dc8e52575ef3533d7d1ade074",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-6",
+        "seed": 20261013,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "ab971cc08608806ea2483fdec9c624b1e95490b6a2309a2e9122cceab9829850",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-6",
+        "seed": 20261014,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "9b75bb235cd933c268778dc802fe1d4300d6594de8fb5511522fcecf4badf35c",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-8",
+        "seed": 20261012,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "d1392eb4c7b5aaaa6539285d41f45b63bf7d09258b54d41a6dfc326492d91c1c",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-8",
+        "seed": 20261013,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "b65b18b7a4fe02dbb95b2e42110a213a7f5f76db4ff7c19473e4320938dbab58",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-8",
+        "seed": 20261014,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "812b29345cc8262ef329f5b09e24141c65f47f24fe8dd2c044b70f9005946d74",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-9",
+        "seed": 20261012,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "123bdeee936900b1d3d1c23aebda48ee02d6f0c46f2de9f17d711b8ed1653629",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-9",
+        "seed": 20261013,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "a73f6eb94abd509ca6ec91b3908275f18cfed340bff6e7f8fa64851ddf1ccc64",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-9",
+        "seed": 20261014,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "70011f5decf4795e8a16cf9658c2af1de69dd0d65ac0d515e6e33988979a61ae",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-11",
+        "seed": 20261012,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "caae0027156bdc8ec56b7f863666bba9d8ffe083c85f735c2772f357657fb6c8",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-11",
+        "seed": 20261013,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "1114f9f1524f681564334e943200e3c09b6efa900c0bf80b394c8992cc08e8fd",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-11",
+        "seed": 20261014,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "e9089a2b0c761b399c14f02a49dd09d16d3a72ab80c935bef50b61754980b880",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-12",
+        "seed": 20261012,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "cbd82eef6ffd5c856e142ac381032e252080957d58f5803b8b7eb2fcb09f6218",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-12",
+        "seed": 20261013,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "98e0ab893e8920a08adbb0298a9e45d5d3cb9a2d0f884110d77cb109676e0aee",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-12",
+        "seed": 20261014,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "4ce16e24f1df1c9f3ceb262166a3a9c99ebd3c32e9debdbffd51fa19a877dafe",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-14",
+        "seed": 20261012,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "18c5557aa4335b6efe44bc202c41393219a81624d00be7da5ded393102cb307e",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-14",
+        "seed": 20261013,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "3a13a62edf23ed06a82c7103f65d187e7f90bde428284b39484e884caef16091",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-14",
+        "seed": 20261014,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "e3ddfeef4ae6212f2b02658a7941e515a84fe648a60aca064e02b1993e9942bb",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-15",
+        "seed": 20261012,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "edad083df2e4be007e3c4e6f38c00287de389113db9e7987674711ec0d2cf6eb",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-15",
+        "seed": 20261013,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "e903c5fa4eeacd7fc10bc1031e177219051145cb918f0c4542dd56197fc95184",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-15",
+        "seed": 20261014,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "c0c94ed7a22a6c97e257db3f2c565b6e16da24d91fe16e099a74e9e1662bbce5",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-17",
+        "seed": 20261012,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "4c8846cc25091eae85d942ac3c6c179a014a236eccb1613270ef8bcfbf0a485c",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-17",
+        "seed": 20261013,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "a30ed546e2ab02bf9c9df4ff9ebb35e6269c84428965eeda56f95cc572bfe1cf",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-17",
+        "seed": 20261014,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "c163c8f36f3c6093ae06e622bb3026400dc068728a8fa5e67ccc99b47b6d9c77",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-18",
+        "seed": 20261012,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "769c451a4692ba6637a98cc4d88206560d474278e75650d0fa56b62c12c2b26e",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-18",
+        "seed": 20261013,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "e5bd76408bd7c3f5c98ae7b9655d7afc934974003d19fdf5d101c14de799565a",
+        "action": "proposal_only_not_authorized"
+      },
+      {
+        "subject": "sub-18",
+        "seed": 20261014,
+        "training_config_sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+        "split_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+        "job_id": "56d83341333e2ad2ec222ea04e316fcca00d690d2ef440956906d372877f0bc4",
+        "action": "proposal_only_not_authorized"
+      }
+    ],
+    "input_scope": "research_logs/kumar_checkpoint_reuse_preparation_20261015/proposed_remaining_source_inputs.json",
+    "training_roles": {
+      "source_train": {
+        "session": "ses-0",
+        "runs": [
+          "run-0",
+          "run-1"
+        ],
+        "normalization_fit": true
+      },
+      "source_validation": {
+        "session": "ses-0",
+        "runs": [
+          "run-2"
+        ],
+        "epoch_selection_only": true
+      }
+    },
+    "compute_count_limits": {
+      "fits": 36,
+      "epochs_per_fit": 100,
+      "steps_per_epoch": 3,
+      "epochs_total": 3600,
+      "optimizer_steps_total": 10800,
+      "historical_all54_epochs_limit": 5400,
+      "historical_all54_optimizer_steps_limit": 16200
+    },
+    "already_completed18_actual_epochs": 1027,
+    "already_completed18_actual_steps": 3081,
+    "new_run_total_wall_seconds": null,
+    "new_run_total_cost_usd": null,
+    "old_19800_second_deadline_reused": false,
+    "historical_operation_constraints_for_review": {
+      "fits_simultaneous": 1,
+      "per_fit_timeout_seconds": 1800,
+      "TERM_grace_seconds": 30,
+      "automatic_retries": 0,
+      "shared_GPU_lock": true,
+      "old_chunk_fits": 2,
+      "old_chunk_timeout_seconds": 3600,
+      "old_minimum_free_disk_bytes": 5368709120,
+      "old_result_archive_max_bytes": 16777216,
+      "old_export_archive_max_bytes": 67108864,
+      "status": "Historical constraints only; new36 operation/export/deadline contract not implemented or approved"
+    },
+    "original_thread_settings": {
+      "torch": 1,
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "preserve_claims_failures_partial_outputs_and_stop_on_failure": true,
+    "input_bytes_and_processed_identities_must_be_reverified_before_future_fit": true,
+    "backups": "Future operation must retain bounded off-Pod loss protection, independent audit, full R2 GET/SHA and real parent acceptance; no credential copying or unsupported API."
+  },
+  "future_evaluation_statistics_proposal": {
+    "scope": "Secondary source-only EEGNet baseline extension; no new adaptation policy",
+    "independent_unit": "published_participant_identity",
+    "development_subjects": [
+      "sub-1",
+      "sub-4",
+      "sub-7",
+      "sub-10",
+      "sub-13",
+      "sub-16"
+    ],
+    "final_test_subjects": [
+      "sub-2",
+      "sub-3",
+      "sub-5",
+      "sub-6",
+      "sub-8",
+      "sub-9",
+      "sub-11",
+      "sub-12",
+      "sub-14",
+      "sub-15",
+      "sub-17",
+      "sub-18"
+    ],
+    "seed_aggregation": "equal_mean_all_three_within_participant_session",
+    "participant_endpoint": "equal_mean_five_target_session_balanced_accuracy",
+    "source_query": "secondary_reference_only_after_separate_query_freeze",
+    "target_support": "no_fit_no_BN_or_normalization_updates",
+    "prediction_rule": "argmax_no_tuning",
+    "retain_class_recalls_confusion_collapse_and_all_failures": true,
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 42,
+    "existing_CPU_primary_comparison_unchanged": true,
+    "primary_comparison_preserved": "refit_csp_lda_minus_source_only_on_same_target_queries",
+    "same_cohort_future_policy_claims": "exploratory_after_prior_final_baseline_exposure",
+    "query_results_computed_this_round": false
+  },
+  "scientific_decision": {
+    "adaptive_strategy_supported": false,
+    "model_or_threshold_search": false,
+    "latest_CSP4_source_score_stage": "Frozen plan available; matching completed execution not located in current checkout",
+    "minimum_next_decision": "Retain source-only checkpoint reuse preparation; reconcile existing CSP4/source-score execution evidence or leave it pending before any separately frozen nested-policy comparison",
+    "near_chance_source_BA_does_not_release_gate": true
+  },
+  "freeze_procedure": "Keep this proposal immutable. After actual parent review, create separate scientific/operational freeze receipts with protocol/split/exact unchanged checkpoint-training identity, canonical operational digest computed with its self-digest null, detached exact-byte SHA256 and actual reviewed delivery commit. Separate source-fit and query scopes, runtime/deadline/exports and authorization; never call generic formal_train or mutate old18 ledger/context.",
+  "unresolved_execution_bindings": {
+    "actual_parent_review_receipt": null,
+    "final_operational_config_and_detached_sha256": null,
+    "final_operational_freeze_canonical_sha256": null,
+    "approved_36_source_fit_entry_and_contract": null,
+    "remaining_source_input_full_verification_receipt": null,
+    "current_runtime_disk_and_software_acceptance": null,
+    "new_absolute_total_wall_deadline_and_cost_scope": null,
+    "off_Pod_export_and_R2_acceptance_contract": null,
+    "query_specific_checkpoint_reuse_entry_and_input_scope": null
+  },
+  "stage_binding_applicability": {
+    "note": "The nine fields are the union of unresolved bindings. Every stage remains closed here; each future operation must freeze its own exact subset and additional input/authorization requirements, not demand unrelated stages.",
+    "existing18_source_validation_replay": {
+      "requires": [
+        "actual_parent_review_receipt",
+        "final_operational_config_and_detached_sha256",
+        "final_operational_freeze_canonical_sha256",
+        "current_runtime_disk_and_software_acceptance"
+      ],
+      "additional_requirements": [
+        "Existing development127 original input verification and frozen processed-window identities",
+        "Kernel exact-hash actual-parent source-replay authorization",
+        "Bound real source-CE replay at unchanged1e-7; no query adapter or remaining253 source manifest required"
+      ],
+      "new_fits": 0
+    },
+    "remaining36_source_fits": {
+      "requires": [
+        "actual_parent_review_receipt",
+        "final_operational_config_and_detached_sha256",
+        "final_operational_freeze_canonical_sha256",
+        "approved_36_source_fit_entry_and_contract",
+        "remaining_source_input_full_verification_receipt",
+        "current_runtime_disk_and_software_acceptance",
+        "new_absolute_total_wall_deadline_and_cost_scope",
+        "off_Pod_export_and_R2_acceptance_contract"
+      ],
+      "additional_requirements": [
+        "Accepted18 never refit",
+        "Only proposed remaining253 source files, no query",
+        "A newly reviewed source-only entry, total deadline and bounded off-Pod contract"
+      ],
+      "query_adapter_required": false
+    },
+    "query_evaluation": {
+      "requires": [
+        "actual_parent_review_receipt",
+        "final_operational_config_and_detached_sha256",
+        "final_operational_freeze_canonical_sha256",
+        "current_runtime_disk_and_software_acceptance",
+        "new_absolute_total_wall_deadline_and_cost_scope",
+        "off_Pod_export_and_R2_acceptance_contract",
+        "query_specific_checkpoint_reuse_entry_and_input_scope"
+      ],
+      "additional_requirements": [
+        "Independent exact query input/role manifest and actual reviewed authorization",
+        "Already accepted checkpoints for the exact frozen query cohort; remaining36 acceptances are upstream requirements only if that cohort needs them",
+        "No fitting, optimizer, parameter/BN/normalization update or threshold selection"
+      ],
+      "query_adapter_implemented": false
+    }
+  }
+}
