@@ -94,3 +94,6 @@ HTTPS/私人备份操作修订：固定首fit官方同版本同字节25文件/16
 
 
 2026-10-15 UTC第7fit sub-7/20261012已独立审计与R2备份：科学执行仍b2e3f2b，14+18载荷另加manifest按实际布局核验，25epochs75steps选10，40 TRAIN/20源validation/query0；Torch原重放差0，保存logits独立CE0.6941331439755201与原0.6941331148147583差2.9160761805258062e-8通过原1e-7。2原包256000bytes完整GET SHA256零失败，回执SHAb6293ab6fe6b551575f0fb2e7f1b5640f62dfc77632e838e1cf6a7a210091075。dispatch附恢复runtime91/input127/queue_gate6及00:50:50退出0记录；未附31载荷恢复原包/GPU_driver/source_acceptance等，149项远端源码及硬件验收仍区分父报告，不宣称未记录历史等同。接收证据及待父确认请求见sub-7-seed-20261012；活动账本仍6，未写父确认/accepted第7/第8释放，无重训或Pod操作，原失败与未提交CSP保留。用户明确论文2绝对优先，论文1仅不影响论文2时并行；dot唯一Pod执行者。
+
+
+2026-10-15 01:14:06 UTC dot父侧实际从固定5e6149ffba88063598529d4a7c1d91e089d4139f读取第7报告/独立审计/完整R2回执并计算UTF-8 SHAb6293ab6fe6b551575f0fb2e7f1b5640f62dfc77632e838e1cf6a7a210091075，确认2对象256000bytes零失败及14+18载荷/原包身份、CE/query0。已追加真实parent_acknowledged和连续账本第7项，原6项与旧证据不改。纯门控唯一下一项sub-7/20261013，剩余11fit名单见sub-7-seed-20261012/batch_release_baseline.json。用户授权准备一次启动有界顺序队列并明确要求批次GPU独占锁/批次总超时、离机小批次保护；实现与流程修订待固定交付后dot独立审核，本轮没有调用旧入口启动fit8或操作Pod。
