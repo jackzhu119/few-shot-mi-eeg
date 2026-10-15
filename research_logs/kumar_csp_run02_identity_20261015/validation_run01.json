@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "observed_at_utc": "2026-10-15T06:21:21.525319+00:00",
+  "status": "run02_metadata_prepared_not_launched",
+  "container_identity": {
+    "hostname": "94346a2083c4",
+    "boot_id": "02e1dd56-6faf-45ed-b710-a28705535fb6",
+    "pid1_start_ticks": "54"
+  },
+  "original_host_matches": true,
+  "runtime": {
+    "python": "3.11.16",
+    "scipy": "1.15.3",
+    "numpy": "2.2.6",
+    "scikit-learn": "1.7.2",
+    "mne": "1.10.2"
+  },
+  "inputs": {
+    "status": "metadata_verified_execution_closed",
+    "binding_sha256": "e1a103e3b3b8bcba24f15593561bcd3f7d816ff7fa0b178cf4d55915b13c0a7a",
+    "artifact_count": 42,
+    "prepared_artifacts": 18,
+    "existing_SOURCE40_artifacts": 24,
+    "scientific_dependency_bindings": 12,
+    "source_train_rows": 240,
+    "target_support_rows": 596,
+    "source_EDF_metadata_identities": 42,
+    "participants": [
+      {
+        "subject": "sub-1",
+        "role_counts": {
+          "source_train": 40,
+          "target_support": 99
+        },
+        "trial_count": 139,
+        "source_file_count": 7
+      },
+      {
+        "subject": "sub-4",
+        "role_counts": {
+          "source_train": 40,
+          "target_support": 99
+        },
+        "trial_count": 139,
+        "source_file_count": 7
+      },
+      {
+        "subject": "sub-7",
+        "role_counts": {
+          "source_train": 40,
+          "target_support": 100
+        },
+        "trial_count": 140,
+        "source_file_count": 7
+      },
+      {
+        "subject": "sub-10",
+        "role_counts": {
+          "source_train": 40,
+          "target_support": 99
+        },
+        "trial_count": 139,
+        "source_file_count": 7
+      },
+      {
+        "subject": "sub-13",
+        "role_counts": {
+          "source_train": 40,
+          "target_support": 100
+        },
+        "trial_count": 140,
+        "source_file_count": 7
+      },
+      {
+        "subject": "sub-16",
+        "role_counts": {
+          "source_train": 40,
+          "target_support": 99
+        },
+        "trial_count": 139,
+        "source_file_count": 7
+      }
+    ],
+    "numerical_arrays_deserialized": false,
+    "new_fits": 0,
+    "query_rows_loaded": 0,
+    "execution_authorized": false,
+    "proof_scope": "byte hashes and metadata, not independent numerical replay or scientific completion"
+  },
+  "resources": {
+    "memory": {
+      "host_available_bytes": 9685245952,
+      "cgroups": [
+        {
+          "path": "/sys/fs/cgroup",
+          "limit_bytes": 8589934592,
+          "current_bytes": 989241344,
+          "headroom_bytes": 7600693248
+        }
+      ],
+      "effective_available_bytes": 7600693248
+    },
+    "output_filesystem_path": "/workspace/few-shot-mi-eeg/results",
+    "free_output_disk_bytes": 5482606592
+  },
+  "run02_output_exists": false,
+  "run02_state_exists": false,
+  "run02_authorization_created": false,
+  "run02_started": false,
+  "preserved_file_count": 62,
+  "preserved_files": {
+    "/workspace/private_model_receipts/csp-cpu-operation-run01-20261015/actual_dispatch.json": "eb5723ccc84c5d4efc756f9ce8ae951ed952c4e32a81e8a33dfc0b92b6da1c22",
+    "/workspace/private_model_receipts/csp-cpu-operation-run01-20261015/actual_existing_cpu_cost_scope_receipt.json": "2de9f7270667c5d5b059c0c57182a4a516da88bfa0acc42a6dc9b48dcae0075f",
+    "/workspace/private_model_receipts/csp-cpu-operation-run01-20261015/actual_external_authorization.json": "6a06d5dd23bce06167c7f86a80f55473b8fe281b36d54e749a52f782f9f84154",
+    "/workspace/private_model_receipts/csp-cpu-operation-run01-20261015/actual_launcher_exit.json": "40b21374e4caf1cea90fde2432070d83f01b44aadb7e782dd0cfb98c48973101",
+    "/workspace/private_model_receipts/csp-cpu-operation-run01-20261015/default_preflight_stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/workspace/private_model_receipts/csp-cpu-operation-run01-20261015/default_preflight_stdout.json": "660cb600374571081f648a2173d7331e6e4b816f40d4e85a44a65866c1de5b96",
+    "/workspace/private_model_receipts/csp-cpu-operation-run01-20261015/duplicate_process_preflight.json": "d77310dcb8f0418d40b70a06c9c5ef4edf482a4e9203877967d0d2419f42afc7",
+    "/workspace/private_model_receipts/csp-cpu-operation-run01-20261015/guarded_launcher_stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/workspace/private_model_receipts/csp-cpu-operation-run01-20261015/guarded_launcher_stdout.log": "476a565cf0fd9886c93016f7d916a4af1466cb338f3d66b1ece92b00a241a9f3",
+    "/workspace/private_model_receipts/csp-cpu-operation-run01-20261015/observed_host_preflight.json": "b58f4ec03d1d57ff581ae6a9f52aff2017b010d384fce20f30c3e4ec639e3a05",
+    "/workspace/private_model_receipts/csp-cpu-operation-run01-20261015/post_failure_process_interface_observation.json": "efc061dc1921219e240ea9b13f54a2049369a473e18be3f0096307ea4258b349",
+    "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/preparation_receipt.json": "f4b3a3bda5533d64c16c9d55e0c15bd934ade5d86c07cf444f340ab7a75e7964",
+    "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-1/included_trial_metadata.json": "c2bc368da49884c224716a775021f273f7b1b2ab61e1f0a9b0a5176399a86abb",
+    "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-1/subject_receipt.json": "bb0f8f8b789254d2d15601bebd2f09b1a522b5e0a17db09ff4f06e36a680a93e",
+    "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-10/included_trial_metadata.json": "1c334153d703a1c263df479eaae980702d3105a29f29c48aac197ea3352df203",
+    "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-10/subject_receipt.json": "1bc481618d8b9dde09ad409a2317911afcf9a0a3ec84fa1e6a9ecfdb58366c74",
+    "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-13/included_trial_metadata.json": "015a93fa89242ffd302a2b1cfb2f28bbc7cd344052f95473359f3a284a511d96",
+    "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-13/subject_receipt.json": "94572b900c51dfe58606a00cb07d58779889cec6a4018341b617d9196bc56ea7",
+    "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-16/included_trial_metadata.json": "0db92a718f649a9ed1f5a5dc521f4ac7abe21be0079f47d5f5ee9e87f263bb91",
+    "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-16/subject_receipt.json": "55b78a2b2152049cf5356e82376532f30561766555789425aed2ad9d322efcfb",
+    "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-4/included_trial_metadata.json": "56bb545778f46af83834a98e939072412746722a646cd2f9852551b047c96da0",
+    "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-4/subject_receipt.json": "f3eedc2a005e5728d3ef1bcef75027363544766035d8af9caf7c5be215abf3c7",
+    "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-7/included_trial_metadata.json": "d3d97e52208333034bac9bc34fe3ab4c6c9af15f24e9b1cad71a9ca663143515",
+    "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014/sub-7/subject_receipt.json": "dbf3b6c006e8d5fcf5c843d3917c13359245759cba109a20d873f97e987f9c18",
+    "research_logs/kumar_cross_session_20261012/csp_implementation_review_run01_20261014/preparation_static_review_receipt.json": "f8ca93c82713d1ab9c6e174f3a00438f2b3b4dfcb556e78215317b989fb9ead5",
+    "research_logs/kumar_csp_signed_score_execution_20261015/run01/R2_closing_validation.json": "13da1bcca53a97e45054464d8eaca4b7a2c2393d979322e528919aa4f49345d6",
+    "research_logs/kumar_csp_signed_score_execution_20261015/run01/R2_full_get_receipt.json": "b5524eeb9aa945535766dcfdba9dab224cb79b6910182694241adbe2d1f48a29",
+    "research_logs/kumar_csp_signed_score_execution_20261015/run01/REPORT.md": "a4ce81ed73a723eaf72a7990d69a9f994c00910b5300ae80e58479d45bfc73f1",
+    "research_logs/kumar_csp_signed_score_execution_20261015/run01/external_original_byte_references.json": "97d03dc695f774f240e8ac18759743a476953bae858d218562662e79b595b8db",
+    "research_logs/kumar_csp_signed_score_execution_20261015/run01/independent_failure_review_run01.json": "f1ca9e02d199c8ae44a507ea0b984b4fa8131300d51ad2ee2ff97d4a5f4e5648",
+    "research_logs/kumar_csp_signed_score_execution_20261015/run01/original_evidence_payload_manifest.json": "d95e4387b886597668699b4269179d046390e47919090a6d9853bd1510170b4e",
+    "research_logs/kumar_csp_signed_score_execution_20261015/run01/post_failure_process_interface_observation.json": "efc061dc1921219e240ea9b13f54a2049369a473e18be3f0096307ea4258b349",
+    "research_logs/kumar_development_queue_20261014/accepted_jobs.json": "1ee1868b97e6ff7ea2e42327fe64337cafbb0f8ee6aff19cc24fba5265f9aaa9",
+    "research_logs/kumar_next_source_operations_20261015/csp_signed_score_operation_run01/claim.json": "79798defb5e32d1f960a35cc5204bc7d0beeb90efe35ab7b78a89c7bf7c0b7ae",
+    "research_logs/kumar_next_source_operations_20261015/csp_signed_score_operation_run01/consumer.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research_logs/kumar_next_source_operations_20261015/csp_signed_score_operation_run01/consumer_start.json": "21a873f764df1f305aba2e65651088a88932a8783f858fee12b7ee7e7d0f506a",
+    "research_logs/kumar_next_source_operations_20261015/csp_signed_score_operation_run01/launcher_receipt.json": "476a565cf0fd9886c93016f7d916a4af1466cb338f3d66b1ece92b00a241a9f3",
+    "research_logs/kumar_procfs_compatibility_20261015/run01/R2_closing_validation.json": "2c16ae5b3375d52742d3022a51ff78650a1e2d40a704791da4d5389aa3750793",
+    "research_logs/kumar_procfs_compatibility_20261015/run01/R2_full_get_receipt.json": "dc24965a25e50473949c25aaaea7d5176e6416ad0561b796c9007270896ed41b",
+    "research_logs/kumar_procfs_compatibility_20261015/run01/REPORT.md": "b0b21d64af5e3fe2570b94bcfd25e67135332deabbcbbd9f98a6d39a2875e4f8",
+    "research_logs/kumar_procfs_compatibility_20261015/run01/delivery_payload_manifest.json": "9c8792dcd3d19eeb11569acbf58a0d60e918e2c8be482f2fb9b120ed1ff94b4d",
+    "research_logs/kumar_procfs_compatibility_20261015/run01/diff_check_run01.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research_logs/kumar_procfs_compatibility_20261015/run01/host_probe/actual_host_process_tree_proof.json": "e3681382f89a802ff7cfec4049b676d8318dcb4ebe85c7b305903d0aa5a12331",
+    "research_logs/kumar_procfs_compatibility_20261015/run01/host_probe/grandchild-independent-session.json": "5a5bb4d63c38cdb9d703eec880398f467482a2896bcfb04dc40db3509c233199",
+    "research_logs/kumar_procfs_compatibility_20261015/run01/host_probe/host_probe_driver.py": "ac060df4937030924f9986d99fe33a7174fa64daf21256ad0217acf9793bd754",
+    "research_logs/kumar_procfs_compatibility_20261015/run01/host_probe/inert_fixture_stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research_logs/kumar_procfs_compatibility_20261015/run01/host_probe/inert_fixture_stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research_logs/kumar_procfs_compatibility_20261015/run01/host_probe/inert_three_generation_fixture.py": "e098c73fb5eb06840d98d12e2cb5c2d11b45303620415e2e6079c960438de757",
+    "research_logs/kumar_procfs_compatibility_20261015/run01/host_probe/node-0-ready.json": "3fc02f0b90e3df0d094b19a75a95e9cb27c9e38aa82ceb66ab77a00bf025d268",
+    "research_logs/kumar_procfs_compatibility_20261015/run01/host_probe/node-1-ready.json": "8bfd75417f48aeda18502c322886959a7dc0024eedafb8219a116e607cf58b09",
+    "research_logs/kumar_procfs_compatibility_20261015/run01/host_probe/node-2-ready.json": "96ade4aef4ee09020276387775154361556160e206ade426c3edb1772c89606b",
+    "research_logs/kumar_procfs_compatibility_20261015/run01/host_probe/pidfd_self_probe.json": "10a9451bf159b1ad69343902695e2e00af2898219497b51ccd775e02d4b6b5e5",
+    "research_logs/kumar_procfs_compatibility_20261015/run01/independent_review_run01.json": "db316cae289622085af1b8ef7a3fcec4c701148e21c5860cdc4362ce52a97db2",
+    "research_logs/kumar_procfs_compatibility_20261015/run01/post_repair_readonly_gate.json": "2fb4b0d67cc59101acc251a5792709710728041bc8ce1500a677ffee6d21c6b1",
+    "research_logs/kumar_procfs_compatibility_20261015/run01/preservation_check_run01.json": "4abed99b89d7eccdb9fb1d67ed3b7caf2d18978137b6ed3da5320a47c21eab0c",
+    "research_logs/kumar_procfs_compatibility_20261015/run01/pytest_operation_run01.log": "4bd454eb7e7e7e7512434c1920e681743c21ef8b876a0232a291ac6ccd5c88ca",
+    "research_logs/kumar_procfs_compatibility_20261015/run01/ruff_run01.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "research_logs/kumar_procfs_compatibility_20261015/run01/user_operational_scope_update.json": "8ea3d141ba100da4ba503877a367d40e84706e27f49db4c16636b6d2b466ca9d",
+    "research_logs/kumar_procfs_compatibility_20261015/run01/validation_run01.json": "cc59c3a9f7c2183d5a73015527d7595cc18ef521e0720e391ad87b6d2bfaf67a",
+    "scripts/analyze_kumar_csp_reliability.py": "f2a0eb4831d78c4cbef54656c56c5ee7c085c697eff287c64dd535a5bdb7a5ad",
+    "scripts/analyze_kumar_csp_signed_score_v1.py": "ebc866734add9769c7b881332cb9362badaa0f6bf401bc2c6dfa717b645960f3",
+    "tests/test_kumar_csp_reliability.py": "d7f794e95b715f5c6e431ed0556339b56cb103a39374e46550bc9f4b64eae404"
+  },
+  "launcher_sha256": "215ec7ec6cb199f2d70c485969583f9b09cfc8346ed7f316448bc92bfdadbf56",
+  "contract_sha256": "0ec85048e51e1f9d3e7cc0e553544db975ab4b792b3e534a3924c6faaef65157",
+  "consumer_sha256": "ebc866734add9769c7b881332cb9362badaa0f6bf401bc2c6dfa717b645960f3",
+  "absolute_window_utc": [
+    "2026-10-15T05:27:00Z",
+    "2026-10-15T07:27:00Z"
+  ],
+  "automatic_retries": 0,
+  "query_access": false,
+  "new_scientific_attempts": 0,
+  "remaining36_released": false,
+  "tests": {
+    "command": "/workspace/.venvs/few-shot-mi-eeg/bin/python -B -m pytest -q tests/test_kumar_csp_run02_identity.py tests/test_kumar_csp_signed_score_operation.py",
+    "passed": 97,
+    "failed": 0,
+    "duration_seconds": 0.71,
+    "scope": "CPU software tests, no scientific consumer invoked"
+  },
+  "ruff": "passed_scoped_three_files",
+  "git_diff_check": "passed"
+}

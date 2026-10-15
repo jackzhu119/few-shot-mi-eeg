@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "diagnostic_id": "kumar-csp-signed-score-development-run01-20261015",
+  "diagnostic_id": "kumar-csp-signed-score-development-run02-20261015",
   "status": "proposal_only_unapproved",
   "execution_enabled": false,
   "cost_authorization": null,
@@ -25,8 +25,8 @@
   "consumer_timeout_seconds": 7200,
   "term_grace_seconds": 30,
   "automatic_retries": 0,
-  "output": "results/kumar_csp_signed_score_20261015/run01",
-  "state_directory": "research_logs/kumar_next_source_operations_20261015/csp_signed_score_operation_run01",
+  "output": "results/kumar_csp_signed_score_20261015/run02",
+  "state_directory": "research_logs/kumar_next_source_operations_20261015/csp_signed_score_operation_run02",
   "command": [
     "/workspace/.venvs/few-shot-mi-eeg/bin/python",
     "-B",
@@ -40,14 +40,14 @@
     "--config",
     "configs/kumar_csp_reliability_20261014.json",
     "--output",
-    "results/kumar_csp_signed_score_20261015/run01"
+    "results/kumar_csp_signed_score_20261015/run02"
   ],
   "frozen_files": {
     "scripts/analyze_kumar_csp_signed_score_v1.py": "ebc866734add9769c7b881332cb9362badaa0f6bf401bc2c6dfa717b645960f3",
     "scripts/check_kumar_csp_signed_score_inputs.py": "5c05a319dec16950d86885962401d5f28d2d30a07c5287d769aeb03339a94264",
     "configs/kumar_csp_signed_score_input_binding_20261015.json": "e1a103e3b3b8bcba24f15593561bcd3f7d816ff7fa0b178cf4d55915b13c0a7a",
     "docs/kumar_csp_signed_score_memory_budget_20261015.md": "c49dbcd41552e5c5199eb1c601f21eda23ab40766df3638df4101a583a0fc367",
-    "scripts/run_kumar_csp_signed_score_operation.py": "12337f162d0f27696e512f1b0e7ff099307520e859628da32c05e92ed781d185"
+    "scripts/run_kumar_csp_signed_score_operation.py": "215ec7ec6cb199f2d70c485969583f9b09cfc8346ed7f316448bc92bfdadbf56"
   },
   "maximum_sampled_consumer_rss_bytes": 2147483648,
   "minimum_running_cgroup_headroom_bytes": 1073741824,

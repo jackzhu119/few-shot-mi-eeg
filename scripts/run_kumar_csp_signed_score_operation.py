@@ -27,10 +27,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTRACT = ROOT / "configs/kumar_csp_signed_score_operation_20261015.json"
-DIAGNOSTIC = "kumar-csp-signed-score-development-run01-20261015"
+DIAGNOSTIC = "kumar-csp-signed-score-development-run02-20261015"
 PYTHON = "/workspace/.venvs/few-shot-mi-eeg/bin/python"
-OUTPUT = "results/kumar_csp_signed_score_20261015/run01"
-STATE = "research_logs/kumar_next_source_operations_20261015/csp_signed_score_operation_run01"
+OUTPUT = "results/kumar_csp_signed_score_20261015/run02"
+STATE = "research_logs/kumar_next_source_operations_20261015/csp_signed_score_operation_run02"
 RUNTIME = {"python": "3.11.16", "numpy": "2.2.6", "scipy": "1.15.3",
            "scikit-learn": "1.7.2", "mne": "1.10.2"}
 MIN_AVAILABLE_MEMORY = 3 * 1024**3

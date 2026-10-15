@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "status": "TEMPLATE_ONLY_NOT_AN_EXECUTION_AUTHORIZATION",
+  "diagnostic_id": "kumar-csp-signed-score-development-run02-20261015",
+  "reviewed_commit": null,
+  "operation_contract_sha256": "0ec85048e51e1f9d3e7cc0e553544db975ab4b792b3e534a3924c6faaef65157",
+  "container_identity": {
+    "hostname": "94346a2083c4",
+    "boot_id": "02e1dd56-6faf-45ed-b710-a28705535fb6",
+    "pid1_start_ticks": "54"
+  },
+  "allocation": "existing_cpu_no_new_paid_allocation",
+  "query_access": false,
+  "gpu_fit_authorized": false,
+  "accepted18_refitting_authorized": false,
+  "paid_compute_allocation_authorized": false,
+  "cost_authorization": {
+    "applicable_to_this_cpu_operation": true,
+    "existing_authorization_receipt": "/workspace/private_model_receipts/csp-cpu-operation-run01-20261015/actual_existing_cpu_cost_scope_receipt.json",
+    "existing_authorization_receipt_sha256": "2de9f7270667c5d5b059c0c57182a4a516da88bfa0acc42a6dc9b48dcae0075f"
+  },
+  "not_before_unix": 1792042020.0,
+  "deadline_unix": 1792049220.0,
+  "approved_wall_seconds": 7200,
+  "recovery_of": {
+    "diagnostic_id": "kumar-csp-signed-score-development-run01-20261015",
+    "launcher_receipt": "research_logs/kumar_next_source_operations_20261015/csp_signed_score_operation_run01/launcher_receipt.json",
+    "launcher_receipt_sha256": "476a565cf0fd9886c93016f7d916a4af1466cb338f3d66b1ece92b00a241a9f3",
+    "claim": "research_logs/kumar_next_source_operations_20261015/csp_signed_score_operation_run01/claim.json",
+    "claim_sha256": "79798defb5e32d1f960a35cc5204bc7d0beeb90efe35ab7b78a89c7bf7c0b7ae",
+    "authorization_sha256": "6a06d5dd23bce06167c7f86a80f55473b8fe281b36d54e749a52f782f9f84154",
+    "R2_full_get_receipt": "research_logs/kumar_csp_signed_score_execution_20261015/run01/R2_full_get_receipt.json",
+    "R2_full_get_receipt_sha256": "b5524eeb9aa945535766dcfdba9dab224cb79b6910182694241adbe2d1f48a29"
+  },
+  "recovery_binding_sha256": "06ac6ea6f700b3f7e551ff1943f728166349f2a90e1aa4517094730a8d25c306",
+  "financial_blocking_requirements_status": "superseded-by-user",
+  "authorization_basis": "User relayed dot technical GO on ad5be8e and explicitly approved one corrected bounded recovery on the same existing CPU host; dispatch only after final identity patch review; original absolute window unchanged."
+}
