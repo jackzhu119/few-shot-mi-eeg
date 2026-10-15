@@ -1,0 +1,120 @@
+{
+  "diagnostic_id": "kumar-csp-signed-score-development-run02-20261015",
+  "claimed_at_utc": "2026-10-15T06:28:25.530153+00:00",
+  "reviewed_commit": "d6afce75da092df1b106182af5c9234b1392604a",
+  "operation_contract_sha256": "0ec85048e51e1f9d3e7cc0e553544db975ab4b792b3e534a3924c6faaef65157",
+  "authorization_sha256": "24ca035e5be573924c8eac874879880de3d434a7d0afc479f853943935ef8e06",
+  "container_identity": {
+    "hostname": "94346a2083c4",
+    "boot_id": "02e1dd56-6faf-45ed-b710-a28705535fb6",
+    "pid1_start_ticks": "54"
+  },
+  "absolute_deadline_unix": 1792049220.0,
+  "automatic_retries": 0,
+  "preflight": {
+    "status": "metadata_verified_execution_closed",
+    "execution_authorized": false,
+    "ready_for_separate_parent_review": true,
+    "problems": [],
+    "runtime": {
+      "python": "3.11.16",
+      "scipy": "1.15.3",
+      "scikit-learn": "1.7.2",
+      "mne": "1.10.2",
+      "numpy": "2.2.6"
+    },
+    "resources": {
+      "memory": {
+        "host_available_bytes": 9677447168,
+        "cgroups": [
+          {
+            "path": "/sys/fs/cgroup",
+            "limit_bytes": 8589934592,
+            "current_bytes": 996159488,
+            "headroom_bytes": 7593775104
+          }
+        ],
+        "effective_available_bytes": 7593775104
+      },
+      "output_filesystem_path": "/workspace/few-shot-mi-eeg/results",
+      "free_output_disk_bytes": 5482434560
+    },
+    "inputs": {
+      "status": "metadata_verified_execution_closed",
+      "binding_sha256": "e1a103e3b3b8bcba24f15593561bcd3f7d816ff7fa0b178cf4d55915b13c0a7a",
+      "artifact_count": 42,
+      "prepared_artifacts": 18,
+      "existing_SOURCE40_artifacts": 24,
+      "scientific_dependency_bindings": 12,
+      "source_train_rows": 240,
+      "target_support_rows": 596,
+      "source_EDF_metadata_identities": 42,
+      "participants": [
+        {
+          "subject": "sub-1",
+          "role_counts": {
+            "source_train": 40,
+            "target_support": 99
+          },
+          "trial_count": 139,
+          "source_file_count": 7
+        },
+        {
+          "subject": "sub-4",
+          "role_counts": {
+            "source_train": 40,
+            "target_support": 99
+          },
+          "trial_count": 139,
+          "source_file_count": 7
+        },
+        {
+          "subject": "sub-7",
+          "role_counts": {
+            "source_train": 40,
+            "target_support": 100
+          },
+          "trial_count": 140,
+          "source_file_count": 7
+        },
+        {
+          "subject": "sub-10",
+          "role_counts": {
+            "source_train": 40,
+            "target_support": 99
+          },
+          "trial_count": 139,
+          "source_file_count": 7
+        },
+        {
+          "subject": "sub-13",
+          "role_counts": {
+            "source_train": 40,
+            "target_support": 100
+          },
+          "trial_count": 140,
+          "source_file_count": 7
+        },
+        {
+          "subject": "sub-16",
+          "role_counts": {
+            "source_train": 40,
+            "target_support": 99
+          },
+          "trial_count": 139,
+          "source_file_count": 7
+        }
+      ],
+      "numerical_arrays_deserialized": false,
+      "new_fits": 0,
+      "query_rows_loaded": 0,
+      "execution_authorized": false,
+      "proof_scope": "byte hashes and metadata, not independent numerical replay or scientific completion"
+    },
+    "preflight_started_at_utc": "2026-10-15T06:28:25.437051+00:00",
+    "preflight_finished_at_utc": "2026-10-15T06:28:25.529982+00:00",
+    "preflight_seconds": 0.09296112200172502,
+    "scientific_consumer_executed": false,
+    "query_access": false
+  }
+}

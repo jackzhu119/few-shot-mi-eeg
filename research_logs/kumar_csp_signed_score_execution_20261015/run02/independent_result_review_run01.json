@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "auditor": "independent subagent /root/run02_result_review",
+  "audited_at_utc": "2026-10-15T06:32:51.996591+00:00",
+  "status": "passed_focused_saved_result_and_execution_audit",
+  "source_commit": "d6afce75da092df1b106182af5c9234b1392604a",
+  "scientific_consumer_sha256": "ebc866734add9769c7b881332cb9362badaa0f6bf401bc2c6dfa717b645960f3",
+  "operation_contract_sha256": "0ec85048e51e1f9d3e7cc0e553544db975ab4b792b3e534a3924c6faaef65157",
+  "authorization_sha256": "24ca035e5be573924c8eac874879880de3d434a7d0afc479f853943935ef8e06",
+  "measurement_receipt_sha256": "1ab524806c865e04b9cef00117448ab0cb20182cb0c421521043f6cf67730aa8",
+  "launcher_receipt_sha256": "16db91fc435c5834e3c2ae1b4b1f3ff23a58d2bf08823452cbe8e863f22ff392",
+  "run01_original_receipt_claim_R2_binding_verified": true,
+  "accepted18_ledger_unchanged": true,
+  "input_verification": {
+    "frozen_input_artifacts": 42,
+    "dependency_bindings": 12,
+    "receipt_input_bindings": 45,
+    "source_train_windows": 240,
+    "authorized_target_support_windows": 596,
+    "query_or_final_cohort_access_in_audit": false,
+    "input_epoch_arrays_deserialized_in_audit": false
+  },
+  "output_integrity": {
+    "members": 253,
+    "bytes": 26108327,
+    "hash_or_length_failures": 0,
+    "serialized_models": 240,
+    "selected_feature_bundles": 6,
+    "subject_json": 6,
+    "main_receipt": 1
+  },
+  "scientific_counts": {
+    "whole_pipeline_fit_attempts": 240,
+    "successes": 240,
+    "failures": 0,
+    "nominal_CSP_and_LDA_estimator_fits": 480,
+    "source_rotation_pairs": 2400,
+    "fold_control_rows_checked": 4800,
+    "cached_heldout_predictions": 4800,
+    "support_sessions": 30,
+    "support_control_shifts": 596,
+    "support_control_modes": 2,
+    "SOURCE40_refits": 0,
+    "EEGNet_fits": 0,
+    "query_rows": 0
+  },
+  "independent_numeric_checks": {
+    "all_240_model_parameter_hashes": true,
+    "saved_heldout_features_to_score_and_class_replay": true,
+    "all_2400_twofold_control_BA_recomputed": true,
+    "label_rotations_and_SOURCE20_trial_id_isolation": true,
+    "all_six_SOURCE40_parameter_states_unchanged": true,
+    "saved_CSP4_features_to_SOURCE40_signed_scores": true,
+    "source_only_scaler_statistics_recomputed": true,
+    "all_support_shift_half_signed_margins_and_BA_checked": true,
+    "participant_bootstrap_10000_draws_recomputed_from_saved_six_participant_values": true,
+    "maximum_saved_score_absolute_replay_difference": 0.0,
+    "diagnostic_recomputation_tolerance": {
+      "rtol": 1e-12,
+      "atol": 1e-12,
+      "scope": "audit of saved double values; scientific protocol tolerance unchanged"
+    }
+  },
+  "participant_results": [
+    {
+      "subject": "sub-1",
+      "source_twofold_balanced_accuracy": 0.7,
+      "source_cyclic_upper_tail_fraction_descriptive": 0.015,
+      "source_fit_attempts": 40,
+      "support_windows": 99,
+      "support_mean_split_half_vector_cosine": -0.12966713659434673
+    },
+    {
+      "subject": "sub-4",
+      "source_twofold_balanced_accuracy": 0.5,
+      "source_cyclic_upper_tail_fraction_descriptive": 0.5275,
+      "source_fit_attempts": 40,
+      "support_windows": 99,
+      "support_mean_split_half_vector_cosine": 0.058796541181125275
+    },
+    {
+      "subject": "sub-7",
+      "source_twofold_balanced_accuracy": 0.725,
+      "source_cyclic_upper_tail_fraction_descriptive": 0.025,
+      "source_fit_attempts": 40,
+      "support_windows": 100,
+      "support_mean_split_half_vector_cosine": 0.6882899466937037
+    },
+    {
+      "subject": "sub-10",
+      "source_twofold_balanced_accuracy": 0.425,
+      "source_cyclic_upper_tail_fraction_descriptive": 0.84,
+      "source_fit_attempts": 40,
+      "support_windows": 99,
+      "support_mean_split_half_vector_cosine": 0.012899406476982355
+    },
+    {
+      "subject": "sub-13",
+      "source_twofold_balanced_accuracy": 0.6749999999999999,
+      "source_cyclic_upper_tail_fraction_descriptive": 0.04,
+      "source_fit_attempts": 40,
+      "support_windows": 100,
+      "support_mean_split_half_vector_cosine": 0.7746487321118309
+    },
+    {
+      "subject": "sub-16",
+      "source_twofold_balanced_accuracy": 0.75,
+      "source_cyclic_upper_tail_fraction_descriptive": 0.005,
+      "source_fit_attempts": 40,
+      "support_windows": 99,
+      "support_mean_split_half_vector_cosine": 0.36698402922314816
+    }
+  ],
+  "participant_summaries": {
+    "source_twofold_balanced_accuracy": {
+      "mean": 0.6291666666666665,
+      "interval95": [
+        0.525,
+        0.7166666666666668
+      ],
+      "independent_unit": "participant",
+      "replicates": 10000,
+      "seed": 42
+    },
+    "mean_five_support_split_half_vector_cosine": {
+      "mean": 0.2953252531820739,
+      "interval95": [
+        0.03204085169492412,
+        0.5730027855722449
+      ],
+      "independent_unit": "participant",
+      "replicates": 10000,
+      "seed": 42
+    }
+  },
+  "support_signed_product_signs_descriptive_session_count": {
+    "positive": 21,
+    "negative": 9,
+    "total": 30,
+    "not_independent_statistical_units": true
+  },
+  "execution": {
+    "consumer_pid": 17755,
+    "launcher_pid": 17730,
+    "consumer_started_at_utc": "2026-10-15T06:28:25.533301+00:00",
+    "consumer_finished_at_utc": "2026-10-15T06:28:43.786427+00:00",
+    "launcher_finished_at_utc": "2026-10-15T06:28:44.056017+00:00",
+    "scientific_wall_seconds": 14.886525243000506,
+    "returncode": 0,
+    "resource_samples": 72,
+    "maximum_observed_consumer_rss_bytes": 217903104,
+    "minimum_cgroup_headroom_bytes": 7383158784,
+    "minimum_host_available_bytes": 9455140864,
+    "sample_interval_seconds_min": 0.25325703620910645,
+    "sample_interval_seconds_max": 0.2630300521850586,
+    "post_exit_processes_absent": true,
+    "absolute_deadline_preserved": true,
+    "automatic_retries": 0,
+    "resource_stop": false,
+    "cleanup_signals": []
+  },
+  "interpretation": "Completed development-only signed-score and cyclic phase-control measurement. Subject heterogeneity and mixed signed support consistency do not establish an adaptive gate; cyclic tail fractions are descriptive, not formal permutation p-values. No clinical or skill-retention conclusion.",
+  "limitations": [
+    "Saved features and score/model outputs replayed; original EEG-to-CSP feature projection was not independently recomputed in this focused audit. Frozen restricted input bytes and identities were independently verified.",
+    "Procfs samples certify the recorded stable visible snapshots and identity-bound cleanup; they are not continuous observation or proof of every sub-sampling transient process.",
+    "No independent fit reconstruction, model selection, query evaluation, scientific strategy search, acceptance-ledger mutation or new authorization performed.",
+    "R2 upload/full-GET not part of this subagent review; parent must record separate actual backup proof."
+  ],
+  "R2_full_GET_verified_by_this_review": false,
+  "parent_confirmation_written": false,
+  "accepted": false
+}
