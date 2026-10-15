@@ -91,3 +91,6 @@ HTTPS/私人备份操作修订：固定首fit官方同版本同字节25文件/16
 
 
 2026-10-14容器重建恢复准备：用户转述同Pod52ivinpjwv947i于14:59:11 UTC容器b5646c12356b变a7d3f0e408a4，15:01:58 UTC/workspace仅.cache、overlay30→50GiB；原因未核实、dot报告未Stop/Restart，第7fit从未执行/预约。本任务仅交付docs/kumar_pod_rebuild_recovery_20261014.md及research_logs/kumar_pod_rebuild_recovery_20261014版本化清单。科学源码/6项账本固定b2e3f2b6378faacd7296c9e769f9f91a4d276d4c；149项源码/验收依赖、22项adapter元数据、127输入98,743,492bytes与原锁/全部hash保留，唯一下一项仍sub-7/20261012。旧运行时与目标锁定依赖分开，旧Poduv/image/Pythonbuildhash未记录，新容器环境待dot实测；不改旧config的30GiB历史观察。没有安装/恢复Pod、训练、释放fit或复制凭据；不重装SSH/加密钥/延长2026-10-16 09:54 UTC授权。dot经既有HTTPS/browser审核固定方案后单独恢复并返回新验收回执，之后再单独调度。
+
+
+2026-10-15 UTC第7fit sub-7/20261012已独立审计与R2备份：科学执行仍b2e3f2b，14+18载荷另加manifest按实际布局核验，25epochs75steps选10，40 TRAIN/20源validation/query0；Torch原重放差0，保存logits独立CE0.6941331439755201与原0.6941331148147583差2.9160761805258062e-8通过原1e-7。2原包256000bytes完整GET SHA256零失败，回执SHAb6293ab6fe6b551575f0fb2e7f1b5640f62dfc77632e838e1cf6a7a210091075。dispatch附恢复runtime91/input127/queue_gate6及00:50:50退出0记录；未附31载荷恢复原包/GPU_driver/source_acceptance等，149项远端源码及硬件验收仍区分父报告，不宣称未记录历史等同。接收证据及待父确认请求见sub-7-seed-20261012；活动账本仍6，未写父确认/accepted第7/第8释放，无重训或Pod操作，原失败与未提交CSP保留。用户明确论文2绝对优先，论文1仅不影响论文2时并行；dot唯一Pod执行者。
