@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "command": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 PYTHONPATH=src:scripts /workspace/.venvs/few-shot-mi-eeg/bin/python -B -m pytest -q tests/test_kumar_all54_acceptance_metadata.py tests/test_kumar_saved_result_aggregation.py tests/test_kumar_development_queue.py -k 'all54 or new_acceptance or frozen_identity or balanced_accuracy or participant_aggregation or nonfinite_or_one_class or archive_hash or accepted_eighteen or backup_gate'",
+  "exact_k_expression": "all54 or new_acceptance or frozen_identity or balanced_accuracy or participant_aggregation or nonfinite_or_one_class or archive_hash or accepted_eighteen or backup_gate",
+  "passed": 19,
+  "deselected": 10,
+  "seconds": 3.51,
+  "exit_code": 0,
+  "scope": "Only acceptance metadata, immutable identity/ACK/R2 gates and saved-result metric tests; no real fitting or query.",
+  "full_unrelated_suite_rerun": false,
+  "test_files": {
+    "tests/test_kumar_all54_acceptance_metadata.py": "5acbba668df14587423c19fb8832bc69685048228709bfdf89ce593c180db575",
+    "tests/test_kumar_saved_result_aggregation.py": "bd0d1930f76b2983441f86552d8ec6d51b3b31665b52d3bf74008f620583a401",
+    "tests/test_kumar_development_queue.py": "7717cf62441274a8ffe77cbe93a6472cdfd46a16d155c872087b565918d2f1f9"
+  }
+}

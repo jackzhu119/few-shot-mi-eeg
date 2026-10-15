@@ -1,0 +1,654 @@
+{
+  "schema_version": 1,
+  "status": "passed_independent_actual_parent_acceptance_and_all54_metadata_gate_audit",
+  "reviewer": "independent subagent /root/run02_result_review",
+  "reviewed_at_utc": "2026-10-15T08:33:39.435036+00:00",
+  "actual_parent_decision_provenance": "User-relayed actual dot parent decision; this audit verifies its exact recorded scope and evidence bindings, does not manufacture a separate parent decision.",
+  "parent_verified_at_utc": "2026-10-15T08:27:35Z",
+  "acknowledged_commit": "f1d4bf4240747b152e9dcd969ff368eb1ab48b59",
+  "parent_confirmation_sha256": "05173b4ab8cdb96be2d6869cc7736b2ea5f475e326322be34694aa9d20ccdf29",
+  "receipt_UTF8_bytes": 113810,
+  "receipt_sha256": "bd52fb3f691d9309ce1cd30a1fa4e92921282399e014a1119b06f06041bdcb1c",
+  "verified_objects": 113,
+  "verified_bytes": 33666029,
+  "failed_objects": 0,
+  "acceptance": {
+    "old18_preserved_as_exact_entry_prefix": true,
+    "old18_original_file_sha256": "1ee1868b97e6ff7ea2e42327fe64337cafbb0f8ee6aff19cc24fba5265f9aaa9",
+    "new36_count": 36,
+    "all54_unique_count": 54,
+    "order": "unchanged old18 prefix plus frozen remaining36 contract order",
+    "all54_ledger_sha256": "013668c8d1b1c5d6061f3701d495cf7770743a1c6fda8678f5db7ffd50992670",
+    "remaining36_ledger_sha256": "6de4f15031109629b6d70823e7d8cd3b3feee335adfd7e01d791031a284a8f8d",
+    "source_model_plan_all54_sha256": "28232bfa53515ae3e66acadefa39ee025320cfda0196a5d785631bf4d8f8abcd",
+    "old18_plan_jobs_and_new36_contract_jobs_preserved_verbatim": true,
+    "exact_request_and_receipt_archive_checkpoint_identities_match": true,
+    "positions": [
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54
+    ]
+  },
+  "per_job_acknowledgements": [
+    {
+      "position": 19,
+      "job_id": "df3d71e4bed6d37058026cbce4f60e34783fb11c87d8b0f5efe6f368c91ba222",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-2-seed-20261012.json",
+      "ack_sha256": "4851407011e940a4facfe3650d32b767c0b77b452d4665c30a9e607c4dee4ae6",
+      "archive_sha256": "7a970cfd963aa3440bf813e3c3dcaff6f82bb27fd768b56a53726a871709b82f",
+      "checkpoint_sha256": "dfac8b4097050fb7310ee6e070cc419d5b8770fb3ae47b8313b4e94fddc0cf82"
+    },
+    {
+      "position": 20,
+      "job_id": "e93b469def25a046cfa08d08fdba7c3dbd6b93bc2d17d360d9d44ef1782aeb07",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-2-seed-20261013.json",
+      "ack_sha256": "55cacdd5f5c8275a8c6e088f7b55dd9956346474753b5e6c8e3660bd2f94af9e",
+      "archive_sha256": "6e14ea97726090a55bf5d241f7063f4eb124c5e6b3c623df86043bd65157971b",
+      "checkpoint_sha256": "8d7e76a645c1a866d2bce689b04d70a976c91d54e325046048b6489b6801481a"
+    },
+    {
+      "position": 21,
+      "job_id": "b5eec7743c554b62a21e160d012eefa38a160a9dbc0dc8809d27ccfb85e7c1c9",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-2-seed-20261014.json",
+      "ack_sha256": "6f439279c6f1b791c53ea6bd27367c0ca1b6a8ce848e4c694670db0b42710e3d",
+      "archive_sha256": "508ebc11a679ecb2cddc32eb3df903756b02ffdd5af18dd566c05f26806e80d2",
+      "checkpoint_sha256": "d08d786b184724f2c10e009031c614dbe16ef0d31683a46b047eadc054a93d7b"
+    },
+    {
+      "position": 22,
+      "job_id": "7b6ebeaef294dff0339c43fa1c35d7f6c34f30785d3e8b2bb9a03e8b7f23b22a",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-3-seed-20261012.json",
+      "ack_sha256": "c511189bf55b15dd294caa9a9e169b9341cc7229825f5cfbc3dffd914f0a6618",
+      "archive_sha256": "1313145f9f0f093936df30098bf95726a7a6e9553d440a49c300b8decd224682",
+      "checkpoint_sha256": "e20b47d2574d73536fe0650d24c2a43794a3f857eab9afd3b8241fced0b7a68b"
+    },
+    {
+      "position": 23,
+      "job_id": "66b5c7a89b8fb4ccbca9f25dfaa588c6952f2aad3a1d7648348f8e88361c4c2f",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-3-seed-20261013.json",
+      "ack_sha256": "effff1bbc9c64a90c2b992cbfab753d23c31e123a53b25b807509bd405513ca9",
+      "archive_sha256": "9aec72b2913adf72ac1ffc44f25a3f602abd2a095712983ff90054a704a3a7de",
+      "checkpoint_sha256": "ca9ae9c1b2f15eb1baab818ed31c6a8b9d4b92a5e8b28d09d6bb22dc42c324e9"
+    },
+    {
+      "position": 24,
+      "job_id": "80bcdedfef4684c5cc9b307805bfb74e00bf0a85756059e351eb10a78a13a037",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-3-seed-20261014.json",
+      "ack_sha256": "1b02b34e9fb61d597120d445c697e48e1be89a977651d125f1e492ca3ae7710b",
+      "archive_sha256": "20e66e434aa0211fb6661a558ce186272c07dd372073adb3d9175485432f7ead",
+      "checkpoint_sha256": "4499bbdcf484b296a4e26e5b979d86c6fb67bd04e95c1c9abea9c0c4aa79495f"
+    },
+    {
+      "position": 25,
+      "job_id": "d80b3b44b6729ec7d94e42cce0668f8065c9fc15c62538b0d37b6e67eb461c7b",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-5-seed-20261012.json",
+      "ack_sha256": "f8ff6e910b97a0c04b91e63c94e96207301286713db5246ca5eb0941ca1b56ba",
+      "archive_sha256": "3a6467ea3ca1ed31a2c530db1d0f4107272f60b348396d3ca74d4c1fcfeee479",
+      "checkpoint_sha256": "933c2251fcb3096eadadbdb5856a140ed2702916e1194c622abda2f59b59361c"
+    },
+    {
+      "position": 26,
+      "job_id": "15203ad240b981b752d4af83fe24fd8aebfd92c96820c66eda7c32ca6ba0c799",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-5-seed-20261013.json",
+      "ack_sha256": "341fac1537cee6652288520a41354f933166468f65f06e45c1aebbbe65e8a028",
+      "archive_sha256": "467ab3d88d8d637f6496e7bca7c2c81f1c3215edca7385710cad96ffef06d627",
+      "checkpoint_sha256": "a54cec9387dd0cc8f5f827d3d28dc5ec707f1d7aa7e608a9c6278f0bfe73c864"
+    },
+    {
+      "position": 27,
+      "job_id": "4221970caa1ebb7becc3ba3ba108ee9ea5b2bd44d95ca8e69f3eda7a280942dd",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-5-seed-20261014.json",
+      "ack_sha256": "8cfa01b5c815410c39b2a0b8da8c97de35d6a8cf02ab70778b6ee1b0f3e08a5b",
+      "archive_sha256": "b1fe9dc37e96fba657bfccd3e6b85bcbe4e2a63b7c00965f2cc2e4ea41845e73",
+      "checkpoint_sha256": "a9b153c6e25a962fed0e8d76542e204a76ef5a0d8099f8b6c92cda3d56c88149"
+    },
+    {
+      "position": 28,
+      "job_id": "dd28327b1068bb128614eeb63d7727a8b59da65dc8e52575ef3533d7d1ade074",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-6-seed-20261012.json",
+      "ack_sha256": "7f96826142a1dfa06c2a06e9c7ecf0dd4321e5d8c59f931d2095de27178ad491",
+      "archive_sha256": "967a0467bdabeca2372d018dfe968ea9c5ef58607199fb1d4827138ca8e248b1",
+      "checkpoint_sha256": "0d2e5d3405bceb189f5c0b7dd046da24c178f951e95a5f4316f044a19d00efa4"
+    },
+    {
+      "position": 29,
+      "job_id": "ab971cc08608806ea2483fdec9c624b1e95490b6a2309a2e9122cceab9829850",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-6-seed-20261013.json",
+      "ack_sha256": "43730508cc88f5d5fa38866002bfb1224118d920b8f612a54e87dede78cbeda3",
+      "archive_sha256": "e6c8eadf1fc931cc51447010fc978bc21bc351d26bc99c5655c24a0d78603ecc",
+      "checkpoint_sha256": "83c33105c03bca916a26c32bb9706166f74fbd2eadbd0e6376e31d8f2fc336b0"
+    },
+    {
+      "position": 30,
+      "job_id": "9b75bb235cd933c268778dc802fe1d4300d6594de8fb5511522fcecf4badf35c",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-6-seed-20261014.json",
+      "ack_sha256": "fe7d5dcf8c464b3bb9793e9b4f47a02a85f18e01632b03ab01c242e07018c2a6",
+      "archive_sha256": "12b4a260be84a711233ee27ed832b26c9e64963903abfac762a20914665114d2",
+      "checkpoint_sha256": "4d48bf7567169e478c9f8f92ec43500d194c8e3effcc788ca3d9ae2166130e2c"
+    },
+    {
+      "position": 31,
+      "job_id": "d1392eb4c7b5aaaa6539285d41f45b63bf7d09258b54d41a6dfc326492d91c1c",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-8-seed-20261012.json",
+      "ack_sha256": "efee77237d7eac60346d3a018dbddf09af8feea89da89b21264e6efc4586ea92",
+      "archive_sha256": "d5eb8d6842d98118f8ce1e721afab7fcd2028ed5d1de7186ab230b40e28e14a6",
+      "checkpoint_sha256": "3f5a26184853346c58b1d750385a9065e0d5a75a5cad04b071bd8ceb56b14b1a"
+    },
+    {
+      "position": 32,
+      "job_id": "b65b18b7a4fe02dbb95b2e42110a213a7f5f76db4ff7c19473e4320938dbab58",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-8-seed-20261013.json",
+      "ack_sha256": "61e900460b5f606b309d978d9ade3e61b9e0cbf68ef0c8cfe3ab6f9b7b78250c",
+      "archive_sha256": "12da3ca34ed6ddc831a177f9ec73486e1e2ea5c79b2d0deee9d6f3b9d35c00f1",
+      "checkpoint_sha256": "342752eee976495218a450173ccbb4739d39f0056c85d08aba45d50f4e1cb4c4"
+    },
+    {
+      "position": 33,
+      "job_id": "812b29345cc8262ef329f5b09e24141c65f47f24fe8dd2c044b70f9005946d74",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-8-seed-20261014.json",
+      "ack_sha256": "343a4b19af14cccf8ae3bfd73e6254c75a16018f63e87c67a64263fda009e891",
+      "archive_sha256": "bbbad039970242163914e4cf1a51e6bc34650bd8e998e1c30cb1a7772559a1ef",
+      "checkpoint_sha256": "a58dbd5b05386dbd4f794aa988f82c8fb3445b7d27bc31dadac3831e13adfaca"
+    },
+    {
+      "position": 34,
+      "job_id": "123bdeee936900b1d3d1c23aebda48ee02d6f0c46f2de9f17d711b8ed1653629",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-9-seed-20261012.json",
+      "ack_sha256": "fd75fe5aca26aaee5ecd1cd61560cf4af0d26f0798391bf20ae2c77e1e778306",
+      "archive_sha256": "1966ab9fcd0a041c8d3d3e7edea131d41ab05ff66c45d3b0436dd039a2fecb5d",
+      "checkpoint_sha256": "3b548e8b000c69a5b1adf61576e9716c25bab22fd76a867d382f193da2770342"
+    },
+    {
+      "position": 35,
+      "job_id": "a73f6eb94abd509ca6ec91b3908275f18cfed340bff6e7f8fa64851ddf1ccc64",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-9-seed-20261013.json",
+      "ack_sha256": "2ac617795ecdbea4fdb181ca61185fb3c8ac9d1755662fef51312ae295858c29",
+      "archive_sha256": "26343dc13b669e967ba8a66ff017cde05e94607f3353bd18449ee20da8018351",
+      "checkpoint_sha256": "e3c19baffab415ff644efd95fdb20e75c9c7ac61a341c61c478a70bc5a3090eb"
+    },
+    {
+      "position": 36,
+      "job_id": "70011f5decf4795e8a16cf9658c2af1de69dd0d65ac0d515e6e33988979a61ae",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-9-seed-20261014.json",
+      "ack_sha256": "143f0e293d2181d9fc32a6ee63e9484279f9bdb7a46d0bcabbfb5719481f086c",
+      "archive_sha256": "1ac505b892ddcc906415c3ac86139dc904ac8cef1a197c9537ed4ac75566c04e",
+      "checkpoint_sha256": "b742f241be5eb0153608a44c9ab1f841c990b4cdaef9d69f1acefe8b1889b5b0"
+    },
+    {
+      "position": 37,
+      "job_id": "caae0027156bdc8ec56b7f863666bba9d8ffe083c85f735c2772f357657fb6c8",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-11-seed-20261012.json",
+      "ack_sha256": "b0e5bf5bb154c15e73082043f5a5ec16fecbdd49e1825036b907d183dcf7ea2a",
+      "archive_sha256": "ca1101b1a4eb954b89598d17ba9d461658fb95149aabbb35f19be1cde13895aa",
+      "checkpoint_sha256": "83e783d52000a4045343777877fcc4999c0c0ddf027a228dfd3fddcb75007e5a"
+    },
+    {
+      "position": 38,
+      "job_id": "1114f9f1524f681564334e943200e3c09b6efa900c0bf80b394c8992cc08e8fd",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-11-seed-20261013.json",
+      "ack_sha256": "2ce513575377b555d3788d11487c822ab1e33df9e5c768d5fe5b4bc13e607916",
+      "archive_sha256": "2c0c01780a36247ac81e8f457c04fda04c58ae76c5db95e61543a9fd291385b0",
+      "checkpoint_sha256": "fb1874b4679381cf0765e9a0fe6419de7eb5175ad689dd1d84461eafb32976b6"
+    },
+    {
+      "position": 39,
+      "job_id": "e9089a2b0c761b399c14f02a49dd09d16d3a72ab80c935bef50b61754980b880",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-11-seed-20261014.json",
+      "ack_sha256": "ecf00bc57cbf1b9e9e923f9593e946b4b273f0af6b6f759a12d42d116304908e",
+      "archive_sha256": "0807d1d11aba3fa105bb422b14d408311c6175b9c0fd92af392c6adf907b354f",
+      "checkpoint_sha256": "7fd9c7ff0f6c1dfb2eedaac2f9395682ae2768579f30556f5a85f87153e8c7bc"
+    },
+    {
+      "position": 40,
+      "job_id": "cbd82eef6ffd5c856e142ac381032e252080957d58f5803b8b7eb2fcb09f6218",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-12-seed-20261012.json",
+      "ack_sha256": "f884c128dcec9a0ceeaca5915d6cfcfd1c933fba48dad9d997e1e1bf6e1dbabd",
+      "archive_sha256": "4081e375018b55809f5a2826d7c96626a0dd87ae67554ddcd27a4b734d06d290",
+      "checkpoint_sha256": "a546a55b5b06993ddc4a0c47063ad53b964b5d9805915b28cfdd05176525f3c3"
+    },
+    {
+      "position": 41,
+      "job_id": "98e0ab893e8920a08adbb0298a9e45d5d3cb9a2d0f884110d77cb109676e0aee",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-12-seed-20261013.json",
+      "ack_sha256": "2af552a9d3a4a188063404021bd379b39f36dd8ba8c48e29f34d2582ad92192c",
+      "archive_sha256": "97a43e2098c1e2f4cbc1a6fa68f553aa47d2ab0b300258f10f325b27d52b420d",
+      "checkpoint_sha256": "c39df834fefc349baaf400dd94a8f30e2daa296215ed97be7176f36b2717cce8"
+    },
+    {
+      "position": 42,
+      "job_id": "4ce16e24f1df1c9f3ceb262166a3a9c99ebd3c32e9debdbffd51fa19a877dafe",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-12-seed-20261014.json",
+      "ack_sha256": "94508f4a4d316567acd278b5b90c52589ed8f4c5c13b3efc10331037f7230604",
+      "archive_sha256": "a02d5cd58c7c56d4c52aba7721b9bc8e7e007cd33d92682d58dc6868b72f677d",
+      "checkpoint_sha256": "5ce61786f3caf5182befbbbb3b43b2773ec2433c8fe78efe54bc3331ca1aa168"
+    },
+    {
+      "position": 43,
+      "job_id": "18c5557aa4335b6efe44bc202c41393219a81624d00be7da5ded393102cb307e",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-14-seed-20261012.json",
+      "ack_sha256": "00a7090ee9079c20797a28fd33a0936ab6b974e84fbf898a616ef38866ec803b",
+      "archive_sha256": "0e037fd230dde5467e024afc17e55af248e74f7670760b098b51a76ce5afb4cc",
+      "checkpoint_sha256": "e79d8bd157b342d0e5eb92f4f131ba442d0a8daa2138187d52490ce68bfa37b5"
+    },
+    {
+      "position": 44,
+      "job_id": "3a13a62edf23ed06a82c7103f65d187e7f90bde428284b39484e884caef16091",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-14-seed-20261013.json",
+      "ack_sha256": "1acd98efb470c61eed0f56d29e87b96dd01385ee06bb4cdb2d92b684a9f076f8",
+      "archive_sha256": "0aeb2e9ba663f9cc3190ad2a80c7180ef6ca5b6fd1d74639e724d5a44fe61270",
+      "checkpoint_sha256": "2a2cbda2ecc895da4941bdc61ef4d01d49ecb4867d02038b50cdc31d7f68b048"
+    },
+    {
+      "position": 45,
+      "job_id": "e3ddfeef4ae6212f2b02658a7941e515a84fe648a60aca064e02b1993e9942bb",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-14-seed-20261014.json",
+      "ack_sha256": "baf7befe75429a20a5e66b2d6acbe9d0ce0901bb708525e6e2f9a180475eb53b",
+      "archive_sha256": "c745b102258cc8626975ffbbf50e9274cde84078916455e115c4f52eaba65a16",
+      "checkpoint_sha256": "6962cab63d0d668a9c4bc00f774f27f0c3e0b1069f2e5c6ad9f5eeeef7f7fa6e"
+    },
+    {
+      "position": 46,
+      "job_id": "edad083df2e4be007e3c4e6f38c00287de389113db9e7987674711ec0d2cf6eb",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-15-seed-20261012.json",
+      "ack_sha256": "dfba3366775fb3c484dc20057822d60d8009a7abb0c0fc8299ce54306a7ead3c",
+      "archive_sha256": "fc930799c78ec1288355fd088c463ef1b1a01b6f087d42154bd6238ea43c78aa",
+      "checkpoint_sha256": "383e2758e05c75ff244716e9e3481a56a264da4817fb98ab9381a909ee6ed881"
+    },
+    {
+      "position": 47,
+      "job_id": "e903c5fa4eeacd7fc10bc1031e177219051145cb918f0c4542dd56197fc95184",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-15-seed-20261013.json",
+      "ack_sha256": "8a04a967d1f176aea27f9a336e0a3e00504e82389c228bcc829f871163af1b98",
+      "archive_sha256": "c0637983e748d8c46fd43d3f6a0464e62ffe247fd6352036eca252c1418739fe",
+      "checkpoint_sha256": "e83923fb29d7d752a997020fb145b56bbb79f4f7b0df35676bb5c66b176fbb3d"
+    },
+    {
+      "position": 48,
+      "job_id": "c0c94ed7a22a6c97e257db3f2c565b6e16da24d91fe16e099a74e9e1662bbce5",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-15-seed-20261014.json",
+      "ack_sha256": "b13b60e28b18cc6e79e01513503158ffc9a4c681bd24745940c21db1c058ec67",
+      "archive_sha256": "4b6aec0aa20b244351df155b8ccea9ac0bd21e6989ed8a48ffc60c99f97092da",
+      "checkpoint_sha256": "9648767fe1194491d4cf1417af6f4cbbb61dfcfb06ef7bccccaf99a8d0aec459"
+    },
+    {
+      "position": 49,
+      "job_id": "4c8846cc25091eae85d942ac3c6c179a014a236eccb1613270ef8bcfbf0a485c",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-17-seed-20261012.json",
+      "ack_sha256": "9aa48f4190f6a8887be1e3c4b7a4e431540ae11baf64905906db1c05890019b3",
+      "archive_sha256": "9b970fa9e9a07d5ccc339da10145af1a192380a202f5af0409452bf44cff3691",
+      "checkpoint_sha256": "9c5a38a554c7fc24dd7d01aac2feacf6a10632283d9a82bf3b4ab1a5a759eb54"
+    },
+    {
+      "position": 50,
+      "job_id": "a30ed546e2ab02bf9c9df4ff9ebb35e6269c84428965eeda56f95cc572bfe1cf",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-17-seed-20261013.json",
+      "ack_sha256": "c37e41327d5ab951c9123fa16b0d203418d15eac4f0f4969a63e733135c6e4fa",
+      "archive_sha256": "ae49f62d61aeaaa9bba1f5a4576e03f038fcd97b0392e5e8790d0efc05e2d1f9",
+      "checkpoint_sha256": "0f47c33b41325668b4e06a4e7589b5d23ad1f1baa4f71f0c0ed1c18048959366"
+    },
+    {
+      "position": 51,
+      "job_id": "c163c8f36f3c6093ae06e622bb3026400dc068728a8fa5e67ccc99b47b6d9c77",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-17-seed-20261014.json",
+      "ack_sha256": "f14941975c481fb8204d0cd2e52504601ff7fc62519c2f41857ba09553c49665",
+      "archive_sha256": "5df6d6bb088793697d21b6283816ec5c7b7a0925c5efe9a7f67e88d96cf07df7",
+      "checkpoint_sha256": "4f68a6717eae553c71cc05c329b6257fe1dab5ba0c2656060c19ecd6b9fc849e"
+    },
+    {
+      "position": 52,
+      "job_id": "769c451a4692ba6637a98cc4d88206560d474278e75650d0fa56b62c12c2b26e",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-18-seed-20261012.json",
+      "ack_sha256": "486a46c469084f776e3bc924fe3472a18289520c1bed33f8bafd9db76c2d8b59",
+      "archive_sha256": "6512449d15446f79ad81dd8e44b64dea1f2c8d1ba607e53cffabc9c7c582bba1",
+      "checkpoint_sha256": "526c825918ff101d29b26f2c33632cbd7acc3ad6c4f748d1f72c05b48a2d67de"
+    },
+    {
+      "position": 53,
+      "job_id": "e5bd76408bd7c3f5c98ae7b9655d7afc934974003d19fdf5d101c14de799565a",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-18-seed-20261013.json",
+      "ack_sha256": "b043ed62cb418d6e5198748f67eb79f262d205ea34fd26389d481279dcc091e6",
+      "archive_sha256": "2682b58be1c3db20c5770366046a798ba13551574a9be8ba462bbe865cc7c9cc",
+      "checkpoint_sha256": "c4c921395a11300373598dfc9503cc8968570c12e51215cc2dc7dbf9ff15c99f"
+    },
+    {
+      "position": 54,
+      "job_id": "56d83341333e2ad2ec222ea04e316fcca00d690d2ef440956906d372877f0bc4",
+      "ack_path": "research_logs/kumar_remaining36_acceptance_20261015/run01/parent_acknowledgements/sub-18-seed-20261014.json",
+      "ack_sha256": "f004fa3c9b0aa3ceaa89203444659ba5feb8cd9183388ac6ab678d411a9fb5ff",
+      "archive_sha256": "9a052f4ba27b67ccde334e1c114597485072dbea3a2c509e75b0c928f7dec7cd",
+      "checkpoint_sha256": "89acd2e4dac6c530d7730a556259e389ccd41fa5ef711516b000fe817034f298"
+    }
+  ],
+  "existing_reuse_identity_gate": {
+    "source": "scripts/evaluate_kumar_checkpoint_reuse.py:check_reuse_identity",
+    "source_sha256": "838f3ed7b8f67c65dcf27b3ef43aace29db9464c8cdaae730be5dfebc92ba4e2",
+    "jobs_checked": 54,
+    "all_passed": true,
+    "snapshotted_metadata_files_unchanged": 65,
+    "jobs": [
+      {
+        "job_id": "17377a7cf04bfc73e25bc94d7e42fc4f1ab6f14fb6dde63c7b21e742b94b9ace",
+        "archive_bytes": 143360,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "5be2fc9499d4ec3916e5191c822c205e195c0e25655c39ec0f84e5aa2c091470",
+        "archive_bytes": 184320,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "ba8899c0dc867baefa9a5623cccf706a82571413d63ec76e4baa7bfab613b4ca",
+        "archive_bytes": 194560,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "e1b092f93db8c972cb59403814c73eb1ba2273b1aa82351f0205c390a28b9faa",
+        "archive_bytes": 174080,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "451a32bd8f38870f333d43c3941498a72bda8f19574ee381a260200bd23ff112",
+        "archive_bytes": 174080,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "fe495208cd04aff921403e3e0d8c9f3e065d477deff26b28fbfe4480d9ada6c2",
+        "archive_bytes": 174080,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "735d0b78575ffe08b0be4e51a26fcadaa0a2db1977c9120d1e837e3ed48d03d7",
+        "archive_bytes": 174080,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "1aa92ed2b84621e78c67af8bf6f1eb6482b810951b9418a9b9fb017541552c91",
+        "archive_bytes": 194560,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "a072e1ee4836265f6237ccb5ae6a36adc90f47395f3c0830071d86798bc1f5ba",
+        "archive_bytes": 184320,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "04c84fd64d26f4aaddcfcce264b71c6332395eb1914ae799470dde4d0e666b5e",
+        "archive_bytes": 174080,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "1a6f1682dafff74743a174565e4e8360d7615ef8b80d09919ff0a5c043ab1e55",
+        "archive_bytes": 174080,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "4b2352788f901e95f387f44be75ad0f71ceac4c5a3e68c030365c5e98559a9f1",
+        "archive_bytes": 184320,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "f7e593ca50f530f362181d48a39258dbbb2f6d741a2ecfd5c51b4ce0e69326b3",
+        "archive_bytes": 184320,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "3afcfb08e856e7b89468b23e78a34aa4419d31a3c7fcec386a442d5766669599",
+        "archive_bytes": 184320,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "fe37e7a42f0658cdddd6db0b2eb5134fda1bdc82eaa2855cb198ea2ed97cc2ea",
+        "archive_bytes": 194560,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "1534e6e3dbe39282e0f7220355889366af2c8a9eafd2008c03cbc3449d361319",
+        "archive_bytes": 194560,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "1f1cf3552df9ed9bdf25fb45271d5b7ed61df8800f2e66fb509df1a76a5bc9af",
+        "archive_bytes": 194560,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "df56f563ff26909b6e0590906f305982b0e5df89520c12355f433a1cd2bd968a",
+        "archive_bytes": 194560,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "df3d71e4bed6d37058026cbce4f60e34783fb11c87d8b0f5efe6f368c91ba222",
+        "archive_bytes": 256000,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "e93b469def25a046cfa08d08fdba7c3dbd6b93bc2d17d360d9d44ef1782aeb07",
+        "archive_bytes": 266240,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "b5eec7743c554b62a21e160d012eefa38a160a9dbc0dc8809d27ccfb85e7c1c9",
+        "archive_bytes": 256000,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "7b6ebeaef294dff0339c43fa1c35d7f6c34f30785d3e8b2bb9a03e8b7f23b22a",
+        "archive_bytes": 266240,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "66b5c7a89b8fb4ccbca9f25dfaa588c6952f2aad3a1d7648348f8e88361c4c2f",
+        "archive_bytes": 256000,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "80bcdedfef4684c5cc9b307805bfb74e00bf0a85756059e351eb10a78a13a037",
+        "archive_bytes": 256000,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "d80b3b44b6729ec7d94e42cce0668f8065c9fc15c62538b0d37b6e67eb461c7b",
+        "archive_bytes": 256000,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "15203ad240b981b752d4af83fe24fd8aebfd92c96820c66eda7c32ca6ba0c799",
+        "archive_bytes": 256000,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "4221970caa1ebb7becc3ba3ba108ee9ea5b2bd44d95ca8e69f3eda7a280942dd",
+        "archive_bytes": 256000,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "dd28327b1068bb128614eeb63d7727a8b59da65dc8e52575ef3533d7d1ade074",
+        "archive_bytes": 256000,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "ab971cc08608806ea2483fdec9c624b1e95490b6a2309a2e9122cceab9829850",
+        "archive_bytes": 256000,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "9b75bb235cd933c268778dc802fe1d4300d6594de8fb5511522fcecf4badf35c",
+        "archive_bytes": 266240,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "d1392eb4c7b5aaaa6539285d41f45b63bf7d09258b54d41a6dfc326492d91c1c",
+        "archive_bytes": 266240,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "b65b18b7a4fe02dbb95b2e42110a213a7f5f76db4ff7c19473e4320938dbab58",
+        "archive_bytes": 256000,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "812b29345cc8262ef329f5b09e24141c65f47f24fe8dd2c044b70f9005946d74",
+        "archive_bytes": 266240,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "123bdeee936900b1d3d1c23aebda48ee02d6f0c46f2de9f17d711b8ed1653629",
+        "archive_bytes": 256000,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "a73f6eb94abd509ca6ec91b3908275f18cfed340bff6e7f8fa64851ddf1ccc64",
+        "archive_bytes": 266240,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "70011f5decf4795e8a16cf9658c2af1de69dd0d65ac0d515e6e33988979a61ae",
+        "archive_bytes": 266240,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "caae0027156bdc8ec56b7f863666bba9d8ffe083c85f735c2772f357657fb6c8",
+        "archive_bytes": 266240,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "1114f9f1524f681564334e943200e3c09b6efa900c0bf80b394c8992cc08e8fd",
+        "archive_bytes": 256000,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "e9089a2b0c761b399c14f02a49dd09d16d3a72ab80c935bef50b61754980b880",
+        "archive_bytes": 256000,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "cbd82eef6ffd5c856e142ac381032e252080957d58f5803b8b7eb2fcb09f6218",
+        "archive_bytes": 256000,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "98e0ab893e8920a08adbb0298a9e45d5d3cb9a2d0f884110d77cb109676e0aee",
+        "archive_bytes": 256000,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "4ce16e24f1df1c9f3ceb262166a3a9c99ebd3c32e9debdbffd51fa19a877dafe",
+        "archive_bytes": 256000,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "18c5557aa4335b6efe44bc202c41393219a81624d00be7da5ded393102cb307e",
+        "archive_bytes": 256000,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "3a13a62edf23ed06a82c7103f65d187e7f90bde428284b39484e884caef16091",
+        "archive_bytes": 266240,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "e3ddfeef4ae6212f2b02658a7941e515a84fe648a60aca064e02b1993e9942bb",
+        "archive_bytes": 266240,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "edad083df2e4be007e3c4e6f38c00287de389113db9e7987674711ec0d2cf6eb",
+        "archive_bytes": 266240,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "e903c5fa4eeacd7fc10bc1031e177219051145cb918f0c4542dd56197fc95184",
+        "archive_bytes": 256000,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "c0c94ed7a22a6c97e257db3f2c565b6e16da24d91fe16e099a74e9e1662bbce5",
+        "archive_bytes": 266240,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "4c8846cc25091eae85d942ac3c6c179a014a236eccb1613270ef8bcfbf0a485c",
+        "archive_bytes": 266240,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "a30ed546e2ab02bf9c9df4ff9ebb35e6269c84428965eeda56f95cc572bfe1cf",
+        "archive_bytes": 256000,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "c163c8f36f3c6093ae06e622bb3026400dc068728a8fa5e67ccc99b47b6d9c77",
+        "archive_bytes": 266240,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "769c451a4692ba6637a98cc4d88206560d474278e75650d0fa56b62c12c2b26e",
+        "archive_bytes": 256000,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "e5bd76408bd7c3f5c98ae7b9655d7afc934974003d19fdf5d101c14de799565a",
+        "archive_bytes": 256000,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      },
+      {
+        "job_id": "56d83341333e2ad2ec222ea04e316fcca00d690d2ef440956906d372877f0bc4",
+        "archive_bytes": 256000,
+        "status": "metadata_identity_gate_passed_no_weights_loaded"
+      }
+    ]
+  },
+  "historical_evidence": {
+    "all_preexisting_tracked_files_match_acknowledged_commit": true,
+    "old_pending_request_accepted_and_parent_flags_remain_false": true,
+    "old_per_model_prebackup_R2_and_parent_flags_remain_false": true,
+    "stage_advancement_is_new_separate_record": true
+  },
+  "permissions": {
+    "new_fit_authorized": false,
+    "query_unblinding_authorized": false,
+    "new_strategy_authorized": false,
+    "Pod_operated": false,
+    "checkpoint_weights_loaded_by_review": false,
+    "EEG_or_query_loaded_by_review": false,
+    "network_access_used_by_review": false
+  },
+  "limitations": [
+    "Acceptance records the actual user-relayed parent acknowledgement and independently verifies its local hashes/identities; it does not reperform the parent remote reading.",
+    "All54 metadata identity gates passed; scientific source replay, checkpoint forward and query evaluation remain separately unauthorized.",
+    "The old 18-only proposal checker remains unchanged and is not reinterpreted as a 54-model evaluation authorization."
+  ]
+}

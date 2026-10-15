@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "status": "targeted_validation_passed",
+  "recorded_at_utc": "2026-10-15T08:38:13.852535+00:00",
+  "working_directory": "/workspace/few-shot-mi-eeg",
+  "source": "Actual captured tool output from this agent; receipt written afterward without rerunning tests",
+  "pytest": {
+    "command": "/workspace/.venvs/few-shot-mi-eeg/bin/python -B -m pytest -q tests/test_kumar_all54_saved_result_aggregation.py tests/test_kumar_saved_result_aggregation.py",
+    "exit_code": 0,
+    "passed": 6,
+    "failed": 0,
+    "pytest_reported_elapsed_seconds": 0.27,
+    "captured_summary": "6 passed in 0.27s",
+    "new_all54_identity_and_descriptive_tests": 2,
+    "shared_saved_metric_archive_tests": 4,
+    "exact_start_and_finish_utc": "not captured",
+    "overlap_note": "The 4 shared saved-result tests also appear in the root-reported 19-case validation; 6 plus 19 must not be represented as 25 distinct tests."
+  },
+  "ruff": {
+    "command": "/workspace/.venvs/few-shot-mi-eeg/bin/ruff check scripts/aggregate_kumar_all54_saved_results.py tests/test_kumar_all54_saved_result_aggregation.py",
+    "exit_code": 0,
+    "captured_summary": "All checks passed!",
+    "elapsed_seconds": null,
+    "elapsed_note": "not separately captured"
+  },
+  "development_test_failure_preserved": {
+    "initial_result": "1 failed, 6 passed in 0.23s",
+    "cause": "A synthetic identity-test fixture shared original18 entry objects with the combined ledger; mutating the test input also mutated its expected prefix.",
+    "correction": "Independent deepcopy of the synthetic expected old18 prefix. Removed the unexecuted source-validation bootstrap implementation/tests after parent clarified the unchanged no-CI policy.",
+    "scientific_execution_or_original_evidence_modified": false
+  },
+  "reviewed_acceptance_report": {
+    "path": "research_logs/kumar_remaining36_acceptance_20261015/run01/REPORT.md",
+    "assessment": "BA/CE, participant grouping, epochs/steps, collapse and seed-range numbers match completed summary; selected-validation/no-CI/no-query limits are explicit.",
+    "minor_wording_note": "Prediction class collapse is descriptive, not a failed training job; source-validation variability is the directly measured interpretation."
+  },
+  "files": {
+    "scripts/aggregate_kumar_all54_saved_results.py": "8900153ce4535abee5d8b112a5ffb60b28136e5b91228000cadbb12a023d9551",
+    "tests/test_kumar_all54_saved_result_aggregation.py": "d74cec32f51d1363f1a7bd5ba40c228ec0c2324722c517b161ae38af97e70cd3",
+    "tests/test_kumar_saved_result_aggregation.py": "bd0d1930f76b2983441f86552d8ec6d51b3b31665b52d3bf74008f620583a401"
+  },
+  "new_test_or_scientific_runs_performed_to_write_this_receipt": 0
+}

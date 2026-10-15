@@ -152,3 +152,30 @@ audited/R2-verified, accepted=false pending actual dot confirmation. No newfit,
 query, Pod or paper1 operation was performed. Do not resume the completed queue.
 See `NEXT_ANALYSIS_READINESS.md` there for checkpoint-only analysis preparation;
 no query or scientific-strategy gate is released by this audit/backup.
+
+
+# 2026-10-15: actual parent acceptance closes all 54 source fits
+
+The user relayed the actual dot confirmation signed 2026-10-15T08:27:35Z for
+all 36 request identities at f1d4bf4240747b152e9dcd969ff368eb1ab48b59. New
+versioned acceptance is in research_logs/kumar_remaining36_acceptance_20261015/run01/.
+The original accepted18 ledger is unchanged; accepted_jobs_all54.json contains
+its exact prefix plus the accepted36, SHA256
+013668c8d1b1c5d6061f3701d495cf7770743a1c6fda8678f5db7ffd50992670.
+Its matching source_model_plan_all54.json SHA256 is
+28232bfa53515ae3e66acadefa39ee025320cfda0196a5d785631bf4d8f8abcd.
+Every identity passed the existing ACK/R2 metadata gate. No source fit remains.
+
+The saved-result summary covers all 54 models / 18 participant identities,
+2871 epochs / 8613 optimizer steps. All-seed source-validation BA is 53.0556%
+for development6 and 57.3611% for remaining12; combined18 is secondary 55.9259%.
+Five model predictions collapse to one class. No CI or hypothesis test is
+computed on this epoch-selected validation set; no seed/strategy is selected.
+Full tables: research_logs/kumar_all54_source_aggregation_20261015/run01/.
+
+Use docs/kumar_all54_next_baseline_step_20261015.md for the exact read-only
+all54 metadata command and concrete next implementation boundary: a separately
+frozen query-only checkpoint-reuse evaluator. No new fit, query unblinding,
+Pod operation or paper1 action is authorized by the acceptance ACK. Preserve
+all old raw stage flags, failed attempts and receipts; do not resume the
+completed 36-fit controller or invoke generic formal_train.
