@@ -1,5 +1,22 @@
 # CSP signed-score evidence reconciliation and CPU execution proposal
 
+Current continuation: the one expressly authorized run01 at fixed32164c0 was
+actually launched and failed on this host's absent `task/<tid>/children` procfs
+interface. Its claim, external authorization and exit evidence are immutable;
+the original05:27–07:27 UTC window is unchanged. The subsequently authorized
+repair uses visible-namespace PPID/session snapshots and PID/starttime history,
+with identity-bound cleanup of observed descendants. Actual non-scientific
+three-generation/RSS proof and80 relevant tests passed. See
+`research_logs/kumar_procfs_compatibility_20261015/run01/REPORT.md` and the
+preserved failure at `research_logs/kumar_csp_signed_score_execution_20261015/run01/`.
+Current launcher SHA12337f162d0f27696e512f1b0e7ff099307520e859628da32c05e92ed781d185,
+CPU contract SHA173f944f4b1df363fb7c0af1025ef6b9d8361979c8397d9c5a6083beae3420ab.
+The old claim still blocks execution; this repair does not authorize another
+scientific attempt. Historical proposal text and actual failed authorization
+records below/elsewhere are preserved. Financial blocking policy is explicitly
+`superseded-by-user` in the new operational-scope record; no historical amount,
+unknown or gate pass is rewritten, and36 GPU fits remain unreleased.
+
 This is a review delivery, not permission to execute a diagnostic. No actual
 CSP/LDA fit, EEG/model-array load, query access or Pod action occurs in this
 round. The 18 accepted EEGNet checkpoints and their ledger are independent of

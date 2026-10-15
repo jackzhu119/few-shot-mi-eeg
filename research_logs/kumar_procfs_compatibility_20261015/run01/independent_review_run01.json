@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-15T06:01:09.016438+00:00",
+  "reviewer": "independent procfs_adapter_review agent",
+  "method": "independent final code/proof review and31focused tests; root records received findings",
+  "status": "no_blocking_procfs_monitor_findings_no_scientific_retry_authorized",
+  "reviewed_launcher_sha256": "12337f162d0f27696e512f1b0e7ff099307520e859628da32c05e92ed781d185",
+  "reviewed_tests_sha256": "faea83ffd1dd4f3046de3c4086202a26fc7bb1a30c50bff8e9dad099597c82e7",
+  "actual_host_proof_sha256": "e3681382f89a802ff7cfec4049b676d8318dcb4ebe85c7b305903d0aa5a12331",
+  "independent_targeted_tests": {
+    "passed": 31,
+    "deselected": 49,
+    "seconds": 0.11,
+    "scope": "procfs and tracked identity/cleanup tests only"
+  },
+  "actual_host_verified": {
+    "tree_pids": [
+      16664,
+      16665,
+      16666
+    ],
+    "live_samples": 4,
+    "stable_independent_RSS_sum_bytes": 139370496,
+    "RSS_exact_match": true,
+    "grandchild_changed_session_and_group": true,
+    "all_fixture_processes_exited": true
+  },
+  "implemented_boundaries": [
+    "complete visible PID namespace with unfiltered mount and matching namespace proof",
+    "PPID closure + dedicated session + observed still-live PID/starttime history",
+    "one VmRSS contribution per TGID, missing live proof fails",
+    "stable before/after census, identities and topology; prior absent identity explicit",
+    "pidfd-bound signals reject reused identities and preserve actual events on errors",
+    "valid identities still stopped when another member cannot be validated",
+    "one cleanup grace, root exit alone cannot certify all tracked descendants exited"
+  ],
+  "evidence_limitations": [
+    "Actual host test changed grandchild SID/PGID while retaining PPID; escaped+reparented retention is targeted synthetic-unit coverage, not actual host reparenting evidence.",
+    "Sampled namespace observations cannot establish atomicity or track an entirely unobserved transient process between polls."
+  ],
+  "scientific_operation_attempts_during_repair": 0,
+  "original_claim_preserved": true,
+  "query_access": false,
+  "Pod_operated": false
+}

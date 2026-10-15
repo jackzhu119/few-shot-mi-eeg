@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-15T05:44:49.850358+00:00",
+  "reviewer": "independent actual_csp_failure_review agent",
+  "method": "read-only original-byte, metadata and process-status verification; root records received findings",
+  "status": "failure_evidence_bindings_verified_no_scientific_completion",
+  "reviewed_execution_commit": "32164c0a23f237aaea3f22bfe5a57e8a21f0a033",
+  "authorization_sha256": "6a06d5dd23bce06167c7f86a80f55473b8fe281b36d54e749a52f782f9f84154",
+  "cost_scope_receipt_sha256": "2de9f7270667c5d5b059c0c57182a4a516da88bfa0acc42a6dc9b48dcae0075f",
+  "container_identity": {
+    "hostname": "94346a2083c4",
+    "boot_id": "02e1dd56-6faf-45ed-b710-a28705535fb6",
+    "pid1_start_ticks": "54"
+  },
+  "authorization_start_utc": "2026-10-15T05:27:00Z",
+  "authorization_deadline_utc": "2026-10-15T07:27:00Z",
+  "original_window_seconds": 7200,
+  "consumer_timeout_seconds": 6284.477964401245,
+  "launcher_pid": 16107,
+  "consumer_pid": 16119,
+  "consumer_started_at_utc": "2026-10-15T05:41:45.522564+00:00",
+  "consumer_finished_at_utc": "2026-10-15T05:41:45.525844+00:00",
+  "consumer_returncode": -15,
+  "launcher_exit": {
+    "launcher_pid": 16107,
+    "observed_exit_at_utc": "2026-10-15T05:41:45.540529+00:00",
+    "returncode": 1,
+    "automatic_retry_performed": false
+  },
+  "failure": {
+    "type": "FileNotFoundError",
+    "message": "[Errno 2] No such file or directory: '/proc/16119/task/16119/children'"
+  },
+  "signals": [
+    {
+      "signal": "SIGTERM",
+      "at_utc": "2026-10-15T05:41:45.524682+00:00"
+    }
+  ],
+  "launcher_receipt_sha256": "476a565cf0fd9886c93016f7d916a4af1466cb338f3d66b1ece92b00a241a9f3",
+  "launcher_stdout_identical_bytes": true,
+  "resource_sample_count": 0,
+  "scientific_output_exists": false,
+  "saved_scientific_fit_results": 0,
+  "proof_limitation": "No saved or recorded fit results; empty log/short elapsed time does not prove no scientific statement or fit ever began. Missing procfs children interface root cause is not established.",
+  "automatic_retry_performed": false,
+  "existing_claim_preserved": true,
+  "accepted18_ledger_sha256": "1ee1868b97e6ff7ea2e42327fe64337cafbb0f8ee6aff19cc24fba5265f9aaa9",
+  "scientific_acceptance_granted": false,
+  "remaining36_authorized": false,
+  "reviewer_scientific_executions": 0,
+  "reviewer_Pod_operations": 0
+}

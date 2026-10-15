@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "observed_at_utc": "2026-10-15T05:42:58.313062+00:00",
+  "scope": "read-only post-failure host-interface observation; no consumer launch",
+  "observer_pid": 16203,
+  "observer_task_children_interfaces": [
+    {
+      "tid": 16203,
+      "children_interface_readable": false,
+      "error_type": "FileNotFoundError",
+      "errno": 2
+    }
+  ],
+  "recorded_launcher_pid_exists": false,
+  "recorded_consumer_pid_exists": false,
+  "scientific_output_path_exists": false,
+  "state_members": [
+    {
+      "path": "claim.json",
+      "bytes": 3671,
+      "sha256": "79798defb5e32d1f960a35cc5204bc7d0beeb90efe35ab7b78a89c7bf7c0b7ae"
+    },
+    {
+      "path": "consumer.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "consumer_start.json",
+      "bytes": 749,
+      "sha256": "21a873f764df1f305aba2e65651088a88932a8783f858fee12b7ee7e7d0f506a"
+    },
+    {
+      "path": "launcher_receipt.json",
+      "bytes": 4617,
+      "sha256": "476a565cf0fd9886c93016f7d916a4af1466cb338f3d66b1ece92b00a241a9f3"
+    }
+  ],
+  "automatic_retry_performed": false
+}

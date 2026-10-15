@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "status": "software_and_actual_host_monitor_verified_scientific_retry_closed",
+  "checks": [
+    {
+      "command": [
+        "/workspace/.venvs/few-shot-mi-eeg/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_kumar_csp_signed_score_operation.py"
+      ],
+      "started_at_utc": "2026-10-15T06:00:14.333527+00:00",
+      "finished_at_utc": "2026-10-15T06:00:15.234024+00:00",
+      "returncode": 0,
+      "output_file": "pytest_operation_run01.log",
+      "sha256": "4bd454eb7e7e7e7512434c1920e681743c21ef8b876a0232a291ac6ccd5c88ca"
+    },
+    {
+      "command": [
+        "/workspace/.venvs/few-shot-mi-eeg/bin/ruff",
+        "check",
+        "scripts/run_kumar_csp_signed_score_operation.py",
+        "tests/test_kumar_csp_signed_score_operation.py"
+      ],
+      "started_at_utc": "2026-10-15T06:00:15.234084+00:00",
+      "finished_at_utc": "2026-10-15T06:00:15.244502+00:00",
+      "returncode": 0,
+      "output_file": "ruff_run01.log",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "command": [
+        "/workspace/.venvs/few-shot-mi-eeg/bin/python",
+        "-B",
+        "scripts/run_kumar_csp_signed_score_operation.py"
+      ],
+      "started_at_utc": "2026-10-15T06:00:15.244540+00:00",
+      "finished_at_utc": "2026-10-15T06:00:15.575093+00:00",
+      "returncode": 0,
+      "output_file": "post_repair_readonly_gate.json",
+      "sha256": "2fb4b0d67cc59101acc251a5792709710728041bc8ce1500a677ffee6d21c6b1"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "started_at_utc": "2026-10-15T06:00:15.575134+00:00",
+      "finished_at_utc": "2026-10-15T06:00:15.590368+00:00",
+      "returncode": 0,
+      "output_file": "diff_check_run01.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "operation_contract_only_launcher_pin_changed": true,
+  "sampling_seconds": 0.25,
+  "max_RSS_bytes": 2147483648,
+  "min_cgroup_and_host_headroom_bytes": 1073741824,
+  "original_failed_claim_blocks_default_gate": true,
+  "scientific_consumer_executed_during_repair": false,
+  "GPU_fit_or_query": false,
+  "Pod_operated": false
+}

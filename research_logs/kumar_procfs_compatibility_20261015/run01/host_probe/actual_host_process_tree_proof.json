@@ -1,0 +1,411 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "software_validation_only": true,
+  "started_at_utc": "2026-10-15T05:58:40.763166+00:00",
+  "tested_launcher_sha256": "12337f162d0f27696e512f1b0e7ff099307520e859628da32c05e92ed781d185",
+  "container_identity": {
+    "hostname": "94346a2083c4",
+    "boot_id": "02e1dd56-6faf-45ed-b710-a28705535fb6",
+    "pid1_start_ticks": "54"
+  },
+  "scientific_consumer_launched": false,
+  "science_data_loaded": false,
+  "query_access": false,
+  "Pod_operated": false,
+  "samples": [
+    {
+      "sample_index": 0,
+      "state": "live_three_generation_tree",
+      "at_utc": "2026-10-15T05:58:41.250630+00:00",
+      "consumer_rss_bytes": 139366400,
+      "process_tree_pids": [
+        16664,
+        16665,
+        16666
+      ],
+      "process_tree_members": [
+        {
+          "pid": 16664,
+          "ppid": 16661,
+          "pgrp": 16664,
+          "session": 16664,
+          "start_ticks": 1921413,
+          "zombie": false,
+          "tgid": 16664,
+          "rss_bytes": 38068224
+        },
+        {
+          "pid": 16665,
+          "ppid": 16664,
+          "pgrp": 16664,
+          "session": 16664,
+          "start_ticks": 1921419,
+          "zombie": false,
+          "tgid": 16665,
+          "rss_bytes": 46460928
+        },
+        {
+          "pid": 16666,
+          "ppid": 16665,
+          "pgrp": 16664,
+          "session": 16664,
+          "start_ticks": 1921438,
+          "zombie": false,
+          "tgid": 16666,
+          "rss_bytes": 54837248
+        }
+      ],
+      "process_snapshot_method": "visible_procfs_ppid_and_dedicated_session_two_snapshots",
+      "visible_process_count": 19,
+      "proc_visibility": {
+        "mountpoint": "/proc",
+        "mount_options": [
+          "nodev",
+          "noexec",
+          "nosuid",
+          "relatime",
+          "rw"
+        ],
+        "pid_namespace": "pid:[4026532200]",
+        "observer_pid": 16661
+      },
+      "previously_observed_stably_absent_pids": [],
+      "host_available_bytes": 9565532160,
+      "cgroup_headroom_bytes": 7480893440
+    },
+    {
+      "sample_index": 1,
+      "state": "live_three_generation_tree",
+      "at_utc": "2026-10-15T05:58:41.503090+00:00",
+      "consumer_rss_bytes": 139366400,
+      "process_tree_pids": [
+        16664,
+        16665,
+        16666
+      ],
+      "process_tree_members": [
+        {
+          "pid": 16664,
+          "ppid": 16661,
+          "pgrp": 16664,
+          "session": 16664,
+          "start_ticks": 1921413,
+          "zombie": false,
+          "tgid": 16664,
+          "rss_bytes": 38068224
+        },
+        {
+          "pid": 16665,
+          "ppid": 16664,
+          "pgrp": 16664,
+          "session": 16664,
+          "start_ticks": 1921419,
+          "zombie": false,
+          "tgid": 16665,
+          "rss_bytes": 46460928
+        },
+        {
+          "pid": 16666,
+          "ppid": 16665,
+          "pgrp": 16664,
+          "session": 16664,
+          "start_ticks": 1921438,
+          "zombie": false,
+          "tgid": 16666,
+          "rss_bytes": 54837248
+        }
+      ],
+      "process_snapshot_method": "visible_procfs_ppid_and_dedicated_session_two_snapshots",
+      "visible_process_count": 19,
+      "proc_visibility": {
+        "mountpoint": "/proc",
+        "mount_options": [
+          "nodev",
+          "noexec",
+          "nosuid",
+          "relatime",
+          "rw"
+        ],
+        "pid_namespace": "pid:[4026532200]",
+        "observer_pid": 16661
+      },
+      "previously_observed_stably_absent_pids": [],
+      "host_available_bytes": 9565532160,
+      "cgroup_headroom_bytes": 7480893440
+    },
+    {
+      "sample_index": 2,
+      "state": "live_three_generation_tree",
+      "at_utc": "2026-10-15T05:58:41.755259+00:00",
+      "consumer_rss_bytes": 139366400,
+      "process_tree_pids": [
+        16664,
+        16665,
+        16666
+      ],
+      "process_tree_members": [
+        {
+          "pid": 16664,
+          "ppid": 16661,
+          "pgrp": 16664,
+          "session": 16664,
+          "start_ticks": 1921413,
+          "zombie": false,
+          "tgid": 16664,
+          "rss_bytes": 38068224
+        },
+        {
+          "pid": 16665,
+          "ppid": 16664,
+          "pgrp": 16664,
+          "session": 16664,
+          "start_ticks": 1921419,
+          "zombie": false,
+          "tgid": 16665,
+          "rss_bytes": 46460928
+        },
+        {
+          "pid": 16666,
+          "ppid": 16665,
+          "pgrp": 16664,
+          "session": 16664,
+          "start_ticks": 1921438,
+          "zombie": false,
+          "tgid": 16666,
+          "rss_bytes": 54837248
+        }
+      ],
+      "process_snapshot_method": "visible_procfs_ppid_and_dedicated_session_two_snapshots",
+      "visible_process_count": 19,
+      "proc_visibility": {
+        "mountpoint": "/proc",
+        "mount_options": [
+          "nodev",
+          "noexec",
+          "nosuid",
+          "relatime",
+          "rw"
+        ],
+        "pid_namespace": "pid:[4026532200]",
+        "observer_pid": 16661
+      },
+      "previously_observed_stably_absent_pids": [],
+      "host_available_bytes": 9565417472,
+      "cgroup_headroom_bytes": 7480893440
+    },
+    {
+      "state": "live_grandchild_independent_session_and_group",
+      "at_utc": "2026-10-15T05:58:42.032977+00:00",
+      "consumer_rss_bytes": 139370496,
+      "process_tree_pids": [
+        16664,
+        16665,
+        16666
+      ],
+      "process_tree_members": [
+        {
+          "pid": 16664,
+          "ppid": 16661,
+          "pgrp": 16664,
+          "session": 16664,
+          "start_ticks": 1921413,
+          "zombie": false,
+          "tgid": 16664,
+          "rss_bytes": 38068224
+        },
+        {
+          "pid": 16665,
+          "ppid": 16664,
+          "pgrp": 16664,
+          "session": 16664,
+          "start_ticks": 1921419,
+          "zombie": false,
+          "tgid": 16665,
+          "rss_bytes": 46460928
+        },
+        {
+          "pid": 16666,
+          "ppid": 16665,
+          "pgrp": 16666,
+          "session": 16666,
+          "start_ticks": 1921438,
+          "zombie": false,
+          "tgid": 16666,
+          "rss_bytes": 54841344
+        }
+      ],
+      "process_snapshot_method": "visible_procfs_ppid_and_dedicated_session_two_snapshots",
+      "visible_process_count": 19,
+      "proc_visibility": {
+        "mountpoint": "/proc",
+        "mount_options": [
+          "nodev",
+          "noexec",
+          "nosuid",
+          "relatime",
+          "rw"
+        ],
+        "pid_namespace": "pid:[4026532200]",
+        "observer_pid": 16661
+      },
+      "previously_observed_stably_absent_pids": [],
+      "host_available_bytes": 9565417472,
+      "cgroup_headroom_bytes": 7480893440
+    }
+  ],
+  "inert_root_pid": 16664,
+  "fixture_nodes": [
+    {
+      "synthetic": true,
+      "software_validation_only": true,
+      "depth": 0,
+      "pid": 16664,
+      "ppid": 16661,
+      "session": 16664,
+      "pgrp": 16664,
+      "allocated_and_touched_bytes": 25165824
+    },
+    {
+      "synthetic": true,
+      "software_validation_only": true,
+      "depth": 1,
+      "pid": 16665,
+      "ppid": 16664,
+      "session": 16664,
+      "pgrp": 16664,
+      "allocated_and_touched_bytes": 33554432
+    },
+    {
+      "synthetic": true,
+      "software_validation_only": true,
+      "depth": 2,
+      "pid": 16666,
+      "ppid": 16665,
+      "session": 16664,
+      "pgrp": 16664,
+      "allocated_and_touched_bytes": 41943040
+    }
+  ],
+  "grandchild_session_transition": {
+    "pid": 16666,
+    "ppid": 16665,
+    "session": 16666,
+    "pgrp": 16666
+  },
+  "stable_RSS_independent_check": {
+    "observed": {
+      "consumer_rss_bytes": 139370496,
+      "process_tree_pids": [
+        16664,
+        16665,
+        16666
+      ],
+      "process_tree_members": [
+        {
+          "pid": 16664,
+          "ppid": 16661,
+          "pgrp": 16664,
+          "session": 16664,
+          "start_ticks": 1921413,
+          "zombie": false,
+          "tgid": 16664,
+          "rss_bytes": 38068224
+        },
+        {
+          "pid": 16665,
+          "ppid": 16664,
+          "pgrp": 16664,
+          "session": 16664,
+          "start_ticks": 1921419,
+          "zombie": false,
+          "tgid": 16665,
+          "rss_bytes": 46460928
+        },
+        {
+          "pid": 16666,
+          "ppid": 16665,
+          "pgrp": 16666,
+          "session": 16666,
+          "start_ticks": 1921438,
+          "zombie": false,
+          "tgid": 16666,
+          "rss_bytes": 54841344
+        }
+      ],
+      "process_snapshot_method": "visible_procfs_ppid_and_dedicated_session_two_snapshots",
+      "visible_process_count": 19,
+      "proc_visibility": {
+        "mountpoint": "/proc",
+        "mount_options": [
+          "nodev",
+          "noexec",
+          "nosuid",
+          "relatime",
+          "rw"
+        ],
+        "pid_namespace": "pid:[4026532200]",
+        "observer_pid": 16661
+      },
+      "previously_observed_stably_absent_pids": [],
+      "host_available_bytes": 9565417472,
+      "cgroup_headroom_bytes": 7480893440
+    },
+    "independent_proc_status": [
+      {
+        "pid": 16664,
+        "TGID": 16664,
+        "rss_bytes": 38068224
+      },
+      {
+        "pid": 16665,
+        "TGID": 16665,
+        "rss_bytes": 46460928
+      },
+      {
+        "pid": 16666,
+        "TGID": 16666,
+        "rss_bytes": 54841344
+      }
+    ],
+    "summed_RSS_matches_exactly": true,
+    "TGID_deduplicated_count": 3
+  },
+  "missing_legacy_children_paths": [
+    "/proc/16664/task/16664/children",
+    "/proc/16665/task/16665/children",
+    "/proc/16666/task/16666/children"
+  ],
+  "identity_bound_cleanup": {
+    "root_returncode": 0,
+    "events": [
+      {
+        "signal": "SIGTERM",
+        "at_utc": "2026-10-15T05:58:42.087956+00:00",
+        "target_process_group": 16664
+      },
+      {
+        "signal": "SIGTERM",
+        "at_utc": "2026-10-15T05:58:42.087975+00:00",
+        "target_pid": 16664,
+        "start_ticks": 1921413
+      },
+      {
+        "signal": "SIGTERM",
+        "at_utc": "2026-10-15T05:58:42.087994+00:00",
+        "target_pid": 16665,
+        "start_ticks": 1921419
+      },
+      {
+        "signal": "SIGTERM",
+        "at_utc": "2026-10-15T05:58:42.088015+00:00",
+        "target_pid": 16666,
+        "start_ticks": 1921438
+      }
+    ]
+  },
+  "all_fixture_pids_reaped": true,
+  "original_failed_claim_receipts_and_accepted18_preserved": true,
+  "status": "actual_host_inert_tree_and_RSS_proof_passed",
+  "finished_at_utc": "2026-10-15T05:58:42.189549+00:00"
+}

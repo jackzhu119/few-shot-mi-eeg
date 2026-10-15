@@ -122,6 +122,217 @@ def test_cgroup_ancestor_headroom_caps_host_memory(tmp_path):
     assert len(result["cgroups"]) == 2
 
 
+@pytest.fixture
+def procfs_tree(tmp_path, monkeypatch):
+    proc = tmp_path / "proc"
+    proc.mkdir()
+
+    def member(pid, ppid, session, rss_kib, *, zombie=False):
+        path = proc / str(pid)
+        path.mkdir()
+        fields = ["0"] * 22
+        fields[0:4] = ["Z" if zombie else "S", str(ppid), str(session), str(session)]
+        fields[19] = str(10000 + pid)
+        (path / "stat").write_text(f"{pid} (synthetic ) process) " + " ".join(fields) + "\n")
+        (path / "status").write_text(
+            f"State:\t{fields[0]} (synthetic)\nPid:\t{pid}\nTgid:\t{pid}\nPPid:\t{ppid}\n"
+            + ("" if zombie else f"VmRSS:\t{rss_kib} kB\n"))
+
+    member(1, 0, 1, 512)
+    (proc / "self/ns").mkdir(parents=True)
+    (proc / "1/ns").mkdir()
+    (proc / "self/ns/pid").symlink_to("pid:[synthetic]")
+    (proc / "1/ns/pid").symlink_to("pid:[synthetic]")
+    (proc / "self/status").write_text(f"Pid:\t{os.getpid()}\nTgid:\t{os.getpid()}\n")
+    (proc / "self/mountinfo").write_text(f"53 52 0:30 / {proc} rw,nosuid,nodev,noexec - proc proc rw\n")
+    member(100, 1, 100, 1024)  # Dedicated root, with no task/*/children files.
+    member(101, 100, 100, 2048)
+    member(102, 101, 200, 4096)  # Grandchild changed session but still in PPID closure.
+    member(103, 1, 100, 8192)  # Reparented child remains in the dedicated session.
+    member(104, 100, 100, 0, zombie=True)
+    member(200, 1, 200, 16384)  # Unrelated process excluded.
+    monkeypatch.setattr(operation, "effective_memory", lambda: {
+        "host_available_bytes": 16 * 1024**3,
+        "cgroups": [{"headroom_bytes": 4 * 1024**3}]})
+    return proc
+
+
+def test_procfs_snapshot_counts_full_tree_and_session_orphan_without_children_files(procfs_tree):
+    observed = operation.running_memory(100, procfs_tree)
+    assert observed["process_tree_pids"] == [100, 101, 102, 103, 104]
+    assert observed["consumer_rss_bytes"] == (1024 + 2048 + 4096 + 8192) * 1024
+    assert observed["visible_process_count"] == 7
+    assert observed["process_tree_members"][-1]["zombie"] is True
+    assert observed["process_tree_members"][-1]["rss_bytes"] == 0
+
+
+@pytest.mark.parametrize("missing", ["101/stat", "101/status", "200/stat"])
+def test_procfs_missing_member_or_census_proof_is_never_zero_or_skipped(procfs_tree, missing):
+    (procfs_tree / missing).unlink()
+    with pytest.raises(FileNotFoundError):
+        operation.running_memory(100, procfs_tree)
+
+
+def test_procfs_unreadable_stat_propagates_without_retry(procfs_tree, monkeypatch):
+    original = Path.read_text
+    failures = []
+
+    def unreadable(path, *args, **kwargs):
+        if path == procfs_tree / "101/stat":
+            failures.append(path)
+            raise PermissionError("Synthetic unreadable process identity")
+        return original(path, *args, **kwargs)
+
+    monkeypatch.setattr(Path, "read_text", unreadable)
+    with pytest.raises(PermissionError):
+        operation.running_memory(100, procfs_tree)
+    assert len(failures) == 1
+
+
+@pytest.mark.parametrize("change", ["new_pid", "lost_pid", "start_ticks", "ppid", "session", "zombie"])
+def test_procfs_snapshot_identity_or_topology_race_fails_without_retry(procfs_tree, monkeypatch, change):
+    original = operation.process_snapshot
+    calls = []
+
+    def changed(proc):
+        rows = original(proc)
+        calls.append(rows)
+        if len(calls) == 2:
+            if change == "new_pid":
+                rows[999] = dict(rows[101], pid=999)
+            elif change == "lost_pid":
+                del rows[101]
+            elif change == "zombie":
+                rows[101]["zombie"] = True
+            else:
+                rows[101][change] += 1
+        return rows
+
+    monkeypatch.setattr(operation, "process_snapshot", changed)
+    with pytest.raises(ValueError, match="Unstable procfs process identity/topology"):
+        operation.running_memory(100, procfs_tree)
+    assert len(calls) == 2
+
+
+def test_procfs_census_change_during_single_snapshot_fails(procfs_tree, monkeypatch):
+    original = Path.iterdir
+    calls = []
+
+    def changed(path):
+        entries = list(original(path))
+        if path == procfs_tree:
+            calls.append(path)
+            if len(calls) == 2:
+                return iter(entries + [procfs_tree / "999"])
+        return iter(entries)
+
+    monkeypatch.setattr(Path, "iterdir", changed)
+    with pytest.raises(ValueError, match="Unstable procfs PID census"):
+        operation.running_memory(100, procfs_tree)
+    assert len(calls) == 2
+
+
+@pytest.mark.parametrize("change", ["missing_rss", "negative_rss", "wrong_unit", "wrong_ppid", "wrong_pid"])
+def test_procfs_live_status_requires_readable_consistent_rss(procfs_tree, change):
+    path = procfs_tree / "101/status"
+    text = path.read_text()
+    if change == "missing_rss":
+        text = text.replace("VmRSS:\t2048 kB\n", "")
+    elif change == "negative_rss":
+        text = text.replace("2048 kB", "-1 kB")
+    elif change == "wrong_unit":
+        text = text.replace("2048 kB", "2048 B")
+    elif change == "wrong_ppid":
+        text = text.replace("PPid:\t100", "PPid:\t1")
+    else:
+        text = text.replace("Pid:\t101", "Pid:\t999")
+    path.write_text(text)
+    with pytest.raises((KeyError, ValueError)):
+        operation.running_memory(100, procfs_tree)
+
+
+def test_procfs_root_must_have_dedicated_session(procfs_tree):
+    with pytest.raises(ValueError, match="dedicated process session"):
+        operation.running_memory(101, procfs_tree)
+
+
+def test_procfs_history_retains_live_reparented_new_session_and_group_member(procfs_tree):
+    history = {}
+    first = operation.running_memory(100, procfs_tree, history)
+    path = procfs_tree / "102/stat"
+    text = path.read_text().replace("S 101 200 200", "S 1 102 102")
+    path.write_text(text)
+    path = procfs_tree / "102/status"
+    path.write_text(path.read_text().replace("PPid:\t101", "PPid:\t1"))
+    second = operation.running_memory(100, procfs_tree, history)
+    assert second["process_tree_pids"] == first["process_tree_pids"]
+    assert second["consumer_rss_bytes"] == first["consumer_rss_bytes"]
+    assert history[102] == 10102
+    assert len({row["tgid"] for row in second["process_tree_members"]}) == 5
+
+
+def test_procfs_history_rejects_reused_pid_without_inheriting_identity(procfs_tree):
+    history = {}
+    operation.running_memory(100, procfs_tree, history)
+    path = procfs_tree / "102/stat"
+    path.write_text(path.read_text().replace("10102", "99999"))
+    with pytest.raises(ValueError, match="descendant PID was reused"):
+        operation.running_memory(100, procfs_tree, history)
+    assert history[102] == 10102
+
+
+def test_procfs_prior_member_can_be_absent_only_across_complete_stable_snapshots(procfs_tree):
+    history = {}
+    operation.running_memory(100, procfs_tree, history)
+    path = procfs_tree / "102"
+    for member in path.iterdir():
+        member.unlink()
+    path.rmdir()
+    observed = operation.running_memory(100, procfs_tree, history)
+    assert observed["previously_observed_stably_absent_pids"] == [102]
+    assert 102 not in observed["process_tree_pids"]
+    assert history[102] == 10102  # Keep identity tombstone; later reuse is rejected.
+
+
+def test_procfs_failed_rss_sample_retains_observed_identities_for_cleanup(procfs_tree):
+    history = {}
+    (procfs_tree / "101/status").unlink()
+    with pytest.raises(FileNotFoundError):
+        operation.running_memory(100, procfs_tree, history)
+    assert history == {100: 10100, 101: 10101, 102: 10102, 103: 10103, 104: 10104}
+
+
+def test_procfs_threads_do_not_duplicate_tgid_rss(procfs_tree):
+    for tid in (100, 999):
+        task = procfs_tree / "100/task" / str(tid)
+        task.mkdir(parents=True)
+        (task / "status").write_text("VmRSS:\t999999 kB\nTgid:\t100\n")
+    observed = operation.running_memory(100, procfs_tree)
+    assert observed["consumer_rss_bytes"] == (1024 + 2048 + 4096 + 8192) * 1024
+    assert [row["tgid"] for row in observed["process_tree_members"]] == [100, 101, 102, 103, 104]
+
+
+@pytest.mark.parametrize("change", ["hidepid", "subset", "wrong_fs", "masked_pid", "wrong_namespace"])
+def test_procfs_visibility_must_prove_unfiltered_current_namespace(procfs_tree, change):
+    path = procfs_tree / "self/mountinfo"
+    text = path.read_text()
+    if change == "hidepid":
+        text = text.replace("- proc proc rw", "- proc proc rw,hidepid=2")
+    elif change == "subset":
+        text = text.replace("- proc proc rw", "- proc proc rw,subset=pid")
+    elif change == "wrong_fs":
+        text = text.replace("- proc proc rw", "- tmpfs tmpfs rw")
+    elif change == "masked_pid":
+        text += f"54 53 0:31 / {procfs_tree}/102 rw - tmpfs tmpfs rw\n"
+    else:
+        namespace = procfs_tree / "1/ns/pid"
+        namespace.unlink()
+        namespace.symlink_to("pid:[different]")
+    path.write_text(text)
+    with pytest.raises(ValueError):
+        operation.running_memory(100, procfs_tree)
+
+
 @pytest.mark.parametrize("change", ["absent", "query", "gpu", "cost", "deadline", "commit", "contract", "container"])
 def test_no_actual_matching_cpu_authorization_cannot_execute(change):
     auth = auth_fixture()
@@ -158,11 +369,11 @@ def launch(prepared, monkeypatch):
     monkeypatch.setattr(operation.subprocess, "check_output", lambda argv, **kw:
                         "a" * 40 + "\n" if argv[1] == "rev-parse" else "")
 
-    def run(popen, *, config=None, memory_reader=None):
+    def run(popen, *, config=None, memory_reader=None, use_actual_monitor=False):
         return operation.execute(config or contract, auth_fixture(), contract_sha="b" * 64,
             commit="a" * 40, auth_sha="c" * 64, root=root,
             preflight_reader=lambda *args, **kwargs: preflight(), popen=popen,
-            memory_reader=memory_reader or (lambda pid: {"consumer_rss_bytes": 1024,
+            memory_reader=None if use_actual_monitor else memory_reader or (lambda pid: {"consumer_rss_bytes": 1024,
                 "process_tree_pids": [pid], "cgroup_headroom_bytes": 4 * 1024**3,
                 "host_available_bytes": 16 * 1024**3}))
     return root, contract, run
@@ -263,16 +474,22 @@ def test_launcher_term_hup_stop_child_group_and_restore_handlers(launch, monkeyp
     assert operation.read(root / operation.STATE / "launcher_receipt.json")["interrupted"] is True
 
 
-@pytest.mark.parametrize("kind", ["rss", "headroom", "host", "unreadable"])
+@pytest.mark.parametrize("kind", ["rss", "headroom", "host", "unreadable", "missing_proc_stat", "unstable_procfs"])
 def test_sampled_memory_limits_or_read_failure_stop_real_inert_child(launch, kind):
-    _, _, run = launch
+    root, _, run = launch
+    launches = []
 
     def inert(argv, **kwargs):
+        launches.append(argv)
         return subprocess.Popen([sys.executable, "-c", "import time;time.sleep(60)"], **kwargs)
 
     def observed(pid):
         if kind == "unreadable":
             raise OSError("Synthetic unreadable consumer memory")
+        if kind == "missing_proc_stat":
+            raise FileNotFoundError(f"Synthetic missing /proc/{pid}/stat")
+        if kind == "unstable_procfs":
+            raise ValueError("Unstable procfs process identity/topology")
         return {"consumer_rss_bytes": 2 * 1024**3 if kind == "rss" else 1024,
                 "cgroup_headroom_bytes": 1024**3 if kind == "headroom" else 4 * 1024**3,
                 "host_available_bytes": 1024**3 if kind == "host" else 16 * 1024**3,
@@ -282,7 +499,10 @@ def test_sampled_memory_limits_or_read_failure_stop_real_inert_child(launch, kin
     assert receipt["returncode"] == -15
     assert receipt["status"] != "consumer_exited_zero_pending_audit"
     assert receipt["accepted"] is False
-    assert receipt["resource_limit_stop"] is (kind != "unreadable")
+    assert receipt["resource_limit_stop"] is (kind in {"rss", "headroom", "host"})
+    assert len(launches) == 1
+    assert (root / operation.STATE / "claim.json").is_file()
+    assert operation.read(root / operation.STATE / "launcher_receipt.json") == receipt
 
 
 @pytest.mark.parametrize("failure", ["claim", "log_hash", "receipt"])
@@ -493,3 +713,129 @@ def test_resource_stop_does_not_restart_term_grace_at_consumer_deadline(launch, 
     assert receipt["timeout"] is False
     assert sent == [signal.SIGTERM, signal.SIGKILL] and waits == [30, 5]
     assert [event["signal"] for event in receipt["signals"]] == ["SIGTERM", "SIGKILL"]
+
+
+@pytest.mark.parametrize("failure", [None, "reused_pid", "unreadable_proof"])
+def test_pidfd_cleanup_stops_escaped_identity_and_root_without_killing_reused_pid(monkeypatch, failure):
+    history = {500: 1000, 501: 1001, 502: 1002}
+    rows = {pid: {"pid": pid, "start_ticks": start} for pid, start in history.items()}
+    ready, sent, groups, closed = set(), [], [], []
+
+    class Child:
+        pid = 500
+        alive = True
+
+        def poll(self):
+            return None if self.alive else -15
+
+        def wait(self, timeout):
+            assert not self.alive
+            return -15
+
+    child = Child()
+
+    def snapshot(proc):
+        if failure == "unreadable_proof":
+            raise PermissionError("Synthetic unreadable cleanup proof")
+        return rows
+
+    def record(pid, proc):
+        return dict(rows[pid], start_ticks=9999) if failure == "reused_pid" and pid == 501 else rows[pid]
+
+    def killgroup(pid, signum):
+        groups.append((pid, signum))
+        child.alive = False
+        ready.add(1500)
+
+    def signal_fd(handle, signum):
+        sent.append((handle, signum))
+        ready.add(handle)
+
+    monkeypatch.setattr(operation, "proc_visibility", lambda proc: {})
+    monkeypatch.setattr(operation, "process_snapshot", snapshot)
+    monkeypatch.setattr(operation, "process_record", record)
+    monkeypatch.setattr(operation.os, "pidfd_open", lambda pid: pid + 1000)
+    monkeypatch.setattr(operation.os, "close", closed.append)
+    monkeypatch.setattr(operation.os, "killpg", killgroup)
+    monkeypatch.setattr(operation.signal, "pidfd_send_signal", signal_fd)
+    monkeypatch.setattr(operation.select, "select", lambda handles, _, __, timeout:
+                        ([handle for handle in handles if handle in ready], [], []))
+    if failure:
+        with pytest.raises(ValueError, match="Process cleanup proof failed") as raised:
+            operation.stop_process(child, 0, history)
+        assert not any(handle == 1501 for handle, _ in sent)
+        assert raised.value.signal_events[0]["target_process_group"] == 500
+        if failure == "reused_pid":
+            assert (1502, signal.SIGTERM) in sent  # A bad earlier identity cannot skip this one.
+            assert any(event.get("target_pid") == 502 for event in raised.value.signal_events)
+    else:
+        code, events = operation.stop_process(child, 0, history)
+        assert code == -15
+        assert (1501, signal.SIGTERM) in sent
+        assert any(event.get("target_pid") == 501 for event in events)
+    assert groups == [(500, signal.SIGTERM)]
+    assert child.poll() == -15
+    if failure != "unreadable_proof":
+        assert sorted(closed) == [1500, 1501, 1502]
+
+
+def test_cleanup_failure_preserved_without_second_stop_or_grace(launch, monkeypatch):
+    _, _, run = launch
+    calls = []
+
+    class Child:
+        pid = -999999
+
+        def poll(self):
+            return None
+
+    def failed_stop(process, grace):
+        calls.append(grace)
+        error = OSError("Synthetic cleanup proof failure")
+        error.signal_events = [{"signal": "SIGTERM", "target_pid": process.pid}]
+        raise error
+
+    monkeypatch.setattr(operation, "stop_process", failed_stop)
+    receipt = run(lambda *args, **kwargs: Child(), memory_reader=lambda pid: {
+        "consumer_rss_bytes": 2 * 1024**3, "process_tree_pids": [pid],
+        "cgroup_headroom_bytes": 4 * 1024**3, "host_available_bytes": 16 * 1024**3})
+    assert calls == [30]
+    assert receipt["stop_failure"]["type"] == "OSError"
+    assert receipt["signals"] == [{"signal": "SIGTERM", "target_pid": -999999}]
+    assert receipt["status"] == "launcher_failed_preserved"
+
+
+@pytest.mark.parametrize("live_descendant", [False, True])
+def test_natural_root_zero_requires_tracked_descendant_exit_proof(launch, monkeypatch, live_descendant):
+    _, _, run = launch
+    stops = []
+
+    class Child:
+        pid = 500
+        done = False
+
+        def poll(self):
+            return 0 if self.done else None
+
+        def wait(self, timeout):
+            self.done = True
+            return 0
+
+    def monitor(pid, observed_descendants):
+        observed_descendants.update({500: 1000, 501: 1001})
+        return {"consumer_rss_bytes": 1024, "process_tree_pids": [500, 501],
+                "cgroup_headroom_bytes": 4 * 1024**3, "host_available_bytes": 16 * 1024**3}
+
+    def cleanup(process, grace, history):
+        stops.append((process.poll(), grace, dict(history)))
+        return 0, ([{"signal": "SIGTERM", "target_pid": 501, "start_ticks": 1001}]
+                   if live_descendant else [])
+
+    monkeypatch.setattr(operation, "running_memory", monitor)
+    monkeypatch.setattr(operation, "stop_process", cleanup)
+    receipt = run(lambda *args, **kwargs: Child(), use_actual_monitor=True)
+    assert stops == [(0, 30, {500: 1000, 501: 1001})]
+    assert receipt["returncode"] == 0
+    assert receipt["descendant_cleanup_required_after_root_exit"] is live_descendant
+    assert receipt["status"] == ("consumer_failed_preserved" if live_descendant
+                                  else "consumer_exited_zero_pending_audit")

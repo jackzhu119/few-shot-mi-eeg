@@ -15,6 +15,7 @@ import math
 import os
 import platform
 import re
+import select
 import shutil
 import signal
 import subprocess
@@ -269,7 +270,9 @@ def member_inventory(folder):
     return rows
 
 
-def stop_process(process, grace):
+def stop_process(process, grace, observed_descendants=None):
+    if observed_descendants:
+        return stop_tracked_process(process, grace, observed_descendants)
     events = []
     for signum, seconds in ((signal.SIGTERM, grace), (signal.SIGKILL, 5)):
         try:
@@ -282,6 +285,74 @@ def stop_process(process, grace):
         except subprocess.TimeoutExpired:
             pass
     raise RuntimeError("Child process did not reap after SIGKILL")
+
+
+def stop_tracked_process(process, grace, history):
+    """Stop known identities via pidfds; escaped groups share the same grace."""
+    deadline = time.monotonic() + max(0, grace)
+    handles, failures, events = {}, [], []
+    proc = Path("/proc")
+    try:
+        try:
+            proc_visibility(proc)
+            before = process_snapshot(proc)
+            for pid, expected in history.items():
+                if pid not in before:
+                    continue  # Absence must also hold in the second full snapshot.
+                try:
+                    handle = os.pidfd_open(pid)
+                    try:
+                        require(process_record(pid, proc)["start_ticks"] == expected,
+                                "Refusing signal to reused descendant PID")
+                    except BaseException:
+                        os.close(handle)
+                        raise
+                    handles[pid] = handle
+                except (OSError, ValueError, IndexError, KeyError) as error:
+                    failures.append(f"PID {pid}: {type(error).__name__}: {error}")
+            require(process_snapshot(proc) == before, "Unstable procfs cleanup identity/topology")
+        except (OSError, ValueError, IndexError, KeyError) as error:
+            failures.append(type(error).__name__ + ": " + str(error))
+
+        for signum in (signal.SIGTERM, signal.SIGKILL):
+            ready = set(select.select(list(handles.values()), [], [], 0)[0])
+            live = {pid: handle for pid, handle in handles.items() if handle not in ready}
+            if process.poll() is None:
+                try:
+                    os.killpg(process.pid, signum)
+                    events.append({"signal": signal.Signals(signum).name, "at_utc": utc(),
+                                   "target_process_group": process.pid})
+                except OSError as error:
+                    failures.append(type(error).__name__ + ": " + str(error))
+            for pid, handle in live.items():
+                try:
+                    signal.pidfd_send_signal(handle, signum)
+                    events.append({"signal": signal.Signals(signum).name, "at_utc": utc(),
+                                   "target_pid": pid, "start_ticks": history[pid]})
+                except ProcessLookupError:
+                    pass  # This identity exited; pidfd never targets a reused PID.
+                except OSError as error:
+                    failures.append(type(error).__name__ + ": " + str(error))
+            if signum == signal.SIGKILL:
+                break
+            while time.monotonic() < deadline:
+                ready = set(select.select(list(handles.values()), [], [], 0)[0])
+                if process.poll() is not None and len(ready) == len(handles):
+                    break
+                time.sleep(min(0.05, max(0, deadline - time.monotonic())))
+            if process.poll() is not None and len(ready) == len(handles):
+                break
+        code = process.wait(timeout=5)  # Reaping after the existing KILL boundary.
+        if len(select.select(list(handles.values()), [], [], 0)[0]) != len(handles):
+            failures.append("Tracked descendant exit not yet proven after SIGKILL")
+        require(not failures, "Process cleanup proof failed: " + "; ".join(failures))
+        return code, events
+    except BaseException as error:
+        error.signal_events = events
+        raise
+    finally:
+        for handle in handles.values():
+            os.close(handle)
 
 
 @contextmanager
@@ -313,29 +384,124 @@ def deadline_guard(deadline):
         signal.signal(signal.SIGALRM, previous)
 
 
-def running_memory(pid):
-    pending, seen, rss = [pid], set(), 0
+def proc_visibility(proc_root):
+    """Require an unfiltered proc mount for this process's PID namespace."""
+    mountpoint = str(proc_root.resolve())
+    matches = []
+    for line in (proc_root / "self/mountinfo").read_text().splitlines():
+        left, right = line.split(" - ", 1)
+        fields, filesystem = left.split(), right.split()
+        path = fields[4]
+        if path == mountpoint:
+            matches.append((fields, filesystem))
+        if path.startswith(mountpoint + "/"):
+            require(not path[len(mountpoint) + 1:].split("/", 1)[0].isdecimal(),
+                    "Masked procfs process subtree prevents complete visibility")
+    require(len(matches) == 1, "Ambiguous or missing procfs mount")
+    fields, filesystem = matches[0]
+    options = set(fields[5].split(",") + filesystem[2].split(","))
+    require(fields[3] == "/" and filesystem[0] == "proc"
+            and all(not option.startswith("subset=")
+                    and (not option.startswith("hidepid=") or option == "hidepid=0")
+                    for option in options), "Filtered or non-proc process visibility")
+    namespace = os.readlink(proc_root / "self/ns/pid")
+    require(namespace == os.readlink(proc_root / "1/ns/pid"),
+            "Procfs PID namespace differs from the current namespace")
+    status = dict(line.split(":", 1) for line in (proc_root / "self/status").read_text().splitlines()
+                  if ":" in line)
+    require(int(status["Pid"]) == os.getpid() and int(status["Tgid"]) == os.getpid(),
+            "Procfs current process identity is not visible")
+    return {"mountpoint": mountpoint, "mount_options": sorted(options),
+            "pid_namespace": namespace, "observer_pid": os.getpid()}
+
+
+def process_record(pid, proc_root):
+    raw = (proc_root / str(pid) / "stat").read_text()
+    fields = raw.rsplit(")", 1)[1].split()
+    require(int(raw.split("(", 1)[0]) == pid and len(fields) >= 22,
+            "Malformed procfs process identity")
+    return {"pid": pid, "ppid": int(fields[1]), "pgrp": int(fields[2]),
+            "session": int(fields[3]), "start_ticks": int(fields[19]),
+            "zombie": fields[0] == "Z"}
+
+
+def process_snapshot(proc_root):
+    """Read every visible PID, refusing process census or identity races.
+
+    procfs reads are sampled, not atomic: processes born and gone entirely
+    between observations cannot be accounted for. No missing proof is skipped.
+    """
+    def census():
+        return {int(path.name) for path in proc_root.iterdir() if path.name.isdecimal()}
+
+    pids = census()
+    rows = {}
+    for pid in sorted(pids):
+        rows[pid] = process_record(pid, proc_root)
+    require(census() == pids, "Unstable procfs PID census")
+    return rows
+
+
+def running_memory(pid, proc_root=Path("/proc"), observed_descendants=None):
+    visibility = proc_visibility(proc_root)
+    history = {} if observed_descendants is None else observed_descendants
+    before = process_snapshot(proc_root)
+    require(pid in before and before[pid]["session"] == pid,
+            "Missing consumer or dedicated process session")
+    for previous, start_ticks in history.items():
+        require(previous not in before or before[previous]["start_ticks"] == start_ticks,
+                "Previously observed descendant PID was reused")
+    # PPID closure includes descendants that change sessions; the dedicated
+    # session retains reparented children. History keeps a previously observed
+    # live descendant even if it subsequently changes both session and parent.
+    pending = [value for value, row in before.items()
+               if row["session"] == pid or value in history]
+    seen, members = set(), []
     while pending:
         current = pending.pop()
         if current in seen:
             continue
         seen.add(current)
-        process_root = Path(f"/proc/{current}")
-        fields = dict(line.split(":", 1) for line in (process_root / "status").read_text().splitlines()
+        pending.extend(value for value, row in before.items() if row["ppid"] == current)
+    absent = sorted(set(history) - set(before))
+    # Preserve observed identities for fail-closed cleanup even if RSS or the
+    # second snapshot fails. Cleanup revalidates each identity before signaling.
+    history.update({current: before[current]["start_ticks"] for current in seen})
+    for current in sorted(seen):
+        row = before[current]
+        fields = dict(line.split(":", 1) for line in (proc_root / str(current) / "status").read_text().splitlines()
                       if ":" in line)
-        rss += (0 if fields["State"].strip().startswith("Z") else
-                int(fields["VmRSS"].split()[0]) * 1024)
-        for task in (process_root / "task").iterdir():
-            pending.extend(int(value) for value in (task / "children").read_text().split())
+        require(int(fields["Pid"]) == current and int(fields["Tgid"]) == current
+                and int(fields["PPid"]) == row["ppid"]
+                and fields["State"].strip().startswith("Z") == row["zombie"],
+                "Changed procfs status identity/topology")
+        if row["zombie"]:
+            rss = 0  # Only an explicitly observed zombie has no resident memory.
+        else:
+            value, unit = fields["VmRSS"].split()
+            require(unit == "kB" and int(value) >= 0, "Invalid procfs VmRSS")
+            rss = int(value) * 1024
+        members.append({**row, "tgid": current, "rss_bytes": rss})
+    after = process_snapshot(proc_root)
+    require(before == after, "Unstable procfs process identity/topology")
+    require(proc_visibility(proc_root) == visibility, "Procfs visibility changed during sampling")
     memory = effective_memory()
     finite = [row["headroom_bytes"] for row in memory["cgroups"] if row["headroom_bytes"] is not None]
-    return {"consumer_rss_bytes": rss, "process_tree_pids": sorted(seen),
+    return {"consumer_rss_bytes": sum(row["rss_bytes"] for row in members),
+            "process_tree_pids": sorted(seen), "process_tree_members": members,
+            "process_snapshot_method": "visible_procfs_ppid_and_dedicated_session_two_snapshots",
+            "visible_process_count": len(before), "proc_visibility": visibility,
+            "previously_observed_stably_absent_pids": absent,
             "host_available_bytes": memory["host_available_bytes"],
             "cgroup_headroom_bytes": min(finite) if finite else None}
 
 
 def execute(contract, auth, *, contract_sha, commit, auth_sha, root=ROOT,
-            preflight_reader=preflight, popen=subprocess.Popen, memory_reader=running_memory):
+            preflight_reader=preflight, popen=subprocess.Popen, memory_reader=None):
+    observed_descendants = {}
+    if memory_reader is None:
+        def memory_reader(pid):
+            return running_memory(pid, observed_descendants=observed_descendants)
     deadline = authorization_check(auth, contract_sha, commit)
     absolute_deadline = time.monotonic() + deadline - time.time()
     with deadline_guard(absolute_deadline - 30):
@@ -358,13 +524,27 @@ def execute(contract, auth, *, contract_sha, commit, auth_sha, root=ROOT,
                "interrupted": False, "signals": [], "output_members": [],
                "resource_samples": [], "maximum_observed_consumer_rss_bytes": None,
                "resource_limit_stop": False,
+               "descendant_cleanup_required_after_root_exit": False,
                "scientific_completion_accepted": False, "independently_audited": False,
                "R2_full_GET_verified": False, "accepted": False, "query_access": False}
-    process, old_handlers = None, {}
+    process, old_handlers, stop_attempted = None, {}, False
 
     def remaining_grace():
         return min(30, max(0, deadline - time.time()),
                    max(0, absolute_deadline - time.monotonic()))
+
+    def stop_consumer():
+        nonlocal stop_attempted
+        require(not stop_attempted, "Consumer cleanup already attempted; no renewed grace")
+        stop_attempted = True
+        try:
+            if observed_descendants:
+                return stop_process(process, remaining_grace(), observed_descendants)
+            return stop_process(process, remaining_grace())
+        except BaseException as error:
+            receipt["signals"] = getattr(error, "signal_events", [])
+            receipt["stop_failure"] = {"type": type(error).__name__, "message": str(error)}
+            raise
 
     def interrupt(signum, frame):
         # A separate session does not receive the launcher's TERM/HUP; explicitly
@@ -428,18 +608,24 @@ def execute(contract, auth, *, contract_sha, commit, auth_sha, root=ROOT,
             if receipt["resource_limit_stop"]:
                 # The consumer timer must not interrupt TERM grace and cause a
                 # second stop attempt with a newly granted grace period.
-                receipt["returncode"], receipt["signals"] = stop_process(process, remaining_grace())
+                receipt["returncode"], receipt["signals"] = stop_consumer()
             if receipt["returncode"] is None:
                 receipt["returncode"] = process.poll()
-            receipt["status"] = "consumer_exited_zero_pending_audit" if receipt["returncode"] == 0 and not (receipt["timeout"] or receipt["resource_limit_stop"]) else "consumer_failed_preserved"
+            if observed_descendants and not stop_attempted:
+                # Root exit alone cannot prove a previously observed escaped
+                # descendant has exited. Prove all identities, stopping any
+                # survivor within the original cleanup allowance exactly once.
+                receipt["returncode"], receipt["signals"] = stop_consumer()
+                receipt["descendant_cleanup_required_after_root_exit"] = bool(receipt["signals"])
+            receipt["status"] = "consumer_exited_zero_pending_audit" if receipt["returncode"] == 0 and not (receipt["timeout"] or receipt["resource_limit_stop"] or receipt["descendant_cleanup_required_after_root_exit"]) else "consumer_failed_preserved"
     except BaseException as error:
         receipt["interrupted"] = isinstance(error, (KeyboardInterrupt, InterruptedError))
         receipt["timeout"] = receipt["timeout"] or isinstance(error, TimeoutError)
         receipt["status"] = "consumer_interrupted_preserved" if receipt["interrupted"] else "launcher_failed_preserved"
         receipt["failure"] = {"type": type(error).__name__, "message": str(error)}
-        if process is not None and process.poll() is None:
+        if process is not None and not stop_attempted and (process.poll() is None or observed_descendants):
             try:
-                receipt["returncode"], receipt["signals"] = stop_process(process, remaining_grace())
+                receipt["returncode"], receipt["signals"] = stop_consumer()
             except BaseException as stop_error:
                 receipt["stop_failure"] = {"type": type(stop_error).__name__, "message": str(stop_error)}
         elif process is not None:

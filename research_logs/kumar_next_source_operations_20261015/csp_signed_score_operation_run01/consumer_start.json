@@ -1,0 +1,21 @@
+{
+  "started_at_utc": "2026-10-15T05:41:45.522564+00:00",
+  "launch_attempt_started_at_utc": "2026-10-15T05:41:45.522040+00:00",
+  "pid": 16119,
+  "command": [
+    "/workspace/.venvs/few-shot-mi-eeg/bin/python",
+    "-B",
+    "scripts/analyze_kumar_csp_signed_score_v1.py",
+    "--epochs",
+    "research_logs/kumar_cross_session_20261012/csp_development_epochs_run01_20261014",
+    "--baseline-root",
+    "results/kumar_cross_session_20261012/cpu_run01_20261013T151445Z",
+    "--baseline-r2-receipt",
+    "research_logs/recovery_20261014/kumar_results_R2_run01.json",
+    "--config",
+    "configs/kumar_csp_reliability_20261014.json",
+    "--output",
+    "results/kumar_csp_signed_score_20261015/run01"
+  ],
+  "timeout_seconds": 6284.477964401245
+}
