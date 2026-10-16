@@ -2,6 +2,9 @@
 
 ## 最新论文审阅稿（2026-10-16 UTC）
 
+[实际 main/R2 同步收尾](docs/kumar_review_revision_sync_closeout_20261016.md)：固定内容 `f2901de` 已公开；
+本轮692个私有对象共89,459,262 bytes完整GET/SHA256通过，零失败。
+
 [新版 PLOS ONE 完整包](manuscript/plos_one_submission_20261016/README.md) /
 [带图 PDF](manuscript/plos_one_submission_20261016/manuscript_for_review.pdf) /
 [Word](manuscript/plos_one_submission_20261016/manuscript_for_review.docx)。

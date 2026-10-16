@@ -1,0 +1,112 @@
+{
+  "status": "passed_local_receipt_and_payload_reconciliation",
+  "no_second_remote_GET_performed": true,
+  "primary_objects": {
+    "planned_files": 679,
+    "planned_bytes": 70070553,
+    "verified_files": 679,
+    "verified_bytes": 70070553,
+    "failed_files": 0,
+    "full_get_sha256_verified_files": 679,
+    "uploaded_bytes": 70070553,
+    "readback_bytes": 70070553
+  },
+  "closing_objects": {
+    "planned_files": 13,
+    "planned_bytes": 19388709,
+    "verified_files": 13,
+    "verified_bytes": 19388709,
+    "failed_files": 0,
+    "full_get_sha256_verified_files": 13,
+    "uploaded_bytes": 19388709,
+    "readback_bytes": 19388709
+  },
+  "combined_unique_objects": 692,
+  "combined_full_GET_verified_bytes": 89459262,
+  "all_failed_objects": [],
+  "primary_receipt_bytes": 579221,
+  "primary_receipt_sha256": "7eab03bf7c6d21dc9ca60a8b878f2a74051ac95af32054255d145933ae4b3770",
+  "closing_receipt_bytes": 11132,
+  "closing_receipt_sha256": "0bfdb0c6c4e67f6c295468aa2018ae4b923459f0f765b6679ba4bc9ff1655b37",
+  "closing_local_full_byte_checks": [
+    {
+      "relative_path": "closing_payload_manifest.json",
+      "bytes": 2427,
+      "sha256": "9313e469b0b2f6f93fd59664cb652e99ecbca18452432494844fa89fdd30047c",
+      "matched": true
+    },
+    {
+      "relative_path": "delivery_archive_full_member_verification.json",
+      "bytes": 8535,
+      "sha256": "2e45d3ccc9a2dbd159a43f0c68db26cec83f3102c399c55b6e46de5c3fab20b1",
+      "matched": true
+    },
+    {
+      "relative_path": "delivery_bundle_receipt.json",
+      "bytes": 8236,
+      "sha256": "97c821b4df013b571a4fd857ad3f25e5a7c3d6f6a92a27285c3571ba4e267bb3",
+      "matched": true
+    },
+    {
+      "relative_path": "git_bundle_verify.stderr",
+      "bytes": 103,
+      "sha256": "ea04179c504ddddb38fc495db9ca1fd36b4da40ce8434ebdeae599647764b150",
+      "matched": true
+    },
+    {
+      "relative_path": "git_bundle_verify.stdout",
+      "bytes": 312,
+      "sha256": "006cd530f9a72e0c4cc09f1608837457cb406f0ef69bd83876a3c10c8a6ff7c1",
+      "matched": true
+    },
+    {
+      "relative_path": "git_content_snapshot.json",
+      "bytes": 622,
+      "sha256": "6570ec0039bac4e024077d31384c2e623b8cf2e8c886374fd372bc085787157e",
+      "matched": true
+    },
+    {
+      "relative_path": "github_public_readback.json",
+      "bytes": 7700,
+      "sha256": "0f2fa5d5c13bc8dc2a3f86cec262d89fa240e090355a333f696f0944d2303ec9",
+      "matched": true
+    },
+    {
+      "relative_path": "independent_R2_receipt_verification.json",
+      "bytes": 723607,
+      "sha256": "8255f485a8f1d1b4146fb929b474da4b5056b596b3131c74ced39ab112585869",
+      "matched": true
+    },
+    {
+      "relative_path": "independent_R2_receipt_verification.md",
+      "bytes": 2440,
+      "sha256": "9e47be5e5cc79fbf4357081db57d6a71aa8b4f160485b6bc90fe1ffdc8657ff7",
+      "matched": true
+    },
+    {
+      "relative_path": "paper2-plos-review-20261016.zip",
+      "bytes": 7553238,
+      "sha256": "86c817d598e6c2f44ddd7a88ddcb34665d97adc73175b7914cb9d20d52aaf430",
+      "matched": true
+    },
+    {
+      "relative_path": "r2_full_get_receipt.json",
+      "bytes": 579221,
+      "sha256": "7eab03bf7c6d21dc9ca60a8b878f2a74051ac95af32054255d145933ae4b3770",
+      "matched": true
+    },
+    {
+      "relative_path": "review_revision_from_a783.bundle",
+      "bytes": 10499217,
+      "sha256": "171c9b4fdb9c0e018ab199205e8571c5c69cafe3e509f904818d5f0a55a94b38",
+      "matched": true
+    },
+    {
+      "relative_path": "verify_publication.py",
+      "bytes": 3051,
+      "sha256": "3580314b95c4e2a59884866d90749a528facb47b45a9550970462094c5aa5773",
+      "matched": true
+    }
+  ],
+  "closing_receipt_not_self_GET_backed_up": true
+}

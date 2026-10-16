@@ -41,3 +41,9 @@ and the author's personal review/approval of the final version. The explicit
 scoped licensing approval does not stand in for either. No real fitting, query
 forward, signal reconstruction, Pod operation, first-paper operation, resource
 purchase or new allocation occurred in this revision.
+
+## Actual synchronization closeout
+
+[Verified GitHub and R2 records](../sync_run01/README.md): content commit `f2901de`
+is public; 692 unique private objects / 89,459,262 bytes passed full GET/SHA256,
+zero failures. The fixed package and original scientific files are unchanged.

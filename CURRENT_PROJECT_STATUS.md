@@ -1,5 +1,13 @@
 # 论文2当前进度与论文状态
 
+## 最新已验证同步（2026-10-16 UTC）
+
+稿件固定内容提交 [`f2901de`](https://github.com/jackzhu119/few-shot-mi-eeg/commit/f2901decfc39b2adecae13253ee4b1159a4f9a4b)
+已推送 main/研究分支及固定标签，10份关键公开文件完整读回一致。
+本轮私有R2共692对象／89,459,262 bytes，全部完整GET/SHA256，失败0。
+[实际收尾记录与回执](docs/kumar_review_revision_sync_closeout_20261016.md)列明全部范围与限制。
+以下内容提交保持封存，后续只追加同步元数据；尚未代作者投稿。
+
 ## 当前修订：审稿意见核验与作者审阅稿（2026-10-16 UTC）
 
 最新稿件入口为 [2026-10-16 完整投稿审阅包](manuscript/plos_one_submission_20261016/README.md)：
