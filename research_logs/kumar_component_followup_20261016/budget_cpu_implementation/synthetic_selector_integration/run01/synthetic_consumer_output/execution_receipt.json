@@ -1,0 +1,55 @@
+{
+  "analysis_status": "posthoc_exploratory_all18_previously_exposed",
+  "synthetic": true,
+  "software_validation_only": true,
+  "features": [
+    "frozen_source_BA_all_support",
+    "source40_to_support_trace_normalized_cov_frobenius",
+    "support_cv_lda_gain",
+    "support_cv_full_gain"
+  ],
+  "alpha": 10.0,
+  "bootstrap_draws": 10000,
+  "feature_consistency_atol": 1e-12,
+  "feature_consistency_rtol": 0,
+  "seed": 42,
+  "tie_order": [
+    "frozen",
+    "lda_only",
+    "full_refit"
+  ],
+  "source_commit": "d03b5a35eed3e303d224f41870bc62b0a926c88d",
+  "script_sha256": "525762758aca82a7eb65618b1ef79d274d4c24d78443151ec021591ebd6cc356",
+  "input_sha256": {
+    "features": "2d29a986ba788b2afe06b83f8f8aa5ef71977d5ca44bfc61a11fd651b9ae86a2",
+    "outcomes": "4fae735d2ab5a4f7cf1886cd78752c70ae58dd7a54fec4aa209d4dc2dbbca57e",
+    "provenance": "d759e261e2c28011c0f8ad03c8dcf1e051c8f5f417f170e10325ff0294de9468"
+  },
+  "output_sha256": {
+    "session_decisions.csv": "94f3abb8d1b46939bf4df8900147d7c37b025723943d1e8fda903d1607724b94",
+    "session_policy_evaluation.csv": "b92ccde4afb8ea54f91fe1761b331ec5e3024116b2ef3636e431ae8d643de417",
+    "participant_policy_endpoints.csv": "27f1703e30612706582499bb0243c94803227316d59252a41e20ecdb3dfe03d1",
+    "participant_bootstrap_summary.csv": "ed7e764829501c4e210b146f46b71ce8a280695c771ced96ea1f4c472f951eea",
+    "risk_sign_diagnostics.csv": "ae633d19e1c56da382500600bfe1583965efcc891bdc4c1c23ae30c79bd3b4e7",
+    "model_fit_audit.json": "1f276bb968233ced182687c401e7ab4d6f0f734b4f115267645671327621d45c",
+    "REPORT.md": "2eaba73d8c4fbe41288c05a6a94e8e13af1bbd3846fae68ea8ddb64bc4216189"
+  },
+  "versions": {
+    "python": "3.11.16",
+    "numpy": "2.2.6",
+    "scikit_learn": "1.7.2"
+  },
+  "n_feature_rows": 90,
+  "n_participants": 18,
+  "independent_statistical_unit": "participant",
+  "confidence_intervals": "Pointwise exploratory 95% percentile; no new p-value family",
+  "numerical_threads": 1,
+  "random_control": "Exact expected mixture; action frequencies match Ridge within each development LOPO fold or the remaining12 evaluation group",
+  "downside_magnitude": "Mean max(frozen BA minus policy BA,0) over all sessions; for random, expectation over actions before aggregation",
+  "source_decline": "Frozen source-query BA minus target-query BA; outcome only",
+  "provenance_limit": "Source/support disjointness and half-split fits checked on provided trial IDs; chronology supplied by upstream producer",
+  "no_eeg_weights_query_trial_access": true,
+  "no_hyperparameter_search_or_external_validation": true,
+  "started_utc": "2026-10-16T03:30:16.049432+00:00",
+  "finished_utc": "2026-10-16T03:30:16.228276+00:00"
+}

@@ -1,0 +1,48 @@
+{
+  "reviewed_utc": "2026-10-16T03:31:21.630364+00:00",
+  "status": "passed_independent_read_only_synthetic_contract_review",
+  "synthetic": true,
+  "software_validation_only": true,
+  "real_EEG_or_model_or_query_trial_files_read": 0,
+  "rows": {
+    "features": 90,
+    "outcomes": 90,
+    "source_support_provenance": 90,
+    "selector_decisions": 90,
+    "policy_evaluations": 630
+  },
+  "support19_rows": 18,
+  "support20_rows": 72,
+  "undefined_holdout_keys": [
+    [
+      "sub-1",
+      "ses-5"
+    ]
+  ],
+  "checks": [
+    "exact_18x5_identity_join",
+    "balanced_full_support19_or20",
+    "compact_UTF8_ID_hashes",
+    "source_support_disjoint",
+    "chronological_half_lists",
+    "both_fit_ID_sets_exact_source40_plus_prefix_exclude_holdout",
+    "explicit_CV_gains_match_BA_or_zero",
+    "missing_class_CV_action_frozen",
+    "all_synthetic_markers_retained",
+    "seven_participant_disjoint_model_folds",
+    "consumer_output_hashes",
+    "producer_consumer_code_hashes",
+    "actual_UTC_start_finish_order"
+  ],
+  "limitations": [
+    "This synthetic run uses fixed four-power features in place of scientific CSP; no scientific efficacy claim.",
+    "Single-candidate numerical fallback semantics were independently checked statically against producer and consumer code; the dynamic 90-row fixture specifically exercises whole-row missing-class fallback."
+  ],
+  "input_sha256": {
+    "synthetic_full_support_features.csv": "2d29a986ba788b2afe06b83f8f8aa5ef71977d5ca44bfc61a11fd651b9ae86a2",
+    "synthetic_full_support_outcomes.csv": "4fae735d2ab5a4f7cf1886cd78752c70ae58dd7a54fec4aa209d4dc2dbbca57e",
+    "synthetic_source_support_trial_provenance.json": "d759e261e2c28011c0f8ad03c8dcf1e051c8f5f417f170e10325ff0294de9468",
+    "synthetic_integration_receipt.json": "f98c18b76585f594a89d979fcc8ff14cf9b628cae45969d7deb2eeb4f7b913fa",
+    "synthetic_consumer_output/execution_receipt.json": "81d6f4f730038ed8cb7934a8248357176abe4b7d74179e3185b44e6f018fecd5"
+  }
+}

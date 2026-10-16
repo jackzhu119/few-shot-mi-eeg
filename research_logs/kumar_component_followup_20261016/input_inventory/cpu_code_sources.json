@@ -1,0 +1,771 @@
+{
+  "audit_commit": "1a7e1ab8b6253db52544ba185abb33a6bcb4937b",
+  "code_reuse_sources": [
+    {
+      "path": "/workspace/few-shot-mi-eeg/src/learning_preserving_bci/datasets/kumar.py",
+      "bytes": 17657,
+      "sha256": "48e382dc770f48b8a7418ac196974949afabdc038c069550bcffbb618864fd07",
+      "definitions": [
+        {
+          "name": "require",
+          "line": 31,
+          "end_line": 33,
+          "signature": "def require(condition: bool, message: str) -> None:"
+        },
+        {
+          "name": "read_json",
+          "line": 36,
+          "end_line": 37,
+          "signature": "def read_json(value: str | Path | dict) -> dict:"
+        },
+        {
+          "name": "sha256_file",
+          "line": 40,
+          "end_line": 45,
+          "signature": "def sha256_file(path: str | Path) -> str:"
+        },
+        {
+          "name": "numeric_hash",
+          "line": 48,
+          "end_line": 49,
+          "signature": "def numeric_hash(data: np.ndarray, *, dtype: str='<f8') -> str:"
+        },
+        {
+          "name": "tsv",
+          "line": 52,
+          "end_line": 54,
+          "signature": "def tsv(path: Path) -> list[dict]:"
+        },
+        {
+          "name": "role_for",
+          "line": 57,
+          "end_line": 65,
+          "signature": "def role_for(session: str, run: str, config: dict) -> str:"
+        },
+        {
+          "name": "preprocess_epoch",
+          "line": 68,
+          "end_line": 81,
+          "signature": "def preprocess_epoch(epoch: np.ndarray, config: dict) -> np.ndarray:"
+        },
+        {
+          "name": "validate_split_trials",
+          "line": 84,
+          "end_line": 119,
+          "signature": "def validate_split_trials(trials: list[dict], config: dict, *, require_hashes: bool=True) -> dict:"
+        },
+        {
+          "name": "allowed_fit_trial_ids",
+          "line": 122,
+          "end_line": 132,
+          "signature": "def allowed_fit_trial_ids(metadata: list[dict], *, method: str, session: str, component: str) -> list[str]:"
+        },
+        {
+          "name": "KumarSubject",
+          "line": 136,
+          "end_line": 143,
+          "signature": "@dataclass(frozen=True)"
+        },
+        {
+          "name": "load_subject",
+          "line": 146,
+          "end_line": 306,
+          "signature": "def load_subject(data_root: str | Path, subject: str, config: str | Path | dict, split_manifest: str | Path | dict | None=None, *, allowed_roles: set[str] | None=None) -> KumarSubject:"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/few-shot-mi-eeg/src/learning_preserving_bci/decoders/csp_lda.py",
+      "bytes": 1066,
+      "sha256": "4aedb37c21c8056d213b90797324fc5b69f370bb011badf97003c739b1127921",
+      "definitions": [
+        {
+          "name": "make_csp_lda",
+          "line": 8,
+          "end_line": 31,
+          "signature": "def make_csp_lda(n_components: int=4, random_state: int=42) -> Pipeline:"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/few-shot-mi-eeg/scripts/run_kumar_baselines.py",
+      "bytes": 39480,
+      "sha256": "bf6bc4de396300c2f2430c8d42960eefdfaf50382d17e083a4c1846dabf736ac",
+      "definitions": [
+        {
+          "name": "file_sha256",
+          "line": 51,
+          "end_line": 53,
+          "signature": "def file_sha256(path: Path) -> str:"
+        },
+        {
+          "name": "write_json",
+          "line": 56,
+          "end_line": 60,
+          "signature": "def write_json(path: Path, data: dict | list) -> None:"
+        },
+        {
+          "name": "write_csv",
+          "line": 63,
+          "end_line": 70,
+          "signature": "def write_csv(path: Path, rows: list[dict]) -> None:"
+        },
+        {
+          "name": "array_digest",
+          "line": 73,
+          "end_line": 84,
+          "signature": "def array_digest(arrays: dict[str, np.ndarray]) -> str:"
+        },
+        {
+          "name": "model_arrays",
+          "line": 87,
+          "end_line": 98,
+          "signature": "def model_arrays(csp, lda) -> dict[str, np.ndarray]:"
+        },
+        {
+          "name": "predict_from_arrays",
+          "line": 101,
+          "end_line": 109,
+          "signature": "def predict_from_arrays(arrays: dict[str, np.ndarray], X: np.ndarray) -> np.ndarray:"
+        },
+        {
+          "name": "summarize_predictions",
+          "line": 112,
+          "end_line": 128,
+          "signature": "def summarize_predictions(y: np.ndarray, prediction: np.ndarray) -> dict:"
+        },
+        {
+          "name": "validate_roles",
+          "line": 131,
+          "end_line": 166,
+          "signature": "def validate_roles(trials: list[dict], y: np.ndarray) -> dict[str, np.ndarray]:"
+        },
+        {
+          "name": "symmetric_function",
+          "line": 169,
+          "end_line": 171,
+          "signature": "def symmetric_function(matrix: np.ndarray, function) -> np.ndarray:"
+        },
+        {
+          "name": "riemannian_mean",
+          "line": 174,
+          "end_line": 189,
+          "signature": "def riemannian_mean(covariances: np.ndarray) -> tuple[np.ndarray, dict]:"
+        },
+        {
+          "name": "descriptive_features",
+          "line": 192,
+          "end_line": 326,
+          "signature": "def descriptive_features(X: np.ndarray, y: np.ndarray, trials: list[dict], *, subject: str, cohort: str, output: Path, synthetic: bool=False) -> dict:"
+        },
+        {
+          "name": "run_participant",
+          "line": 329,
+          "end_line": 481,
+          "signature": "def run_participant(X: np.ndarray, y: np.ndarray, trials: list[dict], *, subject: str, cohort: str, output: Path, seed: int=20261012, n_components: int=4, synthetic: bool=False, save_descriptive_features: bool=False) -> dict:"
+        },
+        {
+          "name": "approval_gate",
+          "line": 484,
+          "end_line": 498,
+          "signature": "def approval_gate(config_path: Path, manifest_path: Path, approval_path: Path) -> dict:"
+        },
+        {
+          "name": "runtime_provenance",
+          "line": 501,
+          "end_line": 513,
+          "signature": "def runtime_provenance() -> dict:"
+        },
+        {
+          "name": "validate_effective_configuration",
+          "line": 516,
+          "end_line": 549,
+          "signature": "def validate_effective_configuration(config: dict) -> None:"
+        },
+        {
+          "name": "participant_bootstrap_summary",
+          "line": 552,
+          "end_line": 618,
+          "signature": "def participant_bootstrap_summary(rows: list[dict], *, seed: int=42, replicates: int=10000) -> tuple[list[dict], dict]:"
+        },
+        {
+          "name": "main",
+          "line": 621,
+          "end_line": 708,
+          "signature": "def main() -> None:"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/few-shot-mi-eeg/scripts/prepare_kumar_development_epochs.py",
+      "bytes": 16775,
+      "sha256": "d48a69740569395feaec1196fe90ea9c4de2a213783809af809d65e7d713820e",
+      "definitions": [
+        {
+          "name": "write_json",
+          "line": 35,
+          "end_line": 38,
+          "signature": "def write_json(path: Path, value) -> None:"
+        },
+        {
+          "name": "repository_path",
+          "line": 41,
+          "end_line": 43,
+          "signature": "def repository_path(path: str | Path) -> Path:"
+        },
+        {
+          "name": "expected_source_file",
+          "line": 46,
+          "end_line": 47,
+          "signature": "def expected_source_file(subject: str, session: str, run: str) -> str:"
+        },
+        {
+          "name": "validate_selected_metadata",
+          "line": 50,
+          "end_line": 112,
+          "signature": "def validate_selected_metadata(metadata: list[dict], subject: str, config: dict) -> None:"
+        },
+        {
+          "name": "verify_source_file",
+          "line": 115,
+          "end_line": 142,
+          "signature": "def verify_source_file(data_root: Path, relative: str, entries: dict, trials: list[dict]) -> tuple[Path, dict]:"
+        },
+        {
+          "name": "validate_raw_header",
+          "line": 145,
+          "end_line": 159,
+          "signature": "def validate_raw_header(raw, audit: dict, source_proof: dict) -> None:"
+        },
+        {
+          "name": "reconstruct_epoch",
+          "line": 162,
+          "end_line": 185,
+          "signature": "def reconstruct_epoch(raw, trial: dict, config: dict) -> tuple[np.ndarray, dict]:"
+        },
+        {
+          "name": "prepare_subject",
+          "line": 188,
+          "end_line": 244,
+          "signature": "def prepare_subject(data_root: Path, metadata_path: Path, subject: str, config: dict, entries: dict, output: Path) -> dict:"
+        },
+        {
+          "name": "main",
+          "line": 247,
+          "end_line": 304,
+          "signature": "def main() -> None:"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/few-shot-mi-eeg/scripts/analyze_kumar_csp_signed_score_v1.py",
+      "bytes": 30922,
+      "sha256": "ebc866734add9769c7b881332cb9362badaa0f6bf401bc2c6dfa717b645960f3",
+      "definitions": [
+        {
+          "name": "_load_helper",
+          "line": 37,
+          "end_line": 41,
+          "signature": "def _load_helper(name, filename):"
+        },
+        {
+          "name": "write_json",
+          "line": 53,
+          "end_line": 57,
+          "signature": "def write_json(path, value):"
+        },
+        {
+          "name": "_resolve",
+          "line": 60,
+          "end_line": 62,
+          "signature": "def _resolve(path):"
+        },
+        {
+          "name": "validate_config",
+          "line": 65,
+          "end_line": 89,
+          "signature": "def validate_config(config):"
+        },
+        {
+          "name": "load_restricted_subject",
+          "line": 92,
+          "end_line": 124,
+          "signature": "def load_restricted_subject(folder, subject):"
+        },
+        {
+          "name": "csp_features_and_scores",
+          "line": 127,
+          "end_line": 138,
+          "signature": "def csp_features_and_scores(arrays, X):"
+        },
+        {
+          "name": "score_summary",
+          "line": 141,
+          "end_line": 152,
+          "signature": "def score_summary(scores, labels):"
+        },
+        {
+          "name": "source_phase_alignment_control",
+          "line": 155,
+          "end_line": 260,
+          "signature": "def source_phase_alignment_control(folds, labels_by_run, *, model_factory=make_csp_lda, state_extractor=None, output=None):"
+        },
+        {
+          "name": "load_verified_source_model",
+          "line": 263,
+          "end_line": 307,
+          "signature": "def load_verified_source_model(folder, subject, source_X, source_y, source_ids, r2_receipt):"
+        },
+        {
+          "name": "support_measure",
+          "line": 310,
+          "end_line": 336,
+          "signature": "def support_measure(source_z, source_labels, support_z, labels, scores, source_score_sd, halves=None, source_reference=None):"
+        },
+        {
+          "name": "support_phase_alignment_control",
+          "line": 339,
+          "end_line": 369,
+          "signature": "def support_phase_alignment_control(source_z, source_labels, support_z, labels, scores, source_score_sd):"
+        },
+        {
+          "name": "analyze_subject",
+          "line": 372,
+          "end_line": 424,
+          "signature": "def analyze_subject(X, labels, metadata, subject, model_arrays, model_audit, output):"
+        },
+        {
+          "name": "main",
+          "line": 427,
+          "end_line": 490,
+          "signature": "def main():"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/few-shot-mi-eeg/scripts/analyze_kumar_lowdim_reliability.py",
+      "bytes": 26071,
+      "sha256": "c3f19cac305cb72fdbfb539172b198bc67836ec6499730fad8829fe16f27a964",
+      "definitions": [
+        {
+          "name": "file_digest",
+          "line": 29,
+          "end_line": 34,
+          "signature": "def file_digest(path):"
+        },
+        {
+          "name": "json_digest",
+          "line": 37,
+          "end_line": 39,
+          "signature": "def json_digest(value):"
+        },
+        {
+          "name": "array_digest",
+          "line": 42,
+          "end_line": 48,
+          "signature": "def array_digest(value):"
+        },
+        {
+          "name": "validate_config",
+          "line": 51,
+          "end_line": 62,
+          "signature": "def validate_config(config):"
+        },
+        {
+          "name": "validate_selected_metadata",
+          "line": 65,
+          "end_line": 101,
+          "signature": "def validate_selected_metadata(metadata, subject):"
+        },
+        {
+          "name": "chronological_indices",
+          "line": 104,
+          "end_line": 110,
+          "signature": "def chronological_indices(metadata, role, session=None, run=None):"
+        },
+        {
+          "name": "load_allowed_subject",
+          "line": 113,
+          "end_line": 144,
+          "signature": "def load_allowed_subject(folder, subject):"
+        },
+        {
+          "name": "fit_coordinates",
+          "line": 147,
+          "end_line": 166,
+          "signature": "def fit_coordinates(x, fit_ids):"
+        },
+        {
+          "name": "transform_coordinates",
+          "line": 169,
+          "end_line": 171,
+          "signature": "def transform_coordinates(x, scaler, pca):"
+        },
+        {
+          "name": "task_direction",
+          "line": 174,
+          "end_line": 177,
+          "signature": "def task_direction(x, labels):"
+        },
+        {
+          "name": "cosine",
+          "line": 180,
+          "end_line": 186,
+          "signature": "def cosine(a, b):"
+        },
+        {
+          "name": "centroid_probe",
+          "line": 189,
+          "end_line": 204,
+          "signature": "def centroid_probe(train, train_labels, holdout, holdout_labels):"
+        },
+        {
+          "name": "source_phase_alignment_control",
+          "line": 207,
+          "end_line": 233,
+          "signature": "def source_phase_alignment_control(folds, labels_by_run, candidates=CANDIDATES):"
+        },
+        {
+          "name": "classwise_halves",
+          "line": 236,
+          "end_line": 241,
+          "signature": "def classwise_halves(labels):"
+        },
+        {
+          "name": "source_axis_reference",
+          "line": 244,
+          "end_line": 249,
+          "signature": "def source_axis_reference(source, labels):"
+        },
+        {
+          "name": "support_measure",
+          "line": 252,
+          "end_line": 278,
+          "signature": "def support_measure(source, source_labels, support, labels, halves=None, source_reference=None):"
+        },
+        {
+          "name": "null_comparison",
+          "line": 281,
+          "end_line": 287,
+          "signature": "def null_comparison(observed, values):"
+        },
+        {
+          "name": "support_phase_alignment_control",
+          "line": 290,
+          "end_line": 322,
+          "signature": "def support_phase_alignment_control(source, source_labels, support, labels, source_reference=None):"
+        },
+        {
+          "name": "participant_bootstrap",
+          "line": 325,
+          "end_line": 340,
+          "signature": "def participant_bootstrap(values_by_subject, seed=42, replicates=10000):"
+        },
+        {
+          "name": "analyze_subject",
+          "line": 343,
+          "end_line": 403,
+          "signature": "def analyze_subject(x, labels, metadata, subject):"
+        },
+        {
+          "name": "main",
+          "line": 406,
+          "end_line": 466,
+          "signature": "def main():"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/few-shot-mi-eeg/scripts/run_kumar_csp_signed_score_operation.py",
+      "bytes": 36292,
+      "sha256": "215ec7ec6cb199f2d70c485969583f9b09cfc8346ed7f316448bc92bfdadbf56",
+      "definitions": [
+        {
+          "name": "require",
+          "line": 47,
+          "end_line": 49,
+          "signature": "def require(condition, message):"
+        },
+        {
+          "name": "sha",
+          "line": 52,
+          "end_line": 57,
+          "signature": "def sha(path):"
+        },
+        {
+          "name": "read",
+          "line": 60,
+          "end_line": 61,
+          "signature": "def read(path):"
+        },
+        {
+          "name": "encoded",
+          "line": 64,
+          "end_line": 65,
+          "signature": "def encoded(value):"
+        },
+        {
+          "name": "write_new",
+          "line": 68,
+          "end_line": 72,
+          "signature": "def write_new(path, value):"
+        },
+        {
+          "name": "utc",
+          "line": 75,
+          "end_line": 76,
+          "signature": "def utc():"
+        },
+        {
+          "name": "container_identity",
+          "line": 79,
+          "end_line": 83,
+          "signature": "def container_identity(proc_root=Path('/proc')):"
+        },
+        {
+          "name": "command",
+          "line": 86,
+          "end_line": 91,
+          "signature": "def command():"
+        },
+        {
+          "name": "validate_contract",
+          "line": 94,
+          "end_line": 120,
+          "signature": "def validate_contract(contract, root=ROOT):"
+        },
+        {
+          "name": "runtime_metadata",
+          "line": 123,
+          "end_line": 130,
+          "signature": "def runtime_metadata():"
+        },
+        {
+          "name": "effective_memory",
+          "line": 133,
+          "end_line": 178,
+          "signature": "def effective_memory(proc_root=Path('/proc'), cgroup_root=Path('/sys/fs/cgroup')):"
+        },
+        {
+          "name": "resources",
+          "line": 181,
+          "end_line": 187,
+          "signature": "def resources(output, memory_reader=effective_memory):"
+        },
+        {
+          "name": "input_check",
+          "line": 190,
+          "end_line": 197,
+          "signature": "def input_check():"
+        },
+        {
+          "name": "preflight",
+          "line": 200,
+          "end_line": 230,
+          "signature": "def preflight(contract, *, root=ROOT, runtime_reader=runtime_metadata, resource_reader=resources, inputs_reader=input_check):"
+        },
+        {
+          "name": "authorization_check",
+          "line": 233,
+          "end_line": 258,
+          "signature": "def authorization_check(auth, contract_sha, commit, *, now=None):"
+        },
+        {
+          "name": "member_inventory",
+          "line": 261,
+          "end_line": 270,
+          "signature": "def member_inventory(folder):"
+        },
+        {
+          "name": "stop_process",
+          "line": 273,
+          "end_line": 287,
+          "signature": "def stop_process(process, grace, observed_descendants=None):"
+        },
+        {
+          "name": "stop_tracked_process",
+          "line": 290,
+          "end_line": 355,
+          "signature": "def stop_tracked_process(process, grace, history):"
+        },
+        {
+          "name": "deadline_guard",
+          "line": 359,
+          "end_line": 384,
+          "signature": "@contextmanager"
+        },
+        {
+          "name": "proc_visibility",
+          "line": 387,
+          "end_line": 415,
+          "signature": "def proc_visibility(proc_root):"
+        },
+        {
+          "name": "process_record",
+          "line": 418,
+          "end_line": 425,
+          "signature": "def process_record(pid, proc_root):"
+        },
+        {
+          "name": "process_snapshot",
+          "line": 428,
+          "end_line": 442,
+          "signature": "def process_snapshot(proc_root):"
+        },
+        {
+          "name": "running_memory",
+          "line": 445,
+          "end_line": 496,
+          "signature": "def running_memory(pid, proc_root=Path('/proc'), observed_descendants=None):"
+        },
+        {
+          "name": "execute",
+          "line": 499,
+          "end_line": 660,
+          "signature": "def execute(contract, auth, *, contract_sha, commit, auth_sha, root=ROOT, preflight_reader=preflight, popen=subprocess.Popen, memory_reader=None):"
+        },
+        {
+          "name": "main",
+          "line": 663,
+          "end_line": 685,
+          "signature": "def main():"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/few-shot-mi-eeg/scripts/check_kumar_csp_signed_score_inputs.py",
+      "bytes": 11173,
+      "sha256": "5c05a319dec16950d86885962401d5f28d2d30a07c5287d769aeb03339a94264",
+      "definitions": [
+        {
+          "name": "require",
+          "line": 38,
+          "end_line": 40,
+          "signature": "def require(condition: bool, message: str) -> None:"
+        },
+        {
+          "name": "digest",
+          "line": 43,
+          "end_line": 48,
+          "signature": "def digest(path: Path) -> str:"
+        },
+        {
+          "name": "contained",
+          "line": 51,
+          "end_line": 58,
+          "signature": "def contained(root: Path, relative: str) -> Path:"
+        },
+        {
+          "name": "verify_file",
+          "line": 61,
+          "end_line": 64,
+          "signature": "def verify_file(path: Path, row: dict) -> None:"
+        },
+        {
+          "name": "check_inputs",
+          "line": 67,
+          "end_line": 178,
+          "signature": "def check_inputs(binding_path: Path=BINDING, *, repo_root: Path=ROOT, epochs_root: Path | None=None, baseline_root: Path | None=None, expected_binding_sha256: str=EXPECTED_BINDING_SHA256) -> dict:"
+        },
+        {
+          "name": "main",
+          "line": 181,
+          "end_line": 187,
+          "signature": "def main() -> None:"
+        }
+      ]
+    }
+  ],
+  "configuration": {
+    "preprocessing": {
+      "window_seconds": 5.0,
+      "partial_action": "retain_source_identity_exclude_without_padding_or_replacement",
+      "input_sfreq": 512.0,
+      "output_sfreq": 128.0,
+      "reference": "epoch_average_of_all_22_eeg_channels",
+      "band_hz": [
+        8.0,
+        30.0
+      ],
+      "filter": "scipy_butter_sos_order4_sosfiltfilt_default_odd_padding_each_epoch_independently",
+      "resampling": "scipy_resample_poly_up1_down4_default_kaiser5_constant_padding",
+      "output_unit": "V",
+      "output_dtype": "float32",
+      "operation_order": [
+        "average_reference",
+        "bandpass",
+        "resample"
+      ],
+      "learned_preprocessing": "none",
+      "artifact_rejection": "none_no_expert_artifact_certification",
+      "causality": "offline_zero_phase_not_real_time"
+    },
+    "split": {
+      "source_session": "ses-0",
+      "source_train_runs": [
+        "run-0",
+        "run-1"
+      ],
+      "source_validation_runs": [
+        "run-2"
+      ],
+      "source_query_runs": [
+        "run-3"
+      ],
+      "target_sessions": [
+        "ses-1",
+        "ses-2",
+        "ses-3",
+        "ses-4",
+        "ses-5"
+      ],
+      "target_support_runs": [
+        "run-0"
+      ],
+      "target_query_runs": "all_remaining_runs",
+      "target_support_source_budget": 20,
+      "target_support_max_per_class": 10,
+      "support_selection": "fixed_first_whole_run_in_actual_acquisition_order_no_label_selection_no_partial_replacement",
+      "adaptation_history": "source_train_plus_current_session_support_only_no_past_target_accumulation",
+      "validation_use": "reserved_no_hyperparameter_search_no_refit"
+    },
+    "baseline": {
+      "methods": [
+        "source_only",
+        "frozen_csp_lda_recalibration",
+        "refit_csp_lda"
+      ],
+      "csp": {
+        "n_components": 4,
+        "reg": "ledoit_wolf",
+        "log": true,
+        "norm_trace": false
+      },
+      "lda": {
+        "solver": "lsqr",
+        "shrinkage": "auto"
+      },
+      "hyperparameter_selection": "single_fixed_setting_before_any_Kumar_performance_no_search",
+      "fit_access": {
+        "source_only": "source_train",
+        "frozen_csp_lda_recalibration": "source_train_CSP_source_train_plus_current_support_LDA",
+        "refit_csp_lda": "source_train_plus_current_support_CSP_and_LDA"
+      },
+      "target_query_access": "prediction_only_no_fit_no_selection",
+      "source_query_access": "prediction_only_no_fit_no_selection"
+    },
+    "seed": 42
+  },
+  "existing_gate_limits_unchanged": {
+    "minimum_effective_available_memory_bytes": 3221225472,
+    "minimum_free_output_disk_bytes": 2147483648,
+    "maximum_sampled_consumer_rss_bytes": 2147483648,
+    "minimum_running_cgroup_headroom_bytes": 1073741824,
+    "minimum_running_host_available_bytes": 1073741824,
+    "resource_poll_seconds": 0.25,
+    "consumer_timeout_seconds": 7200,
+    "term_grace_seconds": 30,
+    "automatic_retries": 0
+  },
+  "no_modules_executed_for_source_inspection": true
+}

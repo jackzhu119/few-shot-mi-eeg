@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-16T03:31:40.773546+00:00",
+  "status": "passed_synthetic_software_validation_only",
+  "synthetic": true,
+  "software_validation_only": true,
+  "real_EEG_or_historical_model_files_read": 0,
+  "new_real_fit_or_query": false,
+  "source_git_commit": "6080a14521ac351a3167c59f75492d2e64bb4d95",
+  "file_sha256": {
+    "scripts/run_kumar_component_budget_cpu_20261016.py": "381bc4739698d7be7c76b2b8c4d05d4d944d0c6e3c3b570f1c2fb60a5cceb5d1",
+    "tests/test_kumar_component_budget_cpu_20261016.py": "51f7216d55a0974939e2ecb59846c5c7bc58a67bc7c76cc29f0a999d2703d40d",
+    "tests/test_kumar_component_budget_operation_20261016.py": "40d33442ee137e7d7cdd2693fdab4e59480b32f5d841d09a517c4393440a6455",
+    "scripts/analyze_kumar_update_gain_feasibility_20261016.py": "525762758aca82a7eb65618b1ef79d274d4c24d78443151ec021591ebd6cc356",
+    "tests/test_kumar_update_gain_feasibility_20261016.py": "92bd7baf053cf5fefb86ca85877f50f33d64d419ac587feb64ea801b7939502b",
+    "docs/kumar_component_exploratory_protocol_20261016.md": "1c3e87ad634148bde031579cd8efb976e75643635d452a2ea69d911ccc9b09fc"
+  },
+  "tests": {
+    "command": "python -m pytest -q tests/test_kumar_component_budget_cpu_20261016.py tests/test_kumar_component_budget_operation_20261016.py tests/test_kumar_update_gain_feasibility_20261016.py",
+    "passed": 109,
+    "seconds": 5.83,
+    "budget_science_tests": 30,
+    "budget_operation_tests": 49,
+    "selector_tests": 30
+  },
+  "ruff": {
+    "status": "passed",
+    "command": "ruff check scripts/run_kumar_component_budget_cpu_20261016.py tests/test_kumar_component_budget_cpu_20261016.py tests/test_kumar_component_budget_operation_20261016.py"
+  },
+  "synthetic_integration_receipt": {
+    "path": "research_logs/kumar_component_followup_20261016/budget_cpu_implementation/synthetic_selector_integration/run01/synthetic_integration_receipt.json",
+    "sha256": "f98c18b76585f594a89d979fcc8ff14cf9b628cae45969d7deb2eeb4f7b913fa"
+  },
+  "versions": {
+    "python": "3.11.16",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.7.2",
+    "mne": "1.10.2",
+    "pytest": "8.4.2",
+    "ruff": "0.16.10"
+  },
+  "notes": [
+    "All science arrays freshly synthetic; synthetic NPZ files are not historical source models.",
+    "One real MNE fit on generated data is checkpoint-replayed without adding another fit.",
+    "Thirty new synthetic model checkpoints replayed by NumPy, including four CV holdouts.",
+    "No automatic acceptance, real scientific execution or remote operation was performed by this implementation review."
+  ]
+}
