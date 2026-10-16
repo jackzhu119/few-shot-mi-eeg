@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "frozen_utc": "2026-10-16T03:25:50.695117+00:00",
+  "scope": "public_original_GDF_header_and_event_ranges_only",
+  "source": "official_NEMAR_nm000177_v1.0.5_existing_manifest",
+  "scientific_protocol_sha256": "1c3e87ad634148bde031579cd8efb976e75643635d452a2ea69d911ccc9b09fc",
+  "maximum_attempts_per_range": 3,
+  "retryable_http_statuses": [
+    502,
+    503,
+    504
+  ],
+  "retry_transport_exceptions": true,
+  "backoff_seconds": [
+    1,
+    3
+  ],
+  "maximum_operation_seconds": 600,
+  "workers": 1,
+  "scientific_fit_retries": 0,
+  "scientific_decoding_executed": false,
+  "nonretryable": [
+    "HTTP200",
+    "HTTP403",
+    "other_HTTP_statuses",
+    "HTTP206_ContentRange_length_ETag_integrity",
+    "parser_or_mapping_integrity",
+    "storage_hash_or_unexpected_failures"
+  ],
+  "reuse_verified_runs": 311,
+  "remaining_runs_before_this_operation": 49,
+  "previous_failures_retained": true,
+  "eligibility_and_2s_window_unchanged": true,
+  "new_or_paid_resources": false
+}

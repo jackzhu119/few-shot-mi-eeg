@@ -1,0 +1,42 @@
+{
+  "recorded_utc": "2026-10-16T03:36:20.650690+00:00",
+  "synthetic": true,
+  "software_validation_only": true,
+  "source_commit": "6080a14521ac351a3167c59f75492d2e64bb4d95",
+  "files": {
+    "scripts/run_kumar_phase_window_cpu_20261016.py": {
+      "bytes": 42830,
+      "sha256": "77da347fb2e4bed23cee29dd582d6d280055fbbf5031fd063fd670dbc053453d"
+    },
+    "scripts/run_kumar_component_budget_cpu_20261016.py": {
+      "bytes": 55636,
+      "sha256": "381bc4739698d7be7c76b2b8c4d05d4d944d0c6e3c3b570f1c2fb60a5cceb5d1"
+    },
+    "tests/test_kumar_phase_consumer_20261016.py": {
+      "bytes": 20336,
+      "sha256": "2e3e037cfa9908bf7a0ce3df88aa8b7da14de996dc5e417a698c4a2af7b1054a"
+    },
+    "tests/test_kumar_phase_window_cpu_20261016.py": {
+      "bytes": 14683,
+      "sha256": "41c71fb1c38d37f14d3df8679dd048583c096b0b202b36595f0d527795fa3fbd"
+    },
+    "docs/kumar_component_exploratory_protocol_20261016.md": {
+      "bytes": 14148,
+      "sha256": "1c3e87ad634148bde031579cd8efb976e75643635d452a2ea69d911ccc9b09fc"
+    }
+  },
+  "test_command": "/workspace/.venvs/few-shot-mi-eeg/bin/python -m pytest -q tests/test_kumar_phase_consumer_20261016.py tests/test_kumar_phase_window_cpu_20261016.py",
+  "test_result": {
+    "passed": 42,
+    "failed": 0,
+    "elapsed_seconds": 9.34
+  },
+  "lint_command": "/workspace/.venvs/few-shot-mi-eeg/bin/ruff check tests/test_kumar_phase_consumer_20261016.py",
+  "lint_result": "All checks passed!",
+  "original_eeg_read": false,
+  "historical_npz_loaded": false,
+  "actual_query_predictions_read": false,
+  "real_scientific_fit": false,
+  "pod_operation": false,
+  "scope": "Synthetic thin-consumer software lifecycle and existing synthetic engine tests only; no scientific run authorization implied."
+}

@@ -1,0 +1,42 @@
+{
+  "recorded_utc": "2026-10-16T03:44:06.647033+00:00",
+  "test_result": {
+    "passed": 74,
+    "failed": 0,
+    "seconds": 11.65
+  },
+  "test_scope": "Synthetic mapper/engine and mocked guarded-consumer lifecycle; no real EEG/model/query read or scientific fitting",
+  "ruff": "All six listed files passed",
+  "files": {
+    "scripts/audit_kumar_gdf_phase_mapping_20261016.py": {
+      "bytes": 32490,
+      "sha256": "6bf787ce065df3508f851477e5b42f3f86787006823c506a6ff1f6b8677fee4f"
+    },
+    "scripts/summarize_kumar_gdf_phase_mapping_20261016.py": {
+      "bytes": 10396,
+      "sha256": "9a95ebbc9b0b997bc06ea35f5317d7399a8ec5145cff46598eb3f89bbf2ff59d"
+    },
+    "scripts/run_kumar_phase_window_cpu_20261016.py": {
+      "bytes": 42830,
+      "sha256": "77da347fb2e4bed23cee29dd582d6d280055fbbf5031fd063fd670dbc053453d"
+    },
+    "tests/test_kumar_gdf_phase_mapping_20261016.py": {
+      "bytes": 12946,
+      "sha256": "dc25c51f4eb7c0b86b8602a3ac3106071ad2fd4eb5c8e7e0e7cf2582c90d1212"
+    },
+    "tests/test_kumar_phase_window_cpu_20261016.py": {
+      "bytes": 14683,
+      "sha256": "41c71fb1c38d37f14d3df8679dd048583c096b0b202b36595f0d527795fa3fbd"
+    },
+    "tests/test_kumar_phase_consumer_20261016.py": {
+      "bytes": 20336,
+      "sha256": "2e3e037cfa9908bf7a0ce3df88aa8b7da14de996dc5e417a698c4a2af7b1054a"
+    }
+  },
+  "final_mapping": {
+    "path": "research_logs/kumar_component_followup_20261016/event_mapping/timing_partial_run05/all_7200_trial_mapping_including_missing.csv",
+    "bytes": 3757304,
+    "sha256": "04f616a5fbfc447b1338aa9e8a1ca3a30e2676a68ae917503a3c3a1f55b9c4ee"
+  },
+  "scientific_phase_execution": false
+}
