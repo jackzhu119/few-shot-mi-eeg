@@ -1,5 +1,7 @@
 # Task-Aware Adaptive Decoding for Longitudinal Motor-Imagery EEG
 
+**2026-10-16伦理更新：**作者报告重庆医科大学科研处于2026-10-16确认本次二次分析免予额外伦理审查，无编号。新版[伦理声明/PDF/Word完整包](manuscript/plos_one_submission_ethics_20261016/README.md)与[实际确认和法规依据](docs/kumar_ethics_statement_revision_20261016.md)已形成；下方日期明确的“伦理待补”为历史状态，原科学结果与旧封存材料保持不变。尚未投稿。
+
 ## 最新论文审阅稿（2026-10-16 UTC）
 
 [实际 main/R2 同步收尾](docs/kumar_review_revision_sync_closeout_20261016.md)：固定内容 `f2901de` 已公开；

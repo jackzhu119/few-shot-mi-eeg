@@ -1,0 +1,1311 @@
+{
+  "status": "passed",
+  "script": {
+    "path": "research_logs/kumar_ethics_statement_revision_20261016/run01/document_QA/validate_document_exports.py",
+    "bytes": 12801,
+    "sha256": "1a9340d0b8bf930227d1af0c67e829773311e752011e8604a88d39ea755bbf10"
+  },
+  "current_source": {
+    "path": "manuscript/kumar_plos_one_submission_draft_ethics_20261016.md",
+    "bytes": 46329,
+    "sha256": "5cb839ed3d79ab5983d3a8e4a0e09bb10f3f595a26bb7805d77134fa2f9eb45c"
+  },
+  "checks": 135,
+  "failures": [],
+  "docx": [
+    {
+      "path": "manuscript/plos_one_submission_ethics_20261016/manuscript_for_submission.docx",
+      "bytes": 35040,
+      "sha256": "183b6bb6e08c1a0888a37707407afe1516d6095e5e714370bd10a9df97def827",
+      "native_tables": 5,
+      "table_cells": [
+        [
+          [
+            "Method",
+            "Source optimizer/estimator training",
+            "Source-validation use",
+            "Current target support for fitting"
+          ],
+          [
+            "Source-only CSP/LDA",
+            "40 labeled windows",
+            "No model or checkpoint selection",
+            "0"
+          ],
+          [
+            "Frozen CSP + LDA recalibration",
+            "40 labeled windows; LDA then refitted with current support",
+            "No model or checkpoint selection",
+            "19/20 labeled windows"
+          ],
+          [
+            "CSP/LDA refit",
+            "40 labeled windows; both stages then refitted with current support",
+            "No model or checkpoint selection",
+            "19/20 labeled windows"
+          ],
+          [
+            "Always-frozen EEGNet",
+            "40 labeled windows per seed",
+            "20 labeled windows select stopping epoch",
+            "0"
+          ]
+        ],
+        [
+          [
+            "Cohort",
+            "Participants",
+            "Source-only CSP/LDA",
+            "Frozen CSP + LDA recalibration",
+            "CSP/LDA refit",
+            "Always-frozen EEGNet"
+          ],
+          [
+            "Development",
+            "6",
+            "59.97 [57.34, 63.70]",
+            "64.37 [56.97, 71.75]",
+            "63.22 [58.36, 67.40]",
+            "52.31 [48.43, 57.36]"
+          ],
+          [
+            "Fixed remaining cohort",
+            "12",
+            "57.94 [52.65, 63.84]",
+            "59.89 [54.30, 65.68]",
+            "65.36 [59.81, 70.90]",
+            "51.58 [49.08, 54.51]"
+          ],
+          [
+            "All identities, secondary",
+            "18",
+            "58.62 [54.88, 62.68]",
+            "61.38 [56.79, 66.17]",
+            "64.65 [60.53, 68.71]",
+            "51.82 [49.59, 54.36]"
+          ]
+        ],
+        [
+          [
+            "Cohort",
+            "Participants",
+            "CPU source model, shared by the three method labels",
+            "Always-frozen EEGNet"
+          ],
+          [
+            "Development",
+            "6",
+            "60.83 [54.17, 68.33]",
+            "52.78 [47.50, 59.44]"
+          ],
+          [
+            "Fixed remaining cohort",
+            "12",
+            "65.00 [56.67, 74.17]",
+            "52.92 [48.89, 58.75]"
+          ],
+          [
+            "All identities, secondary",
+            "18",
+            "63.61 [57.50, 70.28]",
+            "52.87 [49.44, 57.22]"
+          ]
+        ],
+        [
+          [
+            "Method",
+            "All included queries, original 12 participants",
+            "Unflagged queries, 10 eligible participants"
+          ],
+          [
+            "Frozen CSP/LDA",
+            "57.94 [52.65, 63.84]",
+            "60.14 [54.75, 66.02]"
+          ],
+          [
+            "Frozen CSP + LDA-only recalibration",
+            "59.89 [54.30, 65.68]",
+            "62.28 [56.21, 67.91]"
+          ],
+          [
+            "Full CSP/LDA refit",
+            "65.36 [59.81, 70.90]",
+            "66.10 [59.84, 71.94]"
+          ],
+          [
+            "Always-frozen EEGNet",
+            "51.58 [49.08, 54.51]",
+            "51.80 [48.34, 55.28]"
+          ]
+        ],
+        [
+          [
+            "Paired contrast and subset",
+            "Participants",
+            "Unadjusted two-sided p",
+            "Holm p, four checks"
+          ],
+          [
+            "Full refit − frozen, original primary cohort",
+            "12",
+            "0.01953",
+            "0.05859"
+          ],
+          [
+            "Full refit − LDA-only, same primary cohort",
+            "12",
+            "0.01025",
+            "0.04102"
+          ],
+          [
+            "LDA-only − frozen, same primary cohort",
+            "12",
+            "0.26123",
+            "0.26123"
+          ],
+          [
+            "Full refit − frozen, unflagged eligible subset",
+            "10",
+            "0.07617",
+            "0.15234"
+          ]
+        ]
+      ],
+      "image_members": 0,
+      "drawing_elements": 0,
+      "bibliography_paragraphs": 17,
+      "section_line_numbers": [
+        {
+          "countBy": "1",
+          "start": "1",
+          "restart": "continuous",
+          "distance": "180"
+        }
+      ],
+      "PAGE_footer_fields": [
+        "PAGE"
+      ],
+      "effective_spacing_histogram": {
+        "Title:480": 1,
+        "FirstParagraph:480": 25,
+        "BodyText:480": 56,
+        "Heading1:480": 10,
+        "Heading2:480": 17,
+        "Compact:480": 96,
+        "Bibliography:480": 17
+      },
+      "native_Word_layout_rendered": false
+    },
+    {
+      "path": "manuscript/plos_one_submission_ethics_20261016/manuscript_for_review.docx",
+      "bytes": 1568820,
+      "sha256": "27413d2011418a5eadb845733c22c1ee58187512f5c58529c6d3bc295e8abe5a",
+      "native_tables": 5,
+      "table_cells": [
+        [
+          [
+            "Method",
+            "Source optimizer/estimator training",
+            "Source-validation use",
+            "Current target support for fitting"
+          ],
+          [
+            "Source-only CSP/LDA",
+            "40 labeled windows",
+            "No model or checkpoint selection",
+            "0"
+          ],
+          [
+            "Frozen CSP + LDA recalibration",
+            "40 labeled windows; LDA then refitted with current support",
+            "No model or checkpoint selection",
+            "19/20 labeled windows"
+          ],
+          [
+            "CSP/LDA refit",
+            "40 labeled windows; both stages then refitted with current support",
+            "No model or checkpoint selection",
+            "19/20 labeled windows"
+          ],
+          [
+            "Always-frozen EEGNet",
+            "40 labeled windows per seed",
+            "20 labeled windows select stopping epoch",
+            "0"
+          ]
+        ],
+        [
+          [
+            "Cohort",
+            "Participants",
+            "Source-only CSP/LDA",
+            "Frozen CSP + LDA recalibration",
+            "CSP/LDA refit",
+            "Always-frozen EEGNet"
+          ],
+          [
+            "Development",
+            "6",
+            "59.97 [57.34, 63.70]",
+            "64.37 [56.97, 71.75]",
+            "63.22 [58.36, 67.40]",
+            "52.31 [48.43, 57.36]"
+          ],
+          [
+            "Fixed remaining cohort",
+            "12",
+            "57.94 [52.65, 63.84]",
+            "59.89 [54.30, 65.68]",
+            "65.36 [59.81, 70.90]",
+            "51.58 [49.08, 54.51]"
+          ],
+          [
+            "All identities, secondary",
+            "18",
+            "58.62 [54.88, 62.68]",
+            "61.38 [56.79, 66.17]",
+            "64.65 [60.53, 68.71]",
+            "51.82 [49.59, 54.36]"
+          ]
+        ],
+        [
+          [
+            "Cohort",
+            "Participants",
+            "CPU source model, shared by the three method labels",
+            "Always-frozen EEGNet"
+          ],
+          [
+            "Development",
+            "6",
+            "60.83 [54.17, 68.33]",
+            "52.78 [47.50, 59.44]"
+          ],
+          [
+            "Fixed remaining cohort",
+            "12",
+            "65.00 [56.67, 74.17]",
+            "52.92 [48.89, 58.75]"
+          ],
+          [
+            "All identities, secondary",
+            "18",
+            "63.61 [57.50, 70.28]",
+            "52.87 [49.44, 57.22]"
+          ]
+        ],
+        [
+          [
+            "Method",
+            "All included queries, original 12 participants",
+            "Unflagged queries, 10 eligible participants"
+          ],
+          [
+            "Frozen CSP/LDA",
+            "57.94 [52.65, 63.84]",
+            "60.14 [54.75, 66.02]"
+          ],
+          [
+            "Frozen CSP + LDA-only recalibration",
+            "59.89 [54.30, 65.68]",
+            "62.28 [56.21, 67.91]"
+          ],
+          [
+            "Full CSP/LDA refit",
+            "65.36 [59.81, 70.90]",
+            "66.10 [59.84, 71.94]"
+          ],
+          [
+            "Always-frozen EEGNet",
+            "51.58 [49.08, 54.51]",
+            "51.80 [48.34, 55.28]"
+          ]
+        ],
+        [
+          [
+            "Paired contrast and subset",
+            "Participants",
+            "Unadjusted two-sided p",
+            "Holm p, four checks"
+          ],
+          [
+            "Full refit − frozen, original primary cohort",
+            "12",
+            "0.01953",
+            "0.05859"
+          ],
+          [
+            "Full refit − LDA-only, same primary cohort",
+            "12",
+            "0.01025",
+            "0.04102"
+          ],
+          [
+            "LDA-only − frozen, same primary cohort",
+            "12",
+            "0.26123",
+            "0.26123"
+          ],
+          [
+            "Full refit − frozen, unflagged eligible subset",
+            "10",
+            "0.07617",
+            "0.15234"
+          ]
+        ]
+      ],
+      "image_members": 4,
+      "drawing_elements": 4,
+      "bibliography_paragraphs": 17,
+      "section_line_numbers": [
+        {
+          "countBy": "1",
+          "start": "1",
+          "restart": "continuous",
+          "distance": "180"
+        }
+      ],
+      "PAGE_footer_fields": [
+        "PAGE"
+      ],
+      "effective_spacing_histogram": {
+        "Title:480": 1,
+        "FirstParagraph:480": 25,
+        "BodyText:480": 56,
+        "Heading1:480": 10,
+        "Heading2:480": 17,
+        "Compact:480": 96,
+        "Bibliography:480": 17
+      },
+      "native_Word_layout_rendered": false
+    },
+    {
+      "path": "manuscript/plos_one_submission_ethics_20261016/S1_Text.docx",
+      "bytes": 33341,
+      "sha256": "b0bf7df3d39d936191ac2dbac0cb4f72d8e1ddf2ce04e2928620f772aed50e7b",
+      "native_tables": 2,
+      "table_cells": [
+        [
+          [
+            "Role",
+            "Fixed whole-run assignment",
+            "Included windows across 18 IDs"
+          ],
+          [
+            "Source training",
+            "ses-0, run-0 and run-1",
+            "720"
+          ],
+          [
+            "Source validation",
+            "ses-0, run-2",
+            "360"
+          ],
+          [
+            "Source query",
+            "ses-0, run-3",
+            "360"
+          ],
+          [
+            "Target support",
+            "ses-1 through ses-5, run-0",
+            "1,786"
+          ],
+          [
+            "Target query",
+            "All other target-session runs",
+            "3,930"
+          ]
+        ],
+        [
+          [
+            "Pipeline",
+            "Source estimator/optimizer labels",
+            "Additional source-validation labels for selection",
+            "Current support labels for fitting"
+          ],
+          [
+            "Source-only CSP/LDA",
+            "40",
+            "0",
+            "0"
+          ],
+          [
+            "Frozen CSP + LDA recalibration",
+            "40",
+            "0",
+            "19/20"
+          ],
+          [
+            "CSP/LDA refit",
+            "40",
+            "0",
+            "19/20"
+          ],
+          [
+            "Always-frozen EEGNet, each seed",
+            "40",
+            "20",
+            "0"
+          ]
+        ]
+      ],
+      "image_members": 0,
+      "drawing_elements": 0,
+      "bibliography_paragraphs": 4,
+      "section_line_numbers": [
+        {
+          "countBy": "1",
+          "start": "1",
+          "restart": "continuous",
+          "distance": "180"
+        }
+      ],
+      "PAGE_footer_fields": [
+        "PAGE"
+      ],
+      "effective_spacing_histogram": {
+        "Title:480": 1,
+        "FirstParagraph:480": 22,
+        "BodyText:480": 59,
+        "Heading1:480": 11,
+        "Compact:480": 41,
+        "Heading2:480": 11,
+        "SourceCode:480": 2,
+        "Bibliography:480": 4
+      },
+      "native_Word_layout_rendered": false
+    },
+    {
+      "path": "manuscript/plos_one_submission_ethics_20261016/S2_Text.docx",
+      "bytes": 15731,
+      "sha256": "5ac0b04a8091476cc05b09e9f9383cb4d5abe0af32959d9fbcc2b3c2268ce0de",
+      "native_tables": 0,
+      "table_cells": [],
+      "image_members": 0,
+      "drawing_elements": 0,
+      "bibliography_paragraphs": 1,
+      "section_line_numbers": [
+        {
+          "countBy": "1",
+          "start": "1",
+          "restart": "continuous",
+          "distance": "180"
+        }
+      ],
+      "PAGE_footer_fields": [
+        "PAGE"
+      ],
+      "effective_spacing_histogram": {
+        "Title:480": 1,
+        "FirstParagraph:480": 6,
+        "Heading1:480": 5,
+        "BodyText:480": 13,
+        "Bibliography:480": 1
+      },
+      "native_Word_layout_rendered": false
+    },
+    {
+      "path": "manuscript/plos_one_submission_ethics_20261016/author_worksheet.docx",
+      "bytes": 16184,
+      "sha256": "f9cbfda59b922958220f1718da020e1f3ea3a42ad1c2bbcf130d15730d6890ad",
+      "native_tables": 1,
+      "table_cells": [
+        [
+          [
+            "Field",
+            "Current truthful entry"
+          ],
+          [
+            "Journal / article type",
+            "PLOS ONE / Research Article; author confirmed"
+          ],
+          [
+            "Full title",
+            "Longitudinal motor-imagery EEG decoding: Frozen baselines, supervised recalibration, and task-measurement reliability"
+          ],
+          [
+            "Short title",
+            "Longitudinal EEG decoding with limited recalibration labels"
+          ],
+          [
+            "Sole and corresponding author",
+            "Ziyuan Zhu"
+          ],
+          [
+            "Affiliation",
+            "College of Artificial Intelligence Medicine, Chongqing Medical University, Chongqing, China"
+          ],
+          [
+            "Correspondence email",
+            "zzy2630816871@gmail.com"
+          ],
+          [
+            "Postal address",
+            "Jinyun Campus, Chongqing Medical University, No. 61, Daxuecheng Middle Road, Shapingba District, Chongqing 401331, China"
+          ],
+          [
+            "ORCID",
+            "0009-0005-1153-4926; author reports Given name Ziyuan / Family name Zhu correction. This task did not independently refresh the profile. The author should link the actual ORCID in the journal account."
+          ],
+          [
+            "Contributions",
+            "Ziyuan Zhu: Conceptualization; Methodology; Software; Formal analysis; Validation; Visualization; Writing – original draft; Writing – review & editing. These queried roles were author confirmed."
+          ],
+          [
+            "Financial disclosure",
+            "The author received no specific funding for this work. Enter in the financial-disclosure portal field; do not import the original study’s funding or reinsert financial disclosure in the upload manuscript."
+          ],
+          [
+            "Competing interests",
+            "The author declares no competing interests."
+          ],
+          [
+            "Preprint / conference version",
+            "None reported by the author."
+          ],
+          [
+            "Concurrent journal consideration",
+            "None reported by the author."
+          ],
+          [
+            "Institutional/collaborator restrictions",
+            "None reported for original code or derived results; the subsequent scoped MIT/CC BY choice is recorded below and does not eliminate third-party terms."
+          ],
+          [
+            "Prior contact with PLOS",
+            "Not yet supplied; do not assume none. Record any real editorial correspondence if relevant."
+          ],
+          [
+            "Academic Editor suggestions / opposed reviewers",
+            "Not yet selected. Do not invent names, affiliations, contacts, conflicts or opposition reasons."
+          ]
+        ]
+      ],
+      "image_members": 0,
+      "drawing_elements": 0,
+      "bibliography_paragraphs": 1,
+      "section_line_numbers": [],
+      "PAGE_footer_fields": [
+        "PAGE"
+      ],
+      "effective_spacing_histogram": {
+        "Title:264": 1,
+        "FirstParagraph:264": 7,
+        "BodyText:264": 11,
+        "Heading1:264": 3,
+        "Compact:264": 39,
+        "Heading2:264": 4,
+        "Bibliography:264": 1
+      },
+      "native_Word_layout_rendered": false
+    },
+    {
+      "path": "manuscript/plos_one_submission_ethics_20261016/cover_letter_draft.docx",
+      "bytes": 12061,
+      "sha256": "eef6c10efccdcf0df36f569665ac6f6278b3b785d20c29fbdff6a734af68e93f",
+      "native_tables": 0,
+      "table_cells": [],
+      "image_members": 0,
+      "drawing_elements": 0,
+      "bibliography_paragraphs": 0,
+      "section_line_numbers": [],
+      "PAGE_footer_fields": [
+        "PAGE"
+      ],
+      "effective_spacing_histogram": {
+        "Title:264": 1,
+        "FirstParagraph:264": 1,
+        "BodyText:264": 7
+      },
+      "native_Word_layout_rendered": false
+    }
+  ],
+  "PDF": [
+    {
+      "path": "manuscript/plos_one_submission_ethics_20261016/manuscript_for_submission.pdf",
+      "bytes": 130218,
+      "sha256": "ef8b4a5642bf1a4bd7eb4a6a98cc26184b54f05993236f1e38186e7c6a7244d7",
+      "pages": 29,
+      "physical_overflow": [],
+      "empty_text_pages": [],
+      "sparse_pages_under_30_words": [],
+      "key_section_pages": {
+        "Article 32": [
+          5
+        ],
+        "additional ethical review": [
+          5
+        ],
+        "Table 5.": [
+          18,
+          20
+        ],
+        "References": [
+          25
+        ],
+        "Supporting information captions": [
+          28
+        ]
+      },
+      "actual_embedded_fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nZQXLEP+LiberationSerif               CID TrueType      Identity-H       yes yes yes      4  0\nPBMFXY+LiberationSans                CID TrueType      Identity-H       yes yes yes      6  0\nLRNMMD+LiberationSerif-Bold          CID TrueType      Identity-H       yes yes yes      8  0\nPVFYQB+LiberationSerif-Italic        CID TrueType      Identity-H       yes yes yes     37  0\nFDZAVT+DejaVuSansMono                CID TrueType      Identity-H       yes yes yes     48  0\nOQPZFO+LatinModernMath-Regular-Identity-H CID Type 0C       Identity-H       yes yes yes     65  0\n",
+      "pdfinfo": "Title:           Longitudinal motor-imagery EEG decoding: Frozen baselines, supervised recalibration, and task-measurement reliability\nCreator:         LaTeX via pandoc\nProducer:        xdvipdfmx (20240305)\nCreationDate:    Fri Oct 16 02:55:21 2026 UTC\nCustom Metadata: no\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           29\nEncrypted:       no\nPage size:       595.28 x 841.89 pts (A4)\nPage rot:        0\nFile size:       130218 bytes\nOptimized:       no\nPDF version:     1.5\n"
+    },
+    {
+      "path": "manuscript/plos_one_submission_ethics_20261016/manuscript_for_review.pdf",
+      "bytes": 1838498,
+      "sha256": "8cd826232df432ff794a32577601007937fb4f5c7191a3ac79516ff910ed5ec8",
+      "pages": 31,
+      "physical_overflow": [],
+      "empty_text_pages": [],
+      "sparse_pages_under_30_words": [],
+      "key_section_pages": {
+        "Article 32": [
+          5
+        ],
+        "additional ethical review": [
+          5
+        ],
+        "Table 5.": [
+          21,
+          22,
+          23
+        ],
+        "References": [
+          28
+        ],
+        "Supporting information captions": [
+          30
+        ]
+      },
+      "actual_embedded_fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nZQXLEP+LiberationSerif               CID TrueType      Identity-H       yes yes yes      4  0\nPBMFXY+LiberationSans                CID TrueType      Identity-H       yes yes yes      6  0\nLRNMMD+LiberationSerif-Bold          CID TrueType      Identity-H       yes yes yes      8  0\nPVFYQB+LiberationSerif-Italic        CID TrueType      Identity-H       yes yes yes     37  0\nFDZAVT+DejaVuSansMono                CID TrueType      Identity-H       yes yes yes     48  0\nOQPZFO+LatinModernMath-Regular-Identity-H CID Type 0C       Identity-H       yes yes yes     65  0\n",
+      "pdfinfo": "Title:           Longitudinal motor-imagery EEG decoding: Frozen baselines, supervised recalibration, and task-measurement reliability\nCreator:         LaTeX via pandoc\nProducer:        xdvipdfmx (20240305)\nCreationDate:    Fri Oct 16 02:55:21 2026 UTC\nCustom Metadata: no\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           31\nEncrypted:       no\nPage size:       595.28 x 841.89 pts (A4)\nPage rot:        0\nFile size:       1838498 bytes\nOptimized:       no\nPDF version:     1.5\n"
+    },
+    {
+      "path": "manuscript/plos_one_submission_ethics_20261016/S1_Text.pdf",
+      "bytes": 118073,
+      "sha256": "1841c573490f00ff861facb717fd9d2be74b2728759cbc8d014ec05a340d618c",
+      "pages": 25,
+      "physical_overflow": [],
+      "empty_text_pages": [],
+      "sparse_pages_under_30_words": [],
+      "key_section_pages": {
+        "S11.": [
+          7,
+          22
+        ],
+        "Article 32": [
+          15
+        ]
+      },
+      "actual_embedded_fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nZQXLEP+LiberationSerif               CID TrueType      Identity-H       yes yes yes      4  0\nPBMFXY+LiberationSans                CID TrueType      Identity-H       yes yes yes      6  0\nLRNMMD+LiberationSerif-Bold          CID TrueType      Identity-H       yes yes yes      8  0\nPVFYQB+DejaVuSansMono                CID TrueType      Identity-H       yes yes yes     10  0\nFDZAVT+LatinModernMath-Regular-Identity-H CID Type 0C       Identity-H       yes yes yes     77  0\n",
+      "pdfinfo": "Title:           S1 Text. Supplementary scientific methods\nCreator:         LaTeX via pandoc\nProducer:        xdvipdfmx (20240305)\nCreationDate:    Fri Oct 16 02:55:21 2026 UTC\nCustom Metadata: no\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           25\nEncrypted:       no\nPage size:       595.28 x 841.89 pts (A4)\nPage rot:        0\nFile size:       118073 bytes\nOptimized:       no\nPDF version:     1.5\n"
+    },
+    {
+      "path": "manuscript/plos_one_submission_ethics_20261016/S2_Text.pdf",
+      "bytes": 58171,
+      "sha256": "a7a674ad5d6c6f344d6f0d94dec66cbc4f5a34bf28e49b9faef7730a7e93fb69",
+      "pages": 6,
+      "physical_overflow": [],
+      "empty_text_pages": [],
+      "sparse_pages_under_30_words": [],
+      "key_section_pages": {
+        "S11.": [
+          3
+        ],
+        "Article 32": [
+          5
+        ],
+        "additional ethical review": [
+          5
+        ]
+      },
+      "actual_embedded_fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nZQXLEP+LiberationSerif               CID TrueType      Identity-H       yes yes yes      4  0\nPBMFXY+LiberationSans                CID TrueType      Identity-H       yes yes yes      6  0\nLRNMMD+LiberationSerif-Bold          CID TrueType      Identity-H       yes yes yes      8  0\nPVFYQB+DejaVuSansMono                CID TrueType      Identity-H       yes yes yes     10  0\n",
+      "pdfinfo": "Title:           S2 Text. Audit and saved-result reproduction\nCreator:         LaTeX via pandoc\nProducer:        xdvipdfmx (20240305)\nCreationDate:    Fri Oct 16 02:55:21 2026 UTC\nCustom Metadata: no\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           6\nEncrypted:       no\nPage size:       595.28 x 841.89 pts (A4)\nPage rot:        0\nFile size:       58171 bytes\nOptimized:       no\nPDF version:     1.5\n"
+    },
+    {
+      "path": "manuscript/plos_one_submission_ethics_20261016/author_worksheet.pdf",
+      "bytes": 57908,
+      "sha256": "9adc924c2fa54bb4903435278e9a578a25aa3d9285f6908826f7c0f4eea688d2",
+      "pages": 4,
+      "physical_overflow": [],
+      "empty_text_pages": [],
+      "sparse_pages_under_30_words": [],
+      "key_section_pages": {
+        "Article 32": [
+          2
+        ],
+        "additional ethical review": [
+          2
+        ]
+      },
+      "actual_embedded_fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nZQXLEP+LiberationSerif               CID TrueType      Identity-H       yes yes yes      4  0\nPBMFXY+LiberationSerif-Bold          CID TrueType      Identity-H       yes yes yes      6  0\nLRNMMD+DejaVuSansMono                CID TrueType      Identity-H       yes yes yes     12  0\nPVFYQB+NotoSerifCJKjp-Regular-Identity-H CID Type 0C       Identity-H       yes yes yes     18  0\n",
+      "pdfinfo": "Title:           PLOS ONE author worksheet\nCreator:         LaTeX via pandoc\nProducer:        xdvipdfmx (20240305)\nCreationDate:    Fri Oct 16 02:55:21 2026 UTC\nCustom Metadata: no\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           4\nEncrypted:       no\nPage size:       595.28 x 841.89 pts (A4)\nPage rot:        0\nFile size:       57908 bytes\nOptimized:       no\nPDF version:     1.5\n"
+    },
+    {
+      "path": "manuscript/plos_one_submission_ethics_20261016/cover_letter_draft.pdf",
+      "bytes": 39873,
+      "sha256": "91cf26b1a75d787c661ef501133d8c8cf7ce7659a4949744eab5239d96003f7e",
+      "pages": 1,
+      "physical_overflow": [],
+      "empty_text_pages": [],
+      "sparse_pages_under_30_words": [],
+      "key_section_pages": {
+        "Article 32": [
+          1
+        ],
+        "additional ethical review": [
+          1
+        ]
+      },
+      "actual_embedded_fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nZQXLEP+LiberationSerif               CID TrueType      Identity-H       yes yes yes      4  0\nPBMFXY+LiberationSerif-Italic        CID TrueType      Identity-H       yes yes yes      6  0\nLRNMMD+DejaVuSansMono-Oblique        CID TrueType      Identity-H       yes yes yes      8  0\n",
+      "pdfinfo": "Title:           Draft cover letter: for author review; not sent\nCreator:         LaTeX via pandoc\nProducer:        xdvipdfmx (20240305)\nCreationDate:    Fri Oct 16 02:55:21 2026 UTC\nCustom Metadata: no\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           1\nEncrypted:       no\nPage size:       595.28 x 841.89 pts (A4)\nPage rot:        0\nFile size:       39873 bytes\nOptimized:       no\nPDF version:     1.5\n"
+    }
+  ],
+  "check_details": [
+    {
+      "description": "source contains five tables",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.docx: actual PAGE footer field",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.docx: footer linked in each section",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.docx: expected continuous line-numbering metadata",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.docx: effective paragraph spacing 480/240 lines",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.docx: five native editable tables",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.docx: every main-table cell matches source",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.docx: expected 0 embedded figures",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.docx: seventeen bibliography paragraphs",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.docx: Table 1 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.docx: Table 2 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.docx: Table 3 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.docx: Table 4 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.docx: Table 5 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.docx: Fig 1 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.docx: Fig 2 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.docx: Fig 3 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.docx: Fig 4 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.docx: actual PAGE footer field",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.docx: footer linked in each section",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.docx: expected continuous line-numbering metadata",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.docx: effective paragraph spacing 480/240 lines",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.docx: five native editable tables",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.docx: every main-table cell matches source",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.docx: expected 4 embedded figures",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.docx: seventeen bibliography paragraphs",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.docx: Table 1 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.docx: Table 2 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.docx: Table 3 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.docx: Table 4 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.docx: Table 5 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.docx: Fig 1 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.docx: Fig 2 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.docx: Fig 3 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.docx: Fig 4 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "S1_Text.docx: actual PAGE footer field",
+      "passed": true
+    },
+    {
+      "description": "S1_Text.docx: footer linked in each section",
+      "passed": true
+    },
+    {
+      "description": "S1_Text.docx: expected continuous line-numbering metadata",
+      "passed": true
+    },
+    {
+      "description": "S1_Text.docx: effective paragraph spacing 480/240 lines",
+      "passed": true
+    },
+    {
+      "description": "S1_Text.docx: no embedded figures",
+      "passed": true
+    },
+    {
+      "description": "S1_Text.docx: new S11 present",
+      "passed": true
+    },
+    {
+      "description": "S1_Text.docx: native equation elements present",
+      "passed": true
+    },
+    {
+      "description": "S2_Text.docx: actual PAGE footer field",
+      "passed": true
+    },
+    {
+      "description": "S2_Text.docx: footer linked in each section",
+      "passed": true
+    },
+    {
+      "description": "S2_Text.docx: expected continuous line-numbering metadata",
+      "passed": true
+    },
+    {
+      "description": "S2_Text.docx: effective paragraph spacing 480/240 lines",
+      "passed": true
+    },
+    {
+      "description": "S2_Text.docx: no embedded figures",
+      "passed": true
+    },
+    {
+      "description": "author_worksheet.docx: actual PAGE footer field",
+      "passed": true
+    },
+    {
+      "description": "author_worksheet.docx: footer linked in each section",
+      "passed": true
+    },
+    {
+      "description": "author_worksheet.docx: expected continuous line-numbering metadata",
+      "passed": true
+    },
+    {
+      "description": "author_worksheet.docx: effective paragraph spacing 264/240 lines",
+      "passed": true
+    },
+    {
+      "description": "author_worksheet.docx: no embedded figures",
+      "passed": true
+    },
+    {
+      "description": "cover_letter_draft.docx: actual PAGE footer field",
+      "passed": true
+    },
+    {
+      "description": "cover_letter_draft.docx: footer linked in each section",
+      "passed": true
+    },
+    {
+      "description": "cover_letter_draft.docx: expected continuous line-numbering metadata",
+      "passed": true
+    },
+    {
+      "description": "cover_letter_draft.docx: effective paragraph spacing 264/240 lines",
+      "passed": true
+    },
+    {
+      "description": "cover_letter_draft.docx: no embedded figures",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.pdf: actual page count agrees",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.pdf: no word crosses physical PDF boundary",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.pdf: no empty-text pages",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.pdf: no nearly empty page under 30 words",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.pdf: no unresolved citation markers",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.pdf: actual installed PDF body font recorded",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.pdf: all seventeen numbered references",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.pdf: Table 1 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.pdf: Table 2 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.pdf: Table 3 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.pdf: Table 4 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.pdf: Table 5 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.pdf: Fig 1 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.pdf: Fig 2 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.pdf: Fig 3 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.pdf: Fig 4 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.pdf: Table 5 value 0.01953 present",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.pdf: Table 5 value 0.05859 present",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.pdf: Table 5 value 0.01025 present",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.pdf: Table 5 value 0.04102 present",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.pdf: Table 5 value 0.26123 present",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.pdf: Table 5 value 0.07617 present",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_submission.pdf: Table 5 value 0.15234 present",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.pdf: actual page count agrees",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.pdf: no word crosses physical PDF boundary",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.pdf: no empty-text pages",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.pdf: no nearly empty page under 30 words",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.pdf: no unresolved citation markers",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.pdf: actual installed PDF body font recorded",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.pdf: all seventeen numbered references",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.pdf: Table 1 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.pdf: Table 2 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.pdf: Table 3 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.pdf: Table 4 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.pdf: Table 5 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.pdf: Fig 1 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.pdf: Fig 2 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.pdf: Fig 3 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.pdf: Fig 4 caption occurs once",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.pdf: Table 5 value 0.01953 present",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.pdf: Table 5 value 0.05859 present",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.pdf: Table 5 value 0.01025 present",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.pdf: Table 5 value 0.04102 present",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.pdf: Table 5 value 0.26123 present",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.pdf: Table 5 value 0.07617 present",
+      "passed": true
+    },
+    {
+      "description": "manuscript_for_review.pdf: Table 5 value 0.15234 present",
+      "passed": true
+    },
+    {
+      "description": "S1_Text.pdf: actual page count agrees",
+      "passed": true
+    },
+    {
+      "description": "S1_Text.pdf: no word crosses physical PDF boundary",
+      "passed": true
+    },
+    {
+      "description": "S1_Text.pdf: no empty-text pages",
+      "passed": true
+    },
+    {
+      "description": "S1_Text.pdf: no nearly empty page under 30 words",
+      "passed": true
+    },
+    {
+      "description": "S1_Text.pdf: no unresolved citation markers",
+      "passed": true
+    },
+    {
+      "description": "S1_Text.pdf: actual installed PDF body font recorded",
+      "passed": true
+    },
+    {
+      "description": "S1_Text.pdf: new statistical section value S11. present",
+      "passed": true
+    },
+    {
+      "description": "S1_Text.pdf: new statistical section value 0.01953125 present",
+      "passed": true
+    },
+    {
+      "description": "S1_Text.pdf: new statistical section value 0.05859375 present",
+      "passed": true
+    },
+    {
+      "description": "S1_Text.pdf: new statistical section value 0.041015625 present",
+      "passed": true
+    },
+    {
+      "description": "S1_Text.pdf: new statistical section value 0.15234375 present",
+      "passed": true
+    },
+    {
+      "description": "S1_Text.pdf: new statistical section value 0.807128 present",
+      "passed": true
+    },
+    {
+      "description": "S2_Text.pdf: actual page count agrees",
+      "passed": true
+    },
+    {
+      "description": "S2_Text.pdf: no word crosses physical PDF boundary",
+      "passed": true
+    },
+    {
+      "description": "S2_Text.pdf: no empty-text pages",
+      "passed": true
+    },
+    {
+      "description": "S2_Text.pdf: no nearly empty page under 30 words",
+      "passed": true
+    },
+    {
+      "description": "S2_Text.pdf: no unresolved citation markers",
+      "passed": true
+    },
+    {
+      "description": "S2_Text.pdf: actual installed PDF body font recorded",
+      "passed": true
+    },
+    {
+      "description": "author_worksheet.pdf: actual page count agrees",
+      "passed": true
+    },
+    {
+      "description": "author_worksheet.pdf: no word crosses physical PDF boundary",
+      "passed": true
+    },
+    {
+      "description": "author_worksheet.pdf: no empty-text pages",
+      "passed": true
+    },
+    {
+      "description": "author_worksheet.pdf: no nearly empty page under 30 words",
+      "passed": true
+    },
+    {
+      "description": "author_worksheet.pdf: no unresolved citation markers",
+      "passed": true
+    },
+    {
+      "description": "author_worksheet.pdf: actual installed PDF body font recorded",
+      "passed": true
+    },
+    {
+      "description": "author_worksheet.pdf: exact approved Chinese reply survives export",
+      "passed": true
+    },
+    {
+      "description": "author_worksheet.pdf: actual CJK fallback embedded",
+      "passed": true
+    },
+    {
+      "description": "cover_letter_draft.pdf: actual page count agrees",
+      "passed": true
+    },
+    {
+      "description": "cover_letter_draft.pdf: no word crosses physical PDF boundary",
+      "passed": true
+    },
+    {
+      "description": "cover_letter_draft.pdf: no empty-text pages",
+      "passed": true
+    },
+    {
+      "description": "cover_letter_draft.pdf: no nearly empty page under 30 words",
+      "passed": true
+    },
+    {
+      "description": "cover_letter_draft.pdf: no unresolved citation markers",
+      "passed": true
+    },
+    {
+      "description": "cover_letter_draft.pdf: actual installed PDF body font recorded",
+      "passed": true
+    }
+  ],
+  "visual_QA_recorded_separately": true,
+  "native_Word_layout_rendered": false,
+  "native_Word_pagination_claimed": false,
+  "scientific_execution": "none; ZIP XML, PDF text/metadata and exported-document checks only"
+}

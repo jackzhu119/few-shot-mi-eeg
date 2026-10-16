@@ -1,0 +1,130 @@
+{
+  "status": "passed",
+  "checks": 24,
+  "failures": [],
+  "results": [
+    {
+      "name": "five main scientific tables byte-identical in Markdown",
+      "passed": true,
+      "tables": 5
+    },
+    {
+      "name": "S1 existing scientific tables byte-identical in Markdown",
+      "passed": true,
+      "tables": 2
+    },
+    {
+      "name": "S1 scientific suffix from S8. unchanged",
+      "passed": true
+    },
+    {
+      "name": "S1 scientific suffix from S9. unchanged",
+      "passed": true
+    },
+    {
+      "name": "S1 scientific suffix from S10. unchanged",
+      "passed": true
+    },
+    {
+      "name": "S1 scientific suffix from S11. unchanged",
+      "passed": true
+    },
+    {
+      "name": "17 unique bibliography entries, original 16 plus one legal reference",
+      "passed": true,
+      "keys": [
+        "kumar2024",
+        "ramoser2000",
+        "blankertz2008",
+        "ledoit2004",
+        "lawhern2018",
+        "schirrmeister2017",
+        "lotte2018",
+        "jayaram2018",
+        "nemar177",
+        "kumar2024correction",
+        "he2020alignment",
+        "zanini2018alignment",
+        "lotte2018skills",
+        "kumarcodebook",
+        "vidaurre2011lda",
+        "arvaneh2013dsa",
+        "china2023ethics"
+      ]
+    },
+    {
+      "name": "all source citation keys resolve: kumar_plos_one_audit_reproducibility_ethics_20261016.md",
+      "passed": true,
+      "missing": []
+    },
+    {
+      "name": "all source citation keys resolve: kumar_plos_one_author_worksheet_ethics_20261016.md",
+      "passed": true,
+      "missing": []
+    },
+    {
+      "name": "all source citation keys resolve: kumar_plos_one_cover_letter_ethics_20261016.md",
+      "passed": true,
+      "missing": []
+    },
+    {
+      "name": "all source citation keys resolve: kumar_plos_one_submission_draft_ethics_20261016.md",
+      "passed": true,
+      "missing": []
+    },
+    {
+      "name": "all source citation keys resolve: kumar_plos_one_supporting_methods_ethics_20261016.md",
+      "passed": true,
+      "missing": []
+    },
+    {
+      "name": "sealed old export unchanged: manuscript/plos_one_submission_20261016/S1_Text.docx",
+      "passed": true
+    },
+    {
+      "name": "sealed old export unchanged: manuscript/plos_one_submission_20261016/S1_Text.pdf",
+      "passed": true
+    },
+    {
+      "name": "sealed old export unchanged: manuscript/plos_one_submission_20261016/S2_Text.docx",
+      "passed": true
+    },
+    {
+      "name": "sealed old export unchanged: manuscript/plos_one_submission_20261016/S2_Text.pdf",
+      "passed": true
+    },
+    {
+      "name": "sealed old export unchanged: manuscript/plos_one_submission_20261016/author_worksheet.docx",
+      "passed": true
+    },
+    {
+      "name": "sealed old export unchanged: manuscript/plos_one_submission_20261016/author_worksheet.pdf",
+      "passed": true
+    },
+    {
+      "name": "sealed old export unchanged: manuscript/plos_one_submission_20261016/cover_letter_draft.docx",
+      "passed": true
+    },
+    {
+      "name": "sealed old export unchanged: manuscript/plos_one_submission_20261016/cover_letter_draft.pdf",
+      "passed": true
+    },
+    {
+      "name": "sealed old export unchanged: manuscript/plos_one_submission_20261016/manuscript_for_review.docx",
+      "passed": true
+    },
+    {
+      "name": "sealed old export unchanged: manuscript/plos_one_submission_20261016/manuscript_for_review.pdf",
+      "passed": true
+    },
+    {
+      "name": "sealed old export unchanged: manuscript/plos_one_submission_20261016/manuscript_for_submission.docx",
+      "passed": true
+    },
+    {
+      "name": "sealed old export unchanged: manuscript/plos_one_submission_20261016/manuscript_for_submission.pdf",
+      "passed": true
+    }
+  ],
+  "qa_guard_correction": "An initial inline source-citation regex incorrectly treated @gmail in an email as a citation. The corrected email-aware regex above excludes email handles; no manuscript source was changed."
+}

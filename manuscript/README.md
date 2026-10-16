@@ -1,5 +1,7 @@
 # Manuscript working materials
 
+**最新行政版本（2026-10-16）：**[伦理澄清完整审阅包](plos_one_submission_ethics_20261016/README.md)。作者报告学校科研处于2026-10-16确认免予额外伦理审查、无编号，已按已确认单位重庆医科大学及描述性办公室译名更新；未编造新IRB批准。科学数值及原封存包不变，未投稿。
+
 ## Latest author-review revision: 2026-10-16
 
 Start with [the revised package](plos_one_submission_20261016/README.md),

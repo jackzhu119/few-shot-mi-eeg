@@ -1,0 +1,48 @@
+
+Dear PLOS ONE Editors,
+
+Please consider the Research Article “Longitudinal motor-imagery EEG decoding:
+Frozen baselines, supervised recalibration, and task-measurement reliability.”
+
+This secondary analysis compares decoding updates in 18 participant records
+across six sessions of Kumar2024. The acquisition study investigated online
+covariance recentering and Riemannian class-prototype updating, with a separate
+pseudo-online CSP extension. Our analysis distinguishes classifier-only from
+full CSP/LDA refitting under the same 19/20-label current-session support budget
+and examines whether available task measurements justify individual update
+decisions.
+
+The predefined primary comparison in 12 participants favored full refitting
+over frozen decoding by 7.42 percentage points (95% participant-bootstrap
+interval 2.49–12.48). The secondary same-label-budget comparison favored full
+refitting over LDA-only updating by 5.47 points (2.17–8.91). All neural seeds,
+negative outcomes and class-collapsed predictions are retained. Weak EEGNet
+source-query performance limits interpretation of its later target result.
+QC sensitivity, incomplete class coverage, cue-window phase uncertainty and
+prior test exposure are reported explicitly. The additional paired tests were
+introduced after review and are labeled exploratory, with multiplicity shown.
+
+The supporting files provide scientific methods, saved-result inputs/code,
+figure data and a separate provenance appendix. Original code is MIT licensed;
+original manuscript and derived content are CC BY 4.0 within the stated scope.
+According to the author, the research administration office at Chongqing
+Medical University confirmed on 16 October 2026 that this Kumar2024/NEMAR
+secondary analysis is exempt from additional ethical review under Article 32,
+item (1), of the 2023 Chinese ethics-review measures. The author reported that
+no identifier was issued. The office name is a descriptive translation; no
+institutional document has been received for this record. This is an
+exemption from additional review, not a new IRB approval or a consent waiver.
+
+Sincerely,
+
+Ziyuan Zhu; College of Artificial Intelligence Medicine, Chongqing Medical
+University, Chongqing, China; zzy2630816871@gmail.com
+
+*Author-only note: the author approved the scientific content on
+16 October 2026, at content commit \texttt{\seqsplit{f2901decfc39b2adecae13253ee4b1159a4f9a4b}};
+the confirmation is preserved at \texttt{\seqsplit{1a7e1ab8b6253db52544ba185abb33a6bcb4937b}}.
+The new administrative revision is designated `paper2-plos-ethics-20261016`.
+This record does not establish personal inspection of each newly exported
+file or native Word layout. The full AI-assistance disclosure is retained;
+actual portal-specific entries remain to be completed. This letter has not
+been sent.*
