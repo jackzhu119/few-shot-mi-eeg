@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "status": "all_reproduction_cli_checks_passed",
+  "checks": 8,
+  "failures": [],
+  "renders_executed": 0,
+  "preflight_paths_created": false,
+  "wrapper": {
+    "path": "research_logs/kumar_submission_figures_20261016/run01/reproduce_figures.py",
+    "bytes": 2454,
+    "sha256": "71f61d3adc807f2d2958ddf79db61b3aa19fb9686067f66a7e030542d72618cb"
+  },
+  "cases": [
+    {
+      "name": "help",
+      "arguments": [
+        "--help"
+      ],
+      "expected_returncode": 0,
+      "actual_returncode": 0,
+      "stdout": "usage: reproduce_figures.py [-h] --output-dir OUTPUT_DIR --log-dir LOG_DIR\n                            [--check-only]\n\nRun the unchanged, hashed figure producer into explicit fresh repo paths.\n\noptions:\n  -h, --help            show this help message and exit\n  --output-dir OUTPUT_DIR\n  --log-dir LOG_DIR\n  --check-only\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "missing_required_arguments",
+      "arguments": [],
+      "expected_returncode": 2,
+      "actual_returncode": 2,
+      "stdout": "",
+      "stderr": "usage: reproduce_figures.py [-h] --output-dir OUTPUT_DIR --log-dir LOG_DIR\n                            [--check-only]\nreproduce_figures.py: error: the following arguments are required: --output-dir, --log-dir\n",
+      "passed": true
+    },
+    {
+      "name": "fresh_preflight",
+      "arguments": [
+        "--output-dir",
+        "manuscript/figures/plos_submission_cli_preflight_20261016",
+        "--log-dir",
+        "research_logs/kumar_submission_figures_cli_preflight_20261016/run01",
+        "--check-only"
+      ],
+      "expected_returncode": 0,
+      "actual_returncode": 0,
+      "stdout": "{\n  \"status\": \"saved_text_sources_and_fresh_paths_verified\",\n  \"source_count\": 5,\n  \"output_dir\": \"/workspace/few-shot-mi-eeg/manuscript/figures/plos_submission_cli_preflight_20261016\",\n  \"log_dir\": \"/workspace/few-shot-mi-eeg/research_logs/kumar_submission_figures_cli_preflight_20261016/run01\",\n  \"renders_executed\": 0\n}\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "refuse_existing_new",
+      "arguments": [
+        "--output-dir",
+        "manuscript/figures/plos_submission_20261016",
+        "--log-dir",
+        "research_logs/kumar_submission_figures_cli_preflight_20261016/run01",
+        "--check-only"
+      ],
+      "expected_returncode": 1,
+      "actual_returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/workspace/few-shot-mi-eeg/research_logs/kumar_submission_figures_20261016/run01/reproduce_figures.py\", line 60, in <module>\n    main()\n  File \"/workspace/few-shot-mi-eeg/research_logs/kumar_submission_figures_20261016/run01/reproduce_figures.py\", line 34, in main\n    raise FileExistsError(f\"preserve existing non-empty output: {path}\")\nFileExistsError: preserve existing non-empty output: /workspace/few-shot-mi-eeg/manuscript/figures/plos_submission_20261016\n",
+      "passed": true
+    },
+    {
+      "name": "refuse_existing_old",
+      "arguments": [
+        "--output-dir",
+        "manuscript/figures/plos_submission_20261015",
+        "--log-dir",
+        "research_logs/kumar_submission_figures_cli_preflight_20261016/run01",
+        "--check-only"
+      ],
+      "expected_returncode": 1,
+      "actual_returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/workspace/few-shot-mi-eeg/research_logs/kumar_submission_figures_20261016/run01/reproduce_figures.py\", line 60, in <module>\n    main()\n  File \"/workspace/few-shot-mi-eeg/research_logs/kumar_submission_figures_20261016/run01/reproduce_figures.py\", line 34, in main\n    raise FileExistsError(f\"preserve existing non-empty output: {path}\")\nFileExistsError: preserve existing non-empty output: /workspace/few-shot-mi-eeg/manuscript/figures/plos_submission_20261015\n",
+      "passed": true
+    },
+    {
+      "name": "refuse_outside_repo",
+      "arguments": [
+        "--output-dir",
+        "/tmp/kumar_figures_outside_repo_20261016",
+        "--log-dir",
+        "research_logs/kumar_submission_figures_cli_preflight_20261016/run01",
+        "--check-only"
+      ],
+      "expected_returncode": 1,
+      "actual_returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/workspace/few-shot-mi-eeg/research_logs/kumar_submission_figures_20261016/run01/reproduce_figures.py\", line 60, in <module>\n    main()\n  File \"/workspace/few-shot-mi-eeg/research_logs/kumar_submission_figures_20261016/run01/reproduce_figures.py\", line 32, in main\n    raise ValueError(\"fresh output and log paths must be inside this repository\")\nValueError: fresh output and log paths must be inside this repository\n",
+      "passed": true
+    },
+    {
+      "name": "refuse_nested",
+      "arguments": [
+        "--output-dir",
+        "manuscript/figures/plos_submission_cli_preflight_20261016",
+        "--log-dir",
+        "manuscript/figures/plos_submission_cli_preflight_20261016/logs",
+        "--check-only"
+      ],
+      "expected_returncode": 1,
+      "actual_returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/workspace/few-shot-mi-eeg/research_logs/kumar_submission_figures_20261016/run01/reproduce_figures.py\", line 60, in <module>\n    main()\n  File \"/workspace/few-shot-mi-eeg/research_logs/kumar_submission_figures_20261016/run01/reproduce_figures.py\", line 36, in main\n    raise ValueError(\"output and log directories must be distinct and non-nested\")\nValueError: output and log directories must be distinct and non-nested\n",
+      "passed": true
+    },
+    {
+      "name": "refuse_same",
+      "arguments": [
+        "--output-dir",
+        "manuscript/figures/plos_submission_cli_preflight_20261016",
+        "--log-dir",
+        "manuscript/figures/plos_submission_cli_preflight_20261016",
+        "--check-only"
+      ],
+      "expected_returncode": 1,
+      "actual_returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/workspace/few-shot-mi-eeg/research_logs/kumar_submission_figures_20261016/run01/reproduce_figures.py\", line 60, in <module>\n    main()\n  File \"/workspace/few-shot-mi-eeg/research_logs/kumar_submission_figures_20261016/run01/reproduce_figures.py\", line 36, in main\n    raise ValueError(\"output and log directories must be distinct and non-nested\")\nValueError: output and log directories must be distinct and non-nested\n",
+      "passed": true
+    }
+  ]
+}

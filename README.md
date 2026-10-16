@@ -1,5 +1,17 @@
 # Task-Aware Adaptive Decoding for Longitudinal Motor-Imagery EEG
 
+## 最新论文审阅稿（2026-10-16 UTC）
+
+[新版 PLOS ONE 完整包](manuscript/plos_one_submission_20261016/README.md) /
+[带图 PDF](manuscript/plos_one_submission_20261016/manuscript_for_review.pdf) /
+[Word](manuscript/plos_one_submission_20261016/manuscript_for_review.docx)。
+已核验并逐条回应审稿意见，保留原科学结果，补充探索性配对检验、事件查找依据及支持数据。
+[修订报告](docs/kumar_submission_revision_report_20261016.md)与
+[当前状态](CURRENT_PROJECT_STATUS.md)说明真实完成和剩余事项。
+限定 MIT/CC BY 4.0 已按作者确认激活；伦理适用依据与作者最终审阅仍待。
+冻结内容版本为 `paper2-plos-source-20261016`；旧稿及失败记录保留，未新训练或再次 query，未投稿。
+下列早期进度按日期保留，不是新的执行授权。
+
 **面向纵向运动想象 EEG 的任务信息感知跨会话自适应解码**
 
 核心问题：**When should a decoder adapt to cross-session EEG changes, and does

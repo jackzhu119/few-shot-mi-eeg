@@ -1,0 +1,97 @@
+{
+  "recorded_utc": "2026-10-16T01:38:07.769311+00:00",
+  "validation_scope": "Portable two-input producer compared against the prior independently checked saved CPU/QC endpoint audit. No training, model inference, query evaluation, bootstrap recalculation or original artifact modification.",
+  "producer": {
+    "path": "scripts/analyze_kumar_postreview_statistics_20261016.py",
+    "sha256": "d61b862c990fa0c3e44800503f04492f832cafae4f10e4edc6ad26ec6e182336"
+  },
+  "tests": {
+    "path": "tests/test_kumar_postreview_statistics_20261016.py",
+    "sha256": "c32a91c25548c1cf78e1402b22728fb790608449264c46bd77b2ec3f2196396c",
+    "synthetic": true,
+    "software_validation_only": true,
+    "pytest": "24 passed",
+    "ruff": "All checks passed"
+  },
+  "portable_inputs": {
+    "participant_inputs.csv": "c731143104852d01520a2a83912ea696b43fa165efa0a3b873ce0a3feba08096",
+    "statistics_definition.json": "53bfa0f2babb841e24311385ba802139eaffc3410896c95665fcbcc8691770d5"
+  },
+  "prior_independent_audit_results_sha256": "9fae4f797c75f2d0e65713c51f6f8b12e8ffb5a0e070c9319088031d5a29dc65",
+  "prior_independent_participant_inputs_sha256": "c731143104852d01520a2a83912ea696b43fa165efa0a3b873ce0a3feba08096",
+  "public_input_csv_byte_identical_to_prior_audit": true,
+  "original_private_audit_all40_manifest_files_unchanged": true,
+  "all14_original_cpu_qc_review_input_files_unchanged": true,
+  "compared_fields": [
+    "contrast_id",
+    "cohort",
+    "subset",
+    "n",
+    "participants",
+    "mean_difference_BA",
+    "mean_difference_pp",
+    "saved_ci95_low_BA_unchanged",
+    "saved_ci95_high_BA_unchanged",
+    "cohen_dz",
+    "positive",
+    "zero",
+    "negative",
+    "signflip_statistic_abs_mean_BA",
+    "signflip_tail_numerator",
+    "signflip_denominator",
+    "signflip_p_two_sided",
+    "signflip_ties_within_atol",
+    "signflip_atol_BA",
+    "signflip_rtol",
+    "signflip_float_strict_tail_numerator",
+    "signflip_exact_fraction_tail_numerator",
+    "signflip_fraction_agrees",
+    "signflip_holm_adjusted_p_family4"
+  ],
+  "field_comparison": [
+    {
+      "contrast_id": "remaining12_full_minus_frozen",
+      "fields_compared": 24,
+      "all_exact_string_matches": true,
+      "ci_low_exact_string": "0.02487554824561406",
+      "ci_high_exact_string": "0.12476615749142977"
+    },
+    {
+      "contrast_id": "remaining12_full_minus_lda_only",
+      "fields_compared": 24,
+      "all_exact_string_matches": true,
+      "ci_low_exact_string": "0.021680574460576595",
+      "ci_high_exact_string": "0.08913797514619894"
+    },
+    {
+      "contrast_id": "remaining12_lda_only_minus_frozen",
+      "fields_compared": 24,
+      "all_exact_string_matches": true,
+      "ci_low_exact_string": "-0.00983972953216363",
+      "ci_high_exact_string": "0.05085579880016137"
+    },
+    {
+      "contrast_id": "eligible10_unflagged_full_minus_frozen",
+      "fields_compared": 24,
+      "all_exact_string_matches": true,
+      "ci_low_exact_string": "0.009895925827836532",
+      "ci_high_exact_string": "0.11238331639721523"
+    }
+  ],
+  "fresh_directory_replay_byte_comparison": {
+    "statistics_results.csv": {
+      "public_sha256": "7091c89b9e081a30f34621f695386f0621754cf5595b47189900957d7a3e2672",
+      "replay_sha256": "7091c89b9e081a30f34621f695386f0621754cf5595b47189900957d7a3e2672"
+    },
+    "execution_receipt.json": {
+      "public_sha256": "1c0d246c5ec0170080ee9b0a78686f9c418309d9736268c2597a1ae5df6ea509",
+      "replay_sha256": "1c0d246c5ec0170080ee9b0a78686f9c418309d9736268c2597a1ae5df6ea509"
+    }
+  },
+  "no_arguments_cli": {
+    "exit_code": 2,
+    "usage_printed": true
+  },
+  "strict_boundary_diagnostic_retained": "The third contrast remains1070/4096 using predeclared ATOL1e-12 BA versus1066/4096 under strict exact saved-decimal comparison. No tolerance change.",
+  "publication_scope": "New code,46 derived participant rows, definitions,4-row output and numeric audit receipt only. No reviewer full text or third-party documentation copied."
+}

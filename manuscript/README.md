@@ -1,5 +1,17 @@
 # Manuscript working materials
 
+## Latest author-review revision: 2026-10-16
+
+Start with [the revised package](plos_one_submission_20261016/README.md),
+[illustrated PDF](plos_one_submission_20261016/manuscript_for_review.pdf) or
+[editable Word](plos_one_submission_20261016/manuscript_for_review.docx).
+The [review response](../docs/kumar_review_response_20261016.md) distinguishes
+verified corrections from overstated suggestions. Original Tables 1–4 and
+scientific results remain unchanged; Table 5 adds explicitly exploratory checks.
+The scoped MIT/CC BY 4.0 choice is active. The actual secondary-analysis ethics
+basis and the author's final personal review remain outstanding. This revision
+has not been submitted. Older entries below are dated history.
+
 ## Current synchronization and author review
 
 The complete author-review artifact commit

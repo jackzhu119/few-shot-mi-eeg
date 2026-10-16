@@ -1,0 +1,252 @@
+{
+  "recorded_utc": "2026-10-16T01:53:29.845132+00:00",
+  "status": "Full suite failed; historical tests and gates retained unchanged. No CI/full-suite pass claimed.",
+  "scope": "Read-only attribution and two new documentation artifacts. No protected test, production script, configuration, binding, claim, saved result or old log was modified; no suppression plugin or retry was added.",
+  "original_full_suite": {
+    "summary": "13 failed,1257 passed,1 skipped,63 warnings in44.13s",
+    "exit_code": 1,
+    "log": "research_logs/kumar_review_revision_20261016/run01/verification/pytest.log",
+    "log_bytes": 38385,
+    "log_sha256": "98d16e34d621cdfc2ecd558391250d72c82ddc58ae94df4dbb58439a23fa8e27",
+    "checks_receipt": "research_logs/kumar_review_revision_20261016/run01/verification/checks_receipt.json",
+    "checks_receipt_sha256": "37ea5d3a529766b00db1b47e18d8ef3ca3834c581433061eb787c3e8bc252a93"
+  },
+  "category_counts": {
+    "historical_host_identity_gate": 10,
+    "child_script_import_path": 1,
+    "existing_historical_query_state": 1,
+    "disk_reserve_before_hash_path": 1
+  },
+  "failures": [
+    {
+      "node_id": "tests/test_kumar_csp_run02_identity.py::test_exact_documented_gate_passes_read_only_with_original_claim_present",
+      "category": "historical_host_identity_gate",
+      "observed_failure": "ValueError: Recovery host changed",
+      "reason": "The fixture expected the read-only old-host gate to pass; this host differs from the saved binding.",
+      "gate_interpretation": "Real fail-closed host check: current/binding/prior-failure/authorization identities must agree. Historical authorization was not transferred or renewed."
+    },
+    {
+      "node_id": "tests/test_kumar_csp_run02_identity.py::test_wrong_authorization_identity_refused[deadline-Original window]",
+      "category": "historical_host_identity_gate",
+      "observed_failure": "ValueError: Recovery host changed",
+      "reason": "Expected later Original window rejection, but the unchanged host gate rejects first.",
+      "gate_interpretation": "Real fail-closed host check: current/binding/prior-failure/authorization identities must agree. Historical authorization was not transferred or renewed."
+    },
+    {
+      "node_id": "tests/test_kumar_csp_run02_identity.py::test_wrong_authorization_identity_refused[run01-Run02 identity]",
+      "category": "historical_host_identity_gate",
+      "observed_failure": "ValueError: Recovery host changed",
+      "reason": "Expected later Run02 identity rejection, but the unchanged host gate rejects first.",
+      "gate_interpretation": "Real fail-closed host check: current/binding/prior-failure/authorization identities must agree. Historical authorization was not transferred or renewed."
+    },
+    {
+      "node_id": "tests/test_kumar_csp_run02_identity.py::test_wrong_authorization_identity_refused[template-Exact CPU-only]",
+      "category": "historical_host_identity_gate",
+      "observed_failure": "ValueError: Recovery host changed",
+      "reason": "Expected later Exact CPU-only rejection, but the unchanged host gate rejects first.",
+      "gate_interpretation": "Real fail-closed host check: current/binding/prior-failure/authorization identities must agree. Historical authorization was not transferred or renewed."
+    },
+    {
+      "node_id": "tests/test_kumar_csp_run02_identity.py::test_wrong_authorization_identity_refused[contract-Exact CPU-only]",
+      "category": "historical_host_identity_gate",
+      "observed_failure": "ValueError: Recovery host changed",
+      "reason": "Expected later Exact CPU-only rejection, but the unchanged host gate rejects first.",
+      "gate_interpretation": "Real fail-closed host check: current/binding/prior-failure/authorization identities must agree. Historical authorization was not transferred or renewed."
+    },
+    {
+      "node_id": "tests/test_kumar_csp_run02_identity.py::test_existing_run02_identity_stops_without_cleanup[directory-results/kumar_csp_signed_score_20261015/run02]",
+      "category": "historical_host_identity_gate",
+      "observed_failure": "ValueError: Recovery host changed",
+      "reason": "Expected later duplicate Run02 output/state rejection, but the unchanged host gate rejects first.",
+      "gate_interpretation": "Real fail-closed host check: current/binding/prior-failure/authorization identities must agree. Historical authorization was not transferred or renewed."
+    },
+    {
+      "node_id": "tests/test_kumar_csp_run02_identity.py::test_existing_run02_identity_stops_without_cleanup[directory-research_logs/kumar_next_source_operations_20261015/csp_signed_score_operation_run02]",
+      "category": "historical_host_identity_gate",
+      "observed_failure": "ValueError: Recovery host changed",
+      "reason": "Expected later duplicate Run02 output/state rejection, but the unchanged host gate rejects first.",
+      "gate_interpretation": "Real fail-closed host check: current/binding/prior-failure/authorization identities must agree. Historical authorization was not transferred or renewed."
+    },
+    {
+      "node_id": "tests/test_kumar_csp_run02_identity.py::test_existing_run02_identity_stops_without_cleanup[dangling_symlink-results/kumar_csp_signed_score_20261015/run02]",
+      "category": "historical_host_identity_gate",
+      "observed_failure": "ValueError: Recovery host changed",
+      "reason": "Expected later duplicate Run02 output/state rejection, but the unchanged host gate rejects first.",
+      "gate_interpretation": "Real fail-closed host check: current/binding/prior-failure/authorization identities must agree. Historical authorization was not transferred or renewed."
+    },
+    {
+      "node_id": "tests/test_kumar_csp_run02_identity.py::test_existing_run02_identity_stops_without_cleanup[dangling_symlink-research_logs/kumar_next_source_operations_20261015/csp_signed_score_operation_run02]",
+      "category": "historical_host_identity_gate",
+      "observed_failure": "ValueError: Recovery host changed",
+      "reason": "Expected later duplicate Run02 output/state rejection, but the unchanged host gate rejects first.",
+      "gate_interpretation": "Real fail-closed host check: current/binding/prior-failure/authorization identities must agree. Historical authorization was not transferred or renewed."
+    },
+    {
+      "node_id": "tests/test_kumar_csp_run02_identity.py::test_original_deadline_cleanup_margin_cannot_be_renewed",
+      "category": "historical_host_identity_gate",
+      "observed_failure": "ValueError: Recovery host changed",
+      "reason": "Expected later absolute-authorization-window rejection, but the unchanged host gate rejects first.",
+      "gate_interpretation": "Real fail-closed host check: current/binding/prior-failure/authorization identities must agree. Historical authorization was not transferred or renewed."
+    },
+    {
+      "node_id": "tests/test_kumar_development_batch.py::test_real_timeout_wrapper_preserves_GPU_lock_fd_and_bounds_CPU_child",
+      "category": "child_script_import_path",
+      "observed_failure": "ModuleNotFoundError: No module named 'run_kumar_development_batch'",
+      "reason": "The synthetic CPU watchdog child uses python -c from the repository root without the scripts-directory import path. Parent pytest sys.path setup is not inherited. Import fails before the inherited-lock assertion or watchdog success path.",
+      "gate_interpretation": "Test subprocess environment limitation. This failure neither changes nor certifies the production lock and timeout guards."
+    },
+    {
+      "node_id": "tests/test_kumar_frozen_query_operation.py::test_default_metadata_reads_no_archive_or_signal",
+      "category": "existing_historical_query_state",
+      "observed_failure": "AssertionError: problems contains 'Historical attempt/state exists; no retry or overwrite'",
+      "reason": "The old metadata test expects an empty problems list despite the preserved real state directory and claim. Earlier no-query/archive/model-open assertions passed; the unchanged state check correctly reports the historical no-retry blocker.",
+      "gate_interpretation": "Real fail-closed state check. No claim was deleted or recreated, and no query was reevaluated."
+    },
+    {
+      "node_id": "tests/test_kumar_gpu_preparation.py::test_hash_conflict_never_promotes_download",
+      "category": "disk_reserve_before_hash_path",
+      "observed_failure": "RuntimeError: Insufficient disk: retain 5 GiB reserve",
+      "reason": "The test uses actual filesystem free space. Restore checks needed+5GiB before the fake download client, so it rejects before the expected hash-conflict branch. The logged entry needs3bytes, but exact free bytes were not logged.",
+      "gate_interpretation": "Real fail-closed disk reserve check. Reserve was not lowered or mocked; no hash mismatch branch or promotion was reached."
+    }
+  ],
+  "preservation": {
+    "manifest": "research_logs/kumar_submission_optimization_20261015/run01/preservation_before.json",
+    "manifest_sha256": "5b687b56143727d72ca1f49c25a53af3dac0a7aa09c3376fd6dd8c4070a3e714",
+    "protected_file_count": 816,
+    "all_four_historical_tests_protected_and_unchanged": true,
+    "all_four_production_scripts_unchanged": true,
+    "comparisons": [
+      {
+        "path": "tests/test_kumar_csp_run02_identity.py",
+        "bytes": 6190,
+        "sha256": "5fa8d0066576aeda95f106cdb3d858cf64633056c20327e37544d6e2ef0b1eea",
+        "comparison": "preservation_before.json protected_files",
+        "unchanged": true
+      },
+      {
+        "path": "tests/test_kumar_development_batch.py",
+        "bytes": 20218,
+        "sha256": "2b81afe65b5fc25aa87de40c3ce2d9126a1bf4ba8870a136f1c2936678fb0200",
+        "comparison": "preservation_before.json protected_files",
+        "unchanged": true
+      },
+      {
+        "path": "tests/test_kumar_frozen_query_operation.py",
+        "bytes": 19334,
+        "sha256": "bbcbf7d34b0cbffd6084ef37b8ba16cce61e19ed271a224c1033509b86263688",
+        "comparison": "preservation_before.json protected_files",
+        "unchanged": true
+      },
+      {
+        "path": "tests/test_kumar_gpu_preparation.py",
+        "bytes": 1454,
+        "sha256": "79e3bcd9dbb0fbcbb4cf7475c1942dcac7c35a02daf546ebc062dec5b24cfeb7",
+        "comparison": "preservation_before.json protected_files",
+        "unchanged": true
+      },
+      {
+        "path": "scripts/run_kumar_csp_signed_score_operation.py",
+        "bytes": 36292,
+        "sha256": "215ec7ec6cb199f2d70c485969583f9b09cfc8346ed7f316448bc92bfdadbf56",
+        "comparison": "preservation_before.json protected_files",
+        "unchanged": true
+      },
+      {
+        "path": "scripts/run_kumar_development_batch.py",
+        "bytes": 37284,
+        "sha256": "143899dcc6f43ca3d4468745c43f7e305015a696073a319b4bd45837164ab194",
+        "comparison": "preservation_before.json protected_files",
+        "unchanged": true
+      },
+      {
+        "path": "scripts/run_kumar_frozen_query_evaluation.py",
+        "bytes": 29949,
+        "sha256": "987357c1aa12149357cfa14e5f475774dbb67f20217b1b36d97901beb8280538",
+        "comparison": "preservation_before.json protected_files",
+        "unchanged": true
+      },
+      {
+        "path": "scripts/restore_kumar_r2.py",
+        "bytes": 4794,
+        "sha256": "6dd4920254e65494b6a49cd31e03f235adb4d330e9e8c1603868bca0de6932d5",
+        "comparison": "preservation_before.json protected_files",
+        "unchanged": true
+      },
+      {
+        "path": "configs/kumar_csp_signed_score_operation_20261015.json",
+        "bytes": 2448,
+        "sha256": "0ec85048e51e1f9d3e7cc0e553544db975ab4b792b3e534a3924c6faaef65157",
+        "comparison": "preservation_before.json protected_files",
+        "unchanged": true
+      },
+      {
+        "path": "configs/kumar_development_batch_20261015.json",
+        "bytes": 33391,
+        "sha256": "e0ffcbddeacbc1569f44272dd92a7d53e7202391e6742f96983a356d4148fd75",
+        "comparison": "preservation_before.json protected_files",
+        "unchanged": true
+      },
+      {
+        "path": "configs/kumar_frozen_query_operation_20261015.json",
+        "bytes": 6335,
+        "sha256": "fb3a429776e77a4ee8de96c8c7f2a833a4d311cedd8f0a9bcec3d0c6e8df225a",
+        "comparison": "preservation_before.json protected_files",
+        "unchanged": true
+      },
+      {
+        "path": "docs/kumar_csp_run02_recovery_20261015.md",
+        "bytes": 8070,
+        "sha256": "acf6fdca9f20d0e45a1e38490ce857f2f9048dd3b9de38571b7419ce065f6145",
+        "comparison": "Original precomputation checkout a78372db00cd4161e713ab47aca2d93c643a52bb",
+        "unchanged": true
+      },
+      {
+        "path": "research_logs/kumar_csp_run02_identity_20261015/recovery_binding.json",
+        "bytes": 2117,
+        "sha256": "06ac6ea6f700b3f7e551ff1943f728166349f2a90e1aa4517094730a8d25c306",
+        "comparison": "Original precomputation checkout a78372db00cd4161e713ab47aca2d93c643a52bb",
+        "unchanged": true
+      }
+    ]
+  },
+  "later_read_only_environment_snapshot": {
+    "note": "Observed during attribution, not a replacement for an unrecorded exact test-time free-byte reading. No historical authorization renewal implied.",
+    "changed_host_fields": [
+      "hostname",
+      "boot_id",
+      "pid1_start_ticks"
+    ],
+    "historical_binding_identity_sha256": "d0316af6d704d9b87df74a631f4df42d04fb83863a6073e2e1a3f7dfbfca188b",
+    "observed_identity_sha256": "9ac130f8e263d94611b8f5ab50015156f3d5e46eff195b6cf70d808e7197c6b7",
+    "historical_query_state": "research_logs/kumar_frozen_query_evaluation_20261015/run01",
+    "state_exists": true,
+    "claim_exists": true,
+    "claim_sha256": "2837ab7f0beaf384d3f0089cc7ef255ba42b7b8284e1e6cf0e0752e3b55797c3",
+    "free_disk_bytes": 4796116992,
+    "five_GiB_reserve_bytes": 5368709120,
+    "free_disk_below_five_GiB": true
+  },
+  "new_statistics_validation": {
+    "receipt": "research_logs/kumar_review_revision_20261016/run01/statistics/audit/portable_validation_receipt.json",
+    "receipt_sha256": "98189c734185e6ba40bbbc33585b3b19d1fac5e903b6f29715184d5cfafa3aed",
+    "actual_prior_targeted_result": "24 passed; synthetic/software-validation-only",
+    "producer_sha256": "d61b862c990fa0c3e44800503f04492f832cafae4f10e4edc6ad26ec6e182336",
+    "test_file_sha256": "c32a91c25548c1cf78e1402b22728fb790608449264c46bd77b2ec3f2196396c",
+    "replay": "Prior receipt records byte-identical fresh-path replay and24 fields per contrast matching the independently checked saved-endpoint audit.",
+    "rerun_for_this_attribution": false
+  },
+  "attribution_limits": "All13 failing nodes belong to unchanged protected historical tests. Their traces reach unchanged legacy host/state/disk checks or fail before importing the old child script. No failing traceback enters the new statistics or figure producers, and the protected old test/production sources do not import the new producer. This supports the identified environment/history causes rather than new arithmetic or figure-code changes. A controlled full-suite run of the prior checkout was not performed; universal freedom from regressions is not claimed.",
+  "other_original_checks": {
+    "ruff": "Passed per original checks_receipt; not a full-suite pass.",
+    "smoke": "Passed synthetic software check only.",
+    "data_stack": "Passed synthetic stack check only."
+  },
+  "not_performed": [
+    "No protected test or production gate modification",
+    "No host/state/resource gate mocking or bypass",
+    "No failure-suppression plugin",
+    "No full-suite rerun",
+    "No fitting, real query evaluation, bootstrap recalculation or experiment"
+  ]
+}

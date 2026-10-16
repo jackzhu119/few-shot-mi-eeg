@@ -1,0 +1,151 @@
+{
+  "status": "independent_revision_validation_passed",
+  "prior_protected_files_verified": 55,
+  "four_format_and_revision_checks": [
+    {
+      "figure": "Fig1_target_query_participants",
+      "all_four_formats_verified": true,
+      "source_CSV_byte_identical": true,
+      "all_four_format_bytes_identical_to_old": false,
+      "PNG_changed_pixel_box": [
+        1429,
+        2494,
+        3104,
+        2576
+      ],
+      "PDF_72dpi_changed_pixel_box": [
+        171,
+        299,
+        372,
+        310
+      ],
+      "SVG_font_size_range_pt": [
+        8.0,
+        12.0
+      ]
+    },
+    {
+      "figure": "Fig2_cpu_primary_paired_changes",
+      "all_four_formats_verified": true,
+      "source_CSV_byte_identical": true,
+      "all_four_format_bytes_identical_to_old": true,
+      "PNG_changed_pixel_box": null,
+      "PDF_72dpi_changed_pixel_box": null,
+      "SVG_font_size_range_pt": [
+        8.5,
+        9.0
+      ]
+    },
+    {
+      "figure": "Fig3_csp_signed_support_halves",
+      "all_four_formats_verified": true,
+      "source_CSV_byte_identical": true,
+      "all_four_format_bytes_identical_to_old": true,
+      "PNG_changed_pixel_box": null,
+      "PDF_72dpi_changed_pixel_box": null,
+      "SVG_font_size_range_pt": [
+        8.0,
+        10.0
+      ]
+    },
+    {
+      "figure": "Fig4_longitudinal_paired_changes",
+      "all_four_formats_verified": true,
+      "source_CSV_byte_identical": true,
+      "all_four_format_bytes_identical_to_old": true,
+      "PNG_changed_pixel_box": null,
+      "PDF_72dpi_changed_pixel_box": null,
+      "SVG_font_size_range_pt": [
+        8.0,
+        12.0
+      ]
+    }
+  ],
+  "renderer_diff": "Only two output paths and Participant -> Participant (method color)",
+  "Fig4_palette": "unchanged RdBu_r",
+  "Fig4_shared_symmetric_limits_pp": [
+    -60,
+    60
+  ],
+  "Fig4_maximum_absolute_change_pp": 55.00000000000001,
+  "validator_derivation": {
+    "copied_from": "research_logs/kumar_submission_figures_20261015/run01/validate_submission_figures.py",
+    "source_sha256": "82e11719407da7b11902e850e9dcdb074355b650b6049ed1c61f81b2821d598d"
+  },
+  "validation_runtime": {
+    "python": "3.11.16",
+    "Pillow": "12.3.0"
+  },
+  "checks": 1324,
+  "failures": [],
+  "actual_tiffs": [
+    {
+      "name": "Fig1_target_query_participants.tif",
+      "bytes": 622180,
+      "pixels": [
+        4500,
+        2700
+      ],
+      "dpi": [
+        600.0,
+        600.0
+      ]
+    },
+    {
+      "name": "Fig2_cpu_primary_paired_changes.tif",
+      "bytes": 584120,
+      "pixels": [
+        4500,
+        3180
+      ],
+      "dpi": [
+        600.0,
+        600.0
+      ]
+    },
+    {
+      "name": "Fig3_csp_signed_support_halves.tif",
+      "bytes": 544422,
+      "pixels": [
+        4500,
+        3300
+      ],
+      "dpi": [
+        600.0,
+        600.0
+      ]
+    },
+    {
+      "name": "Fig4_longitudinal_paired_changes.tif",
+      "bytes": 3000784,
+      "pixels": [
+        4500,
+        4500
+      ],
+      "dpi": [
+        600.0,
+        600.0
+      ]
+    }
+  ],
+  "actual_embedded_PDF_fonts": [
+    {
+      "figure": "Fig1_target_query_participants",
+      "pdffonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nCQJXMA+LiberationSans-Bold           CID TrueType      Identity-H       yes yes yes     15  0\nGLIVJN+LiberationSans                CID TrueType      Identity-H       yes yes yes     22  0\n"
+    },
+    {
+      "figure": "Fig2_cpu_primary_paired_changes",
+      "pdffonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nDUUICI+LiberationSans                CID TrueType      Identity-H       yes yes yes     15  0\n"
+    },
+    {
+      "figure": "Fig3_csp_signed_support_halves",
+      "pdffonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nGDZPXK+LiberationSans                CID TrueType      Identity-H       yes yes yes     15  0\n"
+    },
+    {
+      "figure": "Fig4_longitudinal_paired_changes",
+      "pdffonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nCQJXMA+LiberationSans-Bold           CID TrueType      Identity-H       yes yes yes     18  0\nFDYDTF+LiberationSans                CID TrueType      Identity-H       yes yes yes     25  0\n"
+    }
+  ],
+  "font_limit": "Liberation Sans is actual installed family; strict Arial/Times compliance not claimed",
+  "scientific_execution": "none; saved-table and image byte checks only"
+}

@@ -1,5 +1,27 @@
 # 论文2当前进度与论文状态
 
+## 当前修订：审稿意见核验与作者审阅稿（2026-10-16 UTC）
+
+最新稿件入口为 [2026-10-16 完整投稿审阅包](manuscript/plos_one_submission_20261016/README.md)：
+[带图 PDF](manuscript/plos_one_submission_20261016/manuscript_for_review.pdf) /
+[Word](manuscript/plos_one_submission_20261016/manuscript_for_review.docx)。
+[逐条审稿回应](docs/kumar_review_response_20261016.md)明确区分采纳、部分采纳和不成立的意见。
+[简短修订报告](docs/kumar_submission_revision_report_20261016.md)列明新发现与限制。
+
+- 54 个源模型与一次冻结 query 的原结果、主次比较和区间不变；无剩余训练、无新 query/Pod 操作。
+- 新增审稿后探索性配对检验：主差仍 +7.42pp，raw p=0.01953125，四项 Holm p=0.05859375；不追认确认性显著。
+- 新 S1 Data 补齐保存的可靠性/drift 底表与新统计输入；原 2026-10-15 包和 816 项科学保护文件保持不变。
+- 作者已明确激活限定 MIT/CC BY 4.0，见 [许可范围](LICENSING.md)。以下历史“许可待定”已被本次真实选择取代。
+- 本次二次分析的适用伦理依据仍待作者据实提供；[未发送的机构信息请求草稿](docs/kumar_secondary_analysis_ethics_information_request_20261016.md)可供使用。
+- 本人最终核验/批准尚待完成。未代作者投稿，不承诺 AI 检测分数或期刊接收。
+
+固定内容版本使用 `paper2-plos-source-20261016` 标签。最终同步与软件检查状态见
+[本轮交付核验](research_logs/kumar_review_revision_20261016/run01/README.md)。
+整仓测试实际 1,257 通过、13 失败、1 跳过；失败来自受保护历史测试的主机/claim/磁盘前提和子进程导入路径，
+未绕过门或改写失败。新增统计 24 项合成测试、Ruff、smoke 和 MOABB 合成检查通过。
+
+**以下为按当时状态保留的旧快照，不作为当前命令、许可或同步状态。**
+
 ## 最新同步状态
 
 完整审阅稿已实际推送至研究分支固定提交

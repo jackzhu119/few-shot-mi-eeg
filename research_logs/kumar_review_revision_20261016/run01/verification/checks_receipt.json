@@ -1,0 +1,62 @@
+{
+  "synthetic_software_checks_only": true,
+  "results": [
+    {
+      "stage": "pytest",
+      "command": [
+        "/workspace/.venvs/few-shot-mi-eeg/bin/python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "started_utc": "2026-10-16T01:45:34.564120+00:00",
+      "ended_utc": "2026-10-16T01:46:21.117267+00:00",
+      "exit_code": 1,
+      "log_bytes": 38385,
+      "log_sha256": "98d16e34d621cdfc2ecd558391250d72c82ddc58ae94df4dbb58439a23fa8e27"
+    },
+    {
+      "stage": "ruff",
+      "command": [
+        "/workspace/.venvs/few-shot-mi-eeg/bin/ruff",
+        "check",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "started_utc": "2026-10-16T01:46:21.117702+00:00",
+      "ended_utc": "2026-10-16T01:46:21.138483+00:00",
+      "exit_code": 0,
+      "log_bytes": 19,
+      "log_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "stage": "smoke",
+      "command": [
+        "/workspace/.venvs/few-shot-mi-eeg/bin/python",
+        "scripts/smoke_experiment.py",
+        "--config",
+        "configs/smoke.json",
+        "--output",
+        "/workspace/few-shot-mi-eeg/research_logs/kumar_review_revision_20261016/run01/verification/smoke_report.json"
+      ],
+      "started_utc": "2026-10-16T01:46:21.138880+00:00",
+      "ended_utc": "2026-10-16T01:46:25.100019+00:00",
+      "exit_code": 0,
+      "log_bytes": 1473,
+      "log_sha256": "3a4add3ecaf9a10054a251aaa75a7e48b03420479fd6815cbd08c2de19ca4ec0"
+    },
+    {
+      "stage": "data_stack",
+      "command": [
+        "/workspace/.venvs/few-shot-mi-eeg/bin/python",
+        "scripts/check_data_stack.py"
+      ],
+      "started_utc": "2026-10-16T01:46:25.100912+00:00",
+      "ended_utc": "2026-10-16T01:46:28.801515+00:00",
+      "exit_code": 0,
+      "log_bytes": 221,
+      "log_sha256": "1c27830fc2e4968a433363d5b7e906cfae975fe7fd02aad0bcdde971998be368"
+    }
+  ]
+}

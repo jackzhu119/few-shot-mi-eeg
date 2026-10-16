@@ -1,0 +1,739 @@
+........................................................................ [  5%]
+........................................................................ [ 11%]
+..................................F....F.FFFFFFFF....................... [ 16%]
+........................................................................ [ 22%]
+.................................................................F...... [ 28%]
+..................................................s..................... [ 33%]
+........................................................................ [ 39%]
+.....................................F..............F................... [ 45%]
+........................................................................ [ 50%]
+........................................................................ [ 56%]
+........................................................................ [ 62%]
+........................................................................ [ 67%]
+........................................................................ [ 73%]
+........................................................................ [ 79%]
+........................................................................ [ 84%]
+........................................................................ [ 90%]
+........................................................................ [ 96%]
+...............................................                          [100%]
+=================================== FAILURES ===================================
+___ test_exact_documented_gate_passes_read_only_with_original_claim_present ____
+
+recovery = (PosixPath('/tmp/pytest-of-agent/pytest-1/test_exact_documented_gate_pas0'), {'accepted18_refitting_authorized': False...he same existing CPU host; dispatch only after final identity patch review; original absolute window unchanged.', ...})
+
+    def test_exact_documented_gate_passes_read_only_with_original_claim_present(recovery):
+        root, binding, auth = recovery
+        before = {p: operation.sha(p) for p in root.rglob("*") if p.is_file()}
+>       assert check(root, auth) == binding
+               ^^^^^^^^^^^^^^^^^
+
+tests/test_kumar_csp_run02_identity.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_kumar_csp_run02_identity.py:42: in check
+    return GATE["recovery_gate"](operation, root, auth,
+reviewed_recovery_handoff:26: in recovery_gate
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'Recovery host changed'
+
+    def require(condition, message):
+        if not condition:
+>           raise ValueError(message)
+E           ValueError: Recovery host changed
+
+scripts/run_kumar_csp_signed_score_operation.py:49: ValueError
+_____ test_wrong_authorization_identity_refused[deadline-Original window] ______
+
+recovery = (PosixPath('/tmp/pytest-of-agent/pytest-1/test_wrong_authorization_ident1'), {'accepted18_refitting_authorized': False...he same existing CPU host; dispatch only after final identity patch review; original absolute window unchanged.', ...})
+change = 'deadline', pattern = 'Original window'
+
+    @pytest.mark.parametrize("change,pattern", [
+        ("link", "must link"), ("deadline", "Original window"),
+        ("host", "Recovery host"), ("run01", "Run02 identity"),
+        ("template", "Exact CPU-only"), ("contract", "Exact CPU-only"),
+    ])
+    def test_wrong_authorization_identity_refused(recovery, change, pattern):
+        root, _, auth = recovery
+        if change == "link":
+            auth["recovery_of"]["launcher_receipt_sha256"] = "0" * 64
+        elif change == "deadline":
+            auth["deadline_unix"] += 3600
+            auth["approved_wall_seconds"] += 3600
+        elif change == "host":
+            auth["container_identity"]["boot_id"] = "different-host"
+        elif change == "run01":
+            auth["diagnostic_id"] = "kumar-csp-signed-score-development-run01-20261015"
+        elif change == "template":
+            auth["status"] = "TEMPLATE_ONLY_NOT_AN_EXECUTION_AUTHORIZATION"
+        else:
+            auth["operation_contract_sha256"] = "0" * 64
+        with pytest.raises(ValueError, match=pattern):
+>           check(root, auth)
+
+tests/test_kumar_csp_run02_identity.py:111: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_kumar_csp_run02_identity.py:42: in check
+    return GATE["recovery_gate"](operation, root, auth,
+reviewed_recovery_handoff:26: in recovery_gate
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'Recovery host changed'
+
+    def require(condition, message):
+        if not condition:
+>           raise ValueError(message)
+E           ValueError: Recovery host changed
+
+scripts/run_kumar_csp_signed_score_operation.py:49: ValueError
+
+During handling of the above exception, another exception occurred:
+
+recovery = (PosixPath('/tmp/pytest-of-agent/pytest-1/test_wrong_authorization_ident1'), {'accepted18_refitting_authorized': False...he same existing CPU host; dispatch only after final identity patch review; original absolute window unchanged.', ...})
+change = 'deadline', pattern = 'Original window'
+
+    @pytest.mark.parametrize("change,pattern", [
+        ("link", "must link"), ("deadline", "Original window"),
+        ("host", "Recovery host"), ("run01", "Run02 identity"),
+        ("template", "Exact CPU-only"), ("contract", "Exact CPU-only"),
+    ])
+    def test_wrong_authorization_identity_refused(recovery, change, pattern):
+        root, _, auth = recovery
+        if change == "link":
+            auth["recovery_of"]["launcher_receipt_sha256"] = "0" * 64
+        elif change == "deadline":
+            auth["deadline_unix"] += 3600
+            auth["approved_wall_seconds"] += 3600
+        elif change == "host":
+            auth["container_identity"]["boot_id"] = "different-host"
+        elif change == "run01":
+            auth["diagnostic_id"] = "kumar-csp-signed-score-development-run01-20261015"
+        elif change == "template":
+            auth["status"] = "TEMPLATE_ONLY_NOT_AN_EXECUTION_AUTHORIZATION"
+        else:
+            auth["operation_contract_sha256"] = "0" * 64
+>       with pytest.raises(ValueError, match=pattern):
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'Original window'
+E        Input: 'Recovery host changed'
+
+tests/test_kumar_csp_run02_identity.py:110: AssertionError
+_______ test_wrong_authorization_identity_refused[run01-Run02 identity] ________
+
+recovery = (PosixPath('/tmp/pytest-of-agent/pytest-1/test_wrong_authorization_ident3'), {'accepted18_refitting_authorized': False...he same existing CPU host; dispatch only after final identity patch review; original absolute window unchanged.', ...})
+change = 'run01', pattern = 'Run02 identity'
+
+    @pytest.mark.parametrize("change,pattern", [
+        ("link", "must link"), ("deadline", "Original window"),
+        ("host", "Recovery host"), ("run01", "Run02 identity"),
+        ("template", "Exact CPU-only"), ("contract", "Exact CPU-only"),
+    ])
+    def test_wrong_authorization_identity_refused(recovery, change, pattern):
+        root, _, auth = recovery
+        if change == "link":
+            auth["recovery_of"]["launcher_receipt_sha256"] = "0" * 64
+        elif change == "deadline":
+            auth["deadline_unix"] += 3600
+            auth["approved_wall_seconds"] += 3600
+        elif change == "host":
+            auth["container_identity"]["boot_id"] = "different-host"
+        elif change == "run01":
+            auth["diagnostic_id"] = "kumar-csp-signed-score-development-run01-20261015"
+        elif change == "template":
+            auth["status"] = "TEMPLATE_ONLY_NOT_AN_EXECUTION_AUTHORIZATION"
+        else:
+            auth["operation_contract_sha256"] = "0" * 64
+        with pytest.raises(ValueError, match=pattern):
+>           check(root, auth)
+
+tests/test_kumar_csp_run02_identity.py:111: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_kumar_csp_run02_identity.py:42: in check
+    return GATE["recovery_gate"](operation, root, auth,
+reviewed_recovery_handoff:26: in recovery_gate
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'Recovery host changed'
+
+    def require(condition, message):
+        if not condition:
+>           raise ValueError(message)
+E           ValueError: Recovery host changed
+
+scripts/run_kumar_csp_signed_score_operation.py:49: ValueError
+
+During handling of the above exception, another exception occurred:
+
+recovery = (PosixPath('/tmp/pytest-of-agent/pytest-1/test_wrong_authorization_ident3'), {'accepted18_refitting_authorized': False...he same existing CPU host; dispatch only after final identity patch review; original absolute window unchanged.', ...})
+change = 'run01', pattern = 'Run02 identity'
+
+    @pytest.mark.parametrize("change,pattern", [
+        ("link", "must link"), ("deadline", "Original window"),
+        ("host", "Recovery host"), ("run01", "Run02 identity"),
+        ("template", "Exact CPU-only"), ("contract", "Exact CPU-only"),
+    ])
+    def test_wrong_authorization_identity_refused(recovery, change, pattern):
+        root, _, auth = recovery
+        if change == "link":
+            auth["recovery_of"]["launcher_receipt_sha256"] = "0" * 64
+        elif change == "deadline":
+            auth["deadline_unix"] += 3600
+            auth["approved_wall_seconds"] += 3600
+        elif change == "host":
+            auth["container_identity"]["boot_id"] = "different-host"
+        elif change == "run01":
+            auth["diagnostic_id"] = "kumar-csp-signed-score-development-run01-20261015"
+        elif change == "template":
+            auth["status"] = "TEMPLATE_ONLY_NOT_AN_EXECUTION_AUTHORIZATION"
+        else:
+            auth["operation_contract_sha256"] = "0" * 64
+>       with pytest.raises(ValueError, match=pattern):
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'Run02 identity'
+E        Input: 'Recovery host changed'
+
+tests/test_kumar_csp_run02_identity.py:110: AssertionError
+______ test_wrong_authorization_identity_refused[template-Exact CPU-only] ______
+
+recovery = (PosixPath('/tmp/pytest-of-agent/pytest-1/test_wrong_authorization_ident4'), {'accepted18_refitting_authorized': False...he same existing CPU host; dispatch only after final identity patch review; original absolute window unchanged.', ...})
+change = 'template', pattern = 'Exact CPU-only'
+
+    @pytest.mark.parametrize("change,pattern", [
+        ("link", "must link"), ("deadline", "Original window"),
+        ("host", "Recovery host"), ("run01", "Run02 identity"),
+        ("template", "Exact CPU-only"), ("contract", "Exact CPU-only"),
+    ])
+    def test_wrong_authorization_identity_refused(recovery, change, pattern):
+        root, _, auth = recovery
+        if change == "link":
+            auth["recovery_of"]["launcher_receipt_sha256"] = "0" * 64
+        elif change == "deadline":
+            auth["deadline_unix"] += 3600
+            auth["approved_wall_seconds"] += 3600
+        elif change == "host":
+            auth["container_identity"]["boot_id"] = "different-host"
+        elif change == "run01":
+            auth["diagnostic_id"] = "kumar-csp-signed-score-development-run01-20261015"
+        elif change == "template":
+            auth["status"] = "TEMPLATE_ONLY_NOT_AN_EXECUTION_AUTHORIZATION"
+        else:
+            auth["operation_contract_sha256"] = "0" * 64
+        with pytest.raises(ValueError, match=pattern):
+>           check(root, auth)
+
+tests/test_kumar_csp_run02_identity.py:111: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_kumar_csp_run02_identity.py:42: in check
+    return GATE["recovery_gate"](operation, root, auth,
+reviewed_recovery_handoff:26: in recovery_gate
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'Recovery host changed'
+
+    def require(condition, message):
+        if not condition:
+>           raise ValueError(message)
+E           ValueError: Recovery host changed
+
+scripts/run_kumar_csp_signed_score_operation.py:49: ValueError
+
+During handling of the above exception, another exception occurred:
+
+recovery = (PosixPath('/tmp/pytest-of-agent/pytest-1/test_wrong_authorization_ident4'), {'accepted18_refitting_authorized': False...he same existing CPU host; dispatch only after final identity patch review; original absolute window unchanged.', ...})
+change = 'template', pattern = 'Exact CPU-only'
+
+    @pytest.mark.parametrize("change,pattern", [
+        ("link", "must link"), ("deadline", "Original window"),
+        ("host", "Recovery host"), ("run01", "Run02 identity"),
+        ("template", "Exact CPU-only"), ("contract", "Exact CPU-only"),
+    ])
+    def test_wrong_authorization_identity_refused(recovery, change, pattern):
+        root, _, auth = recovery
+        if change == "link":
+            auth["recovery_of"]["launcher_receipt_sha256"] = "0" * 64
+        elif change == "deadline":
+            auth["deadline_unix"] += 3600
+            auth["approved_wall_seconds"] += 3600
+        elif change == "host":
+            auth["container_identity"]["boot_id"] = "different-host"
+        elif change == "run01":
+            auth["diagnostic_id"] = "kumar-csp-signed-score-development-run01-20261015"
+        elif change == "template":
+            auth["status"] = "TEMPLATE_ONLY_NOT_AN_EXECUTION_AUTHORIZATION"
+        else:
+            auth["operation_contract_sha256"] = "0" * 64
+>       with pytest.raises(ValueError, match=pattern):
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'Exact CPU-only'
+E        Input: 'Recovery host changed'
+
+tests/test_kumar_csp_run02_identity.py:110: AssertionError
+______ test_wrong_authorization_identity_refused[contract-Exact CPU-only] ______
+
+recovery = (PosixPath('/tmp/pytest-of-agent/pytest-1/test_wrong_authorization_ident5'), {'accepted18_refitting_authorized': False...he same existing CPU host; dispatch only after final identity patch review; original absolute window unchanged.', ...})
+change = 'contract', pattern = 'Exact CPU-only'
+
+    @pytest.mark.parametrize("change,pattern", [
+        ("link", "must link"), ("deadline", "Original window"),
+        ("host", "Recovery host"), ("run01", "Run02 identity"),
+        ("template", "Exact CPU-only"), ("contract", "Exact CPU-only"),
+    ])
+    def test_wrong_authorization_identity_refused(recovery, change, pattern):
+        root, _, auth = recovery
+        if change == "link":
+            auth["recovery_of"]["launcher_receipt_sha256"] = "0" * 64
+        elif change == "deadline":
+            auth["deadline_unix"] += 3600
+            auth["approved_wall_seconds"] += 3600
+        elif change == "host":
+            auth["container_identity"]["boot_id"] = "different-host"
+        elif change == "run01":
+            auth["diagnostic_id"] = "kumar-csp-signed-score-development-run01-20261015"
+        elif change == "template":
+            auth["status"] = "TEMPLATE_ONLY_NOT_AN_EXECUTION_AUTHORIZATION"
+        else:
+            auth["operation_contract_sha256"] = "0" * 64
+        with pytest.raises(ValueError, match=pattern):
+>           check(root, auth)
+
+tests/test_kumar_csp_run02_identity.py:111: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_kumar_csp_run02_identity.py:42: in check
+    return GATE["recovery_gate"](operation, root, auth,
+reviewed_recovery_handoff:26: in recovery_gate
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'Recovery host changed'
+
+    def require(condition, message):
+        if not condition:
+>           raise ValueError(message)
+E           ValueError: Recovery host changed
+
+scripts/run_kumar_csp_signed_score_operation.py:49: ValueError
+
+During handling of the above exception, another exception occurred:
+
+recovery = (PosixPath('/tmp/pytest-of-agent/pytest-1/test_wrong_authorization_ident5'), {'accepted18_refitting_authorized': False...he same existing CPU host; dispatch only after final identity patch review; original absolute window unchanged.', ...})
+change = 'contract', pattern = 'Exact CPU-only'
+
+    @pytest.mark.parametrize("change,pattern", [
+        ("link", "must link"), ("deadline", "Original window"),
+        ("host", "Recovery host"), ("run01", "Run02 identity"),
+        ("template", "Exact CPU-only"), ("contract", "Exact CPU-only"),
+    ])
+    def test_wrong_authorization_identity_refused(recovery, change, pattern):
+        root, _, auth = recovery
+        if change == "link":
+            auth["recovery_of"]["launcher_receipt_sha256"] = "0" * 64
+        elif change == "deadline":
+            auth["deadline_unix"] += 3600
+            auth["approved_wall_seconds"] += 3600
+        elif change == "host":
+            auth["container_identity"]["boot_id"] = "different-host"
+        elif change == "run01":
+            auth["diagnostic_id"] = "kumar-csp-signed-score-development-run01-20261015"
+        elif change == "template":
+            auth["status"] = "TEMPLATE_ONLY_NOT_AN_EXECUTION_AUTHORIZATION"
+        else:
+            auth["operation_contract_sha256"] = "0" * 64
+>       with pytest.raises(ValueError, match=pattern):
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'Exact CPU-only'
+E        Input: 'Recovery host changed'
+
+tests/test_kumar_csp_run02_identity.py:110: AssertionError
+_ test_existing_run02_identity_stops_without_cleanup[directory-results/kumar_csp_signed_score_20261015/run02] _
+
+recovery = (PosixPath('/tmp/pytest-of-agent/pytest-1/test_existing_run02_identity_s0'), {'accepted18_refitting_authorized': False...he same existing CPU host; dispatch only after final identity patch review; original absolute window unchanged.', ...})
+relative = 'results/kumar_csp_signed_score_20261015/run02', kind = 'directory'
+
+    @pytest.mark.parametrize("relative", [operation.OUTPUT, operation.STATE])
+    @pytest.mark.parametrize("kind", ["directory", "dangling_symlink"])
+    def test_existing_run02_identity_stops_without_cleanup(recovery, relative, kind):
+        root, _, auth = recovery
+        path = root / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        if kind == "directory":
+            path.mkdir()
+        else:
+            path.symlink_to("absent-preserved-target")
+        with pytest.raises(ValueError, match="Run02 already"):
+>           check(root, auth)
+
+tests/test_kumar_csp_run02_identity.py:126: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_kumar_csp_run02_identity.py:42: in check
+    return GATE["recovery_gate"](operation, root, auth,
+reviewed_recovery_handoff:26: in recovery_gate
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'Recovery host changed'
+
+    def require(condition, message):
+        if not condition:
+>           raise ValueError(message)
+E           ValueError: Recovery host changed
+
+scripts/run_kumar_csp_signed_score_operation.py:49: ValueError
+
+During handling of the above exception, another exception occurred:
+
+recovery = (PosixPath('/tmp/pytest-of-agent/pytest-1/test_existing_run02_identity_s0'), {'accepted18_refitting_authorized': False...he same existing CPU host; dispatch only after final identity patch review; original absolute window unchanged.', ...})
+relative = 'results/kumar_csp_signed_score_20261015/run02', kind = 'directory'
+
+    @pytest.mark.parametrize("relative", [operation.OUTPUT, operation.STATE])
+    @pytest.mark.parametrize("kind", ["directory", "dangling_symlink"])
+    def test_existing_run02_identity_stops_without_cleanup(recovery, relative, kind):
+        root, _, auth = recovery
+        path = root / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        if kind == "directory":
+            path.mkdir()
+        else:
+            path.symlink_to("absent-preserved-target")
+>       with pytest.raises(ValueError, match="Run02 already"):
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'Run02 already'
+E        Input: 'Recovery host changed'
+
+tests/test_kumar_csp_run02_identity.py:125: AssertionError
+_ test_existing_run02_identity_stops_without_cleanup[directory-research_logs/kumar_next_source_operations_20261015/csp_signed_score_operation_run02] _
+
+recovery = (PosixPath('/tmp/pytest-of-agent/pytest-1/test_existing_run02_identity_s1'), {'accepted18_refitting_authorized': False...he same existing CPU host; dispatch only after final identity patch review; original absolute window unchanged.', ...})
+relative = 'research_logs/kumar_next_source_operations_20261015/csp_signed_score_operation_run02'
+kind = 'directory'
+
+    @pytest.mark.parametrize("relative", [operation.OUTPUT, operation.STATE])
+    @pytest.mark.parametrize("kind", ["directory", "dangling_symlink"])
+    def test_existing_run02_identity_stops_without_cleanup(recovery, relative, kind):
+        root, _, auth = recovery
+        path = root / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        if kind == "directory":
+            path.mkdir()
+        else:
+            path.symlink_to("absent-preserved-target")
+        with pytest.raises(ValueError, match="Run02 already"):
+>           check(root, auth)
+
+tests/test_kumar_csp_run02_identity.py:126: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_kumar_csp_run02_identity.py:42: in check
+    return GATE["recovery_gate"](operation, root, auth,
+reviewed_recovery_handoff:26: in recovery_gate
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'Recovery host changed'
+
+    def require(condition, message):
+        if not condition:
+>           raise ValueError(message)
+E           ValueError: Recovery host changed
+
+scripts/run_kumar_csp_signed_score_operation.py:49: ValueError
+
+During handling of the above exception, another exception occurred:
+
+recovery = (PosixPath('/tmp/pytest-of-agent/pytest-1/test_existing_run02_identity_s1'), {'accepted18_refitting_authorized': False...he same existing CPU host; dispatch only after final identity patch review; original absolute window unchanged.', ...})
+relative = 'research_logs/kumar_next_source_operations_20261015/csp_signed_score_operation_run02'
+kind = 'directory'
+
+    @pytest.mark.parametrize("relative", [operation.OUTPUT, operation.STATE])
+    @pytest.mark.parametrize("kind", ["directory", "dangling_symlink"])
+    def test_existing_run02_identity_stops_without_cleanup(recovery, relative, kind):
+        root, _, auth = recovery
+        path = root / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        if kind == "directory":
+            path.mkdir()
+        else:
+            path.symlink_to("absent-preserved-target")
+>       with pytest.raises(ValueError, match="Run02 already"):
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'Run02 already'
+E        Input: 'Recovery host changed'
+
+tests/test_kumar_csp_run02_identity.py:125: AssertionError
+_ test_existing_run02_identity_stops_without_cleanup[dangling_symlink-results/kumar_csp_signed_score_20261015/run02] _
+
+recovery = (PosixPath('/tmp/pytest-of-agent/pytest-1/test_existing_run02_identity_s2'), {'accepted18_refitting_authorized': False...he same existing CPU host; dispatch only after final identity patch review; original absolute window unchanged.', ...})
+relative = 'results/kumar_csp_signed_score_20261015/run02'
+kind = 'dangling_symlink'
+
+    @pytest.mark.parametrize("relative", [operation.OUTPUT, operation.STATE])
+    @pytest.mark.parametrize("kind", ["directory", "dangling_symlink"])
+    def test_existing_run02_identity_stops_without_cleanup(recovery, relative, kind):
+        root, _, auth = recovery
+        path = root / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        if kind == "directory":
+            path.mkdir()
+        else:
+            path.symlink_to("absent-preserved-target")
+        with pytest.raises(ValueError, match="Run02 already"):
+>           check(root, auth)
+
+tests/test_kumar_csp_run02_identity.py:126: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_kumar_csp_run02_identity.py:42: in check
+    return GATE["recovery_gate"](operation, root, auth,
+reviewed_recovery_handoff:26: in recovery_gate
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'Recovery host changed'
+
+    def require(condition, message):
+        if not condition:
+>           raise ValueError(message)
+E           ValueError: Recovery host changed
+
+scripts/run_kumar_csp_signed_score_operation.py:49: ValueError
+
+During handling of the above exception, another exception occurred:
+
+recovery = (PosixPath('/tmp/pytest-of-agent/pytest-1/test_existing_run02_identity_s2'), {'accepted18_refitting_authorized': False...he same existing CPU host; dispatch only after final identity patch review; original absolute window unchanged.', ...})
+relative = 'results/kumar_csp_signed_score_20261015/run02'
+kind = 'dangling_symlink'
+
+    @pytest.mark.parametrize("relative", [operation.OUTPUT, operation.STATE])
+    @pytest.mark.parametrize("kind", ["directory", "dangling_symlink"])
+    def test_existing_run02_identity_stops_without_cleanup(recovery, relative, kind):
+        root, _, auth = recovery
+        path = root / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        if kind == "directory":
+            path.mkdir()
+        else:
+            path.symlink_to("absent-preserved-target")
+>       with pytest.raises(ValueError, match="Run02 already"):
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'Run02 already'
+E        Input: 'Recovery host changed'
+
+tests/test_kumar_csp_run02_identity.py:125: AssertionError
+_ test_existing_run02_identity_stops_without_cleanup[dangling_symlink-research_logs/kumar_next_source_operations_20261015/csp_signed_score_operation_run02] _
+
+recovery = (PosixPath('/tmp/pytest-of-agent/pytest-1/test_existing_run02_identity_s3'), {'accepted18_refitting_authorized': False...he same existing CPU host; dispatch only after final identity patch review; original absolute window unchanged.', ...})
+relative = 'research_logs/kumar_next_source_operations_20261015/csp_signed_score_operation_run02'
+kind = 'dangling_symlink'
+
+    @pytest.mark.parametrize("relative", [operation.OUTPUT, operation.STATE])
+    @pytest.mark.parametrize("kind", ["directory", "dangling_symlink"])
+    def test_existing_run02_identity_stops_without_cleanup(recovery, relative, kind):
+        root, _, auth = recovery
+        path = root / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        if kind == "directory":
+            path.mkdir()
+        else:
+            path.symlink_to("absent-preserved-target")
+        with pytest.raises(ValueError, match="Run02 already"):
+>           check(root, auth)
+
+tests/test_kumar_csp_run02_identity.py:126: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_kumar_csp_run02_identity.py:42: in check
+    return GATE["recovery_gate"](operation, root, auth,
+reviewed_recovery_handoff:26: in recovery_gate
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'Recovery host changed'
+
+    def require(condition, message):
+        if not condition:
+>           raise ValueError(message)
+E           ValueError: Recovery host changed
+
+scripts/run_kumar_csp_signed_score_operation.py:49: ValueError
+
+During handling of the above exception, another exception occurred:
+
+recovery = (PosixPath('/tmp/pytest-of-agent/pytest-1/test_existing_run02_identity_s3'), {'accepted18_refitting_authorized': False...he same existing CPU host; dispatch only after final identity patch review; original absolute window unchanged.', ...})
+relative = 'research_logs/kumar_next_source_operations_20261015/csp_signed_score_operation_run02'
+kind = 'dangling_symlink'
+
+    @pytest.mark.parametrize("relative", [operation.OUTPUT, operation.STATE])
+    @pytest.mark.parametrize("kind", ["directory", "dangling_symlink"])
+    def test_existing_run02_identity_stops_without_cleanup(recovery, relative, kind):
+        root, _, auth = recovery
+        path = root / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        if kind == "directory":
+            path.mkdir()
+        else:
+            path.symlink_to("absent-preserved-target")
+>       with pytest.raises(ValueError, match="Run02 already"):
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'Run02 already'
+E        Input: 'Recovery host changed'
+
+tests/test_kumar_csp_run02_identity.py:125: AssertionError
+___________ test_original_deadline_cleanup_margin_cannot_be_renewed ____________
+
+recovery = (PosixPath('/tmp/pytest-of-agent/pytest-1/test_original_deadline_cleanup0'), {'accepted18_refitting_authorized': False...he same existing CPU host; dispatch only after final identity patch review; original absolute window unchanged.', ...})
+
+    def test_original_deadline_cleanup_margin_cannot_be_renewed(recovery):
+        root, binding, auth = recovery
+        with pytest.raises(ValueError, match="absolute authorization window"):
+>           check(root, auth, now=binding["deadline_unix"] - 30)
+
+tests/test_kumar_csp_run02_identity.py:133: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_kumar_csp_run02_identity.py:42: in check
+    return GATE["recovery_gate"](operation, root, auth,
+reviewed_recovery_handoff:26: in recovery_gate
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'Recovery host changed'
+
+    def require(condition, message):
+        if not condition:
+>           raise ValueError(message)
+E           ValueError: Recovery host changed
+
+scripts/run_kumar_csp_signed_score_operation.py:49: ValueError
+
+During handling of the above exception, another exception occurred:
+
+recovery = (PosixPath('/tmp/pytest-of-agent/pytest-1/test_original_deadline_cleanup0'), {'accepted18_refitting_authorized': False...he same existing CPU host; dispatch only after final identity patch review; original absolute window unchanged.', ...})
+
+    def test_original_deadline_cleanup_margin_cannot_be_renewed(recovery):
+        root, binding, auth = recovery
+>       with pytest.raises(ValueError, match="absolute authorization window"):
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'absolute authorization window'
+E        Input: 'Recovery host changed'
+
+tests/test_kumar_csp_run02_identity.py:132: AssertionError
+_____ test_real_timeout_wrapper_preserves_GPU_lock_fd_and_bounds_CPU_child _____
+
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-1/test_real_timeout_wrapper_pres0')
+
+    def test_real_timeout_wrapper_preserves_GPU_lock_fd_and_bounds_CPU_child(tmp_path):
+        """Exercise the actual OS watchdog/FD handoff without any GPU or model code."""
+        watchdog = shutil.which("timeout")
+        if watchdog is None:
+            pytest.skip("GNU timeout unavailable on this CPU test host")
+        lock_path = tmp_path / "real-watchdog.lock"
+        child = (
+            "import json,sys;from pathlib import Path;"
+            "import run_kumar_development_batch as b;"
+            "b.single.LOCK=Path(sys.argv[2]);"
+            "b.checked_lock(int(sys.argv[1]));"
+            "print(json.dumps({'inherited_lock_verified':True}))"
+        )
+        with lock_path.open("a") as lock:
+            fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            completed = subprocess.run(
+                [watchdog, "--signal=TERM", "--kill-after=30s", "2s",
+                 batch.sys.executable, "-B", "-c", child, str(lock.fileno()), str(lock_path)],
+                cwd=Path(__file__).resolve().parents[1], pass_fds=(lock.fileno(),),
+                start_new_session=True, capture_output=True, text=True, timeout=5,
+            )
+>       assert completed.returncode == 0, completed.stderr
+E       AssertionError: Traceback (most recent call last):
+E           File "<string>", line 1, in <module>
+E         ModuleNotFoundError: No module named 'run_kumar_development_batch'
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['/usr/bin/timeout', '--signal=TERM', '--kill-after=30s', '2s', '/workspace/.venvs/few-shot-mi-e...ast):\n  File "<string>", line 1, in <module>\nModuleNotFoundError: No module named \'run_kumar_development_batch\'\n').returncode
+
+tests/test_kumar_development_batch.py:428: AssertionError
+_______________ test_default_metadata_reads_no_archive_or_signal _______________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fa58f205010>
+
+    def test_default_metadata_reads_no_archive_or_signal(monkeypatch):
+        original = operation.sha
+        paths = []
+    
+        def metadata_only(path):
+            paths.append(str(path))
+            assert Path(path).suffix not in {".tar", ".edf", ".npz", ".pt"}
+            return original(path)
+    
+        for key, value in operation.THREAD_ENV.items():
+            monkeypatch.setenv(key, value)
+        monkeypatch.delenv("MKL_NUM_THREADS", raising=False)
+        monkeypatch.setattr(operation, "sha", metadata_only)
+        result = operation.metadata_check(operation.read(operation.CONTRACT))
+        assert result["accepted_models"] == 54
+        assert result["query_files_opened"] is result["checkpoint_archives_opened"] is False
+        assert result["models_constructed"] is False
+>       assert result["problems"] == []
+E       AssertionError: assert ['Historical ...or overwrite'] == []
+E         
+E         Left contains one more item: 'Historical attempt/state exists; no retry or overwrite'
+E         Use -v to get more diff
+
+tests/test_kumar_frozen_query_operation.py:212: AssertionError
+__________________ test_hash_conflict_never_promotes_download __________________
+
+tmp_path = PosixPath('/tmp/pytest-of-agent/pytest-1/test_hash_conflict_never_promo0')
+
+    def test_hash_conflict_never_promotes_download(tmp_path):
+        class Body(io.BytesIO):
+            def iter_chunks(self, chunk_size):
+                yield self.read()
+    
+        class Client:
+            def get_object(self, **kwargs):
+                return {'Body': Body(b'bad')}
+    
+        entry = dict(relative_path='x.edf', key='fixed/x', bytes=3,
+                     sha256=hashlib.sha256(b'yes').hexdigest())
+        with pytest.raises(ValueError, match='hash mismatch'):
+>           restore.restore(Client(), 'test', [entry], tmp_path)
+
+tests/test_kumar_gpu_preparation.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+client = <test_kumar_gpu_preparation.test_hash_conflict_never_promotes_download.<locals>.Client object at 0x7fa58f207190>
+bucket = 'test'
+entries = [{'bytes': 3, 'key': 'fixed/x', 'relative_path': 'x.edf', 'sha256': '8a798890fe93817163b10b5f7bd2ca4d25d84c52739a645a889c173eee7d9d3d'}]
+root = PosixPath('/tmp/pytest-of-agent/pytest-1/test_hash_conflict_never_promo0')
+
+    def restore(client, bucket, entries, root):
+        root = root.resolve()
+        root.mkdir(parents=True, exist_ok=True)
+        needed = sum(e['bytes'] for e in entries if not (root / e['relative_path']).exists())
+        if shutil.disk_usage(root).free < needed + 5 * 1024**3:
+>           raise RuntimeError('Insufficient disk: retain 5 GiB reserve')
+E           RuntimeError: Insufficient disk: retain 5 GiB reserve
+
+scripts/restore_kumar_r2.py:56: RuntimeError
+=============================== warnings summary ===============================
+tests/test_decoders.py: 2 warnings
+tests/test_kumar_checkpoint_reuse.py: 22 warnings
+tests/test_kumar_eegnet_training.py: 13 warnings
+tests/test_kumar_frozen_queries.py: 26 warnings
+  /workspace/.venvs/few-shot-mi-eeg/lib/python3.11/site-packages/braindecode/models/eegnet.py:171: DeprecationWarning: Parameter 'final_layer_with_constraint=False' is deprecated and will be removed in a future release. Please use `final_layer_linear=True`.
+    warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_kumar_eegnet_training.py:293: Actual CUDA hardware required
+FAILED tests/test_kumar_csp_run02_identity.py::test_exact_documented_gate_passes_read_only_with_original_claim_present
+FAILED tests/test_kumar_csp_run02_identity.py::test_wrong_authorization_identity_refused[deadline-Original window]
+FAILED tests/test_kumar_csp_run02_identity.py::test_wrong_authorization_identity_refused[run01-Run02 identity]
+FAILED tests/test_kumar_csp_run02_identity.py::test_wrong_authorization_identity_refused[template-Exact CPU-only]
+FAILED tests/test_kumar_csp_run02_identity.py::test_wrong_authorization_identity_refused[contract-Exact CPU-only]
+FAILED tests/test_kumar_csp_run02_identity.py::test_existing_run02_identity_stops_without_cleanup[directory-results/kumar_csp_signed_score_20261015/run02]
+FAILED tests/test_kumar_csp_run02_identity.py::test_existing_run02_identity_stops_without_cleanup[directory-research_logs/kumar_next_source_operations_20261015/csp_signed_score_operation_run02]
+FAILED tests/test_kumar_csp_run02_identity.py::test_existing_run02_identity_stops_without_cleanup[dangling_symlink-results/kumar_csp_signed_score_20261015/run02]
+FAILED tests/test_kumar_csp_run02_identity.py::test_existing_run02_identity_stops_without_cleanup[dangling_symlink-research_logs/kumar_next_source_operations_20261015/csp_signed_score_operation_run02]
+FAILED tests/test_kumar_csp_run02_identity.py::test_original_deadline_cleanup_margin_cannot_be_renewed
+FAILED tests/test_kumar_development_batch.py::test_real_timeout_wrapper_preserves_GPU_lock_fd_and_bounds_CPU_child
+FAILED tests/test_kumar_frozen_query_operation.py::test_default_metadata_reads_no_archive_or_signal
+FAILED tests/test_kumar_gpu_preparation.py::test_hash_conflict_never_promotes_download
+13 failed, 1257 passed, 1 skipped, 63 warnings in 44.13s

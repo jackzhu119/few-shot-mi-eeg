@@ -1,0 +1,39 @@
+{
+  "review_source": {
+    "original_bytes": 25151,
+    "sha256": "6936d14052b0dd82011d3abb8961d70066859f839e58a9448ba9585e7a53e73b",
+    "full_text_public": false,
+    "handling": "Private original preserved byte-identically; public response paraphrases comments."
+  },
+  "preservation": {
+    "scientific_protection_list": "research_logs/kumar_submission_optimization_20261015/run01/preservation_before.json",
+    "scientific_files": 816,
+    "old_sealed_package": "manuscript/plos_one_submission_20261015/release_manifest.json",
+    "old_sources_and_artifacts": 66
+  },
+  "scope": {
+    "real_fits": 0,
+    "real_query_or_model_forwards": 0,
+    "raw_signal_or_GDF_array_reads": 0,
+    "new_bootstrap_estimates": 0,
+    "pod_operations": 0,
+    "paper1_operations": 0,
+    "new_allocations": 0,
+    "postreview_saved_endpoint_checks": 4
+  },
+  "checks": {
+    "full_suite": "1257 passed, 13 failed, 1 skipped; actual failures retained, no CI pass claimed",
+    "ruff": "passed",
+    "smoke": "passed; synthetic software-validation only",
+    "MOABB_data_stack": "passed; FakeDataset only",
+    "new_statistics_synthetic_tests": 24
+  },
+  "known_limits": [
+    "No present institutional ethics conclusion",
+    "No actual author personal review/approval of final version",
+    "Original public GDF embedded arrays and derivative clock mapping not reconstructed",
+    "GitHub fixed version does not guarantee permanent hosting; no archive DOI minted",
+    "Native Word layout not rendered; actual Liberation PDF/figure font substitution disclosed",
+    "Historical full-suite environment assumptions remain unresolved; no production gate altered"
+  ]
+}

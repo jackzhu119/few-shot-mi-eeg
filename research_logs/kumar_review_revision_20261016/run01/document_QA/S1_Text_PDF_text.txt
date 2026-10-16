@@ -1,0 +1,1220 @@
+ 1               S1 Text. Supplementary scientific methods
+
+ 2
+
+
+
+
+ 3   Longitudinal motor-imagery EEG decoding: Frozen baselines, supervised recalibration, and
+
+ 4   task-measurement reliability
+
+
+ 5   This supplement defines the completed frozen analyses and the separately labeled post-observation
+
+ 6   sensitivities reported in the PLOS ONE submission draft. It introduces no model, adaptation gate,
+
+ 7   new fit or repeated query inference. The original scientific records and all incomplete-window
+
+ 8   exclusions remain intact; operational authorizations, storage receipts and fault recovery are retained
+
+ 9   separately in the repository audit records.
+
+
+
+
+10   S1. Source identity, chronology and eligible windows
+
+11   The source was the Kumar2024 derivative at NEMAR nm000177/v1.0.5, CC BY 4.0, bound by
+
+12   the existing 2,705-file selection manifest. The analysis covered 18 published participant identities,
+
+13   six ordered sessions, 360 EDF recordings and 7,200 event identities. Source size/checksum, lo-
+
+14   cal SHA256, annotation/event agreement, channel order, sampling rate, units and frozen numerical
+
+15   window hashes were checked. Complete raw and processed windows had no exact numerical du-
+
+16   plicates in the frozen split audit. These checks do not independently establish biological identity
+
+17   or the accuracy of derivative-reported calendar timestamps. Session order and within-session run
+
+18   order were checked against the source acquisition metadata.
+
+
+19   Development IDs were sub-1, sub-4, sub-7, sub-10, sub-13 and sub-16. The fixed remaining IDs
+
+
+
+                                                       1
+20   were sub-2, sub-3, sub-5, sub-6, sub-8, sub-9, sub-11, sub-12, sub-14, sub-15, sub-17 and sub-18.
+
+21   Assignment preceded performance calculations and used every third numeric published ID, starting
+
+22   at one. Later analysis of previously inspected test identities remains exploratory.
+
+
+23   Exactly five seconds and 2,560 samples at 512 Hz were required for a complete exported cue-
+
+24   anchored task-label window. Sample completeness does not certify uninterrupted imagery or isola-
+
+25   tion of the active task phase; S7 details this distinction. The 44 partial events remained in source/split
+
+26   records and were excluded from tensors without padding, replacement or selecting another run. The
+
+27   included role counts were:
+
+
+            Role                  Fixed whole-run assignment       Included windows across 18 IDs
+
+            Source training       ses-0, run-0 and run-1                                           720
+
+            Source validation     ses-0, run-2                                                     360
+
+            Source query          ses-0, run-3                                                     360
+
+            Target support        ses-1 through ses-5, run-0                                    1,786
+
+            Target query          All other target-session runs                                 3,930
+
+
+
+
+28   Each person had 40 training and 20 validation windows. The fixed first support run allowed at
+
+29   most 20 events, at most 10 per class, before partial exclusion. Among 90 target sessions, 14 had
+
+30   19 included support events and 76 had 20. There was no replacement or accumulation of support
+
+31   from other target sessions. The query inventory retained all 4,320 event identities, including 30
+
+32   partial exclusions, yielding 4,290 included queries. The saved-result comparison verified the same
+
+33   trial IDs, labels, sessions, runs, roles and included-window hashes for every CPU method and every
+
+34   EEGNet seed.
+
+
+
+
+                                                         2
+35   S2. Epoch-local preprocessing and descriptive coordinates
+
+36   The channel order was F7, F3, Fz, F4, F8, FC5, FC1, FC2, FC6, C3, Cz, C4, CP5, CP1, CP2, CP6,
+
+37   P7, P3, Pz, P4, P8 and POz. Labels were left hand = 0 and right hand = 1. MNE numerical input
+
+38   was in volts; the native physical metadata used microvolts. Each epoch independently underwent:
+
+
+39      1. Common-average reference over all 22 channels at each sample.
+
+40      2. Fourth-order SciPy Butterworth SOS band-pass filtering at 8–30 Hz with sosfiltfilt and
+
+41         its default odd padding.
+
+42      3. resample_poly(up=1, down=4) with its default Kaiser-5 window and constant padding,
+
+43         yielding 22 × 640 float32 values at 128 Hz in volts.
+
+
+44   These operations fitted no state across epochs. Zero-phase filtering is an offline convention. A raw
+
+45   within-window peak-to-peak value above 250 µV in any channel generated a fixed quality flag. All
+
+46   1,512 flagged complete windows remained among the 7,156 primary windows. No expert artifact
+
+47   certification or verified reconstruction of the acquisition CPz reference was claimed.
+
+
+48   The predefined power description used Welch estimates with a Hann window, 256-sample segments,
+
+49   128-sample overlap, constant detrending, density scaling, one-sided output and mean averaging.
+
+50   Mu power integrated 8–13 Hz and Beta power 13–30 Hz by trapezoidal integration including band-
+
+51   edge bins. Features were log10(max(power, float64_tiny)), ordered channel-major with Mu
+
+52   then Beta, giving 44 features. They are absolute task-window powers in V² before the log transform,
+
+53   not baseline-normalized ERD.
+
+
+54   Covariance descriptions used a fixed 21 × 22 Helmert basis to remove the CAR null direction.
+
+55   Epochs were time-centered, covariance used the n−1 denominator, and trace-normalized covariance
+
+56   was shrunk as 0.9*C + 0.1*I/21. The source-training-only affine-invariant Riemann mean used
+
+57   an arithmetic initializer, unit step, at most 100 iterations and tolerance 1e-10. Other roles supplied
+
+
+
+                                                       3
+58   distances to that fixed reference, never a refit. A source-training StandardScaler and full-SVD PCA
+
+59   retained four components without whitening. Primary preprocessing and decoder fits did not change
+
+60   in the fixed quality-flag, count-matched or C3/Cz/C4 descriptive sensitivities.
+
+
+61   For the pre-frozen drift associations, the covariance measure was target-query mean distance minus
+
+62   source-query mean distance. The task-axis measure was the one-dimensional Wasserstein distance
+
+63   between target and source query projections onto the fixed source-training right-minus-left power
+
+64   direction. Target labels did not construct that drift variable; labels were used for BA and explicitly
+
+65   supervised retrospective class descriptions. These remaining-cohort associations were descriptive
+
+66   analyses, not development-only reliability probes or policy selection.
+
+
+
+
+67   S3. Decoder definitions and label budgets
+
+68   S3.1. CPU baselines
+
+69   CSP used four components, Ledoit–Wolf regularization, log mean-square features and
+
+70   norm_trace=False; LDA used solver="lsqr" and automatic shrinkage.                      The baseline
+
+71   seed was 42 and there was one prespecified configuration. Source-only CSP/LDA fitted source
+
+72   training and then froze both stages. Frozen-CSP/LDA recalibration reused source filters and
+
+73   refitted LDA on source training plus current support. Full refitting fitted both CSP and LDA on
+
+74   that same union. Every fit recorded exact trial IDs; validation and query were forbidden from
+
+75   fitting or selecting the CPU pipeline. Source-query predictions used the same source model for all
+
+76   three method labels.
+
+
+
+
+                                                       4
+ 77   S3.2. Source-only EEGNet
+
+ 78   The official braindecode.models.EEGNet implementation used F1=4, D=2, F2=8, temporal ker-
+
+ 79   nel 64, depthwise kernel 16, mean-pool sizes 4 and 8, ELU, dropout 0.5, automatic final-convolution
+
+ 80   length and spatial max norm 1.0. Batch normalization used momentum 0.01, affine parameters and
+
+ 81   epsilon 0.001. final_layer_with_constraint=false and norm_rate=0.25 were retained ex-
+
+ 82   actly as recorded in the executed configuration.
+
+
+ 83   For each participant, channel mean and standard deviation were fitted over source-training trials
+
+ 84   and time only, with a 1e-8 V scale floor. The optimizer was Adam: learning rate 0.001, betas (0.9,
+
+ 85   0.999), epsilon 1e-8, zero weight decay, no AMSGrad or scheduler. Training used unweighted
+
+ 86   cross entropy, no label smoothing, batch size 16, shuffled training rows, drop_last=false,
+
+ 87   num_workers=0 and at most 100 epochs. The source-validation mean cross entropy selected the
+
+ 88   checkpoint, with patience 15, minimum improvement zero and the earliest epoch on ties. The
+
+ 89   complete best state was restored. All seeds 20261012, 20261013 and 20261014 were retained; no
+
+ 90   favorable seed was selected.
+
+
+ 91   The 54 completed source fits used 2,871 epochs and 8,613 optimizer steps. Eleven reached the 100-
+
+ 92   epoch cap; reaching that cap was not relabeled as a patience termination. Validation BA/CE was
+
+ 93   descriptive because validation selected epochs. It received no new population interval or hypothesis
+
+ 94   test.
+
+
+ 95   For the fixed checkpoint query evaluation, original package/checkpoint bytes and embed-
+
+ 96   ded source context were verified before loading with torch.load(map_location="cpu",
+
+ 97   weights_only=True).       Evaluation mode, disabled gradients and inference mode prohibited
+
+ 98   optimizer, parameter, batch-normalization and normalization updates. The original state digest was
+
+ 99   recorded before and after each model’s predictions. Labels supported only the fixed metrics; class
+
+100   prediction was untuned logit argmax. The original source CE replay absolute tolerance remained
+
+
+                                                         5
+101   1e-7. Independent saved-result audits checked the recorded states and arithmetic without a second
+
+102   model forward.
+
+
+
+103   S3.3. Comparison boundary
+
+                                              Source                 Additional
+
+                                estimator/optimizer    source-validation labels      Current support labels
+
+      Pipeline                                labels               for selection                  for fitting
+
+      Source-only                                 40                           0                           0
+
+      CSP/LDA
+
+      Frozen CSP +                                40                           0                      19/20
+
+      LDA
+
+      recalibration
+
+      CSP/LDA refit                               40                           0                      19/20
+
+      Always-frozen                               40                          20                           0
+
+      EEGNet, each
+
+      seed
+
+
+
+
+104   The CPU validation run was not used for model selection or fitting. EEGNet therefore had different
+
+105   source-label use, and only the CPU updates used target support. Equal query identities do not
+
+106   establish equal information or compute budgets. The two CPU update methods shared exact labeled
+
+107   fitting IDs, although updating both stages and updating LDA alone involved different computations.
+
+108   The original full-refit versus frozen contrast deliberately added current support; it was not an equal-
+
+109   target-label architecture comparison.
+
+
+
+
+                                                        6
+110   S4. Endpoints, resampling and evidence hierarchy
+
+111   BA was the mean of left and right recall. Confusion counts, recalls, predicted class proportions
+
+112   and single-class prediction indicators accompanied each session. CPU target endpoints first aver-
+
+113   aged five sessions per participant. EEGNet first averaged all three seeds within participant/session,
+
+114   then averaged five target sessions per participant. Source query remained separate. Cohort means
+
+115   weighted participants equally, never pooled trials or treated seeds and sessions as additional in-
+
+116   dependent people. The six development participants and 12 primary participants were analyzed
+
+117   separately; combining all 18 was a secondary exploratory analysis.
+
+
+118   The primary contrast remained full CSP/LDA refit minus source-only CSP/LDA in the remaining
+
+119   12, with paired participant resampling. Mean/BA descriptive intervals used 10,000 draws with
+
+120   seed 42 and the 2.5th/97.5th percentiles. The saved-query comparison and decoder endpoint sum-
+
+121   maries used lexicographic participant-ID order. The six-person reliability bootstrap used numeric
+
+122   order 1,4,7,10,13,16, averaged source folds or support sessions within person first, and used de-
+
+123   fault_rng(42) for 10,000 six-ID samples with replacement. Missing participant values made the
+
+124   entire reliability interval unavailable rather than silently changing its participant denominator.
+
+
+125   The original descriptive Spearman drift intervals instead used 2,000 participant-block bootstrap
+
+126   draws, seed 42. Each selected participant contributed all its session rows together. They did not
+
+127   use 10,000 independent session or trial samples. Both original drift measures retained 2,000 valid
+
+128   block draws. The difference between these two resampling designs is preserved.
+
+
+129   No EEGNet-minus-CPU contrast interval or hypothesis test, or formal test against 50%, was added.
+
+130   The post-review exploratory CPU sign-flip checks and their four-test Holm adjustment are reported
+
+131   separately in S11. The saved comparison reproduced the original CPU primary contrast, +7.42
+
+132   percentage points [2.49, 12.48], with nine positive and three negative participant differences. The
+
+133   original full-refit minus LDA-only secondary contrast was +5.47 percentage points [2.17, 8.91]. Its
+
+
+                                                        7
+134   target-label budget was the same for the two update methods; it was not promoted to a primary end-
+
+135   point. LDA-only minus frozen remained uncertain at +1.95 points [−0.98, +5.09]. All subsequent
+
+136   same-dataset interpretation remained exploratory after prior test exposure. No task-aware policy
+
+137   benefited from looking at these query outcomes.
+
+
+
+
+138   S5. Development-only measurement reliability
+
+139   S5.1. Fixed low-dimensional power probes
+
+140   The candidates were standardized 44-dimensional Mu/Beta power, its source PCA4 coordinates and
+
+141   six C3/Cz/C4 Mu/Beta coordinates. Only the six development IDs’ source training and preassigned
+
+142   current support entered the calculations. Source-run probes trained on run-0’s 20 rows and evaluated
+
+143   run-1’s 20, then reversed the roles. Each run contained ten events per class. StandardScaler and
+
+144   PCA for a fold were fitted to its TRAIN20 alone. The diagnostic classifier used the right-minus-left
+
+145   class-centroid axis and the midpoint threshold. It did not reuse a transform fitted on the held-out
+
+146   source run.
+
+
+147   The exact Cartesian set of 20 × 20 circular label phases was shared across the two source folds
+
+148   and three candidates, including identity. Label-dependent centroid directions and midpoints were
+
+149   recomputed for controls; label-independent fold scales/PCA could be reused. The 14,400 phase-
+
+150   control fold/candidate evaluations included the 36 identity/observed probes; these were auxiliary
+
+151   measurements, not replacements for the primary decoder baseline. All candidates remained; the
+
+152   highest point estimate did not select a winner.
+
+
+
+
+                                                        8
+153   S5.2. Supervised SOURCE20 CSP transfer probes
+
+154   The completed signed-score run02 fitted CSP and LDA anew on each TRAIN20 fold. Because
+
+155   CSP is label-dependent, every training-label phase refitted both stages. For each participant/fold,
+
+156   20 training-label phases produced 20 cached models and their held-out predictions. Crossing those
+
+157   predictions with the 20 held-out label phases yielded all 400 joint (run0_shift, run1_shift)
+
+158   pairs. Held-out labels never entered fitting, so caching across held-out phases preserved the exact
+
+159   full-pipeline controls.
+
+
+160   Across six IDs, this produced 240 fitted pipelines—240 CSP plus 240 LDA fits, including the 12
+
+161   identity-fold pipelines—4,800 cached held-out trial predictions, 4,800 fold/phase BA evaluations
+
+162   and 2,400 participant/phase-pair twofold means. All twelve source runs had 20 unique circular label
+
+163   assignments. The observed value was the identity phase pair (0,0). All 240 attempted pipelines
+
+164   completed; the implemented expected singular-fit failures would have remained explicit unavailable
+
+165   values, not exclusions of participants or controls.
+
+
+
+166   S5.3. Frozen SOURCE40 coordinates and signed scores
+
+167   Current support used the six existing SOURCE40 baseline CSP/LDA models without a new decoder
+
+168   fit. For an exported cue-anchored window X, the four CSP features were the natural logarithms of
+
+169   mean squared projected amplitude:
+
+
+170   f_j(X) = ln(mean_t((W_j X_t)^2)), j=1,...,4.
+
+
+171   The executed consumer rejected nonpositive/nonfinite power rather than inventing features. The
+
+172   vector diagnostic fitted a four-coordinate StandardScaler on SOURCE40 features only, using popu-
+
+173   lation variance (ddof=0), and applied that fixed transform to support. Its fixed source direction was
+
+174   d_source = mean(z|right) − mean(z|left) and its unit direction was u_source = d_source
+
+175   / ||d_source|| when estimable.
+
+
+                                                        9
+176   Within each support class, trials were chronologically ordered by acquisition time, start sample and
+
+177   source row. The first floor(n_class/2) entered the first half and the remainder entered the sec-
+
+178   ond; corresponding class halves were combined. For a half direction d_h, the diagnostics retained
+
+179   source/full support cosine, half-to-half cosine and the signed axis contrast
+
+
+180   A_h = (d_h · u_source) / SD_SOURCE40(z · u_source).
+
+
+181   This contrast has no factor of one half. Its source projection SD used ddof=1. Zero directions,
+
+182   missing classes and non-estimable scales remained explicitly unavailable.
+
+
+183   The separate LDA diagnostic used original unstandardized CSP log features, saved coeffi-
+
+184   cient/intercept and classes [0,1]:
+
+
+185   s = f @ w + b; prediction = right if s > 0, otherwise left.
+
+
+186   The intercept and zero threshold remained unchanged; support was neither centered nor used to
+
+187   fit a score scale. With SD_s = SD_SOURCE40(s) using ddof=1, each half retained the balanced
+
+188   true-class signed margin
+
+
+189   M_h = (mean(s|right,h) − mean(s|left,h)) / (2*SD_s).
+
+
+190   The factor of one half is part of this score-margin definition. Separate right margin mean(s|right,h)/SD_s,
+
+191   left margin −mean(s|left,h)/SD_s, score location, recalls, predicted proportions, BA and col-
+
+192   lapse were also saved. The vector-axis contrast and LDA margin are distinct measurements.
+
+193   Neither is a calibrated probability or a validated neural-information measure. A positive half-
+
+194   product can arise from two negative margins, and a positive class contrast can coexist with both
+
+195   classes on one side of the frozen threshold.
+
+
+
+
+                                                       10
+196   S5.4. Support controls and denominators
+
+197   Each current support run supplied all 19 or 20 circular label phases, including identity, with source
+
+198   features, axes, scales and LDA fixed. The primary control recomputed classwise chronological
+
+199   halves after every phase. A separate sensitivity retained the original half indices while rotating
+
+200   labels. For an estimable observation, the descriptive upper-tail fraction was count(available
+
+201   control >= observed) / count(available control), retaining ties and identity without a
+
+202   plus-one adjustment. Attempted, available, unavailable and unique-assignment denominators were
+
+203   recorded explicitly. Unverified stationarity, cyclic boundaries and cue-order dependence prevent
+
+204   treating these fractions as formal permutation p values.
+
+
+205   For CSP run02 there were 596 support phases per half method; all 596 were available for each
+
+206   of four saved control metrics—source/full-support cosine, half-to-half cosine, vector half-contrast
+
+207   product and LDA half-margin product— with zero unavailable. For the three power candidates there
+
+208   were 1,788 phases per method, all available for each of three metrics; the two methods contributed
+
+209   3,576 method/phase evaluations. Phase counts do not add participants. No sign flip, candidate,
+
+210   confidence cutoff or adaptation threshold was selected from the results.
+
+
+
+
+211   S6. Retained outcomes and numerical-validation scope
+
+212   The neural query analysis retained 16 collapsed seed/session outcomes across seven source-model
+
+213   jobs and seven participants: 14 target and two source outcomes. The frozen CPU model retained
+
+214   three target-session collapses; its two updates retained zero. These denominators differ and their
+
+215   raw counts are not a matched statistical comparison. All participant decreases and all three neural
+
+216   seeds stayed in the aggregates. The five collapsed source-validation fits and eleven 100-epoch
+
+217   terminations also remained in the source records.
+
+
+218   CSP run02’s observed source twofold mean BA was 62.9167% [52.5, 71.6667]; the participant
+
+                                                       11
+219   mean of five support half-cosines was 0.295325 [0.032041, 0.573003]. Among 30 support sessions,
+
+220   signed score half-margins were both positive in 19, both negative in two and opposite in nine; five
+
+221   sessions had frozen-score class collapse. These are calibration-pool measurements, not independent
+
+222   target-query performance of an adaptation rule.
+
+
+223   The completed CSP measurement retained the original scientific definition. Its saved-feature nu-
+
+224   merical check reconstructed 629,137 arithmetic fields with maximum difference zero; it did not
+
+225   independently recompute EEG projections or refit estimators. Earlier incomplete or differently
+
+226   specified diagnostics are not pooled with these measurements. Their original files and failures re-
+
+227   main in the separate audit history rather than being rewritten as successful attempts.
+
+
+
+
+228   S7.     Exported cue windows and unresolved within-trial task
+
+229   phases
+
+230   The released intervals are cue-anchored exported task-label windows, rather than five seconds
+
+231   certified to contain uninterrupted motor imagery. Three questions are distinct: whether all samples
+
+232   of an interval are available, whether its start corresponds to the intended marker, and whether its
+
+233   complete span lies within active imagery or feedback. The first is established for the 7,156 included
+
+234   intervals. The documented cue convention supports the second at the derivative/export level. The
+
+235   third remains unresolved at trial level.
+
+
+236   The original authors’ codebook distinguishes class cue markers 769/770 from subsequent task-start
+
+237   markers 7691/7701 [1]. The preserved official MOABB Kumar adapter maps the former pair to
+
+238   left/right hand and declares an interval of [0,5] seconds. NEMAR identifies MOABB conversion
+
+239   and preserves corresponding onset/sample/class rows. Its metadata reports MOABB 1.5.0dev0,
+
+240   but the exact historical converter commit/options and original GDF marker arrays have not been
+
+
+
+                                                        12
+241   independently replayed. A current adapter is evidence of the documented convention, not proof of
+
+242   every historical conversion operation.
+
+
+243   The original Methods describe one-second fixation, a 1.5-second class cue, then a five-second of-
+
+244   fline task period or online feedback lasting at most seven seconds; a two-second result display and
+
+245   1.5-second rest follow [2]. Online evidence-threshold crossing or timeout can terminate the active
+
+246   period. Consequently, a nominal five-second interval beginning at the class cue contains cue pre-
+
+247   sentation and at most the following 3.5 seconds of the task phase, assuming the described phase
+
+248   schedule. Earlier online termination may introduce post-termination signal, but its presence and
+
+249   duration cannot be assigned to individual intervals from the retained labels. We do not claim that
+
+250   every online interval includes result display or rest.
+
+
+251   The source codebook describes 32766 as recording boundary triggers and 1000 as trial/rest start.
+
+252   For 7692/7702 it describes offline trial end and online timeout/incorrect-hit events. The online
+
+253   7693/7703 description is literally “Cue Left/Right Delivered”; we do not silently reinterpret it as
+
+254   a correct hit. The authors’ versioned task-bounded extraction function starts at 7691/7701 and ter-
+
+255   minates at the subsequent 7692/7702 or 7693/7703. This supports the distinction between their
+
+256   task-period markers and the class-cue export, without equating either annotation convention with
+
+257   evidence of sustained imagery physiology.
+
+
+258   The 360 saved event tables contain onset, duration, trial_type, value and sample, but not the
+
+259   complete within-trial marker sequence. Each of the 44 partial intervals is the twentieth and final
+
+260   retained class event of an online recording and ends at its previously audited EDF sample boundary.
+
+261   Their identities, lengths and exclusion reasons remain unchanged. This demonstrates recording-
+
+262   boundary truncation of the stored interval, not 44 verified early task terminations, and does not
+
+263   by itself establish an indexing error. No retained interval overlaps the next retained class-event
+
+264   onset; absence of this overlap still cannot demonstrate continuous imagery within a window.
+
+
+
+                                                        13
+265   S7.1. Sources actually searched and the availability boundary
+
+266   We checked all 360 retained NEMAR event tables (7,200 rows), their official checksums, and the
+
+267   saved checks comparing the complete derivative EDF annotation stream with those tables. The TSV
+
+268   fields are onset, duration, trial_type, value and sample; the only class labels are left/right
+
+269   hand and the only values are 1/2. They contain no separate task-start/end or outcome records. The
+
+270   EDF statement relies on the prior hash-matched audit and script, not a fresh read of the signals in
+
+271   this revision.
+
+
+272   We also inspected the original-author codebook and extraction function, the complete public source-
+
+273   repository tree, NEMAR’s complete source-file manifest, conversion metadata and saved backup
+
+274   inventories. The full manifest lists 72 offline and 288 online original bar-task GDF files, in addition
+
+275   to racing data. NEMAR describes these source files as unmodified upstream originals. None of the
+
+276   GDF files was part of the frozen derivative selection; their embedded event arrays and their mapping
+
+277   to the analyzed trial/sample identities were not parsed in this review. The public author repository
+
+278   also contains example GDFs, which were not opened here. No standalone target-run POS/TYP
+
+279   export was identified within the inspected repository tree and text files.
+
+
+280   Thus the verified absence concerns the retained derivative annotation stream. It is not a claim that
+
+281   the original public distribution lacks the markers or that phase reconstruction is impossible. Code
+
+282   illustrating task-bounded extraction does not substitute for validating the corresponding arrays and
+
+283   sample mapping for all analyzed trials. The search scope and unopened sources are recorded in the
+
+284   public revision evidence.
+
+
+285   The minimum evidence for a future phase-specific amendment is the original bar-task POS/TYP
+
+286   marker arrays for all 360 runs, their sample rate and sample-origin convention, and a pinned con-
+
+287   verter or maintainer-confirmed mapping to the current trial IDs. Cue, task start, outcome/task end
+
+288   and recording boundaries must be matched without consulting decoding outcomes. Before any new
+
+
+                                                        14
+289   evaluation, an amendment would need to specify one anchor and duration, handling of early ends
+
+290   and altered support/query budgets. Existing cue-window predictions and models would remain the
+
+291   original analysis; they cannot be relabeled as task-only models. No re-epoching, new fit or infer-
+
+292   ence was performed here. The correction to the original paper changes reported CSP numbers, not
+
+293   these marker definitions [3].
+
+
+294   The original Methods were first checked through indexed publisher/PMC passages. During this
+
+295   revision the official Europe PMC full-text XML was successfully obtained and the relevant Meth-
+
+296   ods, framework descriptions and results were read; earlier access failures remain preserved in the
+
+297   audit record. The complete author codebook, task-bounded extraction source and previously saved
+
+298   correction XML were read. The original Methods identify UT Austin protocol 2020-03-0073 and
+
+299   written informed consent. These are the original study’s statements only. The author’s institutional
+
+300   determination for the present secondary analysis remains unresolved; no approval, exemption or
+
+301   no-review conclusion is inferred from public availability.
+
+
+
+
+302   S8. Exploratory decoding sensitivity to the fixed amplitude-QC
+
+303   flag
+
+304   S8.1. Status, input rules and exact identity joins
+
+305   The sensitivity was requested and its protocol recorded after the original results had been ob-
+
+306   served, but before computing these new summaries. It is not preregistration, an amendment to
+
+307   the primary endpoint, artifact correction or an untouched test. The original main results and 44
+
+308   incomplete-window exclusions, including 30 incomplete query identities, were preserved.
+
+
+309   Only saved predictions, the existing Boolean qc_peak_to_peak_over_250uv flag and frozen text
+
+310   metadata were used. The flag was checked against the saved maximum raw channel peak-to-peak
+
+
+                                                      15
+311   amplitude and the fixed strict threshold >0.00025 V in any channel. The threshold was not changed
+
+312   or selected by performance. Partial-window QC entries can be null and are never silently inter-
+
+313   preted as unflagged complete examples. The original 1,512 flagged complete windows comprised
+
+314   76/720 source TRAIN, 36/360 source validation, 36/360 source query, 478/1,786 target support and
+
+315   886/3,930 target query windows. Thus 922/4,290 unique included queries were flagged and 3,368
+
+316   were unflagged. Flagging is not expert artifact certification; unflagged does not mean artifact-free.
+
+
+317   Each saved prediction was joined by exact trial_id with unique, consistent participant/session/run/role,
+
+318   original label, inclusion and QC values. Every complete query required all three CPU methods
+
+319   and all three fixed EEGNet seeds. Unexpected, missing, repeated or inconsistent identities caused
+
+320   failure rather than partial scoring. The join comprised 25,740 stored predictions for 4,290 complete
+
+321   queries in 108 participant/method/seed groups. A separate 4,320-row query ledger retained the 30
+
+322   incomplete identities and their original exclusion reasons. All 144 reconstructed endpoint values
+
+323   (two values, source-query and five-session target BA, for 72 participant-by-method rows) matched
+
+324   the saved values exactly.
+
+
+
+325   S8.2. Class eligibility and aggregation
+
+326   Both all_included and unflagged subsets retain rows for each participant, method, seed and
+
+327   each of six sessions, plus separately labeled target-pooled and all-query-pooled scopes. Counts in-
+
+328   clude true left/right, predicted left/right, all confusion cells and single-class prediction flags. Empty
+
+329   and single-true-class groups remain present with undefined BA and an explicit reason; unavailable
+
+330   values are not set to zero or chance.
+
+
+331   Mathematical BA requires at least one example of each true class. A group with fewer than five ex-
+
+332   amples in either class is flagged as low-count descriptive data but is not deleted by a new minimum-
+
+333   count rule. A group containing both true classes can have model class collapse; a zero-query group
+
+
+
+                                                         16
+334   has no defined collapse assessment. EEGNet BA is computed separately for every seed and then
+
+335   averaged over all three within participant/session. Counts represent unique query identities, not
+
+336   trials multiplied by seeds, and no voting ensemble is constructed.
+
+
+337   The target endpoint requires all five target-session BAs and gives each equal weight. If any target
+
+338   session is undefined, that participant’s equal-session endpoint is undefined; fewer sessions are never
+
+339   silently averaged. Cohort means use the explicitly listed eligible participants. Source, target-pooled
+
+340   and all-query-pooled endpoints have their own eligibility counts and cannot replace the primary
+
+341   equal-session endpoint. Development 6, remaining 12 and secondary all 18 remain separate.
+
+
+342   Two remaining-cohort identities lose their unflagged five-session endpoint for all four methods.
+
+343   Sub-8 has no unflagged queries in ses-3 or ses-4 and only 28 across target sessions (16 left/12 right);
+
+344   its source query retains one left and zero right events, so source BA is also undefined. Sub-12 retains
+
+345   four target events, all left-hand, distributed 1/1/2/0/0 across the five sessions. Every target session
+
+346   is missing the other class. Other low-count sessions remain, including sub-8/ses-2 and sub-11/ses-2
+
+347   (each 2 left/1 right), and sub-5/ses-5 (3 left/12 right). Unflagged equal-session summaries therefore
+
+348   include 6/6 development and 10/12 remaining participants. The eligible remaining IDs are sub-2,
+
+349   3, 5, 6, 9, 11, 14, 15, 17 and 18; sub-8 and 12 remain in all eligibility and missing-class tables.
+
+
+
+350   S8.3. Paired sensitivities, same-participant comparisons and influence
+
+351   The original remaining 12 full-refit minus frozen contrast stays the primary comparison in the origi-
+
+352   nal analysis. Full-refit minus LDA-only stays secondary. Their QC-restricted counterparts are new
+
+353   exploratory sensitivities. Both use paired participant differences and 10,000 percentile bootstrap
+
+354   draws with default_rng(42), lexicographic participant-ID ordering and 2.5th/97.5th percentiles.
+
+355   Fewer than two eligible participants yield no interval. This original QC analysis used descriptive in-
+
+356   tervals; the separately introduced post-review paired checks are identified in S11 and do not replace
+
+
+
+                                                        17
+357   these intervals or establish an adaptation gate.
+
+
+358   In the unflagged remaining 10, full-refit minus frozen is +5.96 percentage points [0.99, 11.24]; full-
+
+359   refit minus LDA-only is +3.82 [1.11, 6.72]. The corresponding original 12-person values remain
+
+360   +7.42 [2.49, 12.48] and +5.47 [2.17, 8.91]. Contrasting these two cohort means directly would
+
+361   mix QC and changed membership. For the same 10 eligible identities, original full-minus-frozen
+
+362   is +6.50 and unflagged is +5.96; the paired change is −0.54 [−1.30, +0.16] points. For full-minus-
+
+363   LDA-only, original is +4.53 and unflagged +3.82; the paired change is −0.71 [−2.11, +0.42] points.
+
+364   For these same ten participants and the unchanged fitted models, the positive unflagged contrast
+
+365   does not support attributing their whole average difference solely to flagged query amplitudes. It
+
+366   does not establish general artifact robustness or recover the missing full-cohort endpoints.
+
+
+367   Deterministic leave-one-participant-out means are retained for both CPU contrasts without exclud-
+
+368   ing anyone by observed gain. The original full-minus- frozen mean ranges from +6.22 to +8.62
+
+369   points over the 12 omissions; the unflagged 10-person range is +4.61 to +7.24. The three original
+
+370   negative individual differences are −5.82, −0.67 and −0.20 points (sub-6, 14, 15). Small negative
+
+371   differences are not automatically interpreted as substantial harm or tested individual effects. These
+
+372   are influence descriptions, not additional independent participants or an exclusion rule.
+
+
+373   Conditioning query evaluation on amplitude changes its class/sample composition and may select
+
+374   observations. The 76 flagged source TRAIN examples, 478 flagged target support examples and 36
+
+375   flagged validation examples were still used as originally prescribed; no historical fit or checkpoint
+
+376   selection was cleaned or repeated. The analysis therefore cannot remove training artifacts, resolve
+
+377   task-phase uncertainty, demonstrate a reliable update rule or provide an independent replication. All
+
+378   previously exposed-cohort follow-up remains exploratory.
+
+
+
+
+                                                         18
+379   S9. Saved learning histories and the weak source-only neural ref-
+
+380   erence
+
+381   All 54 original metadata histories supply 2,871 consecutive recorded epochs and 8,613 optimizer
+
+382   steps. We extracted text histories, selection metadata and existing query metric tables; binary model
+
+383   members were only streamed for integrity hashing, never deserialized. No query array or EEG
+
+384   was read and no new forward pass, optimizer or fit was invoked. Complete curves are supplied
+
+385   as 2,871 text rows with participant, cohort, seed, job, epoch, training CE and validation CE; the
+
+386   accompanying 54-fit table retains every selected epoch and stopping reason. Empty console logs in
+
+387   37 archives were not treated as proof of zero execution, and no missing curve was reconstructed.
+
+
+388   Twelve models selected epoch 1 and 11 reached 100 epochs. Across the 36 fits for the 12 primary
+
+389   participants and three seeds, the corresponding counts are 8 and 10; median executed and selected
+
+390   epochs are 29.5 and 14.5. Final training CE is below its first value in 53/54 models (35/36 remain-
+
+391   ing), whereas final validation CE is above its first value in 29/54 (19/36 remaining). Remaining-
+
+392   cohort medians are training CE 0.704246 initially and 0.596543 finally; validation CE 0.693048
+
+393   initially, 0.691847 at the selected epoch and 0.692351 finally. These are repeated-model descrip-
+
+394   tions, not participant-level intervals. Training CE is accumulated in training mode while parameters
+
+395   change within each epoch; validation CE uses the post-epoch model in evaluation mode. Dropout
+
+396   and batch-normalization mode also differ. The loss difference is consequently not a calibrated
+
+397   generalization-gap measurement or proof of one failure mechanism.
+
+
+398   In the 12-participant primary cohort, mean BA on the held-out source query was 52.9167%, com-
+
+399   pared with 51.5783% over later target sessions, a descriptive difference of −1.3384 percentage
+
+400   points. Weak discrimination is already present in the source session. The target score alone therefore
+
+401   does not identify how much cross-session drift contributes to performance. Source query has only
+
+
+
+                                                       19
+402   20 trials per participant; the target endpoint averages five sessions. These different sampling preci-
+
+403   sions preclude treating the mean difference as an isolated causal drift estimate. Selected-validation
+
+404   performance is not an independent query endpoint.
+
+
+405   Every fixed seed stays in the results. Remaining-cohort target means for 20261012/20261013/20261014
+
+406   are 52.42/49.94/52.37%; the average within-participant target mean BA range is 8.06 percentage
+
+407   points, maximum 24.62. These values do not select an advantageous seed or imply population
+
+408   uncertainty from 54 independent people. The finding concerns this small-source implementation,
+
+409   not the general suitability of deep learning for motor-imagery EEG.
+
+
+
+
+410   S10. Scientific software versions and text-only reproduction
+
+411   The CPU baseline used Python 3.11.16, NumPy 2.2.6, SciPy 1.15.3, scikit-learn 1.7.2
+
+412   and MNE 1.10.2, with recorded OMP/OpenBLAS/MKL thread limits of one.                      The GPU
+
+413   source fits used PyTorch/Torchaudio 2.8.0+cu128 and Braindecode 1.2.0.                 Fixed check-
+
+414   point inference used PyTorch/Torchaudio 2.8.0+cpu and Braindecode 1.2.0 with the same
+
+415   Python/NumPy/SciPy/scikit-learn/MNE versions, one PyTorch thread, OMP/OpenBLAS limits
+
+416   of one and CUBLAS_WORKSPACE_CONFIG=:4096:8. GPU fitting and CPU inference are distinct
+
+417   stages; these software statements do not establish equal compute budgets.
+
+
+418   The public QC inputs comprise the frozen 7,200-event metadata (including 44 historical incomplete
+
+419   identities), 25,740 saved predictions, original analysis configuration, 72 participant-by-method end-
+
+420   point rows and their provenance manifest. The dictionary records left=0/right=1, cpu_fixed for
+
+421   CPU seeds, the three EEGNet seeds, roles, inclusion/exclusion reasons, original amplitude flags and
+
+422   input lengths/hashes. Full per-session class counts, missing groups, confusion cells, paired differ-
+
+423   ences and influence rows accompany the results. No EEG samples, checkpoint parameters, private
+
+424   credentials or new dataset collection is included in these compact inputs. Source-derived data retain
+
+
+                                                       20
+425   their NEMAR CC BY 4.0 attribution; that attribution is distinct from software dependency licenses.
+
+
+426   From a repository checkout, the following command reproduces the public saved-prediction arith-
+
+427   metic only, using Python 3.11 and the recorded NumPy 2.2.6. Choose a new output directory; the
+
+428   existing frozen results are not overwritten:
+
+      mkdir qc_text_reproduction_new
+
+      cp research_logs/kumar_submission_qc_20261015/run01/POST_OBSERVATION_PROTOCOL.md
+
+      ↪   qc_text_reproduction_new/
+
+      python -B scripts/analyze_kumar_saved_query_qc_20261015.py \
+
+        --portable-inputs research_logs/kumar_submission_qc_20261015/run01/public_inputs \
+
+        --output qc_text_reproduction_new
+
+
+
+429   The portable input path needs no private original checkpoint or prediction directory. The original-
+
+430   input computation and portable text-only replay produced the same 13 scientific CSVs byte-for-byte.
+
+431   These are repeat arithmetic checks, not repeat model inference. Public saved history tables can be
+
+432   inspected without weights. To independently validate their original archive/member hashes requires
+
+433   authorized possession of the 54 unmodified originals; use the portable relative-filename index and
+
+434   a new destination:
+
+      python -B scripts/summarize_kumar_saved_training_curves.py \
+
+        --archive-index
+
+          ↪   research_logs/kumar_submission_training_review_20261015/run01/archive_input_index.json
+
+          ↪   \
+
+        --archives /absolute/path/to/54_original_archives \
+
+        --output /absolute/path/to/new_text_only_review
+
+
+
+435   This second command reads only allowlisted metadata/text and streams binary members to SHA
+
+436   256; it does not load tensor values or construct a model. Both postprocessors require explicit output
+
+437   arguments. Invoking either without arguments exits with usage instead of initiating fitting or eval-
+
+438   uation. Neither command invokes the scientific training/query runners; no such rerun is needed
+
+
+                                                       21
+439   to reproduce the new saved-prediction summaries. The fixed protocols, code, CSV dictionaries
+
+440   and complete hashes provide the detailed implementation record without reproducing operational
+
+441   authorization or storage logs in this supplement.
+
+
+
+
+442   S11. Post-review exploratory paired sign-flip checks
+
+443   These checks were introduced in response to review after the original results were known. A com-
+
+444   putation plan and a four-comparison Holm addendum were recorded before executing them; this
+
+445   timing does not constitute preregistration or erase outcome exposure. Inputs are saved participant
+
+446   endpoints, without EEG, weights, new predictions or changes to the original cohort and QC rules.
+
+
+447   The fixed comparisons are full minus frozen, full minus LDA-only, and LDA-only minus frozen in
+
+448   the same 12-person primary cohort, plus full minus frozen in the ten participants already eligible
+
+449   for the unflagged sensitivity. For paired differences 𝑑𝑖 in BA units, the statistic is |𝑛−1 ∑𝑖 𝑑𝑖 |. We
+
+450   enumerate all 2𝑛 vectors 𝑠𝑖 ∈ {−1, 1} and count |𝑛−1 ∑𝑖 𝑠𝑖 𝑑𝑖 | at least as large as the observed
+
+451   value, allowing an absolute boundary tolerance of 10−12 BA with zero relative tolerance. The
+
+452   p value is this count divided by 2𝑛 ; no Monte Carlo seed or plus-one correction is used for full
+
+453   enumeration.
+
+
+454   The enumeration is exhaustive for the sign-flip reference distribution. Its inferential interpreta-
+
+455   tion requires independent participant differences whose signs are exchangeable around zero, condi-
+
+456   tional on their magnitudes. It is not a randomization test justified by assigned treatment labels, an
+
+457   assumption-free test of a population mean, or evidence that the participant identifiers were indepen-
+
+458   dently verified biological identities.
+
+
+459   The four tail fractions are 80/4,096, 42/4,096, 1,070/4,096 and 78/1,024. The unadjusted values
+
+460   are 0.01953125, 0.01025390625, 0.26123046875 and 0.076171875; Holm adjustment over exactly
+
+461   this four-test family gives 0.05859375, 0.041015625, 0.26123046875 and 0.15234375. Adjustment
+
+                                                        22
+462   addresses this reported family only and cannot correct all prior analytical exposure. In particular,
+
+463   the primary contrast is not newly declared confirmatory on the basis of its unadjusted value. The
+
+464   sample standardized paired effect for that contrast is 𝑑𝑧 = 0.807128; percentage-point estimates
+
+465   remain the principal effect measure.
+
+
+466   Four assignments in the LDA-only-minus-frozen comparison lie at a floating-point tail boundary.
+
+467   The declared tolerance includes them (1,070/4,096); strict comparison of the saved decimal strings
+
+468   as exact fractions gives 1,066/4,096. Both counts are preserved in the diagnostics, with no change
+
+469   to the rule after calculation. The difference has no material effect on its interpretation.
+
+
+470   All original percentile intervals are retained verbatim. Existing CPU code already resampled paired
+
+471   participants jointly; the QC scalar implementation uses the same seed, size and lexicographic order
+
+472   for each relevant contrast. Recomputing with numeric instead of lexicographic participant order
+
+473   can change finite Monte Carlo percentile endpoints slightly, which does not justify replacing the
+
+474   saved results. The unflagged contrast illustrates why interval exclusion and a different paired test
+
+475   are not interchangeable: its retained interval is [0.99, 11.24] points, whereas the sign-flip p value is
+
+476   0.076171875.
+
+
+477   Additional t, signed-rank and sign-test calculations were used only to audit the reviewer’s numerical
+
+478   statements, not to choose a favorable test. For tied absolute differences, average-rank sign enumer-
+
+479   ation and a library option named exact need not be equivalent; those audit outputs and the failed
+
+480   initial roundoff-consistency assertion are retained separately. The main article reports only the fixed
+
+481   mean sign-flip checks and their four-test adjustment.
+
+
+482   Portable paired inputs, definitions, code and outputs are supplied in S1 Data. The producer requires
+
+483   explicit input and fresh output paths, rejects missing or duplicate participant identities and never
+
+484   invokes a model or an EEG adapter.
+
+
+
+
+                                                        23
+485   1.   Dataset_Description.pdf. Author-supplied codebook in the TransLearning repository; Avail-
+
+           able: https://github.com/neurosatya/TransLearning/blob/548470542e63f97ab777684c1f5
+
+           e4f1cace4b8ed/Dataset_Description.pdf
+
+
+
+486   2.   Kumar S, Alawieh H, Racz FS, Fakhreddine R, Millán J del R. Transfer learning
+
+           promotes acquisition of individual BCI skills.       PNAS Nexus.       2024;3:   pgae076.
+
+           doi:10.1093/pnasnexus/pgae076
+
+
+
+487   3.   Correction to: Transfer learning promotes acquisition of individual BCI skills. PNAS Nexus.
+
+           2024;3: pgae137. doi:10.1093/pnasnexus/pgae137
+
+
+
+
+                                                   24
+

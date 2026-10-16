@@ -1,0 +1,527 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-10-16T01:43:05.633116+00:00",
+  "scope": "Read-only source and bundle coverage audit; whitelist extraction of already saved numeric records; no statistical rerun.",
+  "audit_head": "a78372db00cd4161e713ab47aca2d93c643a52bb",
+  "reviewed_artifacts": [
+    {
+      "path": "/workspace/few-shot-mi-eeg/manuscript/kumar_plos_one_submission_draft_20261015.md",
+      "bytes": 39792,
+      "sha256": "c483f949715c6c48eb40bb7f72df518d4d3c6422d673b26ebfa448baf471cbec"
+    },
+    {
+      "path": "/workspace/few-shot-mi-eeg/manuscript/kumar_plos_one_supporting_methods_20261015.md",
+      "bytes": 37206,
+      "sha256": "89b26baaf46f4c0ba999cbef879077a0e3370d6f5697538664daad00e84e50eb"
+    },
+    {
+      "path": "/workspace/few-shot-mi-eeg/manuscript/plos_one_submission_20261015/manuscript_for_submission.pdf",
+      "bytes": 105932,
+      "sha256": "24f5aeb7583a4e3db28fe342b2cd1c609db115df7816d380b2583efc8435b72f"
+    },
+    {
+      "path": "/workspace/few-shot-mi-eeg/manuscript/plos_one_submission_20261015/S1_Text.pdf",
+      "bytes": 105217,
+      "sha256": "5e756417b8b7603845b29f68e6bc760be0d1b6dbc649f68f5faaeb647743b9ea"
+    }
+  ],
+  "existing_zip": {
+    "path": "/workspace/few-shot-mi-eeg/manuscript/plos_one_submission_20261015/S1_Data.zip",
+    "bytes": 591742,
+    "sha256": "797d0e4c2f913428b864688cebcf182f65e022f2fcd7e5225cd919701740867b",
+    "member_count": 41,
+    "original_comparison_csvs": 6,
+    "training_csvs": 6,
+    "QC_csvs": 13,
+    "CSV_total": 31,
+    "JSON_total": 5,
+    "other_total": 5,
+    "inventory_receipt": "existing_zip_inventory.json",
+    "detailed_coverage_receipt": "existing_zip_coverage.md"
+  },
+  "claim_families": [
+    {
+      "family": "original_decoder_endpoints_and_CPU_paired_intervals",
+      "existing_zip": "covered",
+      "members": [
+        "results/original_comparison/*.csv (6)",
+        "results/original_cpu/participant_bootstrap_summary.json",
+        "inputs/original_participant_endpoints.csv"
+      ],
+      "examples": [
+        "remaining12 original primary +7.42 [2.49,12.48] pp",
+        "secondary full-refit minus LDA-only +5.47 [2.17,8.91] pp",
+        "Tables2/3 source/target cohort means and CIs"
+      ]
+    },
+    {
+      "family": "training_saved_history_and_seed_outcomes",
+      "existing_zip": "covered",
+      "members": [
+        "results/training/*.csv (6)",
+        "results/original_comparison/eegnet_per_seed_session.csv"
+      ],
+      "examples": [
+        "54 fits, 2871 epochs, 8613 optimizer steps",
+        "12 epoch1 selections; 11 cap terminations",
+        "all three fixed seeds; source/target BA, CE, collapse and seed ranges"
+      ]
+    },
+    {
+      "family": "post_observation_saved_prediction_QC",
+      "existing_zip": "covered",
+      "members": [
+        "results/qc/*.csv (13)",
+        "inputs/frozen_trial_metadata.json",
+        "inputs/saved_predictions.csv"
+      ],
+      "examples": [
+        "7200 events;7156 complete;44 partial",
+        "4320 query IDs;4290 complete;25740 predictions",
+        "10/12 unflagged five-session eligibility",
+        "QC intervals, class counts, paired matched-subset differences, influence"
+      ]
+    },
+    {
+      "family": "plotted_data",
+      "existing_zip": "covered_for_plotted_observations_only",
+      "members": [
+        "figures/*source_data.csv (4)"
+      ],
+      "limitation": "Fig3 has 30 two-half margins/sign-pattern rows only; no source-fold or vector-cosine/collapse evidence."
+    },
+    {
+      "family": "three_development_power_PCA_motor_probes",
+      "existing_zip": "missing",
+      "proposed": [
+        "power_probe_summary.json",
+        "power_probe_source_metrics.json",
+        "power_probe_support_metrics.json"
+      ],
+      "examples": [
+        "source means 0.5166666667/0.5/0.5416666667 and saved CIs",
+        "support cosine CIs including zero",
+        "36 observed folds,14400 source fold/phase evaluations",
+        "1788 support phases per half method;3576 method-phase evaluations"
+      ]
+    },
+    {
+      "family": "supervised_source_CSP_and_rotations",
+      "existing_zip": "missing",
+      "proposed": [
+        "csp_probe_summary.json",
+        "csp_probe_source_metrics.json"
+      ],
+      "examples": [
+        "62.9167% [52.5,71.6667]",
+        "240 completed pipelines and0failures;12identity-fold fits included",
+        "4800 saved heldout predictions;4800 fold-BA evaluations;2400 twofold phase means"
+      ]
+    },
+    {
+      "family": "development_support_vector_and_score_diagnostics",
+      "existing_zip": "partial_only_Fig3_margins_and_sign_pattern",
+      "proposed": [
+        "csp_probe_summary.json",
+        "csp_probe_support_metrics.json"
+      ],
+      "examples": [
+        "30 sessions;vector cosine0.295325 [0.032041,0.573003]",
+        "19positive/2negative/9opposite half-margin patterns",
+        "five frozen-score class-collapsed support sessions",
+        "596 support phases per half method for four metrics;zero unavailable"
+      ]
+    },
+    {
+      "family": "descriptive_remaining_cohort_drift_Spearman_and_block_intervals",
+      "existing_zip": "missing",
+      "proposed": [
+        "drift_session_and_performance.csv",
+        "drift_association_summary.json"
+      ],
+      "examples": [
+        "rho=-0.007198844138264847 [-0.5053110265117752,0.437510139879649]",
+        "rho=0.19692591011431057 [-0.24020554361388935,0.5175787477499612]",
+        "remaining12×5session=60rows;development6×5=30rows",
+        "original2000valid participant-block draws andseed42"
+      ],
+      "limitation": "Original source stores CI/count/seed but no individual draw correlations; none regenerated."
+    },
+    {
+      "family": "timing_boundary_saved_audit_and_software_versions",
+      "existing_zip": "not_standalone_covered",
+      "proposed": [
+        "saved_metadata_and_measurement_audit_summary.json"
+      ],
+      "examples": [
+        "44 original boundary rows;all final twentieth class events stop at audited EDF end",
+        "no next retained event overlap",
+        "629137 saved arithmetic checks/maxdifference0",
+        "source_gate2705files/360EDF and duplicate-zero assertions",
+        "recorded CPU baseline,representative first GPU fit,andCPU query-precheck versions"
+      ],
+      "limitation": "Preserves saved audit assertions and representative runtime record,not independent raw-EEG verification or all54runtime receipts."
+    },
+    {
+      "family": "numerical_method_settings",
+      "existing_zip": "CPU_config_covered_EEGNet_and_probe_configs_missing",
+      "proposed": [
+        "supplement_method_configuration.json"
+      ],
+      "examples": [
+        "S1 EEGNet architecture/optimizer/stopping/input/norm constants",
+        "actual lowdim and CSP frozen configuration;hash verified against measurement receipts"
+      ]
+    }
+  ],
+  "proposed_numeric_file_count": 10,
+  "proposed_payload_bytes": 8684518,
+  "proposed_numeric_outputs": {
+    "power_probe_summary.json": {
+      "bytes": 1103571,
+      "sha256": "8b8f6621f81e14cc7747ad5cd1ea32ef85883b0dadf9eec6758a489a37657231",
+      "source_paths": [
+        "research_logs/kumar_cross_session_20261012/lowdim_reliability_dev_run01_20261014/measurement_receipt.json"
+      ],
+      "source_fields": [
+        "$.participant_summaries (including original stored bootstrap_draws)",
+        "$.<allowlisted measurement counters>"
+      ],
+      "supports": [
+        "51.67/50.00/54.17% source BA with saved participant CIs",
+        "power/PCA/motor6 support cosine CIs",
+        "14,400 source fold/phase evaluations"
+      ],
+      "statistical_recomputation": false,
+      "contains_EEG_or_fitted_weights_or_credentials_or_third_party_full_text": false
+    },
+    "power_probe_source_metrics.json": {
+      "bytes": 830540,
+      "sha256": "81161eb5f34f9871ca23dbc003ad2fe3bb039e02230ed1f4e0f8ec122e49bc25",
+      "source_paths": [
+        "research_logs/kumar_cross_session_20261012/lowdim_reliability_dev_run01_20261014/measurement_receipt.json"
+      ],
+      "source_fields": [
+        "$.subjects.*.source_rows.<allowlisted observed fold metrics>",
+        "$.subjects.*.source_phase_alignment_control.{pairs,shift_pair_count,unique_*,null,diagnostic_centroid_probe_fit_attempts}"
+      ],
+      "supports": [
+        "36 observed folds",
+        "7,200 saved candidate/phase-pair rows; 14,400 saved fold BAs"
+      ],
+      "statistical_recomputation": false,
+      "contains_EEG_or_fitted_weights_or_credentials_or_third_party_full_text": false
+    },
+    "power_probe_support_metrics.json": {
+      "bytes": 2082480,
+      "sha256": "8b2a35d9304de0d014ca42a340435f97f21f9895d7901a1bd13163037dccaf58",
+      "source_paths": [
+        "research_logs/kumar_cross_session_20261012/lowdim_reliability_dev_run01_20261014/measurement_receipt.json"
+      ],
+      "source_fields": [
+        "$.subjects.*.support_rows.<allowlisted metadata,observed,null,comparisons>"
+      ],
+      "supports": [
+        "90 candidate/support-session rows",
+        "1,788 phase rows per half method; 3,576 method/phase rows",
+        "saved valid/unavailable denominators for three control metrics"
+      ],
+      "statistical_recomputation": false,
+      "contains_EEG_or_fitted_weights_or_credentials_or_third_party_full_text": false
+    },
+    "csp_probe_summary.json": {
+      "bytes": 364475,
+      "sha256": "d2982cd547314f2983f0dfa029216b3fdb4b4189a552c91e804e597abb0fa2a5",
+      "source_paths": [
+        "results/kumar_csp_signed_score_20261015/run02/measurement_receipt.json",
+        "research_logs/kumar_csp_signed_score_execution_20261015/run02/original_output_manifest.json",
+        "research_logs/kumar_csp_signed_score_execution_20261015/run02/scientific_summary_from_saved_results.json"
+      ],
+      "source_fields": [
+        "$.participant_summaries (including original stored bootstrap_draws)",
+        "$.<allowlisted measurement counters>",
+        "public_summary:$.support_signed_contrast_sign_counts"
+      ],
+      "supports": [
+        "source CSP 62.9167% [52.5,71.6667]",
+        "support vector cosine 0.295325 [0.032041,0.573003]",
+        "240 completed pipelines and zero failures",
+        "19/2/9 sign counts"
+      ],
+      "statistical_recomputation": false,
+      "contains_EEG_or_fitted_weights_or_credentials_or_third_party_full_text": false
+    },
+    "csp_probe_source_metrics.json": {
+      "bytes": 1522240,
+      "sha256": "5f5b5724bcbe89d5f28c860fbf08afaeedc8291d18a1b4d892936dc6065079dc",
+      "source_paths": [
+        "results/kumar_csp_signed_score_20261015/run02/measurement_receipt.json",
+        "research_logs/kumar_csp_signed_score_execution_20261015/run02/original_output_manifest.json"
+      ],
+      "source_fields": [
+        "$.subjects.*.source_twofold_balanced_accuracy",
+        "$.subjects.*.source_phase_alignment_control.<allowlisted counts,fit_rows,observed,null>",
+        "$.subjects.*.source_phase_alignment_comparison"
+      ],
+      "supports": [
+        "240 pipeline-status rows",
+        "4,800 saved heldout trial predictions",
+        "2,400 phase-pair twofold means and 4,800 fold BA diagnostics",
+        "12 identity-fold pipelines already included"
+      ],
+      "statistical_recomputation": false,
+      "contains_EEG_or_fitted_weights_or_credentials_or_third_party_full_text": false
+    },
+    "csp_probe_support_metrics.json": {
+      "bytes": 2724166,
+      "sha256": "43c75aac88856d0eaf7d2463f285c630e8cecc5b4c8055a69cb3b4d1236caf5f",
+      "source_paths": [
+        "results/kumar_csp_signed_score_20261015/run02/measurement_receipt.json",
+        "research_logs/kumar_csp_signed_score_execution_20261015/run02/original_output_manifest.json"
+      ],
+      "source_fields": [
+        "$.subjects.*.support_rows.<allowlisted metadata,observed,null,comparisons>"
+      ],
+      "supports": [
+        "30 support sessions and 60 signed half-margins",
+        "five frozen-score collapsed support sessions",
+        "596 phases per half method, each of four metrics; no unavailable controls"
+      ],
+      "statistical_recomputation": false,
+      "contains_EEG_or_fitted_weights_or_credentials_or_third_party_full_text": false
+    },
+    "drift_session_and_performance.csv": {
+      "bytes": 8016,
+      "sha256": "7f4ea81673dda79a26afa25c8833cfedf7b1166217677cb8a9ed74b42548ada0",
+      "source_paths": [
+        "research_logs/kumar_cross_session_20261012/independent_review_run01_20261014/session_drift_and_performance.csv"
+      ],
+      "source_fields": [
+        "all original CSV columns and rows (byte-identical copy)"
+      ],
+      "supports": [
+        "90 original development/remaining session observations",
+        "remaining12 frozen BA change and both drift predictors (60 rows)"
+      ],
+      "statistical_recomputation": false,
+      "contains_EEG_or_fitted_weights_or_credentials_or_third_party_full_text": false
+    },
+    "drift_association_summary.json": {
+      "bytes": 1949,
+      "sha256": "513e7dc195eb0b833969eb07da079c5ca4055d138b011a2c6338c38b4968976f",
+      "source_paths": [
+        "research_logs/kumar_cross_session_20261012/independent_review_run01_20261014/task_information_associations.json"
+      ],
+      "source_fields": [
+        "all original JSON fields (byte-identical copy)"
+      ],
+      "supports": [
+        "remaining12 rho=-0.0071988441 / 0.1969259101",
+        "original 2,000 valid participant-block draws, seed 42 and original CIs"
+      ],
+      "statistical_recomputation": false,
+      "contains_EEG_or_fitted_weights_or_credentials_or_third_party_full_text": false
+    },
+    "saved_metadata_and_measurement_audit_summary.json": {
+      "bytes": 43855,
+      "sha256": "af2077de451db5e3eab0dd880a0f645d256b9dae4b65dc8eb77962662d4742ed",
+      "source_paths": [
+        "research_logs/kumar_submission_timing_audit_20261015/run01/saved_metadata_timing_audit.json",
+        "research_logs/kumar_submission_timing_audit_20261015/run01/partial_boundary_inventory.json",
+        "research_logs/kumar_csp_signed_score_execution_20261015/run02/independent_numerical_audit_run01.json",
+        "research_logs/kumar_cross_session_20261012/protocol/source_gate_receipt.json",
+        "research_logs/kumar_cross_session_20261012/baselines/cpu_run01_20261013T151445Z/execution_receipt.json",
+        "research_logs/kumar_first_gpu_fit_20261014/fit_text_evidence/fit_result.json",
+        "research_logs/kumar_frozen_query_execution_audit_20261015/run01/metadata_check_before_execute.json"
+      ],
+      "source_fields": [
+        "timing:$.<allowlisted counts and boundary assertions>",
+        "boundary:all 44 original metadata rows",
+        "arithmetic:$.<allowlisted validation counters>",
+        "source_gate:$.<allowlisted counts,strict_checks,runtime_versions>",
+        "CPU/GPU:$.provenance.<versions/thread_environment/python only>",
+        "inference:$.{status,runtime,thread_environment,problems,models_constructed}"
+      ],
+      "supports": [
+        "all 44 partial intervals are final class events and stop at audited recording boundaries",
+        "no stored interval overlaps next retained event",
+        "629,137 previously completed saved-feature arithmetic checks, maximum difference zero",
+        "2,705-file eligibility and raw/processed duplicate-zero saved audit assertions",
+        "CPU/GPU/CPU-query version and recorded thread-environment statements, with first-GPU-fit scope explicit"
+      ],
+      "statistical_recomputation": false,
+      "contains_EEG_or_fitted_weights_or_credentials_or_third_party_full_text": false
+    },
+    "supplement_method_configuration.json": {
+      "bytes": 3226,
+      "sha256": "86d4fbba53b24536ab1756d3c8efd65409e32527306689841f09eb0f4a3e40f6",
+      "source_paths": [
+        "research_logs/kumar_first_gpu_fit_20261014/fit_text_evidence/training_config.json",
+        "research_logs/kumar_cross_session_20261012/lowdim_reliability_dev_run01_20261014/executed_config.json",
+        "configs/kumar_csp_reliability_20261014.json"
+      ],
+      "source_fields": [
+        "EEGNet:$.{seeds,input,architecture,optimization,normalization,inference.<fixed inference settings>}",
+        "lowdim:all executed configuration fields",
+        "csp:all frozen measurement configuration fields"
+      ],
+      "supports": [
+        "S1 detailed EEGNet numeric architecture/optimizer/stopping/normalization settings",
+        "three fixed lowdim candidates and exact cyclic controls",
+        "CSP run02 20x20 source-phase measurement settings"
+      ],
+      "statistical_recomputation": false,
+      "contains_EEG_or_fitted_weights_or_credentials_or_third_party_full_text": false
+    }
+  },
+  "sources": {
+    "research_logs/kumar_cross_session_20261012/lowdim_reliability_dev_run01_20261014/measurement_receipt.json": {
+      "sha256": "823dacd72811eba0988fc7adc9decd6f0a7c79264ab21dc8c5f1bb3c29fefff3",
+      "bytes": 9489649,
+      "head_git_blob_sha1": "c4962a3e0a17b373e412b2c8e615c271b55658de",
+      "tracked_at_audit_head": true
+    },
+    "results/kumar_csp_signed_score_20261015/run02/measurement_receipt.json": {
+      "sha256": "1ab524806c865e04b9cef00117448ab0cb20182cb0c421521043f6cf67730aa8",
+      "bytes": 12857331,
+      "head_git_blob_sha1": null,
+      "tracked_at_audit_head": false
+    },
+    "research_logs/kumar_csp_signed_score_execution_20261015/run02/original_output_manifest.json": {
+      "sha256": "e1f515502ed305218df4a64921339d48c8d7ba9a8dffda5acaa21f13a37b5837",
+      "bytes": 58613,
+      "head_git_blob_sha1": "9270fd50022838027f4b0da6f81d7d9eac4c1e16",
+      "tracked_at_audit_head": true
+    },
+    "research_logs/kumar_csp_signed_score_execution_20261015/run02/scientific_summary_from_saved_results.json": {
+      "sha256": "14de09c5306169e1f08d84aa8bb822885ea2717ff9da353abc6770a56ae16656",
+      "bytes": 14473,
+      "head_git_blob_sha1": "8c9ce9ff7c5a0e434a9af77f0316f0cb28b7e111",
+      "tracked_at_audit_head": true
+    },
+    "research_logs/kumar_cross_session_20261012/independent_review_run01_20261014/session_drift_and_performance.csv": {
+      "sha256": "7f4ea81673dda79a26afa25c8833cfedf7b1166217677cb8a9ed74b42548ada0",
+      "bytes": 8016,
+      "head_git_blob_sha1": "21fdb8fd97b48603c8908e5e565eed14c6effe2d",
+      "tracked_at_audit_head": true
+    },
+    "research_logs/kumar_cross_session_20261012/independent_review_run01_20261014/task_information_associations.json": {
+      "sha256": "513e7dc195eb0b833969eb07da079c5ca4055d138b011a2c6338c38b4968976f",
+      "bytes": 1949,
+      "head_git_blob_sha1": "e6f5c122805019c8eaca257f9bffa2f3e8dd21c3",
+      "tracked_at_audit_head": true
+    },
+    "research_logs/kumar_cross_session_20261012/independent_review_run01_20261014/executed_script.py": {
+      "sha256": "e0fadf69016980ed0e7a28f5ba37b64fe0cdf33e53900cf01c956eb4dd621e2b",
+      "bytes": 15562,
+      "head_git_blob_sha1": "c57c9c1e86eec24fb3cc9935dc3e78be846b3397",
+      "tracked_at_audit_head": true
+    },
+    "scripts/verify_analyze_kumar_results.py": {
+      "sha256": "885ef0f386af7ae02e0119b894fd633306e80b8d7eea625ad6b9249973228a24",
+      "bytes": 15608,
+      "head_git_blob_sha1": "2e00f099a8f6be280b9f03c330c612e619531376",
+      "tracked_at_audit_head": true
+    },
+    "research_logs/kumar_submission_timing_audit_20261015/run01/saved_metadata_timing_audit.json": {
+      "sha256": "30cac68433f36f1e1f74cdd245a8dfba1dc6d0814d6be9648b387ed564540e37",
+      "bytes": 3402,
+      "head_git_blob_sha1": "9a6302188fcf92085afe2095c3af3004b673a8f7",
+      "tracked_at_audit_head": true
+    },
+    "research_logs/kumar_submission_timing_audit_20261015/run01/partial_boundary_inventory.json": {
+      "sha256": "a8b3a3bf32cca290f64d46fc9c2f0d92f90197c62cd139c91fd458a9fead370c",
+      "bytes": 42407,
+      "head_git_blob_sha1": "05f8a001321d90334679d1c0bf8cc0b69e5aa089",
+      "tracked_at_audit_head": true
+    },
+    "research_logs/kumar_csp_signed_score_execution_20261015/run02/independent_numerical_audit_run01.json": {
+      "sha256": "6f00b62a318ef584368bca831c5c12eb93591e4257c610e3c232228cfd12c250",
+      "bytes": 72379,
+      "head_git_blob_sha1": "a0bf88a6b0d0706e407337d26e2975a2a60d7353",
+      "tracked_at_audit_head": true
+    },
+    "research_logs/kumar_cross_session_20261012/protocol/source_gate_receipt.json": {
+      "sha256": "16187f8d5eb46eefb744396c0e14b2d9d1f6259c6d898f338777d193fa9e730f",
+      "bytes": 8835,
+      "head_git_blob_sha1": "711018e4c28948f10ce6b89bc07f6450977a7cef",
+      "tracked_at_audit_head": true
+    },
+    "research_logs/kumar_cross_session_20261012/baselines/cpu_run01_20261013T151445Z/execution_receipt.json": {
+      "sha256": "7f64629a10bcaacc237ff2ddb1670901afb94b31869f8d72468538fb99052cce",
+      "bytes": 75474,
+      "head_git_blob_sha1": "c228cccc2b0df252b0658f53c54ee2e5371710dd",
+      "tracked_at_audit_head": true
+    },
+    "research_logs/kumar_first_gpu_fit_20261014/fit_text_evidence/fit_result.json": {
+      "sha256": "5e3f6579f028193506dfd3d99c4df9d1c1e0ade781cdccf53d3443ee535158dd",
+      "bytes": 5768,
+      "head_git_blob_sha1": "9b9a8c29b0b81fb2de2f3daf13675b2e7c23351b",
+      "tracked_at_audit_head": true
+    },
+    "research_logs/kumar_frozen_query_execution_audit_20261015/run01/metadata_check_before_execute.json": {
+      "sha256": "6b8f631cbf3b1b29be7dd3ee887f33f0e46ed9042bad852043e76b5017c61a95",
+      "bytes": 682,
+      "head_git_blob_sha1": "7d109b731a215edd5f2765b62d856efca5f41da6",
+      "tracked_at_audit_head": true
+    },
+    "research_logs/kumar_first_gpu_fit_20261014/fit_text_evidence/training_config.json": {
+      "sha256": "14c291ca9762cb676a5f61608ab7b895435fdb957b7396056093c8310435856d",
+      "bytes": 5844,
+      "head_git_blob_sha1": "396eb7fff0ef4324f623df9516ea0325e8e28caf",
+      "tracked_at_audit_head": true
+    },
+    "research_logs/kumar_cross_session_20261012/lowdim_reliability_dev_run01_20261014/executed_config.json": {
+      "sha256": "2bbbece9835cfbdb33b803a2fce03800102f3c7f92719ab9baf30890ac10b34a",
+      "bytes": 983,
+      "head_git_blob_sha1": "3a360a490a8ccc4bb3f9fcf7433a0cb07ea1f7c1",
+      "tracked_at_audit_head": true
+    },
+    "configs/kumar_csp_reliability_20261014.json": {
+      "sha256": "4f71724c6be77696bbf8764e7de4795ceb1c9c4a315c1c2b266cc201a1c3da18",
+      "bytes": 1028,
+      "head_git_blob_sha1": "b77ac7303ac6832cb493b43561e56e04474d690a",
+      "tracked_at_audit_head": true
+    }
+  },
+  "extraction_script": {
+    "path": "/workspace/private_model_receipts/paper2-review-revision-20261016/data_coverage_review/extract_proposed_numeric_inputs.py",
+    "bytes": 20333,
+    "sha256": "be0f9a30174c5471a62824a5bd0fd8e30282dbbfbef0633b040cb1cbd3124d7f"
+  },
+  "extraction_manifest": {
+    "path": "/workspace/private_model_receipts/paper2-review-revision-20261016/data_coverage_review/extraction_manifest.json",
+    "bytes": 16439,
+    "sha256": "b41859d93225a555fd9a1a4cbd582b0131864bff5592dff29bfdfe581b2894b0"
+  },
+  "forbidden_payloads_excluded": [
+    "EEG samples",
+    "CSP/LDA/centroid/PCA fitted parameters and axes",
+    "checkpoint weights",
+    "raw feature matrices",
+    "credentials and authorization records",
+    "third-party full text"
+  ],
+  "no_statistical_recomputation": true,
+  "no_models_EEG_or_credentials_read": true,
+  "original_sources_unchanged_after_extraction": true,
+  "repository_manuscript_package_or_history_modified_by_this_auditor": false,
+  "not_covered_by_this_snapshot": [
+    "Any subsequently added post-review exact-statistics/p-values/new effect intervals need their own numeric tables and provenance.",
+    "Original raw/processed signal checks and full preprocessing/training/inference cannot be independently reproduced from a numeric-text-only bundle.",
+    "Third-party task phase durations and marker-code definitions remain literature/codebook evidence,not newly observed trial-level numeric data."
+  ],
+  "recommended_new_bundle_relative_locations": {
+    "power_probe_summary.json": "results/reliability/power_probe_summary.json",
+    "power_probe_source_metrics.json": "results/reliability/power_probe_source_metrics.json",
+    "power_probe_support_metrics.json": "results/reliability/power_probe_support_metrics.json",
+    "csp_probe_summary.json": "results/reliability/csp_probe_summary.json",
+    "csp_probe_source_metrics.json": "results/reliability/csp_probe_source_metrics.json",
+    "csp_probe_support_metrics.json": "results/reliability/csp_probe_support_metrics.json",
+    "drift_session_and_performance.csv": "results/drift/drift_session_and_performance.csv",
+    "drift_association_summary.json": "results/drift/drift_association_summary.json",
+    "saved_metadata_and_measurement_audit_summary.json": "results/audit/saved_metadata_and_measurement_audit_summary.json",
+    "supplement_method_configuration.json": "inputs/supplement_method_configuration.json"
+  },
+  "readiness": "Existing41-member bundle needs extension to claim numeric coverage of all current reliability/drift results.10extracted proposed files are ready for parent review/integration;they have not been added to the repository/package."
+}

@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "analysis_status": "review_triggered_exploratory",
+  "synthetic": false,
+  "independent_unit": "participant",
+  "participant_order": "lexicographic",
+  "endpoint": "Equally weighted mean of the five fixed target-session balanced accuracies; differences pair the same participant and subset.",
+  "signflip_atol_BA": 1e-12,
+  "signflip_rtol": 0,
+  "tail": "absolute_mean_inclusive",
+  "signflip_enumeration": "All2^n sign assignments, retaining exact-zero participant rows; observed assignment included; no MonteCarlo or plus-one adjustment.",
+  "holm_family_size": 4,
+  "holm_family": "Exactly the four fixed mean sign-flip comparisons in contrasts; no additional test families.",
+  "original_bootstrap_draws": 10000,
+  "original_bootstrap_seed": 42,
+  "original_intervals": "Saved percentile95 participant bootstrap limits copied as exact decimal strings; no interval recomputation in the producer.",
+  "cohen_dz": "Arithmetic mean paired difference divided by sample SD of paired differences (ddof=1).",
+  "null_assumption": "The joint null distribution is invariant under independent participant sign flips; independent participant differences symmetric about zero are sufficient. Mean zero alone does not suffice.",
+  "interpretation": "These p-values were added after exposure to results and review; they were not in the original frozen protocol. This is not a randomized allocation study and no confirmatory validation or causal claim follows.",
+  "qc_caveat": "Unflagged means not marked by the existing250uV flag; it does not certify artifact freedom. Exactly10 previously defined complete-case endpoints are retained.",
+  "strict_boundary_diagnostic": "Exact Fraction arithmetic uses saved decimal difference strings and includes strict ties without tolerance. This diagnostic is reported alongside, never substituted for, the predeclared tolerance-based tail.",
+  "participant_csv_sha256": "c731143104852d01520a2a83912ea696b43fa165efa0a3b873ce0a3feba08096",
+  "original_precomputation_record": {
+    "recorded_utc": "2026-10-16T01:22:50.230538+00:00",
+    "sha256": "5ae59a4347eb85cfcb72da4b42f58fa9f807180957a821842da09380a2220e99",
+    "note": "Recorded after original results/review exposure and before new calculations; not preregistration."
+  },
+  "holm_addendum_record": {
+    "recorded_utc": "2026-10-16T01:25:13.547349+00:00",
+    "sha256": "44e9d7eee7dc8b99d8a32360092727c02b166b29292c56fb70852e9a460e2a60",
+    "note": "Holm family4 decided before actual computed p-values were observed."
+  },
+  "data_license": "CC-BY-4.0; derived numerical material; original dataset rights remain distinct.",
+  "source_sha256": {
+    "research_logs/kumar_submission_qc_20261015/run01/participant_endpoints.csv": "2606b72d6b77b8de0ac388a5b193946ddd6c80c4806d6fe73111b5bd63c28f29",
+    "research_logs/kumar_submission_qc_20261015/run01/paired_participant_contrasts.csv": "584168926fc755f8c195634ac5ae2c3cb934b577f83ac9e6b4e526c6392c0bfb",
+    "research_logs/kumar_submission_qc_20261015/run01/cohort_paired_contrasts.csv": "669adfc22640716a6782bd955f38b99070514ea6f4245b494498b20beac73096",
+    "research_logs/kumar_cross_session_20261012/baselines/cpu_run01_20261013T151445Z/participant_endpoints.csv": "550013342b4111df8d825406fcc8406746ff736cf8efd3b1c8e2da87d7bc4a12",
+    "research_logs/kumar_cross_session_20261012/baselines/cpu_run01_20261013T151445Z/participant_bootstrap_summary.json": "98ac97a64ddc70a10b08a2db020a530ec9023f2513aae651aea71364f70f97dc"
+  },
+  "contrasts": [
+    {
+      "contrast_id": "remaining12_full_minus_frozen",
+      "cohort": "remaining12",
+      "subset": "all_included",
+      "left_method": "refit_csp_lda",
+      "right_method": "source_only",
+      "n": 12,
+      "participants": [
+        "sub-11",
+        "sub-12",
+        "sub-14",
+        "sub-15",
+        "sub-17",
+        "sub-18",
+        "sub-2",
+        "sub-3",
+        "sub-5",
+        "sub-6",
+        "sub-8",
+        "sub-9"
+      ],
+      "saved_ci95_low_BA_unchanged": "0.02487554824561406",
+      "saved_ci95_high_BA_unchanged": "0.12476615749142977",
+      "saved_ci_source": "research_logs/kumar_cross_session_20261012/baselines/cpu_run01_20261013T151445Z/participant_bootstrap_summary.json"
+    },
+    {
+      "contrast_id": "remaining12_full_minus_lda_only",
+      "cohort": "remaining12",
+      "subset": "all_included",
+      "left_method": "refit_csp_lda",
+      "right_method": "frozen_csp_lda_recalibration",
+      "n": 12,
+      "participants": [
+        "sub-11",
+        "sub-12",
+        "sub-14",
+        "sub-15",
+        "sub-17",
+        "sub-18",
+        "sub-2",
+        "sub-3",
+        "sub-5",
+        "sub-6",
+        "sub-8",
+        "sub-9"
+      ],
+      "saved_ci95_low_BA_unchanged": "0.021680574460576595",
+      "saved_ci95_high_BA_unchanged": "0.08913797514619894",
+      "saved_ci_source": "research_logs/kumar_cross_session_20261012/baselines/cpu_run01_20261013T151445Z/participant_bootstrap_summary.json"
+    },
+    {
+      "contrast_id": "remaining12_lda_only_minus_frozen",
+      "cohort": "remaining12",
+      "subset": "all_included",
+      "left_method": "frozen_csp_lda_recalibration",
+      "right_method": "source_only",
+      "n": 12,
+      "participants": [
+        "sub-11",
+        "sub-12",
+        "sub-14",
+        "sub-15",
+        "sub-17",
+        "sub-18",
+        "sub-2",
+        "sub-3",
+        "sub-5",
+        "sub-6",
+        "sub-8",
+        "sub-9"
+      ],
+      "saved_ci95_low_BA_unchanged": "-0.00983972953216363",
+      "saved_ci95_high_BA_unchanged": "0.05085579880016137",
+      "saved_ci_source": "research_logs/kumar_cross_session_20261012/baselines/cpu_run01_20261013T151445Z/participant_bootstrap_summary.json"
+    },
+    {
+      "contrast_id": "eligible10_unflagged_full_minus_frozen",
+      "cohort": "remaining12",
+      "subset": "unflagged",
+      "left_method": "refit_csp_lda",
+      "right_method": "source_only",
+      "n": 10,
+      "participants": [
+        "sub-11",
+        "sub-14",
+        "sub-15",
+        "sub-17",
+        "sub-18",
+        "sub-2",
+        "sub-3",
+        "sub-5",
+        "sub-6",
+        "sub-9"
+      ],
+      "saved_ci95_low_BA_unchanged": "0.009895925827836532",
+      "saved_ci95_high_BA_unchanged": "0.11238331639721523",
+      "saved_ci_source": "research_logs/kumar_submission_qc_20261015/run01/cohort_paired_contrasts.csv"
+    }
+  ]
+}
