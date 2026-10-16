@@ -1,6 +1,17 @@
 # Manuscript working materials
 
-## Latest PLOS ONE author-review revision
+## Current synchronization and author review
+
+The complete author-review artifact commit
+[`f735ffd1e49915e41f28b727f5d3279ad337c692`](https://github.com/jackzhu119/few-shot-mi-eeg/commit/f735ffd1e49915e41f28b727f5d3279ad337c692)
+is now pushed and read back. The private main backup fully GET/SHA256 verified
+all 434 objects, 82,392,690 bytes, with zero failures. See the
+[current closeout](../docs/kumar_submission_sync_closeout_20261016.md).
+The blocked-sync wording inside the sealed package and below is historical;
+artifact bytes and manifests were preserved. Author/institution decisions and
+the unsent submission status remain unchanged.
+
+## Sealed PLOS ONE author-review revision
 
 The [new complete package](plos_one_submission_20261015/README.md) includes the
 image-free submission manuscript, illustrated review PDF/Word, scientific methods,

@@ -1,6 +1,18 @@
 # Current scientific handoff
 
-## 本轮最新：投稿前优化与完整作者审阅包
+## 当前有效：审阅稿已推送，R2主备份已完成
+
+先读[同步收尾](docs/kumar_submission_sync_closeout_20261016.md)和
+[当前状态](CURRENT_PROJECT_STATUS.md)。完整稿件的实际远端固定提交为
+`f735ffd1e49915e41f28b727f5d3279ad337c692`；本次导航／回执追加另行提交。
+434对象／82,392,690 bytes私有R2完整GET／SHA256已通过，失败0，主回执SHA256
+`7968542cb16687bdeb5670a8372e2054e865ce90278dec8401ec7da4e3171874`。
+保留全部旧失败、seal成员、accepted54及一次query记录；不重复实验补同步，不操作Pod。
+下一步为作者审阅及真实机构／许可／本人核验决定，不是训练、query或代投稿授权。
+
+**以下封存快照中的“最新／当前”均按其原日期理解，不覆盖上述实际同步结果。**
+
+## 历史封存快照：投稿前优化与完整作者审阅包
 
 以CURRENT_PROJECT_STATUS.md和manuscript/plos_one_submission_20261015/README.md
 为当前入口，docs/kumar_submission_revision_report_20261015.md给出整改、核验及限制。
@@ -13,7 +25,7 @@ GitHub读取核实370bc94；写入工具要求approval而当前policynever，Git
 新成果以真实本地提交及离线bundle交付，不声称已推送/新R2GET通过，不重复实验补同步。
 下列旧状态按原日期保留，不执行其中过期命令。
 
-## 最新有效状态：2026-10-15，论文作者确认版已完成
+## 历史状态：2026-10-15，论文作者确认版已完成
 
 先读[当前进度及论文状态](CURRENT_PROJECT_STATUS.md)与
 [本次 Git/R2 同步记录](research_logs/kumar_project_status_sync_20261015/run01/README.md)。

@@ -1,0 +1,40 @@
+{
+  "observations_current": true,
+  "observed_phase": "running",
+  "connectivity": "connected",
+  "spec_revision": "317",
+  "observed_spec_revision": "317",
+  "network_policy": {
+    "mode": "unrestricted",
+    "state": "enforced"
+  },
+  "runtime_variables": [
+    {
+      "environment_variable": "R2_ENDPOINT",
+      "optional": false,
+      "state": "ready"
+    },
+    {
+      "environment_variable": "AWS_ACCESS_KEY_ID",
+      "optional": false,
+      "state": "ready"
+    },
+    {
+      "environment_variable": "AWS_SECRET_ACCESS_KEY",
+      "optional": false,
+      "state": "ready"
+    },
+    {
+      "environment_variable": "AWS_DEFAULT_REGION",
+      "optional": false,
+      "state": "ready"
+    },
+    {
+      "environment_variable": "R2_BUCKET",
+      "optional": false,
+      "state": "ready"
+    }
+  ],
+  "credential_values_included": false,
+  "ready_observations_do_not_replace_actual_transfer_results": true
+}

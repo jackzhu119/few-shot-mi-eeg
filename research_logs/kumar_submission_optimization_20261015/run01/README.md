@@ -1,7 +1,7 @@
 # Paper 2 final author-review sealing record
 
-Start with the [actual package](../../../../manuscript/plos_one_submission_20261015/README.md)
-and [revision report](../../../../docs/kumar_submission_revision_report_20261015.md).
+Start with the [actual package](../../../manuscript/plos_one_submission_20261015/README.md)
+and [revision report](../../../docs/kumar_submission_revision_report_20261015.md).
 No training, EEG loading, second query forward, Pod change or paper 1 work was
 performed in this revision. This is an author-review version, not a submission.
 

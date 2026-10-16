@@ -5,7 +5,15 @@
 核心问题：**When should a decoder adapt to cross-session EEG changes, and does
 task-relevant information explain performance changes better than total signal drift?**
 
-## 当前进度与论文入口（2026-10-15）
+## 当前进度：完整稿件与R2已同步
+
+[最新同步收尾及审阅入口](docs/kumar_submission_sync_closeout_20261016.md)：
+稿件固定提交`f735ffd1e49915e41f28b727f5d3279ad337c692`已实际推送并读回；
+434个私有R2对象共82,392,690 bytes已完整GET／SHA256通过，失败0。
+下列封存时的网络／审批阻塞保留为历史，当前状态以顶部入口及
+[CURRENT_PROJECT_STATUS.md](CURRENT_PROJECT_STATUS.md)为准。未新训、未再次query、未投稿。
+
+## 历史封存快照：论文入口（2026-10-15）
 
 **[当前进度、论文状态及剩余事项](CURRENT_PROJECT_STATUS.md)**。
 **[新PLOS ONE最终作者审阅包](manuscript/plos_one_submission_20261015/README.md)**

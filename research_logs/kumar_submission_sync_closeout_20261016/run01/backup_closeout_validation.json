@@ -1,0 +1,29 @@
+{
+  "recorded_at_utc": "2026-10-16T00:43:37.785675+00:00",
+  "status": "all_main_and_closing_text_transfers_completed_and_locally_reconciled",
+  "main_objects": 434,
+  "main_full_GET_bytes": 82392690,
+  "closing_text_objects": 21,
+  "closing_text_full_GET_bytes": 1344461,
+  "combined_unique_objects": 455,
+  "combined_full_GET_bytes": 83737151,
+  "failures": [],
+  "receipts": [
+    {
+      "path": "research_logs/kumar_submission_sync_closeout_20261016/run01/r2_full_get_receipt.json",
+      "bytes": 382673,
+      "full_UTF8_SHA256": "7968542cb16687bdeb5670a8372e2054e865ce90278dec8401ec7da4e3171874"
+    },
+    {
+      "path": "research_logs/kumar_submission_sync_closeout_20261016/run01/r2_closing_text_full_get_receipt.json",
+      "bytes": 19059,
+      "full_UTF8_SHA256": "0bdce1a03964b2712ff64d13c0d762c1680e43c692faf4cc0a455d073e56a459"
+    }
+  ],
+  "all_row_identity_length_SHA256_status_HTTP_and_actual_staging_bytes_match": true,
+  "closing_source_files_still_match_frozen_copy": true,
+  "closing_receipt_self_not_in_its_own_transfer": true,
+  "closing_receipt_and_this_summary_are_published_in_subsequent_Git_closeout_commit": true,
+  "no_new_scientific_or_parent_acceptance": true,
+  "no_second_remote_GET_by_this_summary_checker": true
+}
