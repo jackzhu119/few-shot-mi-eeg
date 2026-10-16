@@ -11,7 +11,8 @@
 已核验并逐条回应审稿意见，保留原科学结果，补充探索性配对检验、事件查找依据及支持数据。
 [修订报告](docs/kumar_submission_revision_report_20261016.md)与
 [当前状态](CURRENT_PROJECT_STATUS.md)说明真实完成和剩余事项。
-限定 MIT/CC BY 4.0 已按作者确认激活；伦理适用依据与作者最终审阅仍待。
+限定 MIT/CC BY 4.0 已激活；作者已报告2026-10-16亲自核对并批准当前稿。
+伦理批准已由作者报告，委员会/日期/编号与范围待补；见[状态补充](manuscript/kumar_author_review_addendum_20261016.md)。
 冻结内容版本为 `paper2-plos-source-20261016`；旧稿及失败记录保留，未新训练或再次 query，未投稿。
 下列早期进度按日期保留，不是新的执行授权。
 

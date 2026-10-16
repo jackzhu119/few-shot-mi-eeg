@@ -8,9 +8,13 @@ Start with [the revised package](plos_one_submission_20261016/README.md),
 The [review response](../docs/kumar_review_response_20261016.md) distinguishes
 verified corrections from overstated suggestions. Original Tables 1–4 and
 scientific results remain unchanged; Table 5 adds explicitly exploratory checks.
-The scoped MIT/CC BY 4.0 choice is active. The actual secondary-analysis ethics
-basis and the author's final personal review remain outstanding. This revision
-has not been submitted. Older entries below are dated history.
+The scoped MIT/CC BY 4.0 choice is active. The author reports personal review
+and approval dated 16 October 2026, and reports obtaining ethics approval;
+committee, actual ethics date, identifier and coverage remain to be supplied.
+The [dated addendum](kumar_author_review_addendum_20261016.md) updates the
+pre-reply pending statements without changing sealed file bytes. The full AI
+disclosure remains. This revision has not been submitted. Older entries below
+are dated history.
 
 ## Current synchronization and author review
 

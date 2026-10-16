@@ -7,8 +7,9 @@
 [当前状态](CURRENT_PROJECT_STATUS.md)、[逐条回应](docs/kumar_review_response_20261016.md)和
 [本轮核验](research_logs/kumar_review_revision_20261016/run01/README.md)。
 不执行下方过期下载/训练命令，不重训54、不再次 query，不操作 Pod 或论文1。
-许可已真实激活；伦理适用依据和作者对精确最终稿的亲自核验/批准仍须据实完成。
-无新模型、gate、调参或科学方案释放；后续仅在真实依据到达后补声明及作者审阅。
+许可已激活；作者报告2026-10-16已阅读、亲自核对并批准固定稿f2901de。
+伦理批准已由作者报告，机构/决定日期/编号与范围仍待补；[新确认记录](research_logs/kumar_author_final_confirmation_20261016/run01/README.md)
+更新封存文件中的旧pending状态，现有完整AI披露不缩减。无新模型、gate、调参或科学方案释放。
 以下历史故障、claim、授权和回执保留，不清理、不重新使用。
 
 ## 当前有效：审阅稿已推送，R2主备份已完成
