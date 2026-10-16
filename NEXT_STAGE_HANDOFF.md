@@ -1,5 +1,7 @@
 # Current scientific handoff
 
+伦理版已实际推送固定`d03b5a3`，私有R2324对象完整GET已核；[回执及当前入口](docs/kumar_ethics_sync_closeout_20261016.md)。
+
 ## 2026-10-16 伦理状态最新补充
 
 已按作者真实回复更新：重庆医科大学科研处2026-10-16确认适用免予额外伦理审查，无编号；作者报告范围及未收到机构原件的限制完整保留。[伦理版完整包](manuscript/plos_one_submission_ethics_20261016/README.md)与[说明](docs/kumar_ethics_statement_revision_20261016.md)取代本文件旧pending。不得改写旧封存稿或推断事前IRB批准。后续用户已新授权有界CPU探索性研究补强，须先另存时间戳方案，不重训54项、不操作Pod。
