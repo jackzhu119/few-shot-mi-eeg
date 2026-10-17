@@ -1,0 +1,125 @@
+{
+  "document": "PLOS_ONE_Manuscript_Reading.pdf",
+  "reviewer": "/root/innovation_context (AI-assisted visual reviewer)",
+  "completed_at_utc": "2026-10-17T04:17:22.716906+00:00",
+  "pdf_path": "manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Reading.pdf",
+  "pdf_sha256": "771b870de3f0e753b6f5860f9923ff8852471314269d596429dcbf55cc62dff6",
+  "final_page_count": 23,
+  "review_method": "Actual visual inspection of full rendered page PNGs with view_image; image rendering, not text extraction or automatic bounds checks, was used to assess layout.",
+  "initial_round": {
+    "page_count": 22,
+    "pages_visually_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ]
+  },
+  "final_round": {
+    "pages_visually_reinspected": [
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "previously_inspected_unchanged_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "unchanged_pages_independently_checked_against_before_png_sha256": true
+  },
+  "total_page_images_actually_viewed_across_rounds": 31,
+  "all_final_pages_have_visual_review_coverage": true,
+  "resolved_findings": [
+    {
+      "finding": "Table 6 left recall column was narrower than the right recall column and caused asymmetric interval wrapping.",
+      "original_page": 16,
+      "final_page": 17,
+      "result": "Resolved. Three numeric columns now have equal width; all point estimates and intervals fit on one line."
+    },
+    {
+      "finding": "Fig 5 caption was split across pages 15 and 16.",
+      "original_pages": [
+        15,
+        16
+      ],
+      "final_page": 16,
+      "result": "Resolved. The complete six-panel figure, title and full caption are on one page; axes, legends and confidence intervals remain legible."
+    },
+    {
+      "finding": "Fig 6 caption opening (A) was interpreted as an ordered-list marker and caused a hanging indent.",
+      "original_page": 17,
+      "final_page": 18,
+      "result": "Resolved. Caption is a regular aligned paragraph with all panel descriptions intact."
+    }
+  ],
+  "final_visual_observations": [
+    "Six figures and six tables were visually checked; no cropped axes, overlapping legends, missing table rows, clipped values or absent symbols were observed.",
+    "Inline exponents, minus signs, microvolt units and formula-related text render correctly in the main manuscript.",
+    "All 19 numbered references remain readable; journal abbreviations and the explicit arXiv preprint designation are present in the final reference section.",
+    "Long repository URLs and file paths wrap within the text area; supporting-information captions remain complete.",
+    "Pages 15 and 17 retain white space because the following figure and its complete caption are kept together. This is an accepted layout tradeoff preserving figure size and caption continuity."
+  ],
+  "outstanding_visual_issues": [],
+  "status": "PASS",
+  "final_png_sha256": {
+    "page-1.png": "ed0f21f9be7b6cda87430ff5ec48a3d312d2d69054831b9e58c286e228ded0f2",
+    "page-2.png": "aaaa189b51d20a01e3fd28e28c213fce7c7f1dbfa2029a4e89bec6a7f30fb22f",
+    "page-3.png": "8b90273b1a8c010add5d60598684ba75e65f96b20f60ba90a3f3edd8a42906c8",
+    "page-4.png": "2d7d1befdb1e9f50d7565e22b4f5c3f326260c814944219c6e681d4e6d47fd0d",
+    "page-5.png": "a8475d8b52fbc644bf1838212e266e463fd7c1a085e256eca689b64923b606c3",
+    "page-6.png": "25669121797afa2a535750d8d6a97567ab7d9db49055dd8a443bbee36db1f84a",
+    "page-7.png": "1fdc564e6f5c9a64fe2047caacd24942e142e51191ff762c50cac7c3bdc00829",
+    "page-8.png": "45e6fd5c710a4e2c80a4f712c1c466ac8bc3f0166737be99a4238e1aac32d24c",
+    "page-9.png": "a216c3082df8145fd6d854fae7cb8a2ca2247cdc5315e55b1e7f8d17e02d0158",
+    "page-10.png": "e87c32e39f7a997366e3776f6ff45046512a837d1fe635585dc11adffadca27f",
+    "page-11.png": "16204746bc73d9094ca649d653d64fc08793cff7ffd24435e36b2bb54eb865dd",
+    "page-12.png": "a19508396ee36ba7467994fdbcb491a83935e8d9ceea58d7a7de72f469f8e9e9",
+    "page-13.png": "e1293251d0ea68659968b4a6c691023476224c842dd088f0f6acfe7067aa8ccf",
+    "page-14.png": "52e0cc2832c7615e41061668692d208195fa2474a3a07a804a055ef5dbe65733",
+    "page-15.png": "0a3882ddb37c6f7c50b2fa5ffde0368609c39bc475fd8c584034395f08dc6cfb",
+    "page-16.png": "133c5e37f71d5afed5d8ff0d2a8454ea945f030ed07e8b89c30413c168abd40e",
+    "page-17.png": "c00637b21c6584e74b6dbeb870f5a51a8942ca55711f4514083379c9e4947b83",
+    "page-18.png": "bd3f744f870d8bd2eacd2b0bb0653df819efdaa3b234f32e90e2b12b575fc3ac",
+    "page-19.png": "605fedf4044cd3ad310b06660717abd035f1234eecc02b6bf5d0777596d1aee4",
+    "page-20.png": "37d0b1d14d7bb5206b272d5536fac12f9a1f37434e3bd6602f0f02a4460e820b",
+    "page-21.png": "7a64691ec394c8fe0ba27dbfb75b63e7febca3c4336631425a392cc62ec5bbfc",
+    "page-22.png": "8f7a2e2f6a3dc632717c85050c732f210f0f6cdae1ad062d2816bb22c736a0f0",
+    "page-23.png": "6c17925c63ee74a1a6f0cfd2d2db73516f85fa9351777f0e3b835c59e861817c"
+  }
+}

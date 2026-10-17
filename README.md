@@ -1,5 +1,11 @@
 # Task-Aware Adaptive Decoding for Longitudinal Motor-Imagery EEG
 
+## 论文2：新增创新分析与完整投稿文件（2026-10-17）
+
+[当前完整文件索引](manuscript/plos_one_innovation_20261017/README.md) · [带图阅读 PDF](manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Reading.pdf) · [投稿 Word](manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Submission.docx) · [中文修订与实验核验说明](docs/kumar_innovation_revision_20261017.md)。
+
+当前题目为 **Spatial-filter refitting improves limited-label recalibration in longitudinal motor-imagery EEG**。引言明确列出四项贡献；新增逐试次错误转移、两类 recall、五会话均值及删除单个参与者的影响分析，形成6图6表。主队列额外空间增益为5.47个百分点，占总均值增益73.7%；所有新增数值均由保存预测复算。扩展S1 Data保留原69成员，并从实际新ZIP完成独立重放。下方日期版本作为历史材料保留，最新阅读与投稿文件以本入口为准。
+
 ## 论文2最新写作修订（2026-10-17）
 
 [完整修订包与文件索引](manuscript/plos_one_revision_20261017/README.md) · [主稿 PDF](manuscript/plos_one_revision_20261017/PLOS_ONE_Manuscript_Revised.pdf) · [主稿 Word](manuscript/plos_one_revision_20261017/PLOS_ONE_Manuscript_Revised.docx) · [中文修改说明](docs/kumar_editorial_revision_20261017.md)。

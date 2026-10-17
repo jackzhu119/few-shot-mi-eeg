@@ -1,0 +1,1719 @@
+{
+  "schema_version": 1,
+  "status": "completed_four_existing_figures_with_exact_Arial",
+  "started_at_utc": "2026-10-17T03:53:50.374197+00:00",
+  "finished_at_utc": "2026-10-17T03:54:00.792136+00:00",
+  "elapsed_seconds": 10.41795004100004,
+  "script": {
+    "path": "scripts/render_kumar_innovation_legacy_figures_20261017.py",
+    "bytes": 7330,
+    "sha256": "333209eee59368c0243ea5dffecd8353a30b352c11945e6b95bb545e4e4ad269"
+  },
+  "original_renderer": {
+    "path": "scripts/render_kumar_submission_figures_20261016.py",
+    "bytes": 31316,
+    "sha256": "4d84091234eff5d887fab0d0ec702144fd079fe136a18aa694706d24f29ae2e9"
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.8",
+    "pillow": "12.3.0"
+  },
+  "sources": [
+    {
+      "path": "research_logs/kumar_frozen_query_comparison_20261015/run01/per_participant_endpoints.csv",
+      "bytes": 5788,
+      "sha256": "115e67c38f89e84f799f9a89008556adf30e7bf9ef0bb5a9c2b9f26fe7c2436b"
+    },
+    {
+      "path": "research_logs/kumar_frozen_query_comparison_20261015/run01/cohort_method_endpoint_summary.csv",
+      "bytes": 4999,
+      "sha256": "e141705b6b53a9b941be7e94d6bcf5ec017a3464f63195b8ddf1dfab199ba76a"
+    },
+    {
+      "path": "research_logs/kumar_frozen_query_comparison_20261015/run01/comparison_receipt.json",
+      "bytes": 97802,
+      "sha256": "a45664d75a3b1e84373f4af809715a8adb356a7710ba14d0843894e968cd80ae"
+    },
+    {
+      "path": "research_logs/kumar_frozen_query_comparison_20261015/run01/per_subject_session.csv",
+      "bytes": 30404,
+      "sha256": "496fb3e0f296ab57e320c3e43f6196aa05e8eb36e9d5a61fdffa34761da87a47"
+    },
+    {
+      "path": "research_logs/kumar_csp_signed_score_execution_20261015/run02/independent_numerical_audit_run01.json",
+      "bytes": 72379,
+      "sha256": "6f00b62a318ef584368bca831c5c12eb93591e4257c610e3c232228cfd12c250"
+    }
+  ],
+  "scientific_sources_unchanged": true,
+  "scientific_export_comparisons": [
+    {
+      "figure": "Fig1_target_query_participants",
+      "byte_identical_to_original": true,
+      "sha256": "0ceba11df4ba651d7d79c84c69c2822e30eb8b1672ab4c2465bad12394edcd90"
+    },
+    {
+      "figure": "Fig2_cpu_primary_paired_changes",
+      "byte_identical_to_original": true,
+      "sha256": "81ae2b1c25822ab458eedba54a7cdc80c39a0890d2793d1b197795bed732acc7"
+    },
+    {
+      "figure": "Fig3_csp_signed_support_halves",
+      "byte_identical_to_original": true,
+      "sha256": "e768941365477a9ba605c109dbf025ab2fbbca9012d06b3fce981e2261d9dcc6"
+    },
+    {
+      "figure": "Fig4_longitudinal_paired_changes",
+      "byte_identical_to_original": true,
+      "sha256": "f4981c04e81a92cbe62ff8f40af4a884c8ec52dbf86b6174e912fc2cf8e1539c"
+    }
+  ],
+  "actual_fonts": [
+    {
+      "figure": "Fig1_target_query_participants",
+      "fonts": [
+        {
+          "path": "/tmp/paper2_fonts_20261017/fonts/Arialbd.TTF",
+          "bytes": 286620,
+          "sha256": "4044aa6b5bebbc36980206b45b0aaaaa5681552a48bcadb41746d5d1d71fd7b4",
+          "family": "Arial"
+        },
+        {
+          "path": "/tmp/paper2_fonts_20261017/fonts/Arial.TTF",
+          "bytes": 275572,
+          "sha256": "35c0f3559d8db569e36c31095b8a60d441643d95f59139de40e23fada819b833",
+          "family": "Arial"
+        }
+      ]
+    },
+    {
+      "figure": "Fig2_cpu_primary_paired_changes",
+      "fonts": [
+        {
+          "path": "/tmp/paper2_fonts_20261017/fonts/Arial.TTF",
+          "bytes": 275572,
+          "sha256": "35c0f3559d8db569e36c31095b8a60d441643d95f59139de40e23fada819b833",
+          "family": "Arial"
+        }
+      ]
+    },
+    {
+      "figure": "Fig3_csp_signed_support_halves",
+      "fonts": [
+        {
+          "path": "/tmp/paper2_fonts_20261017/fonts/Arial.TTF",
+          "bytes": 275572,
+          "sha256": "35c0f3559d8db569e36c31095b8a60d441643d95f59139de40e23fada819b833",
+          "family": "Arial"
+        }
+      ]
+    },
+    {
+      "figure": "Fig4_longitudinal_paired_changes",
+      "fonts": [
+        {
+          "path": "/tmp/paper2_fonts_20261017/fonts/Arialbd.TTF",
+          "bytes": 286620,
+          "sha256": "4044aa6b5bebbc36980206b45b0aaaaa5681552a48bcadb41746d5d1d71fd7b4",
+          "family": "Arial"
+        },
+        {
+          "path": "/tmp/paper2_fonts_20261017/fonts/Arial.TTF",
+          "bytes": 275572,
+          "sha256": "35c0f3559d8db569e36c31095b8a60d441643d95f59139de40e23fada819b833",
+          "family": "Arial"
+        }
+      ]
+    }
+  ],
+  "font_size_range_pt": [
+    8,
+    12
+  ],
+  "strict_Arial_font_family_verified": true,
+  "font_source": "https://sourceforge.net/projects/corefonts/files/the%20fonts/final/arial32.exe/download",
+  "font_package_sha256": "85297a4d146e9c87ac6f74822734bdee5f4b2a722d7eaa584b7f2cbf76f478f6",
+  "font_license": "Core Fonts for the Web EULA; local use; no font binaries redistributed",
+  "font_license_url": "https://corefonts.sourceforge.net/eula.htm",
+  "font_binaries_in_release": false,
+  "outputs": [
+    {
+      "path": "manuscript/figures/plos_innovation_20261017/Fig1_target_query_participants_source_data.csv",
+      "bytes": 5932,
+      "sha256": "0ceba11df4ba651d7d79c84c69c2822e30eb8b1672ab4c2465bad12394edcd90"
+    },
+    {
+      "path": "manuscript/figures/plos_innovation_20261017/Fig1_target_query_participants.png",
+      "bytes": 399159,
+      "sha256": "cb908c37542aa56cbcbe477d3b3971164eae8d625309dfaf96289b5be09f679c"
+    },
+    {
+      "path": "manuscript/figures/plos_innovation_20261017/Fig1_target_query_participants.svg",
+      "bytes": 83854,
+      "sha256": "ffbc8fa2ca1255a286f229ab56158e101236622e3b35349074689bb73515bf07"
+    },
+    {
+      "path": "manuscript/figures/plos_innovation_20261017/Fig1_target_query_participants.pdf",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/figures/plos_innovation_20261017/Fig1_target_query_participants.tif",
+      "bytes": 616596,
+      "sha256": "8592514d003e8cc276048e95f75d9a7cb017b7ab369783e26d12b32651041301"
+    },
+    {
+      "path": "manuscript/figures/plos_innovation_20261017/Fig2_cpu_primary_paired_changes_source_data.csv",
+      "bytes": 634,
+      "sha256": "81ae2b1c25822ab458eedba54a7cdc80c39a0890d2793d1b197795bed732acc7"
+    },
+    {
+      "path": "manuscript/figures/plos_innovation_20261017/Fig2_cpu_primary_paired_changes.png",
+      "bytes": 253291,
+      "sha256": "206748011f29c097ed7c228cefbf1452976ea3e6b3cb2468e7dfdb810e65af80"
+    },
+    {
+      "path": "manuscript/figures/plos_innovation_20261017/Fig2_cpu_primary_paired_changes.svg",
+      "bytes": 53369,
+      "sha256": "4ec33d8cb445960ce94b3372bd57821a9d72405cb4b17e063be67953c1037310"
+    },
+    {
+      "path": "manuscript/figures/plos_innovation_20261017/Fig2_cpu_primary_paired_changes.pdf",
+      "bytes": 21990,
+      "sha256": "2fdd4e71e5c5495efaa84f3e65dd21a596cd5ce9e56c537034f2fc50a1783cf6"
+    },
+    {
+      "path": "manuscript/figures/plos_innovation_20261017/Fig2_cpu_primary_paired_changes.tif",
+      "bytes": 579078,
+      "sha256": "9bab84d8e9a4ca92b63f1bb12c8d0ff59ed9d622a29471a08fe69d70173786ed"
+    },
+    {
+      "path": "manuscript/figures/plos_innovation_20261017/Fig3_csp_signed_support_halves_source_data.csv",
+      "bytes": 2103,
+      "sha256": "e768941365477a9ba605c109dbf025ab2fbbca9012d06b3fce981e2261d9dcc6"
+    },
+    {
+      "path": "manuscript/figures/plos_innovation_20261017/Fig3_csp_signed_support_halves.png",
+      "bytes": 246519,
+      "sha256": "de2d19ab2771bad99674e58303636257765079f37fdd04973d2e960ad645552e"
+    },
+    {
+      "path": "manuscript/figures/plos_innovation_20261017/Fig3_csp_signed_support_halves.svg",
+      "bytes": 86420,
+      "sha256": "814a22d1d44f119f48d77ff4509c4968a81609b81488f3fede7bb434877dd193"
+    },
+    {
+      "path": "manuscript/figures/plos_innovation_20261017/Fig3_csp_signed_support_halves.pdf",
+      "bytes": 25752,
+      "sha256": "844e31b866dab865d0310a973c64fe486c68eb4a9b25d9d172b68773414a533c"
+    },
+    {
+      "path": "manuscript/figures/plos_innovation_20261017/Fig3_csp_signed_support_halves.tif",
+      "bytes": 549802,
+      "sha256": "49e2c1818f313fb48155035d9a077c2e345a4e4649358c30717e591029f5fb27"
+    },
+    {
+      "path": "manuscript/figures/plos_innovation_20261017/Fig4_longitudinal_paired_changes_source_data.csv",
+      "bytes": 16835,
+      "sha256": "f4981c04e81a92cbe62ff8f40af4a884c8ec52dbf86b6174e912fc2cf8e1539c"
+    },
+    {
+      "path": "manuscript/figures/plos_innovation_20261017/Fig4_longitudinal_paired_changes.png",
+      "bytes": 751106,
+      "sha256": "dd1bbe05b85d20aeeb3eff110dbd9c867217263cbfef196ca9908d3a6e508524"
+    },
+    {
+      "path": "manuscript/figures/plos_innovation_20261017/Fig4_longitudinal_paired_changes.svg",
+      "bytes": 221612,
+      "sha256": "10ac13b952e4f58086ae47b67d03f1a2623ccee5fe34fe692be97b5f9f3f642d"
+    },
+    {
+      "path": "manuscript/figures/plos_innovation_20261017/Fig4_longitudinal_paired_changes.pdf",
+      "bytes": 127707,
+      "sha256": "d78349e9e99a1f339238f92d7a7c9ebe58397b122eaaa48522de5a8f31c89f19"
+    },
+    {
+      "path": "manuscript/figures/plos_innovation_20261017/Fig4_longitudinal_paired_changes.tif",
+      "bytes": 2977266,
+      "sha256": "54d0b0b3da50185afd43a768f74a1c172f8b5dd0cca56aec75310ce1fe72d11e"
+    },
+    {
+      "path": "research_logs/kumar_plos_innovation_20261017/legacy_figure_export/visual_contact_sheet.png",
+      "bytes": 626680,
+      "sha256": "eaa8d487957984894612cb6a351a8487d81766f22c0385164191a603c25b704f"
+    }
+  ],
+  "figure_checks": [
+    {
+      "figure": "Fig1_target_query_participants",
+      "pixel_width": 4500,
+      "pixel_height": 2700,
+      "width_cm": 19.05,
+      "height_cm": 11.43,
+      "dpi": [
+        600.0,
+        600.0
+      ],
+      "mode": "RGB",
+      "compression": "tiff_lzw",
+      "single_frame": true,
+      "alpha_channel": false,
+      "physical_text_boundary_check_passed": true,
+      "text_artists": [
+        {
+          "text": "A",
+          "font_size_pt": 12.0
+        },
+        {
+          "text": "60.0%",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "64.4%",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "63.2%",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "52.3%",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "Frozen\nCSP/LDA",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "Frozen CSP +\nLDA update",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "Full\nCSP/LDA refit",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "Frozen\nEEGNet",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "Target-query balanced accuracy (%)",
+          "font_size_pt": 9.0
+        },
+        {
+          "text": "0",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "20",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "40",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "60",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "80",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "100",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "B",
+          "font_size_pt": 12.0
+        },
+        {
+          "text": "57.9%",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "59.9%",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "65.4%",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "51.6%",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "Frozen\nCSP/LDA",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "Frozen CSP +\nLDA update",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "Full\nCSP/LDA refit",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "Frozen\nEEGNet",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "Participant (method color)",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "Mean [95% CI]",
+          "font_size_pt": 8.0
+        }
+      ]
+    },
+    {
+      "figure": "Fig2_cpu_primary_paired_changes",
+      "pixel_width": 4500,
+      "pixel_height": 3180,
+      "width_cm": 19.05,
+      "height_cm": 13.462,
+      "dpi": [
+        600.0,
+        600.0
+      ],
+      "mode": "RGB",
+      "compression": "tiff_lzw",
+      "single_frame": true,
+      "alpha_channel": false,
+      "physical_text_boundary_check_passed": true,
+      "text_artists": [
+        {
+          "text": "+17.67",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "+8.27",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "+0.44",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "-5.82",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "+6.83",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "+19.62",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "+20.67",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "+17.26",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "-0.67",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "-0.20",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "+0.67",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "+4.32",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "+7.42\n[+2.49, +12.48]",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "Full refit − frozen balanced accuracy (percentage points)",
+          "font_size_pt": 9.0
+        },
+        {
+          "text": "−10",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "−5",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "0",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "5",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "10",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "15",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "20",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "25",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-2",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-3",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-5",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-6",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-8",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-9",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-11",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-12",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-14",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-15",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-17",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-18",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "Mean [95% CI]",
+          "font_size_pt": 8.5
+        }
+      ]
+    },
+    {
+      "figure": "Fig3_csp_signed_support_halves",
+      "pixel_width": 4500,
+      "pixel_height": 3300,
+      "width_cm": 19.05,
+      "height_cm": 13.97,
+      "dpi": [
+        600.0,
+        600.0
+      ],
+      "mode": "RGB",
+      "compression": "tiff_lzw",
+      "single_frame": true,
+      "alpha_channel": false,
+      "physical_text_boundary_check_passed": true,
+      "text_artists": [
+        {
+          "text": "sub-1",
+          "font_size_pt": 10.0
+        },
+        {
+          "text": "−4",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "−3",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "−2",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "−1",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "0",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "1",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "2",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "3",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-4",
+          "font_size_pt": 10.0
+        },
+        {
+          "text": "sub-7",
+          "font_size_pt": 10.0
+        },
+        {
+          "text": "sub-10",
+          "font_size_pt": 10.0
+        },
+        {
+          "text": "1",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "2",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "3",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "4",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "5",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "−4",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "−3",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "−2",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "−1",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "0",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "1",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "2",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "3",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-13",
+          "font_size_pt": 10.0
+        },
+        {
+          "text": "1",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "2",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "3",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "4",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "5",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-16",
+          "font_size_pt": 10.0
+        },
+        {
+          "text": "1",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "2",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "3",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "4",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "5",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "Class-balanced signed margin / source-score SD",
+          "font_size_pt": 9.0
+        },
+        {
+          "text": "Target support session",
+          "font_size_pt": 9.0
+        },
+        {
+          "text": "First chronological half",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "Second chronological half",
+          "font_size_pt": 8.0
+        }
+      ]
+    },
+    {
+      "figure": "Fig4_longitudinal_paired_changes",
+      "pixel_width": 4500,
+      "pixel_height": 4500,
+      "width_cm": 19.05,
+      "height_cm": 19.05,
+      "dpi": [
+        600.0,
+        600.0
+      ],
+      "mode": "RGB",
+      "compression": "tiff_lzw",
+      "single_frame": true,
+      "alpha_channel": false,
+      "physical_text_boundary_check_passed": true,
+      "text_artists": [
+        {
+          "text": "A",
+          "font_size_pt": 12.0
+        },
+        {
+          "text": "+0.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+0.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-17.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-16.1",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+10.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-7.9",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+15.8",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+7.4",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+15.8",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-3.6",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+35.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-15.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+5.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+10.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+15.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+8.3",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+2.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+15.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+25.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-32.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+1.7",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+20.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+7.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+2.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+2.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+10.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-16.4",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+5.1",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-2.6",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-5.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+13.3",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+5.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+0.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+15.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+55.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+19.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+7.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+10.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+7.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-2.6",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-23.3",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+2.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+5.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+10.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+8.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-5.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-7.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-2.8",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+0.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-13.8",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+21.7",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+17.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-12.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-5.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+12.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+16.7",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+28.9",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+20.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+20.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+12.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+18.3",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+15.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+25.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+35.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+10.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+45.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-5.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+15.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+10.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+21.3",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+1.7",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-2.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+12.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-7.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-7.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+3.3",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-2.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+7.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-0.1",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-9.2",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-1.7",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-5.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+7.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+2.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+0.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+10.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+22.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+13.2",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-39.9",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+15.8",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "Development (n = 6)",
+          "font_size_pt": 9.0
+        },
+        {
+          "text": "Remaining (n = 12)",
+          "font_size_pt": 9.0
+        },
+        {
+          "text": "Target session",
+          "font_size_pt": 9.0
+        },
+        {
+          "text": "1",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "2",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "3",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "4",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "5",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-1",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-4",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-7",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-10",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-13",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-16",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-2",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-3",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-5",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-6",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-8",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-9",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-11",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-12",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-14",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-15",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-17",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "sub-18",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "B",
+          "font_size_pt": 12.0
+        },
+        {
+          "text": "-8.6",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+5.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+0.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-0.3",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+10.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-9.9",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-5.3",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+7.4",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+7.9",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-7.2",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+11.7",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-37.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-7.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-10.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-2.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+6.7",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+2.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+15.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+22.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-15.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-3.3",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+12.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-17.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+0.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+0.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-3.3",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-8.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+5.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-2.6",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-2.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+1.7",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+7.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+2.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+7.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+42.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+5.6",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+17.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+7.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+2.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+0.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-20.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+5.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-5.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-2.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+5.3",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+3.3",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-10.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-0.3",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+10.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-0.7",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+18.3",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+20.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+2.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+10.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+10.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+8.3",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-2.6",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+5.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-5.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+25.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+11.7",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+10.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+20.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+27.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+17.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+18.3",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-0.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+12.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-15.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+25.1",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-11.7",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+0.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+5.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+7.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-7.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+3.3",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+2.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+2.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+2.4",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-3.8",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-3.3",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+10.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+0.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+0.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+0.0",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+6.7",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+2.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "-2.6",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+5.3",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "+10.5",
+          "font_size_pt": 8.0
+        },
+        {
+          "text": "Target session",
+          "font_size_pt": 9.0
+        },
+        {
+          "text": "1",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "2",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "3",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "4",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "5",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "Balanced accuracy difference (percentage points)",
+          "font_size_pt": 9.0
+        },
+        {
+          "text": "−60",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "−40",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "−20",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "0",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "20",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "40",
+          "font_size_pt": 8.5
+        },
+        {
+          "text": "60",
+          "font_size_pt": 8.5
+        }
+      ]
+    }
+  ],
+  "scientific_summaries": {
+    "Fig1_target_query_participants": {
+      "participant_points": 72,
+      "cohort_summary_points": 8,
+      "all_fixed_EEGNet_seeds": 3
+    },
+    "Fig2_cpu_primary_paired_changes": {
+      "positive_participants": 9,
+      "negative_participants": 3,
+      "original_primary_mean_pp": 7.421355111917724,
+      "original_primary_ci95_pp": [
+        2.487554824561406,
+        12.476615749142978
+      ],
+      "numeric_subject_order": [
+        2,
+        3,
+        5,
+        6,
+        8,
+        9,
+        11,
+        12,
+        14,
+        15,
+        17,
+        18
+      ]
+    },
+    "Fig3_csp_signed_support_halves": {
+      "development_participants": 6,
+      "support_sessions": 30,
+      "half_measurements": 60,
+      "both_positive": 19,
+      "both_negative": 2,
+      "opposite_signs": 9
+    },
+    "Fig4_longitudinal_paired_changes": {
+      "participants": 18,
+      "sessions_per_participant": 5,
+      "panels": 2,
+      "cells": 180,
+      "participant_order_numeric_within_cohort": [
+        "sub-1",
+        "sub-4",
+        "sub-7",
+        "sub-10",
+        "sub-13",
+        "sub-16",
+        "sub-2",
+        "sub-3",
+        "sub-5",
+        "sub-6",
+        "sub-8",
+        "sub-9",
+        "sub-11",
+        "sub-12",
+        "sub-14",
+        "sub-15",
+        "sub-17",
+        "sub-18"
+      ],
+      "shared_symmetric_color_limits_pp": [
+        -60,
+        60
+      ],
+      "observed_max_absolute_change_pp": 55.00000000000001,
+      "rounding_for_display_decimals": 1,
+      "negative_cells": [
+        27,
+        31
+      ],
+      "zero_cells": [
+        5,
+        8
+      ],
+      "positive_cells": [
+        58,
+        51
+      ],
+      "all_individual_session_differences_retained": true,
+      "paired_mean_matches_saved_participant_endpoints": true,
+      "new_bootstraps_or_tests": 0
+    }
+  },
+  "new_model_fits": 0,
+  "new_predictions": 0,
+  "visual_qa": {
+    "status": "passed",
+    "reviewed_images": [
+      "Fig1_target_query_participants.png",
+      "Fig2_cpu_primary_paired_changes.png",
+      "Fig3_csp_signed_support_halves.png",
+      "Fig4_longitudinal_paired_changes.png"
+    ],
+    "checks": "All four images inspected; no clipped labels, missing glyphs, overlap, or obscured data; original numeric layout retained."
+  }
+}

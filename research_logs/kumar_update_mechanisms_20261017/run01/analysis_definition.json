@@ -1,0 +1,78 @@
+{
+  "analysis_status": "post_observation_exploratory",
+  "synthetic": false,
+  "purpose": "Describe trial transitions and component-gain structure from saved predictions.",
+  "comparisons": [
+    {
+      "contrast": "lda_minus_frozen",
+      "baseline": "source_only",
+      "updated": "frozen_csp_lda_recalibration"
+    },
+    {
+      "contrast": "full_minus_lda",
+      "baseline": "frozen_csp_lda_recalibration",
+      "updated": "refit_csp_lda"
+    },
+    {
+      "contrast": "full_minus_frozen",
+      "baseline": "source_only",
+      "updated": "refit_csp_lda"
+    }
+  ],
+  "cohorts": {
+    "primary": [
+      "sub-11",
+      "sub-12",
+      "sub-14",
+      "sub-15",
+      "sub-17",
+      "sub-18",
+      "sub-2",
+      "sub-3",
+      "sub-5",
+      "sub-6",
+      "sub-8",
+      "sub-9"
+    ],
+    "development": [
+      "sub-1",
+      "sub-10",
+      "sub-13",
+      "sub-16",
+      "sub-4",
+      "sub-7"
+    ],
+    "all18": [
+      "sub-1",
+      "sub-10",
+      "sub-11",
+      "sub-12",
+      "sub-13",
+      "sub-14",
+      "sub-15",
+      "sub-16",
+      "sub-17",
+      "sub-18",
+      "sub-2",
+      "sub-3",
+      "sub-4",
+      "sub-5",
+      "sub-6",
+      "sub-7",
+      "sub-8",
+      "sub-9"
+    ]
+  },
+  "weighting": "Each class 1/2 within session; each of five sessions 1/5; each participant 1/n.",
+  "corrected_definition": "Baseline incorrect and update correct, divided by the full same-class query n.",
+  "introduced_definition": "Baseline correct and update incorrect, divided by the full same-class query n.",
+  "identity": "Updated BA minus baseline BA equals balanced corrected rate minus introduced rate.",
+  "uncertainty": "10,000 participant bootstrap resamples, seed 42, lexicographic participant order; percentile 95%.",
+  "existing_hypothesis_test_family": "Original four post-review sign-flip/Holm checks retained and re-enumerated.",
+  "new_hypothesis_tests": 0,
+  "new_fits": 0,
+  "new_model_inference": 0,
+  "development_and_all18_results_retained": true,
+  "session_profiles_and_leave_one_out": "Descriptive sensitivity, not independent confirmation or policy evaluation.",
+  "source_or_support_measurements_used_to_select_actions": false
+}

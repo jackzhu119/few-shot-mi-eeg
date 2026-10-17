@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-17",
+  "scope": "Current manuscript export scripts and saved-prediction analysis; no EEG refit, checkpoint inference or original experiment rerun.",
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pytest": "8.4.2",
+    "ruff": "0.17.1",
+    "environment": "temporary validation venv sharing the primary artifact runtime",
+    "original_project_requires": "Python >=3.11,<3.12"
+  },
+  "checks": [
+    {
+      "command": "ruff check scripts/analyze_kumar_update_mechanisms_20261017.py scripts/build_kumar_innovation_documents_20261017.py scripts/render_kumar_innovation_legacy_figures_20261017.py",
+      "status": "passed",
+      "exit_code": 0,
+      "output": "All checks passed!",
+      "note": "Repeated final changed-script lint, if any, is recorded separately."
+    },
+    {
+      "command": "PYTHONPATH=src python -m pytest -q tests/test_kumar_saved_query_qc_20261015.py tests/test_kumar_postreview_statistics_20261016.py",
+      "status": "passed",
+      "exit_code": 0,
+      "passed": 39,
+      "seconds": 0.7
+    },
+    {
+      "command": "PYTHONPATH=src python -m pytest -q",
+      "status": "collection_stopped_missing_dependencies",
+      "exit_code": 2,
+      "collection_errors": 35,
+      "skipped": 2,
+      "seconds": 4.6,
+      "missing_packages": [
+        "mne",
+        "torch",
+        "requests"
+      ],
+      "note": "Full repository suite did not execute to completion in this environment. Existing unrelated historical software was not changed to bypass dependency requirements."
+    },
+    {
+      "command": "ruff check src tests scripts",
+      "status": "existing_script_style_findings",
+      "exit_code": 1,
+      "findings": 8,
+      "rule": "E701",
+      "file": "scripts/build_kumar_editorial_documents_20261017.py",
+      "lines": [
+        145,
+        146,
+        147,
+        148,
+        158,
+        162,
+        183,
+        210
+      ],
+      "note": "File predates the current extension. All three current scripts passed their separate check."
+    },
+    {
+      "command": "PYTHONPATH=src python scripts/smoke_experiment.py --config configs/smoke.json --output /tmp/paper2_validation_20261017/smoke.json",
+      "status": "not_completed_missing_mne",
+      "exit_code": 1
+    },
+    {
+      "command": "PYTHONPATH=src python scripts/check_data_stack.py",
+      "status": "not_completed_missing_mne",
+      "exit_code": 1
+    }
+  ],
+  "scientific_verification": {
+    "input_audit": "../kumar_update_mechanisms_20261017/run01/input_completeness_audit.json",
+    "independent_arithmetic": "../kumar_update_mechanisms_20261017/run01/independent_arithmetic_check.json",
+    "actual_archive_replay": "../kumar_update_mechanisms_20261017/run01/final_zip_replay_validation.json",
+    "new_scientific_outputs_replayed": 18,
+    "original_endpoint_values_reconstructed": 144
+  },
+  "repository_baseline": "30f23ed3c9afd271a3821fceaa99ab932bf25e5f",
+  "historical_result_files_modified": false
+}

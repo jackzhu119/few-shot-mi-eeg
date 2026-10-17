@@ -1,0 +1,66 @@
+{
+  "reviewer": "root AI-assisted visual review",
+  "date": "2026-10-17",
+  "documents": [
+    {
+      "document": "S2_Reproducibility",
+      "pages": 5,
+      "all_pages_visually_inspected_first_pass": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "changed_pages": [
+        2,
+        5
+      ],
+      "changed_pages_visually_reinspected": [
+        2,
+        5
+      ],
+      "final_page_sha256": {
+        "page-1.png": "82c02b437a82aa5699d8360c60c4b210f667555c532b7df26a450007aefb9068",
+        "page-2.png": "7a7cbdb89ff62be23b281d27d62a05d8ce0645fe617c2535c2737a3a88e26dfb",
+        "page-3.png": "b048638132343317fce5f5451f75e3afecf120a4c940d8275766eb47e0775598",
+        "page-4.png": "aea0aef4d6e913cdc4ce8f0244ece40aefc72b9ac0e25f66e34f093116b2eabe",
+        "page-5.png": "7006f3ab874673e72f26d7eedb9e379bd1ec1118ea0cb0fc017642dff72e8301"
+      },
+      "final_docx_sha256": "730d2e0e75ede29f5a7da825603d83c051d4f55f6a05b321c0a6f0e07fcab76e",
+      "final_pdf_sha256": "870256a7ebb9f34aed34510a13f6c2b9c032b7e5e1f067a8a5120d3bda48af6f",
+      "status": "visual_review_passed",
+      "findings_resolved": [
+        "explicit shell command continuation",
+        "reference hanging layout and journal formatting"
+      ]
+    },
+    {
+      "document": "Cover_Letter",
+      "pages": 1,
+      "all_pages_visually_inspected_first_pass": [
+        1
+      ],
+      "changed_pages": [
+        1
+      ],
+      "changed_pages_visually_reinspected": [
+        1
+      ],
+      "final_page_sha256": {
+        "page-1.png": "ced346ce4d85f3d2555348c6a6b9b29666776fcce24e52825c025bb5087177f3"
+      },
+      "final_docx_sha256": "fb10c8e5f4865cace275686d8d403cb850de506c0e55f9f33b822bc27f86f03e",
+      "final_pdf_sha256": "ae2e9b4425123cdff7de71d793688763c14e4449e5bfb2ebfa54afb003a7324b",
+      "status": "visual_review_passed",
+      "findings_resolved": [
+        "mean-recall wording aligned; one-page layout retained"
+      ]
+    }
+  ],
+  "new_figures_visually_inspected": [
+    "Fig5_prediction_transitions.png",
+    "Fig6_component_consistency.png"
+  ],
+  "changed_script_ruff_final": "All checks passed, exit code 0"
+}

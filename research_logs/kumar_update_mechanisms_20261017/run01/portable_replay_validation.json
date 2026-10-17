@@ -1,0 +1,142 @@
+{
+  "portable_replay_completed": true,
+  "working_directory": "/tmp",
+  "repository_files_used_by_replay": false,
+  "EEG_or_model_files_read": false,
+  "new_fits_or_forward_passes": 0,
+  "all_12_CSVs_byte_identical": true,
+  "checked": [
+    {
+      "file": "cohort_transition_bootstrap.csv",
+      "byte_identical": true,
+      "sha256": "b434192c9e274646e301ce9f315a90d9b69579998a80b28b7dd304d84143693b"
+    },
+    {
+      "file": "leave_one_participant_out.csv",
+      "byte_identical": true,
+      "sha256": "9a4a50547267d730b7982bdd6307ecf193216ed3cbf4a5105b4ce7224d78b9b1"
+    },
+    {
+      "file": "matched_label_fit_audit.csv",
+      "byte_identical": true,
+      "sha256": "65a5f85047b69b2c9e33ae95c9148549517c750178fdcae1500c321914b7e47a"
+    },
+    {
+      "file": "participant_class_transition_decomposition.csv",
+      "byte_identical": true,
+      "sha256": "562f6d8178dd6c6518a85b1d09af5a525dd7b38ed78f8c35280f0965c77c35a3"
+    },
+    {
+      "file": "participant_gain_pairs.csv",
+      "byte_identical": true,
+      "sha256": "dcc881ec929f74801b40efc74cd64a7087805f18c24852d5b9022be38de1116a"
+    },
+    {
+      "file": "query_class_coverage.csv",
+      "byte_identical": true,
+      "sha256": "bec86212306b7d18a04b4bcf4c19043cef85ea7cf3a2cba9b1c059bdf59ff20e"
+    },
+    {
+      "file": "reconstructed_participant_endpoints.csv",
+      "byte_identical": true,
+      "sha256": "8bf0caed8bdb4b10ee5b22571570754dbbc935b1804fc5c25503d8b47ae7633d"
+    },
+    {
+      "file": "reconstructed_seed_session_scores.csv",
+      "byte_identical": true,
+      "sha256": "66d3becc2db1a9c849a17c68016da68f881448aec17f1ae0dfd0ce083fe6db59"
+    },
+    {
+      "file": "session_class_transition_decomposition.csv",
+      "byte_identical": true,
+      "sha256": "7127a26e292d79df31bbcdcd0faa26722cbf0a159fd04dc6d54d80a692521edd"
+    },
+    {
+      "file": "session_contrast_profiles.csv",
+      "byte_identical": true,
+      "sha256": "b897375c96ea05acbf63c530ff9f55f63f2f4d54bb409cae2e973af32e1fd7ac"
+    },
+    {
+      "file": "trial_action_transitions.csv",
+      "byte_identical": true,
+      "sha256": "25821289a14c5a66b994792c5820c2f535933cd1adc0a6e923b6c9b61478a350"
+    },
+    {
+      "file": "trial_role_class_counts.csv",
+      "byte_identical": true,
+      "sha256": "a04ade5541d130edc47a92300437a90453cf61404fb6a248a10ef38701dcbe4e"
+    }
+  ],
+  "six_scientific_JSONs_byte_identical": true,
+  "replay_execution_receipt": {
+    "completed_utc": "2026-10-17T03:57:04.826835+00:00",
+    "source_git_commit": "30f23ed3c9afd271a3821fceaa99ab932bf25e5f",
+    "script_sha256": "28b3feb09efb4ee9a6703d83dcac48cd5f679cc49a811b4979361d6f0f886c46",
+    "python": "3.12.14",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.3.5",
+      "matplotlib": "3.10.8",
+      "Pillow": "12.3.0"
+    },
+    "seed": 42,
+    "bootstrap_replicates": 10000,
+    "input_hashes_unchanged_after_analysis": true,
+    "new_model_fits": 0,
+    "new_model_forward_passes": 0,
+    "output_tables": {
+      "trial_action_transitions.csv": {
+        "rows": 3930,
+        "sha256": "25821289a14c5a66b994792c5820c2f535933cd1adc0a6e923b6c9b61478a350"
+      },
+      "session_class_transition_decomposition.csv": {
+        "rows": 810,
+        "sha256": "7127a26e292d79df31bbcdcd0faa26722cbf0a159fd04dc6d54d80a692521edd"
+      },
+      "participant_class_transition_decomposition.csv": {
+        "rows": 162,
+        "sha256": "562f6d8178dd6c6518a85b1d09af5a525dd7b38ed78f8c35280f0965c77c35a3"
+      },
+      "cohort_transition_bootstrap.csv": {
+        "rows": 189,
+        "sha256": "b434192c9e274646e301ce9f315a90d9b69579998a80b28b7dd304d84143693b"
+      },
+      "participant_gain_pairs.csv": {
+        "rows": 18,
+        "sha256": "dcc881ec929f74801b40efc74cd64a7087805f18c24852d5b9022be38de1116a"
+      },
+      "session_contrast_profiles.csv": {
+        "rows": 45,
+        "sha256": "b897375c96ea05acbf63c530ff9f55f63f2f4d54bb409cae2e973af32e1fd7ac"
+      },
+      "leave_one_participant_out.csv": {
+        "rows": 324,
+        "sha256": "9a4a50547267d730b7982bdd6307ecf193216ed3cbf4a5105b4ce7224d78b9b1"
+      },
+      "reconstructed_seed_session_scores.csv": {
+        "rows": 648,
+        "sha256": "66d3becc2db1a9c849a17c68016da68f881448aec17f1ae0dfd0ce083fe6db59"
+      },
+      "reconstructed_participant_endpoints.csv": {
+        "rows": 72,
+        "sha256": "8bf0caed8bdb4b10ee5b22571570754dbbc935b1804fc5c25503d8b47ae7633d"
+      },
+      "matched_label_fit_audit.csv": {
+        "rows": 90,
+        "sha256": "65a5f85047b69b2c9e33ae95c9148549517c750178fdcae1500c321914b7e47a"
+      },
+      "trial_role_class_counts.csv": {
+        "rows": 751,
+        "sha256": "a04ade5541d130edc47a92300437a90453cf61404fb6a248a10ef38701dcbe4e"
+      },
+      "query_class_coverage.csv": {
+        "rows": 180,
+        "sha256": "bec86212306b7d18a04b4bcf4c19043cef85ea7cf3a2cba9b1c059bdf59ff20e"
+      }
+    },
+    "independent_arithmetic_check_performed": true,
+    "original_scientific_results_modified": false,
+    "analysis_status": "post_observation_exploratory"
+  },
+  "command": "python code/analyze_kumar_update_mechanisms_20261017.py --inputs inputs --output reproduced_extension"
+}

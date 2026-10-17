@@ -1,5 +1,9 @@
 # Scoped licensing
 
+The [17 October paper-2 extension scope](LICENSES/innovation-scope-20261017.md)
+identifies the new manuscript package, figure exports and derived-result
+directories covered by the already activated component-specific licenses below.
+
 Copyright (c) 2026 Ziyuan Zhu for the original contributions identified below.
 The author authorized this license choice on 2026-10-16 (UTC). This is an operative
 grant; the earlier proposal in the 2026-10-15 compliance record remains an
