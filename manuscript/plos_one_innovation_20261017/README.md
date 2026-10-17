@@ -6,7 +6,7 @@
 
 ## 最终投稿核查
 
-[2026年10月17日最终核查](Final_Submission_Check_20261017_ZH.md)记录本次格式、图件、公开数据、伦理与AI披露检查及具体修正。[实际上传文件包](PLOS_ONE_Submission_Files_20261017.zip)提供正式DOCX、六张短名TIFF、S1/S2、数据包、附信及官方参与者清单。Human Participants Checklist第3项仍需作者补全身份信息访问情况，再进行期刊正式提交。
+[2026年10月17日最终核查](Final_Submission_Check_20261017_ZH.md)记录本次格式、图件、公开数据、伦理与AI披露检查及具体修正。[实际上传文件包](PLOS_ONE_Submission_Files_20261017.zip)提供正式DOCX、六张短名TIFF、S1/S2、数据包、附信及官方参与者清单。作者已确认无法访问可识别参与者身份的信息；该声明已补入方法部分，官方 [Human Participants Checklist](Human_Participants_Checklist.pdf) 第3项已完成。
 
 ## 阅读与使用
 

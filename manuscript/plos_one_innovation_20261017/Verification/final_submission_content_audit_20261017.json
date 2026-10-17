@@ -4,7 +4,7 @@
   "task": "Final PLOS ONE content and declarations audit before authorized main-branch synchronization",
   "baseline_commit": "1d78ceb080c96865e3ed2b0a6b75ff81bccc6318",
   "scope": "Read manuscript sources and actual DOCX text, S1/S2, cover letter, author worksheet, package README, historical author/ethics records and latest official PLOS policies. No new training or primary experiments. Prepared official checklist in separate scratch directory; repository integration belongs to root agent.",
-  "overall_status": "document_corrections_applied_and_official_checklist_prepared; author_identification_access_fact_required_before_final_checklist_completion",
+  "overall_status": "Prior content audit retained; author-confirmed identifying-information access statement inserted and official checklist completed.",
   "official_sources": [
     {
       "url": "https://journals.plos.org/plosone/s/submission-guidelines",
@@ -129,30 +129,35 @@
       "severity": "required_submission_attachment",
       "location": "Human Participants Research Checklist, applicable to human participant data and retrospective studies",
       "finding": "Official May 2026 checklist was absent from the baseline package.",
-      "fix": "Use the prepared interactive official form. Q1 explains the reported secondary-use exemption, Q2 is N/A, Q3 gives the date-reporting lines but remains incomplete pending the author fact below.",
-      "status": "prepared_for_root_integration",
-      "prepared_file": "/workspace/scratch/86f850dd59f6/paper2_main_final_check_20261017/human_participants_checklist/PLOS_Human_Participants_Checklist_Prepared_Author_Completion_Required.pdf",
-      "bytes": 235237,
-      "sha256": "98767877cfa40607600cac48e9fa6ef453f2de35e22e64a9ae0f128193ecee6f"
+      "fix": "Completed official form: Q1 reports the existing exemption basis, Q2 is N/A, Q3 is Completed and cites Methods lines 96-100.",
+      "status": "completed_official_form_integrated",
+      "bytes": 234844,
+      "sha256": "000de16bb9203f35a43ec5f8bcb24c90dbb60f5bf27779faa0a38ffab2aa3650",
+      "original_prepared_file": "/workspace/scratch/86f850dd59f6/paper2_main_final_check_20261017/human_participants_checklist/PLOS_Human_Participants_Checklist_Prepared_Author_Completion_Required.pdf",
+      "current_file": "Human_Participants_Checklist.pdf"
     },
     {
       "id": "C4",
       "severity": "author_fact_required_for_final_submission",
       "location": "Human Participants Checklist Q3 / Methods ethics and data access statement",
-      "finding": "The form requires whether the author had access to information that could identify individuals during or after data collection. Existing statements about coded identifiers, no sensitive personal information and no re-identification do not independently establish the full historical access fact.",
+      "finding": "The author twice explicitly confirmed that identifying information was inaccessible; Methods contains the accurate no-access statement.",
       "existing_supported_text": "This secondary analysis used the released coded participant identifiers; no participants were contacted and no re-identification was attempted.",
-      "missing_fact": "Whether the author had access, at any relevant stage, to direct identifiers or a linkage/re-identification key, and any other identifying information.",
-      "action": "Obtain the actual author answer; put an accurate statement in Methods, update Q3 line numbers and only then mark Completed. Do not assume No, invent a key-access history, or substitute the ethical exemption for this fact.",
-      "status": "awaiting_author_fact",
+      "status": "resolved_by_explicit_author_confirmation",
       "conditional_text_if_author_confirms_no_access": "The author had no access to information that could identify individual participants during or after the original data collection.",
-      "conditional_text_must_not_be_inserted_without_confirmation": true
+      "conditional_text_must_not_be_inserted_without_confirmation": true,
+      "original_finding": "The form requires whether the author had access to information that could identify individuals during or after data collection. Existing statements about coded identifiers, no sensitive personal information and no re-identification do not independently establish the full historical access fact.",
+      "original_required_action": "Obtain the actual author answer; put an accurate statement in Methods, update Q3 line numbers and only then mark Completed. Do not assume No, invent a key-access history, or substitute the ethical exemption for this fact.",
+      "original_missing_fact": "Whether the author had access, at any relevant stage, to direct identifiers or a linkage/re-identification key, and any other identifying information.",
+      "action_completed": "Inserted the author-confirmed sentence, verified Methods lines 99-100 and marked official checklist Q3 Completed with lines 96-100.",
+      "confirmed_text": "The author had no access to information that could identify individual participants during or after data collection.",
+      "author_confirmation_record": "Verification/author_identity_access_confirmation_20261017.json"
     }
   ],
   "author_submission_actions": [
     "Personally review and approve the current 17 October extension and the final submission PDF; the recorded scientific approval applies only to the named 16 October version.",
     "Bind the corresponding author ORCID in Editorial Manager; title-page ORCID text does not perform the account action.",
     "Enter financial disclosure, competing interests, Data Availability Statement and accurate CRediT roles in the submission fields.",
-    "Finish the identifying-information access statement and official checklist Q3, then upload the completed checklist using the journal-requested file category.",
+    "Upload the completed official Human Participants Checklist with Methods reference 96-100.",
     "State any prior PLOS contact and any related or concurrently considered manuscripts accurately if asked; earlier recorded declarations are available in the worksheet.",
     "Confirm the journal-generated PDF before actual submission and accept the author/license declarations in the submission system."
   ],
@@ -164,16 +169,18 @@
   ],
   "current_docx_observations": {
     "PLOS_ONE_Manuscript_Submission.docx": {
-      "sha256": "8e606a69359f81a1a9da39c4f212289f4b35d6119dba9535b16a745be90de61a",
+      "sha256": "8e3aaaa84aa72eb2573855a71a811c7329fec5c8103bbd0124962305610fa57a",
       "competing_interest_statement_in_file": false,
       "data_access_dates_present": true,
-      "unresolved_citation_markers": false
+      "unresolved_citation_markers": false,
+      "author_confirmed_no_identifying_information_access_statement_present": true
     },
     "PLOS_ONE_Manuscript_Reading.docx": {
-      "sha256": "a522b67f78396426df78ca55d9109b95c8d2d2868078a3ef667552ee710fc33e",
+      "sha256": "d54bf483c0fcfc9d530320bee59fb3aaece588b5f0b8c7e2a62cd0eb74622cca",
       "competing_interest_statement_in_file": false,
       "data_access_dates_present": true,
-      "unresolved_citation_markers": false
+      "unresolved_citation_markers": false,
+      "author_confirmed_no_identifying_information_access_statement_present": true
     },
     "S1_Supplementary_Methods.docx": {
       "sha256": "fa1c85b4765d96d5a5adb65d855a45c9c32d643042716d3ffc477f5f7b6c3e21",
@@ -194,7 +201,10 @@
       "unresolved_citation_markers": false
     }
   },
-  "checklist_q3_pending": true,
-  "checklist_visual_and_form_validation": "/workspace/scratch/86f850dd59f6/paper2_main_final_check_20261017/human_participants_checklist/filled_checklist_verification.json",
-  "limitations_of_this_audit": "This is an author-side preparation audit, not journal peer review or an acceptance decision. Prior saved-result validation is reused; no claim is made to new model training, independent external validation, original institutional-document authentication or author confirmation of facts not supplied."
+  "checklist_q3_pending": false,
+  "checklist_visual_and_form_validation": "Verification/q3_checklist_verification_20261017.json",
+  "limitations_of_this_audit": "This is an author-side preparation audit, not journal peer review or an acceptance decision. Prior saved-result validation is reused; no claim is made to new model training, independent external validation, original institutional-document authentication or author confirmation of facts not supplied.",
+  "original_checked_at_utc": "2026-10-17T06:45:56.038442+00:00",
+  "q3_followup_checked_at_utc": "2026-10-17T07:37:57.488804+00:00",
+  "author_q3_confirmation_record": "Verification/author_identity_access_confirmation_20261017.json"
 }

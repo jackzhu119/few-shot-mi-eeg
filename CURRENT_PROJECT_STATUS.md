@@ -2,7 +2,7 @@
 
 ## 2026年10月17日最终投稿核查
 
-[最新PLOS ONE核查与上传文件说明](docs/kumar_main_submission_check_20261017.md)：已修正主稿声明位置，补入有原始收据支持的数据访问日期，提供官方Human Participants Checklist预填表及短名图件上传包。稿件格式、图件及公开数据检查通过；清单第3项的身份信息访问事实仍需作者补全。
+[最新PLOS ONE核查与上传文件说明](docs/kumar_main_submission_check_20261017.md)：主稿声明位置、数据访问日期、图件及公开数据已核查。作者于2026年10月17日确认无法访问可识别参与者身份的信息；该事实已补入方法部分，官方Human Participants Checklist第3项已完成。当前提供正式主稿、完成版清单与短名图件上传包。
 
 ## 当前入口：创新分析与PLOS ONE文件（2026-10-17）
 

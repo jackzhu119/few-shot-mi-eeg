@@ -45,7 +45,7 @@
     "funding_in_main_text": false,
     "footnotes_in_main_text": false
   },
-  "main_source_sha256": "08dacfe2cb292d1d177a1a8884d8cb12b658287b3aed832edde0eb92a3046d86",
+  "main_source_sha256": "a1bf7dda3421cfb571beddcc0f9b2e3adb1afee5d9367cabbafd8dd1c2a71fa6",
   "bibliography_sha256": "1f722ae1a49e1886ecda8214fae1edb50222acfb871864f93cdb998e0e69490b",
   "csl_sha256": "9e4e46b754097ccc48377aeeeccf28e1d58c3fac169a46cbc7ef8a5fad97c35f",
   "prepared_csl": "research_logs/kumar_plos_innovation_20261017/document_build/plos_innovation.csl",
@@ -80,7 +80,7 @@
   "documents": [
     {
       "file": "manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Submission.docx",
-      "sha256": "8e606a69359f81a1a9da39c4f212289f4b35d6119dba9535b16a745be90de61a",
+      "sha256": "8e3aaaa84aa72eb2573855a71a811c7329fec5c8103bbd0124962305610fa57a",
       "paragraphs": 158,
       "tables": 6,
       "inline_images": 0,
@@ -144,11 +144,11 @@
           4,
           5
         ],
-        "receipt": "Verification/final_submission_document_QA_20261017.json",
+        "receipt": "Verification/q3_document_QA_20261017.json",
         "final_pdf_and_page_hashes_match_review_receipt": true
       },
       "source": "manuscript/kumar_plos_one_submission_draft_innovation_20261017.md",
-      "source_sha256": "08dacfe2cb292d1d177a1a8884d8cb12b658287b3aed832edde0eb92a3046d86",
+      "source_sha256": "a1bf7dda3421cfb571beddcc0f9b2e3adb1afee5d9367cabbafd8dd1c2a71fa6",
       "figure_placement": [
         {
           "figure": 1,
@@ -189,7 +189,7 @@
       ],
       "pdf": {
         "file": "manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Submission.pdf",
-        "sha256": "403fc89f44b32a8eb6f7918498302090bfcb16597190fc93604f475acd570d1e",
+        "sha256": "9926e718b5c4679b0c32f3d79ffd10740e5eecdf76becd7c7a908c0cec0f5d59",
         "pages": 29,
         "actual_fonts": [
           "BAAAAA+TimesNewRomanPSMT",
@@ -206,7 +206,7 @@
     },
     {
       "file": "manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Reading.docx",
-      "sha256": "a522b67f78396426df78ca55d9109b95c8d2d2868078a3ef667552ee710fc33e",
+      "sha256": "d54bf483c0fcfc9d530320bee59fb3aaece588b5f0b8c7e2a62cd0eb74622cca",
       "paragraphs": 164,
       "tables": 6,
       "inline_images": 6,
@@ -235,8 +235,7 @@
           4,
           5,
           6,
-          7,
-          21
+          7
         ],
         "unchanged_previously_inspected_pages": [
           1,
@@ -254,14 +253,15 @@
           18,
           19,
           20,
+          21,
           22,
           23
         ],
-        "receipt": "Verification/final_submission_document_QA_20261017.json",
+        "receipt": "Verification/q3_document_QA_20261017.json",
         "final_pdf_and_page_hashes_match_review_receipt": true
       },
       "source": "manuscript/kumar_plos_one_submission_draft_innovation_20261017.md",
-      "source_sha256": "08dacfe2cb292d1d177a1a8884d8cb12b658287b3aed832edde0eb92a3046d86",
+      "source_sha256": "a1bf7dda3421cfb571beddcc0f9b2e3adb1afee5d9367cabbafd8dd1c2a71fa6",
       "figure_placement": [
         {
           "figure": 1,
@@ -302,7 +302,7 @@
       ],
       "pdf": {
         "file": "manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Reading.pdf",
-        "sha256": "277004c1a134fe627700b190a73a193d05840d31cf2399094d14f8c6648a84c0",
+        "sha256": "c25b0cf5f1806f607fc3c69eb27cb7919dc1a08df4c74abdcb1807781a2ecff1",
         "pages": 23,
         "actual_fonts": [
           "BAAAAA+TimesNewRomanPSMT",
@@ -486,11 +486,19 @@
   "journal_abbreviation_sources": "research_logs/kumar_plos_innovation_20261017/document_build/journal_abbreviations_verified.json",
   "final_submission_cleanup": {
     "checked_at_utc": "2026-10-17T06:44:15.875446+00:00",
-    "current_main_manuscript_audit": "Verification/final_submission_document_QA_20261017.json",
+    "current_main_manuscript_audit": "Verification/q3_document_QA_20261017.json",
     "historical_audit": "Verification/historical_before_submission_cleanup_formatting_audit_20261017.json",
     "competing_interests_removed_from_main_file": true,
     "documented_data_access_dates_added": true,
     "scientific_table_values_changed": false,
-    "human_participants_checklist_q3": "author_factual_entry_required"
+    "human_participants_checklist_q3": "completed_from_explicit_author_confirmation"
+  },
+  "q3_completion": {
+    "completed_at_utc": "2026-10-17T07:37:57.488804+00:00",
+    "author_fact_record": "Verification/author_identity_access_confirmation_20261017.json",
+    "manuscript_sentence": "The author had no access to information that could identify individual participants during or after data collection.",
+    "checklist_file": "Human_Participants_Checklist.pdf",
+    "checklist_lines": "96-100",
+    "current_QA": "Verification/q3_document_QA_20261017.json"
   }
 }

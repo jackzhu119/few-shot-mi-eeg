@@ -59,8 +59,10 @@ Enter the financial disclosure in the submission system; it is excluded from the
 
 ## Human Participants Checklist
 
-The official 2026 checklist is supplied as `Human_Participants_Checklist_Author_Completion_Required.pdf`. Dataset metadata were accessed on **10 October 2026**, and the selected EEG recordings and accompanying metadata were retrieved on **11 October 2026**, as verified from the retrieval receipts. These dates are included in Methods.
+The completed official 2026 checklist is supplied as `Human_Participants_Checklist.pdf`. Dataset metadata were accessed on **10 October 2026**, and the selected EEG recordings and accompanying metadata were retrieved on **11 October 2026**, as verified from the retrieval receipts.
 
-**Author factual entry required for question 3:** whether, during this research, the author had access to information that could identify individual participants or to an identity-linkage key. The existing record covers coded identifiers, no participant contact and no attempted re-identification; it does not establish this additional access fact. The corresponding field remains explicitly incomplete until the author provides the factual answer.
+On **17 October 2026**, the author confirmed that the author could not access information that could identify individual participants during or after data collection. Methods now states: “The author had no access to information that could identify individual participants during or after data collection.” The confirmation responds to the question covering identifiable participant information, including any identity-linkage key.
 
-Use the final formatted manuscript to verify the checklist page and line references. Competing interests and Financial Disclosure are supplied through the submission system and are not included in the revised main manuscript.
+In the formal manuscript, the data-access dates appear on page 6, lines **96–97**, and the no-access statement on lines **99–100**. Checklist question 3 cites **96–100** and is marked Completed. This is the author's factual confirmation of identifying-information access; the separately reported original approval and institutional secondary-use exemption retain their existing scope.
+
+Competing interests and Financial Disclosure are supplied through the submission system and are not included in the revised main manuscript. The author should check the final journal-generated PDF and complete the required submission-system declarations.

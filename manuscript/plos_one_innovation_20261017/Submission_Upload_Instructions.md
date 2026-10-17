@@ -4,9 +4,9 @@
 
 整理日期：2026年10月17日。
 
-## 提交前先完成
+## 文件与清单
 
-本文件包已整理正式主稿、六张图、两份文字补充材料、数据包、附信和官方参与者研究清单。请先补全 Human Participants Checklist 第3项：根据本研究期间的实际情况，说明是否曾接触能够识别具体参与者的信息或身份链接密钥，并将相应事实写入方法部分。当前清单已填入数据访问日期所在的第96–97行，第3项的 Completed 保留为空。完成后请重新核对主稿行号和清单，不要上传尚未补全的清单。
+本文件包包含正式主稿、六张图、两份文字补充材料、数据包、附信和已完成的官方参与者研究清单。Human Participants Checklist 第3项已依据作者确认的身份信息访问情况填写；方法部分同步报告数据访问日期和无法访问参与者身份信息的事实。清单所列行号已与最终正式主稿核对。
 
 ## 解压后分别上传
 
@@ -20,7 +20,7 @@
 | S2_Text.pdf | Supporting Information，对应主稿中的S2 Text |
 | S1_Data.zip | Supporting Information，对应主稿中的S1 Data；以该ZIP作为一个数据附件上传 |
 | Cover_Letter.pdf | Cover Letter |
-| Human_Participants_Checklist_Author_Completion_Required.pdf | 补全第3项后，作为期刊要求的Human Participants Research Checklist上传 |
+| Human_Participants_Checklist.pdf | 期刊要求的Human Participants Research Checklist，已完成并与主稿核对 |
 | Submission_Upload_Instructions.md | 本说明，供作者操作时参考，无需上传 |
 
 六张短名TIFF与完整材料包中的原始描述性文件名TIFF逐字节相同。阅读版DOCX/PDF供作者阅读；本上传包使用正式投稿版DOCX。

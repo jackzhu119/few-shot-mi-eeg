@@ -1,12 +1,12 @@
 # 论文2 PLOS ONE 最终投稿核查
 
-核查日期：2026年10月17日。科学内容基线为 `1d78ceb080c96865e3ed2b0a6b75ff81bccc6318`，本轮补充投稿所需的声明位置、数据访问日期、官方参与者清单及上传文件整理。
+核查日期：2026年10月17日。科学内容基线为 `1d78ceb080c96865e3ed2b0a6b75ff81bccc6318`；在最终核查版本 `36017383ce594c25946905886e757672dfe8b100` 基础上，依据作者当天15:29及15:31（北京时间）的明确确认，完成身份信息访问声明与官方清单第3项。
 
 ## 当前结论
 
-稿件结构、正文格式、图表技术参数、参考文献、数据公开性、代码与许可均通过本轮核查。两项可直接修复的文字问题已处理：利益冲突声明移至投稿系统字段，数据访问日期补入方法部分。Human Participants Checklist 已按现有事实预填。
+稿件结构、正文格式、图表技术参数、参考文献、数据公开性、代码取得与许可均通过本轮核查。利益冲突声明已移至投稿系统字段，数据访问日期及身份信息访问事实已补入方法部分，Human Participants Checklist 已完成。
 
-**正式提交前仍需作者补充一项事实：在本研究期间，是否曾接触能够识别具体参与者的信息或身份链接密钥。** 这是 PLOS 官方 Human Participants Checklist 第3项的明确要求。现有作者记录说明使用编码数据、不联系参与者、不尝试重新识别；这些记录没有直接回答能否接触身份信息，因此清单保留“Author completion required”，主稿没有代填未经确认的否定声明。
+**此前唯一待补的身份信息访问事实已由作者明确确认：无法访问可识别具体参与者身份的信息。** 作者针对官方清单问题两次确认该事实。相应句子已写入正式稿第6页第99–100行；清单第3项引用第96–100行，涵盖数据访问日期与身份信息访问情况，并标记为Completed。该事实由作者直接提供，没有将使用编码数据本身作为推断依据。
 
 ## 核查结果
 
@@ -26,7 +26,7 @@
 | 数据访问日期 | 元数据访问记录为2026年10月10日；选定EEG及配套元数据取得记录为2026年10月11日 | 已补入方法 |
 | Funding与利益冲突 | Funding和利益冲突声明在作者信息表保留，供投稿系统填写；利益冲突句已从两份主稿移除 | 已修正 |
 | AI辅助披露 | 正文、图注及补充材料说明工具、使用范围与输出核验；作者承担最终责任 | 已报告 |
-| Human Participants Checklist | 官方2026版表格已预填并检查，身份信息访问情况尚待作者提供事实答复 | 作者须补全第3项 |
+| Human Participants Checklist | 官方2026版表格已完成；作者确认无法访问身份信息，方法声明与清单第96–100行引用一致 | 第3项已完成 |
 
 代码DOI或Zenodo归档属于可以进一步增强版本持久性的做法；当前原始数据有版本DOI，派生结果随S1 Data提供，代码在公开GitHub中可取得。本轮未把新增代码DOI列为初投稿的硬性条件。
 
@@ -36,9 +36,15 @@
 
 方法部分依据实际收据补入：
 
-> Dataset metadata were accessed on 10 October 2026, and the selected EEG recordings and accompanying metadata were retrieved on 11 October 2026. This secondary analysis used the released coded participant identifiers; no participants were contacted and no re-identification was attempted.
+> Dataset metadata were accessed on 10 October 2026, and the selected EEG recordings and accompanying metadata were retrieved on 11 October 2026. This secondary analysis used the released coded participant identifiers; no participants were contacted and no re-identification was attempted. The author had no access to information that could identify individual participants during or after data collection.
 
 日期来自收据内的UTC时间字段，并经原始文件校验记录交叉核对。科学结果、端点、表格数值及原有统计口径保持一致。
+
+## 身份信息访问确认
+
+作者于2026年10月17日15:29:58回复“我无法访问”，并于15:31:59在引用“作者在数据收集期间或之后，是否能够访问可识别具体参与者身份的信息”的问题后再次回复“无法访问”。本轮据此加入身份信息访问声明，并完成官方清单。原始采集审批、本次二次分析免审确认及此前科学审阅记录的范围均按原记录保留。
+
+软件检查沿用已经核对源码和输入哈希的适用记录：论文相关脚本、针对性测试和18个新增输出重放已通过。全仓pytest及Ruff没有被表述为全部通过；其历史失败、当前环境依赖和既有样式问题见 `research_logs/kumar_plos_final_submission_20261017/software_gate_audit.json`。这次声明补全没有改研究代码或重新训练模型。
 
 ## 投稿时使用的文件
 
@@ -51,7 +57,7 @@
 | S1_Text.pdf、S2_Text.pdf | Supporting Information，对应S1 Text、S2 Text |
 | S1_Data.zip | Supporting Information，对应S1 Data |
 | Cover_Letter.pdf | Cover Letter |
-| Human_Participants_Checklist_Author_Completion_Required.pdf | 完成第3项后作为期刊要求的参与者研究清单上传 |
+| Human_Participants_Checklist.pdf | 已完成的官方参与者研究清单 |
 
 阅读版PDF供作者通读和批注；正式稿、图件和补充材料按上表分别提交。
 
