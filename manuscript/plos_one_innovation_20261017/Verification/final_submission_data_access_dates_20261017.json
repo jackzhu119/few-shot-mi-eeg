@@ -1,0 +1,129 @@
+{
+  "created_utc": "2026-10-17T06:36:03.618232+00:00",
+  "basis": "Recorded retrieval timestamps and download receipts, not filenames or filesystem mtimes. No new raw EEG access performed.",
+  "sources": {
+    "bounded_metadata": {
+      "repository_path": "research_logs/public_data_expansion_20261010/longitudinal_receipts/bounded_probe_receipts.json",
+      "sha256": "1e3ee572491f4f1e83dfd6e1fa21f58eb352df99c5e5567db73164a9ee6a8786"
+    },
+    "metadata_download": {
+      "repository_path": "research_logs/public_data_expansion_20261010/kumar_ingestion/downloads/download_receipt_20261011T002153112671Z.json",
+      "sha256": "0dec70c04388b1a0662557b9f187718b5199afb5bbfb35587415e33cfe310daa"
+    },
+    "complete_download": {
+      "repository_path": "research_logs/public_data_expansion_20261010/kumar_ingestion/downloads/download_receipt_20261011T063825615923Z.json",
+      "sha256": "0eb789b011438ee7b99d5654dd7f5eeab3d04c83cd67b4002c63023e85bb3f4f"
+    },
+    "independent_signal_audit": {
+      "repository_path": "research_logs/public_data_expansion_20261010/kumar_ingestion/independent_source_crosscheck.json",
+      "sha256": "9cb9dec43ad6802999ef09fdc5ee122f4215337b13c342ab64921507fe5a4a75"
+    },
+    "author_statement": {
+      "repository_path": "research_logs/kumar_ethics_statement_revision_20261016/run01/author_statement_record.json",
+      "sha256": "97d4eacd4af344bd4dcb3ec44c29818af73d6da2716e512b665bf2d06fa0f7c2"
+    }
+  },
+  "metadata_reads": {
+    "nm000177_README.md": {
+      "url": "https://data.nemar.org/nm000177/v1.0.5/README.md",
+      "status": 200,
+      "bytes": 2566,
+      "sha256": "42b1d38790300854b0746eaad1a9f385e6887211b2ec3c6e1c478e54c52a986f",
+      "retrieved_utc": "2026-10-10T12:44:30.196036+00:00"
+    },
+    "nm000177_dataset_description.json": {
+      "url": "https://data.nemar.org/nm000177/v1.0.5/dataset_description.json",
+      "status": 200,
+      "bytes": 1310,
+      "sha256": "3ec4afc49c56dcd35be7c1fe8318a1c463983e1a630a42419bb235c66439a747",
+      "retrieved_utc": "2026-10-10T12:44:30.460419+00:00"
+    },
+    "nm000177_participants.tsv": {
+      "url": "https://data.nemar.org/nm000177/v1.0.5/participants.tsv",
+      "status": 200,
+      "bytes": 1071,
+      "sha256": "1596034e5ba33af6df6870ec82bc17cf4cfd5198d91ffb35daf22e7674410bcd",
+      "retrieved_utc": "2026-10-10T12:44:30.278060+00:00"
+    },
+    "nm000177_sample_events.tsv": {
+      "url": "https://data.nemar.org/nm000177/v1.0.5/sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-0_events.tsv",
+      "status": 200,
+      "bytes": 746,
+      "sha256": "3600a9dd24cc7165deabfca7a48d6c79188cafb39599453887a173a7b5797a35",
+      "retrieved_utc": "2026-10-10T12:44:30.498289+00:00"
+    },
+    "nm000177_sample_channels.tsv": {
+      "url": "https://data.nemar.org/nm000177/v1.0.5/sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-0_channels.tsv",
+      "status": 200,
+      "bytes": 1359,
+      "sha256": "d9d60bdc87a60d4b7f9b3e8b862da2ae7b070fcf4f9efbd21be480491f32b4f0",
+      "retrieved_utc": "2026-10-10T12:44:30.297550+00:00"
+    },
+    "nm000177_sample_eeg.json": {
+      "url": "https://data.nemar.org/nm000177/v1.0.5/sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-0_eeg.json",
+      "status": 200,
+      "bytes": 1699,
+      "sha256": "39217902c3672148fc24ce8a5678c24dd60d9ad8a4be0cf8f0d3477b05ba0f97",
+      "retrieved_utc": "2026-10-10T12:44:30.334237+00:00"
+    }
+  },
+  "signal_HEAD_only": {
+    "url": "https://data.nemar.org/nm000177/v1.0.5/sub-1/ses-0/eeg/sub-1_ses-0_task-imagery_run-0_eeg.edf",
+    "status": 200,
+    "content_length": "5490168",
+    "accept_ranges": null,
+    "content_type": null,
+    "retrieved_utc": "2026-10-10T12:44:34.935175+00:00",
+    "scope": "HEAD only; no EEG bytes downloaded; no checksum/format/readability inference"
+  },
+  "download_receipts": {
+    "metadata_download": {
+      "dataset": "Kumar2024",
+      "version": "v1.0.5",
+      "started_at_utc": "2026-10-11T00:21:53.112709+00:00",
+      "finished_at_utc": "2026-10-11T00:26:20.319562+00:00",
+      "metadata_only": true,
+      "complete": false,
+      "requested_scope_complete": true,
+      "selected_file_count": 2705,
+      "selected_bytes": 1781052841,
+      "transferred_bytes": 2474071,
+      "failed_files": []
+    },
+    "complete_download": {
+      "dataset": "Kumar2024",
+      "version": "v1.0.5",
+      "started_at_utc": "2026-10-11T06:38:25.615966+00:00",
+      "finished_at_utc": "2026-10-11T06:40:46.654255+00:00",
+      "metadata_only": false,
+      "complete": true,
+      "requested_scope_complete": true,
+      "selected_file_count": 2705,
+      "selected_bytes": 1781052841,
+      "transferred_bytes": 1778578770,
+      "failed_files": []
+    }
+  },
+  "independent_verification": {
+    "status": "passed",
+    "recorded_at_utc": "2026-10-11T06:43:59.285844+00:00",
+    "all_source_files_independently_official_checksum_verified": 2705,
+    "EDF_count": 360
+  },
+  "evidenced_access_dates_day_month_year": [
+    "10 October 2026 (metadata access and signal HEAD only)",
+    "11 October 2026 (metadata and selected EEG download)"
+  ],
+  "author_statement_support": {
+    "recorded_utc": "2026-10-16T02:49:41.753816+00:00",
+    "basis": "Author statements in prior conversation as recorded at time; no institutional document supplied.",
+    "coded_identifiers": true,
+    "no_new_participant_contact": true,
+    "no_reidentification_attempts": true,
+    "no_sensitive_information_stated_by_author": true,
+    "explicit_no_access_to_identification_key_or_direct_identifiers_recorded": false
+  },
+  "supported_Methods_addition": "Dataset metadata were accessed on 10 October 2026, and the selected EEG recordings and accompanying metadata were retrieved on 11 October 2026. The analysis used the released coded participant identifiers; no participants were contacted and no re-identification was attempted.",
+  "unverified_statement_do_not_insert": "The author had no access, at any point during or after data collection, to information that could identify individual participants or to a participant re-identification key.",
+  "remaining_Q3_issue": "The access dates can be completed from existing records. Whether the author could access information identifying individuals at any time requires an explicit factual author response or other direct evidence; coded IDs and no attempts at re-identification alone do not answer that question."
+}

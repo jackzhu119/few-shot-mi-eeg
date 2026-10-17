@@ -1,0 +1,492 @@
+{
+  "schema_version": 1,
+  "checked_against": {
+    "manuscript": "https://journals.plos.org/plosone/s/submission-guidelines",
+    "figures": "https://journals.plos.org/plosone/s/figures",
+    "tables": "https://journals.plos.org/plosone/s/tables",
+    "AI_disclosure": "https://journals.plos.org/plosone/s/ethical-publishing-practice"
+  },
+  "source_checks": {
+    "title": "Spatial-filter refitting improves limited-label recalibration in longitudinal motor-imagery EEG",
+    "title_characters": 95,
+    "short_title": "Spatial-filter updating with limited calibration labels",
+    "short_title_characters": 55,
+    "abstract_words": 251,
+    "heading_levels": 2,
+    "top_level_sections": [
+      "Abstract",
+      "Introduction",
+      "Materials and methods",
+      "Results",
+      "Discussion",
+      "Conclusions",
+      "Data and code availability",
+      "Author contributions and declarations",
+      "Acknowledgments",
+      "References",
+      "Supporting information captions"
+    ],
+    "table_numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "table_first_citation_order": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "funding_in_main_text": false,
+    "footnotes_in_main_text": false
+  },
+  "main_source_sha256": "40e1e70044be7b73f4cbfbdc82b69d3da6b0b5c8c31e526a2854d99f46e173de",
+  "bibliography_sha256": "1f722ae1a49e1886ecda8214fae1edb50222acfb871864f93cdb998e0e69490b",
+  "csl_sha256": "9e4e46b754097ccc48377aeeeccf28e1d58c3fac169a46cbc7ef8a5fad97c35f",
+  "prepared_csl": "research_logs/kumar_plos_innovation_20261017/document_build/plos_innovation.csl",
+  "prepared_csl_sha256": "ec2830a903a4e29fd53838c2f6af4c8450b6281b72be04d3ade561d471cd1640",
+  "runtime": {
+    "python": "3.12.14",
+    "python_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "python_docx": "1.2.0",
+    "pandoc": "pandoc 3.1.3"
+  },
+  "font_resolution": {
+    "Times New Roman": {
+      "resolved_family": "Times New Roman",
+      "path": "/tmp/paper2_fonts_20261017/fonts/Times.TTF",
+      "sha256": "4e98adeff8ccc8ef4e3ece8d4547e288ff85fdc9c7ca711a4599c234874bbe86",
+      "exact_family": true
+    },
+    "Arial": {
+      "resolved_family": "Arial",
+      "path": "/tmp/paper2_fonts_20261017/fonts/Arial.TTF",
+      "sha256": "35c0f3559d8db569e36c31095b8a60d441643d95f59139de40e23fada819b833",
+      "exact_family": true
+    },
+    "Latin Modern Math": {
+      "resolved_family": "Latin Modern Math",
+      "path": "/usr/share/texmf/fonts/opentype/public/lm-math/latinmodern-math.otf",
+      "sha256": "6075562b771f8b82f0c179e363389684f2dd09de30038269e2628e504bd7be0f",
+      "exact_family": true
+    }
+  },
+  "font_binaries_copied_to_release": false,
+  "documents": [
+    {
+      "file": "manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Submission.docx",
+      "sha256": "ddf0fc7dd52a864678332827f1a17b4be00f354e13bcd2b87d357832091c2325",
+      "paragraphs": 159,
+      "tables": 6,
+      "inline_images": 0,
+      "native_math_objects": 2,
+      "bibliography_entries": 19,
+      "footnote_references": 0,
+      "line_numbers": [
+        {
+          "countBy": "1",
+          "start": "1",
+          "restart": "continuous",
+          "distance": "180"
+        }
+      ],
+      "single_column": true,
+      "body_font": "Times New Roman",
+      "body_size_pt": 12.0,
+      "body_line_spacing": 2.0,
+      "bibliography_double_spaced": true,
+      "figure_captions": [
+        "Fig 1. Target-query decoding by participant.",
+        "Fig 2. Full-refit gain over frozen decoding in the primary cohort.",
+        "Fig 3. Task-score orientation across chronological support halves.",
+        "Fig 4. Session-level gains from full CSP/LDA refitting.",
+        "Fig 5. Prediction changes underlying recalibration gains.",
+        "Fig 6. Consistency of the spatial-update advantage."
+      ],
+      "visual_qa": {
+        "status": "visual_review_passed",
+        "final_pages_with_actual_visual_review_coverage": 29,
+        "changed_pages_reinspected": [
+          19,
+          20,
+          21,
+          26,
+          27,
+          28,
+          29
+        ],
+        "unchanged_previously_inspected_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          22,
+          23,
+          24,
+          25
+        ],
+        "receipt": "research_logs/kumar_plos_innovation_20261017/document_build/Submission_visual_QA_final.json",
+        "final_pdf_and_page_hashes_match_review_receipt": true
+      },
+      "source": "manuscript/kumar_plos_one_submission_draft_innovation_20261017.md",
+      "source_sha256": "40e1e70044be7b73f4cbfbdc82b69d3da6b0b5c8c31e526a2854d99f46e173de",
+      "prepared_source_sha256": "b7955422c508447abd59e67399019c0b13d37d622105e2dc3663ae38f131b7ca",
+      "figure_placement": [
+        {
+          "figure": 1,
+          "image_source": "manuscript/figures/plos_innovation_20261017/Fig1_target_query_participants.png",
+          "caption_after_first_citation": true,
+          "embedded_image": false
+        },
+        {
+          "figure": 2,
+          "image_source": "manuscript/figures/plos_innovation_20261017/Fig2_cpu_primary_paired_changes.png",
+          "caption_after_first_citation": true,
+          "embedded_image": false
+        },
+        {
+          "figure": 3,
+          "image_source": "manuscript/figures/plos_innovation_20261017/Fig3_csp_signed_support_halves.png",
+          "caption_after_first_citation": true,
+          "embedded_image": false
+        },
+        {
+          "figure": 4,
+          "image_source": "manuscript/figures/plos_innovation_20261017/Fig4_longitudinal_paired_changes.png",
+          "caption_after_first_citation": true,
+          "embedded_image": false
+        },
+        {
+          "figure": 5,
+          "image_source": "manuscript/figures/plos_innovation_20261017/Fig5_prediction_transitions.png",
+          "caption_after_first_citation": true,
+          "embedded_image": false
+        },
+        {
+          "figure": 6,
+          "image_source": "manuscript/figures/plos_innovation_20261017/Fig6_component_consistency.png",
+          "caption_after_first_citation": true,
+          "embedded_image": false
+        }
+      ],
+      "pdf": {
+        "file": "manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Submission.pdf",
+        "sha256": "9c1bafd382dc12d843030920566726b6f29ca810bd6057123655a60500602a51",
+        "pages": 29,
+        "actual_fonts": [
+          "BAAAAA+TimesNewRomanPSMT",
+          "CAAAAA+TimesNewRomanPS-BoldMT",
+          "DAAAAA+TimesNewRomanPS-BoldMT",
+          "EAAAAA+Caladea-Regular",
+          "FAAAAA+TimesNewRomanPS-ItalicMT",
+          "GAAAAA+TimesNewRomanPS-BoldMT",
+          "HAAAAA+TimesNewRomanPSMT",
+          "IAAAAA+LiberationSerif",
+          "JAAAAA+LiberationSerif-Italic"
+        ],
+        "page_images": "research_logs/kumar_plos_innovation_20261017/document_build/rendered/PLOS_ONE_Manuscript_Submission"
+      }
+    },
+    {
+      "file": "manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Reading.docx",
+      "sha256": "f8686a574fe4fefeeccd647c6f8558f78053375e27097abc9f31e89bcf326fe8",
+      "paragraphs": 165,
+      "tables": 6,
+      "inline_images": 6,
+      "native_math_objects": 2,
+      "bibliography_entries": 19,
+      "footnote_references": 0,
+      "line_numbers": [],
+      "single_column": true,
+      "body_font": "Times New Roman",
+      "body_size_pt": 11.5,
+      "body_line_spacing": 1.1791666666666667,
+      "bibliography_double_spaced": false,
+      "figure_captions": [
+        "Fig 1. Target-query decoding by participant.",
+        "Fig 2. Full-refit gain over frozen decoding in the primary cohort.",
+        "Fig 3. Task-score orientation across chronological support halves.",
+        "Fig 4. Session-level gains from full CSP/LDA refitting.",
+        "Fig 5. Prediction changes underlying recalibration gains.",
+        "Fig 6. Consistency of the spatial-update advantage."
+      ],
+      "visual_qa": {
+        "status": "visual_review_passed",
+        "final_pages_with_actual_visual_review_coverage": 23,
+        "changed_pages_reinspected": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "unchanged_previously_inspected_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "receipt": "research_logs/kumar_plos_innovation_20261017/document_build/Reading_visual_QA_final.json",
+        "final_pdf_and_page_hashes_match_review_receipt": true
+      },
+      "source": "manuscript/kumar_plos_one_submission_draft_innovation_20261017.md",
+      "source_sha256": "40e1e70044be7b73f4cbfbdc82b69d3da6b0b5c8c31e526a2854d99f46e173de",
+      "prepared_source_sha256": "75ec350c501378615f2b899b68b6844a3e47b55f6d33762e16e79275767d960e",
+      "figure_placement": [
+        {
+          "figure": 1,
+          "image_source": "manuscript/figures/plos_innovation_20261017/Fig1_target_query_participants.png",
+          "caption_after_first_citation": true,
+          "embedded_image": true
+        },
+        {
+          "figure": 2,
+          "image_source": "manuscript/figures/plos_innovation_20261017/Fig2_cpu_primary_paired_changes.png",
+          "caption_after_first_citation": true,
+          "embedded_image": true
+        },
+        {
+          "figure": 3,
+          "image_source": "manuscript/figures/plos_innovation_20261017/Fig3_csp_signed_support_halves.png",
+          "caption_after_first_citation": true,
+          "embedded_image": true
+        },
+        {
+          "figure": 4,
+          "image_source": "manuscript/figures/plos_innovation_20261017/Fig4_longitudinal_paired_changes.png",
+          "caption_after_first_citation": true,
+          "embedded_image": true
+        },
+        {
+          "figure": 5,
+          "image_source": "manuscript/figures/plos_innovation_20261017/Fig5_prediction_transitions.png",
+          "caption_after_first_citation": true,
+          "embedded_image": true
+        },
+        {
+          "figure": 6,
+          "image_source": "manuscript/figures/plos_innovation_20261017/Fig6_component_consistency.png",
+          "caption_after_first_citation": true,
+          "embedded_image": true
+        }
+      ],
+      "pdf": {
+        "file": "manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Reading.pdf",
+        "sha256": "771b870de3f0e753b6f5860f9923ff8852471314269d596429dcbf55cc62dff6",
+        "pages": 23,
+        "actual_fonts": [
+          "BAAAAA+TimesNewRomanPSMT",
+          "CAAAAA+TimesNewRomanPS-BoldMT",
+          "DAAAAA+TimesNewRomanPS-BoldMT",
+          "EAAAAA+TimesNewRomanPS-BoldMT",
+          "FAAAAA+TimesNewRomanPS-BoldMT",
+          "GAAAAA+TimesNewRomanPS-ItalicMT",
+          "HAAAAA+TimesNewRomanPS-BoldMT",
+          "IAAAAA+TimesNewRomanPSMT",
+          "JAAAAA+LiberationSerif",
+          "KAAAAA+LiberationSerif-Italic"
+        ],
+        "page_images": "research_logs/kumar_plos_innovation_20261017/document_build/rendered/PLOS_ONE_Manuscript_Reading"
+      }
+    },
+    {
+      "file": "manuscript/plos_one_innovation_20261017/S1_Supplementary_Methods.docx",
+      "sha256": "fa1c85b4765d96d5a5adb65d855a45c9c32d643042716d3ffc477f5f7b6c3e21",
+      "paragraphs": 129,
+      "tables": 8,
+      "inline_images": 0,
+      "native_math_objects": 37,
+      "bibliography_entries": 4,
+      "footnote_references": 0,
+      "line_numbers": [],
+      "single_column": true,
+      "body_font": "Times New Roman",
+      "body_size_pt": 11.5,
+      "body_line_spacing": 1.1791666666666667,
+      "bibliography_double_spaced": false,
+      "figure_captions": [],
+      "visual_qa": {
+        "status": "visual_review_passed",
+        "final_pages_with_actual_visual_review_coverage": 15,
+        "changed_pages_reinspected": [
+          11,
+          14,
+          15
+        ],
+        "unchanged_previously_inspected_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          12,
+          13
+        ],
+        "receipt": "research_logs/kumar_update_mechanisms_20261017/run01/S1_visual_QA_final.json",
+        "final_pdf_and_page_hashes_match_review_receipt": true
+      },
+      "source": "manuscript/kumar_plos_one_supporting_methods_innovation_20261017.md",
+      "source_sha256": "394ae33e24678fbbc6952dc735d10f32232d7374c5fdc4320235d1530cd00a5e",
+      "prepared_source_sha256": "255c43360cf39ab5e59603b1e4aa32a13edcc9d6e7fb6f4adf66791cf9fc1b0d",
+      "figure_placement": [],
+      "pdf": {
+        "file": "manuscript/plos_one_innovation_20261017/S1_Supplementary_Methods.pdf",
+        "sha256": "529ebf11e9b10b38cf8c13c130778d82814cd452bf3f3ca22ddd84a9cfc30af1",
+        "pages": 15,
+        "actual_fonts": [
+          "BAAAAA+TimesNewRomanPSMT",
+          "CAAAAA+TimesNewRomanPS-BoldMT",
+          "DAAAAA+TimesNewRomanPS-BoldMT",
+          "EAAAAA+TimesNewRomanPS-BoldMT",
+          "FAAAAA+DejaVuSansMono",
+          "GAAAAA+TimesNewRomanPS-BoldMT",
+          "HAAAAA+TimesNewRomanPSMT",
+          "IAAAAA+TimesNewRomanPS-BoldMT",
+          "JAAAAA+LiberationSerif-Italic",
+          "KAAAAA+OpenSymbol",
+          "LAAAAA+LiberationSerif",
+          "MAAAAA+NimbusRoman-Italic",
+          "NAAAAA+DejaVuSerif-Italic"
+        ],
+        "page_images": "research_logs/kumar_plos_innovation_20261017/document_build/rendered/S1_Supplementary_Methods"
+      }
+    },
+    {
+      "file": "manuscript/plos_one_innovation_20261017/S2_Reproducibility.docx",
+      "sha256": "730d2e0e75ede29f5a7da825603d83c051d4f55f6a05b321c0a6f0e07fcab76e",
+      "paragraphs": 42,
+      "tables": 2,
+      "inline_images": 0,
+      "native_math_objects": 0,
+      "bibliography_entries": 3,
+      "footnote_references": 0,
+      "line_numbers": [],
+      "single_column": true,
+      "body_font": "Times New Roman",
+      "body_size_pt": 11.5,
+      "body_line_spacing": 1.1791666666666667,
+      "bibliography_double_spaced": false,
+      "figure_captions": [],
+      "visual_qa": {
+        "status": "visual_review_passed",
+        "final_pages_with_actual_visual_review_coverage": 5,
+        "changed_pages_reinspected": [
+          2,
+          5
+        ],
+        "unchanged_previously_inspected_pages": [
+          1,
+          3,
+          4
+        ],
+        "receipt": "research_logs/kumar_plos_innovation_20261017/root_visual_QA_final.json",
+        "final_pdf_and_page_hashes_match_review_receipt": true
+      },
+      "source": "manuscript/kumar_plos_one_audit_reproducibility_innovation_20261017.md",
+      "source_sha256": "565e5ddc46efecb6001a59eeec5f3412fdaa7bf87d787b3256b649572bbe46e5",
+      "prepared_source_sha256": "76217d563125c5df40adf9b00bd9001eeb10276d170e69076bba5a7520c24ff3",
+      "figure_placement": [],
+      "pdf": {
+        "file": "manuscript/plos_one_innovation_20261017/S2_Reproducibility.pdf",
+        "sha256": "870256a7ebb9f34aed34510a13f6c2b9c032b7e5e1f067a8a5120d3bda48af6f",
+        "pages": 5,
+        "actual_fonts": [
+          "BAAAAA+TimesNewRomanPSMT",
+          "CAAAAA+TimesNewRomanPS-BoldMT",
+          "DAAAAA+TimesNewRomanPS-BoldMT",
+          "EAAAAA+TimesNewRomanPS-BoldMT",
+          "FAAAAA+TimesNewRomanPS-BoldMT",
+          "GAAAAA+TimesNewRomanPSMT",
+          "HAAAAA+DejaVuSansMono"
+        ],
+        "page_images": "research_logs/kumar_plos_innovation_20261017/document_build/rendered/S2_Reproducibility"
+      }
+    },
+    {
+      "file": "manuscript/plos_one_innovation_20261017/Cover_Letter.docx",
+      "sha256": "fb10c8e5f4865cace275686d8d403cb850de506c0e55f9f33b822bc27f86f03e",
+      "paragraphs": 12,
+      "tables": 0,
+      "inline_images": 0,
+      "native_math_objects": 0,
+      "bibliography_entries": 0,
+      "footnote_references": 0,
+      "line_numbers": [],
+      "single_column": true,
+      "body_font": "Times New Roman",
+      "body_size_pt": 11.0,
+      "body_line_spacing": 1.05,
+      "bibliography_double_spaced": true,
+      "figure_captions": [],
+      "visual_qa": {
+        "status": "visual_review_passed",
+        "final_pages_with_actual_visual_review_coverage": 1,
+        "changed_pages_reinspected": [
+          1
+        ],
+        "unchanged_previously_inspected_pages": [],
+        "receipt": "research_logs/kumar_plos_innovation_20261017/root_visual_QA_final.json",
+        "final_pdf_and_page_hashes_match_review_receipt": true
+      },
+      "source": "manuscript/kumar_plos_one_cover_letter_innovation_20261017.md",
+      "source_sha256": "9070ae4e506bf0fb3997a0f3033f3d70733bc74ff503af60215f677f2f1ec5c4",
+      "prepared_source_sha256": "fcc4f06876f6e4c20eceb56438874762707b5e9b72d7cba8636d2f44f9009778",
+      "figure_placement": [],
+      "pdf": {
+        "file": "manuscript/plos_one_innovation_20261017/Cover_Letter.pdf",
+        "sha256": "ae2e9b4425123cdff7de71d793688763c14e4449e5bfb2ebfa54afb003a7324b",
+        "pages": 1,
+        "actual_fonts": [
+          "BAAAAA+TimesNewRomanPSMT",
+          "CAAAAA+TimesNewRomanPS-BoldMT"
+        ],
+        "page_images": "research_logs/kumar_plos_innovation_20261017/document_build/rendered/Cover_Letter"
+      }
+    }
+  ],
+  "status": "structural_and_visual_review_complete",
+  "note": "All final pages have actual visual review coverage. Unchanged pages were identified by exact PNG hashes; each changed page was inspected again. Review was AI-assisted. No journal submission was performed.",
+  "final_document_pages_visually_reviewed": 73,
+  "visual_review_completed_at_utc": "2026-10-17T04:18:51.496173+00:00",
+  "reference_metadata_comparison": "research_logs/kumar_plos_innovation_20261017/document_build/reference_metadata_comparison.json",
+  "journal_abbreviation_sources": "research_logs/kumar_plos_innovation_20261017/document_build/journal_abbreviations_verified.json",
+  "record_scope": "Historical audit before final submission cleanup; main-manuscript hashes are superseded by Verification/final_submission_document_QA_20261017.json."
+}

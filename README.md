@@ -1,5 +1,9 @@
 # Task-Aware Adaptive Decoding for Longitudinal Motor-Imagery EEG
 
+## 2026年10月17日最终投稿核查
+
+[最新PLOS ONE核查与上传文件说明](docs/kumar_main_submission_check_20261017.md)：已修正主稿声明位置，补入有原始收据支持的数据访问日期，提供官方Human Participants Checklist预填表及短名图件上传包。稿件格式、图件及公开数据检查通过；清单第3项的身份信息访问事实仍需作者补全。
+
 ## 论文2：新增创新分析与完整投稿文件（2026-10-17）
 
 [当前完整文件索引](manuscript/plos_one_innovation_20261017/README.md) · [带图阅读 PDF](manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Reading.pdf) · [投稿 Word](manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Submission.docx) · [中文修订与实验核验说明](docs/kumar_innovation_revision_20261017.md)。

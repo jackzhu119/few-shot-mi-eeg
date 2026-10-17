@@ -1,0 +1,350 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-17T06:56:08.776657+00:00",
+  "status": "existing_scoped_pass_evidence_applicable_full_repository_gates_not_all_green",
+  "full_repository_gate_passed": false,
+  "scope": "Read-only applicability audit for the requested main promotion. No software, package, original receipt or scientific result was changed; no tests, lint, model fitting, forward pass or experiment was rerun.",
+  "audited_research_code_commit": "1d78ceb080c96865e3ed2b0a6b75ff81bccc6318",
+  "observed_HEAD": "9978766129434bbec01b08c1a4df739c3552bac0",
+  "AGENTS_md": {
+    "path": "AGENTS.md",
+    "sha256": "47cc3a5d72de7d74281c4c03d098a29aa4217f88c3aaac77dd0058095c64f72f",
+    "required_commands": [
+      "python -m pytest -q",
+      "ruff check src tests scripts",
+      "python scripts/smoke_experiment.py --config configs/smoke.json",
+      "python scripts/check_data_stack.py"
+    ],
+    "required_environment": "/workspace/.venvs/few-shot-mi-eeg, Python >=3.11,<3.12",
+    "specified_environment_present_at_audit": false
+  },
+  "current_turn_code_changes": {
+    "paths_checked": [
+      "src",
+      "tests",
+      "scripts",
+      "configs",
+      "pyproject.toml",
+      "uv.lock"
+    ],
+    "git_status_porcelain": [],
+    "none": true,
+    "tracked_files_fingerprinted": 223,
+    "sorted_path_sha256_manifest_digest": "6a686171e1539bb0c1725c5311f6ad7e2012089569b6e2db76a7a7ef79b84461"
+  },
+  "latest_scoped_validation": {
+    "receipt": "research_logs/kumar_plos_innovation_20261017/software_validation_20261017.json",
+    "receipt_sha256": "5af026c3b7ef88de61e81e83ac392f52fe1f7d285e1331175d77a05307360a2c",
+    "runtime": {
+      "python": "3.12.14",
+      "numpy": "2.3.5",
+      "pytest": "8.4.2",
+      "ruff": "0.17.1",
+      "environment": "temporary validation venv sharing the primary artifact runtime",
+      "original_project_requires": "Python >=3.11,<3.12"
+    },
+    "source_applicability": "Receipt and current three export/analysis scripts were committed in 1d78ceb; these files and the two tested statistic/QC modules and tests still match that commit exactly. The two targeted tests cover saved-query QC and post-review statistics; they are not presented as dedicated tests of the new update-mechanism script. That new script has the independent saved-output replay below.",
+    "current_file_fingerprints": [
+      {
+        "path": "scripts/analyze_kumar_update_mechanisms_20261017.py",
+        "sha256": "28b3feb09efb4ee9a6703d83dcac48cd5f679cc49a811b4979361d6f0f886c46",
+        "last_change_commit": "1d78ceb080c96865e3ed2b0a6b75ff81bccc6318",
+        "matches_audited_head": true
+      },
+      {
+        "path": "scripts/build_kumar_innovation_documents_20261017.py",
+        "sha256": "00e861850540c6872940fae1967de63bd3a353c6fa314e4e5a0101ec62b7a922",
+        "last_change_commit": "1d78ceb080c96865e3ed2b0a6b75ff81bccc6318",
+        "matches_audited_head": true
+      },
+      {
+        "path": "scripts/render_kumar_innovation_legacy_figures_20261017.py",
+        "sha256": "333209eee59368c0243ea5dffecd8353a30b352c11945e6b95bb545e4e4ad269",
+        "last_change_commit": "1d78ceb080c96865e3ed2b0a6b75ff81bccc6318",
+        "matches_audited_head": true
+      },
+      {
+        "path": "scripts/analyze_kumar_saved_query_qc_20261015.py",
+        "sha256": "c52586829deb77f4b6b16a15d66df83c0588847036ff9c9de9e2ea1c90efa563",
+        "last_change_commit": "f735ffd1e49915e41f28b727f5d3279ad337c692",
+        "matches_audited_head": true
+      },
+      {
+        "path": "scripts/analyze_kumar_postreview_statistics_20261016.py",
+        "sha256": "d61b862c990fa0c3e44800503f04492f832cafae4f10e4edc6ad26ec6e182336",
+        "last_change_commit": "f2901decfc39b2adecae13253ee4b1159a4f9a4b",
+        "matches_audited_head": true
+      },
+      {
+        "path": "tests/test_kumar_saved_query_qc_20261015.py",
+        "sha256": "ce346f5f9120962e362a200c85344679a6b93eef771348751266d54707b8f0d1",
+        "last_change_commit": "f735ffd1e49915e41f28b727f5d3279ad337c692",
+        "matches_audited_head": true
+      },
+      {
+        "path": "tests/test_kumar_postreview_statistics_20261016.py",
+        "sha256": "c32a91c25548c1cf78e1402b22728fb790608449264c46bd77b2ec3f2196396c",
+        "last_change_commit": "f2901decfc39b2adecae13253ee4b1159a4f9a4b",
+        "matches_audited_head": true
+      }
+    ],
+    "three_script_ruff": {
+      "command": "ruff check scripts/analyze_kumar_update_mechanisms_20261017.py scripts/build_kumar_innovation_documents_20261017.py scripts/render_kumar_innovation_legacy_figures_20261017.py",
+      "status": "passed",
+      "exit_code": 0,
+      "output": "All checks passed!",
+      "note": "Repeated final changed-script lint, if any, is recorded separately."
+    },
+    "targeted_pytest": {
+      "command": "PYTHONPATH=src python -m pytest -q tests/test_kumar_saved_query_qc_20261015.py tests/test_kumar_postreview_statistics_20261016.py",
+      "status": "passed",
+      "exit_code": 0,
+      "passed": 39,
+      "seconds": 0.7
+    },
+    "figure_renderer_source_fingerprint_matches_original_generation_receipt": true
+  },
+  "newer_research_component_targeted_receipts": [
+    {
+      "receipt": "research_logs/kumar_component_followup_20261016/budget_cpu_implementation/software_validation_receipt.json",
+      "receipt_sha256": "391a7fc3edaade9887a01d572899d30520b443ca118af3bfeff0e2bd14935f19",
+      "fingerprints": [
+        {
+          "path": "scripts/run_kumar_component_budget_cpu_20261016.py",
+          "recorded_sha256": "381bc4739698d7be7c76b2b8c4d05d4d944d0c6e3c3b570f1c2fb60a5cceb5d1",
+          "current_sha256": "381bc4739698d7be7c76b2b8c4d05d4d944d0c6e3c3b570f1c2fb60a5cceb5d1",
+          "matches": true
+        },
+        {
+          "path": "tests/test_kumar_component_budget_cpu_20261016.py",
+          "recorded_sha256": "51f7216d55a0974939e2ecb59846c5c7bc58a67bc7c76cc29f0a999d2703d40d",
+          "current_sha256": "51f7216d55a0974939e2ecb59846c5c7bc58a67bc7c76cc29f0a999d2703d40d",
+          "matches": true
+        },
+        {
+          "path": "tests/test_kumar_component_budget_operation_20261016.py",
+          "recorded_sha256": "40d33442ee137e7d7cdd2693fdab4e59480b32f5d841d09a517c4393440a6455",
+          "current_sha256": "40d33442ee137e7d7cdd2693fdab4e59480b32f5d841d09a517c4393440a6455",
+          "matches": true
+        },
+        {
+          "path": "scripts/analyze_kumar_update_gain_feasibility_20261016.py",
+          "recorded_sha256": "525762758aca82a7eb65618b1ef79d274d4c24d78443151ec021591ebd6cc356",
+          "current_sha256": "525762758aca82a7eb65618b1ef79d274d4c24d78443151ec021591ebd6cc356",
+          "matches": true
+        },
+        {
+          "path": "tests/test_kumar_update_gain_feasibility_20261016.py",
+          "recorded_sha256": "92bd7baf053cf5fefb86ca85877f50f33d64d419ac587feb64ea801b7939502b",
+          "current_sha256": "92bd7baf053cf5fefb86ca85877f50f33d64d419ac587feb64ea801b7939502b",
+          "matches": true
+        },
+        {
+          "path": "docs/kumar_component_exploratory_protocol_20261016.md",
+          "recorded_sha256": "1c3e87ad634148bde031579cd8efb976e75643635d452a2ea69d911ccc9b09fc",
+          "current_sha256": "1c3e87ad634148bde031579cd8efb976e75643635d452a2ea69d911ccc9b09fc",
+          "matches": true
+        }
+      ],
+      "all_fingerprints_match": true,
+      "result": {
+        "command": "python -m pytest -q tests/test_kumar_component_budget_cpu_20261016.py tests/test_kumar_component_budget_operation_20261016.py tests/test_kumar_update_gain_feasibility_20261016.py",
+        "passed": 109,
+        "seconds": 5.83,
+        "budget_science_tests": 30,
+        "budget_operation_tests": 49,
+        "selector_tests": 30
+      },
+      "lint": {
+        "status": "passed",
+        "command": "ruff check scripts/run_kumar_component_budget_cpu_20261016.py tests/test_kumar_component_budget_cpu_20261016.py tests/test_kumar_component_budget_operation_20261016.py"
+      }
+    },
+    {
+      "receipt": "research_logs/kumar_component_followup_20261016/event_mapping/final_related_test_gate.json",
+      "receipt_sha256": "da008b267df63854add197cd63bb7c75f286d011f07ff354ea6f16a769b8b59e",
+      "fingerprints": [
+        {
+          "path": "scripts/audit_kumar_gdf_phase_mapping_20261016.py",
+          "recorded_sha256": "6bf787ce065df3508f851477e5b42f3f86787006823c506a6ff1f6b8677fee4f",
+          "current_sha256": "6bf787ce065df3508f851477e5b42f3f86787006823c506a6ff1f6b8677fee4f",
+          "matches": true
+        },
+        {
+          "path": "scripts/summarize_kumar_gdf_phase_mapping_20261016.py",
+          "recorded_sha256": "9a95ebbc9b0b997bc06ea35f5317d7399a8ec5145cff46598eb3f89bbf2ff59d",
+          "current_sha256": "9a95ebbc9b0b997bc06ea35f5317d7399a8ec5145cff46598eb3f89bbf2ff59d",
+          "matches": true
+        },
+        {
+          "path": "scripts/run_kumar_phase_window_cpu_20261016.py",
+          "recorded_sha256": "77da347fb2e4bed23cee29dd582d6d280055fbbf5031fd063fd670dbc053453d",
+          "current_sha256": "77da347fb2e4bed23cee29dd582d6d280055fbbf5031fd063fd670dbc053453d",
+          "matches": true
+        },
+        {
+          "path": "tests/test_kumar_gdf_phase_mapping_20261016.py",
+          "recorded_sha256": "dc25c51f4eb7c0b86b8602a3ac3106071ad2fd4eb5c8e7e0e7cf2582c90d1212",
+          "current_sha256": "dc25c51f4eb7c0b86b8602a3ac3106071ad2fd4eb5c8e7e0e7cf2582c90d1212",
+          "matches": true
+        },
+        {
+          "path": "tests/test_kumar_phase_window_cpu_20261016.py",
+          "recorded_sha256": "41c71fb1c38d37f14d3df8679dd048583c096b0b202b36595f0d527795fa3fbd",
+          "current_sha256": "41c71fb1c38d37f14d3df8679dd048583c096b0b202b36595f0d527795fa3fbd",
+          "matches": true
+        },
+        {
+          "path": "tests/test_kumar_phase_consumer_20261016.py",
+          "recorded_sha256": "2e3e037cfa9908bf7a0ce3df88aa8b7da14de996dc5e417a698c4a2af7b1054a",
+          "current_sha256": "2e3e037cfa9908bf7a0ce3df88aa8b7da14de996dc5e417a698c4a2af7b1054a",
+          "matches": true
+        }
+      ],
+      "all_fingerprints_match": true,
+      "result": {
+        "passed": 74,
+        "failed": 0,
+        "seconds": 11.65
+      },
+      "lint": "All six listed files passed"
+    }
+  ],
+  "preserved_python311_baseline": {
+    "receipt": "research_logs/kumar_review_revision_20261016/run01/verification/checks_receipt.json",
+    "receipt_sha256": "37ea5d3a529766b00db1b47e18d8ef3ca3834c581433061eb787c3e8bc252a93",
+    "committed_at": "f2901decfc39b2adecae13253ee4b1159a4f9a4b",
+    "source_changes_to_current_HEAD": {
+      "core_src": [],
+      "smoke_and_data_stack_source_and_declared_environment": [],
+      "four_historical_failing_test_files": []
+    },
+    "all_four_original_logs_match_receipt_SHA256": true,
+    "logs": [
+      {
+        "path": "research_logs/kumar_review_revision_20261016/run01/verification/pytest.log",
+        "sha256": "98d16e34d621cdfc2ecd558391250d72c82ddc58ae94df4dbb58439a23fa8e27",
+        "matches_receipt": true,
+        "exit_code": 1
+      },
+      {
+        "path": "research_logs/kumar_review_revision_20261016/run01/verification/ruff.log",
+        "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+        "matches_receipt": true,
+        "exit_code": 0
+      },
+      {
+        "path": "research_logs/kumar_review_revision_20261016/run01/verification/smoke.log",
+        "sha256": "3a4add3ecaf9a10054a251aaa75a7e48b03420479fd6815cbd08c2de19ca4ec0",
+        "matches_receipt": true,
+        "exit_code": 0
+      },
+      {
+        "path": "research_logs/kumar_review_revision_20261016/run01/verification/data_stack.log",
+        "sha256": "1c27830fc2e4968a433363d5b7e906cfae975fe7fd02aad0bcdde971998be368",
+        "matches_receipt": true,
+        "exit_code": 0
+      }
+    ],
+    "smoke_result": "software_validation_passed; synthetic=true; 6 subject-session evaluations; scientific_result_claimed=false",
+    "data_stack_result": "MNE_MOABB_synthetic_provider_passed; shape [20,3,385]; left_hand/right_hand; sessions 0/1; synthetic=true; public_eeg_downloaded=false",
+    "applicability": "The core source, smoke/data-stack scripts, smoke config and declared environment files are byte-unchanged since the commit carrying these original pass receipts. These are retained historical source-applicable passes, not a claim of fresh validation in the current absent Python 3.11 environment."
+  },
+  "saved_scientific_output_replay": {
+    "receipt": "research_logs/kumar_update_mechanisms_20261017/run01/final_zip_replay_validation.json",
+    "receipt_sha256": "276521596f394a44b02f3ac0f11fd9c2382f92ae522c96da8f937051e149d6fb",
+    "status": "final_zip_extracted_and_reproduced",
+    "current_S1_Data_zip": "manuscript/plos_one_innovation_20261017/S1_Data.zip",
+    "current_archive_sha256": "c6b73502b977b7bd36e27c914bebd686d994596b99f06227131272f428aa3614",
+    "current_archive_matches_replayed_archive": true,
+    "current_analysis_script_matches_replayed_script": true,
+    "exit_code": 0,
+    "scientific_files_compared": 18,
+    "CSV_files": 12,
+    "scientific_JSON_files": 6,
+    "all_byte_identical": true,
+    "original_members_preserved": 69,
+    "new_model_fits": 0,
+    "new_model_forward_passes": 0
+  },
+  "full_repository_gate_findings": [
+    {
+      "gate": "pytest",
+      "current_latest_record": {
+        "command": "PYTHONPATH=src python -m pytest -q",
+        "status": "collection_stopped_missing_dependencies",
+        "exit_code": 2,
+        "collection_errors": 35,
+        "skipped": 2,
+        "seconds": 4.6,
+        "missing_packages": [
+          "mne",
+          "torch",
+          "requests"
+        ],
+        "note": "Full repository suite did not execute to completion in this environment. Existing unrelated historical software was not changed to bypass dependency requirements."
+      },
+      "historical_python311_result": {
+        "passed": 1257,
+        "failed": 13,
+        "skipped": 1,
+        "warnings": 63,
+        "seconds": 44.13,
+        "exit_code": 1
+      },
+      "historical_failure_attribution": "Ten historical host-identity rejections, one child-process import-path failure, one existing historical query-state rejection and one disk-reserve rejection, as recorded; not retested or bypassed.",
+      "attribution_record": "research_logs/kumar_review_revision_20261016/run01/verification/historical_test_failures.md",
+      "verdict": "No applicable full-suite pass exists. Do not claim full repository pytest passed."
+    },
+    {
+      "gate": "ruff check src tests scripts",
+      "current_latest_record": {
+        "command": "ruff check src tests scripts",
+        "status": "existing_script_style_findings",
+        "exit_code": 1,
+        "findings": 8,
+        "rule": "E701",
+        "file": "scripts/build_kumar_editorial_documents_20261017.py",
+        "lines": [
+          145,
+          146,
+          147,
+          148,
+          158,
+          162,
+          183,
+          210
+        ],
+        "note": "File predates the current extension. All three current scripts passed their separate check."
+      },
+      "verdict": "Latest full-scope check retains 8 E701 findings in scripts/build_kumar_editorial_documents_20261017.py. The older all-pass record predates this exporter and does not establish that the current full tree passes lint."
+    },
+    {
+      "gate": "smoke",
+      "current_latest_record": {
+        "command": "PYTHONPATH=src python scripts/smoke_experiment.py --config configs/smoke.json --output /tmp/paper2_validation_20261017/smoke.json",
+        "status": "not_completed_missing_mne",
+        "exit_code": 1
+      },
+      "historical_source_applicable_pass": true,
+      "verdict": "Source-applicable Python 3.11 synthetic pass retained; current artifact environment cannot complete this check because mne is absent."
+    },
+    {
+      "gate": "synthetic data-stack",
+      "current_latest_record": {
+        "command": "PYTHONPATH=src python scripts/check_data_stack.py",
+        "status": "not_completed_missing_mne",
+        "exit_code": 1
+      },
+      "historical_source_applicable_pass": true,
+      "verdict": "Source-applicable Python 3.11 MOABB synthetic-provider pass retained; current artifact environment cannot complete this check because mne is absent."
+    }
+  ],
+  "rerun_decision": {
+    "new_test_or_lint_commands_run": 0,
+    "environment_installed": false,
+    "code_modified": false,
+    "reason": "No research-code edits in the current final manuscript/package turn. Existing actual receipts and their source applicability were checked. Parent explicitly instructed not to install an environment, change historical scripts or rerun the known missing-dependency full suite. Repeating the same failed gates would not resolve a remaining manuscript or source-identity risk."
+  },
+  "manuscript_format_conclusion": "Unchanged: the completed formal manuscript and figure-format/visual checks pass. Repository-wide software gate status is recorded separately and must not be described as all green."
+}

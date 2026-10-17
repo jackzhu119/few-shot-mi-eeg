@@ -1,0 +1,640 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-17T06:35:46.726600+00:00",
+  "source_commit": "1d78ceb080c96865e3ed2b0a6b75ff81bccc6318",
+  "review_scope": "Initial read-only file-format and figure audit; later exact declarations/Methods edits will be audited separately. Scientific claims and submission-form policy are covered by other reviewers.",
+  "status": "final_manuscript_format_and_visual_checks_passed",
+  "official_sources": [
+    {
+      "url": "https://journals.plos.org/plosone/s/submission-guidelines",
+      "ref": "turn47view0"
+    },
+    {
+      "url": "https://journals.plos.org/plosone/s/figures",
+      "ref": "turn59view1"
+    },
+    {
+      "url": "https://journals.plos.org/plosone/s/tables",
+      "ref": "turn59view0"
+    }
+  ],
+  "requirements_interpretation": "PLOS figure formatting is waived for initial review until provisional Editorial Accept. Strict technical figures were still checked. The current descriptive TIFF filenames should be mapped to Fig1.tif through Fig6.tif for actual upload.",
+  "hard_initial_file_format_blockers": [],
+  "recommended_cleanup": [
+    "Create byte-identical short-name TIFF copies for journal upload.",
+    "Use the Submission DOCX as main file; Reading DOCX/PDF is a distinct reader copy.",
+    "Upload the individual manuscript/figures/S1 and S2 Text/S1 Data, not the full archival ZIP."
+  ],
+  "structure": {
+    "title_characters": 95,
+    "short_title_characters": 55,
+    "abstract_words": 251,
+    "abstract_numeric_citations": [],
+    "main_font": "Times New Roman",
+    "main_size_pt": 12.0,
+    "main_nonempty_paragraphs": 159,
+    "all_main_paragraphs_double_spaced": true,
+    "table_cell_line_spacing": 1.05,
+    "single_column": true,
+    "continuous_line_numbering": true,
+    "footnote_references": 0,
+    "native_math_objects": 2,
+    "bibliography_entries": 19,
+    "numbered_vancouver_references_first_appearance_order_pass": true,
+    "verified_journal_abbreviation_receipt": "Verification/journal_abbreviations_verified.json",
+    "all_caption_placement_checks_pass": true
+  },
+  "caption_locations": [
+    {
+      "kind": "Fig",
+      "number": 1,
+      "first_citation_paragraph": 64,
+      "caption_paragraph": 65,
+      "caption_immediately_after_first_citation": true,
+      "title_words_without_label": 4
+    },
+    {
+      "kind": "Fig",
+      "number": 2,
+      "first_citation_paragraph": 68,
+      "caption_paragraph": 69,
+      "caption_immediately_after_first_citation": true,
+      "title_words_without_label": 9
+    },
+    {
+      "kind": "Fig",
+      "number": 3,
+      "first_citation_paragraph": 79,
+      "caption_paragraph": 80,
+      "caption_immediately_after_first_citation": true,
+      "title_words_without_label": 6
+    },
+    {
+      "kind": "Fig",
+      "number": 4,
+      "first_citation_paragraph": 83,
+      "caption_paragraph": 84,
+      "caption_immediately_after_first_citation": true,
+      "title_words_without_label": 6
+    },
+    {
+      "kind": "Fig",
+      "number": 5,
+      "first_citation_paragraph": 95,
+      "caption_paragraph": 96,
+      "caption_immediately_after_first_citation": true,
+      "title_words_without_label": 5
+    },
+    {
+      "kind": "Fig",
+      "number": 6,
+      "first_citation_paragraph": 102,
+      "caption_paragraph": 103,
+      "caption_immediately_after_first_citation": true,
+      "title_words_without_label": 5
+    },
+    {
+      "kind": "Table",
+      "number": 1,
+      "first_citation_paragraph": 39,
+      "caption_paragraph": 40,
+      "caption_immediately_after_first_citation": true,
+      "editable_table_immediately_after_caption": true
+    },
+    {
+      "kind": "Table",
+      "number": 2,
+      "first_citation_paragraph": 62,
+      "caption_paragraph": 63,
+      "caption_immediately_after_first_citation": true,
+      "editable_table_immediately_after_caption": true
+    },
+    {
+      "kind": "Table",
+      "number": 3,
+      "first_citation_paragraph": 74,
+      "caption_paragraph": 75,
+      "caption_immediately_after_first_citation": true,
+      "editable_table_immediately_after_caption": true
+    },
+    {
+      "kind": "Table",
+      "number": 4,
+      "first_citation_paragraph": 86,
+      "caption_paragraph": 87,
+      "caption_immediately_after_first_citation": true,
+      "editable_table_immediately_after_caption": true
+    },
+    {
+      "kind": "Table",
+      "number": 5,
+      "first_citation_paragraph": 91,
+      "caption_paragraph": 92,
+      "caption_immediately_after_first_citation": true,
+      "editable_table_immediately_after_caption": true
+    },
+    {
+      "kind": "Table",
+      "number": 6,
+      "first_citation_paragraph": 98,
+      "caption_paragraph": 99,
+      "caption_immediately_after_first_citation": true,
+      "editable_table_immediately_after_caption": true
+    }
+  ],
+  "documents": [
+    {
+      "file": "PLOS_ONE_Manuscript_Submission.docx",
+      "sha256": "ddf0fc7dd52a864678332827f1a17b4be00f354e13bcd2b87d357832091c2325",
+      "matches_prior_audit": true,
+      "pdf": "PLOS_ONE_Manuscript_Submission.pdf",
+      "pdf_sha256": "9c1bafd382dc12d843030920566726b6f29ca810bd6057123655a60500602a51",
+      "matches_prior_visual_qa": true,
+      "pages": 29,
+      "expected_pages": 29,
+      "xml_redline_comment_protection_counts": {
+        "ins": 0,
+        "del": 0,
+        "moveFrom": 0,
+        "moveTo": 0,
+        "commentRangeStart": 0,
+        "documentProtection": 0,
+        "trackRevisions": 0,
+        "footnoteReference": 0
+      },
+      "footer_page_fields": 1,
+      "tables": 6,
+      "inline_images": 0,
+      "placeholder_hits": []
+    },
+    {
+      "file": "PLOS_ONE_Manuscript_Reading.docx",
+      "sha256": "f8686a574fe4fefeeccd647c6f8558f78053375e27097abc9f31e89bcf326fe8",
+      "matches_prior_audit": true,
+      "pdf": "PLOS_ONE_Manuscript_Reading.pdf",
+      "pdf_sha256": "771b870de3f0e753b6f5860f9923ff8852471314269d596429dcbf55cc62dff6",
+      "matches_prior_visual_qa": true,
+      "pages": 23,
+      "expected_pages": 23,
+      "xml_redline_comment_protection_counts": {
+        "ins": 0,
+        "del": 0,
+        "moveFrom": 0,
+        "moveTo": 0,
+        "commentRangeStart": 0,
+        "documentProtection": 0,
+        "trackRevisions": 0,
+        "footnoteReference": 0
+      },
+      "footer_page_fields": 1,
+      "tables": 6,
+      "inline_images": 6,
+      "placeholder_hits": []
+    },
+    {
+      "file": "S1_Supplementary_Methods.docx",
+      "sha256": "fa1c85b4765d96d5a5adb65d855a45c9c32d643042716d3ffc477f5f7b6c3e21",
+      "matches_prior_audit": true,
+      "pdf": "S1_Supplementary_Methods.pdf",
+      "pdf_sha256": "529ebf11e9b10b38cf8c13c130778d82814cd452bf3f3ca22ddd84a9cfc30af1",
+      "matches_prior_visual_qa": true,
+      "pages": 15,
+      "expected_pages": 15,
+      "xml_redline_comment_protection_counts": {
+        "ins": 0,
+        "del": 0,
+        "moveFrom": 0,
+        "moveTo": 0,
+        "commentRangeStart": 0,
+        "documentProtection": 0,
+        "trackRevisions": 0,
+        "footnoteReference": 0
+      },
+      "footer_page_fields": 1,
+      "tables": 8,
+      "inline_images": 0,
+      "placeholder_hits": []
+    },
+    {
+      "file": "S2_Reproducibility.docx",
+      "sha256": "730d2e0e75ede29f5a7da825603d83c051d4f55f6a05b321c0a6f0e07fcab76e",
+      "matches_prior_audit": true,
+      "pdf": "S2_Reproducibility.pdf",
+      "pdf_sha256": "870256a7ebb9f34aed34510a13f6c2b9c032b7e5e1f067a8a5120d3bda48af6f",
+      "matches_prior_visual_qa": true,
+      "pages": 5,
+      "expected_pages": 5,
+      "xml_redline_comment_protection_counts": {
+        "ins": 0,
+        "del": 0,
+        "moveFrom": 0,
+        "moveTo": 0,
+        "commentRangeStart": 0,
+        "documentProtection": 0,
+        "trackRevisions": 0,
+        "footnoteReference": 0
+      },
+      "footer_page_fields": 1,
+      "tables": 2,
+      "inline_images": 0,
+      "placeholder_hits": []
+    },
+    {
+      "file": "Cover_Letter.docx",
+      "sha256": "fb10c8e5f4865cace275686d8d403cb850de506c0e55f9f33b822bc27f86f03e",
+      "matches_prior_audit": true,
+      "pdf": "Cover_Letter.pdf",
+      "pdf_sha256": "ae2e9b4425123cdff7de71d793688763c14e4449e5bfb2ebfa54afb003a7324b",
+      "matches_prior_visual_qa": true,
+      "pages": 1,
+      "expected_pages": 1,
+      "xml_redline_comment_protection_counts": {
+        "ins": 0,
+        "del": 0,
+        "moveFrom": 0,
+        "moveTo": 0,
+        "commentRangeStart": 0,
+        "documentProtection": 0,
+        "trackRevisions": 0,
+        "footnoteReference": 0
+      },
+      "footer_page_fields": 1,
+      "tables": 0,
+      "inline_images": 0,
+      "placeholder_hits": []
+    }
+  ],
+  "figures": [
+    {
+      "file": "Figures/Fig1_target_query_participants.tif",
+      "sha256": "8592514d003e8cc276048e95f75d9a7cb017b7ab369783e26d12b32651041301",
+      "bytes": 616596,
+      "pixel_dimensions": [
+        4500,
+        2700
+      ],
+      "dpi": [
+        600.0,
+        600.0
+      ],
+      "physical_dimensions_inches": [
+        7.5,
+        4.5
+      ],
+      "mode": "RGB",
+      "compression": "tiff_lzw",
+      "frames": 1,
+      "bits_per_sample": [
+        8,
+        8,
+        8
+      ],
+      "alpha": false,
+      "suggested_upload_filename": "Fig1.tif",
+      "matches_prior_visual_qa": true,
+      "technical_specifications_pass": true,
+      "font_sizes_pt": [
+        8.0,
+        8.5,
+        9.0,
+        12.0
+      ],
+      "font_families": [
+        "Arial"
+      ],
+      "font_specifications_pass": true,
+      "font_verification_method": "Reused export font inspection with current TIFF SHA matched to finalized visual QA",
+      "standalone_pdf_pages": 1,
+      "standalone_pdf_bytes": 133428
+    },
+    {
+      "file": "Figures/Fig2_cpu_primary_paired_changes.tif",
+      "sha256": "9bab84d8e9a4ca92b63f1bb12c8d0ff59ed9d622a29471a08fe69d70173786ed",
+      "bytes": 579078,
+      "pixel_dimensions": [
+        4500,
+        3180
+      ],
+      "dpi": [
+        600.0,
+        600.0
+      ],
+      "physical_dimensions_inches": [
+        7.5,
+        5.3
+      ],
+      "mode": "RGB",
+      "compression": "tiff_lzw",
+      "frames": 1,
+      "bits_per_sample": [
+        8,
+        8,
+        8
+      ],
+      "alpha": false,
+      "suggested_upload_filename": "Fig2.tif",
+      "matches_prior_visual_qa": true,
+      "technical_specifications_pass": true,
+      "font_sizes_pt": [
+        8.5,
+        9.0
+      ],
+      "font_families": [
+        "Arial"
+      ],
+      "font_specifications_pass": true,
+      "font_verification_method": "Reused export font inspection with current TIFF SHA matched to finalized visual QA",
+      "standalone_pdf_pages": 1,
+      "standalone_pdf_bytes": 21990
+    },
+    {
+      "file": "Figures/Fig3_csp_signed_support_halves.tif",
+      "sha256": "49e2c1818f313fb48155035d9a077c2e345a4e4649358c30717e591029f5fb27",
+      "bytes": 549802,
+      "pixel_dimensions": [
+        4500,
+        3300
+      ],
+      "dpi": [
+        600.0,
+        600.0
+      ],
+      "physical_dimensions_inches": [
+        7.5,
+        5.5
+      ],
+      "mode": "RGB",
+      "compression": "tiff_lzw",
+      "frames": 1,
+      "bits_per_sample": [
+        8,
+        8,
+        8
+      ],
+      "alpha": false,
+      "suggested_upload_filename": "Fig3.tif",
+      "matches_prior_visual_qa": true,
+      "technical_specifications_pass": true,
+      "font_sizes_pt": [
+        8.0,
+        8.5,
+        9.0,
+        10.0
+      ],
+      "font_families": [
+        "Arial"
+      ],
+      "font_specifications_pass": true,
+      "font_verification_method": "Reused export font inspection with current TIFF SHA matched to finalized visual QA",
+      "standalone_pdf_pages": 1,
+      "standalone_pdf_bytes": 25752
+    },
+    {
+      "file": "Figures/Fig4_longitudinal_paired_changes.tif",
+      "sha256": "54d0b0b3da50185afd43a768f74a1c172f8b5dd0cca56aec75310ce1fe72d11e",
+      "bytes": 2977266,
+      "pixel_dimensions": [
+        4500,
+        4500
+      ],
+      "dpi": [
+        600.0,
+        600.0
+      ],
+      "physical_dimensions_inches": [
+        7.5,
+        7.5
+      ],
+      "mode": "RGB",
+      "compression": "tiff_lzw",
+      "frames": 1,
+      "bits_per_sample": [
+        8,
+        8,
+        8
+      ],
+      "alpha": false,
+      "suggested_upload_filename": "Fig4.tif",
+      "matches_prior_visual_qa": true,
+      "technical_specifications_pass": true,
+      "font_sizes_pt": [
+        8.0,
+        8.5,
+        9.0,
+        12.0
+      ],
+      "font_families": [
+        "Arial"
+      ],
+      "font_specifications_pass": true,
+      "font_verification_method": "Reused export font inspection with current TIFF SHA matched to finalized visual QA",
+      "standalone_pdf_pages": 1,
+      "standalone_pdf_bytes": 127707
+    },
+    {
+      "file": "Figures/Fig5_prediction_transitions.tif",
+      "sha256": "f6111bc97becbfd834f9e5fcd0dbf141cc881fdc9961d357d147f70364965a60",
+      "bytes": 1037532,
+      "pixel_dimensions": [
+        4500,
+        4200
+      ],
+      "dpi": [
+        600.0,
+        600.0
+      ],
+      "physical_dimensions_inches": [
+        7.5,
+        7.0
+      ],
+      "mode": "RGB",
+      "compression": "tiff_lzw",
+      "frames": 1,
+      "bits_per_sample": [
+        8,
+        8,
+        8
+      ],
+      "alpha": false,
+      "suggested_upload_filename": "Fig5.tif",
+      "matches_prior_visual_qa": true,
+      "technical_specifications_pass": true,
+      "font_sizes_pt": [
+        8.0,
+        8.5,
+        9.0,
+        10.0
+      ],
+      "font_families": [
+        "Arial"
+      ],
+      "font_specifications_pass": true,
+      "font_verification_method": "Reused export font inspection with current TIFF SHA matched to finalized visual QA",
+      "standalone_pdf_pages": 1,
+      "standalone_pdf_bytes": 29314
+    },
+    {
+      "file": "Figures/Fig6_component_consistency.tif",
+      "sha256": "943e398dfb06a0437cec26d5cc36ba157a7a1eb9fb24ead3551ecd41943351b9",
+      "bytes": 973132,
+      "pixel_dimensions": [
+        4500,
+        3840
+      ],
+      "dpi": [
+        600.0,
+        600.0
+      ],
+      "physical_dimensions_inches": [
+        7.5,
+        6.4
+      ],
+      "mode": "RGB",
+      "compression": "tiff_lzw",
+      "frames": 1,
+      "bits_per_sample": [
+        8,
+        8,
+        8
+      ],
+      "alpha": false,
+      "suggested_upload_filename": "Fig6.tif",
+      "matches_prior_visual_qa": true,
+      "technical_specifications_pass": true,
+      "font_sizes_pt": [
+        8.0,
+        8.5,
+        9.0,
+        10.0
+      ],
+      "font_families": [
+        "Arial"
+      ],
+      "font_specifications_pass": true,
+      "font_verification_method": "Reused export font inspection with current TIFF SHA matched to finalized visual QA",
+      "standalone_pdf_pages": 1,
+      "standalone_pdf_bytes": 27232
+    }
+  ],
+  "package_integrity": {
+    "payload_files_checked": 74,
+    "all_payload_files_match_manifest": true,
+    "mismatches": [],
+    "zip": {
+      "file": "Paper2_PLOS_ONE_Innovation_20261017.zip",
+      "members": 75,
+      "bytes": 12524610,
+      "sha256": "f504f3a7a00893686d0aa2f591aa0782885802c96b25ef24e4e28c9a1fa9affe",
+      "crc_passed": true,
+      "all_payload_bytes_match": true,
+      "manifest_bytes_match": true,
+      "expected_member_names_match": true,
+      "matches_checksum_record": true
+    }
+  },
+  "visual_qa_reuse": {
+    "total_prior_final_pages": 73,
+    "all_docx_and_pdf_hashes_match_prior_qa": true,
+    "main_png_pages_checked": 29,
+    "all_main_png_hashes_match_prior_qa": true,
+    "additional_actual_visual_spot_checks": [
+      1,
+      27
+    ],
+    "observation": "No clipping or overlap on title or reference page. Prior full visual QA remains valid because final files are unchanged."
+  },
+  "initial_snapshot_notice": "Baseline checks below were performed before the exact final Methods and declarations updates. final_revision records the current validated manuscripts. Complete package integrity is finalized separately.",
+  "final_revision": {
+    "checked_at_utc": "2026-10-17T06:44:15.875446+00:00",
+    "final_visual_qa": "document_final_QA.json",
+    "precise_text_changes": "precise_main_edits.json",
+    "reading_lossless_media_update_verified": true,
+    "no_actual_journal_submission_performed": true,
+    "hard_file_format_blockers": [],
+    "remaining_policy_information": "Whether the author had access to information that could identify individual participants at any point is not inferred from coded identifiers; author confirmation is handled by the separate final submission checklist.",
+    "documents": [
+      {
+        "file": "manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Submission.docx",
+        "docx_sha256": "8e606a69359f81a1a9da39c4f212289f4b35d6119dba9535b16a745be90de61a",
+        "pdf_sha256": "403fc89f44b32a8eb6f7918498302090bfcb16597190fc93604f475acd570d1e",
+        "pdf_pages": 29,
+        "main_paragraphs": 158,
+        "title_chars": 95,
+        "short_title_chars": 55,
+        "abstract_words": 251,
+        "tables": 6,
+        "inline_figures": 0,
+        "reference_entries": 19,
+        "first_citation_order_from_actual_reference_hyperlinks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "unprotected_clean_docx": true,
+        "main_font": "Times New Roman",
+        "main_font_size_pt": 12.0,
+        "main_line_spacing": 2.0,
+        "continuous_line_numbering": true,
+        "all_pages_with_actual_visual_review_coverage": true,
+        "xattrs_preserved": true
+      },
+      {
+        "file": "manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Reading.docx",
+        "docx_sha256": "a522b67f78396426df78ca55d9109b95c8d2d2868078a3ef667552ee710fc33e",
+        "pdf_sha256": "277004c1a134fe627700b190a73a193d05840d31cf2399094d14f8c6648a84c0",
+        "pdf_pages": 23,
+        "main_paragraphs": 164,
+        "title_chars": 95,
+        "short_title_chars": 55,
+        "abstract_words": 251,
+        "tables": 6,
+        "inline_figures": 6,
+        "reference_entries": 19,
+        "first_citation_order_from_actual_reference_hyperlinks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "unprotected_clean_docx": true,
+        "main_font": "Times New Roman",
+        "main_font_size_pt": 11.5,
+        "main_line_spacing": 1.1791666666666667,
+        "continuous_line_numbering": false,
+        "all_pages_with_actual_visual_review_coverage": true,
+        "xattrs_preserved": true
+      }
+    ]
+  }
+}

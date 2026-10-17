@@ -1,0 +1,714 @@
+{
+  "audit_utc": "2026-10-17T06:34:09.861374+00:00",
+  "audit_scope": "Final read-only PLOS ONE data, code, licensing and public-access check; no model fits, no model inference, no raw EEG downloaded or uploaded, no GitHub mutation.",
+  "reviewed_commit": "1d78ceb080c96865e3ed2b0a6b75ff81bccc6318",
+  "result": "Data/code availability and licensing checks pass. Subsequent Human Participants Checklist Q3 review identifies missing access-date reporting (evidence available) and an explicit identifiability-access statement (not established in existing records).",
+  "mandatory_corrections": [
+    {
+      "priority": "P1",
+      "item": "Methods must state research data-access dates for the retrospective analysis.",
+      "resolvable_from_existing_records": true,
+      "dates": [
+        "10 October 2026",
+        "11 October 2026"
+      ]
+    },
+    {
+      "priority": "P1",
+      "item": "Methods/checklist must answer whether information identifying individual participants was accessible during or after collection.",
+      "resolvable_from_existing_records": false,
+      "author_evidence_needed": "A factual yes/no response about access to directly identifying information or re-identification key; do not infer from coded IDs."
+    }
+  ],
+  "recommended_improvements": [
+    {
+      "priority": "P2",
+      "item": "A versioned release or persistent archive DOI for the 17 October extension would improve citation stability.",
+      "reason": "PLOS encourages code repositories with persistent identifiers; its policy also explicitly lists GitHub as an acceptable software archive. Existing source-data DOI and submitted S1 Data support the current availability statement.",
+      "submission_blocker": false
+    }
+  ],
+  "availability_statement": {
+    "source_file": "manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Submission.docx",
+    "source_sha256": "ddf0fc7dd52a864678332827f1a17b4be00f354e13bcd2b87d357832091c2325",
+    "actual_DOCX_XML_read": true,
+    "source_dataset": "NEMAR nm000177/v1.0.5",
+    "source_doi": "10.82901/nemar.nm000177.v1.0.5",
+    "original_code_repository": "https://github.com/jackzhu119/few-shot-mi-eeg",
+    "saved_result_replay_scope_explicit": true,
+    "code_and_content_licenses_explicit": true
+  },
+  "source_data_access": [
+    {
+      "url": "https://api.datacite.org/dois/10.82901/nemar.nm000177.v1.0.5",
+      "status": 200,
+      "bytes": 13865,
+      "sha256": "c65e6a698c39aac8f7dfb0a0f1f9e2b9f30e5e72ef5bbaa399fe8852574d0011",
+      "metadata": {
+        "doi": "10.82901/nemar.nm000177.v1.0.5",
+        "state": "findable",
+        "url": "https://nemar.org/dataset/nm000177?v=v1.0.5",
+        "version": "1.0.5",
+        "rightsList": [
+          {
+            "rights": "Creative Commons Attribution 4.0 International",
+            "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+            "schemeUri": "https://spdx.org/licenses/",
+            "rightsIdentifier": "cc-by-4.0",
+            "rightsIdentifierScheme": "SPDX"
+          }
+        ],
+        "publicationYear": 2026
+      }
+    },
+    {
+      "url": "https://data.nemar.org/nm000177/v1.0.5/dataset_description.json",
+      "status": 200,
+      "bytes": 1310,
+      "sha256": "3ec4afc49c56dcd35be7c1fe8318a1c463983e1a630a42419bb235c66439a747",
+      "metadata": {
+        "Name": "Multi-session longitudinal motor imagery EEG dataset (Kumar et al. 2024)",
+        "DatasetDOI": "10.82901/nemar.nm000177",
+        "License": "CC-BY-4.0",
+        "Authors": [
+          "Satyam Kumar",
+          "Hussein Alawieh",
+          "Frigyes Samuel Racz",
+          "Rawan Fakhreddine",
+          "Jose del R. Millan"
+        ]
+      }
+    }
+  ],
+  "public_S1_download": {
+    "url": "https://raw.githubusercontent.com/jackzhu119/few-shot-mi-eeg/1d78ceb080c96865e3ed2b0a6b75ff81bccc6318/manuscript/plos_one_innovation_20261017/S1_Data.zip",
+    "status": 200,
+    "bytes": 2078150,
+    "sha256": "c6b73502b977b7bd36e27c914bebd686d994596b99f06227131272f428aa3614"
+  },
+  "repository_visibility": {
+    "private": false,
+    "visibility": "public",
+    "verified_via": "GitHub repository REST GET"
+  },
+  "S1_archive": {
+    "bytes": 2078150,
+    "sha256": "c6b73502b977b7bd36e27c914bebd686d994596b99f06227131272f428aa3614",
+    "members": 101,
+    "member_checks": [
+      {
+        "path": "DATA_DICTIONARY.md",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "LICENSE",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "LICENSES/CC-BY-4.0.txt",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "LICENSES/MIT.txt",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "LICENSING.md",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "MANIFEST.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "POST_OBSERVATION_PROTOCOL.md",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "README.md",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "REPRODUCE_SAVED_RESULTS.md",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "SOURCE_ATTRIBUTION.md",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "SOURCE_PROVENANCE.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "code/analyze_kumar_postreview_statistics_20261016.py",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "code/analyze_kumar_saved_query_qc_20261015.py",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "figures/Fig1_target_query_participants_source_data.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "figures/Fig2_cpu_primary_paired_changes_source_data.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "figures/Fig3_csp_signed_support_halves_source_data.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "figures/Fig4_longitudinal_paired_changes_source_data.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "inputs/frozen_analysis_configuration.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "inputs/frozen_trial_metadata.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "inputs/original_participant_endpoints.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "inputs/postreview/participant_inputs.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "inputs/postreview/statistics_definition.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "inputs/public_input_provenance.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "inputs/saved_predictions.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "inputs/supplement_method_configuration.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "provenance/historical_20261015/DATA_DICTIONARY.md",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "provenance/historical_20261015/MANIFEST.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "provenance/historical_20261015/REPRODUCE_SAVED_RESULTS.md",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "provenance/repository_LICENSING_20261016.md",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/audit/saved_metadata_and_measurement_audit_summary.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/drift/drift_association_summary.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/drift/drift_session_and_performance.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/original_comparison/cohort_method_endpoint_summary.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/original_comparison/descriptive_eegnet_minus_cpu.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/original_comparison/eegnet_per_seed_session.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/original_comparison/per_participant_descriptive_differences.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/original_comparison/per_participant_endpoints.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/original_comparison/per_subject_session.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/original_cpu/participant_bootstrap_summary.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/postreview/execution_receipt.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/postreview/portable_validation_receipt.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/postreview/statistics_results.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/qc/all_role_qc_counts.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/qc/cohort_method_sensitivity_summary.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/qc/cohort_paired_contrasts.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/qc/joined_saved_predictions_qc.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/qc/leave_one_participant_out_influence.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/qc/paired_cross_subset_summary.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/qc/paired_participant_contrasts.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/qc/paired_session_contrasts.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/qc/participant_cross_subset_changes.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/qc/participant_endpoints.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/qc/per_participant_session_metrics.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/qc/per_seed_session_and_pooled_metrics.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/qc/query_identity_qc_ledger.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/reliability/csp_probe_source_metrics.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/reliability/csp_probe_summary.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/reliability/csp_probe_support_metrics.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/reliability/power_probe_source_metrics.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/reliability/power_probe_summary.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/reliability/power_probe_support_metrics.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/training/all_saved_epoch_curves.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/training/cohort_per_seed_query.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/training/cohort_training_review.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/training/per_fit_training_review.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/training/per_participant_source_target_query.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/training/per_seed_source_target_query.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "tests/test_kumar_postreview_statistics_20261016.py",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "tests/test_kumar_saved_query_qc_20261015.py",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "EXTENSION_LICENSE_AND_ATTRIBUTION.md",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "EXTENSION_MANIFEST.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "EXTENSION_README.md",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "code/analyze_kumar_update_mechanisms_20261017.py",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "figures/Fig5_source_data.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "figures/Fig6_influence_source_data.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "figures/Fig6_participant_source_data.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "figures/Fig6_session_source_data.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "inputs/update_mechanism_source_texts.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/update_mechanisms/analysis_definition.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/update_mechanisms/cohort_transition_bootstrap.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/update_mechanisms/followup_completion_status.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/update_mechanisms/independent_arithmetic_check.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/update_mechanisms/input_completeness_audit.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/update_mechanisms/input_sha256_manifest.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/update_mechanisms/leave_one_participant_out.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/update_mechanisms/matched_label_fit_audit.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/update_mechanisms/participant_class_transition_decomposition.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/update_mechanisms/participant_gain_pairs.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/update_mechanisms/query_class_coverage.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/update_mechanisms/reconstructed_participant_endpoints.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/update_mechanisms/reconstructed_seed_session_scores.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/update_mechanisms/session_class_transition_decomposition.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/update_mechanisms/session_contrast_profiles.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/update_mechanisms/summary.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/update_mechanisms/trial_action_transitions.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "results/update_mechanisms/trial_role_class_counts.csv",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "validation/update_mechanisms/Fig5_Fig6_manifest.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "validation/update_mechanisms/execution_receipt.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "validation/update_mechanisms/figure_manifest_initial.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "validation/update_mechanisms/figure_render_QA.json",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      {
+        "path": "validation/update_mechanisms/portable_replay_validation.json",
+        "bytes_match": true,
+        "sha256_match": true
+      }
+    ],
+    "CRC_pass": true,
+    "all_expected_replay_and_license_files_present": true,
+    "saved_result_replay_receipt": {
+      "actual_prior_final_archive_replay_recorded": true,
+      "scientific_files_compared": 18,
+      "all_byte_identical": true,
+      "new_replay_this_final_check": false
+    }
+  },
+  "referenced_repository_paths": [
+    {
+      "path": "research_logs/kumar_submission_qc_20261015/run01/public_inputs",
+      "exists": true
+    },
+    {
+      "path": "research_logs/kumar_frozen_query_execution_audit_20261015",
+      "exists": true
+    },
+    {
+      "path": "research_logs/kumar_submission_training_review_20261015",
+      "exists": true
+    },
+    {
+      "path": "research_logs/kumar_review_revision_20261016",
+      "exists": true
+    },
+    {
+      "path": "research_logs/kumar_update_mechanisms_20261017/run01",
+      "exists": true
+    },
+    {
+      "path": "scripts/run_kumar_baselines.py",
+      "exists": true
+    },
+    {
+      "path": "scripts/train_kumar_eegnet.py",
+      "exists": true
+    },
+    {
+      "path": "scripts/evaluate_kumar_frozen_queries.py",
+      "exists": true
+    },
+    {
+      "path": "scripts/analyze_kumar_update_mechanisms_20261017.py",
+      "exists": true
+    },
+    {
+      "path": "configs/kumar_cross_session_20261012.json",
+      "exists": true
+    },
+    {
+      "path": "configs/kumar_eegnet_gpu_development_20261014.json",
+      "exists": true
+    },
+    {
+      "path": "LICENSES/innovation-scope-20261017.md",
+      "exists": true
+    }
+  ],
+  "recorded_tags": {
+    "paper2-plos-source-20261016": "f2901decfc39b2adecae13253ee4b1159a4f9a4b",
+    "paper2-plos-ethics-20261016": "d03b5a35eed3e303d224f41870bc62b0a926c88d"
+  },
+  "license_conclusion": {
+    "original_software": "MIT with full grant; scoped paths include original scripts/configuration/tests",
+    "original_text_figures_derived_results": "CC BY 4.0 with full terms and 17 October extension scope",
+    "source_event_metadata": "Source creator attribution and NEMAR CC BY 4.0 retained",
+    "third_party_items": "Explicitly excluded from author grant; PLOS CSL retains CC BY-SA 3.0; fonts/dependencies not redistributed in S1 Data",
+    "GitHub_detected_other_license_not_a_defect": "Repository uses explicit component-specific licenses rather than a single blanket license."
+  },
+  "R2_dependency_assessment": {
+    "S1_saved_result_reproduction_requires_R2": false,
+    "S1_saved_result_reproduction_requires_weights_or_raw_EEG": false,
+    "historical_exact_checkpoint_replay": "The original frozen-checkpoint execution uses privately archived original checkpoints and operation-specific authorization receipts; these are not distributed in S1 Data. Original public training/evaluation source, configurations and scientific settings remain in the repository.",
+    "scope_statement_in_submission": "S1 Data is described as reproducing saved-result arithmetic, not as a one-command raw-EEG training/inference archive.",
+    "new_end_to_end_raw_EEG_training_inference_tested": false,
+    "inference": "The public source EEG and distributed minimal numerical results/code support the declared availability scope. Do not describe this audit as a fresh end-to-end model reproduction."
+  },
+  "administrative_sheet": {
+    "file": "manuscript/plos_one_innovation_20261017/Author_Submission_Details.md",
+    "latest_scientific_extension_approval_distinguished_from_16_October_record": true,
+    "actual_submission_editor_reviewer_fields_blank": true,
+    "no_data_access_dependency_on_author_contact": true
+  },
+  "official_policy_sources": [
+    {
+      "url": "https://journals.plos.org/plosone/s/data-availability",
+      "source_ref": "turn62view0",
+      "relevant_lines": "101-142; 158-173",
+      "interpretation": "Share all minimal data and metadata underlying results; supporting data files are permitted and should be less than 20 MB; source repository/DOI and licensing information must be identified."
+    },
+    {
+      "url": "https://journals.plos.org/plosone/s/materials-software-and-code-sharing",
+      "source_ref": "turn51view1",
+      "relevant_lines": "132-174",
+      "interpretation": "Code should be openly accessible with reuse documentation; GitHub is an example archive; persistent identifiers for code are encouraged."
+    },
+    {
+      "url": "https://nemar.org/dataset/nm000177?v=v1.0.5",
+      "source_ref": "turn57view0",
+      "interpretation": "Official versioned source describes access methods and CC-BY-4.0 terms."
+    }
+  ],
+  "human_participant_checklist_Q3_followup": {
+    "status": "Required reporting addition identified after initial data-availability audit",
+    "date_reporting": "Missing from current Methods; exact access dates supported by recorded receipts and can be added without further author information.",
+    "identifiability_reporting": "Author-recorded coded IDs and no re-identification support narrow factual wording. A categorical no-access-to-identifiable-information statement is not established by reviewed evidence.",
+    "evidence_file": "research_data_access_dates_evidence.json"
+  }
+}

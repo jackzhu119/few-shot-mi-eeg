@@ -56,3 +56,11 @@ These entries remain blank for completion with the actual submission details.
 ## Submission preparation
 
 Enter the financial disclosure in the submission system; it is excluded from the main manuscript. The corresponding author's ORCID and individual CRediT roles above are the recorded submission-field values. The source manuscript contains the account of AI assistance applicable to this revision.
+
+## Human Participants Checklist
+
+The official 2026 checklist is supplied as `Human_Participants_Checklist_Author_Completion_Required.pdf`. Dataset metadata were accessed on **10 October 2026**, and the selected EEG recordings and accompanying metadata were retrieved on **11 October 2026**, as verified from the retrieval receipts. These dates are included in Methods.
+
+**Author factual entry required for question 3:** whether, during this research, the author had access to information that could identify individual participants or to an identity-linkage key. The existing record covers coded identifiers, no participant contact and no attempted re-identification; it does not establish this additional access fact. The corresponding field remains explicitly incomplete until the author provides the factual answer.
+
+Use the final formatted manuscript to verify the checklist page and line references. Competing interests and Financial Disclosure are supplied through the submission system and are not included in the revised main manuscript.

@@ -4,6 +4,10 @@
 
 作者：Ziyuan Zhu。修订日期：2026-10-17。
 
+## 最终投稿核查
+
+[2026年10月17日最终核查](Final_Submission_Check_20261017_ZH.md)记录本次格式、图件、公开数据、伦理与AI披露检查及具体修正。[实际上传文件包](PLOS_ONE_Submission_Files_20261017.zip)提供正式DOCX、六张短名TIFF、S1/S2、数据包、附信及官方参与者清单。Human Participants Checklist第3项仍需作者补全身份信息访问情况，再进行期刊正式提交。
+
 ## 阅读与使用
 
 | 文件 | 用途 |

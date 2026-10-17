@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-17T06:45:56.038442+00:00",
+  "task": "Final PLOS ONE content and declarations audit before authorized main-branch synchronization",
+  "baseline_commit": "1d78ceb080c96865e3ed2b0a6b75ff81bccc6318",
+  "scope": "Read manuscript sources and actual DOCX text, S1/S2, cover letter, author worksheet, package README, historical author/ethics records and latest official PLOS policies. No new training or primary experiments. Prepared official checklist in separate scratch directory; repository integration belongs to root agent.",
+  "overall_status": "document_corrections_applied_and_official_checklist_prepared; author_identification_access_fact_required_before_final_checklist_completion",
+  "official_sources": [
+    {
+      "url": "https://journals.plos.org/plosone/s/submission-guidelines",
+      "retrieved_20261017": true,
+      "sections": [
+        "Title",
+        "Abstract",
+        "Author contributions",
+        "Financial Disclosure Statement",
+        "Competing interests",
+        "References",
+        "Human subjects research"
+      ],
+      "ref": "turn41view0"
+    },
+    {
+      "url": "https://journals.plos.org/plosone/s/ethical-publishing-practice",
+      "retrieved_20261017": true,
+      "sections": [
+        "AI use by authors",
+        "AI use disclosures"
+      ],
+      "ref": "turn44view0"
+    },
+    {
+      "url": "https://journals.plos.org/plosone/s/data-availability",
+      "retrieved_20261017": true,
+      "sections": [
+        "Introduction",
+        "Third-party data",
+        "Supporting Information"
+      ],
+      "ref": "turn44view1"
+    },
+    {
+      "url": "https://journals.plos.org/plosone/s/human-subjects-research",
+      "retrieved_20261017": true,
+      "sections": [
+        "Summary of Requirements"
+      ],
+      "ref": "turn56view0"
+    },
+    {
+      "url": "https://journals.plos.org/plosone/s/file?id=ba3b%2FPLOS_Human_Participants_Research_Checklist_2026.pdf",
+      "downloaded_bytes": 195935,
+      "sha256": "ebf2a9913fe2926669dfb60c1ba5f9f98130b00b9e858bf9b1d243b3707162e4",
+      "document_date": "Last Modified May 2026",
+      "pages": 2
+    }
+  ],
+  "checks_passed": [
+    {
+      "item": "Title and abstract",
+      "evidence": "Actual DOCX title 95 characters, short title 55, abstract 251 whitespace-separated words and no numeric citations; objective, design, results, main interpretation present."
+    },
+    {
+      "item": "Author identity",
+      "evidence": "Ziyuan Zhu, College of Artificial Intelligence Medicine, Chongqing Medical University, Chongqing, China; corresponding email and ORCID present in title page and author worksheet. No placeholder author, email or affiliation fields found."
+    },
+    {
+      "item": "Reference completeness and sequence",
+      "evidence": "19 numbered main-manuscript references in first-citation order; original Kumar study and its correction both cited; arXiv source explicitly labeled Preprint; unresolved citeproc markers absent. Prior bibliography metadata verification reused."
+    },
+    {
+      "item": "Cross-document consistency",
+      "evidence": "Submission and reading DOCX textual contents were identical after exclusion of empty image paragraphs. Source copies match working source versions. Six figures and six tables are first cited in 1-6 order. S1/S2 numerical checkpoints use matching cohorts, units, label budgets and equal participant/session weighting."
+    },
+    {
+      "item": "Methodological reporting",
+      "evidence": "Source version and DOI, chronological source/support/query allocation, preprocessing, CSP/LDA settings, neural configuration and seed/validation budgets, independent participant unit, bootstrap resampling, exploratory sign-flip hierarchy, post hoc analysis designation, inclusion and missing class rules, and executable saved-result reproduction are given."
+    },
+    {
+      "item": "Numerical interpretation",
+      "evidence": "7.42-point total gain, 5.47-point matched-label contrast and 73.7% ratio of cohort means consistently defined. Correction 16.04 minus introduced error 10.57 reconstructs the component gain. Class-recall increases are qualified as mean changes, with their intervals crossing zero retained. Development, full cohort, exploratory multiplicity-adjusted tests and participant/session variation remain reported."
+    },
+    {
+      "item": "Data and code statement",
+      "evidence": "Versioned public NEMAR source and DOI; public repository, source and ethics tags, current extension path; portable S1 Data with predictions, underlying figure data and scripts. No statement that data are only available from the author on request."
+    },
+    {
+      "item": "AI disclosure",
+      "evidence": "Dedicated Methods section names OpenAI ChatGPT/Codex, lists software/analysis/figure/source-check/writing/export uses, and describes output validation. Figure legends and S2 also disclose figure/analysis assistance. No external AI-detector score or guarantee is claimed."
+    },
+    {
+      "item": "Funding and CRediT",
+      "evidence": "Financial disclosure is absent from the main manuscript and recorded in the author worksheet; eight named CRediT roles provided. Competing interests retained in system worksheet after main-file removal."
+    },
+    {
+      "item": "Original and secondary-use ethics distinguished",
+      "evidence": "Original University of Texas at Austin protocol 2020-03-0073 and written consent separately identified. Author-reported Chongqing Medical University exemption confirmation dated 16 October 2026, Article 32(1), explicitly no reference number. It is not presented as a newly issued prior IRB approval or as a consent waiver."
+    },
+    {
+      "item": "Placeholders and editing residue",
+      "evidence": "No TODO/TBD/FIXME/XXX/PLACEHOLDER or unresolved citation markers in inspected DOCX files; no tracked insertions/deletions or comment references."
+    }
+  ],
+  "identified_corrections": [
+    {
+      "id": "C1",
+      "severity": "required_file_correction",
+      "location": "Main manuscript Author contributions and declarations section, formerly source line 305",
+      "finding": "Competing-interest declaration was in the manuscript despite current PLOS instructions requiring this information in the submission system.",
+      "fix": "Remove the sentence The author declares no competing interests. from both main manuscript variants and their source copies; retain the value in Author_Submission_Details.md. Rename heading Author contributions.",
+      "status": "fixed_in_current_source_and_docx"
+    },
+    {
+      "id": "C2",
+      "severity": "required_reporting_correction",
+      "location": "Materials and methods / Data source and ethics; source line 44",
+      "finding": "Official Human Participants Checklist Q3 asks for the day, month and year of research data access. The baseline manuscript omitted this.",
+      "fix": "Dataset metadata were accessed on 10 October 2026, and the selected EEG recordings and accompanying metadata were retrieved on 11 October 2026.",
+      "evidence_files": [
+        "research_logs/public_data_expansion_20261010/longitudinal_receipts/bounded_probe_receipts.json",
+        "research_logs/public_data_expansion_20261010/kumar_ingestion/downloads/download_receipt_20261011T002153112671Z.json",
+        "research_logs/public_data_expansion_20261010/kumar_ingestion/downloads/download_receipt_20261011T063825615923Z.json"
+      ],
+      "status": "fixed_in_current_source_and_docx",
+      "final_render_location": "Formal manuscript page 6, lines 96-97, checked by format agent"
+    },
+    {
+      "id": "C3",
+      "severity": "required_submission_attachment",
+      "location": "Human Participants Research Checklist, applicable to human participant data and retrospective studies",
+      "finding": "Official May 2026 checklist was absent from the baseline package.",
+      "fix": "Use the prepared interactive official form. Q1 explains the reported secondary-use exemption, Q2 is N/A, Q3 gives the date-reporting lines but remains incomplete pending the author fact below.",
+      "status": "prepared_for_root_integration",
+      "prepared_file": "/workspace/scratch/86f850dd59f6/paper2_main_final_check_20261017/human_participants_checklist/PLOS_Human_Participants_Checklist_Prepared_Author_Completion_Required.pdf",
+      "bytes": 235237,
+      "sha256": "98767877cfa40607600cac48e9fa6ef453f2de35e22e64a9ae0f128193ecee6f"
+    },
+    {
+      "id": "C4",
+      "severity": "author_fact_required_for_final_submission",
+      "location": "Human Participants Checklist Q3 / Methods ethics and data access statement",
+      "finding": "The form requires whether the author had access to information that could identify individuals during or after data collection. Existing statements about coded identifiers, no sensitive personal information and no re-identification do not independently establish the full historical access fact.",
+      "existing_supported_text": "This secondary analysis used the released coded participant identifiers; no participants were contacted and no re-identification was attempted.",
+      "missing_fact": "Whether the author had access, at any relevant stage, to direct identifiers or a linkage/re-identification key, and any other identifying information.",
+      "action": "Obtain the actual author answer; put an accurate statement in Methods, update Q3 line numbers and only then mark Completed. Do not assume No, invent a key-access history, or substitute the ethical exemption for this fact.",
+      "status": "awaiting_author_fact",
+      "conditional_text_if_author_confirms_no_access": "The author had no access to information that could identify individual participants during or after the original data collection.",
+      "conditional_text_must_not_be_inserted_without_confirmation": true
+    }
+  ],
+  "author_submission_actions": [
+    "Personally review and approve the current 17 October extension and the final submission PDF; the recorded scientific approval applies only to the named 16 October version.",
+    "Bind the corresponding author ORCID in Editorial Manager; title-page ORCID text does not perform the account action.",
+    "Enter financial disclosure, competing interests, Data Availability Statement and accurate CRediT roles in the submission fields.",
+    "Finish the identifying-information access statement and official checklist Q3, then upload the completed checklist using the journal-requested file category.",
+    "State any prior PLOS contact and any related or concurrently considered manuscripts accurately if asked; earlier recorded declarations are available in the worksheet.",
+    "Confirm the journal-generated PDF before actual submission and accept the author/license declarations in the submission system."
+  ],
+  "not_mandatory_blockers": [
+    "Suggested reviewers, opposed reviewers and Academic Editor suggestions remain optional/author-specific entries; no reviewer identities were invented.",
+    "A separate repository archive DOI is not established as a mandatory condition here: source DOI, public versioned code and S1 Data are supplied.",
+    "No requirement for an external AI detector score was found.",
+    "The lack of a numbered new ethical approval document is not by itself treated as a failed requirement where the documented secondary-use exemption applies. Institutional source documentation may be requested; no original institutional confirmation document has been supplied to this workspace."
+  ],
+  "current_docx_observations": {
+    "PLOS_ONE_Manuscript_Submission.docx": {
+      "sha256": "8e606a69359f81a1a9da39c4f212289f4b35d6119dba9535b16a745be90de61a",
+      "competing_interest_statement_in_file": false,
+      "data_access_dates_present": true,
+      "unresolved_citation_markers": false
+    },
+    "PLOS_ONE_Manuscript_Reading.docx": {
+      "sha256": "a522b67f78396426df78ca55d9109b95c8d2d2868078a3ef667552ee710fc33e",
+      "competing_interest_statement_in_file": false,
+      "data_access_dates_present": true,
+      "unresolved_citation_markers": false
+    },
+    "S1_Supplementary_Methods.docx": {
+      "sha256": "fa1c85b4765d96d5a5adb65d855a45c9c32d643042716d3ffc477f5f7b6c3e21",
+      "competing_interest_statement_in_file": false,
+      "data_access_dates_present": false,
+      "unresolved_citation_markers": false
+    },
+    "S2_Reproducibility.docx": {
+      "sha256": "730d2e0e75ede29f5a7da825603d83c051d4f55f6a05b321c0a6f0e07fcab76e",
+      "competing_interest_statement_in_file": false,
+      "data_access_dates_present": false,
+      "unresolved_citation_markers": false
+    },
+    "Cover_Letter.docx": {
+      "sha256": "fb10c8e5f4865cace275686d8d403cb850de506c0e55f9f33b822bc27f86f03e",
+      "competing_interest_statement_in_file": false,
+      "data_access_dates_present": false,
+      "unresolved_citation_markers": false
+    }
+  },
+  "checklist_q3_pending": true,
+  "checklist_visual_and_form_validation": "/workspace/scratch/86f850dd59f6/paper2_main_final_check_20261017/human_participants_checklist/filled_checklist_verification.json",
+  "limitations_of_this_audit": "This is an author-side preparation audit, not journal peer review or an acceptance decision. Prior saved-result validation is reused; no claim is made to new model training, independent external validation, original institutional-document authentication or author confirmation of facts not supplied."
+}

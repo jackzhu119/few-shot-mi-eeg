@@ -41,7 +41,7 @@ We analyzed the public Kumar2024 EEG derivative, NEMAR nm000177/v1.0.5 [@nemar17
 
 For this secondary analysis, the research administration office at Chongqing Medical University confirmed on 16 October 2026 an exemption from additional ethical review under Article 32, item (1), of China's *Measures for Ethical Review of Life Science and Medical Research Involving Human Participants* (2023) [@china2023ethics]. The confirmation, recorded through the author's report, covered lawfully obtained public data under the provision's conditions concerning harm, sensitive personal information and commercial interests. It carried no reference number.
 
-The study used existing, coded participant records. Original collection approval and consent and the institutional secondary-use confirmation are documented separately in S2 Text.
+Dataset metadata were accessed on 10 October 2026, and the selected EEG recordings and accompanying metadata were retrieved on 11 October 2026. This secondary analysis used the released coded participant identifiers; no participants were contacted and no re-identification was attempted. Original collection approval and consent and the institutional secondary-use confirmation are documented separately in S2 Text.
 
 ### Analysis windows and chronological partition
 
@@ -298,11 +298,9 @@ Code, configurations and versioned materials are available at https://github.com
 
 Original project software is licensed under MIT; original manuscript content, figures and derived results are licensed under CC BY 4.0. LICENSING.md describes the scope and third-party terms. Source annotations retain their NEMAR attribution.
 
-## Author contributions and declarations
+## Author contributions
 
 Ziyuan Zhu: Conceptualization; Methodology; Software; Formal analysis; Validation; Visualization; Writing – original draft; Writing – review & editing.
-
-The author declares no competing interests.
 
 ## Acknowledgments
 

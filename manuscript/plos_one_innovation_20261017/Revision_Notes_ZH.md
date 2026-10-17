@@ -56,3 +56,9 @@
 本轮相关软件验证：三个新脚本通过 Ruff；原质控与配对统计后处理的39项测试通过。完整旧仓库测试在当前 Python 3.12 环境因缺少 MNE、Torch、Requests 等依赖而于收集阶段停止；旧 smoke/MOABB 检查同样未完成。全仓 Ruff 的8项错误来自已有的上一版排版脚本。原 Python 3.11 科学环境与当前导出/保存结果分析环境分别记录，未把本机这些未完成的软件检查记为通过。详细状态见[软件验证记录](https://github.com/jackzhu119/few-shot-mi-eeg/blob/research/learning-preserving-bci/research_logs/kumar_plos_innovation_20261017/software_validation_20261017.json)。
 
 本轮交付包括已生成文件和对应来源、复现记录及格式核验；投稿平台中的提交操作仍由作者执行。
+
+## 2026年10月17日最终投稿核查补充
+
+本轮再次对照PLOS官方要求检查实际文件，删除两份主稿中的独立利益冲突句并保留系统字段，依据原始收据在方法部分补入10月10日元数据访问、10月11日EEG及配套元数据取得日期。主稿数值、所有表格和科学结果未改动。
+
+已补官方2026版Human Participants Checklist预填版及短名图件上传包。清单第3项仍需作者提供是否能够接触个体身份信息或身份链接密钥的事实答复；不能由使用编码数据推断这个回答。完整判断与提交文件对应关系见 [最终投稿核查](Final_Submission_Check_20261017_ZH.md)。
