@@ -1,0 +1,277 @@
+{
+  "editorial_revision_date": "2026-10-17",
+  "repository": "jackzhu119/few-shot-mi-eeg",
+  "branch": "research/learning-preserving-bci",
+  "base_commit": "19007a24c0bce0df285643297f35d0f2fe83c713",
+  "scientific_snapshot": "paper2-plos-source-20261016",
+  "ethics_snapshot": "paper2-plos-ethics-20261016",
+  "document_build": {
+    "python": "3.12.14",
+    "python_docx": "1.2.0",
+    "lxml": "6.1.1",
+    "pandoc": "pandoc 3.1.3"
+  },
+  "document_review": [
+    {
+      "document": "Cover_Letter_Revised.pdf",
+      "pages": 1,
+      "all_pages_visually_reviewed": true,
+      "result": "pass",
+      "reviewer": "reviewer_story"
+    },
+    {
+      "document": "PLOS_ONE_Manuscript_Revised.pdf",
+      "pages": 15,
+      "all_pages_visually_reviewed": true,
+      "result": "pass",
+      "checked": [
+        "all body pages",
+        "five tables",
+        "four original figures and revised captions",
+        "page numbers",
+        "17 references",
+        "supporting captions"
+      ]
+    },
+    {
+      "document": "S1_Supplementary_Methods_Revised.pdf",
+      "pages": 12,
+      "all_pages_visually_reviewed": true,
+      "result": "pass",
+      "reviewer": "method_audit"
+    },
+    {
+      "document": "S2_Reproducibility_Revised.pdf",
+      "pages": 5,
+      "all_pages_visually_reviewed": true,
+      "result": "pass",
+      "reviewer": "reviewer_story"
+    },
+    {
+      "document": "PLOS_ONE_Manuscript_Submission.pdf",
+      "pages": 21,
+      "all_pages_visually_reviewed": true,
+      "result": "pass",
+      "reviewer": "novelty_research"
+    }
+  ],
+  "validation": {
+    "development": {
+      "n": 6,
+      "full_minus_frozen_pp": 3.2468407609060925,
+      "full_minus_lda_pp": -1.1504503596155142,
+      "component_positive": 2,
+      "component_negative": 4,
+      "full_positive": 4,
+      "full_negative": 2,
+      "leave_one_out_range": [
+        1.8962089130873139,
+        4.838314176245204
+      ]
+    },
+    "final_test": {
+      "n": 12,
+      "full_minus_frozen_pp": 7.421355111917723,
+      "full_minus_lda_pp": 5.471566848154871,
+      "component_positive": 10,
+      "component_negative": 2,
+      "full_positive": 9,
+      "full_negative": 3,
+      "leave_one_out_range": [
+        6.217235879667819,
+        8.624731892426992
+      ]
+    },
+    "primary_sessions": {
+      "n": 60,
+      "positive": 39,
+      "negative": 18,
+      "zero": 3
+    },
+    "tables": {
+      "number": 5,
+      "all_numerical_cells_preserved": true
+    },
+    "word_counts": {
+      "method": "whitespace-separated Markdown tokens",
+      "original_main": 6255,
+      "revised_main": 4919,
+      "abstract": 233
+    },
+    "unchanged_assets": {
+      "count": 23,
+      "all_original_blob_hashes_match": true
+    },
+    "citation_keys": {
+      "submission_draft": {
+        "used": 17,
+        "missing": []
+      },
+      "supporting_methods": {
+        "used": 4,
+        "missing": []
+      },
+      "audit_reproducibility": {
+        "used": 3,
+        "missing": []
+      }
+    }
+  },
+  "files": [
+    {
+      "path": "manuscript/plos_one_revision_20261017/Author_Submission_Details.md",
+      "bytes": 3090,
+      "sha256": "1ac5ff449d53b82a0e8b9f002dea797b015fbbce996058c5407e032f0a5a0347"
+    },
+    {
+      "path": "manuscript/plos_one_revision_20261017/CAPTIONS.md",
+      "bytes": 2446,
+      "sha256": "021b08935387c3b1880bdf415bcea353a4d600956f6a37bee22b7ed4a078fc21"
+    },
+    {
+      "path": "manuscript/plos_one_revision_20261017/Cover_Letter_Revised.docx",
+      "bytes": 12241,
+      "sha256": "ea90070846ff0ff1d1746ea62fdb8fd52c9f59a831b26362ad19d106b4a6598e"
+    },
+    {
+      "path": "manuscript/plos_one_revision_20261017/Cover_Letter_Revised.pdf",
+      "bytes": 33548,
+      "sha256": "f4200d7420597252021408f5dd51b22f168e71c3ed0f55b2a9bb15d963dd6ccd"
+    },
+    {
+      "path": "manuscript/plos_one_revision_20261017/DATA_DICTIONARY.md",
+      "bytes": 24407,
+      "sha256": "cb6b07047cfe136da9c03742b8e09a7273fbb90e2ebfadfc2c44f569630803bc"
+    },
+    {
+      "path": "manuscript/plos_one_revision_20261017/Fig1.tif",
+      "bytes": 622180,
+      "sha256": "bd8b7972cf0a722b92b6ec8ca463c6068a1c1a6fcc4e246d2497dcebc7770c31"
+    },
+    {
+      "path": "manuscript/plos_one_revision_20261017/Fig2.tif",
+      "bytes": 584120,
+      "sha256": "c3ccb7fb485fb2fc3a39fbd1995bfff3f111aa130683388aa7096efa6c20e09f"
+    },
+    {
+      "path": "manuscript/plos_one_revision_20261017/Fig3.tif",
+      "bytes": 544422,
+      "sha256": "203f4b09cbb41509c36765e15f9aa7f0468d28f57471e559eb26787dc7888c7f"
+    },
+    {
+      "path": "manuscript/plos_one_revision_20261017/Fig4.tif",
+      "bytes": 3000784,
+      "sha256": "ab852de1b1b8a3a9934df058fd084e4fa1110b73f64f2632e0c5ac41f130f61e"
+    },
+    {
+      "path": "manuscript/plos_one_revision_20261017/PLOS_ONE_Manuscript_Revised.docx",
+      "bytes": 1565246,
+      "sha256": "19d1d72a7b9e97854799a8a31b72734e33492082d74bda1dcfb45dca7d25a2e5"
+    },
+    {
+      "path": "manuscript/plos_one_revision_20261017/PLOS_ONE_Manuscript_Revised.pdf",
+      "bytes": 976922,
+      "sha256": "14c2ad7a3f1f18c6e218fc25eb1ed98753fc37448dbcec87f1d3efce468fd619"
+    },
+    {
+      "path": "manuscript/plos_one_revision_20261017/PLOS_ONE_Manuscript_Submission.docx",
+      "bytes": 31459,
+      "sha256": "93e715b65951c7ac4f19992cdf576d7f6695fcfc4a6d99cbf9cf29a45c9426e8"
+    },
+    {
+      "path": "manuscript/plos_one_revision_20261017/PLOS_ONE_Manuscript_Submission.pdf",
+      "bytes": 276589,
+      "sha256": "3882ccbfc16d25c898244935a113ac51d72fd0ac1ccef07b0fa7b82179fc8a70"
+    },
+    {
+      "path": "manuscript/plos_one_revision_20261017/README.md",
+      "bytes": 4824,
+      "sha256": "e70b0f159ba22b089cb2f23dc590d93b08f94f3e48d943e3f99cb1dd7fd7738b"
+    },
+    {
+      "path": "manuscript/plos_one_revision_20261017/REPRODUCE_SAVED_RESULTS.md",
+      "bytes": 5761,
+      "sha256": "5d249ad2129ca63f62568469b9e4eb9df5d76f1c6697896357bcc221772cb057"
+    },
+    {
+      "path": "manuscript/plos_one_revision_20261017/S1_Data.zip",
+      "bytes": 1423505,
+      "sha256": "dccb1d88f4decae03794bc2fa81ead788cff87d2dd13b172f8b55d7e1e373416"
+    },
+    {
+      "path": "manuscript/plos_one_revision_20261017/S1_Data_README.md",
+      "bytes": 3017,
+      "sha256": "38911ee04a24d23254a5bd4a80fccfc12e86ab425c928e8f1380c7aeb2a3e651"
+    },
+    {
+      "path": "manuscript/plos_one_revision_20261017/S1_Data_manifest.json",
+      "bytes": 69628,
+      "sha256": "2b2ad751f448be2eff22dc52186648bc79a24e4c51501a08bed1b7d3c22b3b22"
+    },
+    {
+      "path": "manuscript/plos_one_revision_20261017/S1_Supplementary_Methods_Revised.docx",
+      "bytes": 30567,
+      "sha256": "1e17cabe8c7bb45bfce97c2952193da561408d2f0419f38f6a45bb4fe3fd28de"
+    },
+    {
+      "path": "manuscript/plos_one_revision_20261017/S1_Supplementary_Methods_Revised.pdf",
+      "bytes": 285439,
+      "sha256": "3c77d66d59ad5bf879cb1d4ca9af89d65b0af1fda5ec4bd655cf24a4769e0ce5"
+    },
+    {
+      "path": "manuscript/plos_one_revision_20261017/S2_Reproducibility_Revised.docx",
+      "bytes": 18988,
+      "sha256": "e0a998712439d9bf517ad8a7981f9c8938190f696a49b45fd0c053d79957ce9a"
+    },
+    {
+      "path": "manuscript/plos_one_revision_20261017/S2_Reproducibility_Revised.pdf",
+      "bytes": 147572,
+      "sha256": "f90e419578b032d4670f1511ceeadfc8766c84a61c77099080dd25cfba6fff6b"
+    },
+    {
+      "path": "manuscript/plos_one_revision_20261017/figure_upload_manifest.json",
+      "bytes": 1131,
+      "sha256": "602612fc947352b885ef75c86e88ebc73502025fbc9328c98ecba2a9b3f6e2ca"
+    },
+    {
+      "path": "manuscript/kumar_plos_one_audit_reproducibility_20261017.md",
+      "bytes": 12252,
+      "sha256": "2882860e346d10108cd3389a666c2132aa46184fe14f13b02732402254086a33"
+    },
+    {
+      "path": "manuscript/kumar_plos_one_cover_letter_20261017.md",
+      "bytes": 3019,
+      "sha256": "da78a39cc90adcb16ce127fc07b9075f367c9a7f94ea3d734146e20d8d7ddddb"
+    },
+    {
+      "path": "manuscript/kumar_plos_one_references_20261017.bib",
+      "bytes": 8327,
+      "sha256": "71f1770d6bc9638d323a479f77a8bb8bc235028725e149c7e7c4b3281ead6ac6"
+    },
+    {
+      "path": "manuscript/kumar_plos_one_submission_draft_20261017.md",
+      "bytes": 36801,
+      "sha256": "a011857decc372018a4798fe8eab125c37d918ce220b285db5dd2abf80b1d96d"
+    },
+    {
+      "path": "manuscript/kumar_plos_one_supporting_methods_20261017.md",
+      "bytes": 30954,
+      "sha256": "f86c369f536598ac0083f32afd639c25d0091796a95f21ac2fc4de39924efa0e"
+    },
+    {
+      "path": "docs/kumar_editorial_revision_20261017.md",
+      "bytes": 5689,
+      "sha256": "61b54e8973498774494a402a93f2e7cbd8dbdf285a14227537d12440cf4e81aa"
+    },
+    {
+      "path": "scripts/build_kumar_editorial_documents_20261017.py",
+      "bytes": 11701,
+      "sha256": "05795dc49f11627b3ec83b4ba8b7abbb7d0aaad283f4e8bc51d48e6e6e075ce0"
+    },
+    {
+      "path": "LICENSES/scope-addendum-paper2-revision-20261017.md",
+      "bytes": 1106,
+      "sha256": "b4daa4cd594729ea4bc4b801ea9d23a118f7d4644c400601b09266ba8419607d"
+    }
+  ]
+}

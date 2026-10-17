@@ -1,5 +1,11 @@
 # Task-Aware Adaptive Decoding for Longitudinal Motor-Imagery EEG
 
+## 论文2最新写作修订（2026-10-17）
+
+[完整修订包与文件索引](manuscript/plos_one_revision_20261017/README.md) · [主稿 PDF](manuscript/plos_one_revision_20261017/PLOS_ONE_Manuscript_Revised.pdf) · [主稿 Word](manuscript/plos_one_revision_20261017/PLOS_ONE_Manuscript_Revised.docx) · [中文修改说明](docs/kumar_editorial_revision_20261017.md)。
+
+新版题目为 **Updating spatial filters improves limited-label recalibration in a longitudinal motor-imagery EEG dataset**。主稿、S1 方法、S2 复现说明和附信突出同标签预算下空间滤波器更新的额外价值、纵向收益差异与短校准测量稳定性。现有结果表、图件和数据包保留。下方保留历史日期记录；当前写作版本以本入口为准。
+
 [伦理版实际同步收尾](docs/kumar_ethics_sync_closeout_20261016.md)：固定`d03b5a3`已到main/研究分支/tag；5关键文件完整公开读回，324私有R2对象完整GET。
 
 **2026-10-16伦理更新：**作者报告重庆医科大学科研处于2026-10-16确认本次二次分析免予额外伦理审查，无编号。新版[伦理声明/PDF/Word完整包](manuscript/plos_one_submission_ethics_20261016/README.md)与[实际确认和法规依据](docs/kumar_ethics_statement_revision_20261016.md)已形成；下方日期明确的“伦理待补”为历史状态，原科学结果与旧封存材料保持不变。尚未投稿。

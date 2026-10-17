@@ -1,5 +1,9 @@
 # Current scientific handoff
 
+## Current writing revision — 17 October 2026
+
+Use [the dated paper-2 revision package](manuscript/plos_one_revision_20261017/README.md) and [the Chinese revision notes](docs/kumar_editorial_revision_20261017.md). The revised title and argument foreground the matched-label spatial-filter contrast, longitudinal gains and calibration-measurement reliability. Continue edits from the `*_20261017.md` manuscript sources. The original scientific results, endpoint hierarchy, author-reported ethical basis and historical approval records retain their recorded scope. The task-window follow-up remains a separate protocol. Earlier dated entries below are historical records.
+
 伦理版已实际推送固定`d03b5a3`，私有R2324对象完整GET已核；[回执及当前入口](docs/kumar_ethics_sync_closeout_20261016.md)。
 
 ## 2026-10-16 伦理状态最新补充
