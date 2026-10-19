@@ -1,0 +1,109 @@
+{
+  "baseline_commit": "3a806d210cc8c4f25f5d24f9dca61059588616f5",
+  "scope": "Only manuscript narrative/algorithm terminology explicitly identified in the submitted review; original table 6 negative CI and reference 16 unchanged.",
+  "files": [
+    {
+      "path": "manuscript/kumar_plos_one_submission_draft_innovation_20261017.md",
+      "old_sha256": "0b4eb4985bf82419a6618e44097988e534b9c9d32c05117a5c8f40e64922a37f",
+      "new_sha256": "2e3aa802c7be70434cbe3cb859e413b701792bf97da2d5fed63cf88eddfbbb83",
+      "changes": [
+        {
+          "kind": "algorithm terminology",
+          "old": "The CPU pipeline",
+          "new": "The CSP/LDA pipeline",
+          "occurrences": 1
+        },
+        {
+          "kind": "algorithm terminology",
+          "old": "all CPU comparisons",
+          "new": "all CSP/LDA comparisons",
+          "occurrences": 1
+        },
+        {
+          "kind": "algorithm terminology",
+          "old": "CPU fitting",
+          "new": "CSP/LDA fitting",
+          "occurrences": 1
+        },
+        {
+          "kind": "algorithm terminology",
+          "old": "The two CPU update methods",
+          "new": "The two CSP/LDA update methods",
+          "occurrences": 1
+        },
+        {
+          "kind": "algorithm terminology",
+          "old": "saved CPU predictions",
+          "new": "saved CSP/LDA predictions",
+          "occurrences": 1
+        },
+        {
+          "kind": "algorithm terminology",
+          "old": "The two CPU updating methods",
+          "new": "The two CSP/LDA updating methods",
+          "occurrences": 1
+        },
+        {
+          "kind": "algorithm terminology",
+          "old": "corresponding CPU source-query BA",
+          "new": "corresponding CSP/LDA source-query BA",
+          "occurrences": 1
+        },
+        {
+          "kind": "algorithm terminology",
+          "old": "CPU source model",
+          "new": "CSP/LDA source model",
+          "occurrences": 1
+        },
+        {
+          "kind": "verification wording",
+          "old": "Verification included trial-identity joins and hashes, reconstruction of the original endpoints, independent implementations of the prediction-transition arithmetic, public-input replay, and visual review of the documents and figures.",
+          "new": "Verification included exact trial-identifier matching and file checksums, reconstruction of the original endpoints from saved predictions, independent implementations of the prediction-transition arithmetic, reproduction of saved-result calculations from the shared predictions and trial metadata, and visual review of the documents and figures.",
+          "occurrences": 1
+        },
+        {
+          "kind": "scope paragraph",
+          "old": "The five-second cue-anchored windows include the approximately 1.5-second visual cue and subsequent task activity; variable online trial endings can also place feedback or post-task activity within a complete window. Strictly task-anchored windows would address a different phase-specific endpoint. The amplitude rule flagged 1,512 of 7,156 windows (21.1%) and the query sensitivity retained positive mean gains; this check addresses large query amplitudes, while potential artifacts in training/support data remain a separate issue.",
+          "new": "The five-second cue-anchored windows span the approximately 1.5-second visual cue and subsequent task activity, while variable online trial endings can place feedback or post-task activity within a complete window. Restricting evaluation to strictly task-anchored intervals would therefore address a different, phase-specific endpoint. The amplitude rule flagged 1,512 of 7,156 complete windows (21.1%); the query sensitivity retained positive mean gains after restricting evaluation to unflagged queries. This addresses large query amplitudes, with potential artifacts in training/support data remaining a separate issue.",
+          "occurrences": 1
+        },
+        {
+          "kind": "scope paragraph",
+          "old": "Fourth-order zero-phase filtering defines an offline pipeline. Closed-loop translation requires causal preprocessing and real-time artifact handling. The unweighted source/support union fixes the information available to each update; covariance weighting and signal alignment would require their own controlled comparisons.",
+          "new": "These comparisons use fourth-order zero-phase filtering for offline analysis, whereas closed-loop translation requires causal preprocessing and real-time artifact handling. Both update methods pooled source/support data without weighting to fix the information available for adaptation; covariance weighting and signal alignment would require their own controlled comparisons.",
+          "occurrences": 1
+        },
+        {
+          "kind": "scope paragraph",
+          "old": "This study uses one 18-participant cohort, with six participants for reliability development and 12 for the primary comparison. Prediction transitions, amplitude sensitivity, influence summaries and sign-flip checks are post-hoc exploratory analyses, and earlier test-result exposure remains part of the study history. EEGNet supplies a frozen source-only reference with 20 additional source-validation labels. Independent multi-session cohorts and prospective support-driven update selection would test how well the component advantage and calibration diagnostics generalize.",
+          "new": "The findings come from one 18-participant cohort, partitioned into six participants for reliability development and 12 for the primary comparison. The primary endpoint hierarchy and cohort split were predefined; prediction transitions, amplitude sensitivity, participant-influence summaries and exact sign-flip checks were conducted as post-hoc exploratory analyses after observing the original decoding results. EEGNet supplies a frozen source-only reference with 20 additional source-validation labels. Independent multi-session cohorts and prospective support-driven update selection would test how well the component advantage and calibration diagnostics generalize.",
+          "occurrences": 1
+        },
+        {
+          "kind": "availability paragraph",
+          "old": "Code, configurations and versioned materials are available at https://github.com/jackzhu119/few-shot-mi-eeg. The scientific results are preserved at the tag paper2-plos-source-20261016, with the earlier ethics wording preserved at paper2-plos-ethics-20261016; S2 Text gives the current regulatory exemption statement. This manuscript and its supplements form the 17 October 2026 extended analysis in manuscript/plos_one_innovation_20261017/. Its README identifies the source versions, new prediction-transition code, figure inputs and generated files. S1 Data includes the original saved-result package together with the new component analyses and complete cohort tables.",
+          "new": "Analysis code, configuration files and reproducibility instructions are publicly available at https://github.com/jackzhu119/few-shot-mi-eeg. The versioned manuscript README identifies the fixed source revisions, prediction-transition scripts, figure-generation inputs and generated files. S1 Data archives the complete saved-result package together with the prediction-transition analyses and cohort summary tables.",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "manuscript/plos_one_innovation_20261017/Sources/kumar_plos_one_submission_draft_innovation_20261017.md",
+      "old_sha256": "0b4eb4985bf82419a6618e44097988e534b9c9d32c05117a5c8f40e64922a37f",
+      "new_sha256": "2e3aa802c7be70434cbe3cb859e413b701792bf97da2d5fed63cf88eddfbbb83",
+      "same_as_master": true
+    },
+    {
+      "path": "manuscript/plos_one_innovation_20261017/Figure_Captions.md",
+      "old_sha256": "8f9a224318a92c542d58988ee03d1769992dfef9d8082f694fc8413f27a295bb",
+      "new_sha256": "6bbe1b0d0c850b12214ace728e35c1d69d9f63e980f5b9173e9e033b039c6fd2",
+      "changes": [
+        {
+          "old": "The two CPU updating methods",
+          "new": "The two CSP/LDA updating methods",
+          "occurrences": 1
+        }
+      ]
+    }
+  ]
+}

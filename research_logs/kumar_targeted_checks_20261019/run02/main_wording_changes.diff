@@ -1,0 +1,199 @@
+--- a/manuscript/kumar_plos_one_submission_draft_innovation_20261017.md
++++ b/manuscript/kumar_plos_one_submission_draft_innovation_20261017.md
+@@ -61,13 +61,13 @@
+ 
+ ### Decoders and label budgets
+ 
+-The CPU pipeline combined four-component CSP with Ledoit–Wolf covariance regularization, log mean-square features and norm_trace=False, followed by shrinkage LDA (solver=lsqr, automatic shrinkage) [@ledoit2004]. A single configuration defined all CPU comparisons:
++The CSP/LDA pipeline combined four-component CSP with Ledoit–Wolf covariance regularization, log mean-square features and norm_trace=False, followed by shrinkage LDA (solver=lsqr, automatic shrinkage) [@ledoit2004]. A single configuration defined all CSP/LDA comparisons:
+ 
+ - **Frozen CSP/LDA:** both components were fitted to the 40 source training windows and then held fixed.
+ - **LDA-only recalibration:** source CSP was retained and LDA was refitted using source training plus current support.
+ - **Full CSP/LDA refitting:** both components were refitted using the same source-training/current-support union.
+ 
+-CPU fitting and parameter selection used training/support identities exclusively. The identical labeled fitting sets in the two updating methods make their contrast a direct comparison of the added spatial-filter update within CSP/LDA.
++CSP/LDA fitting and parameter selection used training/support identities exclusively. The identical labeled fitting sets in the two updating methods make their contrast a direct comparison of the added spatial-filter update within CSP/LDA.
+ 
+ EEGNet used the Braindecode implementation [@lawhern2018; @schirrmeister2017], with F1=4, D=2, F2=8 and dropout 0.5. Optimization used Adam, a learning rate of 0.001, batch size 16 and at most 100 epochs. Channel means and scales were fitted on source training. Source-validation cross entropy selected the earliest best epoch with patience 15, and the selected model state was restored. Three seeds (20261012, 20261013 and 20261014) were retained for every participant. Query inference used evaluation mode with model parameters, batch-normalization buffers and normalization statistics fixed.
+ 
+@@ -82,7 +82,7 @@
+ | Full CSP/LDA refitting | 40 labeled windows, combined with current support for both stages | None | 19/20 labeled windows |
+ | Frozen EEGNet | 40 labeled windows per seed | 20 labeled windows for epoch selection | 0 |
+ 
+-The two CPU update methods share the adaptation budget. Their comparison with freezing measures the benefit of adding support labels and refitting the specified components. Frozen EEGNet supplies a source-only neural reference with the additional validation budget shown in Table 1. Target-session neural fine-tuning would add layer-freezing and learning-rate choices for 19 or 20 support trials; retaining the frozen reference keeps the adaptation comparison focused on the CSP and LDA stages. S1 Text, S3 gives the complete implementation settings.
++The two CSP/LDA update methods share the adaptation budget. Their comparison with freezing measures the benefit of adding support labels and refitting the specified components. Frozen EEGNet supplies a source-only neural reference with the additional validation budget shown in Table 1. Target-session neural fine-tuning would add layer-freezing and learning-rate choices for 19 or 20 support trials; retaining the frozen reference keeps the adaptation comparison focused on the CSP and LDA stages. S1 Text, S3 gives the complete implementation settings.
+ 
+ ### Endpoints and statistical analysis
+ 
+@@ -112,7 +112,7 @@
+ 
+ ### Prediction-transition and component-consistency analyses
+ 
+-We added an exploratory analysis of the saved CPU predictions to explain how each update changed class decisions. For two methods A and B evaluated on the same trials, the correction contribution was one half of the sum, over the two true classes, of the fraction classified incorrectly by A and correctly by B. The introduced-error contribution used the reverse transition. Their difference equals BA(B) − BA(A) exactly. We computed all three contrasts: frozen to LDA-only, LDA-only to full refitting, and frozen to full refitting. Left- and right-class recalls were also analyzed separately.
++We added an exploratory analysis of the saved CSP/LDA predictions to explain how each update changed class decisions. For two methods A and B evaluated on the same trials, the correction contribution was one half of the sum, over the two true classes, of the fraction classified incorrectly by A and correctly by B. The introduced-error contribution used the reverse transition. Their difference equals BA(B) − BA(A) exactly. We computed all three contrasts: frozen to LDA-only, LDA-only to full refitting, and frozen to full refitting. Left- and right-class recalls were also analyzed separately.
+ 
+ Within each participant, the five session contributions received equal weight. Cohort means and paired percentile intervals then used 10,000 participant bootstrap resamples with seed 42. Development, primary and all-participant results were retained. Single-participant deletion summaries assessed the influence of each primary participant on the component contrast; separate cohort means for each target session described its time profile. The ratio of the mean component gain to the mean total gain reports their arithmetic decomposition. S1 Text, S12 defines the identities, denominators, reconstruction checks and complete outputs. This analysis was specified after the original results were available and supplements the original endpoint hierarchy.
+ 
+@@ -120,7 +120,7 @@
+ 
+ We examined all saved EEGNet training/validation histories, selected epochs, seed-level outcomes and source/target query metrics. Training loss was accumulated while parameters changed in training mode; validation loss was evaluated after each epoch. Their different computation conditions informed interpretation of the histories.
+ 
+-OpenAI ChatGPT/Codex assisted with software, validation, saved-result aggregation, figures, source and reference checks, manuscript drafting and editing, and document exports. Verification included trial-identity joins and hashes, reconstruction of the original endpoints, independent implementations of the prediction-transition arithmetic, public-input replay, and visual review of the documents and figures. The software and editorial checks were AI-assisted. The author is responsible for the manuscript's content.
++OpenAI ChatGPT/Codex assisted with software, validation, saved-result aggregation, figures, source and reference checks, manuscript drafting and editing, and document exports. Verification included exact trial-identifier matching and file checksums, reconstruction of the original endpoints from saved predictions, independent implementations of the prediction-transition arithmetic, reproduction of saved-result calculations from the shared predictions and trial metadata, and visual review of the documents and figures. The software and editorial checks were AI-assisted. The author is responsible for the manuscript's content.
+ 
+ ## Results
+ 
+@@ -142,7 +142,7 @@
+ 
+ **Fig 1. Target-query decoding by participant.**
+ 
+-\(A) Six development participants. (B) Twelve primary participants. Each colored point represents one participant's mean BA over five target sessions; faint lines connect the same participant across methods. EEGNet averages three seeds within session. Diamonds and bars show cohort means and 95% participant-bootstrap intervals (10,000 resamples, seed 42). All methods were evaluated on the same query identities. The two CPU updating methods used identical source-training and current-support labels; the other information budgets are given in Table 1.
++\(A) Six development participants. (B) Twelve primary participants. Each colored point represents one participant's mean BA over five target sessions; faint lines connect the same participant across methods. EEGNet averages three seeds within session. Diamonds and bars show cohort means and 95% participant-bootstrap intervals (10,000 resamples, seed 42). All methods were evaluated on the same query identities. The two CSP/LDA updating methods used identical source-training and current-support labels; the other information budgets are given in Table 1.
+ 
+ ### Update gains varied across participants and sessions
+ 
+@@ -160,11 +160,11 @@
+ 
+ ### The neural reference retained all scheduled fits and seed outcomes
+ 
+-All 54 scheduled EEGNet fits contributed to the source-only neural reference. Primary-cohort BA was 52.92% on held-out source query and 51.58% across target sessions; the corresponding CPU source-query BA was 65.00% (Table 3).
++All 54 scheduled EEGNet fits contributed to the source-only neural reference. Primary-cohort BA was 52.92% on held-out source query and 51.58% across target sessions; the corresponding CSP/LDA source-query BA was 65.00% (Table 3).
+ 
+ **Table 3. Source-query balanced accuracy (%, participant mean and 95% interval).**
+ 
+-| Cohort | n | CPU source model, shared across the three update conditions | Frozen EEGNet |
++| Cohort | n | CSP/LDA source model, shared across the three update conditions | Frozen EEGNet |
+ | --- | ---: | ---: | ---: |
+ | Development | 6 | 60.83 [54.17, 68.33] | 52.78 [47.50, 59.44] |
+ | Predefined primary cohort | 12 | 65.00 [56.67, 74.17] | 52.92 [48.89, 58.75] |
+@@ -288,11 +288,11 @@
+ 
+ ### Scope and further evaluation
+ 
+-The five-second cue-anchored windows include the approximately 1.5-second visual cue and subsequent task activity; variable online trial endings can also place feedback or post-task activity within a complete window. Strictly task-anchored windows would address a different phase-specific endpoint. The amplitude rule flagged 1,512 of 7,156 windows (21.1%) and the query sensitivity retained positive mean gains; this check addresses large query amplitudes, while potential artifacts in training/support data remain a separate issue.
+-
+-Fourth-order zero-phase filtering defines an offline pipeline. Closed-loop translation requires causal preprocessing and real-time artifact handling. The unweighted source/support union fixes the information available to each update; covariance weighting and signal alignment would require their own controlled comparisons.
+-
+-This study uses one 18-participant cohort, with six participants for reliability development and 12 for the primary comparison. Prediction transitions, amplitude sensitivity, influence summaries and sign-flip checks are post-hoc exploratory analyses, and earlier test-result exposure remains part of the study history. EEGNet supplies a frozen source-only reference with 20 additional source-validation labels. Independent multi-session cohorts and prospective support-driven update selection would test how well the component advantage and calibration diagnostics generalize.
++The five-second cue-anchored windows span the approximately 1.5-second visual cue and subsequent task activity, while variable online trial endings can place feedback or post-task activity within a complete window. Restricting evaluation to strictly task-anchored intervals would therefore address a different, phase-specific endpoint. The amplitude rule flagged 1,512 of 7,156 complete windows (21.1%); the query sensitivity retained positive mean gains after restricting evaluation to unflagged queries. This addresses large query amplitudes, with potential artifacts in training/support data remaining a separate issue.
++
++These comparisons use fourth-order zero-phase filtering for offline analysis, whereas closed-loop translation requires causal preprocessing and real-time artifact handling. Both update methods pooled source/support data without weighting to fix the information available for adaptation; covariance weighting and signal alignment would require their own controlled comparisons.
++
++The findings come from one 18-participant cohort, partitioned into six participants for reliability development and 12 for the primary comparison. The primary endpoint hierarchy and cohort split were predefined; prediction transitions, amplitude sensitivity, participant-influence summaries and exact sign-flip checks were conducted as post-hoc exploratory analyses after observing the original decoding results. EEGNet supplies a frozen source-only reference with 20 additional source-validation labels. Independent multi-session cohorts and prospective support-driven update selection would test how well the component advantage and calibration diagnostics generalize.
+ 
+ ## Conclusions
+ 
+@@ -302,7 +302,7 @@
+ 
+ The source EEG is available as NEMAR nm000177/v1.0.5, DOI 10.82901/nemar.nm000177.v1.0.5, under CC BY 4.0 [@nemar177]. S1 Data contains saved predictions, trial/QC metadata, participant and session summaries, training histories, reliability/drift records, statistical checks and figure data. Its scripts reproduce saved-result arithmetic from these inputs. S1 Text defines the methods; S2 Text provides data provenance and reproduction instructions.
+ 
+-Code, configurations and versioned materials are available at https://github.com/jackzhu119/few-shot-mi-eeg. The scientific results are preserved at the tag paper2-plos-source-20261016, with the earlier ethics wording preserved at paper2-plos-ethics-20261016; S2 Text gives the current regulatory exemption statement. This manuscript and its supplements form the 17 October 2026 extended analysis in manuscript/plos_one_innovation_20261017/. Its README identifies the source versions, new prediction-transition code, figure inputs and generated files. S1 Data includes the original saved-result package together with the new component analyses and complete cohort tables.
++Analysis code, configuration files and reproducibility instructions are publicly available at https://github.com/jackzhu119/few-shot-mi-eeg. The versioned manuscript README identifies the fixed source revisions, prediction-transition scripts, figure-generation inputs and generated files. S1 Data archives the complete saved-result package together with the prediction-transition analyses and cohort summary tables.
+ 
+ Original project software is licensed under MIT; original manuscript content, figures and derived results are licensed under CC BY 4.0. LICENSING.md describes the scope and third-party terms. Source annotations retain their NEMAR attribution.
+ 
+--- a/manuscript/plos_one_innovation_20261017/Sources/kumar_plos_one_submission_draft_innovation_20261017.md
++++ b/manuscript/plos_one_innovation_20261017/Sources/kumar_plos_one_submission_draft_innovation_20261017.md
+@@ -61,13 +61,13 @@
+ 
+ ### Decoders and label budgets
+ 
+-The CPU pipeline combined four-component CSP with Ledoit–Wolf covariance regularization, log mean-square features and norm_trace=False, followed by shrinkage LDA (solver=lsqr, automatic shrinkage) [@ledoit2004]. A single configuration defined all CPU comparisons:
++The CSP/LDA pipeline combined four-component CSP with Ledoit–Wolf covariance regularization, log mean-square features and norm_trace=False, followed by shrinkage LDA (solver=lsqr, automatic shrinkage) [@ledoit2004]. A single configuration defined all CSP/LDA comparisons:
+ 
+ - **Frozen CSP/LDA:** both components were fitted to the 40 source training windows and then held fixed.
+ - **LDA-only recalibration:** source CSP was retained and LDA was refitted using source training plus current support.
+ - **Full CSP/LDA refitting:** both components were refitted using the same source-training/current-support union.
+ 
+-CPU fitting and parameter selection used training/support identities exclusively. The identical labeled fitting sets in the two updating methods make their contrast a direct comparison of the added spatial-filter update within CSP/LDA.
++CSP/LDA fitting and parameter selection used training/support identities exclusively. The identical labeled fitting sets in the two updating methods make their contrast a direct comparison of the added spatial-filter update within CSP/LDA.
+ 
+ EEGNet used the Braindecode implementation [@lawhern2018; @schirrmeister2017], with F1=4, D=2, F2=8 and dropout 0.5. Optimization used Adam, a learning rate of 0.001, batch size 16 and at most 100 epochs. Channel means and scales were fitted on source training. Source-validation cross entropy selected the earliest best epoch with patience 15, and the selected model state was restored. Three seeds (20261012, 20261013 and 20261014) were retained for every participant. Query inference used evaluation mode with model parameters, batch-normalization buffers and normalization statistics fixed.
+ 
+@@ -82,7 +82,7 @@
+ | Full CSP/LDA refitting | 40 labeled windows, combined with current support for both stages | None | 19/20 labeled windows |
+ | Frozen EEGNet | 40 labeled windows per seed | 20 labeled windows for epoch selection | 0 |
+ 
+-The two CPU update methods share the adaptation budget. Their comparison with freezing measures the benefit of adding support labels and refitting the specified components. Frozen EEGNet supplies a source-only neural reference with the additional validation budget shown in Table 1. Target-session neural fine-tuning would add layer-freezing and learning-rate choices for 19 or 20 support trials; retaining the frozen reference keeps the adaptation comparison focused on the CSP and LDA stages. S1 Text, S3 gives the complete implementation settings.
++The two CSP/LDA update methods share the adaptation budget. Their comparison with freezing measures the benefit of adding support labels and refitting the specified components. Frozen EEGNet supplies a source-only neural reference with the additional validation budget shown in Table 1. Target-session neural fine-tuning would add layer-freezing and learning-rate choices for 19 or 20 support trials; retaining the frozen reference keeps the adaptation comparison focused on the CSP and LDA stages. S1 Text, S3 gives the complete implementation settings.
+ 
+ ### Endpoints and statistical analysis
+ 
+@@ -112,7 +112,7 @@
+ 
+ ### Prediction-transition and component-consistency analyses
+ 
+-We added an exploratory analysis of the saved CPU predictions to explain how each update changed class decisions. For two methods A and B evaluated on the same trials, the correction contribution was one half of the sum, over the two true classes, of the fraction classified incorrectly by A and correctly by B. The introduced-error contribution used the reverse transition. Their difference equals BA(B) − BA(A) exactly. We computed all three contrasts: frozen to LDA-only, LDA-only to full refitting, and frozen to full refitting. Left- and right-class recalls were also analyzed separately.
++We added an exploratory analysis of the saved CSP/LDA predictions to explain how each update changed class decisions. For two methods A and B evaluated on the same trials, the correction contribution was one half of the sum, over the two true classes, of the fraction classified incorrectly by A and correctly by B. The introduced-error contribution used the reverse transition. Their difference equals BA(B) − BA(A) exactly. We computed all three contrasts: frozen to LDA-only, LDA-only to full refitting, and frozen to full refitting. Left- and right-class recalls were also analyzed separately.
+ 
+ Within each participant, the five session contributions received equal weight. Cohort means and paired percentile intervals then used 10,000 participant bootstrap resamples with seed 42. Development, primary and all-participant results were retained. Single-participant deletion summaries assessed the influence of each primary participant on the component contrast; separate cohort means for each target session described its time profile. The ratio of the mean component gain to the mean total gain reports their arithmetic decomposition. S1 Text, S12 defines the identities, denominators, reconstruction checks and complete outputs. This analysis was specified after the original results were available and supplements the original endpoint hierarchy.
+ 
+@@ -120,7 +120,7 @@
+ 
+ We examined all saved EEGNet training/validation histories, selected epochs, seed-level outcomes and source/target query metrics. Training loss was accumulated while parameters changed in training mode; validation loss was evaluated after each epoch. Their different computation conditions informed interpretation of the histories.
+ 
+-OpenAI ChatGPT/Codex assisted with software, validation, saved-result aggregation, figures, source and reference checks, manuscript drafting and editing, and document exports. Verification included trial-identity joins and hashes, reconstruction of the original endpoints, independent implementations of the prediction-transition arithmetic, public-input replay, and visual review of the documents and figures. The software and editorial checks were AI-assisted. The author is responsible for the manuscript's content.
++OpenAI ChatGPT/Codex assisted with software, validation, saved-result aggregation, figures, source and reference checks, manuscript drafting and editing, and document exports. Verification included exact trial-identifier matching and file checksums, reconstruction of the original endpoints from saved predictions, independent implementations of the prediction-transition arithmetic, reproduction of saved-result calculations from the shared predictions and trial metadata, and visual review of the documents and figures. The software and editorial checks were AI-assisted. The author is responsible for the manuscript's content.
+ 
+ ## Results
+ 
+@@ -142,7 +142,7 @@
+ 
+ **Fig 1. Target-query decoding by participant.**
+ 
+-\(A) Six development participants. (B) Twelve primary participants. Each colored point represents one participant's mean BA over five target sessions; faint lines connect the same participant across methods. EEGNet averages three seeds within session. Diamonds and bars show cohort means and 95% participant-bootstrap intervals (10,000 resamples, seed 42). All methods were evaluated on the same query identities. The two CPU updating methods used identical source-training and current-support labels; the other information budgets are given in Table 1.
++\(A) Six development participants. (B) Twelve primary participants. Each colored point represents one participant's mean BA over five target sessions; faint lines connect the same participant across methods. EEGNet averages three seeds within session. Diamonds and bars show cohort means and 95% participant-bootstrap intervals (10,000 resamples, seed 42). All methods were evaluated on the same query identities. The two CSP/LDA updating methods used identical source-training and current-support labels; the other information budgets are given in Table 1.
+ 
+ ### Update gains varied across participants and sessions
+ 
+@@ -160,11 +160,11 @@
+ 
+ ### The neural reference retained all scheduled fits and seed outcomes
+ 
+-All 54 scheduled EEGNet fits contributed to the source-only neural reference. Primary-cohort BA was 52.92% on held-out source query and 51.58% across target sessions; the corresponding CPU source-query BA was 65.00% (Table 3).
++All 54 scheduled EEGNet fits contributed to the source-only neural reference. Primary-cohort BA was 52.92% on held-out source query and 51.58% across target sessions; the corresponding CSP/LDA source-query BA was 65.00% (Table 3).
+ 
+ **Table 3. Source-query balanced accuracy (%, participant mean and 95% interval).**
+ 
+-| Cohort | n | CPU source model, shared across the three update conditions | Frozen EEGNet |
++| Cohort | n | CSP/LDA source model, shared across the three update conditions | Frozen EEGNet |
+ | --- | ---: | ---: | ---: |
+ | Development | 6 | 60.83 [54.17, 68.33] | 52.78 [47.50, 59.44] |
+ | Predefined primary cohort | 12 | 65.00 [56.67, 74.17] | 52.92 [48.89, 58.75] |
+@@ -288,11 +288,11 @@
+ 
+ ### Scope and further evaluation
+ 
+-The five-second cue-anchored windows include the approximately 1.5-second visual cue and subsequent task activity; variable online trial endings can also place feedback or post-task activity within a complete window. Strictly task-anchored windows would address a different phase-specific endpoint. The amplitude rule flagged 1,512 of 7,156 windows (21.1%) and the query sensitivity retained positive mean gains; this check addresses large query amplitudes, while potential artifacts in training/support data remain a separate issue.
+-
+-Fourth-order zero-phase filtering defines an offline pipeline. Closed-loop translation requires causal preprocessing and real-time artifact handling. The unweighted source/support union fixes the information available to each update; covariance weighting and signal alignment would require their own controlled comparisons.
+-
+-This study uses one 18-participant cohort, with six participants for reliability development and 12 for the primary comparison. Prediction transitions, amplitude sensitivity, influence summaries and sign-flip checks are post-hoc exploratory analyses, and earlier test-result exposure remains part of the study history. EEGNet supplies a frozen source-only reference with 20 additional source-validation labels. Independent multi-session cohorts and prospective support-driven update selection would test how well the component advantage and calibration diagnostics generalize.
++The five-second cue-anchored windows span the approximately 1.5-second visual cue and subsequent task activity, while variable online trial endings can place feedback or post-task activity within a complete window. Restricting evaluation to strictly task-anchored intervals would therefore address a different, phase-specific endpoint. The amplitude rule flagged 1,512 of 7,156 complete windows (21.1%); the query sensitivity retained positive mean gains after restricting evaluation to unflagged queries. This addresses large query amplitudes, with potential artifacts in training/support data remaining a separate issue.
++
++These comparisons use fourth-order zero-phase filtering for offline analysis, whereas closed-loop translation requires causal preprocessing and real-time artifact handling. Both update methods pooled source/support data without weighting to fix the information available for adaptation; covariance weighting and signal alignment would require their own controlled comparisons.
++
++The findings come from one 18-participant cohort, partitioned into six participants for reliability development and 12 for the primary comparison. The primary endpoint hierarchy and cohort split were predefined; prediction transitions, amplitude sensitivity, participant-influence summaries and exact sign-flip checks were conducted as post-hoc exploratory analyses after observing the original decoding results. EEGNet supplies a frozen source-only reference with 20 additional source-validation labels. Independent multi-session cohorts and prospective support-driven update selection would test how well the component advantage and calibration diagnostics generalize.
+ 
+ ## Conclusions
+ 
+@@ -302,7 +302,7 @@
+ 
+ The source EEG is available as NEMAR nm000177/v1.0.5, DOI 10.82901/nemar.nm000177.v1.0.5, under CC BY 4.0 [@nemar177]. S1 Data contains saved predictions, trial/QC metadata, participant and session summaries, training histories, reliability/drift records, statistical checks and figure data. Its scripts reproduce saved-result arithmetic from these inputs. S1 Text defines the methods; S2 Text provides data provenance and reproduction instructions.
+ 
+-Code, configurations and versioned materials are available at https://github.com/jackzhu119/few-shot-mi-eeg. The scientific results are preserved at the tag paper2-plos-source-20261016, with the earlier ethics wording preserved at paper2-plos-ethics-20261016; S2 Text gives the current regulatory exemption statement. This manuscript and its supplements form the 17 October 2026 extended analysis in manuscript/plos_one_innovation_20261017/. Its README identifies the source versions, new prediction-transition code, figure inputs and generated files. S1 Data includes the original saved-result package together with the new component analyses and complete cohort tables.
++Analysis code, configuration files and reproducibility instructions are publicly available at https://github.com/jackzhu119/few-shot-mi-eeg. The versioned manuscript README identifies the fixed source revisions, prediction-transition scripts, figure-generation inputs and generated files. S1 Data archives the complete saved-result package together with the prediction-transition analyses and cohort summary tables.
+ 
+ Original project software is licensed under MIT; original manuscript content, figures and derived results are licensed under CC BY 4.0. LICENSING.md describes the scope and third-party terms. Source annotations retain their NEMAR attribution.
+ 
+--- a/manuscript/plos_one_innovation_20261017/Figure_Captions.md
++++ b/manuscript/plos_one_innovation_20261017/Figure_Captions.md
+@@ -2,7 +2,7 @@
+ 
+ **Fig 1. Target-query decoding by participant.**
+ 
+-\(A) Six development participants. (B) Twelve primary participants. Each colored point represents one participant's mean BA over five target sessions; faint lines connect the same participant across methods. EEGNet averages three seeds within session. Diamonds and bars show cohort means and 95% participant-bootstrap intervals (10,000 resamples, seed 42). All methods were evaluated on the same query identities. The two CPU updating methods used identical source-training and current-support labels; the other information budgets are given in Table 1.
++\(A) Six development participants. (B) Twelve primary participants. Each colored point represents one participant's mean BA over five target sessions; faint lines connect the same participant across methods. EEGNet averages three seeds within session. Diamonds and bars show cohort means and 95% participant-bootstrap intervals (10,000 resamples, seed 42). All methods were evaluated on the same query identities. The two CSP/LDA updating methods used identical source-training and current-support labels; the other information budgets are given in Table 1.
+ 
+ **Fig 2. Full-refit gain over frozen decoding in the primary cohort.**
+ 

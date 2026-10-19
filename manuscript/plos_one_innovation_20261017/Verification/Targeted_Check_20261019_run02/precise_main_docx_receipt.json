@@ -1,0 +1,283 @@
+{
+  "baseline_commit": "3a806d210cc8c4f25f5d24f9dca61059588616f5",
+  "files": [
+    {
+      "path": "manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Submission.docx",
+      "baseline_sha256": "fb1c8f83937c7a522bfe76f2146041c58b1a16e5678385640430a201c0b5a2ed",
+      "new_sha256": "41b821f10cf17b2859ea875ca88f7a0eb684506c75b9a33e914d823ec6274eef",
+      "changed_ooxml_members": [
+        "word/document.xml"
+      ],
+      "all_other_members_byte_identical": 16,
+      "changed_paragraphs": 12,
+      "unchanged_paragraphs_exact_canonical_xml": 261,
+      "table6_c14n_sha256_unchanged": "ce48d25d01c0496683e3be6f1bec9eb8c34e792bed2d9e320e5f0f5bb99ce079",
+      "table6_correct_lower_bound_preserved": "−1.46",
+      "table_values_all_unchanged": true,
+      "table_changes": [
+        {
+          "table": 3,
+          "cell": 2,
+          "old": "CPU source model, shared across the three update conditions",
+          "new": "CSP/LDA source model, shared across the three update conditions"
+        }
+      ],
+      "all_math_objects_byte_identical": 3,
+      "all_media_byte_identical": true,
+      "changes": [
+        {
+          "old": "The CPU pipeline",
+          "new": "The CSP/LDA pipeline",
+          "occurrences": 1
+        },
+        {
+          "old": "all CPU comparisons",
+          "new": "all CSP/LDA comparisons",
+          "occurrences": 1
+        },
+        {
+          "old": "CPU fitting",
+          "new": "CSP/LDA fitting",
+          "occurrences": 1
+        },
+        {
+          "old": "The two CPU update methods",
+          "new": "The two CSP/LDA update methods",
+          "occurrences": 1
+        },
+        {
+          "old": "saved CPU predictions",
+          "new": "saved CSP/LDA predictions",
+          "occurrences": 1
+        },
+        {
+          "old": "The two CPU updating methods",
+          "new": "The two CSP/LDA updating methods",
+          "occurrences": 1
+        },
+        {
+          "old": "corresponding CPU source-query BA",
+          "new": "corresponding CSP/LDA source-query BA",
+          "occurrences": 1
+        },
+        {
+          "old": "CPU source model",
+          "new": "CSP/LDA source model",
+          "occurrences": 1
+        },
+        {
+          "old": "Verification included trial-identity joins and hashes, reconstruction of the original endpoints, independent implementations of the prediction-transition arithmetic, public-input replay, and visual review of the documents and figures.",
+          "new": "Verification included exact trial-identifier matching and file checksums, reconstruction of the original endpoints from saved predictions, independent implementations of the prediction-transition arithmetic, reproduction of saved-result calculations from the shared predictions and trial metadata, and visual review of the documents and figures.",
+          "occurrences": 1
+        },
+        {
+          "old": "The five-second cue-anchored windows include the approximately 1.5-second visual cue and subsequent task activity; variable online trial endings can also place feedback or post-task activity within a complete window. Strictly task-anchored windows would address a different phase-specific endpoint. The amplitude rule flagged 1,512 of 7,156 windows (21.1%) and the query sensitivity retained positive mean gains; this check addresses large query amplitudes, while potential artifacts in training/support data remain a separate issue.",
+          "new": "The five-second cue-anchored windows span the approximately 1.5-second visual cue and subsequent task activity, while variable online trial endings can place feedback or post-task activity within a complete window. Restricting evaluation to strictly task-anchored intervals would therefore address a different, phase-specific endpoint. The amplitude rule flagged 1,512 of 7,156 complete windows (21.1%); the query sensitivity retained positive mean gains after restricting evaluation to unflagged queries. This addresses large query amplitudes, with potential artifacts in training/support data remaining a separate issue.",
+          "occurrences": 1
+        },
+        {
+          "old": "Fourth-order zero-phase filtering defines an offline pipeline. Closed-loop translation requires causal preprocessing and real-time artifact handling. The unweighted source/support union fixes the information available to each update; covariance weighting and signal alignment would require their own controlled comparisons.",
+          "new": "These comparisons use fourth-order zero-phase filtering for offline analysis, whereas closed-loop translation requires causal preprocessing and real-time artifact handling. Both update methods pooled source/support data without weighting to fix the information available for adaptation; covariance weighting and signal alignment would require their own controlled comparisons.",
+          "occurrences": 1
+        },
+        {
+          "old": "This study uses one 18-participant cohort, with six participants for reliability development and 12 for the primary comparison. Prediction transitions, amplitude sensitivity, influence summaries and sign-flip checks are post-hoc exploratory analyses, and earlier test-result exposure remains part of the study history. EEGNet supplies a frozen source-only reference with 20 additional source-validation labels. Independent multi-session cohorts and prospective support-driven update selection would test how well the component advantage and calibration diagnostics generalize.",
+          "new": "The findings come from one 18-participant cohort, partitioned into six participants for reliability development and 12 for the primary comparison. The primary endpoint hierarchy and cohort split were predefined; prediction transitions, amplitude sensitivity, participant-influence summaries and exact sign-flip checks were conducted as post-hoc exploratory analyses after observing the original decoding results. EEGNet supplies a frozen source-only reference with 20 additional source-validation labels. Independent multi-session cohorts and prospective support-driven update selection would test how well the component advantage and calibration diagnostics generalize.",
+          "occurrences": 1
+        },
+        {
+          "old": "Code, configurations and versioned materials are available at https://github.com/jackzhu119/few-shot-mi-eeg. The scientific results are preserved at the tag paper2-plos-source-20261016, with the earlier ethics wording preserved at paper2-plos-ethics-20261016; S2 Text gives the current regulatory exemption statement. This manuscript and its supplements form the 17 October 2026 extended analysis in manuscript/plos_one_innovation_20261017/. Its README identifies the source versions, new prediction-transition code, figure inputs and generated files. S1 Data includes the original saved-result package together with the new component analyses and complete cohort tables.",
+          "new": "Analysis code, configuration files and reproducibility instructions are publicly available at https://github.com/jackzhu119/few-shot-mi-eeg. The versioned manuscript README identifies the fixed source revisions, prediction-transition scripts, figure-generation inputs and generated files. S1 Data archives the complete saved-result package together with the prediction-transition analyses and cohort summary tables.",
+          "occurrences": 1
+        }
+      ],
+      "pdf_font_families_unchanged": [
+        "Caladea-Regular",
+        "LiberationSerif",
+        "LiberationSerif-Italic",
+        "TimesNewRomanPS-BoldMT",
+        "TimesNewRomanPS-ItalicMT",
+        "TimesNewRomanPSMT"
+      ],
+      "pdf_positive_findings_and_table6_negative_bound_preserved": true,
+      "published_docx_sha256": "41b821f10cf17b2859ea875ca88f7a0eb684506c75b9a33e914d823ec6274eef",
+      "published_pdf_sha256": "e09b3262e0b9019d1a3b19df9df895dd536fee345f4956b45eee0ef40eba3e06",
+      "pdf_qa": {
+        "document": "PLOS_ONE_Manuscript_Submission.docx",
+        "pdf_path": "/workspace/paper2_targeted_check_20261019/run02/document_exports/rendered/PLOS_ONE_Manuscript_Submission/PLOS_ONE_Manuscript_Submission.pdf",
+        "pages": 31,
+        "bytes": 364537,
+        "sha256": "e09b3262e0b9019d1a3b19df9df895dd536fee345f4956b45eee0ef40eba3e06",
+        "fonts": [
+          "BAAAAA+TimesNewRomanPSMT",
+          "CAAAAA+TimesNewRomanPS-BoldMT",
+          "DAAAAA+TimesNewRomanPS-BoldMT",
+          "EAAAAA+Caladea-Regular",
+          "FAAAAA+TimesNewRomanPS-ItalicMT",
+          "GAAAAA+TimesNewRomanPS-BoldMT",
+          "HAAAAA+TimesNewRomanPSMT",
+          "IAAAAA+LiberationSerif",
+          "JAAAAA+LiberationSerif-Italic"
+        ],
+        "checked_text_paragraphs": 237,
+        "unmatched_paragraphs": [],
+        "text_spans_outside_page": [],
+        "no_institutional_ethics_confirmation": true
+      }
+    },
+    {
+      "path": "manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Reading.docx",
+      "baseline_sha256": "098a10e3d70030af6fa383c3036e1e9f8c26f3a411c2eb60d8a179d3d2f05ac4",
+      "new_sha256": "2aafd7b1c04cf0e7408facf3c7aceb2ed38c851b91b03c838a0f109001f6169a",
+      "changed_ooxml_members": [
+        "word/document.xml"
+      ],
+      "all_other_members_byte_identical": 22,
+      "changed_paragraphs": 12,
+      "unchanged_paragraphs_exact_canonical_xml": 267,
+      "table6_c14n_sha256_unchanged": "ce48d25d01c0496683e3be6f1bec9eb8c34e792bed2d9e320e5f0f5bb99ce079",
+      "table6_correct_lower_bound_preserved": "−1.46",
+      "table_values_all_unchanged": true,
+      "table_changes": [
+        {
+          "table": 3,
+          "cell": 2,
+          "old": "CPU source model, shared across the three update conditions",
+          "new": "CSP/LDA source model, shared across the three update conditions"
+        }
+      ],
+      "all_math_objects_byte_identical": 3,
+      "all_media_byte_identical": true,
+      "changes": [
+        {
+          "old": "The CPU pipeline",
+          "new": "The CSP/LDA pipeline",
+          "occurrences": 1
+        },
+        {
+          "old": "all CPU comparisons",
+          "new": "all CSP/LDA comparisons",
+          "occurrences": 1
+        },
+        {
+          "old": "CPU fitting",
+          "new": "CSP/LDA fitting",
+          "occurrences": 1
+        },
+        {
+          "old": "The two CPU update methods",
+          "new": "The two CSP/LDA update methods",
+          "occurrences": 1
+        },
+        {
+          "old": "saved CPU predictions",
+          "new": "saved CSP/LDA predictions",
+          "occurrences": 1
+        },
+        {
+          "old": "The two CPU updating methods",
+          "new": "The two CSP/LDA updating methods",
+          "occurrences": 1
+        },
+        {
+          "old": "corresponding CPU source-query BA",
+          "new": "corresponding CSP/LDA source-query BA",
+          "occurrences": 1
+        },
+        {
+          "old": "CPU source model",
+          "new": "CSP/LDA source model",
+          "occurrences": 1
+        },
+        {
+          "old": "Verification included trial-identity joins and hashes, reconstruction of the original endpoints, independent implementations of the prediction-transition arithmetic, public-input replay, and visual review of the documents and figures.",
+          "new": "Verification included exact trial-identifier matching and file checksums, reconstruction of the original endpoints from saved predictions, independent implementations of the prediction-transition arithmetic, reproduction of saved-result calculations from the shared predictions and trial metadata, and visual review of the documents and figures.",
+          "occurrences": 1
+        },
+        {
+          "old": "The five-second cue-anchored windows include the approximately 1.5-second visual cue and subsequent task activity; variable online trial endings can also place feedback or post-task activity within a complete window. Strictly task-anchored windows would address a different phase-specific endpoint. The amplitude rule flagged 1,512 of 7,156 windows (21.1%) and the query sensitivity retained positive mean gains; this check addresses large query amplitudes, while potential artifacts in training/support data remain a separate issue.",
+          "new": "The five-second cue-anchored windows span the approximately 1.5-second visual cue and subsequent task activity, while variable online trial endings can place feedback or post-task activity within a complete window. Restricting evaluation to strictly task-anchored intervals would therefore address a different, phase-specific endpoint. The amplitude rule flagged 1,512 of 7,156 complete windows (21.1%); the query sensitivity retained positive mean gains after restricting evaluation to unflagged queries. This addresses large query amplitudes, with potential artifacts in training/support data remaining a separate issue.",
+          "occurrences": 1
+        },
+        {
+          "old": "Fourth-order zero-phase filtering defines an offline pipeline. Closed-loop translation requires causal preprocessing and real-time artifact handling. The unweighted source/support union fixes the information available to each update; covariance weighting and signal alignment would require their own controlled comparisons.",
+          "new": "These comparisons use fourth-order zero-phase filtering for offline analysis, whereas closed-loop translation requires causal preprocessing and real-time artifact handling. Both update methods pooled source/support data without weighting to fix the information available for adaptation; covariance weighting and signal alignment would require their own controlled comparisons.",
+          "occurrences": 1
+        },
+        {
+          "old": "This study uses one 18-participant cohort, with six participants for reliability development and 12 for the primary comparison. Prediction transitions, amplitude sensitivity, influence summaries and sign-flip checks are post-hoc exploratory analyses, and earlier test-result exposure remains part of the study history. EEGNet supplies a frozen source-only reference with 20 additional source-validation labels. Independent multi-session cohorts and prospective support-driven update selection would test how well the component advantage and calibration diagnostics generalize.",
+          "new": "The findings come from one 18-participant cohort, partitioned into six participants for reliability development and 12 for the primary comparison. The primary endpoint hierarchy and cohort split were predefined; prediction transitions, amplitude sensitivity, participant-influence summaries and exact sign-flip checks were conducted as post-hoc exploratory analyses after observing the original decoding results. EEGNet supplies a frozen source-only reference with 20 additional source-validation labels. Independent multi-session cohorts and prospective support-driven update selection would test how well the component advantage and calibration diagnostics generalize.",
+          "occurrences": 1
+        },
+        {
+          "old": "Code, configurations and versioned materials are available at https://github.com/jackzhu119/few-shot-mi-eeg. The scientific results are preserved at the tag paper2-plos-source-20261016, with the earlier ethics wording preserved at paper2-plos-ethics-20261016; S2 Text gives the current regulatory exemption statement. This manuscript and its supplements form the 17 October 2026 extended analysis in manuscript/plos_one_innovation_20261017/. Its README identifies the source versions, new prediction-transition code, figure inputs and generated files. S1 Data includes the original saved-result package together with the new component analyses and complete cohort tables.",
+          "new": "Analysis code, configuration files and reproducibility instructions are publicly available at https://github.com/jackzhu119/few-shot-mi-eeg. The versioned manuscript README identifies the fixed source revisions, prediction-transition scripts, figure-generation inputs and generated files. S1 Data archives the complete saved-result package together with the prediction-transition analyses and cohort summary tables.",
+          "occurrences": 1
+        }
+      ],
+      "pdf_font_families_unchanged": [
+        "LiberationSerif",
+        "LiberationSerif-Italic",
+        "TimesNewRomanPS-BoldMT",
+        "TimesNewRomanPS-ItalicMT",
+        "TimesNewRomanPSMT"
+      ],
+      "pdf_positive_findings_and_table6_negative_bound_preserved": true,
+      "published_docx_sha256": "2aafd7b1c04cf0e7408facf3c7aceb2ed38c851b91b03c838a0f109001f6169a",
+      "published_pdf_sha256": "6af84cabc206966973b92b43f978803ba73af025f0a7ab3b8b4be3982d1417a5",
+      "pdf_qa": {
+        "document": "PLOS_ONE_Manuscript_Reading.docx",
+        "pdf_path": "/workspace/paper2_targeted_check_20261019/run02/document_exports/rendered/PLOS_ONE_Manuscript_Reading/PLOS_ONE_Manuscript_Reading.pdf",
+        "pages": 23,
+        "bytes": 1579105,
+        "sha256": "6af84cabc206966973b92b43f978803ba73af025f0a7ab3b8b4be3982d1417a5",
+        "fonts": [
+          "BAAAAA+TimesNewRomanPSMT",
+          "CAAAAA+TimesNewRomanPS-BoldMT",
+          "DAAAAA+TimesNewRomanPS-BoldMT",
+          "EAAAAA+TimesNewRomanPS-BoldMT",
+          "FAAAAA+TimesNewRomanPS-BoldMT",
+          "GAAAAA+TimesNewRomanPS-ItalicMT",
+          "HAAAAA+TimesNewRomanPS-BoldMT",
+          "IAAAAA+TimesNewRomanPSMT",
+          "JAAAAA+LiberationSerif",
+          "KAAAAA+LiberationSerif-Italic"
+        ],
+        "checked_text_paragraphs": 237,
+        "unmatched_paragraphs": [],
+        "text_spans_outside_page": [],
+        "no_institutional_ethics_confirmation": true
+      }
+    }
+  ],
+  "note": "Only baseline-derived document.xml changed in both DOCX files; all tables except table3 CPU header are C14N identical; all media/formulas/styles/relations unchanged.",
+  "checklist_reference": {
+    "submission_pdf_page": 6,
+    "access_and_identity_paragraph_lines": [
+      95,
+      100
+    ],
+    "identity_sentence_lines": [
+      98,
+      99
+    ],
+    "unchanged": true
+  },
+  "visual_review": {
+    "all_pages_reviewed_as_contact_sheets": 54,
+    "contacts": [
+      "/workspace/paper2_targeted_check_20261019/run02/document_exports/visual/contact_01.png",
+      "/workspace/paper2_targeted_check_20261019/run02/document_exports/visual/contact_02.png",
+      "/workspace/paper2_targeted_check_20261019/run02/document_exports/visual/contact_03.png",
+      "/workspace/paper2_targeted_check_20261019/run02/document_exports/visual/contact_04.png"
+    ],
+    "no_text_or_figure_clipping": true,
+    "text_and_results_preserved": true
+  },
+  "published_only_files": [
+    "/workspace/few-shot-mi-eeg/manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Submission.docx",
+    "/workspace/few-shot-mi-eeg/manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Submission.pdf",
+    "/workspace/few-shot-mi-eeg/manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Reading.docx",
+    "/workspace/few-shot-mi-eeg/manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Reading.pdf"
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "audit_scope": "Read-only independent check of Table 6 full refit minus frozen right-class recall mean and interval; no bootstrap, model fitting, inference, figure regeneration, or source edits were performed. Only this external report was written.",
+  "checked_head": "3a806d210cc8c4f25f5d24f9dca61059588616f5",
+  "claim_verdict": "FALSE: the negative lower bound is the genuine saved interval and was already present before the Oct 19 revision. Do not replace it with +1.46.",
+  "exact_value": {
+    "mean_percentage_points": 9.911423674127848,
+    "ci95_low_percentage_points": -1.4625630167372448,
+    "ci95_high_percentage_points": 21.7535503629764,
+    "printed": "9.91 [−1.46, 21.75]",
+    "zero_inside_interval": true
+  },
+  "original_package": {
+    "path": "/workspace/few-shot-mi-eeg/manuscript/plos_one_innovation_20261017/S1_Data.zip",
+    "size_bytes": 2078150,
+    "sha256": "c6b73502b977b7bd36e27c914bebd686d994596b99f06227131272f428aa3614"
+  },
+  "saved_results": [
+    {
+      "member": "figures/Fig5_source_data.csv",
+      "size_bytes": 36749,
+      "sha256": "b434192c9e274646e301ce9f315a90d9b69579998a80b28b7dd304d84143693b",
+      "saved_row": {
+        "cohort": "primary",
+        "n_participants": "12",
+        "n_sessions": "60",
+        "contrast": "full_minus_frozen",
+        "measure": "right_recall",
+        "component": "net_pp",
+        "mean_pp_or_pct": "9.911423674127848",
+        "ci95_low": "-1.4625630167372448",
+        "ci95_high": "21.7535503629764",
+        "bootstrap_n": "10000",
+        "bootstrap_seed": "42",
+        "bootstrap_unit": "participant",
+        "participant_order": "lexicographic",
+        "analysis_status": "post_observation_exploratory_decomposition"
+      }
+    },
+    {
+      "member": "results/update_mechanisms/cohort_transition_bootstrap.csv",
+      "size_bytes": 36749,
+      "sha256": "b434192c9e274646e301ce9f315a90d9b69579998a80b28b7dd304d84143693b",
+      "saved_row": {
+        "cohort": "primary",
+        "n_participants": "12",
+        "n_sessions": "60",
+        "contrast": "full_minus_frozen",
+        "measure": "right_recall",
+        "component": "net_pp",
+        "mean_pp_or_pct": "9.911423674127848",
+        "ci95_low": "-1.4625630167372448",
+        "ci95_high": "21.7535503629764",
+        "bootstrap_n": "10000",
+        "bootstrap_seed": "42",
+        "bootstrap_unit": "participant",
+        "participant_order": "lexicographic",
+        "analysis_status": "post_observation_exploratory_decomposition"
+      }
+    }
+  ],
+  "history": [
+    {
+      "commit": "1d78ceb080c96865e3ed2b0a6b75ff81bccc6318",
+      "path": "manuscript/kumar_plos_one_submission_draft_innovation_20261017.md",
+      "source_sha256": "40e1e70044be7b73f4cbfbdc82b69d3da6b0b5c8c31e526a2854d99f46e173de",
+      "line_number": 243,
+      "table_row": "| Full refit − frozen | 4.93 [−5.10, 15.83] | 9.91 [−1.46, 21.75] | 7.42 [2.49, 12.48] |"
+    },
+    {
+      "commit": "19a5909fd76d96be9316559602010932ccec81a8",
+      "path": "manuscript/kumar_plos_one_submission_draft_innovation_20261017.md",
+      "source_sha256": "a1bf7dda3421cfb571beddcc0f9b2e3adb1afee5d9367cabbafd8dd1c2a71fa6",
+      "line_number": 243,
+      "table_row": "| Full refit − frozen | 4.93 [−5.10, 15.83] | 9.91 [−1.46, 21.75] | 7.42 [2.49, 12.48] |"
+    },
+    {
+      "commit": "3a806d210cc8c4f25f5d24f9dca61059588616f5",
+      "path": "manuscript/kumar_plos_one_submission_draft_innovation_20261017.md",
+      "source_sha256": "0b4eb4985bf82419a6618e44097988e534b9c9d32c05117a5c8f40e64922a37f",
+      "line_number": 245,
+      "table_row": "| Full refit – frozen | 4.93 [−5.10, 15.83] | 9.91 [−1.46, 21.75] | 7.42 [2.49, 12.48] |"
+    }
+  ],
+  "pdf_evidence": [
+    {
+      "path": "/workspace/attachments/ef2aeef9-00d2-4a74-9ad2-701acb1b09a7/PONE-D-26-52050.pdf",
+      "size_bytes": 2019903,
+      "sha256": "e2332b584ccefe0ce385022c7617b0ae2360c3297ef2f349b1a220f828d04dad",
+      "matching_pages": [
+        {
+          "one_based_page": 26,
+          "excerpt": "w the additional spatial update distributed its benefit (Table 6). \n371 \nLDA-only recalibration changed left recall by −1.23 points and right recall by +5.13 points \n372 \nrelative to freezing. Adding spatial refitting increased mean left and right recall, by +6.16 and \n373 \n+4.78 points. The resulting full-refit gains over freezing were +4.93 and +9.91 points. The \n374 \ncomponent advantage therefore accompanied higher cohort-average recall for both labels. \n375 \nTable 6. Primary-cohort class recall changes and their balanced-accuracy mean. \n376 \nContrast \nLeft recall change \nRight recall change \nBA change \nLDA-only − frozen \n−1.23 [−8.03, 5.59] \n5.13 [−2.67, 13.15] \n1.95 [−0.98, 5.09] \nFull refit − LDA-only \n6.16 [−0.51, 13.42] \n4.78 [−3.21, 12.44] \n5.47 [2.17, 8.91] \nFull refit − frozen \n4.93 [−5.10, 15.83] \n9.91 [−1.46, 21.75] \n7.42 [2."
+        }
+      ]
+    },
+    {
+      "path": "/workspace/few-shot-mi-eeg/manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Submission.pdf",
+      "size_bytes": 364521,
+      "sha256": "0b91f5b2b56170c7c14e3eb7f48fd6c54e5e4de73912e9a933a63bb079413350",
+      "matching_pages": [
+        {
+          "one_based_page": 21,
+          "excerpt": "recalls show how the additional spatial update distributed its benefit (Table 6). \nLDA-only recalibration changed left recall by −1.23 points and right recall by +5.13 points \nrelative to freezing. Adding spatial refitting increased mean left and right recall, by +6.16 and \n+4.78 points. The resulting full-refit gains over freezing were +4.93 and +9.91 points. The \ncomponent advantage therefore accompanied higher cohort-average recall for both labels.\nTable 6. Primary-cohort class recall changes and their balanced-accuracy mean.\nContrast\nLeft recall change\nRight recall change\nBA change\nLDA-only – frozen\n−1.23 [−8.03, 5.59]\n5.13 [−2.67, 13.15]\n1.95 [−0.98, 5.09]\nFull refit – LDA-only\n6.16 [−0.51, 13.42]\n4.78 [−3.21, 12.44]\n5.47 [2.17, 8.91]\nFull refit – frozen\n4.93 [−5.10, 15.83]\n9.91 [−1.46, 21.75]\n7.42 [2.49, 12.48]\nValues are percentage"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/few-shot-mi-eeg/manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Reading.pdf",
+      "size_bytes": 1579197,
+      "sha256": "06c227aab71dbc7d37f20e8daa786805c3d745038722239ae822f0e56675789b",
+      "matching_pages": [
+        {
+          "one_based_page": 17,
+          "excerpt": "17\nTable 6. Primary-cohort class recall changes and their balanced-accuracy mean.\nContrast\nLeft recall change\nRight recall change\nBA change\nLDA-only – frozen\n−1.23 [−8.03, 5.59]\n5.13 [−2.67, 13.15]\n1.95 [−0.98, 5.09]\nFull refit – LDA-only\n6.16 [−0.51, 13.42]\n4.78 [−3.21, 12.44]\n5.47 [2.17, 8.91]\nFull refit – frozen\n4.93 [−5.10, 15.83]\n9.91 [−1.46, 21.75]\n7.42 [2.49, 12.48]\nValues are percentage points, averaged equally across five sessions within participant and then across \n12 participants. BA change equals the average of the two class-recall changes. Brackets give \npointwise 95% participant-bootstrap intervals (10,000 resamples, seed 42). Complete cohort-specific \nvalues are supplied in S1 Data.\nThe component advantage extended across all five target-session averages\nThe primary-cohort mean full-minus-LDA-only gain was posi"
+        }
+      ]
+    }
+  ],
+  "figure_source": {
+    "path": "/workspace/few-shot-mi-eeg/manuscript/figures/plos_innovation_20261017/Fig5_source_data.csv",
+    "size_bytes": 36749,
+    "sha256": "b434192c9e274646e301ce9f315a90d9b69579998a80b28b7dd304d84143693b"
+  },
+  "figure_visual_review": {
+    "image": {
+      "path": "/workspace/few-shot-mi-eeg/manuscript/figures/plos_innovation_20261017/Fig5_prediction_transitions.png",
+      "size_bytes": 372026,
+      "sha256": "27e70aae78040c18320ca0115579f51ce513f0bc4a5009e08cc4537df863e697"
+    },
+    "panel": "B, third contrast Full minus frozen, orange right-class recall",
+    "observation": "The left whisker is visibly left of zero, consistent with the saved negative lower endpoint."
+  },
+  "plot_script": {
+    "path": "/workspace/few-shot-mi-eeg/scripts/analyze_kumar_update_mechanisms_20261017.py",
+    "size_bytes": 60662,
+    "sha256": "28b3feb09efb4ee9a6703d83dcac48cd5f679cc49a811b4979361d6f0f886c46",
+    "lookup_lines": [
+      625,
+      627
+    ],
+    "right_errorbar_lines": [
+      729,
+      734
+    ],
+    "meaning": "The right-hand panel uses net_pp and xerr=[[mean-ci95_low],[ci95_high-mean]], with no sign conversion or absolute value."
+  },
+  "manuscript_interpretation": {
+    "path": "manuscript/kumar_plos_one_submission_draft_innovation_20261017.md",
+    "current_lines": [
+      237,
+      245,
+      247
+    ],
+    "text": "Adding spatial refitting increased mean left and right recall, by +6.16 and +4.78 points. The resulting full-refit gains over freezing were +4.93 and +9.91 points. The component advantage therefore accompanied higher cohort-average recall for both labels.",
+    "finding": "The prose explicitly describes means and cohort averages; it does not assert separate statistical significance for right recall. A positive BA contrast does not require each component-recall interval to exclude zero."
+  },
+  "recommended_source_changes": []
+}

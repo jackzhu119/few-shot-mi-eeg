@@ -1,5 +1,9 @@
 # 论文2：PLOS ONE 创新分析与投稿文件
 
+## 2026年10月19日补充核查（run02）
+
+[本轮逐项核实](../../docs/kumar_targeted_checks_20261019_run02.md)确认Table6的9.91 [−1.46, 21.75]为原始正确区间，保持原数值；仅精简本次意见指出的正文措辞、数据可用性表述及CSP/LDA算法称谓。当前主稿导出与校验见 `Verification/Targeted_Check_20261019_run02/`，原科学数据、其它补充材料、checklist和图件不变。
+
 **Spatial-filter refitting improves limited-label recalibration in longitudinal motor-imagery EEG**
 
 作者：Ziyuan Zhu。修订日期：2026-10-17；伦理声明按作者要求于2026-10-19更正。
