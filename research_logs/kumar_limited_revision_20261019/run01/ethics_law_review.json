@@ -1,0 +1,74 @@
+{
+  "reviewed_utc": "2026-10-19T06:23:31.614985+00:00",
+  "scope": "Read-only check of origin/main ethics text, official Article32(1), and PLOS checklist fields. No repository modification or claim of institutional determination.",
+  "reviewed_repository_ref": "19a5909fd76d96be9316559602010932ccec81a8",
+  "current_text_locations": [
+    {
+      "path": "manuscript/plos_one_innovation_20261017/Sources/kumar_plos_one_submission_draft_innovation_20261017.md",
+      "lines": [
+        42,
+        44,
+        297
+      ],
+      "issue": "University research-office exemption confirmation and institutional secondary-use wording; current availability paragraph calls the historical ethics release institutional-exemption."
+    },
+    {
+      "path": "manuscript/plos_one_innovation_20261017/Sources/kumar_plos_one_audit_reproducibility_innovation_20261017.md",
+      "lines": [
+        9,
+        110
+      ],
+      "issue": "University confirmation, date/no-reference assertion, and institutional-exemption release wording."
+    },
+    {
+      "path": "manuscript/plos_one_innovation_20261017/Human_Participants_Checklist.pdf",
+      "issue": "Q1 explanation asserts university research-office exemption confirmation on16October2026 and no reference number; Q3 cites Methods96-100."
+    }
+  ],
+  "official_sources": [
+    {
+      "url": "https://www.gov.cn/zhengce/zhengceku/2023-02/28/content_5743658.htm",
+      "http_status": 200,
+      "response_bytes": 111295,
+      "response_sha256": "73be4889582f8d1399ea9785ac5ef6e1ab0ebffa5e04144c8767cb9b1cdc43e6",
+      "reading_scope": "Full official government HTML response obtained; read Article32 preamble and item1 and neighboring Articles31/33. No exhaustive legal review claimed."
+    },
+    {
+      "url": "https://www.nhc.gov.cn/wjw/c100375/202302/902b4a1dc3af4aba862a6387e6e376dc.shtml",
+      "http_status": 412,
+      "response_bytes": 3805,
+      "response_sha256": "6092e00cb70ed3577f2eb788a5f749318770347816293c45940655bf68890aee",
+      "reading_scope": "Request blocked; not treated as obtained regulatory text."
+    },
+    {
+      "url": "https://journals.plos.org/plosone/s/human-subjects-research",
+      "http_status": 200,
+      "response_bytes": 64944,
+      "response_sha256": "240eaf2dc30021e5f12bea8377de587d511377ee4d99ba75683730f39cb082c0",
+      "reading_scope": "Read operative approval and exemption paragraph and checklist instruction."
+    }
+  ],
+  "official_article32_chinese": "第三十二条 使用人的信息数据或者生物样本开展以下情形的涉及人的生命科学和医学研究，不对人体造成伤害、不涉及敏感个人信息或者商业利益的，可以免除伦理审查，以减少科研人员不必要的负担，促进涉及人的生命科学和医学研究开展。 （一）利用合法获得的公开数据，或者通过观察且不干扰公共行为产生的数据进行研究的；",
+  "interpretation": {
+    "permitted_regulatory_basis": "Article32(1) permits exemption for lawfully obtained public-data studies satisfying the preamble conditions: no harm to the human body, no sensitive personal information or commercial interests.",
+    "not_claimed": "No independent approval, waiver, exemption letter, university-office determination, or universal absence of journal/institutional obligations follows from the regulation itself.",
+    "coded_not_anonymized": "Retain coded participant identifiers and no identifying-information access. Do not replace coded with anonymous merely to invoke Article32(2).",
+    "original_acquisition": "Retain original UT Austin protocol2020-03-0073 and original written informed consent as original-study facts; these do not constitute new approval for this secondary analysis.",
+    "provenance": "Historical released evidence remains historical. Amend current submission statements and current containers; do not falsify earlier signed author records or old release checksums."
+  },
+  "recommended_main_replacement": "This secondary analysis was exempt from additional ethical review under Article 32, item (1), of China's Measures for Ethical Review of Life Science and Medical Research Involving Human Participants (2023) [@china2023ethics]. It used lawfully obtained publicly available data, caused no harm to participants, and did not involve sensitive personal information or commercial interests.",
+  "recommended_following_sentence": "Original collection approval and consent and the regulatory basis for this secondary analysis are documented separately in S2 Text.",
+  "recommended_s2_replacement": "The original acquisition reported University of Texas at Austin protocol 2020-03-0073 and written informed consent [@kumar2024]. The present secondary analysis was exempt from additional ethical review under Article 32, item (1), of China's Measures for Ethical Review of Life Science and Medical Research Involving Human Participants (2023) [@china2023ethics]. It used lawfully obtained publicly available data, caused no harm to participants, and did not involve sensitive personal information or commercial interests.",
+  "checklist": {
+    "Q1_selection": "N/A approval document; explain statutory/regulatory exemption in the existing no-additional-approval explanation box. Do not mark Uploaded or enter a university confirmation, approval number, or exemption date.",
+    "Q1_text": "Secondary analysis of public Kumar2024 EEG (NEMAR nm000177/v1.0.5), exempt from additional ethical review under Article 32(1) of China's 2023 Measures for Ethical Review of Life Science and Medical Research Involving Human Participants. The analysis used lawfully obtained public data, caused no harm, and involved no sensitive personal information or commercial interests. Original data collection: University of Texas at Austin protocol 2020-03-0073 and written informed consent.",
+    "Q2_selection": "N/A: no prospective recruitment for this secondary analysis.",
+    "Q3_selection": "Completed. Preserve actual access dates and no access to identifying information; recalculate Methods line references from the newly rendered final submission PDF."
+  },
+  "current_material_wording_checks": [
+    "Remove university/office confirmed exemption assertions from current main/S2/checklist/submission fields/worksheet/readme/cover wherever they occur.",
+    "Preserve CQMU author affiliation; deleting an exemption claim is not deletion of an affiliation.",
+    "Avoid institutional-exemption as a description of current legal basis. Historical tag paper2-plos-ethics-20261016 may be cited as a historical ethics-text release with no assertion of current institutional confirmation.",
+    "Keep legal-basis preamble conditions; these negative phrases express eligibility rather than defensive scientific hedging."
+  ]
+}

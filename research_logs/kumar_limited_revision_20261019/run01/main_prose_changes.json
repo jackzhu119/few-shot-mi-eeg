@@ -1,0 +1,152 @@
+{
+  "target_files": [
+    "manuscript/kumar_plos_one_submission_draft_innovation_20261017.md",
+    "manuscript/plos_one_innovation_20261017/Sources/kumar_plos_one_submission_draft_innovation_20261017.md"
+  ],
+  "scope": "Only reviewer-requested main-manuscript scientific prose and six repeated AI figure-disclosure sentences. Ethics and data-availability text untouched.",
+  "abstract_whitespace_words": 266,
+  "changes": [
+    {
+      "id": "abstract_all18_secondary",
+      "old": "The component gain was positive in ten of 12 participant averages, in each of the five target-session cohort averages, and across all single-participant deletion summaries.",
+      "new": "The component gain was positive in ten of 12 primary participant averages, in all five target-session cohort averages and in every single-participant deletion summary. The secondary all-18 summary favored full refitting by 3.26 points over LDA-only and 6.03 over freezing."
+    },
+    {
+      "id": "development_allocation_purpose",
+      "old": "Participants sub-1, 4, 7, 10, 13 and 16 formed the development group. The remaining 12 formed the predefined primary cohort, allocated by numeric identifier before examination of these results.",
+      "new": "Participants sub-1, 4, 7, 10, 13 and 16, selected at every third numeric identifier, formed the predefined development group for calibration-reliability probes and pipeline verification. The remaining 12 formed the predefined primary cohort. Both cohorts used the same fixed four-component CSP, Ledoit–Wolf regularization and automatic-shrinkage LDA configuration; the primary-cohort results were not used to tune these settings."
+    },
+    {
+      "id": "neural_reference_scope",
+      "old": "EEGNet supplies a source-only neural reference with the additional validation budget shown in Table 1.",
+      "new": "Frozen EEGNet supplies a source-only neural reference with the additional validation budget shown in Table 1. Target-session neural fine-tuning would add layer-freezing and learning-rate choices for 19 or 20 support trials; retaining the frozen reference keeps the adaptation comparison focused on the CSP and LDA stages."
+    },
+    {
+      "id": "posthoc_methods_term",
+      "old": "The original endpoint hierarchy and cohort allocation preceded the reported results. Later QC, influence and post-review statistical checks were exploratory after inspection of those results.",
+      "new": "The original endpoint hierarchy and cohort allocation preceded the reported results. Amplitude-QC sensitivity, participant-influence and exact sign-flip checks were post-hoc exploratory analyses conducted after inspection of those results."
+    },
+    {
+      "id": "drift_definition",
+      "old": "We assessed two measures of session change relative to source query. The task-axis measure used the source-trained, normalized difference between class means in standardized 44-dimensional mu/beta log-power coordinates; one-dimensional Wasserstein distance measured change along this axis. The covariance-shape measure used a source-training Riemannian reference in a fixed 21-dimensional common-average-reference basis, with trace normalization and fixed shrinkage. It captures normalized covariance shape. Target labels entered the BA outcome, while the drift predictors used the corresponding signal distributions.",
+      "new": "We assessed whether signal-distribution changes tracked changes in frozen-decoder BA. The task-axis measure was the one-dimensional Wasserstein distance between source-query and target-query projections onto the source-trained, normalized right-minus-left class direction in standardized 44-dimensional mu/beta log-power coordinates (8–13 and 13–30 Hz). For covariance-shape drift, each epoch's covariance matrix was trace-normalized and shrinkage-regularized in a fixed 21-dimensional common-average-reference basis. We subtracted the source-query mean Riemannian distance to the source-training reference from the target-query mean distance to that same reference. Both predictors used target signals without target labels; labels entered the BA outcome."
+    },
+    {
+      "id": "drift_statistical_scope",
+      "old": "The outcome was target-minus-source frozen-decoder BA. Associations pooled within- and between-participant variation and shared a source-query reference across each participant's five target sessions. The participant-block bootstrap preserved that clustering. These query-distribution associations served as retrospective descriptions.",
+      "new": "The outcome was target-minus-source frozen-decoder BA across the primary cohort's 60 target sessions. Spearman associations pooled within- and between-participant variation and shared a source-query reference across each participant's five target sessions. We used 2,000 participant-block bootstrap resamples to preserve that clustering. These query-distribution associations were descriptive analyses, separate from update-policy selection."
+    },
+    {
+      "id": "lowdim_and_supervised_probes",
+      "old": "Development-only reliability probes used source training and current support. Fixed power, PCA and supervised CSP-score measurements were evaluated using source-run grouping, chronological support halves and cyclic-label controls. Each source-run probe trained on one 20-event run and evaluated the other, then reversed the roles. All learned transformations, including CSP and LDA, were fitted within the training fold.",
+      "new": "Development-only reliability probes used source training and current support to examine the task information available from short calibration runs. Three low-dimensional probes used standardized 44-dimensional mu/beta log power, four source-fitted principal components, or six C3/Cz/C4 mu/beta coordinates, each classified using the right-minus-left class-centroid axis and midpoint threshold. A fourth probe used supervised four-component CSP/LDA. Each source-run probe trained on one 20-event run and evaluated the other, then reversed the roles. Standardization, PCA, CSP and LDA were fitted within the training fold as applicable."
+    },
+    {
+      "id": "support_coordinates_and_240_controls",
+      "old": "Support measurements used the source models fitted on 40 training events, with source-fitted coordinate scales. Each class was divided into chronological halves within the support run. Vector cosines and signed source-score contrasts measured agreement and class orientation. Cyclic controls enumerated prescribed label phases within run grouping and were interpreted as alignment sensitivities. All 240 supervised fold/rotation pipelines were retained. S1 Text, S4–S6 specifies half sizes, score orientation, controls and degenerate cases.",
+      "new": "For the supervised cyclic-label controls, each of six participants contributed two source-run folds and 20 training-label rotations, giving 6 × 2 × 20 = 240 fitted CSP/LDA pipelines. Held-out label rotations entered scoring only, yielding all 20 × 20 joint label-phase pairs per participant. These controls measured sensitivity to label alignment.\n\nSupport measurements retained the models fitted on 40 source-training events. Within each of the 30 development target-support runs, each class was divided chronologically into first and second halves. The cosine between their right-minus-left vectors measured agreement in the four-dimensional CSP log-power space standardized on source training. Signed task orientation was the mean right-minus-left frozen LDA score within each half divided by twice the source-training score standard deviation. Positive values indicated the source class orientation and negative values its reversal. Source transforms and score scales remained fixed. S1 Text, S4–S6 specifies half sizes, controls and degenerate cases."
+    },
+    {
+      "id": "drift_results_interpretation",
+      "old": "In the primary cohort, the Spearman associations of covariance-shape change and source-task-axis Wasserstein distance with frozen BA change were −0.007 (−0.505–0.438) and 0.197 (−0.240–0.518), respectively. These measures summarize the relation between signal-distribution change and frozen-decoder performance.",
+      "new": "In the primary cohort, covariance-shape drift and task-axis Wasserstein distance had Spearman associations of −0.007 (95% interval −0.505 to 0.438) and 0.197 (−0.240 to 0.518) with target-minus-source frozen BA change. These estimates did not establish a reliable relationship between either fixed drift summary and frozen-decoder performance loss."
+    },
+    {
+      "id": "reliability_results_precision_and_definitions",
+      "old": "Development power, PCA and motor-band probes achieved mean source BA of 51.67%, 50.00% and 54.17%, with intervals including 50%. Supervised CSP/LDA source-run probes achieved 62.9167% (52.5–71.6667). The participant-averaged support-vector cosine was 0.295325 (0.032041–0.573003). Signed scores separated two properties of short-run calibration: agreement between subsets and class orientation relative to the source decoder. Among 30 support sessions, both half-contrasts were positive in 19, both were negative in two, and the signs differed in nine (Fig 3). Five support sessions had single-class source-score predictions. The two double-negative sessions demonstrate that agreement can coexist with reversed class orientation; the nine opposite-sign sessions identify changes in the sampled direction. Both quantities are needed to characterize the task information available from a short support run.",
+      "new": "The development source-run probes using standardized power, PCA and C3/Cz/C4 motor-band coordinates achieved mean BA of 51.67%, 50.00% and 54.17%, respectively, with all 95% intervals including 50%. Supervised CSP/LDA achieved 62.92% (52.50–71.67). The participant-averaged cosine between support-half vectors in the source-standardized CSP space was 0.295 (0.032–0.573). Among 30 support sessions, both signed LDA half-margins were positive in 19, both were negative in two, and the signs differed in nine (Fig 3). Five support sessions had single-class source-score predictions. The double-negative sessions show that agreement can coexist with reversed class orientation; the opposite-sign sessions show that the estimated orientation can change within a 19- or 20-trial support run. Subset agreement and class orientation therefore describe distinct aspects of calibration reliability."
+    },
+    {
+      "id": "posthoc_results_term",
+      "old": "The post-review sign-flip checks are summarized in Table 5. The matched-label component contrast had an unadjusted two-sided p value of 0.01025 and a four-comparison Holm value of 0.04102. The primary total-gain contrast had corresponding values of 0.01953 and 0.05859. Table 5 presents the complete four-contrast family in its original order.",
+      "new": "The supplementary exact sign-flip checks are summarized in Table 5. The matched-label component contrast had an unadjusted two-sided p value of 0.01025 and a four-comparison Holm-adjusted value of 0.04102. The primary total-gain contrast had corresponding values of 0.01953 and 0.05859. Table 5 presents the complete four-contrast family in its original order."
+    },
+    {
+      "id": "table5_caption",
+      "old": "**Table 5. Post-review exploratory participant-level sign-flip checks.**",
+      "new": "**Table 5. Post-hoc exploratory participant-level exact sign-flip checks.**"
+    },
+    {
+      "id": "signflip_bootstrap_reference_explanation",
+      "old": "All sign assignments were enumerated using the stated numerical tolerance. The unflagged ten-person contrast had a positive percentile-bootstrap interval and an unadjusted sign-flip p value of 0.07617; the interval and test use different reference constructions. These exploratory checks complement the effect estimates and their uncertainty.",
+      "new": "All $2^n$ sign assignments were enumerated using the stated numerical tolerance. The percentile-bootstrap intervals summarize paired participant resampling, whereas the exact tests use a sign-symmetric null distribution and Holm adjustment addresses the four-contrast family, including the overlapping 12- and ten-participant sets. These distinct reference constructions explain why an interval excluding zero need not correspond to a Holm-adjusted p value below 0.05. For the unflagged ten-person contrast, the 95% bootstrap interval was 0.99–11.24 points and the unadjusted sign-flip p value was 0.07617."
+    },
+    {
+      "id": "heterogeneity_and_pooling_discussion",
+      "old": "The development group, participant differences and session trajectories remain informative for choosing future updates. The mean component contrast was −1.15 points in development and +5.47 in the primary cohort; individual target-session gains also changed direction. These data support treating the expected benefit of an action as a distinct quantity to estimate. A useful selection target is the gain from an LDA-only or full update relative to the available alternatives, with current source/support information supplying the decision inputs.",
+      "new": "Across all 18 participants, the secondary summary favored full refitting over LDA-only by 3.26 points and over freezing by 6.03 points. The component contrast was −1.15 points in development and +5.47 in the primary cohort. Session-level differences included a 37.50-point full-minus-LDA-only decrease for development participant sub-7 in session 2. Thus, the positive overall result coexisted with marked variation in which update performed best.\n\nBoth update methods pooled 40 source trials with 19 or 20 current-support trials without domain weighting, an approximately 2:1 source-to-target ratio. A short support run with unstable class structure could perturb a useful source spatial representation when CSP is refitted; a spatial shift could instead leave task information poorly represented by the frozen filters. These hypotheses can be tested by relating spatial-pattern stability to paired update gains. The results motivate a session-specific decision between freezing, classifier recalibration and full refitting. Weighted covariance blending, target-only refitting and Euclidean or Riemannian alignment offer distinct alternatives for a future comparison under matched label budgets."
+    },
+    {
+      "id": "scope_four_dimensions",
+      "old": "The present evidence comes from cue-anchored offline decoding in one 18-participant dataset, with the added decompositions and sensitivity checks treated as exploratory; phase-specific signals, independent cohorts and prospective update selection define the next validation targets, while the neural reference is tied to its recorded source-only budget.",
+      "new": "Four features define the scope and next tests. First, the five-second cue-anchored windows include the approximately 1.5-second visual cue and subsequent task activity; variable online trial endings can also place feedback or post-task activity within a complete window. Strictly task-anchored windows would address a different phase-specific endpoint. The amplitude rule flagged 1,512 of 7,156 windows (21.1%) and the query sensitivity retained positive mean gains; this check addresses large query amplitudes, while potential artifacts in training/support data remain a separate issue.\n\nSecond, fourth-order zero-phase filtering defines an offline pipeline. Closed-loop translation requires causal preprocessing and real-time artifact handling. Third, the unweighted source/support union fixes the information available to each update; covariance weighting and signal alignment would require their own controlled comparisons.\n\nFourth, this study uses one 18-participant cohort, with six participants for reliability development and 12 for the primary comparison. Prediction transitions, amplitude sensitivity, influence summaries and sign-flip checks are post-hoc exploratory analyses, and earlier test-result exposure remains part of the study history. EEGNet is a frozen source-only reference with 20 additional source-validation labels, rather than a matched adaptation baseline. Independent multi-session cohorts and prospective support-driven update selection would test how well the component advantage and calibration diagnostics generalize."
+    },
+    {
+      "id": "table5_comparison_en_dashes",
+      "old": "| Paired contrast and subset | n | Unadjusted two-sided p | Holm p, four checks |\n| --- | ---: | ---: | ---: |\n| Full refit − frozen, original primary cohort | 12 | 0.01953 | 0.05859 |\n| Full refit − LDA-only, same primary cohort | 12 | 0.01025 | 0.04102 |\n| LDA-only − frozen, same primary cohort | 12 | 0.26123 | 0.26123 |\n| Full refit − frozen, unflagged eligible subset | 10 | 0.07617 | 0.15234 |",
+      "new": "| Paired contrast and subset | n | Unadjusted two-sided p | Holm p, four checks |\n| --- | ---: | ---: | ---: |\n| Full refit – frozen, original primary cohort | 12 | 0.01953 | 0.05859 |\n| Full refit – LDA-only, same primary cohort | 12 | 0.01025 | 0.04102 |\n| LDA-only – frozen, same primary cohort | 12 | 0.26123 | 0.26123 |\n| Full refit – frozen, unflagged eligible subset | 10 | 0.07617 | 0.15234 |"
+    },
+    {
+      "id": "table6_comparison_en_dashes",
+      "old": "| Contrast | Left recall change | Right recall change | BA change |\n| --- | ---: | ---: | ---: |\n| LDA-only − frozen | −1.23 [−8.03, 5.59] | 5.13 [−2.67, 13.15] | 1.95 [−0.98, 5.09] |\n| Full refit − LDA-only | 6.16 [−0.51, 13.42] | 4.78 [−3.21, 12.44] | 5.47 [2.17, 8.91] |\n| Full refit − frozen | 4.93 [−5.10, 15.83] | 9.91 [−1.46, 21.75] | 7.42 [2.49, 12.48] |",
+      "new": "| Contrast | Left recall change | Right recall change | BA change |\n| --- | ---: | ---: | ---: |\n| LDA-only – frozen | −1.23 [−8.03, 5.59] | 5.13 [−2.67, 13.15] | 1.95 [−0.98, 5.09] |\n| Full refit – LDA-only | 6.16 [−0.51, 13.42] | 4.78 [−3.21, 12.44] | 5.47 [2.17, 8.91] |\n| Full refit – frozen | 4.93 [−5.10, 15.83] | 9.91 [−1.46, 21.75] | 7.42 [2.49, 12.48] |"
+    },
+    {
+      "id": "remove_repeated_ai_caption_0_0",
+      "old": "\\(A) Six development participants. (B) Twelve primary participants. Each colored point represents one participant's mean BA over five target sessions; faint lines connect the same participant across methods. EEGNet averages three seeds within session. Diamonds and bars show cohort means and 95% participant-bootstrap intervals (10,000 resamples, seed 42). All methods were evaluated on the same query identities. The two CPU updating methods used identical source-training and current-support labels; the other information budgets are given in Table 1. Figure preparation used OpenAI ChatGPT/Codex assistance with the saved numerical inputs.",
+      "new": "\\(A) Six development participants. (B) Twelve primary participants. Each colored point represents one participant's mean BA over five target sessions; faint lines connect the same participant across methods. EEGNet averages three seeds within session. Diamonds and bars show cohort means and 95% participant-bootstrap intervals (10,000 resamples, seed 42). All methods were evaluated on the same query identities. The two CPU updating methods used identical source-training and current-support labels; the other information budgets are given in Table 1."
+    },
+    {
+      "id": "remove_repeated_ai_caption_0_1",
+      "old": "Each value is a participant's mean paired BA difference across five target sessions. Participants appear in numeric order. Nine differences are positive and three negative, with a cohort mean of +7.42 percentage points and a 95% participant-bootstrap interval of +2.49 to +12.48. Full refitting used 19/20 current-session support labels in addition to the 40 source training labels. The figure displays observed individual differences; statistical checks concern participant-level cohort contrasts. Figure preparation used OpenAI ChatGPT/Codex assistance with the saved numerical inputs.",
+      "new": "Each value is a participant's mean paired BA difference across five target sessions. Participants appear in numeric order. Nine differences are positive and three negative, with a cohort mean of +7.42 percentage points and a 95% participant-bootstrap interval of +2.49 to +12.48. Full refitting used 19/20 current-session support labels in addition to the 40 source training labels. The figure displays observed individual differences; statistical checks concern participant-level cohort contrasts."
+    },
+    {
+      "id": "remove_repeated_ai_caption_0_2",
+      "old": "Each development participant contributes five target support sessions. Circles and squares represent the first and second halves within class. Values are class-balanced contrasts of frozen source-LDA scores divided by twice their source-score standard deviation. The shared zero line separates positive and reversed class orientation. Nineteen sessions have two positive margins, two have two negative margins and nine have opposite signs. The analysis uses source/support data to describe calibration-measurement reliability. Figure preparation used OpenAI ChatGPT/Codex assistance with the saved numerical inputs.",
+      "new": "Each development participant contributes five target support sessions. Circles and squares represent the first and second halves within class. Values are class-balanced contrasts of frozen source-LDA scores divided by twice their source-score standard deviation. The shared zero line separates positive and reversed class orientation. Nineteen sessions have two positive margins, two have two negative margins and nine have opposite signs. The analysis uses source/support data to describe calibration-measurement reliability."
+    },
+    {
+      "id": "remove_repeated_ai_caption_0_3",
+      "old": "Cells show BA differences on identical query trials: (A) full refitting minus freezing and (B) full refitting minus LDA-only recalibration. Both panels include 18 participants and five target sessions. A horizontal line separates development and primary cohorts. Participants remain in numeric order within each cohort. The symmetric color scale is shared, and values are displayed in percentage points to one decimal. Exact differences and query counts are supplied in the figure source-data CSV. Participant-level averages define the inferential endpoints. Figure preparation used OpenAI ChatGPT/Codex assistance with the saved numerical inputs.",
+      "new": "Cells show BA differences on identical query trials: (A) full refitting minus freezing and (B) full refitting minus LDA-only recalibration. Both panels include 18 participants and five target sessions. A horizontal line separates development and primary cohorts. Participants remain in numeric order within each cohort. The symmetric color scale is shared, and values are displayed in percentage points to one decimal. Exact differences and query counts are supplied in the figure source-data CSV. Participant-level averages define the inferential endpoints."
+    },
+    {
+      "id": "remove_repeated_ai_caption_1_0",
+      "old": "Rows show the primary cohort (12 participants), development cohort (six), and their all-participant union (18). (A, C, E) Blue bars show class-balanced correction contributions and hatched orange bars show introduced errors with negative sign; their sum is the net BA change. Diamonds and bars indicate the net means and 95% participant-bootstrap intervals. (B, D, F) Left- and right-class recall changes use the same weighting. All three contrasts are displayed. Each participant contributes the equal mean of five target sessions; intervals use 10,000 resamples with seed 42. These are exploratory analyses of saved predictions. Figure preparation used OpenAI ChatGPT/Codex assistance and checked numerical inputs.",
+      "new": "Rows show the primary cohort (12 participants), development cohort (six), and their all-participant union (18). (A, C, E) Blue bars show class-balanced correction contributions and hatched orange bars show introduced errors with negative sign; their sum is the net BA change. Diamonds and bars indicate the net means and 95% participant-bootstrap intervals. (B, D, F) Left- and right-class recall changes use the same weighting. All three contrasts are displayed. Each participant contributes the equal mean of five target sessions; intervals use 10,000 resamples with seed 42. These are exploratory analyses of saved predictions."
+    },
+    {
+      "id": "remove_repeated_ai_caption_1_1",
+      "old": "(A) Each point gives one participant’s mean LDA-only-minus-frozen gain (horizontal) and full-minus-LDA-only gain (vertical) across five sessions. Circles show the primary cohort and open squares the development cohort; numbers identify participants. The dashed line marks zero total gain. (B) Primary-cohort session means for the full-minus-frozen and full-minus-LDA-only contrasts, with 95% participant-bootstrap intervals (12 participants; 10,000 resamples; seed 42). (C) Cohort means after deleting each indicated primary participant, with 11 participants per point; dashed lines give the original 12-participant means. The session profiles and deletion summaries describe repeated-session variation and participant influence. All values are supplied in S1 Data. Figure preparation used OpenAI ChatGPT/Codex assistance and checked numerical inputs.",
+      "new": "(A) Each point gives one participant’s mean LDA-only-minus-frozen gain (horizontal) and full-minus-LDA-only gain (vertical) across five sessions. Circles show the primary cohort and open squares the development cohort; numbers identify participants. The dashed line marks zero total gain. (B) Primary-cohort session means for the full-minus-frozen and full-minus-LDA-only contrasts, with 95% participant-bootstrap intervals (12 participants; 10,000 resamples; seed 42). (C) Cohort means after deleting each indicated primary participant, with 11 participants per point; dashed lines give the original 12-participant means. The session profiles and deletion summaries describe repeated-session variation and participant influence. All values are supplied in S1 Data."
+    }
+  ],
+  "source_sha256_before": "a1bf7dda3421cfb571beddcc0f9b2e3adb1afee5d9367cabbafd8dd1c2a71fa6",
+  "source_sha256_after": "a21b868b825defa4fee3e7bc0dfa892bbadc160b44f209f9253f5cea02ee5792",
+  "verified_numbers": {
+    "all18_full_minus_lda_pp": 3.2642277788980754,
+    "all18_full_minus_frozen_pp": 6.029850328247183,
+    "sub7_ses2_full_minus_lda_pp": -37.5
+  },
+  "unmodified": [
+    "All numeric table values",
+    "19 reference identifiers",
+    "Primary/secondary endpoint hierarchy",
+    "Training results and saved predictions",
+    "Six centralized AI-assistance content categories",
+    "Ethics and data availability"
+  ],
+  "validation": {
+    "all_markdown_table_numbers_identical": true,
+    "citation_sequence_identical": true,
+    "untouched_ethics_ai_and_conclusions_through_end": true,
+    "source_copy_identical": true,
+    "all_changes_reconstructed_from_original": true,
+    "comparison_labels_en_dash_count": 7,
+    "retained_primary_gain_pp": 7.42,
+    "retained_component_gain_pp": 5.47,
+    "retained_holm_primary_p": 0.05859,
+    "retained_holm_component_p": 0.04102
+  }
+}

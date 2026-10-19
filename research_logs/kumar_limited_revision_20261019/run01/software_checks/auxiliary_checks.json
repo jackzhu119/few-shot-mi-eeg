@@ -1,0 +1,40 @@
+[
+  {
+    "command": [
+      "/workspace/.venvs/few-shot-mi-eeg/bin/ruff",
+      "check",
+      "src",
+      "tests",
+      "scripts"
+    ],
+    "started_utc": "2026-10-19T06:30:34.435252+00:00",
+    "ended_utc": "2026-10-19T06:30:34.620264+00:00",
+    "exit_code": 1,
+    "stdout": "check_0.stdout",
+    "stderr": "check_0.stderr"
+  },
+  {
+    "command": [
+      "/workspace/.venvs/few-shot-mi-eeg/bin/python",
+      "scripts/smoke_experiment.py",
+      "--config",
+      "configs/smoke.json"
+    ],
+    "started_utc": "2026-10-19T06:30:34.620325+00:00",
+    "ended_utc": "2026-10-19T06:30:39.598856+00:00",
+    "exit_code": 0,
+    "stdout": "check_1.stdout",
+    "stderr": "check_1.stderr"
+  },
+  {
+    "command": [
+      "/workspace/.venvs/few-shot-mi-eeg/bin/python",
+      "scripts/check_data_stack.py"
+    ],
+    "started_utc": "2026-10-19T06:30:39.598939+00:00",
+    "ended_utc": "2026-10-19T06:30:44.732636+00:00",
+    "exit_code": 0,
+    "stdout": "check_2.stdout",
+    "stderr": "check_2.stderr"
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "pytest": "1440 passed, 13 failed, 1 skipped",
+  "failed_test_ids": [
+    "tests/test_kumar_csp_run02_identity.py::test_exact_documented_gate_passes_read_only_with_original_claim_present",
+    "tests/test_kumar_csp_run02_identity.py::test_wrong_authorization_identity_refused[deadline-Original",
+    "tests/test_kumar_csp_run02_identity.py::test_wrong_authorization_identity_refused[run01-Run02",
+    "tests/test_kumar_csp_run02_identity.py::test_wrong_authorization_identity_refused[template-Exact",
+    "tests/test_kumar_csp_run02_identity.py::test_wrong_authorization_identity_refused[contract-Exact",
+    "tests/test_kumar_csp_run02_identity.py::test_existing_run02_identity_stops_without_cleanup[directory-results/kumar_csp_signed_score_20261015/run02]",
+    "tests/test_kumar_csp_run02_identity.py::test_existing_run02_identity_stops_without_cleanup[directory-research_logs/kumar_next_source_operations_20261015/csp_signed_score_operation_run02]",
+    "tests/test_kumar_csp_run02_identity.py::test_existing_run02_identity_stops_without_cleanup[dangling_symlink-results/kumar_csp_signed_score_20261015/run02]",
+    "tests/test_kumar_csp_run02_identity.py::test_existing_run02_identity_stops_without_cleanup[dangling_symlink-research_logs/kumar_next_source_operations_20261015/csp_signed_score_operation_run02]",
+    "tests/test_kumar_csp_run02_identity.py::test_original_deadline_cleanup_margin_cannot_be_renewed",
+    "tests/test_kumar_development_batch.py::test_real_timeout_wrapper_preserves_GPU_lock_fd_and_bounds_CPU_child",
+    "tests/test_kumar_frozen_query_operation.py::test_default_metadata_reads_no_archive_or_signal",
+    "tests/test_kumar_gpu_preparation.py::test_hash_conflict_never_promotes_download"
+  ],
+  "ruff": "8 pre-existing findings in unchanged scripts/build_kumar_editorial_documents_20261017.py",
+  "smoke": "passed; synthetic=true; scientific_result_claimed=false",
+  "data_stack": "MNE/MOABB synthetic provider passed; public_eeg_downloaded=false",
+  "modified_plot_renderer_and_checklist_script_ruff": "passed",
+  "unchanged_failing_test_and_lint_files": [
+    {
+      "path": "scripts/build_kumar_editorial_documents_20261017.py",
+      "identical_to_baseline": true,
+      "sha256": "05795dc49f11627b3ec83b4ba8b7abbb7d0aaad283f4e8bc51d48e6e6e075ce0"
+    },
+    {
+      "path": "tests/test_kumar_csp_run02_identity.py",
+      "identical_to_baseline": true,
+      "sha256": "5fa8d0066576aeda95f106cdb3d858cf64633056c20327e37544d6e2ef0b1eea"
+    },
+    {
+      "path": "tests/test_kumar_development_batch.py",
+      "identical_to_baseline": true,
+      "sha256": "2b81afe65b5fc25aa87de40c3ce2d9126a1bf4ba8870a136f1c2936678fb0200"
+    },
+    {
+      "path": "tests/test_kumar_frozen_query_operation.py",
+      "identical_to_baseline": true,
+      "sha256": "bbcbf7d34b0cbffd6084ef37b8ba16cce61e19ed271a224c1033509b86263688"
+    },
+    {
+      "path": "tests/test_kumar_gpu_preparation.py",
+      "identical_to_baseline": true,
+      "sha256": "79e3bcd9dbb0fbcbb4cf7475c1942dcac7c35a02daf546ebc062dec5b24cfeb7"
+    }
+  ],
+  "scope": "No unrelated test, historical execution gate, disk reserve, claim or style fix performed."
+}

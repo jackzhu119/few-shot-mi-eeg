@@ -2,11 +2,13 @@
 
 **Spatial-filter refitting improves limited-label recalibration in longitudinal motor-imagery EEG**
 
-作者：Ziyuan Zhu。修订日期：2026-10-17。
+作者：Ziyuan Zhu。修订日期：2026-10-17；伦理声明按作者要求于2026-10-19更正。
 
 ## 最终投稿核查
 
 [2026年10月17日最终核查](Final_Submission_Check_20261017_ZH.md)记录本次格式、图件、公开数据、伦理与AI披露检查及具体修正。[实际上传文件包](PLOS_ONE_Submission_Files_20261017.zip)提供正式DOCX、六张短名TIFF、S1/S2、数据包、附信及官方参与者清单。作者已确认无法访问可识别参与者身份的信息；该声明已补入方法部分，官方 [Human Participants Checklist](Human_Participants_Checklist.pdf) 第3项已完成。
+
+本次二次分析依据中国2023年《涉及人的生命科学和医学研究伦理审查办法》第32条第（一）项免予额外伦理审查，删除学校确认的表述。原研究的UT Austin批准与知情同意单独报告；可直接复制的投稿系统声明见 [Ethics_Statement_20261019.md](Ethics_Statement_20261019.md)。
 
 ## 阅读与使用
 
@@ -35,9 +37,9 @@
 
 ## 文件与格式核验
 
-主标题95字符、短标题55字符、摘要251词；参考文献按首次引用编号，使用核验的期刊缩写；预印本单独标识。投稿版正文和参考文献均为双倍行距，六张表保持可编辑，图注按首次引用顺序放置。所有DOCX均转换为PDF并逐页检查。格式、页面与文件SHA-256见 `formatting_audit_20261017.json`、`visual_QA_20261017.json` 和 `PACKAGE_MANIFEST.json`。
+主标题95字符、短标题55字符、摘要266词；参考文献按首次引用编号，使用核验的期刊缩写；预印本单独标识。投稿版正文和参考文献均为双倍行距，六张表保持可编辑，图注按首次引用顺序放置。所有DOCX均转换为PDF并逐页检查。2026年10月19日修订后的文件、页面与SHA-256见 `Verification/Revision_20261019/` 和 `PACKAGE_MANIFEST.json`；原20261017核查记录保留其历史范围。
 
-本轮分析与导出得到AI辅助，正文、图注和补充材料已说明实际范围。文字经过结构与表达修订，未宣称外部AI检测分数。投稿系统中Funding单独填写。文件准备不包含向期刊发送或提交的操作。
+本轮分析与导出得到AI辅助，正文和补充材料统一说明实际范围。文字经过结构与表达修订，未宣称外部AI检测分数。投稿系统中Funding单独填写。文件准备不包含向期刊发送或提交的操作。
 
 ## 来源与许可
 

@@ -27,6 +27,8 @@
 
 ## 投稿系统信息
 
+伦理字段使用 [Ethics_Statement_20261019.md](Ethics_Statement_20261019.md) 的完整英文声明：本次公开数据二次分析依据国家法规免予额外伦理审查，原始数据采集批准与知情同意另行说明。删除此前的学校确认、确认日期及无编号表述。
+
 填写作者姓名、单位、通讯邮箱、CRediT、Financial Disclosure、Competing Interests及Data Availability，并由通讯作者在个人资料中绑定ORCID。可从完整材料包的 `Author_Submission_Details.md` 取得已有信息。编辑建议、回避审稿人、相关稿件和事先联系期刊等事项按实际情况填写。
 
 最后检查投稿系统生成的合并PDF，确认表格、图注、图件顺序和补充材料标签后提交。

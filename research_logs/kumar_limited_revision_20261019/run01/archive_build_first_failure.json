@@ -1,0 +1,7 @@
+{
+  "operation": "editorial ZIP/manifest rebuild, not a scientific experiment",
+  "failed_before_complete_archive_replacement": true,
+  "exception": "TypeError: Object of type IFDRational is not JSON serializable",
+  "cause": "Pillow TIFF dpi metadata uses IFDRational",
+  "correction": "Convert dpi metadata to float for JSON serialization; scientific files and TIFF pixels unchanged"
+}

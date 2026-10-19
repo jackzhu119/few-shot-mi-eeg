@@ -22,7 +22,7 @@ A complete cue-anchored window required five seconds, or 2,560 samples at 512 Hz
 
 Each participant contributed 40 source-training and 20 source-validation windows. The first run of each target session supplied at most 20 support events, with at most ten per class before exclusion. Of 90 target sessions, 14 supplied 19 complete support events and 76 supplied 20. Updates combined source training with support from the current session only. The query ledger contains 4,320 identities: 4,290 complete queries and 30 excluded partial queries. All CPU methods and EEGNet seeds used identical included query IDs.
 
-The original study reports University of Texas at Austin protocol 2020-03-0073 and written informed consent [@kumar2024]. According to the author's report, the research administration office at Chongqing Medical University confirmed on 16 October 2026 that this secondary analysis is exempt from additional ethical review under Article 32, item (1), of the 2023 Chinese ethics-review measures [@china2023ethics]; no reference number was issued. The [ethics-statement record](https://github.com/jackzhu119/few-shot-mi-eeg/blob/research/learning-preserving-bci/docs/kumar_ethics_statement_revision_20261016.md) documents the reported confirmation separately from the original collection.
+The original study reports University of Texas at Austin protocol 2020-03-0073 and written informed consent [@kumar2024]. The present secondary analysis was exempt from additional ethical review under Article 32, item (1), of China's Measures for Ethical Review of Life Science and Medical Research Involving Human Participants (2023) [@china2023ethics]. It used lawfully obtained publicly available data, caused no harm to participants, and did not involve sensitive personal information or commercial interests. The [current ethics statement](https://github.com/jackzhu119/few-shot-mi-eeg/blob/main/manuscript/plos_one_innovation_20261017/Ethics_Statement_20261019.md) reports the regulatory basis separately from the original collection ethics.
 
 ## S2. Epoch-local preprocessing and descriptive coordinates
 
@@ -272,7 +272,7 @@ This postprocessor reproduced all 13 scientific QC CSVs byte-for-byte. S2 Text a
 
 ## S11. Exploratory paired sign-flip checks
 
-The post-review tests use saved participant endpoints and were specified after the original results had been observed. They supplement the original effect estimates under the retained comparison hierarchy.
+The post-hoc exploratory tests use saved participant endpoints and were specified after the original results had been observed. They supplement the original effect estimates under the retained comparison hierarchy.
 
 For paired BA differences $d_i$, the two-sided statistic is
 

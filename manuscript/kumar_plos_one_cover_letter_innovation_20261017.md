@@ -10,7 +10,7 @@ In the predefined 12-participant primary cohort, full refitting improved balance
 
 The work complements covariance-recentering, adaptive spatial-filtering and continual-learning studies by isolating the component comparison under matched labels. Calibration-subset measurements additionally distinguish agreement from correct task-score orientation. Chronological partitions, participant-level inference, amplitude sensitivity, complete neural-reference histories and public saved-result reconstruction provide a consistent experimental foundation.
 
-The submission includes detailed methods, saved predictions, complete cohort and class-specific tables, six figures and reproduction code. Original software is MIT licensed, and original manuscript content, figures and derived results are CC BY 4.0. The manuscript reports the original collection ethics and the author-reported secondary-use exemption confirmed by Chongqing Medical University on 16 October 2026. It also discloses OpenAI ChatGPT/Codex assistance with software, analysis, figures and writing.
+The submission includes detailed methods, saved predictions, complete cohort and class-specific tables, six figures and reproduction code. Original software is MIT licensed, and original manuscript content, figures and derived results are CC BY 4.0. The manuscript reports the original collection ethics and the exemption of this public-data secondary analysis from additional ethical review under Article 32(1) of China's 2023 ethics-review measures. It also discloses OpenAI ChatGPT/Codex assistance with software, analysis, figures and writing.
 
 Sincerely,
 

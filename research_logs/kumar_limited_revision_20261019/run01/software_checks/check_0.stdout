@@ -1,0 +1,89 @@
+E701 Multiple statements on one line (colon)
+   --> scripts/build_kumar_editorial_documents_20261017.py:145:80
+    |
+143 |         widths = {2:[68,98],3:[60,53,53],4:[62,22,43,39],5:[46,30,30,30,30],6:[30,16,30,30,30,30]}.get(n,[166/n]*n)
+144 |         first = " ".join(c.text for c in table.rows[0].cells).lower()
+145 |         if n==4 and "source training" in first and "source-validation" in first: widths=[36,58,35,37]
+    |                                                                                ^
+146 |         if n==4 and "unadjusted" in first: widths=[88,22,28,28]
+147 |         if n==4 and "source-query" in first: widths=[55,22,48,41]
+    |
+
+E701 Multiple statements on one line (colon)
+   --> scripts/build_kumar_editorial_documents_20261017.py:146:42
+    |
+144 |         first = " ".join(c.text for c in table.rows[0].cells).lower()
+145 |         if n==4 and "source training" in first and "source-validation" in first: widths=[36,58,35,37]
+146 |         if n==4 and "unadjusted" in first: widths=[88,22,28,28]
+    |                                          ^
+147 |         if n==4 and "source-query" in first: widths=[55,22,48,41]
+148 |         if n==4 and "cohort" in first and "cpu source" in first: widths=[50,18,52,46]
+    |
+
+E701 Multiple statements on one line (colon)
+   --> scripts/build_kumar_editorial_documents_20261017.py:147:44
+    |
+145 |         if n==4 and "source training" in first and "source-validation" in first: widths=[36,58,35,37]
+146 |         if n==4 and "unadjusted" in first: widths=[88,22,28,28]
+147 |         if n==4 and "source-query" in first: widths=[55,22,48,41]
+    |                                            ^
+148 |         if n==4 and "cohort" in first and "cpu source" in first: widths=[50,18,52,46]
+149 |         for grid,width in zip(table._tbl.tblGrid.gridCol_lst,widths):
+    |
+
+E701 Multiple statements on one line (colon)
+   --> scripts/build_kumar_editorial_documents_20261017.py:148:64
+    |
+146 |         if n==4 and "unadjusted" in first: widths=[88,22,28,28]
+147 |         if n==4 and "source-query" in first: widths=[55,22,48,41]
+148 |         if n==4 and "cohort" in first and "cpu source" in first: widths=[50,18,52,46]
+    |                                                                ^
+149 |         for grid,width in zip(table._tbl.tblGrid.gridCol_lst,widths):
+150 |             grid.set(qn("w:w"),str(round(width/25.4*1440)))
+    |
+
+E701 Multiple statements on one line (colon)
+   --> scripts/build_kumar_editorial_documents_20261017.py:158:80
+    |
+156 |         for side in ("top","left","bottom","right","insideH","insideV"):
+157 |             edge = element(borders,"w:"+side)
+158 |             for key,value in {"val":"single","sz":"4","color":"D9D9D9"}.items(): edge.set(qn("w:"+key),value)
+    |                                                                                ^
+159 |         for ri,row in enumerate(table.rows):
+160 |             rp = row._tr.get_or_add_trPr()
+    |
+
+E701 Multiple statements on one line (colon)
+   --> scripts/build_kumar_editorial_documents_20261017.py:162:21
+    |
+160 |             rp = row._tr.get_or_add_trPr()
+161 |             element(rp,"w:cantSplit")
+162 |             if ri==0: element(rp,"w:tblHeader")
+    |                     ^
+163 |             for ci,cell in enumerate(row.cells):
+164 |                 cell.width = Mm(widths[ci])
+    |
+
+E701 Multiple statements on one line (colon)
+   --> scripts/build_kumar_editorial_documents_20261017.py:183:33
+    |
+181 |                         run.font.size = Pt(10)
+182 |                         run.font.color.rgb = RGBColor(0,0,0)
+183 |                         if ri==0: run.bold=True
+    |                                 ^
+184 |     doc.core_properties.author = "Ziyuan Zhu"
+185 |     doc.core_properties.subject = "Longitudinal motor-imagery EEG component recalibration"
+    |
+
+E701 Multiple statements on one line (colon)
+   --> scripts/build_kumar_editorial_documents_20261017.py:210:41
+    |
+208 |     created = 0
+209 |     for name,kind,submission,illustrated,cover in specs:
+210 |         if args.only and name!=args.only: continue
+    |                                         ^
+211 |         source = ROOT/f"manuscript/kumar_plos_one_{kind}_20261017.md"
+212 |         title,body = source.read_text().split("\n",1)
+    |
+
+Found 8 errors.

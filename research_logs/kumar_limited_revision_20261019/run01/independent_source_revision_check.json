@@ -1,0 +1,174 @@
+{
+  "schema": 1,
+  "checked_at_utc": "2026-10-19T06:31:36.762256+00:00",
+  "base_commit": "19a5909fd76d96be9316559602010932ccec81a8",
+  "scope": "Independent read-only targeted source revision check; no scientific execution; generated PDFs/DOCX not covered yet.",
+  "main_sha256": "0b4eb4985bf82419a6618e44097988e534b9c9d32c05117a5c8f40e64922a37f",
+  "checks": [
+    {
+      "check": "all six tables preserve all numerical entries",
+      "passed": true,
+      "detail": {
+        "before_rows": 33,
+        "after_rows": 33
+      }
+    },
+    {
+      "check": "Conclusions exact unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Introduction exact unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "abstract <=300 whitespace words",
+      "passed": true,
+      "detail": {
+        "whitespace_words": 266,
+        "lexical_words": 268
+      }
+    },
+    {
+      "check": "abstract all18 secondary values",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original primary and secondary gains and uncertainty preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no invented confirmatory or unexposed history",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "correct mu13 Hz and beta30 Hz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "correct covariance delta to common source-training reference",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "three low-dimensional representations plus fourth supervised probe",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "support cosine explicitly four-dimensional CSP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "240 training pipelines definition and heldout scoring separation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rounded reliability displays correct",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "all six AI figure repetitions removed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "full AI methods disclosure exact unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Figure_Captions master matches main",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no post-review main prose",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Table5 contrast U2013 and numerical negative U2212",
+      "passed": true,
+      "detail": {
+        "contrast_count": 4,
+        "numerical_negative_U2212_count": 0
+      }
+    },
+    {
+      "check": "Table6 contrast U2013 and numerical negative U2212",
+      "passed": true,
+      "detail": {
+        "contrast_count": 3,
+        "numerical_negative_U2212_count": 8
+      }
+    },
+    {
+      "check": "source ethics no school-confirmation claim",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "source ethics statute and original collection retained",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "all five master sources and package Sources equal",
+      "passed": true,
+      "detail": [
+        {
+          "master": "/workspace/few-shot-mi-eeg/manuscript/kumar_plos_one_audit_reproducibility_innovation_20261017.md",
+          "copy": "/workspace/few-shot-mi-eeg/manuscript/plos_one_innovation_20261017/Sources/kumar_plos_one_audit_reproducibility_innovation_20261017.md",
+          "equal": true,
+          "sha256": "dff482314802106db6e2d01b445eb8f08a633da11755bf396e14c401a382cff0"
+        },
+        {
+          "master": "/workspace/few-shot-mi-eeg/manuscript/kumar_plos_one_cover_letter_innovation_20261017.md",
+          "copy": "/workspace/few-shot-mi-eeg/manuscript/plos_one_innovation_20261017/Sources/kumar_plos_one_cover_letter_innovation_20261017.md",
+          "equal": true,
+          "sha256": "eb4caa5b50ce7a1269182e385cc3ded978fdebfac648c9a3396e0dee02f3cf16"
+        },
+        {
+          "master": "/workspace/few-shot-mi-eeg/manuscript/kumar_plos_one_references_innovation_20261017.bib",
+          "copy": "/workspace/few-shot-mi-eeg/manuscript/plos_one_innovation_20261017/Sources/kumar_plos_one_references_innovation_20261017.bib",
+          "equal": true,
+          "sha256": "6e12b8112b158951373aa621b65e67469557ec72c184130d9ad5f6b39a3df3c8"
+        },
+        {
+          "master": "/workspace/few-shot-mi-eeg/manuscript/kumar_plos_one_submission_draft_innovation_20261017.md",
+          "copy": "/workspace/few-shot-mi-eeg/manuscript/plos_one_innovation_20261017/Sources/kumar_plos_one_submission_draft_innovation_20261017.md",
+          "equal": true,
+          "sha256": "0b4eb4985bf82419a6618e44097988e534b9c9d32c05117a5c8f40e64922a37f"
+        },
+        {
+          "master": "/workspace/few-shot-mi-eeg/manuscript/kumar_plos_one_supporting_methods_innovation_20261017.md",
+          "copy": "/workspace/few-shot-mi-eeg/manuscript/plos_one_innovation_20261017/Sources/kumar_plos_one_supporting_methods_innovation_20261017.md",
+          "equal": true,
+          "sha256": "e3c456959e3e570989415abe1ba42b7ebfac2e0f2ccd09907f60d50c8f7fdd1e"
+        }
+      ]
+    },
+    {
+      "check": "scientific data/configuration/runner untouched",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "check_count": 23,
+  "failure_count": 0,
+  "findings": [
+    "No substantive scientific or grammatical error found in current targeted source changes.",
+    "Reference16 uses anonymous/date-not-stated Internet codebook rather than fabricating article author list or publication year.",
+    "Necessary scope words (secondary/exploratory/offline/source-only) retained; positive endpoint and Conclusions unchanged."
+  ]
+}

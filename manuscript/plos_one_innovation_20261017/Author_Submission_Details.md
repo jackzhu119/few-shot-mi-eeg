@@ -1,6 +1,6 @@
 # Author Submission Details
 
-Administrative information for the PLOS ONE submission fields. Current manuscript and analysis revision: **17 October 2026**.
+Administrative information for the PLOS ONE submission fields. Current manuscript and analysis revision: **17 October 2026**, with the targeted ethics and editorial revision dated **19 October 2026**.
 
 ## Manuscript and author
 
@@ -31,7 +31,7 @@ Administrative information for the PLOS ONE submission fields. Current manuscrip
 
 ## Ethical basis
 
-The author reports that the research administration office at Chongqing Medical University confirmed on **16 October 2026** that this Kumar2024/NEMAR secondary analysis qualified for exemption from additional ethical review under Article 32, item (1), of China's 2023 ethics-review measures. **No reference number was issued.**
+This Kumar2024/NEMAR secondary analysis was exempt from additional ethical review under Article 32, item (1), of China's Measures for Ethical Review of Life Science and Medical Research Involving Human Participants (2023). It used lawfully obtained publicly available data, caused no harm to participants, and did not involve sensitive personal information or commercial interests. The complete submission-system statement is provided in [Ethics_Statement_20261019.md](Ethics_Statement_20261019.md).
 
 For the original data collection, the source study reports University of Texas at Austin approval under protocol **2020-03-0073** and written informed consent.
 
@@ -39,7 +39,7 @@ For the original data collection, the source study reports University of Texas a
 
 - **Recorded author approval:** 16 October 2026, after personal reading and checking of the scientific manuscript content at commit `f2901decfc39b2adecae13253ee4b1159a4f9a4b`, tag `paper2-plos-source-20261016`.
 - **Approval record:** commit `1a7e1ab8b6253db52544ba185abb33a6bcb4937b`.
-- **Institutional-exemption revision:** `paper2-plos-ethics-20261016`.
+- **Historical ethics-text release:** `paper2-plos-ethics-20261016`; its secondary-use wording is superseded by the regulatory exemption statement in [Ethics_Statement_20261019.md](Ethics_Statement_20261019.md), following the author's 19 October 2026 correction.
 - **Current package:** the 17 October 2026 innovation revision in `manuscript/plos_one_innovation_20261017/`. The earlier recorded scientific approval refers to the identified 16 October content version; this field does not extend that record to newly added analyses.
 
 ## Fields for actual submission
@@ -63,6 +63,6 @@ The completed official 2026 checklist is supplied as `Human_Participants_Checkli
 
 On **17 October 2026**, the author confirmed that the author could not access information that could identify individual participants during or after data collection. Methods now states: “The author had no access to information that could identify individual participants during or after data collection.” The confirmation responds to the question covering identifiable participant information, including any identity-linkage key.
 
-In the formal manuscript, the data-access dates appear on page 6, lines **96–97**, and the no-access statement on lines **99–100**. Checklist question 3 cites **96–100** and is marked Completed. This is the author's factual confirmation of identifying-information access; the separately reported original approval and institutional secondary-use exemption retain their existing scope.
+In the formal manuscript, the data-access dates appear on page 6, lines **95–96**, and the no-access statement on lines **98–99**. Checklist question 3 cites **95–100** and is marked Completed. This is the author's factual confirmation of identifying-information access; the original data-collection approval and the regulatory basis for this secondary analysis are reported separately.
 
 Competing interests and Financial Disclosure are supplied through the submission system and are not included in the revised main manuscript. The author should check the final journal-generated PDF and complete the required submission-system declarations.

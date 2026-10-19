@@ -61,6 +61,11 @@ def main() -> None:
     original_save = module.save_figure
 
     def checked_save(fig, stem):
+        if stem == module.STEMS[3]:
+            cohort_labels = [artist for artist in fig.findobj(module.matplotlib.text.Text)
+                             if artist.get_text() == "Remaining (n = 12)"]
+            module.require(len(cohort_labels) == 1, "Figure 4 primary-cohort label")
+            cohort_labels[0].set_text("Primary cohort (n = 12)")
         fig.canvas.draw()
         fonts = {}
         for artist in fig.findobj(module.matplotlib.text.Text):
