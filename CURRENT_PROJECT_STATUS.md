@@ -1,5 +1,9 @@
 # 论文2当前进度与论文状态
 
+## 2026年10月19日：高清图件与投稿系统核查
+
+[最新投稿辅助文件](manuscript/plos_one_submission_support_20261019/README.md)已整理最新完整提交包、600 dpi原始TIFF图包、六图高清审阅PDF及266词系统摘要。完整包的12份实际上传文件与现有main逐字节一致。作者提供的系统合并PDF图件实际为72 dpi，系统首页仍用旧摘要；原稿、图件内容、科学结果与已有归档包不变。补充附件在合并PDF中仅有链接，实际上传字节未获核验；没有代作者修改系统或提交。完整范围见[核查证据](research_logs/kumar_submission_support_20261019/run01/README.md)。
+
 ## 2026年10月19日：投稿稿局部修订
 
 [本轮修改与核验](docs/kumar_limited_revision_20261019.md)基于已提交稿对应的`19a5909`，按作者最新要求将现行伦理声明统一为第32条第（一）项法规豁免，删除学校确认；同时处理九项文字/方法说明/图表格式意见。原实验、统计数值与历史审计记录保持可追溯。[现行投稿文件](manuscript/plos_one_innovation_20261017/README.md)及[英文系统伦理声明](manuscript/plos_one_innovation_20261017/Ethics_Statement_20261019.md)为当前入口；下方2026年10月17日及更早记录保留其历史范围。
