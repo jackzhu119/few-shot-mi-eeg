@@ -1,0 +1,170 @@
+{
+  "created_utc": "2026-10-23T10:16:14.738106+00:00",
+  "source_commit": "71e79fb6f70346ac2fc307c0b93dc23af101e2c7",
+  "artifacts": [
+    {
+      "file": "paper2-hpc-v2-code.tar.gz",
+      "bytes": 86282,
+      "sha256": "dd6fa2f293943d8b574655bc6f74c5b5d73b6559f5853d709515240c19fdc8ce",
+      "included_in_git": true
+    },
+    {
+      "file": "paper2-hpc-v2-kumar-dev-inputs.tar.gz",
+      "bytes": 125283270,
+      "sha256": "b6f211bbf2ed512fbf30d178d59c67181396c98d0ec122812519ee95a9aa3e0a",
+      "included_in_git": false
+    },
+    {
+      "file": "install_offline.sh",
+      "bytes": 2049,
+      "sha256": "3476346c1c71c92b91517aafdb08803a06a85b09de06f7c9562f6012f4fac508",
+      "included_in_git": true
+    }
+  ],
+  "final_package_payload_files": 26,
+  "final_installed_files": 120,
+  "final_install_all_members_sha_verified": true,
+  "school_slurm_started": false,
+  "school_gpu_verified": false,
+  "r2_new_verified_objects": 0,
+  "r2_status": "HTTP401 retained in r2_inputs_run01; offline delivery remains available",
+  "source_manifest": {
+    "base_git_commit": "71e79fb6f70346ac2fc307c0b93dc23af101e2c7",
+    "content_identity": "Exact per-file SHA256; current development files may be uncommitted.",
+    "files": [
+      {
+        "bytes": 1067,
+        "path": "LICENSE",
+        "sha256": "962e9292bbb78c4227db75dcda2f4b36ca1f354ec38992112d5829a72204f87c"
+      },
+      {
+        "bytes": 18657,
+        "path": "LICENSES/CC-BY-4.0.txt",
+        "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+      },
+      {
+        "bytes": 1307,
+        "path": "LICENSES/paper2-hpc-v2-scope-20261023.md",
+        "sha256": "d9ece6ed7655c9f9252b2d0aebeb8f4c6287ff1203993014d82fe3f9420c50e8"
+      },
+      {
+        "bytes": 6696,
+        "path": "LICENSING.md",
+        "sha256": "54481ea8089da4aab5662dd5251a739b9590bf5293e4d72f9989481771aa1d8d"
+      },
+      {
+        "bytes": 1375,
+        "path": "NOTICE.md",
+        "sha256": "1ee591404f7d8b926a5810f61f4b8a9251216a9e78ae80d9c60072eca793d72a"
+      },
+      {
+        "bytes": 9621,
+        "path": "README.md",
+        "sha256": "c6277ab457adbec38c6da35d89d6b514c4db470035e544bc581b4532656a461c"
+      },
+      {
+        "bytes": 3625,
+        "path": "bootstrap.py",
+        "sha256": "fa94be643868f23ae20df000536e4cfc90256eb427ae5857cb8a19c41fdb10e4"
+      },
+      {
+        "bytes": 15730,
+        "path": "build_offline.py",
+        "sha256": "bbdcc2a8c3de2f0b1acd7cac56870ea7d3f0f4076aedc822756d94dd041b782b"
+      },
+      {
+        "bytes": 408,
+        "path": "configs/input_archive_receipt.json",
+        "sha256": "ce8beb02f7f6934968a52bdf80455beee865fcd7cff13ab451522f65d973ac7a"
+      },
+      {
+        "bytes": 23584,
+        "path": "configs/input_manifest.json",
+        "sha256": "7ae1e0abd13f34aedc71716da8c202335b0cb5ee69b0ba378b98163e6d43de97"
+      },
+      {
+        "bytes": 2305,
+        "path": "configs/kumar_dev.json",
+        "sha256": "bddaef48333d747c50fca91addf43e8d17481ec66f7f1ff41db213fdbdf0d85c"
+      },
+      {
+        "bytes": 74568,
+        "path": "configs/tasks_kumar_dev.json",
+        "sha256": "1aebf942eb085aac963f23e1e92389105d17514403d00725d94db9bd9a4f88fb"
+      },
+      {
+        "bytes": 11222,
+        "path": "docs/paper2_hpc_v2_literature_and_scientific_design_20261023.json",
+        "sha256": "7706be96d607daad430ef2846bbfc240f1ae95a6e2a2867928c5ac0af7f3b0cb"
+      },
+      {
+        "bytes": 24269,
+        "path": "docs/paper2_hpc_v2_literature_and_scientific_design_20261023.md",
+        "sha256": "2b09d0833d05285f807073149bb2157f4cefe73a8d115a5e879aff20f43c3ba3"
+      },
+      {
+        "bytes": 108,
+        "path": "hpc_recalibration/__init__.py",
+        "sha256": "7e57169c86b53c8a383eb0d675f25fa4547a442be9725041947af2d7e1670dec"
+      },
+      {
+        "bytes": 4929,
+        "path": "hpc_recalibration/checkpoint.py",
+        "sha256": "fabe6d2d6e9a8a4851b8fa41941dd5e9608ac46787dd3b7036587d9a316b5f5f"
+      },
+      {
+        "bytes": 21930,
+        "path": "hpc_recalibration/classical.py",
+        "sha256": "7a08d0ebee294799e28e061720c8257889fdee85d1a5c97e9647545a8b76aee5"
+      },
+      {
+        "bytes": 15278,
+        "path": "hpc_recalibration/data.py",
+        "sha256": "f9cc4525212f1f9d80e58ca9aa3ccaa762e34afeac05297d0795c364c424adff"
+      },
+      {
+        "bytes": 20653,
+        "path": "hpc_recalibration/github_sync.py",
+        "sha256": "ccfd9168521c5d02d49f9cb22897da3d79b475505ae986ad4bd7b18ef1a6dc9a"
+      },
+      {
+        "bytes": 15806,
+        "path": "hpc_recalibration/preflight.py",
+        "sha256": "c65a5e959565b691b544610971973034c22aac2b3a07b6cbaf0b0c998f2447ae"
+      },
+      {
+        "bytes": 10739,
+        "path": "hpc_recalibration/slurm.py",
+        "sha256": "c013d235af89c08e4e904acfd0d4572aa3001dc06b8a99d97dcd2931601c9780"
+      },
+      {
+        "bytes": 18795,
+        "path": "hpc_recalibration/summarize.py",
+        "sha256": "6d22a7424fbeb61376e018107d05e61c5e097f104dfd5d8348a03f5bf80222f3"
+      },
+      {
+        "bytes": 36262,
+        "path": "hpc_recalibration/training.py",
+        "sha256": "b1acb805c6b8b83e735d8da72f53a90ef3721ccb163520a1bdc2bbcedb3698dd"
+      },
+      {
+        "bytes": 2049,
+        "path": "install_offline.sh",
+        "sha256": "3476346c1c71c92b91517aafdb08803a06a85b09de06f7c9562f6012f4fac508"
+      },
+      {
+        "bytes": 2251,
+        "path": "job.sh",
+        "sha256": "a839908ac53cfc8287ab5dc4df4aceebacd30a2d50dc8da172c1cc91ecfc8695"
+      },
+      {
+        "bytes": 379,
+        "path": "launch.sh",
+        "sha256": "0fda6a0bb972997cdd98e4e3b5ccc02da5684f4ca14477e4534b0098e3618314"
+      }
+    ],
+    "no_dependencies_or_credentials_included": true,
+    "package": "paper2-recalibration-v2",
+    "schema_version": 1
+  }
+}

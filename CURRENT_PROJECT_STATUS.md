@@ -1,5 +1,17 @@
 # 论文2当前进度与论文状态
 
+## 2026年10月23日：学校HPC独立研究扩展V2
+
+[启动与恢复说明](experiments/hpc_recalibration_v2/README.md)、
+[科研方案与文献核查](docs/paper2_hpc_v2_literature_and_scientific_design_20261023.md)
+和[实际交付报告](research_logs/paper2_hpc_v2_20261023/REPORT.md)已完成。
+采用三项并行单A100任务，每项24CPU/128G；首批6开发参与者、24独立任务，
+6项经典对照和18项新版本神经训练。固定源码为`71e79fb6f70346ac2fc307c0b93dc23af101e2c7`。
+97项针对性合成测试通过，125MB真实输入包及离线安装已核验，学校GPU尚未运行。
+新方案检验相同标签预算下的更新强度，主对照为更强的EA方法；旧54模型及
+已投稿稿件保留。R2本次实际返回401，0对象上传成功；失败回执保留，学校
+本地持久训练不依赖此权限恢复。新工作位于`research/paper2-hpc-v2-20261023`。
+
 ## 2026年10月19日：高清图件与投稿系统核查
 
 [最新投稿辅助文件](manuscript/plos_one_submission_support_20261019/README.md)已整理最新完整提交包、600 dpi原始TIFF图包、六图高清审阅PDF及266词系统摘要。完整包的12份实际上传文件与现有main逐字节一致。作者提供的系统合并PDF图件实际为72 dpi，系统首页仍用旧摘要；原稿、图件内容、科学结果与已有归档包不变。补充附件在合并PDF中仅有链接，实际上传字节未获核验；没有代作者修改系统或提交。完整范围见[核查证据](research_logs/kumar_submission_support_20261019/run01/README.md)。
