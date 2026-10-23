@@ -8,11 +8,11 @@ personal computer or R2 permission is needed. The author expressly requested
 GitHub distribution on 23 October 2026. [Data attribution and original
 CC BY 4.0 license](DATA_ATTRIBUTION.txt) accompany the data.
 
-On login1 run this single line (download first, then execute from a local file
-so the GitHub authorization prompt retains the terminal):
+On login1 run this single line using the already confirmed Python interpreter.
+It needs no curl/wget and preserves terminal input for the authorization prompt:
 
 ```bash
-curl -fL --retry 3 --connect-timeout 20 -o /public/home/zhuziyuan/paper2_download.py https://raw.githubusercontent.com/jackzhu119/few-shot-mi-eeg/research/paper2-hpc-v2-20261023/experiments/hpc_recalibration_v2/download_on_hpc.py && /public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python -u /public/home/zhuziyuan/paper2_download.py
+/public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python -u -c 'import urllib.request; exec(compile(urllib.request.urlopen("https://raw.githubusercontent.com/jackzhu119/few-shot-mi-eeg/d7c49a9a0e25b359c389e2d2383d91fcde973f99/experiments/hpc_recalibration_v2/download_on_hpc.py", timeout=60).read(), "download_on_hpc.py", "exec"))'
 ```
 
 The downloader resumes interrupted files, verifies four input parts, joins them
