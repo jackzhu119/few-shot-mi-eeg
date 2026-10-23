@@ -1,20 +1,31 @@
-# School HPC V2 offline delivery
+# School HPC V2 direct GitHub download
 
 Source commit: `71e79fb6f70346ac2fc307c0b93dc23af101e2c7`.
 
-Download the code tar and installer here. The separate 125,283,270-byte EEG input
-tar is deliberately outside Git; it is supplied through this chat/workspace at
-`/workspace/paper2_hpc_v2_delivery/paper2-hpc-v2-kumar-dev-inputs.tar.gz`.
-Its complete SHA is recorded in SHA256SUMS.txt and the public input manifest.
-The new R2 upload returned HTTP401 and is not claimed as a backup.
+The code, installer and complete input data can now be downloaded directly from
+this GitHub repository on the school's login1 terminal. No transfer through a
+personal computer or R2 permission is needed. The author expressly requested
+GitHub distribution on 23 October 2026. [Data attribution and original
+CC BY 4.0 license](DATA_ATTRIBUTION.txt) accompany the data.
 
-Upload all three files to `/public/home/zhuziyuan/incoming/`, then on login1 run:
+On login1 run this single line (download first, then execute from a local file
+so the GitHub authorization prompt retains the terminal):
 
 ```bash
-bash /public/home/zhuziyuan/incoming/install_offline.sh
+curl -fL --retry 3 --connect-timeout 20 -o /public/home/zhuziyuan/paper2_download.py https://raw.githubusercontent.com/jackzhu119/few-shot-mi-eeg/research/paper2-hpc-v2-20261023/experiments/hpc_recalibration_v2/download_on_hpc.py && /public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python -u /public/home/zhuziyuan/paper2_download.py
 ```
 
-Enter the GitHub token only at the hidden school-terminal prompt.
+The downloader resumes interrupted files, verifies four input parts, joins them
+to the unchanged 125,283,270-byte archive, verifies the full SHA256 and invokes
+the existing installer. Downloads go to `/public/home/zhuziyuan/incoming/`;
+the project is installed under `/public/home/zhuziyuan/projects/paper2-recalibration-v2/`.
+All payload URLs use fixed commits. The input [manifest](input_download_manifest.json)
+pins data revision `b971e79dbf5bf8a1452634046b6e186fe298b6a9`.
+
+Public downloading needs no GitHub token. Before the first training submission,
+enter the token only at the existing hidden school-terminal prompt; it authorizes
+progress reporting. To download/install without submitting, append `--no-launch`
+to the Python command. The same download command resumes interrupted transfers.
 The same experiment resumes with:
 
 ```bash
@@ -23,6 +34,12 @@ bash /public/home/zhuziyuan/projects/paper2-recalibration-v2/launch.sh
 
 [Complete instructions](../../experiments/hpc_recalibration_v2/README.md).
 [Validation and limitations](../../research_logs/paper2_hpc_v2_20261023/REPORT.md).
+
+GitHub's regular-file limit requires the input archive to be stored as four
+files under `inputs/`, each at most32MiB. The program restores the exact original
+archive SHA256 `b6f211bbf2ed512fbf30d178d59c67181396c98d0ec122812519ee95a9aa3e0a`.
+It does not reprocess EEG or change any scientific configuration. R2's earlier
+HTTP401 upload failure remains recorded and is independent of this download path.
 
 Real A100 execution has not occurred in this delivery. The first allocated GPU
 worker performs the minimal forward/backward/save/resume check and then trains.

@@ -2,6 +2,10 @@
 
 ## 2026年10月23日：学校HPC独立研究扩展V2
 
+**直接下载更新：**按作者新要求，[学校一行GitHub下载入口](releases/paper2-hpc-v2-20261023/README.md)
+提供四分片输入、源码及安装器；无需个人电脑中转或R2权限。分片还原原包，
+原输入SHA/科学配置不变，数据原许可和署名一并保留。
+
 [启动与恢复说明](experiments/hpc_recalibration_v2/README.md)、
 [科研方案与文献核查](docs/paper2_hpc_v2_literature_and_scientific_design_20261023.md)
 和[实际交付报告](research_logs/paper2_hpc_v2_20261023/REPORT.md)已完成。

@@ -6,6 +6,12 @@
 
 ## 直接启动
 
+现在可以在学校终端**直接从GitHub下载**，无需先下载到个人电脑。
+[完整入口与一行命令](../../releases/paper2-hpc-v2-20261023/README.md)
+使用固定版本分片下载、断点续传及原包SHA校验，随后调用本安装器。
+下载公开文件无需token；首次提交训练时仍在终端隐藏输入GitHub token。
+下面保留手动离线上传方式，作为网络不可达时的替代路径。
+
 将下列三个文件上传到 `/public/home/zhuziyuan/incoming/`：
 
 1. `install_offline.sh`
@@ -146,6 +152,9 @@ Cloudflare R2原数据前缀为
 `few-shot-mi-eeg/datasets/kumar2024/nm000177/v1.0.5`；本次离线输入与源码
 使用新的版本前缀和完整GET/SHA回执，不重复下载整套原EDF。
 云端已有R2权限不等于学校已配置R2权限；没有把云凭据放进包或复制到学校。
+作者2026-10-23明确要求直接GitHub下载后，同一输入包以四个小于100MB的
+分片发布到仓库，保留原CC BY 4.0及完整来源署名；输入字节未改动。
+此下载路径不依赖R2。
 学校checkpoint首先持久保存 `/public/home`，GitHub只传进度/指标。后续
 R2归档可在已有安全权限的控制环境使用仓库 `scripts/sync_research_r2.py`
 上传已完成原件并完整GET校验；当前不声称学校已实现自动R2上传。

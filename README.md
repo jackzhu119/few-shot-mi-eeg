@@ -2,6 +2,10 @@
 
 ## 2026年10月23日：学校三A100研究扩展
 
+[学校终端一行直接下载](releases/paper2-hpc-v2-20261023/README.md)：
+代码、安装脚本及125MB输入均已提供GitHub路径，自动续传、拼接与SHA核验；
+无需先下载到个人电脑，下载不依赖R2。
+
 [一行启动／断点继续](experiments/hpc_recalibration_v2/README.md) ·
 [新方法比较与文献依据](docs/paper2_hpc_v2_literature_and_scientific_design_20261023.md) ·
 [交付与验证](research_logs/paper2_hpc_v2_20261023/REPORT.md)。

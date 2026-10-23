@@ -1,0 +1,19 @@
+{
+  "observed_utc": "2026-10-23T10:39:27.823480+00:00",
+  "command": "/workspace/.venvs/few-shot-mi-eeg/bin/python -m pytest -q tests/test_hpc_v2_direct_download.py",
+  "stdout": "13 passed in 0.05s",
+  "exit_code": 0,
+  "ruff": "All checks passed!",
+  "git_diff_check_exit_code": 0,
+  "files": [
+    {
+      "path": "experiments/hpc_recalibration_v2/download_on_hpc.py",
+      "sha256": "5644519b82a4c33447778009e4e2b566e6132918e9d8571f08ea5efc7ff9ae81"
+    },
+    {
+      "path": "tests/test_hpc_v2_direct_download.py",
+      "sha256": "d4cca292d4de2b4c9a819fdd9f9b865aca195e732abe55f6ea7bd24d839af607"
+    }
+  ],
+  "scope": "download-layer tests only; existing scientific code package unmodified"
+}
