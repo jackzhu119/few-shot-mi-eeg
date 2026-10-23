@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "audited_utc": "2026-10-23T10:31:16.152843+00:00",
+  "scope": "Independent publication-integrity and visible-schema check of the exact existing input archive; no model fitting, inference, new scientific/ethics approval or credential reading",
+  "archive": "paper2-hpc-v2-kumar-dev-inputs.tar.gz",
+  "archive_bytes": 125283270,
+  "archive_sha256": "b6f211bbf2ed512fbf30d178d59c67181396c98d0ec122812519ee95a9aa3e0a",
+  "verified_regular_members": 93,
+  "manifest_listed_payloads": 92,
+  "manifest_itself_sha256": "7ae1e0abd13f34aedc71716da8c202335b0cb5ee69b0ba378b98163e6d43de97",
+  "all_manifest_lengths_and_sha256_match": true,
+  "expected_member_allowlist_match": true,
+  "no_symlinks_or_path_escape": true,
+  "npz_count": 78,
+  "npz_keys": [
+    "x",
+    "y",
+    "trial_id",
+    "run_id"
+  ],
+  "npz_no_object_pickle_arrays": true,
+  "npz_total_trials": 2381,
+  "source_events": 2400,
+  "included_events": 2381,
+  "excluded_events": 19,
+  "credential_shaped_fields_or_strings_found": [],
+  "model_checkpoint_or_weight_files_found": [],
+  "private_chat_or_credential_files_found": [],
+  "direct_participant_name_contact_birth_fields_found": [],
+  "metadata_retained": {
+    "coded_participant_run_trial_ids": true,
+    "public_source_acquisition_time_fields": 2400,
+    "note": "These are original public source metadata; the audit does not assert that all metadata are anonymous or prove absence of every possible identifying signal."
+  },
+  "source_attribution": {
+    "local_evidence_path": "data/public_eeg/kumar2024/nm000177/v1.0.5/dataset_description.json",
+    "local_evidence_sha256": "3ec4afc49c56dcd35be7c1fe8318a1c463983e1a630a42419bb235c66439a747",
+    "Name": "Multi-session longitudinal motor imagery EEG dataset (Kumar et al. 2024)",
+    "Version": "1.0.5",
+    "License": "CC-BY-4.0",
+    "Authors": [
+      "Satyam Kumar",
+      "Hussein Alawieh",
+      "Frigyes Samuel Racz",
+      "Rawan Fakhreddine",
+      "Jose del R. Millan"
+    ],
+    "DatasetDOI": "10.82901/nemar.nm000177",
+    "ReferencesAndLinks": [
+      "https://zenodo.org/records/10694880",
+      "10.1093/pnasnexus/pgae076"
+    ],
+    "license_url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "publication_authorization": {
+    "source": "Latest user instruction in this chat on 2026-10-23 asks to put the download material on GitHub for direct school-server download",
+    "scope": "The existing prepared development-input package as a repository Release asset",
+    "supersedes": "Earlier operational instruction to keep this input archive private; does not change source ownership/license or authorize publication of model weights or credentials"
+  },
+  "sealed_archive_unchanged": true,
+  "historical_readme_note": "README_INPUTS.txt retains its old keep-EEG-private delivery instruction. The latest explicit user distribution request supersedes that operational instruction; preserve original tar bytes and supply current DATA_ATTRIBUTION.txt/Release notes separately.",
+  "limitation": "This audit checks exact expected paths, array schemas, text keys and recognizable credential patterns. It is not a guarantee of exhaustive secret or personal-information detection in arbitrary content.",
+  "failures": []
+}

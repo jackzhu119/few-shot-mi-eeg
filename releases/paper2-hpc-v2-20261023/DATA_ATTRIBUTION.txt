@@ -1,0 +1,32 @@
+Input asset: paper2-hpc-v2-kumar-dev-inputs.tar.gz
+Bytes: 125283270
+SHA256: b6f211bbf2ed512fbf30d178d59c67181396c98d0ec122812519ee95a9aa3e0a
+
+Source authors (as recorded in the versioned dataset description):
+Satyam Kumar; Hussein Alawieh; Frigyes Samuel Racz; Rawan Fakhreddine;
+Jose del R. Millan.
+
+Multi-session longitudinal motor imagery EEG dataset (Kumar et al. 2024).
+NEMAR nm000177, version 1.0.5.
+Dataset DOI: https://doi.org/10.82901/nemar.nm000177
+Original source: https://zenodo.org/records/10694880
+Original article: https://doi.org/10.1093/pnasnexus/pgae076
+Correction: https://doi.org/10.1093/pnasnexus/pgae137
+Source license: CC BY 4.0, https://creativecommons.org/licenses/by/4.0/
+
+Changes: development-participant subset (sub-1/4/7/10/13/16); existing
+cue-aligned 5-second complete windows; 22-channel CAR; 8-30Hz zero-phase
+order-4 Butterworth filtering; 512-to-128Hz polyphase resampling; float32
+volt arrays; canonical NPZ role partitions and explicit trial/run identities.
+Prepared by the few-shot-mi-eeg project. No new scientific fit or prediction
+was performed to create the package. A complete window does not establish
+sustained motor imagery throughout the entire window.
+
+The original creators retain their data authorship and license. The project's
+MIT license applies to its original software, not to EEG ownership. Publication
+here does not imply endorsement by the source authors. Preserve this attribution
+when redistributing or adapting these source-derived arrays.
+
+Distribution change: on 23 October 2026 the project author explicitly requested
+GitHub-hosted direct downloads. The archive's earlier local-only delivery note
+is retained unchanged as historical text and superseded for this release.
