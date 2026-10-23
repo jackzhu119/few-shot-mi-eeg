@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "task_date": "2026-10-23",
+  "created_at_utc": "2026-10-23T10:09:01.273998+00:00",
+  "purpose": "Public text-only evidence snapshot from completed historical component analyses; no scientific re-execution",
+  "source_component_repository": "/workspace/private_model_receipts/paper2-component-followup-20261016/data_package_portable_check/run02/extracted/component/repository",
+  "historical_git_main_reference": "04d21b06a7acc225391958556220e7cdb2bcffbd",
+  "payload_count": 8,
+  "payload_bytes": 118169,
+  "payloads": [
+    {
+      "snapshot_file": "budget_cohort_paired_gains.csv",
+      "source_relative_to_component_repository": "research_logs/kumar_component_followup_20261016/budget_summary/run01/cohort_budget_paired_gains.csv",
+      "bytes": 31203,
+      "sha256": "f03c37fc8739426b88b846bbe800571f542106af77b89f420c50e272ad5cf600",
+      "copied_byte_identical": true
+    },
+    {
+      "snapshot_file": "budget_cohort_means.csv",
+      "source_relative_to_component_repository": "research_logs/kumar_component_followup_20261016/budget_summary/run01/cohort_budget_summary.csv",
+      "bytes": 19007,
+      "sha256": "786d75786d2501cf1f5c7640e2ad59f4d70cce93a8c98c30ab1c3cdd577dd525",
+      "copied_byte_identical": true
+    },
+    {
+      "snapshot_file": "budget_participant_endpoints.csv",
+      "source_relative_to_component_repository": "research_logs/kumar_component_followup_20261016/budget_summary/run01/participant_budget_endpoints.csv",
+      "bytes": 28934,
+      "sha256": "389ee686b42e7963b1fcdf560a6a9861089e37534e63971896ad37e3bfec1f9c",
+      "copied_byte_identical": true
+    },
+    {
+      "snapshot_file": "budget_original_RESULTS_REVIEW.md",
+      "source_relative_to_component_repository": "research_logs/kumar_component_followup_20261016/budget_summary/run01/RESULTS_REVIEW.md",
+      "bytes": 10110,
+      "sha256": "a0341666ca0e4db420d0e36b75d4b2c75014908797041c12bbc0f4fe969e45ad",
+      "copied_byte_identical": true
+    },
+    {
+      "snapshot_file": "phase_cohort_paired_contrasts.csv",
+      "source_relative_to_component_repository": "research_logs/kumar_component_followup_20261016/phase_summary/run01/paired_contrasts_all_scopes.csv",
+      "bytes": 10206,
+      "sha256": "fe7114fb22677f4bfdefc3798bde023564c11552bd7d3c6f347206991a304931",
+      "copied_byte_identical": true
+    },
+    {
+      "snapshot_file": "phase_original_REPORT.md",
+      "source_relative_to_component_repository": "research_logs/kumar_component_followup_20261016/phase_summary/run01/REPORT.md",
+      "bytes": 7204,
+      "sha256": "c3d92647a4f8cccc5f08a83afed95e95be67700412e01ba9b39f47e98e84b5f8",
+      "copied_byte_identical": true
+    },
+    {
+      "snapshot_file": "gain_policy_summary.csv",
+      "source_relative_to_component_repository": "research_logs/kumar_component_followup_20261016/gain_independent_audit/run01/policy_summary_for_manuscript.csv",
+      "bytes": 5107,
+      "sha256": "0d1d66e41d07054fc5b2d19665d4f3799bdda6cae746f62e5646251c86dd5485",
+      "copied_byte_identical": true
+    },
+    {
+      "snapshot_file": "gain_original_failed_launcher_REPORT.md",
+      "source_relative_to_component_repository": "research_logs/kumar_component_followup_20261016/gain_independent_audit/run01/REPORT.md",
+      "bytes": 6398,
+      "sha256": "5d5651a8669d3732ddf9a51be9d7e7ca0d5f18c8cf8c058e83fc9405ff746c01",
+      "copied_byte_identical": true
+    }
+  ],
+  "quoted_table_checks": [
+    {
+      "claim": "remaining12 full-support EA minus full refit, pp",
+      "raw_values": {
+        "mean_gain_pp": "5.298069167170802",
+        "CI95_low_pp": "2.8091695654365805",
+        "CI95_high_pp": "8.263953165960878"
+      },
+      "display_multiplier": 1,
+      "rounded_two_decimals": [
+        "5.30",
+        "2.81",
+        "8.26"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "remaining12 full minus LDA at 4 labels, pp",
+      "raw_values": {
+        "mean_gain_pp": "-0.08217382536801777",
+        "CI95_low_pp": "-2.954617866505344",
+        "CI95_high_pp": "2.5355527828191162"
+      },
+      "display_multiplier": 1,
+      "rounded_two_decimals": [
+        "-0.08",
+        "-2.95",
+        "2.54"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "remaining12 full minus LDA at 8 labels, pp",
+      "raw_values": {
+        "mean_gain_pp": "1.1755898366606172",
+        "CI95_low_pp": "-1.354428186126235",
+        "CI95_high_pp": "3.9101280500100826"
+      },
+      "display_multiplier": 1,
+      "rounded_two_decimals": [
+        "1.18",
+        "-1.35",
+        "3.91"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "remaining12 full minus LDA at 12 labels, pp",
+      "raw_values": {
+        "mean_gain_pp": "2.896047590239968",
+        "CI95_low_pp": "-1.116264619883041",
+        "CI95_high_pp": "7.015217911877395"
+      },
+      "display_multiplier": 1,
+      "rounded_two_decimals": [
+        "2.90",
+        "-1.12",
+        "7.02"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "remaining12 full-support ea_csp_lda mean BA percent",
+      "raw_values": {
+        "mean_BA": "0.7065681084896148"
+      },
+      "display_multiplier": 100,
+      "rounded_two_decimals": [
+        "70.66"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "remaining12 full-support refit_csp_lda mean BA percent",
+      "raw_values": {
+        "mean_BA": "0.6535874168179069"
+      },
+      "display_multiplier": 100,
+      "rounded_two_decimals": [
+        "65.36"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "conditional n9 cue5s full-minus-frozen, pp",
+      "raw_values": {
+        "mean_difference_ba": "0.020640633271352238",
+        "ci_low_ba": "-0.03728857655860364",
+        "ci_high_ba": "0.08168472313338154"
+      },
+      "display_multiplier": 100,
+      "rounded_two_decimals": [
+        "2.06",
+        "-3.73",
+        "8.17"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "conditional n9 task2s full-minus-frozen, pp",
+      "raw_values": {
+        "mean_difference_ba": "0.032138989725763",
+        "ci_low_ba": "0.0008481891186569168",
+        "ci_high_ba": "0.06563410457743532"
+      },
+      "display_multiplier": 100,
+      "rounded_two_decimals": [
+        "3.21",
+        "0.08",
+        "6.56"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "conditional n9 paired_gain_change_task2s_minus_cue5s full-minus-frozen, pp",
+      "raw_values": {
+        "mean_difference_ba": "0.011498356454410762",
+        "ci_low_ba": "-0.055495901496944305",
+        "ci_high_ba": "0.07216315962422125"
+      },
+      "display_multiplier": 100,
+      "rounded_two_decimals": [
+        "1.15",
+        "-5.55",
+        "7.22"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "remaining12 Ridge minus full refit, pp",
+      "raw_values": {
+        "gain_vs_full_refit_BA_mean": "-0.04466449889090541",
+        "gain_vs_full_refit_BA_ci95_low": "-0.07937284482758619",
+        "gain_vs_full_refit_BA_ci95_high": "-0.013163969550312593"
+      },
+      "display_multiplier": 100,
+      "rounded_two_decimals": [
+        "-4.47",
+        "-7.94",
+        "-1.32"
+      ],
+      "pass": true
+    }
+  ],
+  "verification_scope": {
+    "byte_identical_copy": true,
+    "source_files_unchanged": true,
+    "utf8_text_only": true,
+    "quoted_values_checked_against_existing_rows": true,
+    "new_fit": false,
+    "new_query_inference": false,
+    "new_bootstrap": false,
+    "new_r2_get": false,
+    "new_parent_acceptance": false
+  },
+  "gain_execution_status": {
+    "launcher_exit": 1,
+    "monitor_exception": "KeyError: VmRSS",
+    "worker_exit": "not_independently_recorded",
+    "saved_result_integrity_and_arithmetic": "previous_independent_audit_report_preserved",
+    "clean_success_claimed": false
+  }
+}

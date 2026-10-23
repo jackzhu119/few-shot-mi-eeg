@@ -1,0 +1,100 @@
+{
+  "observed_utc": "2026-10-23T10:12:07.076952+00:00",
+  "scope": "software_only_synthetic_tests_plus_prepared_real_input_metadata",
+  "python": "3.11.16",
+  "pytest_command": "/workspace/.venvs/few-shot-mi-eeg/bin/python -m pytest -q tests/test_hpc_v2_data_baselines.py tests/test_hpc_v2_training.py tests/test_hpc_v2_summarize.py tests/test_hpc_v2_slurm.py tests/test_hpc_v2_github_sync.py tests/test_hpc_v2_offline.py",
+  "pytest_observed_stdout": "97 passed in 5.22s",
+  "pytest_exit_code": 0,
+  "ruff": "All checks passed!",
+  "bash_n_exit_code": 0,
+  "git_diff_check_exit_code": 0,
+  "hpc_or_cuda_test_performed": false,
+  "scientific_model_fits": 0,
+  "scientific_forward_passes": 0,
+  "changed_code_files": {
+    "experiments/hpc_recalibration_v2/NOTICE.md": {
+      "bytes": 1375,
+      "sha256": "1ee591404f7d8b926a5810f61f4b8a9251216a9e78ae80d9c60072eca793d72a"
+    },
+    "experiments/hpc_recalibration_v2/README.md": {
+      "bytes": 9621,
+      "sha256": "c6277ab457adbec38c6da35d89d6b514c4db470035e544bc581b4532656a461c"
+    },
+    "experiments/hpc_recalibration_v2/bootstrap.py": {
+      "bytes": 3625,
+      "sha256": "fa94be643868f23ae20df000536e4cfc90256eb427ae5857cb8a19c41fdb10e4"
+    },
+    "experiments/hpc_recalibration_v2/build_offline.py": {
+      "bytes": 15730,
+      "sha256": "bbdcc2a8c3de2f0b1acd7cac56870ea7d3f0f4076aedc822756d94dd041b782b"
+    },
+    "experiments/hpc_recalibration_v2/configs/input_archive_receipt.json": {
+      "bytes": 408,
+      "sha256": "ce8beb02f7f6934968a52bdf80455beee865fcd7cff13ab451522f65d973ac7a"
+    },
+    "experiments/hpc_recalibration_v2/configs/input_manifest.json": {
+      "bytes": 23584,
+      "sha256": "7ae1e0abd13f34aedc71716da8c202335b0cb5ee69b0ba378b98163e6d43de97"
+    },
+    "experiments/hpc_recalibration_v2/configs/kumar_dev.json": {
+      "bytes": 2305,
+      "sha256": "bddaef48333d747c50fca91addf43e8d17481ec66f7f1ff41db213fdbdf0d85c"
+    },
+    "experiments/hpc_recalibration_v2/configs/tasks_kumar_dev.json": {
+      "bytes": 74568,
+      "sha256": "1aebf942eb085aac963f23e1e92389105d17514403d00725d94db9bd9a4f88fb"
+    },
+    "experiments/hpc_recalibration_v2/hpc_recalibration/__init__.py": {
+      "bytes": 108,
+      "sha256": "7e57169c86b53c8a383eb0d675f25fa4547a442be9725041947af2d7e1670dec"
+    },
+    "experiments/hpc_recalibration_v2/hpc_recalibration/checkpoint.py": {
+      "bytes": 4929,
+      "sha256": "fabe6d2d6e9a8a4851b8fa41941dd5e9608ac46787dd3b7036587d9a316b5f5f"
+    },
+    "experiments/hpc_recalibration_v2/hpc_recalibration/classical.py": {
+      "bytes": 21930,
+      "sha256": "7a08d0ebee294799e28e061720c8257889fdee85d1a5c97e9647545a8b76aee5"
+    },
+    "experiments/hpc_recalibration_v2/hpc_recalibration/data.py": {
+      "bytes": 15278,
+      "sha256": "f9cc4525212f1f9d80e58ca9aa3ccaa762e34afeac05297d0795c364c424adff"
+    },
+    "experiments/hpc_recalibration_v2/hpc_recalibration/github_sync.py": {
+      "bytes": 20653,
+      "sha256": "ccfd9168521c5d02d49f9cb22897da3d79b475505ae986ad4bd7b18ef1a6dc9a"
+    },
+    "experiments/hpc_recalibration_v2/hpc_recalibration/preflight.py": {
+      "bytes": 15806,
+      "sha256": "c65a5e959565b691b544610971973034c22aac2b3a07b6cbaf0b0c998f2447ae"
+    },
+    "experiments/hpc_recalibration_v2/hpc_recalibration/slurm.py": {
+      "bytes": 10739,
+      "sha256": "c013d235af89c08e4e904acfd0d4572aa3001dc06b8a99d97dcd2931601c9780"
+    },
+    "experiments/hpc_recalibration_v2/hpc_recalibration/summarize.py": {
+      "bytes": 18795,
+      "sha256": "6d22a7424fbeb61376e018107d05e61c5e097f104dfd5d8348a03f5bf80222f3"
+    },
+    "experiments/hpc_recalibration_v2/hpc_recalibration/training.py": {
+      "bytes": 36262,
+      "sha256": "b1acb805c6b8b83e735d8da72f53a90ef3721ccb163520a1bdc2bbcedb3698dd"
+    },
+    "experiments/hpc_recalibration_v2/install_offline.sh": {
+      "bytes": 2049,
+      "sha256": "3476346c1c71c92b91517aafdb08803a06a85b09de06f7c9562f6012f4fac508"
+    },
+    "experiments/hpc_recalibration_v2/job.sh": {
+      "bytes": 2251,
+      "sha256": "a839908ac53cfc8287ab5dc4df4aceebacd30a2d50dc8da172c1cc91ecfc8695"
+    },
+    "experiments/hpc_recalibration_v2/launch.sh": {
+      "bytes": 379,
+      "sha256": "0fda6a0bb972997cdd98e4e3b5ccc02da5684f4ca14477e4534b0098e3618314"
+    },
+    "experiments/hpc_recalibration_v2/prepare_kumar_existing.py": {
+      "bytes": 15477,
+      "sha256": "a471a78a470242c9750abc0d3b1a377f4bf89c814741c9cc01ffe4e56843aed9"
+    }
+  }
+}

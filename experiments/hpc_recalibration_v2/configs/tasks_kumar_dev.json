@@ -1,0 +1,1296 @@
+{
+  "scientific_version": "kumar-cue5s-hpc-v2.0.0",
+  "description": "6 classical participant tasks followed by 18 explicit new-V2 source/adaptation tasks; old54 unchanged",
+  "tasks": [
+    {
+      "task_id": "kumar-v2-sub-1-classical",
+      "dataset": "Kumar2024",
+      "participant": "sub-1",
+      "source_train": "kumar_cue5s_v1/sub-1/ses-0_source_train.npz",
+      "source_validation": "kumar_cue5s_v1/sub-1/ses-0_source_validation.npz",
+      "source_query": "kumar_cue5s_v1/sub-1/ses-0_source_query.npz",
+      "targets": [
+        {
+          "session": "ses-1",
+          "support": "kumar_cue5s_v1/sub-1/ses-1_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-1/ses-1_target_query.npz"
+        },
+        {
+          "session": "ses-2",
+          "support": "kumar_cue5s_v1/sub-1/ses-2_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-1/ses-2_target_query.npz"
+        },
+        {
+          "session": "ses-3",
+          "support": "kumar_cue5s_v1/sub-1/ses-3_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-1/ses-3_target_query.npz"
+        },
+        {
+          "session": "ses-4",
+          "support": "kumar_cue5s_v1/sub-1/ses-4_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-1/ses-4_target_query.npz"
+        },
+        {
+          "session": "ses-5",
+          "support": "kumar_cue5s_v1/sub-1/ses-5_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-1/ses-5_target_query.npz"
+        }
+      ],
+      "prior_test_exposure": "all_Kumar_query_results_previously_exposed",
+      "input_sha256": {
+        "kumar_cue5s_v1/sub-1/ses-0_source_train.npz": "0e12bedbd9eab11ab4af46ebf34b4c2edd34ac3032649cf0deb74f6b715af950",
+        "kumar_cue5s_v1/sub-1/ses-0_source_validation.npz": "2fea13ee5f9621416a2874eb8417e29185b77ac486c67c7a78b959de358527c4",
+        "kumar_cue5s_v1/sub-1/ses-0_source_query.npz": "7279dd07942bec05d0692837e8ee1a9b5b42586123d949c43df525b50e9c0f30",
+        "kumar_cue5s_v1/sub-1/ses-1_target_support.npz": "5572179374445e1d7efb655ea53ee1ded62b3e98b628c45ac89758a8d0dc8ca7",
+        "kumar_cue5s_v1/sub-1/ses-1_target_query.npz": "80dcc1abbf740c498cac74ddf4252aedbaacece8e0097ec5ef010fcf66088278",
+        "kumar_cue5s_v1/sub-1/ses-2_target_support.npz": "e22aeb4b86ac9aa4150606f57c7ca46e9c8f6b4587571a1609be17b7afe1d72c",
+        "kumar_cue5s_v1/sub-1/ses-2_target_query.npz": "35d367989b2029cdae48bd862594d1e669c232abf7dd9001ddddd59905f63d3e",
+        "kumar_cue5s_v1/sub-1/ses-3_target_support.npz": "51ea7495fde10688b61434b9165e7e98591fc63d282a7a4d8dfff5ec98a68ba5",
+        "kumar_cue5s_v1/sub-1/ses-3_target_query.npz": "d9954d7414fbe48e40bd702d9619c96abe09510d2d325fe386b3fbacba2d7f96",
+        "kumar_cue5s_v1/sub-1/ses-4_target_support.npz": "65c884a7f402dc4ddcba7a6429758c22bc511de9f59aa80b1b7424203a421826",
+        "kumar_cue5s_v1/sub-1/ses-4_target_query.npz": "9ce9eeb33d49e101809358de5edc28cda20dad375e01575b0728d000f2020eb0",
+        "kumar_cue5s_v1/sub-1/ses-5_target_support.npz": "3f4afd9854c9b6c86246fc7c3dc547a4f0fdbd626c02b3f062104b81caa37793",
+        "kumar_cue5s_v1/sub-1/ses-5_target_query.npz": "b0add63d6f7d90d41adb944bfdbe07fafd80999a2f6b622bf9c953fee2ff87de"
+      },
+      "synthetic": false,
+      "family": "classical"
+    },
+    {
+      "task_id": "kumar-v2-sub-4-classical",
+      "dataset": "Kumar2024",
+      "participant": "sub-4",
+      "source_train": "kumar_cue5s_v1/sub-4/ses-0_source_train.npz",
+      "source_validation": "kumar_cue5s_v1/sub-4/ses-0_source_validation.npz",
+      "source_query": "kumar_cue5s_v1/sub-4/ses-0_source_query.npz",
+      "targets": [
+        {
+          "session": "ses-1",
+          "support": "kumar_cue5s_v1/sub-4/ses-1_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-4/ses-1_target_query.npz"
+        },
+        {
+          "session": "ses-2",
+          "support": "kumar_cue5s_v1/sub-4/ses-2_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-4/ses-2_target_query.npz"
+        },
+        {
+          "session": "ses-3",
+          "support": "kumar_cue5s_v1/sub-4/ses-3_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-4/ses-3_target_query.npz"
+        },
+        {
+          "session": "ses-4",
+          "support": "kumar_cue5s_v1/sub-4/ses-4_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-4/ses-4_target_query.npz"
+        },
+        {
+          "session": "ses-5",
+          "support": "kumar_cue5s_v1/sub-4/ses-5_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-4/ses-5_target_query.npz"
+        }
+      ],
+      "prior_test_exposure": "all_Kumar_query_results_previously_exposed",
+      "input_sha256": {
+        "kumar_cue5s_v1/sub-4/ses-0_source_train.npz": "f4cb4e675a0f832c21f73b2392c59a8672a3ed43c77be303757a099e334faa24",
+        "kumar_cue5s_v1/sub-4/ses-0_source_validation.npz": "509a7545af8ba48ad180731f714b7c4920a72ad6f127e3b2203dbc2fbefe5b3a",
+        "kumar_cue5s_v1/sub-4/ses-0_source_query.npz": "267d03093fd44b27b8f7aea12dd73ab908cf4bc5b9e1cfdf78aaf27397770b39",
+        "kumar_cue5s_v1/sub-4/ses-1_target_support.npz": "dcd892eb25ba97f33701a2b71856125768eb3915888325cfcdc45a7f71b06885",
+        "kumar_cue5s_v1/sub-4/ses-1_target_query.npz": "39d4645cc7acd9403ff99e1b92c2e7eac9092de03ada84d1d85d271425ffc65d",
+        "kumar_cue5s_v1/sub-4/ses-2_target_support.npz": "c1013648937bf227b1a3878f92c2679cb612422bac8fd9a8f5c4c5d81b59d732",
+        "kumar_cue5s_v1/sub-4/ses-2_target_query.npz": "bac475b7c76d7b5b64b4997aba682bb2a8ecf2a6b4d3996ca6981c6838e9f787",
+        "kumar_cue5s_v1/sub-4/ses-3_target_support.npz": "1ce687af1e31ca8f121d2cb65cc9864c4e386d839bcad2e0c396c4d21f130c90",
+        "kumar_cue5s_v1/sub-4/ses-3_target_query.npz": "76af795d1f3567f0ea4829129eeaa3228596346bc91c5a663d027cf5af609011",
+        "kumar_cue5s_v1/sub-4/ses-4_target_support.npz": "4e676cb241bbdfbf21aa4dd9758d86b219d9ef46f8e5d25b741026d8e2217e97",
+        "kumar_cue5s_v1/sub-4/ses-4_target_query.npz": "f06da12e5f913b3b135abfc5eafe9c6d5c998f47d7564280a21cd6404d223eee",
+        "kumar_cue5s_v1/sub-4/ses-5_target_support.npz": "c47e9a51126413f61c63ac789acd2bb7433c1d45a5e7cecb670e717032fa12f7",
+        "kumar_cue5s_v1/sub-4/ses-5_target_query.npz": "b3870096617a71e7a0993d7959ab165146e50b678b6638a983b9949a0dcd1a37"
+      },
+      "synthetic": false,
+      "family": "classical"
+    },
+    {
+      "task_id": "kumar-v2-sub-7-classical",
+      "dataset": "Kumar2024",
+      "participant": "sub-7",
+      "source_train": "kumar_cue5s_v1/sub-7/ses-0_source_train.npz",
+      "source_validation": "kumar_cue5s_v1/sub-7/ses-0_source_validation.npz",
+      "source_query": "kumar_cue5s_v1/sub-7/ses-0_source_query.npz",
+      "targets": [
+        {
+          "session": "ses-1",
+          "support": "kumar_cue5s_v1/sub-7/ses-1_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-7/ses-1_target_query.npz"
+        },
+        {
+          "session": "ses-2",
+          "support": "kumar_cue5s_v1/sub-7/ses-2_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-7/ses-2_target_query.npz"
+        },
+        {
+          "session": "ses-3",
+          "support": "kumar_cue5s_v1/sub-7/ses-3_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-7/ses-3_target_query.npz"
+        },
+        {
+          "session": "ses-4",
+          "support": "kumar_cue5s_v1/sub-7/ses-4_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-7/ses-4_target_query.npz"
+        },
+        {
+          "session": "ses-5",
+          "support": "kumar_cue5s_v1/sub-7/ses-5_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-7/ses-5_target_query.npz"
+        }
+      ],
+      "prior_test_exposure": "all_Kumar_query_results_previously_exposed",
+      "input_sha256": {
+        "kumar_cue5s_v1/sub-7/ses-0_source_train.npz": "0cce12cd36bc3bc05725d897264e37086763add5bfc55862ac31456b0af92f1b",
+        "kumar_cue5s_v1/sub-7/ses-0_source_validation.npz": "c61de9636d844e69fd9a17e4ac4ae43d172b7023aca93e390a4250a04783d216",
+        "kumar_cue5s_v1/sub-7/ses-0_source_query.npz": "1d92ca4c502661c73b2a47ac158df41f4b3d8b42f9a0143f1c73a43be7d4bdae",
+        "kumar_cue5s_v1/sub-7/ses-1_target_support.npz": "3a847079a775ff7de6926dbc03a5abe71adec7eeac196dc1aa3d2c5f051520c1",
+        "kumar_cue5s_v1/sub-7/ses-1_target_query.npz": "244298b32d748d91eeb9f37e7603ec717a47ef73ccdacb9d854824a42ff123d9",
+        "kumar_cue5s_v1/sub-7/ses-2_target_support.npz": "3e3affa46afee0cdfd150d2cc8a6a9822ac4f3d36113f4ca240b94f93eece1a8",
+        "kumar_cue5s_v1/sub-7/ses-2_target_query.npz": "e98a0dde1a1ba3f25c3f6de12f5f02896016fffe978ecaf3017fda790298c811",
+        "kumar_cue5s_v1/sub-7/ses-3_target_support.npz": "69f52e1b69da2eaf1bca22de6a938a68726c1c4d794a9266e69ff0b6e3d6de77",
+        "kumar_cue5s_v1/sub-7/ses-3_target_query.npz": "5b53a204b634aadef4dd0a52b70e1b2ba753b5ee6c1365ee481c9f7c8392b6fb",
+        "kumar_cue5s_v1/sub-7/ses-4_target_support.npz": "1544745865c651065b1025cd5683beddd2525c05acdc2af787d2cc86cc30c69d",
+        "kumar_cue5s_v1/sub-7/ses-4_target_query.npz": "f4c21246223615bca77fd0d45045a869632868ffb20f60ac7f545df98cae29ab",
+        "kumar_cue5s_v1/sub-7/ses-5_target_support.npz": "f5c0cf1355a6d7a7ca524d899a82ff4d8484fc26fd10e7451d6a3b466e72a96b",
+        "kumar_cue5s_v1/sub-7/ses-5_target_query.npz": "07622d19aa4284b6acf0ad9023bbf8783de3135bba38b86a669a4b3e1cd335b6"
+      },
+      "synthetic": false,
+      "family": "classical"
+    },
+    {
+      "task_id": "kumar-v2-sub-10-classical",
+      "dataset": "Kumar2024",
+      "participant": "sub-10",
+      "source_train": "kumar_cue5s_v1/sub-10/ses-0_source_train.npz",
+      "source_validation": "kumar_cue5s_v1/sub-10/ses-0_source_validation.npz",
+      "source_query": "kumar_cue5s_v1/sub-10/ses-0_source_query.npz",
+      "targets": [
+        {
+          "session": "ses-1",
+          "support": "kumar_cue5s_v1/sub-10/ses-1_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-10/ses-1_target_query.npz"
+        },
+        {
+          "session": "ses-2",
+          "support": "kumar_cue5s_v1/sub-10/ses-2_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-10/ses-2_target_query.npz"
+        },
+        {
+          "session": "ses-3",
+          "support": "kumar_cue5s_v1/sub-10/ses-3_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-10/ses-3_target_query.npz"
+        },
+        {
+          "session": "ses-4",
+          "support": "kumar_cue5s_v1/sub-10/ses-4_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-10/ses-4_target_query.npz"
+        },
+        {
+          "session": "ses-5",
+          "support": "kumar_cue5s_v1/sub-10/ses-5_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-10/ses-5_target_query.npz"
+        }
+      ],
+      "prior_test_exposure": "all_Kumar_query_results_previously_exposed",
+      "input_sha256": {
+        "kumar_cue5s_v1/sub-10/ses-0_source_train.npz": "6d41649f5de7c93c15b0b562fc571b9be0f49b45dd8cf781b06f0cf7ae2c84c3",
+        "kumar_cue5s_v1/sub-10/ses-0_source_validation.npz": "6310bceb2478dae3574210edd54bbf445fac2fddf1e3c017c2cc754b932e5367",
+        "kumar_cue5s_v1/sub-10/ses-0_source_query.npz": "185069cb46360b83d861f88189be5a3026c468b2707c79bcf0f5cce35a44374d",
+        "kumar_cue5s_v1/sub-10/ses-1_target_support.npz": "655762596af9f5e0a9532a0666e0f2b9fcc402e33d2fecd0e91c2f436b0b7962",
+        "kumar_cue5s_v1/sub-10/ses-1_target_query.npz": "b7fb078993c0ee0425e7b0a4d600251de80b19d029df1502fc33019d5d93e36f",
+        "kumar_cue5s_v1/sub-10/ses-2_target_support.npz": "3c0a693b95ca77177747299cf17523b21fb47e917d70b0c5b9c9e3ff2a25f2e8",
+        "kumar_cue5s_v1/sub-10/ses-2_target_query.npz": "0e88dd9c09ccce9c1df6fba3dbd5ef5db56204753892a7e9ac51efee50dba863",
+        "kumar_cue5s_v1/sub-10/ses-3_target_support.npz": "78f31e9f514b1e536e4d2b35b527107d1f06c0ab4eea7cf06b99367b4f313ee3",
+        "kumar_cue5s_v1/sub-10/ses-3_target_query.npz": "e764032bee046d9fe9a6963385ddacaed11dfccfb55f18a73d91fb57730113a8",
+        "kumar_cue5s_v1/sub-10/ses-4_target_support.npz": "81d957b602edf431eb6eda81d8d6c8a11d0cbb2e0f89be3a83d7deab632c2fa6",
+        "kumar_cue5s_v1/sub-10/ses-4_target_query.npz": "bded19d957ea2c70ae6cdac49a9d7221a87ad620959dcd83ee29d0b473492378",
+        "kumar_cue5s_v1/sub-10/ses-5_target_support.npz": "7ca4b46c8db38542bfee1062c2a8f0b2a114d491fd96d59e8a0ff8df237d6380",
+        "kumar_cue5s_v1/sub-10/ses-5_target_query.npz": "8efb00d026e42ba5cc505154592986a0459f9c670a0b5fddd02321bd7a4121b6"
+      },
+      "synthetic": false,
+      "family": "classical"
+    },
+    {
+      "task_id": "kumar-v2-sub-13-classical",
+      "dataset": "Kumar2024",
+      "participant": "sub-13",
+      "source_train": "kumar_cue5s_v1/sub-13/ses-0_source_train.npz",
+      "source_validation": "kumar_cue5s_v1/sub-13/ses-0_source_validation.npz",
+      "source_query": "kumar_cue5s_v1/sub-13/ses-0_source_query.npz",
+      "targets": [
+        {
+          "session": "ses-1",
+          "support": "kumar_cue5s_v1/sub-13/ses-1_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-13/ses-1_target_query.npz"
+        },
+        {
+          "session": "ses-2",
+          "support": "kumar_cue5s_v1/sub-13/ses-2_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-13/ses-2_target_query.npz"
+        },
+        {
+          "session": "ses-3",
+          "support": "kumar_cue5s_v1/sub-13/ses-3_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-13/ses-3_target_query.npz"
+        },
+        {
+          "session": "ses-4",
+          "support": "kumar_cue5s_v1/sub-13/ses-4_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-13/ses-4_target_query.npz"
+        },
+        {
+          "session": "ses-5",
+          "support": "kumar_cue5s_v1/sub-13/ses-5_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-13/ses-5_target_query.npz"
+        }
+      ],
+      "prior_test_exposure": "all_Kumar_query_results_previously_exposed",
+      "input_sha256": {
+        "kumar_cue5s_v1/sub-13/ses-0_source_train.npz": "01fa54b2206c3c60697566b8950248e881692372120d3f5f3c62f11a6d4a3314",
+        "kumar_cue5s_v1/sub-13/ses-0_source_validation.npz": "6bebc6b2299915148cf2a411d96c747869a656f568195e8a2d23a5a82cd43dba",
+        "kumar_cue5s_v1/sub-13/ses-0_source_query.npz": "59c2a695da7f6a0d439ee72125380b16b49fad45fb1013a6017f9ef9a6be3648",
+        "kumar_cue5s_v1/sub-13/ses-1_target_support.npz": "eb4250ce8eea3727bd74cc9b12beb67407c79e2e17b55a813eabe16a897a7e06",
+        "kumar_cue5s_v1/sub-13/ses-1_target_query.npz": "4d601ac88e6c3d6adbda73b3cdf71a572bf7f0108f1fa5a28ae53d99d9bfdc7e",
+        "kumar_cue5s_v1/sub-13/ses-2_target_support.npz": "6f8bf37aa92fa57bbcbac9ca8775ae7f540ef4810f548b8a3c9be46ae0db70d4",
+        "kumar_cue5s_v1/sub-13/ses-2_target_query.npz": "66ff68fb4a8c74070b4c09d46d10c3780fecdf65fd7cef50ee520451f7a412d7",
+        "kumar_cue5s_v1/sub-13/ses-3_target_support.npz": "6435c2175faa95af2997f65337941f0cb5f976a6a818d8f222ed9dd3de1132c6",
+        "kumar_cue5s_v1/sub-13/ses-3_target_query.npz": "5322439c02fa2da35e73f4326b61ad6f49fa083f28c10d2b91a66a98e944a71b",
+        "kumar_cue5s_v1/sub-13/ses-4_target_support.npz": "4b53caf88317ad74fee8ca5f86da0732450a2c42379df820b0a75689707075a3",
+        "kumar_cue5s_v1/sub-13/ses-4_target_query.npz": "4eeb482a6fb036c7c7aa34443ad2ffe40f18c416907767bb88139fa10afeca05",
+        "kumar_cue5s_v1/sub-13/ses-5_target_support.npz": "9d655d4c271570c72ea61906a5f0474d789cc4a08ad5caf3b7b0fae5bb50275b",
+        "kumar_cue5s_v1/sub-13/ses-5_target_query.npz": "a851585de15ef09d09a4d40d677415e8e150a7845e5f304a4437348f363b6270"
+      },
+      "synthetic": false,
+      "family": "classical"
+    },
+    {
+      "task_id": "kumar-v2-sub-16-classical",
+      "dataset": "Kumar2024",
+      "participant": "sub-16",
+      "source_train": "kumar_cue5s_v1/sub-16/ses-0_source_train.npz",
+      "source_validation": "kumar_cue5s_v1/sub-16/ses-0_source_validation.npz",
+      "source_query": "kumar_cue5s_v1/sub-16/ses-0_source_query.npz",
+      "targets": [
+        {
+          "session": "ses-1",
+          "support": "kumar_cue5s_v1/sub-16/ses-1_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-16/ses-1_target_query.npz"
+        },
+        {
+          "session": "ses-2",
+          "support": "kumar_cue5s_v1/sub-16/ses-2_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-16/ses-2_target_query.npz"
+        },
+        {
+          "session": "ses-3",
+          "support": "kumar_cue5s_v1/sub-16/ses-3_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-16/ses-3_target_query.npz"
+        },
+        {
+          "session": "ses-4",
+          "support": "kumar_cue5s_v1/sub-16/ses-4_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-16/ses-4_target_query.npz"
+        },
+        {
+          "session": "ses-5",
+          "support": "kumar_cue5s_v1/sub-16/ses-5_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-16/ses-5_target_query.npz"
+        }
+      ],
+      "prior_test_exposure": "all_Kumar_query_results_previously_exposed",
+      "input_sha256": {
+        "kumar_cue5s_v1/sub-16/ses-0_source_train.npz": "f2d6928ca5bc462c5516dbdb07c15e2ea0d8bdaf12200dda99c8b78704fd3030",
+        "kumar_cue5s_v1/sub-16/ses-0_source_validation.npz": "af4e9134f855688479e76f9ff06dc7a867201d3fcd7cbf8cbab105d433999727",
+        "kumar_cue5s_v1/sub-16/ses-0_source_query.npz": "8d0575d234dc501578d99891aea0cc19dedd98c82bd1096dbeb4112aa4fcece7",
+        "kumar_cue5s_v1/sub-16/ses-1_target_support.npz": "c7f3c3fb03cb08eecc741941e7fa75f4650793f9d2a18655742965d6a89ccd4d",
+        "kumar_cue5s_v1/sub-16/ses-1_target_query.npz": "c2057101d1bbaa62fdfd92447f091b581f2cd1a962e4f35b6f493762d60eca59",
+        "kumar_cue5s_v1/sub-16/ses-2_target_support.npz": "1125348489abc34530e6d38815c871bae83dd3ac31262b770047111557c44732",
+        "kumar_cue5s_v1/sub-16/ses-2_target_query.npz": "8fecca9ff79e6684dcfcb2884a8617cc3c08cc9448da36c3ad882e6cbbdf5694",
+        "kumar_cue5s_v1/sub-16/ses-3_target_support.npz": "d47944423dcf588fbf5b6ac8aa19ee5620cff846df5e204503438fcea17df9db",
+        "kumar_cue5s_v1/sub-16/ses-3_target_query.npz": "4541cd7c483a5b3b2a37d40be5bf409e505b12d1d7d311c4014921b3a2892692",
+        "kumar_cue5s_v1/sub-16/ses-4_target_support.npz": "273e507a6a8a29e99b3b4fad7072c55862241956bb781ec9bfd2b58bb1894eda",
+        "kumar_cue5s_v1/sub-16/ses-4_target_query.npz": "2fd1f7d0ad0455f68d542341d1b048f625dcd9bf2ffa775569305ad79f68daf0",
+        "kumar_cue5s_v1/sub-16/ses-5_target_support.npz": "306b0ede558d288d119b701cfe99e340790a260e2cead15d92578b6cd8e3fc4f",
+        "kumar_cue5s_v1/sub-16/ses-5_target_query.npz": "6cd0fd084f768beebb91d81de5a97f8d20f43150f57264651fb5f95dad4fad5f"
+      },
+      "synthetic": false,
+      "family": "classical"
+    },
+    {
+      "task_id": "kumar-v2-sub-1-seed20261023",
+      "dataset": "Kumar2024",
+      "participant": "sub-1",
+      "source_train": "kumar_cue5s_v1/sub-1/ses-0_source_train.npz",
+      "source_validation": "kumar_cue5s_v1/sub-1/ses-0_source_validation.npz",
+      "source_query": "kumar_cue5s_v1/sub-1/ses-0_source_query.npz",
+      "targets": [
+        {
+          "session": "ses-1",
+          "support": "kumar_cue5s_v1/sub-1/ses-1_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-1/ses-1_target_query.npz"
+        },
+        {
+          "session": "ses-2",
+          "support": "kumar_cue5s_v1/sub-1/ses-2_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-1/ses-2_target_query.npz"
+        },
+        {
+          "session": "ses-3",
+          "support": "kumar_cue5s_v1/sub-1/ses-3_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-1/ses-3_target_query.npz"
+        },
+        {
+          "session": "ses-4",
+          "support": "kumar_cue5s_v1/sub-1/ses-4_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-1/ses-4_target_query.npz"
+        },
+        {
+          "session": "ses-5",
+          "support": "kumar_cue5s_v1/sub-1/ses-5_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-1/ses-5_target_query.npz"
+        }
+      ],
+      "prior_test_exposure": "all_Kumar_query_results_previously_exposed",
+      "input_sha256": {
+        "kumar_cue5s_v1/sub-1/ses-0_source_train.npz": "0e12bedbd9eab11ab4af46ebf34b4c2edd34ac3032649cf0deb74f6b715af950",
+        "kumar_cue5s_v1/sub-1/ses-0_source_validation.npz": "2fea13ee5f9621416a2874eb8417e29185b77ac486c67c7a78b959de358527c4",
+        "kumar_cue5s_v1/sub-1/ses-0_source_query.npz": "7279dd07942bec05d0692837e8ee1a9b5b42586123d949c43df525b50e9c0f30",
+        "kumar_cue5s_v1/sub-1/ses-1_target_support.npz": "5572179374445e1d7efb655ea53ee1ded62b3e98b628c45ac89758a8d0dc8ca7",
+        "kumar_cue5s_v1/sub-1/ses-1_target_query.npz": "80dcc1abbf740c498cac74ddf4252aedbaacece8e0097ec5ef010fcf66088278",
+        "kumar_cue5s_v1/sub-1/ses-2_target_support.npz": "e22aeb4b86ac9aa4150606f57c7ca46e9c8f6b4587571a1609be17b7afe1d72c",
+        "kumar_cue5s_v1/sub-1/ses-2_target_query.npz": "35d367989b2029cdae48bd862594d1e669c232abf7dd9001ddddd59905f63d3e",
+        "kumar_cue5s_v1/sub-1/ses-3_target_support.npz": "51ea7495fde10688b61434b9165e7e98591fc63d282a7a4d8dfff5ec98a68ba5",
+        "kumar_cue5s_v1/sub-1/ses-3_target_query.npz": "d9954d7414fbe48e40bd702d9619c96abe09510d2d325fe386b3fbacba2d7f96",
+        "kumar_cue5s_v1/sub-1/ses-4_target_support.npz": "65c884a7f402dc4ddcba7a6429758c22bc511de9f59aa80b1b7424203a421826",
+        "kumar_cue5s_v1/sub-1/ses-4_target_query.npz": "9ce9eeb33d49e101809358de5edc28cda20dad375e01575b0728d000f2020eb0",
+        "kumar_cue5s_v1/sub-1/ses-5_target_support.npz": "3f4afd9854c9b6c86246fc7c3dc547a4f0fdbd626c02b3f062104b81caa37793",
+        "kumar_cue5s_v1/sub-1/ses-5_target_query.npz": "b0add63d6f7d90d41adb944bfdbe07fafd80999a2f6b622bf9c953fee2ff87de"
+      },
+      "synthetic": false,
+      "family": "eegnet",
+      "seed": 20261023
+    },
+    {
+      "task_id": "kumar-v2-sub-4-seed20261023",
+      "dataset": "Kumar2024",
+      "participant": "sub-4",
+      "source_train": "kumar_cue5s_v1/sub-4/ses-0_source_train.npz",
+      "source_validation": "kumar_cue5s_v1/sub-4/ses-0_source_validation.npz",
+      "source_query": "kumar_cue5s_v1/sub-4/ses-0_source_query.npz",
+      "targets": [
+        {
+          "session": "ses-1",
+          "support": "kumar_cue5s_v1/sub-4/ses-1_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-4/ses-1_target_query.npz"
+        },
+        {
+          "session": "ses-2",
+          "support": "kumar_cue5s_v1/sub-4/ses-2_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-4/ses-2_target_query.npz"
+        },
+        {
+          "session": "ses-3",
+          "support": "kumar_cue5s_v1/sub-4/ses-3_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-4/ses-3_target_query.npz"
+        },
+        {
+          "session": "ses-4",
+          "support": "kumar_cue5s_v1/sub-4/ses-4_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-4/ses-4_target_query.npz"
+        },
+        {
+          "session": "ses-5",
+          "support": "kumar_cue5s_v1/sub-4/ses-5_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-4/ses-5_target_query.npz"
+        }
+      ],
+      "prior_test_exposure": "all_Kumar_query_results_previously_exposed",
+      "input_sha256": {
+        "kumar_cue5s_v1/sub-4/ses-0_source_train.npz": "f4cb4e675a0f832c21f73b2392c59a8672a3ed43c77be303757a099e334faa24",
+        "kumar_cue5s_v1/sub-4/ses-0_source_validation.npz": "509a7545af8ba48ad180731f714b7c4920a72ad6f127e3b2203dbc2fbefe5b3a",
+        "kumar_cue5s_v1/sub-4/ses-0_source_query.npz": "267d03093fd44b27b8f7aea12dd73ab908cf4bc5b9e1cfdf78aaf27397770b39",
+        "kumar_cue5s_v1/sub-4/ses-1_target_support.npz": "dcd892eb25ba97f33701a2b71856125768eb3915888325cfcdc45a7f71b06885",
+        "kumar_cue5s_v1/sub-4/ses-1_target_query.npz": "39d4645cc7acd9403ff99e1b92c2e7eac9092de03ada84d1d85d271425ffc65d",
+        "kumar_cue5s_v1/sub-4/ses-2_target_support.npz": "c1013648937bf227b1a3878f92c2679cb612422bac8fd9a8f5c4c5d81b59d732",
+        "kumar_cue5s_v1/sub-4/ses-2_target_query.npz": "bac475b7c76d7b5b64b4997aba682bb2a8ecf2a6b4d3996ca6981c6838e9f787",
+        "kumar_cue5s_v1/sub-4/ses-3_target_support.npz": "1ce687af1e31ca8f121d2cb65cc9864c4e386d839bcad2e0c396c4d21f130c90",
+        "kumar_cue5s_v1/sub-4/ses-3_target_query.npz": "76af795d1f3567f0ea4829129eeaa3228596346bc91c5a663d027cf5af609011",
+        "kumar_cue5s_v1/sub-4/ses-4_target_support.npz": "4e676cb241bbdfbf21aa4dd9758d86b219d9ef46f8e5d25b741026d8e2217e97",
+        "kumar_cue5s_v1/sub-4/ses-4_target_query.npz": "f06da12e5f913b3b135abfc5eafe9c6d5c998f47d7564280a21cd6404d223eee",
+        "kumar_cue5s_v1/sub-4/ses-5_target_support.npz": "c47e9a51126413f61c63ac789acd2bb7433c1d45a5e7cecb670e717032fa12f7",
+        "kumar_cue5s_v1/sub-4/ses-5_target_query.npz": "b3870096617a71e7a0993d7959ab165146e50b678b6638a983b9949a0dcd1a37"
+      },
+      "synthetic": false,
+      "family": "eegnet",
+      "seed": 20261023
+    },
+    {
+      "task_id": "kumar-v2-sub-7-seed20261023",
+      "dataset": "Kumar2024",
+      "participant": "sub-7",
+      "source_train": "kumar_cue5s_v1/sub-7/ses-0_source_train.npz",
+      "source_validation": "kumar_cue5s_v1/sub-7/ses-0_source_validation.npz",
+      "source_query": "kumar_cue5s_v1/sub-7/ses-0_source_query.npz",
+      "targets": [
+        {
+          "session": "ses-1",
+          "support": "kumar_cue5s_v1/sub-7/ses-1_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-7/ses-1_target_query.npz"
+        },
+        {
+          "session": "ses-2",
+          "support": "kumar_cue5s_v1/sub-7/ses-2_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-7/ses-2_target_query.npz"
+        },
+        {
+          "session": "ses-3",
+          "support": "kumar_cue5s_v1/sub-7/ses-3_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-7/ses-3_target_query.npz"
+        },
+        {
+          "session": "ses-4",
+          "support": "kumar_cue5s_v1/sub-7/ses-4_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-7/ses-4_target_query.npz"
+        },
+        {
+          "session": "ses-5",
+          "support": "kumar_cue5s_v1/sub-7/ses-5_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-7/ses-5_target_query.npz"
+        }
+      ],
+      "prior_test_exposure": "all_Kumar_query_results_previously_exposed",
+      "input_sha256": {
+        "kumar_cue5s_v1/sub-7/ses-0_source_train.npz": "0cce12cd36bc3bc05725d897264e37086763add5bfc55862ac31456b0af92f1b",
+        "kumar_cue5s_v1/sub-7/ses-0_source_validation.npz": "c61de9636d844e69fd9a17e4ac4ae43d172b7023aca93e390a4250a04783d216",
+        "kumar_cue5s_v1/sub-7/ses-0_source_query.npz": "1d92ca4c502661c73b2a47ac158df41f4b3d8b42f9a0143f1c73a43be7d4bdae",
+        "kumar_cue5s_v1/sub-7/ses-1_target_support.npz": "3a847079a775ff7de6926dbc03a5abe71adec7eeac196dc1aa3d2c5f051520c1",
+        "kumar_cue5s_v1/sub-7/ses-1_target_query.npz": "244298b32d748d91eeb9f37e7603ec717a47ef73ccdacb9d854824a42ff123d9",
+        "kumar_cue5s_v1/sub-7/ses-2_target_support.npz": "3e3affa46afee0cdfd150d2cc8a6a9822ac4f3d36113f4ca240b94f93eece1a8",
+        "kumar_cue5s_v1/sub-7/ses-2_target_query.npz": "e98a0dde1a1ba3f25c3f6de12f5f02896016fffe978ecaf3017fda790298c811",
+        "kumar_cue5s_v1/sub-7/ses-3_target_support.npz": "69f52e1b69da2eaf1bca22de6a938a68726c1c4d794a9266e69ff0b6e3d6de77",
+        "kumar_cue5s_v1/sub-7/ses-3_target_query.npz": "5b53a204b634aadef4dd0a52b70e1b2ba753b5ee6c1365ee481c9f7c8392b6fb",
+        "kumar_cue5s_v1/sub-7/ses-4_target_support.npz": "1544745865c651065b1025cd5683beddd2525c05acdc2af787d2cc86cc30c69d",
+        "kumar_cue5s_v1/sub-7/ses-4_target_query.npz": "f4c21246223615bca77fd0d45045a869632868ffb20f60ac7f545df98cae29ab",
+        "kumar_cue5s_v1/sub-7/ses-5_target_support.npz": "f5c0cf1355a6d7a7ca524d899a82ff4d8484fc26fd10e7451d6a3b466e72a96b",
+        "kumar_cue5s_v1/sub-7/ses-5_target_query.npz": "07622d19aa4284b6acf0ad9023bbf8783de3135bba38b86a669a4b3e1cd335b6"
+      },
+      "synthetic": false,
+      "family": "eegnet",
+      "seed": 20261023
+    },
+    {
+      "task_id": "kumar-v2-sub-10-seed20261023",
+      "dataset": "Kumar2024",
+      "participant": "sub-10",
+      "source_train": "kumar_cue5s_v1/sub-10/ses-0_source_train.npz",
+      "source_validation": "kumar_cue5s_v1/sub-10/ses-0_source_validation.npz",
+      "source_query": "kumar_cue5s_v1/sub-10/ses-0_source_query.npz",
+      "targets": [
+        {
+          "session": "ses-1",
+          "support": "kumar_cue5s_v1/sub-10/ses-1_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-10/ses-1_target_query.npz"
+        },
+        {
+          "session": "ses-2",
+          "support": "kumar_cue5s_v1/sub-10/ses-2_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-10/ses-2_target_query.npz"
+        },
+        {
+          "session": "ses-3",
+          "support": "kumar_cue5s_v1/sub-10/ses-3_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-10/ses-3_target_query.npz"
+        },
+        {
+          "session": "ses-4",
+          "support": "kumar_cue5s_v1/sub-10/ses-4_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-10/ses-4_target_query.npz"
+        },
+        {
+          "session": "ses-5",
+          "support": "kumar_cue5s_v1/sub-10/ses-5_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-10/ses-5_target_query.npz"
+        }
+      ],
+      "prior_test_exposure": "all_Kumar_query_results_previously_exposed",
+      "input_sha256": {
+        "kumar_cue5s_v1/sub-10/ses-0_source_train.npz": "6d41649f5de7c93c15b0b562fc571b9be0f49b45dd8cf781b06f0cf7ae2c84c3",
+        "kumar_cue5s_v1/sub-10/ses-0_source_validation.npz": "6310bceb2478dae3574210edd54bbf445fac2fddf1e3c017c2cc754b932e5367",
+        "kumar_cue5s_v1/sub-10/ses-0_source_query.npz": "185069cb46360b83d861f88189be5a3026c468b2707c79bcf0f5cce35a44374d",
+        "kumar_cue5s_v1/sub-10/ses-1_target_support.npz": "655762596af9f5e0a9532a0666e0f2b9fcc402e33d2fecd0e91c2f436b0b7962",
+        "kumar_cue5s_v1/sub-10/ses-1_target_query.npz": "b7fb078993c0ee0425e7b0a4d600251de80b19d029df1502fc33019d5d93e36f",
+        "kumar_cue5s_v1/sub-10/ses-2_target_support.npz": "3c0a693b95ca77177747299cf17523b21fb47e917d70b0c5b9c9e3ff2a25f2e8",
+        "kumar_cue5s_v1/sub-10/ses-2_target_query.npz": "0e88dd9c09ccce9c1df6fba3dbd5ef5db56204753892a7e9ac51efee50dba863",
+        "kumar_cue5s_v1/sub-10/ses-3_target_support.npz": "78f31e9f514b1e536e4d2b35b527107d1f06c0ab4eea7cf06b99367b4f313ee3",
+        "kumar_cue5s_v1/sub-10/ses-3_target_query.npz": "e764032bee046d9fe9a6963385ddacaed11dfccfb55f18a73d91fb57730113a8",
+        "kumar_cue5s_v1/sub-10/ses-4_target_support.npz": "81d957b602edf431eb6eda81d8d6c8a11d0cbb2e0f89be3a83d7deab632c2fa6",
+        "kumar_cue5s_v1/sub-10/ses-4_target_query.npz": "bded19d957ea2c70ae6cdac49a9d7221a87ad620959dcd83ee29d0b473492378",
+        "kumar_cue5s_v1/sub-10/ses-5_target_support.npz": "7ca4b46c8db38542bfee1062c2a8f0b2a114d491fd96d59e8a0ff8df237d6380",
+        "kumar_cue5s_v1/sub-10/ses-5_target_query.npz": "8efb00d026e42ba5cc505154592986a0459f9c670a0b5fddd02321bd7a4121b6"
+      },
+      "synthetic": false,
+      "family": "eegnet",
+      "seed": 20261023
+    },
+    {
+      "task_id": "kumar-v2-sub-13-seed20261023",
+      "dataset": "Kumar2024",
+      "participant": "sub-13",
+      "source_train": "kumar_cue5s_v1/sub-13/ses-0_source_train.npz",
+      "source_validation": "kumar_cue5s_v1/sub-13/ses-0_source_validation.npz",
+      "source_query": "kumar_cue5s_v1/sub-13/ses-0_source_query.npz",
+      "targets": [
+        {
+          "session": "ses-1",
+          "support": "kumar_cue5s_v1/sub-13/ses-1_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-13/ses-1_target_query.npz"
+        },
+        {
+          "session": "ses-2",
+          "support": "kumar_cue5s_v1/sub-13/ses-2_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-13/ses-2_target_query.npz"
+        },
+        {
+          "session": "ses-3",
+          "support": "kumar_cue5s_v1/sub-13/ses-3_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-13/ses-3_target_query.npz"
+        },
+        {
+          "session": "ses-4",
+          "support": "kumar_cue5s_v1/sub-13/ses-4_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-13/ses-4_target_query.npz"
+        },
+        {
+          "session": "ses-5",
+          "support": "kumar_cue5s_v1/sub-13/ses-5_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-13/ses-5_target_query.npz"
+        }
+      ],
+      "prior_test_exposure": "all_Kumar_query_results_previously_exposed",
+      "input_sha256": {
+        "kumar_cue5s_v1/sub-13/ses-0_source_train.npz": "01fa54b2206c3c60697566b8950248e881692372120d3f5f3c62f11a6d4a3314",
+        "kumar_cue5s_v1/sub-13/ses-0_source_validation.npz": "6bebc6b2299915148cf2a411d96c747869a656f568195e8a2d23a5a82cd43dba",
+        "kumar_cue5s_v1/sub-13/ses-0_source_query.npz": "59c2a695da7f6a0d439ee72125380b16b49fad45fb1013a6017f9ef9a6be3648",
+        "kumar_cue5s_v1/sub-13/ses-1_target_support.npz": "eb4250ce8eea3727bd74cc9b12beb67407c79e2e17b55a813eabe16a897a7e06",
+        "kumar_cue5s_v1/sub-13/ses-1_target_query.npz": "4d601ac88e6c3d6adbda73b3cdf71a572bf7f0108f1fa5a28ae53d99d9bfdc7e",
+        "kumar_cue5s_v1/sub-13/ses-2_target_support.npz": "6f8bf37aa92fa57bbcbac9ca8775ae7f540ef4810f548b8a3c9be46ae0db70d4",
+        "kumar_cue5s_v1/sub-13/ses-2_target_query.npz": "66ff68fb4a8c74070b4c09d46d10c3780fecdf65fd7cef50ee520451f7a412d7",
+        "kumar_cue5s_v1/sub-13/ses-3_target_support.npz": "6435c2175faa95af2997f65337941f0cb5f976a6a818d8f222ed9dd3de1132c6",
+        "kumar_cue5s_v1/sub-13/ses-3_target_query.npz": "5322439c02fa2da35e73f4326b61ad6f49fa083f28c10d2b91a66a98e944a71b",
+        "kumar_cue5s_v1/sub-13/ses-4_target_support.npz": "4b53caf88317ad74fee8ca5f86da0732450a2c42379df820b0a75689707075a3",
+        "kumar_cue5s_v1/sub-13/ses-4_target_query.npz": "4eeb482a6fb036c7c7aa34443ad2ffe40f18c416907767bb88139fa10afeca05",
+        "kumar_cue5s_v1/sub-13/ses-5_target_support.npz": "9d655d4c271570c72ea61906a5f0474d789cc4a08ad5caf3b7b0fae5bb50275b",
+        "kumar_cue5s_v1/sub-13/ses-5_target_query.npz": "a851585de15ef09d09a4d40d677415e8e150a7845e5f304a4437348f363b6270"
+      },
+      "synthetic": false,
+      "family": "eegnet",
+      "seed": 20261023
+    },
+    {
+      "task_id": "kumar-v2-sub-16-seed20261023",
+      "dataset": "Kumar2024",
+      "participant": "sub-16",
+      "source_train": "kumar_cue5s_v1/sub-16/ses-0_source_train.npz",
+      "source_validation": "kumar_cue5s_v1/sub-16/ses-0_source_validation.npz",
+      "source_query": "kumar_cue5s_v1/sub-16/ses-0_source_query.npz",
+      "targets": [
+        {
+          "session": "ses-1",
+          "support": "kumar_cue5s_v1/sub-16/ses-1_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-16/ses-1_target_query.npz"
+        },
+        {
+          "session": "ses-2",
+          "support": "kumar_cue5s_v1/sub-16/ses-2_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-16/ses-2_target_query.npz"
+        },
+        {
+          "session": "ses-3",
+          "support": "kumar_cue5s_v1/sub-16/ses-3_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-16/ses-3_target_query.npz"
+        },
+        {
+          "session": "ses-4",
+          "support": "kumar_cue5s_v1/sub-16/ses-4_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-16/ses-4_target_query.npz"
+        },
+        {
+          "session": "ses-5",
+          "support": "kumar_cue5s_v1/sub-16/ses-5_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-16/ses-5_target_query.npz"
+        }
+      ],
+      "prior_test_exposure": "all_Kumar_query_results_previously_exposed",
+      "input_sha256": {
+        "kumar_cue5s_v1/sub-16/ses-0_source_train.npz": "f2d6928ca5bc462c5516dbdb07c15e2ea0d8bdaf12200dda99c8b78704fd3030",
+        "kumar_cue5s_v1/sub-16/ses-0_source_validation.npz": "af4e9134f855688479e76f9ff06dc7a867201d3fcd7cbf8cbab105d433999727",
+        "kumar_cue5s_v1/sub-16/ses-0_source_query.npz": "8d0575d234dc501578d99891aea0cc19dedd98c82bd1096dbeb4112aa4fcece7",
+        "kumar_cue5s_v1/sub-16/ses-1_target_support.npz": "c7f3c3fb03cb08eecc741941e7fa75f4650793f9d2a18655742965d6a89ccd4d",
+        "kumar_cue5s_v1/sub-16/ses-1_target_query.npz": "c2057101d1bbaa62fdfd92447f091b581f2cd1a962e4f35b6f493762d60eca59",
+        "kumar_cue5s_v1/sub-16/ses-2_target_support.npz": "1125348489abc34530e6d38815c871bae83dd3ac31262b770047111557c44732",
+        "kumar_cue5s_v1/sub-16/ses-2_target_query.npz": "8fecca9ff79e6684dcfcb2884a8617cc3c08cc9448da36c3ad882e6cbbdf5694",
+        "kumar_cue5s_v1/sub-16/ses-3_target_support.npz": "d47944423dcf588fbf5b6ac8aa19ee5620cff846df5e204503438fcea17df9db",
+        "kumar_cue5s_v1/sub-16/ses-3_target_query.npz": "4541cd7c483a5b3b2a37d40be5bf409e505b12d1d7d311c4014921b3a2892692",
+        "kumar_cue5s_v1/sub-16/ses-4_target_support.npz": "273e507a6a8a29e99b3b4fad7072c55862241956bb781ec9bfd2b58bb1894eda",
+        "kumar_cue5s_v1/sub-16/ses-4_target_query.npz": "2fd1f7d0ad0455f68d542341d1b048f625dcd9bf2ffa775569305ad79f68daf0",
+        "kumar_cue5s_v1/sub-16/ses-5_target_support.npz": "306b0ede558d288d119b701cfe99e340790a260e2cead15d92578b6cd8e3fc4f",
+        "kumar_cue5s_v1/sub-16/ses-5_target_query.npz": "6cd0fd084f768beebb91d81de5a97f8d20f43150f57264651fb5f95dad4fad5f"
+      },
+      "synthetic": false,
+      "family": "eegnet",
+      "seed": 20261023
+    },
+    {
+      "task_id": "kumar-v2-sub-1-seed20261024",
+      "dataset": "Kumar2024",
+      "participant": "sub-1",
+      "source_train": "kumar_cue5s_v1/sub-1/ses-0_source_train.npz",
+      "source_validation": "kumar_cue5s_v1/sub-1/ses-0_source_validation.npz",
+      "source_query": "kumar_cue5s_v1/sub-1/ses-0_source_query.npz",
+      "targets": [
+        {
+          "session": "ses-1",
+          "support": "kumar_cue5s_v1/sub-1/ses-1_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-1/ses-1_target_query.npz"
+        },
+        {
+          "session": "ses-2",
+          "support": "kumar_cue5s_v1/sub-1/ses-2_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-1/ses-2_target_query.npz"
+        },
+        {
+          "session": "ses-3",
+          "support": "kumar_cue5s_v1/sub-1/ses-3_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-1/ses-3_target_query.npz"
+        },
+        {
+          "session": "ses-4",
+          "support": "kumar_cue5s_v1/sub-1/ses-4_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-1/ses-4_target_query.npz"
+        },
+        {
+          "session": "ses-5",
+          "support": "kumar_cue5s_v1/sub-1/ses-5_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-1/ses-5_target_query.npz"
+        }
+      ],
+      "prior_test_exposure": "all_Kumar_query_results_previously_exposed",
+      "input_sha256": {
+        "kumar_cue5s_v1/sub-1/ses-0_source_train.npz": "0e12bedbd9eab11ab4af46ebf34b4c2edd34ac3032649cf0deb74f6b715af950",
+        "kumar_cue5s_v1/sub-1/ses-0_source_validation.npz": "2fea13ee5f9621416a2874eb8417e29185b77ac486c67c7a78b959de358527c4",
+        "kumar_cue5s_v1/sub-1/ses-0_source_query.npz": "7279dd07942bec05d0692837e8ee1a9b5b42586123d949c43df525b50e9c0f30",
+        "kumar_cue5s_v1/sub-1/ses-1_target_support.npz": "5572179374445e1d7efb655ea53ee1ded62b3e98b628c45ac89758a8d0dc8ca7",
+        "kumar_cue5s_v1/sub-1/ses-1_target_query.npz": "80dcc1abbf740c498cac74ddf4252aedbaacece8e0097ec5ef010fcf66088278",
+        "kumar_cue5s_v1/sub-1/ses-2_target_support.npz": "e22aeb4b86ac9aa4150606f57c7ca46e9c8f6b4587571a1609be17b7afe1d72c",
+        "kumar_cue5s_v1/sub-1/ses-2_target_query.npz": "35d367989b2029cdae48bd862594d1e669c232abf7dd9001ddddd59905f63d3e",
+        "kumar_cue5s_v1/sub-1/ses-3_target_support.npz": "51ea7495fde10688b61434b9165e7e98591fc63d282a7a4d8dfff5ec98a68ba5",
+        "kumar_cue5s_v1/sub-1/ses-3_target_query.npz": "d9954d7414fbe48e40bd702d9619c96abe09510d2d325fe386b3fbacba2d7f96",
+        "kumar_cue5s_v1/sub-1/ses-4_target_support.npz": "65c884a7f402dc4ddcba7a6429758c22bc511de9f59aa80b1b7424203a421826",
+        "kumar_cue5s_v1/sub-1/ses-4_target_query.npz": "9ce9eeb33d49e101809358de5edc28cda20dad375e01575b0728d000f2020eb0",
+        "kumar_cue5s_v1/sub-1/ses-5_target_support.npz": "3f4afd9854c9b6c86246fc7c3dc547a4f0fdbd626c02b3f062104b81caa37793",
+        "kumar_cue5s_v1/sub-1/ses-5_target_query.npz": "b0add63d6f7d90d41adb944bfdbe07fafd80999a2f6b622bf9c953fee2ff87de"
+      },
+      "synthetic": false,
+      "family": "eegnet",
+      "seed": 20261024
+    },
+    {
+      "task_id": "kumar-v2-sub-4-seed20261024",
+      "dataset": "Kumar2024",
+      "participant": "sub-4",
+      "source_train": "kumar_cue5s_v1/sub-4/ses-0_source_train.npz",
+      "source_validation": "kumar_cue5s_v1/sub-4/ses-0_source_validation.npz",
+      "source_query": "kumar_cue5s_v1/sub-4/ses-0_source_query.npz",
+      "targets": [
+        {
+          "session": "ses-1",
+          "support": "kumar_cue5s_v1/sub-4/ses-1_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-4/ses-1_target_query.npz"
+        },
+        {
+          "session": "ses-2",
+          "support": "kumar_cue5s_v1/sub-4/ses-2_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-4/ses-2_target_query.npz"
+        },
+        {
+          "session": "ses-3",
+          "support": "kumar_cue5s_v1/sub-4/ses-3_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-4/ses-3_target_query.npz"
+        },
+        {
+          "session": "ses-4",
+          "support": "kumar_cue5s_v1/sub-4/ses-4_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-4/ses-4_target_query.npz"
+        },
+        {
+          "session": "ses-5",
+          "support": "kumar_cue5s_v1/sub-4/ses-5_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-4/ses-5_target_query.npz"
+        }
+      ],
+      "prior_test_exposure": "all_Kumar_query_results_previously_exposed",
+      "input_sha256": {
+        "kumar_cue5s_v1/sub-4/ses-0_source_train.npz": "f4cb4e675a0f832c21f73b2392c59a8672a3ed43c77be303757a099e334faa24",
+        "kumar_cue5s_v1/sub-4/ses-0_source_validation.npz": "509a7545af8ba48ad180731f714b7c4920a72ad6f127e3b2203dbc2fbefe5b3a",
+        "kumar_cue5s_v1/sub-4/ses-0_source_query.npz": "267d03093fd44b27b8f7aea12dd73ab908cf4bc5b9e1cfdf78aaf27397770b39",
+        "kumar_cue5s_v1/sub-4/ses-1_target_support.npz": "dcd892eb25ba97f33701a2b71856125768eb3915888325cfcdc45a7f71b06885",
+        "kumar_cue5s_v1/sub-4/ses-1_target_query.npz": "39d4645cc7acd9403ff99e1b92c2e7eac9092de03ada84d1d85d271425ffc65d",
+        "kumar_cue5s_v1/sub-4/ses-2_target_support.npz": "c1013648937bf227b1a3878f92c2679cb612422bac8fd9a8f5c4c5d81b59d732",
+        "kumar_cue5s_v1/sub-4/ses-2_target_query.npz": "bac475b7c76d7b5b64b4997aba682bb2a8ecf2a6b4d3996ca6981c6838e9f787",
+        "kumar_cue5s_v1/sub-4/ses-3_target_support.npz": "1ce687af1e31ca8f121d2cb65cc9864c4e386d839bcad2e0c396c4d21f130c90",
+        "kumar_cue5s_v1/sub-4/ses-3_target_query.npz": "76af795d1f3567f0ea4829129eeaa3228596346bc91c5a663d027cf5af609011",
+        "kumar_cue5s_v1/sub-4/ses-4_target_support.npz": "4e676cb241bbdfbf21aa4dd9758d86b219d9ef46f8e5d25b741026d8e2217e97",
+        "kumar_cue5s_v1/sub-4/ses-4_target_query.npz": "f06da12e5f913b3b135abfc5eafe9c6d5c998f47d7564280a21cd6404d223eee",
+        "kumar_cue5s_v1/sub-4/ses-5_target_support.npz": "c47e9a51126413f61c63ac789acd2bb7433c1d45a5e7cecb670e717032fa12f7",
+        "kumar_cue5s_v1/sub-4/ses-5_target_query.npz": "b3870096617a71e7a0993d7959ab165146e50b678b6638a983b9949a0dcd1a37"
+      },
+      "synthetic": false,
+      "family": "eegnet",
+      "seed": 20261024
+    },
+    {
+      "task_id": "kumar-v2-sub-7-seed20261024",
+      "dataset": "Kumar2024",
+      "participant": "sub-7",
+      "source_train": "kumar_cue5s_v1/sub-7/ses-0_source_train.npz",
+      "source_validation": "kumar_cue5s_v1/sub-7/ses-0_source_validation.npz",
+      "source_query": "kumar_cue5s_v1/sub-7/ses-0_source_query.npz",
+      "targets": [
+        {
+          "session": "ses-1",
+          "support": "kumar_cue5s_v1/sub-7/ses-1_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-7/ses-1_target_query.npz"
+        },
+        {
+          "session": "ses-2",
+          "support": "kumar_cue5s_v1/sub-7/ses-2_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-7/ses-2_target_query.npz"
+        },
+        {
+          "session": "ses-3",
+          "support": "kumar_cue5s_v1/sub-7/ses-3_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-7/ses-3_target_query.npz"
+        },
+        {
+          "session": "ses-4",
+          "support": "kumar_cue5s_v1/sub-7/ses-4_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-7/ses-4_target_query.npz"
+        },
+        {
+          "session": "ses-5",
+          "support": "kumar_cue5s_v1/sub-7/ses-5_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-7/ses-5_target_query.npz"
+        }
+      ],
+      "prior_test_exposure": "all_Kumar_query_results_previously_exposed",
+      "input_sha256": {
+        "kumar_cue5s_v1/sub-7/ses-0_source_train.npz": "0cce12cd36bc3bc05725d897264e37086763add5bfc55862ac31456b0af92f1b",
+        "kumar_cue5s_v1/sub-7/ses-0_source_validation.npz": "c61de9636d844e69fd9a17e4ac4ae43d172b7023aca93e390a4250a04783d216",
+        "kumar_cue5s_v1/sub-7/ses-0_source_query.npz": "1d92ca4c502661c73b2a47ac158df41f4b3d8b42f9a0143f1c73a43be7d4bdae",
+        "kumar_cue5s_v1/sub-7/ses-1_target_support.npz": "3a847079a775ff7de6926dbc03a5abe71adec7eeac196dc1aa3d2c5f051520c1",
+        "kumar_cue5s_v1/sub-7/ses-1_target_query.npz": "244298b32d748d91eeb9f37e7603ec717a47ef73ccdacb9d854824a42ff123d9",
+        "kumar_cue5s_v1/sub-7/ses-2_target_support.npz": "3e3affa46afee0cdfd150d2cc8a6a9822ac4f3d36113f4ca240b94f93eece1a8",
+        "kumar_cue5s_v1/sub-7/ses-2_target_query.npz": "e98a0dde1a1ba3f25c3f6de12f5f02896016fffe978ecaf3017fda790298c811",
+        "kumar_cue5s_v1/sub-7/ses-3_target_support.npz": "69f52e1b69da2eaf1bca22de6a938a68726c1c4d794a9266e69ff0b6e3d6de77",
+        "kumar_cue5s_v1/sub-7/ses-3_target_query.npz": "5b53a204b634aadef4dd0a52b70e1b2ba753b5ee6c1365ee481c9f7c8392b6fb",
+        "kumar_cue5s_v1/sub-7/ses-4_target_support.npz": "1544745865c651065b1025cd5683beddd2525c05acdc2af787d2cc86cc30c69d",
+        "kumar_cue5s_v1/sub-7/ses-4_target_query.npz": "f4c21246223615bca77fd0d45045a869632868ffb20f60ac7f545df98cae29ab",
+        "kumar_cue5s_v1/sub-7/ses-5_target_support.npz": "f5c0cf1355a6d7a7ca524d899a82ff4d8484fc26fd10e7451d6a3b466e72a96b",
+        "kumar_cue5s_v1/sub-7/ses-5_target_query.npz": "07622d19aa4284b6acf0ad9023bbf8783de3135bba38b86a669a4b3e1cd335b6"
+      },
+      "synthetic": false,
+      "family": "eegnet",
+      "seed": 20261024
+    },
+    {
+      "task_id": "kumar-v2-sub-10-seed20261024",
+      "dataset": "Kumar2024",
+      "participant": "sub-10",
+      "source_train": "kumar_cue5s_v1/sub-10/ses-0_source_train.npz",
+      "source_validation": "kumar_cue5s_v1/sub-10/ses-0_source_validation.npz",
+      "source_query": "kumar_cue5s_v1/sub-10/ses-0_source_query.npz",
+      "targets": [
+        {
+          "session": "ses-1",
+          "support": "kumar_cue5s_v1/sub-10/ses-1_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-10/ses-1_target_query.npz"
+        },
+        {
+          "session": "ses-2",
+          "support": "kumar_cue5s_v1/sub-10/ses-2_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-10/ses-2_target_query.npz"
+        },
+        {
+          "session": "ses-3",
+          "support": "kumar_cue5s_v1/sub-10/ses-3_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-10/ses-3_target_query.npz"
+        },
+        {
+          "session": "ses-4",
+          "support": "kumar_cue5s_v1/sub-10/ses-4_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-10/ses-4_target_query.npz"
+        },
+        {
+          "session": "ses-5",
+          "support": "kumar_cue5s_v1/sub-10/ses-5_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-10/ses-5_target_query.npz"
+        }
+      ],
+      "prior_test_exposure": "all_Kumar_query_results_previously_exposed",
+      "input_sha256": {
+        "kumar_cue5s_v1/sub-10/ses-0_source_train.npz": "6d41649f5de7c93c15b0b562fc571b9be0f49b45dd8cf781b06f0cf7ae2c84c3",
+        "kumar_cue5s_v1/sub-10/ses-0_source_validation.npz": "6310bceb2478dae3574210edd54bbf445fac2fddf1e3c017c2cc754b932e5367",
+        "kumar_cue5s_v1/sub-10/ses-0_source_query.npz": "185069cb46360b83d861f88189be5a3026c468b2707c79bcf0f5cce35a44374d",
+        "kumar_cue5s_v1/sub-10/ses-1_target_support.npz": "655762596af9f5e0a9532a0666e0f2b9fcc402e33d2fecd0e91c2f436b0b7962",
+        "kumar_cue5s_v1/sub-10/ses-1_target_query.npz": "b7fb078993c0ee0425e7b0a4d600251de80b19d029df1502fc33019d5d93e36f",
+        "kumar_cue5s_v1/sub-10/ses-2_target_support.npz": "3c0a693b95ca77177747299cf17523b21fb47e917d70b0c5b9c9e3ff2a25f2e8",
+        "kumar_cue5s_v1/sub-10/ses-2_target_query.npz": "0e88dd9c09ccce9c1df6fba3dbd5ef5db56204753892a7e9ac51efee50dba863",
+        "kumar_cue5s_v1/sub-10/ses-3_target_support.npz": "78f31e9f514b1e536e4d2b35b527107d1f06c0ab4eea7cf06b99367b4f313ee3",
+        "kumar_cue5s_v1/sub-10/ses-3_target_query.npz": "e764032bee046d9fe9a6963385ddacaed11dfccfb55f18a73d91fb57730113a8",
+        "kumar_cue5s_v1/sub-10/ses-4_target_support.npz": "81d957b602edf431eb6eda81d8d6c8a11d0cbb2e0f89be3a83d7deab632c2fa6",
+        "kumar_cue5s_v1/sub-10/ses-4_target_query.npz": "bded19d957ea2c70ae6cdac49a9d7221a87ad620959dcd83ee29d0b473492378",
+        "kumar_cue5s_v1/sub-10/ses-5_target_support.npz": "7ca4b46c8db38542bfee1062c2a8f0b2a114d491fd96d59e8a0ff8df237d6380",
+        "kumar_cue5s_v1/sub-10/ses-5_target_query.npz": "8efb00d026e42ba5cc505154592986a0459f9c670a0b5fddd02321bd7a4121b6"
+      },
+      "synthetic": false,
+      "family": "eegnet",
+      "seed": 20261024
+    },
+    {
+      "task_id": "kumar-v2-sub-13-seed20261024",
+      "dataset": "Kumar2024",
+      "participant": "sub-13",
+      "source_train": "kumar_cue5s_v1/sub-13/ses-0_source_train.npz",
+      "source_validation": "kumar_cue5s_v1/sub-13/ses-0_source_validation.npz",
+      "source_query": "kumar_cue5s_v1/sub-13/ses-0_source_query.npz",
+      "targets": [
+        {
+          "session": "ses-1",
+          "support": "kumar_cue5s_v1/sub-13/ses-1_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-13/ses-1_target_query.npz"
+        },
+        {
+          "session": "ses-2",
+          "support": "kumar_cue5s_v1/sub-13/ses-2_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-13/ses-2_target_query.npz"
+        },
+        {
+          "session": "ses-3",
+          "support": "kumar_cue5s_v1/sub-13/ses-3_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-13/ses-3_target_query.npz"
+        },
+        {
+          "session": "ses-4",
+          "support": "kumar_cue5s_v1/sub-13/ses-4_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-13/ses-4_target_query.npz"
+        },
+        {
+          "session": "ses-5",
+          "support": "kumar_cue5s_v1/sub-13/ses-5_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-13/ses-5_target_query.npz"
+        }
+      ],
+      "prior_test_exposure": "all_Kumar_query_results_previously_exposed",
+      "input_sha256": {
+        "kumar_cue5s_v1/sub-13/ses-0_source_train.npz": "01fa54b2206c3c60697566b8950248e881692372120d3f5f3c62f11a6d4a3314",
+        "kumar_cue5s_v1/sub-13/ses-0_source_validation.npz": "6bebc6b2299915148cf2a411d96c747869a656f568195e8a2d23a5a82cd43dba",
+        "kumar_cue5s_v1/sub-13/ses-0_source_query.npz": "59c2a695da7f6a0d439ee72125380b16b49fad45fb1013a6017f9ef9a6be3648",
+        "kumar_cue5s_v1/sub-13/ses-1_target_support.npz": "eb4250ce8eea3727bd74cc9b12beb67407c79e2e17b55a813eabe16a897a7e06",
+        "kumar_cue5s_v1/sub-13/ses-1_target_query.npz": "4d601ac88e6c3d6adbda73b3cdf71a572bf7f0108f1fa5a28ae53d99d9bfdc7e",
+        "kumar_cue5s_v1/sub-13/ses-2_target_support.npz": "6f8bf37aa92fa57bbcbac9ca8775ae7f540ef4810f548b8a3c9be46ae0db70d4",
+        "kumar_cue5s_v1/sub-13/ses-2_target_query.npz": "66ff68fb4a8c74070b4c09d46d10c3780fecdf65fd7cef50ee520451f7a412d7",
+        "kumar_cue5s_v1/sub-13/ses-3_target_support.npz": "6435c2175faa95af2997f65337941f0cb5f976a6a818d8f222ed9dd3de1132c6",
+        "kumar_cue5s_v1/sub-13/ses-3_target_query.npz": "5322439c02fa2da35e73f4326b61ad6f49fa083f28c10d2b91a66a98e944a71b",
+        "kumar_cue5s_v1/sub-13/ses-4_target_support.npz": "4b53caf88317ad74fee8ca5f86da0732450a2c42379df820b0a75689707075a3",
+        "kumar_cue5s_v1/sub-13/ses-4_target_query.npz": "4eeb482a6fb036c7c7aa34443ad2ffe40f18c416907767bb88139fa10afeca05",
+        "kumar_cue5s_v1/sub-13/ses-5_target_support.npz": "9d655d4c271570c72ea61906a5f0474d789cc4a08ad5caf3b7b0fae5bb50275b",
+        "kumar_cue5s_v1/sub-13/ses-5_target_query.npz": "a851585de15ef09d09a4d40d677415e8e150a7845e5f304a4437348f363b6270"
+      },
+      "synthetic": false,
+      "family": "eegnet",
+      "seed": 20261024
+    },
+    {
+      "task_id": "kumar-v2-sub-16-seed20261024",
+      "dataset": "Kumar2024",
+      "participant": "sub-16",
+      "source_train": "kumar_cue5s_v1/sub-16/ses-0_source_train.npz",
+      "source_validation": "kumar_cue5s_v1/sub-16/ses-0_source_validation.npz",
+      "source_query": "kumar_cue5s_v1/sub-16/ses-0_source_query.npz",
+      "targets": [
+        {
+          "session": "ses-1",
+          "support": "kumar_cue5s_v1/sub-16/ses-1_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-16/ses-1_target_query.npz"
+        },
+        {
+          "session": "ses-2",
+          "support": "kumar_cue5s_v1/sub-16/ses-2_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-16/ses-2_target_query.npz"
+        },
+        {
+          "session": "ses-3",
+          "support": "kumar_cue5s_v1/sub-16/ses-3_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-16/ses-3_target_query.npz"
+        },
+        {
+          "session": "ses-4",
+          "support": "kumar_cue5s_v1/sub-16/ses-4_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-16/ses-4_target_query.npz"
+        },
+        {
+          "session": "ses-5",
+          "support": "kumar_cue5s_v1/sub-16/ses-5_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-16/ses-5_target_query.npz"
+        }
+      ],
+      "prior_test_exposure": "all_Kumar_query_results_previously_exposed",
+      "input_sha256": {
+        "kumar_cue5s_v1/sub-16/ses-0_source_train.npz": "f2d6928ca5bc462c5516dbdb07c15e2ea0d8bdaf12200dda99c8b78704fd3030",
+        "kumar_cue5s_v1/sub-16/ses-0_source_validation.npz": "af4e9134f855688479e76f9ff06dc7a867201d3fcd7cbf8cbab105d433999727",
+        "kumar_cue5s_v1/sub-16/ses-0_source_query.npz": "8d0575d234dc501578d99891aea0cc19dedd98c82bd1096dbeb4112aa4fcece7",
+        "kumar_cue5s_v1/sub-16/ses-1_target_support.npz": "c7f3c3fb03cb08eecc741941e7fa75f4650793f9d2a18655742965d6a89ccd4d",
+        "kumar_cue5s_v1/sub-16/ses-1_target_query.npz": "c2057101d1bbaa62fdfd92447f091b581f2cd1a962e4f35b6f493762d60eca59",
+        "kumar_cue5s_v1/sub-16/ses-2_target_support.npz": "1125348489abc34530e6d38815c871bae83dd3ac31262b770047111557c44732",
+        "kumar_cue5s_v1/sub-16/ses-2_target_query.npz": "8fecca9ff79e6684dcfcb2884a8617cc3c08cc9448da36c3ad882e6cbbdf5694",
+        "kumar_cue5s_v1/sub-16/ses-3_target_support.npz": "d47944423dcf588fbf5b6ac8aa19ee5620cff846df5e204503438fcea17df9db",
+        "kumar_cue5s_v1/sub-16/ses-3_target_query.npz": "4541cd7c483a5b3b2a37d40be5bf409e505b12d1d7d311c4014921b3a2892692",
+        "kumar_cue5s_v1/sub-16/ses-4_target_support.npz": "273e507a6a8a29e99b3b4fad7072c55862241956bb781ec9bfd2b58bb1894eda",
+        "kumar_cue5s_v1/sub-16/ses-4_target_query.npz": "2fd1f7d0ad0455f68d542341d1b048f625dcd9bf2ffa775569305ad79f68daf0",
+        "kumar_cue5s_v1/sub-16/ses-5_target_support.npz": "306b0ede558d288d119b701cfe99e340790a260e2cead15d92578b6cd8e3fc4f",
+        "kumar_cue5s_v1/sub-16/ses-5_target_query.npz": "6cd0fd084f768beebb91d81de5a97f8d20f43150f57264651fb5f95dad4fad5f"
+      },
+      "synthetic": false,
+      "family": "eegnet",
+      "seed": 20261024
+    },
+    {
+      "task_id": "kumar-v2-sub-1-seed20261025",
+      "dataset": "Kumar2024",
+      "participant": "sub-1",
+      "source_train": "kumar_cue5s_v1/sub-1/ses-0_source_train.npz",
+      "source_validation": "kumar_cue5s_v1/sub-1/ses-0_source_validation.npz",
+      "source_query": "kumar_cue5s_v1/sub-1/ses-0_source_query.npz",
+      "targets": [
+        {
+          "session": "ses-1",
+          "support": "kumar_cue5s_v1/sub-1/ses-1_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-1/ses-1_target_query.npz"
+        },
+        {
+          "session": "ses-2",
+          "support": "kumar_cue5s_v1/sub-1/ses-2_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-1/ses-2_target_query.npz"
+        },
+        {
+          "session": "ses-3",
+          "support": "kumar_cue5s_v1/sub-1/ses-3_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-1/ses-3_target_query.npz"
+        },
+        {
+          "session": "ses-4",
+          "support": "kumar_cue5s_v1/sub-1/ses-4_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-1/ses-4_target_query.npz"
+        },
+        {
+          "session": "ses-5",
+          "support": "kumar_cue5s_v1/sub-1/ses-5_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-1/ses-5_target_query.npz"
+        }
+      ],
+      "prior_test_exposure": "all_Kumar_query_results_previously_exposed",
+      "input_sha256": {
+        "kumar_cue5s_v1/sub-1/ses-0_source_train.npz": "0e12bedbd9eab11ab4af46ebf34b4c2edd34ac3032649cf0deb74f6b715af950",
+        "kumar_cue5s_v1/sub-1/ses-0_source_validation.npz": "2fea13ee5f9621416a2874eb8417e29185b77ac486c67c7a78b959de358527c4",
+        "kumar_cue5s_v1/sub-1/ses-0_source_query.npz": "7279dd07942bec05d0692837e8ee1a9b5b42586123d949c43df525b50e9c0f30",
+        "kumar_cue5s_v1/sub-1/ses-1_target_support.npz": "5572179374445e1d7efb655ea53ee1ded62b3e98b628c45ac89758a8d0dc8ca7",
+        "kumar_cue5s_v1/sub-1/ses-1_target_query.npz": "80dcc1abbf740c498cac74ddf4252aedbaacece8e0097ec5ef010fcf66088278",
+        "kumar_cue5s_v1/sub-1/ses-2_target_support.npz": "e22aeb4b86ac9aa4150606f57c7ca46e9c8f6b4587571a1609be17b7afe1d72c",
+        "kumar_cue5s_v1/sub-1/ses-2_target_query.npz": "35d367989b2029cdae48bd862594d1e669c232abf7dd9001ddddd59905f63d3e",
+        "kumar_cue5s_v1/sub-1/ses-3_target_support.npz": "51ea7495fde10688b61434b9165e7e98591fc63d282a7a4d8dfff5ec98a68ba5",
+        "kumar_cue5s_v1/sub-1/ses-3_target_query.npz": "d9954d7414fbe48e40bd702d9619c96abe09510d2d325fe386b3fbacba2d7f96",
+        "kumar_cue5s_v1/sub-1/ses-4_target_support.npz": "65c884a7f402dc4ddcba7a6429758c22bc511de9f59aa80b1b7424203a421826",
+        "kumar_cue5s_v1/sub-1/ses-4_target_query.npz": "9ce9eeb33d49e101809358de5edc28cda20dad375e01575b0728d000f2020eb0",
+        "kumar_cue5s_v1/sub-1/ses-5_target_support.npz": "3f4afd9854c9b6c86246fc7c3dc547a4f0fdbd626c02b3f062104b81caa37793",
+        "kumar_cue5s_v1/sub-1/ses-5_target_query.npz": "b0add63d6f7d90d41adb944bfdbe07fafd80999a2f6b622bf9c953fee2ff87de"
+      },
+      "synthetic": false,
+      "family": "eegnet",
+      "seed": 20261025
+    },
+    {
+      "task_id": "kumar-v2-sub-4-seed20261025",
+      "dataset": "Kumar2024",
+      "participant": "sub-4",
+      "source_train": "kumar_cue5s_v1/sub-4/ses-0_source_train.npz",
+      "source_validation": "kumar_cue5s_v1/sub-4/ses-0_source_validation.npz",
+      "source_query": "kumar_cue5s_v1/sub-4/ses-0_source_query.npz",
+      "targets": [
+        {
+          "session": "ses-1",
+          "support": "kumar_cue5s_v1/sub-4/ses-1_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-4/ses-1_target_query.npz"
+        },
+        {
+          "session": "ses-2",
+          "support": "kumar_cue5s_v1/sub-4/ses-2_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-4/ses-2_target_query.npz"
+        },
+        {
+          "session": "ses-3",
+          "support": "kumar_cue5s_v1/sub-4/ses-3_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-4/ses-3_target_query.npz"
+        },
+        {
+          "session": "ses-4",
+          "support": "kumar_cue5s_v1/sub-4/ses-4_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-4/ses-4_target_query.npz"
+        },
+        {
+          "session": "ses-5",
+          "support": "kumar_cue5s_v1/sub-4/ses-5_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-4/ses-5_target_query.npz"
+        }
+      ],
+      "prior_test_exposure": "all_Kumar_query_results_previously_exposed",
+      "input_sha256": {
+        "kumar_cue5s_v1/sub-4/ses-0_source_train.npz": "f4cb4e675a0f832c21f73b2392c59a8672a3ed43c77be303757a099e334faa24",
+        "kumar_cue5s_v1/sub-4/ses-0_source_validation.npz": "509a7545af8ba48ad180731f714b7c4920a72ad6f127e3b2203dbc2fbefe5b3a",
+        "kumar_cue5s_v1/sub-4/ses-0_source_query.npz": "267d03093fd44b27b8f7aea12dd73ab908cf4bc5b9e1cfdf78aaf27397770b39",
+        "kumar_cue5s_v1/sub-4/ses-1_target_support.npz": "dcd892eb25ba97f33701a2b71856125768eb3915888325cfcdc45a7f71b06885",
+        "kumar_cue5s_v1/sub-4/ses-1_target_query.npz": "39d4645cc7acd9403ff99e1b92c2e7eac9092de03ada84d1d85d271425ffc65d",
+        "kumar_cue5s_v1/sub-4/ses-2_target_support.npz": "c1013648937bf227b1a3878f92c2679cb612422bac8fd9a8f5c4c5d81b59d732",
+        "kumar_cue5s_v1/sub-4/ses-2_target_query.npz": "bac475b7c76d7b5b64b4997aba682bb2a8ecf2a6b4d3996ca6981c6838e9f787",
+        "kumar_cue5s_v1/sub-4/ses-3_target_support.npz": "1ce687af1e31ca8f121d2cb65cc9864c4e386d839bcad2e0c396c4d21f130c90",
+        "kumar_cue5s_v1/sub-4/ses-3_target_query.npz": "76af795d1f3567f0ea4829129eeaa3228596346bc91c5a663d027cf5af609011",
+        "kumar_cue5s_v1/sub-4/ses-4_target_support.npz": "4e676cb241bbdfbf21aa4dd9758d86b219d9ef46f8e5d25b741026d8e2217e97",
+        "kumar_cue5s_v1/sub-4/ses-4_target_query.npz": "f06da12e5f913b3b135abfc5eafe9c6d5c998f47d7564280a21cd6404d223eee",
+        "kumar_cue5s_v1/sub-4/ses-5_target_support.npz": "c47e9a51126413f61c63ac789acd2bb7433c1d45a5e7cecb670e717032fa12f7",
+        "kumar_cue5s_v1/sub-4/ses-5_target_query.npz": "b3870096617a71e7a0993d7959ab165146e50b678b6638a983b9949a0dcd1a37"
+      },
+      "synthetic": false,
+      "family": "eegnet",
+      "seed": 20261025
+    },
+    {
+      "task_id": "kumar-v2-sub-7-seed20261025",
+      "dataset": "Kumar2024",
+      "participant": "sub-7",
+      "source_train": "kumar_cue5s_v1/sub-7/ses-0_source_train.npz",
+      "source_validation": "kumar_cue5s_v1/sub-7/ses-0_source_validation.npz",
+      "source_query": "kumar_cue5s_v1/sub-7/ses-0_source_query.npz",
+      "targets": [
+        {
+          "session": "ses-1",
+          "support": "kumar_cue5s_v1/sub-7/ses-1_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-7/ses-1_target_query.npz"
+        },
+        {
+          "session": "ses-2",
+          "support": "kumar_cue5s_v1/sub-7/ses-2_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-7/ses-2_target_query.npz"
+        },
+        {
+          "session": "ses-3",
+          "support": "kumar_cue5s_v1/sub-7/ses-3_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-7/ses-3_target_query.npz"
+        },
+        {
+          "session": "ses-4",
+          "support": "kumar_cue5s_v1/sub-7/ses-4_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-7/ses-4_target_query.npz"
+        },
+        {
+          "session": "ses-5",
+          "support": "kumar_cue5s_v1/sub-7/ses-5_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-7/ses-5_target_query.npz"
+        }
+      ],
+      "prior_test_exposure": "all_Kumar_query_results_previously_exposed",
+      "input_sha256": {
+        "kumar_cue5s_v1/sub-7/ses-0_source_train.npz": "0cce12cd36bc3bc05725d897264e37086763add5bfc55862ac31456b0af92f1b",
+        "kumar_cue5s_v1/sub-7/ses-0_source_validation.npz": "c61de9636d844e69fd9a17e4ac4ae43d172b7023aca93e390a4250a04783d216",
+        "kumar_cue5s_v1/sub-7/ses-0_source_query.npz": "1d92ca4c502661c73b2a47ac158df41f4b3d8b42f9a0143f1c73a43be7d4bdae",
+        "kumar_cue5s_v1/sub-7/ses-1_target_support.npz": "3a847079a775ff7de6926dbc03a5abe71adec7eeac196dc1aa3d2c5f051520c1",
+        "kumar_cue5s_v1/sub-7/ses-1_target_query.npz": "244298b32d748d91eeb9f37e7603ec717a47ef73ccdacb9d854824a42ff123d9",
+        "kumar_cue5s_v1/sub-7/ses-2_target_support.npz": "3e3affa46afee0cdfd150d2cc8a6a9822ac4f3d36113f4ca240b94f93eece1a8",
+        "kumar_cue5s_v1/sub-7/ses-2_target_query.npz": "e98a0dde1a1ba3f25c3f6de12f5f02896016fffe978ecaf3017fda790298c811",
+        "kumar_cue5s_v1/sub-7/ses-3_target_support.npz": "69f52e1b69da2eaf1bca22de6a938a68726c1c4d794a9266e69ff0b6e3d6de77",
+        "kumar_cue5s_v1/sub-7/ses-3_target_query.npz": "5b53a204b634aadef4dd0a52b70e1b2ba753b5ee6c1365ee481c9f7c8392b6fb",
+        "kumar_cue5s_v1/sub-7/ses-4_target_support.npz": "1544745865c651065b1025cd5683beddd2525c05acdc2af787d2cc86cc30c69d",
+        "kumar_cue5s_v1/sub-7/ses-4_target_query.npz": "f4c21246223615bca77fd0d45045a869632868ffb20f60ac7f545df98cae29ab",
+        "kumar_cue5s_v1/sub-7/ses-5_target_support.npz": "f5c0cf1355a6d7a7ca524d899a82ff4d8484fc26fd10e7451d6a3b466e72a96b",
+        "kumar_cue5s_v1/sub-7/ses-5_target_query.npz": "07622d19aa4284b6acf0ad9023bbf8783de3135bba38b86a669a4b3e1cd335b6"
+      },
+      "synthetic": false,
+      "family": "eegnet",
+      "seed": 20261025
+    },
+    {
+      "task_id": "kumar-v2-sub-10-seed20261025",
+      "dataset": "Kumar2024",
+      "participant": "sub-10",
+      "source_train": "kumar_cue5s_v1/sub-10/ses-0_source_train.npz",
+      "source_validation": "kumar_cue5s_v1/sub-10/ses-0_source_validation.npz",
+      "source_query": "kumar_cue5s_v1/sub-10/ses-0_source_query.npz",
+      "targets": [
+        {
+          "session": "ses-1",
+          "support": "kumar_cue5s_v1/sub-10/ses-1_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-10/ses-1_target_query.npz"
+        },
+        {
+          "session": "ses-2",
+          "support": "kumar_cue5s_v1/sub-10/ses-2_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-10/ses-2_target_query.npz"
+        },
+        {
+          "session": "ses-3",
+          "support": "kumar_cue5s_v1/sub-10/ses-3_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-10/ses-3_target_query.npz"
+        },
+        {
+          "session": "ses-4",
+          "support": "kumar_cue5s_v1/sub-10/ses-4_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-10/ses-4_target_query.npz"
+        },
+        {
+          "session": "ses-5",
+          "support": "kumar_cue5s_v1/sub-10/ses-5_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-10/ses-5_target_query.npz"
+        }
+      ],
+      "prior_test_exposure": "all_Kumar_query_results_previously_exposed",
+      "input_sha256": {
+        "kumar_cue5s_v1/sub-10/ses-0_source_train.npz": "6d41649f5de7c93c15b0b562fc571b9be0f49b45dd8cf781b06f0cf7ae2c84c3",
+        "kumar_cue5s_v1/sub-10/ses-0_source_validation.npz": "6310bceb2478dae3574210edd54bbf445fac2fddf1e3c017c2cc754b932e5367",
+        "kumar_cue5s_v1/sub-10/ses-0_source_query.npz": "185069cb46360b83d861f88189be5a3026c468b2707c79bcf0f5cce35a44374d",
+        "kumar_cue5s_v1/sub-10/ses-1_target_support.npz": "655762596af9f5e0a9532a0666e0f2b9fcc402e33d2fecd0e91c2f436b0b7962",
+        "kumar_cue5s_v1/sub-10/ses-1_target_query.npz": "b7fb078993c0ee0425e7b0a4d600251de80b19d029df1502fc33019d5d93e36f",
+        "kumar_cue5s_v1/sub-10/ses-2_target_support.npz": "3c0a693b95ca77177747299cf17523b21fb47e917d70b0c5b9c9e3ff2a25f2e8",
+        "kumar_cue5s_v1/sub-10/ses-2_target_query.npz": "0e88dd9c09ccce9c1df6fba3dbd5ef5db56204753892a7e9ac51efee50dba863",
+        "kumar_cue5s_v1/sub-10/ses-3_target_support.npz": "78f31e9f514b1e536e4d2b35b527107d1f06c0ab4eea7cf06b99367b4f313ee3",
+        "kumar_cue5s_v1/sub-10/ses-3_target_query.npz": "e764032bee046d9fe9a6963385ddacaed11dfccfb55f18a73d91fb57730113a8",
+        "kumar_cue5s_v1/sub-10/ses-4_target_support.npz": "81d957b602edf431eb6eda81d8d6c8a11d0cbb2e0f89be3a83d7deab632c2fa6",
+        "kumar_cue5s_v1/sub-10/ses-4_target_query.npz": "bded19d957ea2c70ae6cdac49a9d7221a87ad620959dcd83ee29d0b473492378",
+        "kumar_cue5s_v1/sub-10/ses-5_target_support.npz": "7ca4b46c8db38542bfee1062c2a8f0b2a114d491fd96d59e8a0ff8df237d6380",
+        "kumar_cue5s_v1/sub-10/ses-5_target_query.npz": "8efb00d026e42ba5cc505154592986a0459f9c670a0b5fddd02321bd7a4121b6"
+      },
+      "synthetic": false,
+      "family": "eegnet",
+      "seed": 20261025
+    },
+    {
+      "task_id": "kumar-v2-sub-13-seed20261025",
+      "dataset": "Kumar2024",
+      "participant": "sub-13",
+      "source_train": "kumar_cue5s_v1/sub-13/ses-0_source_train.npz",
+      "source_validation": "kumar_cue5s_v1/sub-13/ses-0_source_validation.npz",
+      "source_query": "kumar_cue5s_v1/sub-13/ses-0_source_query.npz",
+      "targets": [
+        {
+          "session": "ses-1",
+          "support": "kumar_cue5s_v1/sub-13/ses-1_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-13/ses-1_target_query.npz"
+        },
+        {
+          "session": "ses-2",
+          "support": "kumar_cue5s_v1/sub-13/ses-2_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-13/ses-2_target_query.npz"
+        },
+        {
+          "session": "ses-3",
+          "support": "kumar_cue5s_v1/sub-13/ses-3_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-13/ses-3_target_query.npz"
+        },
+        {
+          "session": "ses-4",
+          "support": "kumar_cue5s_v1/sub-13/ses-4_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-13/ses-4_target_query.npz"
+        },
+        {
+          "session": "ses-5",
+          "support": "kumar_cue5s_v1/sub-13/ses-5_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-13/ses-5_target_query.npz"
+        }
+      ],
+      "prior_test_exposure": "all_Kumar_query_results_previously_exposed",
+      "input_sha256": {
+        "kumar_cue5s_v1/sub-13/ses-0_source_train.npz": "01fa54b2206c3c60697566b8950248e881692372120d3f5f3c62f11a6d4a3314",
+        "kumar_cue5s_v1/sub-13/ses-0_source_validation.npz": "6bebc6b2299915148cf2a411d96c747869a656f568195e8a2d23a5a82cd43dba",
+        "kumar_cue5s_v1/sub-13/ses-0_source_query.npz": "59c2a695da7f6a0d439ee72125380b16b49fad45fb1013a6017f9ef9a6be3648",
+        "kumar_cue5s_v1/sub-13/ses-1_target_support.npz": "eb4250ce8eea3727bd74cc9b12beb67407c79e2e17b55a813eabe16a897a7e06",
+        "kumar_cue5s_v1/sub-13/ses-1_target_query.npz": "4d601ac88e6c3d6adbda73b3cdf71a572bf7f0108f1fa5a28ae53d99d9bfdc7e",
+        "kumar_cue5s_v1/sub-13/ses-2_target_support.npz": "6f8bf37aa92fa57bbcbac9ca8775ae7f540ef4810f548b8a3c9be46ae0db70d4",
+        "kumar_cue5s_v1/sub-13/ses-2_target_query.npz": "66ff68fb4a8c74070b4c09d46d10c3780fecdf65fd7cef50ee520451f7a412d7",
+        "kumar_cue5s_v1/sub-13/ses-3_target_support.npz": "6435c2175faa95af2997f65337941f0cb5f976a6a818d8f222ed9dd3de1132c6",
+        "kumar_cue5s_v1/sub-13/ses-3_target_query.npz": "5322439c02fa2da35e73f4326b61ad6f49fa083f28c10d2b91a66a98e944a71b",
+        "kumar_cue5s_v1/sub-13/ses-4_target_support.npz": "4b53caf88317ad74fee8ca5f86da0732450a2c42379df820b0a75689707075a3",
+        "kumar_cue5s_v1/sub-13/ses-4_target_query.npz": "4eeb482a6fb036c7c7aa34443ad2ffe40f18c416907767bb88139fa10afeca05",
+        "kumar_cue5s_v1/sub-13/ses-5_target_support.npz": "9d655d4c271570c72ea61906a5f0474d789cc4a08ad5caf3b7b0fae5bb50275b",
+        "kumar_cue5s_v1/sub-13/ses-5_target_query.npz": "a851585de15ef09d09a4d40d677415e8e150a7845e5f304a4437348f363b6270"
+      },
+      "synthetic": false,
+      "family": "eegnet",
+      "seed": 20261025
+    },
+    {
+      "task_id": "kumar-v2-sub-16-seed20261025",
+      "dataset": "Kumar2024",
+      "participant": "sub-16",
+      "source_train": "kumar_cue5s_v1/sub-16/ses-0_source_train.npz",
+      "source_validation": "kumar_cue5s_v1/sub-16/ses-0_source_validation.npz",
+      "source_query": "kumar_cue5s_v1/sub-16/ses-0_source_query.npz",
+      "targets": [
+        {
+          "session": "ses-1",
+          "support": "kumar_cue5s_v1/sub-16/ses-1_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-16/ses-1_target_query.npz"
+        },
+        {
+          "session": "ses-2",
+          "support": "kumar_cue5s_v1/sub-16/ses-2_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-16/ses-2_target_query.npz"
+        },
+        {
+          "session": "ses-3",
+          "support": "kumar_cue5s_v1/sub-16/ses-3_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-16/ses-3_target_query.npz"
+        },
+        {
+          "session": "ses-4",
+          "support": "kumar_cue5s_v1/sub-16/ses-4_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-16/ses-4_target_query.npz"
+        },
+        {
+          "session": "ses-5",
+          "support": "kumar_cue5s_v1/sub-16/ses-5_target_support.npz",
+          "query": "kumar_cue5s_v1/sub-16/ses-5_target_query.npz"
+        }
+      ],
+      "prior_test_exposure": "all_Kumar_query_results_previously_exposed",
+      "input_sha256": {
+        "kumar_cue5s_v1/sub-16/ses-0_source_train.npz": "f2d6928ca5bc462c5516dbdb07c15e2ea0d8bdaf12200dda99c8b78704fd3030",
+        "kumar_cue5s_v1/sub-16/ses-0_source_validation.npz": "af4e9134f855688479e76f9ff06dc7a867201d3fcd7cbf8cbab105d433999727",
+        "kumar_cue5s_v1/sub-16/ses-0_source_query.npz": "8d0575d234dc501578d99891aea0cc19dedd98c82bd1096dbeb4112aa4fcece7",
+        "kumar_cue5s_v1/sub-16/ses-1_target_support.npz": "c7f3c3fb03cb08eecc741941e7fa75f4650793f9d2a18655742965d6a89ccd4d",
+        "kumar_cue5s_v1/sub-16/ses-1_target_query.npz": "c2057101d1bbaa62fdfd92447f091b581f2cd1a962e4f35b6f493762d60eca59",
+        "kumar_cue5s_v1/sub-16/ses-2_target_support.npz": "1125348489abc34530e6d38815c871bae83dd3ac31262b770047111557c44732",
+        "kumar_cue5s_v1/sub-16/ses-2_target_query.npz": "8fecca9ff79e6684dcfcb2884a8617cc3c08cc9448da36c3ad882e6cbbdf5694",
+        "kumar_cue5s_v1/sub-16/ses-3_target_support.npz": "d47944423dcf588fbf5b6ac8aa19ee5620cff846df5e204503438fcea17df9db",
+        "kumar_cue5s_v1/sub-16/ses-3_target_query.npz": "4541cd7c483a5b3b2a37d40be5bf409e505b12d1d7d311c4014921b3a2892692",
+        "kumar_cue5s_v1/sub-16/ses-4_target_support.npz": "273e507a6a8a29e99b3b4fad7072c55862241956bb781ec9bfd2b58bb1894eda",
+        "kumar_cue5s_v1/sub-16/ses-4_target_query.npz": "2fd1f7d0ad0455f68d542341d1b048f625dcd9bf2ffa775569305ad79f68daf0",
+        "kumar_cue5s_v1/sub-16/ses-5_target_support.npz": "306b0ede558d288d119b701cfe99e340790a260e2cead15d92578b6cd8e3fc4f",
+        "kumar_cue5s_v1/sub-16/ses-5_target_query.npz": "6cd0fd084f768beebb91d81de5a97f8d20f43150f57264651fb5f95dad4fad5f"
+      },
+      "synthetic": false,
+      "family": "eegnet",
+      "seed": 20261025
+    }
+  ]
+}

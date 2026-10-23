@@ -1,5 +1,10 @@
 # Scoped licensing
 
+The [23 October school-HPC extension](LICENSES/paper2-hpc-v2-scope-20261023.md)
+applies the same component-specific licenses to the new original V2 code,
+documentation and derived summaries; source EEG and third-party rights remain
+excluded.
+
 The [17 October paper-2 extension scope](LICENSES/innovation-scope-20261017.md)
 identifies the new manuscript package, figure exports and derived-result
 directories covered by the already activated component-specific licenses below.

@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "task_date": "2026-10-23",
+  "purpose": "Focused literature/design review; not a systematic review, training receipt, or performance result for HPC v2",
+  "repo_reference": "main 04d21b06a7acc225391958556220e7cdb2bcffbd, plus preserved component package",
+  "component_repository_location": "/workspace/private_model_receipts/paper2-component-followup-20261016/data_package_portable_check/run02/extracted/component/repository",
+  "component_evidence": [
+    {
+      "path_in_component_repository": "research_logs/kumar_component_followup_20261016/budget_summary/run01/RESULTS_REVIEW.md",
+      "bytes": 10110,
+      "sha256": "a0341666ca0e4db420d0e36b75d4b2c75014908797041c12bbc0f4fe969e45ad"
+    },
+    {
+      "path_in_component_repository": "research_logs/kumar_component_followup_20261016/phase_summary/run01/REPORT.md",
+      "bytes": 7204,
+      "sha256": "c3d92647a4f8cccc5f08a83afed95e95be67700412e01ba9b39f47e98e84b5f8"
+    },
+    {
+      "path_in_component_repository": "research_logs/kumar_component_followup_20261016/gain_independent_audit/run01/REPORT.md",
+      "bytes": 6398,
+      "sha256": "5d5651a8669d3732ddf9a51be9d7e7ca0d5f18c8cf8c058e83fc9405ff746c01"
+    },
+    {
+      "path_in_component_repository": "research_logs/kumar_component_followup_20261016/budget_summary/run01/cohort_budget_paired_gains.csv",
+      "bytes": 31203,
+      "sha256": "f03c37fc8739426b88b846bbe800571f542106af77b89f420c50e272ad5cf600"
+    }
+  ],
+  "sources": [
+    {
+      "key": "Kumar2024",
+      "title": "Transfer learning promotes acquisition of individual BCI skills",
+      "year": 2024,
+      "doi": "10.1093/pnasnexus/pgae076",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10903645/fullTextXML",
+      "read_scope": "full_text_relevant_methods_results_discussion",
+      "finding": "Adaptive versus fixed CSP and supervised first-online-run calibration were already studied.",
+      "fulltext_sha256": "f480343997dac2a824b36ec56c5e8d2ffaaedc03b755995d3a178ba573579817"
+    },
+    {
+      "key": "Kumar2024Correction",
+      "title": "Correction to: Transfer learning promotes acquisition of individual BCI skills",
+      "year": 2024,
+      "doi": "10.1093/pnasnexus/pgae137",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10989871/fullTextXML",
+      "read_scope": "full_text",
+      "finding": "Corrects numerical CSP comparison values; cite with original.",
+      "fulltext_sha256": "9a0449d0b6add41822fd2e6e4148c30f582fc847318a28a2518498d99a091f09"
+    },
+    {
+      "key": "LotteGuan2011",
+      "title": "Regularizing Common Spatial Patterns to Improve BCI Designs: Unified Theory and New Algorithms",
+      "year": 2011,
+      "doi": "10.1109/TBME.2010.2082539",
+      "url": "https://ieeexplore.ieee.org/abstract/document/5593210",
+      "read_scope": "abstract_and_metadata",
+      "finding": "Regularized CSP is established prior art; covariance/source regularization alone does not establish novelty."
+    },
+    {
+      "key": "HeWuEA",
+      "title": "Transfer Learning for Brain–Computer Interfaces: A Euclidean Space Data Alignment Approach",
+      "year": 2020,
+      "online_year": 2019,
+      "doi": "10.1109/TBME.2019.2913914",
+      "url": "https://arxiv.org/html/1808.05464",
+      "read_scope": "full_text_alignment_methods_and_evaluation_scope",
+      "finding": "EA averages trial covariances and whitens signal; target information scope must match when used as comparator."
+    },
+    {
+      "key": "RodriguesRPA2019",
+      "title": "Riemannian Procrustes Analysis: Transfer Learning for Brain–Computer Interfaces",
+      "year": 2019,
+      "doi": "10.1109/TBME.2018.2889705",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30596565/",
+      "read_scope": "metadata_only",
+      "finding": "Identified as geometry-aware transfer prior art; no reproduced performance or full-method claim here."
+    },
+    {
+      "key": "LiL2SP2018",
+      "title": "Explicit Inductive Bias for Transfer Learning with Convolutional Networks",
+      "year": 2018,
+      "url": "https://proceedings.mlr.press/v80/li18a.html",
+      "fulltext_url": "https://proceedings.mlr.press/v80/li18a/li18a.pdf",
+      "read_scope": "full_text_regularization_methods_and_setup",
+      "finding": "Source-parameter-centred quadratic regularization is an existing method; weak source fitting can limit its benefit."
+    },
+    {
+      "key": "Eder2024",
+      "title": "Benchmarking brain–computer interface algorithms: Riemannian approaches vs convolutional neural networks",
+      "year": 2024,
+      "doi": "10.1088/1741-2552/ad6793",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39053485/",
+      "read_scope": "abstract_and_metadata",
+      "finding": "Multi-dataset and cross-session comparisons motivate classical as well as neural controls; do not generalize one weak EEGNet setting."
+    },
+    {
+      "key": "Wimpff2025",
+      "title": "Fine-Tuning Strategies for Continual Online EEG Motor Imagery Decoding: Insights from a Large-Scale Longitudinal Study",
+      "year": 2025,
+      "url": "https://arxiv.org/html/2502.06828v1",
+      "read_scope": "full_text_relevant_methods_and_strategy_definitions",
+      "version": "arXiv v1, 2025-02-05",
+      "finding": "Already compares causal independent/sequential fine-tuning and online alignment on a 61-participant longitudinal dataset. Current support-label protocol is different."
+    },
+    {
+      "key": "Ahmed2026",
+      "title": "Transfer learning for EEG-based BCIs: a comparative evaluation and optimization of data alignment methods",
+      "year": 2026,
+      "doi": "10.3389/fnsys.2026.1840121",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42368409/",
+      "read_scope": "abstract_and_metadata",
+      "finding": "Attention, not MI, dataset; abstract explicitly distinguishes optimized oracle parameter results from leakage-free evaluation. Context only, not a core MI comparator."
+    },
+    {
+      "key": "Wang2026Cholesky",
+      "title": "Deep Cholesky space adaptation for cross-session motor imagery decoding",
+      "year": 2026,
+      "doi": "10.1016/j.knosys.2026.116794",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0950705126015200",
+      "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.knosys.2026.116794",
+      "read_scope": "crossref_metadata_and_publisher_search_excerpt_only",
+      "finding": "October 2026 bibliographic record verified; publisher full-text request returned 403. No implementation/performance or novelty-exclusion conclusion from unread methods."
+    },
+    {
+      "key": "Lee2019",
+      "title": "EEG dataset and OpenBMI toolbox for three BCI paradigms: an investigation into BCI illiteracy",
+      "year": 2019,
+      "journal": "GigaScience",
+      "doi": "10.1093/gigascience/giz002",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6501944/fullTextXML",
+      "read_scope": "full_text_methods_data_records_ethics",
+      "finding": "54 participants, two days, 62 EEG plus four EMG channels, 1000 Hz; 100 offline MI trials/session and separate online data.",
+      "fulltext_sha256": "7125f260abca4e803088317302184cb17202919fe4ca681777662c66084e1c53"
+    },
+    {
+      "key": "Lee2019Dataset",
+      "title": "Supporting data for EEG Dataset and OpenBMI Toolbox for Three BCI Paradigms",
+      "year": 2019,
+      "doi": "10.5524/100542",
+      "url": "https://api.datacite.org/dois/10.5524/100542",
+      "read_scope": "official_dataset_metadata",
+      "data_license": "CC0-1.0",
+      "finding": "Dataset rights confirmed from DataCite; article CC BY and toolbox GPL-3.0 are different scopes."
+    },
+    {
+      "key": "MOABBLee2019",
+      "title": "MOABB Lee2019_MI dataset documentation",
+      "url": "https://moabb.neurotechx.com/docs/generated/moabb.datasets.Lee2019_MI.html",
+      "read_scope": "official_adapter_documentation",
+      "finding": "Default labeled MI access uses train_run; test_run lacks MI labels and defaults false. Must not assume online labels or multiple labeled runs."
+    },
+    {
+      "key": "BNCI2014_001",
+      "title": "BCI Competition 2008 – Graz data set A / BNCI 001-2014",
+      "url": "https://bnci-horizon-2020.eu/database/data-sets/001-2014/description.pdf",
+      "license_url": "https://bnci-horizon-2020.eu/database/data-sets",
+      "read_scope": "full_official_description_and_license_listing",
+      "data_license": "CC-BY-ND-4.0",
+      "finding": "Nine participants, two sessions, six runs/session, 48 four-class trials/run, 22 EEG and three EOG, 250 Hz. Binary left/right gives 24 trials/run before exclusions. Competition-time hidden labels require current released-label verification."
+    }
+  ],
+  "scientific_training_performed": false,
+  "new_query_evaluation_performed": false,
+  "implementation_alignment": {
+    "experiment_version": "hpc_recalibration_v2",
+    "classical_methods": [
+      "frozen",
+      "lda_only",
+      "full_csp",
+      "ea_csp",
+      "anchored_csp",
+      "empirical_anchored_csp",
+      "ea_anchored_csp",
+      "ea_empirical_anchored_csp"
+    ],
+    "principal_contrast": {
+      "left": "ea_empirical_anchored_csp",
+      "right": "ea_csp",
+      "budget_cap": 20,
+      "actual_kumar_full_support": [
+        19,
+        20
+      ],
+      "current_cohort_inference": "post-exposure exploratory"
+    },
+    "initial_participants": [
+      "sub-1",
+      "sub-4",
+      "sub-7",
+      "sub-10",
+      "sub-13",
+      "sub-16"
+    ],
+    "new_v2_seeds": [
+      20261023,
+      20261024,
+      20261025
+    ],
+    "target_label_budget_caps": [
+      4,
+      8,
+      12,
+      16,
+      20
+    ],
+    "new_source_fit_tasks": 18,
+    "classical_participant_tasks": 6,
+    "task_count_caveat": "Neural tasks additionally fit support-adaptation arms; 18 is a source-fit count, not the total optimizer-run count.",
+    "neural_update_positions": [
+      "frozen",
+      "head_only",
+      "full",
+      "l2sp"
+    ],
+    "old_54_weights_loaded_or_reused": false,
+    "old_54_reason": "Incompatible with new pure-PyTorch CompactEEGNet architecture; preserve historical accepted models and results.",
+    "external_adapter_implemented": false,
+    "external_status": "separate data staging and implementation required; proposed protocols are not executable current tasks",
+    "fixed_strength_rule": "alpha=n_support/(n_support+tau), with fixed tau; alpha itself varies by support count",
+    "zero_covariance_difference_rule": "alpha=0; no epsilon denominator added",
+    "historical_mne_estimator_exactly_reproduced": false,
+    "matched_fixed_weight_ablation": "ea_empirical_anchored_csp versus ea_anchored_csp; same EA/current support and fixed budget",
+    "alignment_ablation": "ea_empirical_anchored_csp versus empirical_anchored_csp; same empirical weighting rule",
+    "unaligned_fixed_tau_is_single_factor_candidate_ablation": false
+  },
+  "public_existing_evidence_snapshot": {
+    "path": "research_logs/paper2_hpc_v2_20261023/existing_evidence",
+    "manifest_sha256": "0356f69168c8cbe47872417e79c9e9fef7cf876fca284eeeb8ce9697c9e51fe1",
+    "source_payload_count": 8,
+    "source_payload_bytes": 118169,
+    "quoted_row_checks": 10,
+    "source_preserved": true
+  }
+}

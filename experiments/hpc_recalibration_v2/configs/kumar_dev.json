@@ -1,0 +1,59 @@
+{
+  "experiment_id": "paper2-kumar-dev-recalibration-v2-20261023",
+  "scientific_version": "kumar-cue5s-hpc-v2.0.0",
+  "project_dir": "/public/home/zhuziyuan/projects/paper2-recalibration-v2",
+  "output_root": "/public/home/zhuziyuan/projects/paper2-recalibration-v2/outputs/kumar-dev-v2",
+  "data_root": "/public/home/zhuziyuan/projects/paper2-recalibration-v2/data",
+  "tasks_file": "tasks_kumar_dev.json",
+  "python": "/public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python",
+  "slurm": {
+    "account": "zhuziyuan",
+    "partition": "hpc_gpu1",
+    "gres": "gpu:NVIDIAA100-SXM4-80GB:1",
+    "cpus_per_task": 24,
+    "mem": "128G",
+    "array_parallel": 3,
+    "time_limit": "5-03:00:00",
+    "exclude": "gpu3"
+  },
+  "runtime": {
+    "torch_threads": 4,
+    "blas_threads": 1,
+    "heartbeat_seconds": 30,
+    "checkpoint_seconds": 120,
+    "expected_versions": {"python": "3.12.3", "torch": "2.5.1+cu121", "numpy": "2.2.6"}
+  },
+  "device": "cuda:0",
+  "source_mode": "new_source",
+  "new_source_version": "compact_eegnet_hpc_v2_1_dev20261023",
+  "source_epochs": 100,
+  "adaptation_epochs": 20,
+  "batch_size": 16,
+  "learning_rate": 0.001,
+  "adaptation_learning_rate": 0.0001,
+  "weight_decay": 0.0001,
+  "l2sp_lambda": 0.01,
+  "normalization_scale_floor": 0.000001,
+  "amp": false,
+  "architecture": {"temporal_filters": 8, "depth_multiplier": 2, "kernel_length": 64, "dropout": 0.25},
+  "budgets": [4, 8, 12, 16, 20],
+  "methods": ["frozen", "head", "full", "l2sp"],
+  "classical_methods": ["frozen", "lda_only", "full_csp", "ea_csp", "anchored_csp", "empirical_anchored_csp", "ea_anchored_csp", "ea_empirical_anchored_csp"],
+  "classical": {"n_components": 4, "covariance_shrinkage": 0.1, "lda_shrinkage": 0.1, "anchor_tau": 20},
+  "analysis": {
+    "unit": "participant",
+    "primary_contrast": "ea_empirical_anchored_csp - ea_csp",
+    "primary_budget": 20,
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 20261023,
+    "descriptive_decrease_threshold_pp": -5,
+    "interpretation": "development_exploratory_previously_exposed_cohort"
+  },
+  "git_sync": {
+    "enabled": true,
+    "repository": "jackzhu119/few-shot-mi-eeg",
+    "branch": "research/paper2-hpc-v2-20261023",
+    "status_prefix": "training_status/paper2-recalibration-v2",
+    "interval_seconds": 180
+  }
+}
