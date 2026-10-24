@@ -1,0 +1,21 @@
+{
+  "observed_utc": "2026-10-24T01:34:11.599341+00:00",
+  "pytest_command": "python -m pytest -q tests/test_hpc_v2_direct_download.py tests/test_hpc_v2_bootstrap.py tests/test_hpc_v2_runtime_profile.py",
+  "pytest_observed": "46 passed in 2.27s",
+  "ruff": "All checks passed!",
+  "scope": "network bootstrap/transport and operating-profile tests; no scientific suite rerun",
+  "public_bootstrap_sha256": "126abc8c4e3322bdae61270af9c6538c729d435d572c110973f877af69eae7c4",
+  "downloader_commit": "520b0dfdc7a5e061521404c76260940a9d3b7b3f",
+  "downloader_sha256": "cfe63f6836039660d179eff5298d0aaa6e6adba471683d69f2165170fbbdacb3",
+  "current_resources": {
+    "partition": "hpc_gpu",
+    "gres": "gpu:1",
+    "cpus_per_task": 16,
+    "mem": "128G",
+    "array_parallel": 2,
+    "exclude": ""
+  },
+  "new_fit": false,
+  "actual_provided_token_permission_verified": false,
+  "provided_token_stored_in_public_code": false
+}

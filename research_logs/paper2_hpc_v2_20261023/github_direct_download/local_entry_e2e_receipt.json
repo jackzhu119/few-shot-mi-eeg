@@ -1,0 +1,45 @@
+{
+  "observed_utc": "2026-10-24T01:32:23.656567+00:00",
+  "scope": "actual official API bootstrap/code-cache/local credential separation and no-launch profile; no internal school host access",
+  "downloader_commit": "520b0dfdc7a5e061521404c76260940a9d3b7b3f",
+  "downloader_sha256": "cfe63f6836039660d179eff5298d0aaa6e6adba471683d69f2165170fbbdacb3",
+  "first_exit_code": 0,
+  "repeat_exit_code": 0,
+  "local_entry_saved": true,
+  "credential_saved_mode": "0600",
+  "credential_value_in_saved_source": false,
+  "credential_value_in_effective_json": false,
+  "supplied_credential_permission_tested_in_codex": false,
+  "first_stdout": [
+    "[paper2] local entry: /workspace/private_model_receipts/paper2-school-hpc-20261024/local_hpc_entry_proof/paper2_start.py",
+    "[paper2] GitHub authorization saved locally with mode0600",
+    "[paper2] connecting api.github.com attempt 1/3",
+    "{\"file\": \"paper2-hpc-v2-code.tar.gz\", \"status\": \"already_verified\"}",
+    "{\"file\": \"install_offline.sh\", \"status\": \"already_verified\"}",
+    "{\"status\": \"already_installed\", \"full_archive_rescan\": false, \"project_dir\": \"/workspace/paper2_hpc_v2_delivery/api_transport_e2e_run01/project\", \"installed_files\": 120}",
+    "{\"status\": \"runtime_profile_ready\", \"config\": \"/workspace/paper2_hpc_v2_delivery/api_transport_e2e_run01/project/configs/kumar_dev_hpc_gpu.json\", \"partition\": \"hpc_gpu\", \"gpus_per_task\": 1, \"cpu_per_task\": 16, \"memory_per_task\": \"128G\", \"array_parallel\": 2}"
+  ],
+  "repeat_stdout": [
+    "[paper2] local entry: /workspace/private_model_receipts/paper2-school-hpc-20261024/local_hpc_entry_proof/paper2_start.py",
+    "[paper2] verified local downloader: reusing",
+    "{\"file\": \"paper2-hpc-v2-code.tar.gz\", \"status\": \"already_verified\"}",
+    "{\"file\": \"install_offline.sh\", \"status\": \"already_verified\"}",
+    "{\"status\": \"already_installed\", \"full_archive_rescan\": false, \"project_dir\": \"/workspace/paper2_hpc_v2_delivery/api_transport_e2e_run01/project\", \"installed_files\": 120}",
+    "{\"status\": \"runtime_profile_ready\", \"config\": \"/workspace/paper2_hpc_v2_delivery/api_transport_e2e_run01/project/configs/kumar_dev_hpc_gpu.json\", \"partition\": \"hpc_gpu\", \"gpus_per_task\": 1, \"cpu_per_task\": 16, \"memory_per_task\": \"128G\", \"array_parallel\": 2}"
+  ],
+  "repeat_network_connections": 0,
+  "effective_slurm": {
+    "account": "zhuziyuan",
+    "partition": "hpc_gpu",
+    "gres": "gpu:1",
+    "cpus_per_task": 16,
+    "mem": "128G",
+    "array_parallel": 2,
+    "time_limit": "5-03:00:00",
+    "exclude": ""
+  },
+  "slurm_submitted": false,
+  "new_fit": false,
+  "elapsed_seconds": 0.7589636789998622,
+  "failures": []
+}

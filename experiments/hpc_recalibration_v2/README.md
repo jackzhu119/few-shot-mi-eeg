@@ -1,5 +1,10 @@
 # 论文2：学校 HPC 实验扩展 V2
 
+**当前运行配置：`hpc_gpu`、2个单卡任务并行，每项16核CPU、128GB。**
+[本地启动入口](../../releases/paper2-hpc-v2-20261023/README.md)已替代旧的单次raw下载命令。
+封存代码包仍保留原始模板，实际提交前会生成并使用`kumar_dev_hpc_gpu.json`，
+原科学配置、断点和输入不改。
+
 本目录是独立实验版本。已投稿论文、54个已验收模型及其预测保持原样。
 本交付完成代码、输入准备和软件测试；学校 A100 上的真实检查与科学结果由
 首次 Slurm 作业产生。不要把本地合成测试写成已完成的科学实验。
@@ -35,7 +40,7 @@ bash /public/home/zhuziyuan/incoming/install_offline.sh
 之后启动或恢复都使用同一行：
 
 ```bash
-bash /public/home/zhuziyuan/projects/paper2-recalibration-v2/launch.sh
+/public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python -u /public/home/zhuziyuan/paper2_start.py
 ```
 
 已完成项跳过；正在排队/运行的数组不重复提交；失败或中断项从持久断点恢复。
@@ -81,6 +86,10 @@ BNCI九人whole-run外部验证及Lee/OpenBMI 54人block验证有具体方案，
 打包或运行，当前启动命令不暗中增加外部任务。
 
 ## 资源与环境
+
+当前操作层覆盖为`hpc_gpu/gpu:1`、16CPU/128G、`%2`，取消旧gpu3排除。
+以下三A100/24CPU/%3是封存模板的原始配置，由上述伴随文件覆盖；
+不能从新分区截图推断实际卡型。
 
 默认Slurm数组 `%3`，每项1张 `NVIDIAA100-SXM4-80GB`、24CPU、128G内存，
 账户 `zhuziyuan`、分区 `hpc_gpu1`；总上限3GPU/72CPU/384G。
