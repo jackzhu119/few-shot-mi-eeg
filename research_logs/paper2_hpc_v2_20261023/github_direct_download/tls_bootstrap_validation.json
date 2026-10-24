@@ -1,0 +1,29 @@
+{
+  "observed_utc": "2026-10-24T01:01:23.727920+00:00",
+  "scope": "actual local trusted-CA bootstrap HTTPS fetch, unchanged-payload installation reuse and child-environment trust check; not school-host verification",
+  "bootstrap_body_sha256": "7b1a48a7f0c698169a9164a159745e16b4233393ee5d5eac66bc3836a29c47d6",
+  "bootstrap_exit_code": 0,
+  "elapsed_seconds": 0.890980366000008,
+  "stdout": [
+    "{\"file\": \"paper2-hpc-v2-code.tar.gz\", \"status\": \"already_verified\"}",
+    "{\"file\": \"install_offline.sh\", \"status\": \"already_verified\"}",
+    "{\"status\": \"already_installed\", \"full_archive_rescan\": false, \"project_dir\": \"/workspace/paper2_hpc_v2_delivery/github_direct_e2e/project\", \"installed_files\": 120}"
+  ],
+  "tls_verify_mode": "CERT_REQUIRED",
+  "tls_check_hostname": true,
+  "child_trust": {
+    "ca_file_env_present": true,
+    "verify_mode": 2,
+    "check_hostname": true,
+    "store": {
+      "x509": 154,
+      "crl": 0,
+      "x509_ca": 154
+    }
+  },
+  "school_ca_bundle_existence_verified": false,
+  "school_https_proxy_ca_verified": false,
+  "scientific_code_changed": false,
+  "slurm_submitted": false,
+  "new_fit": false
+}

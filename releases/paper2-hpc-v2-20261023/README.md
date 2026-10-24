@@ -9,10 +9,13 @@ GitHub distribution on 23 October 2026. [Data attribution and original
 CC BY 4.0 license](DATA_ATTRIBUTION.txt) accompany the data.
 
 On login1 run this single line using the already confirmed Python interpreter.
-It needs no curl/wget and preserves terminal input for the authorization prompt:
+It needs no curl/wget and preserves terminal input for the authorization prompt.
+The bootstrap preserves a configured CA file or selects an existing EL7/Debian
+system trust bundle before its first HTTPS request; certificate and hostname
+verification remain enabled, and the setting is inherited by later processes:
 
 ```bash
-/public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python -u -c 'import urllib.request; exec(compile(urllib.request.urlopen("https://raw.githubusercontent.com/jackzhu119/few-shot-mi-eeg/d7c49a9a0e25b359c389e2d2383d91fcde973f99/experiments/hpc_recalibration_v2/download_on_hpc.py", timeout=60).read(), "download_on_hpc.py", "exec"))'
+/public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python -u -c 'import os,sys,urllib.request; ca=next((p for p in (os.environ.get("SSL_CERT_FILE"),"/etc/pki/tls/certs/ca-bundle.crt","/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem","/etc/ssl/certs/ca-certificates.crt") if p and os.path.isfile(p)),None); ca or sys.exit("No existing system CA bundle found; ask the school administrator for its trusted CA bundle."); os.environ["SSL_CERT_FILE"]=ca; exec(compile(urllib.request.urlopen("https://raw.githubusercontent.com/jackzhu119/few-shot-mi-eeg/d7c49a9a0e25b359c389e2d2383d91fcde973f99/experiments/hpc_recalibration_v2/download_on_hpc.py",timeout=60).read(),"download_on_hpc.py","exec"))'
 ```
 
 The downloader resumes interrupted files, verifies four input parts, joins them
@@ -43,3 +46,17 @@ HTTP401 upload failure remains recorded and is independent of this download path
 
 Real A100 execution has not occurred in this delivery. The first allocated GPU
 worker performs the minimal forward/backward/save/resume check and then trains.
+
+## School Python certificate-path repair
+
+If an earlier bootstrap failed with `CERTIFICATE_VERIFY_FAILED: unable to get
+local issuer certificate`, use the complete command above again. It selects
+existing system CA material before downloading the script. No package install,
+Python upgrade, trust bypass or scientific restart is needed. Reuse this same
+command after a new SSH login so the selected CA reaches authorization and the
+monitor as well.
+
+The error may also mean a campus HTTPS proxy CA is absent from the server trust
+store. If verification still fails after selecting the system bundle, the missing
+item is a trusted campus CA chain from the school administrator; this command
+does not invent or download an unverified trust anchor.
