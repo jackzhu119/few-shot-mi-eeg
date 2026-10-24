@@ -114,6 +114,37 @@ def test_failure_is_not_retried_and_other_independent_tasks_continue(config):
     assert len(json.loads((Path(config["output_root"]) / ".runtime/single_pool_state.json").read_text())["runs"]) == 2
 
 
+def test_same_job_automatic_requeue_blocks_recorded_failure_but_continues_unfinished(config, monkeypatch):
+    monkeypatch.setenv("SLURM_JOB_ID", "original-job")
+    monkeypatch.setenv("SLURM_RESTART_COUNT", "0")
+    tasklist = tasks(4)
+    first = Harness(config, tasklist, failures={0})
+    assert first.run(indices=[0, 1]) == 1
+    monkeypatch.setenv("SLURM_RESTART_COUNT", "1")
+    resumed = Harness(config, tasklist)
+    assert resumed.run() == 1
+    assert [row["index"] for row in resumed.calls] == [2, 3]
+    runs = json.loads((Path(config["output_root"]) / ".runtime/single_pool_state.json").read_text())["runs"]
+    assert runs[0]["failed_indices"] == [0]
+    assert runs[-1]["failed_indices"] == []
+    assert runs[-1]["blocked_failed_indices"] == [0]
+    assert runs[-1]["slurm_restart_count"] == 1
+
+
+def test_new_job_explicit_resume_can_retry_old_failure(config, monkeypatch):
+    monkeypatch.setenv("SLURM_JOB_ID", "original-job")
+    monkeypatch.setenv("SLURM_RESTART_COUNT", "0")
+    tasklist = tasks(3)
+    assert Harness(config, tasklist, failures={0}).run(indices=[0, 1]) == 1
+    monkeypatch.setenv("SLURM_JOB_ID", "new-manual-job")
+    resumed = Harness(config, tasklist)
+    assert resumed.run() == 0
+    assert [row["index"] for row in resumed.calls] == [0, 2]
+    runs = json.loads((Path(config["output_root"]) / ".runtime/single_pool_state.json").read_text())["runs"]
+    assert runs[-1]["job_id"] == "new-manual-job"
+    assert runs[-1]["blocked_failed_indices"] == []
+
+
 def test_usr1_during_dispatch_does_not_start_a_third_task(config):
     stop = pool.StopState()
     harness = Harness(config, tasks(7), stop=stop, stop_after=2)

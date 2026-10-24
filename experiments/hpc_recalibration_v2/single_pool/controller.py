@@ -102,10 +102,19 @@ def _run_locked(config, tasks, selected, pending, skipped, bindings, popen, slee
     output = Path(config["output_root"])
     path = output / ".runtime" / "single_pool_state.json"
     history = json.loads(path.read_text()) if path.is_file() else {"schema_version": 1, "runs": []}
-    current = {"run_id": uuid.uuid4().hex, "job_id": os.environ.get("SLURM_JOB_ID"),
+    job_id = os.environ.get("SLURM_JOB_ID")
+    restart_count = int(os.environ.get("SLURM_RESTART_COUNT", "0") or "0")
+    if restart_count > 0 and not job_id:
+        raise RuntimeError("Automatic requeue lacks its Slurm job identity; no task was dispatched")
+    previous_failures = {index for run in history["runs"] if run.get("job_id") == job_id
+                         for index in run.get("failed_indices", [])} if restart_count > 0 else set()
+    blocked = sorted(set(pending) & previous_failures)
+    pending = [index for index in pending if index not in previous_failures]
+    current = {"run_id": uuid.uuid4().hex, "job_id": job_id,
                "controller_pid": os.getpid(), "started_at": utc_now(), "indices": selected,
                "skipped_complete": skipped, "dispatches": [], "finished": [],
-               "failed_indices": [], "status": "running"}
+               "failed_indices": [], "blocked_failed_indices": blocked,
+               "slurm_restart_count": restart_count, "status": "running"}
     history["runs"].append(current)
     active = {}
     signaled = {}
@@ -211,7 +220,8 @@ def _run_locked(config, tasks, selected, pending, skipped, bindings, popen, slee
                 last_heartbeat = time.monotonic()
             if active:
                 sleep(poll_seconds)
-        code = 130 if stop.code == 130 else 1 if current["failed_indices"] else stop.code or 0
+        code = 130 if stop.code == 130 else 1 if (
+            current["failed_indices"] or current["blocked_failed_indices"]) else stop.code or 0
         current.update(status="complete" if code == 0 else "paused" if code == 75 else "cancelled" if code == 130 else "failed",
                        exit_code=code, finished_at=utc_now())
         save("pool_exit")
