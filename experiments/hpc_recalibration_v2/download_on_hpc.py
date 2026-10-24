@@ -35,8 +35,8 @@ ARTIFACTS = (
     {"file": "install_offline.sh", "bytes": 2049,
      "sha256": "3476346c1c71c92b91517aafdb08803a06a85b09de06f7c9562f6012f4fac508"},
 )
-RUNTIME_COMMIT = "782074a4890779c0ffd6367d1b137b2161e0c36d"
-RUNTIME_ARTIFACTS = ({'file': 'submit.py', 'bytes': 12418, 'sha256': 'f70b8f5f37eb58dbca372009b2e262c43ab8f5e249f88b8526453753adc2e7fc'}, {'file': 'controller.py', 'bytes': 12566, 'sha256': '0ceb49a52db626cc3674a2b96e56cc2caa0fb2ce8570df9e5672e7ae433eb884'}, {'file': 'job.sh', 'bytes': 2104, 'sha256': '637d8c4774358c4acdcfc3aeca73010ec39c26ef5674dea6516228ef8f371f3c'}, {'file': 'switch.py', 'bytes': 12708, 'sha256': 'aff2c1300115d85af78f2def53ca3421b269f6c5970b35f908b257c286cc77b1'})
+RUNTIME_COMMIT = "c7cb90a7c73dece6aca082c687dcafcc1028a32d"
+RUNTIME_ARTIFACTS = ({'file': 'submit.py', 'bytes': 12418, 'sha256': 'f70b8f5f37eb58dbca372009b2e262c43ab8f5e249f88b8526453753adc2e7fc'}, {'file': 'controller.py', 'bytes': 12566, 'sha256': '0ceb49a52db626cc3674a2b96e56cc2caa0fb2ce8570df9e5672e7ae433eb884'}, {'file': 'job.sh', 'bytes': 2104, 'sha256': '637d8c4774358c4acdcfc3aeca73010ec39c26ef5674dea6516228ef8f371f3c'}, {'file': 'switch.py', 'bytes': 14394, 'sha256': '6789d694987f703a12a503916bfc000213ce9c5bd194f544da2c65a56cdd604e'})
 
 
 class DownloadError(RuntimeError):
@@ -336,7 +336,7 @@ def prepare_profile(project_dir, token_file=None) -> Path:
     config = json.loads(original_bytes)
     slurm = config.setdefault("slurm", {})
     resource_changes = {"partition": "hpc_gpu1", "gres": "gpu:1", "exclude": "",
-                        "cpus_per_task": 16, "mem": "64G", "array_parallel": 2,
+                        "cpus_per_task": 12, "mem": "64G", "array_parallel": 2,
                         "submission_mode": "single_pool", "pool_workers": 2}
     before = {key: slurm.get(key) for key in resource_changes}
     slurm.update(resource_changes)
@@ -346,7 +346,7 @@ def prepare_profile(project_dir, token_file=None) -> Path:
         if candidate.is_file():
             credential_path = str(candidate)
             config.setdefault("git_sync", {})["token_file"] = credential_path
-    destination = original.with_name("kumar_dev_hpc_gpu1.json")
+    destination = original.with_name("kumar_dev_hpc_gpu1_24cpu.json")
     if not destination.is_file() or json.loads(destination.read_bytes()) != config:
         _atomic_json(destination, config)
     payload = destination.read_bytes()
@@ -428,15 +428,14 @@ def main():
         runtime = install_runtime_bundle(args.project_dir, incoming)
         print(json.dumps({"status": "runtime_profile_ready", "config": str(profile),
                           "partition": "hpc_gpu1", "gpus_per_task": 1,
-                          "cpu_per_task": 16, "memory_per_task": "64G",
+                          "cpu_per_task": 12, "memory_per_task": "64G",
                           "submission_mode": "single_pool", "slurm_jobs": 1,
-                          "pool_workers": 2, "total_cpus": 32, "total_memory": "128G",
+                          "pool_workers": 2, "total_cpus": 24, "total_memory": "128G",
                           "runtime": str(runtime)}), flush=True)
         if not args.no_launch:
             command = [sys.executable, "-u", str(runtime / "switch.py"), "--config", str(profile)]
             if args.switch_job:
-                command.extend(["--from-config", str(profile.with_name("kumar_dev_hpc_gpu.json")),
-                                "--job-id", args.switch_job])
+                command.extend(["--job-id", args.switch_job])
             return subprocess.call(command, env=env)
     return 0
 
