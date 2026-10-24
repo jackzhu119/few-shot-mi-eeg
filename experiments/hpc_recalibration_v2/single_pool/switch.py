@@ -75,6 +75,29 @@ def migrate(config, *, from_config=None, job_id=None, runner=run_command,
     prefix = _safe_slug(config["experiment_id"]) + "-" + hashlib.sha256(str(output.resolve()).encode()).hexdigest()[:8]
     user = config.get("slurm", {}).get("user", "zhuziyuan")
     with file_lock(runtime / "migration.lock"):
+        if job_id == "auto":
+            active = [r for r in queue_entries(user, runner)
+                      if r["name"].startswith(prefix) and r["state"] not in TERMINAL]
+            if len(active) > 1:
+                raise RuntimeError("More than one project job is active; no job was changed")
+            job_id = active[0]["id"] if active else None
+        if job_id and from_config is None:
+            recorded = json.loads((runtime / "submissions.json").read_text())
+            matches = [r for r in recorded["batches"] if str(r.get("job_id")) == str(job_id)]
+            if (recorded.get("experiment_id") != config["experiment_id"] or len(matches) != 1
+                    or not matches[0]["name"].startswith(prefix)):
+                raise RuntimeError("The active job is not uniquely recorded for this project")
+            command = matches[0].get("command", [])
+            expected = pool_submit._pool_command(config, [], "resource-comparison")
+            resource_prefixes = ("--nodes=", "--ntasks=", "--partition=", "--gres=", "--cpus-per-task=", "--mem=")
+            if all(value in command for value in expected if value.startswith(resource_prefixes)):
+                monitor, warning = _monitor_start(config)
+                return {"status": "already_matches_requested_resources", "job_id": str(job_id),
+                        "monitor_pid": monitor, "monitor_warning": warning,
+                        "new_slurm_jobs_submitted": 0}
+            if len(command) < 4 or Path(command[-4]).name != "job.sh":
+                raise RuntimeError("The existing batch configuration cannot be identified; no job was changed")
+            from_config = command[-3]
         if not job_id:
             active = [r for r in queue_entries(user, runner) if r["name"].startswith(prefix) and r["state"] not in TERMINAL]
             if active:

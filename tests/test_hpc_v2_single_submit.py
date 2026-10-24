@@ -90,6 +90,24 @@ def test_latest_allocation_is_one_job_two_gpus_36_cpus_128g(config):
     assert single.preparation_key(config) == science_key
 
 
+def test_gpu1_one_node_two_gpus_total_24_cpus_and_128g(config):
+    before = single.preparation_key(config)
+    config["slurm"].update(partition="hpc_gpu1", cpus_per_task=12, mem="64G", pool_workers=2)
+    commands = []
+
+    def runner(args):
+        commands.append(args)
+        return reply() if args[0] == "squeue" else reply(out="99124\n")
+
+    result = single.submit(config, runner=runner)
+    batches = [args for args in commands if args[0] == "sbatch"]
+    assert len(batches) == result["slurm_jobs_submitted"] == 1
+    assert all(v in batches[0] for v in ("--nodes=1", "--ntasks=1", "--partition=hpc_gpu1",
+                                         "--gres=gpu:2", "--cpus-per-task=24", "--mem=128G"))
+    assert not any(v.startswith("--array=") for v in batches[0])
+    assert single.preparation_key(config) == before
+
+
 def test_memory_refusal_is_preserved_before_one_later_manual_submission(config):
     memory_error = ("sbatch: error: Memory specification can not be satisfied\n"
                     "sbatch: error: Batch job submission failed: Requested node configuration is not available\n")
