@@ -31,7 +31,8 @@ def test_partition_override_preserves_every_scientific_field(project):
     assert original.read_bytes() == before
     assert effective["slurm"] == old["slurm"] | {
         "partition": "hpc_gpu", "gres": "gpu:1", "exclude": "",
-        "cpus_per_task": 16, "mem": "128G", "array_parallel": 2}
+        "cpus_per_task": 16, "mem": "128G", "array_parallel": 2,
+        "submission_mode": "single_pool", "pool_workers": 2}
     assert {k: v for k, v in effective.items() if k != "slurm"} == {
         k: v for k, v in old.items() if k != "slurm"}
     assert "nodelist" not in effective["slurm"]
@@ -89,10 +90,12 @@ def test_installer_cannot_submit_before_operational_profile(project, tmp_path, m
     monkeypatch.setattr(profile, "prepare", lambda *a, **k: None)
     monkeypatch.setattr(profile.sys, "argv", ["entry", "--incoming", str(incoming), "--project-dir", str(project)])
     commands = []
+    monkeypatch.setattr(profile, "install_runtime_bundle", lambda *a, **k: project / ".hpc_runtime/fixed")
     monkeypatch.setattr(profile.subprocess, "call", lambda cmd, **kwargs: commands.append(cmd) or 0)
     assert profile.main() == 0
     assert commands[0][-1] == "--no-launch"
-    assert commands[1] == ["bash", str(project / "launch.sh"), str(project / "configs/kumar_dev_hpc_gpu.json")]
+    assert commands[1] == [sys.executable, "-u", str(project / ".hpc_runtime/fixed/submit.py"),
+                           "--config", str(project / "configs/kumar_dev_hpc_gpu.json")]
     config = json.loads((project / "configs/kumar_dev_hpc_gpu.json").read_bytes())
     assert config["slurm"]["array_parallel"] == 2
     assert config["slurm"]["cpus_per_task"] == 16
@@ -103,6 +106,7 @@ def test_no_launch_never_runs_the_training_launcher(project, tmp_path, monkeypat
     monkeypatch.setattr(profile.sys, "argv", ["entry", "--incoming", str(tmp_path / "incoming"),
                                              "--project-dir", str(project), "--no-launch"])
     commands = []
+    monkeypatch.setattr(profile, "install_runtime_bundle", lambda *a, **k: project / ".hpc_runtime/fixed")
     monkeypatch.setattr(profile.subprocess, "call", lambda cmd, **kwargs: commands.append(cmd) or 0)
     assert profile.main() == 0
     assert len(commands) == 1

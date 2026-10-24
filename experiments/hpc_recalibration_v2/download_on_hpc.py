@@ -35,6 +35,8 @@ ARTIFACTS = (
     {"file": "install_offline.sh", "bytes": 2049,
      "sha256": "3476346c1c71c92b91517aafdb08803a06a85b09de06f7c9562f6012f4fac508"},
 )
+RUNTIME_COMMIT = "335cd65fb452a0f9a6ac8668edb4dae421ddd027"
+RUNTIME_ARTIFACTS = ({'file': 'submit.py', 'bytes': 12418, 'sha256': 'f70b8f5f37eb58dbca372009b2e262c43ab8f5e249f88b8526453753adc2e7fc'}, {'file': 'controller.py', 'bytes': 11867, 'sha256': '3bee17fd150fdf4e7370f67d5a08e6ab20c8c1480a71e05d2be576f73878aad8'}, {'file': 'job.sh', 'bytes': 2104, 'sha256': '637d8c4774358c4acdcfc3aeca73010ec39c26ef5674dea6516228ef8f371f3c'})
 
 
 class DownloadError(RuntimeError):
@@ -334,7 +336,8 @@ def prepare_profile(project_dir, token_file=None) -> Path:
     config = json.loads(original_bytes)
     slurm = config.setdefault("slurm", {})
     resource_changes = {"partition": "hpc_gpu", "gres": "gpu:1", "exclude": "",
-                        "cpus_per_task": 16, "mem": "128G", "array_parallel": 2}
+                        "cpus_per_task": 16, "mem": "128G", "array_parallel": 2,
+                        "submission_mode": "single_pool", "pool_workers": 2}
     before = {key: slurm.get(key) for key in resource_changes}
     slurm.update(resource_changes)
     credential_path = None
@@ -362,6 +365,41 @@ def prepare_profile(project_dir, token_file=None) -> Path:
     return destination
 
 
+def install_runtime_bundle(project_dir, incoming, *, opener=None):
+    """Install immutable extra runtime files; leave the sealed code pack intact."""
+    if not RUNTIME_ARTIFACTS or RUNTIME_COMMIT == "PENDING":
+        raise DownloadError("Single-job runtime is not versioned")
+    project = Path(project_dir).expanduser().resolve()
+    destination = project / ".hpc_runtime" / RUNTIME_COMMIT
+    staged = []
+    for spec in RUNTIME_ARTIFACTS:
+        cached = Path(incoming) / "runtime" / (spec["sha256"] + "-" + spec["file"])
+        url = RAW + RUNTIME_COMMIT + "/experiments/hpc_recalibration_v2/single_pool/" + spec["file"]
+        download(url, cached, spec, opener=opener)
+        staged.append((spec, cached))
+    destination.mkdir(parents=True, exist_ok=True)
+    for spec, cached in staged:
+        target = destination / spec["file"]
+        if target.exists():
+            if target.stat().st_size != spec["bytes"] or _sha(target) != spec["sha256"]:
+                raise DownloadError("Installed versioned runtime differs: " + target.name)
+            continue
+        fd, temporary = tempfile.mkstemp(prefix="." + target.name + ".", dir=destination)
+        try:
+            with os.fdopen(fd, "wb") as outgoing, cached.open("rb") as source:
+                shutil.copyfileobj(source, outgoing)
+                outgoing.flush()
+                os.fsync(outgoing.fileno())
+            os.replace(temporary, target)
+        finally:
+            if os.path.exists(temporary):
+                os.unlink(temporary)
+    _atomic_json(destination / "runtime_manifest.json", {
+        "source_commit": RUNTIME_COMMIT, "artifacts": list(RUNTIME_ARTIFACTS),
+        "original_code_package_modified": False, "scientific_configuration_changed": False})
+    return destination
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--incoming", default="/public/home/zhuziyuan/incoming")
@@ -386,12 +424,16 @@ def main():
         if code:
             return code
         profile = prepare_profile(args.project_dir, args.token_file)
+        runtime = install_runtime_bundle(args.project_dir, incoming)
         print(json.dumps({"status": "runtime_profile_ready", "config": str(profile),
                           "partition": "hpc_gpu", "gpus_per_task": 1,
                           "cpu_per_task": 16, "memory_per_task": "128G",
-                          "array_parallel": 2}), flush=True)
+                          "submission_mode": "single_pool", "slurm_jobs": 1,
+                          "pool_workers": 2, "total_cpus": 32, "total_memory": "256G",
+                          "runtime": str(runtime)}), flush=True)
         if not args.no_launch:
-            return subprocess.call(["bash", str(Path(args.project_dir) / "launch.sh"), str(profile)], env=env)
+            return subprocess.call([sys.executable, "-u", str(runtime / "submit.py"),
+                                    "--config", str(profile)], env=env)
     return 0
 
 

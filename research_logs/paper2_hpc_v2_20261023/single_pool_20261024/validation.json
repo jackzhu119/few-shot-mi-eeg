@@ -1,0 +1,37 @@
+{
+  "observed_utc": "2026-10-24T02:08:21.975647+00:00",
+  "scope": "single-job deployment and local synthetic/software validation; no school Slurm execution",
+  "runtime_commit": "335cd65fb452a0f9a6ac8668edb4dae421ddd027",
+  "runtime_artifacts": [
+    {
+      "file": "submit.py",
+      "bytes": 12418,
+      "sha256": "f70b8f5f37eb58dbca372009b2e262c43ab8f5e249f88b8526453753adc2e7fc"
+    },
+    {
+      "file": "controller.py",
+      "bytes": 11867,
+      "sha256": "3bee17fd150fdf4e7370f67d5a08e6ab20c8c1480a71e05d2be576f73878aad8"
+    },
+    {
+      "file": "job.sh",
+      "bytes": 2104,
+      "sha256": "637d8c4774358c4acdcfc3aeca73010ec39c26ef5674dea6516228ef8f371f3c"
+    }
+  ],
+  "pytest_observed": "73 passed in 2.64s",
+  "ruff": "All checks passed!",
+  "bash_syntax_passed": true,
+  "frozen_package_files_modified": false,
+  "input_archive_redownloaded": false,
+  "credential_reentered_or_rewritten": false,
+  "preview_slurm_jobs": 1,
+  "preview_gpu_total": 2,
+  "preview_cpu_total": 32,
+  "preview_memory_total": "256G",
+  "preview_has_array": false,
+  "remaining_scientific_tasks": 24,
+  "scientific_fits_performed": 0,
+  "school_job_id_claimed": false,
+  "actual_slurm_submitted": false
+}
