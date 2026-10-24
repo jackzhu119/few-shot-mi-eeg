@@ -31,7 +31,7 @@ def test_partition_override_preserves_every_scientific_field(project):
     assert original.read_bytes() == before
     assert effective["slurm"] == old["slurm"] | {
         "partition": "hpc_gpu", "gres": "gpu:1", "exclude": "",
-        "cpus_per_task": 16, "mem": "128G", "array_parallel": 2,
+        "cpus_per_task": 18, "mem": "64G", "array_parallel": 2,
         "submission_mode": "single_pool", "pool_workers": 2}
     assert {k: v for k, v in effective.items() if k != "slurm"} == {
         k: v for k, v in old.items() if k != "slurm"}
@@ -98,7 +98,8 @@ def test_installer_cannot_submit_before_operational_profile(project, tmp_path, m
                            "--config", str(project / "configs/kumar_dev_hpc_gpu.json")]
     config = json.loads((project / "configs/kumar_dev_hpc_gpu.json").read_bytes())
     assert config["slurm"]["array_parallel"] == 2
-    assert config["slurm"]["cpus_per_task"] == 16
+    assert config["slurm"]["cpus_per_task"] == 18
+    assert config["slurm"]["mem"] == "64G"
 
 
 def test_no_launch_never_runs_the_training_launcher(project, tmp_path, monkeypatch):

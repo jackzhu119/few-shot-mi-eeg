@@ -336,7 +336,7 @@ def prepare_profile(project_dir, token_file=None) -> Path:
     config = json.loads(original_bytes)
     slurm = config.setdefault("slurm", {})
     resource_changes = {"partition": "hpc_gpu", "gres": "gpu:1", "exclude": "",
-                        "cpus_per_task": 16, "mem": "128G", "array_parallel": 2,
+                        "cpus_per_task": 18, "mem": "64G", "array_parallel": 2,
                         "submission_mode": "single_pool", "pool_workers": 2}
     before = {key: slurm.get(key) for key in resource_changes}
     slurm.update(resource_changes)
@@ -427,9 +427,9 @@ def main():
         runtime = install_runtime_bundle(args.project_dir, incoming)
         print(json.dumps({"status": "runtime_profile_ready", "config": str(profile),
                           "partition": "hpc_gpu", "gpus_per_task": 1,
-                          "cpu_per_task": 16, "memory_per_task": "128G",
+                          "cpu_per_task": 18, "memory_per_task": "64G",
                           "submission_mode": "single_pool", "slurm_jobs": 1,
-                          "pool_workers": 2, "total_cpus": 32, "total_memory": "256G",
+                          "pool_workers": 2, "total_cpus": 36, "total_memory": "128G",
                           "runtime": str(runtime)}), flush=True)
         if not args.no_launch:
             return subprocess.call([sys.executable, "-u", str(runtime / "submit.py"),
