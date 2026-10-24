@@ -1,92 +1,85 @@
-# School HPC V2 direct GitHub download
+# One Slurm job for the Paper2 fixed task queue
 
-Source commit: `71e79fb6f70346ac2fc307c0b93dc23af101e2c7`.
+Current mode: **one Slurm allocation**, `hpc_gpu`,2 GPUs,32 CPUs and256G total.
+Inside it, at most two independent one-GPU workers take the next unfinished
+task in the fixed queue. Each worker has the planned16CPU/128G share; the
+scheduler enforces the aggregate job allocation. This is not DDP and no job
+array is submitted. Scientific parameters, task order, source IDs and outputs
+remain unchanged.
 
-The code, installer and complete input data can now be downloaded directly from
-this GitHub repository on the school's login1 terminal. No transfer through a
-personal computer or R2 permission is needed. The author expressly requested
-GitHub distribution on 23 October 2026. [Data attribution and original
-CC BY 4.0 license](DATA_ATTRIBUTION.txt) accompany the data.
+## Existing installation: update and continue
 
-Current operating profile: **hpc_gpu partition, one GPU/16 CPU/128G per task,
-at most two tasks in parallel**. The screenshot named a partition, not a node
-or GPU model; the runtime requests generic `gpu:1`. Old A100-model and gpu3
-exclusion constraints are removed only in a companion operating config.
-
-Run this one-line initialization on login1. It first saves the small local entry
-without making a network request, then uses the official GitHub API with raw
-as a fallback (three bounded attempts, progress printed before connecting).
-The embedded public initializer source is [school_bootstrap.py](../../experiments/hpc_recalibration_v2/school_bootstrap.py);
-its compression keeps a single pasted command compatible with the terminal.
-The public command below contains no credential. Existing trusted CA material
-and hostname/certificate validation remain enabled.
+If downloads already completed and sbatch reported `QOSMaxSubmitJobPerUserLimit`,
+run this one line in the same school account. It backs up the local entry,
+updates only its two version pins, then runs the updated entry. Existing data,
+checkpoints and the private GitHub authorization file are reused.
 
 ```bash
-/public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python -u -c 'import base64,json,zlib; p=json.loads(zlib.decompress(base64.b64decode("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"))); exec(compile(p["source"],"paper2_start.py","exec"),{"__name__":"__main__","BOOTSTRAP_SOURCE":p["source"].encode(),"BOOTSTRAP_TOKEN":p.get("token")})'
+/public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python -u -c 'import re,runpy; from pathlib import Path; p=Path("/public/home/zhuziyuan/paper2_start.py"); s=p.read_text(); d=runpy.run_path(str(p),run_name="paper2_update_helper"); n,a=re.subn("(?m)^COMMIT = .*$","COMMIT = \"141410c7345e1fac33e85b31b316205e593f9fb3\"",s); n,b=re.subn("(?m)^SHA256 = .*$","SHA256 = \"41592d3cd2475afe73757e095d7f8c8ac982883b0464ec17ab956110d85cd3ac\"",n); assert (a,b)==(1,1),"Local entry format differs; no file changed"; compile(n,str(p),"exec"); q=p.with_name("paper2_start.before_single_job.py"); q.exists() or d["atomic_file"](q,s.encode()); d["atomic_file"](p,n.encode()); exec(compile(n,str(p),"exec"))'
 ```
 
-The downloader resumes interrupted files, verifies four input parts, joins them
-to the unchanged 125,283,270-byte archive, verifies the full SHA256 and invokes
-the existing installer. Downloads go to `/public/home/zhuziyuan/incoming/`;
-the project is installed under `/public/home/zhuziyuan/projects/paper2-recalibration-v2/`.
-All payload URLs use fixed commits. The verified input manifest is cached too,
-so completed local inputs can resume without a network request. The input [manifest](input_download_manifest.json)
-pins data revision `b971e79dbf5bf8a1452634046b6e186fe298b6a9`.
-
-Public downloading needs no GitHub token. Before the first training submission,
-enter the token only at the existing hidden school-terminal prompt; it authorizes
-progress reporting. To download/install without submitting, append `--no-launch`
-to the Python command. The same download command resumes interrupted transfers.
-The same experiment resumes with:
+After updating, the ordinary start/resume command remains:
 
 ```bash
 /public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python -u /public/home/zhuziyuan/paper2_start.py
 ```
 
-[Complete instructions](../../experiments/hpc_recalibration_v2/README.md).
-[Validation and limitations](../../research_logs/paper2_hpc_v2_20261023/REPORT.md).
+Only the new small runtime files are fetched. The sealed original code package
+and125,283,270-byte input archive are not replaced. The added runtime lives in
+`.hpc_runtime/<fixed-commit>/`, with its complete file hashes.
 
-GitHub's regular-file limit requires the input archive to be stored as four
-files under `inputs/`, each at most32MiB. The program restores the exact original
-archive SHA256 `b6f211bbf2ed512fbf30d178d59c67181396c98d0ec122812519ee95a9aa3e0a`.
-It does not reprocess EEG or change any scientific configuration. R2's earlier
-HTTP401 upload failure remains recorded and is independent of this download path.
+## What changed in scheduling
 
-Real A100 execution has not occurred in this delivery. The first allocated GPU
-worker performs the minimal forward/backward/save/resume check and then trains.
+The old `%2` limited simultaneously running array items; it did not reduce24
+submitted array elements to one accounting item. The new command requests:
 
-## School Python certificate-path repair
+```text
+--nodes=1 --ntasks=1 --partition=hpc_gpu --gres=gpu:2 --cpus-per-task=32 --mem=256G
+```
 
-If an earlier bootstrap failed with `CERTIFICATE_VERIFY_FAILED: unable to get
-local issuer certificate`, use the complete command above again. It selects
-existing system CA material before downloading the script. No package install,
-Python upgrade, trust bypass or scientific restart is needed. Reuse this same
-command after a new SSH login so the selected CA reaches authorization and the
-monitor as well.
+There is no `--array`. Processes are launched inside the existing allocation;
+they do not invoke sbatch. Each child sees only its assigned Slurm GPU token
+and continues to use logical `cuda:0`. Completed tasks skip; interrupted stages
+load their existing full checkpoint. Scientific failures are preserved and not
+automatically retried, while other independent tasks can finish. Known failed
+items stay blocked across automatic same-job requeues; an explicit new manual
+submission after a repair may retry them.
 
-The error may also mean a campus HTTPS proxy CA is absent from the server trust
-store. If verification still fails after selecting the system bundle, the missing
-item is a trusted campus CA chain from the school administrator; this command
-does not invent or download an unverified trust anchor.
+USR1 stops new dispatches, forwards to active workers and requeues only the same
+job ID after safe interruption. TERM/INT preserve checkpoints and do not revive
+the job. A single job still needs one available submission slot; account limits
+are not bypassed and other papers are not cancelled.
 
-## Runtime profile and authorization
+The earlier failed sbatch record is kept. A missing job ID is resolved only when
+its actual nonzero return code and explicit scheduler rejection prove that it
+was not accepted; the original ledger bytes, status and stderr are preserved.
+Ambiguous communication failures are not assumed to be rejections.
 
-The installer runs with `--no-launch` before any submission. The downloader then
-writes `configs/kumar_dev_hpc_gpu.json` with hpc_gpu/gpu:1,16 CPUs,128G and
-array concurrency2, and explicitly launches that file. The original sealed
-`kumar_dev.json` is untouched; scientific identities and outputs are unchanged.
-A provenance sidecar records only operating fields and file hashes.
+## Fresh installation
 
-An optional authorization supplied privately by the author is saved only to the
-school account's `.config/paper2-hpc/github-token` with mode0600. Public source,
-input archives and progress contain no token. The initializer source saved as
-`paper2_start.py` also contains no token value. The companion config references
-only the local token-file path; the existing real GitHub permission check remains
-before the first submission. A user who has not configured that private file
-gets the existing hidden-input authorization prompt.
+For an account that has not initialized the project, this one-line public
+initializer saves the local entry before contacting either GitHub endpoint.
+It contains no credential and uses existing trusted CA files.
 
-The current delivery was verified by a complete125,283,270-byte API-first
-download and local `--no-launch` installation, plus46 focused transport, local
-entry and resource-profile tests. This does not claim access to the internal
-school network or actual GPU execution. The old failed raw-host requests never
-reached scientific training.
+```bash
+/public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python -u -c 'import base64,json,zlib; p=json.loads(zlib.decompress(base64.b64decode("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"))); exec(compile(p["source"],"paper2_start.py","exec"),{"__name__":"__main__","BOOTSTRAP_SOURCE":p["source"].encode(),"BOOTSTRAP_TOKEN":p.get("token")})'
+```
+
+Public downloads need no token. Before first submission, the existing GitHub
+permission check uses the account's private0600 token file or the hidden-input
+prompt. Author-specific authorization is never published in this repository.
+GitHub progress synchronization remains independent, about every180seconds;
+reporting failures do not terminate workers.
+
+## Input and evidence
+
+The four parts restore the original archive SHA256
+`b6f211bbf2ed512fbf30d178d59c67181396c98d0ec122812519ee95a9aa3e0a`.
+[Input manifest](input_download_manifest.json) and [original source attribution](DATA_ATTRIBUTION.txt)
+retain the CC BY4.0 source terms. [Scientific design](../../docs/paper2_hpc_v2_literature_and_scientific_design_20261023.md)
+and the old54 accepted models remain separate from these runtime changes.
+
+[Single-job validation](../../research_logs/paper2_hpc_v2_20261023/single_pool_20261024/)
+records real local runtime downloading, single-job command preview, synthetic
+process/signal tests and preservation checks. No school Slurm job or scientific
+model was run from the Codex validation environment.

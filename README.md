@@ -1,5 +1,14 @@
 # Task-Aware Adaptive Decoding for Longitudinal Motor-Imagery EEG
 
+## 2026年10月24日：单个Slurm作业运行全部队列
+
+[已有安装的一行更新与恢复](releases/paper2-hpc-v2-20261023/README.md)
+将24数组项合为1个Slurm作业，作业内最多2个独立GPU进程逐项取任务；
+总申请2GPU/32CPU/256G，每槽预算16CPU/128G。截图中的QoS提交数拒绝
+将保留原记录并按明确负向回复追加解析，数据、断点和私有授权均复用。
+不再使用作业数组，不创建新科学版本，也不取消其他论文作业。
+
+
 ## 2026年10月24日：当前HPC运行入口
 
 [本地初始化与短命令续跑](releases/paper2-hpc-v2-20261023/README.md)
