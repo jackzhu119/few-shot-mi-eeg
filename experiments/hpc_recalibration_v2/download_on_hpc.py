@@ -8,10 +8,12 @@ from __future__ import annotations
 import argparse
 import fcntl
 import hashlib
+import http.client
 import json
 import os
 from pathlib import Path, PurePosixPath
 import shutil
+import ssl
 import subprocess
 import sys
 import tempfile
@@ -26,6 +28,7 @@ DATA_COMMIT = "b971e79dbf5bf8a1452634046b6e186fe298b6a9"
 CODE_COMMIT = "cddb6aa2b73a169e5386ff981d93fd6f6bf43f28"
 RELEASE = "releases/paper2-hpc-v2-20261023/"
 MANIFEST_URL = RAW + DATA_COMMIT + "/" + RELEASE + "input_download_manifest.json"
+MANIFEST_CONTENT_SHA256 = "57be5ea4637ff5a7dc42869c2504ab231004a967628d1ec41b7b06ca18139310"
 ARTIFACTS = (
     {"file": "paper2-hpc-v2-code.tar.gz", "bytes": 86282,
      "sha256": "dd6fa2f293943d8b574655bc6f74c5b5d73b6559f5853d709515240c19fdc8ce"},
@@ -38,10 +41,70 @@ class DownloadError(RuntimeError):
     pass
 
 
+class _RetryableNetwork(Exception):
+    pass
+
+
 def _https(url):
     if urllib.parse.urlsplit(url).scheme != "https":
         raise DownloadError("Only verified HTTPS download URLs are accepted")
     return url
+
+
+def to_official_candidates(url):
+    """Keep the pinned canonical URL; API raw media is a separate official host."""
+    _https(url)
+    parsed = urllib.parse.urlsplit(url)
+    parts = parsed.path.lstrip("/").split("/", 3)
+    if (parsed.hostname == "raw.githubusercontent.com" and len(parts) == 4
+            and not parsed.query and not parsed.fragment):
+        owner, repository, ref, path = parts
+        api = ("https://api.github.com/repos/" + owner + "/" + repository
+               + "/contents/" + path + "?ref=" + urllib.parse.quote(ref, safe=""))
+        return (api, url)
+    return (url,)
+
+
+def _timeout():
+    try:
+        seconds = float(os.environ.get("PAPER2_DOWNLOAD_TIMEOUT_SECONDS", "30"))
+    except ValueError:
+        raise DownloadError("PAPER2_DOWNLOAD_TIMEOUT_SECONDS must be positive") from None
+    if not 0 < seconds < float("inf"):
+        raise DownloadError("PAPER2_DOWNLOAD_TIMEOUT_SECONDS must be positive")
+    return seconds
+
+
+def _headers(url, offset=0):
+    headers = {"User-Agent": "paper2-hpc-direct-download", "Accept-Encoding": "identity"}
+    if urllib.parse.urlsplit(url).hostname == "api.github.com":
+        headers["Accept"] = "application/vnd.github.raw+json"
+    if offset:
+        headers["Range"] = "bytes=" + str(offset) + "-"
+    return headers
+
+
+def _network_call(call, url):
+    """Classify network operations only; storage calls never pass through here."""
+    try:
+        return call()
+    except urllib.error.HTTPError as error:
+        api = urllib.parse.urlsplit(url).hostname == "api.github.com"
+        if error.code in (408, 429, 500, 502, 503, 504) or (api and error.code in (401, 403)):
+            raise _RetryableNetwork("HTTP " + str(error.code)) from None
+        raise DownloadError("Download HTTP " + str(error.code) + "; fixed source unavailable; no file overwritten") from None
+    except ssl.SSLCertVerificationError:
+        raise DownloadError("TLS certificate verification failed; configure the trusted system/campus CA bundle") from None
+    except (urllib.error.URLError, TimeoutError, ConnectionError, http.client.IncompleteRead) as error:
+        if isinstance(getattr(error, "reason", None), ssl.SSLCertVerificationError):
+            raise DownloadError("TLS certificate verification failed; configure the trusted system/campus CA bundle") from None
+        raise _RetryableNetwork(type(error).__name__) from None
+
+
+def _connecting(url, filename, attempt, offset):
+    print(json.dumps({"file": filename, "status": "connecting",
+                      "host": urllib.parse.urlsplit(url).hostname,
+                      "attempt": attempt + 1, "offset_bytes": offset}), flush=True)
 
 
 def _sha(path):
@@ -115,6 +178,11 @@ def download(url, destination, spec, *, opener=None, sleep=time.sleep):
     _https(url)
     partial = destination.with_name(destination.name + ".part")
     expected = int(spec["bytes"])
+    candidates = to_official_candidates(url)
+    # Raw supports Range; the Contents API returns the full file with HTTP200.
+    if partial.exists() and partial.stat().st_size and len(candidates) > 1:
+        candidates = tuple(reversed(candidates))
+    timeout = _timeout()
     for attempt in range(3):
         offset = partial.stat().st_size if partial.exists() else 0
         if offset > expected:
@@ -122,12 +190,11 @@ def download(url, destination, spec, *, opener=None, sleep=time.sleep):
         if offset == expected:
             _publish(partial, destination, spec)
             return
-        headers = {"User-Agent": "paper2-hpc-direct-download", "Accept-Encoding": "identity"}
-        if offset:
-            headers["Range"] = "bytes=" + str(offset) + "-"
+        current = candidates[attempt % len(candidates)]
+        _connecting(current, destination.name, attempt, offset)
         try:
-            request = urllib.request.Request(url, headers=headers)
-            with opener(request, timeout=60) as response:
+            request = urllib.request.Request(current, headers=_headers(current, offset))
+            with _network_call(lambda: opener(request, timeout=timeout), current) as response:
                 _https(response.geturl())
                 status = response.status
                 if status not in (200, 206):
@@ -153,7 +220,7 @@ def download(url, destination, spec, *, opener=None, sleep=time.sleep):
                                   "resumed_bytes": offset, "attempt": attempt + 1}), flush=True)
                 with partial.open(mode) as stream:
                     while True:
-                        block = response.read(1024 * 1024)
+                        block = _network_call(lambda: response.read(1024 * 1024), current)
                         if not block:
                             break
                         if processed + len(block) > expected:
@@ -167,36 +234,43 @@ def download(url, destination, spec, *, opener=None, sleep=time.sleep):
                     stream.flush()
                     os.fsync(stream.fileno())
                 if processed < expected:
-                    raise ConnectionError("Incomplete response")
+                    raise _RetryableNetwork("Incomplete response")
             _publish(partial, destination, spec)
             print(json.dumps({"file": destination.name, "status": "sha256_verified",
                               "bytes": expected}), flush=True)
             return
-        except urllib.error.HTTPError as error:
-            if error.code not in (408, 429, 500, 502, 503, 504):
-                raise DownloadError("Download HTTP " + str(error.code) + "; no file overwritten") from None
-        except (urllib.error.URLError, TimeoutError, ConnectionError):
-            pass
+        except _RetryableNetwork as error:
+            print(json.dumps({"file": destination.name, "status": "connection_failed",
+                              "host": urllib.parse.urlsplit(current).hostname,
+                              "attempt": attempt + 1, "reason": str(error)}), flush=True)
         if attempt < 2:
             sleep(2 ** attempt)
     raise DownloadError("Network download failed after three attempts; rerun the same command to resume")
 
 
-def read_manifest(url, *, opener=None):
+def read_manifest(url, *, opener=None, sleep=time.sleep):
     opener = opener or urllib.request.urlopen
-    _https(url)
+    candidates = to_official_candidates(url)
+    timeout = _timeout()
     for attempt in range(3):
+        current = candidates[attempt % len(candidates)]
+        _connecting(current, "input_manifest", attempt, 0)
         try:
-            with opener(urllib.request.Request(url), timeout=60) as response:
+            request = urllib.request.Request(current, headers=_headers(current))
+            with _network_call(lambda: opener(request, timeout=timeout), current) as response:
                 _https(response.geturl())
-                value = json.loads(response.read(1024 * 1024))
+                payload = _network_call(lambda: response.read(1024 * 1024), current)
+                value = json.loads(payload)
             if value.get("schema_version") != 1 or not value.get("input", {}).get("parts"):
                 raise DownloadError("Unrecognized input download manifest")
             return value
-        except (urllib.error.URLError, TimeoutError, ConnectionError):
+        except _RetryableNetwork as error:
+            print(json.dumps({"file": "input_manifest", "status": "connection_failed",
+                              "host": urllib.parse.urlsplit(current).hostname,
+                              "attempt": attempt + 1, "reason": str(error)}), flush=True)
             if attempt == 2:
                 raise DownloadError("Could not download input manifest; rerun the same command") from None
-            time.sleep(2 ** attempt)
+            sleep(2 ** attempt)
 
 
 def assemble(parts, destination, spec):
@@ -220,7 +294,20 @@ def prepare(incoming, manifest_url=MANIFEST_URL, *, opener=None):
     for spec in ARTIFACTS:
         download(RAW + CODE_COMMIT + "/" + RELEASE + spec["file"],
                  incoming / spec["file"], spec, opener=opener)
-    manifest = read_manifest(manifest_url, opener=opener)
+    cache = incoming / ".paper2-input-manifest.json"
+    manifest = None
+    if manifest_url == MANIFEST_URL and cache.is_file():
+        cached = json.loads(cache.read_bytes())
+        digest = hashlib.sha256(json.dumps(cached, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+        if digest == MANIFEST_CONTENT_SHA256:
+            manifest = cached
+    if manifest is None:
+        manifest = read_manifest(manifest_url, opener=opener)
+        if manifest_url == MANIFEST_URL:
+            digest = hashlib.sha256(json.dumps(manifest, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+            if digest != MANIFEST_CONTENT_SHA256:
+                raise DownloadError("Frozen input manifest SHA256 mismatch")
+            _atomic_json(cache, manifest)
     spec = manifest["input"]
     if Path(spec["file"]).name != spec["file"]:
         raise DownloadError("Invalid input archive filename")
@@ -239,11 +326,48 @@ def prepare(incoming, manifest_url=MANIFEST_URL, *, opener=None):
     return final
 
 
+def prepare_profile(project_dir, token_file=None) -> Path:
+    """Apply resource/credential-path choices without changing scientific files."""
+    project = Path(project_dir).expanduser().resolve()
+    original = project / "configs" / "kumar_dev.json"
+    original_bytes = original.read_bytes()
+    config = json.loads(original_bytes)
+    slurm = config.setdefault("slurm", {})
+    resource_changes = {"partition": "hpc_gpu", "gres": "gpu:1", "exclude": "",
+                        "cpus_per_task": 16, "mem": "128G", "array_parallel": 2}
+    before = {key: slurm.get(key) for key in resource_changes}
+    slurm.update(resource_changes)
+    credential_path = None
+    if token_file is not None:
+        candidate = Path(token_file).expanduser().resolve()
+        if candidate.is_file():
+            credential_path = str(candidate)
+            config.setdefault("git_sync", {})["token_file"] = credential_path
+    destination = original.with_name("kumar_dev_hpc_gpu.json")
+    if not destination.is_file() or json.loads(destination.read_bytes()) != config:
+        _atomic_json(destination, config)
+    payload = destination.read_bytes()
+    provenance = {"schema_version": 1, "profile": "school_hpc_gpu",
+                  "base_config": str(original),
+                  "base_sha256": hashlib.sha256(original_bytes).hexdigest(),
+                  "effective_config": str(destination),
+                  "effective_sha256": hashlib.sha256(payload).hexdigest(),
+                  "slurm_before": before, "slurm_after": resource_changes,
+                  "token_file": credential_path, "token_value_read_or_recorded": False,
+                  "scientific_configuration_changed": False,
+                  "gpu_model_inferred_from_partition_screenshot": False}
+    receipt = destination.with_suffix(".provenance.json")
+    if not receipt.is_file() or json.loads(receipt.read_bytes()) != provenance:
+        _atomic_json(receipt, provenance)
+    return destination
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--incoming", default="/public/home/zhuziyuan/incoming")
     parser.add_argument("--project-dir", default="/public/home/zhuziyuan/projects/paper2-recalibration-v2")
     parser.add_argument("--manifest-url", default=MANIFEST_URL)
+    parser.add_argument("--token-file", default=os.environ.get("PAPER2_GITHUB_TOKEN_FILE"))
     parser.add_argument("--download-only", action="store_true")
     parser.add_argument("--no-launch", action="store_true")
     args = parser.parse_args()
@@ -256,10 +380,18 @@ def main():
         env = os.environ.copy()
         env.update(HPC_V2_INCOMING=str(incoming), HPC_V2_PROJECT_DIR=args.project_dir,
                    HPC_V2_PYTHON=sys.executable)
-        command = ["bash", str(incoming / "install_offline.sh")]
-        if args.no_launch:
-            command.append("--no-launch")
-        return subprocess.call(command, env=env)
+        # Installation is kept separate so the old packaged default cannot
+        # submit to the original partition before this resource profile applies.
+        code = subprocess.call(["bash", str(incoming / "install_offline.sh"), "--no-launch"], env=env)
+        if code:
+            return code
+        profile = prepare_profile(args.project_dir, args.token_file)
+        print(json.dumps({"status": "runtime_profile_ready", "config": str(profile),
+                          "partition": "hpc_gpu", "gpus_per_task": 1,
+                          "cpu_per_task": 16, "memory_per_task": "128G",
+                          "array_parallel": 2}), flush=True)
+        if not args.no_launch:
+            return subprocess.call(["bash", str(Path(args.project_dir) / "launch.sh"), str(profile)], env=env)
     return 0
 
 

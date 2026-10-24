@@ -1,0 +1,108 @@
+{
+  "recorded_utc": "2026-10-24T01:19:13.553695+00:00",
+  "scope": "Actual read-only current-cloud HTTPS requests through inherited proxy/CA; not school-host reachability verification",
+  "request_headers": {
+    "Accept": "application/vnd.github.raw+json",
+    "User-Agent": "paper2-hpc-transport-probe"
+  },
+  "authorization_header_explicitly_set_by_probe": false,
+  "api_response_content_type": "application/vnd.github.raw+json; charset=utf-8",
+  "api_observed_rate_limit": 15000,
+  "api_observed_remaining_values": [
+    14992,
+    14993,
+    14991,
+    14990,
+    14989
+  ],
+  "anonymous_api_identity_claimed": false,
+  "identity_note": "Configured proxy returned a bound-identity-sized quota; this is not evidence of anonymous school-host quota. Public unauthenticated GitHub API commonly permits60 requests/hour.",
+  "observations": [
+    {
+      "name": "bootstrap_api",
+      "url": "https://api.github.com/repos/jackzhu119/few-shot-mi-eeg/contents/experiments/hpc_recalibration_v2/download_on_hpc.py?ref=d7c49a9a0e25b359c389e2d2383d91fcde973f99",
+      "status": 200,
+      "final_host": "api.github.com",
+      "redirects": [],
+      "bytes_read": 11296,
+      "content_length": 11296,
+      "full_get": true,
+      "sha256": "5644519b82a4c33447778009e4e2b566e6132918e9d8571f08ea5efc7ff9ae81",
+      "matches_local": true
+    },
+    {
+      "name": "manifest_api",
+      "url": "https://api.github.com/repos/jackzhu119/few-shot-mi-eeg/contents/releases/paper2-hpc-v2-20261023/input_download_manifest.json?ref=b971e79dbf5bf8a1452634046b6e186fe298b6a9",
+      "status": 200,
+      "final_host": "api.github.com",
+      "redirects": [],
+      "bytes_read": 1123,
+      "content_length": 1123,
+      "full_get": true,
+      "matches_local": true
+    },
+    {
+      "name": "part000_api_range_probe",
+      "url": "https://api.github.com/repos/jackzhu119/few-shot-mi-eeg/contents/releases/paper2-hpc-v2-20261023/inputs/paper2-hpc-v2-kumar-dev-inputs.tar.gz.part000?ref=b971e79dbf5bf8a1452634046b6e186fe298b6a9",
+      "requested_range": "bytes=0-1023",
+      "status": 200,
+      "final_host": "api.github.com",
+      "redirects": [],
+      "bytes_read": 1024,
+      "content_length": 33554432,
+      "content_range": null,
+      "full_get": false,
+      "range_honored": false,
+      "sample_matches_local": true
+    },
+    {
+      "name": "code_api",
+      "url": "https://api.github.com/repos/jackzhu119/few-shot-mi-eeg/contents/releases/paper2-hpc-v2-20261023/paper2-hpc-v2-code.tar.gz?ref=cddb6aa2b73a169e5386ff981d93fd6f6bf43f28",
+      "status": 200,
+      "final_host": "api.github.com",
+      "redirects": [],
+      "bytes_read": 86282,
+      "content_length": 86282,
+      "full_get": true,
+      "sha256": "dd6fa2f293943d8b574655bc6f74c5b5d73b6559f5853d709515240c19fdc8ce",
+      "matches_local": true
+    },
+    {
+      "name": "part000_api_full",
+      "url": "https://api.github.com/repos/jackzhu119/few-shot-mi-eeg/contents/releases/paper2-hpc-v2-20261023/inputs/paper2-hpc-v2-kumar-dev-inputs.tar.gz.part000?ref=b971e79dbf5bf8a1452634046b6e186fe298b6a9",
+      "status": 200,
+      "final_host": "api.github.com",
+      "redirects": [],
+      "bytes_read": 33554432,
+      "content_length": 33554432,
+      "full_get": true,
+      "sha256": "6f3a028cec6ab0a3c0383d1b9df50faf50f71dee3802921aeafbaa69161ea879",
+      "matches_local": true
+    },
+    {
+      "name": "github_raw_redirect_probe",
+      "url": "https://github.com/jackzhu119/few-shot-mi-eeg/raw/d7c49a9a0e25b359c389e2d2383d91fcde973f99/experiments/hpc_recalibration_v2/download_on_hpc.py",
+      "status": 200,
+      "final_host": "raw.githubusercontent.com",
+      "redirects": [
+        {
+          "status": 302,
+          "host": "raw.githubusercontent.com"
+        }
+      ],
+      "bytes_read": 11296,
+      "content_length": 11296,
+      "full_get": true,
+      "sha256": "5644519b82a4c33447778009e4e2b566e6132918e9d8571f08ea5efc7ff9ae81",
+      "matches_local": true
+    }
+  ],
+  "recommendations": [
+    "Try API Contents raw media first and canonical raw second; github.com/raw redirects back to raw and is not an independent origin.",
+    "API returns HTTP200 for a Range request, so restart only the current partial when switching to API; preserve completed files.",
+    "Keep canonical raw URLs for relative manifest resolution, then convert each request to API Contents with the original pinned ref."
+  ],
+  "scientific_fits": 0,
+  "query_inference": 0,
+  "credential_values_logged": false
+}

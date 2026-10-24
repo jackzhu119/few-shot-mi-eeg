@@ -1,0 +1,53 @@
+{
+  "observed_utc": "2026-10-24T01:29:05.616116+00:00",
+  "scope": "actual API-first full download and local no-launch installation/profile; no school-host access",
+  "actual_api_first_connection_count": 7,
+  "input_bytes": 125283270,
+  "input_sha256": "b6f211bbf2ed512fbf30d178d59c67181396c98d0ec122812519ee95a9aa3e0a",
+  "parts": [
+    {
+      "file": "inputs/paper2-hpc-v2-kumar-dev-inputs.tar.gz.part000",
+      "bytes": 33554432,
+      "sha256": "6f3a028cec6ab0a3c0383d1b9df50faf50f71dee3802921aeafbaa69161ea879"
+    },
+    {
+      "file": "inputs/paper2-hpc-v2-kumar-dev-inputs.tar.gz.part001",
+      "bytes": 33554432,
+      "sha256": "a96102371d69e23578f4e9d97cdd193bf0eb48ae384594d68b336a53e312c451"
+    },
+    {
+      "file": "inputs/paper2-hpc-v2-kumar-dev-inputs.tar.gz.part002",
+      "bytes": 33554432,
+      "sha256": "0d7cfd0625b270e50201930e657b085923a64f772fd9f044e7c3cac2e264371a"
+    },
+    {
+      "file": "inputs/paper2-hpc-v2-kumar-dev-inputs.tar.gz.part003",
+      "bytes": 24619974,
+      "sha256": "83c3ca042425dded556f310a3699370705e94f7dbc518a6513bbcdefd19e1391"
+    }
+  ],
+  "installed_files": 120,
+  "original_config_byte_identical": true,
+  "operational_slurm": {
+    "account": "zhuziyuan",
+    "partition": "hpc_gpu",
+    "gres": "gpu:1",
+    "cpus_per_task": 16,
+    "mem": "128G",
+    "array_parallel": 2,
+    "time_limit": "5-03:00:00",
+    "exclude": ""
+  },
+  "new_fit": false,
+  "query_inference": false,
+  "slurm_submitted": false,
+  "script_sha256": "cfe63f6836039660d179eff5298d0aaa6e6adba471683d69f2165170fbbdacb3",
+  "profile_stdout": [
+    "{\"file\": \"paper2-hpc-v2-code.tar.gz\", \"status\": \"already_verified\"}",
+    "{\"file\": \"install_offline.sh\", \"status\": \"already_verified\"}",
+    "{\"file\": \"input_manifest\", \"status\": \"connecting\", \"host\": \"api.github.com\", \"attempt\": 1, \"offset_bytes\": 0}",
+    "{\"status\": \"already_installed\", \"full_archive_rescan\": false, \"project_dir\": \"/workspace/paper2_hpc_v2_delivery/api_transport_e2e_run01/project\", \"installed_files\": 120}",
+    "{\"status\": \"runtime_profile_ready\", \"config\": \"/workspace/paper2_hpc_v2_delivery/api_transport_e2e_run01/project/configs/kumar_dev_hpc_gpu.json\", \"partition\": \"hpc_gpu\", \"gpus_per_task\": 1, \"cpu_per_task\": 16, \"memory_per_task\": \"128G\", \"array_parallel\": 2}"
+  ],
+  "failures": []
+}
