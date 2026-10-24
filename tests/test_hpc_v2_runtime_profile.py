@@ -30,8 +30,8 @@ def test_partition_override_preserves_every_scientific_field(project):
     effective = json.loads(effective_path.read_bytes())
     assert original.read_bytes() == before
     assert effective["slurm"] == old["slurm"] | {
-        "partition": "hpc_gpu", "gres": "gpu:1", "exclude": "",
-        "cpus_per_task": 18, "mem": "64G", "array_parallel": 2,
+        "partition": "hpc_gpu1", "gres": "gpu:1", "exclude": "",
+        "cpus_per_task": 16, "mem": "64G", "array_parallel": 2,
         "submission_mode": "single_pool", "pool_workers": 2}
     assert {k: v for k, v in effective.items() if k != "slurm"} == {
         k: v for k, v in old.items() if k != "slurm"}
@@ -77,6 +77,15 @@ def test_same_profile_reuses_files_without_rewriting(project):
     assert before == (path.stat().st_mtime_ns, receipt.stat().st_mtime_ns)
 
 
+def test_new_partition_profile_does_not_change_an_active_old_config(project):
+    old = project / "configs/kumar_dev_hpc_gpu.json"
+    original = b'{"preserve":"active old batch configuration"}\n'
+    old.write_bytes(original)
+    target = profile.prepare_profile(project)
+    assert target.name == "kumar_dev_hpc_gpu1.json"
+    assert old.read_bytes() == original
+
+
 def test_existing_outputs_and_claims_are_not_touched(project):
     evidence = project / "outputs" / "old-claim"
     evidence.parent.mkdir()
@@ -94,11 +103,11 @@ def test_installer_cannot_submit_before_operational_profile(project, tmp_path, m
     monkeypatch.setattr(profile.subprocess, "call", lambda cmd, **kwargs: commands.append(cmd) or 0)
     assert profile.main() == 0
     assert commands[0][-1] == "--no-launch"
-    assert commands[1] == [sys.executable, "-u", str(project / ".hpc_runtime/fixed/submit.py"),
-                           "--config", str(project / "configs/kumar_dev_hpc_gpu.json")]
-    config = json.loads((project / "configs/kumar_dev_hpc_gpu.json").read_bytes())
+    assert commands[1] == [sys.executable, "-u", str(project / ".hpc_runtime/fixed/switch.py"),
+                           "--config", str(project / "configs/kumar_dev_hpc_gpu1.json")]
+    config = json.loads((project / "configs/kumar_dev_hpc_gpu1.json").read_bytes())
     assert config["slurm"]["array_parallel"] == 2
-    assert config["slurm"]["cpus_per_task"] == 18
+    assert config["slurm"]["cpus_per_task"] == 16
     assert config["slurm"]["mem"] == "64G"
 
 
@@ -112,3 +121,18 @@ def test_no_launch_never_runs_the_training_launcher(project, tmp_path, monkeypat
     assert profile.main() == 0
     assert len(commands) == 1
     assert commands[0][-1] == "--no-launch"
+
+
+def test_explicit_job_migration_uses_switch_entry_before_new_submission(project, tmp_path, monkeypatch):
+    monkeypatch.setattr(profile, "prepare", lambda *a, **k: None)
+    monkeypatch.setattr(profile.sys, "argv", ["entry", "--incoming", str(tmp_path / "incoming"),
+                                             "--project-dir", str(project), "--switch-job", "771075"])
+    monkeypatch.setattr(profile, "install_runtime_bundle", lambda *a, **k: project / ".hpc_runtime/fixed")
+    commands = []
+    monkeypatch.setattr(profile.subprocess, "call", lambda cmd, **kwargs: commands.append(cmd) or 0)
+    assert profile.main() == 0
+    assert commands[0][-1] == "--no-launch"
+    assert commands[1] == [sys.executable, "-u", str(project / ".hpc_runtime/fixed/switch.py"),
+                           "--config", str(project / "configs/kumar_dev_hpc_gpu1.json"),
+                           "--from-config", str(project / "configs/kumar_dev_hpc_gpu.json"),
+                           "--job-id", "771075"]
