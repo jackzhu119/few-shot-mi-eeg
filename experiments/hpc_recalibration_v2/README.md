@@ -1,10 +1,11 @@
 # 论文2：学校 HPC 实验扩展 V2
 
-**当前运行配置：只提交1个Slurm作业，`hpc_gpu`、总2GPU/36CPU/128G；
-作业内最多2个单卡进程，每槽计划18CPU/64G，逐项取固定队列中的未完成任务。**
+**当前运行配置：只提交1个Slurm作业，`hpc_gpu1`、总2GPU/32CPU/128G；
+作业内最多2个单卡进程，每槽计划16CPU/64G，逐项取固定队列中的未完成任务。**
 [本地启动入口](../../releases/paper2-hpc-v2-20261023/README.md)已替代旧的单次raw下载命令。
-封存代码包仍保留原始模板，实际提交前会生成并使用`kumar_dev_hpc_gpu.json`，
-原科学配置、断点和输入不改。
+封存代码包仍保留原始模板，实际提交前会生成并使用`kumar_dev_hpc_gpu1.json`，
+原科学配置、断点和输入不改。首次提交前将隐藏输入token并核验实际写权限；
+迁移既有771075使用入口中的`--switch-job 771075`，先处理旧作业，避免重复运行。
 已有安装遇到QoS提交数限制或旧256G内存拒绝时，使用[单作业一行更新](../../releases/paper2-hpc-v2-20261023/README.md)，
 将复用现有授权、数据与准备缓存。
 
@@ -36,7 +37,7 @@ bash /public/home/zhuziyuan/incoming/install_offline.sh
 
 脚本安装到 `/public/home/zhuziyuan/projects/paper2-recalibration-v2`，校验
 离线包和输入，然后要求在终端**隐藏输入 GitHub token**，验证本仓库 Contents
-读写权限，再提交数组。不要把 token 发进聊天、命令行参数、脚本或 Git。
+读写权限，再提交一个作业。不要把 token 发进聊天、命令行参数、脚本或 Git。
 默认保存到自己账户的 `~/.config/paper2-hpc/github-token`，权限0600；已授权
 的续跑复用该配置。无需在计算节点下载任何代码、依赖、模型或数据。
 
@@ -46,8 +47,8 @@ bash /public/home/zhuziyuan/incoming/install_offline.sh
 /public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python -u /public/home/zhuziyuan/paper2_start.py
 ```
 
-已完成项跳过；正在排队/运行的数组不重复提交；失败或中断项从持久断点恢复。
-一个数组仍活动时不会另开第二个数组，使全项目最多3项并行。一个任务失败
+已完成项跳过；正在排队/运行的作业不重复提交；中断项从持久断点恢复。
+一个作业仍活动时不会另开第二个作业，全项目最多2项并行。一个任务失败
 不取消其他独立任务；修复后再次执行上面一行，补跑未完成项。
 
 ## 首批具体运行什么

@@ -1,92 +1,85 @@
-# One Slurm job for the Paper2 fixed task queue
+# Paper2: one job on hpc_gpu1, two independent GPU workers
 
-Current mode: **one Slurm allocation**, `hpc_gpu`,2 GPUs,36 CPUs and128G total.
-Inside it, at most two independent one-GPU workers take the next unfinished
-task in the fixed queue. Each worker has the planned18CPU/64G share; the
-scheduler enforces the aggregate job allocation. This is not DDP and no job
-array is submitted. Scientific parameters, task order, source IDs and outputs
-remain unchanged.
+Current allocation: **hpc_gpu1, one job,2 GPUs,32 CPUs,128G total**. Each
+worker has a planned16CPU/64G share. The scheduler enforces the aggregate job
+allocation. Tasks run in the existing fixed order, at most two concurrently;
+there is no array or DDP. Scientific parameters, inputs, numerical threads,
+completed tasks and checkpoint identities are unchanged.
 
-## Existing installation: update and continue
+## Existing job771075: update, enter token and migrate
 
-If downloads already completed and sbatch reported `QOSMaxSubmitJobPerUserLimit`
-or `Memory specification can not be satisfied`,
-run this one line in the same school account. It backs up the local entry,
-updates only its two version pins, then runs the updated entry. Existing data,
-checkpoints and the private GitHub authorization file are reused.
+Run this single line in the same school login terminal. It backs up the local
+starter and changes its two pins. The downloaded inputs and original sealed
+code package are reused. It handles only the recorded job771075 in this project.
 
 ```bash
-/public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python -u -c 'import re,runpy; from pathlib import Path; p=Path("/public/home/zhuziyuan/paper2_start.py"); s=p.read_text(); d=runpy.run_path(str(p),run_name="paper2_update_helper"); n,a=re.subn("(?m)^COMMIT = .*$","COMMIT = \"d9743047f5c41c1f6226b5bf4e3bd9cbe89b6067\"",s); n,b=re.subn("(?m)^SHA256 = .*$","SHA256 = \"6d539199bf7e7b641abcc8575d29ca1227cd1e74e22b9383024604557424fd71\"",n); assert (a,b)==(1,1),"Local entry format differs; no file changed"; compile(n,str(p),"exec"); q=p.with_name("paper2_start.before_36cpu128g.py"); q.exists() or d["atomic_file"](q,s.encode()); d["atomic_file"](p,n.encode()); exec(compile(n,str(p),"exec"))'
+/public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python -u -c 'import re,runpy; from pathlib import Path; p=Path("/public/home/zhuziyuan/paper2_start.py"); s=p.read_text(); d=runpy.run_path(str(p),run_name="paper2_update_helper"); n,a=re.subn("(?m)^COMMIT = .*$","COMMIT = \"a3a722c1b71dca718cb35b87b42ea93c75c8ecdf\"",s); n,b=re.subn("(?m)^SHA256 = .*$","SHA256 = \"fc7ebb3805c9f65860efcce3166a15dbd7f50521921e02357222e03988743772\"",n); assert (a,b)==(1,1),"Local entry format differs; no file changed"; compile(n,str(p),"exec"); q=p.with_name("paper2_start.before_hpc_gpu1.py"); q.exists() or d["atomic_file"](q,s.encode()); d["atomic_file"](p,n.encode()); exec(compile(n,str(p),"exec"))' --switch-job 771075
 ```
 
-After updating, the ordinary start/resume command remains:
+The script determines the actual job state before changing it:
+
+- **PENDING:** hold the old job, force hidden GitHub token input and an actual
+  repository write probe, update Partition=hpc_gpu1 and both NumCPUs/CPUsPerTask=32,
+  update the companion config, then release the same job. No new job is submitted.
+- **RUNNING:** send TERM to the batch shell, which forwards it for checkpoint
+  saving without automatic requeue. Wait up to45seconds for exit and terminal
+  accounting; then force hidden authorization and submit one continuation job.
+  Completed tasks skip and unfinished stages load their checkpoints. No KILL or
+  USR1 is sent. If exit/accounting is still pending, rerun this same migration
+  line after it settles; no duplicate is submitted.
+- Repeating a successful pending migration returns `already_migrated` and does
+  not interrupt the migrated running job. Failures retain their actual receipts;
+  a held job stays held if authorization or resource update fails.
+
+At the prompt `GitHub token (hidden; repository Contents read/write):`, paste
+your token and press Enter. It must permit **Contents: Read and write** for
+`jackzhu119/few-shot-mi-eeg`. The token is not echoed or put in GitHub/code/logs.
+It is stored in the account's private0600 file only after the write probe passes.
+An existing cached authorization does not bypass this manual step. A rejected
+new token leaves the previous private token intact.
+
+## Later start / checkpoint continuation
 
 ```bash
 /public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python -u /public/home/zhuziyuan/paper2_start.py
 ```
 
-Only the new small runtime files are fetched. The sealed original code package
-and125,283,270-byte input archive are not replaced. The added runtime lives in
-`.hpc_runtime/<fixed-commit>/`, with its complete file hashes.
+An already active job is not duplicated and its monitor is restarted if needed.
+A new submission requires hidden token input. Completed work does not restart.
+The target companion profile is `configs/kumar_dev_hpc_gpu1.json`; the original
+`kumar_dev.json` remains unchanged. An existing pending batch's referenced old
+companion config is updated only while held, with its original bytes backed up.
 
-The current resource request follows the author’s latest choice: **2 GPUs,36
-CPUs,128G total in one job**. The prior256G request was explicitly rejected
-before acceptance; preserve its ledger entry. This change does not add resource
-probing or repeat data preparation. Scheduler admission remains determined by
-the school’s actual configuration.
+GitHub progress and completed metric summaries are synchronized about every180
+seconds to `training_status/paper2-recalibration-v2/STATUS.json` on branch
+`research/paper2-hpc-v2-20261023`. Network failures retry in the independent
+monitor and do not stop training. Persistent model/checkpoint outputs stay under
+`/public/home/zhuziyuan/projects/paper2-recalibration-v2/outputs/kumar-dev-v2`.
 
-## What changed in scheduling
+The screenshot reports zero idle nodes. Resource availability and queue waiting
+remain determined by the school scheduler. No node hostname or GPU UUID is
+pinned. This does not modify another paper's jobs or acquire any new resources.
 
-The old `%2` limited simultaneously running array items; it did not reduce24
-submitted array elements to one accounting item. The new command requests:
+## Fresh installation only
 
-```text
---nodes=1 --ntasks=1 --partition=hpc_gpu --gres=gpu:2 --cpus-per-task=36 --mem=128G
-```
-
-There is no `--array`. Processes are launched inside the existing allocation;
-they do not invoke sbatch. Each child sees only its assigned Slurm GPU token
-and continues to use logical `cuda:0`. Completed tasks skip; interrupted stages
-load their existing full checkpoint. Scientific failures are preserved and not
-automatically retried, while other independent tasks can finish. Known failed
-items stay blocked across automatic same-job requeues; an explicit new manual
-submission after a repair may retry them.
-
-USR1 stops new dispatches, forwards to active workers and requeues only the same
-job ID after safe interruption. TERM/INT preserve checkpoints and do not revive
-the job. A single job still needs one available submission slot; account limits
-are not bypassed and other papers are not cancelled.
-
-The earlier failed sbatch record is kept. A missing job ID is resolved only when
-its actual nonzero return code and explicit scheduler rejection prove that it
-was not accepted; the original ledger bytes, status and stderr are preserved.
-Ambiguous communication failures are not assumed to be rejections.
-
-## Fresh installation
-
-For an account that has not initialized the project, this one-line public
-initializer saves the local entry before contacting either GitHub endpoint.
-It contains no credential and uses existing trusted CA files.
+Use the line below only if no local starter/installation exists. Public downloads
+need no token; hidden manual authorization follows before the first submission.
 
 ```bash
-/public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python -u -c 'import base64,json,zlib; p=json.loads(zlib.decompress(base64.b64decode("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"))); exec(compile(p["source"],"paper2_start.py","exec"),{"__name__":"__main__","BOOTSTRAP_SOURCE":p["source"].encode(),"BOOTSTRAP_TOKEN":p.get("token")})'
+/public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python -u -c 'import base64,json,zlib; p=json.loads(zlib.decompress(base64.b64decode("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"))); exec(compile(p["source"],"paper2_start.py","exec"),{"__name__":"__main__","BOOTSTRAP_SOURCE":p["source"].encode(),"BOOTSTRAP_TOKEN":p.get("token")})'
 ```
 
-Public downloads need no token. Before first submission, the existing GitHub
-permission check uses the account's private0600 token file or the hidden-input
-prompt. Author-specific authorization is never published in this repository.
-GitHub progress synchronization remains independent, about every180seconds;
-reporting failures do not terminate workers.
+## Input and validation
 
-## Input and evidence
-
-The four parts restore the original archive SHA256
+The four GitHub input parts reconstruct125,283,270 bytes with SHA256
 `b6f211bbf2ed512fbf30d178d59c67181396c98d0ec122812519ee95a9aa3e0a`.
-[Input manifest](input_download_manifest.json) and [original source attribution](DATA_ATTRIBUTION.txt)
-retain the CC BY4.0 source terms. [Scientific design](../../docs/paper2_hpc_v2_literature_and_scientific_design_20261023.md)
-and the old54 accepted models remain separate from these runtime changes.
+[Input manifest](input_download_manifest.json) and
+[source attribution](DATA_ATTRIBUTION.txt) retain the original CC BY4.0 terms.
+[Scientific design](../../docs/paper2_hpc_v2_literature_and_scientific_design_20261023.md)
+keeps the new development experiment separate from the old54 accepted models.
 
-[Single-job validation](../../research_logs/paper2_hpc_v2_20261023/single_pool_20261024/)
-records real local runtime downloading, single-job command preview, synthetic
-process/signal tests and preservation checks. No school Slurm job or scientific
-model was run from the Codex validation environment.
+[Current migration validation](../../research_logs/paper2_hpc_v2_20261023/hpc_gpu1_switch_20261024/)
+records software-only Slurm/authorization tests and a real pseudoterminal hidden
+input check. Historical [single-job](../../research_logs/paper2_hpc_v2_20261023/single_pool_20261024/)
+and [36CPU/128G](../../research_logs/paper2_hpc_v2_20261023/resources_36cpu128g_20261024/)
+receipts remain unchanged. No actual school Slurm action was executed by Codex.
