@@ -35,8 +35,8 @@ ARTIFACTS = (
     {"file": "install_offline.sh", "bytes": 2049,
      "sha256": "3476346c1c71c92b91517aafdb08803a06a85b09de06f7c9562f6012f4fac508"},
 )
-RUNTIME_COMMIT = "335cd65fb452a0f9a6ac8668edb4dae421ddd027"
-RUNTIME_ARTIFACTS = ({'file': 'submit.py', 'bytes': 12418, 'sha256': 'f70b8f5f37eb58dbca372009b2e262c43ab8f5e249f88b8526453753adc2e7fc'}, {'file': 'controller.py', 'bytes': 11867, 'sha256': '3bee17fd150fdf4e7370f67d5a08e6ab20c8c1480a71e05d2be576f73878aad8'}, {'file': 'job.sh', 'bytes': 2104, 'sha256': '637d8c4774358c4acdcfc3aeca73010ec39c26ef5674dea6516228ef8f371f3c'})
+RUNTIME_COMMIT = "45e6548a7d0ef02fd26176a4c3860af034dc9c96"
+RUNTIME_ARTIFACTS = ({'file': 'submit.py', 'bytes': 12418, 'sha256': 'f70b8f5f37eb58dbca372009b2e262c43ab8f5e249f88b8526453753adc2e7fc'}, {'file': 'controller.py', 'bytes': 12566, 'sha256': '0ceb49a52db626cc3674a2b96e56cc2caa0fb2ce8570df9e5672e7ae433eb884'}, {'file': 'job.sh', 'bytes': 2104, 'sha256': '637d8c4774358c4acdcfc3aeca73010ec39c26ef5674dea6516228ef8f371f3c'})
 
 
 class DownloadError(RuntimeError):
