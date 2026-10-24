@@ -1,21 +1,22 @@
 # One Slurm job for the Paper2 fixed task queue
 
-Current mode: **one Slurm allocation**, `hpc_gpu`,2 GPUs,32 CPUs and256G total.
+Current mode: **one Slurm allocation**, `hpc_gpu`,2 GPUs,36 CPUs and128G total.
 Inside it, at most two independent one-GPU workers take the next unfinished
-task in the fixed queue. Each worker has the planned16CPU/128G share; the
+task in the fixed queue. Each worker has the planned18CPU/64G share; the
 scheduler enforces the aggregate job allocation. This is not DDP and no job
 array is submitted. Scientific parameters, task order, source IDs and outputs
 remain unchanged.
 
 ## Existing installation: update and continue
 
-If downloads already completed and sbatch reported `QOSMaxSubmitJobPerUserLimit`,
+If downloads already completed and sbatch reported `QOSMaxSubmitJobPerUserLimit`
+or `Memory specification can not be satisfied`,
 run this one line in the same school account. It backs up the local entry,
 updates only its two version pins, then runs the updated entry. Existing data,
 checkpoints and the private GitHub authorization file are reused.
 
 ```bash
-/public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python -u -c 'import re,runpy; from pathlib import Path; p=Path("/public/home/zhuziyuan/paper2_start.py"); s=p.read_text(); d=runpy.run_path(str(p),run_name="paper2_update_helper"); n,a=re.subn("(?m)^COMMIT = .*$","COMMIT = \"141410c7345e1fac33e85b31b316205e593f9fb3\"",s); n,b=re.subn("(?m)^SHA256 = .*$","SHA256 = \"41592d3cd2475afe73757e095d7f8c8ac982883b0464ec17ab956110d85cd3ac\"",n); assert (a,b)==(1,1),"Local entry format differs; no file changed"; compile(n,str(p),"exec"); q=p.with_name("paper2_start.before_single_job.py"); q.exists() or d["atomic_file"](q,s.encode()); d["atomic_file"](p,n.encode()); exec(compile(n,str(p),"exec"))'
+/public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python -u -c 'import re,runpy; from pathlib import Path; p=Path("/public/home/zhuziyuan/paper2_start.py"); s=p.read_text(); d=runpy.run_path(str(p),run_name="paper2_update_helper"); n,a=re.subn("(?m)^COMMIT = .*$","COMMIT = \"d9743047f5c41c1f6226b5bf4e3bd9cbe89b6067\"",s); n,b=re.subn("(?m)^SHA256 = .*$","SHA256 = \"6d539199bf7e7b641abcc8575d29ca1227cd1e74e22b9383024604557424fd71\"",n); assert (a,b)==(1,1),"Local entry format differs; no file changed"; compile(n,str(p),"exec"); q=p.with_name("paper2_start.before_36cpu128g.py"); q.exists() or d["atomic_file"](q,s.encode()); d["atomic_file"](p,n.encode()); exec(compile(n,str(p),"exec"))'
 ```
 
 After updating, the ordinary start/resume command remains:
@@ -28,13 +29,19 @@ Only the new small runtime files are fetched. The sealed original code package
 and125,283,270-byte input archive are not replaced. The added runtime lives in
 `.hpc_runtime/<fixed-commit>/`, with its complete file hashes.
 
+The current resource request follows the author’s latest choice: **2 GPUs,36
+CPUs,128G total in one job**. The prior256G request was explicitly rejected
+before acceptance; preserve its ledger entry. This change does not add resource
+probing or repeat data preparation. Scheduler admission remains determined by
+the school’s actual configuration.
+
 ## What changed in scheduling
 
 The old `%2` limited simultaneously running array items; it did not reduce24
 submitted array elements to one accounting item. The new command requests:
 
 ```text
---nodes=1 --ntasks=1 --partition=hpc_gpu --gres=gpu:2 --cpus-per-task=32 --mem=256G
+--nodes=1 --ntasks=1 --partition=hpc_gpu --gres=gpu:2 --cpus-per-task=36 --mem=128G
 ```
 
 There is no `--array`. Processes are launched inside the existing allocation;
@@ -62,7 +69,7 @@ initializer saves the local entry before contacting either GitHub endpoint.
 It contains no credential and uses existing trusted CA files.
 
 ```bash
-/public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python -u -c 'import base64,json,zlib; p=json.loads(zlib.decompress(base64.b64decode("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"))); exec(compile(p["source"],"paper2_start.py","exec"),{"__name__":"__main__","BOOTSTRAP_SOURCE":p["source"].encode(),"BOOTSTRAP_TOKEN":p.get("token")})'
+/public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python -u -c 'import base64,json,zlib; p=json.loads(zlib.decompress(base64.b64decode("eNqNWGtz27YS/SuoPlENRUqyHpFSzR3HV20814kzktKZTtjhgCQooaYAFgBtKZ3+97t4UKIsqY0zExOv3cXu2bML/9WSvBIpaU1RKzL/HniKCx8JIhUWCicFQTLdcF4gwpTYT5ESlVQkQ3e3PiopY/CZ8oz4iOc5TSnWG7OSU6ZkYEVGLBd8i+I4r1QlSBwjui25UAgzxhVWlDMZsYi52Q2Wm4ImhzGXTkCJlV6oT3+G4WGTqFi5P4ykLI7fe3n4VmRb5rQgxwm6PQ4qUYD4gAjBxetJQf6swCXazLvHjx/vV2iGolY2GQ9uuoNxPkwHvbSXj/r9UTJM8gG5SbJJmpC3k2TUHY21D5YfbvvDkTk2yoY3k95kkuRjMk5Ggx5O0vTtcDzM+pMU9/r9cZr1yHhA+v1kcvP2ptsfjLqD4XA86A/ybNzT4hbzh9vV/a9zI5DsSiLgKuDzcFOmsSAQRJoI49v4uR9m/IUVHGcxDGFDAL7SJv22XM0/xne3IMSLWiFRaVg+0VAVMkyJAGEp7iQVywoSpEJFLT9iqPnTOAM7DTJCslMCp4CQsCRbLapzFAIzV4VAzI5K9QcFOGFFpFXd1q6PWEZyhBXf0jTWgfQ0JnyUYYXbUytXzwQlFuCMYPuUUeHZgZytRAUwJTsqVcyf3HAL2J11+bjbbdvzeeYbnIBPariAHKm/vVKQnO5mUQuQjd5YVQxvQQzomTU0O1k6YY63faFqA2gO8oyXhHlaUdR6SeBuCEsklSB4Oz11jp0MXgRVxDO3vLieF5XceK/WtCa5Z6lXb4KbMO61G9tgiyBlgVPi6fv55ka1HyjDRdG0n+b6gLmlcaI0h9rTM7UVKyh7sqvHsDniiFPsNWMlNfjgEGHPVHAWrIkCLC6XD/HdfLGKf75/mIOH/Db4+4BXe1qSgmiggQAGqPO8EuVcoBJR5iSDxSWwTGa4wivbAZUWNu22jz5xRtxdYV8tbHriHWfU1zODfgel9RF7IuVMgRV6XhaAWQLYjeHeuCpU7Ba9oz5gvvpIoNEeS8WBG4F1wa9tULgbdifgK1DVMElgKglaVEwT11wTFfjqE2+QMtJpTrJ3yDEWUpsDg8OqTUSTTkYeAUZmtSHHWOWQkRtPcK589CNQO+CViJn2mI9kQUg50wYE5rMOpt0E93cfEIpT8gxgqNecv3C6MbHTWlAIqQDQAhrrd4CgOglMAm5xCYkWanI6MJjJPEemb8yp/eE64Fcr9hhoE35XUgK5wXDMc3sgRFmc7IFiAA/BhuwyugYz4cxs5jQ0XF8KKGlgyFdr5e/oGSg3p3CFQpdMVBtIxBTcWknK1sB1yKSm4ZpG3tVuN3bYaVxSQ+UbpUo5DUMYB2sgjCoJUr4NIU25DP/A6dO3TdXrTcKcvHTkhqvOlnYIWYcmhJr/jX8O1UF76D/AWjMzbUuXCz1+OVEIY6ewkkQ4cUb3P2htSDWqTrU7IgEgUEDVztd40MlJWLUlUJyI58E1fW2Krx0ASdlr0smGS2VsPHUG6IBAG5HohxnqI1JAUkStqzfQte5qGGEfgzSGcCFjvFGq7wJ1RjOYstMARs+obNuL3lwN7inp23D/Cdd4lQwL+9uDaR9tiAaOnP0Vtb6A7Z3bNZgeQVcWtS4nxesi+t0/Ues2TUnphOOyLHSVhTYhfGZZ7WTw5Js/JGdR6+9XRcXWMJPgHtzENx0Ur9SsPzRVDPrGEto5Mj23T5cvne5uh0k/T2fxj6gHHU5DEdlpC5HXbMiCL4sHQ3g+WlmVbnTn4seZm9D0C2x9B6T6q0lRez+zamw08s5ChOG+BmyrhyVq9B8uz60QCz3v/HIU8h24m0ElJd9hxrkAnSRHGVAEAX2ilgXYNvZpzJmy9S/i2zYl1L505rSDONaNShyfar6aDeCLHAOBZlMLf6v/CuId9dqM/AndXAi+qRQugU5XdZ5SVpGTPuMVYZvO54Shf7jA0FcL5H8P1FwXji2VWwwl7p15u6AXQIUuyGRH0kpX9FbDyGa7aRnbNZz/yOcXDXnPdfbU76RfqPpQJVD/QKV07n7nqol5bAEikMTPUKrQgsALx9Ryuw6sttWVTXGtXOxPGuQtpuzQY5nyOrMd0Fmb9fn283zRj98/Pq6Wq8Xt53gBXxplwHBllQA3hBu+JSHQ/ze6rzAgsO4ftdx/b7DdZvvKBDPWBU9wAQXXGXDUvHz8sribN0u5O0RtbDTup5ejcuggLIpj83Q1fYHvhDihZ3BvOHt65Pnr8toXMkDxJ8KMISfNDOA6p2vTvjRJ3E1You2Ys3V5MoMTH5W8PPHR6vF/808HEjg4yh687KdaqPkdwO1o2XwouE7U7gIOwmzvpdA9yVI/CtqmeKe6Zpsd7e/Jtnv2DI/PDMlKFxfojxzOcaU2XNBvjkivZNjRmz6yA1Nvo0gfAfTqfD15w5zF9JI6m0Y23MXeVjH98uuOut2Lhbz2qrHk2E1eex24PPrlfvXhy3sbpuZDATB1lHZ4Gx6fQ6864mP3XafPXgZYrJ+/dmtxdm+divqPHwH8H+tnj9dY9/WaYX5oAONYEwOUgJor4JJ1WdAtb3PH9NID1vKKHdc1uhl8Hz0ur5fZs0Ad8s2WKIgCeGem7yoVcLW41jwb0C33+kk+31Hl9WCx9ff/AVeEB1Q="))); exec(compile(p["source"],"paper2_start.py","exec"),{"__name__":"__main__","BOOTSTRAP_SOURCE":p["source"].encode(),"BOOTSTRAP_TOKEN":p.get("token")})'
 ```
 
 Public downloads need no token. Before first submission, the existing GitHub

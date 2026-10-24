@@ -69,6 +69,65 @@ def test_all_24_tasks_use_one_allocation_not_an_array(config):
     assert stored["command"] == cmd and stored["job_id"] == "12345"
 
 
+def test_latest_allocation_is_one_job_two_gpus_36_cpus_128g(config):
+    science_key = single.preparation_key(config)
+    config["slurm"].update(cpus_per_task=18, mem="64G", pool_workers=2)
+    calls = []
+
+    def runner(args):
+        calls.append(args)
+        assert args[0] in ("squeue", "sbatch"), "submission invoked an unexpected process"
+        return reply() if args[0] == "squeue" else reply(out="31415\n")
+
+    result = single.submit(config, runner=runner)
+    commands = [args for args in calls if args[0] == "sbatch"]
+    assert len(commands) == 1
+    assert result["slurm_jobs_submitted"] == 1
+    assert result["submitted_indices"] == list(range(24))
+    assert not any(arg.startswith("--array") for arg in commands[0])
+    for value in ("--nodes=1", "--ntasks=1", "--gres=gpu:2", "--cpus-per-task=36", "--mem=128G"):
+        assert value in commands[0]
+    assert single.preparation_key(config) == science_key
+
+
+def test_memory_refusal_is_preserved_before_one_later_manual_submission(config):
+    memory_error = ("sbatch: error: Memory specification can not be satisfied\n"
+                    "sbatch: error: Batch job submission failed: Requested node configuration is not available\n")
+    calls = []
+    submission_count = 0
+
+    def runner(args):
+        nonlocal submission_count
+        calls.append(args)
+        assert args[0] in ("squeue", "sbatch"), "submission invoked a scientific worker"
+        if args[0] == "squeue":
+            return reply()
+        submission_count += 1
+        return reply(1, err=memory_error) if submission_count == 1 else reply(out="27182\n")
+
+    with pytest.raises(RuntimeError, match="Memory specification can not be satisfied"):
+        single.submit(config, runner=runner)
+    assert submission_count == 1
+    first = json.loads(ledger_path(config).read_text())["batches"][0]
+    assert first["status"] == "rejected_before_acceptance"
+    assert first["resolved_terminal"] and first["job_id"] is None
+    assert first["stderr"] == memory_error
+    assert "--mem=256G" in first["command"]
+    assert not (Path(config["output_root"]) / "tasks").exists()
+
+    config["slurm"].update(cpus_per_task=18, mem="64G", pool_workers=2)
+    result = single.submit(config, runner=runner)
+    assert result["job_id"] == "27182"
+    assert submission_count == 2
+    ledger = json.loads(ledger_path(config).read_text())
+    assert len(ledger["batches"]) == 2
+    assert ledger["batches"][0] == first
+    assert "--mem=128G" in ledger["batches"][1]["command"]
+    assert ledger["batches"][1]["status"] == "submitted"
+    assert [args[0] for args in calls] == ["squeue", "sbatch", "squeue", "sbatch"]
+    assert not (Path(config["output_root"]) / "tasks").exists()
+
+
 def test_exact_prior_qos_refusal_is_resolved_without_erasing_original(config):
     path = ledger_path(config)
     original_batch = {"status": "submission_reply_uncertain", "job_id": None,

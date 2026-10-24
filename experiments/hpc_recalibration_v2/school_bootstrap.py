@@ -12,8 +12,8 @@ import time
 import urllib.error
 import urllib.request
 
-COMMIT = "141410c7345e1fac33e85b31b316205e593f9fb3"
-SHA256 = "41592d3cd2475afe73757e095d7f8c8ac982883b0464ec17ab956110d85cd3ac"
+COMMIT = "d9743047f5c41c1f6226b5bf4e3bd9cbe89b6067"
+SHA256 = "6d539199bf7e7b641abcc8575d29ca1227cd1e74e22b9383024604557424fd71"
 RELATIVE = "experiments/hpc_recalibration_v2/download_on_hpc.py"
 SYSTEM_CA = ("/etc/pki/tls/certs/ca-bundle.crt",
              "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem",
