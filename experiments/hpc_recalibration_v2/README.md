@@ -1,11 +1,11 @@
 # 论文2：学校 HPC 实验扩展 V2
 
-**当前运行配置：只提交1个Slurm作业，`hpc_gpu1`、总2GPU/32CPU/128G；
-作业内最多2个单卡进程，每槽计划16CPU/64G，逐项取固定队列中的未完成任务。**
+**当前运行配置：只提交1个Slurm作业，`hpc_gpu1`、单节点、总2GPU/24CPU/128G；
+作业内最多2个单卡进程，每槽计划12CPU/64G，逐项取固定队列中的未完成任务。**
 [本地启动入口](../../releases/paper2-hpc-v2-20261023/README.md)已替代旧的单次raw下载命令。
-封存代码包仍保留原始模板，实际提交前会生成并使用`kumar_dev_hpc_gpu1.json`，
+封存代码包仍保留原始模板，实际提交前会生成并使用`kumar_dev_hpc_gpu1_24cpu.json`，
 原科学配置、断点和输入不改。首次提交前将隐藏输入token并核验实际写权限；
-迁移既有771075使用入口中的`--switch-job 771075`，先处理旧作业，避免重复运行。
+迁移当前活动作业使用入口中的`--switch-job auto`，先处理旧作业，避免重复运行。
 已有安装遇到QoS提交数限制或旧256G内存拒绝时，使用[单作业一行更新](../../releases/paper2-hpc-v2-20261023/README.md)，
 将复用现有授权、数据与准备缓存。
 
@@ -44,7 +44,7 @@ bash /public/home/zhuziyuan/incoming/install_offline.sh
 之后启动或恢复都使用同一行：
 
 ```bash
-/public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python -u /public/home/zhuziyuan/paper2_start.py
+/public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python -u /public/home/zhuziyuan/paper2_start.py --switch-job auto
 ```
 
 已完成项跳过；正在排队/运行的作业不重复提交；中断项从持久断点恢复。

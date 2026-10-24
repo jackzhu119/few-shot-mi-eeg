@@ -1,0 +1,59 @@
+{
+  "observed_utc": "2026-10-24T10:53:06.649294+00:00",
+  "scope": "real official runtime/loader fetch and cached no-launch update; local metadata-only preview; no school execution",
+  "software_validation_only": true,
+  "runtime_commit": "c7cb90a7c73dece6aca082c687dcafcc1028a32d",
+  "loader_commit": "590241df53c8ef48b59dc4ed16707d52f2c4a1af",
+  "loader_sha256": "8c1ba44de524a231110f128caf36545b50cc3255b07fe92e260a9f17e0202723",
+  "update_exit": 0,
+  "repeat_exit": 0,
+  "public_starter_identical": true,
+  "old_config_files_preserved": {
+    "/workspace/paper2_hpc_v2_delivery/api_transport_e2e_run01/project/configs/kumar_dev.json": "bddaef48333d747c50fca91addf43e8d17481ec66f7f1ff41db213fdbdf0d85c",
+    "/workspace/paper2_hpc_v2_delivery/api_transport_e2e_run01/project/configs/kumar_dev_hpc_gpu.json": "34da935796d8b76cba14ee11bdc984bab7f0829240de2fee77fa70396c9ba431",
+    "/workspace/paper2_hpc_v2_delivery/api_transport_e2e_run01/project/configs/kumar_dev_hpc_gpu1.json": "1107fc009b6e6ec93d5b4c232e00828bf1c3e4304f09b1f89adc79cf31f93cb3"
+  },
+  "new_profile": "kumar_dev_hpc_gpu1_24cpu.json",
+  "repeat_network_requests": 0,
+  "input_redownloaded": false,
+  "full_archive_rescan": false,
+  "one_time_local_archive_full_sha_check": {
+    "bytes": 125283270,
+    "sha256": "b6f211bbf2ed512fbf30d178d59c67181396c98d0ec122812519ee95a9aa3e0a"
+  },
+  "slurm_actions_executed": false,
+  "gpu_or_scientific_fits_executed": false,
+  "preview_command": [
+    "sbatch",
+    "--parsable",
+    "--nodes=1",
+    "--ntasks=1",
+    "--account=zhuziyuan",
+    "--partition=hpc_gpu1",
+    "--gres=gpu:2",
+    "--cpus-per-task=24",
+    "--mem=128G",
+    "--time=5-03:00:00",
+    "--signal=B:USR1@180",
+    "--requeue",
+    "--job-name=paper2-kumar-dev-recalibration-v2-2026-4825b11f-d90a58d",
+    "--chdir=/workspace/paper2_hpc_v2_delivery/api_transport_e2e_run01/project",
+    "--output=/workspace/paper2_hpc_v2_delivery/single_pool_upgrade_e2e/local_metadata_only/logs/%x-%j.out",
+    "--error=/workspace/paper2_hpc_v2_delivery/single_pool_upgrade_e2e/local_metadata_only/logs/%x-%j.err",
+    "/workspace/paper2_hpc_v2_delivery/api_transport_e2e_run01/project/.hpc_runtime/c7cb90a7c73dece6aca082c687dcafcc1028a32d/job.sh",
+    "/workspace/paper2_hpc_v2_delivery/hpc_gpu1_24cpu_20261024/local_profile.json",
+    "/workspace/.venvs/few-shot-mi-eeg/bin/python",
+    "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23"
+  ],
+  "relevant_tests_passed": 108,
+  "test_file_counts": {
+    "runtime_profile": 10,
+    "direct_download": 29,
+    "runtime_upgrade": 3,
+    "switch": 14,
+    "single_submit": 21,
+    "bootstrap": 9,
+    "github_sync": 17,
+    "auto_switch": 5
+  }
+}
