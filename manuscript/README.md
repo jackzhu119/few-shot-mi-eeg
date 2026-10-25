@@ -1,118 +1,48 @@
-# Manuscript working materials
+# 论文与投稿文件导航
 
-**最新行政版本（2026-10-16）：**[伦理澄清完整审阅包](plos_one_submission_ethics_20261016/README.md)。作者报告学校科研处于2026-10-16确认免予额外伦理审查、无编号，已按已确认单位重庆医科大学及描述性办公室译名更新；未编造新IRB批准。科学数值及原封存包不变，未投稿。
+[仓库主页](../README.md) · [当前状态](../CURRENT_PROJECT_STATUS.md) · [文档](../docs/README.md) · [研究记录](../research_logs/README.md)
 
-## Latest author-review revision: 2026-10-16
+当前稿件：**Spatial-filter refitting improves limited-label recalibration in longitudinal motor-imagery EEG**。作者：Ziyuan Zhu。文件以2026-10-19修订与支持材料为当前入口；更早日期包保留原始版本。
 
-Start with [the revised package](plos_one_submission_20261016/README.md),
-[illustrated PDF](plos_one_submission_20261016/manuscript_for_review.pdf) or
-[editable Word](plos_one_submission_20261016/manuscript_for_review.docx).
-The [review response](../docs/kumar_review_response_20261016.md) distinguishes
-verified corrections from overstated suggestions. Original Tables 1–4 and
-scientific results remain unchanged; Table 5 adds explicitly exploratory checks.
-The scoped MIT/CC BY 4.0 choice is active. The author reports personal review
-and approval dated 16 October 2026, and reports obtaining ethics approval;
-committee, actual ethics date, identifier and coverage remain to be supplied.
-The [dated addendum](kumar_author_review_addendum_20261016.md) updates the
-pre-reply pending statements without changing sealed file bytes. The full AI
-disclosure remains. This revision has not been submitted. Older entries below
-are dated history.
+## 优先下载与阅读
 
-## Current synchronization and author review
+| 用途 | 文件 |
+| --- | --- |
+| 最新完整提交文件与系统字段 | [PONE-D-26-52050_submission_20261019_run02.zip](plos_one_submission_support_20261019/PONE-D-26-52050_submission_20261019_run02.zip) |
+| 带图阅读PDF | [PLOS_ONE_Manuscript_Reading.pdf](plos_one_innovation_20261017/PLOS_ONE_Manuscript_Reading.pdf) |
+| 可编辑投稿主稿 | [PLOS_ONE_Manuscript_Submission.docx](plos_one_innovation_20261017/PLOS_ONE_Manuscript_Submission.docx) |
+| 投稿主稿PDF预览 | [PLOS_ONE_Manuscript_Submission.pdf](plos_one_innovation_20261017/PLOS_ONE_Manuscript_Submission.pdf) |
+| 六张600 dpi原始图件及清晰审阅版 | [高清图件包](plos_one_submission_support_20261019/Paper2_High_Resolution_Figures.zip) · [合并图件PDF](plos_one_submission_support_20261019/Figures_1_to_6_Clear_Review.pdf) |
+| 与当前正文一致的266词系统摘要 | [Abstract_for_Submission_System.txt](plos_one_submission_support_20261019/Abstract_for_Submission_System.txt) |
 
-The complete author-review artifact commit
-[`f735ffd1e49915e41f28b727f5d3279ad337c692`](https://github.com/jackzhu119/few-shot-mi-eeg/commit/f735ffd1e49915e41f28b727f5d3279ad337c692)
-is now pushed and read back. The private main backup fully GET/SHA256 verified
-all 434 objects, 82,392,690 bytes, with zero failures. See the
-[current closeout](../docs/kumar_submission_sync_closeout_20261016.md).
-The blocked-sync wording inside the sealed package and below is historical;
-artifact bytes and manifests were preserved. Author/institution decisions and
-the unsent submission status remain unchanged.
+完整包需解压后按系统文件类型分别上传。[支持材料说明](plos_one_submission_support_20261019/README.md)记录图件清晰度、系统摘要与实际核验范围。
 
-## Sealed PLOS ONE author-review revision
+## 补充材料、声明与底层数据
 
-The [new complete package](plos_one_submission_20261015/README.md) includes the
-image-free submission manuscript, illustrated review PDF/Word, scientific methods,
-separate audit appendix, four production figures and a portable minimal data ZIP.
-The [revision report](../docs/kumar_submission_revision_report_20261015.md) records
-cue-anchored window semantics, direct QC sensitivity with10/12eligible remaining
-participants and saved EEGNet training interpretation. Original frozen results
-and previous drafts below remain unchanged. Local completion is distinguished
-from the currently blocked GitHub/R2 synchronization. No journal submission occurred.
+- [S1科学方法PDF](plos_one_innovation_20261017/S1_Supplementary_Methods.pdf) / [Word](plos_one_innovation_20261017/S1_Supplementary_Methods.docx)。
+- [S2复现说明PDF](plos_one_innovation_20261017/S2_Reproducibility.pdf) / [Word](plos_one_innovation_20261017/S2_Reproducibility.docx)。
+- [S1_Data.zip](plos_one_innovation_20261017/S1_Data.zip) / [数据包说明](plos_one_innovation_20261017/S1_Data_README.md)：派生数据、保存预测与复现代码。
+- [现行伦理声明](plos_one_innovation_20261017/Ethics_Statement_20261019.md)：第32条第（一）项法规豁免表述，原始采集伦理单独报告。
+- [Human Participants Checklist](plos_one_innovation_20261017/Human_Participants_Checklist.pdf) · [作者与系统字段](plos_one_innovation_20261017/Author_Submission_Details.md)。
+- [附信](plos_one_innovation_20261017/Cover_Letter.pdf) · [图注](plos_one_innovation_20261017/Figure_Captions.md)。
 
-Current repository-wide scientific completion, manuscript deliverables, author
-confirmations and remaining submission requirements are summarized in
-[CURRENT_PROJECT_STATUS.md](../CURRENT_PROJECT_STATUS.md). All54 source models
-and the separately accepted single frozen query evaluation are complete; this
-is not a request for further training or query evaluation.
+[当前稿件完整索引](plos_one_innovation_20261017/README.md)链接源稿、参考文献、图件底表、构建与核验资料。[许可范围](../LICENSING.md)区分原创内容、软件与第三方材料。
 
-## Current Kumar2024 working draft
+## 当前论文结果与后续扩展
 
-The current Kumar2024 research manuscript is
-[Longitudinal Motor-Imagery EEG Decoding: Frozen Baselines, Supervised Recalibration, and Task-Measurement Reliability](kumar_longitudinal_decoding_working_draft_20261015.md).
-This English working draft reports the completed 18-participant CPU baselines,
-all 54 source-only EEGNet checkpoints evaluated on frozen queries, and the
-development-only reliability probes and pre-frozen descriptive drift associations.
-It distinguishes matched query identities from unequal source-validation and target-label budgets, retains
-negative and collapsed results, and establishes no effective task-aware gate.
-Its status is **exploratory_working_draft_not_submission_ready**. The NETBCI
-documents below remain historical records and are not pooled with Kumar to
-increase the participant count.
+[原论文结果](../CROSS_SESSION_RESULTS.md)包含参与者为统计单位的CPU比较与冻结EEGNet结果。54个源模型对应18名参与者的三个种子，不能作为54名独立参与者。
 
-## Complete author-review package
+学校HPC V2是独立研究版本；[新方法与实验设计](https://github.com/jackzhu119/few-shot-mi-eeg/blob/research/paper2-hpc-v2-20261023/docs/paper2_hpc_v2_literature_and_scientific_design_20261023.md)和[运行入口](https://github.com/jackzhu119/few-shot-mi-eeg/blob/research/paper2-hpc-v2-20261023/releases/paper2-hpc-v2-20261023/README.md)位于研究分支。原稿、54模型及历史预测保持原样，新候选方法的效果由其实际结果另行报告。
 
-- [English PDF](review_package_author_confirmed_20261015/manuscript.pdf) and [editable Word](review_package_author_confirmed_20261015/manuscript.docx), updated with the author's eight factual declarations.
-- [Supplementary methods](kumar_supplementary_methods_20261015.md), with [PDF/Word exports](review_package_author_confirmed_20261015/README.md).
-- [Three source-backed figures](figures/kumar2024_20261015/CAPTIONS.md), [verified bibliography](kumar_references_20261015.bib), and [reference verification scope](reference_map.md).
-- [Author review checklist](kumar_author_review_checklist_20261015.md): sole authorship, queried contributions, no specific funding, no competing interests, corrected ORCID fields, no reported release restrictions, PLOS ONE target and no prior preprint/conference or concurrent submission are author-confirmed. The institutional determination remains unresolved; final approval and license/release decisions remain separate.
+## 历史稿件与版本
 
-The review package uses PLOS ONE citation format for the author-confirmed target
-and is not a submitted manuscript. The [earlier package](review_package_20261015/README.md)
-is retained unchanged as a historical version. All actual results and prior test-exposure limitations
-remain unchanged. No new fit, query inference or strategy was introduced.
+| 历史材料 | 入口 |
+| --- | --- |
+| 2026-10-17文字结构修订版 | [plos_one_revision_20261017](plos_one_revision_20261017/README.md) |
+| 2026-10-16伦理行政版本 | [plos_one_submission_ethics_20261016](plos_one_submission_ethics_20261016/README.md) |
+| 2026-10-16审稿意见修订版 | [plos_one_submission_20261016](plos_one_submission_20261016/README.md) |
+| 2026-10-15审阅包 | [plos_one_submission_20261015](plos_one_submission_20261015/README.md) |
+| 早期Kumar英文工作稿 | [2026-10-15工作稿](kumar_longitudinal_decoding_working_draft_20261015.md) |
+| 早期NETBCI工作稿 | [longitudinal_eeg_working_draft.md](longitudinal_eeg_working_draft.md) · [十九身份补充](all19_addendum_20261011.md) |
 
-## Historical NETBCI working materials
-
-The [19-ID addendum](all19_addendum_20261011.md) reports 76 verified session joins,
-456 derivative recordings and frozen CSP/LDA analyses. Exact cross-identity copies affect
-five published IDs; a separately named source-driven sensitivity retains fourteen IDs.
-Neither the original nineteen-ID arithmetic nor absence of exact copies proves biological
-independence. New public resources are accepted separately by source, task and population;
-ingestion does not establish model training or human skill retention.
-
-The historical [ten-ID cohort addendum](cohort_addendum_20261010.md) reports completed computations,
-the exact cross-identity signal duplication involving sub-1/sub-7, and a separately named
-eight-ID source-driven sensitivity. The original ten-ID EEG intervals cannot be interpreted
-as independent-participant evidence. The single-participant manuscript below is a historical
-freeze; its sub-1 session-04 signal is among the shared derivative recordings, and the correct
-original assignment remains unverified. New public-source expansion is audited separately.
-
-The [English working draft](longitudinal_eeg_working_draft.md) reports the actual NETBCI stage-1 evidence available on 2026-10-10. Its status is **`exploratory_single-participant_working_draft_not_submission_ready`**.
-
-Its current claim is an auditable longitudinal EEG feasibility workflow: one participant, four ordered sessions, 24 task runs, 717 stored events, descriptive feature differences, and minimal source-frozen decoder checks. **Learning-Preserving Co-Adaptive Brain–Computer Interfaces** is the longer-term research programme; no candidate algorithm, skill-retention benefit, or causal human learning effect has been demonstrated.
-
-The draft uses original explanatory prose and cites methodological ideas from the three requested Nature-family papers. It does not reproduce their text, results, or interventions. Their different modalities and limitations inform the design rather than supply a conclusion for the present data.
-
-### Historical NETBCI evidence usable now
-
-- Real derivative-file checksums, continuous-signal/event checks, explicit sample boundaries, and corresponding original-release headers/events.
-- Actual 19-participant behavior-only session summaries and four verified participant/session joins to the single EEG participant, with unresolved run/trial joins retained explicitly.
-- Source-only fitting and frozen-model state audits; exact confusion matrices, query counts, and conditional run-bootstrap intervals.
-- Matched representation summaries, post-observation quality sensitivity, source-reference sensitivity, and independent computational replay.
-- Configuration, script/source hashes, executed base commit plus dirty-tree status, and runtime receipts.
-
-Stage-1 numerical claims trace to `research_logs/netbci_stage1_20261010/`: primary `run01/`, replay `run02_replay/`.
-The subsequent behavior/EEG session analysis uses `research_logs/netbci_behavior_sessions_20261010/run03_verified/`
-and exact replay `run04_replay/`, with its own source snapshots and receipts. The 19 behavioral records do not add
-EEG participants. Computational replay and twenty matched resamplings do not create independent biological samples.
-
-### Historical NETBCI requirements before a stronger paper
-
-- Author-confirmed affiliations, contributions, funding/competing-interest statements, secondary-data institutional review status, and complete verified bibliography.
-- Repository license, immutable analysis release, reviewed publication figures, and independent final result audit.
-- A justified multi-participant development/confirmation protocol, measurement reliability, fuller artifact/acquisition controls, and scientifically validated decoder training.
-- Verified run-score order and denominators, missing-event/exclusion logs, linked trial behaviour, feedback and decoder-update records, or a stated restriction to the fields that can actually be established.
-- Participant-level inference and independently tested task-information/geometry hypotheses; no trial/bootstrap result can replace these.
-- Controlled online policy comparison, independent probes, withdrawal of assistance, and delayed retention/transfer evidence for any future learning-preservation claim.
-
-The draft is suitable for a supervisor/research-team methods review and for identifying the next evidence requirements. It is not a completed Nature Communications submission and does not establish the claimed novelty of a new algorithm.
+历史包中“最新”“待补”“未投稿”、学校伦理确认及早期启动命令等文字仅表示当时状态；现行文件以上方入口为准。原目录、封存包和校验记录不改名、不搬迁。更早的导航与时间线见[历史索引](../docs/archive/README.md)。
