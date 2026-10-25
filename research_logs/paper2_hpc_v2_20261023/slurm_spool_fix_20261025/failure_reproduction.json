@@ -1,0 +1,50 @@
+{
+  "observed_utc": "2026-10-25T07:23:42.754393+00:00",
+  "scope": "actual Bash/Python process launch with synthetic controller; local copied-script simulation, not school Slurm execution",
+  "synthetic": true,
+  "software_validation_only": true,
+  "source_job_sh_sha256": "637d8c4774358c4acdcfc3aeca73010ec39c26ef5674dea6516228ef8f371f3c",
+  "results": {
+    "direct": {
+      "command": [
+        "bash",
+        "/workspace/paper2_hpc_v2_delivery/spool_review_20261025/runtime/job.sh",
+        "synthetic.json",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "0,1"
+      ],
+      "returncode": 0,
+      "stdout": "shell_start job=771415 host=03b49cd90283 utc=2026-10-25T07:23:42Z mode=single_pool\npool_controller pid=2287 utc=2026-10-25T07:23:42Z\n{\"synthetic\": true, \"software_validation_only\": true, \"event\": \"synthetic_controller_started\", \"argv\": [\"--config\", \"synthetic.json\", \"--indices\", \"0,1\"]}\npool_exit code=0 usr1=0 cancelled=0 utc=2026-10-25T07:23:42Z\n",
+      "stderr": "",
+      "controller_started": true
+    },
+    "spooled": {
+      "command": [
+        "bash",
+        "/workspace/paper2_hpc_v2_delivery/spool_review_20261025/spool/job771415/slurm_script",
+        "synthetic.json",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "0,1"
+      ],
+      "returncode": 2,
+      "stdout": "shell_start job=771415 host=03b49cd90283 utc=2026-10-25T07:23:42Z mode=single_pool\npool_controller pid=2296 utc=2026-10-25T07:23:42Z\npool_exit code=2 usr1=0 cancelled=0 utc=2026-10-25T07:23:42Z\n",
+      "stderr": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/paper2_hpc_v2_delivery/spool_review_20261025/spool/job771415/controller.py': [Errno 2] No such file or directory\n",
+      "controller_started": false
+    },
+    "spooled_with_explicit_runtime": {
+      "command": [
+        "bash",
+        "/workspace/paper2_hpc_v2_delivery/spool_review_20261025/spool/job771415/slurm_script_explicit_runtime",
+        "synthetic.json",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "0,1",
+        "/workspace/paper2_hpc_v2_delivery/spool_review_20261025/runtime"
+      ],
+      "returncode": 0,
+      "stdout": "shell_start job=771415 host=03b49cd90283 utc=2026-10-25T07:23:42Z mode=single_pool\npool_controller pid=2303 utc=2026-10-25T07:23:42Z\n{\"synthetic\": true, \"software_validation_only\": true, \"event\": \"synthetic_controller_started\", \"argv\": [\"--config\", \"synthetic.json\", \"--indices\", \"0,1\"]}\npool_exit code=0 usr1=0 cancelled=0 utc=2026-10-25T07:23:42Z\n",
+      "stderr": "",
+      "controller_started": true
+    }
+  },
+  "actual_hpc_or_gpu_or_eeg_execution": false
+}

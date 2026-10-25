@@ -6,7 +6,7 @@ allocation. Tasks run in the existing fixed order, at most two concurrently;
 there is no array or DDP. Scientific parameters, inputs, numerical threads,
 completed tasks and checkpoint identities are unchanged.
 
-## Existing installation: update, enter token and apply24 total CPUs
+## Existing installation: repair the Slurm-spooled launcher and continue
 
 Run this single line in the same school login terminal. It backs up the local
 starter and changes its two pins. The downloaded inputs and original sealed
@@ -16,14 +16,21 @@ selects another paper’s job or starts a duplicate. The request includes
 `--nodes=1`, so both GPUs are allocated on the same node.
 
 ```bash
-/public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python -u -c 'import re,runpy; from pathlib import Path; p=Path("/public/home/zhuziyuan/paper2_start.py"); s=p.read_text(); d=runpy.run_path(str(p),run_name="paper2_update_helper"); n,a=re.subn("(?m)^COMMIT = .*$","COMMIT = \"590241df53c8ef48b59dc4ed16707d52f2c4a1af\"",s); n,b=re.subn("(?m)^SHA256 = .*$","SHA256 = \"8c1ba44de524a231110f128caf36545b50cc3255b07fe92e260a9f17e0202723\"",n); assert (a,b)==(1,1),"Local entry format differs; no file changed"; compile(n,str(p),"exec"); q=p.with_name("paper2_start.before_hpc_gpu1_24cpu.py"); q.exists() or d["atomic_file"](q,s.encode()); d["atomic_file"](p,n.encode()); exec(compile(n,str(p),"exec"))' --switch-job auto
+/public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python -u -c 'import re,runpy; from pathlib import Path; p=Path("/public/home/zhuziyuan/paper2_start.py"); s=p.read_text(); d=runpy.run_path(str(p),run_name="paper2_update_helper"); n,a=re.subn("(?m)^COMMIT = .*$","COMMIT = \"e50ef7d9d75a6af731e955d027df90ab79530e2d\"",s); n,b=re.subn("(?m)^SHA256 = .*$","SHA256 = \"6ff4d246cba9b2269860ce433d39efea773e07f0f8c3f115d897715b457a96b6\"",n); assert (a,b)==(1,1),"Local entry format differs; no file changed"; compile(n,str(p),"exec"); q=p.with_name("paper2_start.before_spool_fix.py"); q.exists() or d["atomic_file"](q,s.encode()); d["atomic_file"](p,n.encode()); exec(compile(n,str(p),"exec"))' --switch-job auto
 ```
 
-The script determines the actual job state before changing it:
+Job771415 failed because the original script located `controller.py` relative
+to Slurm’s copied batch script. The updated submitter explicitly exports the
+fixed shared runtime path; the batch script prints that path before starting
+the controller. Existing inputs and scientific checkpoints remain reusable.
 
-- **PENDING:** hold the old job, force hidden GitHub token input and an actual
-  repository write probe, update Partition=hpc_gpu1 and both NumCPUs/CPUsPerTask=24,
-  update the companion config, then release the same job. No new job is submitted.
+The script determines the actual job state and launcher version before changing it:
+
+- **PENDING with an obsolete launcher:** hold, authorize, cancel only this held
+  pending project job, wait for terminal accounting, then submit one replacement
+  with the fixed runtime. Slurm’s old copied script cannot be repaired in place.
+- **PENDING with the current launcher:** hold, authorize, update the resource
+  request and companion config, then release the same job.
 - **RUNNING:** send TERM to the batch shell, which forwards it for checkpoint
   saving without automatic requeue. Wait up to45seconds for exit and terminal
   accounting; then force hidden authorization and submit one continuation job.
@@ -49,7 +56,7 @@ new token leaves the previous private token intact.
 
 An already active job is not duplicated and its monitor is restarted if needed.
 A new submission requires hidden token input. Completed work does not restart.
-An existing allocation whose recorded request already matches24CPUs is reused;
+An existing allocation whose recorded request matches24CPUs and the fixed runtime is reused;
 no TERM, resubmission or token prompt is added for that running job.
 The target companion profile is `configs/kumar_dev_hpc_gpu1_24cpu.json`, separate
 from both previous resource profiles. The original
@@ -72,7 +79,7 @@ Use the line below only if no local starter/installation exists. Public download
 need no token; hidden manual authorization follows before the first submission.
 
 ```bash
-/public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python -u -c 'import base64,json,zlib; p=json.loads(zlib.decompress(base64.b64decode("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"))); exec(compile(p["source"],"paper2_start.py","exec"),{"__name__":"__main__","BOOTSTRAP_SOURCE":p["source"].encode(),"BOOTSTRAP_TOKEN":p.get("token")})'
+/public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python -u -c 'import base64,json,zlib; p=json.loads(zlib.decompress(base64.b64decode("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"))); exec(compile(p["source"],"paper2_start.py","exec"),{"__name__":"__main__","BOOTSTRAP_SOURCE":p["source"].encode(),"BOOTSTRAP_TOKEN":p.get("token")})'
 ```
 
 ## Input and validation
@@ -84,7 +91,8 @@ The four GitHub input parts reconstruct125,283,270 bytes with SHA256
 [Scientific design](../../docs/paper2_hpc_v2_literature_and_scientific_design_20261023.md)
 keeps the new development experiment separate from the old54 accepted models.
 
-[Current24CPU validation](../../research_logs/paper2_hpc_v2_20261023/hpc_gpu1_24cpu_20261024/)
+[Current spool repair](../../research_logs/paper2_hpc_v2_20261023/slurm_spool_fix_20261025/REPORT.md)
+and [24CPU validation](../../research_logs/paper2_hpc_v2_20261023/hpc_gpu1_24cpu_20261024/)
 records software-only Slurm/authorization tests and a real pseudoterminal hidden
 input check. Historical [single-job](../../research_logs/paper2_hpc_v2_20261023/single_pool_20261024/)
 and [36CPU/128G](../../research_logs/paper2_hpc_v2_20261023/resources_36cpu128g_20261024/)
