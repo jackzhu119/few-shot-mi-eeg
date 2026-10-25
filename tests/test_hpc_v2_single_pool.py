@@ -266,6 +266,7 @@ def test_actual_bash_signal_forward_and_requeue_boundary(tmp_path, number, expec
     control.chmod(0o755)
     env = os.environ.copy()
     env.update(SLURM_JOB_ID="123456", READY=str(tmp_path / "ready"),
+               PAPER2_POOL_RUNTIME=str(runtime),
                REQUEUE_LOG=str(tmp_path / "requeue.log"), PATH=str(binary) + os.pathsep + env["PATH"])
     process = subprocess.Popen(["bash", str(runtime / "job.sh"), "fake.json", sys.executable, "0,1"],
                                env=env, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)

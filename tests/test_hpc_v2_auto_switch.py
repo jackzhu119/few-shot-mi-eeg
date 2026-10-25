@@ -119,3 +119,40 @@ def test_auto_unrecorded_active_job_never_mutates_or_prompts(setup):
                        authorize=lambda _: pytest.fail("unrecorded job prompted"))
     assert [row[0] for row in scheduler.events] == ["squeue"]
     assert before == (setup.old.read_bytes(), setup.ledger_path.read_bytes())
+
+
+@pytest.mark.parametrize("accounting,expected", [("CANCELLED", "submitted"), ("RUNNING", "waiting_for_terminal_accounting")])
+def test_obsolete_spooled_launcher_is_not_released_or_reused_for_matching_resources(
+        setup, monkeypatch, accounting, expected):
+    command = switch.pool_submit._pool_command(setup.config, [0], setup.name)
+    command = [value for value in command if not value.startswith("--export=")]
+    command[-4] = str(Path(setup.config["project_dir"]) / ".hpc_runtime/old/job.sh")
+    setup.ledger["batches"][0]["command"] = command
+    setup.ledger_path.write_text(json.dumps(setup.ledger))
+    original_ledger = setup.ledger_path.read_bytes()
+    original_config = Path(setup.config["_config_path"]).read_bytes()
+    scheduler = Scheduler(setup)
+
+    def runner(args):
+        result = scheduler(args)
+        if args[0] == "scancel":
+            scheduler.rows = []
+        elif args[0] == "sacct":
+            result.stdout = "771099|" + accounting + "|\n"
+        return result
+
+    def submit(config, *, runner):
+        scheduler.events.append(["SUBMIT_FIXED_LAUNCHER"])
+        assert config["slurm"]["cpus_per_task"] == 12
+        return {"status": "submitted", "job_id": "synthetic-fixed-job"}
+
+    monkeypatch.setattr(switch.pool_submit, "submit", submit)
+    result = switch.migrate(setup.config, job_id="auto", runner=runner, authorize=scheduler.authorize)
+    assert result["status"] == expected
+    operations = [args for args in scheduler.events if args[0] not in ("squeue", "sacct")]
+    assert operations[:3] == [["scontrol", "hold", "771099"], ["MANUAL_AUTHORIZATION"], ["scancel", "771099"]]
+    assert not any(args[:2] in (["scontrol", "release"], ["scontrol", "update"]) for args in operations)
+    assert operations.count(["MANUAL_AUTHORIZATION"]) == 1
+    assert operations.count(["SUBMIT_FIXED_LAUNCHER"]) == (expected == "submitted")
+    assert setup.ledger_path.read_bytes() == original_ledger
+    assert Path(setup.config["_config_path"]).read_bytes() == original_config

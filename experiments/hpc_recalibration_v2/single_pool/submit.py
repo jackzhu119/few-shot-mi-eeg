@@ -111,6 +111,7 @@ def _pool_command(config, indices, job_name):
     total_gres = gres.rsplit(":", 1)[0] + ":" + str(workers)
     output = Path(config["output_root"]).resolve()
     args = ["sbatch", "--parsable", "--nodes=1", "--ntasks=1",
+            "--export=ALL,PAPER2_POOL_RUNTIME=" + str(Path(__file__).resolve().parent),
             "--account=" + settings.get("account", "zhuziyuan"),
             "--partition=" + settings.get("partition", "hpc_gpu"),
             "--gres=" + total_gres, "--cpus-per-task=" + str(cores * workers),

@@ -34,7 +34,8 @@ def setup(tmp_path, monkeypatch):
         str(Path(config["output_root"]).resolve()).encode()).hexdigest()[:8]
     job_name = prefix + "-existing"
     ledger = {"experiment_id": config["experiment_id"], "batches": [
-        {"job_id": "771075", "name": job_name, "status": "submitted"}]}
+        {"job_id": "771075", "name": job_name, "status": "submitted",
+         "command": switch.pool_submit._pool_command(switch.load_config(old_path), [0], job_name)}]}
     (runtime / "submissions.json").write_text(json.dumps(ledger))
     monkeypatch.setattr(switch, "_monitor_start", lambda _: (123, None))
     return SimpleNamespace(config=config, old=old_path, runtime=runtime, job_name=job_name)

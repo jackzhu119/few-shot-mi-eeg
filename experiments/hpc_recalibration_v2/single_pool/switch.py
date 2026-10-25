@@ -67,6 +67,12 @@ def prompt_authorization(config, *, prompt=None, tty=None, client_factory=None):
     return receipt
 
 
+def _uses_this_launcher(command):
+    directory = str(Path(__file__).resolve().parent)
+    return ("--export=ALL,PAPER2_POOL_RUNTIME=" + directory in command
+            and str(Path(directory) / "job.sh") in command)
+
+
 def migrate(config, *, from_config=None, job_id=None, runner=run_command,
             authorize=prompt_authorization, sleep=time.sleep, clock=time.monotonic):
     output = Path(config["output_root"])
@@ -90,7 +96,8 @@ def migrate(config, *, from_config=None, job_id=None, runner=run_command,
             command = matches[0].get("command", [])
             expected = pool_submit._pool_command(config, [], "resource-comparison")
             resource_prefixes = ("--nodes=", "--ntasks=", "--partition=", "--gres=", "--cpus-per-task=", "--mem=")
-            if all(value in command for value in expected if value.startswith(resource_prefixes)):
+            if (_uses_this_launcher(command)
+                    and all(value in command for value in expected if value.startswith(resource_prefixes))):
                 monitor, warning = _monitor_start(config)
                 return {"status": "already_matches_requested_resources", "job_id": str(job_id),
                         "monitor_pid": monitor, "monitor_warning": warning,
@@ -120,6 +127,8 @@ def migrate(config, *, from_config=None, job_id=None, runner=run_command,
         if (ledger.get("experiment_id") != config["experiment_id"] or len(batches) != 1
                 or not batches[0]["name"].startswith(prefix)):
             raise RuntimeError("The requested job is not uniquely recorded for this project")
+        obsolete_launcher = not _uses_this_launcher(batches[0].get("command", []))
+        authorized = False
         receipt_path = runtime / ("migration-" + str(job_id) + "-" + str(time.time_ns()) + ".json")
         target_hash = hashlib.sha256(json.dumps({k: v for k, v in config.items() if k != "_config_path"},
                                                sort_keys=True).encode()).hexdigest()
@@ -154,7 +163,7 @@ def migrate(config, *, from_config=None, job_id=None, runner=run_command,
         try:
             save("checking")
             current = observe()
-            if current and current["state"] not in TERMINAL:
+            if current and current["state"] not in TERMINAL and not obsolete_launcher:
                 for previous_path in sorted(runtime.glob("migration-" + str(job_id) + "-*.json")):
                     previous = json.loads(previous_path.read_text())
                     if (previous.get("status") == "migrated_existing_job"
@@ -175,26 +184,39 @@ def migrate(config, *, from_config=None, job_id=None, runner=run_command,
                     raise RuntimeError("Job did not remain PENDING after hold; no resource/configuration change made")
                 save("held_awaiting_manual_authorization")
                 authorize(config)
-                settings = config["slurm"]
-                total_cores = str(int(settings["cpus_per_task"]) * int(settings["pool_workers"]))
-                required(["scontrol", "update", "JobId=" + str(job_id), "Partition=" + settings["partition"],
-                          "NumCPUs=" + total_cores, "CPUsPerTask=" + total_cores])
-                source = Path(from_config).resolve()
-                original = source.read_bytes()
-                backup = source.with_name(source.name + ".before-migration-" + hashlib.sha256(original).hexdigest()[:16])
-                if backup.exists() and backup.read_bytes() != original:
-                    raise RuntimeError("Existing migration backup differs; job remains held")
-                if not backup.exists():
-                    pool_submit._atomic_bytes(backup, original)
-                atomic_json(source, {k: v for k, v in config.items() if k != "_config_path"})
-                save("resources_changed_held", original_config_backup=str(backup),
-                     original_config_sha256=hashlib.sha256(original).hexdigest())
-                required(["scontrol", "release", str(job_id)])
-                monitor, warning = _monitor_start(config)
-                save("migrated_existing_job", monitor_pid=monitor, monitor_warning=warning)
-                return {"status": "migrated_existing_job", "job_id": str(job_id),
-                        "new_slurm_jobs_submitted": 0, "receipt": str(receipt_path)}
-            if current:
+                authorized = True
+                if obsolete_launcher:
+                    save("obsolete_pending_launcher_replacement_requested",
+                         note="Slurm copied the old script; replace this held pending job, preserving its evidence")
+                    required(["scancel", str(job_id)])
+                    deadline = clock() + 45
+                    while observe() is not None and clock() < deadline:
+                        sleep(2)
+                    if observe() is not None:
+                        save("waiting_for_obsolete_pending_exit")
+                        return {"status": receipt["status"], "job_id": str(job_id), "receipt": str(receipt_path)}
+                    current = None
+                else:
+                    settings = config["slurm"]
+                    total_cores = str(int(settings["cpus_per_task"]) * int(settings["pool_workers"]))
+                    required(["scontrol", "update", "JobId=" + str(job_id), "Partition=" + settings["partition"],
+                              "NumCPUs=" + total_cores, "CPUsPerTask=" + total_cores])
+                    source = Path(from_config).resolve()
+                    original = source.read_bytes()
+                    backup = source.with_name(source.name + ".before-migration-" + hashlib.sha256(original).hexdigest()[:16])
+                    if backup.exists() and backup.read_bytes() != original:
+                        raise RuntimeError("Existing migration backup differs; job remains held")
+                    if not backup.exists():
+                        pool_submit._atomic_bytes(backup, original)
+                    atomic_json(source, {k: v for k, v in config.items() if k != "_config_path"})
+                    save("resources_changed_held", original_config_backup=str(backup),
+                         original_config_sha256=hashlib.sha256(original).hexdigest())
+                    required(["scontrol", "release", str(job_id)])
+                    monitor, warning = _monitor_start(config)
+                    save("migrated_existing_job", monitor_pid=monitor, monitor_warning=warning)
+                    return {"status": "migrated_existing_job", "job_id": str(job_id),
+                            "new_slurm_jobs_submitted": 0, "receipt": str(receipt_path)}
+            if current and current["state"] not in TERMINAL:
                 if current["state"] != "RUNNING":
                     save("waiting_for_existing_job_state", scheduler_state=current["state"])
                     return {"status": receipt["status"], "job_id": str(job_id), "receipt": str(receipt_path)}
@@ -212,7 +234,8 @@ def migrate(config, *, from_config=None, job_id=None, runner=run_command,
                 save("waiting_for_terminal_accounting", accounting_states=states)
                 return {"status": receipt["status"], "job_id": str(job_id), "receipt": str(receipt_path)}
             save("prior_job_terminal_awaiting_manual_authorization", accounting_states=states)
-            authorize(config)
+            if not authorized:
+                authorize(config)
             result = pool_submit.submit(config, runner=call)
             save("resumed_after_migration", submission=result)
             return {**result, "migration_receipt": str(receipt_path), "previous_job_id": str(job_id)}

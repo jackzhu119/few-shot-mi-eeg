@@ -4,7 +4,23 @@ set -u
 config=${1:?configuration path required}
 python=${2:?Python executable required}
 indices=${3:-}
-here=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+if [ -n "${PAPER2_POOL_RUNTIME:-}" ]; then
+    here=$PAPER2_POOL_RUNTIME
+elif [ -n "${SLURM_JOB_ID:-}" ]; then
+    printf 'pool_runtime_missing: PAPER2_POOL_RUNTIME was not supplied; preserve logs and submit the updated runtime\n' >&2
+    exit 2
+else
+    here=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+fi
+case "$here" in
+    /*) ;;
+    *) printf 'pool_runtime_invalid: an absolute runtime directory is required\n' >&2; exit 2 ;;
+esac
+if [ ! -r "$here/controller.py" ]; then
+    printf 'pool_controller_missing: %s/controller.py\n' "$here" >&2
+    exit 2
+fi
+printf 'pool_runtime directory=%s controller=%s/controller.py\n' "$here" "$here"
 export PYTHONUNBUFFERED=1
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
 export NUMEXPR_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1
