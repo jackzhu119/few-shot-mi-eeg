@@ -1,0 +1,142 @@
+{
+  "scope": "Saved predictions/metadata/statistics only; no model binary, training, inference, EEG or host operation",
+  "summary_values_identical_except_created_at": true,
+  "csv_checks": [
+    {
+      "file": "comparisons.csv",
+      "sha256": "ee7db32569fa1c647d2decdb9ffa1d5e6369c7c696180dd7021635732963e245",
+      "byte_identical": true
+    },
+    {
+      "file": "missing_cells.csv",
+      "sha256": "32965bdd5256873648fb53ebcd390bb99908b673edcda06d444c8c12e02aa97e",
+      "byte_identical": true
+    },
+    {
+      "file": "participant_differences.csv",
+      "sha256": "2dfb35edfee1b4c479db851353f7a7f8797940efc64050a04f78ebb2c2fef0f2",
+      "byte_identical": true
+    },
+    {
+      "file": "participant_metrics.csv",
+      "sha256": "9375c9086a25f138bfcf9d6b48bd9068321f156dbe457d4d34142b9c25019140",
+      "byte_identical": true
+    },
+    {
+      "file": "saved_cells.csv",
+      "sha256": "63883f31400ffc3c424eecc0e0cc675e6d31ffee074606820946701f74486a33",
+      "byte_identical": true
+    },
+    {
+      "file": "session_metrics.csv",
+      "sha256": "000e7bd6f8a91d09b542c0b5dbd1ec101f27c1d7649442219190e4f193cdc699",
+      "byte_identical": true
+    },
+    {
+      "file": "source_query.csv",
+      "sha256": "ae8d318ec6f4d34e4df4744375252f9917ea56b6c513eec4986b8c17d1be27af",
+      "byte_identical": true
+    }
+  ],
+  "current_checkpoint_metadata_counts": {
+    "adaptation": 1350,
+    "source": 18
+  },
+  "classical_model_metadata_count": 1206,
+  "current_completed_epochs": 28800,
+  "current_completed_optimizer_steps": 37800,
+  "source_validation_epoch_selections": [
+    {
+      "file": "training_records/results/tasks/kumar-v2-sub-1-seed20261023/source/checkpoint.pt.json",
+      "best_epoch": 46,
+      "best_validation_loss": 0.6880407691001892
+    },
+    {
+      "file": "training_records/results/tasks/kumar-v2-sub-1-seed20261024/source/checkpoint.pt.json",
+      "best_epoch": 13,
+      "best_validation_loss": 0.6927044272422791
+    },
+    {
+      "file": "training_records/results/tasks/kumar-v2-sub-1-seed20261025/source/checkpoint.pt.json",
+      "best_epoch": 37,
+      "best_validation_loss": 0.6935901165008544
+    },
+    {
+      "file": "training_records/results/tasks/kumar-v2-sub-10-seed20261023/source/checkpoint.pt.json",
+      "best_epoch": 44,
+      "best_validation_loss": 0.6873775005340577
+    },
+    {
+      "file": "training_records/results/tasks/kumar-v2-sub-10-seed20261024/source/checkpoint.pt.json",
+      "best_epoch": 1,
+      "best_validation_loss": 0.6941309809684754
+    },
+    {
+      "file": "training_records/results/tasks/kumar-v2-sub-10-seed20261025/source/checkpoint.pt.json",
+      "best_epoch": 68,
+      "best_validation_loss": 0.6902811646461486
+    },
+    {
+      "file": "training_records/results/tasks/kumar-v2-sub-13-seed20261023/source/checkpoint.pt.json",
+      "best_epoch": 1,
+      "best_validation_loss": 0.693091869354248
+    },
+    {
+      "file": "training_records/results/tasks/kumar-v2-sub-13-seed20261024/source/checkpoint.pt.json",
+      "best_epoch": 11,
+      "best_validation_loss": 0.6938312292098999
+    },
+    {
+      "file": "training_records/results/tasks/kumar-v2-sub-13-seed20261025/source/checkpoint.pt.json",
+      "best_epoch": 72,
+      "best_validation_loss": 0.6853281617164612
+    },
+    {
+      "file": "training_records/results/tasks/kumar-v2-sub-16-seed20261023/source/checkpoint.pt.json",
+      "best_epoch": 51,
+      "best_validation_loss": 0.5547034263610839
+    },
+    {
+      "file": "training_records/results/tasks/kumar-v2-sub-16-seed20261024/source/checkpoint.pt.json",
+      "best_epoch": 100,
+      "best_validation_loss": 0.49836139678955077
+    },
+    {
+      "file": "training_records/results/tasks/kumar-v2-sub-16-seed20261025/source/checkpoint.pt.json",
+      "best_epoch": 60,
+      "best_validation_loss": 0.6118719577789307
+    },
+    {
+      "file": "training_records/results/tasks/kumar-v2-sub-4-seed20261023/source/checkpoint.pt.json",
+      "best_epoch": 2,
+      "best_validation_loss": 0.6930111408233642
+    },
+    {
+      "file": "training_records/results/tasks/kumar-v2-sub-4-seed20261024/source/checkpoint.pt.json",
+      "best_epoch": 100,
+      "best_validation_loss": 0.6409119725227356
+    },
+    {
+      "file": "training_records/results/tasks/kumar-v2-sub-4-seed20261025/source/checkpoint.pt.json",
+      "best_epoch": 100,
+      "best_validation_loss": 0.6443917214870453
+    },
+    {
+      "file": "training_records/results/tasks/kumar-v2-sub-7-seed20261023/source/checkpoint.pt.json",
+      "best_epoch": 17,
+      "best_validation_loss": 0.6918753027915955
+    },
+    {
+      "file": "training_records/results/tasks/kumar-v2-sub-7-seed20261024/source/checkpoint.pt.json",
+      "best_epoch": 90,
+      "best_validation_loss": 0.6506839990615845
+    },
+    {
+      "file": "training_records/results/tasks/kumar-v2-sub-7-seed20261025/source/checkpoint.pt.json",
+      "best_epoch": 7,
+      "best_validation_loss": 0.6940696120262146
+    }
+  ],
+  "failed_checks": [],
+  "note": "Recorded model state immutability and training claims are metadata evidence; not independent checkpoint replay."
+}
