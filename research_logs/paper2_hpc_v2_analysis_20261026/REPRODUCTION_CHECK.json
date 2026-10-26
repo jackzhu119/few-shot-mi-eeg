@@ -1,0 +1,119 @@
+{
+  "scope": "Repeat saved-output postprocessing only, not model evaluation",
+  "csv_count": 22,
+  "checks": [
+    {
+      "path": "classical/classical_budget_curves.csv",
+      "sha256": "d7843fa27297fdf645ac13ccab94b58e6b1bc391b9110e496e67340bb84a2ee7",
+      "repeated_postprocessing_byte_identical": true
+    },
+    {
+      "path": "classical/classical_contrasts.csv",
+      "sha256": "79e76d9f22ac6f90d27c9a775b6cb47b236b9ac3566d28204a15d436c4cd3831",
+      "repeated_postprocessing_byte_identical": true
+    },
+    {
+      "path": "classical/classical_individual_ba_budget20.csv",
+      "sha256": "2fd0f1ced0175b3d51e46acaa8c47b6ce22f90dbf469d71e440da270376be109",
+      "repeated_postprocessing_byte_identical": true
+    },
+    {
+      "path": "classical/classical_individual_budget20.csv",
+      "sha256": "8ef106f81a19920f11836139d295bc6f1884a0b2bf90ed3ef468a92ec533600b",
+      "repeated_postprocessing_byte_identical": true
+    },
+    {
+      "path": "classical/classical_participant_session_budget20.csv",
+      "sha256": "10cfe31b79fe64f647293969424621f7b754ae6eabc883cec9de819f261e1bae",
+      "repeated_postprocessing_byte_identical": true
+    },
+    {
+      "path": "classical/classical_session_contrasts.csv",
+      "sha256": "1bce401c563e71410fe39b0f4eefef7fd2353b39d38ecdc79cab0c5a0b145d88",
+      "repeated_postprocessing_byte_identical": true
+    },
+    {
+      "path": "neural/adaptation_training_records.csv",
+      "sha256": "ba84e5be93c4acfff3864691ab4838363f99f54fd1f26835930cf17399eb0e17",
+      "repeated_postprocessing_byte_identical": true
+    },
+    {
+      "path": "neural/collapse_by_method_budget.csv",
+      "sha256": "ac2178998881f5b405ddf31ce7fb41effd479b4d5b10bc4c61c45b50b7eba533",
+      "repeated_postprocessing_byte_identical": true
+    },
+    {
+      "path": "neural/collapse_participant_method_budget.csv",
+      "sha256": "f8ab42647c8753de4b7a3f26a503d132c0651f169bdc1d31fbc56e1f78caf454",
+      "repeated_postprocessing_byte_identical": true
+    },
+    {
+      "path": "neural/full_l2sp_probability_differences.csv",
+      "sha256": "5d2bb0f9e38fe908e1e16dd89c3945c3deb99db6de96078c1395645c6680a9da",
+      "repeated_postprocessing_byte_identical": true
+    },
+    {
+      "path": "neural/neural_participant_budget20.csv",
+      "sha256": "3c3ab234f8d51e84909e17385cc243a8b47f043fd56a9031ef65a68a4fc8d7ce",
+      "repeated_postprocessing_byte_identical": true
+    },
+    {
+      "path": "neural/participant_seed_spread.csv",
+      "sha256": "01b789a37c3ef84636b55366f3d4782bdb9d0fdb03a079120c13bcab35eab96e",
+      "repeated_postprocessing_byte_identical": true
+    },
+    {
+      "path": "neural/participant_seed_target.csv",
+      "sha256": "523365a86ad1fca639946d92c251a69045868a86f893a2f94fca211e6ce9b284",
+      "repeated_postprocessing_byte_identical": true
+    },
+    {
+      "path": "neural/seed_cohort_means.csv",
+      "sha256": "780968f121928ff61888250114afa0a340ba48d1b1206880d5874c1b624342df",
+      "repeated_postprocessing_byte_identical": true
+    },
+    {
+      "path": "neural/source_epoch_participant_means.csv",
+      "sha256": "8a6c8c9651edd8f0491623aa57bd0c6e68ebf13dd0bed580c50f077758f32480",
+      "repeated_postprocessing_byte_identical": true
+    },
+    {
+      "path": "neural/source_epoch_seed_history.csv",
+      "sha256": "4ffe0387553ad0ba577726437213ded45a724bce64655f740b099697f93b6b5d",
+      "repeated_postprocessing_byte_identical": true
+    },
+    {
+      "path": "neural/source_models.csv",
+      "sha256": "ed4a14b6843c0777d8a08670bc78cd6af4d658df61b605544a865d66200f76c6",
+      "repeated_postprocessing_byte_identical": true
+    },
+    {
+      "path": "neural/target_neural_cells.csv",
+      "sha256": "b2d1c2c2b49b3cbdad586b54f970d5341d7fcd753737bf0f7b56309237db75fb",
+      "repeated_postprocessing_byte_identical": true
+    },
+    {
+      "path": "mechanism/candidate_weight_and_saved_gain.csv",
+      "sha256": "44b4f56111c2b1985877df935a0b6694ea8d60078925c3fb78b5bf539636795b",
+      "repeated_postprocessing_byte_identical": true
+    },
+    {
+      "path": "mechanism/classwise_weights.csv",
+      "sha256": "8335e80c1dc74025a5132d448205702f7afa349e627d9f9bc20e3b19c7729c4a",
+      "repeated_postprocessing_byte_identical": true
+    },
+    {
+      "path": "mechanism/participant_weight_and_saved_gain.csv",
+      "sha256": "584f0ba5aa799f89c493861c30a03838a9bd6e37373a25ef217091879c3b2f99",
+      "repeated_postprocessing_byte_identical": true
+    },
+    {
+      "path": "mechanism/weight_budget_summary.csv",
+      "sha256": "dce3e357f82da04e24df1b1e348c5ac944212b3d2e8afa263b04d3cb9d10a954",
+      "repeated_postprocessing_byte_identical": true
+    }
+  ],
+  "failed_checks": [],
+  "report_independent_review": "No wrong numbers or material overclaim found; primarycontrast independently recomputed",
+  "figures_visual_review": "All4 exported PNGs inspected; axes, annotations, legends and common heatmap scale readable"
+}

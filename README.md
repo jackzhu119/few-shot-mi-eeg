@@ -30,7 +30,7 @@ Kumar2024 / NEMAR `nm000177` v1.0.5，18名参与者、每人6个会话；6人�
 
 研究分支：[research/paper2-hpc-v2-20261023](https://github.com/jackzhu119/few-shot-mi-eeg/tree/research/paper2-hpc-v2-20261023)。
 
-**2026-10-26：24/24任务已完成，完整保存结果已上传并独立核验。** [8,983文件、预测复算与结果报告](research_logs/paper2_hpc_v2_results_received_20261026/REPORT.md)。预设V2主比较相对EA-CSP为−1.14个百分点，区间跨零；相对冻结模型的次要比较为正，二者分别报告。
+**2026-10-26：24/24任务已完成，完整保存结果已上传并独立核验。** [8,983文件、预测复算与结果报告](research_logs/paper2_hpc_v2_results_received_20261026/REPORT.md)。预设V2主比较相对EA-CSP为−1.14个百分点，区间跨零；相对冻结模型的次要比较为正，二者分别报告。 [完整科学分析、预算/纵向图及EEGNet诊断](research_logs/paper2_hpc_v2_analysis_20261026/REPORT.md)。
 
 - 检验“当前校准样本波动驱动的源—目标协方差混合”，以EA完整更新为主要强对照。
 - 首批仍是原6名开发参与者：6个经典方法任务＋18个新V2神经源模型任务；经典8臂、神经4臂，标签预算4/8/12/16/最多20，覆盖5个目标会话。

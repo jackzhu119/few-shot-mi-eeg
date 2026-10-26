@@ -1,0 +1,665 @@
+{
+  "scope": "saved neural predictions/metrics and text checkpoint histories; all fixed seeds; no training/model/inference/query selection",
+  "independent_participants": 6,
+  "source_models": 18,
+  "source_epochs_total": 1800,
+  "source_steps_total": 5400,
+  "adaptation_stages": 1350,
+  "adaptation_epochs_total": 27000,
+  "adaptation_steps_total": 32400,
+  "source_best_epoch": {
+    "mean": 45.55555555555556,
+    "median": 45.0,
+    "minimum": 1.0,
+    "maximum": 100.0,
+    "q25": 11.5,
+    "q75": 71.0
+  },
+  "source_best_epoch_frequency": {
+    "1": 2,
+    "2": 1,
+    "7": 1,
+    "11": 1,
+    "13": 1,
+    "17": 1,
+    "37": 1,
+    "44": 1,
+    "46": 1,
+    "51": 1,
+    "60": 1,
+    "68": 1,
+    "72": 1,
+    "90": 1,
+    "100": 3
+  },
+  "source_first_train_ce": {
+    "mean": 0.7120170778698391,
+    "median": 0.711781257390976,
+    "minimum": 0.6793674230575562,
+    "maximum": 0.7478297114372253,
+    "q25": 0.6925701946020126,
+    "q75": 0.7261080741882324
+  },
+  "source_final_train_ce": {
+    "mean": 0.13359397960205877,
+    "median": 0.1411089524626732,
+    "minimum": 0.053390680253505705,
+    "maximum": 0.18837998509407045,
+    "q25": 0.110252258554101,
+    "q75": 0.16848924867808818
+  },
+  "source_best_validation_ce": {
+    "mean": 0.6610142638285955,
+    "median": 0.6891609668731689,
+    "minimum": 0.49836139678955077,
+    "maximum": 0.6941309809684754,
+    "q25": 0.64596479088068,
+    "q75": 0.6930716872215271
+  },
+  "source_final_validation_ce": {
+    "mean": 0.7422611511415905,
+    "median": 0.7234398782253266,
+    "minimum": 0.49836139678955077,
+    "maximum": 1.0136486887931824,
+    "q25": 0.6701510310173034,
+    "q75": 0.7911290764808654
+  },
+  "source_final_generalization_gap": {
+    "mean": 0.6086671715395319,
+    "median": 0.6048654846847057,
+    "minimum": 0.4449707165360451,
+    "maximum": 0.8552066773176193,
+    "q25": 0.5186420440673829,
+    "q75": 0.6442585391923785
+  },
+  "source_training_loss_decreased_models": 18,
+  "source_validation_final_above_best_models": 15,
+  "source_query_collapsed_models": 2,
+  "source_query_cohort_ba": 0.5611111111111111,
+  "collapse_by_method_budget": [
+    {
+      "method": "frozen",
+      "budget": 4,
+      "collapsed_seed_session_evaluations": 10,
+      "seed_session_evaluations": 90,
+      "mean_participant_collapse_rate": 0.1111111111111111,
+      "participants_with_any_collapse": 3,
+      "participants_with_all_collapsed": 0
+    },
+    {
+      "method": "frozen",
+      "budget": 8,
+      "collapsed_seed_session_evaluations": 10,
+      "seed_session_evaluations": 90,
+      "mean_participant_collapse_rate": 0.1111111111111111,
+      "participants_with_any_collapse": 3,
+      "participants_with_all_collapsed": 0
+    },
+    {
+      "method": "frozen",
+      "budget": 12,
+      "collapsed_seed_session_evaluations": 10,
+      "seed_session_evaluations": 90,
+      "mean_participant_collapse_rate": 0.1111111111111111,
+      "participants_with_any_collapse": 3,
+      "participants_with_all_collapsed": 0
+    },
+    {
+      "method": "frozen",
+      "budget": 16,
+      "collapsed_seed_session_evaluations": 10,
+      "seed_session_evaluations": 90,
+      "mean_participant_collapse_rate": 0.1111111111111111,
+      "participants_with_any_collapse": 3,
+      "participants_with_all_collapsed": 0
+    },
+    {
+      "method": "frozen",
+      "budget": 20,
+      "collapsed_seed_session_evaluations": 10,
+      "seed_session_evaluations": 90,
+      "mean_participant_collapse_rate": 0.1111111111111111,
+      "participants_with_any_collapse": 3,
+      "participants_with_all_collapsed": 0
+    },
+    {
+      "method": "head",
+      "budget": 4,
+      "collapsed_seed_session_evaluations": 10,
+      "seed_session_evaluations": 90,
+      "mean_participant_collapse_rate": 0.1111111111111111,
+      "participants_with_any_collapse": 3,
+      "participants_with_all_collapsed": 0
+    },
+    {
+      "method": "head",
+      "budget": 8,
+      "collapsed_seed_session_evaluations": 10,
+      "seed_session_evaluations": 90,
+      "mean_participant_collapse_rate": 0.1111111111111111,
+      "participants_with_any_collapse": 3,
+      "participants_with_all_collapsed": 0
+    },
+    {
+      "method": "head",
+      "budget": 12,
+      "collapsed_seed_session_evaluations": 10,
+      "seed_session_evaluations": 90,
+      "mean_participant_collapse_rate": 0.1111111111111111,
+      "participants_with_any_collapse": 3,
+      "participants_with_all_collapsed": 0
+    },
+    {
+      "method": "head",
+      "budget": 16,
+      "collapsed_seed_session_evaluations": 9,
+      "seed_session_evaluations": 90,
+      "mean_participant_collapse_rate": 0.09999999999999999,
+      "participants_with_any_collapse": 2,
+      "participants_with_all_collapsed": 0
+    },
+    {
+      "method": "head",
+      "budget": 20,
+      "collapsed_seed_session_evaluations": 8,
+      "seed_session_evaluations": 90,
+      "mean_participant_collapse_rate": 0.08888888888888889,
+      "participants_with_any_collapse": 2,
+      "participants_with_all_collapsed": 0
+    },
+    {
+      "method": "full",
+      "budget": 4,
+      "collapsed_seed_session_evaluations": 9,
+      "seed_session_evaluations": 90,
+      "mean_participant_collapse_rate": 0.09999999999999999,
+      "participants_with_any_collapse": 3,
+      "participants_with_all_collapsed": 0
+    },
+    {
+      "method": "full",
+      "budget": 8,
+      "collapsed_seed_session_evaluations": 8,
+      "seed_session_evaluations": 90,
+      "mean_participant_collapse_rate": 0.08888888888888889,
+      "participants_with_any_collapse": 3,
+      "participants_with_all_collapsed": 0
+    },
+    {
+      "method": "full",
+      "budget": 12,
+      "collapsed_seed_session_evaluations": 8,
+      "seed_session_evaluations": 90,
+      "mean_participant_collapse_rate": 0.08888888888888889,
+      "participants_with_any_collapse": 3,
+      "participants_with_all_collapsed": 0
+    },
+    {
+      "method": "full",
+      "budget": 16,
+      "collapsed_seed_session_evaluations": 7,
+      "seed_session_evaluations": 90,
+      "mean_participant_collapse_rate": 0.07777777777777778,
+      "participants_with_any_collapse": 3,
+      "participants_with_all_collapsed": 0
+    },
+    {
+      "method": "full",
+      "budget": 20,
+      "collapsed_seed_session_evaluations": 17,
+      "seed_session_evaluations": 90,
+      "mean_participant_collapse_rate": 0.18888888888888888,
+      "participants_with_any_collapse": 4,
+      "participants_with_all_collapsed": 0
+    },
+    {
+      "method": "l2sp",
+      "budget": 4,
+      "collapsed_seed_session_evaluations": 9,
+      "seed_session_evaluations": 90,
+      "mean_participant_collapse_rate": 0.09999999999999999,
+      "participants_with_any_collapse": 3,
+      "participants_with_all_collapsed": 0
+    },
+    {
+      "method": "l2sp",
+      "budget": 8,
+      "collapsed_seed_session_evaluations": 8,
+      "seed_session_evaluations": 90,
+      "mean_participant_collapse_rate": 0.08888888888888889,
+      "participants_with_any_collapse": 3,
+      "participants_with_all_collapsed": 0
+    },
+    {
+      "method": "l2sp",
+      "budget": 12,
+      "collapsed_seed_session_evaluations": 8,
+      "seed_session_evaluations": 90,
+      "mean_participant_collapse_rate": 0.08888888888888889,
+      "participants_with_any_collapse": 3,
+      "participants_with_all_collapsed": 0
+    },
+    {
+      "method": "l2sp",
+      "budget": 16,
+      "collapsed_seed_session_evaluations": 7,
+      "seed_session_evaluations": 90,
+      "mean_participant_collapse_rate": 0.07777777777777778,
+      "participants_with_any_collapse": 3,
+      "participants_with_all_collapsed": 0
+    },
+    {
+      "method": "l2sp",
+      "budget": 20,
+      "collapsed_seed_session_evaluations": 17,
+      "seed_session_evaluations": 90,
+      "mean_participant_collapse_rate": 0.18888888888888888,
+      "participants_with_any_collapse": 4,
+      "participants_with_all_collapsed": 0
+    }
+  ],
+  "neural_participant_budget20": [
+    {
+      "participant": "sub-1",
+      "source_query_mean_ba": 0.39999999999999997,
+      "source_query_collapsed_seeds": 0,
+      "best_epochs": "46,13,37",
+      "frozen_target_ba": 0.5297186932849364,
+      "frozen_collapse_rate": 0.06666666666666667,
+      "head_target_ba": 0.5313581367211132,
+      "head_collapse_rate": 0.0,
+      "full_target_ba": 0.5019540229885058,
+      "full_collapse_rate": 0.4,
+      "l2sp_target_ba": 0.5019540229885058,
+      "l2sp_collapse_rate": 0.4
+    },
+    {
+      "participant": "sub-10",
+      "source_query_mean_ba": 0.5499999999999999,
+      "source_query_collapsed_seeds": 1,
+      "best_epochs": "44,1,68",
+      "frozen_target_ba": 0.5522222222222222,
+      "frozen_collapse_rate": 0.26666666666666666,
+      "head_target_ba": 0.5466666666666667,
+      "head_collapse_rate": 0.26666666666666666,
+      "full_target_ba": 0.5544444444444444,
+      "full_collapse_rate": 0.2,
+      "l2sp_target_ba": 0.5527777777777778,
+      "l2sp_collapse_rate": 0.2
+    },
+    {
+      "participant": "sub-13",
+      "source_query_mean_ba": 0.5333333333333333,
+      "source_query_collapsed_seeds": 0,
+      "best_epochs": "1,11,72",
+      "frozen_target_ba": 0.6245029239766082,
+      "frozen_collapse_rate": 0.0,
+      "head_target_ba": 0.6207894736842104,
+      "head_collapse_rate": 0.0,
+      "full_target_ba": 0.5837719298245615,
+      "full_collapse_rate": 0.0,
+      "l2sp_target_ba": 0.5837719298245615,
+      "l2sp_collapse_rate": 0.0
+    },
+    {
+      "participant": "sub-16",
+      "source_query_mean_ba": 0.7833333333333333,
+      "source_query_collapsed_seeds": 0,
+      "best_epochs": "51,100,60",
+      "frozen_target_ba": 0.5785087719298245,
+      "frozen_collapse_rate": 0.0,
+      "head_target_ba": 0.5870175438596491,
+      "head_collapse_rate": 0.0,
+      "full_target_ba": 0.5798830409356726,
+      "full_collapse_rate": 0.2,
+      "l2sp_target_ba": 0.5782163742690059,
+      "l2sp_collapse_rate": 0.2
+    },
+    {
+      "participant": "sub-4",
+      "source_query_mean_ba": 0.5333333333333333,
+      "source_query_collapsed_seeds": 0,
+      "best_epochs": "2,100,100",
+      "frozen_target_ba": 0.5671792027962627,
+      "frozen_collapse_rate": 0.0,
+      "head_target_ba": 0.5736079182630908,
+      "head_collapse_rate": 0.0,
+      "full_target_ba": 0.5860328023122942,
+      "full_collapse_rate": 0.0,
+      "l2sp_target_ba": 0.5860328023122942,
+      "l2sp_collapse_rate": 0.0
+    },
+    {
+      "participant": "sub-7",
+      "source_query_mean_ba": 0.5666666666666668,
+      "source_query_collapsed_seeds": 1,
+      "best_epochs": "17,90,7",
+      "frozen_target_ba": 0.5522222222222222,
+      "frozen_collapse_rate": 0.3333333333333333,
+      "head_target_ba": 0.5488888888888889,
+      "head_collapse_rate": 0.26666666666666666,
+      "full_target_ba": 0.5472222222222223,
+      "full_collapse_rate": 0.3333333333333333,
+      "l2sp_target_ba": 0.5472222222222223,
+      "l2sp_collapse_rate": 0.3333333333333333
+    }
+  ],
+  "budget20_existing_comparisons": [
+    {
+      "dataset": "Kumar2024",
+      "family": "eegnet",
+      "method": "head",
+      "reference": "frozen",
+      "budget": 20,
+      "contrast_role": "neural_reference",
+      "expected_participants": 6,
+      "paired_participants": 6,
+      "included_participants": [
+        "sub-1",
+        "sub-10",
+        "sub-13",
+        "sub-16",
+        "sub-4",
+        "sub-7"
+      ],
+      "incomplete_participants": [],
+      "mean_difference_pp": 0.06624319419237987,
+      "ci_low_pp": -0.33719835988438496,
+      "ci_high_pp": 0.5043523559857526,
+      "negative_participants": 3,
+      "decline_at_least_5pp_participants": 0,
+      "ci_status": "available"
+    },
+    {
+      "dataset": "Kumar2024",
+      "family": "eegnet",
+      "method": "full",
+      "reference": "frozen",
+      "budget": 20,
+      "contrast_role": "neural_reference",
+      "expected_participants": 6,
+      "paired_participants": 6,
+      "included_participants": [
+        "sub-1",
+        "sub-10",
+        "sub-13",
+        "sub-16",
+        "sub-4",
+        "sub-7"
+      ],
+      "incomplete_participants": [],
+      "mean_difference_pp": -0.8507595617395947,
+      "ci_low_pp": -2.4534852456812475,
+      "ci_high_pp": 0.6420985413725915,
+      "negative_participants": 3,
+      "decline_at_least_5pp_participants": 0,
+      "ci_status": "available"
+    },
+    {
+      "dataset": "Kumar2024",
+      "family": "eegnet",
+      "method": "l2sp",
+      "reference": "frozen",
+      "budget": 20,
+      "contrast_role": "neural_reference",
+      "expected_participants": 6,
+      "paired_participants": 6,
+      "included_participants": [
+        "sub-1",
+        "sub-10",
+        "sub-13",
+        "sub-16",
+        "sub-4",
+        "sub-7"
+      ],
+      "incomplete_participants": [],
+      "mean_difference_pp": -0.9063151172951515,
+      "ci_low_pp": -2.4949082476305673,
+      "ci_high_pp": 0.5731834375210094,
+      "negative_participants": 4,
+      "decline_at_least_5pp_participants": 0,
+      "ci_status": "available"
+    }
+  ],
+  "budget20_existing_cohorts": [
+    {
+      "dataset": "Kumar2024",
+      "family": "eegnet",
+      "method": "frozen",
+      "budget": 20,
+      "expected_participants": 6,
+      "complete_participants": 6,
+      "mean_balanced_accuracy": 0.5673923394053461,
+      "ci_low": 0.5459561179449262,
+      "ci_high": 0.592743664717349,
+      "incomplete_participants": [],
+      "ci_status": "available"
+    },
+    {
+      "dataset": "Kumar2024",
+      "family": "eegnet",
+      "method": "full",
+      "budget": 20,
+      "expected_participants": 6,
+      "complete_participants": 6,
+      "mean_balanced_accuracy": 0.5588847437879502,
+      "ci_low": 0.5324389997983464,
+      "ci_high": 0.5789894916089714,
+      "incomplete_participants": [],
+      "ci_status": "available"
+    },
+    {
+      "dataset": "Kumar2024",
+      "family": "eegnet",
+      "method": "head",
+      "budget": 20,
+      "expected_participants": 6,
+      "complete_participants": 6,
+      "mean_balanced_accuracy": 0.5680547713472699,
+      "ci_low": 0.5461079182630907,
+      "ci_high": 0.5935304496874368,
+      "incomplete_participants": [],
+      "ci_status": "available"
+    },
+    {
+      "dataset": "Kumar2024",
+      "family": "eegnet",
+      "method": "l2sp",
+      "budget": 20,
+      "expected_participants": 6,
+      "complete_participants": 6,
+      "mean_balanced_accuracy": 0.5583291882323945,
+      "ci_low": 0.531982478546302,
+      "ci_high": 0.5784339360534158,
+      "incomplete_participants": [],
+      "ci_status": "available"
+    }
+  ],
+  "seed_variation_budget20": [
+    {
+      "method": "frozen",
+      "values": [
+        {
+          "method": "frozen",
+          "budget": 20,
+          "seed": 20261023,
+          "cohort_mean_ba": 0.5111432076359481
+        },
+        {
+          "method": "frozen",
+          "budget": 20,
+          "seed": 20261024,
+          "cohort_mean_ba": 0.6090710492706862
+        },
+        {
+          "method": "frozen",
+          "budget": 20,
+          "seed": 20261025,
+          "cohort_mean_ba": 0.5819627613094037
+        }
+      ],
+      "cohort_ba_sample_sd": 0.05056370672385748
+    },
+    {
+      "method": "head",
+      "values": [
+        {
+          "method": "head",
+          "budget": 20,
+          "seed": 20261023,
+          "cohort_mean_ba": 0.511819251193117
+        },
+        {
+          "method": "head",
+          "budget": 20,
+          "seed": 20261024,
+          "cohort_mean_ba": 0.6094612489077099
+        },
+        {
+          "method": "head",
+          "budget": 20,
+          "seed": 20261025,
+          "cohort_mean_ba": 0.5828838139409828
+        }
+      ],
+      "cohort_ba_sample_sd": 0.05048183146052405
+    },
+    {
+      "method": "full",
+      "values": [
+        {
+          "method": "full",
+          "budget": 20,
+          "seed": 20261023,
+          "cohort_mean_ba": 0.5184566780937018
+        },
+        {
+          "method": "full",
+          "budget": 20,
+          "seed": 20261024,
+          "cohort_mean_ba": 0.5796704644753646
+        },
+        {
+          "method": "full",
+          "budget": 20,
+          "seed": 20261025,
+          "cohort_mean_ba": 0.5785270887947839
+        }
+      ],
+      "cohort_ba_sample_sd": 0.03501639899847755
+    },
+    {
+      "method": "l2sp",
+      "values": [
+        {
+          "method": "l2sp",
+          "budget": 20,
+          "seed": 20261023,
+          "cohort_mean_ba": 0.5184566780937018
+        },
+        {
+          "method": "l2sp",
+          "budget": 20,
+          "seed": 20261024,
+          "cohort_mean_ba": 0.5796704644753646
+        },
+        {
+          "method": "l2sp",
+          "budget": 20,
+          "seed": 20261025,
+          "cohort_mean_ba": 0.5768604221281173
+        }
+      ],
+      "cohort_ba_sample_sd": 0.034559179432799764
+    }
+  ],
+  "source_query_seed_cohort_means": [
+    {
+      "seed": 20261023,
+      "cohort_mean_ba": 0.525
+    },
+    {
+      "seed": 20261024,
+      "cohort_mean_ba": 0.5750000000000001
+    },
+    {
+      "seed": 20261025,
+      "cohort_mean_ba": 0.5833333333333333
+    }
+  ],
+  "frozen_budget_copy_invariance_verified": true,
+  "unique_frozen_target_model_session_evaluations": 90,
+  "full_l2sp_cell_ba_differences": {
+    "equal_ba_cells": 444,
+    "cells": 450,
+    "all_budget_difference_stats": {
+      "mean": -0.0001510721247563354,
+      "median": 0.0,
+      "minimum": -0.02631578947368418,
+      "maximum": 0.016666666666666607,
+      "q25": 0.0,
+      "q75": 0.0
+    }
+  },
+  "full_l2sp_saved_probability_comparison": [
+    {
+      "budget": 4,
+      "paired_cells": 90,
+      "cells_with_distinct_recorded_model_hashes": 90,
+      "cells_with_prediction_label_difference": 2,
+      "total_paired_query_rows": 3915,
+      "changed_label_rows": 2,
+      "maximum_probability_difference": 0.003562331199645996,
+      "mean_absolute_probability_difference": 0.0001509925932623446
+    },
+    {
+      "budget": 8,
+      "paired_cells": 90,
+      "cells_with_distinct_recorded_model_hashes": 90,
+      "cells_with_prediction_label_difference": 0,
+      "total_paired_query_rows": 3915,
+      "changed_label_rows": 0,
+      "maximum_probability_difference": 0.002720057964324951,
+      "mean_absolute_probability_difference": 0.00010147932334803045
+    },
+    {
+      "budget": 12,
+      "paired_cells": 90,
+      "cells_with_distinct_recorded_model_hashes": 90,
+      "cells_with_prediction_label_difference": 2,
+      "total_paired_query_rows": 3915,
+      "changed_label_rows": 2,
+      "maximum_probability_difference": 0.0021587610244750977,
+      "mean_absolute_probability_difference": 0.00013923112419433892
+    },
+    {
+      "budget": 16,
+      "paired_cells": 90,
+      "cells_with_distinct_recorded_model_hashes": 90,
+      "cells_with_prediction_label_difference": 0,
+      "total_paired_query_rows": 3915,
+      "changed_label_rows": 0,
+      "maximum_probability_difference": 0.002329587936401367,
+      "mean_absolute_probability_difference": 0.00012986081128474325
+    },
+    {
+      "budget": 20,
+      "paired_cells": 90,
+      "cells_with_distinct_recorded_model_hashes": 90,
+      "cells_with_prediction_label_difference": 3,
+      "total_paired_query_rows": 3915,
+      "changed_label_rows": 4,
+      "maximum_probability_difference": 0.003476440906524658,
+      "mean_absolute_probability_difference": 0.0002369012509007007
+    }
+  ],
+  "as_implemented_mode_policy": {
+    "head": "model.train then model.features.eval: feature BN/dropout frozen",
+    "full_l2sp": "model.train: feature BN/dropout training mode; BN running buffers may update",
+    "l2sp_scope": "named parameters only; BN running-stat buffers excluded",
+    "interpretation": "Head vsfull mixes parameter update scope and BN/dropout mode, so weight drift alone is not isolated"
+  },
+  "update_norm_available": false,
+  "update_norm_note": "Whitelisted exported text checkpoint metadata omit parameter tensors and parameter-update norms; not reconstructed from outcomes.",
+  "assumptions": "Each reported cohort mean averages all three seeds within participant/session and all five sessions within participant; collapse counts are descriptive repeated evaluation cells, not independent events. Previously exposed development participants imply exploratory conclusions."
+}

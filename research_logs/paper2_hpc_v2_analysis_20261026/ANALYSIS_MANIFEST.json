@@ -1,0 +1,239 @@
+{
+  "created_at_utc": "2026-10-26T05:38:15.342907+00:00",
+  "scope": "Saved predictions/metrics/history-only exploratory analysis; no new fit/forward/EEG/weight access",
+  "packet_id": "f1689db3941ae31757442698",
+  "fixed_receipt_commit": "0050449a0e61cc357a497dc9939adc4fd1d7519b",
+  "source_archive_sha256": "a96e2dca20cd654ec6bff236a4fdd85bcab7c8324e9acbb370d8f338ee769af5",
+  "prespecified_primary": "ea_empirical_anchored_csp minus ea_csp at cap20",
+  "independent_participants": 6,
+  "seeds": [
+    20261023,
+    20261024,
+    20261025
+  ],
+  "bootstrap": {
+    "unit": "participant",
+    "resamples": 10000,
+    "seed": 20261023,
+    "pointwise": true,
+    "multiplicity_correction": false
+  },
+  "additional_slices": "posthoc descriptive session/influence/paired baseline comparisons; no policy selection",
+  "files": [
+    {
+      "path": "REPORT.md",
+      "bytes": 13311,
+      "sha256": "50ba9760ce01b54f2629ba055910a1d92dc334b3f6e207394e2a207eb060cfac"
+    },
+    {
+      "path": "REPRODUCTION_CHECK.json",
+      "bytes": 4915,
+      "sha256": "b7d06e941274309ce2cdd950c67cc75bcb1881691b32dcd0c88e4ba0f5f2059c"
+    },
+    {
+      "path": "build_figures.py",
+      "bytes": 9715,
+      "sha256": "b0a3dbdac6af43dae9eea34450c7964e46ff46b338ff4ce7d8ed185d00505760"
+    },
+    {
+      "path": "classical/FINDINGS.md",
+      "bytes": 5302,
+      "sha256": "b62345c59ac5a4f11b2194ea6aacc296b8d6a1ff4980aa61b4d6661aa387dabd"
+    },
+    {
+      "path": "classical/analyze_classical.py",
+      "bytes": 6583,
+      "sha256": "27bafc4bd1f2234d1dd1e83bf6870ac9e496efae404a350244e9fe36631d9d5e"
+    },
+    {
+      "path": "classical/classical_analysis.json",
+      "bytes": 12648,
+      "sha256": "4a6d3ab7c3df978365b41169916dd3f515e96adc9f7555d93b795dccd5f4e21c"
+    },
+    {
+      "path": "classical/classical_budget_curves.csv",
+      "bytes": 3001,
+      "sha256": "d7843fa27297fdf645ac13ccab94b58e6b1bc391b9110e496e67340bb84a2ee7"
+    },
+    {
+      "path": "classical/classical_contrasts.csv",
+      "bytes": 8232,
+      "sha256": "79e76d9f22ac6f90d27c9a775b6cb47b236b9ac3566d28204a15d436c4cd3831"
+    },
+    {
+      "path": "classical/classical_individual_ba_budget20.csv",
+      "bytes": 985,
+      "sha256": "2fd0f1ced0175b3d51e46acaa8c47b6ce22f90dbf469d71e440da270376be109"
+    },
+    {
+      "path": "classical/classical_individual_budget20.csv",
+      "bytes": 3684,
+      "sha256": "8ef106f81a19920f11836139d295bc6f1884a0b2bf90ed3ef468a92ec533600b"
+    },
+    {
+      "path": "classical/classical_participant_session_budget20.csv",
+      "bytes": 1532,
+      "sha256": "10cfe31b79fe64f647293969424621f7b754ae6eabc883cec9de819f261e1bae"
+    },
+    {
+      "path": "classical/classical_session_contrasts.csv",
+      "bytes": 27366,
+      "sha256": "1bce401c563e71410fe39b0f4eefef7fd2353b39d38ecdc79cab0c5a0b145d88"
+    },
+    {
+      "path": "figures/01_budget_and_primary_contrast.png",
+      "bytes": 541817,
+      "sha256": "0b4fbb2d8ad71efaa84f645b79ec477fddd67f5caab895c949ae852b8b457de2"
+    },
+    {
+      "path": "figures/01_budget_and_primary_contrast.svg",
+      "bytes": 30690,
+      "sha256": "44951fe6d099e02edb2c6556832ca1ea7799593961b7c188b0694a024163913b"
+    },
+    {
+      "path": "figures/02_longitudinal_and_individual_gains.png",
+      "bytes": 931389,
+      "sha256": "163e8f0124e2c0e6de2c4303161fdb74a48c91bb87e9d532c6edeb65b0697811"
+    },
+    {
+      "path": "figures/02_longitudinal_and_individual_gains.svg",
+      "bytes": 54576,
+      "sha256": "44703594247bf2a24a82efa01848694c1facd81a24798d2810d274c3e5af7a59"
+    },
+    {
+      "path": "figures/03_neural_generalization_and_collapse.png",
+      "bytes": 630009,
+      "sha256": "9da392cdc886d507cf962c5e47fd020ad570c1a84242cedfd8de05330516c5a5"
+    },
+    {
+      "path": "figures/03_neural_generalization_and_collapse.svg",
+      "bytes": 37984,
+      "sha256": "6a0ae68f1ea5491d7360021c01ec6c53d30b6e02e812681b69b3696777471343"
+    },
+    {
+      "path": "figures/04_anchoring_behavior.png",
+      "bytes": 552687,
+      "sha256": "b5782c16d8a8e92e984aee92120d9c9f7a56a7f3bfa6caa787e5b69e7250a18f"
+    },
+    {
+      "path": "figures/04_anchoring_behavior.svg",
+      "bytes": 23513,
+      "sha256": "01d7f15051ac65733b162172c62c0e64028e44b9cefab2d84dc53699fc900471"
+    },
+    {
+      "path": "figures/V2_Analysis_Figures.pdf",
+      "bytes": 49326,
+      "sha256": "91601a3e9602f7531fb67c03b5a1de62748fd4598617e9935425c853636aefe8"
+    },
+    {
+      "path": "mechanism/MECHANISM_FINDINGS.md",
+      "bytes": 3373,
+      "sha256": "6d4a19e11d9b952aa40de4f183a1055392811388918b9411d1999f2a8bb38d50"
+    },
+    {
+      "path": "mechanism/analyze_anchor_metadata.py",
+      "bytes": 6762,
+      "sha256": "e192571dfd5b631a9d734434fdced1e9b87454d552c7c4ad951b9da7c1fd32a9"
+    },
+    {
+      "path": "mechanism/candidate_weight_and_saved_gain.csv",
+      "bytes": 17950,
+      "sha256": "44b4f56111c2b1985877df935a0b6694ea8d60078925c3fb78b5bf539636795b"
+    },
+    {
+      "path": "mechanism/classwise_weights.csv",
+      "bytes": 114931,
+      "sha256": "8335e80c1dc74025a5132d448205702f7afa349e627d9f9bc20e3b19c7729c4a"
+    },
+    {
+      "path": "mechanism/mechanism_summary.json",
+      "bytes": 14359,
+      "sha256": "d800cac20d8e36fd650dc1313b3d4fb6990beb2e8971c646e44b21d1e6a5f7dd"
+    },
+    {
+      "path": "mechanism/participant_weight_and_saved_gain.csv",
+      "bytes": 4304,
+      "sha256": "584f0ba5aa799f89c493861c30a03838a9bd6e37373a25ef217091879c3b2f99"
+    },
+    {
+      "path": "mechanism/weight_budget_summary.csv",
+      "bytes": 2728,
+      "sha256": "dce3e357f82da04e24df1b1e348c5ac944212b3d2e8afa263b04d3cb9d10a954"
+    },
+    {
+      "path": "neural/FINDINGS.md",
+      "bytes": 3931,
+      "sha256": "1dbf7120f7d33af289e9f511d38821e4a04916f45dbe3bf19aa5e740e017c679"
+    },
+    {
+      "path": "neural/adaptation_training_records.csv",
+      "bytes": 99855,
+      "sha256": "ba84e5be93c4acfff3864691ab4838363f99f54fd1f26835930cf17399eb0e17"
+    },
+    {
+      "path": "neural/analyze_neural.py",
+      "bytes": 13011,
+      "sha256": "b4326820d8aae7493532c4310d4c610429e59ccaa145c673eebe86bf56168021"
+    },
+    {
+      "path": "neural/collapse_by_method_budget.csv",
+      "bytes": 933,
+      "sha256": "ac2178998881f5b405ddf31ce7fb41effd479b4d5b10bc4c61c45b50b7eba533"
+    },
+    {
+      "path": "neural/collapse_participant_method_budget.csv",
+      "bytes": 6127,
+      "sha256": "f8ab42647c8753de4b7a3f26a503d132c0651f169bdc1d31fbc56e1f78caf454"
+    },
+    {
+      "path": "neural/full_l2sp_probability_differences.csv",
+      "bytes": 525,
+      "sha256": "5d2bb0f9e38fe908e1e16dd89c3945c3deb99db6de96078c1395645c6680a9da"
+    },
+    {
+      "path": "neural/neural_analysis.json",
+      "bytes": 20269,
+      "sha256": "3a58661193552484adec84a5d095368389bfebd021cea398096752da1396351d"
+    },
+    {
+      "path": "neural/neural_participant_budget20.csv",
+      "bytes": 1113,
+      "sha256": "3c3ab234f8d51e84909e17385cc243a8b47f043fd56a9031ef65a68a4fc8d7ce"
+    },
+    {
+      "path": "neural/participant_seed_spread.csv",
+      "bytes": 10512,
+      "sha256": "01b789a37c3ef84636b55366f3d4782bdb9d0fdb03a079120c13bcab35eab96e"
+    },
+    {
+      "path": "neural/participant_seed_target.csv",
+      "bytes": 14972,
+      "sha256": "523365a86ad1fca639946d92c251a69045868a86f893a2f94fca211e6ce9b284"
+    },
+    {
+      "path": "neural/seed_cohort_means.csv",
+      "bytes": 2252,
+      "sha256": "780968f121928ff61888250114afa0a340ba48d1b1206880d5874c1b624342df"
+    },
+    {
+      "path": "neural/source_epoch_participant_means.csv",
+      "bytes": 29347,
+      "sha256": "8a6c8c9651edd8f0491623aa57bd0c6e68ebf13dd0bed580c50f077758f32480"
+    },
+    {
+      "path": "neural/source_epoch_seed_history.csv",
+      "bytes": 143530,
+      "sha256": "4ffe0387553ad0ba577726437213ded45a724bce64655f740b099697f93b6b5d"
+    },
+    {
+      "path": "neural/source_models.csv",
+      "bytes": 3632,
+      "sha256": "ed4a14b6843c0777d8a08670bc78cd6af4d658df61b605544a865d66200f76c6"
+    },
+    {
+      "path": "neural/target_neural_cells.csv",
+      "bytes": 225194,
+      "sha256": "b2d1c2c2b49b3cbdad586b54f970d5341d7fcd753737bf0f7b56309237db75fb"
+    }
+  ]
+}
