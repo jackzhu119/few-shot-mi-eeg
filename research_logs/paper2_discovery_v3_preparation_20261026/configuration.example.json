@@ -1,0 +1,140 @@
+{
+  "experiment_id": "paper2-kumar-discovery-v3-20261026",
+  "scientific_version": "kumar-discovery-v3.0.0",
+  "project_dir": "/public/home/zhuziyuan/projects/paper2-recalibration-v3",
+  "output_root": "/public/home/zhuziyuan/projects/paper2-recalibration-v3/outputs/kumar-discovery-v3",
+  "data_root": "/public/home/zhuziyuan/projects/paper2-recalibration-v2/data",
+  "v2_project_dir": "/public/home/zhuziyuan/projects/paper2-recalibration-v2",
+  "v2_output_root": "/public/home/zhuziyuan/projects/paper2-recalibration-v2/outputs/kumar-dev-v2",
+  "tasks_file": "/public/home/zhuziyuan/projects/paper2-recalibration-v3/configs/tasks.json",
+  "python": "/public/home/zhuziyuan/.venvs/paper3-hpc-cu121-offline/bin/python",
+  "device": "cuda:0",
+  "science": {
+    "source_epochs": 100,
+    "adaptation_epochs": 20,
+    "batch_size": 16,
+    "learning_rate": 0.001,
+    "adaptation_learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "amp": false,
+    "normalization_scale_floor": 1e-06,
+    "architecture": {
+      "temporal_filters": 8,
+      "depth_multiplier": 2,
+      "kernel_length": 64,
+      "dropout": 0.25
+    },
+    "budgets": [
+      4,
+      8,
+      12,
+      16,
+      20
+    ],
+    "neural_methods": [
+      "frozen",
+      "head_fixed",
+      "full_fixed",
+      "full_adaptive_bn",
+      "full_adaptive_bn_dropout",
+      "bn_affine_fixed",
+      "bn_stats_only",
+      "trust_fixed"
+    ],
+    "trust_kl_budget": 0.01,
+    "trust_backtrack_steps": 12,
+    "trust_dose_levels": [
+      0.001,
+      0.1
+    ],
+    "geometry_methods": [
+      "source_tangent_frozen",
+      "tangent_pooled",
+      "tangent_refit",
+      "eb_point",
+      "eb_predictive",
+      "eb_isotropic",
+      "eb_coupled",
+      "eb_no_source_noise",
+      "eb_no_shift"
+    ],
+    "geometry": {
+      "covariance_shrinkage": 0.1,
+      "feature_shrinkage": 0.1,
+      "numerical_floor": 1e-08
+    },
+    "analysis": {
+      "scope": "discovery_previously_exposed_Kumar6_not_external_confirmation",
+      "unit": "participant",
+      "primary_geometry_contrast": "eb_predictive - tangent_refit",
+      "key_strong_reference": "eb_predictive - saved_V2_ea_csp",
+      "primary_neural_contrast": "trust_fixed - full_fixed within each source regime at delta0.01",
+      "primary_budget": 20,
+      "bootstrap_repetitions": 10000,
+      "bootstrap_seed": 20261023,
+      "all_other_contrasts": "exploratory; no query-selected winning threshold, budget or seed",
+      "historical_V2_primary_unchanged": true
+    },
+    "simulation": {
+      "p": [
+        16,
+        64
+      ],
+      "target_perclass": [
+        1,
+        2,
+        5,
+        10
+      ],
+      "shift": [
+        "none",
+        "common",
+        "contrast",
+        "both"
+      ],
+      "anisotropy": [
+        1,
+        20
+      ],
+      "repetitions": 50,
+      "source_perclass": 20,
+      "query_perclass": 100,
+      "shift_scale": 0.5,
+      "seed": 20261026,
+      "source_perclass_levels": [
+        10,
+        20,
+        100
+      ],
+      "serial_correlations": [
+        0,
+        0.5
+      ]
+    }
+  },
+  "slurm": {
+    "account": "zhuziyuan",
+    "user": "zhuziyuan",
+    "partition": "hpc_gpu1",
+    "gres": "gpu:NVIDIAA100-SXM4-80GB:1",
+    "cpus_per_task": 16,
+    "mem": "64G",
+    "worker_jobs": 3,
+    "time_limit": "5-03:00:00",
+    "exclude": "gpu3"
+  },
+  "runtime": {
+    "torch_threads": 4,
+    "blas_threads": 1,
+    "heartbeat_seconds": 30,
+    "checkpoint_seconds": 120
+  },
+  "git_sync": {
+    "enabled": true,
+    "repository": "jackzhu119/few-shot-mi-eeg",
+    "branch": "research/paper2-hpc-v2-20261023",
+    "status_prefix": "training_status/paper2-discovery-v3",
+    "token_file": "~/.config/paper2-hpc/github-token",
+    "interval_seconds": 180
+  }
+}

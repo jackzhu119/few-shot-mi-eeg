@@ -39,6 +39,10 @@ Kumar2024 / NEMAR `nm000177` v1.0.5，18名参与者、每人6个会话；6人�
 
 新V2使用独立实验版本；原54模型和论文结果保留。训练是否推进以[实际进度记录](https://github.com/jackzhu119/few-shot-mi-eeg/blob/research/paper2-hpc-v2-20261023/training_status/paper2-recalibration-v2/STATUS.json)、step及checkpoint为准。外部独立数据验证尚未纳入当前可执行队列。
 
+## 下一轮发现实验 V3（待学校实际执行）
+
+[数学设计、对照和探索矩阵](docs/paper2_discovery_v3_20261026.md)：126项任务，3个持久GPU作业，每个1GPU/16CPU/64G。只读复用18个V2源模型，新增3个共享源模型；探索几何不确定性、BN/Dropout/函数约束及384种机制模拟条件。保留全部分支结果，已完成任务与断点自动复用，不重复学校启动前全套测试。[固定方案与软件检查](research_logs/paper2_discovery_v3_preparation_20261026/SCIENCE_FREEZE.json)。本轮真实结果尚未产生，原稿和V2结果保持原状。
+
 ## 文件导航
 
 | 位置 | 内容 |

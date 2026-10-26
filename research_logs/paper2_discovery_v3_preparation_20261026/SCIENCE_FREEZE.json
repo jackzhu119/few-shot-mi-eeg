@@ -1,0 +1,38 @@
+{
+  "created_at_utc": "2026-10-26T07:14:15.232950+00:00",
+  "status": "prepared_not_executed_on_real_EEG",
+  "scientific_version": "kumar-discovery-v3.0.0",
+  "source_parent_commit": "fe818597e2951e7e3277e13edd9392f26c9a4d19",
+  "science_file_sha256": "6c41a2135916ab133c423c2b972ba8745bcdc3e16b96abf6f26e7e076c8d2407",
+  "canonical_science_sha256": "89bfc380da5c48a5e2c6b2d8cd7333fbddfa3f605a36a165726c917aa0691d1b",
+  "tasks_sha256": "15d3fd069aef260d96639a311a71d9e9ea6d3cf4a4e9e1de04067e06ae4dc6f3",
+  "task_counts": {
+    "pooled_pretrain": 3,
+    "geometry": 6,
+    "neural": 108,
+    "simulation": 9
+  },
+  "per_slot": [
+    42,
+    42,
+    42
+  ],
+  "input_npz_files": 78,
+  "reused_V2_source_models": 18,
+  "new_pooled_source_fits": 3,
+  "new_optimizer_adaptation_stages": 7200,
+  "bn_statistics_only_stages": 900,
+  "target_EEG_cells": 10350,
+  "source_query_cells": 42,
+  "simulation_scenarios": 384,
+  "paired_repetitions_per_scenario": 50,
+  "synthetic_fit_cells": 172800,
+  "old54_and_V2_source_refits": 0,
+  "resources_per_job": {
+    "GPU": 1,
+    "CPU": 16,
+    "RAM": "64G"
+  },
+  "jobs": 3,
+  "actual_school_A100_run": false
+}

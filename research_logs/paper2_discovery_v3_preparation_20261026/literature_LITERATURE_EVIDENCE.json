@@ -1,0 +1,175 @@
+{
+  "observed_at_utc": "2026-10-26T05:48:54.376985+00:00",
+  "scope": "Focused primary-source methods check, not systematic review or proof offirstnovelty",
+  "references": [
+    {
+      "id": "HeWu2019EA",
+      "title": "Transfer Learning for Brain-Computer Interfaces: A Euclidean Space Data Alignment Approach",
+      "url": "https://arxiv.org/html/1808.05464",
+      "scope": "Relevant full-text Methods and evaluation-information regimes read",
+      "finding": "EA covariance whitening and target reference centering are established; distinguish offline all-unlabeled from sequential current-data access.",
+      "source_digests": [
+        {
+          "file": "ea_arxiv.txt",
+          "bytes": 229977,
+          "sha256": "d4dafb5f945ec57ff7b694534f77807e2152cc699940bf9efc5399965afcd83d"
+        }
+      ]
+    },
+    {
+      "id": "Rodrigues2019RPA",
+      "title": "Riemannian Procrustes Analysis: Transfer Learning for Brain-Computer Interfaces",
+      "doi": "10.1109/TBME.2018.2889705",
+      "url": "https://doi.org/10.1109/TBME.2018.2889705",
+      "scope": "EuropePMC abstract and Crossref metadata read; HAL fulltext request returned403",
+      "finding": "SPD translation, scaling and rotation matching is established; cannotclaimfirst geometric or common-distribution alignment.",
+      "source_digests": [
+        {
+          "file": "rpa_epmc.txt",
+          "bytes": 4608,
+          "sha256": "10fbd2fc193d34d17824208c219617a9bdead408666a3db944d05bd671bb1485"
+        },
+        {
+          "file": "rpa_crossref.txt",
+          "bytes": 8156,
+          "sha256": "105e866c082e084813a3f371ec879c968bd32d79300d2d4a83d09418ba0ccb71"
+        }
+      ]
+    },
+    {
+      "id": "LotteGuan2011RCSP",
+      "title": "Regularizing common spatial patterns to improve BCI designs: unified theory and new algorithms",
+      "doi": "10.1109/TBME.2010.2082539",
+      "url": "https://doi.org/10.1109/TBME.2010.2082539",
+      "scope": "EuropePMC abstract read",
+      "finding": "Source-informed/regularized CSP already has a unifying framework; covariance mixing alone is not novel.",
+      "source_digests": [
+        {
+          "file": "rcsp_epmc.txt",
+          "bytes": 4429,
+          "sha256": "096b7dba6b191f0f76d4d1b5c79094e9bc3a6c82836eefe178a7f903f80a2e56"
+        }
+      ]
+    },
+    {
+      "id": "Li2016AdaBN",
+      "title": "Revisiting Batch Normalization For Practical Domain Adaptation",
+      "url": "https://arxiv.org/html/1603.04779",
+      "scope": "Relevant full-text domain-statistics algorithm read",
+      "finding": "Adaptation of BN mean/variance is an established parameter-free mechanism. Original algorithm can use all target-domain data, so support-only access mustbe separately stated.",
+      "source_digests": [
+        {
+          "file": "bn_html.txt",
+          "bytes": 173439,
+          "sha256": "953be23ecdf6a4e2f4ccda8b5e2b8d0e0ab44f801cbfd9e60f8280515e5363b2"
+        }
+      ]
+    },
+    {
+      "id": "Li2018L2SP",
+      "title": "Explicit Inductive Bias for Transfer Learning with Convolutional Networks",
+      "url": "https://proceedings.mlr.press/v80/li18a.html",
+      "scope": "Official PMLR abstract and PDF regularization methods read",
+      "finding": "Pretrained-parameter anchoring is an established baseline; weight penalties and BN-statistic/buffer policy are distinct choices.",
+      "source_digests": [
+        {
+          "file": "l2sp_pmlr.txt",
+          "bytes": 14773,
+          "sha256": "36ccae6bdfeb862d7b8f1ec6560c3f4e0eaae40bbac6691e3c8b3252aca0fe4c"
+        },
+        {
+          "file": "l2sp_pdf.pdf",
+          "bytes": 310633,
+          "sha256": "da898e24defa977a5d38eeaab61da0e08b7cdbc358476b23ff1a28b5de666db0"
+        }
+      ]
+    },
+    {
+      "id": "Junqueira2024EADL",
+      "title": "A systematic evaluation of Euclidean alignment with deep learning for EEG decoding",
+      "doi": "10.1088/1741-2552/ad4f18",
+      "url": "https://doi.org/10.1088/1741-2552/ad4f18",
+      "scope": "EuropePMC abstract and Crossref metadata read",
+      "finding": "EA with shared/individual deep EEG models and multisubject transfer is already evaluated.",
+      "source_digests": [
+        {
+          "file": "ea_deep2024.json",
+          "bytes": 5626,
+          "sha256": "cf7ad9c2e95556ce009222bc654cb9027f66a5ae9a0797c5f5158fe0010a3b4b"
+        }
+      ]
+    },
+    {
+      "id": "Bakas2025Latent",
+      "title": "Latent alignment in deep learning models for EEG decoding",
+      "doi": "10.1088/1741-2552/adb336",
+      "url": "https://doi.org/10.1088/1741-2552/adb336",
+      "scope": "EuropePMC abstract and Crossref metadata read",
+      "finding": "Latent feature alignment is established; abstract identifies tradeoff between later-stage alignment gains and sensitivity to class imbalance. Important for tiny chronological support prefixes.",
+      "source_digests": [
+        {
+          "file": "latent2025.json",
+          "bytes": 7364,
+          "sha256": "e9ba7cee9361334bc45fcab16b566538501b6dd2c6a808bff9b4a00edcbaca79"
+        }
+      ]
+    },
+    {
+      "id": "Wimpff2025Longitudinal",
+      "title": "Fine-Tuning Strategies for Continual Online EEG Motor Imagery Decoding: Insights from a Large-Scale Longitudinal Study",
+      "url": "https://arxiv.org/html/2502.06828v1",
+      "scope": "Relevant full-text data, pretraining, fine-tuning and test-time-adaptation Methods read; version1preprint",
+      "finding": "61subjects/7–11sessions,leave-one-subject-out source pretraining,independent/sequential fine-tuning andonlineEA+AdaBN already studied; informationregime differs from same-session20labelsupport.",
+      "source_digests": [
+        {
+          "file": "wimpff_2025.txt",
+          "bytes": 128652,
+          "sha256": "7c714de852cf3c1aaa747c8617ab890de51c796af1997da5f1eb0e861ef91d07"
+        }
+      ]
+    },
+    {
+      "id": "Schulman2015TRPO",
+      "title": "Trust Region Policy Optimization",
+      "url": "https://proceedings.mlr.press/v37/schulman15.html",
+      "scope": "Official PMLR abstract and PDF Methods sections3–5 read",
+      "finding": "Theoreticalpolicyimprovement bound usesmaximumstateTV/KL; practicalaveragestateKL isexplicitheuristicapproximation. AnempiricalclassifierpredictionKLconstraint boundsaverageanchorTV, notunseenqueryBA.",
+      "source_digests": [
+        {
+          "file": "trpo_pmlr.txt",
+          "bytes": 15933,
+          "sha256": "589b429c7fdae222e261e33e6df41da23a53dd81471090ae8deb652486fb57ee"
+        },
+        {
+          "file": "trpo_pdf.pdf",
+          "bytes": 987863,
+          "sha256": "8e959ae88caeb6d8bdcc92763bc3ff766edff826aa4eb5b96b58a4a56b56ce47"
+        }
+      ]
+    },
+    {
+      "id": "LiHoiem2016LwF",
+      "title": "Learning without Forgetting",
+      "url": "https://arxiv.org/html/1606.09282",
+      "scope": "Relevant full-text Methods read, arxivv3dated14February2017 describingECCV2016LwF andextendedexperiments",
+      "finding": "Preservesoldtasksoftpredictions withdistillationonnewtaskdatawithoutoldtrainingdata; sourceTRAINfunctionalanchoring differs inavailableinputs. Functionalpreservationisnotnewbyitself anddoesnotguaranteeimprovedweakteacher.",
+      "source_digests": [
+        {
+          "file": "lwf_arxiv.txt",
+          "bytes": 222137,
+          "sha256": "6ba606b6bb10eea8efceaa1bd9e53946a96c67691d07f8fa987b516cc4707e35"
+        }
+      ]
+    }
+  ],
+  "blocked_sources": [
+    {
+      "url": "https://hal.science/hal-01971856/document",
+      "status": "HTTP403; nofulltextclaim"
+    },
+    {
+      "url": "https://openreview.net/forum?id=uXl3bZLkr3c",
+      "status": "Browserverificationpage; noTENTreadingclaim"
+    }
+  ]
+}
