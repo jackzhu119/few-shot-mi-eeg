@@ -1,0 +1,70 @@
+{
+  "scope": "Saved-result postprocessing; no fit, inference, checkpoint or EEG load",
+  "experiment_id": "paper2-kumar-discovery-v3-20261026",
+  "source_result_commit": "500831c086d9e1d1e8412cf8ebca5fb6a288db76",
+  "packet_id": "83cbdfdcfa541b3ab3addfc3",
+  "archive_sha256": "e509c2591efa21fff4dd47236e613ed6b611ca10ad20bac3da37e66e34a9d170",
+  "participants": [
+    "sub-1",
+    "sub-10",
+    "sub-13",
+    "sub-16",
+    "sub-4",
+    "sub-7"
+  ],
+  "independent_unit": "participant",
+  "bootstrap_repetitions": 10000,
+  "bootstrap_seed": 20261023,
+  "interval_scope": "pointwise exploratory, no multiplicity-adjusted confirmation",
+  "seed_session_aggregation": "seed mean within session; equal mean of five sessions; equal participants",
+  "saved_target_rows_including_imported_V2_reference": 10500,
+  "participant_endpoints": 900,
+  "cohort_endpoints": 150,
+  "original_participant_summary_max_difference": 0.0,
+  "original_comparisons_recomputed": 165,
+  "original_contrast_or_CI_max_difference_pp": 1.7763568394002505e-15,
+  "all_pairwise_contrasts": 505,
+  "priority_contrasts": 135,
+  "input_tables": [
+    {
+      "file": "cohorts.csv",
+      "bytes": 21014,
+      "sha256": "cbdc638629bfca3fb0f32523d5b02b0ece821c1273742c2b8b6d0783a2ea6c0a"
+    },
+    {
+      "file": "comparisons.csv",
+      "bytes": 30315,
+      "sha256": "b57bbab818e82aca6d6b0bf1744d9595f2bc7667bfa68c89657e1c1b3eac2e7f"
+    },
+    {
+      "file": "missing_cells.csv",
+      "bytes": 283,
+      "sha256": "57d8d5ace62f1266090f3280a0af23aee221561e106b47cfd4628c0bbd7c4854"
+    },
+    {
+      "file": "participant_metrics.csv",
+      "bytes": 79692,
+      "sha256": "b16c2acab07c59d8cfd7eb6e7d044de3615f9bbe528a9b1042fe6f95e7996b62"
+    },
+    {
+      "file": "saved_cells.csv",
+      "bytes": 4752558,
+      "sha256": "c5eace735a8b1717e8e54222fda760468f2434b00eed4583fe95a6de04039711"
+    },
+    {
+      "file": "simulation_scenarios.csv",
+      "bytes": 811329,
+      "sha256": "fb2329da33b2ff3308f60ef1be151c377e657f7c56b13a6dd59e4f96eebdfd79"
+    },
+    {
+      "file": "source_query.csv",
+      "bytes": 17523,
+      "sha256": "6e36f1d33b8bfafa9214a3962a6d307d1a049c315c934a55d46182e8a39f026f"
+    },
+    {
+      "file": "summary.json",
+      "bytes": 201425,
+      "sha256": "1a86e8b86b1c54b79802fc2704e5d5d5f1d7b6d351fa4819aed1260d767f97e5"
+    }
+  ]
+}

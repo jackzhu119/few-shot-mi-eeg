@@ -2,13 +2,14 @@
 
 公开多会话运动想象EEG的跨会话解码研究：比较冻结模型、分类器重校准与空间滤波器更新，并检验少量校准标签下的更新强度。
 
-当前论文：**Spatial-filter refitting improves limited-label recalibration in longitudinal motor-imagery EEG**。
+当前新审阅稿：**Spatial-filter refitting improves limited-label EEG decoding beyond classifier recalibration**，按 **Biomedical Engineering / Biomedizinische Technik** 的 Research Article 要求准备。核心为同标签预算下空间滤波器重学的额外收益；原PLOS ONE稿件保留原路径。
 
 ## 从这里开始
 
 | 目的 | 入口 |
 | --- | --- |
-| 阅读论文 | [带图PDF](manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Reading.pdf) · [投稿Word](manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Submission.docx) |
+| 阅读2026-10-27 BMT新审阅稿 | [PDF](manuscript/discovery_revision_20261027/BMT_Manuscript_Review.pdf) · [Word](manuscript/discovery_revision_20261027/BMT_Manuscript_Review.docx) · [期刊要求与材料](manuscript/discovery_revision_20261027/README.md) |
+| 阅读原PLOS ONE稿件 | [带图PDF](manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Reading.pdf) · [投稿Word](manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Submission.docx) |
 | 获取最新投稿材料 | [完整文件索引](manuscript/README.md) · [2026-10-19完整提交包](manuscript/plos_one_submission_support_20261019/PONE-D-26-52050_submission_20261019_run02.zip) · [600dpi图件](manuscript/plos_one_submission_support_20261019/Paper2_High_Resolution_Figures.zip) |
 | 运行学校HPC扩展 | [下载、更新与断点续跑](https://github.com/jackzhu119/few-shot-mi-eeg/blob/research/paper2-hpc-v2-20261023/releases/paper2-hpc-v2-20261023/README.md) · [实验设计](https://github.com/jackzhu119/few-shot-mi-eeg/blob/research/paper2-hpc-v2-20261023/docs/paper2_hpc_v2_literature_and_scientific_design_20261023.md) |
 | 查看进度 | [项目状态](CURRENT_PROJECT_STATUS.md) · [学校实时同步快照](https://github.com/jackzhu119/few-shot-mi-eeg/blob/research/paper2-hpc-v2-20261023/training_status/paper2-recalibration-v2/STATUS.json) |
@@ -39,9 +40,13 @@ Kumar2024 / NEMAR `nm000177` v1.0.5，18名参与者、每人6个会话；6人�
 
 新V2使用独立实验版本；原54模型和论文结果保留。训练是否推进以[实际进度记录](https://github.com/jackzhu119/few-shot-mi-eeg/blob/research/paper2-hpc-v2-20261023/training_status/paper2-recalibration-v2/STATUS.json)、step及checkpoint为准。外部独立数据验证尚未纳入当前可执行队列。
 
-## 下一轮发现实验 V3（待学校实际执行）
+## V3发现实验与新版论文（已完成回传与分析）
 
-[数学设计、对照和探索矩阵](docs/paper2_discovery_v3_20261026.md)：126项任务，3个持久GPU作业，每个1GPU/16CPU/64G。只读复用18个V2源模型，新增3个共享源模型；探索几何不确定性、BN/Dropout/函数约束及384种机制模拟条件。保留全部分支结果，已完成任务与断点自动复用，不重复学校启动前全套测试。[固定方案与软件检查](research_logs/paper2_discovery_v3_preparation_20261026/SCIENCE_FREEZE.json)。本轮真实结果尚未产生，原稿和V2结果保持原状。
+[数学设计与冻结矩阵](docs/paper2_discovery_v3_20261026.md)的126项任务已完成。完整结果固定于`500831c`，49,984载荷逐成员SHA通过，10,392份预测独立复算一致。原18个V2源模型只读复用，新增3个共享源模型；三个学校slot实际先后执行，不声称同时三卡运行。
+
+[科学分析与新主线](research_logs/paper2_v3_analysis_20261027/REPORT.md)：原12人同标签预算空间组件增益+5.47pp仍是核心证据。新6人发现实验在20标签条件下，固定BN模式较自适应BN高1.50/1.91pp，完整预算曲线保留。新几何候选和KL约束没有赢得其主要强对照，负结果完整报告。没有新训练、query重跑或学校作业操作。
+
+[BMT新稿、补充方法、4组600dpi图及全部底层表](manuscript/discovery_revision_20261027/README.md)已作为独立审阅修订准备；[官方期刊要求](docs/bmt_journal_requirements_20261027.md)与AI/伦理声明分开记录。作者尚需对这版新增分析与稿件实际审阅批准；原投稿版本和原终点身份保持不变。
 
 ## 文件导航
 

@@ -1,0 +1,36 @@
+{
+  "python": "3.11.16",
+  "numpy": "2.2.6",
+  "script_sha256": "b29b5f114be516ae0fc533e29814ab2843b56c8b711dc92a98dbb43396d19d98",
+  "real_saved_prediction_files_checked": 1350,
+  "maximum_absolute_BA_error": 0.0,
+  "query_ID_and_label_agreement_all_methods_and_budgets": true,
+  "independent_prototype_statistics_exactly_reproduced": true,
+  "syntax_compile_passed": true,
+  "ruff_check_passed": true,
+  "functional_checks": {
+    "zero_paired_effect_interval": true,
+    "constant_10pp_effect_interval": true,
+    "input_output_separation": true
+  },
+  "analysis_input_summaries": [
+    {
+      "path": "analysis/participant_metrics.csv",
+      "bytes": 79692,
+      "sha256": "b16c2acab07c59d8cfd7eb6e7d044de3615f9bbe528a9b1042fe6f95e7996b62"
+    },
+    {
+      "path": "analysis/saved_cells.csv",
+      "bytes": 4752558,
+      "sha256": "c5eace735a8b1717e8e54222fda760468f2434b00eed4583fe95a6de04039711"
+    },
+    {
+      "path": "analysis/cohorts.csv",
+      "bytes": 21014,
+      "sha256": "cbdc638629bfca3fb0f32523d5b02b0ece821c1273742c2b8b6d0783a2ea6c0a"
+    }
+  ],
+  "no_model_or_EEG_loaded": true,
+  "no_fitting_or_forward": true,
+  "scope": "Saved-output arithmetic and postprocessing validation. Not a new real scientific run."
+}

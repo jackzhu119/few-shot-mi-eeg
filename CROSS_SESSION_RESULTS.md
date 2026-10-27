@@ -1,5 +1,7 @@
 # Kumar cross-session decoding results
 
+**2026-10-27新增结果：**[V3全部126项的保存结果分析与新论文主线](research_logs/paper2_v3_analysis_20261027/REPORT.md)，[BMT新审阅稿](manuscript/discovery_revision_20261027/README.md)。下文原12人终点、角色和数值保持不变；V2/V3仍属原6名已暴露参与者的发现研究。
+
 真实CPU三基线已完成。下面均为每个参与者五个目标会话BA的等权均值，再对参与者
 取平均；不是将会话或trial作为独立样本。主要比较和测试编号均在性能计算前冻结。
 

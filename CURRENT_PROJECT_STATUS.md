@@ -1,16 +1,19 @@
 # 论文2当前状态
 
-更新日期：2026-10-25（Asia/Shanghai）。本页汇总现行入口；按日期保留的旧状态见[历史索引](docs/archive/README.md)。
+更新日期：2026-10-27（Asia/Shanghai）。最新研究为已回传V3的保存结果分析与BMT新稿；按日期保留的旧状态见[历史索引](docs/archive/README.md)。
 
 ## 当前入口
 
 | 项目 | 状态与位置 |
 | --- | --- |
-| 论文 | **Spatial-filter refitting improves limited-label recalibration in longitudinal motor-imagery EEG**；[阅读PDF](manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Reading.pdf) · [投稿Word](manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Submission.docx) |
+| 当前目标期刊与新稿 | **Biomedical Engineering / Biomedizinische Technik**；[新审阅稿PDF](manuscript/discovery_revision_20261027/BMT_Manuscript_Review.pdf) · [Word及完整材料](manuscript/discovery_revision_20261027/README.md) |
+| 论文核心 | 原12人同约20个当前标签下，完整CSP/LDA比仅LDA更新增加5.47pp [2.17,8.91]；仍为原次要终点，原主要+7.42pp保持 |
+| V3实际结果 | 126/126完成；10,392份预测独立复算一致；[全分支科学分析](research_logs/paper2_v3_analysis_20261027/REPORT.md) |
+| 原PLOS ONE稿件 | **Spatial-filter refitting improves limited-label recalibration in longitudinal motor-imagery EEG**；[阅读PDF](manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Reading.pdf) · [投稿Word](manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Submission.docx) |
 | 最新整理包 | [2026-10-19完整提交包与600dpi图件](manuscript/plos_one_submission_support_20261019/README.md) |
 | 系统摘要与伦理声明 | [266词摘要](manuscript/plos_one_submission_support_20261019/Abstract_for_Submission_System.txt) · [现行伦理声明](manuscript/plos_one_innovation_20261017/Ethics_Statement_20261019.md)；按第32条第（一）项法规豁免依据，不包含学校确认表述 |
 | 原研究结果 | 原CPU基线、54个源模型及一次冻结query评估已完成；[完整结果](CROSS_SESSION_RESULTS.md) |
-| 新HPC扩展 | 代码/固定输入已交付；[学校下载与启动入口](https://github.com/jackzhu119/few-shot-mi-eeg/blob/research/paper2-hpc-v2-20261023/releases/paper2-hpc-v2-20261023/README.md) |
+| 新HPC扩展 | V2 24/24与V3 126/126均完成；不需为写稿重新启动训练 |
 | 实际训练进度 | [实时STATUS.json](https://github.com/jackzhu119/few-shot-mi-eeg/blob/research/paper2-hpc-v2-20261023/training_status/paper2-recalibration-v2/STATUS.json)，查看其中观察时间、step、checkpoint和完成数 |
 
 ## 原论文结果范围
@@ -39,7 +42,9 @@
 
 新V2架构与原54份权重分开保存。候选EA＋经验协方差更新规则仍待结果检验；BNCI/OpenBMI外部验证只在方案中，尚未纳入当前运行队列。详见[实验设计](https://github.com/jackzhu119/few-shot-mi-eeg/blob/research/paper2-hpc-v2-20261023/docs/paper2_hpc_v2_literature_and_scientific_design_20261023.md)。
 
-本次整理开始时读到的学校同步快照为2026-10-25T05:30:24Z（北京时间13:30:24），0/24完成且无任务进度记录。这只说明该时间的公开快照；当前状态请读取上方实时入口。代码交付、Slurm提交和模型实际更新分别记录。
+V2完成结果见[2026-10-26独立分析](research_logs/paper2_hpc_v2_analysis_20261026/REPORT.md)。V3固定回传提交为`500831c086d9e1d1e8412cf8ebca5fb6a288db76`，包`83cbdfdcfa541b3ab3addfc3`，三分片合并40,194,093bytes。新几何候选相对tangent refit−2.33pp，KL核心对比近零；20标签BN模式对比为+1.50/+1.91pp，不外推为所有预算均有收益。全部结果保留于[新版分析](research_logs/paper2_v3_analysis_20261027/REPORT.md)。
+
+本轮仅保存结果后处理、制图与期刊适配，不加载EEG/权重、不做新forward/fit，不操作学校Slurm或Pod。新稿依据[官网要求](docs/bmt_journal_requirements_20261027.md)制作，结构式摘要≤200词，正文保守计数≤6000词，4图+3表。原PLOS ONE正式决定/撤回状态未获新证据；不代作者确认排他投稿或新版本批准。
 
 ## 版本与追溯
 

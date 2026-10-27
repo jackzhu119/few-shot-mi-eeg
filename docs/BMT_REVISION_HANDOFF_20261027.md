@@ -1,5 +1,7 @@
 # BMT manuscript revision — recovery handoff, 27 October 2026
 
+**Recovery update:** The execution workspace returned, its local files were retained, and document building resumed. The completed delivery is indexed at [the BMT review folder](../manuscript/discovery_revision_20261027/README.md). The outage record below is historical; it does not describe the later completed commit.
+
 This records actual completed analysis and local document generation before the Codex execution workspace became unavailable. **It is not a claim that the new manuscript/PDF/Word files have been pushed.** GitHub result data remain safe at the fixed commit below. The current research branch is `research/paper2-hpc-v2-20261023`; preserve existing uncommitted files. Do not reset, initialize, retrain, forward any model, read raw EEG, or operate the school Slurm/Pod.
 
 ## User's current objective

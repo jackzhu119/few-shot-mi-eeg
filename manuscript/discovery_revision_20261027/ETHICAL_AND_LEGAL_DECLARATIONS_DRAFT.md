@@ -1,0 +1,49 @@
+# Ethical and legal declarations
+
+**Journal:** Biomedical Engineering / Biomedizinische Technik
+
+**Manuscript:** Spatial-filter refitting improves limited-label EEG decoding beyond classifier recalibration
+
+**Author:** Ziyuan Zhu
+
+**Review status:** Draft for the author's review. The submission-approval statement remains unconfirmed for this new scientific revision.
+
+## Acknowledgments
+
+The author acknowledges the researchers who released the Kumar2024 EEG records and documentation.
+
+## Research ethics
+
+The present secondary analysis was exempt from additional ethical review under Article 32, item (1), of China's Measures for Ethical Review of Life Science and Medical Research Involving Human Participants (2023). It used lawfully obtained publicly available data, caused no harm to participants, and did not involve sensitive personal information or commercial interests. The original data collection reported University of Texas at Austin approval under protocol 2020-03-0073. The author had no access to identifying participant information and made no attempt to re-identify participants.
+
+## Informed consent
+
+The original study reported written informed consent before data collection. The present study analyzed coded public records; no new participants were recruited or contacted and no additional consent was collected.
+
+## Author contributions
+
+Ziyuan Zhu: Conceptualization; Methodology; Software; Formal analysis; Validation; Visualization; Writing – original draft; Writing – review & editing.
+
+**Pending actual author confirmation for this revision:** The author has accepted responsibility for the entire content of this manuscript and approved its submission.
+
+The earlier author approval of the 2026-10-16 version does not establish approval of the added V2/V3 results or this journal-specific revision.
+
+## Use of large language models, AI and machine learning tools
+
+OpenAI ChatGPT/Codex assisted with research and software development, source and reference checks, saved-result verification and aggregation, plotting code, manuscript drafting and language editing. Checks included exact trial-identifier matching, file SHA256 verification, independent recomputation of metrics from saved predictions, reproduction of participant-level statistics, and document and figure inspection. These checks were also AI-assisted. The scientific plots were rendered programmatically from recorded numerical results; generative image synthesis was not used. Experimental data and saved model predictions were retained unchanged. The author remains responsible for the content, interpretation and final approval of the submission.
+
+## Conflict of interest
+
+The author states no conflict of interest.
+
+## Research funding
+
+None declared.
+
+## Data availability
+
+The source dataset is publicly available as Kumar2024, NEMAR nm000177 version 1.0.5, https://doi.org/10.82901/nemar.nm000177.v1.0.5. Original component-analysis predictions and metadata remain in the previously versioned submission data package. The V3 saved predictions, metrics, text training histories and diagnostics are publicly archived at https://github.com/jackzhu119/few-shot-mi-eeg/tree/500831c086d9e1d1e8412cf8ebca5fb6a288db76/training_status/paper2-discovery-v3/result_exports/83cbdfdcfa541b3ab3addfc3 . This revision supplies the complete participant-level comparisons, figure datasets and saved-result reconstruction code. Original data rights and third-party licenses remain applicable.
+
+## Software availability
+
+Original analysis code is available at https://github.com/jackzhu119/few-shot-mi-eeg under the MIT license. Original derived data, figures and manuscript content use CC BY 4.0. The adapted citation style retains its CC BY-SA 3.0 license.

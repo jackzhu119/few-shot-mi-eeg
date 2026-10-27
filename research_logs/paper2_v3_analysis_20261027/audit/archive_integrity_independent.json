@@ -1,0 +1,2015 @@
+{
+  "audit_type": "saved_remote_archive_integrity_only_no_fit_no_inference",
+  "fixed_commit": "500831c086d9e1d1e8412cf8ebca5fb6a288db76",
+  "packet_id": "83cbdfdcfa541b3ab3addfc3",
+  "parts": [
+    {
+      "file": "paper2-results-83cbdfdcfa541b3ab3addfc3.tar.gz.part000",
+      "bytes": 16777216,
+      "sha256": "3c5b56c5c14c24ced136be26510d0f25221422c38f6583b6a0470c3ddd310e13",
+      "verified": true
+    },
+    {
+      "file": "paper2-results-83cbdfdcfa541b3ab3addfc3.tar.gz.part001",
+      "bytes": 16777216,
+      "sha256": "886d549a68c51aeb54c2c89037068ab1845b7e2a95f3539e0803f456c0449db1",
+      "verified": true
+    },
+    {
+      "file": "paper2-results-83cbdfdcfa541b3ab3addfc3.tar.gz.part002",
+      "bytes": 6639661,
+      "sha256": "49ac8cc2d6626ba93e4044104fdd531045692301699e703b7bd64ea7570d96c1",
+      "verified": true
+    }
+  ],
+  "archive": {
+    "bytes": 40194093,
+    "sha256": "e509c2591efa21fff4dd47236e613ed6b611ca10ad20bac3da37e66e34a9d170",
+    "verified": true
+  },
+  "archive_member_count": 49985,
+  "payload_member_count": 49984,
+  "total_uncompressed_bytes": 407524533,
+  "all_payload_length_sha256_match": true,
+  "mismatches": [],
+  "extra_members": [],
+  "duplicate_members": [],
+  "json_parse_errors": [],
+  "manifest_tasks_count": 126,
+  "manifest_completed_count": 126,
+  "complete_marker_count": 126,
+  "complete_marker_unique_count": 126,
+  "complete_marker_identities_valid": true,
+  "marker_errors": [],
+  "task_ids_exactly_match": true,
+  "export_status": "complete_exported_unreviewed",
+  "history_errors": [],
+  "analysis_counts": {
+    "prediction_files": 10392,
+    "tasks_complete": 126,
+    "tasks_expected": 126
+  },
+  "excluded_count": 17985,
+  "file_extensions": {
+    ".json": 39551,
+    ".csv": 7,
+    ".err": 3,
+    ".out": 3,
+    ".npz": 10392,
+    ".txt": 3,
+    "": 1,
+    ".md": 1,
+    ".py": 23,
+    ".sh": 1
+  },
+  "failure_record_count": 0,
+  "failure_records": [],
+  "slot_run_evidence": {
+    "paper2_results/results/.runtime/slot-0.json": {
+      "runs": [
+        {
+          "slot": 0,
+          "job_id": "775309",
+          "restart_count": 0,
+          "pid": 73423,
+          "started_at": "2026-10-26T10:45:58.739421+00:00",
+          "finished": [
+            {
+              "task_id": "v3-pooled-source-s20261023",
+              "index": 0,
+              "started_at": "2026-10-26T10:45:58.757669+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T10:49:57.333456+00:00"
+            },
+            {
+              "task_id": "v3-geometry-sub-1",
+              "index": 3,
+              "started_at": "2026-10-26T10:49:57.357385+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T10:52:11.597095+00:00"
+            },
+            {
+              "task_id": "v3-geometry-sub-10",
+              "index": 6,
+              "started_at": "2026-10-26T10:52:11.628604+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T10:54:21.355791+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-1-s20261023",
+              "index": 9,
+              "started_at": "2026-10-26T10:54:21.385187+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T10:56:24.185969+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-4-s20261023",
+              "index": 12,
+              "started_at": "2026-10-26T10:56:24.204292+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T10:58:19.059356+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-7-s20261023",
+              "index": 15,
+              "started_at": "2026-10-26T10:58:19.092573+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:00:01.991937+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-10-s20261023",
+              "index": 18,
+              "started_at": "2026-10-26T11:00:02.015189+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:01:52.157207+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-13-s20261023",
+              "index": 21,
+              "started_at": "2026-10-26T11:01:52.175836+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:04:38.860106+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-16-s20261023",
+              "index": 24,
+              "started_at": "2026-10-26T11:04:38.882164+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:06:41.910859+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-1-s20261023",
+              "index": 27,
+              "started_at": "2026-10-26T11:06:41.930370+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:07:59.450204+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-4-s20261023",
+              "index": 30,
+              "started_at": "2026-10-26T11:07:59.472790+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:09:43.731815+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-7-s20261023",
+              "index": 33,
+              "started_at": "2026-10-26T11:09:43.761543+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:11:03.964936+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-10-s20261023",
+              "index": 36,
+              "started_at": "2026-10-26T11:11:03.983189+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:12:22.671648+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-13-s20261023",
+              "index": 39,
+              "started_at": "2026-10-26T11:12:22.703139+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:14:13.633585+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-16-s20261023",
+              "index": 42,
+              "started_at": "2026-10-26T11:14:13.657598+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:15:33.238802+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-1-s20261023-kl0p001",
+              "index": 45,
+              "started_at": "2026-10-26T11:15:33.261479+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:15:49.285759+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-4-s20261023-kl0p001",
+              "index": 48,
+              "started_at": "2026-10-26T11:15:49.305606+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:16:05.992590+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-7-s20261023-kl0p001",
+              "index": 51,
+              "started_at": "2026-10-26T11:16:06.012184+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:16:22.045178+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-10-s20261023-kl0p001",
+              "index": 54,
+              "started_at": "2026-10-26T11:16:22.066692+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:16:36.773139+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-13-s20261023-kl0p001",
+              "index": 57,
+              "started_at": "2026-10-26T11:16:36.792921+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:16:51.268062+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-16-s20261023-kl0p001",
+              "index": 60,
+              "started_at": "2026-10-26T11:16:51.290235+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:17:16.831979+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-1-s20261023-kl0p001",
+              "index": 63,
+              "started_at": "2026-10-26T11:17:16.851621+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:17:31.206801+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-4-s20261023-kl0p001",
+              "index": 66,
+              "started_at": "2026-10-26T11:17:31.225140+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:17:45.503466+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-7-s20261023-kl0p001",
+              "index": 69,
+              "started_at": "2026-10-26T11:17:45.520472+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:18:00.061577+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-10-s20261023-kl0p001",
+              "index": 72,
+              "started_at": "2026-10-26T11:18:00.079536+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:18:27.904268+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-13-s20261023-kl0p001",
+              "index": 75,
+              "started_at": "2026-10-26T11:18:27.926444+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:18:42.951122+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-16-s20261023-kl0p001",
+              "index": 78,
+              "started_at": "2026-10-26T11:18:42.969268+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:19:04.557089+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-1-s20261023-kl0p1",
+              "index": 81,
+              "started_at": "2026-10-26T11:19:04.574553+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:19:19.084466+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-4-s20261023-kl0p1",
+              "index": 84,
+              "started_at": "2026-10-26T11:19:19.104043+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:19:33.339149+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-7-s20261023-kl0p1",
+              "index": 87,
+              "started_at": "2026-10-26T11:19:33.359538+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:19:48.951745+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-10-s20261023-kl0p1",
+              "index": 90,
+              "started_at": "2026-10-26T11:19:48.971211+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:20:03.365161+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-13-s20261023-kl0p1",
+              "index": 93,
+              "started_at": "2026-10-26T11:20:03.390408+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:20:18.761066+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-16-s20261023-kl0p1",
+              "index": 96,
+              "started_at": "2026-10-26T11:20:18.782367+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:20:33.432665+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-1-s20261023-kl0p1",
+              "index": 99,
+              "started_at": "2026-10-26T11:20:33.453010+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:20:47.850050+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-4-s20261023-kl0p1",
+              "index": 102,
+              "started_at": "2026-10-26T11:20:47.873772+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:21:02.198699+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-7-s20261023-kl0p1",
+              "index": 105,
+              "started_at": "2026-10-26T11:21:02.222272+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:21:21.279917+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-10-s20261023-kl0p1",
+              "index": 108,
+              "started_at": "2026-10-26T11:21:21.299012+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:21:35.512152+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-13-s20261023-kl0p1",
+              "index": 111,
+              "started_at": "2026-10-26T11:21:35.537024+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:21:49.732020+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-16-s20261023-kl0p1",
+              "index": 114,
+              "started_at": "2026-10-26T11:21:49.756207+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:22:05.001304+00:00"
+            },
+            {
+              "task_id": "v3-mechanism-block-0",
+              "index": 117,
+              "started_at": "2026-10-26T11:22:05.024863+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:33:49.761487+00:00"
+            },
+            {
+              "task_id": "v3-mechanism-block-3",
+              "index": 120,
+              "started_at": "2026-10-26T11:33:49.780329+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:46:04.807779+00:00"
+            },
+            {
+              "task_id": "v3-mechanism-block-6",
+              "index": 123,
+              "started_at": "2026-10-26T11:46:04.829617+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T11:57:46.120111+00:00"
+            }
+          ],
+          "status": "complete",
+          "active_task": null,
+          "updated_at": "2026-10-26T11:57:46.132302+00:00",
+          "exit_code": 0,
+          "finished_at": "2026-10-26T11:57:46.132291+00:00"
+        }
+      ]
+    },
+    "paper2_results/results/.runtime/slot-1.json": {
+      "runs": [
+        {
+          "slot": 1,
+          "job_id": "775310",
+          "restart_count": 0,
+          "pid": 62027,
+          "started_at": "2026-10-26T11:58:07.882230+00:00",
+          "finished": [
+            {
+              "task_id": "v3-pooled-source-s20261024",
+              "index": 1,
+              "started_at": "2026-10-26T11:58:07.899137+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:00:41.855169+00:00"
+            },
+            {
+              "task_id": "v3-geometry-sub-4",
+              "index": 4,
+              "started_at": "2026-10-26T12:00:41.884019+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:02:09.370059+00:00"
+            },
+            {
+              "task_id": "v3-geometry-sub-13",
+              "index": 7,
+              "started_at": "2026-10-26T12:02:09.391852+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:03:34.851981+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-1-s20261024",
+              "index": 10,
+              "started_at": "2026-10-26T12:03:34.869823+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:05:01.723917+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-4-s20261024",
+              "index": 13,
+              "started_at": "2026-10-26T12:05:01.743637+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:06:27.221331+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-7-s20261024",
+              "index": 16,
+              "started_at": "2026-10-26T12:06:27.239820+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:07:50.899776+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-10-s20261024",
+              "index": 19,
+              "started_at": "2026-10-26T12:07:50.941295+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:09:06.706945+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-13-s20261024",
+              "index": 22,
+              "started_at": "2026-10-26T12:09:06.732792+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:10:40.000338+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-16-s20261024",
+              "index": 25,
+              "started_at": "2026-10-26T12:10:40.019673+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:12:08.534693+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-1-s20261024",
+              "index": 28,
+              "started_at": "2026-10-26T12:12:08.555110+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:13:23.951049+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-4-s20261024",
+              "index": 31,
+              "started_at": "2026-10-26T12:13:23.971289+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:14:38.738355+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-7-s20261024",
+              "index": 34,
+              "started_at": "2026-10-26T12:14:38.760447+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:16:12.960707+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-10-s20261024",
+              "index": 37,
+              "started_at": "2026-10-26T12:16:12.978903+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:17:28.837168+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-13-s20261024",
+              "index": 40,
+              "started_at": "2026-10-26T12:17:28.854872+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:19:04.090458+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-16-s20261024",
+              "index": 43,
+              "started_at": "2026-10-26T12:19:04.115630+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:20:26.815097+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-1-s20261024-kl0p001",
+              "index": 46,
+              "started_at": "2026-10-26T12:20:26.836532+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:20:43.606214+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-4-s20261024-kl0p001",
+              "index": 49,
+              "started_at": "2026-10-26T12:20:43.638525+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:21:14.400526+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-7-s20261024-kl0p001",
+              "index": 52,
+              "started_at": "2026-10-26T12:21:14.421484+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:21:33.760279+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-10-s20261024-kl0p001",
+              "index": 55,
+              "started_at": "2026-10-26T12:21:33.780887+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:21:48.745673+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-13-s20261024-kl0p001",
+              "index": 58,
+              "started_at": "2026-10-26T12:21:48.769241+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:22:04.059559+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-16-s20261024-kl0p001",
+              "index": 61,
+              "started_at": "2026-10-26T12:22:04.080541+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:22:35.410081+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-1-s20261024-kl0p001",
+              "index": 64,
+              "started_at": "2026-10-26T12:22:35.431216+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:22:57.813066+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-4-s20261024-kl0p001",
+              "index": 67,
+              "started_at": "2026-10-26T12:22:57.836146+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:23:20.913295+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-7-s20261024-kl0p001",
+              "index": 70,
+              "started_at": "2026-10-26T12:23:20.935472+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:23:42.428658+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-10-s20261024-kl0p001",
+              "index": 73,
+              "started_at": "2026-10-26T12:23:42.452682+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:24:23.282373+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-13-s20261024-kl0p001",
+              "index": 76,
+              "started_at": "2026-10-26T12:24:23.302450+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:24:53.928186+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-16-s20261024-kl0p001",
+              "index": 79,
+              "started_at": "2026-10-26T12:24:53.945566+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:25:34.579691+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-1-s20261024-kl0p1",
+              "index": 82,
+              "started_at": "2026-10-26T12:25:34.600357+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:25:53.079299+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-4-s20261024-kl0p1",
+              "index": 85,
+              "started_at": "2026-10-26T12:25:53.099661+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:26:11.019037+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-7-s20261024-kl0p1",
+              "index": 88,
+              "started_at": "2026-10-26T12:26:11.037283+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:26:25.474483+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-10-s20261024-kl0p1",
+              "index": 91,
+              "started_at": "2026-10-26T12:26:25.492892+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:26:48.380658+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-13-s20261024-kl0p1",
+              "index": 94,
+              "started_at": "2026-10-26T12:26:48.398193+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:27:14.051995+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-16-s20261024-kl0p1",
+              "index": 97,
+              "started_at": "2026-10-26T12:27:14.074138+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:27:31.777600+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-1-s20261024-kl0p1",
+              "index": 100,
+              "started_at": "2026-10-26T12:27:31.798216+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:27:49.202030+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-4-s20261024-kl0p1",
+              "index": 103,
+              "started_at": "2026-10-26T12:27:49.219400+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:28:04.083771+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-7-s20261024-kl0p1",
+              "index": 106,
+              "started_at": "2026-10-26T12:28:04.103894+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:28:18.518079+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-10-s20261024-kl0p1",
+              "index": 109,
+              "started_at": "2026-10-26T12:28:18.542270+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:28:32.910353+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-13-s20261024-kl0p1",
+              "index": 112,
+              "started_at": "2026-10-26T12:28:32.928625+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:28:47.446257+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-16-s20261024-kl0p1",
+              "index": 115,
+              "started_at": "2026-10-26T12:28:47.468770+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:29:02.077038+00:00"
+            },
+            {
+              "task_id": "v3-mechanism-block-1",
+              "index": 118,
+              "started_at": "2026-10-26T12:29:02.102304+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:41:12.891711+00:00"
+            },
+            {
+              "task_id": "v3-mechanism-block-4",
+              "index": 121,
+              "started_at": "2026-10-26T12:41:12.912696+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T12:53:17.277885+00:00"
+            },
+            {
+              "task_id": "v3-mechanism-block-7",
+              "index": 124,
+              "started_at": "2026-10-26T12:53:17.309892+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:05:49.263443+00:00"
+            }
+          ],
+          "status": "complete",
+          "active_task": null,
+          "updated_at": "2026-10-26T13:05:49.272481+00:00",
+          "exit_code": 0,
+          "finished_at": "2026-10-26T13:05:49.272467+00:00"
+        }
+      ]
+    },
+    "paper2_results/results/.runtime/slot-2.json": {
+      "runs": [
+        {
+          "slot": 2,
+          "job_id": "775311",
+          "restart_count": 0,
+          "pid": 48573,
+          "started_at": "2026-10-26T13:06:09.215520+00:00",
+          "finished": [
+            {
+              "task_id": "v3-pooled-source-s20261025",
+              "index": 2,
+              "started_at": "2026-10-26T13:06:09.232277+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:07:47.228041+00:00"
+            },
+            {
+              "task_id": "v3-geometry-sub-7",
+              "index": 5,
+              "started_at": "2026-10-26T13:07:47.250465+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:09:24.591683+00:00"
+            },
+            {
+              "task_id": "v3-geometry-sub-16",
+              "index": 8,
+              "started_at": "2026-10-26T13:09:24.615555+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:10:50.983825+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-1-s20261025",
+              "index": 11,
+              "started_at": "2026-10-26T13:10:51.007264+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:12:19.566716+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-4-s20261025",
+              "index": 14,
+              "started_at": "2026-10-26T13:12:19.584373+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:13:53.576519+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-7-s20261025",
+              "index": 17,
+              "started_at": "2026-10-26T13:13:53.597504+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:15:20.085733+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-10-s20261025",
+              "index": 20,
+              "started_at": "2026-10-26T13:15:20.318928+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:16:52.918645+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-13-s20261025",
+              "index": 23,
+              "started_at": "2026-10-26T13:16:52.939636+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:18:22.104787+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-16-s20261025",
+              "index": 26,
+              "started_at": "2026-10-26T13:18:22.124952+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:19:43.952984+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-1-s20261025",
+              "index": 29,
+              "started_at": "2026-10-26T13:19:43.974696+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:21:03.884525+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-4-s20261025",
+              "index": 32,
+              "started_at": "2026-10-26T13:21:03.915286+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:22:52.601949+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-7-s20261025",
+              "index": 35,
+              "started_at": "2026-10-26T13:22:52.637409+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:24:57.130997+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-10-s20261025",
+              "index": 38,
+              "started_at": "2026-10-26T13:24:57.161629+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:26:16.579418+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-13-s20261025",
+              "index": 41,
+              "started_at": "2026-10-26T13:26:16.599387+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:27:31.340501+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-16-s20261025",
+              "index": 44,
+              "started_at": "2026-10-26T13:27:31.359387+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:28:47.746550+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-1-s20261025-kl0p001",
+              "index": 47,
+              "started_at": "2026-10-26T13:28:47.768515+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:29:06.964455+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-4-s20261025-kl0p001",
+              "index": 50,
+              "started_at": "2026-10-26T13:29:06.993498+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:30:04.768284+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-7-s20261025-kl0p001",
+              "index": 53,
+              "started_at": "2026-10-26T13:30:04.804495+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:30:40.473800+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-10-s20261025-kl0p001",
+              "index": 56,
+              "started_at": "2026-10-26T13:30:40.499574+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:31:02.956610+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-13-s20261025-kl0p001",
+              "index": 59,
+              "started_at": "2026-10-26T13:31:02.980447+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:31:53.508085+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-16-s20261025-kl0p001",
+              "index": 62,
+              "started_at": "2026-10-26T13:31:53.527945+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:32:45.346592+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-1-s20261025-kl0p001",
+              "index": 65,
+              "started_at": "2026-10-26T13:32:45.370299+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:33:06.605411+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-4-s20261025-kl0p001",
+              "index": 68,
+              "started_at": "2026-10-26T13:33:06.624790+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:33:32.404115+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-7-s20261025-kl0p001",
+              "index": 71,
+              "started_at": "2026-10-26T13:33:32.424198+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:33:54.939389+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-10-s20261025-kl0p001",
+              "index": 74,
+              "started_at": "2026-10-26T13:33:54.961425+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:34:20.304688+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-13-s20261025-kl0p001",
+              "index": 77,
+              "started_at": "2026-10-26T13:34:20.327803+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:34:38.616712+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-16-s20261025-kl0p001",
+              "index": 80,
+              "started_at": "2026-10-26T13:34:38.638711+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:35:06.776352+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-1-s20261025-kl0p1",
+              "index": 83,
+              "started_at": "2026-10-26T13:35:06.797044+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:35:21.468116+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-4-s20261025-kl0p1",
+              "index": 86,
+              "started_at": "2026-10-26T13:35:21.492723+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:35:36.221331+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-7-s20261025-kl0p1",
+              "index": 89,
+              "started_at": "2026-10-26T13:35:36.241801+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:35:51.231819+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-10-s20261025-kl0p1",
+              "index": 92,
+              "started_at": "2026-10-26T13:35:51.253201+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:36:05.966224+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-13-s20261025-kl0p1",
+              "index": 95,
+              "started_at": "2026-10-26T13:36:05.988759+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:36:20.599750+00:00"
+            },
+            {
+              "task_id": "v3-reuse_v2-sub-16-s20261025-kl0p1",
+              "index": 98,
+              "started_at": "2026-10-26T13:36:20.624510+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:36:34.930147+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-1-s20261025-kl0p1",
+              "index": 101,
+              "started_at": "2026-10-26T13:36:34.953918+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:36:49.221154+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-4-s20261025-kl0p1",
+              "index": 104,
+              "started_at": "2026-10-26T13:36:49.242588+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:37:03.608125+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-7-s20261025-kl0p1",
+              "index": 107,
+              "started_at": "2026-10-26T13:37:03.628766+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:37:24.539612+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-10-s20261025-kl0p1",
+              "index": 110,
+              "started_at": "2026-10-26T13:37:24.570431+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:38:09.451331+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-13-s20261025-kl0p1",
+              "index": 113,
+              "started_at": "2026-10-26T13:38:09.474020+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:38:26.828098+00:00"
+            },
+            {
+              "task_id": "v3-pooled_source-sub-16-s20261025-kl0p1",
+              "index": 116,
+              "started_at": "2026-10-26T13:38:26.852076+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:39:17.862865+00:00"
+            },
+            {
+              "task_id": "v3-mechanism-block-2",
+              "index": 119,
+              "started_at": "2026-10-26T13:39:17.883866+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T13:51:35.762733+00:00"
+            },
+            {
+              "task_id": "v3-mechanism-block-5",
+              "index": 122,
+              "started_at": "2026-10-26T13:51:35.779025+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T14:04:16.296705+00:00"
+            },
+            {
+              "task_id": "v3-mechanism-block-8",
+              "index": 125,
+              "started_at": "2026-10-26T14:04:16.325570+00:00",
+              "status": "completed",
+              "exit_code": 0,
+              "finished_at": "2026-10-26T14:16:28.947177+00:00"
+            }
+          ],
+          "status": "complete",
+          "active_task": null,
+          "updated_at": "2026-10-26T14:16:28.956537+00:00",
+          "exit_code": 0,
+          "finished_at": "2026-10-26T14:16:28.956528+00:00"
+        }
+      ]
+    }
+  },
+  "complete_markers": [
+    {
+      "path": "paper2_results/results/tasks/v3-geometry-sub-1/complete.json",
+      "task_id": "v3-geometry-sub-1",
+      "status": "completed",
+      "identity": "83cbc381bbdb11373af50cab297ee2ce6874fd43ea636d8180c80c2c0961c45c",
+      "completed_at": "2026-10-26T10:52:11.567419+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-geometry-sub-10/complete.json",
+      "task_id": "v3-geometry-sub-10",
+      "status": "completed",
+      "identity": "a3e9f558f1300f4e7093bf46ef8650b825c2b9134ab4ee2c55f15153fa5978d1",
+      "completed_at": "2026-10-26T10:54:21.326434+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-geometry-sub-13/complete.json",
+      "task_id": "v3-geometry-sub-13",
+      "status": "completed",
+      "identity": "2cc4df3a966129c28f78e6b94a436dc3c98e437916c5a4b7bdc921934d7b50be",
+      "completed_at": "2026-10-26T12:03:34.834741+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-geometry-sub-16/complete.json",
+      "task_id": "v3-geometry-sub-16",
+      "status": "completed",
+      "identity": "826adc09c54e1722529f8dc933e2d0e2cd519697569e34dadbe2dd42eb139afc",
+      "completed_at": "2026-10-26T13:10:50.964240+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-geometry-sub-4/complete.json",
+      "task_id": "v3-geometry-sub-4",
+      "status": "completed",
+      "identity": "62cd12ee3a88225eb58abb329104231454c476d5fec57fd7c19e33021649381f",
+      "completed_at": "2026-10-26T12:02:09.347317+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-geometry-sub-7/complete.json",
+      "task_id": "v3-geometry-sub-7",
+      "status": "completed",
+      "identity": "8947fdfd4044cb9204382d32a3b3f32d9672fae557d9ccf1ed3bb891a60c56b5",
+      "completed_at": "2026-10-26T13:09:24.571980+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-mechanism-block-0/complete.json",
+      "task_id": "v3-mechanism-block-0",
+      "status": "completed",
+      "identity": "7111b5515c564c9f2585a424e448ca18e3c92ab37df826e94b242daabe0d8182",
+      "completed_at": null
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-mechanism-block-1/complete.json",
+      "task_id": "v3-mechanism-block-1",
+      "status": "completed",
+      "identity": "534479f531b18282c064fe1ca06ff4f1ae1246755988524710e596e14dda53c7",
+      "completed_at": null
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-mechanism-block-2/complete.json",
+      "task_id": "v3-mechanism-block-2",
+      "status": "completed",
+      "identity": "169960a956931d8487e3d816106248861c6a7a099f4767e7daf3db04159428fb",
+      "completed_at": null
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-mechanism-block-3/complete.json",
+      "task_id": "v3-mechanism-block-3",
+      "status": "completed",
+      "identity": "1ec6d0732f896b89a885f07d56f26d5be184030753897ead13afbaedb0014a63",
+      "completed_at": null
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-mechanism-block-4/complete.json",
+      "task_id": "v3-mechanism-block-4",
+      "status": "completed",
+      "identity": "07e24db23cf4239ee88f806d489b1320e732abbbb03258dc9a3b966bf8b94df1",
+      "completed_at": null
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-mechanism-block-5/complete.json",
+      "task_id": "v3-mechanism-block-5",
+      "status": "completed",
+      "identity": "183aece1c9ce0248220aeafc03c8b4f534fba203798a0523a85b79e4893354c7",
+      "completed_at": null
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-mechanism-block-6/complete.json",
+      "task_id": "v3-mechanism-block-6",
+      "status": "completed",
+      "identity": "58f2f8eaa4bf9924d66756ac993afcf05838a705a7c58b3323cce2597f3fcc2b",
+      "completed_at": null
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-mechanism-block-7/complete.json",
+      "task_id": "v3-mechanism-block-7",
+      "status": "completed",
+      "identity": "1d67c04aa91428321aca97b9121357abf24be2927ae5b16ee47b30e1268baf9d",
+      "completed_at": null
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-mechanism-block-8/complete.json",
+      "task_id": "v3-mechanism-block-8",
+      "status": "completed",
+      "identity": "5936ccec94794e6bac0cf0ab7b2ad4e7ad955211035a80430cff073906fd26e2",
+      "completed_at": null
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled-source-s20261023/complete.json",
+      "task_id": "v3-pooled-source-s20261023",
+      "status": "completed",
+      "identity": "51827f66be41907eab9523701eaa0545daeb378ee294ce0c4c75360a18bf7010",
+      "completed_at": "2026-10-26T10:49:57.311312+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled-source-s20261024/complete.json",
+      "task_id": "v3-pooled-source-s20261024",
+      "status": "completed",
+      "identity": "317837e8733c86d92793bc9518f33e039d49bafac1a225d981e9538ccec3d76d",
+      "completed_at": "2026-10-26T12:00:41.819713+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled-source-s20261025/complete.json",
+      "task_id": "v3-pooled-source-s20261025",
+      "status": "completed",
+      "identity": "6efd1d4f0a8f58c88227977042aa6978f383e270b4ef7656b4d76aea04967375",
+      "completed_at": "2026-10-26T13:07:47.203625+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-1-s20261023/complete.json",
+      "task_id": "v3-pooled_source-sub-1-s20261023",
+      "status": "completed",
+      "identity": "399d07240c961e77d6c963e51ccc5201000e4c0f88a632eb3cdbb4fa7b8cc1ef",
+      "completed_at": "2026-10-26T11:07:59.429822+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-1-s20261023-kl0p001/complete.json",
+      "task_id": "v3-pooled_source-sub-1-s20261023-kl0p001",
+      "status": "completed",
+      "identity": "515c72acbdb4f0d410fa826f896052a567680964136ee6a9ec6d7ead2382b7b0",
+      "completed_at": "2026-10-26T11:17:31.186730+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-1-s20261023-kl0p1/complete.json",
+      "task_id": "v3-pooled_source-sub-1-s20261023-kl0p1",
+      "status": "completed",
+      "identity": "f231ea3a4d58a66b2be1de0fc4e4656a03466cdd999392901215c32927d36976",
+      "completed_at": "2026-10-26T11:20:47.828076+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-1-s20261024/complete.json",
+      "task_id": "v3-pooled_source-sub-1-s20261024",
+      "status": "completed",
+      "identity": "1d6efc66f8a78355ad71f073ce2fd76a5b2d299cc3fca7bf2ab27c7bf50b172b",
+      "completed_at": "2026-10-26T12:13:23.932727+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-1-s20261024-kl0p001/complete.json",
+      "task_id": "v3-pooled_source-sub-1-s20261024-kl0p001",
+      "status": "completed",
+      "identity": "419002741396499c984bd04d957542117aee975af9bfba6d4ebfe381e28d447a",
+      "completed_at": "2026-10-26T12:22:57.793544+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-1-s20261024-kl0p1/complete.json",
+      "task_id": "v3-pooled_source-sub-1-s20261024-kl0p1",
+      "status": "completed",
+      "identity": "f742721cfdb0eda664c7ba6817001abdaf172d5bd28d1e618d66e627f705c9b0",
+      "completed_at": "2026-10-26T12:27:49.179966+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-1-s20261025/complete.json",
+      "task_id": "v3-pooled_source-sub-1-s20261025",
+      "status": "completed",
+      "identity": "c7d96db22cc6cf0ea54bdcd7789d07ded22aac4d53ec25e90c994e77ff7b2b04",
+      "completed_at": "2026-10-26T13:21:03.854949+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-1-s20261025-kl0p001/complete.json",
+      "task_id": "v3-pooled_source-sub-1-s20261025-kl0p001",
+      "status": "completed",
+      "identity": "fd2a0c0b0c8be697c7617af3283fd7094f1129ee2686cefd9cf616e19704132e",
+      "completed_at": "2026-10-26T13:33:06.586268+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-1-s20261025-kl0p1/complete.json",
+      "task_id": "v3-pooled_source-sub-1-s20261025-kl0p1",
+      "status": "completed",
+      "identity": "f2eb600b22c5761fddd3d22a109699cecad52e055ac6262b37595314e89d616e",
+      "completed_at": "2026-10-26T13:36:49.201414+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-10-s20261023/complete.json",
+      "task_id": "v3-pooled_source-sub-10-s20261023",
+      "status": "completed",
+      "identity": "3d05988e064418526f436c838a9e579533af5ce90c85136e99d79da4e1c34ac2",
+      "completed_at": "2026-10-26T11:12:22.649338+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-10-s20261023-kl0p001/complete.json",
+      "task_id": "v3-pooled_source-sub-10-s20261023-kl0p001",
+      "status": "completed",
+      "identity": "510f3ee40a0c73c81988e12d979087715f1a60c697bf726c123f5e763bc13c9d",
+      "completed_at": "2026-10-26T11:18:27.883677+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-10-s20261023-kl0p1/complete.json",
+      "task_id": "v3-pooled_source-sub-10-s20261023-kl0p1",
+      "status": "completed",
+      "identity": "57eac5919de2c8c7d0020ea1367555119022bf1479c46a63b0db4fb980ad7ac2",
+      "completed_at": "2026-10-26T11:21:35.488436+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-10-s20261024/complete.json",
+      "task_id": "v3-pooled_source-sub-10-s20261024",
+      "status": "completed",
+      "identity": "02d3e2dc7319e8886dedd7e839fbc4a53d21c6d736194229f2cfd0721368a437",
+      "completed_at": "2026-10-26T12:17:28.820094+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-10-s20261024-kl0p001/complete.json",
+      "task_id": "v3-pooled_source-sub-10-s20261024-kl0p001",
+      "status": "completed",
+      "identity": "6a0db239935e1a4d36e0ea3bbf6c5e550acf14a4130624142e812d84d9b7ad96",
+      "completed_at": "2026-10-26T12:24:23.258956+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-10-s20261024-kl0p1/complete.json",
+      "task_id": "v3-pooled_source-sub-10-s20261024-kl0p1",
+      "status": "completed",
+      "identity": "034b220d149e5528037e873655dd2069391b889e5a9c3ea9e840596835d55b37",
+      "completed_at": "2026-10-26T12:28:32.891376+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-10-s20261025/complete.json",
+      "task_id": "v3-pooled_source-sub-10-s20261025",
+      "status": "completed",
+      "identity": "cd7a5633fa5235d6276240fb1b28e177f0a9015461417ea5af5b123e6b97879b",
+      "completed_at": "2026-10-26T13:26:16.559182+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-10-s20261025-kl0p001/complete.json",
+      "task_id": "v3-pooled_source-sub-10-s20261025-kl0p001",
+      "status": "completed",
+      "identity": "a97d699dcc612e4b6867122052b62ecf78aad1db18c92eb7a6c2d56c2996e340",
+      "completed_at": "2026-10-26T13:34:20.285410+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-10-s20261025-kl0p1/complete.json",
+      "task_id": "v3-pooled_source-sub-10-s20261025-kl0p1",
+      "status": "completed",
+      "identity": "8e1f8ccc20a6b5a68173e279890029f7e33d394c0a8ded2bd7ec08bab3d6d49e",
+      "completed_at": "2026-10-26T13:38:09.427694+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-13-s20261023/complete.json",
+      "task_id": "v3-pooled_source-sub-13-s20261023",
+      "status": "completed",
+      "identity": "dbff5e365c6321bf2e1876f403e0d6fe9ddd07dc0402b2cce549291cff14ec36",
+      "completed_at": "2026-10-26T11:14:13.613411+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-13-s20261023-kl0p001/complete.json",
+      "task_id": "v3-pooled_source-sub-13-s20261023-kl0p001",
+      "status": "completed",
+      "identity": "ad8142aa2062c7718c02d8bc975831613e7da97a57bf216e41fe4187469a9ed4",
+      "completed_at": "2026-10-26T11:18:42.930329+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-13-s20261023-kl0p1/complete.json",
+      "task_id": "v3-pooled_source-sub-13-s20261023-kl0p1",
+      "status": "completed",
+      "identity": "58fe201fa1e4c351194195c996d63fc2c7c0fc34a193d7eaef9aab37b61ff653",
+      "completed_at": "2026-10-26T11:21:49.713590+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-13-s20261024/complete.json",
+      "task_id": "v3-pooled_source-sub-13-s20261024",
+      "status": "completed",
+      "identity": "be3ac5f346f7c254208d876298cc679d45f897231f314f20f806359781d6d014",
+      "completed_at": "2026-10-26T12:19:04.071009+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-13-s20261024-kl0p001/complete.json",
+      "task_id": "v3-pooled_source-sub-13-s20261024-kl0p001",
+      "status": "completed",
+      "identity": "4c8630b6414b720ff6979f4dc5899eed5664db331446a3ac72e0e084408860a8",
+      "completed_at": "2026-10-26T12:24:53.904392+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-13-s20261024-kl0p1/complete.json",
+      "task_id": "v3-pooled_source-sub-13-s20261024-kl0p1",
+      "status": "completed",
+      "identity": "af0ac6019e30046d893e659d0a1daff720f7dfbafb152b17d6e6fa5cf784f94f",
+      "completed_at": "2026-10-26T12:28:47.426197+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-13-s20261025/complete.json",
+      "task_id": "v3-pooled_source-sub-13-s20261025",
+      "status": "completed",
+      "identity": "b3896b31b281edc5a3f308442a493d84ff61ab975709fa9ff74e8f9ab321e173",
+      "completed_at": "2026-10-26T13:27:31.321445+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-13-s20261025-kl0p001/complete.json",
+      "task_id": "v3-pooled_source-sub-13-s20261025-kl0p001",
+      "status": "completed",
+      "identity": "f50f32beb96045841199556ee6330815d8594b1f6cfe2f26a2e5ca03075c7405",
+      "completed_at": "2026-10-26T13:34:38.599494+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-13-s20261025-kl0p1/complete.json",
+      "task_id": "v3-pooled_source-sub-13-s20261025-kl0p1",
+      "status": "completed",
+      "identity": "3f929b4a259604f98b6fde0a911a9bb856b1766a02be07058a377ed9f3eabb46",
+      "completed_at": "2026-10-26T13:38:26.807033+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-16-s20261023/complete.json",
+      "task_id": "v3-pooled_source-sub-16-s20261023",
+      "status": "completed",
+      "identity": "0fa90b3e5f5165f009e665fcaccb70043b1324d6e8f6749a1848fb3eccb6c3c0",
+      "completed_at": "2026-10-26T11:15:33.219216+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-16-s20261023-kl0p001/complete.json",
+      "task_id": "v3-pooled_source-sub-16-s20261023-kl0p001",
+      "status": "completed",
+      "identity": "a09c7ec6ac8668a682449e226f7428997baaadf340795e457e5e6b05568ad58f",
+      "completed_at": "2026-10-26T11:19:04.538179+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-16-s20261023-kl0p1/complete.json",
+      "task_id": "v3-pooled_source-sub-16-s20261023-kl0p1",
+      "status": "completed",
+      "identity": "e5671168643e3a656eca3714425e465d4e514f3899b6bb5bdf32be3608f4f73b",
+      "completed_at": "2026-10-26T11:22:04.978006+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-16-s20261024/complete.json",
+      "task_id": "v3-pooled_source-sub-16-s20261024",
+      "status": "completed",
+      "identity": "7b250341c42e7af0b26fbd652dc0d98cf888d2c3bcab2e6e94db8bb04b98c436",
+      "completed_at": "2026-10-26T12:20:26.793362+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-16-s20261024-kl0p001/complete.json",
+      "task_id": "v3-pooled_source-sub-16-s20261024-kl0p001",
+      "status": "completed",
+      "identity": "c9dba9ba8a2651ba5aede9f138023e91410aba09bbec695129bdb9070ca1692b",
+      "completed_at": "2026-10-26T12:25:34.560694+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-16-s20261024-kl0p1/complete.json",
+      "task_id": "v3-pooled_source-sub-16-s20261024-kl0p1",
+      "status": "completed",
+      "identity": "7ae098ef9e9e5b5d260b7ae6b2b7cadbe841ea49e5184f6df1fd9cb01a9be4c1",
+      "completed_at": "2026-10-26T12:29:02.056371+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-16-s20261025/complete.json",
+      "task_id": "v3-pooled_source-sub-16-s20261025",
+      "status": "completed",
+      "identity": "ca5a02e38cfeb86b916cc6aadd5cf58aeed61a5709c7370228014452acb25fed",
+      "completed_at": "2026-10-26T13:28:47.728594+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-16-s20261025-kl0p001/complete.json",
+      "task_id": "v3-pooled_source-sub-16-s20261025-kl0p001",
+      "status": "completed",
+      "identity": "737b4d5f048bce566bee3658646647e137875aa9cb1bc3d2306b3ee892f852a3",
+      "completed_at": "2026-10-26T13:35:06.755400+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-16-s20261025-kl0p1/complete.json",
+      "task_id": "v3-pooled_source-sub-16-s20261025-kl0p1",
+      "status": "completed",
+      "identity": "d375874d2fa2b5250e679c24de71227ced14723de053fb67939cd5dcd2f8ec25",
+      "completed_at": "2026-10-26T13:39:17.843819+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-4-s20261023/complete.json",
+      "task_id": "v3-pooled_source-sub-4-s20261023",
+      "status": "completed",
+      "identity": "a0a558681f14ca2dd950f1370a458bb1c2a60d198bdc35f6a9248569b6eda7d8",
+      "completed_at": "2026-10-26T11:09:43.704936+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-4-s20261023-kl0p001/complete.json",
+      "task_id": "v3-pooled_source-sub-4-s20261023-kl0p001",
+      "status": "completed",
+      "identity": "0d1304b9325be756c6c47544ae697dafa55de6c6b825912c8c56847ac802fb1a",
+      "completed_at": "2026-10-26T11:17:45.480730+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-4-s20261023-kl0p1/complete.json",
+      "task_id": "v3-pooled_source-sub-4-s20261023-kl0p1",
+      "status": "completed",
+      "identity": "3b8c8e72d94ed508ef9c44bdad4287f92b7ec87acb6e4908e22dda5bd1fb0958",
+      "completed_at": "2026-10-26T11:21:02.175918+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-4-s20261024/complete.json",
+      "task_id": "v3-pooled_source-sub-4-s20261024",
+      "status": "completed",
+      "identity": "233579b91914205f3ccf1693018fc6e74386e3d4f9d7d402cbf39b6d7d048518",
+      "completed_at": "2026-10-26T12:14:38.718991+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-4-s20261024-kl0p001/complete.json",
+      "task_id": "v3-pooled_source-sub-4-s20261024-kl0p001",
+      "status": "completed",
+      "identity": "eac3b50223392cd3c5a38d0cec7fc7013cb57ca22c154589745d2942be00ca47",
+      "completed_at": "2026-10-26T12:23:20.893428+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-4-s20261024-kl0p1/complete.json",
+      "task_id": "v3-pooled_source-sub-4-s20261024-kl0p1",
+      "status": "completed",
+      "identity": "b6c24fb47f4184857939029ff8e1cdf0a2b9171f58743696884f104d3de756c6",
+      "completed_at": "2026-10-26T12:28:04.059793+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-4-s20261025/complete.json",
+      "task_id": "v3-pooled_source-sub-4-s20261025",
+      "status": "completed",
+      "identity": "4b15a80009cbdaa4731cff8405411dc4daaa475d6f28500fb474be9a5a42e646",
+      "completed_at": "2026-10-26T13:22:52.570273+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-4-s20261025-kl0p001/complete.json",
+      "task_id": "v3-pooled_source-sub-4-s20261025-kl0p001",
+      "status": "completed",
+      "identity": "b1a8a6834b1a0aaf63c671531bca218c8a261da98b480613e451136f0431e5c6",
+      "completed_at": "2026-10-26T13:33:32.380897+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-4-s20261025-kl0p1/complete.json",
+      "task_id": "v3-pooled_source-sub-4-s20261025-kl0p1",
+      "status": "completed",
+      "identity": "12e2ba2b0b1c83ed865117ff923fab8d911702a311d6a6657c6cd9c924014bd5",
+      "completed_at": "2026-10-26T13:37:03.589966+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-7-s20261023/complete.json",
+      "task_id": "v3-pooled_source-sub-7-s20261023",
+      "status": "completed",
+      "identity": "23f70f0322750293fcecbe3cdad16278a80909ce8ceef0a4940f8ceef98a9867",
+      "completed_at": "2026-10-26T11:11:03.945555+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-7-s20261023-kl0p001/complete.json",
+      "task_id": "v3-pooled_source-sub-7-s20261023-kl0p001",
+      "status": "completed",
+      "identity": "6484cb6bc04101630c46d0e2c9601b6571b723e793b59adc0d9581704444fa92",
+      "completed_at": "2026-10-26T11:18:00.041175+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-7-s20261023-kl0p1/complete.json",
+      "task_id": "v3-pooled_source-sub-7-s20261023-kl0p1",
+      "status": "completed",
+      "identity": "16d60bfeb7d6ecfec8198cbc6e166615566c6341268ea650676d3f702fbd6e1e",
+      "completed_at": "2026-10-26T11:21:21.259092+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-7-s20261024/complete.json",
+      "task_id": "v3-pooled_source-sub-7-s20261024",
+      "status": "completed",
+      "identity": "407a7b10a385a121590e6e9a966480effdef18cc59c8f97db580128316e05ea6",
+      "completed_at": "2026-10-26T12:16:12.940577+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-7-s20261024-kl0p001/complete.json",
+      "task_id": "v3-pooled_source-sub-7-s20261024-kl0p001",
+      "status": "completed",
+      "identity": "a8c27f0de1d6e3908b87d172e1c2d875851bcf73e7fbd5e4f198d80b9cee8b13",
+      "completed_at": "2026-10-26T12:23:42.408721+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-7-s20261024-kl0p1/complete.json",
+      "task_id": "v3-pooled_source-sub-7-s20261024-kl0p1",
+      "status": "completed",
+      "identity": "dba4ebbdf5eb3637b4514b7dc8abe45a8c0b7c97b7121cde2391553484a1caaa",
+      "completed_at": "2026-10-26T12:28:18.496516+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-7-s20261025/complete.json",
+      "task_id": "v3-pooled_source-sub-7-s20261025",
+      "status": "completed",
+      "identity": "f86462f90bf61df0496ac6dba5c3d799ae9a0ae98bf2426a7e75081cea1f2f99",
+      "completed_at": "2026-10-26T13:24:57.098096+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-7-s20261025-kl0p001/complete.json",
+      "task_id": "v3-pooled_source-sub-7-s20261025-kl0p001",
+      "status": "completed",
+      "identity": "5a91f9bb2bed4eff41909f6425f5e6bce6711db52d65aa144f3e69e01d8c120c",
+      "completed_at": "2026-10-26T13:33:54.919271+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-pooled_source-sub-7-s20261025-kl0p1/complete.json",
+      "task_id": "v3-pooled_source-sub-7-s20261025-kl0p1",
+      "status": "completed",
+      "identity": "71447dc260e4e9f79d6b1d4d9912bd0b5822d6f7ce79a453119a51d520ee8ff4",
+      "completed_at": "2026-10-26T13:37:24.333829+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-1-s20261023/complete.json",
+      "task_id": "v3-reuse_v2-sub-1-s20261023",
+      "status": "completed",
+      "identity": "94dd3062712c13553f39d3e86164537f7a86ce76c62c2894fcc2bd66352ee64e",
+      "completed_at": "2026-10-26T10:56:24.164012+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-1-s20261023-kl0p001/complete.json",
+      "task_id": "v3-reuse_v2-sub-1-s20261023-kl0p001",
+      "status": "completed",
+      "identity": "161d8b833e835308a9aedebcc91edc3a41366986f2f956790386d31e7e956f09",
+      "completed_at": "2026-10-26T11:15:49.267661+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-1-s20261023-kl0p1/complete.json",
+      "task_id": "v3-reuse_v2-sub-1-s20261023-kl0p1",
+      "status": "completed",
+      "identity": "44b423501e4738b76bf7aaff7d7790487c90dd689090315b7b677f9f963ddc06",
+      "completed_at": "2026-10-26T11:19:19.062330+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-1-s20261024/complete.json",
+      "task_id": "v3-reuse_v2-sub-1-s20261024",
+      "status": "completed",
+      "identity": "28b94cf41913716ed517116e60da65deece0e9c42dab45a88713584982b51dd0",
+      "completed_at": "2026-10-26T12:05:01.702821+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-1-s20261024-kl0p001/complete.json",
+      "task_id": "v3-reuse_v2-sub-1-s20261024-kl0p001",
+      "status": "completed",
+      "identity": "15238a1bae4324d8c2353c2c73a741cb74493b2549db1362069912c8e2c9e1e9",
+      "completed_at": "2026-10-26T12:20:43.569458+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-1-s20261024-kl0p1/complete.json",
+      "task_id": "v3-reuse_v2-sub-1-s20261024-kl0p1",
+      "status": "completed",
+      "identity": "f7c98410269f0fcb9f0409c85f7e795b9c63be6eabec2e50fc7aad4fd9f3d259",
+      "completed_at": "2026-10-26T12:25:53.059360+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-1-s20261025/complete.json",
+      "task_id": "v3-reuse_v2-sub-1-s20261025",
+      "status": "completed",
+      "identity": "ec06dadd2e20d9341e4d6ee51f5ad2936f929563b468c616e556c80b1d557579",
+      "completed_at": "2026-10-26T13:12:19.549584+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-1-s20261025-kl0p001/complete.json",
+      "task_id": "v3-reuse_v2-sub-1-s20261025-kl0p001",
+      "status": "completed",
+      "identity": "18bf26207673feb4589c051f54bc29580fd2c7a7e94e26107ac626ef3ceb9f84",
+      "completed_at": "2026-10-26T13:29:06.929731+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-1-s20261025-kl0p1/complete.json",
+      "task_id": "v3-reuse_v2-sub-1-s20261025-kl0p1",
+      "status": "completed",
+      "identity": "dabad2e32ebec436adeb4df615f800f330b60e6b6e8ee615662a26651285dfdf",
+      "completed_at": "2026-10-26T13:35:21.446842+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-10-s20261023/complete.json",
+      "task_id": "v3-reuse_v2-sub-10-s20261023",
+      "status": "completed",
+      "identity": "35e55293d2c921cb658839bc7d4a8b836175a8328606d82a9b93c87dc2b4c28c",
+      "completed_at": "2026-10-26T11:01:52.136598+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-10-s20261023-kl0p001/complete.json",
+      "task_id": "v3-reuse_v2-sub-10-s20261023-kl0p001",
+      "status": "completed",
+      "identity": "2e1f8b606b3926112abfe3f490c8f6e10d536423dfe75cce26dba315814c18d8",
+      "completed_at": "2026-10-26T11:16:36.755285+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-10-s20261023-kl0p1/complete.json",
+      "task_id": "v3-reuse_v2-sub-10-s20261023-kl0p1",
+      "status": "completed",
+      "identity": "c4312da7f258a9fead8b5ac12008bf39f57a398bfda16e1dee5cd0564d9930ba",
+      "completed_at": "2026-10-26T11:20:03.346453+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-10-s20261024/complete.json",
+      "task_id": "v3-reuse_v2-sub-10-s20261024",
+      "status": "completed",
+      "identity": "d06a39e0643679da2da5a876d9769869aec754a2ded782795ddfeeba6494239b",
+      "completed_at": "2026-10-26T12:09:06.676413+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-10-s20261024-kl0p001/complete.json",
+      "task_id": "v3-reuse_v2-sub-10-s20261024-kl0p001",
+      "status": "completed",
+      "identity": "0f344068c8d1146a2944a03749c22a371b0aca431e5498b71e39ad9d65babd67",
+      "completed_at": "2026-10-26T12:21:48.723673+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-10-s20261024-kl0p1/complete.json",
+      "task_id": "v3-reuse_v2-sub-10-s20261024-kl0p1",
+      "status": "completed",
+      "identity": "606f3861b0c12a5ce648f2b9ba59a4c168e5440b64065d5cf8232ba6b37f17f3",
+      "completed_at": "2026-10-26T12:26:48.361884+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-10-s20261025/complete.json",
+      "task_id": "v3-reuse_v2-sub-10-s20261025",
+      "status": "completed",
+      "identity": "647041bba616f97e37cce6e2cef2655c0b33658e442a207ed69b170b5b10ac13",
+      "completed_at": "2026-10-26T13:16:52.897710+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-10-s20261025-kl0p001/complete.json",
+      "task_id": "v3-reuse_v2-sub-10-s20261025-kl0p001",
+      "status": "completed",
+      "identity": "2dbde9a52dad9d4aa2e9cfcc99bb67ac772701c49c17bd05fe5d39e80c23401c",
+      "completed_at": "2026-10-26T13:31:02.936770+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-10-s20261025-kl0p1/complete.json",
+      "task_id": "v3-reuse_v2-sub-10-s20261025-kl0p1",
+      "status": "completed",
+      "identity": "1f4ad951bef055b4311759589afb57c91db0d0eb71a00b23bef5fb89b18ee383",
+      "completed_at": "2026-10-26T13:36:05.947645+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-13-s20261023/complete.json",
+      "task_id": "v3-reuse_v2-sub-13-s20261023",
+      "status": "completed",
+      "identity": "d24b56f5e3e781acd308926919bcfec59e5c34ced4fc629cebc150a24d478ac6",
+      "completed_at": "2026-10-26T11:04:38.838397+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-13-s20261023-kl0p001/complete.json",
+      "task_id": "v3-reuse_v2-sub-13-s20261023-kl0p001",
+      "status": "completed",
+      "identity": "bb4b2494866c70395d9da87d8ca9f7dab8bc5757e243e6deda7db91166d5396d",
+      "completed_at": "2026-10-26T11:16:51.245955+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-13-s20261023-kl0p1/complete.json",
+      "task_id": "v3-reuse_v2-sub-13-s20261023-kl0p1",
+      "status": "completed",
+      "identity": "6ea80fd799809762ad6bcbf3071b26e49fab581850221b1db331605126c3e45f",
+      "completed_at": "2026-10-26T11:20:18.737988+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-13-s20261024/complete.json",
+      "task_id": "v3-reuse_v2-sub-13-s20261024",
+      "status": "completed",
+      "identity": "b8c501970d7adfc2ffeaa3aa51535462fb7ce291be97a362fb91c4bff228bac7",
+      "completed_at": "2026-10-26T12:10:39.978800+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-13-s20261024-kl0p001/complete.json",
+      "task_id": "v3-reuse_v2-sub-13-s20261024-kl0p001",
+      "status": "completed",
+      "identity": "da214dfcc2e85c4ad537dc976d11f1725b25d1e797bb717e719e99eb5630a296",
+      "completed_at": "2026-10-26T12:22:04.041609+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-13-s20261024-kl0p1/complete.json",
+      "task_id": "v3-reuse_v2-sub-13-s20261024-kl0p1",
+      "status": "completed",
+      "identity": "0a0d52d1be309a2ae92bb3f4a170ff68fddade1b156c051e1340300b512fc68f",
+      "completed_at": "2026-10-26T12:27:14.031608+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-13-s20261025/complete.json",
+      "task_id": "v3-reuse_v2-sub-13-s20261025",
+      "status": "completed",
+      "identity": "27537f548fa409dcb43a7679e777ee146d4bc9ed9ab446e680bff59c80182e25",
+      "completed_at": "2026-10-26T13:18:22.084267+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-13-s20261025-kl0p001/complete.json",
+      "task_id": "v3-reuse_v2-sub-13-s20261025-kl0p001",
+      "status": "completed",
+      "identity": "49fb19142015b169b4996c0f64ad147ce1468551e192641aca84616a444b394d",
+      "completed_at": "2026-10-26T13:31:53.488962+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-13-s20261025-kl0p1/complete.json",
+      "task_id": "v3-reuse_v2-sub-13-s20261025-kl0p1",
+      "status": "completed",
+      "identity": "e6c9dec0c2555b9aac939993971bdccb6218cb83a37ee44a32f22e76dae539ce",
+      "completed_at": "2026-10-26T13:36:20.578160+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-16-s20261023/complete.json",
+      "task_id": "v3-reuse_v2-sub-16-s20261023",
+      "status": "completed",
+      "identity": "c66f522c6df02e2780c62cd589c1de45750aadd91c568fa32236c38597096935",
+      "completed_at": "2026-10-26T11:06:41.888919+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-16-s20261023-kl0p001/complete.json",
+      "task_id": "v3-reuse_v2-sub-16-s20261023-kl0p001",
+      "status": "completed",
+      "identity": "0a4f8047b7f6d739220c92c6a442e3502f0096c105e8c04c97cef0494e2af50d",
+      "completed_at": "2026-10-26T11:17:16.810500+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-16-s20261023-kl0p1/complete.json",
+      "task_id": "v3-reuse_v2-sub-16-s20261023-kl0p1",
+      "status": "completed",
+      "identity": "bda377a6fa9ac65cead16b87166dfa609283936038df59d6dac3adaa933d4dca",
+      "completed_at": "2026-10-26T11:20:33.411961+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-16-s20261024/complete.json",
+      "task_id": "v3-reuse_v2-sub-16-s20261024",
+      "status": "completed",
+      "identity": "8bf774bed7a2a3fcf3fe64ebb7abd154e1f7a2a360102ee3229b172f4a608f5f",
+      "completed_at": "2026-10-26T12:12:08.511989+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-16-s20261024-kl0p001/complete.json",
+      "task_id": "v3-reuse_v2-sub-16-s20261024-kl0p001",
+      "status": "completed",
+      "identity": "ad6976cd84f13f6fabac38bd3ffd47fb346ad8d40d90db5572b23a53a83bf751",
+      "completed_at": "2026-10-26T12:22:35.387397+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-16-s20261024-kl0p1/complete.json",
+      "task_id": "v3-reuse_v2-sub-16-s20261024-kl0p1",
+      "status": "completed",
+      "identity": "250cb056dfbd8c45462b4a5f3d330a29b07aaa3dce7c570c0a2b4c92131efce7",
+      "completed_at": "2026-10-26T12:27:31.756127+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-16-s20261025/complete.json",
+      "task_id": "v3-reuse_v2-sub-16-s20261025",
+      "status": "completed",
+      "identity": "fe236aac9b3d965772b6909b3fda4cd716744d5fc6a68a15a3964f0110bb235f",
+      "completed_at": "2026-10-26T13:19:43.930261+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-16-s20261025-kl0p001/complete.json",
+      "task_id": "v3-reuse_v2-sub-16-s20261025-kl0p001",
+      "status": "completed",
+      "identity": "daace5890496dc337f66f7ebbacd649caffe7ecea4601de7cfc93ba3c86135cd",
+      "completed_at": "2026-10-26T13:32:45.324559+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-16-s20261025-kl0p1/complete.json",
+      "task_id": "v3-reuse_v2-sub-16-s20261025-kl0p1",
+      "status": "completed",
+      "identity": "0bbcf488c65f6d5d445675f970310db82d95c8bc88a7b4dba5ff0f47c24cb139",
+      "completed_at": "2026-10-26T13:36:34.908113+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-4-s20261023/complete.json",
+      "task_id": "v3-reuse_v2-sub-4-s20261023",
+      "status": "completed",
+      "identity": "4048d4fb496eb5c6f057370e6458ebd0c1caf31676c4f8564cecf5e053cd9c55",
+      "completed_at": "2026-10-26T10:58:19.027614+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-4-s20261023-kl0p001/complete.json",
+      "task_id": "v3-reuse_v2-sub-4-s20261023-kl0p001",
+      "status": "completed",
+      "identity": "6a64e03965575db5a316a1f025f38a6a098d4cf211df15fe099c53740e9df8e9",
+      "completed_at": "2026-10-26T11:16:05.973071+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-4-s20261023-kl0p1/complete.json",
+      "task_id": "v3-reuse_v2-sub-4-s20261023-kl0p1",
+      "status": "completed",
+      "identity": "68460c1cc74b6a0c6fbb4f22eddf4921a157c29cab30c3c40d25be4cb8f1ee0f",
+      "completed_at": "2026-10-26T11:19:33.320597+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-4-s20261024/complete.json",
+      "task_id": "v3-reuse_v2-sub-4-s20261024",
+      "status": "completed",
+      "identity": "41245893e1d9d499846816861308cfb7219f31155e0dad04dd8c1adfa58186ee",
+      "completed_at": "2026-10-26T12:06:27.203827+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-4-s20261024-kl0p001/complete.json",
+      "task_id": "v3-reuse_v2-sub-4-s20261024-kl0p001",
+      "status": "completed",
+      "identity": "6b8f8ff3cb3638eb01e0a7eed069d4e045c0bab0f7000c1784a9a5b4108343bc",
+      "completed_at": "2026-10-26T12:21:14.380918+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-4-s20261024-kl0p1/complete.json",
+      "task_id": "v3-reuse_v2-sub-4-s20261024-kl0p1",
+      "status": "completed",
+      "identity": "07501655c8814570fb4be8cb4c1dbcf692000edbbc97d8969bb7122a1c81ee58",
+      "completed_at": "2026-10-26T12:26:10.999063+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-4-s20261025/complete.json",
+      "task_id": "v3-reuse_v2-sub-4-s20261025",
+      "status": "completed",
+      "identity": "f6e9eee85b498c859f609119d066900bd00d33f381278815d04c84ba9a47bec3",
+      "completed_at": "2026-10-26T13:13:53.551736+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-4-s20261025-kl0p001/complete.json",
+      "task_id": "v3-reuse_v2-sub-4-s20261025-kl0p001",
+      "status": "completed",
+      "identity": "a7d910b0864630022066c82d682344686a08308c21463743e6905038aefed308",
+      "completed_at": "2026-10-26T13:30:04.731114+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-4-s20261025-kl0p1/complete.json",
+      "task_id": "v3-reuse_v2-sub-4-s20261025-kl0p1",
+      "status": "completed",
+      "identity": "b4a6e980e2449357967670d08a22f8c552436b710f78942071ee29168e2be53e",
+      "completed_at": "2026-10-26T13:35:36.201883+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-7-s20261023/complete.json",
+      "task_id": "v3-reuse_v2-sub-7-s20261023",
+      "status": "completed",
+      "identity": "e3a1e708333d4a0e8a10711f88273ab807445cde99900022b65966c6ad56cc0b",
+      "completed_at": "2026-10-26T11:00:01.970763+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-7-s20261023-kl0p001/complete.json",
+      "task_id": "v3-reuse_v2-sub-7-s20261023-kl0p001",
+      "status": "completed",
+      "identity": "96a8dd65992c3f7b80ddd8461c1165eac6952fafdb8b3d87ca5458095d06e735",
+      "completed_at": "2026-10-26T11:16:22.025587+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-7-s20261023-kl0p1/complete.json",
+      "task_id": "v3-reuse_v2-sub-7-s20261023-kl0p1",
+      "status": "completed",
+      "identity": "5b4a906e035b07c02a006108fc3baed5b788a118d4fc6e665d782ce2f64ba502",
+      "completed_at": "2026-10-26T11:19:48.933569+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-7-s20261024/complete.json",
+      "task_id": "v3-reuse_v2-sub-7-s20261024",
+      "status": "completed",
+      "identity": "e989e0d8f533476623626da26be87655f7a4c9bdd53f7ab9d033ba9ae6bd3cf4",
+      "completed_at": "2026-10-26T12:07:50.879622+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-7-s20261024-kl0p001/complete.json",
+      "task_id": "v3-reuse_v2-sub-7-s20261024-kl0p001",
+      "status": "completed",
+      "identity": "acce920bba518231c678afaaec2d817e9e0a1dc39f98860b8065b88c701a22b0",
+      "completed_at": "2026-10-26T12:21:33.738672+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-7-s20261024-kl0p1/complete.json",
+      "task_id": "v3-reuse_v2-sub-7-s20261024-kl0p1",
+      "status": "completed",
+      "identity": "69962e321c113199fe92805407c1d8ac17c404623df36d278e2eb044b0254d6e",
+      "completed_at": "2026-10-26T12:26:25.452387+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-7-s20261025/complete.json",
+      "task_id": "v3-reuse_v2-sub-7-s20261025",
+      "status": "completed",
+      "identity": "0b489cff644b76aceb076242933d50834b5aee4c88adb4e39ca0f099182758fc",
+      "completed_at": "2026-10-26T13:15:20.062886+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-7-s20261025-kl0p001/complete.json",
+      "task_id": "v3-reuse_v2-sub-7-s20261025-kl0p001",
+      "status": "completed",
+      "identity": "b1971d08f6bb4e5e2056264b4049b11aae0a330bb2b36882bbc3211dc44308e4",
+      "completed_at": "2026-10-26T13:30:40.449211+00:00"
+    },
+    {
+      "path": "paper2_results/results/tasks/v3-reuse_v2-sub-7-s20261025-kl0p1/complete.json",
+      "task_id": "v3-reuse_v2-sub-7-s20261025-kl0p1",
+      "status": "completed",
+      "identity": "2edde5d3c0f29f7492eb1c5cc1a8941d097c707aa8def726e287d3dc9efaec2f",
+      "completed_at": "2026-10-26T13:35:51.213915+00:00"
+    }
+  ]
+}

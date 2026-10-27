@@ -1,0 +1,1764 @@
+{
+  "schema_version": 1,
+  "scope": "Saved predictions/metrics/diagnostics only; no EEG or model load, fit, or forward",
+  "independent_statistical_unit": "participant",
+  "source_frozen_repeat_warning": "Repeated frozen budgets and reused teachers are not independent observations",
+  "task_count": 126,
+  "complete_markers_verified": 126,
+  "prediction_shards_verified": 10392,
+  "source_shards": 42,
+  "target_shards": 10350,
+  "family_counts": {
+    "('geometry', 'target')": 1350,
+    "('geometry', 'source')": 6,
+    "('neural', 'target')": 9000,
+    "('neural', 'source')": 36
+  },
+  "query_rows_including_repeated_methods_budgets_and_seeds": 451065,
+  "unique_query_groups": 36,
+  "unique_query_trials": 1425,
+  "max_balanced_accuracy_replay_difference": 0.0,
+  "cross_method_seed_budget_ordered_query_join_verified": true,
+  "support_prefix_groups_verified": 150,
+  "input_inventory_csv_sha256": "7ffb605604dd0833f486920f6aeb27a017af0077f7c2688439bdc110cf5787ad",
+  "input_inventory_rows": 10392,
+  "packet_manifest_sha256": "e12e263b20ade97c2b93f7f12960b21818e54cbafbe85f5e1b25dfd211d815b3",
+  "frozen_tasks_sha256": "15d3fd069aef260d96639a311a71d9e9ea6d3cf4a4e9e1de04067e06ae4dc6f3",
+  "frozen_config_sha256": "077e9de62440946147276ecd03c97456d29ba530c2c39677ea271280dec8be4e",
+  "prediction_npz_allow_pickle": false,
+  "failures": [],
+  "accepted": false,
+  "raw_weights_audited": false,
+  "query_groups": [
+    {
+      "participant": "sub-1",
+      "session": "ses-1",
+      "signature": "05894d830c2b969bc765939cd3e2e39bd6dc8c4e5744213c8ca4b23d3bd771fa",
+      "shards": 345,
+      "class_counts": [
+        29,
+        29
+      ],
+      "n_query": 58
+    },
+    {
+      "participant": "sub-1",
+      "session": "ses-2",
+      "signature": "9803c02bf11bb3cb67a349799040130b6b22507a3eff4726b7d39713c51d9118",
+      "shards": 345,
+      "class_counts": [
+        20,
+        20
+      ],
+      "n_query": 40
+    },
+    {
+      "participant": "sub-1",
+      "session": "ses-3",
+      "signature": "8ecebe13f07cad589c9606624d458834f9339ee8fcc39911d3bf28f86cb1b9c3",
+      "shards": 345,
+      "class_counts": [
+        20,
+        20
+      ],
+      "n_query": 40
+    },
+    {
+      "participant": "sub-1",
+      "session": "ses-4",
+      "signature": "44fc5f0c46e9c3e7599a09f5f87a284d739690c6eaef6b34fd0b05fcaddfb401",
+      "shards": 345,
+      "class_counts": [
+        19,
+        20
+      ],
+      "n_query": 39
+    },
+    {
+      "participant": "sub-1",
+      "session": "ses-5",
+      "signature": "81f239734d43b07439b3f7484e6f0eef3d9efb0d96e0fab7fe5259f4762597dc",
+      "shards": 345,
+      "class_counts": [
+        20,
+        20
+      ],
+      "n_query": 40
+    },
+    {
+      "participant": "sub-1",
+      "session": "source",
+      "signature": "ad0a8244b8bdd8eaca76eecc920cad8ed829b78f7d36a1bd32daa5a3445b3d65",
+      "shards": 7,
+      "class_counts": [
+        10,
+        10
+      ],
+      "n_query": 20
+    },
+    {
+      "participant": "sub-10",
+      "session": "ses-1",
+      "signature": "6ba3746cc760e4f3cf3131ebe8f6d049c65cf7a445b25ae274777eeead20b1cb",
+      "shards": 345,
+      "class_counts": [
+        30,
+        30
+      ],
+      "n_query": 60
+    },
+    {
+      "participant": "sub-10",
+      "session": "ses-2",
+      "signature": "8aa2f7edb3eda2cc8bcfba00f96545cb9e6bdbd4c3e2dfa965280b613353954f",
+      "shards": 345,
+      "class_counts": [
+        20,
+        20
+      ],
+      "n_query": 40
+    },
+    {
+      "participant": "sub-10",
+      "session": "ses-3",
+      "signature": "ffe32c1ac91b9de1ce733d27220cd771edc4f608949e7972d52be2ccff7338d0",
+      "shards": 345,
+      "class_counts": [
+        20,
+        20
+      ],
+      "n_query": 40
+    },
+    {
+      "participant": "sub-10",
+      "session": "ses-4",
+      "signature": "52359bd184d7840879d0fe52eeb59f1476466f7f027488827d4bc76dcbfcf1e2",
+      "shards": 345,
+      "class_counts": [
+        20,
+        20
+      ],
+      "n_query": 40
+    },
+    {
+      "participant": "sub-10",
+      "session": "ses-5",
+      "signature": "48ce8848539d0b43ab310b9ae49e30733b09b2e974ad838591e795e2389dd599",
+      "shards": 345,
+      "class_counts": [
+        20,
+        20
+      ],
+      "n_query": 40
+    },
+    {
+      "participant": "sub-10",
+      "session": "source",
+      "signature": "48b6044853d21ca78ef471339ae2919b1e48fda99bff7cfebfbff367e548488f",
+      "shards": 7,
+      "class_counts": [
+        10,
+        10
+      ],
+      "n_query": 20
+    },
+    {
+      "participant": "sub-13",
+      "session": "ses-1",
+      "signature": "238a524b717719459b085f38187c8291abe86f3e13bcf55f07c69a5118a4ae44",
+      "shards": 345,
+      "class_counts": [
+        30,
+        30
+      ],
+      "n_query": 60
+    },
+    {
+      "participant": "sub-13",
+      "session": "ses-2",
+      "signature": "f1160f7420a73c079bb55cce182ed7b3cb702bd6c6c62b7c4ef9088d3124134b",
+      "shards": 345,
+      "class_counts": [
+        20,
+        20
+      ],
+      "n_query": 40
+    },
+    {
+      "participant": "sub-13",
+      "session": "ses-3",
+      "signature": "9c4597c643ecf7f8e68b5a9eeb129f98380c5c2ed95790c7c419382a1673d24c",
+      "shards": 345,
+      "class_counts": [
+        20,
+        20
+      ],
+      "n_query": 40
+    },
+    {
+      "participant": "sub-13",
+      "session": "ses-4",
+      "signature": "67d7eaab5766262abf1be5c21690eebacf1abeb65e91cc2f5763fb43084c1394",
+      "shards": 345,
+      "class_counts": [
+        20,
+        19
+      ],
+      "n_query": 39
+    },
+    {
+      "participant": "sub-13",
+      "session": "ses-5",
+      "signature": "82b171c446dd57fcd55da384a9ac7f5e53a2230b459a1f96378e7d30c3356b2b",
+      "shards": 345,
+      "class_counts": [
+        20,
+        20
+      ],
+      "n_query": 40
+    },
+    {
+      "participant": "sub-13",
+      "session": "source",
+      "signature": "8b8692b8723da0831e3589223add246aafdfdd95c1ebfb7a3a16a903b45f4296",
+      "shards": 7,
+      "class_counts": [
+        10,
+        10
+      ],
+      "n_query": 20
+    },
+    {
+      "participant": "sub-16",
+      "session": "ses-1",
+      "signature": "7dd5456beff95d0d33de30ff4680c2f918dddab5d675fab21299df1cca785ce5",
+      "shards": 345,
+      "class_counts": [
+        30,
+        30
+      ],
+      "n_query": 60
+    },
+    {
+      "participant": "sub-16",
+      "session": "ses-2",
+      "signature": "3e348fb95675630928a9815edf7d823c0035a5d221ff19c08607463a6df05ff1",
+      "shards": 345,
+      "class_counts": [
+        19,
+        20
+      ],
+      "n_query": 39
+    },
+    {
+      "participant": "sub-16",
+      "session": "ses-3",
+      "signature": "3f16c94df27b7466d71e068245c54518cde54a5759ea84a2dd0dbecf1af344bb",
+      "shards": 345,
+      "class_counts": [
+        19,
+        20
+      ],
+      "n_query": 39
+    },
+    {
+      "participant": "sub-16",
+      "session": "ses-4",
+      "signature": "bca0acdcc8f8289c156d3849e8805edc5ad9964f6a19c2b701983781b91b3986",
+      "shards": 345,
+      "class_counts": [
+        19,
+        20
+      ],
+      "n_query": 39
+    },
+    {
+      "participant": "sub-16",
+      "session": "ses-5",
+      "signature": "a7d93829869a9288890a5224558515b5cbc01dfe21a888f486bc13ef28fe4b3c",
+      "shards": 345,
+      "class_counts": [
+        20,
+        20
+      ],
+      "n_query": 40
+    },
+    {
+      "participant": "sub-16",
+      "session": "source",
+      "signature": "7f0c0510d0c9b9db6ee1b962786888f625d6d906f8d0cd5440048a997bbd479e",
+      "shards": 7,
+      "class_counts": [
+        10,
+        10
+      ],
+      "n_query": 20
+    },
+    {
+      "participant": "sub-4",
+      "session": "ses-1",
+      "signature": "5f488e8e2f27e28078a5f6adaa08bc28b9d8fb31071dbf03724693ad7c1a26f7",
+      "shards": 345,
+      "class_counts": [
+        30,
+        29
+      ],
+      "n_query": 59
+    },
+    {
+      "participant": "sub-4",
+      "session": "ses-2",
+      "signature": "c75ae643142f01a200118ffa32787ca23a14b6665a26920c974b0597314cbdd6",
+      "shards": 345,
+      "class_counts": [
+        19,
+        19
+      ],
+      "n_query": 38
+    },
+    {
+      "participant": "sub-4",
+      "session": "ses-3",
+      "signature": "111d8a5e857b7db315b82341cfbe86dcf7901f952a64477a3a16f341b83aa0ac",
+      "shards": 345,
+      "class_counts": [
+        19,
+        20
+      ],
+      "n_query": 39
+    },
+    {
+      "participant": "sub-4",
+      "session": "ses-4",
+      "signature": "a4deb9a9b1f91be484e6c805afff6159c3e1e58993a6f5f8739dc93e74b77b0e",
+      "shards": 345,
+      "class_counts": [
+        19,
+        19
+      ],
+      "n_query": 38
+    },
+    {
+      "participant": "sub-4",
+      "session": "ses-5",
+      "signature": "3caaa696f035e8edc22739bbc0e60273df555cae390afff0257dc8252360dd35",
+      "shards": 345,
+      "class_counts": [
+        20,
+        18
+      ],
+      "n_query": 38
+    },
+    {
+      "participant": "sub-4",
+      "session": "source",
+      "signature": "7dcc2e146c8cb072419e0819c11da79e20ee2673f085f5ec803dbf6fed6f672e",
+      "shards": 7,
+      "class_counts": [
+        10,
+        10
+      ],
+      "n_query": 20
+    },
+    {
+      "participant": "sub-7",
+      "session": "ses-1",
+      "signature": "5275d2868d2a95638affae4a68f0528fa0d05f94e77ee42493b948b78b8b5b0e",
+      "shards": 345,
+      "class_counts": [
+        30,
+        30
+      ],
+      "n_query": 60
+    },
+    {
+      "participant": "sub-7",
+      "session": "ses-2",
+      "signature": "3f184b55b8a71f50a26f74236c03c9cb4881fb6cad1b5f3312efd5ff5522fd08",
+      "shards": 345,
+      "class_counts": [
+        20,
+        20
+      ],
+      "n_query": 40
+    },
+    {
+      "participant": "sub-7",
+      "session": "ses-3",
+      "signature": "f05167db1c9e4923142abec5d29ac02764c77f5030672f71eb82a00cd7e55d95",
+      "shards": 345,
+      "class_counts": [
+        20,
+        20
+      ],
+      "n_query": 40
+    },
+    {
+      "participant": "sub-7",
+      "session": "ses-4",
+      "signature": "2e3cb4027c623fec4ee57764e4898b57fd831bc31fee34872ea05222d2cd0a7f",
+      "shards": 345,
+      "class_counts": [
+        20,
+        20
+      ],
+      "n_query": 40
+    },
+    {
+      "participant": "sub-7",
+      "session": "ses-5",
+      "signature": "4b47e4451e5457f0136d9c142db4f473763819205898c1ac18a8d06d3e1ef35a",
+      "shards": 345,
+      "class_counts": [
+        20,
+        20
+      ],
+      "n_query": 40
+    },
+    {
+      "participant": "sub-7",
+      "session": "source",
+      "signature": "0c0dbe528135cbe399276695170db931499e500716001007d872f106c6af9cdf",
+      "shards": 7,
+      "class_counts": [
+        10,
+        10
+      ],
+      "n_query": 20
+    }
+  ],
+  "collapse_counts": [
+    {
+      "family": "geometry",
+      "method": "eb_coupled",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 4,
+      "source_query": false,
+      "count": 2
+    },
+    {
+      "family": "geometry",
+      "method": "eb_coupled",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 8,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "eb_coupled",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 12,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "eb_coupled",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 16,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "geometry",
+      "method": "eb_coupled",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 20,
+      "source_query": false,
+      "count": 5
+    },
+    {
+      "family": "geometry",
+      "method": "eb_isotropic",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 4,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "eb_isotropic",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 8,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "eb_isotropic",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 12,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "eb_isotropic",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 16,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "eb_isotropic",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 20,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "eb_no_shift",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 4,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "geometry",
+      "method": "eb_no_shift",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 8,
+      "source_query": false,
+      "count": 3
+    },
+    {
+      "family": "geometry",
+      "method": "eb_no_shift",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 12,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "eb_no_shift",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 16,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "eb_no_shift",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 20,
+      "source_query": false,
+      "count": 5
+    },
+    {
+      "family": "geometry",
+      "method": "eb_no_source_noise",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 4,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "eb_no_source_noise",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 8,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "geometry",
+      "method": "eb_no_source_noise",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 12,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "eb_no_source_noise",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 16,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "geometry",
+      "method": "eb_no_source_noise",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 20,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "geometry",
+      "method": "eb_point",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 4,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "geometry",
+      "method": "eb_point",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 8,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "geometry",
+      "method": "eb_point",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 12,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "eb_point",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 16,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "eb_point",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 20,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "eb_predictive",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 4,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "eb_predictive",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 8,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "eb_predictive",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 12,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "eb_predictive",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 16,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "geometry",
+      "method": "eb_predictive",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 20,
+      "source_query": false,
+      "count": 2
+    },
+    {
+      "family": "geometry",
+      "method": "source_tangent_frozen",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 0,
+      "source_query": true,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "source_tangent_frozen",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 4,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "source_tangent_frozen",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 8,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "source_tangent_frozen",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 12,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "source_tangent_frozen",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 16,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "source_tangent_frozen",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 20,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "tangent_pooled",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 4,
+      "source_query": false,
+      "count": 3
+    },
+    {
+      "family": "geometry",
+      "method": "tangent_pooled",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 8,
+      "source_query": false,
+      "count": 3
+    },
+    {
+      "family": "geometry",
+      "method": "tangent_pooled",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 12,
+      "source_query": false,
+      "count": 2
+    },
+    {
+      "family": "geometry",
+      "method": "tangent_pooled",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 16,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "tangent_pooled",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 20,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "tangent_refit",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 4,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "tangent_refit",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 8,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "tangent_refit",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 12,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "tangent_refit",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 16,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "geometry",
+      "method": "tangent_refit",
+      "source_regime": "within_subject",
+      "variant": "core",
+      "budget": 20,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "neural",
+      "method": "bn_affine_fixed",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 4,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "bn_affine_fixed",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 8,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "bn_affine_fixed",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 12,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "bn_affine_fixed",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 16,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "bn_affine_fixed",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 20,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "bn_affine_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 4,
+      "source_query": false,
+      "count": 10
+    },
+    {
+      "family": "neural",
+      "method": "bn_affine_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 8,
+      "source_query": false,
+      "count": 10
+    },
+    {
+      "family": "neural",
+      "method": "bn_affine_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 12,
+      "source_query": false,
+      "count": 10
+    },
+    {
+      "family": "neural",
+      "method": "bn_affine_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 16,
+      "source_query": false,
+      "count": 9
+    },
+    {
+      "family": "neural",
+      "method": "bn_affine_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 20,
+      "source_query": false,
+      "count": 9
+    },
+    {
+      "family": "neural",
+      "method": "bn_stats_only",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 4,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "bn_stats_only",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 8,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "bn_stats_only",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 12,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "bn_stats_only",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 16,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "bn_stats_only",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 20,
+      "source_query": false,
+      "count": 11
+    },
+    {
+      "family": "neural",
+      "method": "bn_stats_only",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 4,
+      "source_query": false,
+      "count": 10
+    },
+    {
+      "family": "neural",
+      "method": "bn_stats_only",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 8,
+      "source_query": false,
+      "count": 10
+    },
+    {
+      "family": "neural",
+      "method": "bn_stats_only",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 12,
+      "source_query": false,
+      "count": 10
+    },
+    {
+      "family": "neural",
+      "method": "bn_stats_only",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 16,
+      "source_query": false,
+      "count": 10
+    },
+    {
+      "family": "neural",
+      "method": "bn_stats_only",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 20,
+      "source_query": false,
+      "count": 17
+    },
+    {
+      "family": "neural",
+      "method": "frozen",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 0,
+      "source_query": true,
+      "count": 0
+    },
+    {
+      "family": "neural",
+      "method": "frozen",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 4,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "frozen",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 8,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "frozen",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 12,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "frozen",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 16,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "frozen",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 20,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "frozen",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 0,
+      "source_query": true,
+      "count": 2
+    },
+    {
+      "family": "neural",
+      "method": "frozen",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 4,
+      "source_query": false,
+      "count": 10
+    },
+    {
+      "family": "neural",
+      "method": "frozen",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 8,
+      "source_query": false,
+      "count": 10
+    },
+    {
+      "family": "neural",
+      "method": "frozen",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 12,
+      "source_query": false,
+      "count": 10
+    },
+    {
+      "family": "neural",
+      "method": "frozen",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 16,
+      "source_query": false,
+      "count": 10
+    },
+    {
+      "family": "neural",
+      "method": "frozen",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 20,
+      "source_query": false,
+      "count": 10
+    },
+    {
+      "family": "neural",
+      "method": "full_adaptive_bn",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 4,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "full_adaptive_bn",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 8,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "full_adaptive_bn",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 12,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "full_adaptive_bn",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 16,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "full_adaptive_bn",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 20,
+      "source_query": false,
+      "count": 18
+    },
+    {
+      "family": "neural",
+      "method": "full_adaptive_bn",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 4,
+      "source_query": false,
+      "count": 9
+    },
+    {
+      "family": "neural",
+      "method": "full_adaptive_bn",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 8,
+      "source_query": false,
+      "count": 9
+    },
+    {
+      "family": "neural",
+      "method": "full_adaptive_bn",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 12,
+      "source_query": false,
+      "count": 7
+    },
+    {
+      "family": "neural",
+      "method": "full_adaptive_bn",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 16,
+      "source_query": false,
+      "count": 9
+    },
+    {
+      "family": "neural",
+      "method": "full_adaptive_bn",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 20,
+      "source_query": false,
+      "count": 16
+    },
+    {
+      "family": "neural",
+      "method": "full_adaptive_bn_dropout",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 4,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "full_adaptive_bn_dropout",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 8,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "full_adaptive_bn_dropout",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 12,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "full_adaptive_bn_dropout",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 16,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "full_adaptive_bn_dropout",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 20,
+      "source_query": false,
+      "count": 17
+    },
+    {
+      "family": "neural",
+      "method": "full_adaptive_bn_dropout",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 4,
+      "source_query": false,
+      "count": 9
+    },
+    {
+      "family": "neural",
+      "method": "full_adaptive_bn_dropout",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 8,
+      "source_query": false,
+      "count": 8
+    },
+    {
+      "family": "neural",
+      "method": "full_adaptive_bn_dropout",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 12,
+      "source_query": false,
+      "count": 8
+    },
+    {
+      "family": "neural",
+      "method": "full_adaptive_bn_dropout",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 16,
+      "source_query": false,
+      "count": 7
+    },
+    {
+      "family": "neural",
+      "method": "full_adaptive_bn_dropout",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 20,
+      "source_query": false,
+      "count": 17
+    },
+    {
+      "family": "neural",
+      "method": "full_fixed",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 4,
+      "source_query": false,
+      "count": 2
+    },
+    {
+      "family": "neural",
+      "method": "full_fixed",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 8,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "neural",
+      "method": "full_fixed",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 12,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "neural",
+      "method": "full_fixed",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 16,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "neural",
+      "method": "full_fixed",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 20,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "neural",
+      "method": "full_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 4,
+      "source_query": false,
+      "count": 9
+    },
+    {
+      "family": "neural",
+      "method": "full_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 8,
+      "source_query": false,
+      "count": 10
+    },
+    {
+      "family": "neural",
+      "method": "full_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 12,
+      "source_query": false,
+      "count": 8
+    },
+    {
+      "family": "neural",
+      "method": "full_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 16,
+      "source_query": false,
+      "count": 7
+    },
+    {
+      "family": "neural",
+      "method": "full_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 20,
+      "source_query": false,
+      "count": 8
+    },
+    {
+      "family": "neural",
+      "method": "head_fixed",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 4,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "head_fixed",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 8,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "head_fixed",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 12,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "head_fixed",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 16,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "head_fixed",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 20,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "head_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 4,
+      "source_query": false,
+      "count": 10
+    },
+    {
+      "family": "neural",
+      "method": "head_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 8,
+      "source_query": false,
+      "count": 10
+    },
+    {
+      "family": "neural",
+      "method": "head_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 12,
+      "source_query": false,
+      "count": 10
+    },
+    {
+      "family": "neural",
+      "method": "head_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 16,
+      "source_query": false,
+      "count": 9
+    },
+    {
+      "family": "neural",
+      "method": "head_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 20,
+      "source_query": false,
+      "count": 8
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 4,
+      "source_query": false,
+      "count": 2
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 8,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 12,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 16,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "pooled_source",
+      "variant": "core",
+      "budget": 20,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "pooled_source",
+      "variant": "kl0p001",
+      "budget": 4,
+      "source_query": false,
+      "count": 2
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "pooled_source",
+      "variant": "kl0p001",
+      "budget": 8,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "pooled_source",
+      "variant": "kl0p001",
+      "budget": 12,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "pooled_source",
+      "variant": "kl0p001",
+      "budget": 16,
+      "source_query": false,
+      "count": 1
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "pooled_source",
+      "variant": "kl0p001",
+      "budget": 20,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "pooled_source",
+      "variant": "kl0p1",
+      "budget": 4,
+      "source_query": false,
+      "count": 2
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "pooled_source",
+      "variant": "kl0p1",
+      "budget": 8,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "pooled_source",
+      "variant": "kl0p1",
+      "budget": 12,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "pooled_source",
+      "variant": "kl0p1",
+      "budget": 16,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "pooled_source",
+      "variant": "kl0p1",
+      "budget": 20,
+      "source_query": false,
+      "count": 0
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 4,
+      "source_query": false,
+      "count": 9
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 8,
+      "source_query": false,
+      "count": 10
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 12,
+      "source_query": false,
+      "count": 8
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 16,
+      "source_query": false,
+      "count": 7
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "core",
+      "budget": 20,
+      "source_query": false,
+      "count": 8
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "kl0p001",
+      "budget": 4,
+      "source_query": false,
+      "count": 9
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "kl0p001",
+      "budget": 8,
+      "source_query": false,
+      "count": 10
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "kl0p001",
+      "budget": 12,
+      "source_query": false,
+      "count": 8
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "kl0p001",
+      "budget": 16,
+      "source_query": false,
+      "count": 7
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "kl0p001",
+      "budget": 20,
+      "source_query": false,
+      "count": 8
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "kl0p1",
+      "budget": 4,
+      "source_query": false,
+      "count": 9
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "kl0p1",
+      "budget": 8,
+      "source_query": false,
+      "count": 10
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "kl0p1",
+      "budget": 12,
+      "source_query": false,
+      "count": 8
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "kl0p1",
+      "budget": 16,
+      "source_query": false,
+      "count": 7
+    },
+    {
+      "family": "neural",
+      "method": "trust_fixed",
+      "source_regime": "reuse_v2",
+      "variant": "kl0p1",
+      "budget": 20,
+      "source_query": false,
+      "count": 8
+    }
+  ]
+}
