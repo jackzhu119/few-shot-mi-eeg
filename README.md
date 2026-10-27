@@ -2,7 +2,7 @@
 
 公开多会话运动想象EEG的跨会话解码研究：比较冻结模型、分类器重校准与空间滤波器更新，并检验少量校准标签下的更新强度。
 
-当前新审阅稿：**Spatial-filter refitting improves limited-label EEG decoding beyond classifier recalibration**，按 **Biomedical Engineering / Biomedizinische Technik** 的 Research Article 要求准备。核心为同标签预算下空间滤波器重学的额外收益；原PLOS ONE稿件保留原路径。
+当前新审阅稿：**Matched-label analysis identifies spatial refitting and alignment gains in motor-imagery EEG**，按 **Biomedical Engineering / Biomedizinische Technik** 的 Research Article 要求准备。核心为同标签预算下空间滤波器重学的额外收益；原PLOS ONE稿件保留原路径。
 
 ## 从这里开始
 
@@ -38,7 +38,7 @@ Kumar2024 / NEMAR `nm000177` v1.0.5，18名参与者、每人6个会话；6人�
 - `hpc_gpu1`：**单节点、一个作业、2GPU并行，总24CPU/128G**；每个worker计划12CPU/64G。
 - 在学校终端隐藏输入GitHub token并核验写权限；下载支持续传和SHA256，训练/评估支持断点，约180秒同步进度及已完成指标。
 
-新V2使用独立实验版本；原54模型和论文结果保留。训练是否推进以[实际进度记录](https://github.com/jackzhu119/few-shot-mi-eeg/blob/research/paper2-hpc-v2-20261023/training_status/paper2-recalibration-v2/STATUS.json)、step及checkpoint为准。外部独立数据验证尚未纳入当前可执行队列。
+新V2使用独立实验版本；原54模型和论文结果保留。训练是否推进以[实际进度记录](https://github.com/jackzhu119/few-shot-mi-eeg/blob/research/paper2-hpc-v2-20261023/training_status/paper2-recalibration-v2/STATUS.json)、step及checkpoint为准。该V2历史队列未含外部数据；后续独立数据集复核见下方2026-10-27结果。
 
 ## V3发现实验与新版论文（已完成回传与分析）
 
@@ -46,7 +46,11 @@ Kumar2024 / NEMAR `nm000177` v1.0.5，18名参与者、每人6个会话；6人�
 
 [科学分析与新主线](research_logs/paper2_v3_analysis_20261027/REPORT.md)：原12人同标签预算空间组件增益+5.47pp仍是核心证据。新6人发现实验在20标签条件下，固定BN模式较自适应BN高1.50/1.91pp，完整预算曲线保留。新几何候选和KL约束没有赢得其主要强对照，负结果完整报告。没有新训练、query重跑或学校作业操作。
 
-[BMT新稿、补充方法、4组600dpi图及全部底层表](manuscript/discovery_revision_20261027/README.md)已作为独立审阅修订准备；[官方期刊要求](docs/bmt_journal_requirements_20261027.md)与AI/伦理声明分开记录。作者尚需对这版新增分析与稿件实际审阅批准；原投稿版本和原终点身份保持不变。
+[BMT新稿、补充方法、5组600dpi图及全部底层表](manuscript/discovery_revision_20261027/README.md)已作为独立审阅修订准备；[官方期刊要求](docs/bmt_journal_requirements_20261027.md)与AI/伦理声明分开记录。作者尚需对这版新增分析与稿件实际审阅批准；原投稿版本和原终点身份保持不变。
+
+## 独立数据集补强（2026-10-27实际完成）
+
+[固定四方法协议](docs/paper2_external_validation_protocol_20261027.md)在结果前推送457e7bd，随后使用现有CPU完成BNCI2014-001九人、两天记录。相同20个目标标签下，Full−LDA-only为+0.19pp [−1.85,2.13]；**support-only EA−Full为+5.65pp [3.15,8.70]，9/9人为正，Holm p=.01172**。原Kumar+5.47pp保留，论文聚焦具体空间更新操作，而不把其收益写成普遍现象。[真实结果与边界](research_logs/paper2_external_validation_20261027/REPORT.md) · [仅保存预测复现](research_logs/paper2_external_validation_20261027/REPRODUCE.md)。新稿含5图+3表，未改既有模型或操作学校GPU；R2实际401失败保留，未宣称已备份。
 
 ## 文件导航
 

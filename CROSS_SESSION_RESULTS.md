@@ -71,3 +71,15 @@ EEGNet还用20个有标签source validation选epoch，CPU不以validation选模�
 `manuscript/kumar_longitudinal_decoding_working_draft_20261015.md`。这些是已见测试后的
 探索性结果，不证明架构普遍优劣、自适应因果收益、人类学习或任务感知门控有效。
 没有剩余已冻结EEGNet fit或更新实验需要启动；不为匹配预算重训或补造更新规则。
+
+
+## 2026-10-27：BNCI2014-001独立数据集补充实验
+
+这是原结果之外的固定四方法实验，不改原54个EEGNet模型或验收账本。协议与代码在新预测产生前固定457e7bd，实际9人/两天/20support/120query运行完成并退出0。
+
+| 外部比较 | 平均差，pp | 95%参与者bootstrap区间 | 精确p / 次要Holm p |
+| --- | ---: | --- | --- |
+| Full CSP/LDA − LDA-only（本次唯一主要） | +0.19 | [−1.85,2.13] | .96875 / — |
+| EA-CSP − Full（本次次要） | +5.65 | [3.15,8.70] | .00390625 / .01171875 |
+
+EA−Full在9/9人为正，5个测试run均值为正。新数据没有复现同等的Full−LDA收益；它区分了空间滤波重学与support-only对齐。源标签96与原40、固定收缩与原MNE估计器等差异记录在[冻结协议](docs/paper2_external_validation_protocol_20261027.md)，不混合两个队列作单一推断。独立复算36份预测及180个run指标一致，见[报告与全部结果](research_logs/paper2_external_validation_20261027/REPORT.md)。原始EEG/权重未上传Git；R2当前401，失败回执如实保留。

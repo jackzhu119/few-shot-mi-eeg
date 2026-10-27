@@ -2,11 +2,13 @@
 
 Dear Professor Haueisen,
 
-Please consider my Research Article, “Spatial-filter refitting improves limited-label EEG decoding beyond classifier recalibration,” for Biomedical Engineering / Biomedizinische Technik.
+Please consider my Research Article, “Matched-label analysis identifies spatial refitting and alignment gains in motor-imagery EEG,” for Biomedical Engineering / Biomedizinische Technik.
 
 The study addresses a practical biosignal-processing question: with approximately 20 labels from a new recording session, what additional value comes from relearning the spatial representation after the classifier has already been recalibrated using those same labels? In the predefined 12-participant cohort, full common-spatial-pattern/linear-discriminant-analysis refitting added 5.47 percentage points of balanced accuracy beyond classifier-only recalibration (95% participant-bootstrap interval 2.17–8.91). It accounted for 73.7% of the total mean improvement over frozen decoding. Trial-level prediction transitions and longitudinal participant analyses explain this component contribution.
 
-Controlled discovery experiments on the six development participants extend the component question to neural normalization and finite-sample adaptation. At the 20-label cap, fixed-normalization weight adaptation exceeded adaptive normalization by 1.50–1.91 points across two source-model regimes. The full support-budget profiles and strong-comparator outcomes are reported alongside these results. The engineering contribution is a matched-label component analysis of where recalibration gains arise, supported by reproducible predictions, component controls and uncertainty estimates with participants as the independent units.
+A fixed external comparison in nine BNCI2014-001 participants added support-only Euclidean alignment. Full refitting and classifier-only recalibration were close (+0.19 points; 95% interval −1.85 to 2.13); EA-CSP improved on full refitting by 5.65 points (3.15–8.70; Holm-adjusted p=0.01172), with positive differences in all nine participants. The contrast separates spatial refitting from alignment under identical target labels.
+
+Controlled discovery experiments on the six development participants extend the component question to neural normalization and finite-sample adaptation. At the 20-label cap, fixed-normalization weight adaptation was higher than adaptive normalization by 1.50–1.91 points across two source-model regimes. The full support-budget profiles and strong-comparator outcomes are reported alongside these results. The engineering contribution is a matched-label component analysis of where recalibration gains arise, supported by reproducible predictions, component controls and uncertainty estimates with participants as the independent units.
 
 The manuscript fits the journal's biosignal-processing and neuro-engineering scope. Public data provenance, the regulatory basis for secondary use, code and data availability, and substantive AI assistance are documented in the separate ethical and legal declarations.
 

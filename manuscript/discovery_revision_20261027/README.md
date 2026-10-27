@@ -2,7 +2,7 @@
 
 Date: 27 October 2026. Article type: Research Article. This is a new scientific and journal-specific review draft; the earlier PLOS ONE submission files remain unchanged.
 
-The central result is **the additional value of relearning spatial filters under the same approximately20current-session labels**: +5.47percentage points beyond classifier-only recalibration in the original12-person cohort. The original primary full-minus-frozen contrast remains +7.42points. V3 supplies normalization-mode mechanism evidence and complete candidate-method controls; it does not replace the original endpoint hierarchy.
+The manuscript now compares spatial update operations under matched target labels in two datasets. The original Kumar12-person component gain is +5.47pp; a fixed nine-person BNCI2014-001 replication gave Full−LDA-only +0.19pp [−1.85,2.13] and EA−Full +5.65pp [3.15,8.70], with EA gains in all9participants. Original endpoint roles remain intact. [External experiment and revised main line](../../research_logs/paper2_external_validation_20261027/REPORT.md) · [Exact public replay](../../research_logs/paper2_external_validation_20261027/REPRODUCE.md).
 
 The verified external-review response is recorded in [the point-by-point revision report](../../research_logs/bmt_review_response_20261027/RESPONSE.md).
 
@@ -12,7 +12,7 @@ The verified external-review response is recorded in [the point-by-point revisio
 - [English main source](MAIN.md), [review PDF](BMT_Manuscript_Review.pdf), [review Word](BMT_Manuscript_Review.docx).
 - [Editable manuscript for later submission](BMT_Manuscript_Submission.docx): separate figure files and final figure legends, with editable tables/equations. This file has not been approved or submitted.
 - [Supplementary methods and all-budget tables](SUPPLEMENT.md), [PDF](Supplementary_Methods.pdf), [Word](Supplementary_Methods.docx).
-- [Four 600dpi figure sets, vector exports and underlying data](figures/), with [complete figure legends](figures/captions.md).
+- [Five 600dpi figure sets, vector exports and underlying data](figures/), with [complete figure legends](figures/captions.md).
 - [Ethical and legal declarations — review draft](ETHICAL_AND_LEGAL_DECLARATIONS_DRAFT.md), [Word](Ethical_and_Legal_Declarations_DRAFT.docx).
 - [Cover letter — review draft](COVER_LETTER_DRAFT.md), [Word](Cover_Letter_DRAFT.docx).
 - [Scientific revision report](../../research_logs/paper2_v3_analysis_20261027/REPORT.md), [complete saved-result reproduction](../../research_logs/paper2_v3_analysis_20261027/REPRODUCE.md).
@@ -32,4 +32,4 @@ AI assistance is documented in the acknowledgment and separate declarations: lan
 3. Supply at least five appropriate reviewer suggestions with names, institutions, countries and email addresses, following the journal's independence criteria. [Editable blank list](Suggested_Reviewers_TO_COMPLETE.csv); no names are fabricated.
 4. Check the existing sole-author affiliation, postal address, correspondence email and ORCID. An institutional email is recommended by the journal; the existing verified email is retained until a replacement is supplied.
 
-No new fit, query inference, model selection, source-data acquisition, Pod or school Slurm operation was performed for this revision. Negative outcomes, all seeds, the exposed-cohort status and original ethics wording remain traceable. Original code/results licenses retain their scope; see [third-party citation-style attribution](Third_Party/README.md).
+The external replication added nine source fits and27updating CSP/LDA fits after its protocol was frozen; all previous Kumar/EEGNet models and evaluations were reused. No model search, Pod or school Slurm operation was performed. The new R2 transfer returned HTTP401 on all208planned objects; no remote backup is claimed. Raw inputs and model tensors remain private and local; all derived predictions and statistics are public. Negative outcomes, all seeds, the exposed-cohort status and original ethics wording remain traceable. Original code/results licenses retain their scope; see [third-party citation-style attribution](Third_Party/README.md).

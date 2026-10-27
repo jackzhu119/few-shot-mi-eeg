@@ -70,9 +70,10 @@ def format_word(path):
 
 def submission_source(text):
     """Keep Word tables/equations editable and supply the figures separately."""
-    captions = re.findall(r"^\*\*Figure [1-4]\. .*?(?=\n\s*\n|\Z)", text, flags=re.M | re.S)
-    if len(captions) != 4:
-        raise ValueError("Four complete figure legends required")
+    captions = re.findall(r"^\*\*Figure \d+\. .*?(?=\n\s*\n|\Z)", text, flags=re.M | re.S)
+    numbers = re.findall(r"^\*\*Figure (\d+)\.", text, flags=re.M)
+    if not captions or numbers != [str(i) for i in range(1, len(captions) + 1)]:
+        raise ValueError("Complete, sequential figure legends required")
     text = re.sub(r"^!\[.*?\]\(figures/.*?\).*?$", "", text, flags=re.M)
     for caption in captions:
         text = text.replace(caption, "")
@@ -152,6 +153,19 @@ def package_review():
     files = sorted(p for p in analysis.rglob("*") if p.is_file() and p.suffix in (".json", ".csv", ".md"))
     response = ROOT / "research_logs/bmt_review_response_20261027"
     files += sorted(p for p in response.rglob("*") if p.is_file() and p.suffix in (".json", ".csv", ".md"))
+    external = ROOT / "research_logs/paper2_external_validation_20261027"
+    files += sorted(p for p in external.rglob("*") if p.is_file() and p.suffix in (".json", ".csv", ".md"))
+    files += sorted((ROOT / "experiments/external_validation_20261027").glob("*.json"))
+    code += sorted((ROOT / "experiments/external_validation_20261027").glob("*.py"))
+    code += sorted(ROOT.glob("scripts/*paper2_external*20261027.py"))
+    code += sorted(ROOT.glob("tests/test_external_validation*.py"))
+    code += [ROOT / "experiments/hpc_recalibration_v2/hpc_recalibration" / p
+             for p in ("__init__.py", "classical.py", "data.py")]
+    files += [ROOT / "docs" / p for p in (
+        "paper2_external_validation_protocol_20261027.md",
+        "paper2_external_validation_dataset_review_20261027.md")]
+    files += [ROOT / "LICENSE", ROOT / "LICENSING.md",
+              ROOT / "LICENSES/MIT.txt", ROOT / "LICENSES/CC-BY-4.0.txt"]
     with zipfile.ZipFile(data_zip, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=6) as archive:
         for path in files + code:
             archive.write(path, str(path.relative_to(ROOT)))
@@ -252,7 +266,9 @@ def build():
             assets.append({"file": str(file.relative_to(ROOT)), "bytes": file.stat().st_size,
                            "sha256": hashlib.sha256(file.read_bytes()).hexdigest()})
     record = {"revision": "2026-10-27", "status": "new_author_review_draft_not_submission_approval",
-              "old_submission_files_modified": False, "no_training_or_inference": True,
+              "old_submission_files_modified": False,
+              "document_builder_performed_fitting_or_inference": False,
+              "external_experiment_evidence_added": True,
               "pandoc": subprocess.check_output(["pandoc", "--version"], text=True).splitlines()[0],
               "documents": outputs, "warnings": warnings, "assets": assets}
     (OUT / "DOCUMENT_BUILD.json").write_text(json.dumps(record, indent=2) + "\n")

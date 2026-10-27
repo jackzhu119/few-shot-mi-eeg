@@ -1,6 +1,6 @@
-# Spatial-filter refitting improves limited-label EEG decoding beyond classifier recalibration
+# Matched-label analysis identifies spatial refitting and alignment gains in motor-imagery EEG
 
-**Running head:** Spatial refitting with limited calibration labels
+**Running head:** Spatial updates with limited calibration labels
 
 **Ziyuan Zhu**\*
 
@@ -12,13 +12,13 @@ College of Artificial Intelligence Medicine, Chongqing Medical University, Jinyu
 
 ## Abstract
 
-**Objectives:** To quantify the added value of spatial-filter refitting beyond classifier recalibration with approximately 20 current-session labels.
+**Objectives:** To determine which spatial update adds value beyond classifier recalibration with 20 current-session labels.
 
-**Methods:** We compared frozen common spatial patterns and linear discriminant analysis (CSP/LDA), classifier-only recalibration and full refitting in 18 participants across six Kumar2024 sessions. The predefined primary cohort contained 12 participants. The two updating methods received identical source and current-session labels. Later component experiments used the six development participants.
+**Methods:** We compared frozen common spatial patterns and linear discriminant analysis (CSP/LDA), classifier-only recalibration and full refitting in 18 Kumar2024 participants across six sessions. The original primary cohort contained 12 participants. A fixed four-method replication added nine BNCI2014-001 participants and support-only Euclidean alignment (EA-CSP). Updating methods received identical labels within each dataset.
 
-**Results:** Full refitting achieved 65.36% balanced accuracy, 7.42 percentage points above freezing (95% participant-bootstrap interval 2.49–12.48). The secondary, matched-label full-minus-classifier-only gain was 5.47 points (2.17–8.91), accounting for 73.7% of the mean total gain. It was positive in ten of 12 participant averages and all five target-session averages. At the 20-label cap, fixed-normalization neural adaptation was 1.50–1.91 points higher than adaptive normalization and produced fewer single-class predictions. Smaller-budget profiles differed. Strong-reference comparisons favored simpler geometric decoders; source-functional constraints changed accuracy little.
+**Results:** In Kumar2024, full refitting achieved 65.36% balanced accuracy, 7.42 percentage points above freezing (95% participant-bootstrap interval 2.49–12.48). The secondary full-minus-classifier-only gain was 5.47 points (2.17–8.91), accounting for 73.7% of the mean total gain. In BNCI, full-minus-classifier-only was 0.19 points (−1.85 to 2.13). EA-CSP achieved 77.50%, improving on full refitting by 5.65 points (3.15–8.70; Holm-adjusted p=0.01172), with gains in all nine participants. Fixed source normalization also reduced single-class neural predictions at the 20-label cap.
 
-**Conclusions:** Matched-label component analysis identified spatial-filter refitting as the main contributor to the observed recalibration gain. It separates the value of updating the representation from the value of recalibrating its classifier.
+**Conclusions:** Matched-label comparisons distinguish the contributions of spatial refitting and support-only alignment. Their different effects across datasets make the update operation central to limited-label recalibration.
 
 **Keywords:** batch normalization; brain–computer interfaces; covariance alignment; motor imagery; transfer learning
 
@@ -38,17 +38,17 @@ We use **matched-label component analysis** to connect three contributions:
 
 1. **A controlled spatial-component comparison.** LDA-only recalibration and full CSP/LDA refitting use the same 40 source-training labels, 19 or 20 current-session labels and query trials. Their difference measures the additional spatial update after classifier recalibration. A separate frozen arm measures the total benefit of receiving support labels and refitting.
 2. **Prediction-level and longitudinal attribution.** Corrected and newly introduced errors reconstruct the component gain, while class recalls, target-session profiles and participant-deletion summaries locate that gain across the longitudinal data. The original full-minus-frozen comparison remains primary and full-minus-LDA-only secondary.
-3. **Matched mechanism controls.** Conventional alignment, geometric uncertainty and neural update modes test which additional operations affect decoding under explicit information budgets. Complete strong-reference and ablation results connect the spatial gain to practical update choices.
+3. **An external comparison of update operations.** A fixed nine-participant BNCI2014-001 replication compares the same component contrast with support-only EA-CSP under exactly 20 target labels. Neural normalization and geometric controls locate further operation-specific effects in the development cohort.
 
 ## Materials and methods
 
 ### Data source and ethics
 
-We analyzed the public Kumar2024 EEG derivative, NEMAR nm000177/v1.0.5 [@nemar177], associated with the original study and its correction [@kumar2024; @kumar2024correction]. The original study reported University of Texas at Austin ethical approval under protocol 2020-03-0073 and written informed consent before data collection.
+We analyzed the public Kumar2024 EEG derivative, NEMAR nm000177/v1.0.5 [@nemar177], associated with the original study and its correction [@kumar2024; @kumar2024correction], and the original BNCI2014-001/BCI Competition IV 2a recordings [@tangermann2012competition]. The Kumar acquisition study reported University of Texas at Austin ethical approval under protocol 2020-03-0073 and written informed consent. These statements concern Kumar data collection. BNCI source documentation and its reported ethics information are identified separately in Supplementary Section S12.
 
 This secondary analysis was exempt from additional ethical review under Article 32, item (1), of China's *Measures for Ethical Review of Life Science and Medical Research Involving Human Participants* (2023) [@china2023ethics]. It used lawfully obtained publicly available data, caused no harm to participants, and did not involve sensitive personal information or commercial interests.
 
-Dataset metadata were accessed on 10 October 2026, and the selected EEG recordings and accompanying metadata were retrieved on 11 October 2026. This secondary analysis used the released coded participant identifiers; no participants were contacted and no re-identification was attempted. The author had no access to information that could identify individual participants during or after data collection. Original collection approval and consent and the regulatory basis for this secondary analysis are documented separately in the retained provenance materials.
+Kumar dataset metadata were accessed on 10 October 2026, and the selected EEG recordings and accompanying metadata were retrieved on 11 October 2026. This secondary analysis used the released coded participant identifiers; no participants were contacted and no re-identification was attempted. The author had no access to information that could identify individual participants during or after data collection. Original collection approval and consent and the regulatory basis for this secondary analysis are documented separately in the retained provenance materials.
 
 ### Windows, preprocessing and chronological information access
 
@@ -76,6 +76,14 @@ V2 and V3 used the same six previously exposed development participants, chronol
 
 V2 tested source–target covariance mixing against EA-CSP. V3 fixed two cap-20 primary candidate contrasts before execution: uncertainty-aware prediction minus ordinary tangent refitting, and source-functional-constrained minus ordinary full neural adaptation within each source regime. BN, Dropout and dose comparisons were exploratory mechanisms. The full matrix included 10,350 target and 42 source prediction files, all nested within the same six participants; details are in the supplement.
 
+### External fixed-budget replication
+
+BNCI2014-001 contains nine participants, two different-day sessions and six runs per session [@tangermann2012competition]. We retained left/right imagery and the first 22 EEG channels. The MAT trial-start index precedes the cue by two seconds; epochs covered cue time [0,4) seconds at 250 Hz. A fourth-order 8–30 Hz Butterworth filter operated within each continuous run, with zero phase and the recorded reference. Original artifact flags were retained without trial rejection.
+
+Source runs 1–4 supplied 96 labels. Source runs 5–6 were withheld. The first 20 chronological hand trials of the first target run supplied support; its remaining four hand trials were withheld. Whole target runs 2–6 supplied 120 query trials. LDA-only, full CSP/LDA and EA-CSP used identical source/support trial identities. Frozen decoding received no target labels. EA estimated separate source and support covariance references; query signals did not estimate either reference.
+
+The existing V2 implementation used four CSP components and fixed covariance/LDA shrinkage of 0.1. This differs from the original Kumar MNE/Ledoit–Wolf implementation and its 40-label source budget. The external protocol fixed methods, inputs and endpoints before its predictions were generated; it performed no parameter search. BNCI had previously been used in the first-paper project; this is an independent-data replication of the component question. Supplementary Section S12 gives all partitions and the fixed execution version.
+
 ### Neural update-mode experiment
 
 The compact HPC EEGNet used eight temporal filters, depth multiplier two, temporal kernel 64 and source Dropout 0.25. Individual sources reused 18 V2 checkpoints, each with 40 training and 20 validation labels. Three pooled sources, one per seed, used 240 training and 120 validation examples from the same six participants, changing source-data amount and cross-participant composition.
@@ -100,7 +108,9 @@ BA averaged the two true-class recalls. Seeds were averaged within session, five
 
 All scheduled seeds, sessions, caps and doses were retained; any missing required cell left the endpoint incomplete. Pooled-source intervals are conditional on the fitted shared teachers. Synthetic summaries equally weighted the fixed scenarios and paired draws. Exploratory EEG cross entropy clipped probabilities at $10^{-15}$; simulation scoring used the same numerical floor.
 
-Saved trial identities, labels and metrics were checked before aggregation. The revision reused predictions and histories; no model fitting or new inference was required. The supplement identifies the full result packet, code and provenance checks.
+The external replication had one fixed primary contrast, full CSP/LDA minus LDA-only. Its two-sided exact sign-flip test enumerated 512 sign assignments with the observed difference magnitudes. Three secondary contrasts (full minus frozen, LDA-only minus frozen, EA minus full) formed a separate Holm family. Paired participant-bootstrap intervals used 10,000 draws, seed 20261027 and participant order 1–9. Dataset cohorts were analyzed separately.
+
+Saved trial identities, labels and metrics were checked before aggregation. Kumar analyses reused predictions and histories; the external replication generated its own four-method predictions. All external BA values were independently reconstructed from the saved predictions without another model evaluation.
 
 ## Results
 
@@ -193,11 +203,23 @@ The full synthetic grid contained 172,800 numeric method-by-condition-by-repetit
 
 
 
+### Support-only alignment improved the external fixed-budget comparison
+
+In BNCI2014-001, mean BA was 70.56% for frozen CSP/LDA, 71.67% for LDA-only, 71.85% for full refitting and 77.50% for EA-CSP (Figure 5). The fixed primary full-minus-LDA-only contrast was +0.19 points (95% interval −1.85 to 2.13; exact p=0.96875): three participants improved, three decreased and three were unchanged. Full-minus-frozen was +1.30 points (−1.76 to 3.98; Holm p=0.68750), while LDA-only-minus-frozen was +1.11 points (−0.46 to 2.96; Holm p=0.68750).
+
+EA-CSP improved on full refitting by 5.65 points (3.15–8.70; exact p=0.00391; Holm p=0.01172). All nine participant differences were positive, ranging from +0.83 to +15.83 points. The leave-one-participant-out mean ranged from +4.38 to +6.25 points. All five query-run cohort means favored EA over full refitting. These methods used the same 20 target labels and 120 query trials per participant; target alignment statistics came only from those support trials. Supplementary Section S12 reports every participant and contrast.
+
+
+
+
+
 ## Discussion
 
 ### Matched-label analysis identifies the spatial contribution
 
 The matched-label comparison identifies a substantial spatial-component gain. Full CSP/LDA refitting added 5.47 BA points beyond classifier-only recalibration in the original primary cohort and supplied 73.7% of the mean total improvement over freezing. Holding the fitting examples constant gives this result a clearer interpretation than an updated-versus-frozen comparison alone: the available labels supported a useful change in the spatial representation as well as in the class decision rule.
+
+The external experiment separates spatial refitting from alignment. With the same 20 current labels, ordinary full refitting was close to classifier-only recalibration, whereas support-only EA improved on full refitting in all nine participants. This places the original 5.47-point gain in context: its magnitude did not recur under the external data and implementation. An operation-level comparison, rather than a blanket instruction to update spatial filters, captures both findings. Acquisition, source budget, referencing and covariance estimators differed between datasets, so their individual contributions to this difference remain unresolved.
 
 The neural extension adds a complementary observation. At the final support cap, fixed-source BN during full weight adaptation outperformed adaptive BN in both initialization regimes, with fewer collapsed seed/session predictions. This contrasts with the successful CSP spatial update. The component analysis distinguishes a supervised spatial estimator from repeated normalization updates, making the observed gain attributable to a specific pipeline operation.
 
@@ -227,23 +249,23 @@ The original source/support probes also distinguished calibration agreement from
 
 ### Scope and next validation
 
-The study uses one public longitudinal cohort. The original primary hierarchy is retained; V2/V3, prediction transitions and sensitivity analyses used previously exposed data. The extension estimates are exploratory, conditional on the recorded source models and support schedules. Pooled teachers share participants and change source-label budgets; the independent sample remains the participant cohort.
+The study uses Kumar2024 and the independent BNCI2014-001 acquisition. The external dataset provides two days, whereas Kumar provides six sessions. The original primary hierarchy is retained; V2/V3, prediction transitions and sensitivity analyses used previously exposed data. The extension estimates are exploratory, conditional on the recorded source models and support schedules. Pooled teachers share participants and change source-label budgets; the independent sample remains the participant cohort.
 
-Cue-anchored windows may contain cue, imagery, feedback or post-task activity. Phase-specific decoding requires original marker-level reconstruction. Amplitude-restricted queries retained positive spatial gains in eligible participants, while training/support artifacts and other query artifacts remain possible. Zero-phase filtering makes the present endpoint offline.
+Kumar cue-anchored windows may contain cue, imagery, feedback or post-task activity. Phase-specific decoding requires original marker-level reconstruction. Amplitude-restricted queries retained positive spatial gains in eligible participants, while training/support artifacts and other query artifacts remain possible. Zero-phase filtering makes the present endpoint offline.
 
-An independent longitudinal study can freeze the matched-label spatial comparison and separately control BN exposure count and minibatch size. These are specific hypotheses generated by the component results.
+A larger repeated-session validation can separate source-label amount, covariance estimator and alignment from acquisition differences. Neural follow-up can independently control BN exposure count and minibatch size.
 
 ## Conclusions
 
-Matched-label component analysis showed that relearning spatial filters added 5.47 balanced-accuracy points beyond classifier recalibration with the same source and approximately 20 current-session labels. This increment accounted for 73.7% of the 7.42-point total mean gain over freezing. Practitioners evaluating short-run recalibration should therefore compare classifier-only and full spatial updates under identical labels, with EA-CSP as a strong conventional reference. In the neural extension, fixed BN produced fewer single-class predictions under the 20-label, batch-16 schedule; the full budget profiles motivate independent control of normalization exposure. Posterior covariance improved simulated log loss while classification favored simpler geometric references. Independent longitudinal validation should retain the fixed label budget and component contrasts before selecting an update policy.
+Matched-label analysis identified different useful spatial operations across two datasets. In the original Kumar primary cohort, full refitting added 5.47 BA points beyond classifier-only recalibration and supplied 73.7% of the total mean gain over freezing. In BNCI2014-001, full refitting was close to classifier-only recalibration, while support-only EA added 5.65 points beyond full refitting and improved all nine participants. Short-run recalibration should therefore compare the spatial update itself under identical labels. Fixed source normalization reduced single-class neural predictions at the 20-label cap; complete budget profiles and strong geometric references delimit the additional mechanism results.
 
 ## Data and code availability
 
-Source EEG is available as NEMAR nm000177/v1.0.5, DOI 10.82901/nemar.nm000177.v1.0.5, under CC BY 4.0 [@nemar177]. Code, configurations, original results and saved extension predictions are available at https://github.com/jackzhu119/few-shot-mi-eeg, research branch `research/paper2-hpc-v2-20261023`. The supplement identifies the fixed V3 packet and reproduction inputs. Original software uses MIT; manuscript, figures and derived results use CC BY 4.0 within the scope defined in LICENSING.md. Source-data and third-party terms are retained.
+Source EEG is available as NEMAR nm000177/v1.0.5, DOI 10.82901/nemar.nm000177.v1.0.5, under CC BY 4.0 [@nemar177]. BNCI2014-001 original MAT files are available through the official BNCI directory, with versioned file hashes in NEMAR nm000139/v1.0.3; their CC BY-ND 4.0 terms are retained. Code, configurations, original results, saved external predictions and saved extension predictions are available at https://github.com/jackzhu119/few-shot-mi-eeg, research branch `research/paper2-hpc-v2-20261023`. The supplement identifies the fixed V3 packet and reproduction inputs. Original software uses MIT; manuscript, figures and derived results use CC BY 4.0 within the scope defined in LICENSING.md. Source-data and third-party terms are retained.
 
 ## Acknowledgments
 
-The author thanks the researchers who released Kumar2024. OpenAI ChatGPT/Codex assisted with grammar and language revision, GitHub file organization and uploading, manuscript formatting, and verification of saved results. This work included assistance with analysis and plotting code, statistical reconstruction, and manuscript drafting and revision. The author is responsible for the content and interpretation.
+The author thanks the researchers who released Kumar2024 and BCI Competition IV 2a. OpenAI ChatGPT/Codex assisted with grammar and language revision, GitHub file organization and uploading, manuscript formatting, and verification of saved results. This work included assistance with analysis and plotting code, statistical reconstruction, and manuscript drafting and revision. The author is responsible for the content and interpretation.
 
 ## References
 
@@ -263,3 +285,5 @@ The author thanks the researchers who released Kumar2024. OpenAI ChatGPT/Codex a
 **Figure 3. Neural normalization mode across support budgets.** Fixed-minus-adaptive BN contrasts are shown for both source regimes across all five caps, together with the cap-20 participant contrasts and single-class prediction counts. Fixed and adaptive BN use the same current support, initialization, optimizer budget and Dropout-off setting within each comparison. They differ in normalization during optimization and the resulting inference state. Collapse counts are nested seed/session observations; participant-level summaries define the uncertainty intervals.
 
 **Figure 4. Mechanism simulations and predictive uncertainty.** All 384 conditions retain 50 paired repeats. Panels show candidate-minus-refit BA by source size/correlation, all generating shifts, paired scenario BA, and posterior-versus-point changes in cross entropy and BA. Synthetic results are separate from human EEG endpoints.
+
+**Figure 5. External fixed-budget comparison.** A: participant BA and cohort means. B: participant differences and pointwise 95% bootstrap intervals. C–D: paired differences across five whole query runs. Nine participants contributed 120 query trials each. Updating methods shared 20 support labels; EA references used source/support only.

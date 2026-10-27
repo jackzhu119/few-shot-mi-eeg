@@ -1,0 +1,28 @@
+{
+  "experiment_id": "paper2-bnci001-component-replication-v1-20261027",
+  "output_root": "/workspace/private_external_validation/bnci001-v1-20261027/results",
+  "data_root": "/workspace/private_external_validation/bnci001-v1-20261027/prepared",
+  "budgets": [
+    20
+  ],
+  "classical_methods": [
+    "frozen",
+    "lda_only",
+    "full_csp",
+    "ea_csp"
+  ],
+  "heartbeat_seconds": 30,
+  "classical": {
+    "n_components": 4,
+    "covariance_shrinkage": 0.1,
+    "lda_shrinkage": 0.1,
+    "anchor_tau": 20.0
+  },
+  "git_sync": {
+    "enabled": true,
+    "repository": "jackzhu119/few-shot-mi-eeg",
+    "branch": "research/paper2-hpc-v2-20261023",
+    "status_prefix": "training_status/paper2-external-bnci001",
+    "interval_seconds": 180
+  }
+}

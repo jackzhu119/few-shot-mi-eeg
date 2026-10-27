@@ -147,7 +147,7 @@ The companion figure and saved scenario table display performance by shift, nois
 
 Original source/support probes evaluated low-dimensional power and source-fitted representations, followed by supervised CSP4/LDA controls. The support-half analysis split each class chronologically and retained frozen source transforms. Among 30 sessions, 19 had positive signed source-score orientation in both halves, two were negative in both, and nine changed sign. These observations distinguish calibration-subset agreement from the intended class orientation, providing measurements for future support-driven policy tests.
 
-The endpoint is offline task-label decoding in one public longitudinal cohort. Cue/feedback contributions, zero-phase filtering and amplitude artifacts in fitting/query data affect its interpretation. Pooled-source and source-validation labels are explicit information-budget differences; independent participant validation remains the next step for the component hypotheses.
+The Kumar and V2/V3 endpoints are offline task-label decoding in the same longitudinal cohort. Cue/feedback contributions, zero-phase filtering and amplitude artifacts in fitting/query data affect their interpretation. Pooled-source and source-validation labels are explicit information-budget differences. The separate fixed-budget BNCI replication in Section S12 evaluates spatial update operations in another acquisition; independent neural validation remains a further step.
 
 ## S 9. Saved-result provenance and computational scope
 
@@ -155,7 +155,7 @@ The V3 raw received archive is `paper2-results-83cbdfdcfa541b3ab3addfc3.tar.gz`,
 
 The original three slot jobs were 775309, 775310 and 775311. Each completed 42 tasks with recorded exit 0, no restart; actual slot walltimes show sequential execution. The three-slot capacity setting produced sequential execution in the recorded allocation. Runtime and storage records document provenance; saved-prediction reconstruction supplies the numerical verification.
 
-This revision reused saved predictions, metrics and histories with the original fitted models, seeds and support windows. Original submission packages and all experiment outcomes remain at their versioned paths. Reproduction scripts, table definitions, figure inputs and targeted verification are identified in the accompanying revision report.
+Kumar analyses reused saved predictions, metrics and histories with their original fitted models, seeds and support windows. The external replication in Section S12 generated its own four-method predictions. Original submission packages and all experiment outcomes remain at their versioned paths. Reproduction scripts, table definitions, figure inputs and targeted verification are identified in the accompanying revision report.
 
 ## S 10. Complete V3 cohort means across all frozen budgets
 
@@ -213,3 +213,60 @@ These means give every frozen scenario and paired draw equal weight. Probability
 | eb_no_shift | 74.87 | 2.5946 | 0.2210 | 0.13010 |
 
 The full candidate minus tangent refitting was−5.8255 BA points. Of 384 scenario means, eight favored the candidate and 376 favored refitting. Candidate feature-mean squared error was larger than refitting in every scenario mean. Posterior-predictive versus point candidate prediction changed mean cross entropy by−0.34094, Brier by−0.00191 and BA by−0.0398 percentage points. The contrasts separate probability scoring from classification and mean estimation.
+
+
+## S 12. Fixed external component replication
+
+### Dataset, events and information access
+
+BNCI2014-001/BCI Competition IV 2a contains nine participants, each recorded on two different days. The reviewed original publication and six-page protocol describe six MI runs/session, with 48 four-class trials per run. The released original MAT files have all class labels; only left/right labels 1/2 were mapped to 0/1. Their `classes` arrays were explicitly checked. The initial EOG calibration objects have no MI trial indices and were excluded from MI-run numbering.
+
+The one-based MAT `trial` field marks trial start. Cue onset is 500 samples later at 250 Hz. Epochs contain samples `trial−1+500 : trial−1+1500`, or cue [0,4) seconds, following the source MI instruction. Processing retains the recorded reference and first 22 EEG channels, excludes EOG, converts microvolts to volts, and applies fourth-order Butterworth 8–30 Hz SOS zero-phase filtering within each continuous run. No query-dependent normalization is fitted.
+
+T runs 1–4 provide 96 source examples (48/class); T run 5 is unused and T run 6 is retained as an unused 24-trial source-query partition. E run 1 supplies its first 20 hand trials as support; four remaining hand trials are excluded. E runs 2–6 supply 120 query examples (60/class), with 24 per run. Support retains chronological class imbalance rather than selecting balanced labels. All 576 original four-class records per person retain sample boundaries, original artifact flags, identities and exclusion reasons.
+
+LDA-only, Full CSP/LDA and EA-CSP use identical 116 source/support trials; Frozen uses 96 source labels and zero target labels. EA has separate source/support covariance references and never estimates a reference from query signals. Four-component CSP and covariance/LDA shrinkage 0.1 use the existing V2 NumPy implementation. This differs from the original Kumar MNE/Ledoit–Wolf model and 40-example source setting; the between-dataset result cannot isolate acquisition from implementation and source-budget differences.
+
+### Complete results
+
+BA values are percentages. Differences are percentage points; participants, not four-method or run rows, are the independent units.
+
+| Participant | Frozen | LDA-only | Full CSP/LDA | EA-CSP | Full − LDA | EA − Full |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 1 | 87.50 | 85.00 | 84.17 | 90.00 | -0.83 | +5.83 |
+| 2 | 49.17 | 49.17 | 54.17 | 56.67 | +5.00 | +2.50 |
+| 3 | 88.33 | 90.00 | 90.00 | 95.00 | +0.00 | +5.00 |
+| 4 | 73.33 | 71.67 | 65.00 | 72.50 | -6.67 | +7.50 |
+| 5 | 49.17 | 49.17 | 53.33 | 59.17 | +4.17 | +5.83 |
+| 6 | 58.33 | 59.17 | 59.17 | 65.83 | +0.00 | +6.67 |
+| 7 | 50.83 | 57.50 | 58.33 | 74.17 | +0.83 | +15.83 |
+| 8 | 93.33 | 94.17 | 94.17 | 95.00 | +0.00 | +0.83 |
+| 9 | 85.00 | 89.17 | 88.33 | 89.17 | -0.83 | +0.83 |
+| **Mean** | 70.56 | 71.67 | 71.85 | 77.50 | **+0.19** | **+5.65** |
+
+| Contrast | Role | Mean difference, pp | Pointwise 95% CI, pp | Exact p | Secondary Holm p |
+| --- | --- | ---: | --- | ---: | ---: |
+| Full − LDA-only | primary | +0.19 | [-1.85, 2.13] | 0.96875 | — |
+| Full − Frozen | secondary | +1.30 | [-1.76, 3.98] | 0.45312 | 0.68750 |
+| LDA-only − Frozen | secondary | +1.11 | [-0.46, 2.96] | 0.34375 | 0.68750 |
+| EA − Full | secondary | +5.65 | [3.15, 8.70] | 0.00391 | 0.01172 |
+
+The fixed primary comparison is Full−LDA-only, specified before this run's predictions. The three secondary comparisons form a separate Holm family. Exact two-sided sign-flip tests retain observed difference magnitudes over 512 assignments and use the absolute paired mean, with 1e−12 BA boundary tolerance. Pointwise percentile bootstrap intervals use 10,000 paired participant draws, seed 20261027 and numeric participant order 1–9.
+
+Full−LDA-only is positive/negative/zero in 3/3/3 people; its leave-one-out mean spans −0.42 to +1.04 pp. EA−Full is positive in 9/9, with individual differences +0.83 to +15.83 pp and leave-one-out means +4.38 to +6.25 pp. Across query runs 2–6, EA−Full cohort means are +10.19, +2.78, +6.02, +6.94 and +2.31 pp. The frozen raw statistics count a 5.55e−17 BA LDA−Frozen rounding difference as positive; treating values within 1e−12 as ties gives five positive, two negative and two tied descriptive participant outcomes for that secondary contrast. No recorded result was rewritten.
+
+### Original artifact flags and ethics sources
+
+No artifact-marked trials were rejected. Across nine people, the original flags occurred in 87 source-fit, 17 support and 94 query trials. These retained flags are different from Kumar's amplitude rule. This experiment uses all original labeled hand trials in its assigned roles; it does not reproduce the competition's artifact-free-only scoring convention.
+
+The inspected BNCI2a source paper and original protocol did not report a dataset-2a-specific ethics committee, approval number or consent form. The paper's Harborview IRB/informed-consent paragraph belongs to Dataset 4 (ECoG) and is not attributed to these participants. The secondary analysis uses public coded records under the national-law basis stated in the main text, without recontact or re-identification. Original MAT recordings retain CC BY-ND 4.0 terms; public derived tables and code do not relicense the source recordings.
+
+### Version, execution and reconstruction
+
+The scientific protocol, raw-file identities and implementation were committed and pushed before prediction generation: `457e7bdaad96e84782b6fe968f88925a1200c4b3`. One existing-CPU invocation ran 27 October 2026, 06:34:54.957–06:36:59.303 UTC and exited 0. Nine source fits and 27 updating fits completed; the frozen target models copy each source. No previous Kumar or neural model was retrained and no school Slurm/Pod state changed. All 18 upstream MATs matched the versioned NEMAR byte lengths/SHA256, totaling 779,873,919 bytes. The scientific environment used Python 3.11.16, NumPy 2.2.6 and SciPy 1.15.3, with one BLAS thread.
+
+The external public result folder is `research_logs/paper2_external_validation_20261027/`: all 36 saved prediction JSONs, trial-role manifests, participant/run tables, exact tests and an independent JSON-only reconstruction are retained. This covers 1,080 distinct target trials, 4,320 method-specific prediction rows and 180 nested run endpoints. It does not increase the number of independent participants. The dataset had historical use in the first-paper project; this protocol is a version-frozen replication of the present component question, not a claim of an externally registered or previously unseen cohort.
+
+Raw EEG and fitted CSP/LDA tensors remain outside Git. The new result's R2 transfer was attempted with the existing runtime bindings; all 208 planned objects returned HTTP 401 before upload, and no remote full-GET verification was established. Its failed receipt is retained. Local and public derived-result availability are distinguished from R2 durability; no storage success or parent acknowledgment is inferred.
+
+To regenerate the aggregate from saved predictions, without downloading EEG or refitting, use `runner.analyze` or the public replay entry described in the result-folder REPRODUCE.md. Raw acquisition/fit resumption uses the original fixed script and a separate private output directory.

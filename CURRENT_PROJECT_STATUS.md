@@ -7,7 +7,7 @@
 | 项目 | 状态与位置 |
 | --- | --- |
 | 当前目标期刊与新稿 | **Biomedical Engineering / Biomedizinische Technik**；[新审阅稿PDF](manuscript/discovery_revision_20261027/BMT_Manuscript_Review.pdf) · [Word及完整材料](manuscript/discovery_revision_20261027/README.md) |
-| 论文核心 | 原12人同约20个当前标签下，完整CSP/LDA比仅LDA更新增加5.47pp [2.17,8.91]；仍为原次要终点，原主要+7.42pp保持 |
+| 论文核心 | 同标签预算区分具体空间更新：原Kumar Full−LDA +5.47pp；新BNCI EA−Full +5.65pp [3.15,8.70]，9/9正；原终点身份保持 |
 | V3实际结果 | 126/126完成；10,392份预测独立复算一致；[全分支科学分析](research_logs/paper2_v3_analysis_20261027/REPORT.md) |
 | 原PLOS ONE稿件 | **Spatial-filter refitting improves limited-label recalibration in longitudinal motor-imagery EEG**；[阅读PDF](manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Reading.pdf) · [投稿Word](manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Submission.docx) |
 | 最新整理包 | [2026-10-19完整提交包与600dpi图件](manuscript/plos_one_submission_support_20261019/README.md) |
@@ -40,11 +40,11 @@
 | 下载与恢复 | GitHub官方API优先、续传和SHA；既有数据/准备缓存复用，两代checkpoint及评估分片恢复 |
 | 自动同步 | 学校终端隐藏输入token、实际写入核验后，独立同步器约180秒上传进度和已完成指标 |
 
-新V2架构与原54份权重分开保存。候选EA＋经验协方差更新规则仍待结果检验；BNCI/OpenBMI外部验证只在方案中，尚未纳入当前运行队列。详见[实验设计](https://github.com/jackzhu119/few-shot-mi-eeg/blob/research/paper2-hpc-v2-20261023/docs/paper2_hpc_v2_literature_and_scientific_design_20261023.md)。
+新V2架构与原54份权重分开保存。候选EA＋经验协方差更新规则仍待结果检验；V2历史队列未纳入BNCI/OpenBMI；2026-10-27已另行完成固定BNCI四臂复核，见本页新增状态。详见[实验设计](https://github.com/jackzhu119/few-shot-mi-eeg/blob/research/paper2-hpc-v2-20261023/docs/paper2_hpc_v2_literature_and_scientific_design_20261023.md)。
 
 V2完成结果见[2026-10-26独立分析](research_logs/paper2_hpc_v2_analysis_20261026/REPORT.md)。V3固定回传提交为`500831c086d9e1d1e8412cf8ebca5fb6a288db76`，包`83cbdfdcfa541b3ab3addfc3`，三分片合并40,194,093bytes。新几何候选相对tangent refit−2.33pp，KL核心对比近零；20标签BN模式对比为+1.50/+1.91pp，不外推为所有预算均有收益。全部结果保留于[新版分析](research_logs/paper2_v3_analysis_20261027/REPORT.md)。
 
-本轮仅保存结果后处理、制图与期刊适配，不加载EEG/权重、不做新forward/fit，不操作学校Slurm或Pod。新稿依据[官网要求](docs/bmt_journal_requirements_20261027.md)制作，结构式摘要≤200词，正文保守计数≤6000词，4图+3表。原PLOS ONE正式决定/撤回状态未获新证据；不代作者确认排他投稿或新版本批准。
+2026-10-27原V3稿件修订仅使用保存结果；随后另行冻结并完成BNCI四臂外部实验，未重训旧模型或操作学校Slurm/Pod。新稿依据[官网要求](docs/bmt_journal_requirements_20261027.md)制作，结构式摘要≤200词，正文保守计数≤6000词，5图+3表。原PLOS ONE正式决定/撤回状态未获新证据；不代作者确认排他投稿或新版本批准。
 
 ## 版本与追溯
 
@@ -53,3 +53,11 @@ V2完成结果见[2026-10-26独立分析](research_logs/paper2_hpc_v2_analysis_2
 - [科研协议索引](docs/README.md) · [审计索引](research_logs/README.md) · [历史页面](docs/archive/README.md)。
 
 稿件、协议、结果和验收原件保持原路径；本次仅整理文档入口，不训练、不再次query或改动学校作业。
+
+
+## 2026-10-27新增外部固定验证（已完成）
+
+- 9人BNCI2014-001、2天、每人20support/120whole-run query；执行前冻结457e7bd。
+- Full−LDA-only +0.19pp [−1.85,2.13]，exact p=.96875；EA−Full +5.65pp [3.15,8.70]，9/9正、Holm p=.01172。
+- 36份预测与180个run指标独立复算误差0；[报告](research_logs/paper2_external_validation_20261027/REPORT.md)及[公开JSON重放](research_logs/paper2_external_validation_20261027/REPRODUCE.md)。
+- R2现有注入权限实际401，208计划对象均未上传/GET；失败回执保留，不影响GitHub派生结果和稿件交付。

@@ -1,0 +1,75 @@
+{
+  "checked_on": "2026-10-27",
+  "reading_scope": "Official journal full text Data Set 2a and Statements; complete open XML keyword search; official six-page original dataset protocol",
+  "article": {
+    "title": "Review of the BCI Competition IV",
+    "authors": [
+      "Tangermann, Michael",
+      "Müller, Klaus-Robert",
+      "Aertsen, Ad",
+      "Birbaumer, Niels",
+      "Braun, Christoph",
+      "Brunner, Clemens",
+      "Leeb, Robert",
+      "Mehring, Carsten",
+      "Miller, Kai J.",
+      "Müller-Putz, Gernot R.",
+      "Nolte, Guido",
+      "Pfurtscheller, Gert",
+      "Preissl, Hubert",
+      "Schalk, Gerwin",
+      "Schlögl, Alois",
+      "Vidaurre, Carmen",
+      "Waldert, Stephan",
+      "Blankertz, Benjamin"
+    ],
+    "journal": "Frontiers in Neuroscience",
+    "volume": "6",
+    "article_number": "55",
+    "year": 2012,
+    "published": "2012-07-13",
+    "doi": "10.3389/fnins.2012.00055",
+    "bibtex": "@article{tangermann2012competition,\n  author = {Tangermann, Michael and Müller, Klaus-Robert and Aertsen, Ad and Birbaumer, Niels and Braun, Christoph and Brunner, Clemens and Leeb, Robert and Mehring, Carsten and Miller, Kai J. and Müller-Putz, Gernot R. and Nolte, Guido and Pfurtscheller, Gert and Preissl, Hubert and Schalk, Gerwin and Schlögl, Alois and Vidaurre, Carmen and Waldert, Stephan and Blankertz, Benjamin},\n  title = {Review of the {BCI} Competition {IV}},\n  journal = {Frontiers in Neuroscience},\n  year = {2012},\n  volume = {6},\n  pages = {55},\n  doi = {10.3389/fnins.2012.00055},\n  url = {https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2012.00055/full}\n}\n",
+    "vancouver": "Tangermann M, Müller KR, Aertsen A, Birbaumer N, Braun C, Brunner C, et al. Review of the BCI Competition IV. Front Neurosci. 2012;6:55. doi:10.3389/fnins.2012.00055."
+  },
+  "full_text_xml": {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3396284/fullTextXML",
+    "bytes": 323831,
+    "sha256": "7850247c6e3cd77fc6072a8e6a91eb4553f98d003ab36fc8b37ff94c8b1bd9c4",
+    "ethics_keyword_paragraphs": [
+      {
+        "ancestral_section_titles": [
+          "Materials and subjects",
+          "Data Set 4"
+        ],
+        "text": "The three subjects in the data set were epileptic patients at Harborview Hospital in Seattle, Washington. Each patient had electrode grids placed subdurally on the surface of the brain for the purpose of extended clinical monitoring and localization of seizure foci. Each subject gave informed consent to participate in this study, which was approved by the internal review board (IRB) of Harborview Hospital. All patient data have been anonymized according to IRB protocol in accordance with HIPAA regulations."
+      }
+    ],
+    "dataset_2a_section": [
+      {
+        "title": "Data Set 2a",
+        "section_id": null,
+        "text": "5Data Set 2aData set 2a Continuous Multi-class Motor Imagery is provided by C. Brunner, R. Leeb, G. R. Müller-Putz, G. Pfurtscheller, and A. Schlögl from Graz (Austria). It can be freely assessed via http://www.bbci.de/competition/iv/ with the only restriction that the present article is referenced upon any publication of results.5.1MotivationThis data set challenges the session-to-session transfer of a three class motor imagery task. Compared to other synchronous motor imagery data sets, a continuous estimation of motor imagery class labels is required. This represents a realistic setting for an online control of a continuous output parameter.5.2Materials and subjectsThis data set comprises electroencephalographic (EEG) data from 9 subjects.5.2.1Experimental paradigmThe cue-based BCI paradigm consisted of four different motor imagery tasks, namely the imagination of movement of the left hand (class 1), right hand (class 2), both feet (class 3), and tongue (class 4). Two sessions on different days were recorded for each subject. Each session is comprised of 6 runs separated by short breaks. One run consists of 48 trials (12 for each of the four possible classes), yielding a total of 288 trials per session.5.2.2ProtocolAt the beginning of each session, we recorded approximately 5 min of EEG data to estimate the EOG influence. This recording was divided into 3 blocks: (1) 2 min with eyes open (looking at a fixation cross on the screen), (2) 1 min with eyes closed, and (3) 1 min with eye movements. The timing scheme of one session is illustrated in Figure 15. Note that due to technical problems, the EOG block is shorter for subject A04T and contains only the eye movement condition (see Table A1 in Appendix for a list of all subjects).Figure 15(Data Set 2a). Timing scheme of one session.All subjects were sitting in a comfortable armchair in front of a computer screen. At the beginning of a trial (t = 0 s), a fixation cross appeared on the black screen. In addition, a short acoustic warning tone was presented. After 2 s (t = 2 s), a cue in the form of an arrow pointing either to the left, right, down, or up (corresponding to one of the four classes left hand, right hand, foot, or tongue) appeared and stayed on the screen for 1.25 s. This prompted the subjects to perform the desired motor imagery task. No feedback was provided. The subjects were instructed to carry out the motor imagery task until the fixation cross disappeared from the screen at t = 6 s. A short break with a black screen followed. The paradigm is illustrated in Figure 16.Figure 16(Data Set 2a). Timing scheme of the paradigm.5.3Data formatTwenty-two Ag/AgCl electrodes (with inter-electrode distances of 3.5 cm) were used to record the EEG; the montage is shown in Figure 17, left. All signals were recorded monopolarly with the left mastoid serving as reference and the right mastoid as ground. The signals were sampled with 250 Hz and bandpass filtered between 0.5 and 100 Hz. The sensitivity of the amplifier was set to 100 μV. An additional 50 Hz notch filter was enabled to suppress line noise.Figure 17(Data Set 2a). Left: electrode montage corresponding to the international 10–20 system. Right: electrode montage of the three monopolar EOG channels.In addition to the 22 EEG channels, 3 monopolar EOG channels were recorded and also sampled with 250 Hz (see Figure 17, right). They were bandpass filtered between 0.5 and 100 Hz (with the 50-Hz notch filter enabled), and the sensitivity of the amplifier was set to 1 mV. The EOG channels are provided for the subsequent application of artifact processing methods (Fatourechi et al., 2007) and must not be used for classification.A visual inspection of all data sets was carried out by an expert and trials containing artifacts were marked. Eight out of the total of nine data sets were analyzed in Naeem et al. (2006) and Brunner et al. (2007, 2011).All data sets are stored in the general data format for biomedical signals (GDF), one file per subject and session. However, only one session contains the class labels for all trials, whereas the other sessions are used to test the classifier and hence to evaluate the performance. For details on the data set, the GDF files contained, markers and functions provided for loading and evaluation, please see Section A.1 in Appendix.5.4ChallengeParticipants were asked to provide a continuous classification output for each sample in the form of class labels (1–4), including labeled trials and trials marked as artifact. A confusion matrix was then built from all artifact-free trials for each time point. From these confusion matrices, the time course of the accuracy as well as the kappa coefficient was obtained (Schlögl et al., 2007b). The chance level was at κ = 0. The algorithm used for this evaluation was provided in BioSig. The algorithm achieving the largest kappa value was declared the winner.Due to the fact that the test data sets were not distributed until the end of the competition, software had to be submitted. It had to be capable to process EEG data files of the same format as used for all training sets2) and produce the aforementioned class label vector.Since three EOG channels were provided, the software was required to remove EOG artifacts before the subsequent data processing using artifact removal techniques such as high pass filtering or linear regression (Schlögl et al., 2007a). The use of other correction methods was possible, but it was requested that artifacts had no influence on the classification results.All algorithms had to be causal, meaning that the classification output at time k was allowed only to depend on the current and past samples xk,xk−1,…,x0. In order to check whether the causality criterion and the artifact processing requirements were fulfilled, all submissions had to be open source, including all additional libraries, compilers, programming languages, and so on (for example, Octave/FreeMat, C++, Python, etc.). Note that submissions could also be written in the closed-source development environment MATLAB as long as the code was executable in Octave. Similarly, C++ programs could be written and compiled with a Microsoft or Intel compiler, but the code had to compile also with g++.5.5Outcome in briefThere were five submissions for this data set (see Table 3). All of them used CSP features. The winning algorithm was submitted by K. K. Ang, Z. Y. Chin, C. Wang, C. Guan, H. Zhang, K. S. Phua, B. Hamadicharef, and K. P. Tee from the Institute for Infocomm Research, Agency for Science, Technology and Research Singapore. Details of their approach are described in Ang et al. (2012). The performance measure kappa was 0.57 averaged over all nine subjects. The other four submissions attained kappa values of 0.52, 0.31, 0.30, and 0.29 and thus were well above chance level of κ = 0. The winning algorithm performed best in seven out of nine subjects; in two subjects, the algorithm that overall ranked second best reached even slightly higher kappa values.Table 3(Data Set 2a). Contributions with final result (kappa).ContributorKappaLabK. K. Ang0.57Institute for Infocomm Research, Agency for Science, Technology and Research SingaporeL. Guangquan0.52School of Mechanical Engineering, Shanghai Jiao Tong University, ChinaW. Song0.31College of Inf. Science and Techn., Beijing Normal University, China and National Key Lab. or Cog. Neurosc. and Learning, Beijing Normal Univ., ChinaD. Coyle0.30Intelligent Systems Research Centre, School of Computing and Intell. Systems, Faculty of Computing and Eng., Magee Campus, University of Ulster, UKJ. Wu0.29National Key Lab. for Cogn. Neurosc. and Learning, Beijing Normal Univ., China and College of Inf. Science and Techn., Beijing Normal University, ChinaThe winning algorithm requires MATLAB, but also runs on Octave. It uses the BioSig toolbox to load the data. The algorithm is based on the filter bank common spatial pattern (FBCSP) variant (Ang et al., 2008). It was extended to the multi-class case with one-versus-the-rest classifiers. First, artifacts were removed by bandpass filters. Each classifier selected discriminative CSP features using the Mutual Information Best Individual Features (MIBIF4) algorithm (Ang and Quek, 2006) before Naive Bayes Parzen Window classifiers (Ang and Quek, 2006) were used. The classifier with the highest probability yielded the overall classification result. Due to the computationally intensive algorithms, classification was performed every ten samples (in combination with a zero-order hold for the samples in between). As the algorithm used 2 s of EEG data, the classification output was delayed by 2 s.5.6DiscussionAll five submissions yielded results well above chance level. As a side note, four contributions were submitted by Asian-Pacific groups. As already mentioned above, all contributions used CSP features.There were two major challenges in this data set. First, the contamination with eye movement artifacts could affect classification accuracy; therefore we provided additional EOG channels. Second, the classifiers trained on the training sessions should generalize on unseen data recorded on a different day. The winning algorithm addressed the first issue with a simple bandpass filter. Obviously, the method is stable because it yielded good results on the test data. However, the classification output is delayed by 2 s, which could be a problem in online BCIs that incorporate real-time feedback.",
+        "ethics_keyword_matches": []
+      }
+    ]
+  },
+  "original_protocol_pdf": {
+    "url": "https://bnci-horizon-2020.eu/database/data-sets/001-2014/description.pdf",
+    "status": 200,
+    "bytes": 216135,
+    "sha256": "7914fdf5c8e04468c97d70486372405da4ed66fb1469160bec7cc27bd1676110"
+  },
+  "supports": [
+    "Nine participants, two sessions on different days, six runs/session, 48 trials/run across four classes",
+    "22 EEG and three EOG at 250Hz; EOG excluded from classification",
+    "Cue onset at trial second2; instructed MI until second6",
+    "Public release and later publication of originally hidden test labels"
+  ],
+  "does_not_establish": [
+    "BNCI2014-001 original ethics committee name or approval number",
+    "Whether the BNCI2014-001 participants specifically gave written versus oral consent",
+    "Institutional waiver for the present secondary analysis"
+  ],
+  "ethics_interpretation": "The sole informed-consent/IRB paragraph in the checked article describes Dataset4 ECoG patients at Harborview Hospital, not Dataset2a. No original Dataset2a approval or consent detail was identified in section5 or the original competition dataset description. Do not transfer Dataset4 ethics statements to Dataset2a. Current secondary-analysis national-law basis remains separate."
+}

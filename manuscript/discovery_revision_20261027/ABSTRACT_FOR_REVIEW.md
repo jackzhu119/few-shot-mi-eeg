@@ -1,13 +1,13 @@
-# Spatial-filter refitting improves limited-label EEG decoding beyond classifier recalibration
+# Matched-label analysis identifies spatial refitting and alignment gains in motor-imagery EEG
 
 Biomedical Engineering / Biomedizinische Technik — author-review draft.
 
-**Objectives:** To quantify the added value of spatial-filter refitting beyond classifier recalibration with approximately 20 current-session labels.
+**Objectives:** To determine which spatial update adds value beyond classifier recalibration with 20 current-session labels.
 
-**Methods:** We compared frozen common spatial patterns and linear discriminant analysis (CSP/LDA), classifier-only recalibration and full refitting in 18 participants across six Kumar2024 sessions. The predefined primary cohort contained 12 participants. The two updating methods received identical source and current-session labels. Later component experiments used the six development participants.
+**Methods:** We compared frozen common spatial patterns and linear discriminant analysis (CSP/LDA), classifier-only recalibration and full refitting in 18 Kumar2024 participants across six sessions. The original primary cohort contained 12 participants. A fixed four-method replication added nine BNCI2014-001 participants and support-only Euclidean alignment (EA-CSP). Updating methods received identical labels within each dataset.
 
-**Results:** Full refitting achieved 65.36% balanced accuracy, 7.42 percentage points above freezing (95% participant-bootstrap interval 2.49–12.48). The secondary, matched-label full-minus-classifier-only gain was 5.47 points (2.17–8.91), accounting for 73.7% of the mean total gain. It was positive in ten of 12 participant averages and all five target-session averages. At the 20-label cap, fixed-normalization neural adaptation was 1.50–1.91 points higher than adaptive normalization and produced fewer single-class predictions. Smaller-budget profiles differed. Strong-reference comparisons favored simpler geometric decoders; source-functional constraints changed accuracy little.
+**Results:** In Kumar2024, full refitting achieved 65.36% balanced accuracy, 7.42 percentage points above freezing (95% participant-bootstrap interval 2.49–12.48). The secondary full-minus-classifier-only gain was 5.47 points (2.17–8.91), accounting for 73.7% of the mean total gain. In BNCI, full-minus-classifier-only was 0.19 points (−1.85 to 2.13). EA-CSP achieved 77.50%, improving on full refitting by 5.65 points (3.15–8.70; Holm-adjusted p=0.01172), with gains in all nine participants. Fixed source normalization also reduced single-class neural predictions at the 20-label cap.
 
-**Conclusions:** Matched-label component analysis identified spatial-filter refitting as the main contributor to the observed recalibration gain. It separates the value of updating the representation from the value of recalibrating its classifier.
+**Conclusions:** Matched-label comparisons distinguish the contributions of spatial refitting and support-only alignment. Their different effects across datasets make the update operation central to limited-label recalibration.
 
 **Keywords:** batch normalization; brain–computer interfaces; covariance alignment; motor imagery; transfer learning
