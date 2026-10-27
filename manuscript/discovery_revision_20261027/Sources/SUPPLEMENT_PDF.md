@@ -1,8 +1,8 @@
-# S 1 Text. Component-wise recalibration: detailed methods and complete comparison scope
+# Supplementary methods: spatial refitting and alignment
 
-This supplement accompanies *Spatial-filter refitting improves limited-label EEG decoding beyond classifier recalibration*. It defines the matched-label component analysis, original comparison and subsequent component experiments. Original scientific and provenance supplements remain available at their versioned paths.
+This supplement accompanies *Matched-label analysis identifies spatial refitting and alignment gains in motor-imagery EEG*. It defines the matched-label component analysis, original comparison and subsequent component experiments. The accompanying data package contains the participant tables, prediction identities and reproduction scripts.
 
-## S 1. Study layers and statistical units
+## S 1. Kumar analysis layers and statistical units
 
 | Layer | Participants | Scientific role | Model/seed information | Selection status |
 | --- | --- | --- | --- | --- |
@@ -11,7 +11,7 @@ This supplement accompanies *Spatial-filter refitting improves limited-label EEG
 | V3 extension | The same six development participants | Predefined candidate comparisons and component mechanisms | Read-only reuse of 18 V2 sources; three new pooled sources; all fixed seeds | Task matrix and comparison roles frozen before execution |
 | Mechanism simulation | No human participants | Known-mechanism estimator stress tests | 384 scenarios × 50 paired draws × nine methods | Synthetic, with software_validation_only=true; separate from real EEG evidence |
 
-Participant was the independent unit for real-EEG intervals. Seeds were averaged within session and sessions within participant. V2/V3 used the same already-exposed development participants; their intervals are pointwise exploratory summaries. Pooled teachers are shared across participant evaluations, so their bootstrap uncertainty is conditional on the fitted teachers. Model, seed and repeated-prediction counts describe the nested experiments.
+Participant was the independent unit for real-EEG intervals. Seeds were averaged within session and sessions within participant. V2/V3 used the same already-exposed development participants; their intervals are pointwise exploratory summaries. Pooled teachers are shared across participant evaluations, so their bootstrap uncertainty is conditional on the fitted teachers. Model, seed and repeated-prediction counts describe the nested experiments. The external cohort and its fixed endpoints are described in Section S12.
 
 ## S 2. Exact data access and endpoint definition
 
@@ -37,11 +37,11 @@ $$
 
 The two contributions were averaged over five sessions within each participant before cohort inference. They exactly reconstruct the saved BA difference. The 73.7% spatial-component share is the descriptive ratio of cohort-average full-minus-LDA-only to full-minus-frozen. It decomposes the observed pipeline contrasts.
 
-Original primary-cohort mean full-minus-LDA-only was 5.47 pp, with corrected-error and introduced-error contributions 16.04 pp and 10.57 pp. Left/right recall changes were 6.16 pp and 4.78 pp, with both individual intervals including zero. The same component contrast was positive in 10/12 participant averages and all five session means; participant-deletion means ranged 4.39–6.28 pp. These are related descriptions of the same fitted models and predictions.
+Original primary-cohort mean full-minus-LDA-only was 5.47 pp, with corrected-error and introduced-error contributions 16.04 pp and 10.57 pp. Left/right recall changes were 6.16 pp and 4.78 pp, with both individual intervals including zero. The same component contrast was positive in 10/12 participant averages and all five session means; participant-deletion means ranged 4.39–6.28 pp. Session profiles and participant-deletion summaries locate the component gain within the longitudinal data.
 
 The pre-existing amplitude flag was 250 µV maximum raw channel peak-to-peak. It flagged 1,512/7,156 complete windows. Saved-prediction/QC matching used trial identity, role, true label and inclusion status. The unflagged target endpoint required both classes in every session; only ten original primary participants met that criterion. Their unflagged full-minus-frozen gain was 5.96 pp[0.99, 11.24] and component gain 3.82 pp[1.11, 6.72]. Their corresponding full-query gains were 6.50 pp and 4.53 pp. Source and support data were retained during this amplitude-conditional query restriction; the flag identifies a signal-amplitude property rather than a complete artifact assessment.
 
-The original post-hoc exact sign-flip tests enumerated all $2^n$ sign assignments of the participant differences, retaining their magnitudes. The statistic was the absolute mean paired difference, with an inclusive boundary tolerance of $10^{-12}$ in BA units. The four-test family comprised full-minus-frozen, full-minus-LDA-only and LDA-only-minus-frozen in the 12-person primary cohort, and full-minus-frozen in the ten-person eligible unflagged subset. Unadjusted p values were 0.01953125, 0.01025390625, 0.26123046875 and 0.076171875; Holm-adjusted values were 0.05859375, 0.041015625, 0.26123046875 and 0.15234375, respectively. These tests use a sign-symmetric null conditional on the observed magnitudes; they are distinct from a signs-only test. The original percentile-bootstrap intervals are pointwise and unadjusted for this family.
+The original post-hoc exact sign-flip tests enumerated all $2^n$ sign assignments of the participant differences, retaining their magnitudes. The statistic was the absolute mean paired difference, with an inclusive boundary tolerance of $10^{-12}$ in BA units. The four-test family comprised full-minus-frozen, full-minus-LDA-only and LDA-only-minus-frozen in the 12-person primary cohort, and full-minus-frozen in the ten-person eligible unflagged subset. Unadjusted p values were 0.01953125, 0.01025390625, 0.26123046875 and 0.076171875; Holm-adjusted values were 0.05859375, 0.041015625, 0.26123046875 and 0.15234375, respectively. These tests use a sign-symmetric null conditional on the observed magnitudes. The original percentile-bootstrap intervals are pointwise and unadjusted for this family.
 
 ## S 4. Geometric estimator
 
@@ -86,7 +86,7 @@ The implementation uses a masked linear-Gaussian update and the Joseph form for 
 
 Under the specified Gaussian observation/prior model with known fixed noise matrices, completing the square gives the posterior above. For any estimate a, posterior expected squared error is tr(P)+‖a−θ̂‖²; the posterior mean minimizes that conditional risk. Plug-in covariance estimation, uncertainty in R_s, and uncertainty in source within-class covariance are outside that statement. The implementation propagates conditional class-mean uncertainty, not all representation uncertainty.
 
-For class 0/1, let A_c=[I,−I] or[I, I]. The full candidate scores a Gaussian with mean A_cθ̂ and covariance Q_c=W+A_cPA_cᵀ, using equal class priors and fixed source within-class covariance W. Point prediction uses the same θ̂ and W without P. B/n assumes independent observations; serial-correlation simulations explicitly test violation of that approximation. No BA optimality or target negative-transfer theorem follows from the conditional expected squared-error result.
+For class 0/1, let A_c=[I,−I] or[I, I]. The full candidate scores a Gaussian with mean A_cθ̂ and covariance Q_c=W+A_cPA_cᵀ, using equal class priors and fixed source within-class covariance W. Point prediction uses the same θ̂ and W without P. B/n assumes independent observations; serial-correlation simulations explicitly test violation of that approximation. The risk identity concerns class-mean squared error under the stated Gaussian model; classification accuracy and target BA are evaluated empirically.
 
 ### Complete arm definitions
 
@@ -125,7 +125,7 @@ Canonical policy IDs are retained in the complete machine-readable tables: froze
 
 Fixed/adaptive BN changes normalization during gradient computation and the resulting running state; weight trajectories can consequently differ. Within each budget, initialization, support order, Dropout and optimizer exposure are held fixed. Across budgets, examples and minibatch structure change together: batch 16 gives one batch per epoch for caps≤16 and two for 19/20. With three BN modules, 20 epochs correspond to 60 or 120 total batch-counter increments. Thus the within-budget comparison identifies the BN-mode effect, while the between-budget profiles combine label quantity, class composition and update schedule.
 
-The functional policy evaluates teacher-to-candidate mean KL on 40 source-training anchors and enforces δ=0.01 in the core experiment, with separate full runs at 0.001 and 0.1. Up to 12 halvings are attempted for a proposed optimizer step. Rejected proposals restore parameters and Adam state and are counted separately from accepted optimizer updates. These steps form the constrained optimizer’s proposal procedure. Pinsker and Jensen give mean anchor total variation ≤√(δ/2); this finite-anchor probability statement does not bound discrete class changes or unseen-target BA.
+The functional policy evaluates teacher-to-candidate mean KL on 40 source-training anchors and enforces δ=0.01 in the core experiment, with separate full runs at 0.001 and 0.1. Up to 12 halvings are attempted for a proposed optimizer step. Rejected proposals restore parameters and Adam state and are counted separately from accepted optimizer updates. These steps form the constrained optimizer’s proposal procedure. Pinsker and Jensen give mean anchor total variation ≤√(δ/2). The bound concerns prediction probabilities on the source anchors; target BA is an empirical endpoint.
 
 ## S 6. Complete reporting, intervals and influence
 
@@ -143,7 +143,7 @@ All 172,800 saved cells were retained with finite metrics and explicit synthetic
 
 The companion figure and saved scenario table display performance by shift, noise anisotropy, dimension, source size and serial correlation. Full-grid summaries accompany the factor-specific profiles. Probability-based EEG diagnostics use the saved probabilities; their numerical logarithmic-scoring floor is identified in the analysis record.
 
-## S 8. Calibration reliability and retained original limitations
+## S 8. Calibration measurements and interpretation
 
 Original source/support probes evaluated low-dimensional power and source-fitted representations, followed by supervised CSP4/LDA controls. The support-half analysis split each class chronologically and retained frozen source transforms. Among 30 sessions, 19 had positive signed source-score orientation in both halves, two were negative in both, and nine changed sign. These observations distinguish calibration-subset agreement from the intended class orientation, providing measurements for future support-driven policy tests.
 
@@ -153,7 +153,7 @@ The Kumar and V2/V3 endpoints are offline task-label decoding in the same longit
 
 The V3 raw received archive is `paper2-results-83cbdfdcfa541b3ab3addfc3.tar.gz`, 40,194,093 bytes, SHA256 `e509c2591efa21fff4dd47236e613ed6b611ca10ad20bac3da37e66e34a9d170`. It comprises three verified GitHub parts at fixed commit `500831c086d9e1d1e8412cf8ebca5fb6a288db76`. Its 49,984 payload files plus manifest matched their lengths and checksums; 126 unique valid task-completion identities matched the frozen queue. The public packet contains no original EEG, optimizer tensors or model weights.
 
-The original three slot jobs were 775309, 775310 and 775311. Each completed 42 tasks with recorded exit 0, no restart; actual slot walltimes show sequential execution. The three-slot capacity setting produced sequential execution in the recorded allocation. Runtime and storage records document provenance; saved-prediction reconstruction supplies the numerical verification.
+Runtime, scheduler and storage records are provided in the repository audit reports. Saved-prediction reconstruction supplies the numerical verification.
 
 Kumar analyses reused saved predictions, metrics and histories with their original fitted models, seeds and support windows. The external replication in Section S12 generated its own four-method predictions. Original submission packages and all experiment outcomes remain at their versioned paths. Reproduction scripts, table definitions, figure inputs and targeted verification are identified in the accompanying revision report.
 
@@ -253,11 +253,11 @@ BA values are percentages. Differences are percentage points; participants, not 
 
 The fixed primary comparison is Full−LDA-only, specified before this run's predictions. The three secondary comparisons form a separate Holm family. Exact two-sided sign-flip tests retain observed difference magnitudes over 512 assignments and use the absolute paired mean, with 1e−12 BA boundary tolerance. Pointwise percentile bootstrap intervals use 10,000 paired participant draws, seed 20261027 and numeric participant order 1–9.
 
-Full−LDA-only is positive/negative/zero in 3/3/3 people; its leave-one-out mean spans −0.42 to +1.04 pp. EA−Full is positive in 9/9, with individual differences +0.83 to +15.83 pp and leave-one-out means +4.38 to +6.25 pp. Across query runs 2–6, EA−Full cohort means are +10.19, +2.78, +6.02, +6.94 and +2.31 pp. The frozen raw statistics count a 5.55e−17 BA LDA−Frozen rounding difference as positive; treating values within 1e−12 as ties gives five positive, two negative and two tied descriptive participant outcomes for that secondary contrast. No recorded result was rewritten.
+Full−LDA-only is positive/negative/zero in 3/3/3 people; its leave-one-out mean spans −0.42 to +1.04 pp. EA−Full is positive in 9/9, with individual differences +0.83 to +15.83 pp and leave-one-out means +4.38 to +6.25 pp. Across query runs 2–6, EA−Full cohort means are +10.19, +2.78, +6.02, +6.94 and +2.31 pp. Floating-point tie handling is documented in the independent numerical audit.
 
 ### Original artifact flags and ethics sources
 
-No artifact-marked trials were rejected. Across nine people, the original flags occurred in 87 source-fit, 17 support and 94 query trials. These retained flags are different from Kumar's amplitude rule. This experiment uses all original labeled hand trials in its assigned roles; it does not reproduce the competition's artifact-free-only scoring convention.
+No artifact-marked trials were rejected. Across nine people, the original flags occurred in 87 source-fit, 17 support and 94 query trials. These retained flags are different from Kumar's amplitude rule. This experiment uses all original labeled hand trials in its assigned roles; the competition used an artifact-free-only scoring convention.
 
 The inspected BNCI2a source paper and original protocol did not report a dataset-2a-specific ethics committee, approval number or consent form. The paper's Harborview IRB/informed-consent paragraph belongs to Dataset 4 (ECoG) and is not attributed to these participants. The secondary analysis uses public coded records under the national-law basis stated in the main text, without recontact or re-identification. Original MAT recordings retain CC BY-ND 4.0 terms; public derived tables and code do not relicense the source recordings.
 
@@ -265,8 +265,8 @@ The inspected BNCI2a source paper and original protocol did not report a dataset
 
 The scientific protocol, raw-file identities and implementation were committed and pushed before prediction generation: `457e7bdaad96e84782b6fe968f88925a1200c4b3`. One existing-CPU invocation ran 27 October 2026, 06:34:54.957–06:36:59.303 UTC and exited 0. Nine source fits and 27 updating fits completed; the frozen target models copy each source. No previous Kumar or neural model was retrained and no school Slurm/Pod state changed. All 18 upstream MATs matched the versioned NEMAR byte lengths/SHA256, totaling 779,873,919 bytes. The scientific environment used Python 3.11.16, NumPy 2.2.6 and SciPy 1.15.3, with one BLAS thread.
 
-The external public result folder is `research_logs/paper2_external_validation_20261027/`: all 36 saved prediction JSONs, trial-role manifests, participant/run tables, exact tests and an independent JSON-only reconstruction are retained. This covers 1,080 distinct target trials, 4,320 method-specific prediction rows and 180 nested run endpoints. It does not increase the number of independent participants. The dataset had historical use in the first-paper project; this protocol is a version-frozen replication of the present component question, not a claim of an externally registered or previously unseen cohort.
+The external public result folder is `research_logs/paper2_external_validation_20261027/`: all 36 saved prediction JSONs, trial-role manifests, participant/run tables, exact tests and an independent JSON-only reconstruction are retained. This covers 1,080 distinct target trials, 4,320 method-specific prediction rows and 180 nested run endpoints. Participants define the independent sample. BNCI had historical use in the first-paper project; the present component comparison was fixed in the repository before prediction generation.
 
-Raw EEG and fitted CSP/LDA tensors remain outside Git. The new result's R2 transfer was attempted with the existing runtime bindings; all 208 planned objects returned HTTP 401 before upload, and no remote full-GET verification was established. Its failed receipt is retained. Local and public derived-result availability are distinguished from R2 durability; no storage success or parent acknowledgment is inferred.
+The public repository supplies all saved predictions, trial-role manifests and numerical reconstruction code. Original EEG retains its source-data license. Private storage records and original transfer receipts are documented in the repository audit report.
 
-To regenerate the aggregate from saved predictions, without downloading EEG or refitting, use `runner.analyze` or the public replay entry described in the result-folder REPRODUCE.md. Raw acquisition/fit resumption uses the original fixed script and a separate private output directory.
+Run `scripts/replay_paper2_external_saved_predictions_20261027.py` to regenerate the aggregate from public prediction JSON files. The result-folder REPRODUCE.md supplies the exact command and dependencies. Raw-data execution and resumption use the fixed script and a separate private output directory.

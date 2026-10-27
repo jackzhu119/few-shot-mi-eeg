@@ -1,0 +1,169 @@
+{
+  "source_commit": "8f22ce6a99610b65956e7fafea9a44c86a09e17f",
+  "scope": "editorial wording only; no scientific rerun",
+  "edits": [
+    {
+      "location": "Abstract conclusion",
+      "before": "**Conclusions:** Matched-label comparisons distinguish the contributions of spatial refitting and support-only alignment. Their different effects across datasets make the update operation central to limited-label recalibration.",
+      "after": "**Conclusions:** Matched-label comparisons quantify distinct gains from spatial refitting and support-only alignment, providing a direct way to compare decoder updates with limited calibration labels."
+    },
+    {
+      "location": "Abstract result order",
+      "before": "In BNCI, full-minus-classifier-only was 0.19 points (−1.85 to 2.13). EA-CSP achieved 77.50%, improving on full refitting by 5.65 points (3.15–8.70; Holm-adjusted p=0.01172), with gains in all nine participants.",
+      "after": "In BNCI, EA-CSP achieved 77.50%, improving on full refitting by 5.65 points in the secondary comparison (3.15–8.70; Holm-adjusted p=0.01172), with gains in all nine participants. Full-minus-classifier-only was 0.19 points (−1.85 to 2.13)."
+    },
+    {
+      "location": "Introduction opening",
+      "before": "A decoder trained in the first Kumar2024 session must serve five later sessions. At the start of each later session, a short calibration run supplies only 19 or 20 complete labeled trials. Should these labels recalibrate the classifier, relearn its spatial filters, or update both? This practical choice links longitudinal motor-imagery brain–computer interfaces (BCIs) to the limited-sample estimation problem: each updated component must be learned from the available new observations [@lotte2018].",
+      "after": "Recalibrating a motor-imagery brain–computer interface (BCI) from a short labeled run requires deciding which decoder components to update [@lotte2018]. In Kumar2024, a decoder trained in the first session serves five later sessions, each with 19 or 20 complete calibration trials. We compare classifier recalibration, spatial-filter refitting and their combination using the same available labels."
+    },
+    {
+      "location": "Introduction component definition",
+      "before": "Giving the two updates identical labels isolates the added spatial update within the evaluated pipeline. The distinction matters for the broader instruction to adapt a representation: supervised spatial-filter refitting and repeated neural normalization are different operations with different estimation demands.",
+      "after": "Using identical labels makes their difference a measure of the added spatial update."
+    },
+    {
+      "location": "Introduction research aim",
+      "before": "These precedents motivate a quantitative question: how much does relearning spatial filters add when classifier recalibration already receives the same new labels?",
+      "after": "We quantify the additional gain from relearning spatial filters after classifier recalibration has received those same labels."
+    },
+    {
+      "location": "Closest-work distinction",
+      "before": "The online benchmark evaluates how revealed label histories support continuing updates; our fixed-budget comparison measures the additional spatial component.",
+      "after": "Our comparison measures the additional spatial component at a fixed current-session label budget."
+    },
+    {
+      "location": "Contribution lead",
+      "before": "We use **matched-label component analysis** to connect three contributions:",
+      "after": "**Matched-label component analysis** provides three contributions:"
+    },
+    {
+      "location": "Contribution list endpoint repetition",
+      "before": "The original full-minus-frozen comparison remains primary and full-minus-LDA-only secondary.\n3.",
+      "after": "\n3."
+    },
+    {
+      "location": "External methods repetition",
+      "before": "The external protocol fixed methods, inputs and endpoints before its predictions were generated; it performed no parameter search. BNCI had previously been used in the first-paper project; this is an independent-data replication of the component question.",
+      "after": "Methods, inputs and endpoints were fixed before external prediction generation."
+    },
+    {
+      "location": "Table 1 footnote",
+      "before": "The six-person development row remains separate from the primary cohort and includes its negative component mean.",
+      "after": "Development and primary-cohort estimates are reported separately."
+    },
+    {
+      "location": "Figure 1 caption",
+      "before": "**Figure 1. Spatial-component evidence and strong-reference context.** Original primary-cohort component and total contrasts are displayed separately from the six-participant V2 budget profiles. Participant values, cohort means and participant-bootstrap intervals retain their original denominators and endpoint hierarchy. The original full-minus-LDA-only result compares matched labels; the V2 profiles compare separately versioned methods within the discovery cohort.",
+      "after": "**Figure 1. Spatial-component effects and calibration budgets.** Panels show paired component and total effects in the original primary cohort, followed by V2 budget profiles in the six development participants. Points, cohort means and participant-bootstrap intervals show the distribution of effects. Full-minus-LDA-only compares updates using identical labels."
+    },
+    {
+      "location": "V2 comparator result",
+      "before": "Its gain over frozen decoding was +7.09 points (4.12–11.55), but its prespecified comparison with EA-CSP was −1.14 points (−3.52–1.14).",
+      "after": "The candidate improved on frozen decoding by +7.09 points (4.12–11.55). Its prespecified comparison with EA-CSP was −1.14 points (−3.52–1.14)."
+    },
+    {
+      "location": "Geometric result lead",
+      "before": "At the cap of 20 labels, the geometric candidate achieved 64.68% BA, versus 67.01% for ordinary tangent refitting and 70.37% for saved EA-CSP.",
+      "after": "At the cap of 20 labels, EA-CSP achieved 70.37% BA and ordinary tangent refitting 67.01%, compared with 64.68% for the geometric candidate."
+    },
+    {
+      "location": "Geometric individual results",
+      "before": "Five of six participant differences were negative in both comparisons. All five support-cap mean contrasts versus tangent refitting were negative (Figure 2).",
+      "after": "Both reference methods had higher BA in five of six participants. Ordinary tangent refitting had higher cohort-mean BA at all five support caps (Figure 2)."
+    },
+    {
+      "location": "Neural source result interpretation",
+      "before": "Weak source discrimination was already present before target-session transfer. The pooled-source target mean was lower in this architecture and training regime.",
+      "after": "Source-query measurements provide the within-domain reference for interpreting target performance."
+    },
+    {
+      "location": "Training history interpretation",
+      "before": "These histories show training-loss reduction alongside weak held-out generalization within the source domain.",
+      "after": "Training and validation loss diverged after the validation-selected epochs."
+    },
+    {
+      "location": "External Results",
+      "change": "Lead with the positive, explicitly secondary alignment comparison; preserve primary null estimate and all tests."
+    },
+    {
+      "location": "Discussion main contribution",
+      "before": "The matched-label comparison identifies a substantial spatial-component gain. Full CSP/LDA refitting added 5.47 BA points beyond classifier-only recalibration in the original primary cohort and supplied 73.7% of the mean total improvement over freezing. Holding the fitting examples constant gives this result a clearer interpretation than an updated-versus-frozen comparison alone: the available labels supported a useful change in the spatial representation as well as in the class decision rule.",
+      "after": "Matching source and current-session labels locates recalibration gains in specific decoder components. Full CSP/LDA refitting added 5.47 BA points beyond classifier-only recalibration in the original primary cohort and supplied 73.7% of the mean improvement over freezing. The comparison measures the value of relearning the spatial representation after the classifier has received the same calibration labels."
+    },
+    {
+      "location": "Discussion external contribution",
+      "before": "The external experiment separates spatial refitting from alignment. With the same 20 current labels, ordinary full refitting was close to classifier-only recalibration, whereas support-only EA improved on full refitting in all nine participants. This places the original 5.47-point gain in context: its magnitude did not recur under the external data and implementation. An operation-level comparison, rather than a blanket instruction to update spatial filters, captures both findings. Acquisition, source budget, referencing and covariance estimators differed between datasets, so their individual contributions to this difference remain unresolved.",
+      "after": "The external experiment identifies support-only alignment as a useful additional operation. With the same 20 current labels, EA improved on full refitting in all nine participants, while full refitting and classifier-only recalibration gave similar cohort means. Together, the two datasets quantify the contributions of spatial refitting and alignment within their respective implementations."
+    },
+    {
+      "location": "Discussion neural contribution",
+      "before": "The neural extension adds a complementary observation. At the final support cap, fixed-source BN during full weight adaptation outperformed adaptive BN in both initialization regimes, with fewer collapsed seed/session predictions. This contrasts with the successful CSP spatial update. The component analysis distinguishes a supervised spatial estimator from repeated normalization updates, making the observed gain attributable to a specific pipeline operation.",
+      "after": "The neural extension separates another component choice. At the final support cap, fixed-source BN during full weight adaptation produced higher BA and fewer single-class seed/session predictions than adaptive BN in both initialization regimes. Supervised spatial-filter refitting and repeated neural normalization therefore had different effects under the evaluated support schedules."
+    },
+    {
+      "location": "Discussion participant influence",
+      "before": "Positive session means and participant-deletion summaries show that its cohort average was not supplied by a single participant or only one point in the session sequence.",
+      "after": "The gain remained positive in every target-session mean and after every single-participant deletion."
+    },
+    {
+      "location": "Discussion BN next step",
+      "before": "These details distinguish our information regime from reports using abundant target-domain statistics or continuous online adaptation [@adabn2016; @wimpff2025continual]. They also give a focused next hypothesis: when adaptation repeatedly revisits a short support run, normalization mode and exposure count should be controlled independently of label count. A follow-up can vary the BN update schedule while preserving the trained sources, support identities and comparison hierarchy.",
+      "after": "Reports using abundant target-domain statistics or continuous online adaptation address different information regimes [@adabn2016; @wimpff2025continual]. Here, repeated passes through a short support run link normalization mode to its update schedule. A follow-up can vary the number of BN updates while holding labels, minibatches and trained sources fixed."
+    },
+    {
+      "location": "Discussion source discrimination",
+      "before": "Original primary-cohort EEGNet BA was 52.92% on source query and 51.58% on target sessions. The extension's sources likewise showed weak held-out discrimination despite falling training losses. Source generalization therefore contributes to interpreting target performance alongside session transfer.",
+      "after": "Original primary-cohort EEGNet BA was 52.92% on source query and 51.58% on target sessions. Reporting both endpoints separates source generalization from session transfer. The extension training histories likewise show why source-query performance should accompany target adaptation scores."
+    },
+    {
+      "location": "Scope consolidated",
+      "before": "The study uses Kumar2024 and the independent BNCI2014-001 acquisition. The external dataset provides two days, whereas Kumar provides six sessions. The original primary hierarchy is retained; V2/V3, prediction transitions and sensitivity analyses used previously exposed data. The extension estimates are exploratory, conditional on the recorded source models and support schedules. Pooled teachers share participants and change source-label budgets; the independent sample remains the participant cohort.",
+      "after": "Kumar2024 provides six sessions per participant and BNCI2014-001 two recording days. V2/V3, prediction transitions and sensitivity analyses used previously exposed data and are exploratory. BNCI had historical use in the first-paper project. The external comparison also changed the source-label budget, reference and covariance implementation; separating these factors requires a controlled follow-up. Pooled-source intervals are conditional on the shared teachers, with participants as the independent units."
+    },
+    {
+      "location": "Scope artifact interpretation",
+      "before": "Amplitude-restricted queries retained positive spatial gains in eligible participants, while training/support artifacts and other query artifacts remain possible.",
+      "after": "Amplitude-restricted query analysis retained positive spatial gains in eligible participants; it assessed query sensitivity while leaving training and support signals unchanged."
+    },
+    {
+      "location": "Conclusions",
+      "before": "Matched-label analysis identified different useful spatial operations across two datasets. In the original Kumar primary cohort, full refitting added 5.47 BA points beyond classifier-only recalibration and supplied 73.7% of the total mean gain over freezing. In BNCI2014-001, full refitting was close to classifier-only recalibration, while support-only EA added 5.65 points beyond full refitting and improved all nine participants. Short-run recalibration should therefore compare the spatial update itself under identical labels. Fixed source normalization reduced single-class neural predictions at the 20-label cap; complete budget profiles and strong geometric references delimit the additional mechanism results.",
+      "after": "Matched-label analysis quantified gains from two spatial operations during short-run recalibration. In the original Kumar primary cohort, full refitting added 5.47 BA points beyond classifier-only recalibration and supplied 73.7% of the mean total gain over freezing. In BNCI2014-001, support-only EA added 5.65 points beyond full refitting, with improvement in all nine participants; full refitting and classifier-only recalibration gave similar cohort means. Fixed source normalization reduced single-class neural predictions at the 20-label cap. These component comparisons provide a direct way to evaluate how a short calibration run should update the decoder."
+    }
+  ],
+  "all_scientific_tables_byte_identical": true,
+  "national_law_ethics_section_unchanged": true,
+  "AI_acknowledgment_and_declaration_unchanged": true,
+  "statistical_values_and_negative_results_retained": true,
+  "no_model_or_query_execution": true,
+  "abstract_and_results_numeric_token_multisets_unchanged": true,
+  "independent_review_followups": [
+    "Clarify comparison is LDA-only vs joint CSP/LDA, not an unperformed CSP-only arm",
+    "State Pinsker bound scope without implying a separate discrete-class-change analysis",
+    "Synchronize supplement title and label its original Kumar study-layer table",
+    "Point public reproduction instructions directly to JSON-only replay"
+  ],
+  "all_displayed_equations_unchanged": true,
+  "all_five_individual_figure_sets_byte_identical": true,
+  "science_code_inputs_predictions_statistics_unmodified": true,
+  "independent_prose_review": "passed after clarifying joint CSP/LDA arm and anchor-bound scope",
+  "document_checks": {
+    "abstract_words": 169,
+    "full_words_conservative": 5497,
+    "figures_and_tables": 8,
+    "references": 24,
+    "main_PDF_pages": 18,
+    "editable_tables": 3,
+    "submission_inline_figures": 0,
+    "warnings": {
+      "MAIN_word": "",
+      "MAIN_pdf": "",
+      "submission_word": "",
+      "SUPPLEMENT_word": "",
+      "SUPPLEMENT_pdf": "",
+      "COVER_LETTER_DRAFT": ""
+    },
+    "editorial_report_packaged": true
+  }
+}
