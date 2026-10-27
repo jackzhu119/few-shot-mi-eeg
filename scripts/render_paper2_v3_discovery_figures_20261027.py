@@ -152,24 +152,46 @@ def main():
 
     fig, axes = plt.subplots(1, 2, figsize=(11.8, 7.4), layout="constrained", gridspec_kw={"width_ratios": [1, 1.1]})
     methods = ["source_tangent_frozen", "tangent_pooled", "tangent_refit", "eb_point", "eb_predictive",
-               "eb_isotropic", "eb_coupled", "eb_no_source_noise", "eb_no_shift"]
+               "eb_isotropic", "eb_coupled", "eb_no_source_noise", "eb_no_shift", "saved_V2_ea_csp"]
     labels = {"source_tangent_frozen": "Source frozen", "tangent_pooled": "Pooled means",
               "tangent_refit": "Tangent refit", "eb_point": "EB point", "eb_predictive": "EB predictive",
               "eb_isotropic": "Isotropic noise", "eb_coupled": "Coupled shift", "eb_no_source_noise": "No source noise",
-              "eb_no_shift": "No shift"}
+              "eb_no_shift": "No shift", "saved_V2_ea_csp": "Saved EA-CSP"}
     data = []
-    palette = ["#777777", "#6aa6a2", "#2274a5", "#4a8f69", "#c05c25", "#a484bd", "#be9877", "#859758", "#bd7ca0"]
-    for method, color in zip(methods, palette):
+    emphasized = {
+        "saved_V2_ea_csp": {"color": "#0072B2", "marker": "D", "linestyle": "-"},
+        "tangent_refit": {"color": "#009E73", "marker": "s", "linestyle": "--"},
+        "eb_predictive": {"color": "#D55E00", "marker": "o", "linestyle": "-."},
+    }
+    muted = {
+        "source_tangent_frozen": {"marker": None, "linestyle": ":"},
+        "tangent_pooled": {"marker": "v", "linestyle": (0, (1, 1))},
+        "eb_point": {"marker": "^", "linestyle": (0, (4, 2))},
+        "eb_isotropic": {"marker": "+", "linestyle": (0, (3, 1, 1, 1))},
+        "eb_coupled": {"marker": "x", "linestyle": (0, (5, 2))},
+        "eb_no_source_noise": {"marker": "1", "linestyle": (0, (2, 2))},
+        "eb_no_shift": {"marker": "P", "linestyle": (0, (1, 2))},
+    }
+    for method in methods:
         subset = sorted((r for r in cohorts if r["family"] == "geometry" and r["method"] == method),
                         key=lambda r: int(r["budget"]))
-        emphasis = method in ("tangent_refit", "eb_point", "eb_predictive", "source_tangent_frozen")
+        if [int(row["budget"]) for row in subset] != BUDGETS:
+            raise ValueError("Every geometric curve requires all five frozen budgets")
+        emphasis = method in emphasized
+        style = emphasized[method] if emphasis else {"color": "#858585", **muted[method]}
         axes[0].plot(BUDGETS, [100*float(r["mean_balanced_accuracy"]) for r in subset],
-                     "o-", label=labels[method], color=color, markersize=3,
-                     linewidth=1.8 if emphasis else .9, alpha=1 if emphasis else .7)
+                     label=labels[method], **style, markersize=5 if emphasis else 3.5,
+                     linewidth=2.2 if emphasis else 1, alpha=1 if emphasis else .65,
+                     zorder=3 if emphasis else 2)
         data.extend({"panel": "A", **r} for r in subset)
     budget_axis(axes[0])
     axes[0].set(ylabel="Mean balanced accuracy (%)", ylim=(53, 73), title="A  All geometric methods\nand budgets")
-    axes[0].legend(frameon=False, fontsize=12, ncol=2, loc="upper center", bbox_to_anchor=(.5, -.15))
+    handles, names = axes[0].get_legend_handles_labels()
+    ordered_names = [labels[key] for key in ("saved_V2_ea_csp", "tangent_refit", "eb_predictive")]
+    ordered_names.extend(name for name in names if name not in ordered_names)
+    legend_handles = dict(zip(names, handles))
+    axes[0].legend([legend_handles[name] for name in ordered_names], ordered_names,
+                   frameon=False, fontsize=12, ncol=2, loc="upper center", bbox_to_anchor=(.5, -.15))
     refs = ["tangent_refit", "saved_V2_ea_csp", "tangent_pooled", "eb_point", "eb_isotropic",
             "eb_coupled", "eb_no_source_noise", "eb_no_shift", "source_tangent_frozen"]
     display = ["Tangent refit (primary)", "Saved EA-CSP (strong reference)", "Pooled means", "EB point",
@@ -204,9 +226,11 @@ def main():
                         for p, v in zip(people, values))
             if budget == 20:
                 axes[1].scatter(values, np.arange(6) + (index-.5)*.2, s=31, color=COLORS[index],
+                                marker="o" if index == 0 else "s",
                                 label=REGIME_LABELS[regime])
         means = np.array(means)
-        axes[0].plot(BUDGETS, means, "o-", color=COLORS[index], label=REGIME_LABELS[regime], markersize=4)
+        axes[0].plot(BUDGETS, means, "o-" if index == 0 else "s--", color=COLORS[index],
+                     label=REGIME_LABELS[regime], markersize=4)
         axes[0].fill_between(BUDGETS, lows, highs, color=COLORS[index], alpha=.12)
     axes[0].axhline(0, color="#999999", linewidth=.8)
     budget_axis(axes[0])
@@ -225,13 +249,14 @@ def main():
                 collapse[key][0] += int(row["collapse"])
                 collapse[key][1] += 1
     for x, regime in enumerate(REGIMES):
-        for offset, method, label, color in [(-.17, "full_fixed", "Fixed BN", COLORS[2]),
-                                              (.17, "full_adaptive_bn", "Adaptive BN", COLORS[3])]:
+        for offset, method, label, color, hatch in [(-.17, "full_fixed", "Fixed BN", "#0072B2", "///"),
+                                                     (.17, "full_adaptive_bn", "Adaptive BN", "#E69F00", "xx")]:
             numerator, denominator = collapse[(regime, method)]
             if denominator != 90:
                 raise ValueError("Incomplete cap20 neural-collapse denominator")
             percentage = numerator / denominator * 100
-            axes[2].bar(x + offset, percentage, width=.29, color=color, label=label if x == 0 else None)
+            axes[2].bar(x + offset, percentage, width=.29, color=color, hatch=hatch,
+                        edgecolor="#333333", linewidth=.6, label=label if x == 0 else None)
             axes[2].text(x+offset, percentage+.7, f"{numerator}/{denominator}", ha="center", fontsize=12)
             data.append({"panel": "C", "source_regime": regime, "method": method, "budget": 20,
                          "collapsed_cells": numerator, "nested_cells": denominator, "collapse_percent": percentage})
@@ -312,13 +337,13 @@ def main():
         plt.close(fig)
     captions = """# Figure captions
 
-**Figure 1. Spatial-update evidence and the classical extension.** (A) Original 12-participant primary-cohort differences. Small points are participant endpoints, diamonds are cohort means, and intervals are 10,000 participant-bootstrap percentile intervals using the original seed42. Primary and secondary roles are preserved. (B) V2 six-participant development budget curves. These panels represent different cohorts and scientific versions and are not pooled as an enlarged replication.
+**Figure 1. Spatial-update evidence and the classical extension.** (A) Original 12-participant primary-cohort differences. Small points are participant endpoints, diamonds are cohort means, and intervals are 10,000 participant-bootstrap percentile intervals using the original seed42. Primary and secondary roles are retained. (B) V2 six-participant development budget curves. Each panel retains its own cohort and scientific version. pp, percentage points.
 
-**Figure 2. All geometric candidates and the strong controls.** (A) Six-participant means for all nine geometric methods at every declared support-label cap. (B) Candidate-minus-comparator differences at the frozen 20-label endpoint, with paired participant-bootstrap intervals. The primary tangent-refit comparison and saved EA-CSP strong reference are distinguished from ablations. Positive comparisons with weaker ablations do not establish superiority over the strong controls.
+**Figure 2. Geometric decoding across the complete support-budget grid.** (A) Six-participant means for nine geometric arms and the saved EA-CSP reference at every declared support-label cap. Color, line style and marker distinguish EA-CSP, tangent refitting and EB predictive; seven other arms use muted lines with separate styles and markers. (B) Candidate-minus-comparator differences at the frozen 20-label endpoint, with pointwise paired participant-bootstrap intervals. The primary tangent-refit comparison and saved EA-CSP reference are marked alongside all ablations. pp, percentage points.
 
-**Figure 3. Neural normalization-mode effects.** Both full-update arms train all parameters with dropout disabled; they differ in BN evaluation versus training mode, including current-batch normalization and running-statistic updates. (A) Paired participant differences and pointwise bootstrap intervals at all five budgets, separately for individual-source and pooled-source teachers. (B) All six participant differences at cap20. (C) Single-class prediction counts among90 nested participant×seed×session cells per arm. These are not90 independent participants. The cap20 fitting schedule has two minibatches per epoch, whereas caps≤16 have one; cross-budget changes do not isolate batch size, number of BN updates or label quantity. Source regimes share the same six participants and have different source-label budgets.
+**Figure 3. Neural normalization-mode effects.** Both arms update all parameters with dropout disabled, using fixed source or adaptive batch-normalization (BN) mode. (A) Paired participant differences and pointwise bootstrap intervals at all five budgets for both source regimes. (B) All six participant differences at cap20. (C) Single-class predictions among90 nested participant×seed×session cells per arm; blue/orange fills and hatching distinguish BN modes. Cap20 uses two minibatches per epoch; caps≤16 use one. Both source regimes contain the same six participants and differ in source-label budgets. pp, percentage points.
 
-**Figure 4. Mechanism simulations and the limits of predictive uncertainty.** Every point summarizes50 paired repeats in the prespecified384-scenario factorial. (A) Equal-scenario mean candidate-minus-refit BA by source count and serial correlation. (B) Every scenario within each generating shift type, with group means as diamonds. (C) Candidate and refit BA in all384 scenarios. (D) Adding posterior predictive covariance to identical posterior means changes cross entropy more consistently than BA. Negative CE differences favor posterior prediction. Simulations are synthetic mechanism analyses, separate from real EEG inference; no subset is selected as a confirmatory success.
+**Figure 4. Posterior covariance, probability scoring and classification in simulation.** Every point summarizes50 paired repeats in the prespecified384-scenario factorial. (A) Equal-scenario mean candidate-minus-refit balanced accuracy (BA) by source count and serial correlation. (B) All scenarios within each generating shift type, with group means as diamonds. (C) Candidate and refit BA in all384 scenarios. (D) Posterior predictive covariance changes cross entropy (CE) more consistently than BA for identical posterior means. Negative CE differences favor posterior prediction. Synthetic results are summarized separately from EEG participants. pp, percentage points.
 """
     (out / "captions.md").write_text(captions)
     input_paths = [saved / "analysis/participant_metrics.csv", saved / "analysis/cohorts.csv",
@@ -328,6 +353,12 @@ def main():
     input_paths.extend(sorted((saved / "tasks").glob("*/summary.json")))
     manifest = {"scope": "saved_tables_and_metrics_only_no_fit_no_inference", "figures": sources,
                 "eeg_independent_unit": "participant", "simulation_scenarios": 384,
+                "review_format_revision": {"date": "2026-10-27", "original_Fig2A_curves": 9,
+                                           "current_Fig2A_curves": 10,
+                                           "added_curve": "saved_V2_ea_csp, five frozen budget means",
+                                           "Fig2A_encoding": "three emphasized references/candidate; seven muted arms; redundant line/marker encodings",
+                                           "Fig3C_encoding": "blue/orange plus diagonal/cross hatching",
+                                           "scientific_fits_or_predictions_rerun": False},
                 "lettering_at_intended_size": lettering_checks,
                 "font_selection": {"selected": font_family, "preferred": ["Arial", "Helvetica"],
                                    "fallback_reason": None if font_family in ("Arial", "Helvetica")

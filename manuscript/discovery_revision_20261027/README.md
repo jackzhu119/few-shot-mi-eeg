@@ -4,6 +4,8 @@ Date: 27 October 2026. Article type: Research Article. This is a new scientific 
 
 The central result is **the additional value of relearning spatial filters under the same approximately20current-session labels**: +5.47percentage points beyond classifier-only recalibration in the original12-person cohort. The original primary full-minus-frozen contrast remains +7.42points. V3 supplies normalization-mode mechanism evidence and complete candidate-method controls; it does not replace the original endpoint hierarchy.
 
+The verified external-review response is recorded in [the point-by-point revision report](../../research_logs/bmt_review_response_20261027/RESPONSE.md).
+
 ## Read and review
 
 - [Download the complete author-review package](BMT_Author_Review_Package_20261027.zip), with [archive checksums](PACKAGE_SHA256.json).
@@ -21,7 +23,7 @@ The central result is **the additional value of relearning spatial filters under
 
 The journal's linked Instructions for Authors specify a200-word structured abstract (Objectives; Methods; Results; Conclusions),6000-word Research Article,3–6alphabetical lowercase keywords, a75-character running head, at most8figures/tables combined and35references. References use the journal's Vancouver convention. Each figure is supplied independently; supplementary files are prepared below10MB per file. The journal uses single-blind review.
 
-The publisher's September2026 AI policy requires disclosure of substantive research, code and writing assistance and states that AI-generated papers are not accepted. This work used substantive AI assistance, not just proofreading. The disclosure accurately describes that scope; removing it would not establish policy compliance. The new draft is for the author's substantive scientific review, revision and acceptance of responsibility. Plotting scripts render recorded numeric results without generative-image synthesis or alteration of experimental data.
+AI assistance is documented in the acknowledgment and separate declarations: language revision, GitHub organization/uploading, formatting and result checks, including the recorded code and manuscript assistance. Plotting scripts render saved numerical results. The author's scientific review and approval apply to the actual version being submitted. The publisher's policy and its disclosure requirements are linked in the journal-requirements record.
 
 ## Author items before actual submission
 

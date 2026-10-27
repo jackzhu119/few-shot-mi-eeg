@@ -57,6 +57,9 @@ def format_word(path):
             for paragraph in cell.paragraphs:
                 for span in paragraph.runs:
                     span.bold = True
+    for paragraph in document.paragraphs:
+        if re.match(r"Table [1-3]\.", paragraph.text):
+            paragraph.paragraph_format.keep_with_next = True
     document.save(path)
     return {
         "paragraphs": len(document.paragraphs), "tables": len(document.tables),
@@ -96,6 +99,8 @@ def journal_checks(main_text, reference_keys, bibliography):
         "word_layout": "A4, Times New Roman12pt, single spaced; official-template dimensions",
         "author_approved_this_revision": False, "submission_performed": False,
         "AI_disclosure_retained": "ChatGPT/Codex" in main_text,
+        "original_sign_flip_and_Holm_results_reported_in_main": all(
+            value in main_text for value in ("0.01025", "0.04102", "0.01953", "0.05859")),
     }
     if abstract_words > 200 or structure != ["Objectives", "Methods", "Results", "Conclusions"]:
         raise ValueError("Journal abstract format failed")
@@ -145,6 +150,8 @@ def package_review():
     code += [ROOT / "scripts/build_paper2_discovery_revision_20261027.py"]
     code += sorted(ROOT.glob("tests/test_paper2_v3*.py"))
     files = sorted(p for p in analysis.rglob("*") if p.is_file() and p.suffix in (".json", ".csv", ".md"))
+    response = ROOT / "research_logs/bmt_review_response_20261027"
+    files += sorted(p for p in response.rglob("*") if p.is_file() and p.suffix in (".json", ".csv", ".md"))
     with zipfile.ZipFile(data_zip, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=6) as archive:
         for path in files + code:
             archive.write(path, str(path.relative_to(ROOT)))
@@ -168,6 +175,12 @@ def build():
     bibliography = OUT / "references.bib"
     bib = bibliography.read_text()
     citation_keys = set(re.findall(r"@\w+\s*\{\s*([^,]+),", bib))
+    main = (OUT / "MAIN.md").read_text()
+    abstract = main.split("## Abstract\n", 1)[1].split("**Keywords:**", 1)[0].strip()
+    keywords = re.search(r"\*\*Keywords:\*\*\s*([^\n]+)", main).group(0)
+    (OUT / "ABSTRACT_FOR_REVIEW.md").write_text(
+        main.splitlines()[0] + "\n\nBiomedical Engineering / Biomedizinische Technik — author-review draft.\n\n"
+        + abstract + "\n\n" + keywords + "\n")
     outputs, warnings = [], {}
     checks = None
     for name, stem in (("MAIN", "BMT_Manuscript_Review"), ("SUPPLEMENT", "Supplementary_Methods")):
@@ -187,7 +200,15 @@ def build():
         warnings[name + "_word"] = run(common + ["-o", str(word)])
         word_info = format_word(word)
         pdf = OUT / (stem + ".pdf")
-        warnings[name + "_pdf"] = run(common + [
+        pdf_source = OUT / "Sources" / (name + "_PDF.md")
+        pdf_source.parent.mkdir(exist_ok=True)
+        pdf_source.write_text(re.sub(r"(?m)^(\*\*Table [1-3]\..*)$",
+                                     lambda m: "\\Needspace{16\\baselineskip}\n\n" + m.group(1), text))
+        layout = OUT / "Sources/bmt_layout.tex"
+        layout.write_text("\\usepackage{needspace}\n")
+        pdf_command = list(common)
+        pdf_command[1] = str(pdf_source)
+        warnings[name + "_pdf"] = run(pdf_command + ["--include-in-header", str(layout),
             "--pdf-engine=xelatex", "-V", "mainfont=DejaVu Serif",
             "-V", "sansfont=DejaVu Sans", "-V", "monofont=DejaVu Sans Mono",
             "-V", "geometry:margin=22mm", "-V", "fontsize=11pt",

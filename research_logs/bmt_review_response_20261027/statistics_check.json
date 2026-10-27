@@ -1,0 +1,208 @@
+{
+  "scope": "Independent read-only saved-participant arithmetic; no EEG/models/new inference",
+  "source_files": [
+    {
+      "path": "research_logs/kumar_review_revision_20261016/run01/statistics/public_inputs/participant_inputs.csv",
+      "bytes": 8800,
+      "sha256": "c731143104852d01520a2a83912ea696b43fa165efa0a3b873ce0a3feba08096"
+    },
+    {
+      "path": "manuscript/plos_one_innovation_20261017/Figures/Fig6_participant_source_data.csv",
+      "bytes": 2378,
+      "sha256": "dcc881ec929f74801b40efc74cd64a7087805f18c24852d5b9022be38de1116a"
+    }
+  ],
+  "statistics_definition": "two-sided absolute mean paired difference; all sign vectors on observed magnitudes; inclusive boundary atol1e-12BA,rtol0; Holm over exactly four saved comparisons",
+  "bootstrap_definition": "10000 participant resamples,seed42,lexicographicsubjectorder; separate from exact sign-symmetric null",
+  "results": [
+    {
+      "contrast_id": "remaining12_full_minus_frozen",
+      "n": 12,
+      "participants": [
+        "sub-11",
+        "sub-12",
+        "sub-14",
+        "sub-15",
+        "sub-17",
+        "sub-18",
+        "sub-2",
+        "sub-3",
+        "sub-5",
+        "sub-6",
+        "sub-8",
+        "sub-9"
+      ],
+      "mean_difference_pp": 7.421355111917724,
+      "bootstrap_ci_low_pp": 2.487554824561402,
+      "bootstrap_ci_high_pp": 12.476615749142974,
+      "positive": 9,
+      "negative": 3,
+      "two_sided_statistic_abs_mean_BA": 0.07421355111917724,
+      "tail_count": 80,
+      "denominator": 4096,
+      "raw_p": 0.01953125,
+      "paired_differences_pp": [
+        20.66666666666668,
+        17.263157894736846,
+        -0.666666666666671,
+        -0.20175438596492512,
+        0.666666666666671,
+        4.315789473684206,
+        17.666666666666664,
+        8.266787658802183,
+        0.43859649122807154,
+        -5.815789473684219,
+        6.833333333333325,
+        19.622807017543852
+      ],
+      "holm_p": 0.05859375
+    },
+    {
+      "contrast_id": "remaining12_full_minus_lda_only",
+      "n": 12,
+      "participants": [
+        "sub-11",
+        "sub-12",
+        "sub-14",
+        "sub-15",
+        "sub-17",
+        "sub-18",
+        "sub-2",
+        "sub-3",
+        "sub-5",
+        "sub-6",
+        "sub-8",
+        "sub-9"
+      ],
+      "mean_difference_pp": 5.471566848154871,
+      "bootstrap_ci_low_pp": 2.1680574460576745,
+      "bootstrap_ci_high_pp": 8.913797514619883,
+      "positive": 10,
+      "negative": 2,
+      "two_sided_statistic_abs_mean_BA": 0.054715668481548706,
+      "tail_count": 42,
+      "denominator": 4096,
+      "raw_p": 0.01025390625,
+      "paired_differences_pp": [
+        17.333333333333346,
+        8.192982456140353,
+        -1.333333333333342,
+        1.3771929824561546,
+        1.3333333333333308,
+        4.4649122807017605,
+        12.333333333333329,
+        6.614942528735634,
+        -3.4473684210526323,
+        0.48245614035087314,
+        12.166666666666659,
+        6.140350877192979
+      ],
+      "holm_p": 0.041015625
+    },
+    {
+      "contrast_id": "remaining12_lda_only_minus_frozen",
+      "n": 12,
+      "participants": [
+        "sub-11",
+        "sub-12",
+        "sub-14",
+        "sub-15",
+        "sub-17",
+        "sub-18",
+        "sub-2",
+        "sub-3",
+        "sub-5",
+        "sub-6",
+        "sub-8",
+        "sub-9"
+      ],
+      "mean_difference_pp": 1.9497882637628532,
+      "bootstrap_ci_low_pp": -0.9839729532163773,
+      "bootstrap_ci_high_pp": 5.085579880016131,
+      "positive": 7,
+      "negative": 5,
+      "two_sided_statistic_abs_mean_BA": 0.01949788263762853,
+      "tail_count": 1070,
+      "denominator": 4096,
+      "raw_p": 0.26123046875,
+      "paired_differences_pp": [
+        3.3333333333333326,
+        9.070175438596495,
+        0.666666666666671,
+        -1.5789473684210797,
+        -0.6666666666666599,
+        -0.14912280701755432,
+        5.333333333333334,
+        1.6518451300665482,
+        3.885964912280704,
+        -6.298245614035092,
+        -5.333333333333334,
+        13.482456140350873
+      ],
+      "holm_p": 0.26123046875
+    },
+    {
+      "contrast_id": "eligible10_unflagged_full_minus_frozen",
+      "n": 10,
+      "participants": [
+        "sub-11",
+        "sub-14",
+        "sub-15",
+        "sub-17",
+        "sub-18",
+        "sub-2",
+        "sub-3",
+        "sub-5",
+        "sub-6",
+        "sub-9"
+      ],
+      "mean_difference_pp": 5.959649142794229,
+      "bootstrap_ci_low_pp": 0.9895925827836531,
+      "bootstrap_ci_high_pp": 11.238331639721522,
+      "positive": 7,
+      "negative": 3,
+      "two_sided_statistic_abs_mean_BA": 0.05959649142794229,
+      "tail_count": 78,
+      "denominator": 1024,
+      "raw_p": 0.076171875,
+      "paired_differences_pp": [
+        17.525641025641026,
+        -1.1697626418988527,
+        -1.0947712418300504,
+        1.0000000000000009,
+        3.243784749229406,
+        17.103199174406612,
+        8.519493177387927,
+        1.8528693528693463,
+        -5.528372212582755,
+        18.144410044719628
+      ],
+      "holm_p": 0.15234375
+    }
+  ],
+  "independent_figure_bootstrap": {
+    "full_minus_frozen_pp": {
+      "mean_pp": 7.421355111917724,
+      "ci_low_pp": 2.487554824561403,
+      "ci_high_pp": 12.476615749142972
+    },
+    "full_minus_lda_pp": {
+      "mean_pp": 5.471566848154872,
+      "ci_low_pp": 2.1680574460576763,
+      "ci_high_pp": 8.913797514619885
+    },
+    "lda_minus_frozen_pp": {
+      "mean_pp": 1.9497882637628525,
+      "ci_low_pp": -0.9839729532163779,
+      "ci_high_pp": 5.085579880016129
+    }
+  },
+  "reviewer_errors": [
+    "Sign-flip test is not a signs-only sign test: it preserves each observed magnitude and flips signs.",
+    "Pointwise percentile bootstrap interval and Holm-adjusted exact randomization p are different procedures; mismatch is not arithmetic contradiction.",
+    "Predefined/frozen endpoint is supported; external preregistration was not established by the reviewer report.",
+    "CE/Brier improvements do not alone establish calibration; simulated predictive effect must not be generalized to EEG."
+  ],
+  "recommended_main_methods": "A supplementary post-hoc check enumerated all sign assignments of the participant differences under a sign-symmetric null and applied Holm correction across four saved contrasts. These family-adjusted tests complement the original pointwise percentile-bootstrap intervals.",
+  "recommended_main_results": "The matched-label component contrast had an unadjusted exact sign-flip p value of0.01025 and a four-comparison Holm-adjusted value of0.04102. The primary full-minus-frozen contrast had corresponding values of0.01953 and0.05859. The percentile intervals and the Holm-adjusted tests use different reference constructions and error control."
+}

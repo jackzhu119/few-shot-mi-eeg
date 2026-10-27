@@ -1,31 +1,31 @@
 # S 1 Text. Component-wise recalibration: detailed methods and complete comparison scope
 
-This supplement accompanies *Spatial-filter refitting improves limited-label EEG decoding beyond classifier recalibration*. It integrates the original frozen comparison and the later school-HPC discovery rounds while preserving the original datasets, model identities, endpoint roles and result files. The original submission's scientific and provenance supplements remain available at their versioned paths.
+This supplement accompanies *Spatial-filter refitting improves limited-label EEG decoding beyond classifier recalibration*. It defines the matched-label component analysis, original comparison and subsequent component experiments. Original scientific and provenance supplements remain available at their versioned paths.
 
 ## S 1. Study layers and statistical units
 
 | Layer | Participants | Scientific role | Model/seed information | Selection status |
 | --- | --- | --- | --- | --- |
 | Original comparison | 18, partitioned as six development and 12 primary | Full CSP/LDA minus frozen was the primary contrast; full minus LDA-only was secondary | Original EEGNet reference: three seeds and 54 source models | Original pipeline and endpoint hierarchy frozen before primary performance calculation; prior exploratory exposure retained in the record |
-| V2 discovery | The same six development participants | Candidate covariance mixture versus EA-CSP; support-budget and neural diagnostics | 18 separately versioned individual sources | Development data had already been exposed |
-| V3 discovery | The same six development participants | Prespecified candidate comparisons and exploratory component mechanisms | Read-only reuse of 18 V2 sources; three new pooled sources; all fixed seeds | Data had already been exposed; all resulting hypotheses remain discovery findings |
+| V2 extension | The same six development participants | Candidate covariance mixture versus EA-CSP; support-budget and neural diagnostics | 18 separately versioned individual sources | Later design informed by earlier results |
+| V3 extension | The same six development participants | Predefined candidate comparisons and component mechanisms | Read-only reuse of 18 V2 sources; three new pooled sources; all fixed seeds | Task matrix and comparison roles frozen before execution |
 | Mechanism simulation | No human participants | Known-mechanism estimator stress tests | 384 scenarios × 50 paired draws × nine methods | Synthetic, with software_validation_only=true; separate from real EEG evidence |
 
-Participant was the independent unit for real-EEG endpoint intervals. Seeds were averaged within session and sessions within participant. The neural source conditions share participants; pooled teachers are also shared across participant evaluations. Neither model counts nor repeated target predictions supply additional independent participants. Bootstrap uncertainty for pooled teachers is conditional on those fitted teachers.
+Participant was the independent unit for real-EEG intervals. Seeds were averaged within session and sessions within participant. V2/V3 used the same already-exposed development participants; their intervals are pointwise exploratory summaries. Pooled teachers are shared across participant evaluations, so their bootstrap uncertainty is conditional on the fitted teachers. Model, seed and repeated-prediction counts describe the nested experiments.
 
 ## S 2. Exact data access and endpoint definition
 
 The original source-training set comprised session 0/runs 0–1, validation run 2, and source query run 3. The first whole run of each later session supplied support, with subsequent whole runs reserved for query. The chronological support prefixes were capped at 4/8/12/16/20 complete trials in V2/V3; the last cap retained 19 if only 19 complete support windows were available. A prefix containing one class was preserved. Future labels were never used to balance it, choose a policy, select a model or replace a missing class.
 
-The original conventional update comparison pooled 40 source-training trials with the 19/20 current-support trials. Neural fine-tuning in V3 optimized current support only, starting from the specified source checkpoint. The functional constraint additionally evaluated the participant's 40 source-training examples as fixed prediction anchors. Source validation selected source epochs; it did not select target adaptation epochs. The pooled source regime used the six participants' source training/validation sets, not their query data.
+The two conventional updates pooled the same 40 source-training trials with the same 19/20 current-support trials. The frozen comparator used source training alone. Neural fine-tuning in V3 optimized current support only, starting from the specified source checkpoint. The functional constraint additionally evaluated the participant's 40 source-training examples as fixed prediction anchors. Source validation selected source epochs; it did not select target adaptation epochs. The pooled source regime used the six participants' source training/validation sets, not their query data.
 
-All methods compared within a saved query identity used the same ordered trial IDs and true labels. Importing EA-CSP from V2 required actual ordered trial/label agreement, because versioned query-hash conventions differed. A successful hash comparison alone was not substituted for identity alignment.
+All methods compared within a saved query identity used the same ordered trial IDs and true labels. Importing EA-CSP from V2 required actual ordered trial/label agreement, because versioned query-hash conventions differed. The identity comparison used actual ordered arrays alongside their checksums.
 
-BA required both true classes. Participant target endpoints required all five sessions and all scheduled neural seeds. Undefined groups remained explicit rather than disappearing from the mean. Source-query metrics were reported separately. The original trial exclusions and window lengths were not changed to improve a new score.
+BA required both true classes. Participant target endpoints required all five sessions and all scheduled neural seeds. Undefined groups retained an explicit missing status. Source-query metrics were reported separately. The original trial exclusions and five-second window definition were retained.
 
 ### Cue-window interpretation
 
-Seven thousand one hundred fifty-six complete sample windows were retained from 7,200 exported events; 44 crossed recording boundaries. The event-code documentation and MOABB interval establish the released cue-anchored convention. Reconstructing phase-pure motor imagery for each window would additionally require original marker arrays, task-end/feedback boundaries and the precise derivative-conversion lineage. The variable online trial duration alone establishes neither a cutting error nor the behavioral meaning of each partial event.
+Seven thousand one hundred fifty-six complete sample windows were retained from 7,200 exported events; 44 crossed recording boundaries. The event-code documentation and MOABB interval establish the released cue-anchored convention. Reconstructing phase-pure motor imagery for each window would additionally require original marker arrays, task-end/feedback boundaries and the precise derivative-conversion lineage. Each partial event denotes an incomplete recorded window; interpreting its task phase requires those original boundaries.
 
 ## S 3. Original prediction-transition and sensitivity definitions
 
@@ -35,13 +35,13 @@ $$
 \Delta BA=\tfrac12(C_0+C_1)-\tfrac12(E_0+E_1).
 $$
 
-The two contributions were averaged over five sessions within each participant before cohort inference. They exactly reconstruct the saved BA difference. The 73.7% spatial-component share is the ratio of cohort-average full-minus-LDA-only to full-minus-frozen, not an independently estimated causal proportion of neural adaptation.
+The two contributions were averaged over five sessions within each participant before cohort inference. They exactly reconstruct the saved BA difference. The 73.7% spatial-component share is the descriptive ratio of cohort-average full-minus-LDA-only to full-minus-frozen. It decomposes the observed pipeline contrasts.
 
-Original primary-cohort mean full-minus-LDA-only was 5.47 pp, with corrected-error and introduced-error contributions 16.04 pp and 10.57 pp. Left/right recall changes were 6.16 pp and 4.78 pp, individually with intervals crossingzero. The same component contrast was positive in 10/12 participant averages and all five session means; participant-deletion means ranged 4.39–6.28 pp. These are related descriptions of the same fitted models and predictions.
+Original primary-cohort mean full-minus-LDA-only was 5.47 pp, with corrected-error and introduced-error contributions 16.04 pp and 10.57 pp. Left/right recall changes were 6.16 pp and 4.78 pp, with both individual intervals including zero. The same component contrast was positive in 10/12 participant averages and all five session means; participant-deletion means ranged 4.39–6.28 pp. These are related descriptions of the same fitted models and predictions.
 
-The pre-existing amplitude flag was 250 µV maximum raw channel peak-to-peak. It flagged 1,512/7,156 complete windows. Saved-prediction/QC matching used trial identity, role, true label and inclusion status. The unflagged target endpoint required both classes in every session; only ten original primary participants met that criterion. Their unflagged full-minus-frozen gain was 5.96 pp[0.99, 11.24] and component gain 3.82 pp[1.11, 6.72]. Their corresponding full-query gains were 6.50 pp and 4.53 pp. Restricting query evaluation did not alter source or support data, and the unflagged subset was not labeled artifact-free.
+The pre-existing amplitude flag was 250 µV maximum raw channel peak-to-peak. It flagged 1,512/7,156 complete windows. Saved-prediction/QC matching used trial identity, role, true label and inclusion status. The unflagged target endpoint required both classes in every session; only ten original primary participants met that criterion. Their unflagged full-minus-frozen gain was 5.96 pp[0.99, 11.24] and component gain 3.82 pp[1.11, 6.72]. Their corresponding full-query gains were 6.50 pp and 4.53 pp. Source and support data were retained during this amplitude-conditional query restriction; the flag identifies a signal-amplitude property rather than a complete artifact assessment.
 
-Original exploratory exact sign-flip tests enumerated all 2^n assignments under a sign-symmetric reference. Four-comparison Holm-adjusted p values were.05859 for full-minus-frozen and.04102 for full-minus-LDA-only in the 12-person primary cohort. These checks were conducted after the original outcomes, and their reference distribution differs from the percentile-bootstrap construction.
+The original post-hoc exact sign-flip tests enumerated all $2^n$ sign assignments of the participant differences, retaining their magnitudes. The statistic was the absolute mean paired difference, with an inclusive boundary tolerance of $10^{-12}$ in BA units. The four-test family comprised full-minus-frozen, full-minus-LDA-only and LDA-only-minus-frozen in the 12-person primary cohort, and full-minus-frozen in the ten-person eligible unflagged subset. Unadjusted p values were 0.01953125, 0.01025390625, 0.26123046875 and 0.076171875; Holm-adjusted values were 0.05859375, 0.041015625, 0.26123046875 and 0.15234375, respectively. These tests use a sign-symmetric null conditional on the observed magnitudes; they are distinct from a signs-only test. The original percentile-bootstrap intervals are pointwise and unadjusted for this family.
 
 ## S 4. Geometric estimator
 
@@ -102,7 +102,7 @@ For class 0/1, let A_c=[I,−I] or[I, I]. The full candidate scores a Gaussian w
 | eb_no_source_noise | Same estimated T, with source mean-noise covariance removed |
 | eb_no_shift | T=0, retaining finite-sample mean updating |
 
-The candidate-minus-tangent_refit cap 20 comparison retains its prespecified primary role. Candidate-minus-saved-V2-EA-CSP is the strong reference. All other budgets and ablations remain descriptive discovery comparisons.
+The candidate-minus-tangent_refit cap 20 comparison retains its prespecified primary role. Candidate-minus-saved-V2-EA-CSP is the strong reference. Other budgets and ablations provide the full component profiles.
 
 ## S 5. Neural update modes and optimization
 
@@ -123,43 +123,43 @@ All optimizer adaptations use 20 epochs, batch 16, AdamW, learning rate $10^{-4}
 
 Canonical policy IDs are retained in the complete machine-readable tables: frozen, head_fixed, full_fixed, full_adaptive_bn, full_adaptive_bn_dropout, bn_affine_fixed, bn_stats_only and trust_fixed, in the row order above.
 
-Fixed/adaptive BN changes normalization during gradient computation as well as the resulting buffers. Their trained weights need not coincide. Within each budget, initialization, support order, Dropout setting and optimizer exposure are held fixed. Across budgets, both examples and minibatch structure change: batch 16 yields one batch per epoch for caps≤16 and two for 19/20. With three BN modules, 20 epochs correspond to 60 or 120 total batch-counter increments. The cap 20 contrast therefore cannot establish a general monotone relation between label quantity and BN benefit.
+Fixed/adaptive BN changes normalization during gradient computation and the resulting running state; weight trajectories can consequently differ. Within each budget, initialization, support order, Dropout and optimizer exposure are held fixed. Across budgets, examples and minibatch structure change together: batch 16 gives one batch per epoch for caps≤16 and two for 19/20. With three BN modules, 20 epochs correspond to 60 or 120 total batch-counter increments. Thus the within-budget comparison identifies the BN-mode effect, while the between-budget profiles combine label quantity, class composition and update schedule.
 
-The functional policy evaluates teacher-to-candidate mean KL on 40 source-training anchors and enforces δ=0.01 in the core experiment, with separate full runs at 0.001 and 0.1. Up to 12 halvings are attempted for a proposed optimizer step. Rejected proposals restore parameters and Adam state and are counted separately from accepted optimizer updates. This is part of the algorithm, not an automatic restart of a scientific fit. Pinsker and Jensen yield mean anchor total variation ≤√(δ/2); this finite-anchor probability statement does not bound discrete class changes or unseen-target BA.
+The functional policy evaluates teacher-to-candidate mean KL on 40 source-training anchors and enforces δ=0.01 in the core experiment, with separate full runs at 0.001 and 0.1. Up to 12 halvings are attempted for a proposed optimizer step. Rejected proposals restore parameters and Adam state and are counted separately from accepted optimizer updates. These steps form the constrained optimizer’s proposal procedure. Pinsker and Jensen give mean anchor total variation ≤√(δ/2); this finite-anchor probability statement does not bound discrete class changes or unseen-target BA.
 
 ## S 6. Complete reporting, intervals and influence
 
-The supplied machine-readable analysis retains every method, budget, participant, session and seed, including the primary candidate failures. Prespecified roles are separate from the selection of a narrative after results were available. Later pointwise discovery intervals use 10,000 participant resamples and seed 20261023; original intervals use seed 42. They should not be interpreted as a confirmatory multiple-comparison procedure across the discovery matrix.
+Machine-readable tables retain every method, budget, participant, session and seed, together with the predefined contrast roles. Original intervals use 10,000 participant resamples with seed 42; extension intervals use the same number with seed 20261023. Complete method and budget profiles accompany the selected component interpretations.
 
-The cap 20 BN-mode participant-deletion mean ranges were+1.07 to+1.90 pp for individual sources and+1.34 to+2.29 pp for pooled sources. These are descriptions of the same six-person result. The later neural comparison does not promote its smaller positive interval into a new predefined primary hypothesis.
+The cap 20 BN-mode participant-deletion mean ranges were+1.07 to+1.90 pp for individual sources and+1.34 to+2.29 pp for pooled sources. These summaries assess participant influence on the same six-person result.
 
-Collapse means a model/session predicts one class on its query set even when both true classes exist. Cap 20 fixed-BN/adaptive-BN collapse counts were 8/16 for individual sources and 0/18 for pooled sources, each out of 90 nested seed/session cells. All were retained in BA. They are not statistically independent events.
+Collapse means a model/session predicts one class on its query set even when both true classes exist. Cap 20 fixed-BN/adaptive-BN collapse counts were 8/16 for individual sources and 0/18 for pooled sources, each out of 90 nested seed/session cells. All predictions contributed to BA; participant averages define the independent endpoint.
 
 ## S 7. Complete saved synthetic grid
 
-The fixed factorial grid used p∈{16, 64}, source examples per class∈{10, 20,100}, support examples per class∈{1, 2, 5, 10}, shift type∈{none, common, contrast, both}, anisotropy∈{1, 20}, and stationary AR(1) correlation∈{0, 0.5}. Shift scale was.5, with 50 paired draws and 100 query examples per class. All nine methods received the same source/support/query draws within each replicate. The estimator was not given the true serial-correlation parameter as an oracle correction.
+The fixed factorial grid used p∈{16, 64}, source examples per class∈{10, 20,100}, support examples per class∈{1, 2, 5, 10}, shift type∈{none, common, contrast, both}, anisotropy∈{1, 20}, and stationary AR(1) correlation∈{0, 0.5}. Shift scale was.5, with 50 paired draws and 100 query examples per class. All nine methods received the same source/support/query draws within each replicate. The estimator used its fixed variance approximation across all generating correlations.
 
-All 172,800 saved cells were retained with finite metrics and explicit synthetic/software-validation flags. Cross entropy uses the true-class probability with a numerical lower bound of $10^{-15}$ before taking the logarithm. Outcomes comprise BA, cross entropy, binary Brier score and two class-mean squared-error definitions. Full-grid averaging gives every frozen scenario equal weight; paired Monte Carlo variation measures the finite draws in this fixed grid, not uncertainty over EEG participants or all possible mechanisms. Condition-specific findings remain within this known data-generating setup.
+All 172,800 saved cells were retained with finite metrics and explicit synthetic/software-validation flags. Cross entropy uses the true-class probability with a numerical lower bound of $10^{-15}$ before taking the logarithm. Outcomes comprise BA, cross entropy, binary Brier score and two class-mean squared-error definitions. Full-grid averaging gives every frozen scenario equal weight. Paired Monte Carlo variation measures the finite draws under these fixed generating conditions, separately from the human-participant endpoint intervals.
 
-The companion figure and saved scenario table display performance by shift, noise anisotropy, dimension, source size and serial correlation. No favorable subset of scenarios replaces the complete-grid result. Probability-based EEG diagnostics are post-hoc saved-output analyses; numerical probability clipping for logarithmic scoring is identified in their analysis record.
+The companion figure and saved scenario table display performance by shift, noise anisotropy, dimension, source size and serial correlation. Full-grid summaries accompany the factor-specific profiles. Probability-based EEG diagnostics use the saved probabilities; their numerical logarithmic-scoring floor is identified in the analysis record.
 
 ## S 8. Calibration reliability and retained original limitations
 
-Original source/support probes evaluated low-dimensional power and source-fitted representations, followed by supervised CSP4/LDA controls. The support-half analysis split each class chronologically and retained frozen source transforms. Among 30 sessions, 19 had positive signed source-score orientation in both halves, two were negative in both, and nine changed sign. These observations separate agreement from intended class orientation; they do not define an accepted update gate.
+Original source/support probes evaluated low-dimensional power and source-fitted representations, followed by supervised CSP4/LDA controls. The support-half analysis split each class chronologically and retained frozen source transforms. Among 30 sessions, 19 had positive signed source-score orientation in both halves, two were negative in both, and nine changed sign. These observations distinguish calibration-subset agreement from the intended class orientation, providing measurements for future support-driven policy tests.
 
-All interpretation retains potential cue/feedback mixing, fixed zero-phase offline filtering, amplitude artifacts in both fitting and query data, one public cohort, prior test exposure and modest independent sample size. Pooled source labels and additional validation labels are reported as information-budget differences. The experiment does not estimate human skill retention, plasticity, clinical efficacy or prospective closed-loop improvement.
+The endpoint is offline task-label decoding in one public longitudinal cohort. Cue/feedback contributions, zero-phase filtering and amplitude artifacts in fitting/query data affect its interpretation. Pooled-source and source-validation labels are explicit information-budget differences; independent participant validation remains the next step for the component hypotheses.
 
 ## S 9. Saved-result provenance and computational scope
 
 The V3 raw received archive is `paper2-results-83cbdfdcfa541b3ab3addfc3.tar.gz`, 40,194,093 bytes, SHA256 `e509c2591efa21fff4dd47236e613ed6b611ca10ad20bac3da37e66e34a9d170`. It comprises three verified GitHub parts at fixed commit `500831c086d9e1d1e8412cf8ebca5fb6a288db76`. Its 49,984 payload files plus manifest matched their lengths and checksums; 126 unique valid task-completion identities matched the frozen queue. The public packet contains no original EEG, optimizer tensors or model weights.
 
-The original three slot jobs were 775309, 775310 and 775311. Each completed 42 tasks with recorded exit 0, no restart; actual slot walltimes show sequential execution. Submission for three available slots was a capacity setting, not evidence of simultaneous execution. Such runtime/storage details establish provenance and completion, not the numerical accuracy of predictions.
+The original three slot jobs were 775309, 775310 and 775311. Each completed 42 tasks with recorded exit 0, no restart; actual slot walltimes show sequential execution. The three-slot capacity setting produced sequential execution in the recorded allocation. Runtime and storage records document provenance; saved-prediction reconstruction supplies the numerical verification.
 
-This revision reused saved outputs. It did not launch a new fit, load real checkpoint weights, repeat a query forward pass, add seeds, alter support windows or change a source model. Original submitted packages and prior failed/negative results remain at their paths. Reproduction scripts, table definitions, figure inputs and targeted verification are identified in the accompanying revision report.
+This revision reused saved predictions, metrics and histories with the original fitted models, seeds and support windows. Original submission packages and all experiment outcomes remain at their versioned paths. Reproduction scripts, table definitions, figure inputs and targeted verification are identified in the accompanying revision report.
 
 ## S 10. Complete V3 cohort means across all frozen budgets
 
-Values are BA percentages. Every row uses all six participants, all five target sessions and all declared seeds where applicable. `core`, `kl0p001` and `kl0p1` are separate frozen variants; no dose or cap has been selected from this table. The saved EA reference is included under the geometric scope after ordered query-identity alignment.
+Values are BA percentages. Every row uses all six participants, all five target sessions and all declared seeds where applicable. `core`, `kl0p001` and `kl0p1` identify the separately frozen variants. The saved EA reference is included under the geometric scope after ordered query-identity alignment.
 
 | Family / source / variant | Method | Cap 4 | Cap 8 | Cap 12 | Cap 16 | Cap 20 |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
@@ -194,11 +194,11 @@ Values are BA percentages. Every row uses all six participants, all five target 
 | Neural / individual / KL 0.001 | Full, KL constrained | 56.64 | 56.68 | 56.83 | 57.32 | 57.29 |
 | Neural / individual / KL 0.1 | Full, KL constrained | 56.90 | 56.77 | 56.80 | 57.50 | 57.51 |
 
-All paired participant differences, pointwise intervals, negative-participant counts and reference-role labels are retained in the companion comparison table. The full primary geometry and neural candidate outcomes appear in the main text; this complete grid supplies context without changing those roles.
+All paired participant differences, pointwise intervals, negative-participant counts and reference-role labels are retained in the companion comparison table. The full primary geometric and neural outcomes appear in the main text; this table supplies the complete budget context.
 
 ## S 11. Complete-grid synthetic method summary
 
-These means give every frozen scenario and paired draw equal weight. Probability scoring uses the saved simulation definitions. They are not human EEG results, and their numerical scales are conditional on the synthetic generator.
+These means give every frozen scenario and paired draw equal weight. Probability scoring uses the saved simulation definitions; these numerical scales apply to the synthetic generator.
 
 | Method | BA (%) | Cross entropy | Binary Brier | Mean squared feature error |
 | --- | ---: | ---: | ---: | ---: |
@@ -212,4 +212,4 @@ These means give every frozen scenario and paired draw equal weight. Probability
 | eb_no_source_noise | 70.28 | 3.7042 | 0.2681 | 0.25980 |
 | eb_no_shift | 74.87 | 2.5946 | 0.2210 | 0.13010 |
 
-The full candidate minus tangent refitting was−5.8255 BA points. Of 384 scenario means, eight favored the candidate and 376 favored refitting. Candidate feature-mean squared error exceeded refitting in every scenario mean. Posterior-predictive versus point candidate prediction changed mean cross entropy by−0.34094, Brier by−0.00191 and BA by−0.0398 percentage points. These comparisons separate improvements in a probability score from superiority in decoding or estimation.
+The full candidate minus tangent refitting was−5.8255 BA points. Of 384 scenario means, eight favored the candidate and 376 favored refitting. Candidate feature-mean squared error was larger than refitting in every scenario mean. Posterior-predictive versus point candidate prediction changed mean cross entropy by−0.34094, Brier by−0.00191 and BA by−0.0398 percentage points. The contrasts separate probability scoring from classification and mean estimation.

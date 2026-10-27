@@ -1,0 +1,121 @@
+{
+  "checked_utc": "2026-10-27T03:44:32.866552+00:00",
+  "scope": "Official arXiv abstract and complete10-page v1 PDF/HTML read; no external systematic novelty search; no new scientific execution",
+  "article": {
+    "title": "Benchmarking Label-Revealed Online Updates for EEG BCI Decoding",
+    "authors": [
+      "Bogdan Kozyrskiy",
+      "Artem Grachev",
+      "Abraham I. Camelo Guerrero"
+    ],
+    "arxiv": "2610.07420v1",
+    "date": "2026-10-05",
+    "doi": "10.48550/arXiv.2610.07420",
+    "peer_review_status": "preprint; no peer-reviewed status inferred"
+  },
+  "sources": [
+    {
+      "file": "kozyrskiy_abs.html",
+      "url": "https://arxiv.org/abs/2610.07420v1",
+      "final_url": "https://arxiv.org/abs/2610.07420v1",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 42179,
+      "sha256": "55403fccc3fd697a1a45294258dfcede16579faf04eaa98bfa988df357e5c75c"
+    },
+    {
+      "file": "kozyrskiy_paper.pdf",
+      "url": "https://arxiv.org/pdf/2610.07420v1",
+      "final_url": "https://arxiv.org/pdf/2610.07420v1",
+      "status": 200,
+      "content_type": "application/pdf",
+      "bytes": 1235580,
+      "sha256": "e9b44fbcff811ade382dadbdfbfa3eb5df0b7851daf3435b751e5abd817add74"
+    },
+    {
+      "file": "kozyrskiy_full.html",
+      "url": "https://arxiv.org/html/2610.07420v1",
+      "final_url": "https://arxiv.org/html/2610.07420v1",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 151844,
+      "sha256": "54331b4cc39ccb0f18402334dfcd5e92eaa65b95cca7be019da5390abf282dea"
+    }
+  ],
+  "verified_facts": [
+    {
+      "fact": "Four EEG datasets, three MI and one executed-movement decoding",
+      "location": "PDFp2 Datasets and p3 High-Gamma / Movement Decoding",
+      "datasets": [
+        "BCICompetitionIV2a",
+        "AlexMI",
+        "OpenBMI/Lee2019",
+        "Schirrmeister2017"
+      ]
+    },
+    {
+      "fact": "Time-ordered prequential test-then-train; current prediction is scored before label reveal and subsequent pipeline refit",
+      "location": "PDFpp2–3 Pipelines / Online Learning"
+    },
+    {
+      "fact": "Classifier and feature extractor updated together using available labeled history",
+      "location": "PDFp2 Classifiers and online updates"
+    },
+    {
+      "fact": "Frozen / expanding history / fixed rolling memory / cold-start initialization",
+      "location": "PDFp3 Online Learning"
+    },
+    {
+      "fact": "Expanding scheme uses one newly revealed trial at each step after a dataset-defined initial training split",
+      "location": "PDFp3 Expanding window"
+    },
+    {
+      "fact": "Cold start uses six trials for most pipelines and20forFBCSP, so calibration efficiency budgets differ",
+      "location": "PDFp3 Expanding window"
+    },
+    {
+      "fact": "Primary metric cumulative prequential accuracy, with trailing windoww25; not the same as our equally weighted five-session participant BA",
+      "location": "PDFp1 Introduction and pp3–4 Prequential accuracy"
+    },
+    {
+      "fact": "No fixed-CSP/classifier-only recalibration arm paired with fullCSP/LDA refit under identical current-session19/20-label supports was present in the reviewed seven-pipeline comparison",
+      "location": "PDFpp2–5 pipeline descriptions / results tables",
+      "scope": "This checked article only; not a systematic absence claim"
+    },
+    {
+      "fact": "Reviewer says three-month omission but submission was22days before27October2026;18days before23Octoberproposal",
+      "location": "Official arXiv submission history",
+      "consequence": "Do not repeat three-month claim or infer priority from this chronology"
+    }
+  ],
+  "claims_requiring_correction": [
+    {
+      "claim": "No identical published work exists",
+      "decision": "Not established by this targeted check; describe actual design contrast without first/unique priority claim"
+    },
+    {
+      "claim": "Posterior covariance improves calibration",
+      "decision": "Saved CE/Brier are proper scoring rules, not a direct decomposition of calibration. Use probability-score wording; noECE/reliability analysis performed"
+    },
+    {
+      "claim": "Do not propagate posterior covariance for few-sample classification",
+      "decision": "Overgeneralization beyond this estimator and fixed data/grid; report observed BA and proper-score differences"
+    },
+    {
+      "claim": "Simple tangent/EA is sufficient universally",
+      "decision": "Only superior to evaluated candidates in current settings; no all-task or minimality theorem"
+    }
+  ],
+  "bibliography_check": {
+    "entries_before_revision": 24,
+    "cited_before_revision": 22,
+    "uncited": [
+      "kozyrskiy2026updates",
+      "lotte2018skills"
+    ],
+    "recommendation": "Cite Kozyrskiy directly and retain preprint/v1 identification; remove uncited lotte2018skills if no text uses skill distinction, or cite genuinely relevant statement. No need to delete meaningful references merely to beautify the source."
+  },
+  "recommended_intro": "Kozyrskiy et al. benchmarked CSP- and covariance-based pipelines under time-ordered, label-revealed prequential evaluation across four EEG datasets [@kozyrskiy2026updates]. Their expanding- and rolling-history schemes refitted complete pipelines after each newly revealed trial, addressing update timing, memory and cold-start calibration. Here, each target session receives one fixed source-plus-current-support fit before the later whole runs are scored. The full-refit and classifier-only arms use identical source and current-session trial identities and identical query trials. Their difference quantifies the added spatial-representation update after the classifier has already received the same calibration labels.",
+  "recommended_probability_heading": "Posterior covariance changed probability scores and classification differently",
+  "recommended_score_sentence": "Across the fixed synthetic grid, adding posterior predictive covariance to identical posterior means reduced mean cross entropy by0.341 and Brier score by0.00191, while BA changed by−0.04points. In the EEG comparison, the same predictive step lowered BA and increased Brier score. These outcomes distinguish probability scoring from classification performance."
+}
