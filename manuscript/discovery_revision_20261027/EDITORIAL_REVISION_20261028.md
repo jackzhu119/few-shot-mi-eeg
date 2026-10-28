@@ -1,5 +1,7 @@
 # 2026年10月28日语言审查与修订
 
+**版本标记：Skill修订版（`anti-defensive-writing-en`），2026-10-28。** 本版按用户指定的 `anti-defensive-writing:anti-defensive-writing-en` skill 完成语言审查与修订。固定版本标签为 `paper2-bmt-skill-20261028`；科学稿件内容对应提交 `c381d7e`。
+
 本轮底稿为用户截图明确指定的科研分支提交 `97ff9a55a1cc12182df96771f6c89033b1e8ce14`，论文题目为 *Matched-label analysis identifies spatial refitting and alignment gains in motor-imagery EEG*。本轮审查主稿、补充方法及附信，并同步可编辑投稿稿、带图阅读稿、独立摘要与图注。
 
 ## 发现和修改

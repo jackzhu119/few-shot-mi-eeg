@@ -1,5 +1,7 @@
 # Longitudinal Motor-Imagery EEG Decoding
 
+**当前版本：2026-10-28 Skill修订版（`anti-defensive-writing-en`）。** [版本说明](manuscript/discovery_revision_20261027/SKILL_VERSION.md) · [主稿PDF](manuscript/discovery_revision_20261027/BMT_Manuscript_Review.pdf) · [Skill版完整稿件包](manuscript/discovery_revision_20261027/BMT_Skill_Revision_20261028.zip)。版本标签：`paper2-bmt-skill-20261028`。
+
 公开多会话运动想象EEG的跨会话解码研究：比较冻结模型、分类器重校准与空间滤波器更新，并检验少量校准标签下的更新强度。
 
 当前新审阅稿：**Matched-label analysis identifies spatial refitting and alignment gains in motor-imagery EEG**，按 **Biomedical Engineering / Biomedizinische Technik** 的 Research Article 要求准备。核心为同标签预算下空间滤波器重学的额外收益；原PLOS ONE稿件保留原路径。

@@ -1,5 +1,7 @@
 # Biomedical Engineering / Biomedizinische Technik — author-review revision
 
+**Version: Skill-assisted language revision — anti-defensive-writing-en — 28 October 2026.** Git tag: `paper2-bmt-skill-20261028`. [Version record](SKILL_VERSION.md) · [Download the Skill revision package](BMT_Skill_Revision_20261028.zip). This label identifies the language-revision workflow; the scientific content is the reviewed `c381d7e` version.
+
 Scientific revision: 27 October 2026. Latest language revision: 28 October 2026. Article type: Research Article. This is a new scientific and journal-specific review draft; the earlier PLOS ONE submission files remain unchanged.
 
 The manuscript now compares spatial update operations under matched target labels in two datasets. The original Kumar12-person component gain is +5.47pp; a fixed nine-person BNCI2014-001 replication gave Full−LDA-only +0.19pp [−1.85,2.13] and EA−Full +5.65pp [3.15,8.70], with EA gains in all9participants. Original endpoint roles remain intact. [External experiment and revised main line](../../research_logs/paper2_external_validation_20261027/REPORT.md) · [Exact public replay](../../research_logs/paper2_external_validation_20261027/REPRODUCE.md).
