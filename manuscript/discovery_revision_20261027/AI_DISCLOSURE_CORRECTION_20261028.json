@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-28",
+  "baseline_commit": "e48d1ad3c3f9d366aa1471126aa73aa80ba883b2",
+  "basis": "The author clarified the actual AI-use scope in this chat.",
+  "author_reported_uses": [
+    "grammatical editing",
+    "pushing updates to GitHub",
+    "assembling and cross-checking project files",
+    "revising code"
+  ],
+  "disclosure": "The author used OpenAI ChatGPT/Codex to assist with grammatical editing, pushing updates to GitHub, assembling and cross-checking project files, and revising code. The author is responsible for the content and interpretation of the manuscript.",
+  "text_replacements": {
+    "MAIN.md": {
+      "old": "OpenAI ChatGPT/Codex assisted with grammar and language revision, GitHub file organization and uploading, manuscript formatting, and verification of saved results. This work included assistance with analysis and plotting code, statistical reconstruction, and manuscript drafting and revision. The author is responsible for the content and interpretation.",
+      "new": "The author used OpenAI ChatGPT/Codex to assist with grammatical editing, pushing updates to GitHub, assembling and cross-checking project files, and revising code. The author is responsible for the content and interpretation of the manuscript."
+    },
+    "Sources/MAIN_PDF.md": {
+      "old": "OpenAI ChatGPT/Codex assisted with grammar and language revision, GitHub file organization and uploading, manuscript formatting, and verification of saved results. This work included assistance with analysis and plotting code, statistical reconstruction, and manuscript drafting and revision. The author is responsible for the content and interpretation.",
+      "new": "The author used OpenAI ChatGPT/Codex to assist with grammatical editing, pushing updates to GitHub, assembling and cross-checking project files, and revising code. The author is responsible for the content and interpretation of the manuscript."
+    },
+    "Sources/BMT_Manuscript_For_Submission.md": {
+      "old": "OpenAI ChatGPT/Codex assisted with grammar and language revision, GitHub file organization and uploading, manuscript formatting, and verification of saved results. This work included assistance with analysis and plotting code, statistical reconstruction, and manuscript drafting and revision. The author is responsible for the content and interpretation.",
+      "new": "The author used OpenAI ChatGPT/Codex to assist with grammatical editing, pushing updates to GitHub, assembling and cross-checking project files, and revising code. The author is responsible for the content and interpretation of the manuscript."
+    },
+    "ETHICAL_AND_LEGAL_DECLARATIONS_DRAFT.md": {
+      "old": "OpenAI ChatGPT/Codex assisted with grammar and language revision, GitHub file organization and uploading, manuscript formatting, and verification of saved results. The assistance included analysis and plotting code, statistical reconstruction, and manuscript drafting and revision. Checks covered trial-identity matching, file checksums, recomputation of metrics from saved predictions, and consistency of tables, figures and references. These checks were also AI-assisted. Graphs were rendered programmatically from recorded numerical results; experimental data and saved predictions were retained unchanged. The author is responsible for the content, interpretation and final approval of the submission.",
+      "new": "The author used OpenAI ChatGPT/Codex to assist with grammatical editing, pushing updates to GitHub, assembling and cross-checking project files, and revising code. The author is responsible for the content and interpretation of the manuscript."
+    },
+    "README.md": {
+      "old": "AI assistance is documented in the acknowledgment and separate declarations: language revision, GitHub organization/uploading, formatting and result checks, including the recorded code and manuscript assistance.",
+      "new": "The author reports using OpenAI ChatGPT/Codex for grammatical editing, pushing updates to GitHub, assembling and cross-checking project files, and revising code. This scope is stated in the acknowledgment and separate declarations; the [28 October correction](AI_DISCLOSURE_CORRECTION_20261028.md) supersedes earlier descriptions of AI assistance."
+    }
+  },
+  "word_files_changed": [
+    "BMT_Manuscript_Review.docx",
+    "BMT_Manuscript_Submission.docx",
+    "Ethical_and_Legal_Declarations_DRAFT.docx"
+  ],
+  "author_approval_or_submission_status_changed": false,
+  "verification": {
+    "source_changes_limited_to_disclosure_and_readme": true,
+    "word_text_changes_limited_to_disclosure": true,
+    "word_math_and_media_unchanged": true,
+    "supplement_figures_data_references_and_cover_unchanged": true,
+    "current_disclosure_synchronized": true,
+    "all_three_pdf_disclosures_verified": true
+  },
+  "pdf": {
+    "BMT_Manuscript_Review": {
+      "pages": 15,
+      "text_characters": 40495,
+      "empty_pages": []
+    },
+    "BMT_Manuscript_Submission": {
+      "pages": 12,
+      "text_characters": 40501,
+      "empty_pages": []
+    },
+    "Ethical_and_Legal_Declarations_DRAFT": {
+      "pages": 2,
+      "text_characters": 3896,
+      "empty_pages": []
+    }
+  },
+  "visual_QA": {
+    "passed": true,
+    "method": "Native Microsoft Word 16.0 read-only PDF export; bundled Poppler at 120 dpi; all changed Word documents inspected page by page.",
+    "reading_manuscript": {
+      "pages": 15,
+      "all_pages_inspected": true,
+      "disclosure_page": 13,
+      "result": "All four author-reported AI uses and responsibility sentence appear correctly; no clipping, missing content or broken references."
+    },
+    "submission_manuscript": {
+      "pages": 12,
+      "all_pages_inspected": true,
+      "disclosure_page": 10,
+      "result": "Four uses correct, no drafting/statistical-reconstruction wording in the disclosure; figures legends and page sequence complete."
+    },
+    "ethical_and_legal_declarations": {
+      "pages": 2,
+      "all_pages_inspected": true,
+      "disclosure_page": 1,
+      "result": "AI-use table row is complete with the corrected text. Other declaration text retained. Black title has no decorative border; no clipping or overflow."
+    }
+  },
+  "skill_version_tag": "paper2-bmt-skill-ai-corrected-20261028",
+  "declaration_title_format": "Black Title style with no decorative border; declaration text outside AI row unchanged."
+}

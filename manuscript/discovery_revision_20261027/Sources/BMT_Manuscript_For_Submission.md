@@ -263,7 +263,7 @@ Source EEG is available as NEMAR nm000177/v1.0.5, DOI 10.82901/nemar.nm000177.v1
 
 ## Acknowledgments
 
-The author thanks the researchers who released Kumar2024 and BCI Competition IV 2a. OpenAI ChatGPT/Codex assisted with grammar and language revision, GitHub file organization and uploading, manuscript formatting, and verification of saved results. This work included assistance with analysis and plotting code, statistical reconstruction, and manuscript drafting and revision. The author is responsible for the content and interpretation.
+The author thanks the researchers who released Kumar2024 and BCI Competition IV 2a. The author used OpenAI ChatGPT/Codex to assist with grammatical editing, pushing updates to GitHub, assembling and cross-checking project files, and revising code. The author is responsible for the content and interpretation of the manuscript.
 
 ## References
 

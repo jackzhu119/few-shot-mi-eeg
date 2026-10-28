@@ -30,7 +30,7 @@ The earlier author approval of the 2026-10-16 version does not establish approva
 
 ## Use of large language models, AI and machine learning tools
 
-OpenAI ChatGPT/Codex assisted with grammar and language revision, GitHub file organization and uploading, manuscript formatting, and verification of saved results. The assistance included analysis and plotting code, statistical reconstruction, and manuscript drafting and revision. Checks covered trial-identity matching, file checksums, recomputation of metrics from saved predictions, and consistency of tables, figures and references. These checks were also AI-assisted. Graphs were rendered programmatically from recorded numerical results; experimental data and saved predictions were retained unchanged. The author is responsible for the content, interpretation and final approval of the submission.
+The author used OpenAI ChatGPT/Codex to assist with grammatical editing, pushing updates to GitHub, assembling and cross-checking project files, and revising code. The author is responsible for the content and interpretation of the manuscript.
 
 ## Conflict of interest
 

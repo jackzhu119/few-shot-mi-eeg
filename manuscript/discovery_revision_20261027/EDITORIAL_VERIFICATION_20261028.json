@@ -441,20 +441,6 @@
     }
   ],
   "independent_content_review": "Passed after keeping the two dataset-specific contrasts separate; no claim of a within-dataset refitting-versus-alignment ranking in Kumar.",
-  "verification": {
-    "markdown_scientific_tables_unchanged": true,
-    "displayed_equations_unchanged": true,
-    "results_numeric_tokens_unchanged": true,
-    "ethics_section_unchanged": true,
-    "AI_acknowledgment_unchanged": true,
-    "citations_unchanged": true,
-    "separate_declarations_unchanged": true,
-    "data_and_code_archive_unchanged": true,
-    "all_five_figure_sets_unchanged": true,
-    "word_tables_unchanged": true,
-    "word_equations_unchanged": true,
-    "word_images_unchanged": true
-  },
   "format_checks": {
     "abstract_words": 159,
     "complete_words": 5334,
@@ -525,16 +511,26 @@
     ]
   },
   "skill_version": {
-    "version_label": "Skill修订版 / anti-defensive-writing-en / 2026-10-28",
+    "version_label": "Skill修订版（AI披露已更正） / anti-defensive-writing-en / 2026-10-28",
     "skill_name": "anti-defensive-writing-en",
     "requested_skill": "anti-defensive-writing:anti-defensive-writing-en",
     "revision_date": "2026-10-28",
-    "version_tag": "paper2-bmt-skill-20261028",
+    "version_tag": "paper2-bmt-skill-ai-corrected-20261028",
     "scientific_content_commit": "c381d7e21f60d643bb527f87b46ddc3df633ae66",
     "pre_skill_baseline_commit": "97ff9a55a1cc12182df96771f6c89033b1e8ce14",
     "scope": "Language and editorial revision; version labeling and packaging.",
     "algorithm_or_experiment_version_changed": false,
-    "author_approval_or_submission_status_changed": false
+    "author_approval_or_submission_status_changed": false,
+    "previous_skill_version_tag": "paper2-bmt-skill-20261028",
+    "ai_disclosure_correction": {
+      "basis": "Author clarification on 28 October 2026",
+      "author_reported_uses": [
+        "grammatical editing",
+        "pushing updates to GitHub",
+        "assembling and cross-checking project files",
+        "revising code"
+      ]
+    }
   },
   "version_label_update": {
     "date": "2026-10-28",
@@ -587,5 +583,28 @@
       "Third_Party/bmt_vancouver.csl": "286369d2f1039d85c089317f6ccb74d9875a645aebccb12ff02a9bc7282f27bf",
       "Third_Party/README.md": "1bb4e588e47d4fe39ee7d80383b268f719154d09b7374b2b1b8399cd9ce56957"
     }
+  },
+  "verification_before_AI_disclosure_correction": {
+    "markdown_scientific_tables_unchanged": true,
+    "displayed_equations_unchanged": true,
+    "results_numeric_tokens_unchanged": true,
+    "ethics_section_unchanged": true,
+    "AI_acknowledgment_unchanged": true,
+    "citations_unchanged": true,
+    "separate_declarations_unchanged": true,
+    "data_and_code_archive_unchanged": true,
+    "all_five_figure_sets_unchanged": true,
+    "word_tables_unchanged": true,
+    "word_equations_unchanged": true,
+    "word_images_unchanged": true
+  },
+  "AI_disclosure_correction_record": "AI_DISCLOSURE_CORRECTION_20261028.json",
+  "verification": {
+    "source_changes_limited_to_disclosure_and_readme": true,
+    "word_text_changes_limited_to_disclosure": true,
+    "word_math_and_media_unchanged": true,
+    "supplement_figures_data_references_and_cover_unchanged": true,
+    "current_disclosure_synchronized": true,
+    "all_three_pdf_disclosures_verified": true
   }
 }

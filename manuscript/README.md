@@ -1,6 +1,6 @@
 # 论文与投稿文件导航
 
-**最新语言版本：2026-10-28 Skill修订版（`anti-defensive-writing-en`）。** [版本说明](discovery_revision_20261027/SKILL_VERSION.md) · [Skill版完整包](discovery_revision_20261027/BMT_Skill_Revision_20261028.zip) · [修订说明](discovery_revision_20261027/EDITORIAL_REVISION_20261028.md)。
+**最新语言版本：2026-10-28 Skill修订版（AI披露已更正；`anti-defensive-writing-en`）。** [版本说明](discovery_revision_20261027/SKILL_VERSION.md) · [Skill版完整包](discovery_revision_20261027/BMT_Skill_Revision_AI_Corrected_20261028.zip) · [修订说明](discovery_revision_20261027/EDITORIAL_REVISION_20261028.md)。
 
 **2026-10-27新审阅修订：Biomedical Engineering / Biomedizinische Technik。** [主稿PDF](discovery_revision_20261027/BMT_Manuscript_Review.pdf) · [Word、补充方法、图和声明](discovery_revision_20261027/README.md) · [科学整改报告](../research_logs/paper2_v3_analysis_20261027/REPORT.md)。新稿突出同标签预算下空间滤波器重学的额外收益，纳入V2/V3全部关键对照；原PLOS ONE版本保持原样。
 
