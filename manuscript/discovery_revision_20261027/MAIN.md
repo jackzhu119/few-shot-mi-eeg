@@ -12,13 +12,13 @@ College of Artificial Intelligence Medicine, Chongqing Medical University, Jinyu
 
 ## Abstract
 
-**Objectives:** To determine which spatial update adds value beyond classifier recalibration with 20 current-session labels.
+**Objectives:** To quantify gains from spatial refitting and alignment with up to 20 current-session calibration labels.
 
-**Methods:** We compared frozen common spatial patterns and linear discriminant analysis (CSP/LDA), classifier-only recalibration and full refitting in 18 Kumar2024 participants across six sessions. The original primary cohort contained 12 participants. A fixed four-method replication added nine BNCI2014-001 participants and support-only Euclidean alignment (EA-CSP). Updating methods received identical labels within each dataset.
+**Methods:** We compared frozen common spatial patterns and linear discriminant analysis (CSP/LDA), classifier-only recalibration and full refitting in Kumar2024 (18 participants, six sessions; 12-participant primary cohort). A fixed-budget external comparison in nine BNCI2014-001 participants added support-only Euclidean alignment (EA-CSP). Updating methods received identical labels within each dataset.
 
-**Results:** In Kumar2024, full refitting achieved 65.36% balanced accuracy, 7.42 percentage points above freezing (95% participant-bootstrap interval 2.49–12.48). The secondary full-minus-classifier-only gain was 5.47 points (2.17–8.91), accounting for 73.7% of the mean total gain. In BNCI, EA-CSP achieved 77.50%, improving on full refitting by 5.65 points in the secondary comparison (3.15–8.70; Holm-adjusted p=0.01172), with gains in all nine participants. Full-minus-classifier-only was 0.19 points (−1.85 to 2.13). Fixed source normalization also reduced single-class neural predictions at the 20-label cap.
+**Results:** In the Kumar2024 primary cohort, full refitting achieved 65.36% balanced accuracy, 7.42 percentage points above freezing (95% participant-bootstrap interval 2.49–12.48). The secondary full-minus-classifier-only gain was 5.47 points (2.17–8.91), accounting for 73.7% of the mean total gain. In BNCI, EA-CSP achieved 77.50%, improving on full refitting by 5.65 points in the secondary comparison (3.15–8.70; Holm-adjusted p=0.01172), with gains in all nine participants. Full-minus-classifier-only was 0.19 points (−1.85 to 2.13). Fixed source normalization also reduced single-class neural predictions at the 20-label cap.
 
-**Conclusions:** Matched-label comparisons quantify distinct gains from spatial refitting and support-only alignment, providing a direct way to compare decoder updates with limited calibration labels.
+**Conclusions:** Spatial refitting in Kumar2024 and support-only alignment in BNCI2014-001 improved recalibration under matched labels.
 
 **Keywords:** batch normalization; brain–computer interfaces; covariance alignment; motor imagery; transfer learning
 
@@ -30,15 +30,15 @@ Common spatial patterns (CSP) and linear discriminant analysis (LDA) make the co
 
 Previous research has established classifier adaptation, adaptive CSP, data-space transformations and distribution alignment [@vidaurre2011lda; @arvaneh2013dsa; @song2015acsp; @he2020alignment; @zanini2018alignment]. The Kumar acquisition study combined covariance recentering with a Riemannian classifier, added supervised prototype updates, and examined a recentering-based CSP extension [@kumar2024; @kumar2024correction]. We quantify the additional gain from relearning spatial filters after classifier recalibration has received those same labels.
 
-Kozyrskiy et al. benchmarked label-revealed online updates across four EEG datasets [@kozyrskiy2026updates]. Their prequential procedure predicts a trial, reveals its label, then refits CSP or Riemannian pipelines using expanding, rolling or cold-start histories. Here, each later session is recalibrated from the source-training set and a fixed current-session support run, and full CSP/LDA refitting is compared directly with LDA-only recalibration using identical trial identities. Our comparison measures the additional spatial component at a fixed current-session label budget.
+Kozyrskiy et al. benchmarked label-revealed online updates across four EEG datasets [@kozyrskiy2026updates]. Their prequential procedure predicts a trial, reveals its label, then refits CSP or Riemannian pipelines using expanding, rolling or cold-start histories. Here, each later session is recalibrated from the source-training set and a fixed current-session support run, and full CSP/LDA refitting is compared directly with LDA-only recalibration using identical trial identities.
 
-Neural adaptation introduces further choices. Weight updates can accompany changes in normalization statistics, affine parameters and Dropout. Adaptive batch normalization (BN) is established [@adabn2016], and longitudinal EEG studies have combined fine-tuning with alignment and normalization updates [@wimpff2025continual]. Weight and functional constraints offer other ways to preserve source information [@l2sp2018; @lwf2016; @trpo2015]. Explicitly separating these actions helps explain the resulting predictions.
+Neural adaptation introduces further choices. Weight updates can accompany changes in normalization statistics, affine parameters and Dropout. Adaptive batch normalization (BN) is established [@adabn2016], and longitudinal EEG studies have combined fine-tuning with alignment and normalization updates [@wimpff2025continual]. Weight and functional constraints offer other ways to preserve source information [@l2sp2018; @lwf2016; @trpo2015]. We compare normalization modes during weight adaptation and test a constraint on source predictions.
 
-**Matched-label component analysis** provides three contributions:
+The study combines three analyses:
 
 1. **A controlled spatial-component comparison.** LDA-only recalibration and full CSP/LDA refitting use the same 40 source-training labels, 19 or 20 current-session labels and query trials. Their difference measures the additional spatial update after classifier recalibration. A separate frozen arm measures the total benefit of receiving support labels and refitting.
-2. **Prediction-level and longitudinal attribution.** Corrected and newly introduced errors reconstruct the component gain, while class recalls, target-session profiles and participant-deletion summaries locate that gain across the longitudinal data.
-3. **An external comparison of update operations.** A fixed nine-participant BNCI2014-001 replication compares the same component contrast with support-only EA-CSP under exactly 20 target labels. Neural normalization and geometric controls locate further operation-specific effects in the development cohort.
+2. **Prediction-level decomposition across sessions and participants.** Corrected and newly introduced errors reconstruct the component gain. Class recalls, target-session means and participant-deletion summaries show how the gain is distributed across labels, sessions and participants.
+3. **An external comparison of spatial updates.** A fixed nine-participant BNCI2014-001 comparison evaluates LDA-only recalibration, full refitting and support-only EA-CSP with exactly 20 target labels. Development-cohort experiments examine neural normalization and geometric estimation across support budgets.
 
 ## Materials and methods
 
@@ -76,7 +76,7 @@ V2 and V3 used the same six previously exposed development participants, chronol
 
 V2 tested source–target covariance mixing against EA-CSP. V3 fixed two cap-20 primary candidate contrasts before execution: uncertainty-aware prediction minus ordinary tangent refitting, and source-functional-constrained minus ordinary full neural adaptation within each source regime. BN, Dropout and dose comparisons were exploratory mechanisms. The full matrix included 10,350 target and 42 source prediction files, all nested within the same six participants; details are in the supplement.
 
-### External fixed-budget replication
+### External comparison with a fixed calibration budget
 
 BNCI2014-001 contains nine participants, two different-day sessions and six runs per session [@tangermann2012competition]. We retained left/right imagery and the first 22 EEG channels. The MAT trial-start index precedes the cue by two seconds; epochs covered cue time [0,4) seconds at 250 Hz. A fourth-order 8–30 Hz Butterworth filter operated within each continuous run, with zero phase and the recorded reference. Original artifact flags were retained without trial rejection.
 
@@ -108,9 +108,9 @@ BA averaged the two true-class recalls. Seeds were averaged within session, five
 
 All scheduled seeds, sessions, caps and doses were retained; any missing required cell left the endpoint incomplete. Pooled-source intervals are conditional on the fitted shared teachers. Synthetic summaries equally weighted the fixed scenarios and paired draws. Exploratory EEG cross entropy clipped probabilities at $10^{-15}$; simulation scoring used the same numerical floor.
 
-The external replication had one fixed primary contrast, full CSP/LDA minus LDA-only. Its two-sided exact sign-flip test enumerated 512 sign assignments with the observed difference magnitudes. Three secondary contrasts (full minus frozen, LDA-only minus frozen, EA minus full) formed a separate Holm family. Paired participant-bootstrap intervals used 10,000 draws, seed 20261027 and participant order 1–9. Dataset cohorts were analyzed separately.
+The external comparison had one fixed primary contrast, full CSP/LDA minus LDA-only. Its two-sided exact sign-flip test enumerated 512 sign assignments with the observed difference magnitudes. Three secondary contrasts (full minus frozen, LDA-only minus frozen, EA minus full) formed a separate Holm family. Paired participant-bootstrap intervals used 10,000 draws, seed 20261027 and participant order 1–9. Dataset cohorts were analyzed separately.
 
-Saved trial identities, labels and metrics were checked before aggregation. Kumar analyses reused predictions and histories; the external replication generated its own four-method predictions. All external BA values were independently reconstructed from the saved predictions without another model evaluation.
+Saved trial identities, labels and metrics were checked before aggregation. Kumar analyses reused predictions and histories; the external comparison generated its own four-method predictions. All external BA values were independently reconstructed from the saved predictions without another model evaluation.
 
 ## Results
 
@@ -128,7 +128,7 @@ Full CSP/LDA refitting achieved 65.36% target BA in the original 12-participant 
 
 BA, balanced accuracy; pp, percentage points. The two updating methods used the same source-training/current-support union. Values average five sessions within participants. Full refitting versus freezing in the 12-participant cohort was the predefined primary comparison; full versus LDA-only was secondary. Development and primary-cohort estimates are reported separately.
 
-The component gain reflected 16.04 BA points of corrected errors against 10.57 points of newly introduced errors on the same query trials. Mean left- and right-class recall increased by 6.16 and 4.78 points, respectively. These recall intervals individually included zero; their class-balanced mean gives the observed component endpoint. The added spatial update was positive in ten of 12 participant averages and every target-session cohort average: +3.52, +5.20, +4.13, +4.18 and +10.33 points. Every single-participant deletion mean remained positive, between +4.39 and +6.28 points.
+The component gain reflected 16.04 BA points of corrected errors against 10.57 points of newly introduced errors on the same query trials. Mean left- and right-class recall changes were +6.16 and +4.78 points, respectively, with both class-specific intervals including zero. Their class-balanced mean gives the observed component endpoint. The added spatial update was positive in ten of 12 participant averages and every target-session cohort average: +3.52, +5.20, +4.13, +4.18 and +10.33 points. Every single-participant deletion mean remained positive, between +4.39 and +6.28 points.
 
 Full refitting gave higher BA than frozen decoding for nine of 12 primary participants. The three decreases were −5.82, −0.67 and −0.20 points. In the ten participants retaining both query classes across all five unflagged sessions, full-minus-frozen was +5.96 points (0.99–11.24) and full-minus-LDA-only +3.82 (1.11–6.72). This query restriction left original training and support data unchanged. The retained cohort and amplitude-conditional endpoint differ from the complete primary analysis.
 
@@ -136,13 +136,11 @@ Full refitting gave higher BA than frozen decoding for nine of 12 primary partic
 
 **Figure 1. Spatial-component effects and calibration budgets.** Panels show paired component and total effects in the original primary cohort, followed by V2 budget profiles in the six development participants. Points, cohort means and participant-bootstrap intervals show the distribution of effects. Full-minus-LDA-only compares updates using identical labels.
 
-### EA-CSP provided a strong conventional reference
+### Covariance mixing and EA-CSP under matched labels
 
-In the six-participant V2 extension at the 20-label cap, frozen classical decoding achieved 62.15% BA, LDA-only 67.30%, full CSP/LDA 68.65% and EA-CSP 70.37%. The covariance-mixture candidate achieved 69.24%. The candidate improved on frozen decoding by +7.09 points (4.12–11.55). Its prespecified comparison with EA-CSP was −1.14 points (−3.52–1.14). EA-CSP therefore provided the stronger conventional reference for the next experiment.
+In the six-participant V2 extension at the 20-label cap, frozen classical decoding achieved 62.15% BA, LDA-only 67.30%, full CSP/LDA 68.65% and EA-CSP 70.37%. The covariance-mixture candidate achieved 69.24%. The candidate improved on frozen decoding by +7.09 points (4.12–11.55). Its prespecified comparison with EA-CSP was −1.14 points (−3.52–1.14).
 
-These results motivated the source-fixed feature and component controls in V3.
-
-### Tangent refitting and EA-CSP gave higher geometric-decoder accuracy
+### Geometric estimation in a fixed tangent feature space
 
 At the cap of 20 labels, EA-CSP achieved 70.37% BA and ordinary tangent refitting 67.01%, compared with 64.68% for the geometric candidate. Its prespecified primary contrast was −2.33 points (−4.41 to −0.24), and its strong-reference contrast was −5.69 points (−9.30 to −2.22; Table 2). Both reference methods had higher BA in five of six participants. Ordinary tangent refitting had higher cohort-mean BA at all five support caps (Figure 2).
 
@@ -163,11 +161,11 @@ The matched ablations distinguish three operations. Separating common and discri
 
 ![Figure 2](figures/Fig2_geometry.png){width=100%}
 
-**Figure 2. Geometric candidate, matched controls and ablations.** Full support-budget profiles and cap-20 paired contrasts retain ordinary tangent refitting and EA-CSP as strong references. Ablations separate posterior mean estimation, prediction covariance, source-mean noise and common/contrast variation scales. All candidate-versus-ablation and strong-reference contrasts are displayed together; intervals use participant-bootstrap resampling.
+**Figure 2. Geometric candidate, matched controls and ablations.** Curves show BA across support budgets; paired cap-20 contrasts compare the candidate with tangent refitting, EA-CSP and matched ablations. Ablations vary posterior mean estimation, predictive covariance, source-mean noise and common/contrast shift scales. Intervals are participant-bootstrap summaries.
 
 ### Fixed source normalization reduced single-class predictions at the 20-label cap
 
-At the 20-label cap, fixed-BN full updates produced eight single-class query predictions among 90 nested participant-by-seed-by-session outcomes, compared with 16 under adaptive BN. Pooled-source counts were zero and 18, respectively. Fixed-BN BA was 57.51%, versus 56.01% for adaptive BN with individual sources, a difference of 1.50 points (0.33–2.74). Pooled-source values were 56.22% and 54.31%, a difference of 1.91 points (0.76–3.24; Table 3). Five of six participant differences favored fixed BN in each regime; the remaining difference was negative for individual sources and approximately zero for pooled sources. All participant-deletion mean contrasts stayed positive at this cap.
+At the 20-label cap, fixed-BN full updates predicted a single class in eight of 90 participant-by-seed-by-session query sets, compared with 16 for adaptive BN. Pooled-source counts were zero and 18, respectively. Fixed-BN BA was 57.51%, versus 56.01% for adaptive BN with individual sources, a difference of 1.50 points (0.33–2.74). Pooled-source values were 56.22% and 54.31%, a difference of 1.91 points (0.76–3.24; Table 3). Five of six participant differences favored fixed BN in each regime; the remaining difference was negative for individual sources and approximately zero for pooled sources. All participant-deletion mean contrasts stayed positive at this cap.
 
 **Table 3. V3 neural component contrasts at the 20-label cap.**
 
@@ -189,15 +187,15 @@ The full budget curves show how this contrast changes (Figure 3). Individual-sou
 
 ### Source discrimination and functional-constraint effects
 
-Frozen individual-source models achieved 56.74% target BA, compared with 55.26% for pooled-source models, a pooled-minus-individual difference of −1.48 points (−2.90 to −0.20). Source-query BA was 56.11% and 57.78%, respectively. Source-query measurements provide the within-domain reference for interpreting target performance.
+Frozen individual-source models achieved 56.74% target BA, compared with 55.26% for pooled-source models, a pooled-minus-individual difference of −1.48 points (−2.90 to −0.20). Source-query BA was 56.11% and 57.78%, respectively.
 
-The three pooled models selected epochs 14, 20 and 17 by validation loss. Their final training losses were approximately 0.20–0.22, while final validation losses were 0.91–0.96, above the selected validation losses near 0.68. Training and validation loss diverged after the validation-selected epochs.
+The three pooled models selected epochs 14, 20 and 17 by validation loss. Their final training losses were approximately 0.20–0.22, while final validation losses were 0.91–0.96, above the selected validation losses near 0.68.
 
 At the core KL bound 0.01, the functional constraint changed the cap-20 mean relative to ordinary fixed-BN adaptation by −0.01 points for individual sources and +0.03 points for pooled sources. At bound 0.1, BA matched the ordinary update in both regimes; bound 0.001 produced differences of −0.22 and −0.19 points, respectively, with intervals crossing zero. The complete dose profiles and accepted/rejected-step histories are retained.
 
 ### Posterior covariance reduced simulated log loss with little change in accuracy
 
-The full synthetic grid contained 172,800 numeric method-by-condition-by-repetition results. Equal-grid BA was 70.36% for the candidate and 76.19% for tangent refitting, a difference of −5.83 points; 376 of 384 scenario means favored refitting. Candidate feature-mean squared error was also larger. Adding posterior covariance to identical candidate means reduced mean cross entropy by 0.341 but changed BA by −0.04 points. Thus, the probability-score improvement and classification endpoint moved differently (Figure 4).
+The full synthetic grid contained 172,800 numeric method-by-condition-by-repetition results. Equal-grid BA was 70.36% for the candidate and 76.19% for tangent refitting, a difference of −5.83 points; 376 of 384 scenario means favored refitting. Candidate feature-mean squared error was also larger. Adding posterior covariance to identical candidate means reduced mean cross entropy by 0.341 but changed BA by −0.04 points. Posterior covariance improved log loss for the same estimated means, with little change in classification accuracy (Figure 4).
 
 ![Figure 4](figures/Fig4_mechanisms.png){width=100%}
 
@@ -215,13 +213,13 @@ In BNCI2014-001, mean BA was 70.56% for frozen CSP/LDA, 71.67% for LDA-only, 71.
 
 ## Discussion
 
-### Matched-label analysis identifies the spatial contribution
+### Gains from spatial refitting and alignment
 
-Matching source and current-session labels locates recalibration gains in specific decoder components. Full CSP/LDA refitting added 5.47 BA points beyond classifier-only recalibration in the original primary cohort and supplied 73.7% of the mean improvement over freezing. The comparison measures the value of relearning the spatial representation after the classifier has received the same calibration labels.
+Full CSP/LDA refitting added 5.47 BA points beyond classifier-only recalibration in the original primary cohort and supplied 73.7% of the mean improvement over freezing. Because both updates used identical source and support trials, this contrast measures the gain from relearning the spatial representation together with the classifier.
 
-The external experiment identifies support-only alignment as a useful additional operation. With the same 20 current labels, EA improved on full refitting in all nine participants, while full refitting and classifier-only recalibration gave similar cohort means. Together, the two datasets quantify the contributions of spatial refitting and alignment within their respective implementations.
+In BNCI2014-001, EA improved on full refitting in all nine participants using the same 20 current labels, while full refitting and classifier-only recalibration gave similar cohort means. The two comparisons measure separate additions to recalibration: spatial refitting beyond LDA-only in Kumar2024, and alignment beyond full refitting in BNCI2014-001.
 
-The neural extension separates another component choice. At the final support cap, fixed-source BN during full weight adaptation produced higher BA and fewer single-class seed/session predictions than adaptive BN in both initialization regimes. Supervised spatial-filter refitting and repeated neural normalization therefore had different effects under the evaluated support schedules.
+At the 20-label cap, fixed-source BN during full weight adaptation produced higher BA and fewer single-class seed/session predictions than adaptive BN in both initialization regimes.
 
 Prediction transitions explain the spatial gain: refitting corrected more class-balanced errors than it introduced, with improvement in both labels. The gain remained positive in every target-session mean and after every single-participant deletion.
 
@@ -231,19 +229,19 @@ The BN comparison holds source initialization, support, trainable parameters, Dr
 
 Adaptive BN changes batch normalization during optimization and accumulates the running state used for evaluation; both can affect the resulting model. The small final minibatch, number of BN updates and class composition differ across the chronological prefixes. The full curves show a different sign for the individual-source comparison at smaller caps.
 
-Reports using abundant target-domain statistics or continuous online adaptation address different information regimes [@adabn2016; @wimpff2025continual]. Here, repeated passes through a short support run link normalization mode to its update schedule. A follow-up can vary the number of BN updates while holding labels, minibatches and trained sources fixed.
+Reports using abundant target-domain statistics or continuous online adaptation address different information regimes [@adabn2016; @wimpff2025continual]. Here, repeated passes through a short support run link normalization mode to its update schedule.
 
-### Strong references guide estimator comparisons
+### Spatial alignment and predictive covariance
 
-EA-CSP had higher mean BA than the V2 covariance-mixture candidate and the V3 uncertainty-aware candidate. Ordinary tangent refitting also had higher BA in the candidate’s own feature family. EA-CSP and tangent refitting therefore provide practical references for evaluating additional adaptation machinery on these data.
+EA-CSP had higher mean BA than the V2 covariance-mixture candidate and the V3 uncertainty-aware candidate. Ordinary tangent refitting also achieved higher BA within the same tangent feature space. These comparisons place the candidate’s mean and covariance updates against EA-CSP and tangent refitting.
 
 The candidate separated shared class movement from discriminative change and propagated estimated mean uncertainty. Ablations showed contributions from its shift scales and noise estimates, while point prediction identified a cost of adding posterior covariance. Its conditional expected squared-error result concerns class-mean estimation under the Gaussian assumptions; classification remains an empirical endpoint.
 
-The enforced source-anchor KL constraint changed cap-20 BA by −0.01 and +0.03 points in the two source regimes. Alignment, source regularization and functional preservation are established [@he2020alignment; @l2sp2018; @lwf2016; @trpo2015]. The present evidence identifies their value through explicit information budgets and matched component comparisons.
+The enforced source-anchor KL constraint changed cap-20 BA by −0.01 and +0.03 points in the two source regimes. Alignment, source regularization and functional preservation are established [@he2020alignment; @l2sp2018; @lwf2016; @trpo2015].
 
 ### Source discrimination and calibration measurements
 
-Original primary-cohort EEGNet BA was 52.92% on source query and 51.58% on target sessions. Reporting both endpoints separates source generalization from session transfer. The extension training histories likewise show why source-query performance should accompany target adaptation scores.
+Original primary-cohort EEGNet BA was 52.92% on source query and 51.58% on target sessions. The source-query endpoint gives the reference accuracy before session transfer. In the extension, validation loss increased after the selected epochs despite continued training-loss reduction.
 
 The original source/support probes also distinguished calibration agreement from correct task orientation. Of 30 development support sessions, 19 had positive source-score contrasts in both chronological halves, two were negative in both, and nine changed sign. Agreement can coexist with reversed orientation. These findings motivate testing support-driven selection among fixed component choices in an independent evaluation.
 
@@ -257,7 +255,7 @@ A larger repeated-session validation can separate source-label amount, covarianc
 
 ## Conclusions
 
-Matched-label analysis quantified gains from two spatial operations during short-run recalibration. In the original Kumar primary cohort, full refitting added 5.47 BA points beyond classifier-only recalibration and supplied 73.7% of the mean total gain over freezing. In BNCI2014-001, support-only EA added 5.65 points beyond full refitting, with improvement in all nine participants; full refitting and classifier-only recalibration gave similar cohort means. Fixed source normalization reduced single-class neural predictions at the 20-label cap. These component comparisons provide a direct way to evaluate how a short calibration run should update the decoder.
+In the original Kumar primary cohort, full refitting added 5.47 BA points beyond classifier-only recalibration and supplied 73.7% of the mean total gain over freezing. In BNCI2014-001, support-only EA added 5.65 points beyond full refitting, with improvement in all nine participants; full refitting and classifier-only recalibration gave similar cohort means. Fixed source normalization reduced single-class neural predictions at the 20-label cap. These results support evaluating spatial refitting and alignment separately under a fixed calibration budget.
 
 ## Data and code availability
 

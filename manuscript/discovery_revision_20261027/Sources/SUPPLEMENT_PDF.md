@@ -19,7 +19,7 @@ The original source-training set comprised session 0/runs 0–1, validation run 
 
 The two conventional updates pooled the same 40 source-training trials with the same 19/20 current-support trials. The frozen comparator used source training alone. Neural fine-tuning in V3 optimized current support only, starting from the specified source checkpoint. The functional constraint additionally evaluated the participant's 40 source-training examples as fixed prediction anchors. Source validation selected source epochs; it did not select target adaptation epochs. The pooled source regime used the six participants' source training/validation sets, not their query data.
 
-All methods compared within a saved query identity used the same ordered trial IDs and true labels. Importing EA-CSP from V2 required actual ordered trial/label agreement, because versioned query-hash conventions differed. The identity comparison used actual ordered arrays alongside their checksums.
+Methods evaluated on the same query set used identical ordered trial IDs and true labels. EA-CSP predictions imported from V2 were matched by these arrays and their checksums because query-hash conventions differed between versions.
 
 BA required both true classes. Participant target endpoints required all five sessions and all scheduled neural seeds. Undefined groups retained an explicit missing status. Source-query metrics were reported separately. The original trial exclusions and five-second window definition were retained.
 
@@ -39,7 +39,7 @@ The two contributions were averaged over five sessions within each participant b
 
 Original primary-cohort mean full-minus-LDA-only was 5.47 pp, with corrected-error and introduced-error contributions 16.04 pp and 10.57 pp. Left/right recall changes were 6.16 pp and 4.78 pp, with both individual intervals including zero. The same component contrast was positive in 10/12 participant averages and all five session means; participant-deletion means ranged 4.39–6.28 pp. Session profiles and participant-deletion summaries locate the component gain within the longitudinal data.
 
-The pre-existing amplitude flag was 250 µV maximum raw channel peak-to-peak. It flagged 1,512/7,156 complete windows. Saved-prediction/QC matching used trial identity, role, true label and inclusion status. The unflagged target endpoint required both classes in every session; only ten original primary participants met that criterion. Their unflagged full-minus-frozen gain was 5.96 pp[0.99, 11.24] and component gain 3.82 pp[1.11, 6.72]. Their corresponding full-query gains were 6.50 pp and 4.53 pp. Source and support data were retained during this amplitude-conditional query restriction; the flag identifies a signal-amplitude property rather than a complete artifact assessment.
+The pre-existing amplitude flag was 250 µV maximum raw channel peak-to-peak. It flagged 1,512/7,156 complete windows. Saved-prediction/QC matching used trial identity, role, true label and inclusion status. The unflagged target endpoint required both classes in every session; only ten original primary participants met that criterion. Their unflagged full-minus-frozen gain was 5.96 pp [0.99, 11.24] and component gain 3.82 pp [1.11, 6.72]. Their corresponding full-query gains were 6.50 pp and 4.53 pp. Source and support data were retained during this amplitude-conditional query restriction; the flag identifies a signal-amplitude property rather than a complete artifact assessment.
 
 The original post-hoc exact sign-flip tests enumerated all $2^n$ sign assignments of the participant differences, retaining their magnitudes. The statistic was the absolute mean paired difference, with an inclusive boundary tolerance of $10^{-12}$ in BA units. The four-test family comprised full-minus-frozen, full-minus-LDA-only and LDA-only-minus-frozen in the 12-person primary cohort, and full-minus-frozen in the ten-person eligible unflagged subset. Unadjusted p values were 0.01953125, 0.01025390625, 0.26123046875 and 0.076171875; Holm-adjusted values were 0.05859375, 0.041015625, 0.26123046875 and 0.15234375, respectively. These tests use a sign-symmetric null conditional on the observed magnitudes. The original percentile-bootstrap intervals are pointwise and unadjusted for this family.
 
@@ -53,7 +53,7 @@ $$
 z=\operatorname{vech}_{\sqrt2}\{\log(R_s^{-1/2}CR_s^{-1/2})\}.
 $$
 
-The symmetric-vector operator multiplies off-diagonal elements by√2 to preserve the Frobenius inner product. With 22 channels, p=253. The reference remains fixed for every current-session budget and all queries. Trace normalization and identity shrinkage do not confer strict invariance to arbitrary affine sensor transformations.
+The symmetric-vector operator multiplies off-diagonal elements by √2 to preserve the Frobenius inner product. With 22 channels, p=253. The reference remains fixed for every current-session budget and all queries. Trace normalization and identity shrinkage do not confer strict invariance to arbitrary affine sensor transformations.
 
 For a domain d, define class means $\mu_{d0}$, $\mu_{d1}$ and
 
@@ -80,13 +80,13 @@ $$
 P=M-M(M+V_t)^{-1}M.
 $$
 
-The implementation uses a masked linear-Gaussian update and the Joseph form for P. For a single observed class, the mask retains only that class's observations, unidentifiable shift variation is set tozero, and the unobserved class retains its source mean. A class represented by one support trial uses the fixed source class covariance as its variance proxy. The numerical floor is $10^{-8}$.
+The implementation uses a masked linear-Gaussian update and the Joseph form for P. For a single observed class, the mask retains only that class's observations, unidentifiable shift variation is set to zero, and the unobserved class retains its source mean. A class represented by one support trial uses the fixed source class covariance as its variance proxy. The numerical floor is $10^{-8}$.
 
 ### Conditional result and prediction
 
 Under the specified Gaussian observation/prior model with known fixed noise matrices, completing the square gives the posterior above. For any estimate a, posterior expected squared error is tr(P)+‖a−θ̂‖²; the posterior mean minimizes that conditional risk. Plug-in covariance estimation, uncertainty in R_s, and uncertainty in source within-class covariance are outside that statement. The implementation propagates conditional class-mean uncertainty, not all representation uncertainty.
 
-For class 0/1, let A_c=[I,−I] or[I, I]. The full candidate scores a Gaussian with mean A_cθ̂ and covariance Q_c=W+A_cPA_cᵀ, using equal class priors and fixed source within-class covariance W. Point prediction uses the same θ̂ and W without P. B/n assumes independent observations; serial-correlation simulations explicitly test violation of that approximation. The risk identity concerns class-mean squared error under the stated Gaussian model; classification accuracy and target BA are evaluated empirically.
+For class 0/1, let A_c=[I,−I] or [I, I]. The full candidate scores a Gaussian with mean A_cθ̂ and covariance Q_c=W+A_cPA_cᵀ, using equal class priors and fixed source within-class covariance W. Point prediction uses the same θ̂ and W without P. B/n assumes independent observations; serial-correlation simulations explicitly test violation of that approximation. The risk identity concerns class-mean squared error under the stated Gaussian model; classification accuracy and target BA are evaluated empirically.
 
 ### Complete arm definitions
 
@@ -131,13 +131,13 @@ The functional policy evaluates teacher-to-candidate mean KL on 40 source-traini
 
 Machine-readable tables retain every method, budget, participant, session and seed, together with the predefined contrast roles. Original intervals use 10,000 participant resamples with seed 42; extension intervals use the same number with seed 20261023. Complete method and budget profiles accompany the selected component interpretations.
 
-The cap 20 BN-mode participant-deletion mean ranges were+1.07 to+1.90 pp for individual sources and+1.34 to+2.29 pp for pooled sources. These summaries assess participant influence on the same six-person result.
+The cap 20 BN-mode participant-deletion mean ranges were +1.07 to +1.90 pp for individual sources and +1.34 to +2.29 pp for pooled sources. These summaries assess participant influence on the same six-person result.
 
 Collapse means a model/session predicts one class on its query set even when both true classes exist. Cap 20 fixed-BN/adaptive-BN collapse counts were 8/16 for individual sources and 0/18 for pooled sources, each out of 90 nested seed/session cells. All predictions contributed to BA; participant averages define the independent endpoint.
 
 ## S 7. Complete saved synthetic grid
 
-The fixed factorial grid used p∈{16, 64}, source examples per class∈{10, 20,100}, support examples per class∈{1, 2, 5, 10}, shift type∈{none, common, contrast, both}, anisotropy∈{1, 20}, and stationary AR(1) correlation∈{0, 0.5}. Shift scale was.5, with 50 paired draws and 100 query examples per class. All nine methods received the same source/support/query draws within each replicate. The estimator used its fixed variance approximation across all generating correlations.
+The fixed factorial grid used p∈{16, 64}, source examples per class∈{10, 20,100}, support examples per class∈{1, 2, 5, 10}, shift type∈{none, common, contrast, both}, anisotropy∈{1, 20}, and stationary AR(1) correlation∈{0, 0.5}. Shift scale was 0.5, with 50 paired draws and 100 query examples per class. All nine methods received the same source/support/query draws within each replicate. The estimator used its fixed variance approximation across all generating correlations.
 
 All 172,800 saved cells were retained with finite metrics and explicit synthetic/software-validation flags. Cross entropy uses the true-class probability with a numerical lower bound of $10^{-15}$ before taking the logarithm. Outcomes comprise BA, cross entropy, binary Brier score and two class-mean squared-error definitions. Full-grid averaging gives every frozen scenario equal weight. Paired Monte Carlo variation measures the finite draws under these fixed generating conditions, separately from the human-participant endpoint intervals.
 
@@ -155,7 +155,7 @@ The V3 raw received archive is `paper2-results-83cbdfdcfa541b3ab3addfc3.tar.gz`,
 
 Runtime, scheduler and storage records are provided in the repository audit reports. Saved-prediction reconstruction supplies the numerical verification.
 
-Kumar analyses reused saved predictions, metrics and histories with their original fitted models, seeds and support windows. The external replication in Section S12 generated its own four-method predictions. Original submission packages and all experiment outcomes remain at their versioned paths. Reproduction scripts, table definitions, figure inputs and targeted verification are identified in the accompanying revision report.
+Kumar analyses reused saved predictions, metrics and histories with their original fitted models, seeds and support windows. The external comparison in Section S12 generated its own four-method predictions. Original submission packages and all experiment outcomes remain at their versioned paths. Reproduction scripts, table definitions, figure inputs and targeted verification are identified in the accompanying revision report.
 
 ## S 10. Complete V3 cohort means across all frozen budgets
 
@@ -212,10 +212,9 @@ These means give every frozen scenario and paired draw equal weight. Probability
 | eb_no_source_noise | 70.28 | 3.7042 | 0.2681 | 0.25980 |
 | eb_no_shift | 74.87 | 2.5946 | 0.2210 | 0.13010 |
 
-The full candidate minus tangent refitting was−5.8255 BA points. Of 384 scenario means, eight favored the candidate and 376 favored refitting. Candidate feature-mean squared error was larger than refitting in every scenario mean. Posterior-predictive versus point candidate prediction changed mean cross entropy by−0.34094, Brier by−0.00191 and BA by−0.0398 percentage points. The contrasts separate probability scoring from classification and mean estimation.
+The full candidate minus tangent refitting was −5.8255 BA points. Of 384 scenario means, eight favored the candidate and 376 favored refitting. Candidate feature-mean squared error was larger than refitting in every scenario mean. Posterior-predictive versus point candidate prediction changed mean cross entropy by −0.34094, Brier by −0.00191 and BA by −0.0398 percentage points. The contrasts separate probability scoring from classification and mean estimation.
 
-
-## S 12. Fixed external component replication
+## S 12. External component comparison with a fixed calibration budget
 
 ### Dataset, events and information access
 
@@ -263,7 +262,7 @@ The inspected BNCI2a source paper and original protocol did not report a dataset
 
 ### Version, execution and reconstruction
 
-The scientific protocol, raw-file identities and implementation were committed and pushed before prediction generation: `457e7bdaad96e84782b6fe968f88925a1200c4b3`. One existing-CPU invocation ran 27 October 2026, 06:34:54.957–06:36:59.303 UTC and exited 0. Nine source fits and 27 updating fits completed; the frozen target models copy each source. No previous Kumar or neural model was retrained and no school Slurm/Pod state changed. All 18 upstream MATs matched the versioned NEMAR byte lengths/SHA256, totaling 779,873,919 bytes. The scientific environment used Python 3.11.16, NumPy 2.2.6 and SciPy 1.15.3, with one BLAS thread.
+The protocol, raw-file identities and implementation were fixed at commit `457e7bdaad96e84782b6fe968f88925a1200c4b3` before prediction generation. The external experiment used nine source fits and 27 updating fits; frozen models reused the corresponding source fit. All 18 original MAT files matched the versioned NEMAR byte lengths and SHA256 checksums, totaling 779,873,919 bytes. Execution used Python 3.11.16, NumPy 2.2.6 and SciPy 1.15.3, with one BLAS thread.
 
 The external public result folder is `research_logs/paper2_external_validation_20261027/`: all 36 saved prediction JSONs, trial-role manifests, participant/run tables, exact tests and an independent JSON-only reconstruction are retained. This covers 1,080 distinct target trials, 4,320 method-specific prediction rows and 180 nested run endpoints. Participants define the independent sample. BNCI had historical use in the first-paper project; the present component comparison was fixed in the repository before prediction generation.
 

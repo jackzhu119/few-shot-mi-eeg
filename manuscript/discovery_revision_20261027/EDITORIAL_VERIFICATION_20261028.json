@@ -1,0 +1,527 @@
+{
+  "baseline_commit": "97ff9a55a1cc12182df96771f6c89033b1e8ce14",
+  "date": "2026-10-28",
+  "main_changes": [
+    {
+      "label": "Abstract budget",
+      "before": "To determine which spatial update adds value beyond classifier recalibration with 20 current-session labels.",
+      "after": "To quantify gains from spatial refitting and alignment with up to 20 current-session calibration labels.",
+      "reason": "Kumar support contains 19 or 20 complete trials; state the measured operations directly."
+    },
+    {
+      "label": "Abstract cohort and external design",
+      "before": "We compared frozen common spatial patterns and linear discriminant analysis (CSP/LDA), classifier-only recalibration and full refitting in 18 Kumar2024 participants across six sessions. The original primary cohort contained 12 participants. A fixed four-method replication added nine BNCI2014-001 participants and support-only Euclidean alignment (EA-CSP). Updating methods received identical labels within each dataset.",
+      "after": "We compared frozen common spatial patterns and linear discriminant analysis (CSP/LDA), classifier-only recalibration and full refitting in Kumar2024 (18 participants, six sessions; 12-participant primary cohort). A fixed-budget external comparison in nine BNCI2014-001 participants added support-only Euclidean alignment (EA-CSP). Updating methods received identical labels within each dataset.",
+      "reason": "Attach the main estimates to their cohort and avoid implying identical implementations across datasets."
+    },
+    {
+      "label": "Abstract result population",
+      "before": "In Kumar2024, full refitting achieved 65.36% balanced accuracy,",
+      "after": "In the Kumar2024 primary cohort, full refitting achieved 65.36% balanced accuracy,",
+      "reason": "The 65.36% estimate belongs to the 12-person primary cohort."
+    },
+    {
+      "label": "Abstract empirical conclusion",
+      "before": "Matched-label comparisons quantify distinct gains from spatial refitting and support-only alignment, providing a direct way to compare decoder updates with limited calibration labels.",
+      "after": "Spatial refitting in Kumar2024 and support-only alignment in BNCI2014-001 improved recalibration under matched labels.",
+      "reason": "Replace a generic framework claim with the observed finding."
+    },
+    {
+      "label": "Repeated comparison frame",
+      "before": " Our comparison measures the additional spatial component at a fixed current-session label budget.",
+      "after": "",
+      "reason": "The same comparison has already been defined in the preceding sentence and earlier paragraphs."
+    },
+    {
+      "label": "Neural actions",
+      "before": "Explicitly separating these actions helps explain the resulting predictions.",
+      "after": "We compare normalization modes during weight adaptation and test a source-functional constraint.",
+      "reason": "Name the tested operations instead of a generic promise of explanation."
+    },
+    {
+      "label": "Contribution lead",
+      "before": "**Matched-label component analysis** provides three contributions:",
+      "after": "We examine spatial updates through three comparisons:",
+      "reason": "Remove repeated framework branding."
+    },
+    {
+      "label": "Prediction decomposition",
+      "before": "**Prediction-level and longitudinal attribution.** Corrected and newly introduced errors reconstruct the component gain, while class recalls, target-session profiles and participant-deletion summaries locate that gain across the longitudinal data.",
+      "after": "**Prediction-level decomposition across sessions and participants.** Corrected and newly introduced errors reconstruct the component gain. Class recalls, target-session means and participant-deletion summaries show how the gain is distributed across labels, sessions and participants.",
+      "reason": "Describe post-hoc decomposition without implying causal attribution."
+    },
+    {
+      "label": "External contribution",
+      "before": "**An external comparison of update operations.** A fixed nine-participant BNCI2014-001 replication compares the same component contrast with support-only EA-CSP under exactly 20 target labels. Neural normalization and geometric controls locate further operation-specific effects in the development cohort.",
+      "after": "**An external comparison of spatial updates.** A fixed nine-participant BNCI2014-001 comparison evaluates LDA-only recalibration, full refitting and support-only EA-CSP with exactly 20 target labels. Development-cohort experiments examine neural normalization and geometric estimation across support budgets.",
+      "reason": "Name the arms and separate the external comparison from exploratory development experiments."
+    },
+    {
+      "label": "External methods heading",
+      "before": "### External fixed-budget replication",
+      "after": "### External comparison with a fixed calibration budget",
+      "reason": "Use a design description consistent with the implementation differences."
+    },
+    {
+      "label": "External inference naming",
+      "before": "The external replication had one fixed primary contrast,",
+      "after": "The external comparison had one fixed primary contrast,",
+      "reason": "Use consistent design terminology."
+    },
+    {
+      "label": "External prediction naming",
+      "before": "Kumar analyses reused predictions and histories; the external replication generated its own four-method predictions.",
+      "after": "Kumar analyses reused predictions and histories; the external comparison generated its own four-method predictions.",
+      "reason": "Use consistent design terminology."
+    },
+    {
+      "label": "Class recall scope",
+      "before": "Mean left- and right-class recall increased by 6.16 and 4.78 points, respectively. These recall intervals individually included zero; their class-balanced mean gives the observed component endpoint.",
+      "after": "Mean left- and right-class recall changes were +6.16 and +4.78 points, respectively, with both class-specific intervals including zero. Their class-balanced mean gives the observed component endpoint.",
+      "reason": "Keep the uncertainty with the estimates in one direct sentence."
+    },
+    {
+      "label": "V2 heading",
+      "before": "### EA-CSP provided a strong conventional reference",
+      "after": "### Covariance mixing and EA-CSP under matched labels",
+      "reason": "Describe the experiment instead of the research workflow."
+    },
+    {
+      "label": "V2 process conclusion",
+      "before": " EA-CSP therefore provided the stronger conventional reference for the next experiment.",
+      "after": "",
+      "reason": "The numerical comparison already states the result; the next-experiment narrative is unnecessary."
+    },
+    {
+      "label": "V3 process bridge",
+      "before": "These results motivated the source-fixed feature and component controls in V3.",
+      "after": "",
+      "reason": "Remove laboratory chronology from Results."
+    },
+    {
+      "label": "Geometry heading",
+      "before": "### Tangent refitting and EA-CSP gave higher geometric-decoder accuracy",
+      "after": "### Geometric estimation in a fixed tangent feature space",
+      "reason": "Keep the result values and comparator roles in the text; use a descriptive section heading."
+    },
+    {
+      "label": "Figure 2 caption",
+      "before": "**Figure 2. Geometric candidate, matched controls and ablations.** Full support-budget profiles and cap-20 paired contrasts retain ordinary tangent refitting and EA-CSP as strong references. Ablations separate posterior mean estimation, prediction covariance, source-mean noise and common/contrast variation scales. All candidate-versus-ablation and strong-reference contrasts are displayed together; intervals use participant-bootstrap resampling.",
+      "after": "**Figure 2. Geometric candidate, matched controls and ablations.** Curves show BA across support budgets; paired cap-20 contrasts compare the candidate with tangent refitting, EA-CSP and matched ablations. Ablations vary posterior mean estimation, predictive covariance, source-mean noise and common/contrast shift scales. Intervals are participant-bootstrap summaries.",
+      "reason": "Replace repeated assurances about retained comparisons with a description of the plotted content."
+    },
+    {
+      "label": "Single-class outcome unit",
+      "before": "At the 20-label cap, fixed-BN full updates produced eight single-class query predictions among 90 nested participant-by-seed-by-session outcomes, compared with 16 under adaptive BN.",
+      "after": "At the 20-label cap, fixed-BN full updates predicted a single class in eight of 90 participant-by-seed-by-session query sets, compared with 16 for adaptive BN.",
+      "reason": "Clarify that each count is a complete model/session query set, not one trial."
+    },
+    {
+      "label": "Repeated source reference",
+      "before": " Source-query measurements provide the within-domain reference for interpreting target performance.",
+      "after": "",
+      "reason": "The source and target endpoints are already reported together."
+    },
+    {
+      "label": "Repeated training interpretation",
+      "before": " Training and validation loss diverged after the validation-selected epochs.",
+      "after": "",
+      "reason": "The immediately preceding loss values already establish this observation."
+    },
+    {
+      "label": "Simulation interpretation",
+      "before": "Thus, the probability-score improvement and classification endpoint moved differently (Figure 4).",
+      "after": "Posterior covariance improved log loss for the same estimated means, with little change in classification accuracy (Figure 4).",
+      "reason": "State the specific mechanism comparison and measured distinction."
+    },
+    {
+      "label": "Discussion contribution heading",
+      "before": "### Matched-label analysis identifies the spatial contribution",
+      "after": "### Gains from spatial refitting and alignment",
+      "reason": "Lead with the scientific finding rather than the analysis framework."
+    },
+    {
+      "label": "Discussion main interpretation",
+      "before": "Matching source and current-session labels locates recalibration gains in specific decoder components. Full CSP/LDA refitting added 5.47 BA points beyond classifier-only recalibration in the original primary cohort and supplied 73.7% of the mean improvement over freezing. The comparison measures the value of relearning the spatial representation after the classifier has received the same calibration labels.",
+      "after": "Full CSP/LDA refitting added 5.47 BA points beyond classifier-only recalibration in the original primary cohort and supplied 73.7% of the mean improvement over freezing. Because both updates used identical source and support trials, this contrast measures the gain from relearning the spatial representation together with the classifier.",
+      "reason": "Remove repeated framing and connect the result directly to its control."
+    },
+    {
+      "label": "Discussion external interpretation",
+      "before": "The external experiment identifies support-only alignment as a useful additional operation. With the same 20 current labels, EA improved on full refitting in all nine participants, while full refitting and classifier-only recalibration gave similar cohort means. Together, the two datasets quantify the contributions of spatial refitting and alignment within their respective implementations.",
+      "after": "In BNCI2014-001, EA improved on full refitting in all nine participants using the same 20 current labels, while full refitting and classifier-only recalibration gave similar cohort means. The spatial operation associated with the larger gain therefore differed between the two evaluated datasets.",
+      "reason": "Replace generic contribution language with the cross-dataset observation without claiming its cause."
+    },
+    {
+      "label": "Discussion neural interpretation",
+      "before": "The neural extension separates another component choice. At the final support cap, fixed-source BN during full weight adaptation produced higher BA and fewer single-class seed/session predictions than adaptive BN in both initialization regimes. Supervised spatial-filter refitting and repeated neural normalization therefore had different effects under the evaluated support schedules.",
+      "after": "At the 20-label cap, fixed-source BN during full weight adaptation produced higher BA and fewer single-class seed/session predictions than adaptive BN in both initialization regimes.",
+      "reason": "Retain the observed cap-specific result without a second framework summary."
+    },
+    {
+      "label": "Repeated future experiment",
+      "before": " A follow-up can vary the number of BN updates while holding labels, minibatches and trained sources fixed.",
+      "after": "",
+      "reason": "Consolidate the proposed validation in the scope section."
+    },
+    {
+      "label": "Estimator discussion heading",
+      "before": "### Strong references guide estimator comparisons",
+      "after": "### Spatial alignment and predictive covariance",
+      "reason": "Use the tested operations as the subject."
+    },
+    {
+      "label": "Estimator comparison interpretation",
+      "before": "Ordinary tangent refitting also had higher BA in the candidate’s own feature family. EA-CSP and tangent refitting therefore provide practical references for evaluating additional adaptation machinery on these data.",
+      "after": "Ordinary tangent refitting also achieved higher BA within the same tangent feature space. These comparisons place the candidate’s mean and covariance updates against EA-CSP and tangent refitting.",
+      "reason": "Remove informal ownership and vague adaptation-machinery wording."
+    },
+    {
+      "label": "Unsupported collective value claim",
+      "before": " The present evidence identifies their value through explicit information budgets and matched component comparisons.",
+      "after": "",
+      "reason": "The KL effect is near zero; do not imply established value for all cited method families."
+    },
+    {
+      "label": "Discussion source measurements",
+      "before": "Reporting both endpoints separates source generalization from session transfer. The extension training histories likewise show why source-query performance should accompany target adaptation scores.",
+      "after": "The source-query endpoint gives the reference accuracy before session transfer. In the extension, validation loss increased after the selected epochs despite continued training-loss reduction.",
+      "reason": "Describe the measurements instead of repeating a reporting recommendation."
+    },
+    {
+      "label": "Conclusion opening",
+      "before": "Matched-label analysis quantified gains from two spatial operations during short-run recalibration. In the original Kumar primary cohort,",
+      "after": "In the original Kumar primary cohort,",
+      "reason": "Start with the empirical result."
+    },
+    {
+      "label": "Conclusion takeaway",
+      "before": "These component comparisons provide a direct way to evaluate how a short calibration run should update the decoder.",
+      "after": "Short-run recalibration benefited from different spatial operations in the two evaluated datasets.",
+      "reason": "Replace a generic method promise with a supported empirical takeaway."
+    }
+  ],
+  "supplement_changes": [
+    {
+      "label": "Query identity verification",
+      "before": "All methods compared within a saved query identity used the same ordered trial IDs and true labels. Importing EA-CSP from V2 required actual ordered trial/label agreement, because versioned query-hash conventions differed. The identity comparison used actual ordered arrays alongside their checksums.",
+      "after": "Methods evaluated on the same query set used identical ordered trial IDs and true labels. EA-CSP predictions imported from V2 were matched by these arrays and their checksums because query-hash conventions differed between versions.",
+      "reason": "Keep the verification method and remove repeated self-certification."
+    },
+    {
+      "label": "Supplement external naming",
+      "before": "The external replication in Section S12 generated its own four-method predictions.",
+      "after": "The external comparison in Section S12 generated its own four-method predictions.",
+      "reason": "Use consistent design terminology."
+    },
+    {
+      "label": "Supplement external section",
+      "before": "## S 12. Fixed external component replication",
+      "after": "## S 12. External component comparison with a fixed calibration budget",
+      "reason": "Describe the design without implying identical implementation."
+    },
+    {
+      "label": "Execution log compression",
+      "before": "The scientific protocol, raw-file identities and implementation were committed and pushed before prediction generation: `457e7bdaad96e84782b6fe968f88925a1200c4b3`. One existing-CPU invocation ran 27 October 2026, 06:34:54.957–06:36:59.303 UTC and exited 0. Nine source fits and 27 updating fits completed; the frozen target models copy each source. No previous Kumar or neural model was retrained and no school Slurm/Pod state changed. All 18 upstream MATs matched the versioned NEMAR byte lengths/SHA256, totaling 779,873,919 bytes. The scientific environment used Python 3.11.16, NumPy 2.2.6 and SciPy 1.15.3, with one BLAS thread.",
+      "after": "The protocol, raw-file identities and implementation were fixed at commit `457e7bdaad96e84782b6fe968f88925a1200c4b3` before prediction generation. The external experiment used nine source fits and 27 updating fits; frozen models reused the corresponding source fit. All 18 original MAT files matched the versioned NEMAR byte lengths and SHA256 checksums, totaling 779,873,919 bytes. Execution used Python 3.11.16, NumPy 2.2.6 and SciPy 1.15.3, with one BLAS thread.",
+      "reason": "Keep protocol, input identity, model counts and environment; leave millisecond timing and infrastructure operations in the audit record."
+    },
+    {
+      "label": "Spacing by√2",
+      "before": "by√2",
+      "after": "by √2",
+      "reason": "Correct a spacing or leading-zero defect without changing its value."
+    },
+    {
+      "label": "Spacing set tozero",
+      "before": "set tozero",
+      "after": "set to zero",
+      "reason": "Correct a spacing or leading-zero defect without changing its value."
+    },
+    {
+      "label": "Spacing or[I, I]",
+      "before": "or[I, I]",
+      "after": "or [I, I]",
+      "reason": "Correct a spacing or leading-zero defect without changing its value."
+    },
+    {
+      "label": "Spacing 5.96 pp[0.99, 11.24]",
+      "before": "5.96 pp[0.99, 11.24]",
+      "after": "5.96 pp [0.99, 11.24]",
+      "reason": "Correct a spacing or leading-zero defect without changing its value."
+    },
+    {
+      "label": "Spacing 3.82 pp[1.11, 6.72]",
+      "before": "3.82 pp[1.11, 6.72]",
+      "after": "3.82 pp [1.11, 6.72]",
+      "reason": "Correct a spacing or leading-zero defect without changing its value."
+    },
+    {
+      "label": "Spacing were+1.07 to+1.90 pp",
+      "before": "were+1.07 to+1.90 pp",
+      "after": "were +1.07 to +1.90 pp",
+      "reason": "Correct a spacing or leading-zero defect without changing its value."
+    },
+    {
+      "label": "Spacing and+1.34 to+2.29 pp",
+      "before": "and+1.34 to+2.29 pp",
+      "after": "and +1.34 to +2.29 pp",
+      "reason": "Correct a spacing or leading-zero defect without changing its value."
+    },
+    {
+      "label": "Spacing was.5",
+      "before": "was.5",
+      "after": "was 0.5",
+      "reason": "Correct a spacing or leading-zero defect without changing its value."
+    },
+    {
+      "label": "Spacing was−5.8255",
+      "before": "was−5.8255",
+      "after": "was −5.8255",
+      "reason": "Correct a spacing or leading-zero defect without changing its value."
+    },
+    {
+      "label": "Spacing by−0.34094",
+      "before": "by−0.34094",
+      "after": "by −0.34094",
+      "reason": "Correct a spacing or leading-zero defect without changing its value."
+    },
+    {
+      "label": "Spacing by−0.00191",
+      "before": "by−0.00191",
+      "after": "by −0.00191",
+      "reason": "Correct a spacing or leading-zero defect without changing its value."
+    },
+    {
+      "label": "Spacing by−0.0398",
+      "before": "by−0.0398",
+      "after": "by −0.0398",
+      "reason": "Correct a spacing or leading-zero defect without changing its value."
+    }
+  ],
+  "cover_changes": [
+    {
+      "label": "Cover external hierarchy",
+      "before": "In the fixed nine-participant BNCI2014-001 comparison, support-only EA-CSP improved",
+      "after": "In the secondary comparison in nine BNCI2014-001 participants, support-only EA-CSP improved",
+      "reason": "Keep the external EA finding explicitly secondary."
+    },
+    {
+      "label": "Cover repeated framing",
+      "before": " The matched target labels make the additional alignment contribution directly measurable.",
+      "after": "",
+      "reason": "The preceding numbers and matched-label introduction already establish this point."
+    },
+    {
+      "label": "Cover exploratory extension",
+      "before": "Controlled discovery experiments on the six development participants extend the component question to neural normalization and finite-sample adaptation. At the 20-label cap, weight adaptation with fixed source normalization achieved 1.50–1.91 points higher BA than adaptive normalization across two source-model regimes. The full support-budget profiles and strong-comparator outcomes are reported alongside these results. The engineering contribution is a matched-label component analysis of where recalibration gains arise, supported by reproducible predictions, component controls and uncertainty estimates with participants as the independent units.",
+      "after": "Exploratory experiments in the six development participants extended the comparison to neural normalization. At the 20-label cap, weight adaptation with fixed source normalization achieved 1.50–1.91 percentage points higher balanced accuracy than adaptive normalization across two source-model regimes. The complete budget profiles show how this effect varies with calibration size.",
+      "reason": "Remove repeated sales language and identify the extension as exploratory."
+    }
+  ],
+  "docx_applied": {
+    "BMT_Manuscript_Review.docx": [
+      "Abstract budget",
+      "Abstract cohort and external design",
+      "Abstract result population",
+      "Abstract empirical conclusion",
+      "Repeated comparison frame",
+      "Neural actions",
+      "Contribution lead",
+      "Prediction decomposition",
+      "External contribution",
+      "External methods heading",
+      "External inference naming",
+      "External prediction naming",
+      "Class recall scope",
+      "V2 heading",
+      "V2 process conclusion",
+      "V3 process bridge",
+      "Geometry heading",
+      "Figure 2 caption",
+      "Single-class outcome unit",
+      "Repeated source reference",
+      "Repeated training interpretation",
+      "Simulation interpretation",
+      "Discussion contribution heading",
+      "Discussion main interpretation",
+      "Discussion external interpretation",
+      "Discussion neural interpretation",
+      "Repeated future experiment",
+      "Estimator discussion heading",
+      "Estimator comparison interpretation",
+      "Unsupported collective value claim",
+      "Discussion source measurements",
+      "Conclusion opening",
+      "Conclusion takeaway"
+    ],
+    "BMT_Manuscript_Submission.docx": [
+      "Abstract budget",
+      "Abstract cohort and external design",
+      "Abstract result population",
+      "Abstract empirical conclusion",
+      "Repeated comparison frame",
+      "Neural actions",
+      "Contribution lead",
+      "Prediction decomposition",
+      "External contribution",
+      "External methods heading",
+      "External inference naming",
+      "External prediction naming",
+      "Class recall scope",
+      "V2 heading",
+      "V2 process conclusion",
+      "V3 process bridge",
+      "Geometry heading",
+      "Figure 2 caption",
+      "Single-class outcome unit",
+      "Repeated source reference",
+      "Repeated training interpretation",
+      "Simulation interpretation",
+      "Discussion contribution heading",
+      "Discussion main interpretation",
+      "Discussion external interpretation",
+      "Discussion neural interpretation",
+      "Repeated future experiment",
+      "Estimator discussion heading",
+      "Estimator comparison interpretation",
+      "Unsupported collective value claim",
+      "Discussion source measurements",
+      "Conclusion opening",
+      "Conclusion takeaway"
+    ],
+    "Supplementary_Methods.docx": [
+      "Query identity verification",
+      "Supplement external naming",
+      "Supplement external section",
+      "Execution log compression",
+      "Spacing by√2",
+      "Spacing set tozero",
+      "Spacing or[I, I]",
+      "Spacing 5.96 pp[0.99, 11.24]",
+      "Spacing 3.82 pp[1.11, 6.72]",
+      "Spacing were+1.07 to+1.90 pp",
+      "Spacing and+1.34 to+2.29 pp",
+      "Spacing was.5",
+      "Spacing was−5.8255",
+      "Spacing by−0.34094",
+      "Spacing by−0.00191",
+      "Spacing by−0.0398"
+    ],
+    "Cover_Letter_DRAFT.docx": [
+      "Cover external hierarchy",
+      "Cover repeated framing",
+      "Cover exploratory extension"
+    ]
+  },
+  "scientific_markdown_tables_unchanged": true,
+  "displayed_equations_unchanged": true,
+  "docx_tables_and_figure_counts_unchanged": true,
+  "no_fitting_inference_or_statistical_reanalysis": true,
+  "independent_review_followups": [
+    {
+      "label": "Contribution grouping",
+      "before": "We examine spatial updates through three comparisons:",
+      "after": "The study combines three analyses:"
+    },
+    {
+      "label": "Plain neural description",
+      "before": "test a source-functional constraint.",
+      "after": "test a constraint on source predictions."
+    },
+    {
+      "label": "Cross-dataset comparison scope",
+      "before": "The spatial operation associated with the larger gain therefore differed between the two evaluated datasets.",
+      "after": "The two comparisons measure separate additions to recalibration: spatial refitting beyond LDA-only in Kumar2024, and alignment beyond full refitting in BNCI2014-001."
+    },
+    {
+      "label": "Conclusion comparison scope",
+      "before": "Short-run recalibration benefited from different spatial operations in the two evaluated datasets.",
+      "after": "These results support evaluating spatial refitting and alignment separately under a fixed calibration budget."
+    }
+  ],
+  "independent_content_review": "Passed after keeping the two dataset-specific contrasts separate; no claim of a within-dataset refitting-versus-alignment ranking in Kumar.",
+  "verification": {
+    "markdown_scientific_tables_unchanged": true,
+    "displayed_equations_unchanged": true,
+    "results_numeric_tokens_unchanged": true,
+    "ethics_section_unchanged": true,
+    "AI_acknowledgment_unchanged": true,
+    "citations_unchanged": true,
+    "separate_declarations_unchanged": true,
+    "data_and_code_archive_unchanged": true,
+    "all_five_figure_sets_unchanged": true,
+    "word_tables_unchanged": true,
+    "word_equations_unchanged": true,
+    "word_images_unchanged": true
+  },
+  "format_checks": {
+    "abstract_words": 159,
+    "complete_words": 5334,
+    "figures": 5,
+    "tables": 3,
+    "references": 24
+  },
+  "renderer": {
+    "canonical_attempt": "render_docx.py failed: LibreOffice soffice.exe not found on PATH",
+    "fallback": "native Microsoft Word 16.0 read-only PDF export and bundled Poppler 26.07.0 rasterization",
+    "receipts": [
+      {
+        "source": "D:\\codex默认存储位置\\2026-10-28\\new-chat-2\\work\\few-shot-mi-eeg\\manuscript\\discovery_revision_20261027\\BMT_Manuscript_Review.docx",
+        "pdf": "D:\\codex默认存储位置\\2026-10-28\\new-chat-2\\work\\word_render\\BMT_Manuscript_Review.pdf",
+        "pages": 15,
+        "renderer": "Microsoft Word 16.0",
+        "read_only": true
+      },
+      {
+        "source": "D:\\codex默认存储位置\\2026-10-28\\new-chat-2\\work\\few-shot-mi-eeg\\manuscript\\discovery_revision_20261027\\BMT_Manuscript_Submission.docx",
+        "pdf": "D:\\codex默认存储位置\\2026-10-28\\new-chat-2\\work\\word_render\\BMT_Manuscript_Submission.pdf",
+        "pages": 12,
+        "renderer": "Microsoft Word 16.0",
+        "read_only": true
+      },
+      {
+        "source": "D:\\codex默认存储位置\\2026-10-28\\new-chat-2\\work\\few-shot-mi-eeg\\manuscript\\discovery_revision_20261027\\Supplementary_Methods.docx",
+        "pdf": "D:\\codex默认存储位置\\2026-10-28\\new-chat-2\\work\\word_render\\Supplementary_Methods.pdf",
+        "pages": 9,
+        "renderer": "Microsoft Word 16.0",
+        "read_only": true
+      },
+      {
+        "source": "D:\\codex默认存储位置\\2026-10-28\\new-chat-2\\work\\few-shot-mi-eeg\\manuscript\\discovery_revision_20261027\\Cover_Letter_DRAFT.docx",
+        "pdf": "D:\\codex默认存储位置\\2026-10-28\\new-chat-2\\work\\word_render\\Cover_Letter_DRAFT.pdf",
+        "pages": 1,
+        "renderer": "Microsoft Word 16.0",
+        "read_only": true
+      }
+    ]
+  },
+  "visual_QA": {
+    "passed": true,
+    "method": "Native Microsoft Word 16.0 read-only PDF export; bundled Poppler 26.07.0 rasterization at 120 dpi; every page image inspected.",
+    "review_manuscript": {
+      "pages": 15,
+      "all_pages_inspected": true,
+      "result": "No clipping, overlap, missing glyphs or blank pages. Table 1 kept together. Figures 1-5 and captions kept together. Normal last-page whitespace."
+    },
+    "submission_manuscript": {
+      "pages": 12,
+      "all_pages_inspected": true,
+      "result": "No clipping, overlap, missing glyphs, table overflow or blank pages. Table 1 together on page 6; all five legends complete on page 12."
+    },
+    "supplement": {
+      "pages": 9,
+      "all_pages_inspected": true,
+      "result": "Displayed equations and matrices readable; long tables retain repeated headers and intact rows. First page rechecked after title styling; pages 2-9 unchanged."
+    },
+    "cover_letter": {
+      "pages": 1,
+      "all_pages_inspected": true,
+      "result": "Complete on one page with signature and contact details."
+    },
+    "minor_inherited_features": [
+      "Some Table 3 unit labels wrap inside their cells without losing values.",
+      "Some supplementary inline variable names use literal underscores as in the source; displayed equations retain proper mathematical subscripts."
+    ]
+  }
+}

@@ -1,10 +1,10 @@
 # Biomedical Engineering / Biomedizinische Technik — author-review revision
 
-Date: 27 October 2026. Article type: Research Article. This is a new scientific and journal-specific review draft; the earlier PLOS ONE submission files remain unchanged.
+Scientific revision: 27 October 2026. Latest language revision: 28 October 2026. Article type: Research Article. This is a new scientific and journal-specific review draft; the earlier PLOS ONE submission files remain unchanged.
 
 The manuscript now compares spatial update operations under matched target labels in two datasets. The original Kumar12-person component gain is +5.47pp; a fixed nine-person BNCI2014-001 replication gave Full−LDA-only +0.19pp [−1.85,2.13] and EA−Full +5.65pp [3.15,8.70], with EA gains in all9participants. Original endpoint roles remain intact. [External experiment and revised main line](../../research_logs/paper2_external_validation_20261027/REPORT.md) · [Exact public replay](../../research_logs/paper2_external_validation_20261027/REPRODUCE.md).
 
-The verified external-review response is recorded in [the point-by-point revision report](../../research_logs/bmt_review_response_20261027/RESPONSE.md). The latest [editorial revision](EDITORIAL_REVISION_20261027.md) removes repeated self-qualification while preserving all numerical results and declarations.
+The verified external-review response is recorded in [the point-by-point revision report](../../research_logs/bmt_review_response_20261027/RESPONSE.md). The latest [language review](EDITORIAL_REVISION_20261028.md) clarifies cohort attribution, removes repeated framework claims and execution-log prose, and synchronizes Word, PDF and the package. All scientific results and declarations are preserved. The [27 October editorial record](EDITORIAL_REVISION_20261027.md) remains available.
 
 ## Read and review
 

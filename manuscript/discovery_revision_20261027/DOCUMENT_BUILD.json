@@ -1,13 +1,24 @@
 {
-  "revision": "2026-10-27",
-  "status": "new_author_review_draft_not_submission_approval",
+  "revision": "2026-10-28",
+  "baseline_commit": "97ff9a55a1cc12182df96771f6c89033b1e8ce14",
+  "status": "author_review_draft_not_submitted_or_approved",
   "old_submission_files_modified": false,
   "document_builder_performed_fitting_or_inference": false,
-  "external_experiment_evidence_added": true,
-  "pandoc": "pandoc 3.1.11.1",
+  "build_method": "Targeted source/OOXML prose edits preserving tables, math and media; native Microsoft Word read-only PDF export. Historical Pandoc builder was not rerun.",
   "documents": [
     {
       "source": "manuscript/discovery_revision_20261027/MAIN.md",
+      "word": {
+        "paragraphs": 150,
+        "tables": 3,
+        "inline_figures": 5,
+        "extracted_words": 5138
+      },
+      "pdf": {
+        "pages": 15,
+        "text_characters": 41142,
+        "empty_pages": []
+      },
       "citation_keys": [
         "adabn2016",
         "arvaneh2013dsa",
@@ -33,73 +44,96 @@
         "vidaurre2011lda",
         "wimpff2025continual",
         "zanini2018alignment"
-      ],
-      "word": {
-        "paragraphs": 151,
-        "tables": 3,
-        "inline_figures": 5,
-        "extracted_words": 5270
-      },
-      "pdf": {
-        "pages": 18,
-        "text_characters": 42063,
-        "empty_pages": []
-      }
+      ]
     },
     {
       "source": "manuscript/discovery_revision_20261027/SUPPLEMENT.md",
-      "citation_keys": [],
       "word": {
         "paragraphs": 83,
         "tables": 7,
         "inline_figures": 0,
-        "extracted_words": 2940
+        "extracted_words": 2929
       },
       "pdf": {
-        "pages": 13,
-        "text_characters": 28705,
+        "pages": 9,
+        "text_characters": 28527,
         "empty_pages": []
-      }
+      },
+      "citation_keys": []
     }
   ],
-  "warnings": {
-    "MAIN_word": "",
-    "MAIN_pdf": "",
-    "submission_word": "",
-    "SUPPLEMENT_word": "",
-    "SUPPLEMENT_pdf": "",
-    "COVER_LETTER_DRAFT": ""
+  "verification": {
+    "markdown_scientific_tables_unchanged": true,
+    "displayed_equations_unchanged": true,
+    "results_numeric_tokens_unchanged": true,
+    "ethics_section_unchanged": true,
+    "AI_acknowledgment_unchanged": true,
+    "citations_unchanged": true,
+    "separate_declarations_unchanged": true,
+    "data_and_code_archive_unchanged": true,
+    "all_five_figure_sets_unchanged": true,
+    "word_tables_unchanged": true,
+    "word_equations_unchanged": true,
+    "word_images_unchanged": true
+  },
+  "visual_QA": {
+    "passed": true,
+    "method": "Native Microsoft Word 16.0 read-only PDF export; bundled Poppler 26.07.0 rasterization at 120 dpi; every page image inspected.",
+    "review_manuscript": {
+      "pages": 15,
+      "all_pages_inspected": true,
+      "result": "No clipping, overlap, missing glyphs or blank pages. Table 1 kept together. Figures 1-5 and captions kept together. Normal last-page whitespace."
+    },
+    "submission_manuscript": {
+      "pages": 12,
+      "all_pages_inspected": true,
+      "result": "No clipping, overlap, missing glyphs, table overflow or blank pages. Table 1 together on page 6; all five legends complete on page 12."
+    },
+    "supplement": {
+      "pages": 9,
+      "all_pages_inspected": true,
+      "result": "Displayed equations and matrices readable; long tables retain repeated headers and intact rows. First page rechecked after title styling; pages 2-9 unchanged."
+    },
+    "cover_letter": {
+      "pages": 1,
+      "all_pages_inspected": true,
+      "result": "Complete on one page with signature and contact details."
+    },
+    "minor_inherited_features": [
+      "Some Table 3 unit labels wrap inside their cells without losing values.",
+      "Some supplementary inline variable names use literal underscores as in the source; displayed equations retain proper mathematical subscripts."
+    ]
   },
   "assets": [
     {
       "file": "manuscript/discovery_revision_20261027/ABSTRACT_FOR_REVIEW.md",
-      "bytes": 1678,
-      "sha256": "1fd31cbaee87b85c36f1e0f1c9a1e547237dac2eec69e9fcd30303d226e31bfb"
+      "bytes": 1602,
+      "sha256": "a976981182b0964d4f729b687d20f3cd2d1f2bd551f179e194cd4a6dd43cd064"
     },
     {
       "file": "manuscript/discovery_revision_20261027/BMT_Manuscript_Review.docx",
-      "bytes": 4916024,
-      "sha256": "03c426fa9cc721eb3df6abd50c052b4a445e6f8afc418314d9714f23dffb4c92"
+      "bytes": 4915728,
+      "sha256": "a6f96a507558c085949343ece8bbef88aaf3db68765798033558ab83305ae836"
     },
     {
       "file": "manuscript/discovery_revision_20261027/BMT_Manuscript_Review.pdf",
-      "bytes": 5326459,
-      "sha256": "e90c27aad67f6e2cc089620a29d70e61978058125adbaa6d43a291caca3acdb9"
+      "bytes": 1117180,
+      "sha256": "ed4242b2c000aef224407f363a65c518abf7e1c13ddf51b0529ab29c35c89f5e"
     },
     {
       "file": "manuscript/discovery_revision_20261027/BMT_Manuscript_Submission.docx",
-      "bytes": 30882,
-      "sha256": "6ece61d9be79756467d00d2486eb91a899ca95c32271489664cd3dbd700adf83"
-    },
-    {
-      "file": "manuscript/discovery_revision_20261027/COVER_LETTER_DRAFT.md",
-      "bytes": 2667,
-      "sha256": "2d5f524689f64b8a9d1cf71ae23e5ca3895d03ddcc7608b6a03623917e00abce"
+      "bytes": 30573,
+      "sha256": "d2d19f3413ce7c7b085b3cb30a6260bddeeda68a9a0aa30698310ea8188f60e3"
     },
     {
       "file": "manuscript/discovery_revision_20261027/Cover_Letter_DRAFT.docx",
-      "bytes": 11567,
-      "sha256": "0c0953387d59c9288ff883f56e9f7e58ed7906c12664aaee5c40294c2fae188b"
+      "bytes": 11500,
+      "sha256": "251035bae771c339d57b575f6c5329d866801b5caba23b9639ebff958287c5e0"
+    },
+    {
+      "file": "manuscript/discovery_revision_20261027/COVER_LETTER_DRAFT.md",
+      "bytes": 2314,
+      "sha256": "8243496ca44b2158be05f9358b470c03281b63abfc35c000ee4bd443d9e311ea"
     },
     {
       "file": "manuscript/discovery_revision_20261027/EDITORIAL_REVISION_20261027.md",
@@ -107,9 +141,9 @@
       "sha256": "3960a73a260ee4d92554143cb42efa19a9a64eb5a80eb995f4a817181677e8ef"
     },
     {
-      "file": "manuscript/discovery_revision_20261027/ETHICAL_AND_LEGAL_DECLARATIONS_DRAFT.md",
-      "bytes": 4434,
-      "sha256": "41e980b8c3cfbd2919be8bff7f8397a79c2d2e79b25f2eed7a5d8808eb7f9d01"
+      "file": "manuscript/discovery_revision_20261027/EDITORIAL_REVISION_20261028.md",
+      "bytes": 3271,
+      "sha256": "b44739fbf3d850a3e9afb38792248976ee1780b30993215ad2ea5c120d686b8a"
     },
     {
       "file": "manuscript/discovery_revision_20261027/Ethical_and_Legal_Declarations_DRAFT.docx",
@@ -117,59 +151,14 @@
       "sha256": "7637b1f36b770a8ad77795d05ba27aad7f31b76f08d70d74c4e1c7629a783b28"
     },
     {
-      "file": "manuscript/discovery_revision_20261027/MAIN.md",
-      "bytes": 38237,
-      "sha256": "9e33c11a4a2dcc4d9a64c04436b7356269b2770ba718677997829990266073f7"
+      "file": "manuscript/discovery_revision_20261027/ETHICAL_AND_LEGAL_DECLARATIONS_DRAFT.md",
+      "bytes": 4434,
+      "sha256": "41e980b8c3cfbd2919be8bff7f8397a79c2d2e79b25f2eed7a5d8808eb7f9d01"
     },
     {
-      "file": "manuscript/discovery_revision_20261027/README.md",
-      "bytes": 4967,
-      "sha256": "53515162393083cb5be835db7d6fcf0615b1d26cf4871b22e51e1c3a053d442a"
-    },
-    {
-      "file": "manuscript/discovery_revision_20261027/REVISION_NOTES_ZH.md",
-      "bytes": 4330,
-      "sha256": "e4de4436c106a25c99ba5ac7b17993515373170814f0225590742dc92fd9ad9d"
-    },
-    {
-      "file": "manuscript/discovery_revision_20261027/SUPPLEMENT.md",
-      "bytes": 30126,
-      "sha256": "5d434bd0d8e2bedc5602d8a4bbbf5c4a16735e4eb4b4d1af156be548ae595252"
-    },
-    {
-      "file": "manuscript/discovery_revision_20261027/Sources/BMT_Manuscript_For_Submission.md",
-      "bytes": 37982,
-      "sha256": "e979976b25cbe304246abb053318e539b9f36543c6566301fc100d94907d03e2"
-    },
-    {
-      "file": "manuscript/discovery_revision_20261027/Sources/MAIN_PDF.md",
-      "bytes": 38324,
-      "sha256": "819210802e48424036d568f2118a2ceee6ec6ffceceb2d9a93663aa025b579bb"
-    },
-    {
-      "file": "manuscript/discovery_revision_20261027/Sources/SUPPLEMENT_PDF.md",
-      "bytes": 30126,
-      "sha256": "5d434bd0d8e2bedc5602d8a4bbbf5c4a16735e4eb4b4d1af156be548ae595252"
-    },
-    {
-      "file": "manuscript/discovery_revision_20261027/Suggested_Reviewers_TO_COMPLETE.csv",
-      "bytes": 133,
-      "sha256": "feafa70e8f61911029b2df761b96c4a49e53443ea359a91e1fa3161e1f14b3b0"
-    },
-    {
-      "file": "manuscript/discovery_revision_20261027/Supplementary_Methods.docx",
-      "bytes": 26248,
-      "sha256": "23a8436624cf623f1b07ffb18fd2cac95525bbd273faf991a519f19255f4ccbb"
-    },
-    {
-      "file": "manuscript/discovery_revision_20261027/Supplementary_Methods.pdf",
-      "bytes": 94600,
-      "sha256": "55cb8e0f307bc800295e32316f6f9d5338e0c9097194316c7fca1148c5390971"
-    },
-    {
-      "file": "manuscript/discovery_revision_20261027/Third_Party/README.md",
-      "bytes": 717,
-      "sha256": "1bb4e588e47d4fe39ee7d80383b268f719154d09b7374b2b1b8399cd9ce56957"
+      "file": "manuscript/discovery_revision_20261027/figures/captions.md",
+      "bytes": 2003,
+      "sha256": "59a25f9989495d15346508076bae213082af7e422b15845d0cadd62d5c68e97d"
     },
     {
       "file": "manuscript/discovery_revision_20261027/figures/Discovery_Revision_Figures.pdf",
@@ -277,14 +266,64 @@
       "sha256": "f09474336f5f2927ab20cecdaeb858ec1f21312ac8cd2c005bb57f2c8d57d733"
     },
     {
-      "file": "manuscript/discovery_revision_20261027/figures/captions.md",
-      "bytes": 2082,
-      "sha256": "12c8c8cede40f29095f46ce5677aeffd4864623da0631c5c8f94075a3e70a6c4"
+      "file": "manuscript/discovery_revision_20261027/MAIN.md",
+      "bytes": 37000,
+      "sha256": "ad8e67ce3009ef866126ee8f5d2962933fb66d9262352b68db316ea0130d8ca1"
+    },
+    {
+      "file": "manuscript/discovery_revision_20261027/README.md",
+      "bytes": 5202,
+      "sha256": "2f48a4c1a782abef3f49f6328de032853e8de2c1ccf9d9e9bd1266f6d256d17e"
     },
     {
       "file": "manuscript/discovery_revision_20261027/references.bib",
       "bytes": 12331,
       "sha256": "52113d009e43d8e63c2b253b863562d1871a9d29cf6a679423287d5a6e7ca736"
+    },
+    {
+      "file": "manuscript/discovery_revision_20261027/REVISION_NOTES_ZH.md",
+      "bytes": 4330,
+      "sha256": "e4de4436c106a25c99ba5ac7b17993515373170814f0225590742dc92fd9ad9d"
+    },
+    {
+      "file": "manuscript/discovery_revision_20261027/Sources/BMT_Manuscript_For_Submission.md",
+      "bytes": 36745,
+      "sha256": "57a1a7e260a701219b26fe87b1647c3b185104791c7365c67f254ddc6b08b118"
+    },
+    {
+      "file": "manuscript/discovery_revision_20261027/Sources/MAIN_PDF.md",
+      "bytes": 37087,
+      "sha256": "3059e1daa6735674e783eef159083ec87bfc88eef5e167043ff37b679b7bc45a"
+    },
+    {
+      "file": "manuscript/discovery_revision_20261027/Sources/SUPPLEMENT_PDF.md",
+      "bytes": 29926,
+      "sha256": "9d88d8ecb98eba9750cfe70bbdf357cb1861109f08eb4e8f669b35ad8b6b5b7c"
+    },
+    {
+      "file": "manuscript/discovery_revision_20261027/Suggested_Reviewers_TO_COMPLETE.csv",
+      "bytes": 133,
+      "sha256": "feafa70e8f61911029b2df761b96c4a49e53443ea359a91e1fa3161e1f14b3b0"
+    },
+    {
+      "file": "manuscript/discovery_revision_20261027/SUPPLEMENT.md",
+      "bytes": 29926,
+      "sha256": "9d88d8ecb98eba9750cfe70bbdf357cb1861109f08eb4e8f669b35ad8b6b5b7c"
+    },
+    {
+      "file": "manuscript/discovery_revision_20261027/Supplementary_Methods.docx",
+      "bytes": 26184,
+      "sha256": "869752240d997600e60292e5417c07118ea55d8f5575b09fbc4eb70c3cd881d5"
+    },
+    {
+      "file": "manuscript/discovery_revision_20261027/Supplementary_Methods.pdf",
+      "bytes": 447988,
+      "sha256": "b0a72366ed4bb0dcb99e17e70f1c06dc160f3390ee1ffed43d29c09503904851"
+    },
+    {
+      "file": "manuscript/discovery_revision_20261027/Third_Party/README.md",
+      "bytes": 717,
+      "sha256": "1bb4e588e47d4fe39ee7d80383b268f719154d09b7374b2b1b8399cd9ce56957"
     }
   ]
 }
