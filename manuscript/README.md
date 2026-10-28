@@ -1,12 +1,12 @@
 # 论文与投稿文件导航
 
-**最新语言版本：2026-10-28 Skill修订版（AI披露已更正；`anti-defensive-writing-en`）。** [版本说明](discovery_revision_20261027/SKILL_VERSION.md) · [Skill版完整包](discovery_revision_20261027/BMT_Skill_Revision_AI_Corrected_20261028.zip) · [修订说明](discovery_revision_20261027/EDITORIAL_REVISION_20261028.md)。
+**当前BMT投稿版本：2026-10-28，Ziyuan Zhu*, Sihao Liu。** [主稿Word](bmt_submission_20261028/BMT_Manuscript_Submission.docx) · [阅读PDF](bmt_submission_20261028/BMT_Manuscript_Reading.pdf) · [完整投稿包](bmt_submission_20261028/BMT_Submission_Version_20261028.zip) · [要求核对](bmt_submission_20261028/SUBMISSION_CHECK_20261028.md)。
 
 **2026-10-27新审阅修订：Biomedical Engineering / Biomedizinische Technik。** [主稿PDF](discovery_revision_20261027/BMT_Manuscript_Review.pdf) · [Word、补充方法、图和声明](discovery_revision_20261027/README.md) · [科学整改报告](../research_logs/paper2_v3_analysis_20261027/REPORT.md)。新稿突出同标签预算下空间滤波器重学的额外收益，纳入V2/V3全部关键对照；原PLOS ONE版本保持原样。
 
 [仓库主页](../README.md) · [当前状态](../CURRENT_PROJECT_STATUS.md) · [文档](../docs/README.md) · [研究记录](../research_logs/README.md)
 
-当前稿件：**Spatial-filter refitting improves limited-label recalibration in longitudinal motor-imagery EEG**。作者：Ziyuan Zhu。文件以2026-10-19修订与支持材料为当前入口；更早日期包保留原始版本。
+历史PLOS稿件：**Spatial-filter refitting improves limited-label recalibration in longitudinal motor-imagery EEG**。作者：Ziyuan Zhu。该历史稿件以2026-10-19修订与支持材料为入口；更早日期包保留原始版本。
 
 ## 优先下载与阅读
 

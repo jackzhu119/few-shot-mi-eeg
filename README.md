@@ -1,18 +1,18 @@
 # Longitudinal Motor-Imagery EEG Decoding
 
-**当前版本：2026-10-28 Skill修订版（AI披露已更正；`anti-defensive-writing-en`）。** [版本说明](manuscript/discovery_revision_20261027/SKILL_VERSION.md) · [主稿PDF](manuscript/discovery_revision_20261027/BMT_Manuscript_Review.pdf) · [Skill版完整稿件包](manuscript/discovery_revision_20261027/BMT_Skill_Revision_AI_Corrected_20261028.zip)。版本标签：`paper2-bmt-skill-ai-corrected-20261028`。
+**当前版本：2026-10-28 BMT投稿版本（Ziyuan Zhu*, Sihao Liu）。** [投稿目录](manuscript/bmt_submission_20261028/README.md) · [完整投稿版本包](manuscript/bmt_submission_20261028/BMT_Submission_Version_20261028.zip) · [Word](manuscript/bmt_submission_20261028/BMT_Manuscript_Submission.docx)。固定标签：`paper2-bmt-submission-20261028`；文件已准备，尚未操作投稿系统。
 
 公开多会话运动想象EEG的跨会话解码研究：比较冻结模型、分类器重校准与空间滤波器更新，并检验少量校准标签下的更新强度。
 
-当前新审阅稿：**Matched-label analysis identifies spatial refitting and alignment gains in motor-imagery EEG**，按 **Biomedical Engineering / Biomedizinische Technik** 的 Research Article 要求准备。核心为同标签预算下空间滤波器重学的额外收益；原PLOS ONE稿件保留原路径。
+当前投稿稿件：**Matched-label analysis identifies spatial refitting and alignment gains in motor-imagery EEG**，按 **Biomedical Engineering / Biomedizinische Technik** 的 Research Article 要求准备。核心为同标签预算下空间滤波器重学的额外收益；原PLOS ONE稿件保留原路径。
 
 ## 从这里开始
 
 | 目的 | 入口 |
 | --- | --- |
-| 阅读2026-10-27 BMT新审阅稿 | [PDF](manuscript/discovery_revision_20261027/BMT_Manuscript_Review.pdf) · [Word](manuscript/discovery_revision_20261027/BMT_Manuscript_Review.docx) · [期刊要求与材料](manuscript/discovery_revision_20261027/README.md) |
+| 阅读2026-10-28 BMT投稿版本 | [PDF](manuscript/bmt_submission_20261028/BMT_Manuscript_Reading.pdf) · [投稿Word](manuscript/bmt_submission_20261028/BMT_Manuscript_Submission.docx) · [期刊核对与材料](manuscript/bmt_submission_20261028/README.md) |
 | 阅读原PLOS ONE稿件 | [带图PDF](manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Reading.pdf) · [投稿Word](manuscript/plos_one_innovation_20261017/PLOS_ONE_Manuscript_Submission.docx) |
-| 获取最新投稿材料 | [完整文件索引](manuscript/README.md) · [2026-10-19完整提交包](manuscript/plos_one_submission_support_20261019/PONE-D-26-52050_submission_20261019_run02.zip) · [600dpi图件](manuscript/plos_one_submission_support_20261019/Paper2_High_Resolution_Figures.zip) |
+| 获取历史PLOS材料 | [完整文件索引](manuscript/README.md) · [2026-10-19完整提交包](manuscript/plos_one_submission_support_20261019/PONE-D-26-52050_submission_20261019_run02.zip) · [600dpi图件](manuscript/plos_one_submission_support_20261019/Paper2_High_Resolution_Figures.zip) |
 | 运行学校HPC扩展 | [下载、更新与断点续跑](https://github.com/jackzhu119/few-shot-mi-eeg/blob/research/paper2-hpc-v2-20261023/releases/paper2-hpc-v2-20261023/README.md) · [实验设计](https://github.com/jackzhu119/few-shot-mi-eeg/blob/research/paper2-hpc-v2-20261023/docs/paper2_hpc_v2_literature_and_scientific_design_20261023.md) |
 | 查看进度 | [项目状态](CURRENT_PROJECT_STATUS.md) · [学校实时同步快照](https://github.com/jackzhu119/few-shot-mi-eeg/blob/research/paper2-hpc-v2-20261023/training_status/paper2-recalibration-v2/STATUS.json) |
 | 复现与查证 | [S1 Data及重放说明](manuscript/plos_one_innovation_20261017/S1_Data_README.md) · [原研究结果](CROSS_SESSION_RESULTS.md) · [协议索引](docs/README.md) · [审计记录](research_logs/README.md) |

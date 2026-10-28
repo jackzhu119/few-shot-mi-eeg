@@ -1,5 +1,7 @@
 # Biomedical Engineering / Biomedizinische Technik — author-review revision
 
+**Historical Skill review snapshot. The current two-author [submission version](../bmt_submission_20261028/README.md) was prepared on 28 October 2026.**
+
 **Version: Skill-assisted language revision with author-corrected AI disclosure — anti-defensive-writing-en — 28 October 2026.** Git tag: `paper2-bmt-skill-ai-corrected-20261028`. [Version record](SKILL_VERSION.md) · [Download the Skill revision package](BMT_Skill_Revision_AI_Corrected_20261028.zip). This label identifies the language-revision workflow; the scientific results are unchanged and the AI-use statement follows the author's 28 October clarification.
 
 Scientific revision: 27 October 2026. Latest language revision: 28 October 2026. Article type: Research Article. This is a new scientific and journal-specific review draft; the earlier PLOS ONE submission files remain unchanged.

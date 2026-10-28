@@ -1,5 +1,7 @@
 # 论文2当前状态
 
+**2026-10-28：BMT双作者投稿版本已准备并核对。** Ziyuan Zhu*, Sihao Liu；两人共享重庆医科大学已确认单位。[当前投稿材料](manuscript/bmt_submission_20261028/README.md) · [投稿核对](manuscript/bmt_submission_20261028/SUBMISSION_CHECK_20261028.md)。作者确认原PLOS稿件已拒稿、两位作者均批准本版；尚未在ScholarOne提交。下方日期记录保留其原范围。
+
 更新日期：2026-10-27（Asia/Shanghai）。最新研究为已回传V3的保存结果分析与BMT新稿；按日期保留的旧状态见[历史索引](docs/archive/README.md)。
 
 ## 当前入口
