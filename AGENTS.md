@@ -36,3 +36,15 @@ python scripts/smoke_experiment.py --config configs/smoke.json
 The full environment also verifies `python scripts/check_data_stack.py` on MOABB
 synthetic data. Real EEG adapters, full training and online studies remain separate
 validated research milestones, not assumed consequences of these software checks.
+
+## Manuscript writing style
+
+For paper drafting, revision, abstracts, conclusions and reviewer responses, read
+the installed Anti-Defensive Writing skill before editing:
+
+- Chinese guidance: `.agents/skills/anti-defensive-writing/SKILL.md`.
+- English guidance: `.agents/skills/anti-defensive-writing-en/SKILL.md`.
+
+Use its contribution-led structure and direct language. Keep the claims, reported
+results, endpoint identities, ethics and AI-use statements faithful to the actual
+evidence, frozen protocols and journal requirements.
