@@ -1,0 +1,36 @@
+node_id,method_id,method_name,stage,text,x_mm,y_mm,width_mm,height_mm,font_pt
+frozen_0,frozen,Frozen CSP/LDA,Fitting inputs,Source training only,4.0,99.0,35.0,13.0,8.0
+frozen_1,frozen,Frozen CSP/LDA,Spatial representation,"Fit CSP
+on source training",44.0,99.0,39.0,13.0,8.0
+frozen_2,frozen,Frozen CSP/LDA,Decision rule,"Fit LDA
+on source training",88.0,99.0,36.0,13.0,8.0
+frozen_3,frozen,Frozen CSP/LDA,Later query inference,"Apply fixed source
+CSP + LDA",129.0,99.0,37.0,13.0,8.0
+lda_only_0,lda_only,LDA-only recalibration,Fitting inputs,"Source for CSP;
+source + current
+support for LDA",4.0,76.0,35.0,13.0,8.0
+lda_only_1,lda_only,LDA-only recalibration,Spatial representation,Keep source CSP fixed,44.0,76.0,39.0,13.0,8.0
+lda_only_2,lda_only,LDA-only recalibration,Decision rule,"Refit LDA on the
+source/support union",88.0,76.0,36.0,13.0,8.0
+lda_only_3,lda_only,LDA-only recalibration,Later query inference,"Apply source CSP
+and updated LDA",129.0,76.0,37.0,13.0,8.0
+full_0,full,Full CSP/LDA refitting,Fitting inputs,"Source + current
+support",4.0,53.0,35.0,13.0,8.0
+full_1,full,Full CSP/LDA refitting,Spatial representation,"Refit CSP on the
+source/support union",44.0,53.0,39.0,13.0,8.0
+full_2,full,Full CSP/LDA refitting,Decision rule,"Refit LDA on the
+source/support union",88.0,53.0,36.0,13.0,8.0
+full_3,full,Full CSP/LDA refitting,Later query inference,"Apply updated
+CSP + LDA",129.0,53.0,37.0,13.0,8.0
+ea_0,ea,EA-CSP,Fitting inputs,"Source + current
+support",4.0,22.0,35.0,21.0,8.0
+ea_1,ea,EA-CSP,Spatial representation,"Separate references:
+Rₛ from source;
+Rₜ from current support.
+Align each domain.",44.0,22.0,39.0,21.0,8.0
+ea_2,ea,EA-CSP,Decision rule,"Fit CSP + LDA on the
+aligned source/
+support union",88.0,22.0,36.0,21.0,8.0
+ea_3,ea,EA-CSP,Later query inference,"Apply support-derived
+$R_t^{-1/2}$ to query;
+then fitted CSP + LDA",129.0,22.0,37.0,21.0,8.0

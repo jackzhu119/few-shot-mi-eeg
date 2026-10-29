@@ -8,6 +8,8 @@
 
 当前审阅稿件：**Disentangling spatial-filter and classifier contributions to limited-label motor-imagery EEG recalibration**，按 **Biomedical Engineering / Biomedizinische Technik** 的 Research Article 要求准备。主线为相同校准标签经分类器重校准、空间滤波重学和support-only对齐产生的组件贡献；含3图、2表，结构式摘要174词，完整正文约4,954词。原PLOS ONE及双作者BMT稿件保留原路径。
 
+[正式科研图及代码数据包](manuscript/bmt_component_revision_20261029/Publication_Figures_and_Source_20261029.zip)：Matplotlib真实数据绘图，PDF/SVG矢量、600 dpi RGB TIFF，另附黑白流程图和[重绘说明](manuscript/bmt_component_revision_20261029/FIGURE_REPRODUCTION.md)。
+
 ## 从这里开始
 
 | 目的 | 入口 |

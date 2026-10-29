@@ -82,7 +82,10 @@ def package():
                 selected[str(p.relative_to(ROOT))] = p.read_bytes()
     for p in [ROOT / 'scripts/review_kumar_component_saved_evidence_20261029.py',
               ROOT / 'scripts/render_component_revision_figures_20261029.py',
+              ROOT / 'scripts/render_component_external_figure_20261029.py',
+              ROOT / 'scripts/render_component_workflow_20261029.py',
               ROOT / 'scripts/build_bmt_component_revision_20261029.py',
+              OUT / 'FIGURE_REPRODUCTION.md',
               ROOT / 'research_logs/kumar_cross_session_20261012/protocol/split_manifest.json',
               ROOT / 'LICENSE', ROOT / 'LICENSING.md', ROOT / 'LICENSES/MIT.txt',
               ROOT / 'LICENSES/CC-BY-4.0.txt',
@@ -95,6 +98,9 @@ def package():
             selected[str(p.relative_to(ROOT))] = p.read_bytes()
     for p in (OUT / 'figures').glob('*.csv'):
         selected[str(p.relative_to(ROOT))] = p.read_bytes()
+    for p in (OUT / 'workflow').glob('*'):
+        if p.suffix in {'.csv', '.json', '.txt'}:
+            selected[str(p.relative_to(ROOT))] = p.read_bytes()
     with zipfile.ZipFile(data, 'w', zipfile.ZIP_DEFLATED, compresslevel=6) as z:
         for name, content in sorted(selected.items()):
             if name.endswith(('.npz', '.pt', '.pth', '.edf', '.bdf', '.mat')):
@@ -109,13 +115,32 @@ def package():
                ('Supplementary_Methods.pdf', OUT / 'Supplementary_Methods.pdf'),
                ('Supplementary_Data_and_Code.zip', data)]
     for i, stem in [(1, 'Fig1_components'), (2, 'Fig2_budgets_sessions'), (3, 'Fig3_external_validation')]:
-        entries.append((f'Figure{i}.png', OUT / 'figures' / (stem + '.png')))
+        entries.append((f'Figure{i}.tiff', OUT / 'figures' / (stem + '.tiff')))
     with zipfile.ZipFile(upload, 'w', zipfile.ZIP_DEFLATED, compresslevel=6) as z:
         for name, path in entries:
             z.write(path, name)
+    drawing = OUT / 'Publication_Figures_and_Source_20261029.zip'
+    figure_sources = {ROOT / 'scripts' / name for name in [
+        'render_component_revision_figures_20261029.py',
+        'render_component_external_figure_20261029.py',
+        'render_component_workflow_20261029.py']}
+    figure_sources.update(ROOT / item['path'] for item in json.loads(
+        (OUT / 'figures/FIGURE_MANIFEST_20261029.json').read_text())['source_files'])
+    figure_sources.update([OUT / 'MAIN.md', OUT / 'references.bib', ROOT / 'LICENSE',
+                           ROOT / 'LICENSING.md', OUT / 'FIGURE_REPRODUCTION.md',
+                           ROOT / 'research_logs/paper2_external_validation_20261027/aggregate.json',
+                           ROOT / 'research_logs/paper2_external_validation_20261027/run_metrics.json'])
+    for directory in (OUT / 'figures', OUT / 'workflow'):
+        figure_sources.update(p for p in directory.glob('*') if p.is_file())
+    with zipfile.ZipFile(drawing, 'w', zipfile.ZIP_DEFLATED, compresslevel=6) as z:
+        for p in sorted(figure_sources):
+            z.write(p, str(p.relative_to(ROOT)))
+        readme = zipfile.ZipInfo.from_file(OUT / 'FIGURE_REPRODUCTION.md', 'README.md')
+        readme.compress_type = zipfile.ZIP_DEFLATED
+        z.writestr(readme, (OUT / 'FIGURE_REPRODUCTION.md').read_bytes())
     complete = OUT / 'BMT_Three_Author_Review_Package_20261029.zip'
     files = sorted(p for p in OUT.rglob('*') if p.is_file() and p.name not in {
-        complete.name, upload.name, 'PACKAGE_SHA256.json', 'PACKAGE_MANIFEST.json'})
+        complete.name, upload.name, drawing.name, 'PACKAGE_SHA256.json', 'PACKAGE_MANIFEST.json'})
     with zipfile.ZipFile(complete, 'w', zipfile.ZIP_DEFLATED, compresslevel=6) as z:
         for p in files:
             z.write(p, str(p.relative_to(OUT)))
@@ -123,7 +148,7 @@ def package():
                 'submission_performed': False, 'EEG_or_weights_included': False,
                 'archives': [{'file': p.name, 'bytes': p.stat().st_size,
                               'sha256': hashlib.sha256(p.read_bytes()).hexdigest()}
-                             for p in [data, upload, complete]]}
+                             for p in [data, upload, drawing, complete]]}
     (OUT / 'PACKAGE_SHA256.json').write_text(json.dumps(manifest, indent=2) + '\n')
 
 
@@ -166,6 +191,10 @@ def build():
         # Group table captions with their first rows and figure captions with each full image.
         text = re.sub(r'(?m)^(\*\*Table (?:S?\d+)\..*)$', lambda m:'\\Needspace{12\\baselineskip}\n\n' + m.group(1), text)
         text = re.sub(r'(?m)^(!\[Figure[^\n]+)$', lambda m:'\\Needspace{40\\baselineskip}\n\n' + m.group(1), text)
+        # Embed vector artwork in PDF; editable Word retains its PNG previews.
+        text = re.sub(r'(!\[[^\]]*\]\()([^\)]+)\.png(\))',
+                      lambda m: m.group(1) + m.group(2) + '.pdf' + m.group(3)
+                      if (OUT / (m.group(2) + '.pdf')).is_file() else m.group(0), text)
         pdf_source.write_text(text)
         pdf_cmd = list(common)
         pdf_cmd[1] = str(pdf_source)

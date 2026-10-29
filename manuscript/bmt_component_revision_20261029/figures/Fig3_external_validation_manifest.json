@@ -1,0 +1,136 @@
+{
+  "figure": "Fig3_external_validation",
+  "rendering_only": true,
+  "decoder_or_EEG_loaded": false,
+  "new_fit_or_prediction": false,
+  "source_files": [
+    {
+      "file": "research_logs/paper2_external_validation_20261027/aggregate.json",
+      "sha256": "94e3f1cc70d6c4930c559fc7145c83317dacbb84e2850153dbd14285639e6c72"
+    },
+    {
+      "file": "research_logs/paper2_external_validation_20261027/run_metrics.json",
+      "sha256": "5e1fde5ed50424792d260cc173608a2f88a9b65a8950311090d863beb260de30"
+    },
+    {
+      "file": "manuscript/bmt_component_revision_20261029/figures/Fig3_external_validation_source_data.csv",
+      "sha256": "95db0fcc869eb5ae6d00adc6076f5aa1b7f6bc01a0804ca2addd19da8ecc96bb"
+    }
+  ],
+  "renderer": {
+    "file": "scripts/render_component_external_figure_20261029.py",
+    "sha256": "595752c0c568ec6f6aeadf2b54d1ea9e557b7701adb876739403143f68662a75"
+  },
+  "prior_figure_csv_equivalence": {
+    "rows": 150,
+    "numerical_fields_compared": 154,
+    "maximum_absolute_error": 0.0,
+    "all_identities_and_saved_confidence_intervals_equivalent": true
+  },
+  "participants": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+  ],
+  "participant_method_endpoints": 36,
+  "participant_method_query_run_endpoints": 180,
+  "method_colors": {
+    "frozen": "#666666",
+    "lda_only": "#009E73",
+    "full_csp": "#0072B2",
+    "ea_csp": "#D55E00"
+  },
+  "participant_marker_shapes": {
+    "frozen": "s",
+    "lda_only": "^",
+    "full_csp": "o",
+    "ea_csp": "D"
+  },
+  "participant_pairs_connect_actual_jittered_points": true,
+  "paired_confidence_intervals": {
+    "full_csp_minus_lda_only": {
+      "mean_difference_pp": 0.1851851851851833,
+      "saved_bootstrap_ci95_pp": [
+        -1.8518518518518563,
+        2.129629629629627
+      ]
+    },
+    "ea_csp_minus_full_csp": {
+      "mean_difference_pp": 5.64814814814815,
+      "saved_bootstrap_ci95_pp": [
+        3.1481481481481493,
+        8.703703703703704
+      ]
+    }
+  },
+  "cohort_mean_BA_percent": {
+    "frozen": 70.55555555555556,
+    "lda_only": 71.66666666666667,
+    "full_csp": 71.85185185185185,
+    "ea_csp": 77.5
+  },
+  "font_family": "DejaVu Sans",
+  "minimum_font_points_at_final_width": 8.0,
+  "panel_letter_font_points": 10,
+  "final_width_mm": 170,
+  "final_height_mm": 145,
+  "raster_dpi": 600,
+  "BA_axis_limits_percent": [
+    40,
+    100
+  ],
+  "heatmap_symmetric_range_pp": [
+    -35,
+    35
+  ],
+  "heatmaps_vector_rectangles": true,
+  "SVG_text_editable": true,
+  "PDF_font_type": 42,
+  "TIFF": {
+    "compression": "tiff_lzw",
+    "mode": "RGB",
+    "dpi": [
+      600.0,
+      600.0
+    ],
+    "pixels": [
+      4015,
+      3425
+    ]
+  },
+  "matplotlib_version": "3.10.8",
+  "numpy_version": "2.3.5",
+  "outputs": [
+    {
+      "file": "manuscript/bmt_component_revision_20261029/figures/Fig3_external_validation.png",
+      "bytes": 608936,
+      "sha256": "493f9cdc2044f884ef2d38023f84cb8cf7d22c4927d6becfaa5c94fab2022043"
+    },
+    {
+      "file": "manuscript/bmt_component_revision_20261029/figures/Fig3_external_validation.pdf",
+      "bytes": 38894,
+      "sha256": "b37f6f7f1ca76d39922a6bea407a3fc58e9e4fc8f06bed582d2a8353fbf77c46"
+    },
+    {
+      "file": "manuscript/bmt_component_revision_20261029/figures/Fig3_external_validation.svg",
+      "bytes": 133402,
+      "sha256": "76a29d2217ea506c2c8df2d68b13f413eef7cce65b3c3bbf69bc32459a97b2d4"
+    },
+    {
+      "file": "manuscript/bmt_component_revision_20261029/figures/Fig3_external_validation.tiff",
+      "bytes": 1474892,
+      "sha256": "52f31e1004a1d17522cdb5879392f68a3f4a6999d7b93680628dccd6a31ee92e"
+    },
+    {
+      "file": "manuscript/bmt_component_revision_20261029/figures/Fig3_external_validation.csv",
+      "bytes": 9411,
+      "sha256": "95db0fcc869eb5ae6d00adc6076f5aa1b7f6bc01a0804ca2addd19da8ecc96bb"
+    }
+  ]
+}

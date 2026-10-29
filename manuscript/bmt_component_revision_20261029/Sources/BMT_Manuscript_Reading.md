@@ -156,7 +156,7 @@ Intervals resample participants and are pointwise. Kumar original intervals reta
 
 \Needspace{40\baselineskip}
 
-![Figure 1](figures/Fig1_components.png){width=100%}
+![Figure 1](figures/Fig1_components.pdf){width=100%}
 
 **Figure 1. Contributions to limited-label recalibration.** Four pipeline actions distinguish classifier recalibration, the added spatial refit and support-only alignment. Participant and cohort results retain the original Kumar comparison and its exploratory EA extension. The prediction-transition decomposition shows corrected errors and newly introduced errors underlying the original full-minus-LDA-only gain. Updating pipelines receive the same source and current-support labels; the frozen source decoder receives no target labels.
 
@@ -176,7 +176,7 @@ EA-CSP achieved 60.22%, 66.10%, 67.59%, 70.08% and 70.66% across the same prefix
 
 \Needspace{40\baselineskip}
 
-![Figure 2](figures/Fig2_budgets_sessions.png){width=100%}
+![Figure 2](figures/Fig2_budgets_sessions.pdf){width=100%}
 
 **Figure 2. Calibration budgets and longitudinal participant differences.** A–B: full four-method curves in the original primary and development cohorts, respectively. Support caps are 4, 8, 12, 16 and the full run of 19 or 20 labels. C–D: participant-by-session spatial-refitting and alignment increments in the 12-person primary cohort. Participants define the cohort summaries; all scheduled budgets and session differences are shown.
 
@@ -184,9 +184,9 @@ Figure 3 resolves the external alignment comparison into participant effects and
 
 \Needspace{40\baselineskip}
 
-![Figure 3](figures/Fig3_external_validation.png){width=100%}
+![Figure 3](figures/Fig3_external_validation.pdf){width=100%}
 
-**Figure 3. External comparison under exactly 20 support labels.** A: participant BA and cohort means for four fixed decoders. B: paired participant differences and pointwise 95% bootstrap intervals for the primary full-minus-LDA-only and secondary EA-minus-full contrasts. C–D: participant-by-query-run differences across five complete test runs. Nine participants contributed 120 query trials each. Alignment references used source and current-support signals.
+**Figure 3. External comparison under exactly 20 support labels.** A: participant BA; cohort means appear beneath the method names. B: paired participant differences and pointwise 95% bootstrap intervals for the primary full-minus-LDA-only and secondary EA-minus-full contrasts. C–D: participant-by-query-run differences across five complete test runs. Nine participants contributed 120 query trials each. Alignment references used source and current-support signals.
 
 ### Paired task-window analysis assessed the cue-anchored endpoint
 

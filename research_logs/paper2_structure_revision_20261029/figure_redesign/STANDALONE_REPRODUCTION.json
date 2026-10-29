@@ -1,0 +1,31 @@
+{
+  "scope": "Actual clean-tree extraction and rerender of the final standalone figure ZIP",
+  "tested_archive_SHA256": "241763553ad808751dd68e15328179c3dd2d5d9c6fc0203c3660848bb0c78a39",
+  "all_three_renderers_executed": [
+    {
+      "script": "render_component_revision_figures_20261029.py",
+      "exit_code": 0,
+      "script_SHA256": "0a9bf5f3d06b2f126cc9615b3ed4313cbfab8f4bf16b585cf0babc393f289e15"
+    },
+    {
+      "script": "render_component_external_figure_20261029.py",
+      "exit_code": 0,
+      "script_SHA256": "595752c0c568ec6f6aeadf2b54d1ea9e557b7701adb876739403143f68662a75"
+    },
+    {
+      "script": "render_component_workflow_20261029.py",
+      "exit_code": 0,
+      "script_SHA256": "cd6a76ae122bf08132b8abd8cf2eb36eaccc349ed84bd3be93c930166ddf230e"
+    }
+  ],
+  "all_five_numeric_or_workflow_CSVs_byte_identical": {
+    "manuscript/bmt_component_revision_20261029/figures/Fig1_components.csv": "a1a98399e484ed4965df5729bcca2d8c47dedf8444fd80cd32e073a3f9a3a7d0",
+    "manuscript/bmt_component_revision_20261029/figures/Fig2_budgets_sessions.csv": "a02740bc962264502f33a33ce50b129cf8a36aefb331c861c911404629beca0a",
+    "manuscript/bmt_component_revision_20261029/figures/Fig3_external_validation.csv": "95db0fcc869eb5ae6d00adc6076f5aa1b7f6bc01a0804ca2addd19da8ecc96bb",
+    "manuscript/bmt_component_revision_20261029/workflow/Decoder_component_workflow_nodes.csv": "d4b2a80ee262446ed7c27fadf9a618e4481acab2e14e51775b3cfe09ff1f025a",
+    "manuscript/bmt_component_revision_20261029/workflow/Decoder_component_workflow_edges.csv": "a5f88f42e2034e8bcc6e8c3a291484bfc607645a09f6ffa38a79557094ffb980"
+  },
+  "no_EEG_weights_network_training_or_new_statistics_needed": true,
+  "temporary_execution_root": "/tmp/component_figures_final_standalone_20261029",
+  "software_python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+}

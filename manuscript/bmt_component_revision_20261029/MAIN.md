@@ -176,7 +176,7 @@ Figure 3 resolves the external alignment comparison into participant effects and
 
 ![Figure 3](figures/Fig3_external_validation.png){width=100%}
 
-**Figure 3. External comparison under exactly 20 support labels.** A: participant BA and cohort means for four fixed decoders. B: paired participant differences and pointwise 95% bootstrap intervals for the primary full-minus-LDA-only and secondary EA-minus-full contrasts. C–D: participant-by-query-run differences across five complete test runs. Nine participants contributed 120 query trials each. Alignment references used source and current-support signals.
+**Figure 3. External comparison under exactly 20 support labels.** A: participant BA; cohort means appear beneath the method names. B: paired participant differences and pointwise 95% bootstrap intervals for the primary full-minus-LDA-only and secondary EA-minus-full contrasts. C–D: participant-by-query-run differences across five complete test runs. Nine participants contributed 120 query trials each. Alignment references used source and current-support signals.
 
 ### Paired task-window analysis assessed the cue-anchored endpoint
 

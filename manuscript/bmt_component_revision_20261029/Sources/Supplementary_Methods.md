@@ -302,7 +302,7 @@ The matched ablations distinguish three operations. Separating common and discri
 
 \Needspace{40\baselineskip}
 
-![Figure S1](supplementary_figures/FigS1_geometry.png){width=100%}
+![Figure S1](supplementary_figures/FigS1_geometry.pdf){width=100%}
 
 **Figure S1. Geometric candidate, matched controls and ablations.** Curves show BA across support budgets; paired cap-20 contrasts compare the candidate with tangent refitting, EA-CSP and matched ablations. Ablations vary posterior mean estimation, predictive covariance, source-mean noise and common/contrast shift scales. Intervals are participant-bootstrap summaries.
 
@@ -328,7 +328,7 @@ The full budget curves show how this contrast changes (Figure S2). Individual-so
 
 \Needspace{40\baselineskip}
 
-![Figure S2](supplementary_figures/FigS2_neural_normalization.png){width=100%}
+![Figure S2](supplementary_figures/FigS2_neural_normalization.pdf){width=100%}
 
 **Figure S2. Neural normalization mode across support budgets.** Fixed-minus-adaptive BN contrasts are shown for both source regimes across all five caps, together with the cap-20 participant contrasts and single-class prediction counts. Fixed and adaptive BN use the same current support, initialization, optimizer budget and Dropout-off setting within each comparison. They differ in normalization during optimization and the resulting inference state. Collapse counts are nested seed/session observations; participant-level summaries define the uncertainty intervals.
 
@@ -346,7 +346,7 @@ The full synthetic grid contained 172,800 numeric method-by-condition-by-repetit
 
 \Needspace{40\baselineskip}
 
-![Figure S3](supplementary_figures/FigS3_mechanisms.png){width=100%}
+![Figure S3](supplementary_figures/FigS3_mechanisms.pdf){width=100%}
 
 **Figure S3. Mechanism simulations and predictive uncertainty.** All 384 conditions retain 50 paired repeats. Panels show candidate-minus-refit BA by source size/correlation, all generating shifts, paired scenario BA, and posterior-versus-point changes in cross entropy and BA. Synthetic results are separate from human EEG endpoints.
 
