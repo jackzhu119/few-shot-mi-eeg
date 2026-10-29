@@ -51,7 +51,8 @@ def declarations():
     values = {parts[i]: parts[i + 1].strip() for i in range(1, len(parts), 2)}
     d = Document()
     d.add_heading('Ethical and legal declarations', 0)
-    d.add_paragraph('Biomedical Engineering / Biomedizinische Technik — three-author revision for final review')
+    status = json.loads((OUT / 'SUBMISSION_STATUS.json').read_text())
+    d.add_paragraph('Biomedical Engineering / Biomedizinische Technik — ' + status['display_version'])
     d.add_paragraph('Ziyuan Zhu; Sihao Liu; Haoyang Yu')
     d.add_paragraph((OUT / 'MAIN.md').read_text().splitlines()[0][2:])
     table = d.add_table(rows=1, cols=2)
@@ -144,7 +145,9 @@ def package():
     with zipfile.ZipFile(complete, 'w', zipfile.ZIP_DEFLATED, compresslevel=6) as z:
         for p in files:
             z.write(p, str(p.relative_to(OUT)))
-    manifest = {'status': 'three_author_revision_for_final_author_review',
+    status = json.loads((OUT / 'SUBMISSION_STATUS.json').read_text())
+    manifest = {'status': status['status'],
+                'final_new_artifact_approval_recorded': status['final_new_artifact_approval_recorded'],
                 'submission_performed': False, 'EEG_or_weights_included': False,
                 'archives': [{'file': p.name, 'bytes': p.stat().st_size,
                               'sha256': hashlib.sha256(p.read_bytes()).hexdigest()}
@@ -161,8 +164,8 @@ def build():
     status = json.loads((OUT / 'SUBMISSION_STATUS.json').read_text())
     checks.update({'review_date': '2026-10-29', 'authors': status['authors'],
                    'third_author_membership_and_COI_user_confirmed': True,
-                   'all_authors_final_new_artifact_approval_recorded': False,
-                   'reviewer_independence_for_third_author': 'author_check_required',
+                   'all_authors_final_new_artifact_approval_recorded': status['final_new_artifact_approval_recorded'],
+                   'reviewer_independence_for_third_author': status['reviewer_independence_for_third_author'],
                    'no_new_fit_or_forward': True})
     abstract = main.split('## Abstract\n', 1)[1].split('**Keywords:**', 1)[0].strip()
     (OUT / 'ABSTRACT_FOR_SUBMISSION.txt').write_text(re.sub(r'\*\*', '', abstract) + '\n')

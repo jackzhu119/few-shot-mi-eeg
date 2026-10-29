@@ -1,6 +1,6 @@
 # 论文与投稿文件导航
 
-**当前BMT审阅稿：2026-10-29，Ziyuan Zhu*, Sihao Liu, Haoyang Yu。** 标题：**Disentangling spatial-filter and classifier contributions to limited-label motor-imagery EEG recalibration**。[主稿Word](bmt_component_revision_20261029/BMT_Manuscript_Submission.docx) · [阅读PDF](bmt_component_revision_20261029/BMT_Manuscript_Reading.pdf) · [全部材料](bmt_component_revision_20261029/README.md) · [保存预测独立复核](../research_logs/paper2_structure_revision_20261029/component_replay/README.md)。3图、2表，摘要174词，完整正文约4,954词。新稿待全体作者最终审阅批准，尚未投稿。
+**当前BMT审阅稿：2026-10-29，Ziyuan Zhu*, Sihao Liu, Haoyang Yu。** 标题：**Disentangling spatial-filter and classifier contributions to limited-label motor-imagery EEG recalibration**。[主稿Word](bmt_component_revision_20261029/BMT_Manuscript_Submission.docx) · [阅读PDF](bmt_component_revision_20261029/BMT_Manuscript_Reading.pdf) · [全部材料](bmt_component_revision_20261029/README.md) · [保存预测独立复核](../research_logs/paper2_structure_revision_20261029/component_replay/README.md)。3图、2表，摘要174词，完整正文约4,954词。通讯作者已确认三位作者批准终稿、承担责任且无利益冲突，五位候选审稿人的无冲突确认覆盖三人；尚未投稿。
 
 **2026-10-28双作者历史批准版：Ziyuan Zhu*, Sihao Liu。** [主稿Word](bmt_submission_20261028/BMT_Manuscript_Submission.docx) · [阅读PDF](bmt_submission_20261028/BMT_Manuscript_Reading.pdf) · [完整历史包](bmt_submission_20261028/BMT_Submission_Version_20261028.zip) · [当时要求核对](bmt_submission_20261028/SUBMISSION_CHECK_20261028.md)。该版批准范围保持原样，不延伸到三作者新稿。
 

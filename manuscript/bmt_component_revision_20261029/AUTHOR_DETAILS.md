@@ -20,4 +20,4 @@ Sihao Liu: Code verification, project-file organization and checking journal sub
 
 Haoyang Yu: Data checking and aggregation, project-file organization and assistance with GitHub uploads.
 
-The user confirmed the third author's agreement to authorship and absence of conflicts. The final exported revision is supplied for all authors' review. The 28 October two-author approval remains attached to that earlier version.
+On 29 October 2026, the corresponding author confirmed that all three authors had reviewed and approved the latest manuscript and figures, verified their names and substantive contributions, agreed to submission and accepted responsibility for the work. All three authors report no conflicts of interest. This records the corresponding author's report in this conversation; it is not a set of separate signed author forms. The ORCID screenshot supplied on the same date confirms Ziyuan Zhu's identifier above. The 28 October two-author approval remains attached to that earlier version.

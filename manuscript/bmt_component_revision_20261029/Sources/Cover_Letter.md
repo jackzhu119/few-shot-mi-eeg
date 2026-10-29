@@ -1,4 +1,4 @@
-# Cover letter — final author-review draft
+# Cover letter
 
 Dear Professor Haueisen,
 
@@ -10,7 +10,7 @@ The completed calibration-budget analysis adds a second spatial operation. Suppo
 
 The contribution is a reproducible analysis of where limited-label recalibration gains arise, supported by shared trial identities and participant-level estimates. The study uses our recorded analyses of public datasets; source methods and acquisition studies receive their appropriate citations. Data/code availability, national-law secondary-use ethics and actual AI assistance are documented in the separate declarations.
 
-The author list is Ziyuan Zhu, Sihao Liu and Haoyang Yu, all sharing the Chongqing Medical University affiliation. The authors report no conflicts and no study funding. The prior PLOS ONE submission was rejected, as confirmed by the corresponding author. This revised version is supplied for final author review; ScholarOne submission has not been performed. The existing five suggested reviewers are supplied for the authors to verify against the expanded author list.
+The manuscript has been reviewed and approved for submission by Ziyuan Zhu, Sihao Liu and Haoyang Yu, all sharing the Chongqing Medical University affiliation. All authors accept responsibility for its content and report no conflicts of interest and no study funding. The prior PLOS ONE submission was rejected, as confirmed by the corresponding author. The accompanying list supplies five suggested reviewers with institutional affiliations and professional contact details. The corresponding author confirms no known relevant conflicts between these candidates and any of the three authors.
 
 Sincerely,
 

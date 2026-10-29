@@ -6,7 +6,7 @@
 
 **Authors:** Ziyuan Zhu; Sihao Liu; Haoyang Yu
 
-**Version:** Three-author revision for final author review.
+**Version:** Author-approved submission version, 29 October 2026.
 
 ## Acknowledgments
 
@@ -22,7 +22,7 @@ The original Kumar study reported written informed consent before data collectio
 
 ## Author contributions
 
-All three authors are listed with their actual contributions. Final review and submission approval are required for the exported revision.
+All authors have accepted responsibility for the entire content of this manuscript and approved its submission.
 
 Ziyuan Zhu: Conceptualization; Methodology; Software; Formal analysis; Validation; Visualization; Writing – original draft; Writing – review & editing.
 

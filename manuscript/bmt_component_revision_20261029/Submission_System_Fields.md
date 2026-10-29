@@ -1,4 +1,4 @@
-# Submission-system fields — final author review
+# Submission-system fields — author-approved version
 
 **Article type:** Research Article
 
@@ -36,6 +36,10 @@ brain–computer interfaces; cross-session decoding; domain adaptation; signal p
 
 Use the exact current text in Ethical_and_Legal_Declarations.md. The national-law exemption refers to this secondary analysis; the University of Texas protocol refers only to Kumar original data collection. Three authors report no conflicts and no study funding. Actual AI assistance and individual contributions are declared in that file.
 
-## Final author checks
+## Suggested reviewers
 
-Review and approve the exported three-author manuscript and recheck the existing reviewer suggestions against all three authors before submitting. The prior PLOS rejection is author-reported. No submission has been made through ScholarOne.
+Enter the five candidates in Suggested_Reviewers.csv in ScholarOne's reviewer-suggestion fields. Their current institutional details and public professional email addresses were rechecked on 29 October 2026; see Reviewer_Sources.md. Country denotes institutional location. The corresponding author confirmed no known relevant conflicts with any of the three manuscript authors. These are reviewer suggestions, not additional manuscript authors.
+
+## Author confirmation
+
+On 29 October 2026, the corresponding author confirmed final manuscript approval, substantive author contributions, responsibility for the work, absence of author conflicts, and reviewer independence covering all three authors. The confirmation applies to the reviewed scientific revision ffb87f9e9b0afeeda5eaa6273c6bd6d02653a36b; this update changes submission administration only. The prior PLOS rejection is author-reported. No submission has been made through ScholarOne.

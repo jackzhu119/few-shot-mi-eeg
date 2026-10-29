@@ -4,16 +4,16 @@ Date: 29 October 2026. Journal: **Biomedical Engineering / Biomedizinische Techn
 
 The paper now follows one question: what do the same current-session labels contribute through classifier recalibration, spatial refitting and support-only alignment? It uses completed analyses from two original acquisitions and keeps their participant cohorts separate. The original Kumar component gain is +5.47pp; its completed alignment follow-up adds +5.30pp beyond full refitting, and the fixed external BNCI comparison adds +5.65pp. Every original endpoint role and the complete budget/phase/extension results are reported.
 
-## Read and review
+## Submission files
 
 - `BMT_Manuscript_Reading.pdf` / `.docx`: illustrated English article.
 - `BMT_Manuscript_Submission.docx`: editable tables/equations, separate main figures and end legends. Main publication figures are supplied as 600 dpi RGB TIFF, with editable PDF/SVG originals.
 - `Supplementary_Methods.pdf` / `.docx`: full original, budget, phase, neural, geometric and simulation evidence, including all scheduled comparisons.
 - `Ethical_and_Legal_Declarations.docx`: separate journal-order statements, national-law ethics and actual AI-use disclosure.
-- `Cover_Letter.docx`: corresponding-author cover letter for final review.
+- `Cover_Letter.docx`: corresponding-author cover letter approved for submission.
 - `ABSTRACT_FOR_SUBMISSION.txt`, `AUTHOR_DETAILS.md`, `Suggested_Reviewers.csv` and `SUBMISSION_STATUS.json`: system fields and author facts.
 - `BMT_Three_Author_Review_Package_20261029.zip`: complete review container with individual files; the separate upload ZIP is not nested inside it.
-- `BMT_Upload_Files_20261029.zip`: eight individual candidate upload files after extraction; this is not a single supplementary upload.
+- `BMT_Upload_Files_20261029.zip`: eight individual upload files after extraction; this is not a single supplementary upload.
 - `Publication_Figures_and_Source_20261029.zip`: three main figures and a separate black-and-white workflow, each in PDF/SVG/600 dpi TIFF/PNG, with plotting scripts and all exact input tables. See [figure reproduction](FIGURE_REPRODUCTION.md).
 - `Supplementary_Data_and_Code.zip`: public prediction reconstruction, plot data, scripts and provenance; no EEG or model tensors.
 
@@ -23,9 +23,9 @@ The prose uses the installed `anti-defensive-writing-en` skill. Generic research
 
 [Dataset/version inventory](../../research_logs/paper2_structure_revision_20261029/DATA_VERSION_INVENTORY.md) distinguishes two raw datasets from six analysis layers. [Reading and official-policy checks](../../docs/paper2_structure_revision_20261029/) record exact access scope. [Component replay](../../research_logs/paper2_structure_revision_20261029/component_replay/README.md) explains the independently reconstructed predictions, historical bootstrap orders and unchanged source files.
 
-## Author review before actual submission
+## Author approval and reviewer confirmation
 
-The user confirmed Haoyang Yu's agreement to authorship, data checking/aggregation, file organization, GitHub assistance and absence of conflicts. His name, email and shared affiliation are synchronized. The final exported three-author article is supplied for all authors' review. The earlier two-author approval remains attached to that earlier version. Authors should check the five existing reviewer suggestions against the expanded author list. No ScholarOne submission or external contact has been performed.
+On 29 October 2026, the corresponding author confirmed all three authors' final approval, substantive contributions, accountability and absence of conflicts, and no known relevant conflicts between the five suggested reviewers and any of the three authors. The confirmation covers scientific revision `ffb87f9e9b0afeeda5eaa6273c6bd6d02653a36b`; subsequent changes in this update concern approval/status and reviewer-source documentation. The supplied ORCID screenshot matches Ziyuan Zhu's identifier. The earlier two-author approval remains attached to that earlier version. See [dated confirmation](../../research_logs/paper2_structure_revision_20261029/final_author_approval/AUTHOR_CONFIRMATION.json), [reviewer recheck](Reviewer_Sources.md) and [reviewer field sheet](Suggested_Reviewers_For_Submission.md). No ScholarOne submission or external contact has been performed.
 
 ## Completed checks
 
