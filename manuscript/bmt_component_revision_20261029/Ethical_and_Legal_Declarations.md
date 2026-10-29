@@ -32,7 +32,7 @@ Haoyang Yu assisted with data checking and aggregation, project-file organizatio
 
 ## Use of large language models, AI and machine learning tools
 
-Ziyuan Zhu used OpenAI ChatGPT/Codex for literature organization, manuscript restructuring and language editing, code and file organization, and checks of saved results. The authors are responsible for verifying the sources, scientific claims and final manuscript content.
+OpenAI Codex assisted with code revision, GitHub updates, file compilation and organization, manuscript preparation and saved-result checks; OpenAI ChatGPT assisted with grammatical correction. The authors are responsible for verifying sources, scientific claims and the final manuscript.
 
 ## Conflict of interest
 

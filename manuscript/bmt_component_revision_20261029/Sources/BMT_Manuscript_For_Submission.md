@@ -234,7 +234,7 @@ Kumar2024 source EEG is available as NEMAR nm000177/v1.0.5, DOI 10.82901/nemar.n
 
 ## Acknowledgments
 
-The authors thank the researchers who released Kumar2024 and BCI Competition IV 2a. Ziyuan Zhu used OpenAI ChatGPT/Codex for literature organization, manuscript restructuring and language editing, code and file organization, and checks of saved results. The authors are responsible for verifying the sources, scientific claims and final manuscript content.
+The authors thank the researchers who released Kumar2024 and BCI Competition IV 2a. OpenAI Codex assisted with code revision, GitHub updates, file compilation and organization, manuscript preparation and saved-result checks; OpenAI ChatGPT assisted with grammatical correction. The authors are responsible for verifying sources, scientific claims and the final manuscript.
 
 ## References
 
