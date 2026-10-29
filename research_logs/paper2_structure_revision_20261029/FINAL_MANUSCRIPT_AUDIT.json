@@ -1,0 +1,488 @@
+{
+  "audit_date_UTC": "2026-10-29T02:19:52.364464+00:00",
+  "auditor": "independent_child_agent_component_manuscript_final_audit",
+  "scope": "Read-only consistency review of the new three-author revision, saved metrics and existing replay receipts. This audit performed no EEG/weight loading, model import, fit, forward, query reevaluation or new scientific bootstrap.",
+  "repository_head_at_review": "59ae621626a36d32795e92c51e5955d7f929c399",
+  "status": "passed_targeted_scientific_consistency_checks_final_author_review_pending",
+  "checked_files": [
+    {
+      "path": "manuscript/bmt_component_revision_20261029/MAIN.md",
+      "bytes": 34857,
+      "sha256": "fa30cf1c1b00d5a2efff3a388f9b78d95b8bbd42e22ed67386ca8c5a008473f5"
+    },
+    {
+      "path": "manuscript/bmt_component_revision_20261029/SUPPLEMENT.md",
+      "bytes": 52565,
+      "sha256": "bd5f6d902c5f73ab5861a723ce34b69514599ac89bc11a871c27654561f30abd"
+    },
+    {
+      "path": "manuscript/bmt_component_revision_20261029/AUTHOR_DETAILS.md",
+      "bytes": 1194,
+      "sha256": "15d78322278b62b578d081ce39a933b0f0bbb9821870d84328b3cfaf73992e16"
+    },
+    {
+      "path": "manuscript/bmt_component_revision_20261029/Ethical_and_Legal_Declarations.md",
+      "bytes": 3989,
+      "sha256": "725ecbaf1187d4c6bf7328d4326e7f83bf79dcc5c9670d16be38e126c2066656"
+    },
+    {
+      "path": "manuscript/bmt_component_revision_20261029/SUBMISSION_STATUS.json",
+      "bytes": 2501,
+      "sha256": "e429ca2218e271d26f1d4752993fcea0f082d1e9857d394f4acdb8589f9fdaf3"
+    },
+    {
+      "path": "manuscript/bmt_component_revision_20261029/references.bib",
+      "bytes": 11693,
+      "sha256": "3b58028767a19e4818b1b6d50c52be681e2e91aa51c5c5fa18e5eb67bcf0e84e"
+    },
+    {
+      "path": "manuscript/bmt_component_revision_20261029/REPRODUCE.md",
+      "bytes": 1801,
+      "sha256": "a3fc76a9a905d9004379839a2f48c9461525251064127b26a1aedafc7e83f871"
+    },
+    {
+      "path": "manuscript/bmt_component_revision_20261029/Submission_System_Fields.md",
+      "bytes": 3075,
+      "sha256": "91bbc821fd464a0da4ab73f520735987537dfd193b3d36edb4a88e99d1f148ab"
+    }
+  ],
+  "supporting_evidence_files": [
+    {
+      "path": "research_logs/bmt_review_response_20261027/statistics_check.json",
+      "bytes": 6767,
+      "sha256": "2268693a02219b6362115c8e8654b586dfbb5f63f92ca58ac6810a75f0570a3d"
+    },
+    {
+      "path": "research_logs/paper2_external_validation_20261027/aggregate.json",
+      "bytes": 19767,
+      "sha256": "94e3f1cc70d6c4930c559fc7145c83317dacbb84e2850153dbd14285639e6c72"
+    },
+    {
+      "path": "research_logs/paper2_structure_revision_20261029/component_replay/REPLAY_REPORT.json",
+      "bytes": 5579,
+      "sha256": "bea2d492f334f980953a58d3f9479b6ce1d3e69bb48d9da191958e05e0f42b5c"
+    },
+    {
+      "path": "research_logs/paper2_structure_revision_20261029/component_replay/STATISTICAL_DEFINITION_SOURCE.json",
+      "bytes": 1587,
+      "sha256": "389be969a90604e13b33a65fdab4c60a4b2cc41c65bd7cdaae976d883df7a4e2"
+    },
+    {
+      "path": "research_logs/paper2_structure_revision_20261029/DATA_VERSION_INVENTORY.json",
+      "bytes": 27653,
+      "sha256": "012c52734f3536b53fc81b03f397f77d0dba27d880905979871ae88ca677b1cd"
+    },
+    {
+      "path": "docs/paper2_structure_revision_20261029/song_reading_notes.md",
+      "bytes": 3900,
+      "sha256": "eae71c010087da8ba0087fa0ae94af19f1688f5efed0b880236269ce67025b66"
+    },
+    {
+      "path": "docs/paper2_structure_revision_20261029/peterson_reading_notes.md",
+      "bytes": 4891,
+      "sha256": "a1255e309905891be256b5bce28f1861a5234a38e885f19ec561ee332f8877d3"
+    },
+    {
+      "path": "docs/paper2_structure_revision_20261029/journal_policy_check.md",
+      "bytes": 5175,
+      "sha256": "04df024ef0fe5512c60f95b254eda4546e1bf9bdcee6f27dcb57ffb959446fd6"
+    }
+  ],
+  "checks_passed": 29,
+  "checks": [
+    {
+      "id": "original_primary_CI_and_Holm",
+      "passed": true,
+      "evidence": {
+        "mean_difference_pp": 7.421355111917724,
+        "bootstrap_ci_low_pp": 2.487554824561402,
+        "bootstrap_ci_high_pp": 12.476615749142974,
+        "raw_p": 0.01953125,
+        "holm_p": 0.05859375
+      }
+    },
+    {
+      "id": "original_secondary_CI_and_Holm",
+      "passed": true,
+      "evidence": {
+        "mean_difference_pp": 5.471566848154871,
+        "bootstrap_ci_low_pp": 2.1680574460576745,
+        "bootstrap_ci_high_pp": 8.913797514619883,
+        "raw_p": 0.01025390625,
+        "holm_p": 0.041015625
+      }
+    },
+    {
+      "id": "ratio_of_cohort_means",
+      "passed": true,
+      "evidence": 73.72732830650094
+    },
+    {
+      "id": "Kumar_EA_role",
+      "passed": true,
+      "evidence": {
+        "cohort": "remaining12",
+        "budget": "full",
+        "contrast": "ea_minus_full",
+        "n_participants": "12",
+        "mean_gain_pp": "5.298069167170802",
+        "CI95_low_pp": "2.8091695654365805",
+        "CI95_high_pp": "8.263953165960878",
+        "n_positive": "10",
+        "n_equal": "0",
+        "n_negative": "2"
+      }
+    },
+    {
+      "id": "BNCI_primary_role",
+      "passed": true,
+      "evidence": {
+        "role": "primary",
+        "mean_difference_pp": 0.1851851851851833,
+        "bootstrap_ci95_pp": [
+          -1.8518518518518563,
+          2.129629629629627
+        ],
+        "p_exact_sign_flip": 0.96875,
+        "exact_sign_flip": {
+          "p_value": 0.96875,
+          "extreme_assignments": 496,
+          "total_assignments": 512,
+          "alternative": "two_sided_absolute_mean",
+          "inclusive_tolerance_balanced_accuracy": 1e-12,
+          "observed_magnitudes_retained": true
+        },
+        "p_holm_secondary": null,
+        "n_participants": 9,
+        "participant_differences_pp": {
+          "1": -0.8333333333333415,
+          "2": 4.999999999999993,
+          "3": 0.0,
+          "4": -6.666666666666677,
+          "5": 4.1666666666666625,
+          "6": 0.0,
+          "7": 0.8333333333333415,
+          "8": 0.0,
+          "9": -0.8333333333333304
+        },
+        "positive_participants": 3,
+        "negative_participants": 3,
+        "zero_participants": 3,
+        "leave_one_out_mean_pp": {
+          "1": 0.3124999999999989,
+          "2": -0.41666666666666796,
+          "3": 0.2083333333333312,
+          "4": 1.0416666666666656,
+          "5": -0.31250000000000167,
+          "6": 0.2083333333333312,
+          "7": 0.10416666666666352,
+          "8": 0.2083333333333312,
+          "9": 0.3124999999999975
+        },
+        "leave_one_out_mean_range_pp": [
+          -0.41666666666666796,
+          1.0416666666666656
+        ]
+      }
+    },
+    {
+      "id": "BNCI_secondary_EA_role",
+      "passed": true,
+      "evidence": {
+        "role": "secondary",
+        "mean_difference_pp": 5.64814814814815,
+        "bootstrap_ci95_pp": [
+          3.1481481481481493,
+          8.703703703703704
+        ],
+        "p_exact_sign_flip": 0.00390625,
+        "exact_sign_flip": {
+          "p_value": 0.00390625,
+          "extreme_assignments": 2,
+          "total_assignments": 512,
+          "alternative": "two_sided_absolute_mean",
+          "inclusive_tolerance_balanced_accuracy": 1e-12,
+          "observed_magnitudes_retained": true
+        },
+        "p_holm_secondary": 0.01171875,
+        "n_participants": 9,
+        "participant_differences_pp": {
+          "1": 5.833333333333335,
+          "2": 2.500000000000002,
+          "3": 5.000000000000004,
+          "4": 7.500000000000018,
+          "5": 5.833333333333335,
+          "6": 6.666666666666665,
+          "7": 15.833333333333332,
+          "8": 0.8333333333333304,
+          "9": 0.8333333333333304
+        },
+        "positive_participants": 9,
+        "negative_participants": 0,
+        "zero_participants": 0,
+        "leave_one_out_mean_pp": {
+          "1": 5.625000000000002,
+          "2": 6.041666666666669,
+          "3": 5.729166666666669,
+          "4": 5.416666666666667,
+          "5": 5.625000000000002,
+          "6": 5.520833333333336,
+          "7": 4.375000000000003,
+          "8": 6.250000000000003,
+          "9": 6.250000000000003
+        },
+        "leave_one_out_mean_range_pp": [
+          4.375000000000003,
+          6.250000000000003
+        ]
+      }
+    },
+    {
+      "id": "independent_unit_and_repeated_cohorts",
+      "passed": true,
+      "evidence": "Participant independent unit; six-development and twelve-primary groups separate."
+    },
+    {
+      "id": "four_method_information_access",
+      "passed": true,
+      "evidence": "Only updating branches share the target label budget; frozen does not."
+    },
+    {
+      "id": "source_TRAIN_and_covariance_scope",
+      "passed": true,
+      "evidence": "Kumar source40, CAR21D and LedoitWolf; BNCI source96, recordedreference, fixed0.1 shrinkage; query never reference-fitting data."
+    },
+    {
+      "id": "phase_missing_mapping_and_paired_uncertainty",
+      "passed": true,
+      "evidence": "No within-window CI is treated as a between-window finding; anchor, length, edge and outcome-dependent eligibility are explicit."
+    },
+    {
+      "id": "partial_is_sample_boundary",
+      "passed": true,
+      "evidence": "7200 exported;7156 complete;44 incomplete sample windows."
+    },
+    {
+      "id": "saved_replay_complete",
+      "passed": true,
+      "evidence": {
+        "budget_cells": 1800,
+        "phase_defined": 444,
+        "phase_undefined": 96,
+        "maximum_BA_error": 1.1102230246251565e-16,
+        "maximum_summary_or_CI_error": 0
+      }
+    },
+    {
+      "id": "historical_CIs_not_replaced",
+      "passed": true,
+      "evidence": "Original historical lexical-order CIs remain separate from numeric-order budget summaries; phase uses its own lexical order."
+    },
+    {
+      "id": "negative_results_retained",
+      "passed": true,
+      "evidence": "Development and individual declines, geometric candidate primary and functional controls retained."
+    },
+    {
+      "id": "amplitude_query_scope",
+      "passed": true,
+      "evidence": "Sensitivity does not imply artifact-free data."
+    },
+    {
+      "id": "third_author_actual_identity",
+      "passed": true,
+      "evidence": {
+        "order": 3,
+        "given_name": "Haoyang",
+        "family_name": "Yu",
+        "chinese_name": "余昊洋",
+        "email": "jiaguca3329@163.com",
+        "orcid": null,
+        "corresponding": false,
+        "affiliation": "College of Artificial Intelligence Medicine, Chongqing Medical University, Jinyun Campus, No. 61 Daxuecheng Middle Road, Shapingba District, Chongqing 401331, China",
+        "contribution": "Data checking and aggregation, project-file organization and assistance with GitHub uploads."
+      }
+    },
+    {
+      "id": "agreement_COI_not_final_artifact_approval",
+      "passed": true,
+      "evidence": {
+        "user_statements": [
+          "协助推送GitHub，整理文件。同意",
+          "参与数据的核对和汇总，没有利益冲突"
+        ],
+        "status": "three_author_revision_for_final_author_review",
+        "third_author_reviewer_independence": "not separately confirmed; authors to check existing candidate list"
+      }
+    },
+    {
+      "id": "ethics_national_law_separate_acquisition_approval",
+      "passed": true,
+      "evidence": "No school-confirmation statement or new approval number; Kumar original approval is not transferred to secondary analysis or BNCI."
+    },
+    {
+      "id": "AI_assistance_disclosed",
+      "passed": true,
+      "evidence": "Current restructuring assistance is not reduced to proofreading-only; no new final human approval is asserted."
+    },
+    {
+      "id": "independent_data_and_method_attribution",
+      "passed": true,
+      "evidence": "Own data and saved analyses; no claimed implementation of Song ACSP or Peterson OT. Generic organization learned; substantive method citation retained."
+    },
+    {
+      "id": "MAIN.md_citation_keys",
+      "passed": true,
+      "evidence": {
+        "unique_citation_keys": 17,
+        "missing": []
+      }
+    },
+    {
+      "id": "MAIN.md_Figure_first_citation_and_captions",
+      "passed": true,
+      "evidence": {
+        "first_citation_order": [
+          "1",
+          "2",
+          "3"
+        ],
+        "caption_order": [
+          "1",
+          "2",
+          "3"
+        ]
+      }
+    },
+    {
+      "id": "MAIN.md_Table_first_citation_and_captions",
+      "passed": true,
+      "evidence": {
+        "first_citation_order": [
+          "1",
+          "2"
+        ],
+        "caption_order": [
+          "1",
+          "2"
+        ]
+      }
+    },
+    {
+      "id": "MAIN.md_image_refs",
+      "passed": true,
+      "evidence": [
+        "figures/Fig1_components.png",
+        "figures/Fig2_budgets_sessions.png",
+        "figures/Fig3_external_validation.png"
+      ]
+    },
+    {
+      "id": "SUPPLEMENT.md_citation_keys",
+      "passed": true,
+      "evidence": {
+        "unique_citation_keys": 6,
+        "missing": []
+      }
+    },
+    {
+      "id": "SUPPLEMENT.md_Figure_first_citation_and_captions",
+      "passed": true,
+      "evidence": {
+        "first_citation_order": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "caption_order": [
+          "S1",
+          "S2",
+          "S3"
+        ]
+      }
+    },
+    {
+      "id": "SUPPLEMENT.md_Table_first_citation_and_captions",
+      "passed": true,
+      "evidence": {
+        "first_citation_order": [
+          "S1",
+          "S2"
+        ],
+        "caption_order": [
+          "S1",
+          "S2"
+        ]
+      }
+    },
+    {
+      "id": "SUPPLEMENT.md_image_refs",
+      "passed": true,
+      "evidence": [
+        "supplementary_figures/FigS1_geometry.png",
+        "supplementary_figures/FigS2_neural_normalization.png",
+        "supplementary_figures/FigS3_mechanisms.png"
+      ]
+    },
+    {
+      "id": "public_phase_reconstruction_entry",
+      "passed": true,
+      "evidence": "Current public gzip prediction replay and REPRODUCE entry replace stale private paths."
+    }
+  ],
+  "structure": {
+    "MAIN.md": {
+      "Figure": [
+        "1",
+        "2",
+        "3"
+      ],
+      "Table": [
+        "1",
+        "2"
+      ]
+    },
+    "SUPPLEMENT.md": {
+      "Figure": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "Table": [
+        "S1",
+        "S2"
+      ]
+    }
+  },
+  "editorial_findings": [
+    {
+      "id": "S13_table_reference",
+      "status": "corrected_by_parent",
+      "detail": "Geometry now points to Table S1."
+    },
+    {
+      "id": "S15_private_commands",
+      "status": "corrected_by_parent",
+      "detail": "Public replay and REPRODUCE replace unavailable private scripts."
+    },
+    {
+      "id": "S2_marker_recovery_scope",
+      "status": "corrected_by_parent",
+      "detail": "Partial recovery and 980 missing mappings now explicit."
+    },
+    {
+      "id": "declaration_final_approval_sentence",
+      "status": "clarified",
+      "detail": "Prefer \"Final review and submission approval are required for the exported revision.\" Status and AUTHOR_DETAILS already record current-artifact review as pending."
+    }
+  ],
+  "remaining_author_actions": [
+    "All authors review and approve the actual new exported three-author revision; prior two-author approval is not transferred.",
+    "Check existing reviewer-candidate independence against the added third author."
+  ],
+  "limits": [
+    "Targeted source consistency audit, not new scientific validation.",
+    "National-law exemption records the author-provided legal basis; this audit is not an institutional or ethical adjudication.",
+    "No AI-detection score or claimed absence of AI usage is inferred."
+  ]
+}

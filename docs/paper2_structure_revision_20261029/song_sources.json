@@ -1,0 +1,86 @@
+{
+  "checked_on": "2026-10-29",
+  "requested_paper": {
+    "title": "Improving brain-computer interface classification using adaptive common spatial patterns",
+    "authors": [
+      "Xiaomu Song",
+      "Suk-Chung Yoon"
+    ],
+    "year": 2015,
+    "journal": "Computers in Biology and Medicine",
+    "volume": "61",
+    "pages": "150-160",
+    "doi": "10.1016/j.compbiomed.2015.03.023",
+    "pmid": "25909828",
+    "repository_citation_key": "song2015acsp",
+    "reading_level": "abstract_and_publicly_indexed_section_previews_not_complete_journal_full_text"
+  },
+  "sources": [
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25909828/",
+      "access": "actual_page_read",
+      "scope": "complete abstract, author affiliations, publication metadata",
+      "supports": [
+        "supervised two-class CSP background",
+        "adaptive target covariance update without assigning target class labels",
+        "simultaneous spatial-filter changes in both classes",
+        "comparison to classic/adaptive CSP",
+        "effect of recycling classified target trials"
+      ]
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0010482515001018",
+      "access": "search-indexed previews read; direct web open returned 403",
+      "scope": "highlights; introduction, CSP-method and results section snippets",
+      "complete_full_text_read": false
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1016/j.compbiomed.2015.03.023",
+      "access": "actual JSON GET and metadata read",
+      "scope": "bibliographic metadata and official TDM links"
+    },
+    {
+      "url": "https://api.openalex.org/works/https://doi.org/10.1016/j.compbiomed.2015.03.023",
+      "access": "actual JSON GET",
+      "scope": "closed access status and no repository fulltext location"
+    },
+    {
+      "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1016/j.compbiomed.2015.03.023?fields=title,authors,openAccessPdf,url,externalIds",
+      "access": "actual JSON GET",
+      "scope": "DOI/PMID identity and CLOSED openAccessPdf status"
+    },
+    {
+      "url": "https://api.elsevier.com/content/article/PII:S0010482515001018?httpAccept=text/xml",
+      "access": "proxy tunnel returned403; full text not obtained",
+      "scope": "official Crossref-listed TDM endpoint attempted without credentials; no access bypass"
+    }
+  ],
+  "distinct_full_text_companion": {
+    "title": "Incremental Versus Non-incremental Learning in Adaptive Common Spatial Patterns",
+    "authors": [
+      "Xiaomu Song",
+      "Suk-Chung Yoon"
+    ],
+    "doi": "10.1109/SPMB.2015.7405468",
+    "conference": "2015 IEEE Signal Processing in Medicine and Biology Symposium",
+    "relationship": "same-author follow-up; reference10 cites requested journal article; not a substitute identity for the journal article",
+    "url": "https://isip.piconepress.com/conferences/ieee_spmb/2015/papers/l03_03.pdf",
+    "bytes": 117076,
+    "sha256": "af48a8ada20e0cc4e7880c3d32a74cf99ccce60f760da83da7c232c17b413fac",
+    "pages": 4,
+    "reading_level": "complete_4_page_full_text",
+    "not_the_requested_journal_article": true,
+    "sections_read": [
+      "I Introduction",
+      "II Common Spatial Patterns",
+      "III Adaptive Common Spatial Patterns",
+      "IV Incremental and Non-incremental ACSP",
+      "V Experimental Study",
+      "VI Results",
+      "VII Conclusion"
+    ]
+  },
+  "full_text_or_external_EEG_copied_into_repository": false,
+  "external_results_imported_into_current_manuscript": false,
+  "data_fits_or_inference_performed": false
+}

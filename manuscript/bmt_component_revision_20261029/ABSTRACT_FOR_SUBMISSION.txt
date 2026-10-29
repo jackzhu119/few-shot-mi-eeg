@@ -1,0 +1,7 @@
+Objectives: To quantify the contributions of classifier recalibration, spatial-filter refitting and covariance alignment when a new motor-imagery session provides approximately 20 labels.
+
+Methods: We compared frozen common spatial patterns and linear discriminant analysis (CSP/LDA) with three updating pipelines in Kumar2024 (18 participants, six sessions; 12-participant primary cohort). The updates shared source/support labels and query trials. Saved predictions supported error-transition, label-budget and phase-window analyses. A fixed external comparison included nine BNCI2014-001 participants.
+
+Results: In Kumar2024, full refitting achieved 65.36% balanced accuracy, improving on frozen decoding by 7.42 percentage points (95% participant-bootstrap interval 2.49–12.48). The secondary spatial-refitting increment beyond LDA-only was 5.47 points (2.17–8.91), or 73.7% of the mean total gain. An exploratory support-only Euclidean-alignment comparison added 5.30 points beyond full refitting (2.81–8.26), reaching 70.66%. In BNCI, alignment added 5.65 points (3.15–8.70; secondary Holm-adjusted p=0.01172), improving all nine participants. Its primary full-minus-LDA-only contrast was 0.19 points (−1.85 to 2.13).
+
+Conclusions: Matched-label comparisons locate recalibration gains in specific spatial operations. Spatial refitting supplied the principal component gain in Kumar2024, while support-only alignment added accuracy in both datasets.

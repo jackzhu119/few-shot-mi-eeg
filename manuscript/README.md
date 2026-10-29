@@ -1,23 +1,32 @@
 # 论文与投稿文件导航
 
-**当前BMT投稿版本：2026-10-28，Ziyuan Zhu*, Sihao Liu。** [主稿Word](bmt_submission_20261028/BMT_Manuscript_Submission.docx) · [阅读PDF](bmt_submission_20261028/BMT_Manuscript_Reading.pdf) · [完整投稿包](bmt_submission_20261028/BMT_Submission_Version_20261028.zip) · [要求核对](bmt_submission_20261028/SUBMISSION_CHECK_20261028.md)。
+**当前BMT审阅稿：2026-10-29，Ziyuan Zhu*, Sihao Liu, Haoyang Yu。** 标题：**Disentangling spatial-filter and classifier contributions to limited-label motor-imagery EEG recalibration**。[主稿Word](bmt_component_revision_20261029/BMT_Manuscript_Submission.docx) · [阅读PDF](bmt_component_revision_20261029/BMT_Manuscript_Reading.pdf) · [全部材料](bmt_component_revision_20261029/README.md) · [保存预测独立复核](../research_logs/paper2_structure_revision_20261029/component_replay/README.md)。3图、2表，摘要174词，完整正文约4,954词。新稿待全体作者最终审阅批准，尚未投稿。
 
-**2026-10-27新审阅修订：Biomedical Engineering / Biomedizinische Technik。** [主稿PDF](discovery_revision_20261027/BMT_Manuscript_Review.pdf) · [Word、补充方法、图和声明](discovery_revision_20261027/README.md) · [科学整改报告](../research_logs/paper2_v3_analysis_20261027/REPORT.md)。新稿突出同标签预算下空间滤波器重学的额外收益，纳入V2/V3全部关键对照；原PLOS ONE版本保持原样。
+**2026-10-28双作者历史批准版：Ziyuan Zhu*, Sihao Liu。** [主稿Word](bmt_submission_20261028/BMT_Manuscript_Submission.docx) · [阅读PDF](bmt_submission_20261028/BMT_Manuscript_Reading.pdf) · [完整历史包](bmt_submission_20261028/BMT_Submission_Version_20261028.zip) · [当时要求核对](bmt_submission_20261028/SUBMISSION_CHECK_20261028.md)。该版批准范围保持原样，不延伸到三作者新稿。
+
+**2026-10-27历史审阅修订：Biomedical Engineering / Biomedizinische Technik。** [主稿PDF](discovery_revision_20261027/BMT_Manuscript_Review.pdf) · [Word、补充方法、图和声明](discovery_revision_20261027/README.md) · [科学整改报告](../research_logs/paper2_v3_analysis_20261027/REPORT.md)。新稿突出同标签预算下空间滤波器重学的额外收益，纳入V2/V3全部关键对照；原PLOS ONE版本保持原样。
 
 [仓库主页](../README.md) · [当前状态](../CURRENT_PROJECT_STATUS.md) · [文档](../docs/README.md) · [研究记录](../research_logs/README.md)
 
 历史PLOS稿件：**Spatial-filter refitting improves limited-label recalibration in longitudinal motor-imagery EEG**。作者：Ziyuan Zhu。该历史稿件以2026-10-19修订与支持材料为入口；更早日期包保留原始版本。
 
-## 优先下载与阅读
+## 当前稿件下载与阅读
 
 | 用途 | 文件 |
 | --- | --- |
-| 最新完整提交文件与系统字段 | [PONE-D-26-52050_submission_20261019_run02.zip](plos_one_submission_support_20261019/PONE-D-26-52050_submission_20261019_run02.zip) |
+| 三作者主稿、补充方法、图和投稿字段 | [2026-10-29完整目录](bmt_component_revision_20261029/README.md) |
+| 数据版本与组件重放 | [两原始采集／六分析层](../research_logs/paper2_structure_revision_20261029/DATA_VERSION_INVENTORY.md) · [复现说明与底层表](../research_logs/paper2_structure_revision_20261029/component_replay/README.md) |
+
+## 历史PLOS稿件下载与阅读
+
+| 用途 | 文件 |
+| --- | --- |
+| 2026-10-19历史提交文件与系统字段 | [PONE-D-26-52050_submission_20261019_run02.zip](plos_one_submission_support_20261019/PONE-D-26-52050_submission_20261019_run02.zip) |
 | 带图阅读PDF | [PLOS_ONE_Manuscript_Reading.pdf](plos_one_innovation_20261017/PLOS_ONE_Manuscript_Reading.pdf) |
 | 可编辑投稿主稿 | [PLOS_ONE_Manuscript_Submission.docx](plos_one_innovation_20261017/PLOS_ONE_Manuscript_Submission.docx) |
 | 投稿主稿PDF预览 | [PLOS_ONE_Manuscript_Submission.pdf](plos_one_innovation_20261017/PLOS_ONE_Manuscript_Submission.pdf) |
 | 六张600 dpi原始图件及清晰审阅版 | [高清图件包](plos_one_submission_support_20261019/Paper2_High_Resolution_Figures.zip) · [合并图件PDF](plos_one_submission_support_20261019/Figures_1_to_6_Clear_Review.pdf) |
-| 与当前正文一致的266词系统摘要 | [Abstract_for_Submission_System.txt](plos_one_submission_support_20261019/Abstract_for_Submission_System.txt) |
+| 与历史PLOS正文一致的266词系统摘要 | [Abstract_for_Submission_System.txt](plos_one_submission_support_20261019/Abstract_for_Submission_System.txt) |
 
 完整包需解压后按系统文件类型分别上传。[支持材料说明](plos_one_submission_support_20261019/README.md)记录图件清晰度、系统摘要与实际核验范围。
 
@@ -30,7 +39,7 @@
 - [Human Participants Checklist](plos_one_innovation_20261017/Human_Participants_Checklist.pdf) · [作者与系统字段](plos_one_innovation_20261017/Author_Submission_Details.md)。
 - [附信](plos_one_innovation_20261017/Cover_Letter.pdf) · [图注](plos_one_innovation_20261017/Figure_Captions.md)。
 
-[当前稿件完整索引](plos_one_innovation_20261017/README.md)链接源稿、参考文献、图件底表、构建与核验资料。[许可范围](../LICENSING.md)区分原创内容、软件与第三方材料。
+[历史PLOS稿件完整索引](plos_one_innovation_20261017/README.md)链接源稿、参考文献、图件底表、构建与核验资料。[许可范围](../LICENSING.md)区分原创内容、软件与第三方材料。
 
 ## 当前论文结果与后续扩展
 

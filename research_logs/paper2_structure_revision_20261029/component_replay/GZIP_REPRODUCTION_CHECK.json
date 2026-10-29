@@ -1,0 +1,48 @@
+{
+  "scope": "Actual full CLI saved-result replay using gzip copies in a temporary directory",
+  "all_csv_outputs_byte_identical_to_plain_CSV_replay": true,
+  "csv_outputs_checked": [
+    "budget_cohort_means.csv",
+    "budget_cohort_paired_gains.csv",
+    "budget_participant_endpoints.csv",
+    "budget_session_metrics_replayed.csv",
+    "full_support_participant_effects.csv",
+    "full_support_session_effects.csv",
+    "phase_existing_contrasts_reproduced.csv",
+    "phase_participant_endpoints.csv",
+    "phase_session_metrics_replayed.csv",
+    "remaining12_budget_curves.csv",
+    "remaining12_full_support_session_effects.csv"
+  ],
+  "input_roundtrip_original_bytes_identical": true,
+  "inputs": [
+    {
+      "source_name": "budget/query_predictions.csv",
+      "original_bytes": 8381274,
+      "original_sha256": "1fe18ecdd2e48f1419c663e4f40f423fcc40d17a575fa17bc68be0f106f6dcf2",
+      "gz_bytes": 262906
+    },
+    {
+      "source_name": "budget/session_metrics.csv",
+      "original_bytes": 312444,
+      "original_sha256": "7570bc035ed9391d260a168e2e4bf0cde448206aafeb6c5e171f474996e273d9",
+      "gz_bytes": 23529
+    },
+    {
+      "source_name": "phase/query_predictions.csv",
+      "original_bytes": 839909,
+      "original_sha256": "166fc260913d51dc6709b01b6d4b187e58039cb163bf0ecc0c939e1dae463aac",
+      "gz_bytes": 37502
+    },
+    {
+      "source_name": "phase/metrics.csv",
+      "original_bytes": 1560686,
+      "original_sha256": "23d0e367b61ba5f8e9243691f376e293768659590033e84b207c623452772b6b",
+      "gz_bytes": 69001
+    }
+  ],
+  "temporary_copies_removed": true,
+  "EEG_or_model_tensors_loaded": false,
+  "new_fit_or_forward": false,
+  "new_significance_tests": false
+}

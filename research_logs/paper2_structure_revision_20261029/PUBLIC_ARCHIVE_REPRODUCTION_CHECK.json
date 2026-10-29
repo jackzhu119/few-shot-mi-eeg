@@ -1,0 +1,39 @@
+{
+  "scope": "Actual standalone numerical replay from the public data/code ZIP in a clean temporary repository tree",
+  "zip_members_used": [
+    "scripts/review_kumar_component_saved_evidence_20261029.py",
+    "research_logs/kumar_cross_session_20261012/protocol/split_manifest.json",
+    "research_logs/paper2_structure_revision_20261029/component_replay/input/budget/query_predictions.csv.gz",
+    "research_logs/paper2_structure_revision_20261029/component_replay/input/budget/session_metrics.csv.gz",
+    "research_logs/paper2_structure_revision_20261029/component_replay/input/phase/query_predictions.csv.gz",
+    "research_logs/paper2_structure_revision_20261029/component_replay/input/phase/metrics.csv.gz",
+    "research_logs/paper2_hpc_v2_20261023/existing_evidence/budget_cohort_means.csv",
+    "research_logs/paper2_hpc_v2_20261023/existing_evidence/budget_cohort_paired_gains.csv",
+    "research_logs/paper2_hpc_v2_20261023/existing_evidence/phase_cohort_paired_contrasts.csv"
+  ],
+  "replay_exit_code": 0,
+  "csv_outputs_byte_identical_to_independent_replay": [
+    "budget_cohort_means.csv",
+    "budget_cohort_paired_gains.csv",
+    "budget_participant_endpoints.csv",
+    "budget_session_metrics_replayed.csv",
+    "full_support_participant_effects.csv",
+    "full_support_session_effects.csv",
+    "phase_existing_contrasts_reproduced.csv",
+    "phase_participant_endpoints.csv",
+    "phase_session_metrics_replayed.csv",
+    "remaining12_budget_curves.csv",
+    "remaining12_full_support_session_effects.csv"
+  ],
+  "result_summary": {
+    "budget_cells": 1800,
+    "budget_predictions": 78600,
+    "phase_cells": 540,
+    "phase_defined": 444,
+    "phase_undefined": 96,
+    "phase_predictions": 11460
+  },
+  "no_EEG_or_weights_loaded": true,
+  "no_new_fit_or_forward": true,
+  "temporary_tree_removed": true
+}

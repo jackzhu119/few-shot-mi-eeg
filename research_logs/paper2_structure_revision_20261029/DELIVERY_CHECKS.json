@@ -1,0 +1,108 @@
+{
+  "scope": "Final exported manuscript, targeted lint, clean-tree ZIP numerical reproduction and visual layout review",
+  "independent_source_audit_checks": 29,
+  "independent_source_audit_hashes_still_match": true,
+  "ruff_new_three_scripts": "passed in existing scientific venv",
+  "standalone_public_archive_replay": {
+    "scope": "Actual standalone numerical replay from the public data/code ZIP in a clean temporary repository tree",
+    "zip_members_used": [
+      "scripts/review_kumar_component_saved_evidence_20261029.py",
+      "research_logs/kumar_cross_session_20261012/protocol/split_manifest.json",
+      "research_logs/paper2_structure_revision_20261029/component_replay/input/budget/query_predictions.csv.gz",
+      "research_logs/paper2_structure_revision_20261029/component_replay/input/budget/session_metrics.csv.gz",
+      "research_logs/paper2_structure_revision_20261029/component_replay/input/phase/query_predictions.csv.gz",
+      "research_logs/paper2_structure_revision_20261029/component_replay/input/phase/metrics.csv.gz",
+      "research_logs/paper2_hpc_v2_20261023/existing_evidence/budget_cohort_means.csv",
+      "research_logs/paper2_hpc_v2_20261023/existing_evidence/budget_cohort_paired_gains.csv",
+      "research_logs/paper2_hpc_v2_20261023/existing_evidence/phase_cohort_paired_contrasts.csv"
+    ],
+    "replay_exit_code": 0,
+    "csv_outputs_byte_identical_to_independent_replay": [
+      "budget_cohort_means.csv",
+      "budget_cohort_paired_gains.csv",
+      "budget_participant_endpoints.csv",
+      "budget_session_metrics_replayed.csv",
+      "full_support_participant_effects.csv",
+      "full_support_session_effects.csv",
+      "phase_existing_contrasts_reproduced.csv",
+      "phase_participant_endpoints.csv",
+      "phase_session_metrics_replayed.csv",
+      "remaining12_budget_curves.csv",
+      "remaining12_full_support_session_effects.csv"
+    ],
+    "result_summary": {
+      "budget_cells": 1800,
+      "budget_predictions": 78600,
+      "phase_cells": 540,
+      "phase_defined": 444,
+      "phase_undefined": 96,
+      "phase_predictions": 11460
+    },
+    "no_EEG_or_weights_loaded": true,
+    "no_new_fit_or_forward": true,
+    "temporary_tree_removed": true
+  },
+  "figures_and_author_fields_checked": true,
+  "PDF_contact_sheets_visually_inspected": {
+    "main_pages": "1-16",
+    "supplement_pages": "1-25",
+    "main_first_page": "three names/emails and shared affiliation visible"
+  },
+  "journal_format": {
+    "abstract_words": 174,
+    "exported_complete_words": 4954,
+    "figures": 3,
+    "tables": 2,
+    "main_references": 17
+  },
+  "artifacts": [
+    {
+      "path": "manuscript/bmt_component_revision_20261029/BMT_Manuscript_Reading.pdf",
+      "bytes": 2995829,
+      "sha256": "d8535ceafbe31f47f2276e88a0fb0cc6814546ddbd5628a9fec58ae55d9d8c5c"
+    },
+    {
+      "path": "manuscript/bmt_component_revision_20261029/BMT_Manuscript_Reading.docx",
+      "bytes": 2723141,
+      "sha256": "2b18b7306559a28b75dd7e10e16e9216602ad238e4bf8c48a82f5726b4b3947b"
+    },
+    {
+      "path": "manuscript/bmt_component_revision_20261029/BMT_Manuscript_Submission.docx",
+      "bytes": 28284,
+      "sha256": "efd4b213d47ea3b1d41ba661128a0f4ebeb41b5b7c509729f948cc811529d13e"
+    },
+    {
+      "path": "manuscript/bmt_component_revision_20261029/Supplementary_Methods.pdf",
+      "bytes": 3725604,
+      "sha256": "d2ec1fa858cdabfee69ae8354f42118d2c2782858e5e25172334d210e69284d9"
+    },
+    {
+      "path": "manuscript/bmt_component_revision_20261029/Supplementary_Methods.docx",
+      "bytes": 3432456,
+      "sha256": "9d2f461b2d1224ab69631ff6ee2052a9efc496f9d57e6897dd4a925493fc896a"
+    },
+    {
+      "path": "manuscript/bmt_component_revision_20261029/Ethical_and_Legal_Declarations.docx",
+      "bytes": 39397,
+      "sha256": "941466e85380e79e4cdb276c6930c4424b24fa08f728b156bc70f2a9511e464d"
+    },
+    {
+      "path": "manuscript/bmt_component_revision_20261029/Ethical_and_Legal_Declarations.pdf",
+      "bytes": 35027,
+      "sha256": "3f3d27d1ea68ad4198a62facd1cccacde41ab419e186626ab9ccaf4bb02d7d41"
+    },
+    {
+      "path": "manuscript/bmt_component_revision_20261029/Cover_Letter.docx",
+      "bytes": 11745,
+      "sha256": "b7d49ace0e1f349608e0dc0733d4c3668159aaa15080975010fb516e6fd46528"
+    },
+    {
+      "path": "manuscript/bmt_component_revision_20261029/Cover_Letter.pdf",
+      "bytes": 29732,
+      "sha256": "e60f2fb4b8f8ed4b5cbd572e34a32b6038255d1ae8e35d1372ad2d4ffc05704e"
+    }
+  ],
+  "final_new_artifact_author_approval_recorded": false,
+  "submission_performed": false,
+  "training_or_forward_performed": false
+}

@@ -1,0 +1,25 @@
+{
+  "purpose": "Actual old postprocessor source inspection used to reproduce existing intervals, not copied confidence limits",
+  "sources": [
+    {
+      "path": "/workspace/private_model_receipts/paper2-component-followup-20261016/data_package_portable_check/run02/extracted/component/repository/scripts/summarize_kumar_component_budget_20261016.py",
+      "bytes": 41752,
+      "sha256": "bd618d058700318aaf4b8561454025a8d6b967cace5ee0b5eff7d3ae8bb34775",
+      "reading_scope": "complete functions defining independent units, cohort ordering, endpoint averaging and bootstrap"
+    },
+    {
+      "path": "/workspace/private_model_receipts/paper2-component-followup-20261016/data_package_portable_check/run02/extracted/component/repository/scripts/summarize_kumar_phase_window_20261016.py",
+      "bytes": 17727,
+      "sha256": "fcabded0a4f63e92ea7e44e8f9f2ce50dc256df183486cd44af9455869727358",
+      "reading_scope": "complete functions defining independent units, cohort ordering, endpoint averaging and bootstrap"
+    }
+  ],
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 42,
+  "quantile": "linear percentile2.5/97.5",
+  "each_call_uses_fresh_default_rng42": true,
+  "budget_participant_order": "numeric1..18, remove fixed development IDs for remaining12; exact Fraction session BA, equal5-session mean before float conversion",
+  "phase_participant_order": "lexicographic string order within each predefined complete scope; numpy float per-cell and5-session mean",
+  "original_primary_bootstrap_or_Holm_family_recomputed": false,
+  "new_significance_test_family": false
+}

@@ -1,0 +1,160 @@
+{
+  "scope": "independent saved-derived-results replay; no EEG/model imports, fit or forward",
+  "budget": {
+    "metric_cells": 1800,
+    "saved_prediction_rows": 78600,
+    "unique_target_trials": 3930,
+    "participant_endpoints": 360,
+    "existing_cohort_mean_rows_reproduced": 60,
+    "existing_paired_contrast_rows_reproduced": 75,
+    "maximum_BA_error": 1.1102230246251565e-16,
+    "maximum_saved_summary_or_CI_error": 0.0,
+    "participant_order": {
+      "development6": [
+        "sub-1",
+        "sub-4",
+        "sub-7",
+        "sub-10",
+        "sub-13",
+        "sub-16"
+      ],
+      "remaining12": [
+        "sub-2",
+        "sub-3",
+        "sub-5",
+        "sub-6",
+        "sub-8",
+        "sub-9",
+        "sub-11",
+        "sub-12",
+        "sub-14",
+        "sub-15",
+        "sub-17",
+        "sub-18"
+      ],
+      "all18_descriptive": [
+        "sub-1",
+        "sub-2",
+        "sub-3",
+        "sub-4",
+        "sub-5",
+        "sub-6",
+        "sub-7",
+        "sub-8",
+        "sub-9",
+        "sub-10",
+        "sub-11",
+        "sub-12",
+        "sub-13",
+        "sub-14",
+        "sub-15",
+        "sub-16",
+        "sub-17",
+        "sub-18"
+      ]
+    },
+    "bootstrap_seed": 42,
+    "bootstrap_replicates": 10000,
+    "scope": "existing_post_exposure_pointwise_results_reproduced_no_new_tests"
+  },
+  "phase": {
+    "planned_cells": 540,
+    "defined_cells": 444,
+    "undefined_cells_retained": 96,
+    "saved_prediction_rows": 11460,
+    "maximum_BA_error": 0.0,
+    "maximum_existing_contrast_CI_error": 0.0,
+    "scopes": {
+      "development_conditional": [
+        "sub-1",
+        "sub-10",
+        "sub-13",
+        "sub-4",
+        "sub-7"
+      ],
+      "primary_conditional": [
+        "sub-12",
+        "sub-14",
+        "sub-15",
+        "sub-2",
+        "sub-3",
+        "sub-5",
+        "sub-6",
+        "sub-8",
+        "sub-9"
+      ],
+      "primary_metadata_complete": [
+        "sub-12",
+        "sub-14",
+        "sub-2",
+        "sub-3",
+        "sub-5",
+        "sub-6",
+        "sub-8",
+        "sub-9"
+      ]
+    },
+    "existing_contrasts_reproduced": 33,
+    "participant_order": "lexicographic per old phase postprocessor",
+    "bootstrap_seed": 42,
+    "bootstrap_replicates": 10000,
+    "new_test_family": false
+  },
+  "source_inputs": {
+    "/workspace/private_model_receipts/paper2-component-followup-20261016/budget_cpu/run01/session_metrics.csv": {
+      "stored_bytes": 312444,
+      "stored_sha256": "7570bc035ed9391d260a168e2e4bf0cde448206aafeb6c5e171f474996e273d9",
+      "uncompressed_bytes": 312444,
+      "uncompressed_sha256": "7570bc035ed9391d260a168e2e4bf0cde448206aafeb6c5e171f474996e273d9"
+    },
+    "/workspace/private_model_receipts/paper2-component-followup-20261016/budget_cpu/run01/query_predictions.csv": {
+      "stored_bytes": 8381274,
+      "stored_sha256": "1fe18ecdd2e48f1419c663e4f40f423fcc40d17a575fa17bc68be0f106f6dcf2",
+      "uncompressed_bytes": 8381274,
+      "uncompressed_sha256": "1fe18ecdd2e48f1419c663e4f40f423fcc40d17a575fa17bc68be0f106f6dcf2"
+    },
+    "/workspace/private_model_receipts/paper2-component-followup-20261016/phase_cpu/run01/metrics.csv": {
+      "stored_bytes": 1560686,
+      "stored_sha256": "23d0e367b61ba5f8e9243691f376e293768659590033e84b207c623452772b6b",
+      "uncompressed_bytes": 1560686,
+      "uncompressed_sha256": "23d0e367b61ba5f8e9243691f376e293768659590033e84b207c623452772b6b"
+    },
+    "/workspace/private_model_receipts/paper2-component-followup-20261016/phase_cpu/run01/query_predictions.csv": {
+      "stored_bytes": 839909,
+      "stored_sha256": "166fc260913d51dc6709b01b6d4b187e58039cb163bf0ecc0c939e1dae463aac",
+      "uncompressed_bytes": 839909,
+      "uncompressed_sha256": "166fc260913d51dc6709b01b6d4b187e58039cb163bf0ecc0c939e1dae463aac"
+    },
+    "/workspace/few-shot-mi-eeg/research_logs/kumar_cross_session_20261012/protocol/split_manifest.json": {
+      "stored_bytes": 9610103,
+      "stored_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+      "uncompressed_bytes": 9610103,
+      "uncompressed_sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28"
+    },
+    "/workspace/few-shot-mi-eeg/research_logs/paper2_hpc_v2_20261023/existing_evidence/budget_cohort_means.csv": {
+      "stored_bytes": 19007,
+      "stored_sha256": "786d75786d2501cf1f5c7640e2ad59f4d70cce93a8c98c30ab1c3cdd577dd525",
+      "uncompressed_bytes": 19007,
+      "uncompressed_sha256": "786d75786d2501cf1f5c7640e2ad59f4d70cce93a8c98c30ab1c3cdd577dd525"
+    },
+    "/workspace/few-shot-mi-eeg/research_logs/paper2_hpc_v2_20261023/existing_evidence/budget_cohort_paired_gains.csv": {
+      "stored_bytes": 31203,
+      "stored_sha256": "f03c37fc8739426b88b846bbe800571f542106af77b89f420c50e272ad5cf600",
+      "uncompressed_bytes": 31203,
+      "uncompressed_sha256": "f03c37fc8739426b88b846bbe800571f542106af77b89f420c50e272ad5cf600"
+    },
+    "/workspace/few-shot-mi-eeg/research_logs/paper2_hpc_v2_20261023/existing_evidence/phase_cohort_paired_contrasts.csv": {
+      "stored_bytes": 10206,
+      "stored_sha256": "fe7114fb22677f4bfdefc3798bde023564c11552bd7d3c6f347206991a304931",
+      "uncompressed_bytes": 10206,
+      "uncompressed_sha256": "fe7114fb22677f4bfdefc3798bde023564c11552bd7d3c6f347206991a304931"
+    }
+  },
+  "new_significance_test_or_family": false,
+  "historical_primary_intervals_or_Holm_results_modified": false,
+  "original_files_changed": false,
+  "software": {
+    "python": "3.11.16 (main, Sep 24 2026, 17:56:40) [Clang 22.1.3 ]",
+    "numpy": "2.2.6"
+  }
+}

@@ -1,5 +1,7 @@
 # Kumar cross-session decoding results
 
+**2026-10-29新稿入口：** [三作者BMT组件分析审阅稿](manuscript/bmt_component_revision_20261029/README.md)，题为 *Disentangling spatial-filter and classifier contributions to limited-label motor-imagery EEG recalibration*；原结果及终点身份保持不变，新稿待全体作者最终批准、尚未投稿。
+
 **2026-10-27新增结果：**[V3全部126项的保存结果分析与新论文主线](research_logs/paper2_v3_analysis_20261027/REPORT.md)，[BMT新审阅稿](manuscript/discovery_revision_20261027/README.md)。下文原12人终点、角色和数值保持不变；V2/V3仍属原6名已暴露参与者的发现研究。
 
 真实CPU三基线已完成。下面均为每个参与者五个目标会话BA的等权均值，再对参与者
@@ -83,3 +85,10 @@ EEGNet还用20个有标签source validation选epoch，CPU不以validation选模�
 | EA-CSP − Full（本次次要） | +5.65 | [3.15,8.70] | .00390625 / .01171875 |
 
 EA−Full在9/9人为正，5个测试run均值为正。新数据没有复现同等的Full−LDA收益；它区分了空间滤波重学与support-only对齐。源标签96与原40、固定收缩与原MNE估计器等差异记录在[冻结协议](docs/paper2_external_validation_protocol_20261027.md)，不混合两个队列作单一推断。独立复算36份预测及180个run指标一致，见[报告与全部结果](research_logs/paper2_external_validation_20261027/REPORT.md)。原始EEG/权重未上传Git；R2当前401，失败回执如实保留。
+
+
+## 2026-10-29：已保存预算与阶段敏感性结果独立复核
+
+本轮仅重放原component-follow-up保存预测；未读取EEG、加载权重、重新训练或执行query forward。预算分析的78,600行预测和1,800个BA单元全部核对，60项既有队列均值及75项配对对比区间逐项复现。原12人full-support EA−Full为探索性+5.30pp [2.81,8.26]，10人正、2人负；source40与当前19/20个support身份匹配，query未用于reference或拟合。原主要Full−Frozen及次要Full−LDA的区间、统计角色与账本不变。
+
+阶段分析的11,460行保存预测对应540个计划单元，444个可定义、96个未定义均保留；33项既有对比及区间逐项复现。原remaining组conditional n=9的task2s−cue5s配对收益变化为+1.15pp [−5.55,7.22]，不由单个窗口的区间推断窗间效应。部分阶段标记映射、覆盖范围和所有源文件hash见[独立重放说明与完整派生表](research_logs/paper2_structure_revision_20261029/component_replay/README.md)；[数据版本清单](research_logs/paper2_structure_revision_20261029/DATA_VERSION_INVENTORY.md)区分两套原始采集与六个复用分析层。
