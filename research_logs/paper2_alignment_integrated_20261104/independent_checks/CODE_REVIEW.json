@@ -1,0 +1,45 @@
+{
+  "reviewed_at_utc": "2026-11-04T06:52:21.505406+00:00",
+  "status": "PASS",
+  "frozen_plan_commit": "13dd7646c4ce37db40504154388e76b4c6ca6595",
+  "reviewed_files": [
+    {
+      "path": "src/learning_preserving_bci/paper2_alignment_integrated.py",
+      "sha256": "f2b1b184cfe272e2ef578e1ff0ce35edc110b65b5e0bb0da5424efe26c2fa68c"
+    },
+    {
+      "path": "scripts/analyze_paper2_alignment_integrated_20261104.py",
+      "sha256": "c03465a8e1724ea025a519c205506e8d2ad034cd7e6d7285aa9c04f57f072223"
+    },
+    {
+      "path": "tests/test_paper2_alignment_integrated.py",
+      "sha256": "2b75a71d2342f4b3d479bc847f019a5c97b1030b7499d2f8878af0a15641dada"
+    },
+    {
+      "path": "scripts/check_paper2_alignment_integrated_20261104.py",
+      "sha256": "b747d345723253cc1ba790db13480a6de656029f147e0dc395a5b59e59f84275"
+    }
+  ],
+  "static_findings": [
+    "Kumar nonlinear recalls/W/H calculated in original participant/session endpoints before equal five-session participant averaging.",
+    "BNCI original E query120 is one participant endpoint; run-level metrics remain diagnostics.",
+    "Transitions use true-class denominators across entire query, and direct disagreement; independently verified exact rational identities.",
+    "All methods/budgets have one-to-one original trial identity/order/labels; metadata role checks exclude source/support/validation decisions.",
+    "Missing classes remain undefined; no zero imputation or silently partial participant averaging.",
+    "All9joint sign combinations retain ties under1e-12; QC uses samecomplete participant cohort in both queries.",
+    "New paired bootstrap uses participant numericorder, seed20261104,10000draws,linearquantiles; historicalBA comparisons/intervals remain separate.",
+    "Probability unavailable conclusion is scoped to the selected hard-decision exports, not all repository artifacts."
+  ],
+  "actionable_code_bugs_found": [],
+  "targeted_tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 /workspace/.venvs/few-shot-mi-eeg/bin/python -m pytest tests/test_paper2_alignment_integrated.py -q -p no:cacheprovider",
+    "actual_result": "............                                                             [100%]\n12 passed in 0.24s",
+    "passed": 12
+  },
+  "independent_checks": 105672,
+  "maximum_absolute_difference": 4.440892098500626e-16,
+  "own_checker_ruff": "passed",
+  "new_fits": 0,
+  "query_forward_count": 0,
+  "production_code_modified_by_reviewer": false
+}

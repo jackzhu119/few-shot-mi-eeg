@@ -1,0 +1,85 @@
+{
+  "dataset_versions": {
+    "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+    "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+    "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+  },
+  "participants": {
+    "source_levels": {
+      "S9": 9,
+      "S29": 29,
+      "S60": 60
+    },
+    "external": 85,
+    "excluded_provider_global_ids": [
+      17,
+      41
+    ]
+  },
+  "sessions": {
+    "Yang": 153,
+    "Dreyer": "first two acquisitions;80trials per person,40per hand"
+  },
+  "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+  "channels": [
+    "Fz",
+    "FC3",
+    "FC1",
+    "FCz",
+    "FC2",
+    "FC4",
+    "C5",
+    "C3",
+    "C1",
+    "Cz",
+    "C2",
+    "C4",
+    "C6",
+    "CP3",
+    "CP1",
+    "CP2",
+    "CP4",
+    "Pz"
+  ],
+  "sample_rate_hz": 160,
+  "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+  "time_window": {
+    "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+    "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+  },
+  "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+  "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+  "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+  "trial_counts_executed": {
+    "S9": 2592,
+    "S29": 14590,
+    "S60": 33183
+  },
+  "trial_count_note": "Executed eligible-v3 retained33183S60trials; pre-eligibility design had33192 and is not actual count",
+  "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+  "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+  "qc_vs_acquisition_position": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+  "model_config": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+  "seeds": [
+    20261013,
+    20261014,
+    20261015
+  ],
+  "checkpoint_identity": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+  "result_identities": {
+    "eligible_result_commit": "040956085499ed788948de0d5a09cddd9eabca56",
+    "eligible_execution_code_commit": "0539379578818b3d71f995192e5e8a81cf4d5aef",
+    "source_risk_result_commit": "2afb6c3eddbe2c3c82664b683f01970f95d4db39"
+  },
+  "metrics": {
+    "BA": "(rL+rR)/2",
+    "W": "min(rL,rR) computed within participant×seed before seeds averaged",
+    "H": "abs(rL-rR); gap or reciprocal stronger/weaker summaries already exist; label H chosen for Paper2 avoids G ambiguity",
+    "joint": "paired participant ΔBA>tol and ΔW>tol; full sign combinations should be recomputed in Paper2",
+    "probability": "source code CE is ordinary sample-mean, not balanced NLL for imbalanced Paper2 groups; strict argmax ties resolve to left/class0"
+  },
+  "aggregation": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+  "historical_comparison_family": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+  "prior_exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople",
+  "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms"
+}

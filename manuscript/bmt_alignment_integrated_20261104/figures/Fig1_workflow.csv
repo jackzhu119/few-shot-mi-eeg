@@ -1,0 +1,23 @@
+panel,dataset,cohort,participant,budget,method,contrast,statistic,value,lower,upper,unit,interval_identity
+workflow,Kumar2024,,,,,,source_train_labels,40,,,labels,
+workflow,BNCI2014-001,,,,,,source_train_labels,96,,,labels,
+workflow,Kumar2024,,,,,,minimum_full_support_labels,19,,,labels,
+workflow,Kumar2024,,,,,,maximum_full_support_labels,20,,,labels,
+workflow,BNCI2014-001,,,,,,support_labels,20,,,labels,
+workflow,,,,,source,,node_label,"Source TRAIN
+Fixed earlier-session labels",,,label,
+workflow,,,,,support,,node_label,"Current-session support
+Chronological first run",,,label,
+workflow,,,,,frozen,,node_label,"Frozen
+Source CSP + LDA kept fixed",,,label,
+workflow,,,,,lda_only,,node_label,"LDA-only
+Source CSP fixed; refit LDA",,,label,
+workflow,,,,,full_csp,,node_label,"Full refit
+Refit CSP + LDA",,,label,
+workflow,,,,,ea_csp,,node_label,"EA-CSP
+Separate source/support whitening;
+refit CSP + LDA",,,label,
+workflow,,,,,query,,node_label,"Later query
+Shared trial IDs
+Prediction +
+scoring",,,label,

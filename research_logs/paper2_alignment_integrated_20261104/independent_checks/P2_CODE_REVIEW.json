@@ -1,0 +1,92 @@
+{
+  "reviewed_at_utc": "2026-11-04T07:01:11.350613+00:00",
+  "status": "PASS: final saved outputs and repaired phase boundary; original failure preserved",
+  "reviewed_sources": [
+    {
+      "path": "src/learning_preserving_bci/alignment_mechanism.py",
+      "sha256": "73ca95c0d852ef86fc92b3dd2a47730cfdc1c504432a65b71cc106ec205917dc"
+    },
+    {
+      "path": "scripts/run_paper2_alignment_mechanisms_20261104.py",
+      "sha256": "63e996a09216e3bc24bae0652665ff1428f247d7839e25a46df44d70c8a37ea1"
+    },
+    {
+      "path": "tests/test_alignment_mechanism.py",
+      "sha256": "375b577a0a3e82b597e1a2339e98e29c0c510a02c07afea48c86cfe763f3c0d9"
+    },
+    {
+      "path": "experiments/hpc_recalibration_v2/hpc_recalibration/classical.py",
+      "sha256": "7a08d0ebee294799e28e061720c8257889fdee85d1a5c97e9647545a8b76aee5"
+    },
+    {
+      "path": "scripts/run_kumar_phase_window_cpu_20261016.py",
+      "sha256": "77da347fb2e4bed23cee29dd582d6d280055fbbf5031fd063fd670dbc053453d"
+    }
+  ],
+  "scientific_core_findings": [
+    "All Kumar main arms share explicit H21 orthonormal CAR coordinates, MNE CSP4 with Ledoit-Wolf regularization and full rank, and LDA with lsqr/automatic shrinkage. The support-derived reference is fixed during prediction.",
+    "BNCI retains the original 22-coordinate prepared inputs and fixed 0.1 CSP/LDA core. Direct comparison of all nine Full and nine EA saved prediction vectors found no differences from the historical results.",
+    "The diagonal reference is defined in a fixed coordinate basis. Full covariance EA and diagonal arms share the remaining core estimation choices.",
+    "RMS normalization uses one scalar per trial, independently for source, support and query; it estimates no query-batch reference.",
+    "Class order is 0=left and 1=right. Balanced NLL with clipping at 1e-7 and single-coordinate binary Brier were independently verified from actual saved probabilities.",
+    "Only the anticipated np.linalg.LinAlgError raised by fit is classified as a scientific failed attempt. Prediction, state, storage, hash and unexpected errors propagate."
+  ],
+  "original_boundary_and_resolution": {
+    "original_issue": "A nonempty one-class query incorrectly entered the historical-prediction join. Run01 stopped before claiming that cell, after 362 completed fits.",
+    "repaired_scope": "The original Full phase status and support/query IDs and counts are checked before fitting. All 32 undefined statuses are retained without fit claims.",
+    "old_failure_receipt_sha256": "c46fdd13b82f18c64eb095addc84e493b9daad1094b66caf90b3d9bf5822d0d2",
+    "original_runner_sha256": "c581d998dd415cacfa1b746889ac672c9f9cf8c146f8bf48a8f32caa279b15eb",
+    "repaired_runner_sha256": "63e996a09216e3bc24bae0652665ff1428f247d7839e25a46df44d70c8a37ea1",
+    "core_sha_unchanged": true,
+    "prior362completed_cells_SHA_unchanged": true,
+    "operational_repair_metadata_sha256": "976d780e85828fdce4f9b5bf3203ce98f8b9dc29d4820cd690ff99253edd5d2a"
+  },
+  "actual_complete_grid": {
+    "main_completed": 396,
+    "phase_completed": 148,
+    "phase_undefined": 32,
+    "total_cells": 576,
+    "unique_fit_claims": 544,
+    "model_bytes_SHA_verified": 544,
+    "duplicate_or_undefined_fit_claims": 0,
+    "run01_fit_attempts": 362,
+    "continuation_fit_attempts": 182,
+    "run01_phase_fits": 106,
+    "continuation_phase_fits": 42,
+    "frozen_plan_maximum": 756
+  },
+  "independent_completed_cell_score_replay": {
+    "cells": 544,
+    "numeric_checks": 5440,
+    "maximum_absolute_error": 3.3306690738754696e-16,
+    "genuine_saved_p_right_in_0_1": true,
+    "probability_hard_decisions_agree": true,
+    "saved_model_state_unchanged_flags_true": true,
+    "no_fit_orforward": true
+  },
+  "phase_eligibility_check": {
+    "all180originalFullrows_checked": true,
+    "defined148_complete": true,
+    "undefined32_preserved": true,
+    "source_support_query_IDs_disjoint": true
+  },
+  "runtime_accounting": {
+    "initial_dispatch_utc": "2026-11-04T06:51:11.567632+00:00",
+    "continuation_dispatch_utc": "2026-11-04T06:57:06.914876+00:00",
+    "completed_utc": "2026-11-04T06:58:35.166668+00:00",
+    "observed_total_seconds_including_pause": 443.599036,
+    "observed_within_original7200seconds": true,
+    "implementation_boundary": "The runner checks a per-process monotonic clock, which is reset on manual resume. This audit verifies actual elapsed time from the first dispatch; it does not establish a persistent cross-process deadline guard."
+  },
+  "non_scientific_boundary_tests": {
+    "command": "pytest tests/test_alignment_mechanism.py -q -p no:cacheprovider -k \"storage_or_hash_failure or phase_undefined_query\"",
+    "exit_code": 0,
+    "stdout": "...                                                                      [100%]\n3 passed, 13 deselected in 0.25s",
+    "stderr": "",
+    "realmodel_fits_by_reviewer": 0
+  },
+  "new_fits_by_reviewer": 0,
+  "production_code_modified_by_reviewer": false,
+  "BNCI_original_hard_prediction_vectors_directly_compared": 18,
+  "BNCI_original_prediction_differences": 0
+}

@@ -1,0 +1,81 @@
+{
+  "baseline_commit": "da2a3acee24746981bbcdd779ab88132da6e24c4",
+  "observed_checkout_commit": "da2a3acee24746981bbcdd779ab88132da6e24c4",
+  "files": [
+    {
+      "path": "manuscript/bmt_component_revision_20261029/MAIN.md",
+      "bytes": 34878,
+      "sha256": "f3d9f3f416f713ecc89ab50e6ba4f93383f464bd6fc322fe9d6c98eec84ee070"
+    },
+    {
+      "path": "manuscript/bmt_component_revision_20261029/references.bib",
+      "bytes": 11693,
+      "sha256": "3b58028767a19e4818b1b6d50c52be681e2e91aa51c5c5fa18e5eb67bcf0e84e"
+    },
+    {
+      "path": "docs/paper2_external_validation_protocol_20261027.md",
+      "bytes": 6851,
+      "sha256": "3176566d88852dd4a9c50899ec384e535a86a1257a5cec6f1d3ff7f842172345"
+    },
+    {
+      "path": "docs/paper2_structure_revision_20261029/policy_sources.json",
+      "bytes": 7659,
+      "sha256": "ddd3daafd92c1c786252567ffa2f1e671c1d0e68e20a2e7afcedbdbf3506fbdc"
+    }
+  ],
+  "EA_prior_art": {
+    "publication_doi": "10.1109/TBME.2019.2913914",
+    "online_publication_year": 2019,
+    "journal_issue_year": 2020,
+    "journal": "IEEE Transactions on Biomedical Engineering",
+    "volume": 67,
+    "issue": 2,
+    "pages": "399\u2013410",
+    "authors": [
+      "He He",
+      "Dongrui Wu"
+    ],
+    "reference_key_already_present": "he2020alignment",
+    "already_established": [
+      "arithmetic-mean covariance reference and inverse-square-root transformation",
+      "EA before CSP/LDA",
+      "unlabeled target signals can estimate a reference",
+      "few labeled target examples combined with labeled auxiliary data for supervised CSP/LDA",
+      "simulated online evaluation with only available target trials used for reference estimation",
+      "comparison of reference estimators and individual negative transfer"
+    ],
+    "article_support_only_procedure_location": "SectionVI-B,p408",
+    "official_code_scope": "main_MI.m is offline leave-one-subject-out; target reference uses all target trials; not evidence for available-only online code",
+    "official_code_license_declared": false,
+    "official_code_copied": false
+  },
+  "format_requirements": {
+    "article_words_max": 6000,
+    "abstract_words_max": 200,
+    "abstract_headings": [
+      "Objectives",
+      "Methods",
+      "Results",
+      "Conclusions"
+    ],
+    "keywords_min": 3,
+    "keywords_max": 6,
+    "combined_figures_tables_max": 8,
+    "references_max": 35,
+    "running_head_characters_max": 75,
+    "supplement_bytes_each_max": 10000000,
+    "minimum_figure_font_points": 6,
+    "minimum_combined_line_raster_dpi": 600,
+    "separate_ethics_legal_word_required": true,
+    "reviewer_suggestions_min": 5,
+    "reviewer_institutions_different_from_all_authors": true
+  },
+  "policy_application": {
+    "prior_author_approval_not_transferred_to_new_revision": true,
+    "existing_ethics_basis_preserved": true,
+    "AI_assistance_consolidate_in_designated_disclosure": true,
+    "AI_substantive_code_manuscript_analysis_assistance_must_remain_factual": true,
+    "paper2_scientific_text_or_data_changed_by_this_literature_audit": false,
+    "journal_submission_or_contact_performed": false
+  }
+}

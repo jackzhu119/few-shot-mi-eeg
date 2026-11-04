@@ -1,5 +1,7 @@
 # 论文2当前状态
 
+**本分支新扩展稿：EA增量、弱类别覆盖与时间窗依赖。** [英文稿及完整审阅文件](manuscript/bmt_alignment_integrated_20261104/README.md)；基准`da2a3ac`，执行方案`13dd764`，隔离分支`research/paper2-alignment-integrated-revision`。已重放保存预测并完成544个经典CPU敏感性拟合，未重训54个EEGNet或操作HPC/Pod。原PLOS仍在审理（用户最新确认），本轮不改投稿文件、不合入main。下列10月记录保留当时范围，新稿审阅状态以新目录为准。
+
 **2026-10-29：BMT三作者组件分析稿已获作者批准。** Ziyuan Zhu*, Sihao Liu, Haoyang Yu；三人共享重庆医科大学单位。新标题为 **Disentangling spatial-filter and classifier contributions to limited-label motor-imagery EEG recalibration**。[阅读PDF](manuscript/bmt_component_revision_20261029/BMT_Manuscript_Reading.pdf) · [Word与全部材料](manuscript/bmt_component_revision_20261029/README.md)。3图、2表，结构式摘要174词，完整正文约4,954词；通讯作者已确认三位作者批准终稿并承担责任，五位候选审稿人关系已确认；尚未在ScholarOne提交。
 
 2026-10-28双作者版及当时的两位作者批准保留于[历史目录](manuscript/bmt_submission_20261028/README.md)，不作为本次三作者导出稿的批准。作者已确认原PLOS稿件拒稿；下方按日期保留的旧记录仍表达当时的证据范围。

@@ -1,0 +1,21 @@
+{
+  "scope": "Saved-decision analysis only; no model fit or forward in any attempt",
+  "events": [
+    {
+      "attempt": "input_validation_attempt01",
+      "status": "stopped during input validation before writing result tables; no fit or model forward",
+      "error": "frozen BNCI scheduled20 versus actual0 support-label metadata initially asserted as20; adapter corrected to preserve actual zero target labels for frozen method",
+      "traceback": "input_validation_attempt01.log"
+    },
+    {
+      "attempt": "saved_prediction_reanalysis_run02",
+      "status": "completed",
+      "stdout": "execution_run02.log"
+    },
+    {
+      "step": "run-level descriptive extension",
+      "paired_run_contrasts": 1215,
+      "status": "completed from same saved predictions; within-person fractions precede cohort means"
+    }
+  ]
+}

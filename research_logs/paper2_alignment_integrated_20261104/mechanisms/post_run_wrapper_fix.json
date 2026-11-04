@@ -1,0 +1,20 @@
+{
+  "recorded_at_utc": "2026-11-04T07:03:39.892009+00:00",
+  "fix_identity": "post-execution future-resume wall-clock budget and aggregate-count handling",
+  "current_wrapper_sha256": "ace6e7e0da93ce76d71ad440c6f3629041acdee631044c0787b5319438bac601",
+  "executed_initial_wrapper_sha256": "c581d998dd415cacfa1b746889ac672c9f9cf8c146f8bf48a8f32caa279b15eb",
+  "executed_continuation_wrapper_sha256": "63e996a09216e3bc24bae0652665ff1428f247d7839e25a46df44d70c8a37ea1",
+  "scientific_core_sha256": "73ca95c0d852ef86fc92b3dd2a47730cfdc1c504432a65b71cc106ec205917dc",
+  "scientific_core_changed": false,
+  "new_real_fits_or_forwards": 0,
+  "real_outputs_rewritten": false,
+  "targeted_synthetic_tests": "17 passed",
+  "ruff": "passed",
+  "changes": [
+    "Persist the first wall-clock operation deadline; resume can shorten, never extend it.",
+    "Legacy first-dispatch metadata reconstructed only from preserved actual dispatch receipt, explicitly not retroactive enforcement.",
+    "Future progress/exit report cumulative unique and phase fit-claims plus elapsed from first dispatch.",
+    "Actual source pins and prior continuation remain intact; any later operational wrapper receipt is appended."
+  ],
+  "executed_result_scope": "Actual completed544 fits used the TWO archived wrappers; combined observed elapsed443.599036 seconds includes pause and stays below original7200, but pre-fix cross-resume enforcement is not claimed."
+}

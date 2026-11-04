@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/workspace/few-shot-mi-eeg/scripts/analyze_paper2_alignment_integrated_20261104.py", line 28, in <module>
+    main()
+  File "/workspace/few-shot-mi-eeg/scripts/analyze_paper2_alignment_integrated_20261104.py", line 21, in main
+    report = execute(args.root.resolve(), args.output.resolve(), args.plan_commit)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/few-shot-mi-eeg/src/learning_preserving_bci/paper2_alignment_integrated.py", line 377, in execute
+    records, historical_kumar, historical_bnci, paths = load_inputs(root)
+                                                        ^^^^^^^^^^^^^^^^^
+  File "/workspace/few-shot-mi-eeg/src/learning_preserving_bci/paper2_alignment_integrated.py", line 207, in load_inputs
+    require(saved["budget_requested"] == saved["n_support_actual"] == 20, "BNCI budget mismatch")
+  File "/workspace/few-shot-mi-eeg/src/learning_preserving_bci/paper2_alignment_integrated.py", line 41, in require
+    raise ValueError(message)
+ValueError: BNCI budget mismatch

@@ -1,0 +1,2270 @@
+[
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "main",
+    "commit": "c4ea1f4ee1d078bcb015922f8092f05e263f2399",
+    "path": "README.md",
+    "sha256": "528fb65d182c13097aa277d2cca090f1edcfa34abf00d6590c26b0a735026696",
+    "git_blob_sha1": "ebdeb3e066b107b4af58342b105028a1b4100a23",
+    "file_type": "index_or_provenance",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "D",
+    "intended_use": "Read-only source/version mapping; no independent Paper2 evidence or extra participants",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "main",
+    "commit": "c4ea1f4ee1d078bcb015922f8092f05e263f2399",
+    "path": "LICENSE",
+    "sha256": "962e9292bbb78c4227db75dcda2f4b36ca1f354ec38992112d5829a72204f87c",
+    "git_blob_sha1": "d3a1ff091037bae5b7b38f0027f913ec224a4733",
+    "file_type": "license",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "B",
+    "intended_use": "Reuse permission and third-party exclusions",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "main",
+    "commit": "c4ea1f4ee1d078bcb015922f8092f05e263f2399",
+    "path": "LICENSING.md",
+    "sha256": "d4f9240d0562cdec8c0ee5467a3f5c095b2f7cbd13d640ad485b25a0f2e1aa96",
+    "git_blob_sha1": "814215d3d90db3734919d73431904e0824540d48",
+    "file_type": "license",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "B",
+    "intended_use": "Reuse permission and third-party exclusions",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "main",
+    "commit": "c4ea1f4ee1d078bcb015922f8092f05e263f2399",
+    "path": "research_runs/README.md",
+    "sha256": "99ddee202e9753b79971b602b8281b32620483b42a3ab03b12553e71a695a9c5",
+    "git_blob_sha1": "7920b07685048dc964e5c56c6dc95cfd1e7d99e7",
+    "file_type": "index_or_provenance",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "D",
+    "intended_use": "Read-only source/version mapping; no independent Paper2 evidence or extra participants",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "main",
+    "commit": "c4ea1f4ee1d078bcb015922f8092f05e263f2399",
+    "path": "LICENSE-DATA.md",
+    "sha256": "e098c10e14fa8aa05f4ac5b369931e0feb6a7f68f7fca9685f71dc2c8c4a8c1f",
+    "git_blob_sha1": "29be1ad975d9ad0b1ce926eab0cdf7d1f1f2a61c",
+    "file_type": "license",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "B",
+    "intended_use": "Reuse permission and third-party exclusions",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "main",
+    "commit": "c4ea1f4ee1d078bcb015922f8092f05e263f2399",
+    "path": "research_runs/PAPER1_IJBET_20261029/README_zh.md",
+    "sha256": "aed437117dea99c7f78c89bac078aaf7e845e2fef5d3b79c0f6c3bddd06f226a",
+    "git_blob_sha1": "bd7d858079b332dfa3957af259602b2b91dd2ab5",
+    "file_type": "index_or_provenance",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "D",
+    "intended_use": "Read-only source/version mapping; no independent Paper2 evidence or extra participants",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "main",
+    "commit": "c4ea1f4ee1d078bcb015922f8092f05e263f2399",
+    "path": "research_runs/PAPER1_IJBET_20261029/evidence/version_inventory.json",
+    "sha256": "90798ec950efa94620e06cab759e84ffb125aa8eab54750de833612c2abe47ad",
+    "git_blob_sha1": "e1ea8e7a4fcd003a0cdb9f26862d6dc96f6be70a",
+    "file_type": "index_or_provenance",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "D",
+    "intended_use": "Read-only source/version mapping; no independent Paper2 evidence or extra participants",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "main",
+    "commit": "c4ea1f4ee1d078bcb015922f8092f05e263f2399",
+    "path": "research_runs/PAPER1_IJBET_20261029/evidence/version_inventory.md",
+    "sha256": "515913fc74e05d513f7df29f2c1f020fadb610eda04c82d55b61c66f6cc273d3",
+    "git_blob_sha1": "a92ca232554fc22139680657d5045e4a103b8770",
+    "file_type": "index_or_provenance",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "D",
+    "intended_use": "Read-only source/version mapping; no independent Paper2 evidence or extra participants",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "main",
+    "commit": "c4ea1f4ee1d078bcb015922f8092f05e263f2399",
+    "path": "research_runs/ELIGIBLE_V3_RESULTS_20261018/README_zh.md",
+    "sha256": "bbf405c82c4193156839e4a78b43a07bb579ba04b096b255ec59af33a3b5dc27",
+    "git_blob_sha1": "59b2471f0359680007c9e42fbf8c9d3573147b23",
+    "file_type": "index_or_provenance",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "D",
+    "intended_use": "Read-only source/version mapping; no independent Paper2 evidence or extra participants",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "main",
+    "commit": "c4ea1f4ee1d078bcb015922f8092f05e263f2399",
+    "path": "research_runs/ELIGIBLE_V3_RESULTS_20261018/RESULTS_REVIEW_zh.md",
+    "sha256": "eb366c2c698c78c2d6f8303eedca5e3e661042424110321645cf33d532a68d4e",
+    "git_blob_sha1": "f08df676787139ccd079886a43370f638e8d5569",
+    "file_type": "index_or_provenance",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "D",
+    "intended_use": "Read-only source/version mapping; no independent Paper2 evidence or extra participants",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "main",
+    "commit": "c4ea1f4ee1d078bcb015922f8092f05e263f2399",
+    "path": "research_runs/SOURCE_EXPANSION_20261017/README_zh.md",
+    "sha256": "bffb4202ff687757690d110ec69f379c5d6d56b6a86583ce184bd07fe8d3adb3",
+    "git_blob_sha1": "1ff19ce283209e9c4c9bb5e9d4454707905a7431",
+    "file_type": "index_or_provenance",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "D",
+    "intended_use": "Read-only source/version mapping; no independent Paper2 evidence or extra participants",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "main",
+    "commit": "c4ea1f4ee1d078bcb015922f8092f05e263f2399",
+    "path": "research_runs/PAPER1_COMPOSITION_20261027/README_zh.md",
+    "sha256": "3be6b4a42fdfde18a107de988fe1d50aed4054d8ea44c174c9aea7117998dc75",
+    "git_blob_sha1": "a2bf0134cb170d6053bec24f7c831d8c25fc4e99",
+    "file_type": "design",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "E",
+    "intended_use": "Not needed for EA incremental question;no complete inferred results imported",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "main",
+    "commit": "c4ea1f4ee1d078bcb015922f8092f05e263f2399",
+    "path": "research_runs/SOURCE_EXPANSION_20261017/p1_select.py",
+    "sha256": "6535f7d60ba7dd802c648bba1c2b41b389ad5b77ab2a50f6448135a16d62a87e",
+    "git_blob_sha1": "3b893fe919b2b9e522ebb7eee11cef476d067571",
+    "file_type": "code",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "B",
+    "intended_use": "Metric definitions/identity and grouping checks as reference for a separately tested Paper2 implementation; no direct import or scientific run here",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "main",
+    "commit": "c4ea1f4ee1d078bcb015922f8092f05e263f2399",
+    "path": "research_runs/SOURCE_EXPANSION_20261017/p1_report.py",
+    "sha256": "79f8385bac7292846199e3275f1a8846848855483a854b7986744fa11dcf4fb3",
+    "git_blob_sha1": "8954e74d9a54f0d3e043f7ff6441c76f53d5adef",
+    "file_type": "code",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "B",
+    "intended_use": "Participant paired display idea only; new Paper2 source data required",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "main",
+    "commit": "c4ea1f4ee1d078bcb015922f8092f05e263f2399",
+    "path": "research_runs/SOURCE_EXPANSION_20261017/p1_train.py",
+    "sha256": "9f0cff962c6bfa44bb8fbb83e101a22367b3fa5160ffe90a3f09687b2bf6e847",
+    "git_blob_sha1": "7315b03cc5b829189cde4b9e77704b12892063f6",
+    "file_type": "code",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "B",
+    "intended_use": "Metric definitions/identity and grouping checks as reference for a separately tested Paper2 implementation; no direct import or scientific run here",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "main",
+    "commit": "c4ea1f4ee1d078bcb015922f8092f05e263f2399",
+    "path": "research_runs/SOURCE_EXPANSION_20261017/config/study.json",
+    "sha256": "0822da8ac7833cb904afde09c3c92968db46259adfb714d12584087bbddeaf29",
+    "git_blob_sha1": "702a481bacefff323297ebbd25a88dc43a5dbf89",
+    "file_type": "design",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "E",
+    "intended_use": "Historical pre-eligibility design; exact executed context obtained separately; never used as Paper2 input contract",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "main",
+    "commit": "c4ea1f4ee1d078bcb015922f8092f05e263f2399",
+    "path": "research_runs/PAPER1_IJBET_20261029/RELEASE.json",
+    "sha256": "ce4e9c38f8f625283c49291df894decbdef12a5db489d49a4ddc721d719effba",
+    "git_blob_sha1": "b557be2c17a9a314a0de373afb4083d61b89bd82",
+    "file_type": "index_or_provenance",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "D",
+    "intended_use": "Read-only source/version mapping; no independent Paper2 evidence or extra participants",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "main",
+    "commit": "c4ea1f4ee1d078bcb015922f8092f05e263f2399",
+    "path": "research_runs/PAPER1_REVIEW_20261020/manuscript_en.md",
+    "sha256": "66bffb4175a45e6d6c0f6f4d425c096a5267174efaaef36941891c40ca487578",
+    "git_blob_sha1": "822baf26cad24e3510778592f8137b94912dd3ba",
+    "file_type": "historical_manuscript",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "D",
+    "intended_use": "Historical methods definitions read; not latest IJBET full manuscript, no copied prose",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "main",
+    "commit": "c4ea1f4ee1d078bcb015922f8092f05e263f2399",
+    "path": "research_runs/PAPER1_IJBET_20261029/figure_data/FIGURE_SOURCE_MANIFEST.json",
+    "sha256": "0979e7fa16bf5d118dcea36cfa21e9c6ecd80684699dada6e9e385191b0e84f5",
+    "git_blob_sha1": "81dca25ee48663980b4eacc00df4180298a19fd3",
+    "file_type": "index_or_provenance",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "D",
+    "intended_use": "Read-only source/version mapping; no independent Paper2 evidence or extra participants",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "main",
+    "commit": "c4ea1f4ee1d078bcb015922f8092f05e263f2399",
+    "path": "research_runs/PAPER1_IJBET_20261029/figure_data/Fig1_primary_participant_changes.csv",
+    "sha256": "7249b7d8c6aed0308d7ba0da379609f2b127a5361a3d53fff9ed9c2478293fef",
+    "git_blob_sha1": "ae6ec3be7726d49683e1295f92d18f4cef7cec70",
+    "file_type": "participant_table",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "D",
+    "intended_use": "Duplicate/provenance check only; no foreign numeric result in Paper2 results",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "historical_result_commit",
+    "commit": "2afb6c3eddbe2c3c82664b683f01970f95d4db39",
+    "path": "research_runs/PAPER1_HPC_RESULTS_20261027/b96a3fcaacf91017/README.md",
+    "sha256": "c81793a711b678b3211d4fab3facc73954f6106adb61b18f134a3dcc5b55489e",
+    "git_blob_sha1": "6c27343571bbfc951607ab8fdfe6f6b25fd32eed",
+    "file_type": "index_or_provenance",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "D",
+    "intended_use": "Read-only source/version mapping; no independent Paper2 evidence or extra participants",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "historical_result_commit",
+    "commit": "2afb6c3eddbe2c3c82664b683f01970f95d4db39",
+    "path": "research_runs/PAPER1_HPC_RESULTS_20261027/b96a3fcaacf91017/paper1-results-b96a3fcaacf91017.tar.gz.sha256",
+    "sha256": "268be94571b53ac91067c9eeb8e444a420140eeaf0908da71496d802491ef1a5",
+    "git_blob_sha1": "708c0de4d12c8bc26c399c88dd60596c05848841",
+    "file_type": "index_or_provenance",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "D",
+    "intended_use": "Read-only source/version mapping; no independent Paper2 evidence or extra participants",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "main",
+    "commit": "c4ea1f4ee1d078bcb015922f8092f05e263f2399",
+    "path": "research_runs/ELIGIBLE_V3_RESULTS_20261018/indexed/provenance/code_manifest.json",
+    "sha256": "a709a28acc976c4fca9e0e7ed16ee0287763aa675ef0eb108be11c673c116aeb",
+    "git_blob_sha1": "d01b8775e8836c013c512da725df132e7393a5cd",
+    "file_type": "index_or_provenance",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "D",
+    "intended_use": "Read-only source/version mapping; no independent Paper2 evidence or extra participants",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "main",
+    "commit": "c4ea1f4ee1d078bcb015922f8092f05e263f2399",
+    "path": "research_runs/ELIGIBLE_V3_RESULTS_20261018/indexed/provenance/execution_identity.json",
+    "sha256": "2eabe0438aa2e8fe294f0f5633bc59bbe880849f29e4a75601084326ea7ed19c",
+    "git_blob_sha1": "d6a4671090f77951f95ecf301e56b3c4c3caba3e",
+    "file_type": "index_or_provenance",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "D",
+    "intended_use": "Read-only source/version mapping; no independent Paper2 evidence or extra participants",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "main",
+    "commit": "c4ea1f4ee1d078bcb015922f8092f05e263f2399",
+    "path": "research_runs/ELIGIBLE_V3_RESULTS_20261018/indexed/provenance/source_registry.json",
+    "sha256": "66f14adf4d913da4df6fd01822ce4dba198f0173553c2a539a1582dfef34dbe0",
+    "git_blob_sha1": "d8a2759c9346575d7902d52f63b12d48c3b36b7f",
+    "file_type": "index_or_provenance",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "D",
+    "intended_use": "Read-only source/version mapping; no independent Paper2 evidence or extra participants",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "main",
+    "commit": "c4ea1f4ee1d078bcb015922f8092f05e263f2399",
+    "path": "research_runs/ELIGIBLE_V3_RESULTS_20261018/indexed/provenance/study.json",
+    "sha256": "87f2de5eeec6bb94149885678cc8c541b59f5316fe53396cfef16b21120f03fb",
+    "git_blob_sha1": "ecb83a2ae4f05963e506df555ea83b89d7517661",
+    "file_type": "index_or_provenance",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "D",
+    "intended_use": "Read-only source/version mapping; no independent Paper2 evidence or extra participants",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "main",
+    "commit": "c4ea1f4ee1d078bcb015922f8092f05e263f2399",
+    "path": "research_runs/PAPER1_PLOS_FINAL_20261018/evidence/additional_descriptives/analysis_plan.json",
+    "sha256": "7fc9bb2b2dfc9620c104927390b3f9dd68c474f54845bf9d24e31da1eebb628b",
+    "git_blob_sha1": "191823b67f9858a13002adda8b635abac955d8df",
+    "file_type": "index_or_provenance",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "D",
+    "intended_use": "Read-only source/version mapping; no independent Paper2 evidence or extra participants",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  },
+  {
+    "source_project": "paper1",
+    "repo": "jackzhu119/cross-subject-mi-eeg",
+    "ref": "main",
+    "commit": "c4ea1f4ee1d078bcb015922f8092f05e263f2399",
+    "path": "research_runs/PAPER1_PLOS_FINAL_20261018/evidence/additional_descriptives/additional_descriptive_receipt.json",
+    "sha256": "2ae88661bb2d8bca4a12529c8ecdcfd1dc592162493179bf20b3e95ce6920018",
+    "git_blob_sha1": "99d6cd45992c3a40583c3692346ab1a94d810646",
+    "file_type": "index_or_provenance",
+    "obtained": true,
+    "recomputed": false,
+    "verification_level": "downloaded full bytes +SHA and method/source inspection",
+    "migration_category": "D",
+    "intended_use": "Read-only source/version mapping; no independent Paper2 evidence or extra participants",
+    "license": "MIT author-owned code; CC BY4.0 author-owned narrative/figures/derivedoutputs; raw EEG/provider/thirdparty originalterms",
+    "protocol_context_file": "protocol_context.json",
+    "dataset_version": {
+      "BNCI": "BCI Competition IV2a original MAT; fixed provider hash manifests in source study",
+      "Yang": "original Figshare v5, explicit native1/2 eligible-v3; distinct later NEMAR privacy-corrected input for source-risk-v1",
+      "Dreyer": "NEMAR nm000250 v1.0.5 sourcedata EDF"
+    },
+    "participants": {
+      "source_levels": {
+        "S9": 9,
+        "S29": 29,
+        "S60": 60
+      },
+      "external": 85,
+      "excluded_provider_global_ids": [
+        17,
+        41
+      ]
+    },
+    "sessions": {
+      "Yang": 153,
+      "Dreyer": "first two acquisitions;80trials per person,40per hand"
+    },
+    "roles": "BNCI/Yang source whole-person CV and final source training; Dreyer external scoring only; Paper2 must keep its own source/support/query split",
+    "channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CP2",
+      "CP4",
+      "Pz"
+    ],
+    "sample_rate_hz": 160,
+    "reference": "CAR over18common channels; CSP Helmert valid subspace17dimensions",
+    "window": {
+      "BNCI_Dreyer": "operational cue+[0.5,2.5)s; context[-1.5,4.5)s",
+      "Yang": "raw native marker+[2,4)s; context[0,6)s; computational1.5s anchor not proven physical MI-onset"
+    },
+    "filter": "fourth-order Butterworth SOS, odd pad27, zero phase native6s context; broad8–30,mu8–13,beta13–30Hz; polyphase160Hz",
+    "amplitude_normalization": "within each trial, per-view/channel temporal centering; common broadband18×320RMS divisor, dimensionless; no across-query fitted normalization",
+    "covariance_normalization": "traditional source comparator: per-trial unit trace; person/cohort-balanced average; fixed0.1spherical shrinkage; not Paper2 historical EA implementation",
+    "label_budget": "source cohorts all eligible labels;0Dreyer calibration labels, not matched to Paper2 target20",
+    "signal_budget": "source pools2592/14590/33183 unique eligible trials;85external×80scoredtrials",
+    "qc_acquisition_definition": "Native Yang markers/explicit labels determine eligibility; marker9segments retained before dropping unknown255/missing; no relabeling retained events into groups40",
+    "models": "Braindecode1.5.1EEGNet,broad/shared-mu-beta; CSP4+shrinkageLDA separate source baseline",
+    "seeds": [
+      20261013,
+      20261014,
+      20261015
+    ],
+    "checkpoint": "source-only selector values/epochs in frozen selection records; weights not obtained in this audit",
+    "metrics_and_weights": "85participant independent units after3seed metric averaging; min/abs before averaging; external all40+40means CEclassbalance coincides there",
+    "historical_statistical_families": "eligible primary S60−S9 W;3frozen secondary Holm; additional4posthoc Holm; joint/gap additional descriptions explicitlyposthoc; source-risk separatelyreported",
+    "exposure": "Dreyer prior exposure uncertain; both completed Paper1 studies reuse same85people; BNCI9 sourcepeople overlap Paper2 BNCI9 and cannot be claimed fresh externalpeople"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "completed_utc": "2026-11-04T06:52:41.118139+00:00",
+  "exception_type": "ValueError",
+  "exception": "Historical/new query identity or label mismatch",
+  "traceback": "Traceback (most recent call last):\n  File \"/workspace/few-shot-mi-eeg/scripts/run_paper2_alignment_mechanisms_20261104.py\", line 398, in main\n    run_kumar(run, args.phase)\n  File \"/workspace/few-shot-mi-eeg/scripts/run_paper2_alignment_mechanisms_20261104.py\", line 335, in run_kumar\n    run_phase(run, subject, loaded, split, mapping, phase_module, budget_module, phase_saved)\n  File \"/workspace/few-shot-mi-eeg/scripts/run_paper2_alignment_mechanisms_20261104.py\", line 291, in run_phase\n    check_query_identity(query_ids, yquery, historical)\n  File \"/workspace/few-shot-mi-eeg/scripts/run_paper2_alignment_mechanisms_20261104.py\", line 121, in check_query_identity\n    raise ValueError(\"Historical/new query identity or label mismatch\")\nValueError: Historical/new query identity or label mismatch\n",
+  "fit_attempts": 362,
+  "phase_fit_attempts": 106,
+  "automatic_retry": false,
+  "exit_code": 1
+}

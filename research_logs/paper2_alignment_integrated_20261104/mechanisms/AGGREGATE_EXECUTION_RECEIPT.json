@@ -1,0 +1,91 @@
+{
+  "status": "completed",
+  "recorded_at_utc": "2026-11-04T07:01:12.520639+00:00",
+  "first_dispatch_utc": "2026-11-04T06:51:11.567632+00:00",
+  "completed_utc": "2026-11-04T06:58:35.166668+00:00",
+  "elapsed_including_pause_seconds": 443.599036,
+  "observed_elapsed_below_initial_7200_seconds": true,
+  "executed_versions_timer_scope": "Each invocation enforced its local7200s limit; cross-resume absolute deadline enforcement is not claimed. Actual combined elapsed includes pause and is below7200s.",
+  "all_unique_fit_attempts": 544,
+  "all_successful_new_fits": 544,
+  "matched_mechanism_fits": 396,
+  "new_EA_phase_fits": 148,
+  "undefined_original_phase_cells": 32,
+  "failed_scientific_fits": 0,
+  "prior362_scientific_cell_bytes_unchanged": true,
+  "invocations": [
+    {
+      "pid": 1661,
+      "fit_attempts": 362,
+      "phase_fit_attempts": 106,
+      "exit_code": 1,
+      "kind": "Original one-class-query eligibility pre-fit operational stop; all362 attempted fits succeeded.",
+      "log": "/workspace/few-shot-mi-eeg/research_logs/paper2_alignment_integrated_20261104/mechanisms/run01_initial.log"
+    },
+    {
+      "pid": 2217,
+      "fit_attempts": 182,
+      "phase_fit_attempts": 42,
+      "exit_code": 0,
+      "kind": "Explicit same-state unattempted-cell continuation; no retraining.",
+      "log": "/workspace/few-shot-mi-eeg/research_logs/paper2_alignment_integrated_20261104/mechanisms/run01_continuation.log"
+    }
+  ],
+  "original_exception_sha256": "c46fdd13b82f18c64eb095addc84e493b9daad1094b66caf90b3d9bf5822d0d2",
+  "original_runner_sha256": "c581d998dd415cacfa1b746889ac672c9f9cf8c146f8bf48a8f32caa279b15eb",
+  "executed_continuation_runner_sha256": "63e996a09216e3bc24bae0652665ff1428f247d7839e25a46df44d70c8a37ea1",
+  "unchanged_scientific_core_sha256": "73ca95c0d852ef86fc92b3dd2a47730cfdc1c504432a65b71cc106ec205917dc",
+  "runtime_stack": {
+    "frozen_plan_commit": "13dd764",
+    "head_at_execution": "13dd7646c4ce37db40504154388e76b4c6ca6595",
+    "sources": [
+      {
+        "path": "scripts/run_paper2_alignment_mechanisms_20261104.py",
+        "sha256": "c581d998dd415cacfa1b746889ac672c9f9cf8c146f8bf48a8f32caa279b15eb"
+      },
+      {
+        "path": "src/learning_preserving_bci/alignment_mechanism.py",
+        "sha256": "73ca95c0d852ef86fc92b3dd2a47730cfdc1c504432a65b71cc106ec205917dc"
+      },
+      {
+        "path": "docs/paper2_alignment_integrated_20261104/analysis_plan.yaml",
+        "sha256": "fa74662f16b6be816b989933dfb0bb64b7b93b642959d8d869ffb84bf9385a95"
+      },
+      {
+        "path": "configs/kumar_cross_session_20261012.json",
+        "sha256": "f1b2d0fa870493cc2aaab906fe6d8b1227e45b2a270e06700e3ca137fbfe9c89"
+      },
+      {
+        "path": "research_logs/kumar_cross_session_20261012/protocol/split_manifest.json",
+        "sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28"
+      },
+      {
+        "path": "scripts/run_kumar_component_budget_cpu_20261016.py",
+        "sha256": "381bc4739698d7be7c76b2b8c4d05d4d944d0c6e3c3b570f1c2fb60a5cceb5d1"
+      },
+      {
+        "path": "scripts/run_kumar_phase_window_cpu_20261016.py",
+        "sha256": "77da347fb2e4bed23cee29dd582d6d280055fbbf5031fd063fd670dbc053453d"
+      },
+      {
+        "path": "experiments/hpc_recalibration_v2/hpc_recalibration/classical.py",
+        "sha256": "7a08d0ebee294799e28e061720c8257889fdee85d1a5c97e9647545a8b76aee5"
+      }
+    ],
+    "python": "3.11.16 (main, Sep 24 2026, 17:56:40) [Clang 22.1.3 ]",
+    "numpy": "2.2.6",
+    "mne": "1.10.2",
+    "thread_settings": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    },
+    "new_fits": true,
+    "neural_refits": false,
+    "automatic_retry": false
+  },
+  "hardware_or_environment_changes": false,
+  "neural_models_refit": 0,
+  "Pod_operations": false,
+  "query_reference_or_selection": false
+}

@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "data_zip_sha256": "d16aac10c7adbc467cfaa9ba83e08933e91456e8cad8df569d8293315835d94b",
+  "data_zip_bytes": 8641548,
+  "members": 1392,
+  "new_fit_or_forward_count": 0,
+  "source_EEG_or_private_weights_read": false,
+  "saved_table_reproduction_count": 17,
+  "figure_data_checks": [
+    {
+      "file": "Fig1_workflow.csv",
+      "sha256": "07286bcfbdcb0c2e0e2e4aaed686af42f356d2f6dfde847fe10e214b402cd864",
+      "byte_identical": true
+    },
+    {
+      "file": "Fig1_workflow_edges.csv",
+      "sha256": "d526939d99ff032b52f6418f19f4a01cc72046934f20ba01cdb7e164f596ca06",
+      "byte_identical": true
+    },
+    {
+      "file": "Fig1_workflow_nodes.csv",
+      "sha256": "d115cce44412c348e57e376117fbab7fd910fab50fa03edc0046ee57d61a3af7",
+      "byte_identical": true
+    },
+    {
+      "file": "Fig2_performance.csv",
+      "sha256": "4e83341ed2837e3d458d8a29a9c15498fd4fd684389ea971a8fadedd82e01eaf",
+      "byte_identical": true
+    },
+    {
+      "file": "Fig3_error_coverage.csv",
+      "sha256": "e620a927c1a58dfe2aa22c45b65cd88bbb69e1fad0329e4a59ff5065cf78d893",
+      "byte_identical": true
+    },
+    {
+      "file": "Fig4_budget.csv",
+      "sha256": "a7fdf675bc97d8e948f612fcba000da1fd22f4719e666b917691305a7812d9d9",
+      "byte_identical": true
+    },
+    {
+      "file": "Fig5_mechanisms.csv",
+      "sha256": "a9917f9a653f0aaf5e486888d6ebdebcc2ac5a9de829685648b85f751e4c9ed6",
+      "byte_identical": true
+    }
+  ],
+  "works_outside_git_checkout": true,
+  "actual_commands": [
+    [
+      "/workspace/.venvs/few-shot-mi-eeg/bin/python",
+      "/tmp/paper2-public-final-4nptmh7c/scripts/reproduce_paper2_alignment_saved_results_20261104.py",
+      "--output",
+      "/tmp/paper2-public-final-4nptmh7c/reproduced_tables"
+    ],
+    [
+      "python",
+      "/tmp/paper2-public-final-4nptmh7c/scripts/render_paper2_alignment_integrated_20261104.py",
+      "--output",
+      "/tmp/paper2-public-final-4nptmh7c/reproduced_figures"
+    ]
+  ],
+  "numeric_definitions_changed_for_portability": false
+}

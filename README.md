@@ -1,5 +1,7 @@
 # Longitudinal Motor-Imagery EEG Decoding
 
+**本分支新扩展稿：EA增量、弱类别覆盖与时间窗依赖。** [英文稿及完整审阅文件](manuscript/bmt_alignment_integrated_20261104/README.md)；基准`da2a3ac`，执行方案`13dd764`，隔离分支`research/paper2-alignment-integrated-revision`。已重放保存预测并完成544个经典CPU敏感性拟合，未重训54个EEGNet或操作HPC/Pod。原PLOS仍在审理（用户最新确认），本轮不改投稿文件、不合入main。下列10月记录保留当时范围，新稿审阅状态以新目录为准。
+
 **当前版本：2026-10-29 BMT三作者终稿（Ziyuan Zhu*, Sihao Liu, Haoyang Yu）。** [完整目录](manuscript/bmt_component_revision_20261029/README.md) · [阅读PDF](manuscript/bmt_component_revision_20261029/BMT_Manuscript_Reading.pdf) · [投稿Word](manuscript/bmt_component_revision_20261029/BMT_Manuscript_Submission.docx) · [保存预测独立复核](research_logs/paper2_structure_revision_20261029/component_replay/README.md)。通讯作者已确认三位作者批准终稿、承担责任且无利益冲突，五位候选审稿人的无冲突确认覆盖三人；尚未投稿。
 
 2026-10-28双作者批准版作为[历史版本](manuscript/bmt_submission_20261028/README.md)保留，固定标签为`paper2-bmt-submission-20261028`；该批准不延伸至本次三作者新稿。

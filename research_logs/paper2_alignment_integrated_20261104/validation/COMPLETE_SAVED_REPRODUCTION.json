@@ -1,0 +1,145 @@
+{
+  "status": "passed",
+  "new_fit_count": 0,
+  "new_query_forward_count": 0,
+  "EEG_or_private_models_loaded": false,
+  "commands": [
+    {
+      "argv": [
+        "/workspace/.venvs/few-shot-mi-eeg/bin/python",
+        "/workspace/few-shot-mi-eeg/scripts/analyze_paper2_alignment_integrated_20261104.py",
+        "--root",
+        "/workspace/few-shot-mi-eeg",
+        "--output",
+        "/tmp/paper2-complete-saved-repro-20261104-run02/analysis",
+        "--plan-commit",
+        "13dd7646c4ce37db40504154388e76b4c6ca6595"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "/workspace/.venvs/few-shot-mi-eeg/bin/python",
+        "/workspace/few-shot-mi-eeg/scripts/check_paper2_alignment_integrated_20261104.py",
+        "--root",
+        "/workspace/few-shot-mi-eeg",
+        "--analysis",
+        "/tmp/paper2-complete-saved-repro-20261104-run02/analysis",
+        "--output",
+        "/tmp/paper2-complete-saved-repro-20261104-run02/independent"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "/workspace/.venvs/few-shot-mi-eeg/bin/python",
+        "/tmp/paper2-complete-saved-repro-20261104-run02/receipt_tree/research_logs/paper2_alignment_integrated_20261104/mechanisms/summarize_mechanisms.py"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "CSV_comparisons": [
+    {
+      "source": "research_logs/paper2_alignment_integrated_20261104/analysis/cohort_contrasts.csv",
+      "bytes": 371241,
+      "sha256": "54e1152aaf20137bf6cf62a1712442f1a8d48453f43b7374ebffa9b54d814211",
+      "byte_identical": true
+    },
+    {
+      "source": "research_logs/paper2_alignment_integrated_20261104/analysis/cohort_method_metrics.csv",
+      "bytes": 132331,
+      "sha256": "fb9bf900e183b86b207b989be5b297129d932c24a69dd0d2a7d218f3fb1c28c7",
+      "byte_identical": true
+    },
+    {
+      "source": "research_logs/paper2_alignment_integrated_20261104/analysis/cohort_run_effect_distribution.csv",
+      "bytes": 22358,
+      "sha256": "f269ffd14b7abc4d8f1c5a6a7059ca527c679c33b8c387df9975e89cb68581c7",
+      "byte_identical": true
+    },
+    {
+      "source": "research_logs/paper2_alignment_integrated_20261104/analysis/endpoint_metrics.csv",
+      "bytes": 291174,
+      "sha256": "aceb553054887e0aa2a36b210591c28f3ffb8345d5961e25d8ab411c504b04cb",
+      "byte_identical": true
+    },
+    {
+      "source": "research_logs/paper2_alignment_integrated_20261104/analysis/endpoint_transitions.csv",
+      "bytes": 499400,
+      "sha256": "7647cda30a14c944962e0140d6a0ab88516b0a281a429ec6f2143bf6676d198e",
+      "byte_identical": true
+    },
+    {
+      "source": "research_logs/paper2_alignment_integrated_20261104/analysis/joint_benefit_distribution.csv",
+      "bytes": 196390,
+      "sha256": "d9e6223fe6cbb4bab57a1ed32589b777c674db73f125f8309ebfac0e970373e8",
+      "byte_identical": true
+    },
+    {
+      "source": "research_logs/paper2_alignment_integrated_20261104/analysis/participant_contrasts.csv",
+      "bytes": 130043,
+      "sha256": "fad8ff38c6d6e7fdce0c89c281a8f9b7f9a1050e66dda15e68ca846d491a09a5",
+      "byte_identical": true
+    },
+    {
+      "source": "research_logs/paper2_alignment_integrated_20261104/analysis/participant_metrics.csv",
+      "bytes": 64824,
+      "sha256": "b0d7367d620510da5c0c70617185872ed2f9fcee66f5287bf42c37e55a5b381b",
+      "byte_identical": true
+    },
+    {
+      "source": "research_logs/paper2_alignment_integrated_20261104/analysis/participant_run_effect_distribution.csv",
+      "bytes": 11165,
+      "sha256": "3ca03d8c76214c7ed316ebb674314a52e7d7de376b267a3426e683df352bb7c7",
+      "byte_identical": true
+    },
+    {
+      "source": "research_logs/paper2_alignment_integrated_20261104/analysis/qc_same_eligible_comparisons.csv",
+      "bytes": 151842,
+      "sha256": "d8ba827e2899e7d1fc691f24e831a51e93b4f8f9be8593dd8d3171447e580c65",
+      "byte_identical": true
+    },
+    {
+      "source": "research_logs/paper2_alignment_integrated_20261104/analysis/query_run_contrasts.csv",
+      "bytes": 185023,
+      "sha256": "42f863ffa623e00a7359ebefa8c0a9e949d79f093b2e71b04ee3844ff53634ee",
+      "byte_identical": true
+    },
+    {
+      "source": "research_logs/paper2_alignment_integrated_20261104/analysis/query_run_metrics.csv",
+      "bytes": 98194,
+      "sha256": "00e9707de291d5803b440e95d4122b18b2e2d1a0ebd448a0ac0afeb57a0cb760",
+      "byte_identical": true
+    },
+    {
+      "source": "research_logs/paper2_alignment_integrated_20261104/mechanisms/cohort_comparisons.csv",
+      "bytes": 48164,
+      "sha256": "26b3f7ac34ecfe9a48a513d4f5f943c81aa572285232a3530c629e1c3481ab6e",
+      "byte_identical": true
+    },
+    {
+      "source": "research_logs/paper2_alignment_integrated_20261104/mechanisms/cohort_means.csv",
+      "bytes": 11594,
+      "sha256": "ad9ec16c969d676cce3c6f813db7b0cf5b20e2521db1dab0fa44de1aaaceeb9b",
+      "byte_identical": true
+    },
+    {
+      "source": "research_logs/paper2_alignment_integrated_20261104/mechanisms/participant_metrics.csv",
+      "bytes": 29489,
+      "sha256": "80578fa9b7462bbcb36b30104df9644782b4eb9006aa666ca513dc740b1c0606",
+      "byte_identical": true
+    },
+    {
+      "source": "research_logs/paper2_alignment_integrated_20261104/mechanisms/phase_cohort_comparisons.csv",
+      "bytes": 2202,
+      "sha256": "4088037ef8e3c68f925d9939c4e29a924a7f8dd50fe060373beb63bedb2752e2",
+      "byte_identical": true
+    },
+    {
+      "source": "research_logs/paper2_alignment_integrated_20261104/mechanisms/phase_participant_metrics.csv",
+      "bytes": 4012,
+      "sha256": "e395dbed3756473fa8c8d54731c012e56e7675bc3ce3829ec2a82c7b0c62e12e",
+      "byte_identical": true
+    }
+  ]
+}
