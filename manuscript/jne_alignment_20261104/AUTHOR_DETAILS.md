@@ -1,6 +1,6 @@
 # Author details
 
-**Proposed order:** Ziyuan Zhu*, Sihao Liu, Haoyang Yu.
+**Author order:** Ziyuan Zhu*, Sihao Liu, Haoyang Yu.
 
 **Shared affiliation:** College of Artificial Intelligence Medicine, Chongqing Medical University, Jinyun Campus, No. 61 Daxuecheng Middle Road, Shapingba District, Chongqing 401331, China
 
@@ -20,10 +20,10 @@ Sihao Liu assisted with code auditing and verification, supervised the correct e
 
 Haoyang Yu assisted the first author with experimental design and code modification.
 
-The latest contribution statements include Sihao Liu’s code auditing and supervision of correct training execution, and Haoyang Yu’s assistance with experimental design and code modification. Additional writing or critical-revision roles are not inferred.
+The latest contribution statements include Sihao Liu’s code auditing and supervision of correct training execution, and Haoyang Yu’s assistance with experimental design and code modification. All three authors’ substantive review of the manuscript’s intellectual content was explicitly confirmed on 4 November 2026.
 
-## Current-version review record
+## Final-version approval record
 
-The user states: “我们三位作者已经全部阅读新版，ai披露符合实际。” The three-author reading and AI-disclosure accuracy are therefore recorded for the expanded scientific manuscript at `e5969e6ee6294206954b5a83c5258fdb2e143eda`. This records the reported review, without fabricating individual signatures or additional contribution details.
+On 4 November 2026, the corresponding user explicitly confirmed on behalf of all three authors that they had substantively reviewed the manuscript's important intellectual content, approved final version `79c0c53803efe226088b35991326904254e05023`, consented to submission to Journal of Neural Engineering and accepted author responsibility. Author order, contributions, affiliation, contact details and AI disclosure were confirmed accurate.
 
-IOP requires all four ICMJE conditions, including substantial scientific contribution, drafting or important intellectual revision, final approval and accountability. The current record does not establish all four conditions for each proposed author. Final approval of the completed JNE-format files and consent to submit must correspond to the actual final version. The proposed names and order are retained while those factual details are completed.
+The four ICMJE authorship conditions are recorded as author-confirmed on the basis of this statement and the previously supplied substantive research contributions. The present export adds the approval statement and final author designations to that approved scientific version; it changes no experiment, result or scientific conclusion. Individual signatures have not been generated, and no submission-system action has been performed.

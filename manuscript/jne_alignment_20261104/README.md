@@ -1,4 +1,4 @@
-# Journal of Neural Engineering — author review package
+# Journal of Neural Engineering — author-approved files
 
 **Current target: Journal of Neural Engineering (JNE), Paper, single-anonymous review.** This directory adapts the completed scientific version `e5969e6ee6294206954b5a83c5258fdb2e143eda`. The revision changes journal presentation, administrative information, author contributions and project narration; it adds no fits or query evaluations. Earlier BMT and PLOS files retain their original paths and bytes.
 
@@ -12,7 +12,7 @@
 | Relationship to the PLOS manuscript under review | [Standalone statement PDF](Related_Manuscript_Statement.pdf) · [Word](Related_Manuscript_Statement.docx) |
 | Declarations | [PDF](Declarations.pdf) · [Word](Declarations.docx) |
 | Copyable abstract and submission fields | [Abstract](ABSTRACT_FOR_SUBMISSION.txt) · [fields](SUBMISSION_FIELDS.md) |
-| Authors and remaining final decisions | [AUTHOR_DETAILS.md](AUTHOR_DETAILS.md) · [AUTHOR_REVIEW_ITEMS.md](AUTHOR_REVIEW_ITEMS.md) |
+| Authors and submission checks | [AUTHOR_DETAILS.md](AUTHOR_DETAILS.md) · [AUTHOR_REVIEW_ITEMS.md](AUTHOR_REVIEW_ITEMS.md) |
 | Figures and underlying data | [figures/](figures/) · [supplementary_figures/](supplementary_figures/) |
 | Rebuild instructions and validation | [REPRODUCTION.md](REPRODUCTION.md) · [format checks](JOURNAL_FORMAT_CHECKS.json) · [package hashes](PACKAGE_SHA256.json) |
 
@@ -20,7 +20,7 @@ The initial JNE main file is the complete PDF with figures and tables in place. 
 
 Scientific findings retain their actual analysis roles, participant-level statistics, window dependence, uncertain contrasts and earlier data exposure. The national-law ethics statement contains no school-confirmation claim. Codex and ChatGPT assistance are described in Acknowledgements and computational assistance in Methods.
 
-The author reports that all three authors read the expanded scientific version and that the AI disclosure is accurate. Sihao Liu's code audit and supervision of correct training execution, and Haoyang Yu's experimental-design/code contributions, are recorded as supplied. Final JNE-file approval, individual authorship declarations and the actual current PLOS manuscript should be resolved from the authors' facts before submission. No submission, editor contact, withdrawal or merge to `main` was performed.
+On 4 November 2026, the corresponding user confirmed all three authors’ substantive intellectual review, approval of scientific version `79c0c53803efe226088b35991326904254e05023`, consent to JNE submission and accountability; author information, contributions and AI disclosure were confirmed accurate. This export records that approval and removes draft author designations without changing the science. The actual related submission remains part of the factual editorial-disclosure steps. No submission, editor contact, withdrawal or merge to `main` was performed.
 
 Official policy checks: [format](../../docs/paper2_jne_20261104/FORMAT_POLICY.md) · [editorial/AI/authorship](../../docs/paper2_jne_20261104/EDITORIAL_POLICY.md). The usual 14-page guidance concerns journal typeset pages, not this one-column review PDF.
 

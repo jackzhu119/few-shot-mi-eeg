@@ -4,7 +4,7 @@
 
 **Manuscript:** Limited-label cross-session motor-imagery EEG recalibration: spatial refitting and the added value of Euclidean alignment
 
-**Proposed author order:** Ziyuan Zhu; Sihao Liu; Haoyang Yu
+**Author order:** Ziyuan Zhu; Sihao Liu; Haoyang Yu
 
 ## Research ethics
 
@@ -29,6 +29,8 @@ Ziyuan Zhu: Conceptualization; Methodology; Software; Formal analysis; Validatio
 Sihao Liu assisted with code auditing and verification, supervised the correct execution of training, checked publication policies and organized project files.
 
 Haoyang Yu assisted the first author with experimental design and code modification.
+
+All authors critically reviewed the manuscript, approved the final version, consented to its submission to Journal of Neural Engineering, and agree to be accountable for all aspects of the work.
 
 ## AI disclosure
 

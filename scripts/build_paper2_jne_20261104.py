@@ -250,7 +250,8 @@ def package():
     if any(len(x["title"]) > 30 or len(x["description"].split()) > 30 for x in metadata):
         raise ValueError("Supplement metadata exceeds IOP limits")
     selected = set()
-    for directory in (DOCS, AUDIT, ROOT / "research_logs/paper2_jne_presubmission_20261104", OUT):
+    for directory in (DOCS, AUDIT, ROOT / "research_logs/paper2_jne_presubmission_20261104",
+                      ROOT / "research_logs/paper2_jne_author_approval_20261104", OUT):
         selected.update(p for p in directory.rglob("*") if p.is_file() and p.suffix in {".md", ".json", ".csv", ".bib", ".csl", ".tex"}
                         and p.name not in {"PACKAGE_SHA256.json", "FILE_MANIFEST.json", "FINAL_VALIDATION.json", "GITHUB_FULL_GET_RECEIPT.json"})
     selected.update(ROOT.glob("scripts/*jne*20261104.py"))
@@ -292,7 +293,12 @@ def package():
     uploads = [OUT / "JNE_Manuscript.pdf", OUT / "Supplementary_Methods.pdf", data]
     if any(p.stat().st_size > 50_000_000 for p in uploads[1:]) or sum(p.stat().st_size for p in uploads) > 150_000_000:
         raise ValueError("IOP submission file-size limits exceeded")
-    receipt = {"journal": "Journal of Neural Engineering", "status": "author_review",
+    author_status = json.loads((OUT / "SUBMISSION_STATUS.json").read_text())
+    receipt = {"journal": "Journal of Neural Engineering", "status": author_status["status"],
+               "author_approval": {"recorded": author_status["final_jne_files_author_approval_recorded"],
+                                   "date": author_status.get("author_confirmation_date"),
+                                   "approved_base_commit": author_status.get("author_approved_base_commit"),
+                                   "authors_consent_to_submit": author_status.get("authors_consent_to_submit")},
                "submitted": False, "main_branch_merged": False, "new_fits_or_query_forwards": 0,
                "science_preservation": archive_check, "actual_supplement_files": metadata,
                "submission_file_bytes": sum(p.stat().st_size for p in uploads),

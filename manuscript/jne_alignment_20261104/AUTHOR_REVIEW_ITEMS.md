@@ -1,11 +1,13 @@
-# Final author review items
+# Author confirmation and submission checks
 
-The latest author reports are recorded in `research_logs/paper2_jne_20261104/author_confirmation.json`. All three authors have read the expanded scientific version; the AI disclosure was confirmed accurate. Contributions, funding and conflicts reflect the supplied facts.
+## Completed author confirmation
 
-Before submitting this exported JNE version:
+On 4 November 2026, the corresponding user explicitly confirmed that Ziyuan Zhu, Sihao Liu and Haoyang Yu had substantively reviewed the important intellectual content, approved final scientific version `79c0c53803efe226088b35991326904254e05023`, consented to submission to Journal of Neural Engineering and accepted author responsibility. Author order, contributions, affiliations, emails and AI disclosure were confirmed accurate. The four authorship conditions are recorded as author-confirmed in the status and provenance records.
 
-1. Each author must actually satisfy the four ICMJE criteria: substantive research contribution, drafting or important intellectual review, final approval and accountability. The newly recorded code/design contributions establish additional substantive facts; reading a version alone is not a substitute for the other declarations. Do not invent intellectual revision, signatures or approval.
-2. Review the final PDF, cover letter and declarations, and enter the authors' real consent to submit and responsibility statements in the submission system.
-3. Attach the actual current `PONE-D-26-52050` manuscript with the related-manuscript disclosure. The standalone statement compares an identified archived source, not an independently retrieved current portal file. Its comparison and source hashes aid editorial assessment; they do not constitute an editor's permission.
+The current exports add that confirmation and remove draft author designations; they do not change the approved science. The declaration is complete. No individual signature was created and no manuscript has been submitted by this task.
 
-The corresponding author's ORCID, all three names/emails, common affiliation, no-funding/no-conflict statements and Article 32(1) national-law exemption basis are already filled from the current record. Suggested reviewers are optional in the reviewed IOP guidance. No journal submission has been made by this task.
+## Submission-system steps
+
+Use `JNE_Manuscript.pdf` as the main file and the two named supplementary files in their appropriate slots. Author and originality declarations must match the actual facts recorded in the cover letter and editorial materials. The related-manuscript statement uses the identified archived comparison; the actual current related submission should accompany the final editorial disclosure.
+
+Author names, emails, common affiliation, corresponding-author ORCID, no-funding/no-conflict statements, statutory secondary-analysis ethics basis and AI disclosure are filled. Co-author ORCIDs remain optional because none were supplied. Suggested reviewers are optional in the reviewed IOP guidance.

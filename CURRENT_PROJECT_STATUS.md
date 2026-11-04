@@ -1,6 +1,6 @@
 # 论文2当前状态
 
-**本分支最新：Journal of Neural Engineering（JNE）审阅版，2026-11-04。** [主稿、完整审阅包与独立关联稿说明](manuscript/jne_alignment_20261104/README.md)。JNE四段式摘要、内嵌图表PDF、Word、两项补充材料和矢量科研图已准备；科学结果固定于`e5969e6`，本次不新增拟合或query。三位作者已读科学新版、确认AI披露准确；最新代码审核/训练监督与设计/代码贡献已记录。实际最终作者声明与当前PLOS在审稿副本见新目录审阅项。隔离分支`research/paper2-alignment-integrated-revision`，不合入main、不操作投稿系统。下列BMT/PLOS记录保留其历史范围。
+**本分支最新：Journal of Neural Engineering（JNE）作者批准版，2026-11-04。** [主稿、完整审阅包与独立关联稿说明](manuscript/jne_alignment_20261104/README.md)。JNE四段式摘要、内嵌图表PDF、Word、两项补充材料和矢量科研图已准备；科学结果固定于`e5969e6`，本次不新增拟合或query。三位作者已于2026-11-04明确批准`79c0c53`最终版、同意投稿JNE并承担作者责任，署名、贡献、单位、邮箱及AI披露均确认准确。当前仅补入批准声明并导出相同科学内容；投稿系统步骤见新目录。隔离分支`research/paper2-alignment-integrated-revision`，不合入main、不操作投稿系统。下列BMT/PLOS记录保留其历史范围。
 
 **2026-10-29：BMT三作者组件分析稿已获作者批准。** Ziyuan Zhu*, Sihao Liu, Haoyang Yu；三人共享重庆医科大学单位。新标题为 **Disentangling spatial-filter and classifier contributions to limited-label motor-imagery EEG recalibration**。[阅读PDF](manuscript/bmt_component_revision_20261029/BMT_Manuscript_Reading.pdf) · [Word与全部材料](manuscript/bmt_component_revision_20261029/README.md)。3图、2表，结构式摘要174词，完整正文约4,954词；通讯作者已确认三位作者批准终稿并承担责任，五位候选审稿人关系已确认；尚未在ScholarOne提交。
 

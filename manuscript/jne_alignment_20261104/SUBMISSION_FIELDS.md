@@ -1,4 +1,4 @@
-# JNE submission fields — author review copy
+# JNE submission fields — author-approved files
 
 ## Journal and article
 
@@ -9,7 +9,7 @@
 - Keywords: brain–computer interfaces; calibration; covariance; domain adaptation; signal processing
 - Corresponding/submitting author: Ziyuan Zhu, zzy2630816871@gmail.com
 - Submitting-author ORCID: https://orcid.org/0009-0005-1153-4926
-- Proposed author order: Ziyuan Zhu; Sihao Liu; Haoyang Yu. Enter given and family names separately as listed in AUTHOR_DETAILS.md.
+- Author order: Ziyuan Zhu; Sihao Liu; Haoyang Yu. Enter given and family names separately as listed in AUTHOR_DETAILS.md.
 
 ## Structured abstract
 
@@ -49,4 +49,6 @@ PONE-D-26-52050 remains under review at PLOS ONE. Supply RELATED_MANUSCRIPT_STAT
 
 Use the complete JNE manuscript PDF with embedded figures and tables as the initial main file, plus the supplementary methods and scientific data/code archive. Review the cover letter and related-manuscript statement as editor-facing documents. Suggested reviewers are optional under the public IOP guidance; any names supplied must be free of conflicts.
 
-The user reports that all three proposed authors have read the expanded scientific version and that the AI disclosure is accurate. Enter consent to submit, final-version approval and ICMJE authorship declarations only as they actually apply to the final author record. No submission-system action has been performed.
+All three authors’ substantive intellectual review, approval of version `79c0c53803efe226088b35991326904254e05023`, consent to JNE submission and accountability were explicitly confirmed on 4 November 2026. Author order, contributions, affiliations, emails and AI disclosure were confirmed accurate. The current files record that approval without changing the scientific content. No submission-system action has been performed.
+
+**Author approval statement:** All authors critically reviewed the manuscript, approved the final version, consented to its submission to Journal of Neural Engineering, and agree to be accountable for all aspects of the work.

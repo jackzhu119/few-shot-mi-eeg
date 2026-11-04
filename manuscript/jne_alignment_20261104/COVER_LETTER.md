@@ -10,11 +10,11 @@ The contribution is an information-matched analysis of recalibration operations,
 
 The manuscript addresses a distinct question: what Euclidean alignment adds after supervised spatial-filter and classifier refitting. A separate editor-facing statement identifies the shared Kumar evidence with PONE-D-26-52050, currently under review at PLOS ONE, and the additional alignment, BNCI, class-coverage and controlled-sensitivity analyses.
 
-The authors declare no conflict of interest, and this research received no external funding. The manuscript includes the Article 32(1) secondary-analysis exemption basis and the AI-assistance disclosure.
+All three authors have critically reviewed and approved the final manuscript, consent to its submission to Journal of Neural Engineering, and accept accountability for the work. The authors declare no conflict of interest, and this research received no external funding. The manuscript includes the Article 32(1) secondary-analysis exemption basis and the AI-assistance disclosure.
 
 Sincerely,
 
-Ziyuan Zhu, proposed corresponding author  
+Ziyuan Zhu, corresponding author  
 College of Artificial Intelligence Medicine, Chongqing Medical University  
 zzy2630816871@gmail.com  
 ORCID: https://orcid.org/0009-0005-1153-4926

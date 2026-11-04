@@ -254,7 +254,7 @@ The authors thank the researchers who released Kumar2024 and BCI Competition IV 
 
 **Conflict of interest.** The authors declare no conflict of interest.
 
-**Author contributions.** Ziyuan Zhu: conceptualization, methodology, software, formal analysis, validation, visualization, writing the original draft, and review and editing. Sihao Liu assisted with code auditing and verification, supervised the correct execution of training, checked publication policies and organized project files. Haoyang Yu assisted the first author with experimental design and code modification.
+**Author contributions.** Ziyuan Zhu: conceptualization, methodology, software, formal analysis, validation, visualization, writing the original draft, and review and editing. Sihao Liu assisted with code auditing and verification, supervised the correct execution of training, checked publication policies and organized project files. Haoyang Yu assisted the first author with experimental design and code modification. All authors critically reviewed the manuscript, approved the final version, consented to its submission to Journal of Neural Engineering, and agree to be accountable for all aspects of the work.
 
 **AI disclosure.** OpenAI Codex assisted with code revision, data analysis and result checks, manuscript preparation, GitHub updates and file organization; OpenAI ChatGPT assisted with grammatical correction. Validation comprised the computational and result checks described in the Methods and supplementary materials. The authors are responsible for verifying sources, scientific claims and the final manuscript. Tool-version identifiers were not recorded.
 
