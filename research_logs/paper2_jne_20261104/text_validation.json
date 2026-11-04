@@ -1,0 +1,190 @@
+{
+  "checked_at_utc": "2026-11-04T08:18:24.581183+00:00",
+  "status": "passed",
+  "scientific_source_commit": "e5969e6ee6294206954b5a83c5258fdb2e143eda",
+  "read_only_check": true,
+  "scope": "Independent of document build: compare source science, actual author/ethics/AI records, and extract all five built PDFs. No models, EEG, fits or query inference.",
+  "science_exclusions": [
+    "Only newly disclosed AI/software-verification Methods paragraph",
+    "Main-figure panel labels changed from capital to lowercase parenthesized letters"
+  ],
+  "checks": {
+    "science_body_exact_after_explicit_format_AI_exclusions": true,
+    "all_main_table_source_lines_exact": true,
+    "supplement_bytes_exact": true,
+    "abstract_four_headings": true,
+    "abstract_under_300_words": true,
+    "latest_reading_AI_statement_exact": true,
+    "reading_and_AI_true": true,
+    "final_JNE_approval_not_invented": true,
+    "no_individual_signatures_created": true,
+    "submission_not_performed": true,
+    "new_scientific_fit_zero": true,
+    "query_rerun_zero": true,
+    "MAIN.md_Sihao_actual_contribution": true,
+    "MAIN.md_Haoyang_actual_contribution": true,
+    "DECLARATIONS.md_Sihao_actual_contribution": true,
+    "DECLARATIONS.md_Haoyang_actual_contribution": true,
+    "AUTHOR_DETAILS.md_Sihao_actual_contribution": true,
+    "AUTHOR_DETAILS.md_Haoyang_actual_contribution": true,
+    "MAIN.md_national_law_basis": true,
+    "MAIN.md_UT_original_scope": true,
+    "MAIN.md_no_school_confirmation_claim": true,
+    "DECLARATIONS.md_national_law_basis": true,
+    "DECLARATIONS.md_UT_original_scope": true,
+    "DECLARATIONS.md_no_school_confirmation_claim": true,
+    "SUBMISSION_FIELDS.md_national_law_basis": true,
+    "SUBMISSION_FIELDS.md_UT_original_scope": true,
+    "SUBMISSION_FIELDS.md_no_school_confirmation_claim": true,
+    "main_pdf_all_critical_values_present": true,
+    "main_pdf_all_five_captions": true,
+    "main_pdf_lowercase_panel_caption_labels": true,
+    "main_pdf_all_authors": true,
+    "main_pdf_methods_and_ack_AI_present": true,
+    "main_pdf_no_replacement_glyph": true,
+    "supp_pdf_three_original_figure_captions": true,
+    "supp_pdf_critical_scientific_scope": true,
+    "related_pdf_PLOS_true_status": true,
+    "related_pdf_current_portal_limit": true,
+    "two_actual_supplements_with_short_metadata": true,
+    "main_pdf_signed_probability_and_phase_changes_preserved": true,
+    "main_pdf_current_Sihao_validation_supervision": true,
+    "main_pdf_current_Haoyang_design_code": true,
+    "all_five_pdf_extractions_completed": true,
+    "JNE_Manuscript_pdf_national_law_basis": true,
+    "JNE_Manuscript_pdf_no_school_confirmation_claim": true,
+    "Declarations_pdf_national_law_basis": true,
+    "Declarations_pdf_no_school_confirmation_claim": true,
+    "Cover_Letter_pdf_national_law_basis": true,
+    "Cover_Letter_pdf_no_school_confirmation_claim": true,
+    "supplementary_note_now_before_references": true,
+    "shortened_cover_retains_conflict_funding_ethics_AI": true,
+    "main_pdf_supplementary_note_before_references": true,
+    "final_pdf_page_counts_match_confirmed_build": true
+  },
+  "critical_pdf_values": [
+    "5.30",
+    "5.65",
+    "10.45",
+    "8.52",
+    "7.85",
+    "0.13",
+    "−7.73",
+    "−12.17",
+    "−3.76",
+    "7.42",
+    "5.47",
+    "0.05859",
+    "0.04102",
+    "0.01172",
+    "5.07",
+    "2.55",
+    "0.91",
+    "4.63",
+    "4.91",
+    "0.07265",
+    "0.02629",
+    "0.01859",
+    "0.00923"
+  ],
+  "pdfs": [
+    {
+      "path": "manuscript/jne_alignment_20261104/JNE_Manuscript.pdf",
+      "bytes": 209886,
+      "sha256": "2128344188815cb522ab682f9f4e53cb01546d588fd004e75a11a9d3aceb9c7d",
+      "pages_extracted": 23,
+      "extraction": "pdftotext -layout"
+    },
+    {
+      "path": "manuscript/jne_alignment_20261104/Supplementary_Methods.pdf",
+      "bytes": 233993,
+      "sha256": "e15dd46c875b9169b2fdfbf06d88f5b6f5036cd5dc4712355f58e043a0a12664",
+      "pages_extracted": 44,
+      "extraction": "pdftotext -layout"
+    },
+    {
+      "path": "manuscript/jne_alignment_20261104/Declarations.pdf",
+      "bytes": 43383,
+      "sha256": "15c0b957f2bfddee52eaf6d4799e75f9c87760b24cb673c64a836532eb066ecc",
+      "pages_extracted": 2,
+      "extraction": "pdftotext -layout"
+    },
+    {
+      "path": "manuscript/jne_alignment_20261104/Cover_Letter.pdf",
+      "bytes": 27657,
+      "sha256": "68f1e8bf11e89c5469fcfa0c767794dd7dc757409fdfba2fb26191456a687fee",
+      "pages_extracted": 1,
+      "extraction": "pdftotext -layout"
+    },
+    {
+      "path": "manuscript/jne_alignment_20261104/Related_Manuscript_Statement.pdf",
+      "bytes": 50107,
+      "sha256": "99fb508b7dc9f20809194e8a8e708945e44f8813af8d212d39fe73dc3560d510",
+      "pages_extracted": 2,
+      "extraction": "pdftotext -layout"
+    }
+  ],
+  "supplement_source_sha256": "31d960f76b1208c4ab0e11e0f9c7433f5d0b4bd29ccb0e04ba0dc6a6ebd41692",
+  "model_or_EEG_loaded": false,
+  "new_fit_or_forward": 0,
+  "source_files_edited_by_validation": false,
+  "validation_history": [
+    {
+      "status": "failed_literal_character_check",
+      "check": "supp_pdf_critical_scientific_scope",
+      "reason": "The supplementary table uses ASCII minus (-7.73), as in the source. An initial literal check expected Unicode minus; scientific value and sign were intact. No source or PDF was edited."
+    },
+    {
+      "status": "rechecked",
+      "check": "supp_pdf_critical_scientific_scope",
+      "normalization": "Treat ASCII hyphen-minus and Unicode minus as equal numeric signs.",
+      "passed": true
+    },
+    {
+      "status": "final_PDF_layout_rechecked",
+      "all_checks_passed": true,
+      "no_document_or_source_edits_by_checker": true
+    },
+    {
+      "status": "last_presentation_source_delta_checked",
+      "scope": "Same supplementary note moved before references; cover final administrative paragraph shortened, core findings and disclosures retained.",
+      "scientific_or_model_execution": false
+    },
+    {
+      "status": "definitive_final_PDF_extraction",
+      "all_checks_passed": true,
+      "document_build": 49242,
+      "no_document_or_source_edits_by_checker": true
+    }
+  ],
+  "rechecked_at_utc": "2026-11-04T08:18:49.213285+00:00",
+  "pdf_final_build_pending": false,
+  "pdf_build_note": "Final build session49242 exit0 confirmed by parent; no further document rebuild. Last cover layout20mm margins; main23pages, supplement44, declarations2, cover1, related2. Final five PDFs re-extracted and hashed.",
+  "provisional_pdf_sha256_before_layout_rerender": {
+    "manuscript/jne_alignment_20261104/JNE_Manuscript.pdf": "27b3c9fd9776071c701e36900b32a0d13c6aa7119a3d522beff1d15b81e9f91d",
+    "manuscript/jne_alignment_20261104/Supplementary_Methods.pdf": "c8a0cdbdf9bab97284a2bc76c5ff7cc77f6f1e4ed0a4d1031d6d15581516a60e",
+    "manuscript/jne_alignment_20261104/Declarations.pdf": "f07d1cce82a04c98eaef2c0649281854402d3955de1d6674fac97af7ebe0e06f",
+    "manuscript/jne_alignment_20261104/Cover_Letter.pdf": "a7e815894040cdc293ab38b9dc217240540b95b1239b432576ef59ee29af312e",
+    "manuscript/jne_alignment_20261104/Related_Manuscript_Statement.pdf": "a4e2aa79dff6d9e3102b1cebb89c5fec41614974c08a4e862980d536c7c98e27"
+  },
+  "final_checked_at_utc": "2026-11-04T08:22:48.632739+00:00",
+  "source_text_sha256": {
+    "manuscript/jne_alignment_20261104/AUTHOR_DETAILS.md": "163958be975348225fb6f1fe7bdcdec3ab73ed550049fb2912e67900edc56dc1",
+    "manuscript/jne_alignment_20261104/AUTHOR_REVIEW_ITEMS.md": "82e0f4031f09cad7927f69ff74a8165a077535e57ed6d075abd99a97c287979e",
+    "manuscript/jne_alignment_20261104/COVER_LETTER.md": "b67b6d3708bf0c000a957b89cfedf9557e547ccdb299e1b0b8fd1e89e54cd77f",
+    "manuscript/jne_alignment_20261104/DECLARATIONS.md": "54d4f89aa49dbf8f8947092eb173f07f26b36be738daf76a5dcf46af7499791d",
+    "manuscript/jne_alignment_20261104/MAIN.md": "3f4859a496ba4edd0cdb5108d473fc3e11c7f197f73edd65a6766b2a8e586c13",
+    "manuscript/jne_alignment_20261104/README.md": "c1c36de86f621a9cef6c482a1a7d2ccb2a4974faac2d5fdc60eacbbf2e40d9aa",
+    "manuscript/jne_alignment_20261104/RELATED_MANUSCRIPT_STATEMENT.md": "201dd80c8d11fcde6b808cc21c0a03212c56bd31386ac0e1f350024f64b4fbd8",
+    "manuscript/jne_alignment_20261104/REPRODUCTION.md": "c7078dc7196401f7b8e9732f7bed7e4d45d9968445f0c086e1c24e026990d882",
+    "manuscript/jne_alignment_20261104/SUBMISSION_FIELDS.md": "66c8cf8fff2f9f6524c10e942a8a6d997b9845f45b2ad413f5d438a1cf23a6fc",
+    "manuscript/jne_alignment_20261104/SUPPLEMENT.md": "31d960f76b1208c4ab0e11e0f9c7433f5d0b4bd29ccb0e04ba0dc6a6ebd41692"
+  },
+  "pdf_sha256_before_last_presentation_rerender": {
+    "manuscript/jne_alignment_20261104/JNE_Manuscript.pdf": "1c010ccece052c3cdaeac8ef3fadf056152d24cc58e6ff1d126a5b5c471c0d1c",
+    "manuscript/jne_alignment_20261104/Supplementary_Methods.pdf": "d158829da33cba139288dc0c53dfe07d659622a563b5059eb12827ffc234f37c",
+    "manuscript/jne_alignment_20261104/Declarations.pdf": "ac4634863d90fe4a5330bec355ed4ca7033698602b89cc3a3ef3e84d7abe0173",
+    "manuscript/jne_alignment_20261104/Cover_Letter.pdf": "3fcbd327db1f27c02cc6751ff5ddaa6991ff8fcba74a0a15cac46433566da0be",
+    "manuscript/jne_alignment_20261104/Related_Manuscript_Statement.pdf": "8607983102b804eed11fefa5a9f31926098dff6565fe2025e94d8f73136d37d5"
+  }
+}

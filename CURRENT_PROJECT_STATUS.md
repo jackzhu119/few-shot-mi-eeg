@@ -1,10 +1,10 @@
 # 论文2当前状态
 
-**本分支新扩展稿：EA增量、弱类别覆盖与时间窗依赖。** [英文稿及完整审阅文件](manuscript/bmt_alignment_integrated_20261104/README.md)；基准`da2a3ac`，执行方案`13dd764`，隔离分支`research/paper2-alignment-integrated-revision`。已重放保存预测并完成544个经典CPU敏感性拟合，未重训54个EEGNet或操作HPC/Pod。原PLOS仍在审理（用户最新确认），本轮不改投稿文件、不合入main。下列10月记录保留当时范围，新稿审阅状态以新目录为准。
+**本分支最新：Journal of Neural Engineering（JNE）审阅版，2026-11-04。** [主稿、完整审阅包与独立关联稿说明](manuscript/jne_alignment_20261104/README.md)。JNE四段式摘要、内嵌图表PDF、Word、两项补充材料和矢量科研图已准备；科学结果固定于`e5969e6`，本次不新增拟合或query。三位作者已读科学新版、确认AI披露准确；最新代码审核/训练监督与设计/代码贡献已记录。实际最终作者声明与当前PLOS在审稿副本见新目录审阅项。隔离分支`research/paper2-alignment-integrated-revision`，不合入main、不操作投稿系统。下列BMT/PLOS记录保留其历史范围。
 
 **2026-10-29：BMT三作者组件分析稿已获作者批准。** Ziyuan Zhu*, Sihao Liu, Haoyang Yu；三人共享重庆医科大学单位。新标题为 **Disentangling spatial-filter and classifier contributions to limited-label motor-imagery EEG recalibration**。[阅读PDF](manuscript/bmt_component_revision_20261029/BMT_Manuscript_Reading.pdf) · [Word与全部材料](manuscript/bmt_component_revision_20261029/README.md)。3图、2表，结构式摘要174词，完整正文约4,954词；通讯作者已确认三位作者批准终稿并承担责任，五位候选审稿人关系已确认；尚未在ScholarOne提交。
 
-2026-10-28双作者版及当时的两位作者批准保留于[历史目录](manuscript/bmt_submission_20261028/README.md)，不作为本次三作者导出稿的批准。作者已确认原PLOS稿件拒稿；下方按日期保留的旧记录仍表达当时的证据范围。
+2026-10-28双作者版及当时的两位作者批准保留于[历史目录](manuscript/bmt_submission_20261028/README.md)，不作为本次三作者导出稿的批准。当时记录的原PLOS拒稿说法已由作者最新“仍在审理”说明取代；下方日期记录保留原证据范围。
 
 更新日期：2026-10-29（Asia/Shanghai）。本轮以保存预测、既有统计与文献核对重构论文，未新训练、重新运行query或操作学校作业。
 
@@ -12,7 +12,7 @@
 
 | 项目 | 状态与位置 |
 | --- | --- |
-| 当前目标期刊与新稿 | **Biomedical Engineering / Biomedizinische Technik**；[2026-10-29三作者审阅稿PDF](manuscript/bmt_component_revision_20261029/BMT_Manuscript_Reading.pdf) · [Word及完整材料](manuscript/bmt_component_revision_20261029/README.md) |
+| 历史BMT目标与稿件 | **Biomedical Engineering / Biomedizinische Technik**；[2026-10-29三作者审阅稿PDF](manuscript/bmt_component_revision_20261029/BMT_Manuscript_Reading.pdf) · [Word及完整材料](manuscript/bmt_component_revision_20261029/README.md) |
 | 论文核心 | 同标签预算区分分类器、空间重学和support-only对齐：原Kumar Full−LDA +5.47pp；原Kumar探索性EA−Full +5.30pp [2.81,8.26]；BNCI次要EA−Full +5.65pp [3.15,8.70]，9/9正；BNCI唯一主要Full−LDA +0.19pp [−1.85,2.13] |
 | 原始数据与分析层 | 两套原始采集：Kumar18人×6会话、BNCI9人×2天；六个分析层复用相应队列，不增加独立人数，见[数据版本清单](research_logs/paper2_structure_revision_20261029/DATA_VERSION_INVENTORY.md) |
 | 保存预测复核 | [预算／phase复现与图表底表](research_logs/paper2_structure_revision_20261029/component_replay/README.md)：78,600+11,460行预测，仅重放保存结果，既有统计定义与区间保留 |

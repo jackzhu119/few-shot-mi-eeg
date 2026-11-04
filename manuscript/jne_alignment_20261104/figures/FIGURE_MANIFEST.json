@@ -1,0 +1,417 @@
+{
+  "rendered_utc": "2026-11-04T08:08:07.425331+00:00",
+  "source_commit": "e5969e6ee6294206954b5a83c5258fdb2e143eda",
+  "git_metadata_available": true,
+  "renderer": {
+    "path": "scripts/render_paper2_jne_figures_20261104.py",
+    "sha256": "94691d727b75feb57e4fb68e8efb2b50fda6130f29b361e3849cf77f8bb203e0"
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.8"
+  },
+  "actual_new_fit_or_forward": false,
+  "EEG_or_weights_loaded": false,
+  "bootstrap_run_by_renderer": false,
+  "statistical_unit": "participant; Kumar five target sessions first averaged within participant",
+  "intervals": {
+    "new_descriptive": "10000 resamples, seed20261104, numeric participant order, linear percentiles",
+    "historical_Fig2_contrasts": "original stored contrasts and original bootstrap identities retained"
+  },
+  "source_files": [
+    {
+      "path": "research_logs/paper2_alignment_integrated_20261104/analysis/participant_metrics.csv",
+      "bytes": 64824,
+      "sha256": "b0d7367d620510da5c0c70617185872ed2f9fcee66f5287bf42c37e55a5b381b"
+    },
+    {
+      "path": "research_logs/paper2_alignment_integrated_20261104/analysis/cohort_method_metrics.csv",
+      "bytes": 132331,
+      "sha256": "fb9bf900e183b86b207b989be5b297129d932c24a69dd0d2a7d218f3fb1c28c7"
+    },
+    {
+      "path": "research_logs/paper2_alignment_integrated_20261104/analysis/participant_contrasts.csv",
+      "bytes": 130043,
+      "sha256": "fad8ff38c6d6e7fdce0c89c281a8f9b7f9a1050e66dda15e68ca846d491a09a5"
+    },
+    {
+      "path": "research_logs/paper2_alignment_integrated_20261104/analysis/cohort_contrasts.csv",
+      "bytes": 371241,
+      "sha256": "54e1152aaf20137bf6cf62a1712442f1a8d48453f43b7374ebffa9b54d814211"
+    },
+    {
+      "path": "research_logs/paper2_alignment_integrated_20261104/input_audit/INPUT_MANIFEST.json",
+      "bytes": 76799,
+      "sha256": "095d00e8f43e073ef314a32c7b9f6aad0f47c77810c704538fec962b77bb9084"
+    },
+    {
+      "path": "manuscript/bmt_component_revision_20261029/figures/Fig1_components.csv",
+      "bytes": 7663,
+      "sha256": "a1a98399e484ed4965df5729bcca2d8c47dedf8444fd80cd32e073a3f9a3a7d0"
+    },
+    {
+      "path": "research_logs/paper2_external_validation_20261027/aggregate.json",
+      "bytes": 19767,
+      "sha256": "94e3f1cc70d6c4930c559fc7145c83317dacbb84e2850153dbd14285639e6c72"
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/baselines/cpu_run01_20261013T151445Z/participant_bootstrap_summary.json",
+      "bytes": 14929,
+      "sha256": "98ac97a64ddc70a10b08a2db020a530ec9023f2513aae651aea71364f70f97dc"
+    },
+    {
+      "path": "research_logs/paper2_alignment_integrated_20261104/mechanisms/participant_metrics.csv",
+      "bytes": 29489,
+      "sha256": "80578fa9b7462bbcb36b30104df9644782b4eb9006aa666ca513dc740b1c0606"
+    },
+    {
+      "path": "research_logs/paper2_alignment_integrated_20261104/mechanisms/cohort_comparisons.csv",
+      "bytes": 48164,
+      "sha256": "26b3f7ac34ecfe9a48a513d4f5f943c81aa572285232a3530c629e1c3481ab6e"
+    },
+    {
+      "path": "research_logs/paper2_alignment_integrated_20261104/mechanisms/phase_cohort_comparisons.csv",
+      "bytes": 2202,
+      "sha256": "4088037ef8e3c68f925d9939c4e29a924a7f8dd50fe060373beb63bedb2752e2"
+    }
+  ],
+  "figures": [
+    {
+      "stem": "Fig1_workflow",
+      "width_mm": 150,
+      "minimum_font_pt": 8.0,
+      "PDF_raster_image_count": 0,
+      "SVG_image_element_count": 0,
+      "visible_text_within_canvas": true,
+      "panel_style": "(a), (b), (c), (d)",
+      "tiff": {
+        "pixels": [
+          3543,
+          2716
+        ],
+        "mode": "RGB",
+        "dpi": [
+          600.0,
+          600.0
+        ],
+        "compression": "tiff_lzw",
+        "bits_per_sample": [
+          8,
+          8,
+          8
+        ]
+      },
+      "plot_rows": 12,
+      "outputs": [
+        {
+          "file": "Fig1_workflow.pdf",
+          "bytes": 15214,
+          "sha256": "6562032368ce04fe4b2606e7935d303738be6f8530c6ac61ffeb07f2fca43121"
+        },
+        {
+          "file": "Fig1_workflow.svg",
+          "bytes": 11903,
+          "sha256": "ea9651d2f62b1e5f00ca75f020044ee31ac0344cf283e8e03e6ca20c2340734d"
+        },
+        {
+          "file": "Fig1_workflow.tiff",
+          "bytes": 490620,
+          "sha256": "3a10f0521446a41fb851743e144b586a0e3e90270805e4ecd8cb6dc67b2db3f1"
+        },
+        {
+          "file": "Fig1_workflow.png",
+          "bytes": 393794,
+          "sha256": "dae95a0a86557cd65f46d055a1a8e6fde99dfae3ca598e9f26fe2a108aede0e6"
+        },
+        {
+          "file": "Fig1_workflow.csv",
+          "bytes": 1024,
+          "sha256": "07286bcfbdcb0c2e0e2e4aaed686af42f356d2f6dfde847fe10e214b402cd864"
+        }
+      ],
+      "additional_data_files": [
+        {
+          "file": "Fig1_workflow_nodes.csv",
+          "sha256": "d115cce44412c348e57e376117fbab7fd910fab50fa03edc0046ee57d61a3af7"
+        },
+        {
+          "file": "Fig1_workflow_edges.csv",
+          "sha256": "d526939d99ff032b52f6418f19f4a01cc72046934f20ba01cdb7e164f596ca06"
+        }
+      ]
+    },
+    {
+      "stem": "Fig2_performance",
+      "width_mm": 150,
+      "minimum_font_pt": 8.0,
+      "PDF_raster_image_count": 0,
+      "SVG_image_element_count": 0,
+      "visible_text_within_canvas": true,
+      "panel_style": "(a), (b), (c), (d)",
+      "tiff": {
+        "pixels": [
+          3543,
+          3614
+        ],
+        "mode": "RGB",
+        "dpi": [
+          600.0,
+          600.0
+        ],
+        "compression": "tiff_lzw",
+        "bits_per_sample": [
+          8,
+          8,
+          8
+        ]
+      },
+      "plot_rows": 98,
+      "outputs": [
+        {
+          "file": "Fig2_performance.pdf",
+          "bytes": 26228,
+          "sha256": "f656dd6b673267ab0f28cca4e0f34d35410ed2de98f884fd27bd8c268ea6becd"
+        },
+        {
+          "file": "Fig2_performance.svg",
+          "bytes": 54615,
+          "sha256": "561232d1ef142f7f816f2447f5c1231ae8f2a754e01c33bcaedc69be697acce6"
+        },
+        {
+          "file": "Fig2_performance.tiff",
+          "bytes": 668948,
+          "sha256": "72e86414d368d20bf6796aff391fc54a540d42de3de9ac510c0708496a9a7238"
+        },
+        {
+          "file": "Fig2_performance.png",
+          "bytes": 478049,
+          "sha256": "b3301415d67faf8bf93b9c3d49d8d6f0bb3fae6517335eb3fbcd2d9208a68210"
+        },
+        {
+          "file": "Fig2_performance.csv",
+          "bytes": 9115,
+          "sha256": "4e83341ed2837e3d458d8a29a9c15498fd4fd684389ea971a8fadedd82e01eaf"
+        }
+      ]
+    },
+    {
+      "stem": "Fig3_error_coverage",
+      "width_mm": 150,
+      "minimum_font_pt": 8.0,
+      "PDF_raster_image_count": 0,
+      "SVG_image_element_count": 0,
+      "visible_text_within_canvas": true,
+      "panel_style": "(a), (b), (c), (d)",
+      "tiff": {
+        "pixels": [
+          3543,
+          3566
+        ],
+        "mode": "RGB",
+        "dpi": [
+          600.0,
+          600.0
+        ],
+        "compression": "tiff_lzw",
+        "bits_per_sample": [
+          8,
+          8,
+          8
+        ]
+      },
+      "plot_rows": 92,
+      "outputs": [
+        {
+          "file": "Fig3_error_coverage.pdf",
+          "bytes": 26179,
+          "sha256": "f5196cb2ddc7fed89757abdb30e8d7bb9982f11d96613297021473fdf816a812"
+        },
+        {
+          "file": "Fig3_error_coverage.svg",
+          "bytes": 39181,
+          "sha256": "c0137ac374f3712f01ef6387cce762f35be2f6805eefbfd8889a6cdbff03d06f"
+        },
+        {
+          "file": "Fig3_error_coverage.tiff",
+          "bytes": 575162,
+          "sha256": "595a01ed3d6da402523549be0a8c8a08c78397385f31ecea12ba82cd85955360"
+        },
+        {
+          "file": "Fig3_error_coverage.png",
+          "bytes": 417568,
+          "sha256": "178b1791efa4a96f6764ca9c26663a1cb9b105231a54ff23feba100ecc2c1b5a"
+        },
+        {
+          "file": "Fig3_error_coverage.csv",
+          "bytes": 10747,
+          "sha256": "e620a927c1a58dfe2aa22c45b65cd88bbb69e1fad0329e4a59ff5065cf78d893"
+        }
+      ]
+    },
+    {
+      "stem": "Fig4_budget",
+      "width_mm": 150,
+      "minimum_font_pt": 8.0,
+      "PDF_raster_image_count": 0,
+      "SVG_image_element_count": 0,
+      "visible_text_within_canvas": true,
+      "panel_style": "(a), (b), (c), (d)",
+      "tiff": {
+        "pixels": [
+          3543,
+          2007
+        ],
+        "mode": "RGB",
+        "dpi": [
+          600.0,
+          600.0
+        ],
+        "compression": "tiff_lzw",
+        "bits_per_sample": [
+          8,
+          8,
+          8
+        ]
+      },
+      "plot_rows": 25,
+      "outputs": [
+        {
+          "file": "Fig4_budget.pdf",
+          "bytes": 21615,
+          "sha256": "9bba57ea6b0face43c4ac44af90398b8a8e13d12064cdfaba7d0ad0111aec5fc"
+        },
+        {
+          "file": "Fig4_budget.svg",
+          "bytes": 34233,
+          "sha256": "737890ca93c99d2a34ff51464a3f09dd3d2f441641b2dcdcb2893a5fd821a842"
+        },
+        {
+          "file": "Fig4_budget.tiff",
+          "bytes": 386206,
+          "sha256": "d76c316242d02d1684065724fd1812386393fab31908f181b8ae9457afbd795c"
+        },
+        {
+          "file": "Fig4_budget.png",
+          "bytes": 261947,
+          "sha256": "cec1a3df2fe4e0b0ab60826d31c70e93adcf37465e4a67af52d1cc45c0331b5c"
+        },
+        {
+          "file": "Fig4_budget.csv",
+          "bytes": 4330,
+          "sha256": "a7fdf675bc97d8e948f612fcba000da1fd22f4719e666b917691305a7812d9d9"
+        }
+      ]
+    },
+    {
+      "stem": "Fig5_mechanisms",
+      "width_mm": 150,
+      "minimum_font_pt": 8.0,
+      "PDF_raster_image_count": 0,
+      "SVG_image_element_count": 0,
+      "visible_text_within_canvas": true,
+      "panel_style": "(a), (b), (c), (d)",
+      "tiff": {
+        "pixels": [
+          3543,
+          3874
+        ],
+        "mode": "RGB",
+        "dpi": [
+          600.0,
+          600.0
+        ],
+        "compression": "tiff_lzw",
+        "bits_per_sample": [
+          8,
+          8,
+          8
+        ]
+      },
+      "plot_rows": 107,
+      "outputs": [
+        {
+          "file": "Fig5_mechanisms.pdf",
+          "bytes": 27505,
+          "sha256": "60f49989412c520ecec6fbc46c60ee9cb97db399828715e9ba1158b5aa052a36"
+        },
+        {
+          "file": "Fig5_mechanisms.svg",
+          "bytes": 56646,
+          "sha256": "83017076668829912b50ce6ac052ac68f08b2e30a5e61ea7fc8b8fd9a8522882"
+        },
+        {
+          "file": "Fig5_mechanisms.tiff",
+          "bytes": 754388,
+          "sha256": "2756017e27b61acae596ebced378d5ac609c689a940de3af80428cde2f48c30e"
+        },
+        {
+          "file": "Fig5_mechanisms.png",
+          "bytes": 554776,
+          "sha256": "c949efe4062b0b73cd83dedd7229cba1ac270f7e6fc2d88480428159b29ee6aa"
+        },
+        {
+          "file": "Fig5_mechanisms.csv",
+          "bytes": 11278,
+          "sha256": "a9917f9a653f0aaf5e486888d6ebdebcc2ac5a9de829685648b85f751e4c9ed6"
+        }
+      ]
+    }
+  ],
+  "base_renderer": {
+    "path": "scripts/render_paper2_alignment_integrated_20261104.py",
+    "sha256": "fda439a06e3f24584d4161669b67b46728c72ea18a2c7b5e976803fb434bc2a8"
+  },
+  "journal": "Journal of Neural Engineering",
+  "presentation_only_adaptation": true,
+  "panel_data_ids": "Original A-D identifiers retained in source CSVs; display labels are lowercase parenthesized",
+  "layout_adjustments": [
+    "150 mm physical canvas width with 8 pt minimum text",
+    "Panel titles wrapped at word boundaries",
+    "Workflow source and EA node labels rewrapped without changing words"
+  ],
+  "source_csv_invariance": [
+    {
+      "file": "Fig1_workflow.csv",
+      "sha256": "07286bcfbdcb0c2e0e2e4aaed686af42f356d2f6dfde847fe10e214b402cd864",
+      "original_path": "manuscript/bmt_alignment_integrated_20261104/figures/Fig1_workflow.csv",
+      "byte_identical": true
+    },
+    {
+      "file": "Fig1_workflow_edges.csv",
+      "sha256": "d526939d99ff032b52f6418f19f4a01cc72046934f20ba01cdb7e164f596ca06",
+      "original_path": "manuscript/bmt_alignment_integrated_20261104/figures/Fig1_workflow_edges.csv",
+      "byte_identical": true
+    },
+    {
+      "file": "Fig1_workflow_nodes.csv",
+      "sha256": "d115cce44412c348e57e376117fbab7fd910fab50fa03edc0046ee57d61a3af7",
+      "original_path": "manuscript/bmt_alignment_integrated_20261104/figures/Fig1_workflow_nodes.csv",
+      "byte_identical": true
+    },
+    {
+      "file": "Fig2_performance.csv",
+      "sha256": "4e83341ed2837e3d458d8a29a9c15498fd4fd684389ea971a8fadedd82e01eaf",
+      "original_path": "manuscript/bmt_alignment_integrated_20261104/figures/Fig2_performance.csv",
+      "byte_identical": true
+    },
+    {
+      "file": "Fig3_error_coverage.csv",
+      "sha256": "e620a927c1a58dfe2aa22c45b65cd88bbb69e1fad0329e4a59ff5065cf78d893",
+      "original_path": "manuscript/bmt_alignment_integrated_20261104/figures/Fig3_error_coverage.csv",
+      "byte_identical": true
+    },
+    {
+      "file": "Fig4_budget.csv",
+      "sha256": "a7fdf675bc97d8e948f612fcba000da1fd22f4719e666b917691305a7812d9d9",
+      "original_path": "manuscript/bmt_alignment_integrated_20261104/figures/Fig4_budget.csv",
+      "byte_identical": true
+    },
+    {
+      "file": "Fig5_mechanisms.csv",
+      "sha256": "a9917f9a653f0aaf5e486888d6ebdebcc2ac5a9de829685648b85f751e4c9ed6",
+      "original_path": "manuscript/bmt_alignment_integrated_20261104/figures/Fig5_mechanisms.csv",
+      "byte_identical": true
+    }
+  ]
+}

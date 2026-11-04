@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "journal": "Journal of Neural Engineering",
+  "publisher": "IOP Publishing",
+  "checked_date": "2026-11-04",
+  "target_article_type": "Paper",
+  "review_route_for_current_package": "single-anonymous",
+  "policy_not_submission_authorization": true,
+  "rules": [
+    {
+      "key": "article_type",
+      "status": "verified",
+      "value": "Paper (official category heading: Papers)",
+      "source": "about"
+    },
+    {
+      "key": "normal_length",
+      "status": "normal_guideline",
+      "value": {
+        "words": 12000,
+        "journal_pages": 14,
+        "not_a_review_pdf_page_limit": true
+      },
+      "source": "about"
+    },
+    {
+      "key": "abstract_headings",
+      "status": "required",
+      "value": [
+        "Objective",
+        "Approach",
+        "Main results",
+        "Significance"
+      ],
+      "source": "about"
+    },
+    {
+      "key": "abstract_words",
+      "status": "normal_guideline",
+      "value": 300,
+      "source": "article_structure"
+    },
+    {
+      "key": "abstract_content",
+      "status": "required",
+      "value": "Self-contained: define abbreviations; no citations, equations or figure/table references.",
+      "source": "article_structure"
+    },
+    {
+      "key": "peer_review",
+      "status": "author_choice",
+      "value": [
+        "single-anonymous",
+        "double-anonymous"
+      ],
+      "source": "about"
+    },
+    {
+      "key": "initial_submission",
+      "status": "required",
+      "value": "One complete PDF plus relevant separate supplementary files; figures/tables embedded near appropriate text.",
+      "source": "article_format"
+    },
+    {
+      "key": "font",
+      "status": "required",
+      "value": "Readable font at least 12 pt with reasonable spacing.",
+      "source": "article_format"
+    },
+    {
+      "key": "line_numbers",
+      "status": "not_required",
+      "value": "Submission system adds line numbers.",
+      "source": "article_format"
+    },
+    {
+      "key": "templates",
+      "status": "optional",
+      "value": "Free-format initial submission; Word and common TeX accepted.",
+      "source": "article_format"
+    },
+    {
+      "key": "title",
+      "status": "guidance",
+      "value": "Concise and informative.",
+      "source": "article_structure"
+    },
+    {
+      "key": "authors",
+      "status": "required",
+      "value": "Full names/affiliations and corresponding author information for selected single-anonymous route.",
+      "source": "article_structure"
+    },
+    {
+      "key": "keywords",
+      "status": "required_count_unverified",
+      "value": "Relevant keywords supplied at submission; no fixed count verified.",
+      "source": "article_structure"
+    },
+    {
+      "key": "orcid",
+      "status": "recommended",
+      "value": "Provide available author ORCIDs.",
+      "source": "article_structure"
+    },
+    {
+      "key": "sections",
+      "status": "guidance",
+      "value": [
+        "Introduction",
+        "Method",
+        "Results",
+        "Discussion",
+        "Conclusion",
+        "Acknowledgements",
+        "References"
+      ],
+      "source": "article_structure"
+    },
+    {
+      "key": "tables",
+      "status": "required",
+      "value": "Sequential numbers and captions; no coloured text or shading.",
+      "source": "article_structure"
+    },
+    {
+      "key": "references",
+      "status": "choice",
+      "value": "Consistent Vancouver numbered square brackets or Harvard; production applies house style.",
+      "source": "references"
+    },
+    {
+      "key": "figures_formats",
+      "status": "preferred",
+      "value": "Vector PDF/EPS; TIFF, PNG and JPEG also accepted.",
+      "source": "author_guidelines"
+    },
+    {
+      "key": "figures_text",
+      "status": "recommended",
+      "value": {
+        "final_pt_range": [
+          8,
+          12
+        ],
+        "typical_width_cm": [
+          8.5,
+          15
+        ]
+      },
+      "source": "author_guidelines"
+    },
+    {
+      "key": "figures_panel_labels",
+      "status": "required",
+      "value": "Lower-case letters in parentheses.",
+      "source": "author_guidelines"
+    },
+    {
+      "key": "figures_captions",
+      "status": "required",
+      "value": "Captions in article text; self-contained; identify reused sources/permissions.",
+      "source": "author_guidelines"
+    },
+    {
+      "key": "figures_separate",
+      "status": "recommended",
+      "value": "Word figures separate where possible, as well as embedded.",
+      "source": "author_guidelines"
+    },
+    {
+      "key": "supplement_limits",
+      "status": "required",
+      "value": {
+        "per_file_MB": 50,
+        "combined_main_and_files_MB": 150,
+        "title_characters_max": 30,
+        "description_words_max": 30,
+        "title_description_inside_file": true
+      },
+      "source": "author_guidelines"
+    },
+    {
+      "key": "source_files",
+      "status": "required",
+      "value": "Editable Word equations or common TeX; production source files and graphics; source ZIP permitted.",
+      "source": "author_guidelines"
+    },
+    {
+      "key": "file_names",
+      "status": "guidance",
+      "value": "Letters, digits, underscores and an extension; avoid spaces/accents; number figure files.",
+      "source": "author_guidelines"
+    },
+    {
+      "key": "data_availability",
+      "status": "required",
+      "value": "Include article statement giving accessible URLs/DOIs or accurate restrictions/reason.",
+      "source": "data_policy"
+    },
+    {
+      "key": "archive",
+      "status": "recommended",
+      "value": "Archive GitHub code/data in a repository providing persistent DOI; not a blanket initial-submission prerequisite.",
+      "source": "data_policy"
+    },
+    {
+      "key": "conflict_of_interest",
+      "status": "required",
+      "value": "Disclose in cover letter and article acknowledgements.",
+      "source": "about"
+    },
+    {
+      "key": "funding",
+      "status": "required",
+      "value": "Disclose all financial support in acknowledgements.",
+      "source": "article_structure"
+    },
+    {
+      "key": "ethics",
+      "status": "required_if_applicable",
+      "value": "State actual approval/waiver/statutory basis and original-data collection accurately; Methods normally appropriate.",
+      "source": "ethical_policy"
+    },
+    {
+      "key": "ai_disclosure",
+      "status": "required_for_material_use",
+      "value": "Separate statement in Acknowledgements names tools/tasks/author validation; research-process use additionally described in Methods. Routine grammar-only use exempt.",
+      "source": "ethical_policy"
+    },
+    {
+      "key": "running_head_length",
+      "status": "not_verified",
+      "value": null,
+      "source": "article_structure"
+    },
+    {
+      "key": "title_character_limit",
+      "status": "not_verified",
+      "value": null,
+      "source": "article_structure"
+    },
+    {
+      "key": "keyword_count",
+      "status": "not_verified",
+      "value": null,
+      "source": "article_structure"
+    },
+    {
+      "key": "reference_count_limit",
+      "status": "not_verified",
+      "value": null,
+      "source": "references"
+    },
+    {
+      "key": "numeric_dpi_requirement",
+      "status": "not_verified",
+      "value": null,
+      "source": "author_guidelines"
+    }
+  ],
+  "template_selection": {
+    "word_optional_source": "https://publishingsupport.iopscience.iop.org/wp-content/uploads/2026/01/IOPP-WordTemplate-SingleCol.docx",
+    "latex_optional_source": "https://publishingsupport.iopscience.iop.org/wp-content/uploads/2025/07/ioplatextemplate.zip",
+    "choice": "Maintain editable one-column Word/TeX sources and complete embedded-figure review PDF; official template use optional."
+  },
+  "source_receipts": "../../research_logs/paper2_jne_20261104/policy/source_receipts.json",
+  "not_borrowed_from_bmt": [
+    "200-word abstract cap",
+    "6000-word body cap",
+    "35-reference cap",
+    "8-item figure/table cap",
+    "75-character running-head cap"
+  ]
+}
