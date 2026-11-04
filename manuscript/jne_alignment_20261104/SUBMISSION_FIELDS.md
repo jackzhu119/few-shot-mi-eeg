@@ -4,7 +4,7 @@
 
 - Journal: Journal of Neural Engineering
 - Article type: Paper
-- Intended review mode: single-anonymous
+- Current submission-form review mode: double-anonymous. The form permits author-identifying information at the authors’ risk; the current approved main PDF retains it.
 - Title: Limited-label cross-session motor-imagery EEG recalibration: spatial refitting and the added value of Euclidean alignment
 - Keywords: brain–computer interfaces; calibration; covariance; domain adaptation; signal processing
 - Corresponding/submitting author: Ziyuan Zhu, zzy2630816871@gmail.com

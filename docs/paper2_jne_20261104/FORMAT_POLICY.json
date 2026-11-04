@@ -4,7 +4,7 @@
   "publisher": "IOP Publishing",
   "checked_date": "2026-11-04",
   "target_article_type": "Paper",
-  "review_route_for_current_package": "single-anonymous",
+  "review_route_for_current_package": "double-anonymous (current submission-form requirement)",
   "policy_not_submission_authorization": true,
   "rules": [
     {
@@ -48,12 +48,9 @@
     },
     {
       "key": "peer_review",
-      "status": "author_choice",
-      "value": [
-        "single-anonymous",
-        "double-anonymous"
-      ],
-      "source": "about"
+      "status": "superseded_by_current_submission_form",
+      "value": "Double-anonymous. Current form permits author identifying information at authors’ risk.",
+      "source": "current_form_evidence"
     },
     {
       "key": "initial_submission",
@@ -88,8 +85,8 @@
     {
       "key": "authors",
       "status": "required",
-      "value": "Full names/affiliations and corresponding author information for selected single-anonymous route.",
-      "source": "article_structure"
+      "value": "Author details supplied in submission metadata. Current form permits identifying information in the review PDF and notes reviewers will see it.",
+      "source": "current_form_evidence"
     },
     {
       "key": "keywords",
@@ -271,5 +268,11 @@
     "35-reference cap",
     "8-item figure/table cap",
     "75-character running-head cap"
-  ]
+  ],
+  "current_form_evidence": {
+    "source_file_sha256": "1ca4a5f332ca603ceadabdd36865c3cdcf1e4f04ef9782993186f646cccca03d",
+    "observed_date": "2026-11-04",
+    "form_statement": "This journal now operates double-anonymous peer review; author identifying information may remain but will be visible to reviewers.",
+    "supersedes": "Prior single-anonymous intention based on earlier public-page reading"
+  }
 }
