@@ -2,9 +2,11 @@
 
 This supplement accompanies *Limited-label cross-session motor-imagery EEG recalibration: spatial refitting and the added value of Euclidean alignment*. Sections S1–S15 specify the decoder definitions, comparison families, scheduled budgets, neural/geometric controls and source-data details. Sections S16–S20 report the saved-prediction analysis and completed CPU sensitivities. The tables identify participant cohorts, historical intervals and new descriptive endpoints. Repeated observations of the same participants retain the same independent statistical units.
 
-**Abbreviations:** AR, autoregressive; BA, balanced accuracy; BCI, brain–computer interface; BN, batch normalization; CSP, common spatial patterns; EA, Euclidean alignment; EEG, electroencephalography; KL, Kullback–Leibler divergence; LDA, linear discriminant analysis; MI, motor imagery; SOS, second-order sections; SPD, symmetric positive-definite.
+**Abbreviations:** AR, autoregressive; BA, balanced accuracy; BCI, brain–computer interface; BN, batch normalization; CSP, common spatial patterns; EA, Euclidean alignment; EEG, electroencephalography; KL, Kullback–Leibler divergence; LDA, linear discriminant analysis; MI, motor imagery; NLL, negative log likelihood; RMS, root mean square; SOS, second-order sections; SPD, symmetric positive-definite.
 
 ## S 1. Analysis layers and statistical units
+
+**Table S1. Analysis layers and independent statistical units.**
 
 | Layer | Participants | Scientific role | Model/seed information | Selection status |
 | --- | --- | --- | --- | --- |
@@ -92,6 +94,8 @@ For class 0/1, let A_c=[I,−I] or [I, I]. The full candidate scores a Gaussian 
 
 ### Complete arm definitions
 
+**Table S2. Geometric method definitions and ablation arms.**
+
 | Saved method ID | Defining difference |
 | --- | --- |
 | source_tangent_frozen | Source-fixed means and within-class covariance |
@@ -111,6 +115,8 @@ The candidate-minus-tangent_refit cap 20 comparison retains its prespecified pri
 The compact HPC network follows an EEGNet-style temporal/spatial architecture [@lawhern2018; @schirrmeister2017] and uses temporal_filters 8, depth_multiplier 2, kernel_length 64, source Dropout 0.25, BN epsilon 0.001 and momentum 0.01. The individual regime reuses 18 V2 checkpoint identities; the pooled regime uses three new shared source checkpoints trained on 240 source-training/120 source-validation examples. These six participants are the same people in both conditions.
 
 All optimizer adaptations use 20 epochs, batch 16, AdamW, learning rate $10^{-4}$, weight decay $10^{-4}$, cosine scheduling and no AMP. A separate saved sampler controls support order. The methods reset to their own declared teacher before adapting each current-session/budget; they do not accumulate future support. Source normalization is reused rather than refitted from query.
+
+**Table S3. Neural adaptation policies and normalization modes.**
 
 | Policy (readable name) | Optimized parameters | Adaptation BN mode | Dropout during adaptation |
 | --- | --- | --- | --- |
@@ -163,6 +169,8 @@ Kumar analyses reused saved predictions, metrics and histories with their origin
 
 Values are BA percentages. Every row uses all six participants, all five target sessions and all declared seeds where applicable. `core`, `kl0p001` and `kl0p1` identify the separately frozen variants. The saved EA reference is included under the geometric scope after ordered query-identity alignment.
 
+**Table S4. Complete V3 cohort balanced accuracy across support budgets.**
+
 | Family / source / variant | Method | Cap 4 | Cap 8 | Cap 12 | Cap 16 | Cap 20 |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
 | Geometry / own / core | EB coupled | 57.82 | 60.33 | 61.63 | 66.10 | 61.35 |
@@ -202,6 +210,8 @@ All paired participant differences, pointwise intervals, negative-participant co
 
 These means give every frozen scenario and paired draw equal weight. Probability scoring uses the saved simulation definitions; these numerical scales apply to the synthetic generator.
 
+**Table S5. Complete-grid synthetic method means.**
+
 | Method | BA (%) | Cross entropy | Binary Brier | Mean squared feature error |
 | --- | ---: | ---: | ---: | ---: |
 | source_tangent_frozen | 74.31 | 2.9701 | 0.2276 | 0.10815 |
@@ -226,11 +236,13 @@ The one-based MAT `trial` field marks trial start. Cue onset is 500 samples late
 
 T runs 1–4 provide 96 source examples (48/class); T run 5 is unused and T run 6 is retained as an unused 24-trial source-query partition. E run 1 supplies its first 20 hand trials as support; four remaining hand trials are excluded. E runs 2–6 supply 120 query examples (60/class), with 24 per run. Support retains chronological class imbalance rather than selecting balanced labels. All 576 original four-class records per person retain sample boundaries, original artifact flags, identities and exclusion reasons.
 
-LDA-only, Full CSP/LDA and EA-CSP use identical 116 source/support trials; Frozen uses 96 source labels and zero target labels. EA has separate source/support covariance references and never estimates a reference from query signals. Four-component CSP and covariance/LDA shrinkage 0.1 use the existing V2 NumPy implementation. This differs from the original Kumar MNE/Ledoit–Wolf model and 40-example source setting; the between-dataset result cannot isolate acquisition from implementation and source-budget differences.
+LDA-only, Full CSP/LDA and EA-CSP use identical 116 source/support trials; Frozen uses 96 source labels and zero target labels. EA has separate source/support covariance references and never estimates a reference from query signals. Four-component CSP and covariance/LDA shrinkage 0.1 use the existing V2 NumPy implementation. This differs from the original Kumar MNE/Ledoit–Wolf model and 40-example source setting; the between-dataset result cannot isolate acquisition from implementation and source-budget differences. LDA uses the empirical class frequencies of its fitting set as priors; updating arms estimate them from the 116 source/support labels and frozen decoding from the 96 source labels.
 
 ### Complete results
 
 BA values are percentages. Differences are percentage points; participants, not four-method or run rows, are the independent units.
+
+**Table S6. BNCI participant balanced accuracy and full-budget differences.**
 
 | Participant | Frozen | LDA-only | Full CSP/LDA | EA-CSP | Full − LDA | EA − Full |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -244,6 +256,8 @@ BA values are percentages. Differences are percentage points; participants, not 
 | 8 | 93.33 | 94.17 | 94.17 | 95.00 | +0.00 | +0.83 |
 | 9 | 85.00 | 89.17 | 88.33 | 89.17 | -0.83 | +0.83 |
 | **Mean** | 70.56 | 71.67 | 71.85 | 77.50 | **+0.19** | **+5.65** |
+
+**Table S7. BNCI comparison roles and participant-level inference.**
 
 | Contrast | Role | Mean difference, pp | Pointwise 95 % CI, pp | Exact p | Secondary Holm p |
 | --- | --- | ---: | --- | ---: | ---: |
@@ -281,9 +295,9 @@ In the six-participant V2 extension at the 20-label cap, frozen classical decodi
 
 ### Geometric estimation in a fixed tangent feature space
 
-At the cap of 20 labels, EA-CSP achieved 70.37 % BA and ordinary tangent refitting 67.01 %, compared with 64.68 % for the geometric candidate. Its prespecified primary contrast was −2.33 points (−4.41 to −0.24), and its strong-reference contrast was −5.69 points (−9.30 to −2.22; Table S1). Both reference methods had higher BA in five of six participants. Ordinary tangent refitting had higher cohort-mean BA at all five support caps (Figure S1).
+At the cap of 20 labels, EA-CSP achieved 70.37 % BA and ordinary tangent refitting 67.01 %, compared with 64.68 % for the geometric candidate. Its prespecified primary contrast was −2.33 points (−4.41 to −0.24), and its strong-reference contrast was −5.69 points (−9.30 to −2.22; Table S8). Both reference methods had higher BA in five of six participants. Ordinary tangent refitting had higher cohort-mean BA at all five support caps (Figure S1).
 
-**Table S1. V3 geometric comparison at the 20-label cap.**
+**Table S8. V3 geometric comparison at the 20-label cap.**
 
 | Method | Mean BA | Candidate − method, pp |
 | --- | ---: | ---: |
@@ -304,9 +318,9 @@ The matched ablations distinguish three operations. Separating common and discri
 
 ### Fixed source normalization reduced single-class predictions at the 20-label cap
 
-At the 20-label cap, fixed-BN full updates predicted a single class in eight of 90 participant-by-seed-by-session query sets, compared with 16 for adaptive BN. Pooled-source counts were zero and 18, respectively. Fixed-BN BA was 57.51 %, versus 56.01 % for adaptive BN with individual sources, a difference of 1.50 points (0.33–2.74). Pooled-source values were 56.22 % and 54.31 %, a difference of 1.91 points (0.76–3.24; Table S2). Five of six participant differences favored fixed BN in each regime; the remaining difference was negative for individual sources and approximately zero for pooled sources. All participant-deletion mean contrasts stayed positive at this cap.
+At the 20-label cap, fixed-BN full updates predicted a single class in eight of 90 participant-by-seed-by-session query sets, compared with 16 for adaptive BN. Pooled-source counts were zero and 18, respectively. Fixed-BN BA was 57.51 %, versus 56.01 % for adaptive BN with individual sources, a difference of 1.50 points (0.33–2.74). Pooled-source values were 56.22 % and 54.31 %, a difference of 1.91 points (0.76–3.24; Table S9). Five of six participant differences favored fixed BN in each regime; the remaining difference was negative for individual sources and approximately zero for pooled sources. All participant-deletion mean contrasts stayed positive at this cap.
 
-**Table S2. V3 neural component contrasts at the 20-label cap.**
+**Table S9. V3 neural component contrasts at the 20-label cap.**
 
 | Contrast | Individual source models | Pooled source models | Role |
 | --- | ---: | ---: | --- |
@@ -350,6 +364,8 @@ These completed component-follow-up results use the original eighteen Kumar part
 
 BA in percent [pointwise 95% CI].
 
+**Table S10. Six-participant development cohort: method means by budget.**
+
 | Budget | Frozen | LDA update | Full refit | EA + CSP/LDA |
 |---|---:|---:|---:|---:|
 | 4 | 59.97 [57.34, 63.59] | 62.69 [59.02, 66.76] | 62.35 [57.53, 67.02] | 64.14 [60.57, 67.54] |
@@ -360,6 +376,8 @@ BA in percent [pointwise 95% CI].
 
 Paired gains in percentage points [pointwise 95% CI]; final count is participants whose measured gain was negative.
 
+**Table S11. Six-participant development cohort: updating versus frozen.**
+
 | Budget | LDA − frozen | Full − frozen | EA − frozen |
 |---|---:|---:|---:|
 | 4 | +2.72 [+1.27, +4.59]; 0/6 decreased | +2.38 [-0.58, +5.41]; 2/6 decreased | +4.17 [-0.18, +8.69]; 2/6 decreased |
@@ -367,6 +385,8 @@ Paired gains in percentage points [pointwise 95% CI]; final count is participant
 | 12 | +4.03 [+1.41, +7.31]; 1/6 decreased | +5.03 [+0.68, +10.46]; 2/6 decreased | +8.01 [+3.24, +12.56]; 1/6 decreased |
 | 16 | +5.41 [+2.63, +9.43]; 0/6 decreased | +7.13 [+1.98, +13.58]; 1/6 decreased | +8.49 [+3.69, +14.28]; 0/6 decreased |
 | full | +4.40 [-1.75, +11.53]; 2/6 decreased | +3.25 [-0.90, +7.14]; 2/6 decreased | +10.53 [+5.21, +15.73]; 0/6 decreased |
+
+**Table S12. Six-participant development cohort: spatial and alignment increments.**
 
 | Budget | Full − LDA | EA − full |
 |---|---:|---:|
@@ -380,6 +400,8 @@ Paired gains in percentage points [pointwise 95% CI]; final count is participant
 
 BA in percent [pointwise 95% CI].
 
+**Table S13. Original twelve-participant primary cohort: method means by budget.**
+
 | Budget | Frozen | LDA update | Full refit | EA + CSP/LDA |
 |---|---:|---:|---:|---:|
 | 4 | 57.94 [52.62, 63.62] | 58.83 [53.41, 64.59] | 58.74 [54.02, 63.95] | 60.22 [55.38, 65.55] |
@@ -390,6 +412,8 @@ BA in percent [pointwise 95% CI].
 
 Paired gains in percentage points [pointwise 95% CI]; final count is participants whose measured gain was negative.
 
+**Table S14. Original twelve-participant primary cohort: updating versus frozen.**
+
 | Budget | LDA − frozen | Full − frozen | EA − frozen |
 |---|---:|---:|---:|
 | 4 | +0.89 [-1.15, +2.66]; 4/12 decreased | +0.81 [-2.53, +4.17]; 7/12 decreased | +2.29 [-0.26, +4.84]; 4/12 decreased |
@@ -397,6 +421,8 @@ Paired gains in percentage points [pointwise 95% CI]; final count is participant
 | 12 | +3.48 [+1.31, +5.48]; 3/12 decreased | +6.37 [+1.65, +11.18]; 4/12 decreased | +9.65 [+4.57, +14.83]; 1/12 decreased |
 | 16 | +4.20 [+1.41, +6.76]; 2/12 decreased | +8.99 [+4.06, +14.23]; 2/12 decreased | +12.15 [+5.77, +18.82]; 2/12 decreased |
 | full | +1.95 [-1.00, +5.03]; 5/12 decreased | +7.42 [+2.51, +12.43]; 3/12 decreased | +12.72 [+6.50, +19.10]; 2/12 decreased |
+
+**Table S15. Original twelve-participant primary cohort: spatial and alignment increments.**
 
 | Budget | Full − LDA | EA − full |
 |---|---:|---:|
@@ -410,6 +436,8 @@ Paired gains in percentage points [pointwise 95% CI]; final count is participant
 
 BA in percent [pointwise 95% CI].
 
+**Table S16. All eighteen participants: descriptive method means by budget.**
+
 | Budget | Frozen | LDA update | Full refit | EA + CSP/LDA |
 |---|---:|---:|---:|---:|
 | 4 | 58.62 [54.80, 62.52] | 60.11 [56.05, 64.25] | 59.95 [56.17, 63.86] | 61.53 [57.86, 65.27] |
@@ -420,6 +448,8 @@ BA in percent [pointwise 95% CI].
 
 Paired gains in percentage points [pointwise 95% CI]; final count is participants whose measured gain was negative.
 
+**Table S17. All eighteen participants: descriptive updating versus frozen.**
+
 | Budget | LDA − frozen | Full − frozen | EA − frozen |
 |---|---:|---:|---:|
 | 4 | +1.50 [-0.01, +2.86]; 4/18 decreased | +1.33 [-1.17, +3.84]; 9/18 decreased | +2.91 [+0.63, +5.29]; 6/18 decreased |
@@ -427,6 +457,8 @@ Paired gains in percentage points [pointwise 95% CI]; final count is participant
 | 12 | +3.66 [+1.97, +5.37]; 4/18 decreased | +5.92 [+2.39, +9.64]; 6/18 decreased | +9.10 [+5.36, +13.07]; 2/18 decreased |
 | 16 | +4.60 [+2.42, +6.83]; 2/18 decreased | +8.37 [+4.57, +12.53]; 3/18 decreased | +10.93 [+6.38, +15.93]; 2/18 decreased |
 | full | +2.77 [-0.15, +6.01]; 7/18 decreased | +6.03 [+2.44, +9.88]; 5/18 decreased | +11.99 [+7.53, +16.76]; 2/18 decreased |
+
+**Table S18. All eighteen participants: descriptive spatial and alignment increments.**
 
 | Budget | Full − LDA | EA − full |
 |---|---:|---:|
@@ -441,6 +473,8 @@ Paired gains in percentage points [pointwise 95% CI]; final count is participant
 There were no scientific fallbacks, undefined query BAs or missing query classes. The budget actions had 1,170 newly attempted/completed fits and 630 historical prediction reuses. Half-support validation fits are separate and are not added to these budget counts. Six 4-label prefixes lacked one support class (development 1/30, remaining 5/60); all stayed included and completed their candidate fits using the fixed two-class source 40. Budgets 8/12/16/full had no missing support class.
 
 Prediction class-collapse counts per 90 repeated participant/session cells; these are descriptive repeats, not independent sample sizes.
+
+**Table S19. Prediction class collapse and support coverage by budget.**
 
 | Budget | Frozen | LDA update | Full refit | EA + CSP/LDA | Shared single-class support | Fallbacks, all methods |
 |---|---:|---:|---:|---:|---:|---:|
@@ -466,6 +500,8 @@ This completed comparison used saved predictions on common eligible queries. Its
 ### Conditional phase-window results
 
 All differences and confidence intervals below are percentage points (pp).
+
+**Table S20. Original three-action phase-window contrasts.**
 
 | Scope | Window | Full CSP/LDA − frozen | Full CSP/LDA − LDA only |
 |---|---|---:|---:|
@@ -499,7 +535,7 @@ For Kumar, predictions match on participant/session/budget/trial identity; the j
 
 For endpoint unit u and true class c, recall is the correctly predicted count divided by that class's actual query count. Both classes must be present for BA, W and H. The two class recalls, BA, W=min(rL,rR) and H=|rL−rR| are first calculated within u. Kumar then averages five target sessions equally within each person. BNCI retains its original pooled 120-query endpoint for each person; its run-level metrics are descriptive. This order preserves the nonlinear weak-class and gap definitions. `W=BA−H/2` holds at each defined endpoint and after the common linear aggregation.
 
-**Table S3. Full-support method means reconstructed from saved predictions.** Values are percentages. W is weak-class recall; H is the absolute recall gap. The all 18 Kumar scope is the union of the other two scopes, not an additional sample.
+**Table S21. Full-support method means reconstructed from saved predictions.** Values are percentages. W is weak-class recall; H is the absolute recall gap. The all 18 Kumar scope is the union of the other two scopes, not an additional sample.
 
 | Cohort | Method | BA | W | H | Left recall | Right recall |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
@@ -526,7 +562,7 @@ These cohort W/H means average endpoint-level values; they cannot be reproduced 
 
 For paired binary hard predictions, class-balanced query weights 1/(2n_c) give corrected error mass C, introduced mass I and prediction disagreement D. Verification checks `C−I=ΔBA` and `C+I=D` without rounding. Saved EA predictions supply the transition reconstruction, weak-class summaries and joint-effect estimates under the present analysis plan; these calculations add no new participants or model predictions.
 
-**Table S4. EA-minus-full estimates at full support.** Differences and error masses are percentage points. All intervals below are new descriptive paired participant-percentile intervals, 10,000 resamples, seed 20261104, numeric participant order and linear quantiles. Historical BA intervals in the main Table 2 retain their original draws and roles.
+**Table S22. EA-minus-full estimates at full support.** Differences and error masses are percentage points. All intervals below are new descriptive paired participant-percentile intervals, 10,000 resamples, seed 20261104, numeric participant order and linear quantiles. Historical BA intervals in the main Table 2 retain their original draws and roles.
 
 | Cohort | ΔBA | ΔW | ΔH | Corrected C | Introduced I | Disagreement D |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -537,7 +573,7 @@ For paired binary hard predictions, class-balanced query weights 1/(2n_c) give c
 
 C and I use the whole class-balanced query denominator. For example, the primary Kumar values are 14.6147660819 and 9.3166969147 points, giving 5.2980691672 points before display rounding. A correction rate conditioned on reference errors would have a different denominator and would not reconstruct the BA difference.
 
-**Table S5. Participant joint BA/weak-class outcomes for EA versus full.** Values are counts. The sign tolerance is 10\(^{-12}\) in fraction units; zeros are not assigned to benefit or decline.
+**Table S23. Participant joint BA/weak-class outcomes for EA versus full.** Values are counts. The sign tolerance is 10\(^{-12}\) in fraction units; zeros are not assigned to benefit or decline.
 
 | BA sign | W sign | Kumar primary 12 | Kumar development 6 | Kumar all 18 | BNCI 9 |
 | --- | --- | ---: | ---: | ---: | ---: |
@@ -559,7 +595,7 @@ The anatomical class summaries preserve a further distinction. Kumar left/right 
 
 The original raw 250 µV peak-to-peak flags are joined by immutable Kumar trial IDs. They restrict query scoring only. An eligible complete participant endpoint requires both unflagged true classes in each of five target sessions. Ten of the original primary twelve meet that criterion: sub-2, 3, 5, 6, 9, 11, 14, 15, 17 and 18. The same ten participants define the all-query reference, avoiding a comparison between an original 12-person mean and a restricted 10-person mean. All participant/session class counts and undefined cases remain explicit in the endpoint table.
 
-**Table S6. EA-minus-full on the same ten eligible participants.** Differences and intervals are percentage points. The last column is the participant-paired change in the contrast after query restriction, not a subtraction of two marginal confidence limits.
+**Table S24. EA-minus-full on the same ten eligible participants.** Differences and intervals are percentage points. The last column is the participant-paired change in the contrast after query restriction, not a subtraction of two marginal confidence limits.
 
 | Metric | All queries, same ten | Unflagged queries | Paired restricted-minus-all change |
 | --- | ---: | ---: | ---: |
@@ -581,7 +617,7 @@ For Kumar, every arm first projects common-average signals into the same fixed 2
 
 BNCI retains the original 22-channel recorded-reference arrays and original fixed 0.1 covariance/LDA-shrinkage NumPy core. Source/support domain references use its fixed 0.1 shrinkage. Its diagonal entries therefore refer to the original channel coordinates; Kumar diagonals refer to Helmert contrasts. Source/support counts remain 40/19–20 in Kumar and 96/20 in BNCI. No cross-dataset preprocessing unification or hyperparameter grid was introduced.
 
-**Table S7. Matched-arm performance and genuine probability scores.** BA is percent; NLL is nats; Brier is the binary single-coordinate class-balanced score in squared-probability units. All means first respect the original participant endpoint weights.
+**Table S25. Matched-arm performance and genuine probability scores.** BA is percent; NLL is nats; Brier is the binary single-coordinate class-balanced score in squared-probability units. All means first respect the original participant endpoint weights.
 
 | Cohort | Arm | BA | Balanced NLL | Balanced Brier |
 | --- | --- | ---: | ---: | ---: |
@@ -604,7 +640,7 @@ BNCI retains the original 22-channel recorded-reference arrays and original fixe
 
 The shared-coordinate Kumar EA score 70.43% differs from the historical whitening/re-embedding endpoint 70.66%; the new 5.07-point contrast does not overwrite the historical 5.30-point estimate. Historical BNCI Full/EA predictions were exactly reproduced. The full per-participant and per-cell results remain in `mechanisms/participant_metrics.csv` and `mechanisms/run01/cells/`.
 
-**Table S8. Prespecified focal matched-arm contrasts.** Values are new descriptive paired participant 95% intervals. BA differences use percentage points; NLL and Brier retain their own units. The complete output CSV retains all six pairwise contrasts and all seven metrics for every emitted cohort; this table displays the focal EA comparisons.
+**Table S26. Prespecified focal matched-arm contrasts.** Values are new descriptive paired participant 95% intervals. BA differences use percentage points; NLL and Brier retain their own units. The complete output CSV retains all six pairwise contrasts and all seven metrics for every emitted cohort; this table displays the focal EA comparisons.
 
 | Cohort | Contrast | ΔBA, pp | ΔNLL, nats | ΔBrier |
 | --- | --- | ---: | ---: | ---: |
@@ -634,7 +670,7 @@ There are 148 new successful EA phase fits across all defined participant/sessio
 
 The nine conditional participants are sub-2, 3, 5, 6, 8, 9, 12, 14 and 15. The metadata-complete subset contains the same list except sub-15. Its sub-15/ses-5 endpoint has five common queries (two left, three right) and 19 unknown original query-phase mappings; the conditional result retains it, while the metadata-complete result follows the original exclusion. Sub-11/ses-4 lacks the right query class in this scope. Participants 16–18 lack the required online phase mapping. All identities, counts and undefined endpoints are preserved in the cell and phase participant tables.
 
-**Table S9. Paired EA-minus-full phase comparisons.** Effects and intervals are percentage points, with the present 10,000-draw seed 20261104 paired participant bootstrap. Task-minus-cue is computed within each person before its interval; it is not the difference between marginal interval limits.
+**Table S27. Paired EA-minus-full phase comparisons.** Effects and intervals are percentage points, with the present 10,000-draw seed 20261104 paired participant bootstrap. Task-minus-cue is computed within each person before its interval; it is not the difference between marginal interval limits.
 
 | Scope | n | Window or paired change | EA−Full, pp [95% interval] |
 | --- | ---: | --- | ---: |

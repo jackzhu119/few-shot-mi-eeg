@@ -109,8 +109,29 @@ def source_check():
         return text
     if scientific(main) != scientific(previous):
         raise ValueError("Scientific manuscript changed beyond the recorded presentation/AI changes")
-    if canonical_editorial((OUT / "SUPPLEMENT.md").read_text()) != canonical_editorial((OLD / "SUPPLEMENT.md").read_text()):
+    table_index = json.loads((OUT / "SUPPLEMENT_TABLE_INDEX.json").read_text())
+    def canonical_supplement(text):
+        entries = table_index["tables"]
+        if all(row["new_caption_paragraph"] in text for row in entries):
+            for row in entries:
+                placeholder = f"[caption slot {row['position']}]" if row["old_caption_paragraph"] else ""
+                text = text.replace(row["new_caption_paragraph"], placeholder, 1)
+            inverse = {new: old for old, new in table_index["old_to_new_labels"].items()}
+            text = re.sub(r"\bTable (S\d+)\b", lambda match: "Table " + inverse.get(match[1], match[1]), text)
+            for row in entries:
+                if row["old_caption_paragraph"]:
+                    text = text.replace(f"[caption slot {row['position']}]", row["old_caption_paragraph"])
+        text = canonical_editorial(text)
+        return "\n\n".join(part for part in text.split("\n\n") if part.strip())
+    supplement = (OUT / "SUPPLEMENT.md").read_text()
+    if canonical_supplement(supplement) != canonical_supplement((OLD / "SUPPLEMENT.md").read_text()):
         raise ValueError("Supplement changed beyond the exact recorded editorial paragraphs")
+    tables = re.findall(r"(?m)^\|[^\n]*(?:\n\|[^\n]*)*", supplement)
+    if len(tables) != 27 or any(sha(text.encode()) != row["table_rows_sha256"]
+                                for text, row in zip(tables, table_index["tables"])):
+        raise ValueError("Supplementary table values changed")
+    if re.findall(r"(?m)^\*\*Table S(\d+)\.", supplement) != [str(i) for i in range(1, 28)]:
+        raise ValueError("Supplementary table captions must run consecutively S1-S27")
     abstract = main.split("## Abstract\n", 1)[1].split("**Keywords:**", 1)[0].strip()
     labels = re.findall(r"\*\*(Objective|Approach|Main results|Significance):\*\*", abstract)
     if labels != ["Objective", "Approach", "Main results", "Significance"]:
@@ -123,7 +144,9 @@ def source_check():
     (OUT / "ABSTRACT_FOR_SUBMISSION.txt").write_text(abstract.replace("**", "") + "\n")
     return {"science_source_commit": SCIENCE_COMMIT,
             "scientific_body_unchanged_excluding_recorded_editorial_rephrasings_AI_methods_and_panel_case": True,
-            "supplement_unchanged_excluding_recorded_editorial_rephrasings": True,
+            "supplement_unchanged_excluding_recorded_editorial_rephrasings_and_table_presentation": True,
+            "supplementary_table_captions": list(range(1, 28)),
+            "all_27_supplementary_table_blocks_byte_identical": True,
             "exact_editorial_paragraph_pairs": len(pairs), "abstract_headings": labels,
             "abstract_word_count": abstract_words}
 
@@ -172,6 +195,9 @@ def build_documents():
         table_space = 25 if filename == "MAIN.md" else 10
         text = re.sub(r"(?m)^(\*\*Table (?:S?\d+)\..*)$",
                       lambda m: f"\\Needspace{{{table_space}\\baselineskip}}\n\n" + m[1], text)
+        if filename == "SUPPLEMENT.md":
+            text = text.replace("## S 1. Analysis layers and statistical units",
+                                "\\Needspace{20\\baselineskip}\n\n## S 1. Analysis layers and statistical units")
         def figure_space(match):
             path = OUT / match[2].replace(".png", ".pdf")
             with fitz.open(path) as figure:
@@ -224,7 +250,7 @@ def package():
     if any(len(x["title"]) > 30 or len(x["description"].split()) > 30 for x in metadata):
         raise ValueError("Supplement metadata exceeds IOP limits")
     selected = set()
-    for directory in (DOCS, AUDIT, OUT):
+    for directory in (DOCS, AUDIT, ROOT / "research_logs/paper2_jne_presubmission_20261104", OUT):
         selected.update(p for p in directory.rglob("*") if p.is_file() and p.suffix in {".md", ".json", ".csv", ".bib", ".csl", ".tex"}
                         and p.name not in {"PACKAGE_SHA256.json", "FILE_MANIFEST.json", "FINAL_VALIDATION.json", "GITHUB_FULL_GET_RECEIPT.json"})
     selected.update(ROOT.glob("scripts/*jne*20261104.py"))

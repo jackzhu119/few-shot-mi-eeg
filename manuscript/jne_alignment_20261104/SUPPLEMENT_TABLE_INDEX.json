@@ -1,0 +1,261 @@
+{
+  "source_version": "ff9f6c47eea2745174a233bd4310b43d59cb6f5c",
+  "scope": "Presentation-only serial table numbering; preserve every table row and all existing caption explanations.",
+  "old_to_new_labels": {
+    "S1": "S8",
+    "S2": "S9",
+    "S3": "S21",
+    "S4": "S22",
+    "S5": "S23",
+    "S6": "S24",
+    "S7": "S25",
+    "S8": "S26",
+    "S9": "S27"
+  },
+  "tables": [
+    {
+      "position": 1,
+      "old_label": null,
+      "new_label": "S1",
+      "old_caption_paragraph": null,
+      "new_caption_paragraph": "**Table S1. Analysis layers and independent statistical units.**",
+      "table_rows_sha256": "9eab1038f3361959069dbe85e6cea0a48449bba885b9a8bb969b27886448b98f",
+      "table_header": "| Layer | Participants | Scientific role | Model/seed information | Selection status |"
+    },
+    {
+      "position": 2,
+      "old_label": null,
+      "new_label": "S2",
+      "old_caption_paragraph": null,
+      "new_caption_paragraph": "**Table S2. Geometric method definitions and ablation arms.**",
+      "table_rows_sha256": "32731bd2f1b56ce2c6446a7a84879e76c061f698420d8cb3a5203068ec1f3908",
+      "table_header": "| Saved method ID | Defining difference |"
+    },
+    {
+      "position": 3,
+      "old_label": null,
+      "new_label": "S3",
+      "old_caption_paragraph": null,
+      "new_caption_paragraph": "**Table S3. Neural adaptation policies and normalization modes.**",
+      "table_rows_sha256": "47d8e13f0d92202ff5aa78ae365ff64a9b3ad29f358a3e7bedd1794d2419c58b",
+      "table_header": "| Policy (readable name) | Optimized parameters | Adaptation BN mode | Dropout during adaptation |"
+    },
+    {
+      "position": 4,
+      "old_label": null,
+      "new_label": "S4",
+      "old_caption_paragraph": null,
+      "new_caption_paragraph": "**Table S4. Complete V3 cohort balanced accuracy across support budgets.**",
+      "table_rows_sha256": "387ea9c9ca1bcbf39e520c8e2533ee40531cad13c227a8d3158270a7de947eac",
+      "table_header": "| Family / source / variant | Method | Cap 4 | Cap 8 | Cap 12 | Cap 16 | Cap 20 |"
+    },
+    {
+      "position": 5,
+      "old_label": null,
+      "new_label": "S5",
+      "old_caption_paragraph": null,
+      "new_caption_paragraph": "**Table S5. Complete-grid synthetic method means.**",
+      "table_rows_sha256": "a533baad7dc016dc375dec3f8891f3b6016bd4902904a1d8ed27f696f7a9d51e",
+      "table_header": "| Method | BA (%) | Cross entropy | Binary Brier | Mean squared feature error |"
+    },
+    {
+      "position": 6,
+      "old_label": null,
+      "new_label": "S6",
+      "old_caption_paragraph": null,
+      "new_caption_paragraph": "**Table S6. BNCI participant balanced accuracy and full-budget differences.**",
+      "table_rows_sha256": "f8dcf1f9d7dc98f961c2493391f0b94cbec9e8248405b55e57ae5ecc8afc8180",
+      "table_header": "| Participant | Frozen | LDA-only | Full CSP/LDA | EA-CSP | Full \u2212 LDA | EA \u2212 Full |"
+    },
+    {
+      "position": 7,
+      "old_label": null,
+      "new_label": "S7",
+      "old_caption_paragraph": null,
+      "new_caption_paragraph": "**Table S7. BNCI comparison roles and participant-level inference.**",
+      "table_rows_sha256": "b2ede73e37fcf7456238d646759e560f6b8a48e928ed41461af5d317ba7853f7",
+      "table_header": "| Contrast | Role | Mean difference, pp | Pointwise 95\u202f% CI, pp | Exact p | Secondary Holm p |"
+    },
+    {
+      "position": 8,
+      "old_label": "S1",
+      "new_label": "S8",
+      "old_caption_paragraph": "**Table S1. V3 geometric comparison at the 20-label cap.**",
+      "new_caption_paragraph": "**Table S8. V3 geometric comparison at the 20-label cap.**",
+      "table_rows_sha256": "551fba8b0477c64cf57ff2d8efb237418eb8435704dfe922f79b18d491dfbafe",
+      "table_header": "| Method | Mean BA | Candidate \u2212 method, pp |"
+    },
+    {
+      "position": 9,
+      "old_label": "S2",
+      "new_label": "S9",
+      "old_caption_paragraph": "**Table S2. V3 neural component contrasts at the 20-label cap.**",
+      "new_caption_paragraph": "**Table S9. V3 neural component contrasts at the 20-label cap.**",
+      "table_rows_sha256": "3e98f2bc22dacf9b8add965c9958a8f622a4d912681754c52a88d2a532b417a1",
+      "table_header": "| Contrast | Individual source models | Pooled source models | Role |"
+    },
+    {
+      "position": 10,
+      "old_label": null,
+      "new_label": "S10",
+      "old_caption_paragraph": null,
+      "new_caption_paragraph": "**Table S10. Six-participant development cohort: method means by budget.**",
+      "table_rows_sha256": "a1f58736821d1d973fc3237501517789a1e3d30e20d21eb5bbe4a53576d15c0d",
+      "table_header": "| Budget | Frozen | LDA update | Full refit | EA + CSP/LDA |"
+    },
+    {
+      "position": 11,
+      "old_label": null,
+      "new_label": "S11",
+      "old_caption_paragraph": null,
+      "new_caption_paragraph": "**Table S11. Six-participant development cohort: updating versus frozen.**",
+      "table_rows_sha256": "7886aee8013b01c26bfa9b90422d9631eb321b38831b6bd14b53d98b1fbaa01f",
+      "table_header": "| Budget | LDA \u2212 frozen | Full \u2212 frozen | EA \u2212 frozen |"
+    },
+    {
+      "position": 12,
+      "old_label": null,
+      "new_label": "S12",
+      "old_caption_paragraph": null,
+      "new_caption_paragraph": "**Table S12. Six-participant development cohort: spatial and alignment increments.**",
+      "table_rows_sha256": "aa8d07a01f3d2bc49782756af5631482b9c880b55fd3d6164fc509afa7a6fe33",
+      "table_header": "| Budget | Full \u2212 LDA | EA \u2212 full |"
+    },
+    {
+      "position": 13,
+      "old_label": null,
+      "new_label": "S13",
+      "old_caption_paragraph": null,
+      "new_caption_paragraph": "**Table S13. Original twelve-participant primary cohort: method means by budget.**",
+      "table_rows_sha256": "e1e93dd5ed7180cfad0f24f38be7d3d2fdeb2cfff01fe5d5350fb204002778b1",
+      "table_header": "| Budget | Frozen | LDA update | Full refit | EA + CSP/LDA |"
+    },
+    {
+      "position": 14,
+      "old_label": null,
+      "new_label": "S14",
+      "old_caption_paragraph": null,
+      "new_caption_paragraph": "**Table S14. Original twelve-participant primary cohort: updating versus frozen.**",
+      "table_rows_sha256": "338ea749fa8f0200510ae95a1a8c8c98862b74ccd5e55f076983f453f7b6e986",
+      "table_header": "| Budget | LDA \u2212 frozen | Full \u2212 frozen | EA \u2212 frozen |"
+    },
+    {
+      "position": 15,
+      "old_label": null,
+      "new_label": "S15",
+      "old_caption_paragraph": null,
+      "new_caption_paragraph": "**Table S15. Original twelve-participant primary cohort: spatial and alignment increments.**",
+      "table_rows_sha256": "7fe77c1ed307874400787c833b5ae6c473e46ca79265126f7a8e02ae1d49c894",
+      "table_header": "| Budget | Full \u2212 LDA | EA \u2212 full |"
+    },
+    {
+      "position": 16,
+      "old_label": null,
+      "new_label": "S16",
+      "old_caption_paragraph": null,
+      "new_caption_paragraph": "**Table S16. All eighteen participants: descriptive method means by budget.**",
+      "table_rows_sha256": "94df38d5aa56a68390a80ab0e1305f3810c34384ec5bac622b39bfccfbc0d5d0",
+      "table_header": "| Budget | Frozen | LDA update | Full refit | EA + CSP/LDA |"
+    },
+    {
+      "position": 17,
+      "old_label": null,
+      "new_label": "S17",
+      "old_caption_paragraph": null,
+      "new_caption_paragraph": "**Table S17. All eighteen participants: descriptive updating versus frozen.**",
+      "table_rows_sha256": "48bef9fbbc088aafcde2c38a4693ce7daac77846d4f0496688f8d18816cf5d1c",
+      "table_header": "| Budget | LDA \u2212 frozen | Full \u2212 frozen | EA \u2212 frozen |"
+    },
+    {
+      "position": 18,
+      "old_label": null,
+      "new_label": "S18",
+      "old_caption_paragraph": null,
+      "new_caption_paragraph": "**Table S18. All eighteen participants: descriptive spatial and alignment increments.**",
+      "table_rows_sha256": "84510e51e054ce014cc9cd39e743d24da746c22547b53e22c602b600775eba19",
+      "table_header": "| Budget | Full \u2212 LDA | EA \u2212 full |"
+    },
+    {
+      "position": 19,
+      "old_label": null,
+      "new_label": "S19",
+      "old_caption_paragraph": null,
+      "new_caption_paragraph": "**Table S19. Prediction class collapse and support coverage by budget.**",
+      "table_rows_sha256": "c68e4aa6c7331be3c98c165189fa706f5d9d991ad0f6dc4dc98013ae5a321e62",
+      "table_header": "| Budget | Frozen | LDA update | Full refit | EA + CSP/LDA | Shared single-class support | Fallbacks, all methods |"
+    },
+    {
+      "position": 20,
+      "old_label": null,
+      "new_label": "S20",
+      "old_caption_paragraph": null,
+      "new_caption_paragraph": "**Table S20. Original three-action phase-window contrasts.**",
+      "table_rows_sha256": "bfe90cde6d708b965a282dfceaee05dd26ec34bcdfc5f40cc0395dd933b9f5f9",
+      "table_header": "| Scope | Window | Full CSP/LDA \u2212 frozen | Full CSP/LDA \u2212 LDA only |"
+    },
+    {
+      "position": 21,
+      "old_label": "S3",
+      "new_label": "S21",
+      "old_caption_paragraph": "**Table S3. Full-support method means reconstructed from saved predictions.** Values are percentages. W is weak-class recall; H is the absolute recall gap. The all 18 Kumar scope is the union of the other two scopes, not an additional sample.",
+      "new_caption_paragraph": "**Table S21. Full-support method means reconstructed from saved predictions.** Values are percentages. W is weak-class recall; H is the absolute recall gap. The all 18 Kumar scope is the union of the other two scopes, not an additional sample.",
+      "table_rows_sha256": "561fc25e27ea71b9f3e6695bee9c8bf3c5076df9f3498736fe295a29619347e3",
+      "table_header": "| Cohort | Method | BA | W | H | Left recall | Right recall |"
+    },
+    {
+      "position": 22,
+      "old_label": "S4",
+      "new_label": "S22",
+      "old_caption_paragraph": "**Table S4. EA-minus-full estimates at full support.** Differences and error masses are percentage points. All intervals below are new descriptive paired participant-percentile intervals, 10,000 resamples, seed 20261104, numeric participant order and linear quantiles. Historical BA intervals in the main Table 2 retain their original draws and roles.",
+      "new_caption_paragraph": "**Table S22. EA-minus-full estimates at full support.** Differences and error masses are percentage points. All intervals below are new descriptive paired participant-percentile intervals, 10,000 resamples, seed 20261104, numeric participant order and linear quantiles. Historical BA intervals in the main Table 2 retain their original draws and roles.",
+      "table_rows_sha256": "26ed0f26ff3cfa3854c39d5c6021cbc3e4e93688b63e4f3ccd33b2ab491b74cf",
+      "table_header": "| Cohort | \u0394BA | \u0394W | \u0394H | Corrected C | Introduced I | Disagreement D |"
+    },
+    {
+      "position": 23,
+      "old_label": "S5",
+      "new_label": "S23",
+      "old_caption_paragraph": "**Table S5. Participant joint BA/weak-class outcomes for EA versus full.** Values are counts. The sign tolerance is 10\\(^{-12}\\) in fraction units; zeros are not assigned to benefit or decline.",
+      "new_caption_paragraph": "**Table S23. Participant joint BA/weak-class outcomes for EA versus full.** Values are counts. The sign tolerance is 10\\(^{-12}\\) in fraction units; zeros are not assigned to benefit or decline.",
+      "table_rows_sha256": "465624b1522a04c15add918fc5ac38f71e90b4b6b02f3ba30926afe2b92f4681",
+      "table_header": "| BA sign | W sign | Kumar primary 12 | Kumar development 6 | Kumar all 18 | BNCI 9 |"
+    },
+    {
+      "position": 24,
+      "old_label": "S6",
+      "new_label": "S24",
+      "old_caption_paragraph": "**Table S6. EA-minus-full on the same ten eligible participants.** Differences and intervals are percentage points. The last column is the participant-paired change in the contrast after query restriction, not a subtraction of two marginal confidence limits.",
+      "new_caption_paragraph": "**Table S24. EA-minus-full on the same ten eligible participants.** Differences and intervals are percentage points. The last column is the participant-paired change in the contrast after query restriction, not a subtraction of two marginal confidence limits.",
+      "table_rows_sha256": "bc2332a37fea474dbca339cfb46facf1fe60af4407349b8336f76509b5fd6d6e",
+      "table_header": "| Metric | All queries, same ten | Unflagged queries | Paired restricted-minus-all change |"
+    },
+    {
+      "position": 25,
+      "old_label": "S7",
+      "new_label": "S25",
+      "old_caption_paragraph": "**Table S7. Matched-arm performance and genuine probability scores.** BA is percent; NLL is nats; Brier is the binary single-coordinate class-balanced score in squared-probability units. All means first respect the original participant endpoint weights.",
+      "new_caption_paragraph": "**Table S25. Matched-arm performance and genuine probability scores.** BA is percent; NLL is nats; Brier is the binary single-coordinate class-balanced score in squared-probability units. All means first respect the original participant endpoint weights.",
+      "table_rows_sha256": "627466ee0d710933a833a75d1a7cdab94309d8a9ae18b514c6fa0645c2227607",
+      "table_header": "| Cohort | Arm | BA | Balanced NLL | Balanced Brier |"
+    },
+    {
+      "position": 26,
+      "old_label": "S8",
+      "new_label": "S26",
+      "old_caption_paragraph": "**Table S8. Prespecified focal matched-arm contrasts.** Values are new descriptive paired participant 95% intervals. BA differences use percentage points; NLL and Brier retain their own units. The complete output CSV retains all six pairwise contrasts and all seven metrics for every emitted cohort; this table displays the focal EA comparisons.",
+      "new_caption_paragraph": "**Table S26. Prespecified focal matched-arm contrasts.** Values are new descriptive paired participant 95% intervals. BA differences use percentage points; NLL and Brier retain their own units. The complete output CSV retains all six pairwise contrasts and all seven metrics for every emitted cohort; this table displays the focal EA comparisons.",
+      "table_rows_sha256": "75e35cbfd7eec4acd6df03c8076d4589b36b92c0cea4c15187a74275f133a53e",
+      "table_header": "| Cohort | Contrast | \u0394BA, pp | \u0394NLL, nats | \u0394Brier |"
+    },
+    {
+      "position": 27,
+      "old_label": "S9",
+      "new_label": "S27",
+      "old_caption_paragraph": "**Table S9. Paired EA-minus-full phase comparisons.** Effects and intervals are percentage points, with the present 10,000-draw seed 20261104 paired participant bootstrap. Task-minus-cue is computed within each person before its interval; it is not the difference between marginal interval limits.",
+      "new_caption_paragraph": "**Table S27. Paired EA-minus-full phase comparisons.** Effects and intervals are percentage points, with the present 10,000-draw seed 20261104 paired participant bootstrap. Task-minus-cue is computed within each person before its interval; it is not the difference between marginal interval limits.",
+      "table_rows_sha256": "5bba6700e827850568bab7a145ac2df6e4285b16eed171037d8ea8e4e7addbe2",
+      "table_header": "| Scope | n | Window or paired change | EA\u2212Full, pp [95% interval] |"
+    }
+  ],
+  "all_27_table_blocks_byte_identical": true
+}

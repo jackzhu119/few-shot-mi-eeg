@@ -1,0 +1,319 @@
+{
+  "schema_version": 1,
+  "checked_commit": "ff9f6c47eea2745174a233bd4310b43d59cb6f5c",
+  "checked_at_utc": "2026-11-04T11:44:46.055563+00:00",
+  "read_only_review": true,
+  "scope": "Policy/administrative/source and exported-file metadata audit; no experiment/query/HPC execution; no submission or contact; no comprehensive image/similarity or all-reference verification.",
+  "format_verdict": "No confirmed mandatory formatting/declaration-content defect identified in reviewed files. Final author/originality declarations remain factual pre-submission actions, distinct from scientific/code checks.",
+  "checks": [
+    {
+      "id": "P01",
+      "status": "pass",
+      "subject": "Article type and abstract",
+      "finding": "Paper; Objective/Approach/Main results/Significance; 165 words.",
+      "source_url": "https://publishingsupport.iopscience.iop.org/journals/journal-of-neural-engineering/about-journal-neural-engineering/"
+    },
+    {
+      "id": "P02",
+      "status": "pass",
+      "subject": "Initial manuscript",
+      "finding": "Complete PDF; five embedded vector figures/two tables; editable Word available; 12 pt body/table text and 1.15 spacing per current build record.",
+      "source_url": "https://publishingsupport.iopscience.iop.org/questions/article-format/"
+    },
+    {
+      "id": "P03",
+      "status": "pass",
+      "subject": "Author information",
+      "finding": "Three consistent full names, common institution, correspondence email and supplied ORCID; single-anonymous route.",
+      "source_url": "https://publishingsupport.iopscience.iop.org/questions/article-format/"
+    },
+    {
+      "id": "P04",
+      "status": "pass",
+      "subject": "Funding and conflict",
+      "finding": "No external funding/no conflict in Acknowledgements and cover letter.",
+      "source_url": "https://publishingsupport.iopscience.iop.org/journals/journal-of-neural-engineering/about-journal-neural-engineering/"
+    },
+    {
+      "id": "P05",
+      "status": "pass",
+      "subject": "AI transparency",
+      "finding": "Separate Acknowledgements disclosure identifies Codex/ChatGPT tasks and verification; research-code/result assistance also described in Methods; unrecorded versions not fabricated.",
+      "source_url": "https://publishingsupport.iopscience.iop.org/ethical-policy-journals/"
+    },
+    {
+      "id": "P06",
+      "status": "pass",
+      "subject": "Ethics statement",
+      "finding": "Methods/declarations state Article32(1) statutory secondary-analysis basis; original UT approval/consent separate; no school-confirmation claim or invented BNCI approval. Applicability of statutory exemption remains an author factual/legal declaration, not certified by this format audit.",
+      "source_url": "https://publishingsupport.iopscience.iop.org/ethical-policy-journals/"
+    },
+    {
+      "id": "P07",
+      "status": "pass",
+      "subject": "Data availability",
+      "finding": "Data/code statement, source identifiers/licenses, fixed public scientific GitHub version, provenance and saved-result reconstruction supplied.",
+      "source_url": "https://publishingsupport.iopscience.iop.org/iop-publishing-data-availability-policy/"
+    },
+    {
+      "id": "P08",
+      "status": "pass",
+      "subject": "Figures and tables",
+      "finding": "Sequential captions; lower-case parenthesized panels; renderer records 15cm/8pt minima; vector PDF supplied. Word XML has no explicit coloured table text or shading.",
+      "source_url": "https://publishingsupport.iopscience.iop.org/journals/journal-of-neural-engineering/"
+    },
+    {
+      "id": "P09",
+      "status": "pass",
+      "subject": "Supplement metadata and limits",
+      "finding": "Two supplement titles21/22 characters and descriptions23words each, included inside PDF/ZIP. Each<50MB; main plus two supplements9,328,872bytes<150MB.",
+      "source_url": "https://publishingsupport.iopscience.iop.org/journals/journal-of-neural-engineering/"
+    },
+    {
+      "id": "P10",
+      "status": "pass",
+      "subject": "References and language",
+      "finding": "Numbered Vancouver retained, all main/supplement body text Roman script; exact house style optional at first submission. No invented BMT count limits applied.",
+      "source_url": "https://publishingsupport.iopscience.iop.org/journals/journal-of-neural-engineering/"
+    },
+    {
+      "id": "P11",
+      "status": "disclosed_not_cleared",
+      "subject": "Related manuscript",
+      "finding": "Cover letter/standalone statement identify PONE-D-26-52050 under review, shared evidence and additions; no editor clearance claimed.",
+      "source_url": "https://publishingsupport.iopscience.iop.org/ethical-policy-journals/"
+    }
+  ],
+  "actions": [
+    {
+      "id": "A01",
+      "classification": "author_action_before_submission",
+      "requirement": "All named authors satisfy all four ICMJE criteria and agree authorship/order; actual final approval/accountability are required.",
+      "current_evidence": "All three read the expanded scientific version; AI disclosure accuracy confirmed. Current status explicitly leaves final JNE-file approval and individual all-four criteria unconfirmed.",
+      "concrete_action": "Authors review the final JNE PDF and editor-facing documents and make truthful final approval/accountability/authorship declarations. Do not fabricate signatures or additional contributions.",
+      "source_url": "https://publishingsupport.iopscience.iop.org/ethical-policy-journals/",
+      "not_a_new_scientific_gate": true
+    },
+    {
+      "id": "A02",
+      "classification": "editorial_originality_question_before_submission",
+      "requirement": "The same or essentially the same article must not be simultaneously under consideration elsewhere. Disclosure does not itself decide substantial distinctness.",
+      "current_evidence": "PLOS remains under review; comparison identifies an archived PLOS source, while actual current portal files remain unavailable.",
+      "concrete_action": "Reconcile the comparison with the actual under-review PLOS version, include it with the existing editor-facing disclosure for assessment, and answer the originality declaration truthfully. This audit neither certifies distinctness nor mandates withdrawal/contact on the authors behalf.",
+      "source_url": "https://publishingsupport.iopscience.iop.org/ethical-policy-journals/",
+      "copy_requirement_scope": "Supplying the actual copy is the practical comparison/disclosure fix; this audit does not claim that the generic public policy explicitly specifies an upload slot for every related work."
+    },
+    {
+      "id": "N01",
+      "classification": "access_advisory",
+      "requirement": "Data statement must tell readers where/how to access data.",
+      "current_evidence": "Fixed GitHub scientific and current JNE landing pages HTTP200; Kumar DOI HTTP200. Original BNCI URL HTTP403 from this environment.",
+      "concrete_action": "Retain the accurate original source citation; check the BNCI link from another network before submission and, if access remains restricted, add a verified working official/versioned mirror URL already supported by the input provenance. Do not label the URL globally dead based on this403.",
+      "source_url": "https://publishingsupport.iopscience.iop.org/iop-publishing-data-availability-policy/"
+    },
+    {
+      "id": "N02",
+      "classification": "optional_recommendation",
+      "requirement": "IOP recommends a DOI-issuing archival copy for GitHub code/data.",
+      "current_evidence": "Fixed scientific commit and supplemental data/code archive exist; no invented DOI.",
+      "concrete_action": "A DOI archive may be added if the authors choose; lack of a new code DOI is not a blanket initial-submission blocker.",
+      "source_url": "https://publishingsupport.iopscience.iop.org/iop-publishing-data-availability-policy/"
+    }
+  ],
+  "supplement_metadata": [
+    {
+      "filename": "Supplementary_Methods.pdf",
+      "title": "Supplementary methods",
+      "description": "Complete decoder definitions, statistical families, participant and class counts, calibration budgets, neural and geometric controls, matched implementation sensitivities, phase-window comparisons and supplementary figures.",
+      "title_characters": 21,
+      "description_words": 23
+    },
+    {
+      "filename": "Supplementary_Data_and_Code.zip",
+      "title": "Data and analysis code",
+      "description": "Saved derived predictions, participant and session tables, figure data, analysis scripts, input provenance, software checks and reconstruction instructions accompanying the fixed scientific results.",
+      "title_characters": 22,
+      "description_words": 23
+    }
+  ],
+  "minimal_main_and_supplements_bytes": 9328872,
+  "artifact_sizes": [
+    {
+      "path": "JNE_Manuscript.pdf",
+      "bytes": 209682
+    },
+    {
+      "path": "Supplementary_Methods.pdf",
+      "bytes": 233462
+    },
+    {
+      "path": "Supplementary_Data_and_Code.zip",
+      "bytes": 8885728
+    },
+    {
+      "path": "Cover_Letter.pdf",
+      "bytes": 27401
+    },
+    {
+      "path": "Related_Manuscript_Statement.pdf",
+      "bytes": 36031
+    },
+    {
+      "path": "Declarations.pdf",
+      "bytes": 42994
+    }
+  ],
+  "inputs": [
+    {
+      "path": "manuscript/jne_alignment_20261104/MAIN.md",
+      "bytes": 37202,
+      "sha256": "00cfd5d487190b75fca374e828555ff3ccf81586cbc2e4b2fc0afa4d6ad11bb1"
+    },
+    {
+      "path": "manuscript/jne_alignment_20261104/SUPPLEMENT.md",
+      "bytes": 71699,
+      "sha256": "4e30c3d389a2c9be444181b04431578a7e55878d568fb2f4bd244c4399f665f9"
+    },
+    {
+      "path": "manuscript/jne_alignment_20261104/AUTHOR_DETAILS.md",
+      "bytes": 2155,
+      "sha256": "163958be975348225fb6f1fe7bdcdec3ab73ed550049fb2912e67900edc56dc1"
+    },
+    {
+      "path": "manuscript/jne_alignment_20261104/AUTHOR_REVIEW_ITEMS.md",
+      "bytes": 1540,
+      "sha256": "82e0f4031f09cad7927f69ff74a8165a077535e57ed6d075abd99a97c287979e"
+    },
+    {
+      "path": "manuscript/jne_alignment_20261104/DECLARATIONS.md",
+      "bytes": 3629,
+      "sha256": "842c1d8c79fd083dc2477d32c916cb2f20cc2f198b085eb00795aabc16bb6c28"
+    },
+    {
+      "path": "manuscript/jne_alignment_20261104/COVER_LETTER.md",
+      "bytes": 2486,
+      "sha256": "53310caa502ad71ac568c2b5e3d9c57b98e166eeeaf67c7841969a528120c49d"
+    },
+    {
+      "path": "manuscript/jne_alignment_20261104/RELATED_MANUSCRIPT_STATEMENT.md",
+      "bytes": 1819,
+      "sha256": "f48755bf646679a335da25c944e88719a129a0792e0abbdfb3f50ff0e140f91a"
+    },
+    {
+      "path": "manuscript/jne_alignment_20261104/SUBMISSION_FIELDS.md",
+      "bytes": 5273,
+      "sha256": "66c8cf8fff2f9f6524c10e942a8a6d997b9845f45b2ad413f5d438a1cf23a6fc"
+    },
+    {
+      "path": "manuscript/jne_alignment_20261104/SUBMISSION_STATUS.json",
+      "bytes": 3918,
+      "sha256": "56fe533ea99224926799ec4a24285e49508015244d07067bee20cd987fa15c9a"
+    },
+    {
+      "path": "manuscript/jne_alignment_20261104/README.md",
+      "bytes": 3270,
+      "sha256": "01e2ff9904a844b0b5a04937e64d870a4c004239e94720014c43f7fe85f65610"
+    },
+    {
+      "path": "manuscript/jne_alignment_20261104/REPRODUCTION.md",
+      "bytes": 2707,
+      "sha256": "fa7a8a97948d624dd7cfe626795972569432c95021d6d96e1c1d353cab3f59dd"
+    },
+    {
+      "path": "manuscript/jne_alignment_20261104/SUPPLEMENT_METADATA.csv",
+      "bytes": 560,
+      "sha256": "5104865c3c27a25e871fb70784de110de6cc1848d2bcefe96565fc9bd3c72341"
+    },
+    {
+      "path": "manuscript/jne_alignment_20261104/JOURNAL_FORMAT_CHECKS.json",
+      "bytes": 2511,
+      "sha256": "f01f4d05b7d775eb6d8941d6bf6ec280d30d027ad22eb835aea107844aaa948c"
+    }
+  ],
+  "fresh_official_sources": [
+    {
+      "source_id": "format",
+      "url": "https://publishingsupport.iopscience.iop.org/questions/article-format/",
+      "retrieved_at_utc": "2026-11-04T11:41:29.191065+00:00",
+      "method": "HTTPS GET browser User-Agent",
+      "status": 200,
+      "bytes": 52708,
+      "sha256": "29ea2b81d865e0c9dc25c14b2ed24911debcaaf9338579e1022be6fb3e9221bf"
+    },
+    {
+      "source_id": "ethics",
+      "url": "https://publishingsupport.iopscience.iop.org/ethical-policy-journals/",
+      "retrieved_at_utc": "2026-11-04T11:41:30.087043+00:00",
+      "method": "HTTPS GET browser User-Agent",
+      "status": 200,
+      "bytes": 134574,
+      "sha256": "cc151b8cf3596d678121f831f604f64c380ae1259549b399875a923d72a275fd"
+    },
+    {
+      "source_id": "guidelines",
+      "url": "https://publishingsupport.iopscience.iop.org/journals/journal-of-neural-engineering/",
+      "retrieved_at_utc": "2026-11-04T11:41:30.342840+00:00",
+      "method": "HTTPS GET browser User-Agent",
+      "status": 200,
+      "bytes": 105625,
+      "sha256": "3444a65316b50a67a930a1caff98c3e431d14327f19196294f6db5b376d9ecb2"
+    },
+    {
+      "source_id": "data",
+      "url": "https://publishingsupport.iopscience.iop.org/iop-publishing-data-availability-policy/",
+      "retrieved_at_utc": "2026-11-04T11:41:30.665152+00:00",
+      "method": "HTTPS GET browser User-Agent",
+      "status": 200,
+      "bytes": 66955,
+      "sha256": "313b86d8a03125521b0882f135bd3ef166cedb7bee48fe1afa054135e9723acf"
+    }
+  ],
+  "access_checks": [
+    {
+      "key": "scientific_GitHub_directory",
+      "url": "https://github.com/jackzhu119/few-shot-mi-eeg/tree/e5969e6ee6294206954b5a83c5258fdb2e143eda/manuscript/bmt_alignment_integrated_20261104",
+      "checked_at_utc": "2026-11-04T11:42:17.387427+00:00",
+      "status": 200,
+      "final_url": "https://github.com/jackzhu119/few-shot-mi-eeg/tree/e5969e6ee6294206954b5a83c5258fdb2e143eda/manuscript/bmt_alignment_integrated_20261104",
+      "bytes": 282838,
+      "sha256": "c81134e5d9aca2458e28a578f46802c1d39e0f72e2329ede1cbf54307796778a",
+      "scope": "HTML landing-page GET; not all linked data bytes"
+    },
+    {
+      "key": "current_JNE_GitHub_directory",
+      "url": "https://github.com/jackzhu119/few-shot-mi-eeg/tree/ff9f6c47eea2745174a233bd4310b43d59cb6f5c/manuscript/jne_alignment_20261104",
+      "checked_at_utc": "2026-11-04T11:42:18.456513+00:00",
+      "status": 200,
+      "final_url": "https://github.com/jackzhu119/few-shot-mi-eeg/tree/ff9f6c47eea2745174a233bd4310b43d59cb6f5c/manuscript/jne_alignment_20261104",
+      "bytes": 285899,
+      "sha256": "e1f37e0257fa4f7a1df3e591f313573d424ab828eea6cb4a353d1735565d8594",
+      "scope": "HTML landing-page GET; not all linked data bytes"
+    },
+    {
+      "key": "nemar_doi",
+      "url": "https://doi.org/10.82901/nemar.nm000177.v1.0.5",
+      "checked_at_utc": "2026-11-04T11:42:19.382393+00:00",
+      "status": 200,
+      "final_url": "https://nemar.org/dataset/nm000177?v=v1.0.5",
+      "bytes": 91053,
+      "sha256": "abd798de01cee48836aeb6d042e5dc73644d49993bd3df6a3c4fa43d3fe4a879",
+      "scope": "HTML landing-page GET; not all linked data bytes"
+    },
+    {
+      "key": "bnci_dataset",
+      "url": "https://bnci-horizon-2020.eu/database/data-sets/001-2014/",
+      "checked_at_utc": "2026-11-04T11:42:20.768442+00:00",
+      "error": "<HTTPError 403: 'Forbidden'>",
+      "scope": "This environment access failure; not proof of globally dead URL"
+    }
+  ],
+  "earlier_policy_receipts": "research_logs/paper2_jne_20261104/policy/source_receipts.json",
+  "no_claims": [
+    "No all-author final approval invented",
+    "No current PLOS portal file obtained",
+    "No editorial determination of manuscript distinctness",
+    "No full byte check of all externally linked EEG objects",
+    "No science reruns",
+    "No journal submission or contact"
+  ]
+}

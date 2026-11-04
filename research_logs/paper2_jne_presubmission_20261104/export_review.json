@@ -1,0 +1,184 @@
+{
+  "reviewed_commit": "ff9f6c47eea2745174a233bd4310b43d59cb6f5c",
+  "reviewed_utc": "2026-11-04T11:47:06.634400+00:00",
+  "scope": "Read-only export, layout, native Word objects and package consistency review; no rendering of new figures and no scientific computation.",
+  "artifact_inputs": [
+    {
+      "file": "Cover_Letter.docx",
+      "bytes": 12096,
+      "sha256": "e88f61fd449d511498cf8d17c171adfc00ca86f3c9d58abfbeb9796674b0164b"
+    },
+    {
+      "file": "Cover_Letter.pdf",
+      "bytes": 27401,
+      "sha256": "0cfb8158db81909f189528a81f9e96bf9936c9f17c0804d9ee9de3c10400c1c7"
+    },
+    {
+      "file": "Declarations.docx",
+      "bytes": 12993,
+      "sha256": "01f5d5d65f225db66397f7296c8da588812a47155a2cb45ab9be64ebeb6aa9c8"
+    },
+    {
+      "file": "Declarations.pdf",
+      "bytes": 42994,
+      "sha256": "c7e87758c1649a261a0635b6699713230dd813138bea454ff5a28c1c5baf5c30"
+    },
+    {
+      "file": "JNE_Manuscript.docx",
+      "bytes": 1728868,
+      "sha256": "bf56f3ad008c79993f0e522846699bf7b16af72d0f7f5e2db13ed3afa9bab810"
+    },
+    {
+      "file": "JNE_Manuscript.pdf",
+      "bytes": 209682,
+      "sha256": "048725a99d92db7c6a4d4918935920b13a85e8cc740467f43c33d1003efd928b"
+    },
+    {
+      "file": "Related_Manuscript_Statement.docx",
+      "bytes": 11404,
+      "sha256": "347ba840b0768f6c6b0e97a4de027475e338a789f8185248d093aaabdc2775a5"
+    },
+    {
+      "file": "Related_Manuscript_Statement.pdf",
+      "bytes": 36031,
+      "sha256": "fb9a3ffb02a32ab3ac13489faf6b7026827e584d0ad4d4ca39a9467db5e50cd0"
+    },
+    {
+      "file": "Supplementary_Methods.docx",
+      "bytes": 2165117,
+      "sha256": "b3b172380786fa8a8ef9d4d09990288c0bde4bf00b1ad5ac07c0e1d5c042d656"
+    },
+    {
+      "file": "Supplementary_Methods.pdf",
+      "bytes": 233462,
+      "sha256": "ec2359f6dcfaee626f6d2232b2e780a60bff65c8f51b52131e7a949fa402093f"
+    }
+  ],
+  "archive_inputs": [
+    {
+      "path": "manuscript/jne_alignment_20261104/Supplementary_Data_and_Code.zip",
+      "bytes": 8885728,
+      "sha256": "f7f7918a17ede5c82646c8d16e5e20293437826f322470e079f1a94028789eb7"
+    },
+    {
+      "path": "manuscript/jne_alignment_20261104/JNE_Author_Review_Package.zip",
+      "bytes": 21314895,
+      "sha256": "43e21fbeb229bee6d89f92305dd15dc2182b960eb3fb0c22f86ca3074533b34d"
+    }
+  ],
+  "must_fix": [
+    {
+      "id": "R1",
+      "file": "manuscript/jne_alignment_20261104/SUPPLEMENT.md",
+      "issue": "27 editable tables, but only nine numbered captions; 18 tables lack numbered captions.",
+      "evidence": "export_review.table_inventory.json provides all 27 baseline line ranges/headings, short caption proposals and old-to-new reference map.",
+      "action": "Number all tables consecutively S1\u2013S27, add concise captions and update the nine existing in-text table references without changing table values; rebuild Word/PDF and package manifests.",
+      "scientific_result_error": false
+    }
+  ],
+  "cosmetic_only": [
+    {
+      "id": "C1",
+      "file": "Supplementary_Methods.pdf",
+      "page": 1,
+      "issue": "The S1 section heading ends page1 while its first table starts page2.",
+      "action": "Optionally keep the heading, caption and first table content together after caption repair."
+    },
+    {
+      "id": "C2",
+      "file": "JNE_Manuscript.pdf",
+      "pages": [
+        4,
+        9,
+        11,
+        13,
+        16
+      ],
+      "issue": "Substantial white space from keeping tables/figures with their captions.",
+      "action": "Optional layout tightening only; no blank page or cropped content was found."
+    },
+    {
+      "id": "C3",
+      "files": [
+        "JNE_Manuscript.pdf",
+        "Supplementary_Methods.pdf"
+      ],
+      "page": 1,
+      "issue": "Title words are automatically hyphenated across lines (re-calibration, align-ment).",
+      "action": "Optional title line-break adjustment; the text is complete."
+    }
+  ],
+  "PDF_checks": {
+    "main_pages": 23,
+    "supplement_pages": 44,
+    "all_five_document_PDFs_checked": true,
+    "out_of_page_text_spans": 0,
+    "empty_pages": 0,
+    "orphan_only_pages": 0,
+    "all_fonts_embedded": true,
+    "all_document_PDF_raster_image_counts_zero": true,
+    "unresolved_citation_or_replacement_glyph_marker_found": false,
+    "review_PDF_page_count_is_not_JNE_typeset_page_count": true
+  },
+  "figure_checks": {
+    "all_eight_figure_PDFs_checked": true,
+    "width_mm": 149.99999576144748,
+    "minimum_font_pt": 8.0,
+    "raster_images": 0,
+    "all_fonts_embedded": true,
+    "all_manifest_output_size_and_SHA_checks_pass": true,
+    "main_caption_numbers": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "supplement_caption_numbers": [
+      "S1",
+      "S2",
+      "S3"
+    ],
+    "all_figure_references_resolve": true,
+    "all_display_panels_lowercase_parenthesized": true
+  },
+  "Word_checks": {
+    "main": {
+      "editable_tables": 2,
+      "native_OMML_equations": 4,
+      "embedded_figure_images": 5,
+      "table_font_half_points": [
+        24
+      ]
+    },
+    "supplement": {
+      "editable_tables": 27,
+      "native_OMML_equations": 17,
+      "embedded_figure_images": 3,
+      "table_font_half_points": [
+        24
+      ]
+    },
+    "tracked_insertions_and_deletions": 0,
+    "actual_comment_entries": 0,
+    "limitation": "Native table/math structures verified from Word XML. Microsoft Word pagination was not independently rendered; the delivered PDF was inspected for layout."
+  },
+  "archive_checks": {
+    "author_review_ZIP_entries": 87,
+    "manifest_entries": 86,
+    "manifest_inside_ZIP_byte_identical_to_local": true,
+    "every_manifest_entry_size_SHA_and_local_full_bytes_match": true,
+    "unlisted_nonmanifest_review_entries": 0,
+    "review_ZIP_CRC_failures": 0,
+    "data_code_ZIP_entries": 1451,
+    "data_code_ZIP_CRC_failures": 0,
+    "both_archive_SHA_and_sizes_match_PACKAGE_SHA256": true
+  },
+  "table_caption_inventory": "export_review.table_inventory.json",
+  "visual_contact_sheets": [
+    "export_review.main_contact.png",
+    "export_review.supplement_contact_1.png",
+    "export_review.supplement_contact_2.png"
+  ],
+  "status": "one_numbering_and_caption_format_correction_required_before_final_package"
+}

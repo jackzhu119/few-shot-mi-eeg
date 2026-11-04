@@ -35,7 +35,7 @@ The authors declare no conflict of interest.
 
 ## Data availability
 
-Kumar2024 source EEG is available through NEMAR nm000177/v1.0.5, https://doi.org/10.82901/nemar.nm000177.v1.0.5, under CC BY 4.0. BNCI2014-001 original recordings are available from https://bnci-horizon-2020.eu/database/data-sets/001-2014/ under CC BY-ND 4.0; versioned hashes are recorded in NEMAR nm000139/v1.0.3. Supplementary Data and Code contains analysis code, saved derived data, figure data, provenance and reproduction instructions. The fixed scientific archive is recorded at https://github.com/jackzhu119/few-shot-mi-eeg/tree/e5969e6ee6294206954b5a83c5258fdb2e143eda/manuscript/bmt_alignment_integrated_20261104. Original code is MIT; original derived data, figures and manuscript content are CC BY 4.0. Source EEG and third-party terms are unchanged.
+Kumar2024 source EEG is available through NEMAR nm000177/v1.0.5, https://doi.org/10.82901/nemar.nm000177.v1.0.5, under CC BY 4.0. BNCI2014-001 original recordings are available from https://bnci-horizon-2020.eu/database/data-sets/001-2014/ under CC BY-ND 4.0; a versioned mirror with original-file hashes is available at NEMAR nm000139/v1.0.3, https://nemar.org/dataset/nm000139?v=v1.0.3. Supplementary Data and Code contains analysis code, saved derived data, figure data, provenance and reproduction instructions. The fixed scientific archive is recorded at https://github.com/jackzhu119/few-shot-mi-eeg/tree/e5969e6ee6294206954b5a83c5258fdb2e143eda/manuscript/bmt_alignment_integrated_20261104. Original code is MIT; original derived data, figures and manuscript content are CC BY 4.0. Source EEG and third-party terms are unchanged.
 
 ## AI assistance
 

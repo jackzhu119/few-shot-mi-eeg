@@ -23,3 +23,7 @@ Scientific findings retain their actual analysis roles, participant-level statis
 The author reports that all three authors read the expanded scientific version and that the AI disclosure is accurate. Sihao Liu's code audit and supervision of correct training execution, and Haoyang Yu's experimental-design/code contributions, are recorded as supplied. Final JNE-file approval, individual authorship declarations and the actual current PLOS manuscript should be resolved from the authors' facts before submission. No submission, editor contact, withdrawal or merge to `main` was performed.
 
 Official policy checks: [format](../../docs/paper2_jne_20261104/FORMAT_POLICY.md) · [editorial/AI/authorship](../../docs/paper2_jne_20261104/EDITORIAL_POLICY.md). The usual 14-page guidance concerns journal typeset pages, not this one-column review PDF.
+
+## Pre-submission check, 4 November 2026
+
+The [final check and corrections](../../docs/paper2_jne_20261104/PRE_SUBMISSION_REVIEW.md) complete the serial supplementary-table labels S1–S27, clarify the existing query counts and LDA priors, define RMS/NLL, and provide a verified versioned data mirror. All table rows, result values and inferential roles are retained. Submit the main PDF and two actual supplements; the full review ZIP is an author handoff containing additional editable and editorial files.

@@ -1,0 +1,308 @@
+{
+  "checked_at_utc": "2026-11-04T11:53:38.183846+00:00",
+  "reviewed_baseline_commit": "ff9f6c47eea2745174a233bd4310b43d59cb6f5c",
+  "status": "passed",
+  "scope": "Read-only metadata/source audit after query-count, empirical-prior and acronym clarifications, serial supplementary table labels and versioned original-file mirror link. No numerical results or inferential conventions changed.",
+  "checks": {
+    "all_five_frozen_clarification_paragraph_pairs_match": true,
+    "main_mirror_wording_exact_and_limited": true,
+    "main_only_five_clarifications_plus_mirror_delta": true,
+    "main_results_discussion_conclusion_byte_identical": true,
+    "main_all_table_blocks_byte_identical": true,
+    "main_all_display_equations_byte_identical": true,
+    "main_citation_keys_identical": true,
+    "exactly_27_supplement_table_blocks": true,
+    "all_27_supplement_table_blocks_byte_identical": true,
+    "all_27_supplement_captions_unique_serial": true,
+    "inventory_source_version_correct": true,
+    "all_table_inventory_hashes_match": true,
+    "all_full_caption_strings_once": true,
+    "all_old_caption_explanations_preserved": true,
+    "supplement_only_documented_clarifications_and_table_renumbering": true,
+    "all_existing_table_crossreferences_invert_to_original": true,
+    "supplement_all_display_equations_byte_identical": true,
+    "supplement_figure_crossreferences_unchanged": true,
+    "supplement_citation_keys_identical": true,
+    "empirical_CSP_LDA_prior_definition_correct": true,
+    "separate_geometric_equal_priors_definition_preserved": true,
+    "query_count_clarification_correct": true,
+    "RMS_first_use_expanded_correctly": true,
+    "NLL_first_use_expanded_correctly": true,
+    "saved_probability_definitions_preserved": true,
+    "DECLARATIONS.md_only_data_availability_mirror_paragraph_changed": true,
+    "SUBMISSION_FIELDS.md_only_data_availability_mirror_paragraph_changed": true,
+    "data_licenses_unmodified": true,
+    "mirror_scope_consistent_with_original_file_provenance": true
+  },
+  "clarification_paragraph_pairs": [
+    {
+      "file": "MAIN.md",
+      "old_paragraph_sha256": "c9293dda49ca0007ed13d11cb049e9ab94bb0f3dd04c394b540889347bf77f22",
+      "new_paragraph_sha256": "8b7432853275ff6620c3e4cfbe0641d8561b8aba1660c3627e2dda572afdeb5f",
+      "old_and_new_found": true
+    },
+    {
+      "file": "MAIN.md",
+      "old_paragraph_sha256": "b905662377aff400ad4261d797a76227a68ead0ecc8284514586d00db550cf4a",
+      "new_paragraph_sha256": "b3671c331ba0f5e6ebdf933f7f17d196e531c4975c46e4d91fdcdb70bea8f799",
+      "old_and_new_found": true
+    },
+    {
+      "file": "MAIN.md",
+      "old_paragraph_sha256": "9589a900f70e2201b7eef2d388d33d2e9b4ec4f5c766d36315d3d95bc9480a58",
+      "new_paragraph_sha256": "5588dcdbc41f380554858b070bc4b4257bf74cbbb888d103225002a9b6e6c9b9",
+      "old_and_new_found": true
+    },
+    {
+      "file": "SUPPLEMENT.md",
+      "old_paragraph_sha256": "0287aadb2d3ceb82bcb9d7551ce3c503f107d5fc730d61372344b6d901cb1330",
+      "new_paragraph_sha256": "893650f17df9cbd5248631c7c9f0cc19beb4182cf317812bfb5edaaf5fc5849f",
+      "old_and_new_found": true
+    },
+    {
+      "file": "SUPPLEMENT.md",
+      "old_paragraph_sha256": "dfeefbb551740818605f695551295a1ed643018ef3e8a32f0dbb2b2d17faf667",
+      "new_paragraph_sha256": "050734cc805c8b45cc63c2969ddbc40aa9fbec857d56d2db67aed00df056bc9b",
+      "old_and_new_found": true
+    }
+  ],
+  "table_inventory_checks": [
+    {
+      "new_label": "S1",
+      "old_label": null,
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    },
+    {
+      "new_label": "S2",
+      "old_label": null,
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    },
+    {
+      "new_label": "S3",
+      "old_label": null,
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    },
+    {
+      "new_label": "S4",
+      "old_label": null,
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    },
+    {
+      "new_label": "S5",
+      "old_label": null,
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    },
+    {
+      "new_label": "S6",
+      "old_label": null,
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    },
+    {
+      "new_label": "S7",
+      "old_label": null,
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    },
+    {
+      "new_label": "S8",
+      "old_label": "S1",
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    },
+    {
+      "new_label": "S9",
+      "old_label": "S2",
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    },
+    {
+      "new_label": "S10",
+      "old_label": null,
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    },
+    {
+      "new_label": "S11",
+      "old_label": null,
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    },
+    {
+      "new_label": "S12",
+      "old_label": null,
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    },
+    {
+      "new_label": "S13",
+      "old_label": null,
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    },
+    {
+      "new_label": "S14",
+      "old_label": null,
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    },
+    {
+      "new_label": "S15",
+      "old_label": null,
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    },
+    {
+      "new_label": "S16",
+      "old_label": null,
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    },
+    {
+      "new_label": "S17",
+      "old_label": null,
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    },
+    {
+      "new_label": "S18",
+      "old_label": null,
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    },
+    {
+      "new_label": "S19",
+      "old_label": null,
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    },
+    {
+      "new_label": "S20",
+      "old_label": null,
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    },
+    {
+      "new_label": "S21",
+      "old_label": "S3",
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    },
+    {
+      "new_label": "S22",
+      "old_label": "S4",
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    },
+    {
+      "new_label": "S23",
+      "old_label": "S5",
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    },
+    {
+      "new_label": "S24",
+      "old_label": "S6",
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    },
+    {
+      "new_label": "S25",
+      "old_label": "S7",
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    },
+    {
+      "new_label": "S26",
+      "old_label": "S8",
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    },
+    {
+      "new_label": "S27",
+      "old_label": "S9",
+      "rows_sha_match": true,
+      "exact_caption_present_once": true,
+      "existing_caption_explanation_unchanged": true
+    }
+  ],
+  "table_reference_map": {
+    "S1": "S8",
+    "S2": "S9",
+    "S3": "S21",
+    "S4": "S22",
+    "S5": "S23",
+    "S6": "S24",
+    "S7": "S25",
+    "S8": "S26",
+    "S9": "S27"
+  },
+  "resolved_prior_review_findings": [
+    "S1 query count after exclusions",
+    "S2 fitting-set empirical LDA priors"
+  ],
+  "new_findings": [],
+  "mirror_evidence_scope": "The added URL identifies version v1.0.3; original-file provenance supports the same18 MAT files/779873919bytes. This review made no fresh HTTP request and does not claim a new18-file GET/SHA audit.",
+  "input_text_hashes": {
+    "manuscript/jne_alignment_20261104/MAIN.md": {
+      "bytes": 37560,
+      "sha256": "37c372884e33525bc5866db37b37e398a552fa7f3ab74c0b1f05f05cc2e1ff4c"
+    },
+    "manuscript/jne_alignment_20261104/SUPPLEMENT.md": {
+      "bytes": 73297,
+      "sha256": "966125f2d936bb6c960b7143d9466c522c8b63ee050798ab464490987ff53f61"
+    },
+    "manuscript/jne_alignment_20261104/DECLARATIONS.md": {
+      "bytes": 3695,
+      "sha256": "d45793c7a2ed84b817ee46c3d2356e92892e1afa4a178e593741d25e6e694d07"
+    },
+    "manuscript/jne_alignment_20261104/SUBMISSION_FIELDS.md": {
+      "bytes": 5346,
+      "sha256": "86e3fc2ff1c93fdf425363b3dfc1a5a6ee2b1c37f127296a37dfd051737fbb39"
+    },
+    "manuscript/jne_alignment_20261104/SUPPLEMENT_TABLE_INDEX.json": {
+      "bytes": 15288,
+      "sha256": "1272ed7a0bf9e4d7f72ac340feda02affe908d56280fae1e1d088c38b8af94c8"
+    },
+    "research_logs/paper2_jne_20261104/narrative_cleanup_20261104.json": {
+      "bytes": 3765,
+      "sha256": "6aed3d58b363ee8bef00a832cdaf4d0f8ff6442d688da4fce18082b1412f4505"
+    }
+  },
+  "source_edits_by_reviewer": false,
+  "scientific_runs": 0,
+  "new_fits": 0,
+  "query_evaluations": 0,
+  "EEG_or_weights_loaded": false
+}

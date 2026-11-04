@@ -1,0 +1,229 @@
+{
+  "reviewed_at_utc": "2026-11-04T11:48:09.876865+00:00",
+  "reviewed_commit": "ff9f6c47eea2745174a233bd4310b43d59cb6f5c",
+  "status": "no_new_scientific_blocker_found_minor_clarifications_identified",
+  "read_only": true,
+  "new_scientific_runs": 0,
+  "EEG_or_model_weights_loaded": false,
+  "scope": "Fresh scientific/admin review of current text against saved result tables and code; no duplicate-manuscript debate. Existing 49 format/equivalence checks were not treated as the entire substantive review.",
+  "scientific_blockers": [],
+  "minor_findings": [
+    {
+      "id": "S1",
+      "severity": "minor",
+      "category": "endpoint wording",
+      "blocking_scientific_validity": false,
+      "file": "manuscript/jne_alignment_20261104/MAIN.md",
+      "line": 51,
+      "finding": "The statement gives 3,930 target-query events and 30 exclusions without explicitly saying that 3,930 is the count after exclusion. The stored count is correct; the sequence can be stated more clearly.",
+      "evidence": [
+        {
+          "path": "research_logs/kumar_submission_qc_20261015/run01/REPORT.md",
+          "lines": "14–17,25–31",
+          "fact": "4,320 query identities include 360 source query and 3,960 scheduled target query;4,290 included queries comprise 360 source+3,930 target.30 target partials are excluded."
+        },
+        {
+          "path": "docs/kumar_frozen_checkpoint_query_protocol_20261015.md",
+          "lines": "41–50",
+          "fact": "The table labels3,930 target-query rows as included;30 partial-query identities are retained only in the ledger."
+        },
+        {
+          "path": "docs/kumar_submission_window_timing_review_20261015.md",
+          "line": 16,
+          "fact": "All 44 partial source intervals end at the prior-audited EDF boundary; the 30 target-query partials are a subset."
+        }
+      ],
+      "minimal_fix": "The target-query endpoint retained 3,930 complete windows after excluding the 30 recording-boundary partial events from 3,960 scheduled target-query identities.",
+      "new_analysis_or_fit_needed": false
+    },
+    {
+      "id": "S2",
+      "severity": "minor",
+      "category": "reproducible methods",
+      "blocking_scientific_validity": false,
+      "file": "manuscript/jne_alignment_20261104/MAIN.md",
+      "line": 65,
+      "secondary_location": {
+        "file": "manuscript/jne_alignment_20261104/SUPPLEMENT.md",
+        "line": 229
+      },
+      "finding": "The CSP/LDA descriptions specify covariance and LDA shrinkage but not the fitted class-prior convention, which matters for chronological, class-imbalanced support prefixes. No incorrect prior is claimed, and the public implementation is unambiguous.",
+      "evidence": [
+        {
+          "path": "experiments/hpc_recalibration_v2/hpc_recalibration/classical.py",
+          "lines": "104–114,211",
+          "fact": "NumPy LDA uses empirical counts from its fitting labels and adds log(counts/counts.sum()) to its discriminant intercept."
+        },
+        {
+          "path": "src/learning_preserving_bci/decoders/csp_lda.py",
+          "line": 29,
+          "fact": "Historical Kumar scikit-learn LDA does not override priors."
+        },
+        {
+          "path": "src/learning_preserving_bci/alignment_mechanism.py",
+          "lines": "176–180",
+          "fact": "Matched Kumar LDA does not override priors; it is fitted to source/support union."
+        },
+        {
+          "path": "/workspace/.venvs/few-shot-mi-eeg/lib/python3.11/site-packages/sklearn/discriminant_analysis.py",
+          "lines": "672–674",
+          "fact": "The actual installed implementation estimates priors from fitting-label counts when priors is None."
+        },
+        {
+          "path": "scripts/run_kumar_phase_window_cpu_20261016.py",
+          "lines": "192–195",
+          "fact": "The original phase arms use the same factory/default LDA."
+        }
+      ],
+      "minimal_fix": "All CSP/LDA arms estimated LDA class priors from the class frequencies in their own fitting set: source training alone for frozen decoding, and the source/support union for updating arms.",
+      "scope_limit": "Applies to the CSP/LDA arms, not the separate geometric candidates that explicitly use equal priors.",
+      "new_analysis_or_fit_needed": false
+    }
+  ],
+  "known_submission_items": [
+    {
+      "id": "A1",
+      "classification": "known final-submission declaration item; not a newly discovered science defect",
+      "file": "manuscript/jne_alignment_20261104/SUBMISSION_STATUS.json",
+      "lines": "11–16",
+      "fact": "All three have read the expanded scientific version and confirmed the AI-disclosure accuracy; final JNE-file approval and all-four ICMJE conditions are intentionally not marked as individually confirmed. Latest Sihao code-validation/training-supervision and Haoyang design/code contributions are accurately retained.",
+      "action": "Use actual author consent, final-version approval, intellectual-revision and accountability facts for the final journal declarations; no signatures or extra contribution roles should be invented. This does not require a new scientific experiment.",
+      "prevents_false_ready_for_submission_claim": true
+    }
+  ],
+  "confirmed_checks": [
+    {
+      "topic": "Main performance and uncertainty",
+      "evidence": [
+        "research_logs/paper2_alignment_integrated_20261104/analysis/cohort_contrasts.csv",
+        "research_logs/paper2_alignment_integrated_20261104/mechanisms/cohort_comparisons.csv",
+        "research_logs/paper2_alignment_integrated_20261104/mechanisms/phase_cohort_comparisons.csv"
+      ],
+      "result": "No discrepancy found in the reported EA gains, weak-class/recall-gap changes, left/right recalls, C/I masses, participant sign counts, leave-one-out ranges, matched controls or paired phase effects. Historical and current bootstrap intervals are explicitly distinguished rather than silently interchanged."
+    },
+    {
+      "topic": "Statistical units and inferential roles",
+      "evidence": [
+        "manuscript/jne_alignment_20261104/MAIN.md:106",
+        "manuscript/jne_alignment_20261104/MAIN.md:110",
+        "manuscript/jne_alignment_20261104/MAIN.md:112",
+        "manuscript/jne_alignment_20261104/SUPPLEMENT.md:500"
+      ],
+      "result": "Participant is the independent unit. BNCI weak-class/gap measures use each pooled120-query participant endpoint, not an average of nonlinear run-wise scores. Kumar five-session aggregation, original primary/secondary contrasts and separate Holm families are accurately stated. The7.42-point bootstrap interval is not falsely called Holm-significant."
+    },
+    {
+      "topic": "Scope, novelty and signal interpretation",
+      "evidence": [
+        "manuscript/jne_alignment_20261104/MAIN.md:35",
+        "manuscript/jne_alignment_20261104/MAIN.md:65",
+        "manuscript/jne_alignment_20261104/MAIN.md:201",
+        "manuscript/jne_alignment_20261104/MAIN.md:217"
+      ],
+      "result": "EA is attributed to established literature. The contribution is an information-matched comparison and controlled sensitivity analysis, not a claim of inventing EA. Historical coordinate differences, the unresolved Kumar EA-versus-RMS interval, and the jointly changed cue/task signal definition are retained. No claim isolates a causal imagery-duration effect or proves clinical benefit."
+    },
+    {
+      "topic": "AI, ethics and author facts",
+      "evidence": [
+        "manuscript/jne_alignment_20261104/DECLARATIONS.md:11",
+        "manuscript/jne_alignment_20261104/DECLARATIONS.md:29",
+        "manuscript/jne_alignment_20261104/DECLARATIONS.md:31",
+        "manuscript/jne_alignment_20261104/DECLARATIONS.md:35",
+        "research_logs/paper2_jne_20261104/author_confirmation.json"
+      ],
+      "result": "AI disclosure includes the actual Codex research/code/manuscript/repository scope plus ChatGPT grammar assistance. Versions are not invented. National-law secondary-analysis exemption is distinguished from original Kumar UT approval; no school-confirmation or BNCI-specific approval is fabricated. No unrecorded author signatures are asserted."
+    }
+  ],
+  "frozen_query_manifest_count_audit": {
+    "path": "research_logs/kumar_cross_session_20261012/protocol/split_manifest.json",
+    "sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28",
+    "target_query_scheduled": 3960,
+    "target_query_included": 3930,
+    "target_query_excluded": 30,
+    "all_target_excluded_status": "excluded_partial",
+    "all_target_excluded_reason": "partial_source_event_under_5s"
+  },
+  "reviewed_source_snapshots": [
+    {
+      "path": "manuscript/jne_alignment_20261104/MAIN.md",
+      "commit": "ff9f6c47eea2745174a233bd4310b43d59cb6f5c",
+      "bytes": 37202,
+      "sha256": "00cfd5d487190b75fca374e828555ff3ccf81586cbc2e4b2fc0afa4d6ad11bb1"
+    },
+    {
+      "path": "manuscript/jne_alignment_20261104/SUPPLEMENT.md",
+      "commit": "ff9f6c47eea2745174a233bd4310b43d59cb6f5c",
+      "bytes": 71699,
+      "sha256": "4e30c3d389a2c9be444181b04431578a7e55878d568fb2f4bd244c4399f665f9"
+    },
+    {
+      "path": "manuscript/jne_alignment_20261104/DECLARATIONS.md",
+      "commit": "ff9f6c47eea2745174a233bd4310b43d59cb6f5c",
+      "bytes": 3629,
+      "sha256": "842c1d8c79fd083dc2477d32c916cb2f20cc2f198b085eb00795aabc16bb6c28"
+    },
+    {
+      "path": "manuscript/jne_alignment_20261104/SUBMISSION_STATUS.json",
+      "commit": "ff9f6c47eea2745174a233bd4310b43d59cb6f5c",
+      "bytes": 3918,
+      "sha256": "56fe533ea99224926799ec4a24285e49508015244d07067bee20cd987fa15c9a"
+    },
+    {
+      "path": "research_logs/paper2_alignment_integrated_20261104/analysis/cohort_contrasts.csv",
+      "commit": "ff9f6c47eea2745174a233bd4310b43d59cb6f5c",
+      "bytes": 371241,
+      "sha256": "54e1152aaf20137bf6cf62a1712442f1a8d48453f43b7374ebffa9b54d814211"
+    },
+    {
+      "path": "research_logs/paper2_alignment_integrated_20261104/analysis/endpoint_metrics.csv",
+      "commit": "ff9f6c47eea2745174a233bd4310b43d59cb6f5c",
+      "bytes": 291174,
+      "sha256": "aceb553054887e0aa2a36b210591c28f3ffb8345d5961e25d8ab411c504b04cb"
+    },
+    {
+      "path": "research_logs/paper2_alignment_integrated_20261104/analysis/qc_same_eligible_comparisons.csv",
+      "commit": "ff9f6c47eea2745174a233bd4310b43d59cb6f5c",
+      "bytes": 151842,
+      "sha256": "d8ba827e2899e7d1fc691f24e831a51e93b4f8f9be8593dd8d3171447e580c65"
+    },
+    {
+      "path": "research_logs/paper2_alignment_integrated_20261104/mechanisms/cohort_comparisons.csv",
+      "commit": "ff9f6c47eea2745174a233bd4310b43d59cb6f5c",
+      "bytes": 48164,
+      "sha256": "26b3f7ac34ecfe9a48a513d4f5f943c81aa572285232a3530c629e1c3481ab6e"
+    },
+    {
+      "path": "research_logs/paper2_alignment_integrated_20261104/mechanisms/phase_cohort_comparisons.csv",
+      "commit": "ff9f6c47eea2745174a233bd4310b43d59cb6f5c",
+      "bytes": 2202,
+      "sha256": "4088037ef8e3c68f925d9939c4e29a924a7f8dd50fe060373beb63bedb2752e2"
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/protocol/split_manifest.json",
+      "commit": "ff9f6c47eea2745174a233bd4310b43d59cb6f5c",
+      "bytes": 9610103,
+      "sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28"
+    },
+    {
+      "path": "experiments/hpc_recalibration_v2/hpc_recalibration/classical.py",
+      "commit": "ff9f6c47eea2745174a233bd4310b43d59cb6f5c",
+      "bytes": 21930,
+      "sha256": "7a08d0ebee294799e28e061720c8257889fdee85d1a5c97e9647545a8b76aee5"
+    },
+    {
+      "path": "src/learning_preserving_bci/decoders/csp_lda.py",
+      "commit": "ff9f6c47eea2745174a233bd4310b43d59cb6f5c",
+      "bytes": 1066,
+      "sha256": "4aedb37c21c8056d213b90797324fc5b69f370bb011badf97003c739b1127921"
+    },
+    {
+      "path": "src/learning_preserving_bci/alignment_mechanism.py",
+      "commit": "ff9f6c47eea2745174a233bd4310b43d59cb6f5c",
+      "bytes": 11121,
+      "sha256": "73ca95c0d852ef86fc92b3dd2a47730cfdc1c504432a65b71cc106ec205917dc"
+    }
+  ],
+  "limitations": [
+    "This is a source/table/code inspection, not a fresh trial-level scientific replay or a legal certification of exemption.",
+    "Final author declarations are factual author responsibilities; the review does not create new author roles or signatures."
+  ]
+}
