@@ -1,0 +1,139 @@
+{
+  "status": "passed",
+  "validated_utc": "2026-11-04T08:22:48.747217+00:00",
+  "scientific_source_commit": "e5969e6ee6294206954b5a83c5258fdb2e143eda",
+  "checks": [
+    {
+      "check": "protected_BMT_PLOS_files",
+      "count": 83,
+      "passed": true
+    },
+    {
+      "check": "figures_source_data_invariance",
+      "files": [
+        {
+          "file": "Fig1_workflow.csv",
+          "sha256": "07286bcfbdcb0c2e0e2e4aaed686af42f356d2f6dfde847fe10e214b402cd864"
+        },
+        {
+          "file": "Fig1_workflow_edges.csv",
+          "sha256": "d526939d99ff032b52f6418f19f4a01cc72046934f20ba01cdb7e164f596ca06"
+        },
+        {
+          "file": "Fig1_workflow_nodes.csv",
+          "sha256": "d115cce44412c348e57e376117fbab7fd910fab50fa03edc0046ee57d61a3af7"
+        },
+        {
+          "file": "Fig2_performance.csv",
+          "sha256": "4e83341ed2837e3d458d8a29a9c15498fd4fd684389ea971a8fadedd82e01eaf"
+        },
+        {
+          "file": "Fig3_error_coverage.csv",
+          "sha256": "e620a927c1a58dfe2aa22c45b65cd88bbb69e1fad0329e4a59ff5065cf78d893"
+        },
+        {
+          "file": "Fig4_budget.csv",
+          "sha256": "a7fdf675bc97d8e948f612fcba000da1fd22f4719e666b917691305a7812d9d9"
+        },
+        {
+          "file": "Fig5_mechanisms.csv",
+          "sha256": "a9917f9a653f0aaf5e486888d6ebdebcc2ac5a9de829685648b85f751e4c9ed6"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "check": "supplementary_figures_source_data_invariance",
+      "files": [
+        {
+          "file": "FigS1_source_data.csv",
+          "sha256": "bd0115b0106bd83dca490768c9f0a5ce529a5bbe4f78aa66e9cd0d43d125a414"
+        },
+        {
+          "file": "FigS2_source_data.csv",
+          "sha256": "9a021afba4e2b9eadea08c817eeac652a47ae68269ae6a68647ad351b3b3983e"
+        },
+        {
+          "file": "FigS3_source_data.csv",
+          "sha256": "648713a1f5d5d3d20c8086813625e7d4c8999c12977ddc746e45b7035c5bff13"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "check": "all_PDF_text_bounds_nonempty_and_no_unresolved_references",
+      "pdfs": [
+        {
+          "file": "Cover_Letter.pdf",
+          "pages": 1,
+          "bytes": 27657,
+          "sha256": "68f1e8bf11e89c5469fcfa0c767794dd7dc757409fdfba2fb26191456a687fee",
+          "raster_images": 0,
+          "outside_15pt_horizontal_10pt_vertical_safety_bounds": []
+        },
+        {
+          "file": "Declarations.pdf",
+          "pages": 2,
+          "bytes": 43383,
+          "sha256": "15c0b957f2bfddee52eaf6d4799e75f9c87760b24cb673c64a836532eb066ecc",
+          "raster_images": 0,
+          "outside_15pt_horizontal_10pt_vertical_safety_bounds": []
+        },
+        {
+          "file": "JNE_Manuscript.pdf",
+          "pages": 23,
+          "bytes": 209886,
+          "sha256": "2128344188815cb522ab682f9f4e53cb01546d588fd004e75a11a9d3aceb9c7d",
+          "raster_images": 0,
+          "outside_15pt_horizontal_10pt_vertical_safety_bounds": []
+        },
+        {
+          "file": "Related_Manuscript_Statement.pdf",
+          "pages": 2,
+          "bytes": 50107,
+          "sha256": "99fb508b7dc9f20809194e8a8e708945e44f8813af8d212d39fe73dc3560d510",
+          "raster_images": 0,
+          "outside_15pt_horizontal_10pt_vertical_safety_bounds": []
+        },
+        {
+          "file": "Supplementary_Methods.pdf",
+          "pages": 44,
+          "bytes": 233993,
+          "sha256": "e15dd46c875b9169b2fdfbf06d88f5b6f5036cd5dc4712355f58e043a0a12664",
+          "raster_images": 0,
+          "outside_15pt_horizontal_10pt_vertical_safety_bounds": []
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "visual_inspection": [
+    "All main PDF pages via contact sheet: main tables intact, captions adjacent, final references complete.",
+    "Final one-page cover letter rendered and inspected.",
+    "All eight standalone figures inspected by figure task; vector and font/export checks recorded separately."
+  ],
+  "targeted_lint": "ruff passed for the three new build/render scripts",
+  "new_fits": 0,
+  "query_forwards": 0,
+  "main_merge": false,
+  "submission": false,
+  "package_validation": {
+    "author_review": {
+      "members": 87,
+      "manifest_verified_files": 86,
+      "duplicate_names": 0,
+      "bytes": 21332918,
+      "sha256": "db4e93801ab6b47a5fa8636ae6f9fd31bd339fb3d73ddbd61d4f813b2d7e1339",
+      "all_manifest_full_bytes_verified": true
+    },
+    "data_code": {
+      "members": 1448,
+      "new_JNE_members_scanned": 56,
+      "private_binary_extensions": 0,
+      "credential_literal_matches_in_new_JNE_members": 0,
+      "bytes": 8882314,
+      "sha256": "3de83adfde7ee51dee183b10a97578f97d916cac9d4c29b35c79b202ebcd8c66"
+    },
+    "checked_utc": "2026-11-04T08:23:53.588343+00:00"
+  }
+}

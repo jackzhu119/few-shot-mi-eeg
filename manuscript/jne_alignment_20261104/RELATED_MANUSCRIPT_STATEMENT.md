@@ -1,25 +1,17 @@
-# Related manuscript statement
+# Editorial statement: research question and shared evidence
 
-**Proposed JNE manuscript:** Limited-label cross-session motor-imagery EEG recalibration: spatial refitting and the added value of Euclidean alignment
+**JNE manuscript:** Limited-label cross-session motor-imagery EEG recalibration: spatial refitting and the added value of Euclidean alignment
 
-**Related submission:** PONE-D-26-52050, PLOS ONE, under review according to the corresponding author's latest report.
+## Distinct research question
 
-## Basis of the comparison
+This article asks what Euclidean alignment adds after spatial filters and a classifier have received the same short calibration run. It evaluates added accuracy, weak-class coverage, prediction changes and the signal definition supporting the gain. Its contribution is the comparison of these operations and their controlled sensitivities.
 
-The available archived PLOS source is *Spatial-filter refitting improves limited-label recalibration in longitudinal motor-imagery EEG*, `manuscript/plos_one_innovation_20261017/Sources/kumar_plos_one_submission_draft_innovation_20261017.md`, at repository commit `da2a3acee24746981bbcdd779ab88132da6e24c4`. Its complete UTF-8 source is 47,210 bytes with SHA256 `2e3aa802c7be70434cbe3cb859e413b701792bf97da2d5fed63cf88eddfbbb83`. The current files held in the PLOS submission system have not been supplied for this comparison. The statements below concern that identified archived source, which should be reconciled with the actual under-review version in the final submission disclosure.
+## Shared evidence
 
-## Shared material
+PONE-D-26-52050, reported by the author as under review at PLOS ONE, addresses spatial-filter refitting in Kumar2024. The identified archived source shares the Kumar participants, development/primary split, source/support/query partitions, three baseline prediction sets, and the full-minus-frozen and full-minus-LDA component results used here. This reuse supplies common reference evidence rather than another independent sample.
 
-Both manuscripts use the same 18 Kumar2024 participants, including the same six-person development and twelve-person original primary cohorts. They share source/support/query partitions, the three frozen/LDA-only/full CSP/LDA baseline predictions, original full-minus-frozen and full-minus-LDA contrasts, and earlier spatial-update prediction-transition and amplitude-QC analyses. Reanalysis of these participants or predictions does not add an independent sample. The original 5.47-point spatial-refitting increment remains a previously reported component contrast rather than a new result of the JNE-format revision.
+The comparison is based on the archived source identified at commit `da2a3acee24746981bbcdd779ab88132da6e24c4`, with SHA256 `2e3aa802c7be70434cbe3cb859e413b701792bf97da2d5fed63cf88eddfbbb83`. The actual current related submission should accompany the final editorial disclosure.
 
-## Question and evidence emphasized in the present manuscript
+## Additional evidence in this article
 
-The JNE manuscript asks what Euclidean alignment adds after full supervised spatial-filter/classifier refitting has received the same short calibration information. It reports the existing EA-minus-full comparisons in Kumar and BNCI2014-001, resolves the changes through left/right and weak-class recalls, corrected/introduced errors and joint participant benefits, and examines chronological support budgets. New controlled sensitivities match the decoder core and coordinates, compare common RMS and diagonal-reference transformations with full-covariance alignment, and extend the paired cue/task-window analysis to EA.
-
-EA and BNCI empirical comparisons were already present in the later October 29 BMT-format project snapshot (`manuscript/bmt_component_revision_20261029/` at `da2a3acee24746981bbcdd779ab88132da6e24c4`). The present work builds on those saved results; it does not present their reuse as newly acquired data. The November scientific extension adds recall-resolved reanalyses and the completed matched-control and EA phase sensitivities. The JNE formatting revision does not add experiments or change those numerical results.
-
-The two acquisitions are analyzed separately. The common Kumar baselines and historical comparisons remain explicitly identified. The revised question, additional BNCI comparison and controlled sensitivities extend the available archived PLOS account, while the manuscripts' shared evidence is disclosed directly.
-
-## Editorial disclosure
-
-This statement accompanies the cover letter to make the relationship visible to the editor. It is not an editorial determination that the manuscripts are sufficiently distinct for simultaneous consideration. It does not claim that the actual current PLOS files were obtained, that the PLOS submission was withdrawn, or that editorial clearance has been granted. No journal or reviewer has been contacted in preparing this statement.
+The article adds the alignment-centered question, BNCI comparisons, recall-resolved and joint-benefit analyses, matched-coordinate/RMS/diagonal controls, and the EA cue/task-window sensitivity. The datasets are analyzed separately, and the manuscript identifies reused predictions and historical contrasts alongside the additional analyses. These differences establish the article's own research question while retaining the provenance of its shared reference results.

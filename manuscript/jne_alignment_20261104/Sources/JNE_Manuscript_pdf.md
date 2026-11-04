@@ -89,7 +89,7 @@ $$
 
 C and I use the full class-balanced query denominator. They are not conditional rates within the reference method's errors or correct predictions. Common trial identities and class labels were verified before each comparison. BA/W joint effects retained all nine combinations of positive, zero and negative differences, using tolerance 10\(^{-12}\). Participant and session summaries include actual class counts, effect ranges, negative-session proportions and leave-one-participant-out means.
 
-Previously reported EA error transitions from these same saved predictions were reconstructed, while recall-resolved and joint-benefit summaries were computed under the present analysis plan. These analyses describe the existing prediction evidence. Probability endpoints below derive from the newly fitted matched sensitivities; the historical hard-label replay retains its separate scoring scope.
+Error transitions were reconstructed from the saved EA predictions; recall-resolved and joint-benefit summaries were calculated under the present analysis plan. Probability endpoints below derive from the newly fitted matched sensitivities; hard-label replay retains its separate scoring scope.
 
 ### Calibration budgets and targeted sensitivities
 
@@ -234,7 +234,7 @@ The cue-anchored Kumar endpoint labels complete five-second windows that can inc
 
 ### Scope and reproducibility
 
-The evidence concerns 18 Kumar participants and nine BNCI participants, analyzed within their own cohorts. The original primary/secondary hierarchy remains attached to the historical comparisons. EA and the new prediction-level and CPU-sensitivity extensions use previously exposed data and are exploratory. The BNCI four-method protocol was fixed before its saved predictions were generated, with EA in its secondary family; the same public participants also appeared in related project work. Source and overlap ledgers identify reused predictions, tools and earlier analyses.
+The evidence concerns 18 Kumar participants and nine BNCI participants, analyzed within their own cohorts. The original primary/secondary hierarchy remains attached to the historical comparisons. EA and the new prediction-level and CPU-sensitivity extensions use previously exposed data and are exploratory. The BNCI four-method protocol was fixed before its saved predictions were generated, with EA in its secondary family. Data provenance, saved predictions and analysis definitions are documented in the accompanying data/code archive.
 
 Complete neural and geometric controls are retained in the supplement, including their candidate primary contrasts, seeds and budget profiles. They use the existing six-person development group and do not enlarge the independent sample. This revision's central evidence is the conventional four-pipeline comparison and its targeted sensitivities. Zero-phase preprocessing defines an offline endpoint; closed-loop benefit and clinical outcomes require a separately designed study.
 

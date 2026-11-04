@@ -11,6 +11,8 @@ Changes:
 - A standalone English related-manuscript statement and cover letter disclose the PLOS manuscript still under review and shared evidence. The comparison identifies its actual archived source and does not certify editorial permission.
 - Two actual supplementary files include IOP short titles/descriptions. The scientific archive retains all 1,392 prior entries byte for byte; new JNE sources and format code are added.
 
-Unchanged: all numerical results, statistical roles/families, scientific Methods/Results/Discussion, participant counts, negative/uncertain findings, phase-window dependence, national-law ethics basis, original data ethics and prior exposure. No new experiment, query forward, HPC/Pod action, resource purchase or submission was performed.
+Unchanged: all numerical results, statistical roles/families, scientific definitions, participant counts, negative/uncertain findings, phase-window dependence, national-law ethics basis, original data ethics and prior exposure. A later narrative cleanup removes other-project wording from seven exact article/supplement paragraphs, while preserving their scientific facts; its SHA256 replacement pairs are recorded separately. No new experiment, query forward, HPC/Pod action, resource purchase or submission was performed.
 
 Verification is recorded in the exported JOURNAL_FORMAT_CHECKS, figure validations and FINAL_VALIDATION. Final author declarations and the actual current PLOS submission copy remain author-supplied facts, as listed in AUTHOR_REVIEW_ITEMS.
+
+The article, supplementary methods and declarations now present the study without naming other project manuscripts. The concise cover-letter and separate editorial statement retain the shared-evidence facts and distinguish the present research question. Historical sources and audit records remain unchanged.

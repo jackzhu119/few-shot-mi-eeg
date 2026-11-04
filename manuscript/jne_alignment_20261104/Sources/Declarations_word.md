@@ -37,7 +37,3 @@ OpenAI Codex assisted with code revision, data analysis and result checks, manus
 ## Data and software availability
 
 Kumar2024 source EEG: NEMAR nm000177/v1.0.5, https://doi.org/10.82901/nemar.nm000177.v1.0.5, CC BY 4.0. BNCI2014-001 original recordings: https://bnci-horizon-2020.eu/database/data-sets/001-2014/, CC BY-ND 4.0; NEMAR nm000139/v1.0.3 records versioned original hashes. The accompanying Supplementary Data and Code archive contains code, derived data, figure data, provenance and reproduction instructions. Its fixed scientific version is recorded at https://github.com/jackzhu119/few-shot-mi-eeg/tree/e5969e6ee6294206954b5a83c5258fdb2e143eda/manuscript/bmt_alignment_integrated_20261104. Current JNE manuscript materials are on branch `research/paper2-alignment-integrated-revision` of the same repository. Original project code is MIT; original derived data, figures and manuscript content are CC BY 4.0 under LICENSING.md. Original EEG and third-party materials retain their original terms.
-
-## Related manuscript
-
-PONE-D-26-52050 is under review at PLOS ONE. The separate Related Manuscript Statement identifies shared Kumar data, baseline predictions and earlier contrasts, and the added alignment, class-coverage and sensitivity questions. It compares the available archived PLOS source rather than claiming access to the current submission-system files.

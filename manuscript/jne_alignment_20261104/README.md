@@ -1,6 +1,6 @@
 # Journal of Neural Engineering — author review package
 
-**Current target: Journal of Neural Engineering (JNE), Paper, single-anonymous review.** This directory adapts the completed scientific version `e5969e6ee6294206954b5a83c5258fdb2e143eda`. The revision changes journal presentation, administrative information and author contributions; it adds no fits or query evaluations. Earlier BMT and PLOS files retain their original paths and bytes.
+**Current target: Journal of Neural Engineering (JNE), Paper, single-anonymous review.** This directory adapts the completed scientific version `e5969e6ee6294206954b5a83c5258fdb2e143eda`. The revision changes journal presentation, administrative information, author contributions and project narration; it adds no fits or query evaluations. Earlier BMT and PLOS files retain their original paths and bytes.
 
 | Purpose | File |
 | --- | --- |

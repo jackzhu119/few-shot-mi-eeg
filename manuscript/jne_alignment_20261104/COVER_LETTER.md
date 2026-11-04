@@ -8,7 +8,7 @@ EA added 5.30 balanced-accuracy points beyond full refitting in the original twe
 
 The contribution is an information-matched analysis of recalibration operations, class coverage and signal definitions using established alignment and decoding methods. This combination connects neural signal processing with the practical allocation of short calibration recordings. We intend single-anonymous review and provide a complete manuscript PDF with embedded figures and tables, supplementary methods, and the scientific data/code archive.
 
-A related manuscript, PONE-D-26-52050, remains under consideration at PLOS ONE. It addresses the contribution of spatial-filter refitting in Kumar2024. The present manuscript shares Kumar participants, partitions, baseline predictions and previously reported component contrasts, and adds the alignment-centered question and analyses summarized in the attached Related Manuscript Statement. That statement identifies the archived source available for comparison; it does not claim access to current files in the PLOS submission system or that the manuscripts have received an editorial overlap assessment. The actual related submission should accompany the final disclosure.
+The manuscript addresses a distinct question: what Euclidean alignment adds after supervised spatial-filter and classifier refitting. A separate editor-facing statement identifies the shared Kumar evidence with PONE-D-26-52050, currently under review at PLOS ONE, and the additional alignment, BNCI, class-coverage and controlled-sensitivity analyses.
 
 The authors declare no conflict of interest, and this research received no external funding. The manuscript includes the Article 32(1) secondary-analysis exemption basis and the AI-assistance disclosure.
 

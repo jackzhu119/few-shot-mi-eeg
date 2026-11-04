@@ -92,7 +92,15 @@ def word_style(path):
 def source_check():
     main = (OUT / "MAIN.md").read_text()
     previous = (OLD / "MAIN.md").read_text()
+    cleanup = json.loads((AUDIT / "narrative_cleanup_20261104.json").read_text())
+    pairs = cleanup["authorized_paragraph_rephrasings"]
+    def canonical_editorial(text):
+        mapping = {row[key]: f"[recorded editorial paragraph {i}]"
+                   for i, row in enumerate(pairs)
+                   for key in ("old_paragraph_sha256", "new_paragraph_sha256")}
+        return "\n\n".join(mapping.get(sha(part.encode()), part) for part in text.split("\n\n"))
     def scientific(text):
+        text = canonical_editorial(text)
         text = text.split("## Introduction\n", 1)[1].split("## Data and code availability\n", 1)[0]
         text = re.sub(r"### Computational checks and AI assistance\n.*?(?=### Statistical units)",
                       "", text, flags=re.S)
@@ -101,8 +109,8 @@ def source_check():
         return text
     if scientific(main) != scientific(previous):
         raise ValueError("Scientific manuscript changed beyond the recorded presentation/AI changes")
-    if (OUT / "SUPPLEMENT.md").read_bytes() != (OLD / "SUPPLEMENT.md").read_bytes():
-        raise ValueError("Frozen supplementary scientific source changed")
+    if canonical_editorial((OUT / "SUPPLEMENT.md").read_text()) != canonical_editorial((OLD / "SUPPLEMENT.md").read_text()):
+        raise ValueError("Supplement changed beyond the exact recorded editorial paragraphs")
     abstract = main.split("## Abstract\n", 1)[1].split("**Keywords:**", 1)[0].strip()
     labels = re.findall(r"\*\*(Objective|Approach|Main results|Significance):\*\*", abstract)
     if labels != ["Objective", "Approach", "Main results", "Significance"]:
@@ -114,8 +122,9 @@ def source_check():
         raise ValueError("IOP AI acknowledgement missing")
     (OUT / "ABSTRACT_FOR_SUBMISSION.txt").write_text(abstract.replace("**", "") + "\n")
     return {"science_source_commit": SCIENCE_COMMIT,
-            "scientific_body_unchanged_excluding_AI_methods_and_panel_case": True,
-            "supplement_source_byte_identical": True, "abstract_headings": labels,
+            "scientific_body_unchanged_excluding_recorded_editorial_rephrasings_AI_methods_and_panel_case": True,
+            "supplement_unchanged_excluding_recorded_editorial_rephrasings": True,
+            "exact_editorial_paragraph_pairs": len(pairs), "abstract_headings": labels,
             "abstract_word_count": abstract_words}
 
 

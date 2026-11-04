@@ -1,6 +1,6 @@
 # Supplementary methods: the added value of alignment
 
-This supplement accompanies *Limited-label cross-session motor-imagery EEG recalibration: spatial refitting and the added value of Euclidean alignment*. Sections S1–S15 retain the historical decoder definitions, comparison families, all scheduled budgets, neural/geometric controls and source-data details from the component revision. Sections S16–S20 report the present saved-prediction reanalysis and actually completed CPU sensitivities. The accompanying tables distinguish original participant cohorts, historical intervals and new descriptive endpoints. Repeated use of the same people or predictions does not add an independent cohort.
+This supplement accompanies *Limited-label cross-session motor-imagery EEG recalibration: spatial refitting and the added value of Euclidean alignment*. Sections S1–S15 specify the decoder definitions, comparison families, scheduled budgets, neural/geometric controls and source-data details. Sections S16–S20 report the saved-prediction analysis and completed CPU sensitivities. The tables identify participant cohorts, historical intervals and new descriptive endpoints. Repeated observations of the same participants retain the same independent statistical units.
 
 **Abbreviations:** AR, autoregressive; BA, balanced accuracy; BCI, brain–computer interface; BN, batch normalization; CSP, common spatial patterns; EA, Euclidean alignment; EEG, electroencephalography; KL, Kullback–Leibler divergence; LDA, linear discriminant analysis; MI, motor imagery; SOS, second-order sections; SPD, symmetric positive-definite.
 
@@ -157,7 +157,7 @@ The V3 raw received archive is `paper2-results-83cbdfdcfa541b3ab3addfc3.tar.gz`,
 
 Runtime, scheduler and storage records are provided in the repository audit reports. Saved-prediction reconstruction supplies the numerical verification.
 
-Kumar analyses reused saved predictions, metrics and histories with their original fitted models, seeds and support windows. The external comparison in Section S12 generated its own four-method predictions. Original submission packages and all experiment outcomes remain at their versioned paths. Reproduction scripts, table definitions, figure inputs and targeted verification are identified in the accompanying revision report.
+Kumar analyses reused saved predictions, metrics and histories with their original fitted models, seeds and support windows. The external comparison in Section S12 generated its own four-method predictions. The data/code archive provides reproduction scripts, table definitions, figure inputs and numerical checks.
 
 ## S 10. Complete V3 cohort means across all frozen budgets
 
@@ -266,7 +266,7 @@ The inspected BNCI2a source paper and original protocol did not report a dataset
 
 The protocol, raw-file identities and implementation were fixed at commit `457e7bdaad96e84782b6fe968f88925a1200c4b3` before prediction generation. The external experiment used nine source fits and 27 updating fits; frozen models reused the corresponding source fit. All 18 original MAT files matched the versioned NEMAR byte lengths and SHA256 checksums, totaling 779,873,919 bytes. Execution used Python 3.11.16, NumPy 2.2.6 and SciPy 1.15.3, with one BLAS thread.
 
-The external public result folder is `research_logs/paper2_external_validation_20261027/`: all 36 saved prediction JSONs, trial-role manifests, participant/run tables, exact tests and an independent JSON-only reconstruction are retained. This covers 1,080 distinct target trials, 4,320 method-specific prediction rows and 180 nested run endpoints. Participants define the independent sample. BNCI had historical use in the first-paper project; the present component comparison was fixed in the repository before prediction generation.
+The external public result folder is `research_logs/paper2_external_validation_20261027/`: all 36 saved prediction JSONs, trial-role manifests, participant/run tables, exact tests and an independent JSON-only reconstruction are retained. This covers 1,080 distinct target trials, 4,320 method-specific prediction rows and 180 nested run endpoints. Participants define the independent sample. These public participants had prior exploratory exposure; the present four-method comparison was fixed before prediction generation.
 
 The public repository supplies all saved predictions, trial-role manifests and numerical reconstruction code. Original EEG retains its source-data license. Private storage records and original transfer receipts are documented in the repository audit report.
 
@@ -524,7 +524,7 @@ These cohort W/H means average endpoint-level values; they cannot be reproduced 
 
 ## S 17. EA transitions, joint effects and influence
 
-For paired binary hard predictions, class-balanced query weights 1/(2n_c) give corrected error mass C, introduced mass I and prediction disagreement D. Verification checks `C−I=ΔBA` and `C+I=D` without rounding. The current computation independently reconstructs the EA transition quantities already reported from these same Paper2 predictions in the related integrated report; it does not count that earlier analysis as another experiment. Weak-class and joint-effect summaries are recomputed in the Paper2 scopes under the present plan.
+For paired binary hard predictions, class-balanced query weights 1/(2n_c) give corrected error mass C, introduced mass I and prediction disagreement D. Verification checks `C−I=ΔBA` and `C+I=D` without rounding. Saved EA predictions supply the transition reconstruction, weak-class summaries and joint-effect estimates under the present analysis plan; these calculations add no new participants or model predictions.
 
 **Table S4. EA-minus-full estimates at full support.** Differences and error masses are percentage points. All intervals below are new descriptive paired participant-percentile intervals, 10,000 resamples, seed 20261104, numeric participant order and linear quantiles. Historical BA intervals in the main Table 2 retain their original draws and roles.
 
@@ -575,7 +575,7 @@ Both selected conventional exports contain hard class labels, not probability ve
 
 ## S 19. Matched-coordinate scale and covariance sensitivities
 
-The four fixed sensitivity arms were completed under the analysis plan committed at 13dd764. All use the original source training and full current-support identities, with no query reference fitting or parameter selection. The scope contains 18 Kumar participants×five target sessions×four arms and nine BNCI participants×four arms, totaling 396 new target fits. All 544 new fits in this revision include these 396 plus 148 additional EA phase fits; historical neural source models were not retrained. The complete execution history, including the operational stop and same-state continuation without repeating completed fits, remains in the repository receipts.
+The four fixed sensitivity arms were completed under the analysis plan committed at 13dd764. All use the original source training and full current-support identities, with no query reference fitting or parameter selection. The scope contains 18 Kumar participants×five target sessions×four arms and nine BNCI participants×four arms, totaling 396 new target fits. The 544 new fits comprise these 396 and 148 additional EA phase fits; historical neural source models were not retrained. Versioned execution receipts accompany the saved outputs.
 
 For Kumar, every arm first projects common-average signals into the same fixed 21×22 Helmert coordinates. Full refitting applies the unchanged CSP/LDA core to the source/support union. Common RMS divides each complete trial by one scalar equal to the square root of mean squared signal across coordinate/time; it changes amplitude information. Diagonal alignment estimates separate source/support mean covariance references and retains only their diagonals in the fixed Helmert coordinates. Full EA retains the full references. The Kumar reference estimate has no extra shrinkage; every arm then shares four-component MNE CSP, Ledoit–Wolf covariance regularization, `norm_trace=False`, full rank and LDA `lsqr`/automatic shrinkage.
 
