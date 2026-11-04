@@ -2,7 +2,7 @@
 
 **Supplement title:** Supplementary methods
 
-**Description:** Complete decoder definitions, statistical families, participant and class counts, calibration budgets, neural and geometric controls, matched implementation sensitivities, phase-window comparisons and supplementary figures.
+**Description:** Complete decoder definitions, statistical roles, participant and class counts, calibration budgets, targeted sensitivities and supplementary figures.
 
 This supplement accompanies *Limited-label cross-session motor-imagery EEG recalibration: spatial refitting and the added value of Euclidean alignment*. Sections S1–S15 specify the decoder definitions, comparison families, scheduled budgets, neural/geometric controls and source-data details. Sections S16–S20 report the saved-prediction analysis and completed CPU sensitivities. The tables identify participant cohorts, historical intervals and new descriptive endpoints. Repeated observations of the same participants retain the same independent statistical units.
 
@@ -167,7 +167,7 @@ The V3 raw received archive is `paper2-results-83cbdfdcfa541b3ab3addfc3.tar.gz`,
 
 Runtime, scheduler and storage records are provided in the repository audit reports. Saved-prediction reconstruction supplies the numerical verification.
 
-Kumar analyses reused saved predictions, metrics and histories with their original fitted models, seeds and support windows. The external comparison in Section S12 generated its own four-method predictions. The data/code archive provides reproduction scripts, table definitions, figure inputs and numerical checks.
+Kumar analyses reused saved predictions, metrics and histories with their original fitted models, seeds and support windows. The external comparison in Section S12 generated its own four-method predictions. The companion data files and fixed code repository provide reproduction scripts, table definitions, figure inputs and numerical checks.
 
 ## S 10. Complete V3 cohort means across all frozen budgets
 
@@ -529,7 +529,7 @@ Individual full-minus-frozen five-session differences in n=9 ranged from **−13
 
 ### Public saved-prediction reconstruction
 
-The public data package contains gzip copies of the unchanged budget and phase prediction CSVs, original metrics, the fixed trial-role manifest and all existing interval tables. The supplied `scripts/review_kumar_component_saved_evidence_20261029.py` reconstructs all 1,800 budget cells and 540 phase cells, retaining undefined endpoints. The revision-folder REPRODUCE.md provides the exact command. No original private path or model tensors are needed for this numerical reconstruction.
+The direct-upload files provide the unchanged budget and phase prediction CSVs, result tables and reversible saved classical/metric records. The full original machine-readable files, fixed trial-role manifest and interval tables remain publicly available at repository commit `407e6ce0a17339d5808a7acc14e9745b9dceffbd`. The supplied `scripts/review_kumar_component_saved_evidence_20261029.py` reconstructs all 1,800 budget cells and 540 phase cells, retaining undefined endpoints. The revision-folder REPRODUCE.md provides the exact command. No original private path or model tensors are needed for this numerical reconstruction.
 
 ## S 16. Present saved-prediction reanalysis: definitions and reconstruction
 

@@ -1,29 +1,35 @@
-# Journal of Neural Engineering — author-approved files
+# Journal of Neural Engineering — individual upload files
 
-**Current target: Journal of Neural Engineering (JNE), Paper, single-anonymous review.** This directory adapts the completed scientific version `e5969e6ee6294206954b5a83c5258fdb2e143eda`. The revision changes journal presentation, administrative information, author contributions and project narration; it adds no fits or query evaluations. Earlier BMT and PLOS files retain their original paths and bytes.
+The manuscript and author declarations remain approved. The current delivery replaces the failed ZIP upload with actual PDF and CSV files. It changes file format and availability wording, adds no model fit or prediction, and retains every reported result and statistical role.
 
-| Purpose | File |
-| --- | --- |
-| Complete main manuscript, figures and tables embedded | [PDF](JNE_Manuscript.pdf) · [editable Word](JNE_Manuscript.docx) |
-| All author-review files | [JNE_Author_Review_Package.zip](JNE_Author_Review_Package.zip) |
-| Supplement 1 | [Supplementary methods PDF](Supplementary_Methods.pdf) · [editable Word](Supplementary_Methods.docx) |
-| Supplement 2 | [Derived data and analysis code](Supplementary_Data_and_Code.zip) |
-| Cover letter | [PDF](Cover_Letter.pdf) · [Word](Cover_Letter.docx) |
-| Relationship to the PLOS manuscript under review | [Standalone statement PDF](Related_Manuscript_Statement.pdf) · [Word](Related_Manuscript_Statement.docx) |
-| Declarations | [PDF](Declarations.pdf) · [Word](Declarations.docx) |
-| Copyable abstract and submission fields | [Abstract](ABSTRACT_FOR_SUBMISSION.txt) · [fields](SUBMISSION_FIELDS.md) |
-| Authors and submission checks | [AUTHOR_DETAILS.md](AUTHOR_DETAILS.md) · [AUTHOR_REVIEW_ITEMS.md](AUTHOR_REVIEW_ITEMS.md) |
-| Figures and underlying data | [figures/](figures/) · [supplementary_figures/](supplementary_figures/) |
-| Rebuild instructions and validation | [REPRODUCTION.md](REPRODUCTION.md) · [format checks](JOURNAL_FORMAT_CHECKS.json) · [package hashes](PACKAGE_SHA256.json) |
+## Seven files for the current upload page
 
-The initial JNE main file is the complete PDF with figures and tables in place. Two accompanying supplementary items have short titles and descriptions within the files. Separate vector figures are supplied for production; the 600 dpi TIFFs are an export choice, not a claimed IOP numeric requirement. Numbered Vancouver references are retained for initial submission; the local CSL is not an official IOP template.
+| Order | File | ScholarOne designation |
+| --- | --- | --- |
+| 1 | [JNE_Manuscript.pdf](UPLOAD_FILES/JNE_Manuscript.pdf) | Complete Document for Review (PDF Only) |
+| 2 | [Supplementary_Methods.pdf](UPLOAD_FILES/Supplementary_Methods.pdf) | Supplementary Data Files (incl. Multimedia) |
+| 3 | [Supplementary_Results.csv](UPLOAD_FILES/Supplementary_Results.csv) | Supplementary Data Files (incl. Multimedia) |
+| 4 | [Supplementary_Budget_Predictions.csv](UPLOAD_FILES/Supplementary_Budget_Predictions.csv) | Supplementary Data Files (incl. Multimedia) |
+| 5 | [Supplementary_Phase_Predictions.csv](UPLOAD_FILES/Supplementary_Phase_Predictions.csv) | Supplementary Data Files (incl. Multimedia) |
+| 6 | [Supplementary_Saved_Records.csv](UPLOAD_FILES/Supplementary_Saved_Records.csv) | Supplementary Data Files (incl. Multimedia) |
+| 7 | [Supplementary_Code_and_Reproduction.pdf](UPLOAD_FILES/Supplementary_Code_and_Reproduction.pdf) | Supplementary Data Files (incl. Multimedia) |
 
-Scientific findings retain their actual analysis roles, participant-level statistics, window dependence, uncertain contrasts and earlier data exposure. The national-law ethics statement contains no school-confirmation claim. Codex and ChatGPT assistance are described in Acknowledgements and computational assistance in Methods.
+These are real PDFs and CSVs, not renamed archives. CSVs begin with two rectangular metadata records (`#title`, `#description`); the third record is their data header. Use `skiprows=2` and text dtypes when reading, as explained in the code/reproduction PDF. All original decimal strings and empty fields are retained. The prediction data sections exactly match their decompressed original CSVs. Saved JSON objects are canonicalized reversibly, not presented as original formatting bytes.
 
-On 4 November 2026, the corresponding user confirmed all three authors’ substantive intellectual review, approval of scientific version `79c0c53803efe226088b35991326904254e05023`, consent to JNE submission and accountability; author information, contributions and AI disclosure were confirmed accurate. This export records that approval and removes draft author designations without changing the science. The actual related submission remains part of the factual editorial-disclosure steps. No submission, editor contact, withdrawal or merge to `main` was performed.
+[Upload instructions in Chinese](DIRECT_UPLOAD_README.md) · [File sizes/hashes](DIRECT_UPLOAD_MANIFEST.json) · [Editable main Word](JNE_Manuscript.docx) · [Editable methods Word](Supplementary_Methods.docx).
 
-Official policy checks: [format](../../docs/paper2_jne_20261104/FORMAT_POLICY.md) · [editorial/AI/authorship](../../docs/paper2_jne_20261104/EDITORIAL_POLICY.md). The usual 14-page guidance concerns journal typeset pages, not this one-column review PDF.
+## Additional individual files
 
-## Pre-submission check, 4 November 2026
+- [Optional readable workbook](READABLE_COPY/Supplementary_Results.xlsx): 58 sheets, every source field stored as text. It mirrors the 56 table sources in the Results CSV and is not an additional required upload.
+- [Cover letter](EDITOR_FILES/Cover_Letter.pdf), [declarations](EDITOR_FILES/Declarations.pdf) and [editorial statement](EDITOR_FILES/Related_Manuscript_Statement.pdf) use the appropriate editorial or declaration fields rather than public supplementary-data categories.
+- [Figures](figures/) and [supplementary figures](supplementary_figures/) remain available in vector and high-resolution formats; the main/methods PDFs already embed them.
 
-The [final check and corrections](../../docs/paper2_jne_20261104/PRE_SUBMISSION_REVIEW.md) complete the serial supplementary-table labels S1–S27, clarify the existing query counts and LDA priors, define RMS/NLL, and provide a verified versioned data mirror. All table rows, result values and inferential roles are retained. Submit the main PDF and two actual supplements; the full review ZIP is an author handoff containing additional editable and editorial files.
+## Approved scope and preserved versions
+
+On 4 November 2026, all three authors' substantive intellectual review, approval of scientific version `79c0c53803efe226088b35991326904254e05023`, consent to JNE submission and accountability were explicitly confirmed. The approval was recorded in fixed commit `407e6ce0a17339d5808a7acc14e9745b9dceffbd`. The current change only adapts those approved materials for direct file upload; it does not create another author-approval gate.
+
+The earlier complete ZIP files remain intact in that immutable GitHub version and Git history. They are omitted from the active upload folder. The full original machine-readable code/input records and historical neural/synthetic packets remain at their documented fixed locations. The current CSV files represent the scopes specified in the guide, not all 1,471 historical source files or all neural/synthetic raw outputs.
+
+[Reproduction](REPRODUCTION.md) · [Author confirmation](AUTHOR_DETAILS.md) · [Supplement titles/descriptions](SUPPLEMENT_METADATA.csv) · [JNE requirements](../../docs/paper2_jne_20261104/FORMAT_POLICY.md).
+
+No submission-system operation, new experiment or merge to main has been performed.

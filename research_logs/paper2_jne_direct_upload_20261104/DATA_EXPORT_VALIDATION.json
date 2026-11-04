@@ -1,0 +1,110 @@
+{
+  "status": "passed",
+  "validated_utc": "2026-11-04T12:50:28.566582+00:00",
+  "source_commit": "407e6ce0a17339d5808a7acc14e9745b9dceffbd",
+  "input_archive_sha256": "e06c756aa183fc32714d938a2cdd21ca065e5b9d43abf5642e7a4bf1839788ad",
+  "source_table_count": 56,
+  "long_result_data_cells_roundtripped": 238401,
+  "workbook_cells_including_headers_roundtripped": 238945,
+  "workbook_sheets": 58,
+  "numeric_or_formula_auto_conversion": false,
+  "original_decimal_text_retained": true,
+  "empty_fields_retained": true,
+  "all_primary_files_below_50MB": true,
+  "new_fit_count": 0,
+  "new_query_forward_count": 0,
+  "EEG_or_model_loaded": false,
+  "saved_records": {
+    "saved_record_CSV_rows": 2952,
+    "JSON_documents": 612,
+    "cell_status_counts": {
+      "complete": 544,
+      "undefined_query_missing_class": 32
+    },
+    "contained_JSON_prediction_values": {
+      "external": 4320,
+      "matched": 20040,
+      "new_phase": 3820
+    },
+    "total_selected_classical_prediction_values": 118240,
+    "scope_note": "CSP/LDA predictions and sensitivity records. Not all EEGNet, geometric or synthetic raw outputs; no new predictions."
+  },
+  "raw_prediction_CSV_roundtrip": [
+    {
+      "source_id": "budget_predictions",
+      "path": "research_logs/paper2_structure_revision_20261029/component_replay/input/budget/query_predictions.csv.gz",
+      "source_url": "https://raw.githubusercontent.com/jackzhu119/few-shot-mi-eeg/407e6ce0a17339d5808a7acc14e9745b9dceffbd/research_logs/paper2_structure_revision_20261029/component_replay/input/budget/query_predictions.csv.gz",
+      "source_bytes": 262906,
+      "source_sha256": "4a78be7079ac9104042afbb13b2ef0b906b41590ca93a7205616c67f2b59e3fa",
+      "decompressed_bytes": 8381274,
+      "decompressed_sha256": "1fe18ecdd2e48f1419c663e4f40f423fcc40d17a575fa17bc68be0f106f6dcf2",
+      "headers": [
+        "subject",
+        "cohort",
+        "session",
+        "run",
+        "budget",
+        "k",
+        "method",
+        "trial_id",
+        "label",
+        "prediction",
+        "historical_predictions_reused",
+        "fallback",
+        "synthetic",
+        "software_validation_only"
+      ],
+      "rows": 78600,
+      "output_file": "Supplementary_Budget_Predictions.csv"
+    },
+    {
+      "source_id": "phase_predictions",
+      "path": "research_logs/paper2_structure_revision_20261029/component_replay/input/phase/query_predictions.csv.gz",
+      "source_url": "https://raw.githubusercontent.com/jackzhu119/few-shot-mi-eeg/407e6ce0a17339d5808a7acc14e9745b9dceffbd/research_logs/paper2_structure_revision_20261029/component_replay/input/phase/query_predictions.csv.gz",
+      "source_bytes": 37502,
+      "source_sha256": "95defd6e24d5d241ff562d66d9a1307a814b53b94b6c4086250f2164311f11b4",
+      "decompressed_bytes": 839909,
+      "decompressed_sha256": "166fc260913d51dc6709b01b6d4b187e58039cb163bf0ecc0c939e1dae463aac",
+      "headers": [
+        "subject",
+        "session",
+        "window",
+        "method",
+        "trial_id",
+        "label",
+        "prediction",
+        "synthetic"
+      ],
+      "rows": 11460,
+      "output_file": "Supplementary_Phase_Predictions.csv"
+    }
+  ],
+  "outputs": [
+    {
+      "file": "Supplementary_Budget_Predictions.csv",
+      "bytes": 8381274,
+      "sha256": "1fe18ecdd2e48f1419c663e4f40f423fcc40d17a575fa17bc68be0f106f6dcf2"
+    },
+    {
+      "file": "Supplementary_Phase_Predictions.csv",
+      "bytes": 839909,
+      "sha256": "166fc260913d51dc6709b01b6d4b187e58039cb163bf0ecc0c939e1dae463aac"
+    },
+    {
+      "file": "Supplementary_Results.csv",
+      "bytes": 7547138,
+      "sha256": "b6955f5651b382539a9b5f3c1655e86d201fcf5f6eb3e98e66ecdc6fcab7667f"
+    },
+    {
+      "file": "Supplementary_Results.xlsx",
+      "bytes": 1208177,
+      "sha256": "5ebd4857d3f2560dcbcae6632bc64b44ab46003be570b352d7434674337e7132"
+    },
+    {
+      "file": "Supplementary_Saved_Records.csv",
+      "bytes": 7731471,
+      "sha256": "d11323e2863985190243280ddf448df639ea8d4e469b77e7e737c4cb648cc8f5"
+    }
+  ],
+  "decimal_text_scope": "Original CSV/table field strings and XLSX text cells; JSON numbers retain parsed IEEE values and canonical JSON semantics."
+}

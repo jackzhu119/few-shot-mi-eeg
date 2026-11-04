@@ -1,25 +1,23 @@
-# Reproduce the JNE files
+# Reproduce the standalone upload files
 
-Scientific results are frozen at `e5969e6ee6294206954b5a83c5258fdb2e143eda`; the prior execution plan is `13dd7646c4ce37db40504154388e76b4c6ca6595`. Journal formatting adds no model fit, inference or statistical search.
+Scientific results and author declarations are fixed at `407e6ce0a17339d5808a7acc14e9745b9dceffbd`; the approved scientific base is `79c0c53803efe226088b35991326904254e05023`. This delivery changes only containers and availability wording.
 
-From the repository root, using the recorded document/plot dependencies:
-
-```bash
-python scripts/render_paper2_jne_figures_20261104.py
-python scripts/render_paper2_jne_supplementary_figures_20261104.py
-python scripts/build_paper2_jne_20261104.py
-```
-
-The renderers read existing tables; the supplement renderer reads the already computed figure CSVs. They do not regenerate bootstrap intervals. Main and supplementary source CSVs are preserved byte for byte. PDF/SVG contain vector graphics and editable text; TIFFs use RGB8, LZW and 600 dpi. Figure display labels change to lowercase parenthesized letters; original data panel IDs remain unchanged.
-
-The builder uses Pandoc, XeLaTeX, DejaVu fonts, xurl/seqsplit and python-docx. It exports 12 pt review documents, embeds all five main figures and two editable tables, and retains four editable main equations. It checks scientific-source equivalence, abstract headings, citations, actual supplement sizes and archive preservation. Supplement short titles and descriptions are inserted into export sources without changing its numerical results. Exact wording clarifications are recorded by SHA256 in `research_logs/paper2_jne_20261104/narrative_cleanup_20261104.json`. `SUPPLEMENT_TABLE_INDEX.json` records the 27 captions, old/new reference mapping and each unchanged table-block SHA256. The builder reverses only those recorded presentation changes when checking the frozen scientific source.
-
-To reconstruct scientific tables from saved outputs without EEG, checkpoints or new fits, run the existing source command with an unused output directory:
+From the repository root, using the existing document/data-formatting dependencies:
 
 ```bash
-python scripts/reproduce_paper2_alignment_saved_results_20261104.py --output /tmp/paper2-jne-table-reproduction-new
+python scripts/build_paper2_jne_direct_upload_20261104.py
 ```
 
-That command was already validated for all 17 CSV tables and independent numerical replay in the frozen scientific version. See `manuscript/bmt_alignment_integrated_20261104/PUBLIC_ARCHIVE_REPRODUCTION.json` and `research_logs/paper2_alignment_integrated_20261104/independent_checks/` for the actual evidence. This format revision does not claim to have rerun science checks or all original experiments.
+The data exporter reads the SHA256-pinned historical archive from Git history when the active archive is absent; it requires no network download, EEG, checkpoint, model fit or inference. To export only the unchanged data into another directory:
 
-The JNE data/code ZIP preserves all 1,392 historical scientific entries byte for byte, including historical BMT source paths, and adds current JNE sources, figure CSVs, policy records and format code. The old scientific ZIP SHA256 is `d16aac10c7adbc467cfaa9ba83e08933e91456e8cad8df569d8293315835d94b`. Code and original derived content follow LICENSE/LICENSING.md; the third-party CSL retains CC BY-SA 3.0. No raw EEG, model weights or credentials are packaged.
+```bash
+python scripts/export_paper2_jne_direct_data_20261104.py --output /tmp/paper2-direct-data-new
+```
+
+The exporter creates four raw CSV exports, the optional 58-sheet workbook, INPUT_INDEX.json and DATA_EXPORT_VALIDATION.json. Every result cell, decimal string and empty field is roundtripped; saved JSON objects and vector counts are checked, retaining 32 undefined cells. It performs no scientific metric calculation.
+
+The direct-file builder inserts two metadata records before each CSV header, retaining the entire verified export as the byte-identical following data section. It exports the code/reproduction PDF, rebuilds the main/methods files, copies the seven final files into UPLOAD_FILES, and writes their complete byte/SHA256 manifest. Read delivered CSVs with two metadata records skipped. XLSX source fields are text, with formulas and numeric coercion disabled. The optional workbook is a readable mirror, not all historical raw outputs.
+
+Original source CSV/JSON/GZ files, all code and historical packets stay publicly available at their fixed versions. The earlier 1,471-member archive is preserved in Git history at `407e6ce0a17339d5808a7acc14e9745b9dceffbd`; it is no longer required as a journal upload. The original 1,392-member scientific archive and reproduction checks also remain preserved in their earlier paths. No raw EEG, model weights or credentials are placed in the direct upload files.
+
+Current export inputs and validation: research_logs/paper2_jne_direct_upload_20261104/. The approved numerical reproduction command and dependencies are documented in Supplementary_Code_and_Reproduction.pdf. The current delivery does not rerun that analysis or claim a new experiment.

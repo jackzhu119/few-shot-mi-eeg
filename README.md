@@ -1,6 +1,6 @@
 # Longitudinal Motor-Imagery EEG Decoding
 
-**本分支最新：Journal of Neural Engineering（JNE）作者批准版，2026-11-04。** [主稿、完整审阅包与独立关联稿说明](manuscript/jne_alignment_20261104/README.md)。JNE四段式摘要、内嵌图表PDF、Word、两项补充材料和矢量科研图已准备；科学结果固定于`e5969e6`，本次不新增拟合或query。三位作者已于2026-11-04明确批准`79c0c53`最终版、同意投稿JNE并承担作者责任，署名、贡献、单位、邮箱及AI披露均确认准确。当前仅补入批准声明并导出相同科学内容；投稿系统步骤见新目录。隔离分支`research/paper2-alignment-integrated-revision`，不合入main、不操作投稿系统。下列BMT/PLOS记录保留其历史范围。
+**本分支最新：Journal of Neural Engineering（JNE）作者批准版，2026-11-04。** [主稿、直接上传文件与编辑材料](manuscript/jne_alignment_20261104/README.md)。JNE四段式摘要、内嵌图表PDF、Word、六个PDF/CSV补充文件和矢量科研图已准备；科学结果固定于`e5969e6`，本次不新增拟合或query。三位作者已于2026-11-04明确批准`79c0c53`最终版、同意投稿JNE并承担作者责任，署名、贡献、单位、邮箱及AI披露均确认准确。当前按上传要求提供独立PDF/CSV文件，原ZIP在固定版本保留；科学内容与批准不变。隔离分支`research/paper2-alignment-integrated-revision`，不合入main、不操作投稿系统。下列BMT/PLOS记录保留其历史范围。
 
 **历史版本：2026-10-29 BMT三作者终稿（Ziyuan Zhu*, Sihao Liu, Haoyang Yu）。** [完整目录](manuscript/bmt_component_revision_20261029/README.md) · [阅读PDF](manuscript/bmt_component_revision_20261029/BMT_Manuscript_Reading.pdf) · [投稿Word](manuscript/bmt_component_revision_20261029/BMT_Manuscript_Submission.docx) · [保存预测独立复核](research_logs/paper2_structure_revision_20261029/component_replay/README.md)。通讯作者已确认三位作者批准终稿、承担责任且无利益冲突，五位候选审稿人的无冲突确认覆盖三人；尚未投稿。
 

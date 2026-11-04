@@ -10,6 +10,7 @@ from pathlib import Path
 import re
 import shutil
 import subprocess
+import sys
 import zipfile
 
 from docx import Document
@@ -314,7 +315,10 @@ def main():
     if not args.package_only:
         build_documents()
     if not args.no_package:
-        package()
+        result = subprocess.run([sys.executable, str(ROOT / "scripts/build_paper2_jne_direct_upload_20261104.py"),
+                                 "--documents-already-built"], cwd=ROOT)
+        if result.returncode:
+            raise RuntimeError("Standalone upload-file preparation failed")
 
 
 if __name__ == "__main__":

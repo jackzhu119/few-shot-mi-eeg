@@ -1,44 +1,103 @@
 {
-  "journal": "Journal of Neural Engineering",
-  "status": "author_approved_JNE_files",
-  "author_approval": {
-    "recorded": true,
-    "date": "2026-11-04",
-    "approved_base_commit": "79c0c53803efe226088b35991326904254e05023",
-    "authors_consent_to_submit": true
-  },
-  "submitted": false,
-  "main_branch_merged": false,
-  "new_fits_or_query_forwards": 0,
-  "science_preservation": {
-    "historical_entries": 1392,
-    "new_total_entries": 1471,
-    "all_historical_entries_byte_identical": true,
-    "original_archive_sha256": "d16aac10c7adbc467cfaa9ba83e08933e91456e8cad8df569d8293315835d94b"
-  },
-  "actual_supplement_files": [
+  "status": "passed",
+  "delivery": "Seven standalone PDF/CSV files; no archive upload",
+  "fixed_source_commit": "407e6ce0a17339d5808a7acc14e9745b9dceffbd",
+  "author_approval_retained": true,
+  "csv_metadata_wrapping": [
     {
-      "filename": "Supplementary_Methods.pdf",
-      "title": "Supplementary methods",
-      "description": "Complete decoder definitions, statistical families, participant and class counts, calibration budgets, neural and geometric controls, matched implementation sensitivities, phase-window comparisons and supplementary figures."
+      "file": "Supplementary_Results.csv",
+      "bytes": 7547342,
+      "sha256": "3fa9bb98a3d340a8e4e41b65e0a15c76c338ebb1853d8eabfa27f208c17d1c54",
+      "metadata_records_before_header": 2,
+      "data_section_offset_bytes": 204,
+      "data_section_bytes": 7547138,
+      "data_section_sha256": "b6955f5651b382539a9b5f3c1655e86d201fcf5f6eb3e98e66ecdc6fcab7667f",
+      "data_section_byte_identical_to_verified_export": true
     },
     {
-      "filename": "Supplementary_Data_and_Code.zip",
-      "title": "Data and analysis code",
-      "description": "Saved derived predictions, participant and session tables, figure data, analysis scripts, input provenance, software checks and reconstruction instructions accompanying the fixed scientific results."
+      "file": "Supplementary_Budget_Predictions.csv",
+      "bytes": 8381461,
+      "sha256": "661ba41be38490024a7a49989de0b16e1fecfdcf49017f4d4c83a144c594d637",
+      "metadata_records_before_header": 2,
+      "data_section_offset_bytes": 187,
+      "data_section_bytes": 8381274,
+      "data_section_sha256": "1fe18ecdd2e48f1419c663e4f40f423fcc40d17a575fa17bc68be0f106f6dcf2",
+      "data_section_byte_identical_to_verified_export": true
+    },
+    {
+      "file": "Supplementary_Phase_Predictions.csv",
+      "bytes": 840080,
+      "sha256": "655d3a8110034b01b3fbcf23e55f7468ec0a49eaa7ef79ab8b06838e295a622f",
+      "metadata_records_before_header": 2,
+      "data_section_offset_bytes": 171,
+      "data_section_bytes": 839909,
+      "data_section_sha256": "166fc260913d51dc6709b01b6d4b187e58039cb163bf0ecc0c939e1dae463aac",
+      "data_section_byte_identical_to_verified_export": true
+    },
+    {
+      "file": "Supplementary_Saved_Records.csv",
+      "bytes": 7731686,
+      "sha256": "6ad3d54f2b2d59711cd39688b8a50690e4edbefb543d79b1d75f88bda7c612e1",
+      "metadata_records_before_header": 2,
+      "data_section_offset_bytes": 215,
+      "data_section_bytes": 7731471,
+      "data_section_sha256": "d11323e2863985190243280ddf448df639ea8d4e469b77e7e737c4cb648cc8f5",
+      "data_section_byte_identical_to_verified_export": true
     }
   ],
-  "submission_file_bytes": 9379213,
-  "archives": [
+  "files": [
     {
-      "path": "manuscript/jne_alignment_20261104/Supplementary_Data_and_Code.zip",
-      "bytes": 8933253,
-      "sha256": "e06c756aa183fc32714d938a2cdd21ca065e5b9d43abf5642e7a4bf1839788ad"
+      "file": "JNE_Manuscript.pdf",
+      "bytes": 210269,
+      "sha256": "015b49d950d5a80009bd02cc7032c8b3505d22f772d6343ac83ea9293421d0a1",
+      "designation": "Complete Document for Review (PDF Only)"
     },
     {
-      "path": "manuscript/jne_alignment_20261104/JNE_Author_Review_Package.zip",
-      "bytes": 21373207,
-      "sha256": "1846ce8752579974b39f3de13eb56d98320ff2fe58d836ef852bb05258bc72e9"
+      "file": "Supplementary_Methods.pdf",
+      "bytes": 235561,
+      "sha256": "f127f9c7b8ebf1057b2daa669abc22301b45622dc4cf6eec79f2839401c06efd",
+      "designation": "Supplementary Data Files (incl. Multimedia)"
+    },
+    {
+      "file": "Supplementary_Results.csv",
+      "bytes": 7547342,
+      "sha256": "3fa9bb98a3d340a8e4e41b65e0a15c76c338ebb1853d8eabfa27f208c17d1c54",
+      "designation": "Supplementary Data Files (incl. Multimedia)"
+    },
+    {
+      "file": "Supplementary_Budget_Predictions.csv",
+      "bytes": 8381461,
+      "sha256": "661ba41be38490024a7a49989de0b16e1fecfdcf49017f4d4c83a144c594d637",
+      "designation": "Supplementary Data Files (incl. Multimedia)"
+    },
+    {
+      "file": "Supplementary_Phase_Predictions.csv",
+      "bytes": 840080,
+      "sha256": "655d3a8110034b01b3fbcf23e55f7468ec0a49eaa7ef79ab8b06838e295a622f",
+      "designation": "Supplementary Data Files (incl. Multimedia)"
+    },
+    {
+      "file": "Supplementary_Saved_Records.csv",
+      "bytes": 7731686,
+      "sha256": "6ad3d54f2b2d59711cd39688b8a50690e4edbefb543d79b1d75f88bda7c612e1",
+      "designation": "Supplementary Data Files (incl. Multimedia)"
+    },
+    {
+      "file": "Supplementary_Code_and_Reproduction.pdf",
+      "bytes": 81645,
+      "sha256": "e3bd8b671cff7b3ad9b166df37b3c9c6d91c72c4f3dfb02babfe58c377bfc77f",
+      "designation": "Supplementary Data Files (incl. Multimedia)"
     }
-  ]
+  ],
+  "total_upload_bytes": 25028044,
+  "optional_workbook": {
+    "path": "READABLE_COPY/Supplementary_Results.xlsx",
+    "bytes": 1208177,
+    "sha256": "5ebd4857d3f2560dcbcae6632bc64b44ab46003be570b352d7434674337e7132",
+    "required_for_upload": false
+  },
+  "new_fits": 0,
+  "query_forwards": 0,
+  "journal_submission": false,
+  "main_merge": false
 }

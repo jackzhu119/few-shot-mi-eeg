@@ -1,0 +1,467 @@
+{
+  "checked_at_utc": "2026-11-04T13:04:43.307006+00:00",
+  "status": "passed",
+  "source_commit": "407e6ce0a17339d5808a7acc14e9745b9dceffbd",
+  "scope": "Read-only independent validation of standalone publication exports, exact existing field/prediction conversion, received author approval and unchanged empirical science. No scientific score/CI calculation or model execution.",
+  "checks": {
+    "fixed_full_original_input_archive_SHA": true,
+    "original_archive1471_members_preserved": true,
+    "all_seven_primary_files_match_manifest": true,
+    "all_primary_files_non_archive_and_size_limits": true,
+    "Supplementary_Results.csv_metadata_records_offsets_hash_rectangular": true,
+    "Supplementary_Results.csv_body_equals_previously_verified_raw_export_bytes": true,
+    "Supplementary_Budget_Predictions.csv_metadata_records_offsets_hash_rectangular": true,
+    "Supplementary_Budget_Predictions.csv_body_equals_previously_verified_raw_export_bytes": true,
+    "Supplementary_Phase_Predictions.csv_metadata_records_offsets_hash_rectangular": true,
+    "Supplementary_Phase_Predictions.csv_body_equals_previously_verified_raw_export_bytes": true,
+    "Supplementary_Saved_Records.csv_metadata_records_offsets_hash_rectangular": true,
+    "Supplementary_Saved_Records.csv_body_equals_previously_verified_raw_export_bytes": true,
+    "56_fixed_table_sources_hash_header_shape": true,
+    "all238401_result_cells_exact_source_strings_no_duplicates": true,
+    "budget_predictions_original_gzip_SHA_and_decompressed_entire_bytes": true,
+    "phase_predictions_original_gzip_SHA_and_decompressed_entire_bytes": true,
+    "all612_JSON_and2_metric_source_SHAs": true,
+    "all2952_saved_records_semantically_equal_source_no_duplicates": true,
+    "612_JSON2340_metric_rows_exact": true,
+    "544_complete32_undefined_retained": true,
+    "118240_method_specific_prediction_values_not_unique_trials": true,
+    "optional_XLSX58_sheets_238945_field_cells_exact_text": true,
+    "MAIN_all_science_before_DAS_same_except_named_delivery_sentence": true,
+    "MAIN_Results_Conclusions_numerical_words_same_except_delivery_location": true,
+    "all_MAIN2_SUPP27_table_blocks_byte_identical": true,
+    "all_MAIN_SUPP_equations_byte_identical": true,
+    "received_author_approval_and_no_new_gate_retained": true,
+    "MAIN_author_approval_paragraph_retained": true,
+    "active_upload_directory_noZIP": true,
+    "guide_separates1471_archive_from_selected_direct_files": true,
+    "guide_counters_and_fixed_refs_present": true,
+    "current_availability_naming_separates_CSV_Git_originals": true,
+    "current_PDF_page_counts_24_45_9": true,
+    "guide_PDF_hash_matches_final_confirmed": true,
+    "legacyZIPs_preserved_in_fixed_Git_objects": true
+  },
+  "csv_preface_and_body_checks": [
+    {
+      "file": "Supplementary_Results.csv",
+      "metadata_columns": 5,
+      "data_rows": 238401,
+      "offset_bytes": 204,
+      "body_sha256": "b6955f5651b382539a9b5f3c1655e86d201fcf5f6eb3e98e66ecdc6fcab7667f",
+      "full_sha256": "3fa9bb98a3d340a8e4e41b65e0a15c76c338ebb1853d8eabfa27f208c17d1c54"
+    },
+    {
+      "file": "Supplementary_Budget_Predictions.csv",
+      "metadata_columns": 14,
+      "data_rows": 78600,
+      "offset_bytes": 187,
+      "body_sha256": "1fe18ecdd2e48f1419c663e4f40f423fcc40d17a575fa17bc68be0f106f6dcf2",
+      "full_sha256": "661ba41be38490024a7a49989de0b16e1fecfdcf49017f4d4c83a144c594d637"
+    },
+    {
+      "file": "Supplementary_Phase_Predictions.csv",
+      "metadata_columns": 8,
+      "data_rows": 11460,
+      "offset_bytes": 171,
+      "body_sha256": "166fc260913d51dc6709b01b6d4b187e58039cb163bf0ecc0c939e1dae463aac",
+      "full_sha256": "655d3a8110034b01b3fbcf23e55f7468ec0a49eaa7ef79ab8b06838e295a622f"
+    },
+    {
+      "file": "Supplementary_Saved_Records.csv",
+      "metadata_columns": 5,
+      "data_rows": 2952,
+      "offset_bytes": 215,
+      "body_sha256": "d11323e2863985190243280ddf448df639ea8d4e469b77e7e737c4cb648cc8f5",
+      "full_sha256": "6ad3d54f2b2d59711cd39688b8a50690e4edbefb543d79b1d75f88bda7c612e1"
+    }
+  ],
+  "source_table_checks": [
+    {
+      "table_id": "M01",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 4,
+      "columns": 5
+    },
+    {
+      "table_id": "M02",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 7,
+      "columns": 5
+    },
+    {
+      "table_id": "S01",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 4,
+      "columns": 5
+    },
+    {
+      "table_id": "S02",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 9,
+      "columns": 2
+    },
+    {
+      "table_id": "S03",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 8,
+      "columns": 4
+    },
+    {
+      "table_id": "S04",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 30,
+      "columns": 7
+    },
+    {
+      "table_id": "S05",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 9,
+      "columns": 5
+    },
+    {
+      "table_id": "S06",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 10,
+      "columns": 7
+    },
+    {
+      "table_id": "S07",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 4,
+      "columns": 6
+    },
+    {
+      "table_id": "S08",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 6,
+      "columns": 3
+    },
+    {
+      "table_id": "S09",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 5,
+      "columns": 4
+    },
+    {
+      "table_id": "S10",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 5,
+      "columns": 5
+    },
+    {
+      "table_id": "S11",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 5,
+      "columns": 4
+    },
+    {
+      "table_id": "S12",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 5,
+      "columns": 3
+    },
+    {
+      "table_id": "S13",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 5,
+      "columns": 5
+    },
+    {
+      "table_id": "S14",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 5,
+      "columns": 4
+    },
+    {
+      "table_id": "S15",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 5,
+      "columns": 3
+    },
+    {
+      "table_id": "S16",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 5,
+      "columns": 5
+    },
+    {
+      "table_id": "S17",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 5,
+      "columns": 4
+    },
+    {
+      "table_id": "S18",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 5,
+      "columns": 3
+    },
+    {
+      "table_id": "S19",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 5,
+      "columns": 7
+    },
+    {
+      "table_id": "S20",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 4,
+      "columns": 4
+    },
+    {
+      "table_id": "S21",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 16,
+      "columns": 7
+    },
+    {
+      "table_id": "S22",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 4,
+      "columns": 7
+    },
+    {
+      "table_id": "S23",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 9,
+      "columns": 6
+    },
+    {
+      "table_id": "S24",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 5,
+      "columns": 4
+    },
+    {
+      "table_id": "S25",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 16,
+      "columns": 5
+    },
+    {
+      "table_id": "S26",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 12,
+      "columns": 5
+    },
+    {
+      "table_id": "S27",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 6,
+      "columns": 4
+    },
+    {
+      "table_id": "A01",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 1045,
+      "columns": 21
+    },
+    {
+      "table_id": "A02",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 380,
+      "columns": 21
+    },
+    {
+      "table_id": "A03",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 60,
+      "columns": 20
+    },
+    {
+      "table_id": "A04",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 2196,
+      "columns": 22
+    },
+    {
+      "table_id": "A05",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 2745,
+      "columns": 18
+    },
+    {
+      "table_id": "A06",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 855,
+      "columns": 13
+    },
+    {
+      "table_id": "A07",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 585,
+      "columns": 20
+    },
+    {
+      "table_id": "A08",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 468,
+      "columns": 14
+    },
+    {
+      "table_id": "A09",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 135,
+      "columns": 9
+    },
+    {
+      "table_id": "A10",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 405,
+      "columns": 23
+    },
+    {
+      "table_id": "A11",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 1215,
+      "columns": 17
+    },
+    {
+      "table_id": "A12",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 972,
+      "columns": 18
+    },
+    {
+      "table_id": "C01",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 168,
+      "columns": 19
+    },
+    {
+      "table_id": "C02",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 112,
+      "columns": 8
+    },
+    {
+      "table_id": "C03",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 180,
+      "columns": 12
+    },
+    {
+      "table_id": "C04",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 12,
+      "columns": 11
+    },
+    {
+      "table_id": "C05",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 36,
+      "columns": 10
+    },
+    {
+      "table_id": "F01",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 12,
+      "columns": 13
+    },
+    {
+      "table_id": "F02",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 11,
+      "columns": 5
+    },
+    {
+      "table_id": "F03",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 7,
+      "columns": 6
+    },
+    {
+      "table_id": "F04",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 98,
+      "columns": 13
+    },
+    {
+      "table_id": "F05",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 92,
+      "columns": 13
+    },
+    {
+      "table_id": "F06",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 25,
+      "columns": 13
+    },
+    {
+      "table_id": "F07",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 107,
+      "columns": 13
+    },
+    {
+      "table_id": "F08",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 104,
+      "columns": 21
+    },
+    {
+      "table_id": "F09",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 64,
+      "columns": 12
+    },
+    {
+      "table_id": "F10",
+      "source_SHA_shape_headers_match": true,
+      "data_rows": 774,
+      "columns": 21
+    }
+  ],
+  "counts": {
+    "source_tables": 56,
+    "result_data_cells": 238401,
+    "optional_XLSX_sheets": 58,
+    "optional_XLSX_checked_cells_including_headers": 238945,
+    "raw_prediction_rows": {
+      "budget_predictions": 78600,
+      "phase_predictions": 11460
+    },
+    "JSON_documents": 612,
+    "metric_records": 2340,
+    "saved_records": 2952,
+    "cell_statuses": {
+      "complete": 544,
+      "undefined_query_missing_class": 32
+    },
+    "contained_prediction_vectors": {
+      "external": 4320,
+      "matched": 20040,
+      "new_phase": 3820
+    },
+    "total_method_specific_classical_prediction_values": 118240
+  },
+  "bad_result_cells": [],
+  "bad_saved_records": [],
+  "bad_XLSX_cells": [],
+  "nontext_XLSX_cells": [],
+  "PDFs": [
+    {
+      "file": "JNE_Manuscript.pdf",
+      "pages": 24,
+      "sha256": "015b49d950d5a80009bd02cc7032c8b3505d22f772d6343ac83ea9293421d0a1"
+    },
+    {
+      "file": "Supplementary_Methods.pdf",
+      "pages": 45,
+      "sha256": "f127f9c7b8ebf1057b2daa669abc22301b45622dc4cf6eec79f2839401c06efd"
+    },
+    {
+      "file": "Supplementary_Code_and_Reproduction.pdf",
+      "pages": 9,
+      "sha256": "e3bd8b671cff7b3ad9b166df37b3c9c6d91c72c4f3dfb02babfe58c377bfc77f"
+    }
+  ],
+  "file_manifest_sha256": "aada141ac7c17231c5e06c035146ef0b187e02d9c6ccd2bb3cf5c5cf9df16499",
+  "scope_limits": [
+    "Only selected classical predictions and completed/undefined sensitivity records are directly exported; neural/geometric/synthetic raw exports remain at their separately fixed packet locations.",
+    "CSV metadata is new; source data sections retain exact existing bytes. JSON records preserve parsed values, not original formatting bytes.",
+    "No new R2 GET, HTTP availability check, scientific metric, fit, forward pass or author permission request was made."
+  ],
+  "source_or_document_edits_by_reviewer": false,
+  "new_fit_or_query": 0
+}

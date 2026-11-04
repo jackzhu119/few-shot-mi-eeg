@@ -8,6 +8,6 @@ The current exports add that confirmation and remove draft author designations; 
 
 ## Submission-system steps
 
-Use `JNE_Manuscript.pdf` as the main file and the two named supplementary files in their appropriate slots. Author and originality declarations must match the actual facts recorded in the cover letter and editorial materials. The related-manuscript statement uses the identified archived comparison; the actual current related submission should accompany the final editorial disclosure.
+Use `JNE_Manuscript.pdf` as the main file and the six named PDF/CSV supplementary files in their appropriate slots. Author and originality declarations must match the actual facts recorded in the cover letter and editorial materials. The related-manuscript statement uses the identified archived comparison; the actual current related submission should accompany the final editorial disclosure.
 
 Author names, emails, common affiliation, corresponding-author ORCID, no-funding/no-conflict statements, statutory secondary-analysis ethics basis and AI disclosure are filled. Co-author ORCIDs remain optional because none were supplied. Suggested reviewers are optional in the reviewed IOP guidance.
