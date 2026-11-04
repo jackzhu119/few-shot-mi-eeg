@@ -1,0 +1,167 @@
+{
+  "version": "paper2-alignment-integrated-20261104",
+  "baseline_commit": "da2a3acee24746981bbcdd779ab88132da6e24c4",
+  "recorded_at_utc": "2026-11-04T06:43:34.040541+00:00",
+  "client_local_date": "2026-11-03",
+  "client_timezone": "America/Los_Angeles",
+  "analysis_identity": "Post-exposure exploratory reanalysis and bounded classical CPU sensitivities; not historical preregistration or a new blind test. Freeze applies before this revision executes new derived metrics or new fits.",
+  "work_branch": "research/paper2-alignment-integrated-revision",
+  "protected_refs": [
+    "main",
+    "research/paper2-hpc-v2-20261023"
+  ],
+  "protected_manuscripts": [
+    "manuscript/bmt_component_revision_20261029",
+    "all historical PLOS snapshots"
+  ],
+  "request_sha256": "bb2d3f1715b7889e429df25c54d6fda4146890b6124faaa733c9b4c03d698588",
+  "cohorts": {
+    "kumar_primary12": [
+      "sub-2",
+      "sub-3",
+      "sub-5",
+      "sub-6",
+      "sub-8",
+      "sub-9",
+      "sub-11",
+      "sub-12",
+      "sub-14",
+      "sub-15",
+      "sub-17",
+      "sub-18"
+    ],
+    "kumar_development6": [
+      "sub-1",
+      "sub-4",
+      "sub-7",
+      "sub-10",
+      "sub-13",
+      "sub-16"
+    ],
+    "kumar_all18": "secondary union; never independent of the above",
+    "bnci9": [
+      "bnci001-sub-01",
+      "bnci001-sub-02",
+      "bnci001-sub-03",
+      "bnci001-sub-04",
+      "bnci001-sub-05",
+      "bnci001-sub-06",
+      "bnci001-sub-07",
+      "bnci001-sub-08",
+      "bnci001-sub-09"
+    ]
+  },
+  "input_roles": "Use exact original split_manifest/trial-identity manifests; query labels scoring only. No query reference, normalization fitting, hyperparameter/model/budget selection. No synthetic rows in empirical results.",
+  "endpoints": {
+    "unit": "participant",
+    "kumar_aggregation": "Compute every nonlinear endpoint per participant/session first; five target sessions equal weight, then participants equal weight. No classical seeds in these predictions.",
+    "bnci_aggregation": "Original full E-session query120 per participant; run metrics descriptive, not independent participants.",
+    "metrics": [
+      "BA",
+      "left_recall",
+      "right_recall",
+      "W=min(left_recall,right_recall)",
+      "H=abs(left_recall-right_recall)",
+      "C=balanced corrected errors",
+      "I=balanced introduced errors",
+      "D=balanced prediction disagreement"
+    ],
+    "identities": [
+      "W=BA-H/2",
+      "deltaBA=C-I",
+      "D=C+I for binary hard predictions"
+    ],
+    "new_comparisons": [
+      "EA-Full",
+      "Full-LDA-only",
+      "Full-Frozen",
+      "LDA-only-Frozen",
+      "EA-Frozen"
+    ],
+    "joint_benefit": "All nine combinations of negative/zero/positive deltaBA and deltaW; tolerance1e-12. Report exact class counts and missingness, no zero imputation.",
+    "effect_distribution": [
+      "positive/zero/negative participant and session denominators",
+      "participant mean/median/min/max",
+      "leave-one-participant-out means",
+      "within-participant negative-session proportions averaged equally across participants"
+    ],
+    "bootstrap": {
+      "resamples": 10000,
+      "seed": 20261104,
+      "participant_order": "numeric suffix ascending separately in every cohort",
+      "paired": true,
+      "interval": "np.quantile([.025,.975],method=linear) of participant paired differences",
+      "missing": "Original cohort endpoint complete across all5targetsessions; otherwise undefined retained and excluded only from the specifically named eligible sensitivity with exact denominator.",
+      "new_p_values": false
+    },
+    "historical_roles": "Kumar Full-Frozen original primary; Full-LDA secondary; EA and budgets/phase exploratory. BNCI Full-LDA fixed primary; EA-Full in historical 3-test secondary Holm family. Preserve historical intervals/pvalues/families; new descriptive intervals separately labeled."
+  },
+  "P1": {
+    "saved_predictions": [
+      "research_logs/paper2_structure_revision_20261029/component_replay/input/budget/query_predictions.csv.gz",
+      "research_logs/paper2_external_validation_20261027/saved_predictions"
+    ],
+    "budgets": [
+      "4",
+      "8",
+      "12",
+      "16",
+      "full19or20"
+    ],
+    "qc": "Join frozen QC by exact trial ID; compare all vs unflagged query within SAME eligible cohort, report every group/class count/undefined. Test-side sensitivity only.",
+    "probability": "Compute balanced NLL (clipping1e-7) and binary single-coordinate Brier only if actual stored probabilities or original logits exist and mapping is verifiable; hard labels are not probabilities. Otherwise document unsupported, no fabricated table.",
+    "reconstruction": "Check BA and identities by independent confusion-count implementation. Cross-project same-prediction transitions are categoryA replay, not new independent findings."
+  },
+  "P2": {
+    "scope": "Full support only, one deterministic pass, original source/query and preprocess; preserve all results.",
+    "matched_mechanism_arms": [
+      "matched Full",
+      "per-trial common RMS then matched Full",
+      "diagonal domain reference then matched Full",
+      "full domain covariance EA then matched Full"
+    ],
+    "kumar": "All18participants x5targets; fixed Helmert21 CAR effective coordinates shared by all four arms; same MNE CSP4/LedoitWolf/norm_traceFalse/rankfull + LDA lsqr/auto within this sensitivity; source40/support19or20. Compare historical Full/EA separately without overwriting.",
+    "bnci": "All9participants; original prepared arrays/source96/support20/query120; original fixed.1 CSP/LDA core across four arms, no artificial cross-dataset preprocessing unification.",
+    "diagonal": "Diagonal taken in each explicitly named fixed coordinate system; Kumar Helmert coordinates are not individual electrodes.",
+    "rms": "Per-trial common RMS over channel/time; changes amplitude information; no assumed harmlessness.",
+    "maximum_target_fit_count_main": 396,
+    "phase_extension": "If existing exact EDF+mapping+window functions usable, Full and EA at cue5s/task2s, same original common eligibility and all18 complete/undefined statuses; max360 additional target fits. No missing marker completion. New anchors/duration/filter-boundary contrast jointly defined.",
+    "maximum_target_fit_count_including_phase": 756,
+    "refit_neural_models": false,
+    "search_or_retry": false,
+    "partial_policy": "Save after each completed cell. Expected estimator scientific failures retained explicitly; IO/integrity/unexpected failures propagate and preserve partial. No automatic training retry.",
+    "evaluation_after_plan_commit_only": true
+  },
+  "P3": "No support-only model selection, perturbation grid, additional dataset or neural experiment this revision. Record precise future validation entry if needed.",
+  "figures": [
+    "workflow information budget",
+    "four methods and historical paired contrasts by dataset",
+    "EA corrected/introduced errors and W/joint benefit",
+    "Kumar scheduled budget curve + paired EA increment",
+    "completed matched-mechanism and sensitivity results if supported"
+  ],
+  "statistical_safety": "No historical endpoint promotion, seed selection, new multiplicity family, dataset pooling or old-paper accuracy migration.",
+  "submission": "Original PLOS currently under review, latest user confirmation in this conversation supersedes prior rejected-status claim. This extension is not authorized for submission or replacement; related data/results overlap must be assessed. Old approvals do not extend to new results/text.",
+  "initial_input_pins": [
+    {
+      "path": "research_logs/paper2_structure_revision_20261029/component_replay/input/budget/query_predictions.csv.gz",
+      "bytes": 262906,
+      "sha256": "4a78be7079ac9104042afbb13b2ef0b906b41590ca93a7205616c67f2b59e3fa"
+    },
+    {
+      "path": "research_logs/kumar_cross_session_20261012/protocol/split_manifest.json",
+      "bytes": 9610103,
+      "sha256": "ac6e9f2cdd66b3c26814cfc04edf5f8e08eb592ca523c7ab029a2fa56ffd0b28"
+    },
+    {
+      "path": "configs/kumar_component_budget_exploratory_20261016.json",
+      "bytes": 74872,
+      "sha256": "31720a71619281a0f1b2c4162b6bfa28582faae7d074be311e7b5cc9582df88c"
+    },
+    {
+      "path": "configs/kumar_phase_window_exploratory_20261016.json",
+      "bytes": 75995,
+      "sha256": "633c25060c45f027f8e6e0d81164011ef5f91eec348df1a112d3447c4997cd07"
+    }
+  ]
+}
