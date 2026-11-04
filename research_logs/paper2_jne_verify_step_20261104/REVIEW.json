@@ -1,0 +1,63 @@
+{
+  "status": "portal_review_completed_with_items_to_resolve",
+  "source_commit": "16a95a8839fc9a4816e0bcabc94cd24e854af109",
+  "source_form_sha256": "e9c9aae8d2a4a0cff59d353519ca32e9333b45ccac73924a9ee889fdeb9fc0ce",
+  "findings": [
+    {
+      "field": "Open Access",
+      "observed": "Yes: Reviewer discount rate, with two article IDs",
+      "eligibility_and_intent": "not independently established",
+      "action": "Retain only if intended and eligible; otherwise select the intended publication route and remove unverified discount IDs"
+    },
+    {
+      "field": "Author address",
+      "observed_postcode": "400016",
+      "approved_manuscript_postcode": "401331",
+      "action": "Align all three metadata records with the true Jinyun Campus affiliation; coauthors department should match manuscript"
+    },
+    {
+      "field": "Editor-facing attachment",
+      "observed": "Seven main/supplement file names plus Cover_Letter.pdf only",
+      "statement_already_uploaded_elsewhere": "unknown",
+      "action": "Use combined cover-letter/statement PDF if statement not separately attached; actual current related submission is not supplied by this bundle"
+    }
+  ],
+  "matching_visible_fields": [
+    "title",
+    "author_order_and_emails",
+    "novelty_78_words",
+    "ethics_statement",
+    "funding_none",
+    "clinical_trials_no",
+    "public_data_option_and_fixed_link",
+    "seven_expected_upload_filenames"
+  ],
+  "not_proven_by_pasted_form": [
+    "full_abstract_beyond_More_truncation",
+    "uploaded_file_bytes_or_hashes",
+    "file_designations",
+    "reviewer_discount_eligibility",
+    "actual_current_related_submission_file"
+  ],
+  "combined_editor_pdf": {
+    "path": "manuscript/jne_alignment_20261104/EDITOR_FILES/Cover_Letter_with_Editorial_Statement.pdf",
+    "bytes": 65892,
+    "sha256": "b612ece9d73b3d91e6935f4cbdcc64e1df61f77d86e2d572c906c99fd1f00dbd",
+    "pages": 2,
+    "page_text_identical_to_sources": true,
+    "sources": [
+      {
+        "path": "manuscript/jne_alignment_20261104/EDITOR_FILES/Cover_Letter.pdf",
+        "sha256": "f31af61dfcf0f86dd7b4ebee25e3e5eb7298925a7e0ef2803cbf6a844039ca12"
+      },
+      {
+        "path": "manuscript/jne_alignment_20261104/EDITOR_FILES/Related_Manuscript_Statement.pdf",
+        "sha256": "2124b7e3a725818fc2b3ff42ea19406015a2b012ddf87c4dde0aacbca526a554"
+      }
+    ]
+  },
+  "seven_primary_upload_hashes_unchanged": true,
+  "scientific_content_unchanged": true,
+  "author_approval_retained": true,
+  "journal_submission": false
+}
